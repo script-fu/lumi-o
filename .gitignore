@@ -3,19 +3,8 @@
 
 # Auto-generated local translation artifacts
 /.cache/
-content/**/*.de.md
-content/**/*.es.md
-content/**/*.fr.md
-content/**/*.it.md
-content/**/*.ja.md
-content/**/*.ko.md
-content/**/*.nl.md
-content/**/*.pl.md
-content/**/*.pt-br.md
-content/**/*.ru.md
-content/**/*.sv.md
-content/**/*.th.md
-content/**/*.zh-cn.md
-content/**/*.zh-tw.md
+
+# NOTE: Translated Markdown content files are required for multilingual builds on GitHub Pages.
+# If you want to regenerate translations locally, use `scripts/translate_site_incremental.py`.
 
 # Other files or folders you want to ignore
