@@ -19,4 +19,4 @@ chmod +x Lumi*.AppImage
 ./Lumi*.AppImage
 ```
 
-소스에서 작업하려면 [Technical Guides](/hub/technical-guides/folder/) 및 [How to Install Linux](/hub/install-linux/)으로 이동하세요.
+소스에서 작업하려면 [Technical Guides](/hub/technical-guides/) 및 [How to Install Linux](/hub/install-linux/)으로 이동하세요.

@@ -170,7 +170,7 @@ weight = 3
 [[menu.main]]
 name = "Technical Guides"
 identifier = "menuTechnicalGuides"
-pageRef = "hub/technical-guides/folder/"
+pageRef = "hub/technical-guides/"
 weight = 5
 
 [[menu.main]]
@@ -188,7 +188,7 @@ type = "flexsearch"
 index = "content"  # index page by: content | summary | heading | title
 
 [services.googleAnalytics]
-ID = "G-MEASUREMENT_ID"
+ID = "G-ZT5VEBMMYH"
 
 [markup]
   [markup.goldmark]

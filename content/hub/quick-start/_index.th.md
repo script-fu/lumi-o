@@ -19,4 +19,4 @@ chmod +x Lumi*.AppImage
 ./Lumi*.AppImage
 ```
 
-หากคุณต้องการทำงานจากแหล่งที่มา ให้ไปที่ [Technical Guides](/hub/technical-guides/folder/) และ [How to Install Linux](/hub/install-linux/)
+หากคุณต้องการทำงานจากแหล่งที่มา ให้ไปที่ [Technical Guides](/hub/technical-guides/) และ [How to Install Linux](/hub/install-linux/)

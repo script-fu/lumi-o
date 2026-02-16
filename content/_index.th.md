@@ -12,6 +12,6 @@ Lumi สร้างขึ้นบนสถาปัตยกรรมที่
   {{< card link="hub/about/" title="เกี่ยวกับ" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="เริ่มต้นอย่างรวดเร็ว" icon="play" >}}
   {{< card link="hub/install-linux/" title="วิธีการติดตั้งลินุกซ์" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/folder/" title="คำแนะนำด้านเทคนิค" icon="book-open" >}}
+  {{< card link="hub/technical-guides/" title="คำแนะนำด้านเทคนิค" icon="book-open" >}}
   {{< card link="https://lumi-o.org/" title="ลูมิ·โอ" icon="home" >}}
 {{< /cards >}}

@@ -12,6 +12,6 @@ GIMP의 입증된 아키텍처를 기반으로 구축된 Lumi는 디지털 페�
   {{< card link="hub/about/" title="에 대한" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="빠른 시작" icon="play" >}}
   {{< card link="hub/install-linux/" title="리눅스를 설치하는 방법" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/folder/" title="기술 가이드" icon="book-open" >}}
+  {{< card link="hub/technical-guides/" title="기술 가이드" icon="book-open" >}}
   {{< card link="https://lumi-o.org/" title="루미오" icon="home" >}}
 {{< /cards >}}

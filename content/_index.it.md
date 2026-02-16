@@ -12,6 +12,6 @@ Basato sulla comprovata architettura di GIMP, Lumi ristruttura il software attor
   {{< card link="hub/about/" title="Di" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Avvio rapido" icon="play" >}}
   {{< card link="hub/install-linux/" title="Come installare Linux" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/folder/" title="Guide tecniche" icon="book-open" >}}
+  {{< card link="hub/technical-guides/" title="Guide tecniche" icon="book-open" >}}
   {{< card link="https://lumi-o.org/" title="Lumi·o" icon="home" >}}
 {{< /cards >}}

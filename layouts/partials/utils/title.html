@@ -9,7 +9,7 @@
   {{- $title = ((T "menuQuickStart") | default "Quick Start") -}}
 {{- else if and .IsSection $rel (strings.Contains $rel "/hub/install-linux/") -}}
   {{- $title = ((T "menuInstallLinux") | default "How to Install Linux") -}}
-{{- else if and .IsSection $rel (strings.Contains $rel "/hub/technical-guides/folder/") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/technical-guides/") -}}
   {{- $title = ((T "menuTechnicalGuides") | default "Technical Guides") -}}
 {{- else if and .IsSection $rel (strings.Contains $rel "/hub/about/") -}}
   {{- $title = ((T "menuAbout") | default "About") -}}

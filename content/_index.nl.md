@@ -12,6 +12,6 @@ Gebouwd op de beproefde architectuur van GIMP, herstructureert Lumi de software 
   {{< card link="hub/about/" title="Over" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Snel beginnen" icon="play" >}}
   {{< card link="hub/install-linux/" title="Hoe Linux te installeren" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/folder/" title="Technische gidsen" icon="book-open" >}}
+  {{< card link="hub/technical-guides/" title="Technische gidsen" icon="book-open" >}}
   {{< card link="https://lumi-o.org/" title="Lumi·o" icon="home" >}}
 {{< /cards >}}
