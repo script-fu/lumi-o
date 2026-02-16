@@ -5,9 +5,11 @@ url: "hub/technical-guides/folder"
 
 ---
 
-Welcome to this series of guides designed for those who are new to Linux and want to explore its capabilities. Whether you're wondering what Linux is, how to navigate its different distributions, or looking to master essential tools like Git, Debian, and Clonezilla for backups, these guides will help you get started. Each guide provides a clear, step-by-step approach to understanding and using Linux, breaking down complex concepts into simple terms.
+Welcome to the technical guides for Lumi.
 
-These guides cover Lumi development, debugging, automation, and technical workflows on Debian-based Linux systems.
+These guides document practical workflows used while developing and maintaining Lumi on Debian-based Linux systems. They focus on real working environments rather than general Linux theory.
+
+Topics covered include Lumi development, debugging, automation, system setup, and supporting tools used in daily production workflows.
 
 {{< cards >}}
   {{< card link="AppImage" title="AppImage">}}

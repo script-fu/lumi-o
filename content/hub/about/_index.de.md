@@ -21,7 +21,7 @@ Es wird anderen zur Nutzung und Erkundung frei zur Verfügung gestellt. Lumi ist
 
 Lumi schließt eine Lücke zwischen allgemeinen Bildbearbeitungsprogrammen und spezieller Malsoftware. Es bleibt kostenlos und Open Source, vermeidet KI-gesteuerte Generierungsfunktionen innerhalb der Anwendung selbst und beseitigt fotografisch orientierte Designbeschränkungen, während die Leistungsfähigkeit und Zuverlässigkeit der GIMP-Architektur erhalten bleibt.
 
-Das Ergebnis ist eine auf Malerei ausgerichtete Umgebung, die eher für die bewusste, manuelle Bilderstellung als für die automatisierte Produktion konzipiert ist. Zuverlässigkeit wird als Kernmerkmal behandelt: Automatisches Speichern, schnelles Speichern und inkrementelles Speichern sind in den Workflow integriert und nicht als Sicherheitsmaßnahmen eingeführt. Das Lumi-Dateiformat ist offen und hocheffizient und nutzt Lazy Loading, sodass sehr große Projekte schnell geöffnet werden und auch bei langen Illustrationssitzungen reaktionsfähig bleiben.
+Das Ergebnis ist eine auf Malerei ausgerichtete Umgebung, die eher für die bewusste, manuelle Bilderstellung als für die automatisierte Produktion konzipiert ist. Zuverlässigkeit ist ein Kernmerkmal: Automatisches Speichern, schnelles Speichern und inkrementelles Speichern sind von Anfang an in den Workflow integriert. Das Lumi-Dateiformat ist offen und hocheffizient und nutzt Lazy Loading, sodass sehr große Projekte schnell geöffnet werden und auch bei langen Illustrationssitzungen reaktionsfähig bleiben.
 
 Lumi wurde für Künstler entwickelt, die erwarten, dass ihre Werkzeuge über Jahre hinweg stabil, transparent und unter ihrer Kontrolle bleiben.
 
@@ -41,7 +41,7 @@ Lumi kombiniert ein pigmentbasiertes Farbsystem, das auf physischer Mischung bas
 ## Was die Software priorisiert
 
 - **Künstlerische Absicht**: Werkzeuge verhalten sich vorhersehbar und unterstützen die Intuition des Künstlers.
-- **Zuverlässigkeit**: Datenintegrität und -wiederherstellung sind von größter Bedeutung. Ein Künstler sollte niemals Arbeit verlieren.
+- **Zuverlässigkeit**: Datenintegrität und -wiederherstellung sind von größter Bedeutung; Ein Künstler sollte niemals Arbeit verlieren.
 - **Strukturelle Klarheit**: Die Benutzeroberfläche sorgt dafür, dass Ebenen, Werkzeuge und Dateiformate übersichtlich und lesbar bleiben, sodass selbst große Gemälde mit Hunderten von Ebenen überschaubar bleiben.
 
 ## Ist es nicht

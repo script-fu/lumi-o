@@ -21,7 +21,7 @@ Il est partagé librement pour que d’autres puissent l’utiliser et l’explo
 
 Lumi comble un écart entre les éditeurs d'images généraux et les logiciels de peinture dédiés. Il reste gratuit et open source, évite les fonctionnalités de génération basées sur l'IA au sein de l'application elle-même et supprime les contraintes de conception orientées photographie tout en conservant la puissance et la fiabilité de l'architecture GIMP.
 
-Le résultat est un environnement axé sur la peinture, conçu pour la création délibérée et manuelle d’images plutôt que pour la production automatisée. La fiabilité est traitée comme une fonctionnalité essentielle : la sauvegarde automatique, la sauvegarde rapide et la sauvegarde incrémentielle sont intégrées au flux de travail plutôt que introduites comme garanties. Le format de fichier Lumi est ouvert et très efficace, utilisant un chargement paresseux afin que les très gros projets s'ouvrent rapidement et restent réactifs pendant les longues sessions d'illustration.
+Le résultat est un environnement axé sur la peinture, conçu pour la création délibérée et manuelle d’images plutôt que pour la production automatisée. La fiabilité est une fonctionnalité essentielle : la sauvegarde automatique, la sauvegarde rapide et la sauvegarde incrémentielle sont intégrées au flux de travail dès le début. Le format de fichier Lumi est ouvert et très efficace, utilisant un chargement paresseux afin que les très gros projets s'ouvrent rapidement et restent réactifs pendant les longues sessions d'illustration.
 
 Lumi est conçu pour les artistes qui s'attendent à ce que leurs outils restent stables, transparents et sous leur contrôle pendant des années de travail.
 

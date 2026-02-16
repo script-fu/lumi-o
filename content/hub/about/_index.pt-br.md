@@ -21,7 +21,7 @@ Ele é compartilhado livremente para que outros possam usar e explorar. Lumi nã
 
 Lumi aborda uma lacuna entre editores de imagens gerais e softwares de pintura dedicados. Ele permanece gratuito e de código aberto, evita recursos de geração orientados por IA dentro do próprio aplicativo e remove restrições de design orientadas para fotografia, mantendo o poder e a confiabilidade da arquitetura GIMP.
 
-O resultado é um ambiente focado na pintura, construído para criação de imagens manual e deliberada, em vez de produção automatizada. A confiabilidade é tratada como um recurso central: salvamento automático, salvamento rápido e salvamento incremental são integrados ao fluxo de trabalho, em vez de introduzidos como salvaguardas. O formato de arquivo Lumi é aberto e altamente eficiente, usando carregamento lento para que projetos muito grandes abram rapidamente e permaneçam responsivos durante longas sessões de ilustração.
+O resultado é um ambiente focado na pintura, construído para criação de imagens manual e deliberada, em vez de produção automatizada. A confiabilidade é um recurso fundamental: salvamento automático, salvamento rápido e salvamento incremental estão integrados ao fluxo de trabalho desde o início. O formato de arquivo Lumi é aberto e altamente eficiente, usando carregamento lento para que projetos muito grandes abram rapidamente e permaneçam responsivos durante longas sessões de ilustração.
 
 O Lumi foi projetado para artistas que esperam que suas ferramentas permaneçam estáveis, transparentes e sob seu controle ao longo de anos de trabalho.
 
@@ -34,7 +34,7 @@ Esta combinação de prática artística e implementação técnica molda direta
 ## A Filosofia
 
 Lumi combina um sistema de cores baseado em pigmentos construído em torno da mistura física com um fluxo de trabalho de ilustração baseado em camadas altamente responsivo e não destrutivo.- **Pigment-Centric**: As cores são derivadas de perfis de pigmentos do mundo real (códigos de índice de cores) em vez de valores RGB arbitrários, suportando a construção de paleta intuitiva baseada na experiência real de pintura.
-- **Ferramentas táteis**: Pincéis, pressão da caneta, inclinação e velocidade são totalmente integrados para se comportarem como ferramentas de pintura física, proporcionando controle diferenciado com atrito mínimo.
+- **Ferramentas táteis**: pincéis, pressão da caneta, inclinação e velocidade são totalmente integrados para se comportarem como ferramentas de pintura física, proporcionando controle diferenciado com atrito mínimo.
 - **Gerenciamento de cena**: fluxos de trabalho não destrutivos e em camadas aumentam em complexidade, permanecendo previsíveis e responsivos.
 - **Controles focados na intenção**: as ferramentas oferecem opções significativas sem sobrecarregar o artista, apoiando decisões deliberadas e baseadas em habilidades.
 

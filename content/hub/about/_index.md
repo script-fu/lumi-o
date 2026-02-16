@@ -22,7 +22,7 @@ It is shared freely for others to use and explore. Lumi is not a catch-all solut
 
 Lumi addresses a gap between general image editors and dedicated painting software. It remains free and open source, avoids AI-driven generation features within the application itself, and removes photography-oriented design constraints while retaining the power and reliability of the GIMP architecture.
 
-The result is a painting-focused environment built for deliberate, manual image making rather than automated production. Reliability is treated as a core feature: autosave, fast saving, and incremental saving are built into the workflow rather than introduced as safeguards. The Lumi file format is open and highly efficient, using lazy loading so very large projects open quickly and remain responsive during long illustration sessions.
+The result is a painting-focused environment built for deliberate, manual image making rather than automated production. Reliability is a core feature: autosave, fast saving, and incremental saving are built into the workflow from the beginning. The Lumi file format is open and highly efficient, using lazy loading so very large projects open quickly and remain responsive during long illustration sessions.
 
 Lumi is designed for artists who expect their tools to remain stable, transparent, and under their control over years of work.
 

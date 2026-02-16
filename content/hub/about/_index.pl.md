@@ -21,7 +21,7 @@ Jest udostępniany swobodnie, aby inni mogli z niego korzystać i odkrywać. Lum
 
 Lumi wypełnia lukę pomiędzy ogólnymi edytorami obrazów a dedykowanym oprogramowaniem do malowania. Pozostaje darmowym i otwartym źródłem, unika funkcji generowania opartych na sztucznej inteligencji w samej aplikacji i usuwa ograniczenia projektowe zorientowane na fotografię, zachowując jednocześnie moc i niezawodność architektury GIMP.
 
-Rezultatem jest środowisko skupione na malarstwie, zbudowane z myślą o celowym, ręcznym tworzeniu obrazów, a nie o produkcji zautomatyzowanej. Niezawodność jest traktowana jako podstawowa cecha: automatyczne zapisywanie, szybkie zapisywanie i zapisywanie przyrostowe są wbudowane w przepływ pracy, a nie wprowadzane jako zabezpieczenia. Format pliku Lumi jest otwarty i bardzo wydajny, wykorzystując leniwe ładowanie, dzięki czemu bardzo duże projekty otwierają się szybko i zachowują responsywność podczas długich sesji ilustracyjnych.
+Rezultatem jest środowisko skupione na malarstwie, zbudowane z myślą o celowym, ręcznym tworzeniu obrazów, a nie o produkcji zautomatyzowanej. Niezawodność to podstawowa cecha: automatyczne zapisywanie, szybkie zapisywanie i zapisywanie przyrostowe są od początku wbudowane w przepływ pracy. Format pliku Lumi jest otwarty i bardzo wydajny, wykorzystując leniwe ładowanie, dzięki czemu bardzo duże projekty otwierają się szybko i zachowują responsywność podczas długich sesji ilustracyjnych.
 
 Lumi przeznaczony jest dla artystów, którzy oczekują, że ich narzędzia pozostaną stabilne, przejrzyste i pod ich kontrolą przez lata pracy.
 
@@ -29,7 +29,7 @@ Lumi przeznaczony jest dla artystów, którzy oczekują, że ich narzędzia pozo
 
 Lumi został opracowany przez niezależnego artystę z wieloletnim doświadczeniem obejmującym sztukę pikselową, tradycyjny rysunek i malarstwo oraz profesjonalną pracę w zakresie tworzenia gier, grafiki technicznej, ilustracji i animacji 3D.
 
-To połączenie praktyki artystycznej i realizacji technicznych bezpośrednio kształtuje projekt Lumi, wpływając na jego podejście do koloru, szkicu, warstw, wydajności, odzyskiwania danych, skryptów i doświadczenia użytkownika.
+To połączenie praktyki artystycznej i technicznej realizacji bezpośrednio kształtuje projekt Lumi, wpływając na jego podejście do koloru, szkicu, warstw, wydajności, odzyskiwania danych, skryptów i doświadczenia użytkownika.
 
 ## Filozofia
 

@@ -21,7 +21,7 @@ Se comparte libremente para que otros lo utilicen y exploren. Lumi no es una sol
 
 Lumi aborda la brecha entre los editores de imágenes generales y el software de pintura dedicado. Sigue siendo gratuito y de código abierto, evita las funciones de generación impulsadas por IA dentro de la propia aplicación y elimina las limitaciones de diseño orientadas a la fotografía al tiempo que conserva la potencia y la confiabilidad de la arquitectura GIMP.
 
-El resultado es un entorno centrado en la pintura creado para la creación manual y deliberada de imágenes en lugar de la producción automatizada. La confiabilidad se trata como una característica central: el guardado automático, el guardado rápido y el guardado incremental están integrados en el flujo de trabajo en lugar de introducirse como salvaguardas. El formato de archivo Lumi es abierto y muy eficiente, y utiliza carga diferida para que los proyectos muy grandes se abran rápidamente y sigan respondiendo durante largas sesiones de ilustración.
+El resultado es un entorno centrado en la pintura creado para la creación manual y deliberada de imágenes en lugar de la producción automatizada. La confiabilidad es una característica fundamental: el guardado automático, el guardado rápido y el guardado incremental están integrados en el flujo de trabajo desde el principio. El formato de archivo Lumi es abierto y muy eficiente, y utiliza carga diferida para que los proyectos muy grandes se abran rápidamente y sigan respondiendo durante largas sesiones de ilustración.
 
 Lumi está diseñado para artistas que esperan que sus herramientas permanezcan estables, transparentes y bajo control durante años de trabajo.
 

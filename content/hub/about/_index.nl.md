@@ -21,7 +21,7 @@ Het wordt vrijelijk gedeeld zodat anderen het kunnen gebruiken en verkennen. Lum
 
 Lumi adresseert een kloof tussen algemene beeldeditors en speciale schildersoftware. Het blijft gratis en open source, vermijdt AI-gestuurde generatiefuncties binnen de applicatie zelf en neemt fotografie-georiënteerde ontwerpbeperkingen weg, terwijl de kracht en betrouwbaarheid van de GIMP-architectuur behouden blijft.
 
-Het resultaat is een op schilderkunst gerichte omgeving die is gebouwd voor doelbewuste, handmatige beeldproductie in plaats van geautomatiseerde productie. Betrouwbaarheid wordt gezien als een kernkenmerk: automatisch opslaan, snel opslaan en incrementeel opslaan zijn ingebouwd in de workflow in plaats van geïntroduceerd als beveiliging. Het Lumi-bestandsformaat is open en zeer efficiënt en maakt gebruik van lazyloading, zodat zeer grote projecten snel worden geopend en responsief blijven tijdens lange illustratiesessies.
+Het resultaat is een op schilderkunst gerichte omgeving die is gebouwd voor doelbewuste, handmatige beeldproductie in plaats van geautomatiseerde productie. Betrouwbaarheid is een kernkenmerk: automatisch opslaan, snel opslaan en incrementeel opslaan zijn vanaf het begin in de workflow ingebouwd. Het Lumi-bestandsformaat is open en zeer efficiënt en maakt gebruik van lazyloading, zodat zeer grote projecten snel worden geopend en responsief blijven tijdens lange illustratiesessies.
 
 Lumi is ontworpen voor kunstenaars die verwachten dat hun gereedschappen gedurende jarenlang werk stabiel, transparant en onder hun controle blijven.
 

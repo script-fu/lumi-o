@@ -21,7 +21,7 @@ Den delas fritt för andra att använda och utforska. Lumi är inte en helhetsl�
 
 Lumi tar upp ett gap mellan allmänna bildredigerare och dedikerad målarprogramvara. Det förblir gratis och öppen källkod, undviker AI-drivna generationsfunktioner i själva applikationen och tar bort fotografiorienterade designbegränsningar samtidigt som kraften och tillförlitligheten hos GIMP-arkitekturen behålls.
 
-Resultatet är en målningsfokuserad miljö byggd för avsiktlig, manuell bildframställning snarare än automatiserad produktion. Tillförlitlighet behandlas som en kärnfunktion: autospara, snabbt sparande och inkrementellt sparande är inbyggda i arbetsflödet snarare än införs som säkerhetsåtgärder. Lumi-filformatet är öppet och mycket effektivt och använder lazy loading så att mycket stora projekt öppnas snabbt och förblir lyhörda under långa illustrationssessioner.
+Resultatet är en målningsfokuserad miljö byggd för avsiktlig, manuell bildframställning snarare än automatiserad produktion. Tillförlitlighet är en kärnfunktion: autospara, snabbt sparande och inkrementellt sparande är inbyggda i arbetsflödet från början. Lumi-filformatet är öppet och mycket effektivt och använder lazy loading så att mycket stora projekt öppnas snabbt och förblir lyhörda under långa illustrationssessioner.
 
 Lumi är designad för artister som förväntar sig att deras verktyg ska förbli stabila, transparenta och under deras kontroll över år av arbete.
 

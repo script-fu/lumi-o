@@ -21,7 +21,7 @@ Viene condiviso liberamente affinché altri possano utilizzarlo ed esplorarlo. L
 
 Lumi colma un divario tra gli editor di immagini generali e il software di pittura dedicato. Rimane gratuito e open source, evita funzionalità di generazione guidate dall'intelligenza artificiale all'interno dell'applicazione stessa e rimuove i vincoli di progettazione orientati alla fotografia mantenendo la potenza e l'affidabilità dell'architettura GIMP.
 
-Il risultato è un ambiente incentrato sulla pittura, creato per la creazione manuale e deliberata di immagini piuttosto che per la produzione automatizzata. L'affidabilità è considerata una caratteristica fondamentale: il salvataggio automatico, il salvataggio rapido e il salvataggio incrementale sono integrati nel flusso di lavoro anziché introdotti come misure di salvaguardia. Il formato file Lumi è aperto ed estremamente efficiente, utilizzando il caricamento lento, quindi progetti molto grandi si aprono rapidamente e rimangono reattivi durante le lunghe sessioni di illustrazione.
+Il risultato è un ambiente incentrato sulla pittura, creato per la creazione manuale e deliberata di immagini piuttosto che per la produzione automatizzata. L'affidabilità è una caratteristica fondamentale: il salvataggio automatico, il salvataggio rapido e il salvataggio incrementale sono integrati nel flusso di lavoro fin dall'inizio. Il formato file Lumi è aperto ed estremamente efficiente, utilizzando il caricamento lento, quindi progetti molto grandi si aprono rapidamente e rimangono reattivi durante le lunghe sessioni di illustrazione.
 
 Lumi è progettato per gli artisti che si aspettano che i loro strumenti rimangano stabili, trasparenti e sotto il loro controllo per anni di lavoro.
 
