@@ -1,0 +1,196 @@
+baseURL = 'https://lumi-o.org/'
+languageCode = 'en-GB'
+defaultContentLanguage = 'en-gb'
+defaultContentLanguageInSubdir = false
+title = 'Lumi·o'
+theme = 'hextra'
+
+[languages]
+
+  [languages."en-gb"]
+  languageName = "English (UK)"
+  languageCode = "en-GB"
+  weight = 1
+
+  [languages.de]
+  languageName = "Deutsch"
+  languageCode = "de"
+  weight = 2
+
+  [languages.es]
+  languageName = "Español"
+  languageCode = "es"
+  weight = 3
+
+  [languages.fr]
+  languageName = "Français"
+  languageCode = "fr"
+  weight = 4
+
+  [languages.it]
+  languageName = "Italiano"
+  languageCode = "it"
+  weight = 5
+
+  [languages.ja]
+  languageName = "日本語"
+  languageCode = "ja"
+  weight = 6
+
+  [languages.ko]
+  languageName = "한국어"
+  languageCode = "ko"
+  weight = 7
+
+  [languages.nl]
+  languageName = "Nederlands"
+  languageCode = "nl"
+  weight = 8
+
+  [languages.pl]
+  languageName = "Polski"
+  languageCode = "pl"
+  weight = 9
+
+  [languages."pt-br"]
+  languageName = "Português (Brasil)"
+  languageCode = "pt-BR"
+  weight = 10
+
+  [languages.ru]
+  languageName = "Русский"
+  languageCode = "ru"
+  weight = 11
+
+  [languages.sv]
+  languageName = "Svenska"
+  languageCode = "sv"
+  weight = 12
+
+  [languages.th]
+  languageName = "ไทย"
+  languageCode = "th"
+  weight = 13
+
+  [languages."zh-cn"]
+  languageName = "中文 (简体)"
+  languageCode = "zh-CN"
+  weight = 14
+
+  [languages."zh-tw"]
+  languageName = "中文 (繁體)"
+  languageCode = "zh-TW"
+  weight = 15
+
+[params]
+description = "Lumi·o is a free, open-source digital painting and illustration app for Linux. Lightweight, focused, and easy to build from source."
+keywords = "Lumi-o, Lumi, digital painting, illustration software, Linux art app, open-source art app, Debian, AppImage"
+
+[params.theme]
+default = "dark"  # light | dark | system
+displayToggle = false
+
+[params.navbar]
+displayTitle = true
+displayLogo = true
+
+[params.navbar.logo]
+path = "images/favicon/android-chrome-192x192.png"
+link = "/"
+width = 40
+height = 40
+
+[page]
+width = "normal"
+
+[params.footer]
+enable = false
+displayCopyright = false
+displayPoweredBy = false
+width = "normal"
+
+[metadata]
+displayUpdatedDate = true
+dateFormat = "January 2, 2006"
+
+[search]
+enable = true
+type = "flexsearch"
+
+[search.flexsearch]
+index = "content"
+tokenize = "forward"
+
+[blog.list]
+displayTags = true
+sortBy = "date"
+sortOrder = "desc"
+# date | lastmod | publishDate | title | weight
+
+[highlight.copy]
+enable = true
+display = "hover"
+
+[params.comments]
+enable = false
+type = "giscus"
+
+[params.comments.giscus]
+repo = "<repository>"
+repoId = "<repository ID>"
+category = "<category>"
+categoryId = "<category ID>"
+
+[menu]
+
+[[menu.main]]
+name = "Quick Start"
+identifier = "menuQuickStart"
+pageRef = "hub/quick-start/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+identifier = "menuAbout"
+pageRef = "hub/about/"
+weight = 8
+
+[[menu.main]]
+name = "Patreon"
+identifier = "menuPatreon"
+pageRef = "hub/about/Patreon"
+weight = 7
+
+[[menu.main]]
+name = "How to Install Linux"
+identifier = "menuInstallLinux"
+pageRef = "hub/install-linux/"
+weight = 3
+
+[[menu.main]]
+name = "Technical Guides"
+identifier = "menuTechnicalGuides"
+pageRef = "hub/technical-guides/folder/"
+weight = 5
+
+[[menu.main]]
+name = "Search"
+weight = 9
+
+  [menu.main.params]
+  type = "search"
+
+[params.search]
+enable = true
+type = "flexsearch"
+
+[params.search.flexsearch]
+index = "content"  # index page by: content | summary | heading | title
+
+[services.googleAnalytics]
+ID = "G-MEASUREMENT_ID"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

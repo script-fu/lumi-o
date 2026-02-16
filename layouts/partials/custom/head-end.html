@@ -1,0 +1,108 @@
+<!-- Custom CSS and JS for sidebar fixes -->
+{{- $sidebarFixesCSS := resources.Get "css/scrollbar-fix.css" -}}
+{{- if $sidebarFixesCSS }}
+<link href="{{ $sidebarFixesCSS.RelPermalink }}" rel="stylesheet" />
+{{- end }}
+
+{{- $sidebarFixesJS := resources.Get "js/sidebar-scroll-fix.js" -}}
+{{- if $sidebarFixesJS }}
+<script src="{{ $sidebarFixesJS.RelPermalink }}"></script>
+{{- end }}
+
+<script>
+	(() => {
+		const STORAGE_KEY = "lumi-site-language";
+		const defaultLang = {{ site.Home.Language.Lang | jsonify }};
+		const supportedLanguages = [{{- range $index, $language := site.Languages -}}{{- if gt $index 0 -}}, {{- end -}}{{ $language.Lang | jsonify }}{{- end -}}];
+		const supportedSet = new Set(supportedLanguages);
+		const basePath = {{ site.Home.RelPermalink | jsonify }};
+		const isDefaultLanguageHome = {{ if and .IsHome (eq .Language.Lang site.Home.Language.Lang) }}true{{ else }}false{{ end }};
+
+		const normalize = (value) => (value || "").toLowerCase().replaceAll("_", "-");
+		const trimSlashes = (value) => value.replace(/^\/+|\/+$/g, "");
+
+		const detectLanguageFromPath = (path) => {
+			let remainder = path;
+
+			if (basePath !== "/" && remainder.startsWith(basePath)) {
+				remainder = "/" + remainder.slice(basePath.length);
+			}
+
+			const trimmed = trimSlashes(remainder);
+			if (!trimmed) {
+				return defaultLang;
+			}
+
+			const firstSegment = normalize(trimmed.split("/")[0]);
+			return supportedSet.has(firstSegment) ? firstSegment : null;
+		};
+
+		const buildLanguageHomePath = (language) => {
+			const root = basePath.endsWith("/") ? basePath : `${basePath}/`;
+			if (language === defaultLang) {
+				return root;
+			}
+			return `${root}${language}/`.replace(/\/\/+/, "/");
+		};
+
+		document.addEventListener(
+			"click",
+			(event) => {
+				const languageLink = event.target.closest(".language-options a[href]");
+				if (!languageLink) {
+					return;
+				}
+
+				try {
+					const destination = new URL(languageLink.href, window.location.origin);
+					const selected = detectLanguageFromPath(destination.pathname) || defaultLang;
+					localStorage.setItem(STORAGE_KEY, selected);
+				} catch (error) {
+				}
+			},
+			true
+		);
+
+		const savedLanguage = normalize(localStorage.getItem(STORAGE_KEY));
+		if (savedLanguage && supportedSet.has(savedLanguage)) {
+			return;
+		}
+
+		if (!isDefaultLanguageHome) {
+			return;
+		}
+
+		const browserCandidates = [...(navigator.languages || []), navigator.language]
+			.filter(Boolean)
+			.map(normalize);
+
+		let preferred = defaultLang;
+
+		outer:
+		for (const candidate of browserCandidates) {
+			if (supportedSet.has(candidate)) {
+				preferred = candidate;
+				break;
+			}
+
+			const primary = candidate.split("-")[0];
+			for (const language of supportedLanguages) {
+				if (language.split("-")[0] === primary) {
+					preferred = language;
+					break outer;
+				}
+			}
+		}
+
+		if (preferred === defaultLang) {
+			return;
+		}
+
+		localStorage.setItem(STORAGE_KEY, preferred);
+
+		const targetPath = buildLanguageHomePath(preferred);
+		if (targetPath !== window.location.pathname) {
+			window.location.replace(targetPath);
+		}
+	})();
+</script>

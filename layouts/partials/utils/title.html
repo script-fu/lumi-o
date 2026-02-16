@@ -1,0 +1,31 @@
+{{/*
+  Override theme title helper to localize top-level hub section names via menu i18n keys.
+  Falls back to the default title behavior for all other pages.
+*/}}
+{{- $rel := .RelPermalink -}}
+{{- $title := "" -}}
+
+{{- if and .IsSection $rel (strings.Contains $rel "/hub/quick-start/") -}}
+  {{- $title = ((T "menuQuickStart") | default "Quick Start") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/install-linux/") -}}
+  {{- $title = ((T "menuInstallLinux") | default "How to Install Linux") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/technical-guides/folder/") -}}
+  {{- $title = ((T "menuTechnicalGuides") | default "Technical Guides") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/about/") -}}
+  {{- $title = ((T "menuAbout") | default "About") -}}
+{{- end -}}
+
+{{- if eq $title "" -}}
+  {{- if .LinkTitle -}}
+    {{- $title = .LinkTitle -}}
+  {{- else if .Title -}}
+    {{- $title = .Title -}}
+  {{- else if and .IsSection .File -}}
+    {{- $title = path.Base .File.Dir | humanize | title -}}
+  {{- else if and .IsPage .File -}}
+    {{- $baseName := .File.BaseFileName | lower -}}
+    {{- $baseName = replaceRE "\\.[a-z]{2}(?:-[a-z]{2})?$" "" $baseName -}}
+    {{- $title = $baseName | humanize | title -}}
+  {{- end -}}
+{{- end -}}
+{{- $title -}}

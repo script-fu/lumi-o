@@ -1,0 +1,10 @@
+- id: menuQuickStart
+  translation: "Snabbstart"
+- id: menuAbout
+  translation: "Om"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuInstallLinux
+  translation: "Installera Linux"
+- id: menuTechnicalGuides
+  translation: "Tekniska guider"

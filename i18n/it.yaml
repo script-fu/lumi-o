@@ -1,0 +1,10 @@
+- id: menuQuickStart
+  translation: "Avvio rapido"
+- id: menuAbout
+  translation: "Informazioni"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuInstallLinux
+  translation: "Installare Linux"
+- id: menuTechnicalGuides
+  translation: "Guide tecniche"

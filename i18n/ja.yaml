@@ -1,0 +1,10 @@
+- id: menuQuickStart
+  translation: "クイックスタート"
+- id: menuAbout
+  translation: "概要"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuInstallLinux
+  translation: "Linuxのインストール"
+- id: menuTechnicalGuides
+  translation: "技術ガイド"

@@ -1,0 +1,10 @@
+- id: menuQuickStart
+  translation: "빠른 시작"
+- id: menuAbout
+  translation: "소개"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuInstallLinux
+  translation: "Linux 설치"
+- id: menuTechnicalGuides
+  translation: "기술 가이드"

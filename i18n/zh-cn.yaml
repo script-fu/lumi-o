@@ -1,0 +1,10 @@
+- id: menuQuickStart
+  translation: "快速开始"
+- id: menuAbout
+  translation: "关于"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuInstallLinux
+  translation: "安装 Linux"
+- id: menuTechnicalGuides
+  translation: "技术指南"
