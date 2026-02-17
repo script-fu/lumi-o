@@ -2,7 +2,6 @@
 title: "Lumi·o"
 toc: false
 type: docs
-url: ""
 ---
 Lumi·o (Lumi) est une application de peinture numérique open source conçue pour les flux de travail d'illustration structurés.
 
@@ -13,5 +12,6 @@ Construit sur l'architecture éprouvée de GIMP, Lumi restructure le logiciel au
   {{< card link="hub/quick-start/" title="Démarrage rapide" icon="play" >}}
   {{< card link="hub/install-linux/" title="Comment installer Linux" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="Guides techniques" icon="book-open" >}}
+  {{< card link="hub/scripting/" title="Script" icon="code" >}}
   {{< card link="https://lumi-o.org/" title="Lumi·o" icon="home" >}}
 {{< /cards >}}

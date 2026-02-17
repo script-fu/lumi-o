@@ -2,7 +2,6 @@
 title: "루미오"
 toc: false
 type: docs
-url: ""
 ---
 Lumi·o(Lumi)는 구조화된 일러스트레이션 워크플로우를 위해 설계된 오픈 소스 디지털 페인팅 애플리케이션입니다.
 
@@ -13,5 +12,6 @@ GIMP의 입증된 아키텍처를 기반으로 구축된 Lumi는 디지털 페�
   {{< card link="hub/quick-start/" title="빠른 시작" icon="play" >}}
   {{< card link="hub/install-linux/" title="리눅스를 설치하는 방법" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="기술 가이드" icon="book-open" >}}
+  {{< card link="hub/scripting/" title="스크립팅" icon="code" >}}
   {{< card link="https://lumi-o.org/" title="루미오" icon="home" >}}
 {{< /cards >}}

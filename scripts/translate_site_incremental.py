@@ -58,6 +58,9 @@ def split_front_matter(text: str):
 def protect_tokens(text: str):
     patterns = [
         re.compile(r"```[\s\S]*?```", re.MULTILINE),
+        re.compile(r"~~~[\s\S]*?~~~", re.MULTILINE),
+        # Indented code blocks (Markdown): protect to avoid translating code that isn't fenced.
+        re.compile(r"(?m)(?:^(?: {4}|\t).*(?:\n|$))+"),
         re.compile(r"`[^`\n]+`"),
         re.compile(r"\{\{[%<][\s\S]*?[%>]\}\}"),
         re.compile(r"!\[[^\]]*\]\([^\)]+\)"),
@@ -78,6 +81,14 @@ def protect_tokens(text: str):
     return protected, tokens
 
 
+def safe_translate(translator, text: str, *, label: str) -> str:
+    try:
+        return translator.translate(text)
+    except Exception as exc:
+        print(f"[translate] warning: translate failed ({label}): {exc}")
+        return text
+
+
 def translate_card_shortcodes(text: str, translator):
     pattern = re.compile(r'(\{\{<\s*card\b[^>]*\btitle=")([^"]+)("[^>]*>\}\})')
 
@@ -85,7 +96,7 @@ def translate_card_shortcodes(text: str, translator):
         prefix, title, suffix = match.groups()
         if not re.search(r"[A-Za-z]", title):
             return match.group(0)
-        translated_title = translator.translate(title)
+        translated_title = safe_translate(translator, title, label="card.title")
         translated_title = translated_title.replace('"', "\\\"")
         return f"{prefix}{translated_title}{suffix}"
 
@@ -130,7 +141,8 @@ def translate_body(body: str, translator):
         if not re.search(r"[A-Za-z]", chunk):
             translated_chunks.append(chunk)
             continue
-        translated_chunks.append(translator.translate(chunk))
+
+        translated_chunks.append(safe_translate(translator, chunk, label="body.chunk"))
 
     translated = "".join(translated_chunks)
     restored = restore_tokens(translated, tokens)
@@ -191,7 +203,7 @@ def ensure_translated_title(front_matter: str, source_file: Path, translator):
     if not re.search(r"[A-Za-z]", source_title):
         return front_matter
 
-    translated_label = translator.translate(source_title).replace('"', "\\\"")
+    translated_label = safe_translate(translator, source_title, label="front_matter.title").replace('"', "\\\"")
 
     if re.search(r"(?im)^title\s*:", front_matter):
         return re.sub(
@@ -214,6 +226,46 @@ def ensure_translated_title(front_matter: str, source_file: Path, translator):
     before = front_matter[:index]
     after = front_matter[index:]
     return f'{before}{newline}title: "{translated_label}"{after}'
+
+
+def strip_front_matter_keys(front_matter: str, keys: set[str]) -> str:
+    """Remove selected top-level YAML keys from a --- front matter block.
+
+    This is used for translated files to avoid cross-language URL collisions.
+    """
+    if not front_matter:
+        return front_matter
+
+    lines = front_matter.splitlines(keepends=True)
+
+    def is_top_level_key(line: str, key: str) -> bool:
+        return re.match(rf"(?im)^\s*{re.escape(key)}\s*:.*$", line) is not None and not line.startswith(" ")
+
+    out: list[str] = []
+    skip_aliases_block = False
+
+    for line in lines:
+        if skip_aliases_block:
+            # Stop skipping when we hit a new top-level key or the front matter end.
+            if line.startswith("---") or (line.strip() and not line.startswith(" ") and not line.startswith("\t")):
+                skip_aliases_block = False
+            else:
+                continue
+
+        if is_top_level_key(line, "url") and "url" in keys:
+            continue
+
+        if is_top_level_key(line, "aliases") and "aliases" in keys:
+            # Skip this line and any indented list items that follow.
+            skip_aliases_block = True
+            continue
+
+        out.append(line)
+
+    cleaned = "".join(out)
+    # Clean up accidental double blank lines inside front matter
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned
 
 
 def extract_front_matter_title(front_matter: str):
@@ -301,6 +353,8 @@ def main():
             target_code = LANGUAGE_TARGETS[lang]
             translator = GoogleTranslator(source="en", target=target_code)
             translated_front_matter = ensure_translated_title(front_matter, source_file, translator)
+            # Avoid language redirect/meta-refresh pages by not pinning translated files to the same URL.
+            translated_front_matter = strip_front_matter_keys(translated_front_matter, {"url", "aliases"})
             translated_body = translate_body(body, translator)
             translated_title = extract_front_matter_title(translated_front_matter)
             translated_body = dedupe_leading_h1_with_title(translated_body, translated_title)
