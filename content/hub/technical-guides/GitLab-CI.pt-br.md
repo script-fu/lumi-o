@@ -1,7 +1,6 @@
 ---
 title: "CI do GitLab"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 Integração Contínua (CI) é uma forma de testar, construir e validar automaticamente seu código sempre que alterações são feitas.
 
@@ -35,6 +34,16 @@ O pipeline Lumi usa conteinerização para construções consistentes:
 3. **Construções reproduzíveis**: o isolamento do contêiner garante os mesmos resultados em diferentes executores
 
 Essa abordagem garante que os builds funcionem da mesma maneira em qualquer executor do GitLab e fornece um ambiente controlado para processos de build complexos.
+
+### Fontes de Dependência Integradas
+
+A imagem de dependência de CI do Lumi constrói a pilha bifurcada a partir de **fontes integradas no repositório** (não de clones externos):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Esses diretórios são copiados no contexto de construção do contêiner e compilados no prefixo de dependência (normalmente `/opt/lumi-deps`). Isso mantém o CI reproduzível e garante que a construção do AppImage use a mesma fonte de verdade que o desenvolvimento local.
 
 ## Função dos scripts Shell
 
@@ -76,9 +85,7 @@ Aqui:
 
 ## Estrutura do sistema de construção Meson
 
-O sistema de compilação **Meson** usa um arquivo raiz `meson.build` colocado no diretório raiz do projeto. Este arquivo define a configuração de compilação de nível superior e o ponto de entrada para o processo de compilação.
-
-- A raiz `meson.build` normalmente está localizada no mesmo diretório que `.gitlab-ci.yml`
+O sistema de compilação **Meson** usa um arquivo raiz `meson.build` colocado no diretório raiz do projeto. Este arquivo define a configuração de compilação de nível superior e o ponto de entrada para o processo de compilação.- A raiz `meson.build` normalmente está localizada no mesmo diretório que `.gitlab-ci.yml`
 - A partir daí, ele **cascata recursivamente** em subdiretórios, cada um dos quais pode ter seu próprio arquivo `meson.build`
 - Esses arquivos de subdiretórios definem destinos, fontes, dependências e instruções de construção relevantes para esse diretório
 
@@ -102,9 +109,11 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Essas variáveis ​​controlam o comportamento de construção e garantem consistência entre diferentes estágios e executores.
+```
 
-## Exemplo de estrutura
+Essas variáveis controlam o comportamento de construção e garantem consistência entre diferentes estágios e executores.
+
+## Exemplo de Estrutura
 
 ```
 project-root/
@@ -160,8 +169,8 @@ Cada estágio é executado somente depois que suas dependências são concluída
 
 O Lumi `.gitlab-ci.yml` atualmente define estes nomes de trabalho:
 
-- `deps-debian`
--`build-lumi`
+-`deps-debian`
+- `build-lumi`
 - `lumi-appimage`
 
 ## Resumo
@@ -176,6 +185,6 @@ Para detalhes no nível da fonte, use:
 
 - `.gitlab-ci.yml` na raiz do repositório Lumi
 - `build/linux/appimage/lumi-goappimage.sh`
-- `build/linux/appimage/README-CI.md`
+-`build/linux/appimage/README-CI.md`
 
 Para obter detalhes técnicos abrangentes sobre o processo de construção do Lumi CI, incluindo configuração do ambiente, arquitetura de script e solução de problemas, consulte [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).

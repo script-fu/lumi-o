@@ -1,11 +1,10 @@
 ---
 title: "アプリイメージ"
 type: docs
-url: "hub/technical-guides/AppImage"
 ---
 AppImage は、単一ファイルの Linux アプリケーション パッケージです。 1 つのファイルをダウンロードして実行可能としてマークし、システム全体にソフトウェアをインストールせずに実行します。
 
-公式AppImageサイト：https://appimage.org/
+公式アプリ画像サイト：https://appimage.org/
 
 AppImage は、インストールやシステムの変更を行わずに実行できる Lumi のポータブル バージョンを提供します。依存関係の管理、ソース コードのコンパイル、開発環境の構成を行わずに、すぐにソフトウェアを使用したいアーティストに最適です。
 
@@ -13,12 +12,14 @@ AppImage は自己完結型の実行可能ファイルとして、システム�
 
 Lumi の開発プロセスでは、AppImage は継続的インテグレーションの出力と厳密に一致するポータブル テスト ビルドとして機能します。これにより、ローカル ソース ビルドを開発作業に集中させながら、一貫した環境で信頼性の高いテストが可能になります。
 
+注: CI は、Lumi のリポジトリ内統合依存関係ソース (BABL/GEGL/GTK3) を使用して AppImage を構築するため、依存関係スタックはローカルの `lumi-build-script.sh` ワークフローと一致します。
+
 ## リリースと開発 AppImage
 
 - **AppImage のリリース**: まだ利用できません (Lumi はリリースされていません)。
 - **開発 AppImage (CI アーティファクト)**: テストのために進行中の開発コミットから自動的に生成されます。
 
-このガイドでは主に **AppImage 開発**のワークフローについて説明します。
+このガイドでは主に **AppImage の開発**ワークフローについて説明します。
 
 現在の成果物ページ:
 
@@ -49,7 +50,7 @@ bash lumi-appimage-launch.sh
 ## オプションのヘルパー スクリプト
 
 - `lumi-appimage-unpack-zip.sh`
-  - `~/Downloads` で最新の `lumi-appimage*.zip` を見つけます
+  - `~/Downloads` で最新の `lumi-appimage*.zip` を検索します
   - AppImage を `~/AppImage/Lumi/Lumi_CI.AppImage` にインストールします
   - デスクトップ リソースを `~/.local/share/applications/lumi.desktop` にインストールします
 

@@ -1,7 +1,6 @@
 ---
 title: "应用程序图像"
 type: docs
-url: "hub/technical-guides/AppImage"
 ---
 AppImage 是一个单文件 Linux 应用程序包。您下载一个文件，将其标记为可执行文件，然后运行它，而无需在系统范围内安装软件。
 
@@ -12,6 +11,8 @@ AppImage 提供了 Lumi 的便携式版本，无需安装或修改系统即可�
 作为一个独立的可执行文件，AppImage 可以存储在系统上的任何位置。这使得测试新版本、保留多个版本或在计算机之间移动软件变得容易。
 
 对于 Lumi 的开发过程，AppImage 充当便携式测试构建，与持续集成输出紧密匹配。这允许在一致的环境中进行可靠的测试，同时保持本地源构建专注于开发工作。
+
+注意：CI 使用 Lumi 的存储库内集成依赖项源 (BABL/GEGL/GTK3) 构建 AppImage，因此依赖项堆栈与本地 `lumi-build-script.sh` 工作流程一致。
 
 ## 发布与开发 AppImage
 
@@ -50,7 +51,7 @@ bash lumi-appimage-launch.sh
 
 - `lumi-appimage-unpack-zip.sh`
   - 在`~/Downloads`中找到最新的`lumi-appimage*.zip`
-  - 将 AppImage 安装到`~/AppImage/Lumi/Lumi_CI.AppImage`
+  - 将AppImage安装到`~/AppImage/Lumi/Lumi_CI.AppImage`
   - 将桌面资源安装到`~/.local/share/applications/lumi.desktop`
 
 - `lumi-appimage-launch.sh`

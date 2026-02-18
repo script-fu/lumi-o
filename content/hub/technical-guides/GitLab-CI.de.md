@@ -1,7 +1,6 @@
 ---
 title: "GitLab CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 Continuous Integration (CI) ist eine Möglichkeit, Ihren Code automatisch zu testen, zu erstellen und zu validieren, wenn Änderungen vorgenommen werden.
 
@@ -35,6 +34,16 @@ Die Lumi-Pipeline nutzt Containerisierung für konsistente Builds:
 3. **Reproduzierbare Builds**: Die Containerisolierung garantiert die gleichen Ergebnisse auf verschiedenen Läufern
 
 Dieser Ansatz stellt sicher, dass Builds auf allen GitLab-Runnern gleich funktionieren und bietet eine kontrollierte Umgebung für komplexe Build-Prozesse.
+
+### Integrierte Abhängigkeitsquellen
+
+Das CI-Abhängigkeitsimage von Lumi erstellt den gespaltenen Stapel aus **in-Repo-integrierten Quellen** (keine externen Klone):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Diese Verzeichnisse werden in den Container-Build-Kontext kopiert und in das Abhängigkeitspräfix kompiliert (normalerweise `/opt/lumi-deps`). Dadurch bleibt CI reproduzierbar und stellt sicher, dass der AppImage-Build dieselbe Quelle der Wahrheit verwendet wie die lokale Entwicklung.
 
 ## Rolle von Shell-Skripten
 
@@ -76,9 +85,7 @@ Hier:
 
 ## Struktur des Meson-Build-Systems
 
-Das **Meson**-Build-System verwendet eine Stammdatei `meson.build`, die im Stammverzeichnis des Projekts abgelegt wird. Diese Datei definiert die Build-Konfiguration der obersten Ebene und den Einstiegspunkt für den Build-Prozess.
-
-- Das Stammverzeichnis `meson.build` befindet sich normalerweise im selben Verzeichnis wie `.gitlab-ci.yml`
+Das **Meson**-Build-System verwendet eine Stammdatei `meson.build`, die im Stammverzeichnis des Projekts abgelegt wird. Diese Datei definiert die Build-Konfiguration der obersten Ebene und den Einstiegspunkt für den Build-Prozess.- Das Stammverzeichnis `meson.build` befindet sich normalerweise im selben Verzeichnis wie `.gitlab-ci.yml`
 - Von dort aus **kaskadiert es** in Unterverzeichnisse, von denen jedes seine eigene `meson.build` Datei haben kann
 – Diese Unterverzeichnisdateien definieren Ziele, Quellen, Abhängigkeiten und Buildanweisungen, die für dieses Verzeichnis relevant sind
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Diese Variablen steuern das Build-Verhalten und stellen die Konsistenz über verschiedene Phasen und Läufer hinweg sicher.
+```
+
+Diese Variablen steuern das Build-Verhalten und stellen die Konsistenz über verschiedene Phasen und Läufer hinweg sicher.
 
 ## Beispielstruktur
 
@@ -121,7 +130,7 @@ project-root/
 In dieser Struktur:
 
 – Die Stammdatei `meson.build` konfiguriert die gesamte Build-Umgebung
-– Die Dateien im Unterverzeichnis `meson.build` verarbeiten Kompilierungsdetails für bestimmte Komponenten oder Module
+- Die Dateien im Unterverzeichnis `meson.build` verarbeiten Kompilierungsdetails für bestimmte Komponenten oder Module
 - Durch dieses hierarchische Layout bleibt die Build-Logik modular und wartbar
 
 ## Artefakte zwischen den Phasen

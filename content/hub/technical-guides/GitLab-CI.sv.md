@@ -1,7 +1,6 @@
 ---
 title: "GitLab CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 Continuous Integration (CI) är ett sätt att automatiskt testa, bygga och validera din kod närhelst ändringar görs.
 
@@ -35,6 +34,16 @@ Lumi pipeline använder containerisering för konsekventa konstruktioner:
 3. **Reproducerbara byggnader**: Behållarisolering garanterar samma resultat för olika löpare
 
 Detta tillvägagångssätt säkerställer att byggen fungerar på samma sätt över alla GitLab-löpare och ger en kontrollerad miljö för komplexa byggprocesser.
+
+### Integrerade beroendekällor
+
+Lumis CI-beroendebild bygger upp den kluvna stacken från **in-repo integrerade källor** (inte externa kloner):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Dessa kataloger kopieras till containerbyggkontexten och kompileras till beroendeprefixet (vanligtvis `/opt/lumi-deps`). Detta håller CI reproducerbar och säkerställer att AppImage-bygget använder samma källa till sanning som lokal utveckling.
 
 ## Rollen för Shell-skript
 
@@ -76,9 +85,7 @@ Här:
 
 ## Meson Build System Struktur
 
-Byggsystemet **Meson** använder en rot `meson.build`-fil placerad i projektets rotkatalog. Den här filen definierar byggkonfigurationen på toppnivån och startpunkten för byggprocessen.
-
-- Roten `meson.build` finns vanligtvis i samma katalog som `.gitlab-ci.yml`
+Byggsystemet **Meson** använder en rot `meson.build`-fil placerad i projektets rotkatalog. Den här filen definierar byggkonfigurationen på toppnivån och startpunkten för byggprocessen.- Roten `meson.build` finns vanligtvis i samma katalog som `.gitlab-ci.yml`
 - Därifrån **kaskaderar den rekursivt** till underkataloger, som var och en kan ha sin egen `meson.build`-fil
 - Dessa underkatalogfiler definierar mål, källor, beroenden och bygginstruktioner som är relevanta för den katalogen
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Dessa variabler styr byggbeteendet och säkerställer konsistens över olika etapper och löpare.
+```
+
+Dessa variabler styr byggbeteendet och säkerställer konsistens över olika etapper och löpare.
 
 ## Exempelstruktur
 

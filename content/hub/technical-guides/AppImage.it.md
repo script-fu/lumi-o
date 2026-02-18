@@ -1,7 +1,6 @@
 ---
 title: "AppImage"
 type: docs
-url: "hub/technical-guides/AppImage"
 ---
 Un AppImage è un pacchetto di applicazioni Linux a file singolo. Si scarica un file, lo si contrassegna come eseguibile e lo si esegue senza installare software a livello di sistema.
 
@@ -12,6 +11,8 @@ AppImage fornisce una versione portatile di Lumi che funziona senza installazion
 Essendo un eseguibile autonomo, AppImage può essere archiviato ovunque nel sistema. Ciò semplifica il test di nuove versioni, il mantenimento di più versioni o lo spostamento del software tra computer.
 
 Per il processo di sviluppo di Lumi, AppImage funziona come una build di test portatile che corrisponde strettamente all’output dell’integrazione continua. Ciò consente test affidabili in un ambiente coerente mantenendo le build di origine locali focalizzate sul lavoro di sviluppo.
+
+Nota: CI crea l'AppImage utilizzando le origini delle dipendenze integrate nel repository di Lumi (BABL/GEGL/GTK3), quindi lo stack delle dipendenze è coerente con il flusso di lavoro locale `lumi-build-script.sh`.
 
 ## Rilascio e sviluppo dell'AppImage
 

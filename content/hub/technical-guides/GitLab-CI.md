@@ -37,6 +37,16 @@ The Lumi pipeline uses containerization for consistent builds:
 
 This approach ensures that builds work the same way across any GitLab runner and provides a controlled environment for complex build processes.
 
+### Integrated Dependency Sources
+
+Lumi’s CI dependency image builds the forked stack from **in-repo integrated sources** (not external clones):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+These directories are copied into the container build context and compiled into the dependency prefix (typically `/opt/lumi-deps`). This keeps CI reproducible and ensures the AppImage build uses the same source-of-truth as local development.
+
 ## Role of Shell Scripts
 
 Jobs in `.gitlab-ci.yml` typically invoke shell commands directly. Complex operations are often moved into separate scripts stored in the repository.

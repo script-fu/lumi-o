@@ -1,7 +1,6 @@
 ---
 title: "GitLab-CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 Continuous Integration (CI) is een manier om uw code automatisch te testen, bouwen en valideren wanneer er wijzigingen worden aangebracht.
 
@@ -35,6 +34,16 @@ De Lumi-pijplijn maakt gebruik van containerisatie voor consistente builds:
 3. **Reproduceerbare builds**: containerisolatie garandeert dezelfde resultaten voor verschillende runners
 
 Deze aanpak zorgt ervoor dat builds op elke GitLab-runner op dezelfde manier werken en biedt een gecontroleerde omgeving voor complexe bouwprocessen.
+
+### Geïntegreerde afhankelijkheidsbronnen
+
+Lumi's CI-afhankelijkheidsimage bouwt de gevorkte stapel op van **in-repo geïntegreerde bronnen** (geen externe klonen):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Deze mappen worden gekopieerd naar de containerbouwcontext en gecompileerd in het afhankelijkheidsvoorvoegsel (meestal `/opt/lumi-deps`). Hierdoor blijft CI reproduceerbaar en wordt ervoor gezorgd dat de AppImage-build dezelfde bron van waarheid gebruikt als lokale ontwikkeling.
 
 ## Rol van Shell-scripts
 
@@ -76,9 +85,7 @@ Hier:
 
 ## Meson Build-systeemstructuur
 
-Het **Meson**-buildsysteem gebruikt een root `meson.build`-bestand dat in de hoofdmap van het project is geplaatst. Dit bestand definieert de buildconfiguratie op het hoogste niveau en het toegangspunt voor het buildproces.
-
-- De root `meson.build` bevindt zich doorgaans in dezelfde map als `.gitlab-ci.yml`
+Het **Meson**-buildsysteem gebruikt een root `meson.build`-bestand dat in de hoofdmap van het project is geplaatst. Dit bestand definieert de buildconfiguratie op het hoogste niveau en het toegangspunt voor het buildproces.- De root `meson.build` bevindt zich doorgaans in dezelfde map als `.gitlab-ci.yml`
 - Van daaruit gaat het **recursief** over in submappen, die elk hun eigen `meson.build` bestand kunnen hebben
 - Deze submapbestanden definiëren doelen, bronnen, afhankelijkheden en bouwinstructies die relevant zijn voor die map
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Deze variabelen bepalen het bouwgedrag en zorgen voor consistentie tussen verschillende fasen en lopers.
+```
+
+Deze variabelen bepalen het bouwgedrag en zorgen voor consistentie tussen verschillende fasen en lopers.
 
 ## Voorbeeldstructuur
 

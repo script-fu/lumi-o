@@ -1,7 +1,6 @@
 ---
 title: "GitLabCI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 L'intégration continue (CI) est un moyen de tester, créer et valider automatiquement votre code chaque fois que des modifications sont apportées.
 
@@ -35,6 +34,16 @@ Le pipeline Lumi utilise la conteneurisation pour des builds cohérents :
 3. **Builds reproductibles** : l'isolation des conteneurs garantit les mêmes résultats sur différents exécuteurs
 
 Cette approche garantit que les builds fonctionnent de la même manière sur n’importe quel exécuteur GitLab et fournit un environnement contrôlé pour les processus de build complexes.
+
+### Sources de dépendance intégrées
+
+L'image de dépendance CI de Lumi construit la pile forkée à partir de **sources intégrées dans le dépôt** (et non de clones externes) :
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Ces répertoires sont copiés dans le contexte de construction du conteneur et compilés dans le préfixe de dépendance (généralement `/opt/lumi-deps`). Cela maintient CI reproductible et garantit que la version AppImage utilise la même source de vérité que le développement local.
 
 ## Rôle des scripts Shell
 
@@ -76,9 +85,7 @@ Ici :
 
 ## Structure du système de construction de mésons
 
-Le système de construction **Meson** utilise un fichier racine `meson.build` placé dans le répertoire racine du projet. Ce fichier définit la configuration de build de niveau supérieur et le point d'entrée pour le processus de build.
-
-- La racine `meson.build` se trouve généralement dans le même répertoire que `.gitlab-ci.yml`
+Le système de construction **Meson** utilise un fichier racine `meson.build` placé dans le répertoire racine du projet. Ce fichier définit la configuration de build de niveau supérieur et le point d'entrée pour le processus de build.- La racine `meson.build` se trouve généralement dans le même répertoire que `.gitlab-ci.yml`
 - À partir de là, il **cascade récursivement** dans des sous-répertoires, chacun pouvant avoir son propre fichier `meson.build`
 - Ces fichiers de sous-répertoire définissent les cibles, les sources, les dépendances et les instructions de construction pertinentes pour ce répertoire.
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Ces variables contrôlent le comportement de construction et garantissent la cohérence entre les différentes étapes et coureurs.
+```
+
+Ces variables contrôlent le comportement de construction et garantissent la cohérence entre les différentes étapes et coureurs.
 
 ## Exemple de structure
 
@@ -121,7 +130,7 @@ project-root/
 Dans cette structure :
 
 - Le fichier racine `meson.build` configure l'environnement global de construction
-- Les fichiers du sous-répertoire `meson.build` gèrent les détails de compilation pour des composants ou des modules spécifiques
+- Le sous-répertoire `meson.build` gère les détails de compilation pour des composants ou des modules spécifiques
 - Cette disposition hiérarchique maintient la logique de construction modulaire et maintenable
 
 ## Artefacts entre les étapes

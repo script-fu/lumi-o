@@ -1,42 +1,73 @@
 ---
 title: "Installatie"
 type: docs
-url: "hub/technical-guides/Installation"
 ---
-Deze handleiding gebruikt de huidige Lumi-buildscripts in:
+Je hebt Git nodig voor de eerste kloonstap hieronder. Als Git nog niet is geïnstalleerd, installeer het dan eerst (Debian/Ubuntu: `sudo apt install git`) of volg: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
-`~/code/lumi-dev/build/lumi/scripts`
+## 1) Lumi klonen (eerste installatie)
 
-## 1) Afhankelijkheden installeren (eerste installatie)
+Maak de map voor Lumi en gebruik Git om de broncode te klonen.
+
+```bash
+sudo apt install git
+
+mkdir -p ~/code
+cd ~/code
+
+# Clone via SSH (matches the Git guide above)
+git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
+
+# Or clone via HTTPS (no SSH key setup)
+# git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
+```
+
+## 2) Afhankelijkheden installeren (eerste installatie)
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 sudo bash lumi-install-packages.sh
 ```
 
-## 2) Bouw Lumi
+## 3) Lumi bouwen (eerste installatie)
+
+Eerste volledige setup-build (eerste keer of na grote wijzigingen):
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
-
-# First full setup build (BABL + lumi-gtk3 + GEGL + Lumi)
 bash lumi-build-script.sh --scope setup --dir lumi-dev
-
-# Normal rebuild after code changes
-bash lumi-build-script.sh --scope build --dir lumi-dev
-
-# Quick compile-only path
-bash lumi-build-script.sh --scope compile --dir lumi-dev
 ```
 
-## 3) Start Lumi
+## 4) Start Lumi
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-launch-active.sh lumi-dev
 ```
 
-## Bouwtypen
+## Optioneel: opnieuw opbouwen / compileren
+
+Normaal opnieuw opbouwen na codewijzigingen:
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope build --dir lumi-dev
+```
+
+Snel alleen-compileren pad:
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope compile --dir lumi-dev
+```
+
+Bouw één geïntegreerd onderdeel (vervang `babl` door `gegl` of `gtk3`):
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
+```
+
+## Optioneel: buildtypen
 
 Gebruik `--type` indien nodig:
 

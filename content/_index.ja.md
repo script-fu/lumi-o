@@ -13,5 +13,4 @@ Lumi は GIMP の実証済みのアーキテクチャに基づいて構築され
   {{< card link="hub/install-linux/" title="Linuxのインストール方法" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="テクニカルガイド" icon="book-open" >}}
   {{< card link="hub/scripting/" title="スクリプト作成" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="ルミオ" icon="home" >}}
 {{< /cards >}}

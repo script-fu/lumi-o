@@ -13,5 +13,4 @@ Lumi·o (Lumi) — это приложение для цифровой живо�
   {{< card link="hub/install-linux/" title="Как установить Linux" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="Технические руководства" icon="book-open" >}}
   {{< card link="hub/scripting/" title="Сценарии" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="Люми·о" icon="home" >}}
 {{< /cards >}}

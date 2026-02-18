@@ -13,5 +13,4 @@ Lumi 基於經過驗證的 GIMP 架構構建，圍繞數位繪畫重組了軟體
   {{< card link="hub/install-linux/" title="如何安裝Linux" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="技術指南" icon="book-open" >}}
   {{< card link="hub/scripting/" title="腳本編寫" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="盧米歐" icon="home" >}}
 {{< /cards >}}

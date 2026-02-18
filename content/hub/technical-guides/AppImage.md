@@ -14,6 +14,8 @@ As a self-contained executable, the AppImage can be stored anywhere on the syste
 
 For Lumi’s development process, the AppImage functions as a portable test build that closely matches continuous integration output. This allows reliable testing in a consistent environment while keeping local source builds focused on development work.
 
+Note: CI builds the AppImage using Lumi’s in-repo integrated dependency sources (BABL/GEGL/GTK3), so the dependency stack is consistent with the local `lumi-build-script.sh` workflow.
+
 ## Release vs Development AppImage
 
 - **Release AppImage**: not available yet (Lumi has not been released).

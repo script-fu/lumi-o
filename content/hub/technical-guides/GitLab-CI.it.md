@@ -1,7 +1,6 @@
 ---
 title: "GitLabCI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 L'integrazione continua (CI) è un modo per testare, creare e convalidare automaticamente il codice ogni volta che vengono apportate modifiche.
 
@@ -35,6 +34,16 @@ La pipeline Lumi utilizza la containerizzazione per build coerenti:
 3. **Build riproducibili**: l'isolamento del contenitore garantisce gli stessi risultati su diversi corridori
 
 Questo approccio garantisce che le build funzionino allo stesso modo in qualsiasi runner GitLab e fornisce un ambiente controllato per processi di build complessi.
+
+### Sorgenti di dipendenza integrate
+
+L'immagine delle dipendenze CI di Lumi crea lo stack biforcato da **sorgenti integrate in-repo** (non cloni esterni):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Queste directory vengono copiate nel contesto di creazione del contenitore e compilate nel prefisso di dipendenza (in genere `/opt/lumi-deps`). Ciò mantiene la CI riproducibile e garantisce che la build di AppImage utilizzi la stessa fonte di verità dello sviluppo locale.
 
 ## Ruolo degli script di shell
 
@@ -71,14 +80,12 @@ script:
 
 Qui:
 
-- `meson setup` prepara la directory di build e genera `build.ninja`
+- `meson setup` prepara la directory di compilazione e genera `build.ninja`
 - `ninja` esegue i comandi di compilazione come definito
 
 ## Struttura del sistema di costruzione dei mesoni
 
-Il sistema di compilazione **Meson** utilizza un file root `meson.build` posizionato nella directory root del progetto. Questo file definisce la configurazione di compilazione di livello superiore e il punto di ingresso per il processo di compilazione.
-
-- La radice `meson.build` si trova generalmente nella stessa directory di `.gitlab-ci.yml`
+Il sistema di build **Meson** utilizza un file root `meson.build` posizionato nella directory root del progetto. Questo file definisce la configurazione di compilazione di livello superiore e il punto di ingresso per il processo di compilazione.- La radice `meson.build` si trova generalmente nella stessa directory di `.gitlab-ci.yml`
 - Da lì, **si estende ricorsivamente** in sottodirectory, ognuna delle quali può avere il proprio file `meson.build`
 - Questi file di sottodirectory definiscono obiettivi, origini, dipendenze e istruzioni di creazione rilevanti per quella directory
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Queste variabili controllano il comportamento della build e garantiscono la coerenza tra le diverse fasi e i diversi corridori.
+```
+
+Queste variabili controllano il comportamento della build e garantiscono la coerenza tra le diverse fasi e i diversi corridori.
 
 ## Esempio di struttura
 

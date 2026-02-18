@@ -1,7 +1,6 @@
 ---
 title: "GitLab CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 CI(지속적 통합)는 변경 사항이 있을 때마다 코드를 자동으로 테스트, 구축 및 검증하는 방법입니다.
 
@@ -35,6 +34,16 @@ Lumi 파이프라인은 일관된 빌드를 위해 컨테이너화를 사용합�
 3. **재현 가능한 빌드**: 컨테이너 격리를 통해 다양한 실행자 간에 동일한 결과가 보장됩니다.
 
 이 접근 방식은 빌드가 모든 GitLab 실행기에서 동일한 방식으로 작동하도록 보장하고 복잡한 빌드 프로세스를 위한 제어된 환경을 제공합니다.
+
+### 통합 종속성 소스
+
+Lumi의 CI 종속성 이미지는 **저장소 내 통합 소스**(외부 클론 아님)에서 포크된 스택을 빌드합니다.
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+이러한 디렉터리는 컨테이너 빌드 컨텍스트에 복사되고 종속성 접두사(일반적으로 `/opt/lumi-deps`)로 컴파일됩니다. 이를 통해 CI 재현성을 유지하고 AppImage 빌드가 로컬 개발과 동일한 정보 소스를 사용하도록 보장합니다.
 
 ## 쉘 스크립트의 역할
 
@@ -76,10 +85,8 @@ script:
 
 ## Meson 빌드 시스템 구조
 
-**Meson** 빌드 시스템은 프로젝트의 루트 디렉터리에 있는 루트 `meson.build` 파일을 사용합니다. 이 파일은 빌드 프로세스의 최상위 빌드 구성과 진입점을 정의합니다.
-
-- 루트 `meson.build`은 일반적으로 `.gitlab-ci.yml`과 동일한 디렉터리에 있습니다.
-- 거기서부터 하위 디렉터리로 **반복적으로** 계단식으로 배열되며, 각 하위 디렉터리에는 자체 `meson.build` 파일이 있을 수 있습니다.
+**Meson** 빌드 시스템은 프로젝트의 루트 디렉터리에 있는 루트 `meson.build` 파일을 사용합니다. 이 파일은 빌드 프로세스의 최상위 빌드 구성과 진입점을 정의합니다.- 루트 `meson.build`은 일반적으로 `.gitlab-ci.yml`과 동일한 디렉터리에 있습니다.
+- 거기에서 하위 디렉터리로 **재귀적으로** 계단식으로 배열되며, 각 하위 디렉터리에는 자체 `meson.build` 파일이 있을 수 있습니다.
 - 이러한 하위 디렉터리 파일은 해당 디렉터리와 관련된 대상, 소스, 종속성 및 빌드 지침을 정의합니다.
 
 ## 환경 변수
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```이러한 변수는 빌드 동작을 제어하고 다양한 단계와 실행기에서 일관성을 보장합니다.
+```
+
+이러한 변수는 빌드 동작을 제어하고 다양한 단계와 실행기에서 일관성을 보장합니다.
 
 ## 예제 구조
 

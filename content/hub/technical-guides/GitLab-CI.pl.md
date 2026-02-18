@@ -1,7 +1,6 @@
 ---
 title: "GitLab CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 Ciągła integracja (CI) to sposób na automatyczne testowanie, kompilowanie i sprawdzanie poprawności kodu po każdym wprowadzeniu zmian.
 
@@ -35,6 +34,16 @@ Potok Lumi wykorzystuje konteneryzację w celu zapewnienia spójnych kompilacji:
 3. **Powtarzalne kompilacje**: Izolacja kontenera gwarantuje takie same wyniki w różnych modułach uruchamiających
 
 Takie podejście gwarantuje, że kompilacje będą działać w ten sam sposób w każdym programie uruchamiającym GitLab i zapewnia kontrolowane środowisko dla złożonych procesów kompilacji.
+
+### Zintegrowane źródła zależności
+
+Obraz zależności CI Lumi buduje rozwidlony stos z **zintegrowanych źródeł w repo** (nie z klonów zewnętrznych):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Te katalogi są kopiowane do kontekstu kompilacji kontenera i kompilowane do prefiksu zależności (zwykle `/opt/lumi-deps`). Dzięki temu CI jest odtwarzalna i gwarantuje, że kompilacja AppImage korzysta z tego samego źródła prawdy, co w przypadku rozwoju lokalnego.
 
 ## Rola skryptów powłoki
 
@@ -76,9 +85,7 @@ Tutaj:
 
 ## Meson Budowa struktury systemu
 
-System kompilacji **Meson** wykorzystuje plik główny `meson.build` umieszczony w katalogu głównym projektu. Ten plik definiuje konfigurację kompilacji najwyższego poziomu i punkt wejścia dla procesu kompilacji.
-
-- Katalog główny `meson.build` zazwyczaj znajduje się w tym samym katalogu co `.gitlab-ci.yml`
+System kompilacji **Meson** wykorzystuje plik główny `meson.build` umieszczony w katalogu głównym projektu. Ten plik definiuje konfigurację kompilacji najwyższego poziomu i punkt wejścia dla procesu kompilacji.- Katalog główny `meson.build` zazwyczaj znajduje się w tym samym katalogu co `.gitlab-ci.yml`
 - Stamtąd **przechodzi rekurencyjnie** do podkatalogów, z których każdy może mieć własny plik `meson.build`
 - Te pliki podkatalogów definiują cele, źródła, zależności i instrukcje kompilacji odpowiednie dla tego katalogu
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Te zmienne kontrolują zachowanie kompilacji i zapewniają spójność na różnych etapach i biegaczach.
+```
+
+Te zmienne kontrolują zachowanie kompilacji i zapewniają spójność na różnych etapach i biegaczach.
 
 ## Przykładowa struktura
 
@@ -121,7 +130,7 @@ project-root/
 W tej strukturze:
 
 - Główny plik `meson.build` konfiguruje ogólne środowisko kompilacji
-- Podkatalog plików `meson.build` obsługuje szczegóły kompilacji dla określonych komponentów lub modułów
+- Pliki podkatalogu `meson.build` obsługują szczegóły kompilacji dla określonych komponentów lub modułów
 - Ten hierarchiczny układ sprawia, że logika kompilacji jest modułowa i łatwa w utrzymaniu
 
 ## Artefakty między etapami

@@ -1,42 +1,73 @@
 ---
 title: "Installation"
 type: docs
-url: "hub/technical-guides/Installation"
 ---
-Ce guide utilise les scripts de build Lumi actuels dans :
+Vous avez besoin de Git pour l'étape de clonage initiale ci-dessous. Si Git n'est pas encore installé, installez-le d'abord (Debian/Ubuntu : `sudo apt install git`) ou suivez : [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
-`~/code/lumi-dev/build/lumi/scripts`
+## 1) Cloner Lumi (première configuration)
 
-## 1) Installer les dépendances (première configuration)
+Créez le répertoire pour Lumi et utilisez Git pour cloner le code source.
+
+```bash
+sudo apt install git
+
+mkdir -p ~/code
+cd ~/code
+
+# Clone via SSH (matches the Git guide above)
+git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
+
+# Or clone via HTTPS (no SSH key setup)
+# git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
+```
+
+## 2) Installer les dépendances (première configuration)
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 sudo bash lumi-install-packages.sh
 ```
 
-## 2) Construire Lumi
+## 3) Construire Lumi (première configuration)
+
+Première version d'installation complète (première fois ou après des changements majeurs) :
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
-
-# First full setup build (BABL + lumi-gtk3 + GEGL + Lumi)
 bash lumi-build-script.sh --scope setup --dir lumi-dev
-
-# Normal rebuild after code changes
-bash lumi-build-script.sh --scope build --dir lumi-dev
-
-# Quick compile-only path
-bash lumi-build-script.sh --scope compile --dir lumi-dev
 ```
 
-## 3) Lancez Lumi
+## 4) Lancez Lumi
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-launch-active.sh lumi-dev
 ```
 
-## Types de construction
+## Facultatif : Reconstruire / Compiler
+
+Reconstruction normale après modification du code :
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope build --dir lumi-dev
+```
+
+Chemin rapide de compilation uniquement :
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope compile --dir lumi-dev
+```
+
+Créez un seul composant intégré (remplacez `babl` par `gegl` ou `gtk3`) :
+
+```bash
+cd ~/code/lumi-dev/build/lumi/scripts
+bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
+```
+
+## Facultatif : types de build
 
 Utilisez `--type` si nécessaire :
 

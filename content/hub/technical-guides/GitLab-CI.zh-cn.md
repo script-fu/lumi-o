@@ -1,7 +1,6 @@
 ---
 title: "亚搏体育appGitLab持续集成"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 持续集成 (CI) 是一种在代码发生更改时自动测试、构建和验证代码的方法。
 
@@ -35,6 +34,16 @@ Lumi 管道使用容器化来实现一致的构建：
 3. **可重复的构建**：容器隔离保证不同运行者获得相同的结果
 
 这种方法确保构建在任何 GitLab 运行器上都以相同的方式工作，并为复杂的构建过程提供受控环境。
+
+### 集成依赖源
+
+Lumi 的 CI 依赖镜像从 **in-repo 集成源**（不是外部克隆）构建分叉堆栈：
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+这些目录被复制到容器构建上下文中并编译到依赖项前缀（通常为`/opt/lumi-deps`）中。这保持了 CI 的可重复性，并确保 AppImage 构建使用与本地开发相同的真实来源。
 
 ## Shell 脚本的作用
 
@@ -76,9 +85,7 @@ script:
 
 ## 介子构建系统结构
 
-**Meson** 构建系统使用位于项目根目录的根 `meson.build` 文件。该文件定义了构建过程的顶级构建配置和入口点。
-
-- 根`meson.build` 通常位于与`.gitlab-ci.yml` 相同的目录中
+**Meson** 构建系统使用位于项目根目录的根 `meson.build` 文件。该文件定义了构建过程的顶级构建配置和入口点。- 根`meson.build` 通常位于与`.gitlab-ci.yml` 相同的目录中
 - 从那里，它**递归地**到子目录中，每个子目录可能有自己的`meson.build` 文件
 - 这些子目录文件定义与该目录相关的目标、源、依赖项和构建指令
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```这些变量控制构建行为并确保不同阶段和运行者之间的一致性。
+```
+
+这些变量控制构建行为并确保不同阶段和运行者之间的一致性。
 
 ## 结构示例
 
@@ -160,7 +169,7 @@ lumi-appimage:
 
 Lumi `.gitlab-ci.yml` 当前定义了这些作业名称：
 
-- `deps-debian`
+-`deps-debian`
 - `build-lumi`
 - `lumi-appimage`
 

@@ -13,5 +13,4 @@ Lumi 基于经过验证的 GIMP 架构构建，围绕数字绘画重组了软件
   {{< card link="hub/install-linux/" title="如何安装Linux" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="技术指南" icon="book-open" >}}
   {{< card link="hub/scripting/" title="脚本编写" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="卢米欧" icon="home" >}}
 {{< /cards >}}

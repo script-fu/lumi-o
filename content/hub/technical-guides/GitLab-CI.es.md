@@ -1,7 +1,6 @@
 ---
 title: "GitLab CI"
 type: docs
-url: "hub/technical-guides/GitLab-CI"
 ---
 La integración continua (CI) es una forma de probar, crear y validar automáticamente su código cada vez que se realizan cambios.
 
@@ -36,7 +35,17 @@ El canal Lumi utiliza contenedores para compilaciones consistentes:
 
 Este enfoque garantiza que las compilaciones funcionen de la misma manera en cualquier ejecutor de GitLab y proporciona un entorno controlado para procesos de compilación complejos.
 
-## Función de los scripts de Shell
+### Fuentes de dependencia integradas
+
+La imagen de dependencia de CI de Lumi construye la pila bifurcada a partir de **fuentes integradas en el repositorio** (no clones externos):
+
+- `lumi-babl/` (BABL)
+- `lumi-gegl/` (GEGL)
+- `lumi-gtk3/` (GTK3)
+
+Estos directorios se copian en el contexto de compilación del contenedor y se compilan en el prefijo de dependencia (normalmente `/opt/lumi-deps`). Esto mantiene la CI reproducible y garantiza que la compilación de AppImage utilice la misma fuente de verdad que el desarrollo local.
+
+## Papel de los scripts de Shell
 
 Los trabajos en `.gitlab-ci.yml` normalmente invocan comandos de shell directamente. Las operaciones complejas a menudo se trasladan a scripts separados almacenados en el repositorio.
 
@@ -76,9 +85,7 @@ Aquí:
 
 ## Estructura del sistema de construcción de Meson
 
-El sistema de compilación **Meson** utiliza un archivo raíz `meson.build` ubicado en el directorio raíz del proyecto. Este archivo define la configuración de compilación de nivel superior y el punto de entrada para el proceso de compilación.
-
-- La raíz `meson.build` normalmente se encuentra en el mismo directorio que `.gitlab-ci.yml`
+El sistema de compilación **Meson** utiliza un archivo raíz `meson.build` ubicado en el directorio raíz del proyecto. Este archivo define la configuración de compilación de nivel superior y el punto de entrada para el proceso de compilación.- La raíz `meson.build` normalmente se encuentra en el mismo directorio que `.gitlab-ci.yml`
 - Desde allí, **cae en cascada recursivamente** en subdirectorios, cada uno de los cuales puede tener su propio archivo `meson.build`
 - Estos archivos de subdirectorio definen destinos, fuentes, dependencias y crean instrucciones relevantes para ese directorio.
 
@@ -102,7 +109,9 @@ build-lumi:
     LUMI_PREFIX: "${CI_PROJECT_DIR}/_install-${CI_RUNNER_TAG}"  # Installation path
     DEPS_PREFIX: "/opt/lumi-deps"                               # Prebuilt dependency prefix
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
-```Estas variables controlan el comportamiento de la construcción y garantizan la coherencia entre las diferentes etapas y corredores.
+```
+
+Estas variables controlan el comportamiento de la construcción y garantizan la coherencia entre las diferentes etapas y corredores.
 
 ## Estructura de ejemplo
 

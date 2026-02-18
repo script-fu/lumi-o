@@ -13,5 +13,4 @@ Aufbauend auf der bewährten Architektur von GIMP strukturiert Lumi die Software
   {{< card link="hub/install-linux/" title="So installieren Sie Linux" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="Technische Leitfäden" icon="book-open" >}}
   {{< card link="hub/scripting/" title="Skripterstellung" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="Lumi·o" icon="home" >}}
 {{< /cards >}}

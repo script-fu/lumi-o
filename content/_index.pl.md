@@ -13,5 +13,4 @@ Zbudowany w oparciu o sprawdzoną architekturę GIMP, Lumi restrukturyzuje oprog
   {{< card link="hub/install-linux/" title="Jak zainstalować Linuksa" icon="desktop-computer" >}}
   {{< card link="hub/technical-guides/" title="Przewodniki techniczne" icon="book-open" >}}
   {{< card link="hub/scripting/" title="Skrypty" icon="code" >}}
-  {{< card link="https://lumi-o.org/" title="Lumi·o" icon="home" >}}
 {{< /cards >}}
