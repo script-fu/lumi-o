@@ -158,11 +158,19 @@ Possiamo scrivere nel _nostro_ Schema:
 
 Avvolgendo le funzioni di basso livello in nomi significativi, creiamo un modo più intuitivo di lavorare con i dati, riducendo confusione e potenziali errori.
 
+### Wrapper spediti: l'utility Stdlib
+
+Lumi fornisce un set di wrapper già pronti caricati automaticamente all'avvio, quindi sono disponibili in qualsiasi plug-in o nella Scheme Console senza alcuna chiamata `(load ...)`. Queste librerie — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` e `paths.scm` — sono costruite esattamente sullo stesso principio degli esempi precedenti: forniscono informazioni chiare nomi alle operazioni di basso livello, nascondere i boilerplate ripetitivi e fornire un unico posto per l'aggiornamento se il comando sottostante cambia.Ad esempio, `images.scm` fornisce `image-get-open-list` come wrapper leggibile attorno alla chiamata PDB non elaborata e `files.scm` espone aiutanti per la creazione del percorso che altrimenti richiederebbero catene `string-append` ripetute.
+
+È possibile sfogliare ogni nome esportato, leggere la relativa docstring e vedere da quale libreria proviene in **[Utility Browser](@@LUMI_TOKEN_21@@)** (Guida → Programmazione → Browser delle utilità). Si tratta di una dimostrazione pratica del confezionamento su larga scala e di un'utile fonte di modelli da prendere in prestito quando si crea la propria libreria di supporto.
+
 ### Conclusione
 
 Le funzioni di wrapper sono un modo potente per semplificare lo sviluppo di Scheme, rendendo gli script più leggibili, gestibili e robusti. Incapsulando la complessità ed esponendo solo i dettagli necessari, creiamo un approccio più strutturato alla scrittura dei plug-in.
 
-Punti chiave di questo approccio:- **Semplifica le attività ripetitive** – Invece di ripetere manualmente comandi di basso livello, creiamo funzioni riutilizzabili.
+Punti chiave di questo approccio:
+
+- **Semplifica le attività ripetitive** – Invece di ripetere manualmente comandi di basso livello, creiamo funzioni riutilizzabili.
 - **Migliora la leggibilità del codice** – I wrapper con nomi ben definiti rendono gli script più facili da comprendere.
 - **Incapsula la complessità**: i dettagli di basso livello vengono gestiti all'interno del wrapper, mantenendo pulito lo script principale.
 - **Migliora la manutenibilità** – Se la funzionalità principale cambia, dobbiamo aggiornare solo il wrapper, non tutti gli script che si basano su di esso.

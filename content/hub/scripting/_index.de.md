@@ -11,4 +11,5 @@ Nutzen Sie diese Leitfäden, um die grundlegenden Sprachgrundlagen zu erlernen, 
   {{< card link="tutorials/" title="Tutorials" icon="sparkles" >}}
   {{< card link="tools/" title="Werkzeuge" icon="cog" >}}
   {{< card link="plug-ins/" title="Plug-Ins" icon="collection" >}}
+  {{< card link="reference/" title="Referenz" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

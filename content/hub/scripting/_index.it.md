@@ -11,4 +11,5 @@ Utilizza queste guide per apprendere i fondamenti fondamentali del linguaggio, s
   {{< card link="tutorials/" title="Tutorial" icon="sparkles" >}}
   {{< card link="tools/" title="Utensili" icon="cog" >}}
   {{< card link="plug-ins/" title="Plug-in" icon="collection" >}}
+  {{< card link="reference/" title="Riferimento" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

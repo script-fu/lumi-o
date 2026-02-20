@@ -71,21 +71,21 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
                       #:dct "integer")))
 ```
 
-在此包装函数中，大多数导出选项都是硬编码的，仅公开我们可能调整的参数：文件名和质量。这种方法提高了可读性并使保存图像更简单。另外，如果Lumi的导出器将来发生变化，我们只需要更新这一个函数，而不需要修改每个导出JPEG的脚本。
+在此包装函数中，大多数导出选项都是硬编码的，仅公开我们可能调整的参数：文件名和质量。这种方法提高了可读性并使保存图像更简单。Additionally, if Lumi's exporter changes in the future, we only need to update this one function rather than modifying every script that exports a JPEG.
 
-### 使用包装器
+### Using the Wrapper
 
-要在我们的插件中导出 JPEG，我们只需包含该库并调用我们的自定义函数：
+To export a JPEG in our plug-ins, we simply include the library and call our custom function:
 
 ```scheme
 (file-jpg-save image "/home/mark/pictures/my-picture" 85)
 ```
 
-这使我们的代码保持干净、可读和适应性强，同时允许我们以最小的努力高效地导出 JPEG。
+This keeps our code clean, readable, and adaptable while allowing us to export JPEGs efficiently with minimal effort.
 
-### 汽车更换
+### Car Replacement
 
-***car*** 函数可能很神秘并且容易出现脚本错误。很容易错误地将 ***car*** 应用于向量或非列表项，从而导致意外行为。为了使我们的代码更加健壮和可读，我们可以将此功能包装在一个更安全的函数中。
+The ***car*** function can be cryptic and prone to scripting errors. It’s easy to mistakenly apply ***car*** to a vector or a non-list item, leading to unexpected behaviour. To make our code more robust and readable, we can wrap this functionality in a safer function.
 
 ```scheme
 ;; Purpose: Returns the first item of a list or vector.
@@ -105,26 +105,26 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
        #f))))
 ```
 
-此函数安全地检索列表或向量的第一项，同时在遇到无效或空输入时提供有用的警告。通过使用***first-item***而不是***car***，我们降低了意外错误的风险并提高了脚本的清晰度。
+This function safely retrieves the first item of a list or vector while providing helpful warnings when invalid or empty inputs are encountered. By using ***first-item*** instead of ***car***, we reduce the risk of accidental errors and improve the clarity of our scripts.
 
-#### 为什么使用这个包装器？
+#### Why Use This Wrapper?
 
-- **防止脚本崩溃** – 避免将 ***car*** 应用于非列表而导致的错误。
-- **支持列表和向量** – 将可用性扩展到列表之外。
-- **提供有意义的警告** – 帮助调试意外的输入问题。
-- **提高可读性** – 函数名称清楚地传达了其用途。
+- **Prevents script crashes** – Avoids errors caused by applying ***car*** to non-lists.
+- **Supports both lists and vectors** – Expands usability beyond just lists.
+- **Provides meaningful warnings** – Helps debug unexpected input issues.
+- **Improves readability** – The function name clearly conveys its purpose.
 
-通过将这个逻辑封装在第一项中，我们使我们的插件更加健壮并且更易于维护。当然，这取决于个人喜好，直接使用 car、caar、cadr 和类似的Scheme 函数可能会完全舒服。
+By encapsulating this logic in first-item, we make our plug-ins more robust and easier to maintain. Of course, this comes down to personal preference, you may be completely comfortable using car, caar, cadr, and similar Scheme functions directly.
 
-### 包装一个包装函数
+### Wrapping a Wrapped Function
 
-包装已经包装过的函数可以进一步提高可读性和可维护性。例如，当使用像***像素坐标（列表100 200）***这样的坐标对时，我们可以使用：
+Wrapping a function that is already wrapped can further improve readability and maintainability. For example, when working with coordinate pairs like ***pixel-coords (list 100 200)***, we could use:
 
 ```scheme
 (first-item pixel-coords)
 ```
 
-检索 ***x*** 坐标。然而，虽然功能齐全，但表现力并不强。相反，我们可以用更合适的定义来包装***first-item***，以使我们的意图更清晰。
+to retrieve the ***x*** coordinate. However, while functional, this is not very expressive. Instead, we can wrap ***first-item*** in a more appropriate definition to make our intent clearer.
 
 ```scheme
 ;; Purpose: Return the x-coordinate, for readability
@@ -136,33 +136,43 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
   (second-item pixel-coords))
 ```
 
-### 为什么使用这种方法？
+### Why Use This Approach?
 
-- **增强代码清晰度** – 我们不使用通用列表访问函数，而是显式定义描述其用途的函数。
-- **提高可维护性** – 如果我们的坐标表示发生变化（例如，使用向量而不是列表），我们只需要更新这些小函数。
-- **鼓励一致性** – 使用 ***x-coord*** 和 ***y-coord*** 使脚本更易于阅读和一目了然。
+- **Enhances code clarity** – Instead of using generic list access functions, we explicitly define functions that describe their purpose.
+- **Improves maintainability** – If our coordinate representation changes (e.g., using vectors instead of lists), we only need to update these small functions.
+- **Encourages consistency** – Using ***x-coord*** and ***y-coord*** makes the script easier to read and understand at a glance.
 
-现在，不要用通用方案编写：
+Now, instead of writing in generic Scheme:
 
 ```scheme
 (car pixel-coords) ;; Gets the x-coordinate
 (cadr pixel-coords) ;; Gets the y-coordinate
 ```
 
-我们可以在_our_Scheme中写：
+We can write in _our_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)
 (y-coord pixel-coords)
 ```
 
-通过将低级函数包装在有意义的名称中，我们创建了一种更直观的数据处理方式，减少了混乱和潜在的错误。
+By wrapping low-level functions in meaningful names, we create a more intuitive way to work with data, reducing confusion and potential errors.
+
+### Shipped Wrappers: the Utility Stdlib
+
+Lumi ships a set of ready-made wrappers loaded automatically at startup, so they are available in any plug-in or in the Scheme Console without any `(load ...)` call. These libraries — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, and `paths.scm` — are built on exactly the same principle as the examples above: they give clear names to low-level operations, hide repetitive boilerplate, and provide a single place to update if the underlying command changes.
+
+例如，`images.scm` 提供 `image-get-open-list` 作为原始 PDB 调用的可读包装器，`files.scm` 公开路径构建帮助程序，否则需要重复的 `string-append` 链。
+
+您可以浏览每个导出的名称，阅读其文档字符串，并在 **[Utility Browser](@@LUMI_TOKEN_21@@)**（帮助 → 编程 → 实用程序浏览器）中查看它来自哪个库。它是大规模包装的实际演示，也是构建您自己的帮助程序库时可以借用的有用模式来源。
 
 ### 结论
 
 包装函数是简化Scheme开发的有效方法，使脚本更具可读性、可维护性和健壮性。通过封装复杂性并仅公开必要的细节，我们创建了一种更加结构化的插件编写方法。
 
-这种方法的主要要点：- **简化重复性任务** – 我们创建可重用的函数，而不是手动重复低级命令。
+这种方法的主要要点：
+
+- **简化重复性任务** – 我们创建可重用的函数，而不是手动重复低级命令。
 - **提高代码可读性** – 命名良好的包装器使脚本更易于理解。
 - **封装复杂性** – 低级细节在包装器内部处理，保持主脚本干净。
 - **增强可维护性** – 如果核心功能发生变化，我们只需要更新包装器，而不是每个依赖它的脚本。

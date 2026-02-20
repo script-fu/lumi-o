@@ -11,4 +11,5 @@ type: docs
   {{< card link="tutorials/" title="บทช่วยสอน" icon="sparkles" >}}
   {{< card link="tools/" title="เครื่องมือ" icon="cog" >}}
   {{< card link="plug-ins/" title="ปลั๊กอิน" icon="collection" >}}
+  {{< card link="reference/" title="อ้างอิง" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

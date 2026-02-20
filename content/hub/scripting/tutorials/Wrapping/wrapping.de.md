@@ -158,11 +158,19 @@ Wir können in _unser_ Schema schreiben:
 
 Indem wir Low-Level-Funktionen in aussagekräftige Namen verpacken, schaffen wir eine intuitivere Möglichkeit, mit Daten zu arbeiten und reduzieren so Verwirrung und potenzielle Fehler.
 
+### Mitgelieferte Wrapper: das Dienstprogramm Stdlib
+
+Lumi liefert einen Satz vorgefertigter Wrapper aus, die beim Start automatisch geladen werden, sodass sie in jedem Plug-in oder in der Scheme-Konsole ohne `(load ...)` Aufruf verfügbar sind. Diese Bibliotheken – `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` und `paths.scm` – basieren auf genau dem gleichen Prinzip wie die obigen Beispiele: Sie geben Operationen auf niedriger Ebene klare Namen, Blenden Sie sich wiederholende Boilerplates aus und stellen Sie einen einzigen Ort zum Aktualisieren bereit, wenn sich der zugrunde liegende Befehl ändert.Beispielsweise stellt `images.scm` `image-get-open-list` als lesbaren Wrapper um den rohen PDB-Aufruf bereit, und `files.scm` stellt pfadbildende Helfer bereit, die andernfalls wiederholte `string-append` Ketten erfordern würden.
+
+Sie können jeden exportierten Namen durchsuchen, seine Dokumentzeichenfolge lesen und sehen, aus welcher Bibliothek er stammt, im **[Utility Browser](@@LUMI_TOKEN_21@@)** (Hilfe → Programmierung → Dienstprogramm-Browser). Es ist eine praktische Demonstration des Wrappings im großen Maßstab – und eine nützliche Quelle für Muster, die Sie beim Aufbau Ihrer eigenen Hilfsbibliothek ausleihen können.
+
 ### Fazit
 
 Das Umschließen von Funktionen ist eine leistungsstarke Möglichkeit, die Schemaentwicklung zu vereinfachen und Skripte lesbarer, wartbarer und robuster zu machen. Indem wir die Komplexität einkapseln und nur die notwendigen Details offenlegen, schaffen wir einen strukturierteren Ansatz zum Schreiben von Plug-Ins.
 
-Wichtigste Erkenntnisse aus diesem Ansatz:- **Vereinfacht sich wiederholende Aufgaben** – Anstatt Befehle auf niedriger Ebene manuell zu wiederholen, erstellen wir wiederverwendbare Funktionen.
+Wichtigste Erkenntnisse aus diesem Ansatz:
+
+- **Vereinfacht sich wiederholende Aufgaben** – Anstatt Befehle auf niedriger Ebene manuell zu wiederholen, erstellen wir wiederverwendbare Funktionen.
 - **Verbessert die Lesbarkeit des Codes** – Gut benannte Wrapper erleichtern das Verständnis von Skripten.
 - **Kapselt Komplexität** – Details auf niedriger Ebene werden innerhalb des Wrappers verarbeitet, wodurch das Hauptskript sauber bleibt.
 - **Verbessert die Wartbarkeit** – Wenn sich die Kernfunktionalität ändert, müssen wir nur den Wrapper aktualisieren, nicht jedes Skript, das darauf basiert.

@@ -158,15 +158,23 @@ W _naszym_ schemacie możemy napisać:
 
 Zawijając funkcje niskiego poziomu w znaczące nazwy, tworzymy bardziej intuicyjny sposób pracy z danymi, redukując zamieszanie i potencjalne błędy.
 
+### Dostarczane opakowania: narzędzie Stdlib
+
+Lumi dostarcza zestaw gotowych opakowań ładowanych automatycznie przy uruchomieniu, dzięki czemu są one dostępne w dowolnej wtyczce lub w Scheme Console bez żadnego wywołania `(load ...)`. Biblioteki te — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` i `paths.scm` — są zbudowane dokładnie na tej samej zasadzie, co powyższe przykłady: dają jasne nazwy operacji niskiego poziomu, ukryj powtarzalne schematy i zapewnij jedno miejsce do aktualizacji, jeśli zmieni się podstawowe polecenie.Na przykład `images.scm` zapewnia `image-get-open-list` jako czytelne opakowanie wokół surowego wywołania PDB, a `files.scm` udostępnia pomocników tworzących ścieżki, które w innym przypadku wymagałyby powtarzanych łańcuchów `string-append`.
+
+Możesz przeglądać każdą wyeksportowaną nazwę, czytać jej dokumentację i zobaczyć, z której biblioteki pochodzi, w **[Utility Browser](@@LUMI_TOKEN_21@@)** (Pomoc → Programowanie → Przeglądarka narzędzi). Jest to praktyczna demonstracja owijania na dużą skalę i przydatne źródło wzorców do zapożyczenia podczas tworzenia własnej biblioteki pomocniczej.
+
 ### Wniosek
 
 Zawijanie funkcji to skuteczny sposób na uproszczenie tworzenia schematów, dzięki czemu skrypty są bardziej czytelne, łatwiejsze w utrzymaniu i niezawodne. Hermetyzując złożoność i eksponując tylko niezbędne szczegóły, tworzymy bardziej uporządkowane podejście do pisania wtyczek.
 
-Najważniejsze wnioski z tego podejścia:- **Ułatwia powtarzalne zadania** – Zamiast ręcznie powtarzać polecenia niskiego poziomu, tworzymy funkcje wielokrotnego użytku.
+Najważniejsze wnioski z tego podejścia:
+
+- **Ułatwia powtarzalne zadania** – Zamiast ręcznie powtarzać polecenia niskiego poziomu, tworzymy funkcje wielokrotnego użytku.
 - **Poprawia czytelność kodu** – Dobrze nazwane opakowania ułatwiają zrozumienie skryptów.
 - ** Hermetyzuje złożoność** – Szczegóły niskiego poziomu są obsługiwane wewnątrz opakowania, dzięki czemu główny skrypt jest czysty.
 - **Większa łatwość konserwacji** – Jeśli zmieni się podstawowa funkcjonalność, wystarczy zaktualizować opakowanie, a nie każdy skrypt, który się na nim opiera.
-- **Zachęca do ponownego użycia i zapewnia spójność** – Nasza osobista biblioteka funkcji rozrasta się z biegiem czasu, dzięki czemu programowanie staje się szybsze i wydajniejsze.
+- **Zachęca do ponownego użycia i spójności** – Nasza osobista biblioteka funkcji z biegiem czasu rośnie, dzięki czemu programowanie jest szybsze i wydajniejsze.
 
 Konsekwentnie stosując zawijanie funkcji, możemy zmienić sposób pisania wtyczek Scheme, tworząc bardziej modułowe i wyraziste środowisko skryptowe. Mając na uwadze te zasady, możemy w dalszym ciągu udoskonalać nasze podejście, opracowując bardziej wydajną i dostosowaną do potrzeb wersję Schematu, która spełnia nasze specyficzne potrzeby.
 

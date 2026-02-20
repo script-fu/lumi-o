@@ -1,319 +1,2511 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-  <loc>https://script-fu.github.io/artbox/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/AppImage/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/Installation/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/about/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/de/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/about/Patreon/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/es/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/Data/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/fr/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/Technical-Guide/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/it/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/docs/folder/Troubleshooting/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/ja/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/brush-aspect-ratio-range/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/ko/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/color-picker-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/nl/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/curves-view/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/pl/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/dynamic-brush-spacing/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/pt-br/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/dynamic-multiply-modes/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/ru/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/dynamic-velocity-compression/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/sv/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/dynamic-velocity-output/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/th/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/dynamics-editor/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/zh-cn/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/filter-restores-last-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/zh-tw/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/fullscreen/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/layer-picking/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/paint-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/paintbrush-high-quality-force/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/paintbrush-options/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/paintbrush-smooth-stroke/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/path-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/presets-restore/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/resource-control/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/script-fu/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/selection-display/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/selection/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/simple-sliders/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/tool-preset-editor/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/tool-tips/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/toolbox/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/transform-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/feature-test/folder/warp-tool/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/A-Linux-System-Overview/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/Building-a-Debug-Version/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/Installing-Debian/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/System-Backup-Clonezilla/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/guides/folder/Using-Git-on-Linux/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/add-path-guide/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/almost-autosave/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/alpha-to-show-mask/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/gaussian-glow/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/layer-group/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/incremental-save/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/layer-group-to-new-image/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/new-layer-from-selection/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/rename-layers/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/toggle-eraser/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/toggle-paint-mode/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/plugins/folder/toggle-paintbrush-eraser/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/dark/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/high-contrast/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/middle/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/system/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://script-fu.github.io/artbox/hub/themes/folder/warm/</loc>
-  <lastmod>2025-05-23T12:50:55+00:00</lastmod>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/scripting/tutorials/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/technical-guides/AppImage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/technical-guides/GitLab-CI/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/technical-guides/Installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/quick-start/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/install-linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/technical-guides/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/scripting/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/about/Patreon/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/nl/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pl/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/pt-br/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ru/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/sv/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/th/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-cn/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/zh-tw/hub/about/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/de/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/es/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/fr/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/it/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/batch-process/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/layer-group-to-new-image/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/crop-layer-to-mask/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/plug-ins/new-layer-from-selection/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ja/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/gitlab-ci/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/Using-Git-on-Linux/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/Building-a-Debug-Version/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/installation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/technical-guides/appimage/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/install-linux/System-Backup-Clonezilla/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/install-linux/A-Linux-System-Overview/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/install-linux/Installing-Debian/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/variables-and-scope/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/variables-and-scope/define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/variables-and-scope/let/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/variables-and-scope/let-vs-define/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/variables-and-scope/symbols/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/conditionals/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/conditionals/conditionals-if/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/conditionals/conditionals-when/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/conditionals/conditionals-cond/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/data-structures/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/data-structures/lists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/data-structures/vectors/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/data-structures/alists/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/iteration/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/iteration/map/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/iteration/for-each/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/iteration/recursion/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/iteration/do/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/functions/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/functions/lambda/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/fundamentals/functions/variadic/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tools/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tools/visual-studio-code/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tools/git/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/reference/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/reference/utility-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/hello-world/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/the-procedure-browser/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/refactoring/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/loading/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/validation/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/refactor-again/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/messaging-library/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/reworking/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/return-values/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/first-step/final-thoughts/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/filter-plug-in/filter-plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/wrapping/wrapping/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/debugging/debugging/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/tutorials/files/files/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/plug-ins/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lumi-o.org/ko/hub/scripting/plug-ins/rename-layers/</loc>
+  <lastmod>2026-02-20T18:07:31+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

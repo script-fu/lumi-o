@@ -12,4 +12,5 @@ Use these guides to learn the core language fundamentals, follow step-by-step tu
   {{< card link="tutorials/" title="Tutorials" icon="sparkles" >}}
   {{< card link="tools/" title="Tools" icon="cog" >}}
   {{< card link="plug-ins/" title="Plug-ins" icon="collection" >}}
+  {{< card link="reference/" title="Reference" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

@@ -158,11 +158,19 @@ We kunnen in _ons_schema schrijven:
 
 Door functies op laag niveau in betekenisvolle namen te verpakken, creëren we een meer intuïtieve manier om met gegevens te werken, waardoor verwarring en potentiële fouten worden verminderd.
 
+### Verzonden verpakkingen: het hulpprogramma Stdlib
+
+Lumi levert een set kant-en-klare wrappers die automatisch worden geladen bij het opstarten, zodat ze beschikbaar zijn in elke plug-in of in de Scheme Console zonder enige `(load ...)` aanroep. Deze bibliotheken — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` en `paths.scm` — zijn gebouwd op precies hetzelfde principe als de bovenstaande voorbeelden: ze geven duidelijke namen aan bewerkingen op laag niveau, verberg repetitieve standaardteksten en zorg voor één plek waar u kunt bijwerken als de onderliggende opdracht verandert.`images.scm` biedt bijvoorbeeld `image-get-open-list` als een leesbare wrapper rond de onbewerkte PDB-aanroep, en `files.scm` biedt hulp bij het bouwen van paden waarvoor anders herhaalde `string-append`-ketens nodig zouden zijn.
+
+U kunt door elke geëxporteerde naam bladeren, de bijbehorende docstring lezen en zien uit welke bibliotheek deze afkomstig is in **[Utility Browser](@@LUMI_TOKEN_21@@)** (Help → Programmeren → Hulpprogrammabrowser). Het is een praktische demonstratie van inpakken op schaal - en een nuttige bron van patronen die u kunt lenen bij het bouwen van uw eigen helperbibliotheek.
+
 ### Conclusie
 
 Wrapping-functies zijn een krachtige manier om de ontwikkeling van schema's te vereenvoudigen, waardoor scripts leesbaarder, onderhoudbaarder en robuuster worden. Door de complexiteit in te kapselen en alleen de noodzakelijke details bloot te leggen, creëren we een meer gestructureerde aanpak voor het schrijven van plug-ins.
 
-Belangrijkste conclusies uit deze aanpak:- **Vereenvoudigt repetitieve taken** – In plaats van handmatig opdrachten op laag niveau te herhalen, creëren we herbruikbare functies.
+Belangrijkste conclusies uit deze aanpak:
+
+- **Vereenvoudigt repetitieve taken** – In plaats van handmatig opdrachten op laag niveau te herhalen, creëren we herbruikbare functies.
 - **Verbetert de leesbaarheid van de code** – Wrappers met een goede naam maken scripts gemakkelijker te begrijpen.
 - **Bevat complexiteit** – Details op laag niveau worden binnen de wrapper afgehandeld, waardoor het hoofdscript schoon blijft.
 - **Verbetert de onderhoudbaarheid** – Als de kernfunctionaliteit verandert, hoeven we alleen de wrapper bij te werken, niet elk script dat ervan afhankelijk is.

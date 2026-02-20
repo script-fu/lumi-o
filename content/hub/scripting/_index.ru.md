@@ -11,4 +11,5 @@ type: docs
   {{< card link="tutorials/" title="Учебники" icon="sparkles" >}}
   {{< card link="tools/" title="Инструменты" icon="cog" >}}
   {{< card link="plug-ins/" title="Плагины" icon="collection" >}}
+  {{< card link="reference/" title="Ссылка" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

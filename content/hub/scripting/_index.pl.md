@@ -11,4 +11,5 @@ Skorzystaj z tych przewodników, aby poznać podstawy języka podstawowego, post
   {{< card link="tutorials/" title="Poradniki" icon="sparkles" >}}
   {{< card link="tools/" title="Narzędzia" icon="cog" >}}
   {{< card link="plug-ins/" title="Wtyczki" icon="collection" >}}
+  {{< card link="reference/" title="Odniesienie" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

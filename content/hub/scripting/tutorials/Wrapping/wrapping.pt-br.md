@@ -158,11 +158,19 @@ Podemos escrever em _nosso_ esquema:
 
 Ao agrupar funções de baixo nível em nomes significativos, criamos uma maneira mais intuitiva de trabalhar com dados, reduzindo confusão e possíveis erros.
 
+### Wrappers enviados: o utilitário Stdlib
+
+O Lumi envia um conjunto de wrappers prontos carregados automaticamente na inicialização, para que estejam disponíveis em qualquer plug-in ou no Scheme Console sem qualquer chamada `(load ...)`. Essas bibliotecas - `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` e `paths.scm` - são construídas exatamente no mesmo princípio dos exemplos acima: elas fornecem informações claras nomes para operações de baixo nível, ocultar clichês repetitivos e fornecer um único local para atualização se o comando subjacente for alterado.Por exemplo, `images.scm` fornece `image-get-open-list` como um wrapper legível em torno da chamada PDB bruta e `files.scm` expõe auxiliares de construção de caminho que, de outra forma, exigiriam cadeias `string-append` repetidas.
+
+Você pode navegar por cada nome exportado, ler sua documentação e ver de qual biblioteca ele vem em **[Utility Browser](@@LUMI_TOKEN_21@@)** (Ajuda → Programação → Navegador de Utilitários). É uma demonstração prática de empacotamento em escala — e uma fonte útil de padrões para emprestar ao construir sua própria biblioteca auxiliar.
+
 ### Conclusão
 
 As funções de agrupamento são uma maneira poderosa de simplificar o desenvolvimento do esquema, tornando os scripts mais legíveis, fáceis de manter e robustos. Ao encapsular a complexidade e expor apenas os detalhes necessários, criamos uma abordagem mais estruturada para escrever plug-ins.
 
-Principais conclusões desta abordagem:- **Simplifica tarefas repetitivas** – Em vez de repetir manualmente comandos de baixo nível, criamos funções reutilizáveis.
+Principais conclusões desta abordagem:
+
+- **Simplifica tarefas repetitivas** – Em vez de repetir manualmente comandos de baixo nível, criamos funções reutilizáveis.
 - **Melhora a legibilidade do código** – Wrappers bem nomeados tornam os scripts mais fáceis de entender.
 - **Encapsula a complexidade** – Detalhes de baixo nível são tratados dentro do wrapper, mantendo o script principal limpo.
 - **Melhora a capacidade de manutenção** – Se a funcionalidade principal for alterada, só precisaremos atualizar o wrapper, não todos os scripts que dependem dele.

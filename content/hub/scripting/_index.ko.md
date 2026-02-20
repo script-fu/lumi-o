@@ -11,4 +11,5 @@ Scheme 스크립팅을 사용하면 반복 작업을 자동화하고, 맞춤형 
   {{< card link="tutorials/" title="튜토리얼" icon="sparkles" >}}
   {{< card link="tools/" title="도구" icon="cog" >}}
   {{< card link="plug-ins/" title="플러그인" icon="collection" >}}
+  {{< card link="reference/" title="참조" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}

@@ -11,4 +11,5 @@ Använd dessa guider för att lära dig grunderna för språket, följa steg-fö
   {{< card link="tutorials/" title="Handledningar" icon="sparkles" >}}
   {{< card link="tools/" title="Verktyg" icon="cog" >}}
   {{< card link="plug-ins/" title="Plug-ins" icon="collection" >}}
+  {{< card link="reference/" title="Hänvisning" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
 {{< /cards >}}
