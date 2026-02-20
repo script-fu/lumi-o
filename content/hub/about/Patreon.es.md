@@ -2,7 +2,6 @@
 ---
 title: "Cómprame un café"
 type: docs
-url: "hub/about/Patreon"
 ---
 ¡Hola!
 
@@ -12,8 +11,8 @@ Si disfrutó mi trabajo y lo encontró útil, considere mostrar su apoyo con una
 
 Puedes hacerlo a través de Patreon, una plataforma que muchos creativos utilizan para recibir soporte directo:
 
-[Visit my Patreon page](https://www.patreon.com/) para apoyar.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) para apoyar.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Patreón" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreón" icon="heart" >}}
 {{< /cards >}}

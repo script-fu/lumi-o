@@ -2,7 +2,6 @@
 ---
 title: "Kup mi kawę"
 type: docs
-url: "hub/about/Patreon"
 ---
 Hej tam!
 
@@ -12,8 +11,8 @@ Jeśli spodobała Ci się moja praca i okazała się pomocna, rozważ okazanie w
 
 Możesz to zrobić za pośrednictwem Patreona, platformy, z której korzysta wielu twórców, aby uzyskać bezpośrednie wsparcie:
 
-[Visit my Patreon page](https://www.patreon.com/) do wsparcia.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) do wsparcia.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Patreona" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreona" icon="heart" >}}
 {{< /cards >}}

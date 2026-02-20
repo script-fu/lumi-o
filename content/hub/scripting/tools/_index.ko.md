@@ -7,4 +7,5 @@ type: docs
 {{< cards >}}
   {{< card link="git" title="힘내" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="비주얼 스튜디오 코드" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="AI 지원" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

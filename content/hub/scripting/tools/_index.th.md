@@ -7,4 +7,5 @@ type: docs
 {{< cards >}}
   {{< card link="git" title="คอมไพล์" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="รหัสวิชวลสตูดิโอ" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="AI ช่วย" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

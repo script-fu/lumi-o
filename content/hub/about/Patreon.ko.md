@@ -2,7 +2,6 @@
 ---
 title: "커피 사주세요"
 type: docs
-url: "hub/about/Patreon"
 ---
 안녕하세요!
 
@@ -12,8 +11,8 @@ url: "hub/about/Patreon"
 
 많은 창작자들이 직접적인 지원을 받기 위해 사용하는 플랫폼인 Patreon을 통해 이를 수행할 수 있습니다.
 
-[Visit my Patreon page](https://www.patreon.com/) 지원합니다.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) 지원합니다.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="패트리온" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="패트리온" icon="heart" >}}
 {{< /cards >}}

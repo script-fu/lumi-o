@@ -2,7 +2,6 @@
 ---
 title: "Koop een koffie voor mij"
 type: docs
-url: "hub/about/Patreon"
 ---
 Hé daar!
 
@@ -12,8 +11,8 @@ Als je van mijn werk hebt genoten en het nuttig hebt gevonden, overweeg dan om j
 
 Dit kun je doen via Patreon, een platform dat veel creatieven gebruiken om directe ondersteuning te krijgen:
 
-[Visit my Patreon page](https://www.patreon.com/) ter ondersteuning.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) ter ondersteuning.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Patreon" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}

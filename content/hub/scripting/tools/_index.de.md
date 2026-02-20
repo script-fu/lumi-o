@@ -7,4 +7,5 @@ Diese Anleitungen behandeln eine minimale Toolchain zum Schreiben von Scheme-Plu
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="Visual Studio-Code" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="KI-unterstützt" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

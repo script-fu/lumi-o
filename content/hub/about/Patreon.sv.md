@@ -2,7 +2,6 @@
 ---
 title: "Köp mig en kaffe"
 type: docs
-url: "hub/about/Patreon"
 ---
 Hej där!
 
@@ -12,8 +11,8 @@ Om du har tyckt om mitt arbete och funnit det användbart, överväg att visa di
 
 Du kan göra detta genom Patreon, en plattform som många annonsörer använder för att få direkt support:
 
-[Visit my Patreon page](https://www.patreon.com/) för att stödja.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) för att stödja.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Patreon" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}

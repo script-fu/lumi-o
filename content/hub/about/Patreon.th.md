@@ -2,7 +2,6 @@
 ---
 title: "ซื้อกาแฟให้ฉัน"
 type: docs
-url: "hub/about/Patreon"
 ---
 เฮ้!
 
@@ -12,8 +11,8 @@ url: "hub/about/Patreon"
 
 คุณสามารถดำเนินการนี้ได้ผ่าน Patreon ซึ่งเป็นแพลตฟอร์มที่ครีเอทีฟจำนวนมากใช้เพื่อรับการสนับสนุนโดยตรง:
 
-[Visit my Patreon page](https://www.patreon.com/) เพื่อสนับสนุน
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) เพื่อสนับสนุน
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="แพทเรียน" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="แพทเรียน" icon="heart" >}}
 {{< /cards >}}

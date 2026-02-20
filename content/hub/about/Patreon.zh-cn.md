@@ -2,7 +2,6 @@
 ---
 title: "请我喝杯咖啡"
 type: docs
-url: "hub/about/Patreon"
 ---
 嘿！
 
@@ -12,8 +11,8 @@ url: "hub/about/Patreon"
 
 您可以通过 Patreon 来做到这一点，这是许多创意人员用来获得直接支持的平台：
 
-[Visit my Patreon page](https://www.patreon.com/) 支持。
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) 支持。
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="帕特隆" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="帕特雷恩" icon="heart" >}}
 {{< /cards >}}

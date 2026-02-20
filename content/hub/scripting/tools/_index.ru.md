@@ -7,4 +7,5 @@ type: docs
 {{< cards >}}
   {{< card link="git" title="Гит" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="Код Visual Studio" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="С помощью ИИ" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

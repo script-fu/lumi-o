@@ -2,7 +2,6 @@
 ---
 title: "コーヒーを買ってきて"
 type: docs
-url: "hub/about/Patreon"
 ---
 ちょっと、そこ！
 
@@ -10,10 +9,10 @@ url: "hub/about/Patreon"
 
 私の仕事を気に入って役に立ったと感じていただけましたら、少額の寄付でサポートを示すことをご検討ください。 「ありがとう」を伝え、創造力を発揮し続ける簡単な方法です。あなたのサポートは、ソフトウェア開発、チュートリアル、進行中の芸術プロジェクトのコストをカバーするのに役立ちます。
 
-これは、多くのクリエイターが直接サポートを受けるために使用するプラットフォームである Patreon を通じて行うことができます。
+これは、多くのクリエイターが直接サポートを受けるために使用しているプラットフォームである Patreon を通じて行うことができます。
 
-[Visit my Patreon page](https://www.patreon.com/) をサポートします。
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) をサポートします。
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="パトレオン" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="パトレオン" icon="heart" >}}
 {{< /cards >}}

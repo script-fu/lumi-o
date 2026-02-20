@@ -7,4 +7,5 @@ Esses guias cobrem um conjunto de ferramentas mínimo para escrever plug-ins de 
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="Código do Visual Studio" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="Assistido por IA" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

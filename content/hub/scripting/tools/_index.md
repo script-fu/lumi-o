@@ -9,5 +9,6 @@ These guides cover a minimal toolchain for writing Scheme plug-ins for Lumi on L
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="Visual Studio Code" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="AI Assisted" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}
 

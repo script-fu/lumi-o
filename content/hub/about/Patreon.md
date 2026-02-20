@@ -13,8 +13,8 @@ If you've enjoyed my work and found it helpful, consider showing your support wi
 
 You can do this through Patreon, a platform many creatives use to receive direct support:
 
-[Visit my Patreon page](https://www.patreon.com/) to support.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) to support.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Patreon" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}

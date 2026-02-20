@@ -7,4 +7,5 @@ Deze handleidingen behandelen een minimale toolchain voor het schrijven van Sche
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="Version control for Scheme development" >}}
   {{< card link="visual-studio-code" title="Visual Studio-code" icon="code" subtitle="Code editor setup and extensions for Scheme" >}}
+  {{< card link="ai-assisted" title="AI-geassisteerd" icon="sparkles" subtitle="Use AI Agents to write and refactor plug-ins" >}}
 {{< /cards >}}

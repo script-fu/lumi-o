@@ -2,7 +2,6 @@
 ---
 title: "Купи мне кофе"
 type: docs
-url: "hub/about/Patreon"
 ---
 Привет!
 
@@ -12,8 +11,8 @@ url: "hub/about/Patreon"
 
 Вы можете сделать это через Patreon, платформу, которую многие креативщики используют для получения прямой поддержки:
 
-[Visit my Patreon page](https://www.patreon.com/) для поддержки.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) для поддержки.
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer/membership" title="Патреон" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Патреон" icon="heart" >}}
 {{< /cards >}}
