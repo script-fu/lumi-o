@@ -4,7 +4,7 @@ type: docs
 url: "hub/scripting/reference/utility-browser"
 ---
 
-The Utility Browser lets you explore the built-in Scheme utility stdlib that ships with Lumi — without having to leave the app or dig through source files.
+The Utility Browser lets you explore the built-in Scheme utility stdlib that ships with Lumi, without having to leave the app or dig through source files.
 
 ## Opening the Utility Browser
 
@@ -30,8 +30,8 @@ All of these are available in any Scheme plug-in or in the Scheme Console.
 
 ## Searching and Filtering
 
-- **Search box** — filters by name as you type (case-insensitive substring match).
-- **Kind filter** — narrow results to `procedure`, `variable`, or `syntax`.
+- **Search box**: filters by name as you type (case-insensitive substring match).
+- **Kind filter**: narrow results to `procedure`, `variable`, or `syntax`.
 
 Clicking an entry shows its full docstring and the library it comes from.
 
@@ -41,4 +41,4 @@ The utility libraries are a practical application of the wrapping pattern: each 
 
 ## Relationship to the Procedure Browser
 
-The Utility Browser is separate from **Filters → Script-Fu → Console → Browse** (the Procedure Browser). The Procedure Browser lists PDB-registered procedures. The Utility Browser lists helper definitions that intentionally live *outside* the PDB — they are Scheme-only and have no C binding.
+The Utility Browser is separate from **Filters → Script-Fu → Console → Browse** (the Procedure Browser). The Procedure Browser lists PDB-registered procedures. The Utility Browser lists helper definitions that intentionally live *outside* the PDB: they are Scheme-only and have no C binding.

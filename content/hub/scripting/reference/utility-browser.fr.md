@@ -29,7 +29,7 @@ Tous ces éléments sont disponibles dans n’importe quel plug-in Scheme ou dan
 ## Recherche et filtrage
 
 - **Champ de recherche** : filtre par nom au fur et à mesure que vous tapez (correspondance de sous-chaîne insensible à la casse).
-- **Filtre de type** — limitez les résultats à `procedure`, `variable` ou `syntax`.
+- **Filtre de type** : limitez les résultats à `procedure`, `variable` ou `syntax`.
 
 Cliquer sur une entrée affiche sa docstring complète et la bibliothèque dont elle provient.
 
@@ -39,4 +39,4 @@ Les bibliothèques d'utilitaires sont une application pratique du modèle d'enca
 
 ## Relation avec le navigateur de procédures
 
-Le navigateur d'utilitaires est distinct de **Filtres → Script-Fu → Console → Parcourir** (le navigateur de procédures). Le navigateur de procédures répertorie les procédures enregistrées dans PDB. Le navigateur d'utilitaires répertorie les définitions d'assistance qui vivent intentionnellement *en dehors* du PDB — elles sont uniquement Scheme et n'ont pas de liaison C.
+Le navigateur d'utilitaires est distinct de **Filtres → Script-Fu → Console → Parcourir** (le navigateur de procédures). Le navigateur de procédures répertorie les procédures enregistrées dans PDB. Le navigateur d'utilitaires répertorie les définitions d'assistance qui vivent intentionnellement *en dehors* du PDB : elles sont uniquement Scheme et n'ont pas de liaison C.

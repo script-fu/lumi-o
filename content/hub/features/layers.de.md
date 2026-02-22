@@ -15,12 +15,15 @@ Ebenen sind die Grundlage einer strukturierten Illustration. Jede Ebene ist unab
 ## Ebenentypen
 
 ### Farbschichten
+
 Standard-Rasterebenen für gemalte Inhalte. Speichern Sie Pixeldaten als GEGL-Puffer mit optionaler Alpha-Transparenz.
 
 ### Gruppenebenen
+
 Hierarchische Container zum Organisieren zusammengehöriger Ebenen. Gruppen können ihren eigenen Mischmodus, ihre eigene Deckkraft und ihre eigenen Schnittmasken haben. Gruppenprognosen werden bei Bedarf zusammengestellt.
 
 ### Ebenenmasken
+
 An jede Ebene angehängte Graustufenmasken, die die Deckkraft pro Pixel steuern. Das Malen auf einer Maske mit Weiß macht Pixel undurchsichtig; Schwarz macht sie transparent; Grau sorgt für teilweise Deckkraft.
 
 ## Mischmodi
@@ -37,15 +40,15 @@ Jede Ebene verfügt über einen Mischmodus, der bestimmt, wie sie mit den darunt
 
 ## Ausschneiden und Maskieren
 
-- **Composite-Modus – Auf Hintergrund zuschneiden**: Wenn Sie den Zusammensetzungsmodus einer Ebene auf **Auf Hintergrund zuschneiden** festlegen, wird das Compositing auf Bereiche beschränkt, in denen die angesammelten **Union**-Ebenen darunter eine Deckkraft hergestellt haben. Die Ebene malt nur dort, wo diese Ebenen Inhalte haben – sie kann den Alpha-Fußabdruck nicht erweitern. Dies wird pro Ebene im Dialogfeld „Ebenenattribute“ (Dropdown-Menü „Composite-Modus“) festgelegt. Wenn der effektive Zusammensetzungsmodus einer Ebene etwas anderes als „Vereinigen“ ist, wird das Augensymbol im Ebenenbedienfeld durch ein zusammengesetztes Symbol ersetzt, um das nicht standardmäßige Zusammensetzungsverhalten anzuzeigen.
+- **Zusammensetzungsmodus: Auf Hintergrund zuschneiden**: Wenn Sie den Zusammensetzungsmodus einer Ebene auf **Auf Hintergrund zuschneiden** festlegen, wird das Zusammensetzen auf Bereiche beschränkt, in denen die angesammelten **Union**-Ebenen darunter eine Deckkraft hergestellt haben. Die Ebene malt nur dort, wo diese Ebenen Inhalt haben, und kann den Alpha-Fußabdruck nicht erweitern. Dies wird pro Ebene im Dialogfeld „Ebenenattribute“ (Dropdown-Menü „Composite-Modus“) festgelegt. Wenn der effektive Zusammensetzungsmodus einer Ebene etwas anderes als „Vereinigen“ ist, wird das Augensymbol im Ebenenbedienfeld durch ein zusammengesetztes Symbol ersetzt, um das nicht standardmäßige Zusammensetzungsverhalten anzuzeigen.
 
-  **Beispiel – gemeinsam genutzte Alphaform:** In einer Gruppe enthält die untere Ebene einen gefüllten Kreis auf einem transparenten Hintergrund, der auf den Standard-Kompositmodus **Union** eingestellt ist. Jede darüber liegende Ebene in derselben Gruppe ist auf **Auf Hintergrund zuschneiden** eingestellt. Diese Ebenen können nur dort malen, wo der Kreis für Deckkraft sorgt – eine Form, viele Ebenen. Dies ist ein gängiges Muster zum Färben, Schattieren und Detaillieren innerhalb einer definierten Silhouette, ohne dass man sich Gedanken über Verschütten machen muss.
+  **Beispiel: Gemeinsame Alphaform:** In einer Gruppe enthält die untere Ebene einen gefüllten Kreis auf einem transparenten Hintergrund, der auf den Standard-Kompositmodus **Union** eingestellt ist. Jede darüber liegende Ebene in derselben Gruppe ist auf **Auf Hintergrund zuschneiden** eingestellt. Diese Ebenen können nur dort malen, wo der Kreis für Deckkraft sorgt (eine Form, viele Ebenen). Dies ist ein gängiges Muster zum Färben, Schattieren und Detaillieren innerhalb einer definierten Silhouette, ohne dass man sich Gedanken über Verschütten machen muss.
 - **Ebenenmasken**: Wenden Sie eine Graustufenmaske an, um die Sichtbarkeit der Ebene Pixel für Pixel zu steuern. Das Aufmalen der Maske mit Weiß zeigt; schwarze Kaschierungen; Grau sorgt für teilweise Deckkraft.
 - **Reine untergeordnete Masken**: Masken werden als untergeordnete Masken im Zeichenstapel gespeichert, um Datenverlust während Transformationen zu verhindern.
 
 ## Ebenenauswahl (Alt-Taste)
 
-Durch Tippen auf **Alt** (linke Alt-Taste), während Sie mit der Maus über die Leinwand fahren, wird die Ebene mit sichtbaren Pixeln unter dem Cursor ausgewählt – ohne Werkzeugwechsel oder Klicken.
+Durch Tippen auf **Alt** (linke Alt-Taste), während Sie mit der Maus über die Leinwand fahren, wird die Ebene mit sichtbaren Pixeln unter dem Cursor ausgewählt, ohne dass Sie die Werkzeuge wechseln oder klicken müssen.
 
 ### Wie es funktioniert
 
@@ -66,7 +69,7 @@ Dadurch wird sichergestellt, dass Alt-Ziehgesten (z. B. Anpassung der Pinselgrö
 
 ### Einschränkungen
 
-- Die Ebenenauswahl wird während der Werkzeugoperationen **Transformieren** nicht aktiviert – Alt hat dort eine andere Bedeutung.
+- Die Ebenenauswahl wird während der Werkzeugoperationen **Transformieren** nicht aktiviert. Alt hat dort eine andere Bedeutung.
 - Die Auswahl erfolgt nicht, wenn eine schwebende Auswahl vorhanden ist.
 - Nur die linke Alt-Taste löst das Auswählen aus; Die rechte Alt-Taste wird als Standardmodifikator behandelt.
 
@@ -96,7 +99,7 @@ Schlosssymbole werden in der Kopfzeile des Ebenenbedienfelds angezeigt. Jede Spe
 
 - **Maske sperren**: Verhindert das Bearbeiten der Ebenenmaske. Die Maske bleibt sichtbar und aktiv, kann jedoch nicht übermalt oder geändert werden, während diese Sperre aktiviert ist.
 
-- **Farbe sperren**: Sperrt das Malen auf eine bestimmte Farbe – die aktuelle Vordergrundfarbe zum Zeitpunkt der Anwendung der Sperre. Nachfolgende Striche auf dieser Ebene verwenden diese gespeicherte Farbe unabhängig von der aktiven Vordergrundfarbe. Beim Entsperren wird die gespeicherte Farbe verworfen.
+- **Farbe sperren**: Sperrt das Malen auf eine bestimmte Farbe: die aktuelle Vordergrundfarbe zum Zeitpunkt der Anwendung der Sperre. Nachfolgende Striche auf dieser Ebene verwenden diese gespeicherte Farbe unabhängig von der aktiven Vordergrundfarbe. Beim Entsperren wird die gespeicherte Farbe verworfen.
 
 - **Inhalt sperren** (Pixel sperren): Verhindert alle Pixeländerungen an der Ebene. Die Ebene kann nicht übermalt, gefüllt, transformiert oder anderweitig geändert werden. Nützlich zum Schutz fertiger Schichten.
 
@@ -112,7 +115,7 @@ Zerstörungsfreie GEGL-Filter, die über das Menü **Filter** angewendet werden,
 
 Klicken Sie auf das **fx**-Symbol in einer Ebenenzeile im Ebenenbedienfeld, um das Popover **Ebeneneffekte** für diese Ebene zu öffnen.
 
-Das Popover zeigt den Filterstapel für die Ebene an – jeder festgeschriebene Effekt wird nach Namen aufgelistet, mit einem Sichtbarkeitsschalter daneben.
+Das Popover zeigt den Filterstapel für die Ebene an, wobei jeder festgeschriebene Effekt nach Namen aufgelistet ist und daneben ein Sichtbarkeitsschalter angezeigt wird.
 
 ### Steuerelemente
 
@@ -142,21 +145,21 @@ Doppelklicken Sie im Ebenenbedienfeld auf eine Ebene, um das Dialogfeld „Ebene
 ### Zusammengesetzter Raum und Modus
 
 - **Zusammengesetzter Raum**: Der Farbraum, der beim Zusammensetzen dieser Ebene mit den darunter liegenden Ebenen verwendet wird. Optionen: Auto, Linear (RGB), Wahrnehmung (RGB).
-- **Zusammengesetzter Modus**: Steuert, wie das Ebenen-Alpha mit dem Hintergrund interagiert. Zu den Optionen gehören „Vereinigung“ (betrifft alle Bereiche – die Standardeinstellung für den Normalmodus), „Auf Hintergrund ausschneiden“ (betrifft nur Bereiche mit vorhandenem Inhalt – die Standardeinstellung für die meisten anderen Mischmodi) und „Schnittpunkt“.
+- **Zusammengesetzter Modus**: Steuert, wie das Ebenen-Alpha mit dem Hintergrund interagiert. Zu den Optionen gehören „Vereinigung“ (betrifft alle Bereiche, die Standardeinstellung für den Normalmodus), „Auf Hintergrund ausschneiden“ (betrifft nur Bereiche mit vorhandenem Inhalt, die Standardeinstellung für die meisten anderen Mischmodi) und „Schnittpunkt“.
 
 ### Größe und Offsets
 
 Für eine vorhandene Ebene zeigt **Größen** die Ebenenabmessungen und Maskenabmessungen (sofern eine Maske angehängt ist) als schreibgeschützte Beschriftungen an.
 
-**Ebenenversätze** – X- und Y-Drehregler, die die Position der Ebene auf der Leinwand steuern. Änderungen werden sofort wirksam und nicht erst beim Schließen des Dialogs.
+**Ebenenversätze**: X- und Y-Drehregler, die die Position der Ebene auf der Leinwand steuern. Änderungen werden sofort wirksam und nicht erst beim Schließen des Dialogs.
 
-Wenn die Ebene eine Maske hat, werden unten **Maskenversätze** – X- und Y-Drehregler für die unabhängige Position der Maske – angezeigt.
+Wenn die Ebene eine Maske hat, werden unten **Maskenversätze** (X- und Y-Drehregler für die unabhängige Position der Maske) angezeigt.
 
 Beim Erstellen einer neuen Ebene ersetzen die Felder „Breite“ und „Höhe“ sowie ein Dropdown-Menü „Füllen mit“ (Vordergrund, Hintergrund, Weiß, Transparent) die schreibgeschützte Größenanzeige.
 
 ### Layer-Attribute (Persistente Parasiten)
 
-Der untere Abschnitt des Dialogs enthält eine scrollbare Namens-/Werttabelle für persistente Parasiten – beliebige Schlüsselwert-Metadaten, die an die Ebene angehängt sind. Diese Werte werden mit dem Projekt gespeichert und sind über die Scheme-Skriptschnittstelle zugänglich.
+Der untere Abschnitt des Dialogs enthält eine scrollbare Namens-/Werttabelle für persistente Parasiten (willkürliche Schlüsselwert-Metadaten, die an die Ebene angehängt sind). Diese Werte werden mit dem Projekt gespeichert und sind über die Scheme-Skriptschnittstelle zugänglich.
 
 - Klicken Sie auf eine beliebige Zelle in der Spalte „Name“ oder „Wert“, um sie direkt zu bearbeiten.
 - **Hinzufügen**: Fügt eine neue leere Zeile hinzu.
@@ -173,7 +176,7 @@ Wenn die Schicht keine hartnäckigen Parasiten aufweist, werden drei leere Start
   Der Schnellmodus ist deaktiviert, wenn eine der folgenden Bedingungen auf eine Vorfahrengruppe zutrifft:
   - Die Gruppe verfügt über sichtbare zerstörungsfreie Filter (Filter benötigen den Projektionspuffer).
   – Der Mischmodus der Gruppe ist etwas anderes als **Normal** oder **Durchgang**.
-  - Die Gruppe verfügt über ein direktes untergeordnetes Element, das den zusammengesetzten Modus **Auf Hintergrund ausschneiden** oder **Schnittpunkt** verwendet (diese erfordern Hintergrunddaten aus dem Projektionspuffer).
+  - Die Gruppe hat ein direktes untergeordnetes Element, das den zusammengesetzten Modus **Auf Hintergrund ausschneiden** oder **Schnittpunkt** verwendet (diese erfordern Hintergrunddaten aus dem Projektionspuffer).
 
   Der Schnellmodus wird auch nicht für Ebenen der obersten Ebene, schwebende Auswahlen oder wenn mehrere Ebenen gleichzeitig als Ziel ausgewählt werden, aktiviert.
 

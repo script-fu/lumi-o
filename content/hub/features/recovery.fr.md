@@ -2,7 +2,7 @@
 title: "Récupération de fichiers"
 type: docs
 ---
-Lumi gère deux systèmes de récupération indépendants : sauvegardes automatiques en arrière-plan et points de contrôle incrémentiels manuels, tous deux accessibles à partir d'une seule boîte de dialogue.
+Lumi maintient deux systèmes de récupération indépendants (sauvegardes automatiques en arrière-plan et points de contrôle incrémentiels manuels), tous deux accessibles à partir d'une seule boîte de dialogue.
 
 ## Accès
 

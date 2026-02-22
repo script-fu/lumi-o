@@ -15,12 +15,15 @@ As camadas são a base da ilustração estruturada. Cada camada é independente,
 ## Tipos de camada
 
 ### Pintar Camadas
+
 Camadas raster padrão para conteúdo pintado. Armazene dados de pixels como buffers GEGL com transparência alfa opcional.
 
 ### Camadas de Grupo
+
 Contêineres hierárquicos para organizar camadas relacionadas. Os grupos podem ter seu próprio modo de mesclagem, opacidade e máscaras de corte. As projeções do grupo são compostas sob demanda.
 
 ### Máscaras de camada
+
 Máscaras em tons de cinza anexadas a qualquer camada, controlando a opacidade por pixel. Pintar uma máscara com branco torna os pixels opacos; o preto os torna transparentes; cinza fornece opacidade parcial.
 
 ## Modos de mesclagem
@@ -37,15 +40,15 @@ Cada camada possui um modo de mesclagem que determina como ela se combina com as
 
 ## Recorte e mascaramento
 
-- **Modo Composto — Cortar no Pano de Fundo**: Definir o modo composto de uma camada como **Cortar no Pano de Fundo** restringe a composição a áreas onde as camadas **União** acumuladas abaixo estabeleceram opacidade. A camada pinta apenas onde essas camadas têm conteúdo — ela não pode expandir a área alfa. Isso é definido por camada na caixa de diálogo Atributos da camada (menu suspenso **Modo composto**). Quando o modo de composição efetivo de uma camada for diferente de União, o ícone de olho no painel Camadas será substituído por um ícone de composição para indicar o comportamento de composição não padrão.
+- **Modo Composto: Cortar no Pano de Fundo**: Definir o modo composto de uma camada como **Cortar no Pano de Fundo** restringe a composição a áreas onde as camadas **União** acumuladas abaixo estabeleceram opacidade. A camada pinta apenas onde essas camadas têm conteúdo e não podem expandir a área alfa. Isso é definido por camada na caixa de diálogo Atributos da camada (menu suspenso **Modo composto**). Quando o modo de composição efetivo de uma camada for diferente de União, o ícone de olho no painel Camadas será substituído por um ícone de composição para indicar o comportamento de composição não padrão.
 
-  **Exemplo — forma alfa compartilhada:** Em um grupo, a camada inferior contém um círculo preenchido em um fundo transparente, definido como o modo de composição padrão **União**. Cada camada acima dela no mesmo grupo está definida como **Cortar para Pano de Fundo**. Essas camadas só podem pintar onde o círculo fornece opacidade – uma forma, muitas camadas. Este é um padrão comum para colorir, sombrear e detalhar dentro de uma silhueta definida sem se preocupar com respingos.
+  **Exemplo: forma alfa compartilhada:** Em um grupo, a camada inferior contém um círculo preenchido em um fundo transparente, definido como o modo de composição **União** padrão. Cada camada acima dela no mesmo grupo está definida como **Cortar para Pano de Fundo**. Essas camadas só podem ser pintadas onde o círculo fornece opacidade (uma forma, muitas camadas). Este é um padrão comum para colorir, sombrear e detalhar dentro de uma silhueta definida sem se preocupar com respingos.
 - **Máscaras de camada**: aplique uma máscara de escala de cinza para controlar a visibilidade da camada pixel por pixel. A pintura branca na máscara revela; ocultações pretas; cinza fornece opacidade parcial.
 - **Máscaras Pure-Child**: as máscaras são armazenadas como filhas na pilha drawable, evitando a perda de dados durante as transformações.
 
 ## Seleção de camada (tecla Alt)
 
-Tocar em **Alt** (Alt esquerdo) enquanto passa o mouse sobre a tela seleciona a camada com pixels visíveis abaixo do cursor – sem trocar de ferramentas ou clicar.
+Tocar em **Alt** (Alt esquerdo) enquanto passa o mouse sobre a tela seleciona a camada com pixels visíveis abaixo do cursor, sem alternar ferramentas ou clicar.
 
 ### Como funciona
 
@@ -66,7 +69,7 @@ Isso garante que os gestos de arrastar Alt (como o ajuste do tamanho do pincel) 
 
 ### Limitações
 
-- A seleção de camadas não é ativada durante as operações da ferramenta **Transformar** — Alt tem um significado diferente aqui.
+- A seleção de camadas não é ativada durante as operações da ferramenta **Transformar**; Alt tem um significado diferente aí.
 - A seleção não ocorre se uma seleção flutuante estiver presente.
 - Somente seleção de gatilhos Alt esquerdos; Alt direito é tratado como um modificador padrão.
 
@@ -96,7 +99,7 @@ Os ícones de bloqueio são mostrados na linha do cabeçalho do painel Camadas. 
 
 - **Bloquear Máscara**: Impede a edição da máscara da camada. A máscara permanece visível e ativa, mas não pode ser pintada ou modificada enquanto este bloqueio estiver ativado.
 
-- **Bloquear cor**: bloqueia a pintura em uma cor específica — a cor de primeiro plano atual no momento em que o bloqueio é aplicado. Os traços subsequentes nesta camada usam a cor armazenada, independentemente da cor de primeiro plano ativa. O desbloqueio descarta a cor armazenada.
+- **Bloquear Cor**: Bloqueia a pintura em uma cor específica: a cor atual do primeiro plano no momento em que o bloqueio é aplicado. Os traços subsequentes nesta camada usam a cor armazenada, independentemente da cor de primeiro plano ativa. O desbloqueio descarta a cor armazenada.
 
 - **Bloquear Conteúdo** (Bloquear Pixels): Impede todas as edições de pixels na camada. A camada não pode ser pintada, preenchida, transformada ou modificada de outra forma. Útil para proteger camadas acabadas.
 
@@ -112,7 +115,7 @@ Os filtros GEGL não destrutivos aplicados por meio do menu **Filtros** são arm
 
 Clique no ícone **fx** em uma linha de camada no painel Camadas para abrir o popover **Efeitos de camada** dessa camada.
 
-O popover exibe a pilha de filtros da camada – cada efeito confirmado listado por nome com um botão de visibilidade ao lado dele.
+O popover exibe a pilha de filtros da camada, com cada efeito confirmado listado por nome com um botão de visibilidade ao lado dele.
 
 ### Controles
 
@@ -142,21 +145,21 @@ Clique duas vezes em uma camada no painel Camadas para abrir a caixa de diálogo
 ### Espaço e modo composto
 
 - **Espaço composto**: O espaço de cores usado ao compor esta camada com as camadas abaixo. Opções: Automático, Linear (RGB), Perceptual (RGB).
-- **Modo composto**: controla como a camada alfa interage com o pano de fundo. As opções incluem União (afeta todas as áreas — o padrão para o modo Normal), Cortar para Pano de Fundo (afeta apenas áreas com conteúdo existente — o padrão para a maioria dos outros modos de mesclagem) e Interseção.
+- **Modo composto**: controla como a camada alfa interage com o pano de fundo. As opções incluem União (afeta todas as áreas, o padrão para o modo Normal), Cortar para Pano de Fundo (afeta apenas áreas com conteúdo existente, o padrão para a maioria dos outros modos de mesclagem) e Interseção.
 
 ### Tamanho e deslocamentos
 
 Para uma camada existente, **Tamanhos** mostra as dimensões da camada e da máscara (se uma máscara estiver anexada) como rótulos somente leitura.
 
-**Deslocamentos de camada** — controles giratórios X e Y que controlam a posição da camada na tela. As alterações são aplicadas imediatamente e não no fechamento da caixa de diálogo.
+**Deslocamentos de camada**: controles giratórios X e Y que controlam a posição da camada na tela. As alterações são aplicadas imediatamente e não no fechamento da caixa de diálogo.
 
-Se a camada tiver uma máscara, **Deslocamentos de máscara** — controles giratórios X e Y para a posição independente da máscara — são mostrados abaixo.
+Se a camada tiver uma máscara, **Deslocamentos de máscara** (giradores X e Y para a posição independente da máscara) serão mostrados abaixo.
 
 Ao criar uma nova camada, os campos Largura e Altura e um menu suspenso **Preencher com** (Primeiro plano, Plano de fundo, Branco, Transparente) substituem a exibição do tamanho somente leitura.
 
 ### Atributos de Camada (Parasitas Persistentes)
 
-A seção inferior da caixa de diálogo contém uma tabela rolável de Nome/Valor para parasitas persistentes — metadados de valores-chave arbitrários anexados à camada. Esses valores são armazenados com o projeto e podem ser acessados ​​na interface de script do esquema.
+A seção inferior da caixa de diálogo contém uma tabela rolável de Nome/Valor para parasitas persistentes (metadados de valor-chave arbitrários anexados à camada). Esses valores são armazenados com o projeto e podem ser acessados ​​na interface de script do esquema.
 
 - Clique em qualquer célula na coluna Nome ou Valor para editá-la in-line.
 - **Adicionar**: acrescenta uma nova linha vazia.

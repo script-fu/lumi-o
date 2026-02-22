@@ -12,10 +12,10 @@ The Paintbrush tool supports raster, procedurally generated, and animated brush 
 
 ## Brush Types
 
-### Raster Brushes
-Bitmap brush images loaded from `.png` or `.vbr` files. Supports alpha transparency and animated pipe frames.
+### Raster Brushes (.raster)
+Bitmap brush images that supports alpha transparency.
 
-### Generated Brushes
+### Generated Brushes (.param)
 Procedurally rendered shapes (Circle, Square, Diamond, Triangle) with adjustable parameters: hardness, aspect ratio, angle, roundness, and corner radius. Generated brushes are lightweight and scalable.
 
 ### Animated Brushes (.anim)
@@ -93,29 +93,45 @@ In the **Fade and Colour** expander (nested inside Stroke Effects; only visible 
 
 
 ### Brush Heads
-Paint with multiple independent brush heads arranged in a formation ring around the stroke path. Controls appear in the **Brush Heads** expander in the tool options panel.
 
-- **Heads**: Number of simultaneous brush heads (1–16).
+Brush Heads places multiple independent brush heads on a circular **orbit ring** centred on the stroke path. Every head paints a full dab at its own position each time the stroke advances, producing multiple parallel or fanned strokes simultaneously.
+
+The orbit radius is determined by the global brush size minus the head size: larger heads sit closer to the centre; smaller heads orbit further out. Heads space evenly around the ring. With two heads you get one on each side of the stroke, creating a symmetrical spread that behaves like a calligraphy nib. The **Follows Direction** slider rotates the whole ring to stay perpendicular to the stroke, so the nib tracks direction naturally as you paint. Adding more heads fans them progressively around the ring, up to a full spray circle at 16.
+
+Controls appear in the **Brush Heads** expander in the tool options panel.
+
+- **Count**: Number of simultaneous brush heads (1–16).
 - **Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
-- **Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit tracks the dynamics size; 1 = orbit stays fixed to the base size.
-- **Follows** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 (default) the ring is always perpendicular to the direction of travel. At 0.0 it is locked to the static **Angle** value. Intermediate values blend between the two orientations. This is independent of the Dynamics system — no angle dynamics configuration is required.
-- **Angle** (0–360°): Static orientation of the formation ring, used when **Follows** is below 1.0. When **Lock to View** is active, the angle is automatically compensated for canvas rotation.
-- **Variation**: Per-head size variation and pressure bias applied to dynamics.
+- **Angle** (0–360°): Static orientation of the formation ring, used when **Follows Direction** is below 1.0.
+- **Pressure Variation**: Per-head size variation applied as an independent pressure bias through the dynamics curves.
 - **Opacity Variation**: Per-head opacity variation, independent of size variation.
-- **Seed**: Fixed random seed for per-head variation. Only applies when **Random Bristles** is off.
-- **Random Bristles**: Randomize bristle character each stroke (ignores Seed).
-- **Independent Frames**: For animated brushes — when on, each head advances its animation frame independently.
+- **Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit tracks the dynamics size; 1 = orbit stays fixed to the base size.
+- **Follows Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Angle** value.
+- **Character Seed** (0–255): Fixed seed for per-head character (size, scatter position, reach). The same seed reproduces the same formation every stroke. Desensitized when **Random Head Character** is on.
+
+#### Interpolation
+Displaces heads along and around the stroke path each dab, creating smear and spray effects.
+
+- **Overshoot** (0–5): Scatters heads forward along the travel direction. At 1.0 heads spread up to one full dab-spacing interval ahead; values above 1.0 allow greater reach with a steep rarity bias.
+- **Undershoot** (0–5): Same as Overshoot but trailing behind the current dab. Combined with Overshoot this builds a leading smear or comet-tail. Suppressed on the first dab to avoid retrograde artefacts.
+- **Spray Angle** (0–90°): Fans each head outward from the stroke direction by a per-head random angle up to this value. Clamped to 90° so no head ever faces backwards. Default: 10°.
+- **Spray Seed** (0–255): Fixed seed for per-head spray angles, independent of Character Seed. Desensitized when **Random Spray Pattern** is on.
+
+#### Randomization
+- **Random Head Character**: Re-draws per-head character values (size, scatter position, reach) every dab so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
+- **Random Spray Pattern**: Re-draws spray angles every dab so the fan shifts continuously along the stroke ("living spray"). Overrides **Spray Seed**.
+- **Random Animation Frames**: For animated brushes: each head advances its animation frame independently.
 
 ### Additional Options
 
 In the **Additional Options** expander (collapsed by default):
 
-- **Lock to View**: Keeps the brush appearance fixed relative to the canvas view — when you rotate the canvas, the brush rotates with it.
+- **Lock to View**: Keeps the brush appearance fixed relative to the canvas view: when you rotate the canvas, the brush rotates with it.
 - **Simple Brush Boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
 - **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is Gaussian (offsets cluster toward centre).
 - **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
 - **Random Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
 - **Random Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
-- **Reset Animation**: For animated brushes — when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
+- **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
 

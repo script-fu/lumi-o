@@ -14,7 +14,7 @@ Lumi models this using a 10-band spectral reflectance representation for palette
 
 This produces paint-like results: mixing blue and yellow produces green, not grey. Mixing two saturated colors produces a color that shifts toward neutral the way physical pigments do.
 
-The spectral computation runs during palette construction — when generating secondary and tertiary palette entries and when the Palette Mixer blends two parent colors. The resulting color is converted to linear RGB for display and for painting.
+The spectral computation runs during palette construction, when generating secondary and tertiary palette entries and when the Palette Mixer blends two parent colors. The resulting color is converted to linear RGB for display and for painting.
 
 ## Pigment Profiles
 
@@ -37,67 +37,67 @@ The Master palette ships with the following pigments. Swatches show each pigment
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,135,20);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Pyrrole Orange | PO73 | Red (Scarlet) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(243,114,64);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cadmium Orange | PO20 | Yellow (Body) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(240,180,80);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cadmium Yellow | PY35 | Yellow (Body) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,210,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cadmium Yellow Pale | PY35:Pale | Yellow (Cadmium Pale) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(250,230,5);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Lemon Yellow | PY3 | Yellow (Lemon) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,155,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Nickel Azo Yellow | PY150 | Yellow (Mid) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(180,175,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Green Gold | PY129 | Yellow-Green (Gold) |
+| {{< swatch "245,135,20" >}} | Pyrrole Orange | PO73 | Red (Scarlet) |
+| {{< swatch "243,114,64" >}} | Cadmium Orange | PO20 | Yellow (Body) |
+| {{< swatch "240,180,80" >}} | Cadmium Yellow | PY35 | Yellow (Body) |
+| {{< swatch "245,210,25" >}} | Cadmium Yellow Pale | PY35:Pale | Yellow (Cadmium Pale) |
+| {{< swatch "250,230,5" >}} | Lemon Yellow | PY3 | Yellow (Lemon) |
+| {{< swatch "225,155,10" >}} | Nickel Azo Yellow | PY150 | Yellow (Mid) |
+| {{< swatch "180,175,45" >}} | Green Gold | PY129 | Yellow-Green (Gold) |
 
 ### Earth Colors
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(200,100,70);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Burnt Sienna | PBr7:Burnt | Earth (Red Brown) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(117,66,0);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Burnt Umber | PBr7:Umber | Earth (Neutral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(205,68,35);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Raw Sienna | PBr7:Raw | Earth (Yellow Brown) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(187,124,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Yellow Ochre | PY42 | Earth (Yellow) |
+| {{< swatch "200,100,70" >}} | Burnt Sienna | PBr7:Burnt | Earth (Red Brown) |
+| {{< swatch "117,66,0" >}} | Burnt Umber | PBr7:Umber | Earth (Neutral) |
+| {{< swatch "205,68,35" >}} | Raw Sienna | PBr7:Raw | Earth (Yellow Brown) |
+| {{< swatch "187,124,25" >}} | Yellow Ochre | PY42 | Earth (Yellow) |
 
 ### Greens
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,166,81);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Phthalo Green (YS) | PG36 | Green (Phthalo Yellow-Shade) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(64,130,109);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Viridian | PG18 | Green (Viridian) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,138,112);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Terre Verte | PG23 | Green (Earth Cool) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,110,100);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Winsor Green (BS) | PG7 | Green (Phthalo Blue-Shade) |
+| {{< swatch "0,166,81" >}} | Phthalo Green (YS) | PG36 | Green (Phthalo Yellow-Shade) |
+| {{< swatch "64,130,109" >}} | Viridian | PG18 | Green (Viridian) |
+| {{< swatch "128,138,112" >}} | Terre Verte | PG23 | Green (Earth Cool) |
+| {{< swatch "0,110,100" >}} | Winsor Green (BS) | PG7 | Green (Phthalo Blue-Shade) |
 
 ### Blues and Cyans
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,177,176);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cobalt Turquoise Light | PG50 | Cyan (Mineral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,148,214);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cerulean Blue | PB35 | Cyan (Mineral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,100,110);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Phthalo Turquoise | PB16 | Blue (Phthalo) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,123,194);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cobalt Blue | PB28 | Blue (Violet-Lean) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,75,115);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Winsor Blue | PB15 | Blue (Phthalo) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(27,63,148);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Ultramarine | PB29 | Blue (Violet-Lean) |
+| {{< swatch "0,177,176" >}} | Cobalt Turquoise Light | PG50 | Cyan (Mineral) |
+| {{< swatch "0,148,214" >}} | Cerulean Blue | PB35 | Cyan (Mineral) |
+| {{< swatch "0,100,110" >}} | Phthalo Turquoise | PB16 | Blue (Phthalo) |
+| {{< swatch "0,123,194" >}} | Cobalt Blue | PB28 | Blue (Violet-Lean) |
+| {{< swatch "0,75,115" >}} | Winsor Blue | PB15 | Blue (Phthalo) |
+| {{< swatch "27,63,148" >}} | Ultramarine | PB29 | Blue (Violet-Lean) |
 
 ### Violets, Magentas and Reds
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(124,65,153);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Brilliant Violet | PV23 | Violet (Dioxazine) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(230,90,180);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Permanent Rose | PV19:Rose | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(190,40,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Quinacridone Magenta | PV19:Magenta | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(160,30,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Permanent Alizarin Crimson | PV19:Crimson | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,35,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Perylene Violet | PV29 | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,10,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Perylene Maroon | PR179 | Red (Crimson) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(215,30,60);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Pyrrole Red | PR254 | Red (Scarlet) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,55,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Pyrrole Red Light | PR255 | Red (Pyrrole Light) |
+| {{< swatch "124,65,153" >}} | Brilliant Violet | PV23 | Violet (Dioxazine) |
+| {{< swatch "230,90,180" >}} | Permanent Rose | PV19:Rose | Magenta (Quinacridone) |
+| {{< swatch "190,40,120" >}} | Quinacridone Magenta | PV19:Magenta | Magenta (Quinacridone) |
+| {{< swatch "160,30,65" >}} | Permanent Alizarin Crimson | PV19:Crimson | Magenta (Quinacridone) |
+| {{< swatch "120,35,65" >}} | Perylene Violet | PV29 | Magenta (Quinacridone) |
+| {{< swatch "135,10,45" >}} | Perylene Maroon | PR179 | Red (Crimson) |
+| {{< swatch "215,30,60" >}} | Pyrrole Red | PR254 | Red (Scarlet) |
+| {{< swatch "225,55,65" >}} | Pyrrole Red Light | PR255 | Red (Pyrrole Light) |
 
 ### Blacks and Whites
 
 | Swatch | Name | CI Code | Family |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(22,15,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Mars Black (Warm) | PBk11 | Black (Mars) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,28,12);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Perylene Green | PBk31 | Black (Perylene Green) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(10,18,19);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Ivory Black (Cool) | PBk9 | Black (Ivory) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,18,18);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Lamp Black (Neutral) | PBk7 | Black (Lamp) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,249,235);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Titanium White (Warm) | PW6:Warm | White (Titanium Warm) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,255,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Titanium White (Neutral) | PW6 | White (Titanium Neutral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,250,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Zinc White (Cool) | PW4 | White (Zinc Cool) |
+| {{< swatch "22,15,10" >}} | Mars Black (Warm) | PBk11 | Black (Mars) |
+| {{< swatch "18,28,12" >}} | Perylene Green | PBk31 | Black (Perylene Green) |
+| {{< swatch "10,18,19" >}} | Ivory Black (Cool) | PBk9 | Black (Ivory) |
+| {{< swatch "18,18,18" >}} | Lamp Black (Neutral) | PBk7 | Black (Lamp) |
+| {{< swatch "255,249,235" >}} | Titanium White (Warm) | PW6:Warm | White (Titanium Warm) |
+| {{< swatch "255,255,255" >}} | Titanium White (Neutral) | PW6 | White (Titanium Neutral) |
+| {{< swatch "245,250,255" >}} | Zinc White (Cool) | PW4 | White (Zinc Cool) |
 
 ### Control Grays
 
@@ -105,9 +105,9 @@ Control grays are standardized neutralizers used to predictably desaturate mixes
 
 | Swatch | Name | CI Code |
 | :---: | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,128,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Warm Gray | N_WARM |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,128,128);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Neutral Gray | N_NEUTRAL |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,128,135);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Cool Gray | N_COOL |
+| {{< swatch "135,128,120" >}} | Warm Gray | N_WARM |
+| {{< swatch "128,128,128" >}} | Neutral Gray | N_NEUTRAL |
+| {{< swatch "120,128,135" >}} | Cool Gray | N_COOL |
 
 ## The Palette Map
 
@@ -129,6 +129,6 @@ Mixed colors can be saved to the palette as **Custom** entries, storing the full
 
 ## Canvas Pixels Are RGB
 
-The spectral system operates entirely within palette construction and color selection. When a brush stroke is applied, the foreground color — already converted to linear RGB — is what gets painted. The canvas stores standard RGB pixel data.
+The spectral system operates entirely within palette construction and color selection. When a brush stroke is applied, the foreground color (already converted to linear RGB) is what gets painted. The canvas stores standard RGB pixel data.
 
 Spectral mixing improves the experience of building a palette and choosing colors in a way consistent with physical pigment behavior, without changing how image data is stored or composited.

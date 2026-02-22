@@ -160,9 +160,9 @@ Genom att slå in lågnivåfunktioner i meningsfulla namn skapar vi ett mer intu
 
 ### Levererade omslag: verktyget Stdlib
 
-Lumi skickar en uppsättning färdiga omslag som laddas automatiskt vid start, så de är tillgängliga i alla plugin-program eller i Scheme Console utan något `(load ...)`-samtal. Dessa bibliotek — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, och `gegl.scm`, de bygger på exakt samma namn som exemplen ovan för att de är uppbyggda på exemplet ovan: operationer på låg nivå, dölj repetitiva plattor och tillhandahålla en enda plats att uppdatera om det underliggande kommandot ändras.Till exempel ger `images.scm` `image-get-open-list` som ett läsbart omslag runt det råa PDB-anropet, och `files.scm` avslöjar vägbyggande hjälpare som annars skulle kräva upprepade `string-append`-kedjor.
+Lumi skickar en uppsättning färdiga omslag som laddas automatiskt vid start, så de är tillgängliga i alla plugin-program eller i Scheme Console utan något `(load ...)`-samtal. Dessa bibliotek (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, och `gegl.scm`, de är byggda på exakt samma namn som ovanstående exempel på: principen ovan: de är uppbyggda på exakt samma namn som ovan: operationer på låg nivå, dölj repetitiva plattor och tillhandahålla en enda plats att uppdatera om det underliggande kommandot ändras.Till exempel ger `images.scm` `image-get-open-list` som ett läsbart omslag runt det råa PDB-anropet, och `files.scm` avslöjar vägbyggande hjälpare som annars skulle kräva upprepade `string-append`-kedjor.
 
-Du kan bläddra i alla exporterade namn, läsa dess docstring och se vilket bibliotek det kommer från i **[Utility Browser](@@LUMI_TOKEN_21@@)** (Hjälp → Programmering → Verktygsläsare). Det är en praktisk demonstration av omslag i skala – och en användbar källa till mönster att låna när du bygger ditt eget hjälpbibliotek.
+Du kan bläddra i alla exporterade namn, läsa dess docstring och se vilket bibliotek det kommer från i **[Utility Browser](@@LUMI_TOKEN_21@@)** (Hjälp → Programmering → Verktygsläsare). Det är en praktisk demonstration av omslag i stor skala och en användbar källa till mönster att låna när du bygger ditt eget hjälpbibliotek.
 
 ### Slutsats
 

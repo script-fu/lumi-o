@@ -2,7 +2,7 @@
 title: "Odzyskiwanie plików"
 type: docs
 ---
-Lumi obsługuje dwa niezależne systemy odzyskiwania — automatyczne zapisywanie w tle i ręczne, przyrostowe punkty kontrolne — oba dostępne z jednego okna dialogowego.
+Lumi utrzymuje dwa niezależne systemy odzyskiwania (automatyczne zapisywanie w tle i ręczne, przyrostowe punkty kontrolne), oba dostępne z jednego okna dialogowego.
 
 ## Dostęp
 

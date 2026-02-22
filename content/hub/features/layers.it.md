@@ -15,12 +15,15 @@ I livelli sono il fondamento dell'illustrazione strutturata. Ogni livello è ind
 ## Tipi di livelli
 
 ### Strati di pittura
+
 Livelli raster standard per contenuto dipinto. Memorizza i dati dei pixel come buffer GEGL con trasparenza alfa opzionale.
 
 ### Raggruppa livelli
+
 Contenitori gerarchici per organizzare livelli correlati. I gruppi possono avere la propria modalità di fusione, opacità e maschere di ritaglio. Le proiezioni di gruppo sono composte su richiesta.
 
 ### Maschere di livello
+
 Maschere in scala di grigi collegate a qualsiasi livello, che controllano l'opacità per pixel. Dipingere su una maschera con il bianco rende i pixel opachi; il nero li rende trasparenti; il grigio fornisce un'opacità parziale.
 
 ## Modalità di fusione
@@ -37,9 +40,9 @@ Ogni livello ha una modalità di fusione che determina come si combina con i liv
 
 ## Ritaglio e mascheramento
 
-- **Modalità composita - Ritaglia sullo sfondo**: l'impostazione della modalità composita di un livello su **Ritaglia sullo sfondo** limita la composizione alle aree in cui i livelli accumulati di **Unione** sottostanti hanno stabilito l'opacità. Il livello dipinge solo dove tali livelli hanno contenuto: non può espandere l'impronta alfa. Questo viene impostato per livello nella finestra di dialogo Attributi livello (elenco a discesa **Modalità composita**). Quando la modalità composita effettiva di un livello è diversa da Unione, l'icona a forma di occhio nel pannello Livelli viene sostituita con un'icona composita per indicare il comportamento di composizione non standard.
+- **Modalità composita: Ritaglia sullo sfondo**: impostando la modalità composita di un livello su **Ritaglia sullo sfondo** limita la composizione alle aree in cui i livelli **Unione** accumulati sottostanti hanno stabilito l'opacità. Il livello dipinge solo dove tali livelli hanno contenuto e non possono espandere l'impronta alfa. Questo viene impostato per livello nella finestra di dialogo Attributi livello (elenco a discesa **Modalità composita**). Quando la modalità composita effettiva di un livello è diversa da Unione, l'icona a forma di occhio nel pannello Livelli viene sostituita con un'icona composita per indicare il comportamento di composizione non standard.
 
-  **Esempio: forma alfa condivisa:** In un gruppo, il livello inferiore contiene un cerchio pieno su uno sfondo trasparente, impostato sulla modalità composita **Unione** predefinita. Ogni livello sopra di esso nello stesso gruppo è impostato su **Ritaglia sullo sfondo**. Questi livelli possono dipingere solo dove il cerchio fornisce opacità: una forma, molti livelli. Questo è un modello comune per colorare, ombreggiare e dettagliare all'interno di una silhouette definita senza preoccuparsi di fuoriuscite.
+  **Esempio: forma alfa condivisa:** In un gruppo, il livello inferiore contiene un cerchio pieno su uno sfondo trasparente, impostato sulla modalità composita **Unione** predefinita. Ogni livello sopra di esso nello stesso gruppo è impostato su **Ritaglia sullo sfondo**. Questi livelli possono dipingere solo dove il cerchio fornisce opacità (una forma, molti livelli). Questo è un modello comune per colorare, ombreggiare e dettagliare all'interno di una silhouette definita senza preoccuparsi di fuoriuscite.
 - **Maschere di livello**: applica una maschera in scala di grigi per controllare la visibilità del livello pixel per pixel. Dipingere il bianco sulla maschera rivela; il nero nasconde; il grigio fornisce un'opacità parziale.
 - **Maschere Pure-Child**: le maschere vengono archiviate come figli all'interno dello stack disegnabile, prevenendo la perdita di dati durante le trasformazioni.
 
@@ -66,7 +69,7 @@ Ciò garantisce che i gesti di trascinamento Alt (come la regolazione della dime
 
 ### Limitazioni
 
-- La selezione dei livelli non si attiva durante le operazioni dello strumento **Trasforma**: Alt ha un significato diverso in questo caso.
+- La selezione dei livelli non si attiva durante le operazioni dello strumento **Trasforma**; Alt ha un significato diverso lì.
 - La selezione non avviene se è presente una selezione mobile.
 - Solo l'Alt sinistro attiva la raccolta; destra Alt viene trattato come un modificatore standard.
 
@@ -112,7 +115,7 @@ I filtri GEGL non distruttivi applicati tramite il menu **Filtri** vengono memor
 
 Fai clic sull'icona **fx** su una riga di livello nel pannello Livelli per aprire il popover **Effetti di livello** per quel livello.
 
-Il popover mostra lo stack di filtri per il livello: ogni effetto impegnato è elencato per nome con un interruttore di visibilità accanto.
+Il popover mostra lo stack di filtri per il livello, con ogni effetto impegnato elencato per nome con un interruttore di visibilità accanto.
 
 ### Controlli
 
@@ -142,21 +145,21 @@ Fare doppio clic su un livello nel pannello Livelli per aprire la finestra di di
 ### Spazio e modalità compositi
 
 - **Spazio composito**: lo spazio colore utilizzato durante la composizione di questo livello con i livelli sottostanti. Opzioni: Automatico, Lineare (RGB), Percettivo (RGB).
-- **Modalità composita**: controlla il modo in cui il livello alfa interagisce con lo sfondo. Le opzioni includono Unione (influenza tutte le aree, impostazione predefinita per la modalità Normale), Ritaglia su sfondo (influenza solo aree con contenuto esistente, impostazione predefinita per la maggior parte delle altre modalità di fusione) e Intersezione.
+- **Modalità composita**: controlla il modo in cui il livello alfa interagisce con lo sfondo. Le opzioni includono Unione (influenza tutte le aree, impostazione predefinita per la modalità Normale), Ritaglia su sfondo (influenza solo le aree con contenuto esistente, impostazione predefinita per la maggior parte delle altre modalità di fusione) e Intersezione.
 
 ### Dimensioni e offset
 
 Per un livello esistente, **Dimensioni** mostra le dimensioni del livello e le dimensioni della maschera (se è allegata una maschera) come etichette di sola lettura.
 
-**Offset livello**: ruote X e Y che controllano la posizione del livello sull'area di disegno. Le modifiche vengono applicate immediatamente anziché alla chiusura della finestra di dialogo.
+**Offset livello**: ruote X e Y che controllano la posizione del livello sulla tela. Le modifiche vengono applicate immediatamente anziché alla chiusura della finestra di dialogo.
 
-Se il livello ha una maschera, di seguito vengono mostrati **Offset maschera**: gli indicatori X e Y per la posizione indipendente della maschera.
+Se il livello ha una maschera, di seguito vengono visualizzati gli **Offset maschera** (ruote X e Y per la posizione indipendente della maschera).
 
 Quando si crea un nuovo livello, i campi Larghezza e Altezza e il menu a discesa **Riempi con** (Primo piano, Sfondo, Bianco, Trasparente) sostituiscono la visualizzazione delle dimensioni di sola lettura.
 
 ### Attributi del livello (parassiti persistenti)
 
-La sezione inferiore della finestra di dialogo contiene una tabella Nome/Valore scorrevole per i parassiti persistenti: metadati con valori-chiave arbitrari allegati al livello. Questi valori vengono memorizzati con il progetto e sono accessibili dall'interfaccia di scripting di Scheme.
+La sezione inferiore della finestra di dialogo contiene una tabella Nome/Valore scorrevole per i parassiti persistenti (metadati di valori-chiave arbitrari allegati al livello). Questi valori vengono memorizzati con il progetto e sono accessibili dall'interfaccia di scripting di Scheme.
 
 - Fai clic su qualsiasi cella nella colonna Nome o Valore per modificarla in linea.
 - **Aggiungi**: aggiunge una nuova riga vuota.

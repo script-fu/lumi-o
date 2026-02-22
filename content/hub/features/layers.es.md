@@ -15,12 +15,15 @@ Las capas son la base de la ilustración estructurada. Cada capa es independient
 ## Tipos de capa
 
 ### Capas de pintura
+
 Capas ráster estándar para contenido pintado. Almacene datos de píxeles como buffers GEGL con transparencia alfa opcional.
 
 ### Agrupar capas
+
 Contenedores jerárquicos para organizar capas relacionadas. Los grupos pueden tener su propio modo de fusión, opacidad y máscaras de recorte. Las proyecciones grupales se componen según demanda.
 
 ### Máscaras de capa
+
 Máscaras de escala de grises adjuntas a cualquier capa, controlando la opacidad por píxel. Pintar una máscara con blanco vuelve opacos los píxeles; el negro los hace transparentes; el gris proporciona opacidad parcial.
 
 ## Modos de fusión
@@ -37,9 +40,9 @@ Cada capa tiene un modo de fusión que determina cómo se combina con las capas 
 
 ## Recorte y enmascaramiento
 
-- **Modo compuesto: Recortar al fondo**: configurar el modo compuesto de una capa en **Recortar al fondo** restringe la composición a áreas donde las capas acumuladas de **Unión** debajo tienen opacidad establecida. La capa se pinta solo donde esas capas tienen contenido; no puede expandir la huella alfa. Esto se establece por capa en el cuadro de diálogo Atributos de capa (menú desplegable **Modo compuesto**). Cuando el modo compuesto efectivo de una capa no es Unión, el ícono del ojo en el panel Capas se reemplaza con un ícono compuesto para indicar el comportamiento de composición no estándar.
+- **Modo compuesto: Recortar al fondo**: configurar el modo compuesto de una capa en **Recortar al fondo** restringe la composición a áreas donde las capas acumuladas de **Unión** debajo tienen opacidad establecida. La capa se pinta solo donde esas capas tienen contenido y no pueden expandir la huella alfa. Esto se establece por capa en el cuadro de diálogo Atributos de capa (menú desplegable **Modo compuesto**). Cuando el modo compuesto efectivo de una capa no es Unión, el ícono del ojo en el panel Capas se reemplaza con un ícono compuesto para indicar el comportamiento de composición no estándar.
 
-  **Ejemplo: forma alfa compartida:** En un grupo, la capa inferior contiene un círculo relleno sobre un fondo transparente, configurado en el modo compuesto **Unión** predeterminado. Cada capa superior en el mismo grupo está configurada en **Recortar al fondo**. Esas capas sólo pueden pintar donde el círculo proporciona opacidad: una forma, muchas capas. Este es un patrón común para colorear, sombrear y detallar dentro de una silueta definida sin preocuparse por el derrame.
+  **Ejemplo: forma alfa compartida:** En un grupo, la capa inferior contiene un círculo relleno sobre un fondo transparente, configurado en el modo compuesto **Unión** predeterminado. Cada capa superior en el mismo grupo está configurada en **Recortar al fondo**. Esas capas solo se pueden pintar donde el círculo proporciona opacidad (una forma, muchas capas). Este es un patrón común para colorear, sombrear y detallar dentro de una silueta definida sin preocuparse por el derrame.
 - **Máscaras de capa**: aplique una máscara en escala de grises para controlar la visibilidad de la capa píxel por píxel. Pintar de blanco la máscara revela; ocultaciones negras; el gris proporciona opacidad parcial.
 - **Máscaras puramente infantiles**: las máscaras se almacenan como elementos secundarios dentro de la pila dibujable, lo que evita la pérdida de datos durante las transformaciones.
 
@@ -112,7 +115,7 @@ Los filtros GEGL no destructivos aplicados a través del menú **Filtros** se al
 
 Haga clic en el icono **fx** en una fila de capa en el panel Capas para abrir la ventana emergente **Efectos de capa** para esa capa.
 
-La ventana emergente muestra la pila de filtros para la capa: cada efecto confirmado aparece por nombre con un interruptor de visibilidad al lado.
+La ventana emergente muestra la pila de filtros para la capa, con cada efecto confirmado enumerado por nombre con un interruptor de visibilidad al lado.
 
 ### Controles
 
@@ -142,13 +145,13 @@ Haga doble clic en una capa en el panel Capas para abrir el cuadro de diálogo A
 ### Espacio y modo compuestos
 
 - **Espacio compuesto**: el espacio de color utilizado al componer esta capa con las capas inferiores. Opciones: Automático, Lineal (RGB), Perceptual (RGB).
-- **Modo compuesto**: controla cómo interactúa la capa alfa con el fondo. Las opciones incluyen Unión (afecta a todas las áreas; el valor predeterminado para el modo Normal), Recortar al fondo (solo afecta áreas con contenido existente; el valor predeterminado para la mayoría de los otros modos de fusión) e Intersección.
+- **Modo compuesto**: controla cómo interactúa la capa alfa con el fondo. Las opciones incluyen Unión (afecta a todas las áreas, el valor predeterminado para el modo Normal), Recortar al fondo (solo afecta áreas con contenido existente, el valor predeterminado para la mayoría de los otros modos de fusión) e Intersección.
 
 ### Tamaño y compensaciones
 
 Para una capa existente, **Tamaños** muestra las dimensiones de la capa y las dimensiones de la máscara (si hay una máscara adjunta) como etiquetas de solo lectura.
 
-**Desplazamientos de capa**: controles giratorios X e Y que controlan la posición de la capa en el lienzo. Los cambios se aplican inmediatamente en lugar de cerrar el cuadro de diálogo.
+**Desplazamientos de capa**: los controles giratorios X e Y controlan la posición de la capa en el lienzo. Los cambios se aplican inmediatamente en lugar de cerrar el cuadro de diálogo.
 
 Si la capa tiene una máscara, a continuación se muestran **Desplazamientos de máscara** (controladores X e Y para la posición independiente de la máscara).
 
@@ -156,7 +159,7 @@ Al crear una nueva capa, los campos Ancho y Alto y un menú desplegable **Rellen
 
 ### Atributos de capa (parásitos persistentes)
 
-La sección inferior del cuadro de diálogo contiene una tabla desplazable de Nombre/Valor para parásitos persistentes: metadatos de valores-clave arbitrarios adjuntos a la capa. Estos valores se almacenan con el proyecto y se puede acceder a ellos desde la interfaz de secuencias de comandos de Scheme.
+La sección inferior del cuadro de diálogo contiene una tabla desplazable de Nombre/Valor para parásitos persistentes (metadatos de valores-clave arbitrarios adjuntos a la capa). Estos valores se almacenan con el proyecto y se puede acceder a ellos desde la interfaz de secuencias de comandos de Scheme.
 
 - Haga clic en cualquier celda de la columna Nombre o Valor para editarla en línea.
 - **Agregar**: Agrega una nueva fila vacía.

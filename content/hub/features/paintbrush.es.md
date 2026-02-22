@@ -10,16 +10,20 @@ La herramienta Pincel admite tipos de pincel rasterizados, generados por procedi
 
 ## Tipos de pincel
 
-### Pinceles rasterizados
-Imágenes de pincel de mapa de bits cargadas desde archivos `.png` o `.vbr`. Admite transparencia alfa y marcos de tuberías animados.
+### Pinceles ráster (.raster)
 
-### Pinceles generados
+Imágenes de pincel de mapa de bits que admiten transparencia alfa.
+
+### Pinceles generados (.param)
+
 Formas procesadas (círculo, cuadrado, diamante, triángulo) con parámetros ajustables: dureza, relación de aspecto, ángulo, redondez y radio de esquina. Los pinceles generados son livianos y escalables.
 
 ### Pinceles animados (.anim)
+
 Secuencias de cuadros secuenciales que avanzan durante los trazos. Los fotogramas pueden ciclarse de forma incremental (avances de fotograma por toque), seleccionarse aleatoriamente por toque o indexarse ​​por dinámica (presión, velocidad, inclinación, ángulo).
 
 ## Cursor de pintura
+
 El cursor se adapta al estado actual de la herramienta para proporcionar información contextual clara:
 
 - **Contorno del pincel**: el cursor sigue la forma y el tamaño exactos del pincel, brindando una vista previa en vivo de dónde aterrizará la pintura.
@@ -29,11 +33,13 @@ El cursor se adapta al estado actual de la herramienta para proporcionar informa
 ## Opciones de herramienta
 
 ### Controles de nivel superior
+
 Presente en todo momento, fuera de cualquier expansor:
 - **Modo**: Modo de fusión de pintura (Normal, Multiplicar, Trama, etc.)
 - **Opacidad**: opacidad general del trazo (0–100).
 
 ### Opciones de pincel
+
 En el expansor **Opciones de pincel** (ampliado de forma predeterminada):
 - **Tamaño**: Diámetro del pincel en píxeles.
 - **Relación**: Aplasta o estira la forma del pincel (-1,0–1,0). 0 = sin modificar; los valores negativos rotan la calabaza 90°.
@@ -45,6 +51,7 @@ En el expansor **Opciones de pincel** (ampliado de forma predeterminada):
 - **Borrador**: multiplicador de tamaño que se aplica cuando este pincel se utiliza como borrador (0,1–10,0). No se muestra en la propia herramienta Borrador.
 
 ### Efectos del trazo
+
 En el expansor **Efectos de trazo**:
 - **Postproceso**: aplica estabilización, compresión de velocidad y corrección de repetición una vez completado el golpe, lo que mejora la consistencia sin latencia.
   - **Umbral de giro**: Umbral de ángulo (0–180°) para corrección de dirección en esquinas cerradas. 0 = corrección de dirección de salto.
@@ -58,6 +65,7 @@ Cuando está activo, el estampado dab se reemplaza por un corredor geométrico c
 - **Reducción de velocidad** (0–100%): disminución máxima permitida del tamaño por muestra. Limita la rapidez con la que el tamaño puede disminuir cuando el trazo se desacelera.
 
 #### Suavizado
+
 Habilita el suavizado de entrada en tiempo real aplicado a la ruta del trazo mientras pinta. Se expande para revelar:
   - **Profundidad** (2–256): número de muestras de entrada anteriores consideradas al calcular la posición suavizada. Los valores más altos producen un retraso más prolongado y comprometido.
   - **Posición** (0–100): Intensidad del alisado aplicado a la posición del cepillo. Los valores más altos completan cambios bruscos de dirección.
@@ -65,6 +73,7 @@ Habilita el suavizado de entrada en tiempo real aplicado a la ruta del trazo mie
   - **Dirección** (0–100): Suavizado aplicado a la dirección del trazo, estabilizando la dinámica sensible al ángulo.
 
 #### Dinámica
+
 Asigne entrada de lápiz u otros valores en vivo a los parámetros de pintura:
 
 - **Presión** (lápiz óptico): controla el tamaño, la opacidad, la velocidad, la dureza, el color y más según la presión del lápiz.
@@ -77,6 +86,7 @@ Asigne entrada de lápiz u otros valores en vivo a los parámetros de pintura:
 Cada entrada dinámica se puede asignar a varias propiedades de forma independiente. Abra **Opciones de herramienta** → **Dinámica** para configurar.
 
 #### Desvanecimiento y color
+
 En el expansor **Fundido y color** (anidado dentro de Efectos de trazo; solo visible cuando **Sistema dinámico** está habilitado):
 
 - **Ángulo inicial relativo**: el valor del **Ángulo inicial** se interpreta en relación con la dirección del trazo en lugar de como un ángulo absoluto del lienzo.
@@ -88,23 +98,39 @@ En el expansor **Fundido y color** (anidado dentro de Efectos de trazo; solo vis
 - **Repetir**: Cómo se repite el desvanecimiento una vez que se agota la duración del desvanecimiento (Ninguno, Bucle, Diente de sierra, Triángulo).
 
 
-### Cabezales de cepillo
-Pinte con múltiples cabezales de cepillo independientes dispuestos en un anillo de formación alrededor del recorrido del trazo. Los controles aparecen en el expansor **Cabezales de cepillo** en el panel de opciones de herramientas.- **Cabezales**: Número de cabezales de cepillo simultáneos (1–16).
+### Cabezales de cepilloCabezales de cepillo coloca varios cabezales de cepillo independientes en un **anillo de órbita** circular centrado en la ruta del trazo. Cada cabezal pinta una pincelada completa en su propia posición cada vez que avanza el trazo, produciendo múltiples trazos paralelos o en abanico simultáneamente.
+
+El radio de la órbita está determinado por el tamaño global del cepillo menos el tamaño de la cabeza: las cabezas más grandes se sitúan más cerca del centro; las cabezas más pequeñas orbitan más lejos. Las cabezas se espacian uniformemente alrededor del ring. Con dos cabezas, obtienes una a cada lado del trazo, creando una extensión simétrica que se comporta como una punta de caligrafía. El control deslizante **Seguir dirección** gira todo el anillo para permanecer perpendicular al trazo, de modo que la punta sigue la dirección de forma natural mientras pintas. Agregar más cabezas las abanica progresivamente alrededor del anillo, hasta un círculo de rociado completo en 16.
+
+Los controles aparecen en el expansor **Cabezales de cepillo** en el panel de opciones de herramientas.
+
+- **Count**: Número de cabezales de cepillo simultáneos (1–16).
 - **Tamaño**: tamaño renderizado de cada cabeza en relación con el tamaño global del pincel (0,1–1,0).
-- **Rigidez**: La rigidez con la que el radio de la órbita sigue el tamaño del pincel en escala dinámica. 0 = la órbita sigue el tamaño de la dinámica; 1 = la órbita permanece fija al tamaño base.
-- **Sigue** (0,0–1,0): con qué intensidad el anillo de formación sigue la dirección de desplazamiento de la carrera. En 1,0 (predeterminado), el anillo siempre es perpendicular a la dirección de viaje. En 0,0 está bloqueado en el valor estático de **Ángulo**. Los valores intermedios se mezclan entre las dos orientaciones. Esto es independiente del sistema Dynamics: no se requiere ninguna configuración de dinámica de ángulos.
-- **Ángulo** (0–360°): Orientación estática del anillo de formación, utilizada cuando **Seguimiento** es inferior a 1,0. Cuando **Bloquear para ver** está activo, el ángulo se compensa automáticamente para la rotación del lienzo.
-- **Variación**: variación del tamaño por cabeza y sesgo de presión aplicados a la dinámica.
+- **Ángulo** (0–360°): Orientación estática del anillo de formación, utilizada cuando **Sigue dirección** es inferior a 1,0.
+- **Variación de presión**: variación del tamaño por cabeza aplicada como un sesgo de presión independiente a través de las curvas dinámicas.
 - **Variación de opacidad**: variación de opacidad por cabeza, independiente de la variación de tamaño.
-- **Semilla**: Semilla aleatoria fija para variación por cabeza. Solo se aplica cuando **Random Bristles** está desactivado.
-- **Cerdas aleatorias**: aleatoriza el carácter de las cerdas en cada trazo (ignora la semilla).
-- **Marcos independientes**: para pinceles animados: cuando está activado, cada cabezal avanza su cuadro de animación de forma independiente.
+- **Rigidez**: La rigidez con la que el radio de la órbita sigue el tamaño del pincel en escala dinámica. 0 = la órbita sigue el tamaño de la dinámica; 1 = la órbita permanece fija al tamaño base.
+- **Sigue la dirección** (0,0–1,0): con qué fuerza el anillo de formación sigue la dirección de desplazamiento del trazo. En 1,0, el anillo siempre es perpendicular a la dirección de desplazamiento; en 0.0 se bloquea en el valor estático **Ángulo**.
+- **Semilla de personaje** (0–255): Semilla fija para personaje por cabeza (tamaño, posición de dispersión, alcance). La misma semilla reproduce la misma formación en cada golpe. Insensibilizado cuando **Personaje principal aleatorio** está activado.
+
+#### Interpolación
+
+Desplaza las cabezas a lo largo y alrededor del trazo en cada toque, creando efectos de difuminado y rociado.
+
+- **Exceso** (0–5): Dispersa las cabezas hacia adelante a lo largo de la dirección de viaje. A 1,0, las cabezas se extienden hasta un intervalo completo de espaciado de toques hacia adelante; los valores superiores a 1,0 permiten un mayor alcance con un sesgo de rareza pronunciado.
+- **Undershoot** (0–5): Igual que Overshoot pero detrás del dab actual. Combinado con Overshoot, esto crea una mancha principal o cola de cometa. Suprimido en el primer toque para evitar artefactos retrógrados.
+- **Ángulo de pulverización** (0–90°): ventila cada cabezal hacia afuera desde la dirección del trazo en un ángulo aleatorio por cabezal hasta este valor. Sujetado a 90° para que ninguna cabeza mire hacia atrás. Predeterminado: 10°.
+- **Semilla de pulverización** (0–255): Semilla fija para ángulos de pulverización por cabezal, independiente de la semilla de carácter. Desensibilizado cuando **Patrón de pulverización aleatorio** está activado.
+
+#### Aleatorización
+
+- **Carácter de cabeza aleatorio**: vuelve a dibujar los valores de los caracteres por cabeza (tamaño, posición de dispersión, alcance) en cada toque para que la formación sea completamente caótica a lo largo del trazo. Anula **Semilla de personaje**.
+- **Patrón de pulverización aleatorio**: vuelve a dibujar los ángulos de pulverización en cada aplicación para que el abanico se mueva continuamente a lo largo del trazo ("spray vivo"). Anula **Spray Seed**.
+- **Cuadros de animación aleatorios**: Para pinceles animados: cada cabezal avanza su cuadro de animación de forma independiente.
 
 ### Opciones adicionales
 
-En el expansor **Opciones adicionales** (contraído de forma predeterminada):
-
-- **Bloquear para ver**: Mantiene la apariencia del pincel fija en relación con la vista del lienzo; cuando gira el lienzo, el pincel gira con él.
+En el expansor **Opciones adicionales** (contraído de forma predeterminada):- **Bloquear para ver**: Mantiene la apariencia del pincel fija en relación con la vista del lienzo: cuando giras el lienzo, el pincel gira con él.
 - **Límite de pincel simple**: utiliza un círculo simple para el contorno del cursor del pincel en lugar de representar la forma completa del pincel. Útil para pinceles complejos o grandes donde resulta costoso dibujar el límite preciso.
 - **Vibración uniforme**: cuando está activado, los desplazamientos de dab del control deslizante **Vibración** se extraen de una distribución uniforme (cada desplazamiento es igualmente probable dentro del rango). Cuando está desactivado, la distribución es gaussiana (desplaza el grupo hacia el centro).
 - **Restaurar los últimos colores utilizados**: Restaura los colores de primer plano y de fondo de la sesión anterior al inicio, en lugar de usar el blanco y negro de forma predeterminada.

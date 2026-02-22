@@ -2,7 +2,7 @@
 title: "Filåterställning"
 type: docs
 ---
-Lumi har två oberoende återställningssystem – automatiska bakgrundssparningar och manuella inkrementella kontrollpunkter – båda tillgängliga från en enda dialogruta.
+Lumi har två oberoende återställningssystem (automatiska bakgrundssparningar och manuella inkrementella kontrollpunkter), båda tillgängliga från en enda dialogruta.
 
 ## Åtkomst
 

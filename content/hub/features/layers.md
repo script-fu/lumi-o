@@ -39,15 +39,15 @@ Every layer has a blending mode determining how it combines with layers below:
 
 ## Clipping & Masking
 
-- **Composite Mode — Clip to Backdrop**: Setting a layer's composite mode to **Clip to Backdrop** restricts compositing to areas where the accumulated **Union** layers below have established opacity. The layer paints only where those layers have content — it cannot expand the alpha footprint. This is set per-layer in the Layer Attributes dialog (**Composite mode** dropdown). When a layer's effective composite mode is anything other than Union, the eye icon in the Layers panel is replaced with a composite icon to indicate the non-standard compositing behavior.
+- **Composite Mode: Clip to Backdrop**: Setting a layer's composite mode to **Clip to Backdrop** restricts compositing to areas where the accumulated **Union** layers below have established opacity. The layer paints only where those layers have content and cannot expand the alpha footprint. This is set per-layer in the Layer Attributes dialog (**Composite mode** dropdown). When a layer's effective composite mode is anything other than Union, the eye icon in the Layers panel is replaced with a composite icon to indicate the non-standard compositing behavior.
 
-  **Example — shared alpha shape:** In a group, the bottom layer contains a filled circle on a transparent background, set to the default **Union** composite mode. Every layer above it in the same group is set to **Clip to Backdrop**. Those layers can only paint where the circle provides opacity — one shape, many layers. This is a common pattern for colouring, shading, and detailing within a defined silhouette without worrying about spill.
+  **Example: shared alpha shape:** In a group, the bottom layer contains a filled circle on a transparent background, set to the default **Union** composite mode. Every layer above it in the same group is set to **Clip to Backdrop**. Those layers can only paint where the circle provides opacity (one shape, many layers). This is a common pattern for colouring, shading, and detailing within a defined silhouette without worrying about spill.
 - **Layer Masks**: Apply a grayscale mask to control layer visibility pixel-by-pixel. Painting white on the mask reveals; black conceals; grey provides partial opacity.
 - **Pure-Child Masks**: Masks are stored as children within the drawable stack, preventing data loss during transformations.
 
 ## Layer Picking (Alt Key)
 
-Tapping **Alt** (left Alt) while hovering over the canvas selects the layer with visible pixels beneath the cursor — without switching tools or clicking.
+Tapping **Alt** (left Alt) while hovering over the canvas selects the layer with visible pixels beneath the cursor, without switching tools or clicking.
 
 ### How It Works
 
@@ -70,7 +70,7 @@ This ensures Alt drag gestures (such as brush size adjustment) and Alt-modified 
 
 ### Limitations
 
-- Layer picking does not activate during **Transform** tool operations — Alt has a different meaning there.
+- Layer picking does not activate during **Transform** tool operations; Alt has a different meaning there.
 - Picking does not occur if a floating selection is present.
 - Only left Alt triggers picking; right Alt is treated as a standard modifier.
 
@@ -100,7 +100,7 @@ Lock icons are shown in the Layers panel header row. Each lock can be toggled in
 
 - **Lock Mask**: Prevents editing the layer mask. The mask remains visible and active but cannot be painted on or modified while this lock is on.
 
-- **Lock Color**: Locks painting to a specific color — the current foreground color at the moment the lock is applied. Subsequent strokes on this layer use that stored color regardless of the active foreground color. Unlocking discards the stored color.
+- **Lock Color**: Locks painting to a specific color: the current foreground color at the moment the lock is applied. Subsequent strokes on this layer use that stored color regardless of the active foreground color. Unlocking discards the stored color.
 
 - **Lock Content** (Lock Pixels): Prevents all pixel edits to the layer. The layer cannot be painted on, filled, transformed, or otherwise modified. Useful for protecting finished layers.
 
@@ -118,7 +118,7 @@ Non-destructive GEGL filters applied through the **Filters** menu are stored as 
 
 Click the **fx** icon on a layer row in the Layers panel to open the **Layer Effects** popover for that layer.
 
-The popover displays the filter stack for the layer — each committed effect listed by name with a visibility toggle beside it.
+The popover displays the filter stack for the layer, with each committed effect listed by name with a visibility toggle beside it.
 
 ### Controls
 
@@ -148,21 +148,21 @@ Double-click a layer in the Layers panel to open the Layer Attributes dialog.
 ### Composite Space and Mode
 
 - **Composite space**: The color space used when compositing this layer with layers below. Options: Auto, Linear (RGB), Perceptual (RGB).
-- **Composite mode**: Controls how the layer alpha interacts with the backdrop. Options include Union (affects all areas — the default for Normal mode), Clip to Backdrop (only affects areas with existing content — the default for most other blend modes), and Intersection.
+- **Composite mode**: Controls how the layer alpha interacts with the backdrop. Options include Union (affects all areas, the default for Normal mode), Clip to Backdrop (only affects areas with existing content, the default for most other blend modes), and Intersection.
 
 ### Size and Offsets
 
 For an existing layer, **Sizes** shows the layer dimensions and mask dimensions (if a mask is attached) as read-only labels.
 
-**Layer Offsets** — X and Y spinners controlling the layer's position on the canvas. Changes apply immediately rather than on dialog close.
+**Layer Offsets**: X and Y spinners controlling the layer's position on the canvas. Changes apply immediately rather than on dialog close.
 
-If the layer has a mask, **Mask Offsets** — X and Y spinners for the mask's independent position — are shown below.
+If the layer has a mask, **Mask Offsets** (X and Y spinners for the mask's independent position) are shown below.
 
 When creating a new layer, Width and Height fields and a **Fill with** dropdown (Foreground, Background, White, Transparent) replace the read-only size display.
 
 ### Layer Attributes (Persistent Parasites)
 
-The lower section of the dialog contains a scrollable Name / Value table for persistent parasites — arbitrary key-value metadata attached to the layer. These values are stored with the project and are accessible from the Scheme scripting interface.
+The lower section of the dialog contains a scrollable Name / Value table for persistent parasites (arbitrary key-value metadata attached to the layer). These values are stored with the project and are accessible from the Scheme scripting interface.
 
 - Click any cell in the Name or Value column to edit it inline.
 - **Add**: Appends a new empty row.

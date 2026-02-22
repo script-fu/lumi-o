@@ -163,11 +163,11 @@ By wrapping low-level functions in meaningful names, we create a more intuitive 
 
 ### Shipped Wrappers: the Utility Stdlib
 
-Lumi ships a set of ready-made wrappers loaded automatically at startup, so they are available in any plug-in or in the Scheme Console without any `(load ...)` call. These libraries — `common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, and `paths.scm` — are built on exactly the same principle as the examples above: they give clear names to low-level operations, hide repetitive boilerplate, and provide a single place to update if the underlying command changes.
+Lumi ships a set of ready-made wrappers loaded automatically at startup, so they are available in any plug-in or in the Scheme Console without any `(load ...)` call. These libraries (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, and `paths.scm`) are built on exactly the same principle as the examples above: they give clear names to low-level operations, hide repetitive boilerplate, and provide a single place to update if the underlying command changes.
 
 For example, `images.scm` provides `image-get-open-list` as a readable wrapper around the raw PDB call, and `files.scm` exposes path-building helpers that would otherwise require repeated `string-append` chains.
 
-You can browse every exported name, read its docstring, and see which library it comes from in the **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Help → Programming → Utility Browser). It is a practical demonstration of wrapping at scale — and a useful source of patterns to borrow when building your own helper library.
+You can browse every exported name, read its docstring, and see which library it comes from in the **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Help → Programming → Utility Browser). It is a practical demonstration of wrapping at scale, and a useful source of patterns to borrow when building your own helper library.
 
 ### Conclusion
 

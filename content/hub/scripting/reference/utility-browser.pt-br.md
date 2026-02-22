@@ -2,7 +2,7 @@
 title: "Navegador de utilitários"
 type: docs
 ---
-O Navegador de Utilitários permite que você explore o utilitário Scheme stdlib integrado que acompanha o Lumi - sem ter que sair do aplicativo ou vasculhar os arquivos de origem.
+O Navegador de utilitários permite explorar o utilitário de esquema integrado stdlib que acompanha o Lumi, sem precisar sair do aplicativo ou vasculhar os arquivos de origem.
 
 ## Abrindo o navegador de utilitários
 
@@ -28,8 +28,8 @@ Tudo isso está disponível em qualquer plug-in do Scheme ou no Scheme Console.
 
 ## Pesquisa e filtragem
 
-- **Caixa de pesquisa** — filtra por nome conforme você digita (correspondência de substring sem distinção entre maiúsculas e minúsculas).
-- **Filtro de tipo** — restrinja os resultados para `procedure`, `variable` ou `syntax`.
+- **Caixa de pesquisa**: filtra por nome conforme você digita (correspondência de substring sem distinção entre maiúsculas e minúsculas).
+- **Filtro de tipo**: restrinja os resultados para `procedure`, `variable` ou `syntax`.
 
 Clicar em uma entrada mostra sua documentação completa e a biblioteca de onde ela vem.
 
@@ -39,4 +39,4 @@ As bibliotecas de utilitários são uma aplicação prática do padrão de encap
 
 ## Relacionamento com o navegador de procedimentos
 
-O Navegador de Utilitários é separado de **Filtros → Script-Fu → Console → Navegar** (o Navegador de Procedimento). O Navegador de procedimentos lista os procedimentos registrados no PDB. O Navegador de Utilitários lista definições auxiliares que residem intencionalmente *fora* do PDB — elas são apenas do esquema e não possuem ligação C.
+O Navegador de Utilitários é separado de **Filtros → Script-Fu → Console → Navegar** (o Navegador de Procedimento). O Navegador de procedimentos lista os procedimentos registrados no PDB. O Navegador de Utilitários lista definições auxiliares que residem intencionalmente *fora* do PDB: elas são apenas de esquema e não possuem ligação C.

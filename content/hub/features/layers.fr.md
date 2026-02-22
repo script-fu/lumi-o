@@ -15,12 +15,15 @@ Les calques constituent la base d’une illustration structurée. Chaque calque 
 ## Types de calques
 
 ### Couches de peinture
+
 Calques raster standard pour le contenu peint. Stockez les données de pixels sous forme de tampons GEGL avec transparence alpha en option.
 
 ### Couches de groupe
+
 Conteneurs hiérarchiques pour organiser les couches associées. Les groupes peuvent avoir leur propre mode de fusion, leur propre opacité et leurs propres masques d'écrêtage. Les projections de groupe sont composées à la demande.
 
 ### Masques de calque
+
 Masques en niveaux de gris attachés à n’importe quel calque, contrôlant l’opacité par pixel. Peindre sur un masque avec du blanc rend les pixels opaques ; le noir les rend transparents ; le gris fournit une opacité partielle.
 
 ## Modes de fusion
@@ -37,9 +40,9 @@ Chaque calque a un mode de fusion déterminant comment il se combine avec les ca
 
 ## Découpage et masquage
 
-- **Mode composite — Découper sur toile de fond** : définir le mode composite d'un calque sur **Clip sur toile de fond** restreint la composition aux zones où les calques **Union** accumulés ci-dessous ont établi leur opacité. Le calque peint uniquement là où ces calques ont du contenu – il ne peut pas étendre l’empreinte alpha. Ceci est défini par couche dans la boîte de dialogue Attributs de couche (menu déroulant **Mode composite**). Lorsque le mode composite effectif d'un calque est autre que Union, l'icône en forme d'œil dans le panneau Calques est remplacée par une icône composite pour indiquer le comportement de composition non standard.
+- **Mode composite : Clip sur toile de fond** : la définition du mode composite d'un calque sur **Clip sur toile de fond** restreint la composition aux zones où les calques **Union** accumulés ci-dessous ont établi leur opacité. Le calque peint uniquement là où ces calques ont du contenu et ne peut pas étendre l'empreinte alpha. Ceci est défini par couche dans la boîte de dialogue Attributs de couche (menu déroulant **Mode composite**). Lorsque le mode composite effectif d'un calque est autre que Union, l'icône en forme d'œil dans le panneau Calques est remplacée par une icône composite pour indiquer le comportement de composition non standard.
 
-  **Exemple : forme alpha partagée :** Dans un groupe, le calque inférieur contient un cercle rempli sur un arrière-plan transparent, défini sur le mode composite **Union** par défaut. Chaque calque situé au-dessus dans le même groupe est défini sur **Clip to Toile de fond**. Ces calques ne peuvent peindre que là où le cercle assure l'opacité : une forme, plusieurs calques. Il s'agit d'un motif courant pour colorer, ombrer et détailler une silhouette définie sans se soucier des déversements.
+  **Exemple : forme alpha partagée :** Dans un groupe, le calque inférieur contient un cercle rempli sur un fond transparent, défini sur le mode composite **Union** par défaut. Chaque calque situé au-dessus dans le même groupe est défini sur **Clip to Toile de fond**. Ces calques ne peuvent peindre que là où le cercle assure l'opacité (une forme, plusieurs calques). Il s'agit d'un motif courant pour colorer, ombrer et détailler une silhouette définie sans se soucier des déversements.
 - **Masques de calque** : appliquez un masque en niveaux de gris pour contrôler la visibilité du calque pixel par pixel. La peinture blanche sur le masque révèle ; le noir cache; le gris fournit une opacité partielle.
 - **Masques purs enfants** : les masques sont stockés en tant qu'enfants dans la pile dessinable, évitant ainsi la perte de données lors des transformations.
 
@@ -66,7 +69,7 @@ Cela garantit que les gestes de glisser Alt (tels que l'ajustement de la taille 
 
 ### Limites
 
-- La sélection de calques ne s'active pas pendant les opérations de l'outil **Transformation** — Alt a ici une signification différente.
+- La sélection de calques ne s'active pas pendant les opérations de l'outil **Transformation** ; Alt a ici une signification différente.
 - Le picking n'a pas lieu si une sélection flottante est présente.
 - Seul l'Alt gauche déclenche le picking ; Right Alt est traité comme un modificateur standard.
 
@@ -96,7 +99,7 @@ Les icônes de verrouillage sont affichées dans la ligne d'en-tête du panneau 
 
 - **Verrouiller le masque** : empêche la modification du masque de calque. Le masque reste visible et actif mais ne peut pas être peint ou modifié tant que ce verrou est activé.
 
-- **Verrouiller la couleur** : verrouille la peinture sur une couleur spécifique : la couleur de premier plan actuelle au moment où le verrouillage est appliqué. Les traits suivants sur ce calque utilisent cette couleur stockée quelle que soit la couleur de premier plan active. Le déverrouillage supprime la couleur stockée.
+- **Verrouiller la couleur** : Verrouille la peinture sur une couleur spécifique : la couleur de premier plan actuelle au moment où le verrouillage est appliqué. Les traits suivants sur ce calque utilisent cette couleur stockée quelle que soit la couleur de premier plan active. Le déverrouillage supprime la couleur stockée.
 
 - **Verrouiller le contenu** (Verrouiller les pixels) : empêche toutes les modifications de pixels du calque. Le calque ne peut pas être peint, rempli, transformé ou autrement modifié. Utile pour protéger les couches finies.
 
@@ -112,7 +115,7 @@ Les filtres GEGL non destructifs appliqués via le menu **Filtres** sont stocké
 
 Cliquez sur l'icône **fx** sur une ligne de calque dans le panneau Calques pour ouvrir le popover **Effets de calque** pour ce calque.
 
-La fenêtre contextuelle affiche la pile de filtres pour la couche : chaque effet validé est répertorié par son nom avec une bascule de visibilité à côté.
+La fenêtre contextuelle affiche la pile de filtres pour la couche, chaque effet validé étant répertorié par nom avec une bascule de visibilité à côté.
 
 ### Contrôles
 
@@ -142,21 +145,21 @@ Double-cliquez sur un calque dans le panneau Calques pour ouvrir la boîte de di
 ### Espace et mode composites
 
 - **Espace composite** : L'espace colorimétrique utilisé lors de la composition de ce calque avec les calques ci-dessous. Options : Auto, Linéaire (RVB), Perceptuel (RVB).
-- **Mode composite** : contrôle la façon dont le calque alpha interagit avec la toile de fond. Les options incluent Union (affecte toutes les zones – la valeur par défaut pour le mode Normal), Couper sur toile de fond (affecte uniquement les zones avec du contenu existant – la valeur par défaut pour la plupart des autres modes de fusion) et Intersection.
+- **Mode composite** : contrôle la façon dont le calque alpha interagit avec la toile de fond. Les options incluent Union (affecte toutes les zones, valeur par défaut pour le mode Normal), Découper sur toile de fond (affecte uniquement les zones avec du contenu existant, valeur par défaut pour la plupart des autres modes de fusion) et Intersection.
 
 ### Taille et décalages
 
 Pour un calque existant, **Tailles** affiche les dimensions du calque et les dimensions du masque (si un masque est attaché) sous forme d'étiquettes en lecture seule.
 
-**Décalages de calque** — Les doubles flèches X et Y contrôlant la position du calque sur le canevas. Les modifications s’appliquent immédiatement plutôt qu’à la fermeture de la boîte de dialogue.
+**Décalages de calque** : les doubles flèches X et Y contrôlant la position du calque sur le canevas. Les modifications s’appliquent immédiatement plutôt qu’à la fermeture de la boîte de dialogue.
 
-Si le calque comporte un masque, les **Décalages du masque** (les doubles flèches X et Y pour la position indépendante du masque) sont indiqués ci-dessous.
+Si le calque a un masque, les **Décalages du masque** (les doubles flèches X et Y pour la position indépendante du masque) sont indiqués ci-dessous.
 
 Lors de la création d'un nouveau calque, les champs Largeur et Hauteur et une liste déroulante **Remplir avec** (Premier plan, Arrière-plan, Blanc, Transparent) remplacent l'affichage de la taille en lecture seule.
 
 ### Attributs de couche (parasites persistants)
 
-La section inférieure de la boîte de dialogue contient un tableau déroulant Nom/Valeur pour les parasites persistants – des métadonnées clé-valeur arbitraires attachées à la couche. Ces valeurs sont stockées avec le projet et sont accessibles depuis l'interface de script Scheme.
+La section inférieure de la boîte de dialogue contient un tableau déroulant Nom/Valeur pour les parasites persistants (métadonnées clé-valeur arbitraires attachées à la couche). Ces valeurs sont stockées avec le projet et sont accessibles depuis l'interface de script Scheme.
 
 - Cliquez sur n'importe quelle cellule de la colonne Nom ou Valeur pour la modifier en ligne.
 - **Ajouter** : ajoute une nouvelle ligne vide.

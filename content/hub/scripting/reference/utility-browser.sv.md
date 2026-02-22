@@ -2,7 +2,7 @@
 title: "Verktygswebbläsare"
 type: docs
 ---
-Utility Browser låter dig utforska det inbyggda Scheme-verktyget stdlib som levereras med Lumi — utan att behöva lämna appen eller gräva igenom källfiler.
+Utility Browser låter dig utforska det inbyggda Scheme-verktyget stdlib som levereras med Lumi, utan att behöva lämna appen eller gräva igenom källfiler.
 
 ## Öppna Utility Browser
 
@@ -28,8 +28,8 @@ Alla dessa är tillgängliga i alla Scheme-plugin-program eller i Scheme Console
 
 ## Sökning och filtrering
 
-- **Sökruta** — filtrerar efter namn medan du skriver (skiftlägesokänslig understrängsmatchning).
-- **Snällt filter** — begränsa resultaten till `procedure`, `variable` eller `syntax`.
+- **Sökruta**: filtrerar efter namn medan du skriver (skiftlägesokänslig understrängsmatchning).
+- **Snällt filter**: begränsa resultaten till `procedure`, `variable` eller `syntax`.
 
 Om du klickar på en post visas dess fullständiga docstring och biblioteket den kommer ifrån.
 
@@ -39,4 +39,4 @@ Verktygsbiblioteken är en praktisk tillämpning av omslagsmönstret: varje hjä
 
 ## Relation till procedurbläddraren
 
-Verktygswebbläsaren är separat från **Filter → Script-Fu → Konsol → Bläddra** (Procedurbläddraren). Procedurbläddraren listar PDB-registrerade procedurer. Verktygswebbläsaren listar hjälpdefinitioner som avsiktligt lever *utanför* PDB - de är endast för schema och har ingen C-bindning.
+Verktygswebbläsaren är separat från **Filter → Script-Fu → Konsol → Bläddra** (Procedurbläddraren). Procedurbläddraren listar PDB-registrerade procedurer. Verktygswebbläsaren listar hjälpdefinitioner som avsiktligt lever *utanför* PDB: de är endast för schema och har ingen C-bindning.

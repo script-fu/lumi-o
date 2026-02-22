@@ -28,8 +28,8 @@ Deze zijn allemaal beschikbaar in elke Scheme-plug-in of in de Scheme Console.
 
 ## Zoeken en filteren
 
-- **Zoekvak** — filtert op naam terwijl u typt (hoofdlettergevoelige subtekenreeksovereenkomst).
-- **Soort filter** — beperk de resultaten tot `procedure`, `variable`, of `syntax`.
+- **Zoekvak**: filtert op naam terwijl u typt (niet-hoofdlettergevoelige subtekenreeksovereenkomst).
+- **Soort filter**: resultaten beperken tot `procedure`, `variable`, of `syntax`.
 
 Als u op een item klikt, wordt de volledige docstring weergegeven, evenals de bibliotheek waar het vandaan komt.
 
@@ -39,4 +39,4 @@ De hulpprogrammabibliotheken zijn een praktische toepassing van het inpakpatroon
 
 ## Relatie met de procedurebrowser
 
-De Utility Browser staat los van **Filters → Script-Fu → Console → Browse** (de Procedurebrowser). De Procedurebrowser geeft een overzicht van PDB-geregistreerde procedures. De Utility Browser geeft hulpdefinities weer die opzettelijk *buiten* de PDB leven - ze zijn alleen voor Scheme en hebben geen C-binding.
+De Utility Browser staat los van **Filters → Script-Fu → Console → Browse** (de Procedurebrowser). De Procedurebrowser geeft een overzicht van PDB-geregistreerde procedures. De Utility Browser geeft hulpdefinities weer die opzettelijk *buiten* de PDB leven: ze zijn alleen voor Scheme en hebben geen C-binding.

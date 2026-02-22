@@ -147,7 +147,13 @@ def translate_body(body: str, translator):
     translated = "".join(translated_chunks)
     restored = restore_tokens(translated, tokens)
     restored = re.sub(r"^(#{1,6})\u00A0", r"\1 ", restored, flags=re.MULTILINE)
-    return re.sub(r"^(#{1,6})([^\s#])", r"\1 \2", restored, flags=re.MULTILINE)
+    restored = re.sub(r"^(#{1,6})([^\s#])", r"\1 \2", restored, flags=re.MULTILINE)
+    # Re-split heading lines that were merged with following content by the translator
+    # e.g. "### Blues und Cyan| Muster |..." -> "### Blues und Cyan\n\n| Muster |..."
+    restored = re.sub(r"^(#{1,6} [^\n|]+?)\s*(\|)", r"\1\n\n\2", restored, flags=re.MULTILINE)
+    # Ensure a blank line follows every heading (single \n -> \n\n)
+    restored = re.sub(r"^(#{1,6} [^\n]+)\n(?!\n)", r"\1\n\n", restored, flags=re.MULTILINE)
+    return restored
 
 
 def translated_path(src_path: Path, lang: str):

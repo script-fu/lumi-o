@@ -2,7 +2,7 @@
 title: "Dateiwiederherstellung"
 type: docs
 ---
-Lumi unterhält zwei unabhängige Wiederherstellungssysteme – automatische Hintergrundspeicherungen und manuelle inkrementelle Prüfpunkte – beide sind über einen einzigen Dialog zugänglich.
+Lumi unterhält zwei unabhängige Wiederherstellungssysteme (automatische Hintergrundspeicherungen und manuelle inkrementelle Prüfpunkte), auf die beide über einen einzigen Dialog zugegriffen werden können.
 
 ## Zugriff
 

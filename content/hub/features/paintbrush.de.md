@@ -10,16 +10,20 @@ Das Pinselwerkzeug unterstützt Raster-, prozedural generierte und animierte Pin
 
 ## Pinseltypen
 
-### Rasterpinsel
-Bitmap-Pinselbilder, die aus `.png`- oder `.vbr`-Dateien geladen wurden. Unterstützt Alpha-Transparenz und animierte Rohrrahmen.
+### Rasterpinsel (.raster)
 
-### Generierte Pinsel
+Bitmap-Pinselbilder, die Alpha-Transparenz unterstützen.
+
+### Generierte Pinsel (.param)
+
 Prozedural gerenderte Formen (Kreis, Quadrat, Raute, Dreieck) mit einstellbaren Parametern: Härte, Seitenverhältnis, Winkel, Rundheit und Eckenradius. Generierte Pinsel sind leichtgewichtig und skalierbar.
 
 ### Animierte Pinsel (.anim)
+
 Sequentielle Bildsequenzen, die während der Striche fortschreiten. Frames können inkrementell durchlaufen werden (Bildvorlauf pro Tupfer), zufällig pro Tupfer ausgewählt oder nach Dynamik (Druck, Geschwindigkeit, Neigung, Winkel) indiziert werden.
 
 ## Malcursor
+
 Der Cursor passt sich dem aktuellen Werkzeugstatus an, um klares, kontextbezogenes Feedback zu geben:
 
 - **Pinselumriss**: Der Cursor verfolgt die genaue Pinselform und -größe und bietet eine Live-Vorschau, wo die Farbe landen wird.
@@ -29,11 +33,13 @@ Der Cursor passt sich dem aktuellen Werkzeugstatus an, um klares, kontextbezogen
 ## Werkzeugoptionen
 
 ### Steuerelemente der obersten Ebene
+
 Immer präsent, außerhalb jedes Expanders:
 - **Modus**: Farbmischmodus (Normal, Multiplizieren, Bildschirm usw.)
 - **Deckkraft**: Gesamtdeckkraft des Strichs (0–100).
 
 ### Pinseloptionen
+
 Im Expander **Pinseloptionen** (standardmäßig erweitert):
 - **Größe**: Pinseldurchmesser in Pixel.
 - **Verhältnis**: Die Pinselform stauchen oder strecken (-1,0–1,0). 0 = unverändert; Negative Werte drehen den Kürbis um 90°.
@@ -45,6 +51,7 @@ Im Expander **Pinseloptionen** (standardmäßig erweitert):
 - **Radiergummi**: Größenmultiplikator, der angewendet wird, wenn dieser Pinsel als Radiergummi verwendet wird (0,1–10,0). Wird im Radiergummi selbst nicht angezeigt.
 
 ### Stricheffekte
+
 Im Expander **Stricheffekte**:
 - **Nachbearbeitung**: Wendet Stabilisierung, Geschwindigkeitskomprimierung und Wiederholungskorrektur an, nachdem der Schlag abgeschlossen ist, und verbessert so die Konsistenz ohne Latenz.
   - **Drehschwellenwert**: Winkelschwellenwert (0–180°) zur Richtungskorrektur an scharfen Ecken. 0 = Sprungrichtung fix.
@@ -58,6 +65,7 @@ Wenn aktiv, wird das Stempeln von Spitzen durch einen kontinuierlichen geometris
 - **Velocity Shrink** (0–100 %): Maximal zulässige Größenverringerung pro Probe. Begrenzt, wie schnell die Größe sinken kann, wenn der Hub verlangsamt wird.
 
 #### Glättung
+
 Ermöglicht die Eingabeglättung in Echtzeit, die beim Malen auf den Strichpfad angewendet wird. Wird erweitert und zeigt Folgendes:
   - **Tiefe** (2–256): Anzahl der vorherigen Eingabeproben, die bei der Berechnung der geglätteten Position berücksichtigt werden. Höhere Werte führen zu einer längeren, engagierteren Verzögerung.
   - **Position** (0–100): Intensität der auf die Pinselposition angewendeten Glättung. Höhere Werte runden scharfe Richtungsänderungen ab.
@@ -65,6 +73,7 @@ Ermöglicht die Eingabeglättung in Echtzeit, die beim Malen auf den Strichpfad 
   - **Richtung** (0–100): Glättung der Strichrichtung, Stabilisierung der winkelempfindlichen Dynamik.
 
 #### Dynamik
+
 Weisen Sie Malparametern Stifteingaben oder andere Live-Werte zu:
 
 - **Druck** (Stift): Steuert Größe, Deckkraft, Rate, Härte, Farbe und mehr basierend auf dem Stiftdruck.
@@ -77,6 +86,7 @@ Weisen Sie Malparametern Stifteingaben oder andere Live-Werte zu:
 Jede dynamische Eingabe kann mehreren Eigenschaften unabhängig zugeordnet werden. Öffnen Sie zum Konfigurieren **Tool-Optionen** → **Dynamik**.
 
 #### Verblassen und Farbe
+
 Im Expander **Fade and Colour** (verschachtelt in Stroke Effects; nur sichtbar, wenn **Dynamics System** aktiviert ist):
 
 - **Relativer Anfangswinkel**: Der Wert **Anfangswinkel** wird relativ zur Strichrichtung und nicht als absoluter Leinwandwinkel interpretiert.
@@ -88,27 +98,43 @@ Im Expander **Fade and Colour** (verschachtelt in Stroke Effects; nur sichtbar, 
 - **Wiederholen**: Wie der Fade wiederholt wird, sobald die Fade-Länge erschöpft ist (Keine, Schleife, Sägezahn, Dreieck).
 
 
-### Bürstenköpfe
-Malen Sie mit mehreren unabhängigen Pinselköpfen, die ringförmig um den Strichweg angeordnet sind. Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.- **Köpfe**: Anzahl der gleichzeitigen Bürstenköpfe (1–16).
+### BürstenköpfeMit „Bürstenköpfe“ werden mehrere unabhängige Bürstenköpfe auf einem kreisförmigen **Umlaufring** platziert, der auf dem Strichpfad zentriert ist. Jeder Kopf malt bei jedem fortschreitenden Strich einen vollständigen Tupfer an seiner eigenen Position, wodurch mehrere parallele oder gefächerte Striche gleichzeitig erzeugt werden.
+
+Der Umlaufradius wird durch die globale Pinselgröße minus der Kopfgröße bestimmt: Größere Köpfe sitzen näher an der Mitte; kleinere Köpfe kreisen weiter draußen. Die Köpfe verteilen sich gleichmäßig um den Ring. Mit zwei Köpfen erhalten Sie einen auf jeder Seite des Strichs, wodurch eine symmetrische Ausbreitung entsteht, die sich wie eine Kalligraphiefeder verhält. Der Schieberegler **Folgt der Richtung** dreht den gesamten Ring so, dass er senkrecht zum Strich bleibt, sodass die Spitze beim Malen auf natürliche Weise der Richtung folgt. Durch das Hinzufügen weiterer Köpfe werden diese nach und nach um den Ring verteilt, bis hin zu einem vollständigen Sprühkreis bei 16.
+
+Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.
+
+- **Anzahl**: Anzahl gleichzeitiger Bürstenköpfe (1–16).
 - **Größe**: Gerenderte Größe jedes Kopfes im Verhältnis zur globalen Pinselgröße (0,1–1,0).
-- **Steifheit**: Wie steif der Umlaufradius der dynamikskalierten Pinselgröße folgt. 0 = Orbit verfolgt die Dynamikgröße; 1 = Orbit bleibt auf der Basisgröße fixiert.
-- **Folgt** (0,0–1,0): Wie stark der Formationsring der Schlagbewegungsrichtung folgt. Bei 1,0 (Standard) steht der Ring immer senkrecht zur Fahrtrichtung. Bei 0,0 ist es an den statischen **Winkel**-Wert gebunden. Zwischenwerte vermischen sich zwischen den beiden Ausrichtungen. Dies ist unabhängig vom Dynamics-System – es ist keine Winkeldynamikkonfiguration erforderlich.
-- **Winkel** (0–360°): Statische Ausrichtung des Formationsrings, verwendet, wenn **Follows** unter 1,0 liegt. Wenn **An Ansicht sperren** aktiv ist, wird der Winkel automatisch an die Drehung der Leinwand angepasst.
-- **Variation**: Größenvariation pro Kopf und auf die Dynamik angewendete Druckverzerrung.
+- **Winkel** (0–360°): Statische Ausrichtung des Formationsrings, verwendet, wenn **Follows Direction** unter 1,0 liegt.
+- **Druckvariation**: Größenvariation pro Kopf, angewendet als unabhängige Druckvorspannung durch die Dynamikkurven.
 - **Deckkraftvariation**: Opazitätsvariation pro Kopf, unabhängig von der Größenvariation.
-- **Seed**: Zufälliger Seed für die Pro-Kopf-Variation behoben. Gilt nur, wenn **Zufällige Borsten** ausgeschaltet ist.
-- **Zufällige Borsten**: Borstencharakter bei jedem Strich zufällig auswählen (Seed wird ignoriert).
-- **Unabhängige Frames**: Für animierte Pinsel – wenn diese Option aktiviert ist, bewegt jeder Kopf sein Animationsframe unabhängig weiter.
+- **Steifheit**: Wie steif der Umlaufradius der dynamikskalierten Pinselgröße folgt. 0 = Orbit verfolgt die Dynamikgröße; 1 = Orbit bleibt auf der Basisgröße fixiert.
+- **Folgt der Richtung** (0,0–1,0): Wie stark der Formationsring der Schlagrichtung folgt. Bei 1,0 steht der Ring immer senkrecht zur Fahrtrichtung; Bei 0,0 wird der statische **Winkel**-Wert festgelegt.
+- **Charakter-Seed** (0–255): Der Seed für Pro-Kopf-Charaktere wurde korrigiert (Größe, Streuposition, Reichweite). Derselbe Samen reproduziert bei jedem Schlag die gleiche Formation. Desensibilisiert, wenn **Zufälliger Kopfcharakter** aktiviert ist.
+
+#### Interpolation
+
+Verschiebt die Köpfe bei jedem Tupfer entlang und um den Strichpfad und erzeugt so Schmier- und Sprüheffekte.
+
+- **Overshoot** (0–5): Streut vorwärts in Fahrtrichtung. Bei 1,0 sind die Köpfe bis zu einem vollen Dab-Abstandsintervall nach vorne verteilt; Werte über 1,0 ermöglichen eine größere Reichweite mit einem starken Seltenheits-Bias.
+- **Unterschreitung** (0–5): Wie „Überschreitung“, jedoch hinter dem aktuellen Tupfer zurückliegend. In Kombination mit Overshoot entsteht ein führender Streifen oder Kometenschweif. Beim ersten Tupfer unterdrückt, um retrograde Artefakte zu vermeiden.
+- **Sprühwinkel** (0–90°): Fächert jeden Kopf von der Hubrichtung um einen zufälligen Winkel pro Kopf bis zu diesem Wert nach außen. Auf 90° geklemmt, sodass kein Kopf jemals nach hinten zeigt. Standard: 10°.
+- **Spray Seed** (0–255): Fixierter Seed für Sprühwinkel pro Kopf, unabhängig vom Character Seed. Desensibilisiert, wenn **Zufälliges Sprühmuster** aktiviert ist.
+
+#### Randomisierung
+
+- **Zufälliger Kopfcharakter**: Zeichnet die Zeichenwerte pro Kopf (Größe, Streuposition, Reichweite) bei jedem Tupfer neu, sodass die Formation entlang des Strichs völlig chaotisch ist. Überschreibt **Charakter-Seed**.
+- **Zufälliges Sprühmuster**: Der Sprühwinkel wird bei jedem Tupfer neu gezeichnet, sodass sich der Fächer kontinuierlich entlang des Strichs verschiebt („lebendiger Sprühstrahl“). Überschreibt **Spray Seed**.
+- **Zufällige Animationsrahmen**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.
 
 ### Zusätzliche Optionen
 
-Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet):
-
-- **An Ansicht sperren**: Hält das Erscheinungsbild des Pinsels relativ zur Leinwandansicht fest – wenn Sie die Leinwand drehen, dreht sich der Pinsel mit.
+Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet):- **An Ansicht sperren**: Hält das Erscheinungsbild des Pinsels relativ zur Leinwandansicht fest: Wenn Sie die Leinwand drehen, dreht sich der Pinsel mit.
 - **Einfache Pinselgrenze**: Verwendet einen einfachen Kreis als Umriss des Pinselcursors, anstatt die vollständige Pinselform darzustellen. Nützlich für komplexe oder große Pinsel, bei denen das Zeichnen der genauen Grenze aufwändig ist.
 - **Gleichmäßiger Jitter**: Wenn diese Option aktiviert ist, werden Spitzenversätze vom Schieberegler **Jitter** aus einer gleichmäßigen Verteilung gezogen (jeder Versatz ist innerhalb des Bereichs gleich wahrscheinlich). Wenn diese Option deaktiviert ist, ist die Verteilung eine Gaußsche Verteilung (versetzt den Cluster zur Mitte hin).
 - **Zuletzt verwendete Farben wiederherstellen**: Stellt beim Start die Vordergrund- und Hintergrundfarben der vorherigen Sitzung wieder her, anstatt standardmäßig Schwarz und Weiß zu verwenden.
 - **Zufällige Horizontale**: 50 % Chance, jeden Stempel pro Tupfer von links nach rechts zu spiegeln.
 - **Zufällige Vertikale**: 50 % Chance, jeden Stempel pro Tupfer auf den Kopf zu stellen.
 - **Zufällige Drehung**: Rotiert jeden Stempel zufällig um 0°, 90°, 180° oder 270° pro Tupfer.
-- **Animation zurücksetzen**: Für animierte Pinsel – wenn diese Option aktiviert ist, startet die Animation bei jedem neuen Strich ab Bild 0 neu; Wenn diese Option deaktiviert ist, wird an der Stelle fortgesetzt, an der der vorherige Strich endete.
+- **Animation zurücksetzen**: Für animierte Pinsel: Wenn diese Option aktiviert ist, startet die Animation bei jedem neuen Strich ab Bild 0 neu; Wenn diese Option deaktiviert ist, wird an der Stelle fortgesetzt, an der der vorherige Strich endete.

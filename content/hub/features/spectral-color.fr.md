@@ -12,7 +12,7 @@ Lumi modélise cela en utilisant une représentation de réflectance spectrale �
 
 Cela produit des résultats semblables à ceux de la peinture : le mélange du bleu et du jaune produit du vert et non du gris. Le mélange de deux couleurs saturées produit une couleur qui vire au neutre comme le font les pigments physiques.
 
-Le calcul spectral s'exécute pendant la construction de la palette, lors de la génération d'entrées de palette secondaire et tertiaire et lorsque le mélangeur de palette mélange deux couleurs parentes. La couleur résultante est convertie en RVB linéaire pour l'affichage et la peinture.
+Le calcul spectral s'exécute pendant la construction de la palette, lors de la génération des entrées de palette secondaire et tertiaire et lorsque le mélangeur de palette mélange deux couleurs parentes. La couleur résultante est convertie en RVB linéaire pour l'affichage et la peinture.
 
 ## Profils de pigments
 
@@ -31,65 +31,71 @@ L'ajout de primaires avec des codes CI à une palette donne au moteur de mélang
 
 La palette Master est livrée avec les pigments suivants. Les échantillons montrent l’apparence masstone typique de chaque pigment (pleine résistance, non diluée).
 
-### Oranges et jaunes| Échantillon | Nom | Code CI | Famille |
+### Oranges et jaunes
+
+| Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,135,20);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Orange Pyrrole | PO73 | Rouge (écarlate) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(243,114,64);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Orange de cadmium | PO20 | Jaune (Corps) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(240,180,80);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Jaune de cadmium | PY35 | Jaune (Corps) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,210,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Jaune de cadmium pâle | PY35 : Pâle | Jaune (cadmium pâle) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(250,230,5);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Jaune citron | PY3 | Jaune (Citron) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,155,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Nickel Azo Jaune | PY150 | Jaune (milieu) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(180,175,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Or vert | PY129 | Jaune-Vert (Or) |
+| {{< swatch "245,135,20" >}} | Orange Pyrrole | PO73 | Rouge (écarlate) |
+| {{< swatch "243,114,64" >}} | Orange de cadmium | PO20 | Jaune (Corps) |
+| {{< swatch "240,180,80" >}} | Jaune de cadmium | PY35 | Jaune (Corps) |
+| {{< swatch "245,210,25" >}} | Jaune de cadmium pâle | PY35 : Pâle | Jaune (cadmium pâle) |
+| {{< swatch "250,230,5" >}} | Jaune citron | PY3 | Jaune (Citron) |
+| {{< swatch "225,155,10" >}} | Nickel Azo Jaune | PY150 | Jaune (milieu) |
+| {{< swatch "180,175,45" >}} | Or vert | PY129 | Jaune-Vert (Or) |
 
 ### Couleurs de la Terre
 
 | Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(200,100,70);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Sienne brûlée | PBr7 : Brûlé | Terre (Brun Rouge) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(117,66,0);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Ombre brûlée | PBr7:Ombre | Terre (Neutre) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(205,68,35);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Sienne crue | PBr7:Brut | Terre (jaune brun) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(187,124,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Ocre jaune | PY42 | Terre (Jaune) |
+| {{< swatch "200,100,70" >}} | Sienne brûlée | PBr7 : Brûlé | Terre (Brun Rouge) |
+| {{< swatch "117,66,0" >}} | Ombre brûlée | PBr7:Ombre | Terre (Neutre) |
+| {{< swatch "205,68,35" >}} | Sienne crue | PBr7:Brut | Terre (jaune brun) |
+| {{< swatch "187,124,25" >}} | Ocre jaune | PY42 | Terre (Jaune) |
 
 ### Verts
 
 | Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,166,81);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Vert de phtalo (YS) | PG36 | Vert (teinte jaune phtalo) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(64,130,109);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Viridien | PG18 | Vert (Viridien) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,138,112);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Terre Verte | PG23 | Vert (Terre Cool) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,110,100);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Winsor Vert (BS) | PG7 | Vert (nuance bleu phtalo) |### Bleus et Cyans
+| {{< swatch "0,166,81" >}} | Vert de phtalo (YS) | PG36 | Vert (teinte jaune phtalo) |
+| {{< swatch "64,130,109" >}} | Viridien | PG18 | Vert (Viridien) |
+| {{< swatch "128,138,112" >}} | Terre Verte | PG23 | Vert (Terre Cool) |
+| {{< swatch "0,110,100" >}} | Winsor Vert (BS) | PG7 | Vert (nuance bleu phtalo) |
+
+### Bleus et Cyans
 
 | Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,177,176);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Lumière turquoise cobalt | PG50 | Cyan (minéral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,148,214);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Bleu céruléen | PB35 | Cyan (minéral) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,100,110);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Phthalo Turquoise | PB16 | Bleu (Phthalo) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,123,194);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Bleu cobalt | PB28 | Bleu (Violet-Maigre) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,75,115);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Bleu Winsor | PB15 | Bleu (Phthalo) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(27,63,148);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Outremer | PB29 | Bleu (Violet-Maigre) |
+| {{< swatch "0,177,176" >}} | Lumière turquoise cobalt | PG50 | Cyan (minéral) |
+| {{< swatch "0,148,214" >}} | Bleu céruléen | PB35 | Cyan (minéral) |
+| {{< swatch "0,100,110" >}} | Phthalo Turquoise | PB16 | Bleu (Phthalo) |
+| {{< swatch "0,123,194" >}} | Bleu cobalt | PB28 | Bleu (Violet-Maigre) |
+| {{< swatch "0,75,115" >}} | Bleu Winsor | PB15 | Bleu (Phthalo) |
+| {{< swatch "27,63,148" >}} | Outremer | PB29 | Bleu (Violet-Maigre) |
 
 ### Violettes, Magentas et Rouges
 
 | Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(124,65,153);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Violette Brillante | PV23 | Violette (Dioxazine) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(230,90,180);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Roses permanentes | PV19:Rose | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(190,40,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Quinacridone Magenta | PV19:Magenta | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(160,30,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Alizarine permanente pourpre | PV19 : Pourpre | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,35,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Violette de Pérylène | PV29 | Magenta (Quinacridone) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,10,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Pérylène Marron | PR179 | Rouge (cramoisi) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(215,30,60);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Rouge Pyrrole | PR254 | Rouge (écarlate) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,55,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Feu Rouge Pyrrole | PR255 | Rouge (lumière pyrrole) |
+| {{< swatch "124,65,153" >}} | Violette Brillante | PV23 | Violette (Dioxazine) |
+| {{< swatch "230,90,180" >}} | Roses permanentes | PV19:Rose | Magenta (Quinacridone) |
+| {{< swatch "190,40,120" >}} | Quinacridone Magenta | PV19:Magenta | Magenta (Quinacridone) |
+| {{< swatch "160,30,65" >}} | Alizarine permanente pourpre | PV19 : Pourpre | Magenta (Quinacridone) |
+| {{< swatch "120,35,65" >}} | Violette de Pérylène | PV29 | Magenta (Quinacridone) |
+| {{< swatch "135,10,45" >}} | Pérylène Marron | PR179 | Rouge (cramoisi) |
+| {{< swatch "215,30,60" >}} | Rouge Pyrrole | PR254 | Rouge (écarlate) |
+| {{< swatch "225,55,65" >}} | Feu Rouge Pyrrole | PR255 | Rouge (lumière pyrrole) |
 
-### Noirs et Blancs| Échantillon | Nom | Code CI | Famille |
+### Noirs et Blancs
+
+| Échantillon | Nom | Code CI | Famille |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(22,15,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Mars Noir (Chaud) | PBk11 | Noir (Mars) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,28,12);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Vert pérylène | PBk31 | Noir (vert pérylène) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(10,18,19);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Noir ivoire (Froid) | PBk9 | Noir (ivoire) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,18,18);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Lampe noire (neutre) | PBk7 | Noir (Lampe) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,249,235);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Blanc de titane (chaud) | PW6 : Chaud | Blanc (Titane Chaud) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,255,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Blanc de titane (neutre) | PW6 | Blanc (Titane Neutre) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,250,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Blanc de zinc (froid) | PW4 | Blanc (Zinc Cool) |
+| {{< swatch "22,15,10" >}} | Mars Noir (Chaud) | PBk11 | Noir (Mars) |
+| {{< swatch "18,28,12" >}} | Vert pérylène | PBk31 | Noir (vert pérylène) |
+| {{< swatch "10,18,19" >}} | Noir ivoire (Froid) | PBk9 | Noir (ivoire) |
+| {{< swatch "18,18,18" >}} | Lampe noire (neutre) | PBk7 | Noir (Lampe) |
+| {{< swatch "255,249,235" >}} | Blanc de titane (chaud) | PW6 : Chaud | Blanc (Titane Chaud) |
+| {{< swatch "255,255,255" >}} | Blanc de titane (neutre) | PW6 | Blanc (Titane Neutre) |
+| {{< swatch "245,250,255" >}} | Blanc de zinc (froid) | PW4 | Blanc (Zinc Cool) |
 
 ### Contrôler les gris
 
@@ -97,9 +103,9 @@ Les gris de contrôle sont des neutralisants standardisés utilisés pour désat
 
 | Échantillon | Nom | Code CI |
 | :---: | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,128,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Gris chaud | N_CHAUD |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,128,128);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Gris neutre | N_NEUTRE |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,128,135);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | Gris froid | N_COOL |
+| {{< swatch "135,128,120" >}} | Gris chaud | N_CHAUD |
+| {{< swatch "128,128,128" >}} | Gris neutre | N_NEUTRE |
+| {{< swatch "120,128,135" >}} | Gris froid | N_COOL |
 
 ## La carte des palettes
 
@@ -119,6 +125,6 @@ Le ton est appliqué en dernier afin que les ajustements de luminosité ne soien
 
 Les couleurs mélangées peuvent être enregistrées dans la palette en tant qu'entrées **Personnalisées**, stockant la recette complète (UID parents, facteur de mélange, tonalité, valeurs de chrominance) pour une récupération ultérieure.
 
-## Les pixels du canevas sont RVBLe système spectral fonctionne entièrement dans la construction de palettes et la sélection de couleurs. Lorsqu’un coup de pinceau est appliqué, la couleur de premier plan – déjà convertie en RVB linéaire – est ce qui est peint. Le canevas stocke les données de pixels RVB standard.
+## Les pixels du canevas sont RVB
 
-Le mélange spectral améliore l'expérience de création d'une palette et de choix des couleurs d'une manière cohérente avec le comportement physique des pigments, sans modifier la façon dont les données d'image sont stockées ou composées.
+Le système spectral fonctionne entièrement dans la construction de palettes et la sélection de couleurs. Lorsqu'un coup de pinceau est appliqué, la couleur de premier plan (déjà convertie en RVB linéaire) est ce qui est peint. Le canevas stocke les données de pixels RVB standard.Le mélange spectral améliore l'expérience de création d'une palette et de choix des couleurs d'une manière cohérente avec le comportement physique des pigments, sans modifier la façon dont les données d'image sont stockées ou composées.

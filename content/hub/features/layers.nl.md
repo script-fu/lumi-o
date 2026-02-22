@@ -15,12 +15,15 @@ Lagen vormen de basis van gestructureerde illustraties. Elke laag is onafhankeli
 ## Laagtypen
 
 ### Verflagen
+
 Standaard rasterlagen voor geschilderde inhoud. Bewaar pixelgegevens als GEGL-buffers met optionele alfa-transparantie.
 
 ### Groepslagen
+
 Hiërarchische containers voor het organiseren van gerelateerde lagen. Groepen kunnen hun eigen overvloeimodus, dekking en uitknipmaskers hebben. Groepsprojecties worden op aanvraag samengesteld.
 
 ### Laagmaskers
+
 Grijswaardenmaskers die aan elke laag zijn bevestigd en de dekking per pixel regelen. Als u met wit op een masker schildert, worden pixels ondoorzichtig; zwart maakt ze transparant; grijs zorgt voor gedeeltelijke dekking.
 
 ## Overvloeimodi
@@ -37,15 +40,15 @@ Elke laag heeft een overvloeimodus die bepaalt hoe deze wordt gecombineerd met d
 
 ## Knippen en maskeren
 
-- **Samengestelde modus — Clip naar achtergrond**: Door de samengestelde modus van een laag in te stellen op **Clip naar achtergrond** wordt de compositie beperkt tot gebieden waar de verzamelde **Union**-lagen hieronder dekking hebben bereikt. De laag tekent alleen daar waar die lagen inhoud hebben; de alfavoetafdruk kan niet worden vergroot. Dit wordt per laag ingesteld in het dialoogvenster Laagkenmerken (vervolgkeuzelijst **Samengestelde modus**). Wanneer de effectieve samengestelde modus van een laag iets anders is dan Samenvoegen, wordt het oogpictogram in het deelvenster Lagen vervangen door een samengesteld pictogram om het niet-standaard compositiegedrag aan te geven.
+- **Samengestelde modus: Clip naar achtergrond**: Door de samengestelde modus van een laag in te stellen op **Clip naar achtergrond** wordt de compositie beperkt tot gebieden waar de verzamelde **Union**-lagen hieronder dekking hebben bereikt. De laag tekent alleen daar waar die lagen inhoud hebben en kan de alfavoetafdruk niet uitbreiden. Dit wordt per laag ingesteld in het dialoogvenster Laagkenmerken (vervolgkeuzelijst **Samengestelde modus**). Wanneer de effectieve samengestelde modus van een laag iets anders is dan Samenvoegen, wordt het oogpictogram in het deelvenster Lagen vervangen door een samengesteld pictogram om het niet-standaard compositiegedrag aan te geven.
 
-  **Voorbeeld: gedeelde alfavorm:** In een groep bevat de onderste laag een gevulde cirkel op een transparante achtergrond, ingesteld op de standaard samengestelde modus **Union**. Elke laag erboven in dezelfde groep is ingesteld op **Clip to Background**. Die lagen kunnen alleen schilderen waar de cirkel dekking biedt: één vorm, veel lagen. Dit is een gebruikelijk patroon voor kleuren, schaduwen en details binnen een gedefinieerd silhouet zonder dat u zich zorgen hoeft te maken over morsen.
+  **Voorbeeld: gedeelde alfavorm:** In een groep bevat de onderste laag een gevulde cirkel op een transparante achtergrond, ingesteld op de standaard samengestelde **Union**-modus. Elke laag erboven in dezelfde groep is ingesteld op **Clip to Background**. Die lagen kunnen alleen schilderen waar de cirkel dekking biedt (één vorm, veel lagen). Dit is een gebruikelijk patroon voor kleuren, schaduwen en details binnen een gedefinieerd silhouet zonder dat u zich zorgen hoeft te maken over morsen.
 - **Laagmaskers**: pas een grijswaardenmasker toe om de zichtbaarheid van de laag pixel voor pixel te regelen. Wit schilderen op het masker onthult; zwarte huiden; grijs zorgt voor gedeeltelijke dekking.
 - **Pure-Child Masks**: Maskers worden opgeslagen als onderliggende elementen in de tekenbare stapel, waardoor gegevensverlies tijdens transformaties wordt voorkomen.
 
 ## Lagen kiezen (Alt-toets)
 
-Als u op **Alt** (Alt links) tikt terwijl u over het canvas zweeft, selecteert u de laag met zichtbare pixels onder de cursor - zonder van gereedschap te wisselen of te klikken.
+Als u op **Alt** (Alt links) tikt terwijl u over het canvas zweeft, selecteert u de laag met zichtbare pixels onder de cursor, zonder van gereedschap te wisselen of te klikken.
 
 ### Hoe het werkt
 
@@ -66,7 +69,7 @@ Dit zorgt ervoor dat Alt-sleepbewegingen (zoals het aanpassen van de penseelgroo
 
 ### Beperkingen
 
-- Het selecteren van lagen wordt niet geactiveerd tijdens bewerkingen met het gereedschap **Transformeren** — Alt heeft daar een andere betekenis.
+- Het selecteren van lagen wordt niet geactiveerd tijdens **Transformeren** gereedschapsbewerkingen; Alt heeft daar een andere betekenis.
 - Er wordt niet gepickt als er een zwevende selectie aanwezig is.
 - Alleen Alt links activeert het picken; right Alt wordt behandeld als een standaardmodificator.
 
@@ -96,7 +99,7 @@ Vergrendelingspictogrammen worden weergegeven in de koprij van het deelvenster L
 
 - **Masker vergrendelen**: Voorkomt het bewerken van het laagmasker. Het masker blijft zichtbaar en actief, maar kan niet worden beschilderd of gewijzigd zolang dit slot is ingeschakeld.
 
-- **Vergrendelkleur**: vergrendelt het schilderen op een specifieke kleur: de huidige voorgrondkleur op het moment dat de vergrendeling wordt toegepast. Volgende streken op deze laag gebruiken die opgeslagen kleur, ongeacht de actieve voorgrondkleur. Bij het ontgrendelen wordt de opgeslagen kleur verwijderd.
+- **Kleur vergrendelen**: vergrendelt het schilderen op een specifieke kleur: de huidige voorgrondkleur op het moment dat de vergrendeling wordt toegepast. Volgende streken op deze laag gebruiken die opgeslagen kleur, ongeacht de actieve voorgrondkleur. Bij het ontgrendelen wordt de opgeslagen kleur verwijderd.
 
 - **Inhoud vergrendelen** (pixels vergrendelen): voorkomt alle pixelbewerkingen in de laag. De laag kan niet worden beschilderd, opgevuld, getransformeerd of anderszins gewijzigd. Handig voor het beschermen van afgewerkte lagen.
 
@@ -112,7 +115,7 @@ Niet-destructieve GEGL-filters die via het **Filters**-menu worden toegepast, wo
 
 Klik op het pictogram **fx** in een laagrij in het deelvenster Lagen om de popover **Laageffecten** voor die laag te openen.
 
-De popover toont de filterstapel voor de laag: elk vastgelegd effect wordt op naam vermeld met een zichtbaarheidsschakelaar ernaast.
+De popover geeft de filterstapel voor de laag weer, waarbij elk vastgelegd effect op naam wordt vermeld met een zichtbaarheidsschakelaar ernaast.
 
 ### Bediening
 
@@ -142,21 +145,21 @@ Dubbelklik op een laag in het deelvenster Lagen om het dialoogvenster Laagkenmer
 ### Samengestelde ruimte en modus
 
 - **Samengestelde ruimte**: de kleurruimte die wordt gebruikt bij het samenstellen van deze laag met onderliggende lagen. Opties: Automatisch, Lineair (RGB), Perceptueel (RGB).
-- **Samengestelde modus**: bepaalt hoe de alfa van de laag interageert met de achtergrond. Opties zijn onder meer Samenvoegen (van invloed op alle gebieden – de standaard voor de normale modus), Knippen naar achtergrond (is alleen van invloed op gebieden met bestaande inhoud – de standaard voor de meeste andere overvloeimodi) en Snijpunt.
+- **Samengestelde modus**: bepaalt hoe de alfa van de laag interageert met de achtergrond. Opties zijn onder meer Samenvoegen (van invloed op alle gebieden, de standaardinstelling voor de normale modus), Knippen naar achtergrond (is alleen van invloed op gebieden met bestaande inhoud, de standaardinstelling voor de meeste andere overvloeimodi) en Snijpunt.
 
 ### Grootte en offsets
 
 Voor een bestaande laag toont **Afmetingen** de laagafmetingen en maskerafmetingen (als er een masker is gekoppeld) als alleen-lezen labels.
 
-**Laagverschuivingen** — X- en Y-spinners bepalen de positie van de laag op het canvas. Wijzigingen zijn onmiddellijk van toepassing in plaats van bij het sluiten van het dialoogvenster.
+**Laagverschuivingen**: X- en Y-spinners die de positie van de laag op het canvas bepalen. Wijzigingen zijn onmiddellijk van toepassing in plaats van bij het sluiten van het dialoogvenster.
 
-Als de laag een masker heeft, worden hieronder **Maskeroffsets** — X- en Y-spinners voor de onafhankelijke positie van het masker — weergegeven.
+Als de laag een masker heeft, worden hieronder **Maskeroffsets** (X- en Y-spinners voor de onafhankelijke positie van het masker) weergegeven.
 
 Wanneer u een nieuwe laag maakt, vervangen de velden Breedte en Hoogte en een vervolgkeuzelijst **Vullen met** (Voorgrond, Achtergrond, Wit, Transparant) de alleen-lezen formaatweergave.
 
 ### Laagkenmerken (Persistente parasieten)
 
-Het onderste gedeelte van het dialoogvenster bevat een schuifbare tabel Naam/Waarde voor persistente parasieten: willekeurige sleutelwaarde-metagegevens die aan de laag zijn gekoppeld. Deze waarden worden bij het project opgeslagen en zijn toegankelijk via de Scheme-scriptinterface.
+Het onderste gedeelte van het dialoogvenster bevat een schuifbare tabel Naam/Waarde voor persistente parasieten (willekeurige metagegevens van sleutelwaarden die aan de laag zijn gekoppeld). Deze waarden worden bij het project opgeslagen en zijn toegankelijk via de Scheme-scriptinterface.
 
 - Klik op een cel in de kolom Naam of Waarde om deze inline te bewerken.
 - **Toevoegen**: voegt een nieuwe lege rij toe.

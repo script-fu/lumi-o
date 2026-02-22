@@ -28,7 +28,7 @@ Tutti questi sono disponibili in qualsiasi plug-in di Scheme o nella Console di 
 
 ## Ricerca e filtraggio
 
-- **Casella di ricerca**: filtra in base al nome durante la digitazione (corrispondenza della sottostringa senza distinzione tra maiuscole e minuscole).
+- **Casella di ricerca**: filtra per nome durante la digitazione (corrispondenza della sottostringa senza distinzione tra maiuscole e minuscole).
 - **Filtro tipo**: restringe i risultati a `procedure`, `variable` o `syntax`.
 
 Facendo clic su una voce viene mostrata la sua docstring completa e la libreria da cui proviene.

@@ -10,16 +10,20 @@ Het gereedschap Penseel ondersteunt raster-, procedureel gegenereerde en geanime
 
 ## Penseeltypen
 
-### Rasterborstels
-Bitmappenseelafbeeldingen geladen vanuit `.png`- of `.vbr`-bestanden. Ondersteunt alpha-transparantie en geanimeerde pijpframes.
+### Rasterpenselen (.raster)
 
-### Gegenereerde penselen
+Bitmappenseelafbeeldingen die alfatransparantie ondersteunen.
+
+### Gegenereerde penselen (.param)
+
 Procedureel weergegeven vormen (cirkel, vierkant, ruit, driehoek) met instelbare parameters: hardheid, beeldverhouding, hoek, rondheid en hoekradius. Gegenereerde penselen zijn lichtgewicht en schaalbaar.
 
 ### Geanimeerde penselen (.anim)
+
 Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen stapsgewijs worden doorlopen (frame-voortgangen per dab), willekeurig per dab worden geselecteerd of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
 
 ## Schildercursor
+
 De cursor past zich aan de huidige gereedschapsstatus aan en geeft duidelijke, contextuele feedback:
 
 - **Penseelomtrek**: de cursor volgt de exacte vorm en grootte van het penseel en geeft een live voorbeeld van waar de verf terechtkomt.
@@ -29,11 +33,13 @@ De cursor past zich aan de huidige gereedschapsstatus aan en geeft duidelijke, c
 ## Gereedschapsopties
 
 ### Bediening op het hoogste niveau
+
 Altijd aanwezig, buiten elke expander:
 - **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, etc.)
 - **Dekking**: algehele dekking van de lijn (0–100).
 
 ### Penseelopties
+
 In de uitbreiding **Penseelopties** (standaard uitgevouwen):
 - **Grootte**: Penseeldiameter in pixels.
 - **Verhouding**: De penseelvorm platdrukken of uitrekken (-1,0–1,0). 0 = ongewijzigd; negatieve waarden roteren de pompoen 90°.
@@ -45,6 +51,7 @@ In de uitbreiding **Penseelopties** (standaard uitgevouwen):
 - **Gum**: Groottevermenigvuldiger wordt toegepast wanneer dit penseel als gum wordt gebruikt (0,1–10,0). Niet weergegeven op het gummetje zelf.
 
 ### Lijneffecten
+
 In de uitbreiding **Streekeffecten**:
 - **Postproces**: past stabilisatie, snelheidscompressie en herhalingscorrectie toe nadat de slag is voltooid, waardoor de consistentie zonder latentie wordt verbeterd.
   - **Draaidrempel**: Hoekdrempel (0–180°) voor richtingscorrectie bij scherpe hoeken. 0 = fix richting overslaan.
@@ -58,6 +65,7 @@ Wanneer actief, wordt dab stamping vervangen door een doorlopende geometrische g
 - **Snelheidskrimp** (0–100%): Maximaal toegestane afname van de grootte per monster. Beperkt hoe snel de maat kan afnemen als de slag vertraagt.
 
 #### Gladmaken
+
 Maakt real-time invoerverzachting mogelijk die wordt toegepast op het lijnpad terwijl u tekent. Breidt uit om te onthullen:
   - **Diepte** (2–256): aantal eerdere invoermonsters die in aanmerking zijn genomen bij het berekenen van de afgevlakte positie. Hogere waarden produceren een langere, meer toegewijde vertraging.
   - **Positie** (0–100): Intensiteit van de verzachting toegepast op de penseelpositie. Hogere waarden ronden scherpe richtingsveranderingen af.
@@ -65,6 +73,7 @@ Maakt real-time invoerverzachting mogelijk die wordt toegepast op het lijnpad te
   - **Richting** (0–100): Afvlakking toegepast op de streekrichting, waardoor de hoekgevoelige dynamiek wordt gestabiliseerd.
 
 #### Dynamiek
+
 Wijs stylusinvoer of andere livewaarden toe aan schilderparameters:
 
 - **Druk** (stylus): regelt de grootte, dekking, snelheid, hardheid, kleur en meer op basis van de stylusdruk.
@@ -77,6 +86,7 @@ Wijs stylusinvoer of andere livewaarden toe aan schilderparameters:
 Elke dynamische invoer kan onafhankelijk aan meerdere eigenschappen worden toegewezen. Open **Toolopties** → **Dynamiek** om te configureren.
 
 #### Vervagen en kleuren
+
 In de uitbreiding **Fade and Colour** (genest in Lijneffecten; alleen zichtbaar wanneer **Dynamics System** is ingeschakeld):
 
 - **Relatieve initiële hoek**: de **Initiële hoek**-waarde wordt geïnterpreteerd ten opzichte van de lijnrichting in plaats van als een absolute canvashoek.
@@ -88,23 +98,39 @@ In de uitbreiding **Fade and Colour** (genest in Lijneffecten; alleen zichtbaar 
 - **Herhalen**: hoe de fade wordt herhaald zodra de fade-lengte is uitgeput (Geen, Loop, Sawtooth, Triangle).
 
 
-### Opzetborstels
-Verf met meerdere onafhankelijke penseelkoppen, gerangschikt in een formatiering rond het streekpad. De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.- **Koppen**: aantal gelijktijdige opzetborstels (1–16).
+### OpzetborstelsOpzetborstels plaatsen meerdere onafhankelijke opzetborstels op een cirkelvormige **baanring** gecentreerd op het streekpad. Elke kop schildert een volledige schar op zijn eigen positie, elke keer dat de streek verder gaat, waardoor meerdere parallelle of uitwaaierende bewegingen tegelijk worden geproduceerd.
+
+De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: grotere koppen zitten dichter bij het midden; kleinere hoofden draaien verder naar buiten. De hoofden hebben een gelijkmatige ruimte rond de ring. Met twee koppen krijg je er één aan elke kant van de streek, waardoor een symmetrische spreiding ontstaat die zich gedraagt ​​als een kalligrafiepunt. De schuifregelaar **Volgt richting** draait de hele ring zodat deze loodrecht op de lijn blijft staan, zodat de punt op natuurlijke wijze de richting volgt terwijl u schildert. Door meer koppen toe te voegen, worden ze geleidelijk rond de ring verspreid, tot een volledige spuitcirkel bij 16.
+
+De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.
+
+- **Aantal**: aantal gelijktijdige opzetborstels (1–16).
 - **Grootte**: weergegeven grootte van elk hoofd ten opzichte van de globale penseelgrootte (0,1–1,0).
-- **Stijfheid**: hoe strak de straal van de baan de dynamisch geschaalde penseelgrootte volgt. 0 = baan volgt de dynamische grootte; 1 = baan blijft gefixeerd op de basisgrootte.
-- **Volgt** (0,0–1,0): Hoe sterk de formatiering de bewegingsrichting van de slag volgt. Bij 1,0 (standaard) staat de ring altijd loodrecht op de rijrichting. Bij 0,0 is deze vergrendeld op de statische **Hoek**-waarde. Tussenliggende waarden vermengen zich tussen de twee oriëntaties. Dit is onafhankelijk van het Dynamics-systeem; er is geen hoekdynamiekconfiguratie vereist.
-- **Hoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volgt** lager is dan 1,0. Wanneer **Vergrendelen om te bekijken** actief is, wordt de hoek automatisch gecompenseerd voor canvasrotatie.
-- **Variatie**: variatie in grootte per hoofd en drukvooroordeel toegepast op de dynamiek.
+- **Hoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volg richting** lager is dan 1,0.
+- **Drukvariatie**: variatie in grootte per hoofd toegepast als een onafhankelijke drukafwijking via de dynamische curven.
 - **Dekkingsvariatie**: De dekkingsvariatie per hoofd, onafhankelijk van de groottevariatie.
-- **Zaad**: Vast willekeurig zaad voor variatie per kop. Geldt alleen wanneer **Random Bristles** is uitgeschakeld.
-- **Willekeurige borstelharen**: Willekeurig borstelkarakter bij elke streek (negeer Zaad).
-- **Onafhankelijke frames**: voor geanimeerde penselen: indien ingeschakeld, verplaatst elk hoofd zijn animatieframe onafhankelijk.
+- **Stijfheid**: hoe strak de straal van de baan de dynamisch geschaalde penseelgrootte volgt. 0 = baan volgt de dynamische grootte; 1 = baan blijft gefixeerd op de basisgrootte.
+- **Volgt richting** (0,0–1,0): Hoe sterk de formatiering de bewegingsrichting van de slag volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Hoek**-waarde.
+- **Karakterzaad** (0–255): Vaste zaadwaarde voor karakter per hoofd (grootte, spreidingspositie, bereik). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Random Head Character** is ingeschakeld.
+
+#### Interpolatie
+
+Verplaatst de koppen langs en rond het slagpad bij elke aanraking, waardoor uitstrijk- en sprayeffecten ontstaan.
+
+- **Overshoot** (0–5): Scatters gaan naar voren in de rijrichting. Bij 1,0 worden de koppen gespreid tot één volledig dab-afstandsinterval vooruit; waarden boven 1,0 maken een groter bereik mogelijk met een sterke zeldzaamheidsbias.
+- **Undershoot** (0–5): Hetzelfde als Overshoot, maar loopt achter op de huidige schar. Gecombineerd met Overshoot ontstaat er een leidende uitstrijkje of komeetstaart. Onderdrukt bij de eerste schar om retrograde artefacten te voorkomen.
+- **Spuithoek** (0–90°): Waait elke kop vanuit de slagrichting naar buiten met een willekeurige hoek per kop tot deze waarde. Geklemd tot 90° zodat geen enkel hoofd ooit naar achteren wijst. Standaard: 10°.
+- **Spray Seed** (0–255): Vast zaad voor spuithoeken per kop, onafhankelijk van Character Seed. Ongevoelig wanneer **Willekeurig spuitpatroon** is ingeschakeld.
+
+#### Randomisatie
+
+- **Willekeurig hoofdkarakter**: tekent de karakterwaarden per hoofd opnieuw (grootte, spreidingspositie, bereik) bij elke schar, zodat de formatie langs de slag volledig chaotisch is. Overschrijft **Karakterzaad**.
+- **Willekeurig spuitpatroon**: Hertekent de spuithoeken bij elke druppel, zodat de ventilator continu langs de slag beweegt ("levende spray"). Overschrijft **Spuitzaad**.
+- **Willekeurige animatieframes**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
 
 ### Extra opties
 
-In de uitbreiding **Aanvullende opties** (standaard samengevouwen):
-
-- **Vergrendelen voor weergave**: houdt het uiterlijk van het penseel vast ten opzichte van de canvasweergave: wanneer u het canvas roteert, draait het penseel mee.
+In de uitbreiding **Aanvullende opties** (standaard samengevouwen):- **Vergrendelen om te bekijken**: Houdt de weergave van het penseel vast ten opzichte van de canvasweergave: wanneer u het canvas roteert, draait het penseel mee.
 - **Eenvoudige penseelgrens**: gebruikt een gewone cirkel voor de penseelcursoromtrek in plaats van de volledige penseelvorm weer te geven. Handig voor complexe of grote penselen waarbij het moeilijk is om een ​​nauwkeurige grens te tekenen.
 - **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling Gaussiaans (de verschuivingen clusteren naar het midden).
 - **Laatst gebruikte kleuren herstellen**: herstelt de voorgrond- en achtergrondkleuren van de vorige sessie bij het opstarten, in plaats van standaard zwart en wit te gebruiken.

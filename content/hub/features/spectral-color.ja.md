@@ -8,11 +8,11 @@ Lumi のパレット システムは、スペクトル カラー モデルを使
 
 従来の RGB 混合は加算的です。2 つの RGB 値をブレンドすると、中間点に向かって平均化されます。顔料の混合は減算法で行われます。各顔料は特定の波長を吸収し、それらを組み合わせた効果はより暗くなり、色相が変化することがよくあります。
 
-Lumi models this using a 10-band spectral reflectance representation for palette colors, rather than RGB.
+Lumi は、パレット カラーの RGB ではなく 10 バンドの分光反射率表現を使用してこれをモデル化します。
 
 これにより、ペイントのような結果が得られます。青と黄色を混ぜると、グレーではなく緑が生成されます。 2 つの飽和した色を混合すると、物理的な顔料と同じようにニュートラルに移行する色が生成されます。
 
-スペクトル計算は、パレットの構築中、つまり 2 番目と 3 番目のパレット エントリを生成するとき、およびパレット ミキサーが 2 つの親色をブレンドするときに実行されます。結果の色は、表示およびペイントのためにリニア RGB に変換されます。
+スペクトル計算は、パレットの構築中、2 番目および 3 番目のパレット エントリを生成するとき、およびパレット ミキサーが 2 つの親色をブレンドするときに実行されます。結果の色は、表示およびペイントのためにリニア RGB に変換されます。
 
 ## 顔料プロファイル
 
@@ -29,67 +29,73 @@ CI コードを含む原色をパレットに追加すると、ミキシング �
 
 ## ルミピグメント
 
-The Master palette ships with the following pigments. Swatches show each pigment's typical masstone (full-strength, undiluted) appearance.
+マスター パレットには次の顔料が同梱されています。スウォッチは、各顔料の典型的なマストーン (完全強度、希釈されていない) の外観を示しています。
 
-### オレンジとイエロー|スウォッチ |名前 | CI コード |家族 |
+### オレンジとイエロー
+
+|スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,135,20);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ピロールオレンジ | PO73 |レッド(スカーレット) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(243,114,64);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |カドミウムオレンジ | PO20 |イエロー（ボディ） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(240,180,80);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |カドミウムイエロー | 35円 |イエロー（ボディ） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,210,25);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |カドミウムイエローペール | PY35:ペール |イエロー(カドミウムペール) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(250,230,5);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |レモンイエロー | PY3 |イエロー（レモン） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,155,10);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ニッケルアゾイエロー | 150円 |イエロー（ミッド） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(180,175,45);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |グリーンゴールド | 129円 |黄緑（ゴールド） |
+| {{< swatch "245,135,20" >}} |ピロールオレンジ | PO73 |レッド(スカーレット) |
+| {{< swatch "243,114,64" >}} |カドミウムオレンジ | PO20 |イエロー（ボディ） |
+| {{< swatch "240,180,80" >}} |カドミウムイエロー | 35円 |イエロー（ボディ） |
+| {{< swatch "245,210,25" >}} |カドミウムイエローペール | PY35:ペール |イエロー(カドミウムペール) |
+| {{< swatch "250,230,5" >}} |レモンイエロー | PY3 |イエロー（レモン） |
+| {{< swatch "225,155,10" >}} |ニッケルアゾイエロー | 150円 |イエロー（ミッド） |
+| {{< swatch "180,175,45" >}} |グリーンゴールド | 129円 |黄緑（ゴールド） |
 
 ### アースカラー
 
 |スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(200,100,70);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |バーントシエナ | PBr7:焼けた |アース（レッドブラウン） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(117,66,0);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |バーントアンバー | PBr7:アンバー |地球 (中立) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(205,68,35);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |生のシエナ | PBr7:生 |アース（イエローブラウン） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(187,124,25);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |イエローオーカー | PY42 |地球（黄色） |
+| {{< swatch "200,100,70" >}} |バーントシエナ | PBr7:焼けた |アース（レッドブラウン） |
+| {{< swatch "117,66,0" >}} |バーントアンバー | PBr7:アンバー |地球 (中立) |
+| {{< swatch "205,68,35" >}} |生のシエナ | PBr7:生 |アース（イエローブラウン） |
+| {{< swatch "187,124,25" >}} |イエローオーカー | PY42 |地球（黄色） |
 
 ### グリーンズ
 
 |スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,166,81);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |フタログリーン(YS) | PG36 |グリーン (フタロイエローシェード) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(64,130,109);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ビリジアン | PG18 |グリーン (ビリジアン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,138,112);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |テール ヴェルテ | PG23 |グリーン（アースクール） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,110,100);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ウィンザー・グリーン (BS) | PG7 |グリーン (フタロブルーシェード) |### ブルーとシアン
+| {{< swatch "0,166,81" >}} |フタログリーン(YS) | PG36 |グリーン (フタロイエローシェード) |
+| {{< swatch "64,130,109" >}} |ビリジアン | PG18 |グリーン (ビリジアン) |
+| {{< swatch "128,138,112" >}} |テール ヴェルテ | PG23 |グリーン（アースクール） |
+| {{< swatch "0,110,100" >}} |ウィンザー・グリーン (BS) | PG7 |グリーン (フタロブルーシェード) |
+
+### ブルーとシアン
 
 |スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,177,176);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |コバルトターコイズライト | PG50 |シアン (ミネラル) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,148,214);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |セルリアンブルー | PB35 |シアン (ミネラル) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,100,110);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |フタロターコイズ | PB16 |ブルー（フタロ） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,123,194);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |コバルトブルー | PB28 |ブルー (紫がかった色) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,75,115);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ウィンザー・ブルー | PB15 |ブルー（フタロ） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(27,63,148);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ウルトラマリン | PB29 |ブルー (紫がかった色) |
+| {{< swatch "0,177,176" >}} |コバルトターコイズライト | PG50 |シアン (ミネラル) |
+| {{< swatch "0,148,214" >}} |セルリアンブルー | PB35 |シアン (ミネラル) |
+| {{< swatch "0,100,110" >}} |フタロターコイズ | PB16 |ブルー（フタロ） |
+| {{< swatch "0,123,194" >}} |コバルトブルー | PB28 |ブルー (紫がかった色) |
+| {{< swatch "0,75,115" >}} |ウィンザー・ブルー | PB15 |ブルー（フタロ） |
+| {{< swatch "27,63,148" >}} |ウルトラマリン | PB29 |ブルー (紫がかった色) |
 
 ### バイオレット、マゼンタ、レッド
 
 |スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(124,65,153);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ブリリアントバイオレット | PV23 |バイオレット (ジオキサジン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(230,90,180);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |パーマネントローズ | PV19:ローズ |マゼンタ (キナクリドン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(190,40,120);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |キナクリドンマゼンタ | PV19:マゼンタ |マゼンタ (キナクリドン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(160,30,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |永久アリザリン クリムゾン | PV19:クリムゾン |マゼンタ (キナクリドン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,35,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ペリレンバイオレット | PV29 |マゼンタ (キナクリドン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,10,45);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ペリレンマルーン | PR179 |レッド（クリムゾン） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(215,30,60);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ピロールレッド | PR254 |レッド(スカーレット) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,55,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ピロールレッドライト | ピロールレッドライトPR255 |レッド(ピロールライト) |
+| {{< swatch "124,65,153" >}} |ブリリアントバイオレット | PV23 |バイオレット (ジオキサジン) |
+| {{< swatch "230,90,180" >}} |パーマネントローズ | PV19:ローズ |マゼンタ (キナクリドン) |
+| {{< swatch "190,40,120" >}} |キナクリドンマゼンタ | PV19:マゼンタ |マゼンタ (キナクリドン) |
+| {{< swatch "160,30,65" >}} |永久アリザリン クリムゾン | PV19:クリムゾン |マゼンタ (キナクリドン) |
+| {{< swatch "120,35,65" >}} |ペリレンバイオレット | PV29 |マゼンタ (キナクリドン) |
+| {{< swatch "135,10,45" >}} |ペリレンマルーン | PR179 |レッド（クリムゾン） |
+| {{< swatch "215,30,60" >}} |ピロールレッド | PR254 |レッド(スカーレット) |
+| {{< swatch "225,55,65" >}} |ピロールレッドライト | ピロールレッドライトPR255 |レッド(ピロールライト) |
 
-### 黒人と白人|スウォッチ |名前 | CI コード |家族 |
+### 黒人と白人
+
+|スウォッチ |名前 | CI コード |家族 |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(22,15,10);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |マーズブラック (ウォーム) | PBk11 |黒（火星） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,28,12);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ペリレングリーン | PBk31 |ブラック(ペリレングリーン) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(10,18,19);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |アイボリーブラック(クール) | PBk9 |ブラック(アイボリー) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,18,18);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ランプブラック (ニュートラル) | PBk7 |黒（ランプ） |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,249,235);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |チタンホワイト（ウォーム） | PW6:暖かい |ホワイト(チタンウォーム) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,255,255);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |チタンホワイト(ニュートラル) | PW6 |ホワイト (チタンニュートラル) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,250,255);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ジンクホワイト（クール） | PW4 |ホワイト(ジンククール) |
+| {{< swatch "22,15,10" >}} |マーズブラック (ウォーム) | PBk11 |黒（火星） |
+| {{< swatch "18,28,12" >}} |ペリレングリーン | PBk31 |ブラック(ペリレングリーン) |
+| {{< swatch "10,18,19" >}} |アイボリーブラック(クール) | PBk9 |ブラック(アイボリー) |
+| {{< swatch "18,18,18" >}} |ランプブラック (ニュートラル) | PBk7 |黒（ランプ） |
+| {{< swatch "255,249,235" >}} |チタンホワイト（ウォーム） | PW6:暖かい |ホワイト(チタンウォーム) |
+| {{< swatch "255,255,255" >}} |チタンホワイト(ニュートラル) | PW6 |ホワイト (チタンニュートラル) |
+| {{< swatch "245,250,255" >}} |ジンクホワイト（クール） | PW4 |ホワイト(ジンククール) |
 
 ### コントロールグレー
 
@@ -97,9 +103,9 @@ The Master palette ships with the following pigments. Swatches show each pigment
 
 |スウォッチ |名前 | CI コード |
 | :---: | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,128,120);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ウォームグレー | N_WARM |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,128,128);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |ニュートラルグレー | N_ニュートラル |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,128,135);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> |クールグレー | N_COOL |
+| {{< swatch "135,128,120" >}} |ウォームグレー | N_WARM |
+| {{< swatch "128,128,128" >}} |ニュートラルグレー | N_ニュートラル |
+| {{< swatch "120,128,135" >}} |クールグレー | N_COOL |
 
 ## パレットマップ
 
@@ -119,6 +125,6 @@ The Master palette ships with the following pigments. Swatches show each pigment
 
 混合色は **カスタム** エントリとしてパレットに保存でき、後で復元できるように完全なレシピ (親 UID、ブレンド係数、トーン、クロマ値) を保存できます。
 
-## キャンバスのピクセルは RGBスペクトル システムは、パレットの構築と色の選択内で完全に動作します。ブラシ ストロークが適用されると、前景色 (すでにリニア RGB に変換されている) がペイントされます。キャンバスには標準の RGB ピクセル データが保存されます。
+## キャンバスのピクセルは RGB
 
-スペクトル混合により、画像データの保存方法や合成方法を変更することなく、物理的な顔料の動作と一致する方法でパレットを構築し、色を選択するエクスペリエンスが向上します。
+スペクトル システムは、パレットの構築と色の選択内で完全に動作します。ブラシ ストロークが適用されると、前景色 (既にリニア RGB に変換されている) がペイントされます。キャンバスには標準の RGB ピクセル データが保存されます。スペクトル混合により、画像データの保存方法や合成方法を変更することなく、物理的な顔料の動作と一致する方法でパレットを構築し、色を選択するエクスペリエンスが向上します。

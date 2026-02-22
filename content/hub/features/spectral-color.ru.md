@@ -12,7 +12,7 @@ type: docs
 
 Это дает результат, похожий на краску: смешивание синего и желтого дает зеленый, а не серый цвет. Смешивание двух насыщенных цветов дает цвет, который смещается в сторону нейтрального, как это происходит с физическими пигментами.
 
-Спектральные вычисления выполняются во время построения палитры — при создании записей вторичной и третичной палитры, а также когда микшер палитр смешивает два родительских цвета. Результирующий цвет преобразуется в линейный RGB для отображения и рисования.
+Спектральные вычисления выполняются во время построения палитры, при создании записей вторичной и третичной палитры и когда микшер палитр смешивает два родительских цвета. Результирующий цвет преобразуется в линейный RGB для отображения и рисования.
 
 ## Профили пигментов
 
@@ -31,65 +31,71 @@ type: docs
 
 Палитра Master поставляется со следующими пигментами. Образцы демонстрируют типичный массовый оттенок каждого пигмента (насыщенный, неразбавленный).
 
-### Апельсины и желтые| Образец | Имя | Код CI | Семья |
+### Апельсины и желтые
+
+| Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,135,20);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Пирроловый оранжевый | ПО73 | Красный (Алый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(243,114,64);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Кадмий оранжевый | РО20 | Желтый (Тело) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(240,180,80);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Кадмий желтый | ПГ35 | Желтый (Тело) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,210,25);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Кадмий Желтый Бледный | PY35:Бледный | Желтый (бледный кадмий) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(250,230,5);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Лимонно-желтый | ПГ3 | Желтый (Лимонный) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,155,10);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Никель азо желтый | ПГ150 | Желтый (Средний) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(180,175,45);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Зеленое золото | PY129 | Желто-зеленый (золотой) |
+| {{< swatch "245,135,20" >}} | Пирроловый оранжевый | ПО73 | Красный (Алый) |
+| {{< swatch "243,114,64" >}} | Кадмий оранжевый | РО20 | Желтый (Тело) |
+| {{< swatch "240,180,80" >}} | Кадмий желтый | ПГ35 | Желтый (Тело) |
+| {{< swatch "245,210,25" >}} | Кадмий Желтый Бледный | PY35:Бледный | Желтый (бледный кадмий) |
+| {{< swatch "250,230,5" >}} | Лимонно-желтый | ПГ3 | Желтый (Лимонный) |
+| {{< swatch "225,155,10" >}} | Никель азо желтый | ПГ150 | Желтый (Средний) |
+| {{< swatch "180,175,45" >}} | Зеленое золото | PY129 | Желто-зеленый (золотой) |
 
 ### Цвета Земли
 
 | Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(200,100,70);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Жженая Сиенна | PBr7:Сгорел | Земля (красно-коричневый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(117,66,0);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Жженая умбра | PBr7:Умбра | Земля (Нейтральная) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(205,68,35);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Сырая Сиенна | PBr7:Сырой | Земля (Желто-Коричневый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(187,124,25);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Желтая охра | PY42 | Земля (Желтый) |
+| {{< swatch "200,100,70" >}} | Жженая Сиенна | PBr7:Сгорел | Земля (красно-коричневый) |
+| {{< swatch "117,66,0" >}} | Жженая умбра | PBr7:Умбра | Земля (Нейтральная) |
+| {{< swatch "205,68,35" >}} | Сырая Сиенна | PBr7:Сырой | Земля (Желто-Коричневый) |
+| {{< swatch "187,124,25" >}} | Желтая охра | PY42 | Земля (Желтый) |
 
 ### Зелень
 
 | Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,166,81);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Фтало-зеленый (YS) | PG36 | Зеленый (желтый оттенок фтало) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(64,130,109);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Виридиан | PG18 | Зеленый (Виридиан) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,138,112);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Терре Верте | PG23 | Зеленый (Земля Прохладный) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,110,100);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Уинзор Грин (Б.С.) | PG7 | Зеленый (Фтало-синий оттенок) |### Блюз и цианы
+| {{< swatch "0,166,81" >}} | Фтало-зеленый (YS) | PG36 | Зеленый (желтый оттенок фтало) |
+| {{< swatch "64,130,109" >}} | Виридиан | PG18 | Зеленый (Виридиан) |
+| {{< swatch "128,138,112" >}} | Терре Верте | PG23 | Зеленый (Земля Прохладный) |
+| {{< swatch "0,110,100" >}} | Уинзор Грин (Б.С.) | PG7 | Зеленый (Фтало-синий оттенок) |
+
+### Блюз и цианы
 
 | Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,177,176);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Кобальт Бирюзовый Светлый | PG50 | Голубой (минерал) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,148,214);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | лазурный синий | ПБ35 | Голубой (минерал) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,100,110);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Фтало Бирюзовый | ПБ16 | Синий (Фтало) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,123,194);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Кобальтовый синий | ПБ28 | Синий (фиолетово-худой) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(0,75,115);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Винзор Блю | ПБ15 | Синий (Фтало) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(27,63,148);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Ультрамарин | ПБ29 | Синий (фиолетово-худой) |
+| {{< swatch "0,177,176" >}} | Кобальт Бирюзовый Светлый | PG50 | Голубой (минерал) |
+| {{< swatch "0,148,214" >}} | лазурный синий | ПБ35 | Голубой (минерал) |
+| {{< swatch "0,100,110" >}} | Фтало Бирюзовый | ПБ16 | Синий (Фтало) |
+| {{< swatch "0,123,194" >}} | Кобальтовый синий | ПБ28 | Синий (фиолетово-худой) |
+| {{< swatch "0,75,115" >}} | Винзор Блю | ПБ15 | Синий (Фтало) |
+| {{< swatch "27,63,148" >}} | Ультрамарин | ПБ29 | Синий (фиолетово-худой) |
 
 ### Фиолетовые, пурпурные и красные
 
 | Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(124,65,153);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | блестящий фиолетовый | ПВ23 | Фиолетовый (Диоксазин) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(230,90,180);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Перманентная роза | PV19:Роза | Пурпурный (Хинакридон) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(190,40,120);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Хинакридон пурпурный | PV19:Пурпурный | Пурпурный (Хинакридон) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(160,30,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Постоянный Ализарин Кримсон | PV19:Малиновый | Пурпурный (Хинакридон) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,35,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Перилен Фиолетовый | ПВ29 | Пурпурный (Хинакридон) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,10,45);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Перилен Бордовый | ПР179 | Красный (Малиновый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(215,30,60);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Пирроловый красный | ПР254 | Красный (Алый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(225,55,65);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Пиррол Красный Свет | ПР255 | Красный (пирроловый свет) |
+| {{< swatch "124,65,153" >}} | блестящий фиолетовый | ПВ23 | Фиолетовый (Диоксазин) |
+| {{< swatch "230,90,180" >}} | Перманентная роза | PV19:Роза | Пурпурный (Хинакридон) |
+| {{< swatch "190,40,120" >}} | Хинакридон пурпурный | PV19:Пурпурный | Пурпурный (Хинакридон) |
+| {{< swatch "160,30,65" >}} | Постоянный Ализарин Кримсон | PV19:Малиновый | Пурпурный (Хинакридон) |
+| {{< swatch "120,35,65" >}} | Перилен Фиолетовый | ПВ29 | Пурпурный (Хинакридон) |
+| {{< swatch "135,10,45" >}} | Перилен Бордовый | ПР179 | Красный (Малиновый) |
+| {{< swatch "215,30,60" >}} | Пирроловый красный | ПР254 | Красный (Алый) |
+| {{< swatch "225,55,65" >}} | Пиррол Красный Свет | ПР255 | Красный (пирроловый свет) |
 
-### Чёрные и белые| Образец | Имя | Код CI | Семья |
+### Чёрные и белые
+
+| Образец | Имя | Код CI | Семья |
 | :---: | :--- | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(22,15,10);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Марс Черный (Теплый) | ПБк11 | Черный (Марс) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,28,12);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Перилен Зеленый | ПБк31 | Черный (периленовый зеленый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(10,18,19);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Черный цвет слоновой кости (прохладный) | ПБк9 | Черный (слоновая кость) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(18,18,18);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Лампа черная (нейтральная) | ПБк7 | Черный (Лампа) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,249,235);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Титановый Белый (Теплый) | PW6:Теплый | Белый (Титан Теплый) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(255,255,255);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Титановый белый (нейтральный) | PW6 | Белый (титановый нейтральный) |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(245,250,255);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Цинковый белый (холодный) | ПВ4 | Белый (Цинковый Холодный) |
+| {{< swatch "22,15,10" >}} | Марс Черный (Теплый) | ПБк11 | Черный (Марс) |
+| {{< swatch "18,28,12" >}} | Перилен Зеленый | ПБк31 | Черный (периленовый зеленый) |
+| {{< swatch "10,18,19" >}} | Черный цвет слоновой кости (прохладный) | ПБк9 | Черный (слоновая кость) |
+| {{< swatch "18,18,18" >}} | Лампа черная (нейтральная) | ПБк7 | Черный (Лампа) |
+| {{< swatch "255,249,235" >}} | Титановый Белый (Теплый) | PW6:Теплый | Белый (Титан Теплый) |
+| {{< swatch "255,255,255" >}} | Титановый белый (нейтральный) | PW6 | Белый (титановый нейтральный) |
+| {{< swatch "245,250,255" >}} | Цинковый белый (холодный) | ПВ4 | Белый (Цинковый Холодный) |
 
 ### Контроль серого
 
@@ -97,9 +103,9 @@ type: docs
 
 | Образец | Имя | Код CI |
 | :---: | :--- | :--- |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(135,128,120);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Теплый серый | Н_ТЕПЛЫЙ |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(128,128,128);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Нейтральный серый | Н_НЕЙТРАЛЬ |
-| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px;background:rgb(120,128,135);vertical-align:middle;border:1px Solid rgba(0,0,0,0.25)"></span> | Прохладный серый | Н_КУЛ |
+| {{< swatch "135,128,120" >}} | Теплый серый | Н_ТЕПЛЫЙ |
+| {{< swatch "128,128,128" >}} | Нейтральный серый | Н_НЕЙТРАЛЬ |
+| {{< swatch "120,128,135" >}} | Прохладный серый | Н_КУЛ |
 
 ## Карта палитры
 
@@ -119,6 +125,6 @@ type: docs
 
 Смешанные цвета можно сохранить в палитре как записи **Пользовательские**, сохраняя полный рецепт (родительские UID, коэффициент смешивания, тон, значения цветности) для последующего восстановления.
 
-## Пиксели холста — это RGBСпектральная система полностью работает в рамках построения палитры и выбора цвета. Когда применяется мазок кисти, цвет переднего плана, уже преобразованный в линейный RGB, окрашивается. Холст хранит стандартные данные пикселей RGB.
+## Пиксели холста — это RGB
 
-Спектральное смешивание улучшает процесс создания палитры и выбора цветов в соответствии с физическим поведением пигментов, не меняя при этом способ хранения или компоновки данных изображения.
+Спектральная система полностью работает в рамках построения палитры и выбора цвета. Когда применяется мазок кисти, окрашивается цвет переднего плана (уже преобразованный в линейный RGB). Холст хранит стандартные данные пикселей RGB.Спектральное смешивание улучшает процесс создания палитры и выбора цветов в соответствии с физическим поведением пигментов, не меняя при этом способ хранения или компоновки данных изображения.

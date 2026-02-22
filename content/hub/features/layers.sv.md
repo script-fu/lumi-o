@@ -15,12 +15,15 @@ Lager är grunden för strukturerad illustration. Varje lager är oberoende, med
 ## Lagertyper
 
 ### Måla lager
+
 Standardrasterlager för målat innehåll. Lagra pixeldata som GEGL-buffertar med valfri alfatransparens.
 
 ### Grupplager
+
 Hierarkiska behållare för att organisera relaterade lager. Grupper kan ha sina egna blandningsläge, opacitet och klippmasker. Gruppprognoser är sammansatta på begäran.
 
 ### Lagermasker
+
 Gråskalemasker fästa på vilket lager som helst och kontrollerar opaciteten per pixel. Att måla på en mask med vitt gör pixlar ogenomskinliga; svart gör dem genomskinliga; grått ger partiell opacitet.
 
 ## Blandningslägen
@@ -37,15 +40,15 @@ Varje lager har ett blandningsläge som avgör hur det kombineras med lager neda
 
 ## Klippning och maskering
 
-- **Kompositläge — Klipp till bakgrund**: Att ställa in ett lagers sammansatta läge till **Klippa till bakgrund** begränsar kompositionen till områden där de ackumulerade **Union**-lagren nedan har etablerat opacitet. Lagret målas bara där dessa lager har innehåll – det kan inte utöka alfaavtrycket. Detta ställs in per lager i dialogrutan Lagerattribut (**Kompositläge** rullgardinsmenyn). När ett lagers effektiva sammansatta läge är något annat än Union, ersätts ögonikonen på panelen Lager med en sammansatt ikon för att indikera det icke-standardiserade sammansättningsbeteendet.
+- **Kompositläge: Klipp till bakgrund**: Att ställa in ett lagers sammansatta läge till **Klippa till bakgrund** begränsar sammansättningen till områden där de ackumulerade **Union**-lagren nedan har etablerat opacitet. Lagret målas endast där dessa lager har innehåll och inte kan utöka alfaavtrycket. Detta ställs in per lager i dialogrutan Lagerattribut (**Kompositläge** rullgardinsmenyn). När ett lagers effektiva sammansatta läge är något annat än Union, ersätts ögonikonen på panelen Lager med en sammansatt ikon för att indikera det icke-standardiserade sammansättningsbeteendet.
 
-  **Exempel — delad alfaform:** I en grupp innehåller det nedre lagret en fylld cirkel på en genomskinlig bakgrund, inställd på standardläget **Union**. Varje lager ovanför det i samma grupp är inställt på **Klipp till bakgrund**. Dessa lager kan bara måla där cirkeln ger opacitet - en form, många lager. Detta är ett vanligt mönster för färgning, skuggning och detaljering inom en definierad siluett utan att oroa dig för spill.
+  **Exempel: delad alfaform:** I en grupp innehåller det nedre lagret en fylld cirkel på en genomskinlig bakgrund, inställd på standardläget **Union**. Varje lager ovanför det i samma grupp är inställt på **Klipp till bakgrund**. Dessa lager kan bara måla där cirkeln ger opacitet (en form, många lager). Detta är ett vanligt mönster för färgning, skuggning och detaljering inom en definierad siluett utan att oroa dig för spill.
 - **Lagermasker**: Använd en gråskalemask för att kontrollera lagrets synlighet pixel för pixel. Att måla vitt på masken avslöjar; svarta döljer; grått ger partiell opacitet.
 - **Pure-Child Masks**: Masker lagras som barn i den ritbara stacken, vilket förhindrar dataförlust under transformationer.
 
 ## Lagerval (Alt-tangent)
 
-Om du trycker på **Alt** (vänster Alt) medan du håller muspekaren över duken väljer du lagret med synliga pixlar under markören – utan att byta verktyg eller klicka.
+Om du trycker på **Alt** (vänster Alt) medan du håller muspekaren över duken väljer du lagret med synliga pixlar under markören, utan att byta verktyg eller klicka.
 
 ### Hur det fungerar
 
@@ -66,7 +69,7 @@ Detta säkerställer att Alt-draggester (som justering av penselstorlek) och Alt
 
 ### Begränsningar
 
-- Lagerplockning aktiveras inte under **Transform**-verktygsoperationer — Alt har en annan betydelse där.
+- Lagerplockning aktiveras inte under **Transform**-verktygsoperationer; Alt har en annan betydelse där.
 - Plockning sker inte om ett flytande urval finns.
 - Endast vänster Alt utlöser plockning; höger Alt behandlas som en standardmodifierare.
 
@@ -96,7 +99,7 @@ Låsikoner visas i rubrikraden på panelen Lager. Varje lås kan växlas oberoen
 
 - **Låsmask**: Förhindrar redigering av lagermasken. Masken förblir synlig och aktiv men kan inte målas på eller modifieras medan detta lås är på.
 
-- **Låsfärg**: Låser målningen till en specifik färg — den aktuella förgrundsfärgen i det ögonblick som låset appliceras. Efterföljande streck på detta lager använder den lagrade färgen oavsett den aktiva förgrundsfärgen. Upplåsning kasserar den lagrade färgen.
+- **Låsfärg**: Låser målningen till en specifik färg: den aktuella förgrundsfärgen i det ögonblick som låset appliceras. Efterföljande streck på detta lager använder den lagrade färgen oavsett den aktiva förgrundsfärgen. Upplåsning kasserar den lagrade färgen.
 
 - **Lås innehåll** (Låsa pixlar): Förhindrar alla pixelredigeringar i lagret. Lagret kan inte målas på, fyllas, transformeras eller på annat sätt modifieras. Användbar för att skydda färdiga lager.
 
@@ -112,7 +115,7 @@ Icke-förstörande GEGL-filter som appliceras via menyn **Filter** lagras som co
 
 Klicka på ikonen **fx** på en lagerrad i panelen Lager för att öppna popover-fönstret **Lagereffekter** för det lagret.
 
-Popover-fönstret visar filterstapeln för lagret - varje begången effekt listad efter namn med en synlighetsomkopplare bredvid den.
+Popover-fönstret visar filterstapeln för lagret, med varje begången effekt listad efter namn med en synlighetsomkopplare bredvid.
 
 ### Kontroller
 
@@ -142,21 +145,21 @@ Dubbelklicka på ett lager i panelen Lager för att öppna dialogrutan Lagerattr
 ### Sammansatt utrymme och läge
 
 - **Kompositutrymme**: Färgrymden som används vid sammansättning av detta lager med lager under. Alternativ: Auto, Linjär (RGB), Perceptuell (RGB).
-- **Kompositläge**: Styr hur lagrets alfa interagerar med bakgrunden. Alternativen inkluderar Union (påverkar alla områden – standard för normalt läge), Clip to Backdrop (påverkar endast områden med befintligt innehåll – standard för de flesta andra blandningslägen) och Intersection.
+- **Kompositläge**: Styr hur lagrets alfa interagerar med bakgrunden. Alternativen inkluderar Union (påverkar alla områden, standard för normalt läge), Clip to Backdrop (påverkar endast områden med befintligt innehåll, standard för de flesta andra blandningslägen) och Intersection.
 
 ### Storlek och förskjutningar
 
 För ett befintligt lager visar **Storlekar** lagerdimensionerna och maskdimensionerna (om en mask är ansluten) som skrivskyddade etiketter.
 
-**Layer Offsets** — X- och Y-spinnare som styr lagrets position på duken. Ändringar gäller omedelbart snarare än när dialogrutan stängs.
+**Layer Offset**: X- och Y-spinnare som styr lagrets position på duken. Ändringar gäller omedelbart snarare än när dialogrutan stängs.
 
-Om lagret har en mask visas **Mask Offsets** — X- och Y-spinnare för maskens oberoende position — nedan.
+Om lagret har en mask visas **Mask Offsets** (X- och Y-spinnare för maskens oberoende position) nedan.
 
 När du skapar ett nytt lager, ersätter fälten för bredd och höjd och en rullgardinsmeny **Fyll med** (Förgrund, Bakgrund, Vit, Transparent) den skrivskyddade storleksvisningen.
 
 ### Lagerattribut (ihållande parasiter)
 
-Den nedre delen av dialogrutan innehåller en rullningsbar Namn/Värdetabell för ihållande parasiter – godtycklig nyckel-värde-metadata kopplad till lagret. Dessa värden lagras med projektet och är tillgängliga från Scheme-skriptgränssnittet.
+Den nedre delen av dialogrutan innehåller en rullningsbar Namn/Värdetabell för ihållande parasiter (godtycklig nyckel-värde-metadata kopplad till lagret). Dessa värden lagras med projektet och är tillgängliga från Scheme-skriptgränssnittet.
 
 - Klicka på valfri cell i kolumnen Namn eller Värde för att redigera den inline.
 - **Lägg till**: Lägger till en ny tom rad.

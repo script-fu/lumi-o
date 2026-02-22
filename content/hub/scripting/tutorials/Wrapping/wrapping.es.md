@@ -160,13 +160,13 @@ Al incluir funciones de bajo nivel en nombres significativos, creamos una forma 
 
 ### Envoltorios enviados: la utilidad Stdlib
 
-Lumi envía un conjunto de contenedores listos para usar que se cargan automáticamente al inicio, por lo que están disponibles en cualquier complemento o en Scheme Console sin ninguna llamada `(load ...)`. Estas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` y `paths.scm`) se basan exactamente en el mismo principio que los ejemplos anteriores: brindan información clara nombres a operaciones de bajo nivel, oculta texto repetitivo y proporciona un lugar único para actualizar si el comando subyacente cambia.Por ejemplo, `images.scm` proporciona `image-get-open-list` como un contenedor legible alrededor de la llamada PDB sin procesar, y `files.scm` expone ayudas de creación de rutas que de otro modo requerirían cadenas `string-append` repetidas.
+Lumi envía un conjunto de contenedores listos para usar que se cargan automáticamente al inicio, por lo que están disponibles en cualquier complemento o en Scheme Console sin ninguna llamada `(load ...)`. Estas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` y `paths.scm`) se basan exactamente en el mismo principio que los ejemplos anteriores: dan nombres claros. a operaciones de bajo nivel, ocultar texto repetitivo y proporcionar un único lugar para actualizar si el comando subyacente cambia.Por ejemplo, `images.scm` proporciona `image-get-open-list` como un contenedor legible alrededor de la llamada PDB sin procesar, y `files.scm` expone ayudas de creación de rutas que de otro modo requerirían cadenas `string-append` repetidas.
 
-Puede explorar cada nombre exportado, leer su cadena de documentación y ver de qué biblioteca proviene en **[Utility Browser](@@LUMI_TOKEN_21@@)** (Ayuda → Programación → Explorador de utilidades). Es una demostración práctica de cómo envolver a escala y una fuente útil de patrones que puede tomar prestados al crear su propia biblioteca auxiliar.
+Puede explorar cada nombre exportado, leer su cadena de documentación y ver de qué biblioteca proviene en **[Utility Browser](@@LUMI_TOKEN_21@@)** (Ayuda → Programación → Explorador de utilidades). Es una demostración práctica de envoltura a escala y una fuente útil de patrones para tomar prestados al crear su propia biblioteca auxiliar.
 
 ### Conclusión
 
-Ajustar funciones es una forma poderosa de simplificar el desarrollo de Scheme, haciendo que los scripts sean más legibles, fáciles de mantener y robustos. Al encapsular la complejidad y exponer solo los detalles necesarios, creamos un enfoque más estructurado para escribir complementos.
+Ajustar funciones es una manera poderosa de simplificar el desarrollo de Scheme, haciendo que los scripts sean más legibles, fáciles de mantener y robustos. Al encapsular la complejidad y exponer solo los detalles necesarios, creamos un enfoque más estructurado para escribir complementos.
 
 Conclusiones clave de este enfoque:
 

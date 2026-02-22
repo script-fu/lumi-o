@@ -10,16 +10,20 @@ Lo strumento Pennello supporta tipi di pennello raster, generati proceduralmente
 
 ## Tipi di pennelli
 
-### Pennelli raster
-Immagini di pennelli bitmap caricate da file `.png` o `.vbr`. Supporta la trasparenza alfa e i fotogrammi di tubi animati.
+### Pennelli raster (.raster)
 
-### Pennelli generati
+Immagini pennello bitmap che supportano la trasparenza alfa.
+
+### Pennelli generati (.param)
+
 Forme renderizzate proceduralmente (cerchio, quadrato, diamante, triangolo) con parametri regolabili: durezza, proporzioni, angolo, rotondità e raggio dell'angolo. I pennelli generati sono leggeri e scalabili.
 
 ### Pennelli animati (.anim)
+
 Sequenze di fotogrammi sequenziali che avanzano durante i colpi. I fotogrammi possono essere spostati in modo incrementale (avanzamento dei fotogrammi per tocco), selezionati casualmente per tocco o indicizzati in base alla dinamica (pressione, velocità, inclinazione, angolo).
 
 ## Cursore di disegno
+
 Il cursore si adatta allo stato corrente dello strumento per fornire un feedback chiaro e contestuale:
 
 - **Contorno del pennello**: il cursore traccia l'esatta forma e dimensione del pennello, fornendo un'anteprima in tempo reale di dove atterrerà la vernice.
@@ -29,11 +33,13 @@ Il cursore si adatta allo stato corrente dello strumento per fornire un feedback
 ## Opzioni dello strumento
 
 ### Controlli di livello superiore
+
 Presente in ogni momento, al di fuori di qualsiasi espansore:
 - **Modalità**: modalità di fusione dei colori (Normale, Moltiplica, Schermo, ecc.)
 - **Opacità**: opacità complessiva del tratto (0–100).
 
 ### Opzioni pennello
+
 Nell'espansore **Opzioni pennello** (espanso per impostazione predefinita):
 - **Dimensione**: diametro del pennello in pixel.
 - **Rapporto**: schiaccia o allunga la forma del pennello (-1,0–1,0). 0 = non modificato; valori negativi ruotano la zucca di 90°.
@@ -45,6 +51,7 @@ Nell'espansore **Opzioni pennello** (espanso per impostazione predefinita):
 - **Gomma**: moltiplicatore di dimensione applicato quando questo pennello viene utilizzato come gomma (0,1–10,0). Non mostrato sullo strumento Gomma stesso.
 
 ### Effetti del tratto
+
 Nell'espansore **Effetti tratto**:
 - **Post processo**: applica la stabilizzazione, la compressione della velocità e la correzione della riproduzione al termine del tratto, migliorando la coerenza senza latenza.
   - **Soglia di svolta**: soglia dell'angolo (0–180°) per la correzione della direzione in corrispondenza di angoli acuti. 0 = correzione della direzione di salto.
@@ -58,6 +65,7 @@ Quando è attivo, il dab stamping viene sostituito da un corridoio geometrico co
 - **Velocity Shrink** (0–100%): riduzione massima consentita delle dimensioni per campione. Limita la velocità con cui le dimensioni possono diminuire quando il tratto decelera.
 
 #### Levigatura
+
 Abilita l'arrotondamento dell'input in tempo reale applicato al tracciato del tratto mentre dipingi. Si espande per rivelare:
   - **Profondità** (2–256): numero di campioni di input precedenti considerati durante il calcolo della posizione livellata. Valori più alti producono un ritardo più lungo e più impegnato.
   - **Posizione** (0–100): intensità di levigatura applicata alla posizione del pennello. Valori più alti completano bruschi cambiamenti di direzione.
@@ -65,6 +73,7 @@ Abilita l'arrotondamento dell'input in tempo reale applicato al tracciato del tr
   - **Direzione** (0–100): attenuazione applicata alla direzione del tratto, stabilizzando la dinamica sensibile all'angolo.
 
 #### Dinamica
+
 Assegna l'input dello stilo o altri valori live ai parametri di pittura:
 
 - **Pressione** (stilo): controlla dimensioni, opacità, velocità, durezza, colore e altro in base alla pressione dello stilo.
@@ -77,6 +86,7 @@ Assegna l'input dello stilo o altri valori live ai parametri di pittura:
 Ogni input dinamico può essere mappato su più proprietà in modo indipendente. Apri **Opzioni strumento** → **Dinamiche** per configurare.
 
 #### Dissolvenza e colore
+
 Nell'espansore **Dissolvenza e colore** (nidificato all'interno di Effetti tratto; visibile solo quando il **Sistema dinamico** è abilitato):
 
 - **Angolo iniziale relativo**: il valore dell'**Angolo iniziale** viene interpretato rispetto alla direzione del tratto anziché come un angolo assoluto della tela.
@@ -88,27 +98,43 @@ Nell'espansore **Dissolvenza e colore** (nidificato all'interno di Effetti tratt
 - **Ripeti**: come viene ripetuta la dissolvenza una volta esaurita la durata della dissolvenza (None, Loop, Sawtooth, Triangle).
 
 
-### Testine per spazzole
-Dipingi con più testine di pennello indipendenti disposte in un anello di formazione attorno al percorso del tratto. I controlli vengono visualizzati nell'espansore **Teste di pennello** nel pannello delle opzioni dello strumento.- **Teste**: numero di testine simultanee (1–16).
+### Testine per spazzoleTestine della spazzola posiziona più testine della spazzola indipendenti su un **anello orbitale** circolare centrato sul percorso del tratto. Ogni testa dipinge un tocco completo nella propria posizione ogni volta che il tratto avanza, producendo più tratti paralleli o a ventaglio contemporaneamente.
+
+Il raggio dell'orbita è determinato dalla dimensione globale della spazzola meno la dimensione della testa: le teste più grandi si trovano più vicine al centro; le teste più piccole orbitano più lontano. Le teste si distanziano uniformemente attorno all'anello. Con due teste se ne ottiene una su ciascun lato del tratto, creando una stesura simmetrica che si comporta come un pennino per calligrafia. Il cursore **Segue la direzione** ruota l'intero anello per rimanere perpendicolare al tratto, in modo che il pennino segua la direzione in modo naturale mentre dipingi. Aggiungendo più teste, le si ventaglio progressivamente attorno all'anello, fino a un cerchio di spruzzo completo a 16.
+
+I controlli vengono visualizzati nell'espansore **Teste di pennello** nel pannello delle opzioni dello strumento.
+
+- **Conteggio**: numero di testine simultanee (1–16).
 - **Dimensione**: dimensione renderizzata di ciascuna testa rispetto alla dimensione globale del pennello (0,1–1,0).
-- **Rigidità**: quanto rigidamente il raggio dell'orbita segue la dimensione del pennello in scala dinamica. 0 = l'orbita traccia la dimensione della dinamica; 1 = l'orbita rimane fissa alla dimensione della base.
-- **Segue** (0,0–1,0): con quanta forza l'anello di formazione segue la direzione di viaggio del tratto. A 1.0 (default) l'anello è sempre perpendicolare alla direzione di marcia. A 0,0 è bloccato sul valore statico **Angolo**. I valori intermedi si fondono tra i due orientamenti. Questo è indipendente dal sistema Dynamics: non è richiesta alcuna configurazione della dinamica angolare.
-- **Angolo** (0–360°): orientamento statico dell'anello di formazione, utilizzato quando **Segue** è inferiore a 1,0. Quando **Blocca vista** è attivo, l'angolo viene automaticamente compensato per la rotazione della tela.
-- **Variazione**: variazione delle dimensioni pro capite e bias di pressione applicati alla dinamica.
+- **Angolo** (0–360°): orientamento statico dell'anello di formazione, utilizzato quando **Segue la direzione** è inferiore a 1,0.
+- **Variazione della pressione**: variazione delle dimensioni pro capite applicata come bias di pressione indipendente attraverso le curve dinamiche.
 - **Variazione dell'opacità**: variazione dell'opacità per testa, indipendente dalla variazione delle dimensioni.
-- **Seme**: risolto il problema del seme casuale per la variazione pro capite. Si applica solo quando **Setole casuali** è disattivato.
-- **Setole casuali**: randomizza il carattere delle setole a ogni tratto (ignora il seme).
-- **Fotogrammi indipendenti**: per i pennelli animati: quando è attivata, ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.
+- **Rigidità**: quanto rigidamente il raggio dell'orbita segue la dimensione del pennello in scala dinamica. 0 = l'orbita traccia la dimensione della dinamica; 1 = l'orbita rimane fissa alla dimensione della base.
+- **Segue la direzione** (0,0–1,0): con quanta forza l'anello di formazione segue la direzione di viaggio del tratto. A 1.0 l'anello è sempre perpendicolare al senso di marcia; a 0.0 si blocca sul valore statico **Angolo**.
+- **Seme personaggio** (0–255): numero fisso per personaggio pro-testa (dimensione, posizione scatter, portata). Lo stesso seme riproduce la stessa formazione ad ogni colpo. Desensibilizzato quando **Personaggio testa casuale** è attivo.
+
+#### Interpolazione
+
+Sposta le teste lungo e attorno al percorso del tratto ogni tocco, creando effetti di sbavatura e spruzzo.
+
+- **Overshoot** (0–5): disperde le teste in avanti lungo la direzione di viaggio. A 1,0 le teste si espandono fino a un intervallo completo di spaziatura del tocco in avanti; i valori superiori a 1,0 consentono una copertura maggiore con una forte propensione alla rarità.
+- **Undershoot** (0–5): uguale a Overshoot ma in ritardo rispetto al tocco corrente. In combinazione con Overshoot, questo crea una macchia principale o una coda di cometa. Soppresso al primo tocco per evitare artefatti retrogradi.
+- **Angolo di spruzzo** (0–90°): sventaglia ciascuna testa verso l'esterno dalla direzione della corsa di un angolo casuale per testa fino a questo valore. Fissato a 90° in modo che la testa non sia mai rivolta all'indietro. Predefinito: 10°.
+- **Spray Seed** (0–255): fisso il seed per gli angoli di spruzzo per testa, indipendente dal Character Seed. Desensibilizzato quando **Schema di spruzzatura casuale** è attivo.
+
+#### Randomizzazione
+
+- **Carattere testa casuale**: ridisegna i valori dei caratteri per testa (dimensione, posizione di dispersione, portata) ogni tocco in modo che la formazione sia completamente caotica lungo il tratto. Sostituisce **Seme carattere**.
+- **Schema di spruzzo casuale**: ridisegna gli angoli di spruzzo a ogni passata in modo che la ventola si sposti continuamente lungo la corsa ("spruzzo vivente"). Sostituisce **Spruzza seme**.
+- **Fotogrammi di animazione casuali**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.
 
 ### Opzioni aggiuntive
 
-Nell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita):
-
-- **Blocca su vista**: mantiene fisso l'aspetto del pennello rispetto alla visualizzazione della tela: quando ruoti la tela, il pennello ruota con essa.
+Nell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita):- **Blocca su vista**: mantiene fisso l'aspetto del pennello rispetto alla vista della tela: quando ruoti la tela, il pennello ruota con essa.
 - **Contorno pennello semplice**: utilizza un cerchio semplice per il contorno del cursore del pennello invece di riprodurre la forma completa del pennello. Utile per pennelli complessi o di grandi dimensioni in cui è costoso disegnare un contorno accurato.
 - **Jitter uniforme**: quando attivato, gli offset dei tocchi dal cursore **Jitter** vengono ricavati da una distribuzione uniforme (ogni offset ha la stessa probabilità all'interno dell'intervallo). Quando è disattivata, la distribuzione è gaussiana (sposta il cluster verso il centro).
 - **Ripristina gli ultimi colori utilizzati**: ripristina i colori di primo piano e di sfondo della sessione precedente all'avvio, invece di tornare al bianco e nero per impostazione predefinita.
 - **Orizzontale casuale**: 50% di possibilità di rispecchiare ogni timbro da sinistra a destra per tocco.
 - **Verticale casuale**: 50% di possibilità di capovolgere ciascun timbro per ogni tocco.
 - **Rotazione casuale**: ruota casualmente ciascun timbro di 0°, 90°, 180° o 270° per tocco.
-- **Ripristina animazione**: per i pennelli animati: quando è attivo, l'animazione riparte dal fotogramma 0 ad ogni nuovo tratto; quando è spento, continua da dove è terminata la corsa precedente.
+- **Reimposta animazione**: Per i pennelli animati: quando è attivo, l'animazione riparte dal fotogramma 0 ad ogni nuovo tratto; quando è spento, continua da dove è terminata la corsa precedente.

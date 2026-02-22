@@ -2,7 +2,7 @@
 title: "Utility-Browser"
 type: docs
 ---
-Mit dem Utility-Browser können Sie das integrierte Scheme-Dienstprogramm stdlib erkunden, das im Lieferumfang von Lumi enthalten ist – ohne die App verlassen oder Quelldateien durchsuchen zu müssen.
+Mit dem Utility-Browser können Sie das integrierte Scheme-Dienstprogramm stdlib erkunden, das im Lieferumfang von Lumi enthalten ist, ohne die App verlassen oder Quelldateien durchsuchen zu müssen.
 
 ## Öffnen des Utility-Browsers
 
@@ -28,8 +28,8 @@ All dies ist in jedem Scheme-Plug-in oder in der Scheme-Konsole verfügbar.
 
 ## Suchen und Filtern
 
-- **Suchfeld** – filtert während der Eingabe nach Namen (Groß- und Kleinschreibung wird bei der Teilzeichenfolgenübereinstimmung nicht berücksichtigt).
-- **Typfilter** – Ergebnisse auf `procedure`, `variable` oder `syntax` eingrenzen.
+- **Suchfeld**: Filtert während der Eingabe nach Namen (Groß-/Kleinschreibung wird bei der Teilzeichenfolgenübereinstimmung nicht berücksichtigt).
+- **Typfilter**: Ergebnisse auf `procedure`, `variable` oder `syntax` eingrenzen.
 
 Wenn Sie auf einen Eintrag klicken, werden dessen vollständiger Dokumentstring und die Bibliothek angezeigt, aus der er stammt.
 
@@ -39,4 +39,4 @@ Die Dienstprogrammbibliotheken sind eine praktische Anwendung des Umbruchmusters
 
 ## Beziehung zum Prozedurbrowser
 
-Der Utility-Browser ist getrennt von **Filter → Script-Fu → Konsole → Durchsuchen** (dem Prozedur-Browser). Der Prozedurenbrowser listet PDB-registrierte Prozeduren auf. Der Utility-Browser listet Hilfsdefinitionen auf, die absichtlich *außerhalb* der PDB leben – sie sind nur Scheme-definiert und haben keine C-Bindung.
+Der Utility-Browser ist getrennt von **Filter → Script-Fu → Konsole → Durchsuchen** (dem Prozedur-Browser). Der Prozedurenbrowser listet PDB-registrierte Prozeduren auf. Der Utility-Browser listet Hilfsdefinitionen auf, die absichtlich *außerhalb* der PDB leben: Sie sind nur Scheme-definiert und haben keine C-Bindung.

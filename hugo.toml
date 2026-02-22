@@ -168,9 +168,9 @@ pageRef = "hub/install-linux/"
 weight = 3
 
 [[menu.main]]
-name = "Technical Guides"
-identifier = "menuTechnicalGuides"
-pageRef = "hub/technical-guides/"
+name = "Features"
+identifier = "menuFeatures"
+pageRef = "hub/features/"
 weight = 5
 
 [[menu.main]]

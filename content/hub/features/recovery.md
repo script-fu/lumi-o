@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/recovery"
 ---
 
-Lumi maintains two independent recovery systems — automatic background saves and manual incremental checkpoints — both accessible from a single dialog.
+Lumi maintains two independent recovery systems (automatic background saves and manual incremental checkpoints), both accessible from a single dialog.
 
 ## Access
 

@@ -2,7 +2,7 @@
 title: "Recuperação de arquivos"
 type: docs
 ---
-Lumi mantém dois sistemas de recuperação independentes – salvamento automático em segundo plano e pontos de verificação incrementais manuais – ambos acessíveis em uma única caixa de diálogo.
+Lumi mantém dois sistemas de recuperação independentes (salvamentos automáticos em segundo plano e pontos de verificação incrementais manuais), ambos acessíveis em uma única caixa de diálogo.
 
 ## Acesso
 

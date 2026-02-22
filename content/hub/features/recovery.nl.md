@@ -2,7 +2,7 @@
 title: "Bestandsherstel"
 type: docs
 ---
-Lumi onderhoudt twee onafhankelijke herstelsystemen: automatisch opslaan op de achtergrond en handmatige incrementele controlepunten, beide toegankelijk vanuit één enkel dialoogvenster.
+Lumi onderhoudt twee onafhankelijke herstelsystemen (automatische opslag op de achtergrond en handmatige incrementele controlepunten), beide toegankelijk vanuit één enkel dialoogvenster.
 
 ## Toegang
 
@@ -93,7 +93,7 @@ Het standaardtabblad wanneer het dialoogvenster wordt geopend. Identificeert aut
 ## Oude staten opruimenHet accumuleren van herstelstatussen in de loop van de tijd kan aanzienlijke schijfruimte in beslag nemen. De knop **Oude staten opschonen…** (linksonder in het dialoogvenster) opent een opschoonprompt voor het actieve tabblad (Automatisch opslaan of Incrementeel).
 
 De prompt toont:
-- Hoeveel volledige opslagen er zijn voor het bestand.
+- Hoeveel volledige opslagen er bestaan voor het bestand.
 - De totale schijfruimte die ze in beslag nemen.
 - Een draaiknop **Bewaar meest recente** om te selecteren hoeveel saves je wilt behouden.
 

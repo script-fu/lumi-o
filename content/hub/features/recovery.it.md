@@ -2,7 +2,7 @@
 title: "Recupero file"
 type: docs
 ---
-Lumi mantiene due sistemi di ripristino indipendenti: salvataggi automatici in background e checkpoint incrementali manuali, entrambi accessibili da un'unica finestra di dialogo.
+Lumi mantiene due sistemi di ripristino indipendenti (salvataggio automatico in background e checkpoint incrementali manuali), entrambi accessibili da un'unica finestra di dialogo.
 
 ## Accesso
 

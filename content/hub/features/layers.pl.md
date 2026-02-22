@@ -15,12 +15,15 @@ Warstwy są podstawą uporządkowanej ilustracji. Każda warstwa jest niezależn
 ## Typy warstw
 
 ### Warstwy farby
+
 Standardowe warstwy rastrowe dla malowanej zawartości. Przechowuj dane pikseli jako bufory GEGL z opcjonalną przezroczystością alfa.
 
 ### Grupuj warstwy
+
 Hierarchiczne kontenery do organizowania powiązanych warstw. Grupy mogą mieć własny tryb mieszania, krycie i maski przycinające. Projekcje grupowe są komponowane na żądanie.
 
 ### Maski warstw
+
 Maski skali szarości dołączone do dowolnej warstwy, kontrolujące krycie na piksel. Malowanie na masce bielą sprawia, że ​​piksele stają się nieprzezroczyste; czarny sprawia, że ​​są przezroczyste; szary zapewnia częściowe krycie.
 
 ## Tryby mieszania
@@ -37,15 +40,15 @@ Każda warstwa ma tryb mieszania określający sposób łączenia jej z warstwam
 
 ## Przycinanie i maskowanie
 
-- **Tryb złożony — Przytnij do tła**: Ustawienie trybu złożonego warstwy na **Przytnij do tła** ogranicza komponowanie do obszarów, w których skumulowane warstwy **Łączące** poniżej mają ustaloną nieprzezroczystość. Warstwa maluje tylko tam, gdzie te warstwy zawierają treść — nie może rozszerzać śladu alfa. Ustawia się to dla poszczególnych warstw w oknie dialogowym Atrybuty warstw (menu **Tryb kompozytowy**). Jeśli efektywnym trybem złożonym warstwy jest inny niż Union, ikona oka w panelu Warstwy zostaje zastąpiona ikoną złożoną, aby wskazać niestandardowe zachowanie podczas komponowania.
+- **Tryb kompozytowy: Przytnij do tła**: Ustawienie trybu złożonego warstwy na **Przytnij do tła** ogranicza komponowanie do obszarów, w których skumulowane warstwy **Łączące** poniżej mają ustaloną nieprzezroczystość. Warstwa maluje tylko te warstwy, które zawierają treść i nie mogą rozszerzać śladu alfa. Ustawia się to dla poszczególnych warstw w oknie dialogowym Atrybuty warstw (menu **Tryb kompozytowy**). Jeśli efektywnym trybem złożonym warstwy jest inny niż Union, ikona oka w panelu Warstwy zostaje zastąpiona ikoną złożoną, aby wskazać niestandardowe zachowanie podczas komponowania.
 
-  **Przykład — współdzielony kształt alfa:** W grupie dolna warstwa zawiera wypełnione koło na przezroczystym tle, ustawionym na domyślny tryb złożony **Unia**. Każda warstwa powyżej w tej samej grupie ma ustawioną opcję **Przytnij do tła**. Warstwy te mogą malować tylko tam, gdzie okrąg zapewnia krycie — jeden kształt, wiele warstw. Jest to powszechny wzór do kolorowania, cieniowania i opracowywania szczegółów w ramach określonej sylwetki bez obawy o rozlanie.
+  **Przykład: wspólny kształt alfa:** w grupie dolna warstwa zawiera wypełniony okrąg na przezroczystym tle, ustawiony na domyślny tryb złożony **Unia**. Każda warstwa powyżej w tej samej grupie ma ustawioną opcję **Przytnij do tła**. Warstwy te mogą malować tylko tam, gdzie okrąg zapewnia krycie (jeden kształt, wiele warstw). Jest to powszechny wzór do kolorowania, cieniowania i opracowywania szczegółów w ramach określonej sylwetki bez obawy o rozlanie.
 - **Maski warstw**: Zastosuj maskę w skali szarości, aby kontrolować widoczność warstwy piksel po pikselu. Malowanie na biało maski ujawnia; czarne kryjówki; szary zapewnia częściowe krycie.
 - **Maski Pure-Child**: Maski są przechowywane jako maski podrzędne w stosie do rysowania, co zapobiega utracie danych podczas transformacji.
 
 ## Wybieranie warstw (klawisz Alt)
 
-Dotknięcie **Alt** (lewy Alt) podczas przesuwania wskaźnika myszy nad obszarem roboczym powoduje wybranie warstwy z widocznymi pikselami pod kursorem — bez przełączania narzędzi i klikania.
+Dotknięcie **Alt** (lewy Alt) podczas przesuwania wskaźnika myszy nad obszarem roboczym powoduje wybranie warstwy z widocznymi pikselami pod kursorem, bez przełączania narzędzi i klikania.
 
 ### Jak to działa
 
@@ -66,7 +69,7 @@ Dzięki temu gesty przeciągania Alt (takie jak regulacja rozmiaru pędzla) i sk
 
 ### Ograniczenia
 
-- Wybieranie warstw nie jest aktywowane podczas operacji narzędzia **Przekształć** — Alt ma tam inne znaczenie.
+- Wybieranie warstw nie jest aktywowane podczas operacji narzędzia **Przekształć**; Alt ma tam inne znaczenie.
 - Pobieranie nie następuje, jeśli występuje selekcja pływająca.
 - Tylko lewy Alt uruchamia wybieranie; prawy Alt jest traktowany jako standardowy modyfikator.
 
@@ -96,7 +99,7 @@ Ikony kłódki są wyświetlane w wierszu nagłówka panelu Warstwy. Każdą blo
 
 - **Zablokuj maskę**: Uniemożliwia edycję maski warstwy. Maska pozostaje widoczna i aktywna, ale nie można jej pomalować ani zmodyfikować, gdy ta blokada jest włączona.
 
-- **Zablokuj kolor**: Blokuje malowanie na określonym kolorze — bieżącym kolorze pierwszego planu w momencie zastosowania blokady. Kolejne pociągnięcia na tej warstwie korzystają z zapisanego koloru niezależnie od aktywnego koloru pierwszego planu. Odblokowanie powoduje odrzucenie zapisanego koloru.
+- **Zablokuj kolor**: Blokuje malowanie na określonym kolorze: bieżącym kolorze pierwszego planu w momencie zastosowania blokady. Kolejne pociągnięcia na tej warstwie korzystają z zapisanego koloru niezależnie od aktywnego koloru pierwszego planu. Odblokowanie powoduje odrzucenie zapisanego koloru.
 
 - **Zablokuj zawartość** (Zablokuj piksele): Zapobiega wszelkim edycjom pikseli w warstwie. Warstwa nie może być malowana, wypełniana, przekształcana ani w żaden inny sposób modyfikowana. Przydatny do zabezpieczania gotowych warstw.
 
@@ -112,7 +115,7 @@ Nieniszczące filtry GEGL zastosowane za pomocą menu **Filtry** są przechowywa
 
 Kliknij ikonę **fx** w wierszu warstwy w panelu Warstwy, aby otworzyć wyskakujące okienko **Efekty warstw** dla tej warstwy.
 
-W wyskakującym okienku wyświetlany jest stos filtrów dla warstwy — każdy zatwierdzony efekt jest wyszczególniony według nazwy i znajduje się obok niego przełącznik widoczności.
+W wyskakującym okienku wyświetlany jest stos filtrów dla warstwy, a każdy zatwierdzony efekt jest wymieniony według nazwy i znajduje się obok niego przełącznik widoczności.
 
 ### Sterowanie
 
@@ -142,21 +145,21 @@ Kliknij dwukrotnie warstwę w panelu Warstwy, aby otworzyć okno dialogowe Atryb
 ### Złożona przestrzeń i tryb
 
 - **Przestrzeń złożona**: Przestrzeń kolorów używana podczas łączenia tej warstwy z warstwami poniżej. Opcje: Auto, Liniowy (RGB), Percepcyjny (RGB).
-- **Tryb złożony**: Kontroluje interakcję warstwy alfa z tłem. Opcje obejmują Łączenie (wpływa na wszystkie obszary — ustawienie domyślne w trybie Normal), Przytnij do tła (wpływa tylko na obszary z istniejącą zawartością — ustawienie domyślne w większości innych trybów mieszania) i Przecięcie.
+- **Tryb złożony**: Kontroluje interakcję warstwy alfa z tłem. Opcje obejmują Łączenie (wpływa na wszystkie obszary, ustawienie domyślne w trybie normalnym), Przytnij do tła (wpływa tylko na obszary z istniejącą zawartością, ustawienie domyślne w większości innych trybów mieszania) i Przecięcie.
 
 ### Rozmiar i przesunięcia
 
 W przypadku istniejącej warstwy opcja **Rozmiary** pokazuje wymiary warstwy i wymiary maski (jeśli maska jest dołączona) jako etykiety tylko do odczytu.
 
-**Przesunięcia warstw** — pokrętła X i Y kontrolujące położenie warstwy na płótnie. Zmiany obowiązują natychmiast, a nie po zamknięciu okna dialogowego.
+**Przesunięcia warstw**: Pokrętła X i Y kontrolujące położenie warstwy na płótnie. Zmiany obowiązują natychmiast, a nie po zamknięciu okna dialogowego.
 
-Jeśli warstwa zawiera maskę, poniżej pokazano **Przesunięcia maski** — pokrętła X i Y dla niezależnej pozycji maski.
+Jeśli warstwa zawiera maskę, poniżej pokazano **Przesunięcia maski** (pokrętła X i Y dla niezależnej pozycji maski).
 
 Podczas tworzenia nowej warstwy pola Szerokość i Wysokość oraz lista rozwijana **Wypełnij** (Pierwszy plan, Tło, Biały, Przezroczysty) zastępują wyświetlany rozmiar tylko do odczytu.
 
 ### Atrybuty warstw (trwałe pasożyty)
 
-Dolna część okna dialogowego zawiera przewijaną tabelę nazw/wartości dla trwałych pasożytów — dowolnych metadanych klucz-wartość dołączonych do warstwy. Wartości te są przechowywane w projekcie i są dostępne z poziomu interfejsu skryptowego Scheme.
+Dolna część okna dialogowego zawiera przewijaną tabelę nazw/wartości dla trwałych pasożytów (dowolne metadane klucz-wartość dołączone do warstwy). Wartości te są przechowywane w projekcie i są dostępne z poziomu interfejsu skryptowego Scheme.
 
 - Kliknij dowolną komórkę w kolumnie Nazwa lub Wartość, aby edytować ją bezpośrednio.
 - **Dodaj**: Dołącza nowy pusty wiersz.
