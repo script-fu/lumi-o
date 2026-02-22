@@ -1,0 +1,124 @@
+---
+title: "스펙트럼 색상 혼합"
+type: docs
+---
+Lumi의 팔레트 시스템은 스펙트럼 색상 모델을 사용하여 실제 안료가 혼합되는 방식을 시뮬레이션합니다. 목표는 디지털 팔레트에서 색상을 만들고 선택하는 경험이 실제 페인트를 혼합하는 것처럼 동작하도록 만드는 것입니다. 캔버스에 색상이 적용되면 표준 RGB가 됩니다.
+
+## 스펙트럼 혼합의 의미
+
+전통적인 RGB 혼합은 가산적입니다. 두 개의 RGB 값을 혼합하면 평균이 중간점으로 계산됩니다. 안료 혼합은 감산입니다. 각 안료는 특정 파장을 흡수하고 결합된 효과는 더 어둡고 색상이 바뀌는 경우가 많습니다.
+
+Lumi는 RGB 대신 팔레트 색상에 대한 10밴드 스펙트럼 반사 표현을 사용하여 이를 모델링합니다.
+
+이렇게 하면 페인트와 같은 결과가 생성됩니다. 파란색과 노란색을 혼합하면 회색이 아닌 녹색이 생성됩니다. 두 가지 채도가 높은 색상을 혼합하면 물리적 안료와 마찬가지로 중성색으로 이동하는 색상이 생성됩니다.
+
+스펙트럼 계산은 팔레트 구성 중에, 즉 2차 및 3차 팔레트 항목을 생성할 때와 팔레트 믹서가 두 개의 상위 색상을 혼합할 때 실행됩니다. 결과 색상은 표시 및 페인팅을 위해 선형 RGB로 변환됩니다.
+
+## 안료 프로필
+
+팔레트 항목은 **컬러 인덱스(CI) 코드**를 사용하여 실제 안료 데이터를 기반으로 할 수 있습니다. 각 CI 안료 제품군에는 혼합 방식에 영향을 미치는 특징적인 스펙트럼 편향이 있습니다.
+
+| 안료 역할 | 혼합 동작 | 예 |
+| :--- | :--- | :--- |
+| **기본** | 높은 채도, 깨끗한 이차 | PY3(레몬옐로우), PR122(마젠타) |
+| **몸** | 불투명하고 강한 질량 톤, 녹색 믹스에서 올리브색으로 전환 | PY35(카드뮴 황색), PR108(카드뮴 레드) |
+| **중화제** | 빠르게 채도를 낮추고 음소거 | PBk11(마스 블랙), PBr7(시에나) |
+| **크로마 앵커** | 높은 착색력, 혼합물의 지배력 | PB29(울트라마린 블루), PG7(프탈로 그린) |
+
+CI 코드가 포함된 원색을 팔레트에 추가하면 혼합 엔진에 해당 색상에 대한 정확한 스펙트럼 바이어스가 제공되므로 생성된 2차 및 3차 혼합은 실제 혼합 동작을 반영합니다.
+
+## 루미 안료
+
+마스터 팔레트에는 다음 안료가 함께 제공됩니다. 견본은 각 안료의 전형적인 매스톤(완전 강도, 희석되지 않은) 외관을 보여줍니다.
+
+### 오렌지와 노란색| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(245,135,20);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 피롤 오렌지 | PO73 | 레드(스칼렛) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(243,114,64);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 카드뮴 오렌지 | PO20 | 노란색(바디) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(240,180,80);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 카드뮴 옐로우 | PY35 | 노란색(바디) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(245,210,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 카드뮴 옐로우 페일 | PY35:페일 | 노란색(카드뮴 페일) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(250,230,5);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 레몬 옐로우 | PY3 | 노란색(레몬) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(225,155,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 니켈 아조 옐로우 | 150엔 | 노란색(중간) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(180,175,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 그린 골드 | PY129 | 황록색(골드) |
+
+### 지구 색상
+
+| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(200,100,70);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 번트 시에나 | PBr7:탄 | 지구(적갈색) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(117,66,0);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 번트 엄버 | PBr7:움버 | 지구(중립) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(205,68,35);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 원시 시에나 | PBr7:원시 | 지구(황갈색) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(187,124,25);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 황토색 | PY42 | 지구(노란색) |
+
+### 녹색
+
+| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,166,81);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 프탈로그린(YS) | PG36 | 녹색(프탈로 노랑색) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(64,130,109);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 비리디안 | PG18 | 그린(비리디안) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(128,138,112);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 테르 베르테 | PG23 | 그린(어스 쿨) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,110,100);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 윈저 그린(BS) | PG7 | 그린(프탈로 블루쉐이드) |### 파란색과 청록색
+
+| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,177,176);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 코발트 청록색 빛 | PG50 | 청록색(미네랄) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,148,214);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 세룰리안 블루 | PB35 | 청록색(미네랄) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,100,110);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 프탈로 터키석 | PB16 | 블루(프탈로) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,123,194);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 코발트 블루 | PB28 | 블루(바이올렛-린) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(0,75,115);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 윈저 블루 | PB15 | 블루(프탈로) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(27,63,148);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 울트라마린 | PB29 | 블루(바이올렛-린) |
+
+### 제비꽃, 자홍색 및 빨간색
+
+| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(124,65,153);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 브릴리언트 바이올렛 | PV23 | 바이올렛(디옥사진) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(230,90,180);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 퍼머넌트 로즈 | PV19:로즈 | 마젠타(퀴나크리돈) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(190,40,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 퀴나크리돈 마젠타 | PV19:마젠타 | 마젠타(퀴나크리돈) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(160,30,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 영구 알리자린 크림슨 | PV19:크림슨 | 마젠타(퀴나크리돈) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(120,35,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 페릴렌 바이올렛 | PV29 | 마젠타(퀴나크리돈) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(135,10,45);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 페릴렌 마룬 | PR179 | 레드(크림슨) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(215,30,60);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 피롤 레드 | PR254 | 레드(스칼렛) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(225,55,65);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 피롤 레드 라이트 | PR255 | 레드(피롤 라이트) |
+
+### 흑인과 백인| 견본 | 이름 | CI 코드 | 가족 |
+| :---: | :--- | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(22,15,10);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 화성 블랙(웜) | PBk11 | 블랙(화성) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(18,28,12);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 페릴렌 그린 | PBk31 | 블랙(페릴렌 그린) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(10,18,19);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 아이보리 블랙(쿨) | PBk9 | 블랙(아이보리) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(18,18,18);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 램프 검정색(중립) | PBk7 | 블랙(램프) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(255,249,235);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 티타늄 화이트(웜) | PW6:따뜻함 | 화이트(티타늄 웜) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(255,255,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 티타늄 화이트(뉴트럴) | PW6 | 화이트(티타늄 뉴트럴) |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(245,250,255);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 징크화이트(쿨) | PW4 | 화이트(아연쿨) |
+
+### 회색 제어
+
+컨트롤 그레이는 혼합의 채도를 예측 가능하게 낮추는 데 사용되는 표준화된 중화제입니다.
+
+| 견본 | 이름 | CI 코드 |
+| :---: | :--- | :--- |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(135,128,120);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 따뜻한 그레이 | N_따뜻함 |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(128,128,128);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 뉴트럴 그레이 | N_중립 |
+| <span style="display:inline-block;width:1.3em;height:1.3em;border-radius:3px; background:rgb(120,128,135);vertical-align:middle;border:1px solid rgba(0,0,0,0.25)"></span> | 쿨 그레이 | N_COOL |
+
+## 팔레트 맵
+
+팔레트 맵은 활성 팔레트를 색상 휠(36개의 색상 섹터(10° 단계) × 15개의 밝기 셀)로 시각화합니다. 기본이 추가되면 시스템은 2차 및 3차 믹스를 생성하여 적절한 지도 위치에 배치합니다.
+
+셀을 클릭하면 색상이 전경으로 선택됩니다. Shift 키를 누른 채 클릭하면 팔레트 믹서의 상위 끝점으로 할당됩니다.
+
+## 팔레트 믹서
+
+팔레트 믹서는 고정된 3단계 파이프라인을 사용하여 두 개의 상위 항목에서 새로운 색상을 파생합니다.
+
+1. **혼합**: 상위 A(CCW)와 상위 B(CW) 사이의 스펙트럼 WGM.
+2. **채도**: 팔레트의 중성 스펙트럼 쪽으로 혼합하여 채도를 줄입니다.
+3. **톤**: 흰색을 섞거나 검은색을 섞는 방향으로 블렌딩하여 명도를 조정합니다.
+
+톤은 마지막에 적용되므로 채도 변화로 인해 밝기 조정이 희석되지 않습니다. 값 잠금 및 밴드 클램프 컨트롤은 결과를 특정 밝기 수준 또는 값 밴드로 제한합니다.
+
+혼합 색상은 나중에 복구할 수 있도록 전체 레시피(상위 UID, 혼합 요소, 톤, 채도 값)를 저장하여 **사용자 정의** 항목으로 팔레트에 저장할 수 있습니다.
+
+## 캔버스 픽셀은 RGB입니다스펙트럼 시스템은 전적으로 팔레트 구성 및 색상 선택 내에서 작동합니다. 브러시 획이 적용되면 이미 선형 RGB로 변환된 전경색이 칠해집니다. 캔버스는 표준 RGB 픽셀 데이터를 저장합니다.
+
+스펙트럼 혼합은 이미지 데이터가 저장되거나 합성되는 방식을 변경하지 않고도 물리적 안료 동작과 일치하는 방식으로 팔레트를 구축하고 색상을 선택하는 경험을 향상시킵니다.
