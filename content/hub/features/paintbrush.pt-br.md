@@ -100,37 +100,38 @@ No expansor **Fade and Colour** (aninhado dentro de Stroke Effects; visível ape
 
 ### Cabeças de escovaCabeças de pincel colocam várias cabeças de pincel independentes em um **anel de órbita** circular centralizado no caminho do traço. Cada cabeça pinta um pincel completo em sua própria posição cada vez que o traço avança, produzindo vários traços paralelos ou em leque simultaneamente.
 
-O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; cabeças menores orbitam mais longe. As cabeças se espaçam uniformemente ao redor do anel. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Segue a direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta rastreie a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
+O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; cabeças menores orbitam mais longe. As cabeças se espaçam uniformemente ao redor do anel. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
 
 Os controles aparecem no expansor **Cabeças de pincel** no painel de opções de ferramentas.
 
 - **Contagem**: Número de cabeças de escova simultâneas (1–16).
 - **Tamanho**: tamanho renderizado de cada cabeça em relação ao tamanho global do pincel (0,1–1,0).
-- **Ângulo** (0–360°): Orientação estática do anel de formação, usado quando **Segue a direção** está abaixo de 1,0.
+- **Rigidez das cerdas**: quão rigidamente o raio da órbita segue o tamanho do pincel em escala dinâmica. 0 = a órbita se expande e se contrai com a pressão; 1 = a órbita permanece fixa ao tamanho da base.
+- **Ângulo** (0–360°): Orientação estática do anel de formação, usado quando **Seguir Direção** está abaixo de 1,0.
+- **Seguir direção** (0,0–1,0): quão fortemente o anel de formação acompanha a direção de deslocamento do curso. Em 1,0 o anel é sempre perpendicular à direção de deslocamento; em 0,0 ele trava no valor estático **Angle**.
 - **Variação de pressão**: variação de tamanho por cabeça aplicada como um viés de pressão independente através das curvas dinâmicas.
 - **Variação de opacidade**: variação de opacidade por cabeça, independente da variação de tamanho.
-- **Rigidez**: quão rigidamente o raio da órbita segue o tamanho do pincel em escala dinâmica. 0 = a órbita rastreia o tamanho da dinâmica; 1 = a órbita permanece fixa ao tamanho da base.
-- **Segue a direção** (0,0–1,0): Quão fortemente o anel de formação acompanha a direção de deslocamento do curso. Em 1,0 o anel é sempre perpendicular à direção de deslocamento; em 0,0 ele trava no valor estático **Angle**.
-- **Semente de personagem** (0–255): Semente fixa para personagem por cabeça (tamanho, posição de dispersão, alcance). A mesma semente reproduz a mesma formação a cada golpe. Dessensibilizado quando **Random Head Character** está ativado.
+- **Semente de personagem** (0–255): Semente fixa para caractere por cabeça (tamanho, posição de espaçamento de preenchimento). A mesma semente reproduz a mesma formação a cada golpe. Dessensibilizado quando **Randomizar personagem principal** está ativado.
 
-#### Interpolação
+#### Dispersão
 
 Desloca as cabeças ao longo e ao redor do caminho do traço a cada pincelada, criando efeitos de mancha e spray.
 
-- **Overshoot** (0–5): Os Scatters avançam ao longo da direção de deslocamento. A 1,0, as cabeças se espalham até um intervalo completo de espaçamento à frente; valores acima de 1,0 permitem maior alcance com um viés de raridade acentuado.
-- **Undershoot** (0–5): O mesmo que Overshoot, mas ficando atrás do dab atual. Combinado com Overshoot, isso cria uma mancha principal ou cauda de cometa. Suprimido na primeira pincelada para evitar artefatos retrógrados.
-- **Ângulo de pulverização** (0–90°): Ventila cada cabeçote para fora da direção do curso em um ângulo aleatório por cabeçote até esse valor. Fixado a 90° para que nenhuma cabeça fique voltada para trás. Padrão: 10°.
-- **Spray Seed** (0–255): Semente fixa para ângulos de pulverização por cabeça, independente da Semente de Personagem. Dessensibilizado quando **Padrão de pulverização aleatório** está ativado.
+- **Espaçamento de preenchimento** (0,0–1,0): espalha as cabeças no espaço entre posições de salpico consecutivas. O valor de caráter estável de cada cabeça determina sua direção inclinada; em 1,0 cabeças preencha todo o intervalo de espaçamento. O caráter é estável por semente.
+- **Ângulo de dispersão** (0–90°, padrão 10°): Ventila cada cabeçote para fora da direção do curso em um ângulo recentemente randomizado até esse valor. Fixado a 90° para que nenhuma cabeça fique voltada para trás.
+- **Dispersão direta** (0–4000 px): Dispersão aleatória máxima à frente da direção do traço. Re-rolado de forma independente a cada pincelada.
+- **Dispersão para trás** (0–4000 px): Dispersão aleatória máxima atrás do traço. As cabeças ainda estão voltadas para frente; apenas a direção do deslocamento é invertida. Tanto Forward quanto Backward podem ser diferentes de zero simultaneamente.
+- **Equilíbrio de tamanho de dispersão** (0,0–1,0): Peso mínimo de dispersão para cabeçotes grandes. Aos 0, cabeças grandes pousam perto da tacada; em 1, todas as cabeças se espalham igualmente, independentemente do tamanho.
+- **Limite de tamanho de dispersão** (1–100 px): Cabeças menores que esse raio de pixel se espalham a toda distância; cabeças maiores são progressivamente puxadas para mais perto do golpe.
 
 #### Randomização
 
-- **Caracter de cabeça aleatório**: Redesenha os valores dos caracteres por cabeça (tamanho, posição de dispersão, alcance) a cada pincelada para que a formação seja totalmente caótica ao longo do traço. Substitui **Semente de personagem**.
-- **Padrão de pulverização aleatório**: redesenha os ângulos de pulverização a cada pincelada para que o ventilador se desloque continuamente ao longo do curso ("spray vivo"). Substitui **Spray Seed**.
-- **Quadros de animação aleatórios**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.
+- **Randomizar personagem principal**: redesenha os valores dos caracteres por cabeça (tamanho, posição de dispersão) em cada carimbo para que a formação seja totalmente caótica ao longo do traço. Substitui **Semente de personagem**.
+- **Randomizar quadros de animação**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.
 
-### Opções Adicionais
+### Opções AdicionaisNo expansor **Opções adicionais** (recolhido por padrão):
 
-No expansor **Opções adicionais** (recolhido por padrão):- **Bloquear para visualizar**: mantém a aparência do pincel fixa em relação à visualização da tela: quando você gira a tela, o pincel gira com ela.
+- **Bloquear para visualizar**: mantém a aparência do pincel fixa em relação à visualização da tela: quando você gira a tela, o pincel gira com ela.
 - **Limite do pincel simples**: usa um círculo simples para o contorno do cursor do pincel em vez de renderizar a forma completa do pincel. Útil para pincéis complexos ou grandes onde o desenho do limite preciso é caro.
 - **Jitter uniforme**: Quando ativado, os deslocamentos de salpicos do controle deslizante **Jitter** são extraídos de uma distribuição uniforme (cada deslocamento é igualmente provável dentro do intervalo). Quando desativado, a distribuição é gaussiana (desloca o cluster em direção ao centro).
 - **Restaurar as últimas cores usadas**: restaura as cores de primeiro plano e de fundo da sessão anterior na inicialização, em vez de usar preto e branco como padrão.

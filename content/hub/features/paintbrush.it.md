@@ -100,37 +100,38 @@ Nell'espansore **Dissolvenza e colore** (nidificato all'interno di Effetti tratt
 
 ### Testine per spazzoleTestine della spazzola posiziona più testine della spazzola indipendenti su un **anello orbitale** circolare centrato sul percorso del tratto. Ogni testa dipinge un tocco completo nella propria posizione ogni volta che il tratto avanza, producendo più tratti paralleli o a ventaglio contemporaneamente.
 
-Il raggio dell'orbita è determinato dalla dimensione globale della spazzola meno la dimensione della testa: le teste più grandi si trovano più vicine al centro; le teste più piccole orbitano più lontano. Le teste si distanziano uniformemente attorno all'anello. Con due teste se ne ottiene una su ciascun lato del tratto, creando una stesura simmetrica che si comporta come un pennino per calligrafia. Il cursore **Segue la direzione** ruota l'intero anello per rimanere perpendicolare al tratto, in modo che il pennino segua la direzione in modo naturale mentre dipingi. Aggiungendo più teste, le si ventaglio progressivamente attorno all'anello, fino a un cerchio di spruzzo completo a 16.
+Il raggio dell'orbita è determinato dalla dimensione globale della spazzola meno la dimensione della testa: le teste più grandi si trovano più vicine al centro; le teste più piccole orbitano più lontano. Le teste si distanziano uniformemente attorno all'anello. Con due teste se ne ottiene una su ciascun lato del tratto, creando una stesura simmetrica che si comporta come un pennino per calligrafia. Il cursore **Segui direzione** ruota l'intero anello per rimanere perpendicolare al tratto, in modo che il pennino segua la direzione in modo naturale mentre dipingi. Aggiungendo più teste, le si ventaglio progressivamente attorno all'anello, fino a un cerchio di spruzzo completo a 16.
 
 I controlli vengono visualizzati nell'espansore **Teste di pennello** nel pannello delle opzioni dello strumento.
 
 - **Conteggio**: numero di testine simultanee (1–16).
 - **Dimensione**: dimensione renderizzata di ciascuna testa rispetto alla dimensione globale del pennello (0,1–1,0).
-- **Angolo** (0–360°): orientamento statico dell'anello di formazione, utilizzato quando **Segue la direzione** è inferiore a 1,0.
+- **Rigidità delle setole**: quanto rigidamente il raggio dell'orbita segue la dimensione del pennello in scala dinamica. 0 = l'orbita si espande e si contrae con la pressione; 1 = l'orbita rimane fissa alla dimensione della base.
+- **Angolo** (0–360°): orientamento statico dell'anello di formazione, utilizzato quando **Segui direzione** è inferiore a 1,0.
+- **Segui direzione** (0,0–1,0): con quale intensità l'anello di formazione segue la direzione di viaggio del tratto. A 1.0 l'anello è sempre perpendicolare al senso di marcia; a 0.0 si blocca sul valore statico **Angolo**.
 - **Variazione della pressione**: variazione delle dimensioni pro capite applicata come bias di pressione indipendente attraverso le curve dinamiche.
 - **Variazione dell'opacità**: variazione dell'opacità per testa, indipendente dalla variazione delle dimensioni.
-- **Rigidità**: quanto rigidamente il raggio dell'orbita segue la dimensione del pennello in scala dinamica. 0 = l'orbita traccia la dimensione della dinamica; 1 = l'orbita rimane fissa alla dimensione della base.
-- **Segue la direzione** (0,0–1,0): con quanta forza l'anello di formazione segue la direzione di viaggio del tratto. A 1.0 l'anello è sempre perpendicolare al senso di marcia; a 0.0 si blocca sul valore statico **Angolo**.
-- **Seme personaggio** (0–255): numero fisso per personaggio pro-testa (dimensione, posizione scatter, portata). Lo stesso seme riproduce la stessa formazione ad ogni colpo. Desensibilizzato quando **Personaggio testa casuale** è attivo.
+- **Seme carattere** (0–255): numero fisso per carattere per testa (dimensione, posizione di spaziatura di riempimento). Lo stesso seme riproduce la stessa formazione ad ogni colpo. Desensibilizzato quando **Randomizza personaggio testa** è attivo.
 
-#### Interpolazione
+#### Dispersione
 
 Sposta le teste lungo e attorno al percorso del tratto ogni tocco, creando effetti di sbavatura e spruzzo.
 
-- **Overshoot** (0–5): disperde le teste in avanti lungo la direzione di viaggio. A 1,0 le teste si espandono fino a un intervallo completo di spaziatura del tocco in avanti; i valori superiori a 1,0 consentono una copertura maggiore con una forte propensione alla rarità.
-- **Undershoot** (0–5): uguale a Overshoot ma in ritardo rispetto al tocco corrente. In combinazione con Overshoot, questo crea una macchia principale o una coda di cometa. Soppresso al primo tocco per evitare artefatti retrogradi.
-- **Angolo di spruzzo** (0–90°): sventaglia ciascuna testa verso l'esterno dalla direzione della corsa di un angolo casuale per testa fino a questo valore. Fissato a 90° in modo che la testa non sia mai rivolta all'indietro. Predefinito: 10°.
-- **Spray Seed** (0–255): fisso il seed per gli angoli di spruzzo per testa, indipendente dal Character Seed. Desensibilizzato quando **Schema di spruzzatura casuale** è attivo.
+- **Spaziatura riempimento** (0,0–1,0): distribuisce le teste attraverso lo spazio tra posizioni di tocco consecutive. Il valore del carattere stabile di ciascuna testa determina la sua direzione di inclinazione; a 1,0 le teste riempiono l'intero intervallo di spaziatura. Il carattere è stabile per seme.
+- **Angolo di diffusione** (0–90°, predefinito 10°): sventaglia ciascuna testa verso l'esterno dalla direzione del tratto di un angolo appena randomizzato fino a questo valore. Fissato a 90° in modo che la testa non sia mai rivolta all'indietro.
+- **Dispersione in avanti** (0–4000 px): dispersione casuale massima davanti alla direzione del tratto. Rilaminato in modo indipendente ogni tocco.
+- **Dispersione all'indietro** (0–4000 px): massima dispersione casuale dietro il tratto. Le teste sono ancora rivolte in avanti; si inverte solo la direzione dello spostamento. Sia Avanti che Indietro possono essere diversi da zero contemporaneamente.
+- **Bilanciamento dimensione scatter** (0,0–1,0): peso scatter minimo per teste grandi. A 0 le teste grosse atterrano vicino al colpo; con 1 tutte le teste si disperdono equamente indipendentemente dalla taglia.
+- **Soglia dimensione diffusione** (1–100 px): le teste più piccole di questo raggio di pixel si disperdono a tutta distanza; le teste più grandi vengono progressivamente avvicinate alla corsa.
 
 #### Randomizzazione
 
-- **Carattere testa casuale**: ridisegna i valori dei caratteri per testa (dimensione, posizione di dispersione, portata) ogni tocco in modo che la formazione sia completamente caotica lungo il tratto. Sostituisce **Seme carattere**.
-- **Schema di spruzzo casuale**: ridisegna gli angoli di spruzzo a ogni passata in modo che la ventola si sposti continuamente lungo la corsa ("spruzzo vivente"). Sostituisce **Spruzza seme**.
-- **Fotogrammi di animazione casuali**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.
+- **Randomizza carattere testa**: ridisegna i valori dei caratteri per testa (dimensioni, posizione di dispersione) ogni francobollo in modo che la formazione sia completamente caotica lungo il tratto. Sostituisce **Seme carattere**.
+- **Randomizza fotogrammi di animazione**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.
 
-### Opzioni aggiuntive
+### Opzioni aggiuntiveNell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita):
 
-Nell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita):- **Blocca su vista**: mantiene fisso l'aspetto del pennello rispetto alla vista della tela: quando ruoti la tela, il pennello ruota con essa.
+- **Blocca su vista**: mantiene fisso l'aspetto del pennello rispetto alla vista della tela: quando ruoti la tela, il pennello ruota con essa.
 - **Contorno pennello semplice**: utilizza un cerchio semplice per il contorno del cursore del pennello invece di riprodurre la forma completa del pennello. Utile per pennelli complessi o di grandi dimensioni in cui è costoso disegnare un contorno accurato.
 - **Jitter uniforme**: quando attivato, gli offset dei tocchi dal cursore **Jitter** vengono ricavati da una distribuzione uniforme (ogni offset ha la stessa probabilità all'interno dell'intervallo). Quando è disattivata, la distribuzione è gaussiana (sposta il cluster verso il centro).
 - **Ripristina gli ultimi colori utilizzati**: ripristina i colori di primo piano e di sfondo della sessione precedente all'avvio, invece di tornare al bianco e nero per impostazione predefinita.

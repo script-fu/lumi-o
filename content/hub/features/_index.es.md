@@ -17,4 +17,5 @@ Esta sección describe las capacidades principales disponibles en Lumi y dónde 
   {{< card link="scripting" title="Secuencia de comandos del esquema" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Mezcla de colores espectrales" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
   {{< card link="warp-tool" title="Herramienta de deformación" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
+  {{< card link="workspaces" title="Espacios de trabajo" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
 {{< /cards >}}

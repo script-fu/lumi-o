@@ -100,37 +100,38 @@ In de uitbreiding **Fade and Colour** (genest in Lijneffecten; alleen zichtbaar 
 
 ### OpzetborstelsOpzetborstels plaatsen meerdere onafhankelijke opzetborstels op een cirkelvormige **baanring** gecentreerd op het streekpad. Elke kop schildert een volledige schar op zijn eigen positie, elke keer dat de streek verder gaat, waardoor meerdere parallelle of uitwaaierende bewegingen tegelijk worden geproduceerd.
 
-De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: grotere koppen zitten dichter bij het midden; kleinere hoofden draaien verder naar buiten. De hoofden hebben een gelijkmatige ruimte rond de ring. Met twee koppen krijg je er één aan elke kant van de streek, waardoor een symmetrische spreiding ontstaat die zich gedraagt ​​als een kalligrafiepunt. De schuifregelaar **Volgt richting** draait de hele ring zodat deze loodrecht op de lijn blijft staan, zodat de punt op natuurlijke wijze de richting volgt terwijl u schildert. Door meer koppen toe te voegen, worden ze geleidelijk rond de ring verspreid, tot een volledige spuitcirkel bij 16.
+De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: grotere koppen zitten dichter bij het midden; kleinere hoofden draaien verder naar buiten. De hoofden hebben een gelijkmatige ruimte rond de ring. Met twee koppen krijg je er één aan elke kant van de streek, waardoor een symmetrische spreiding ontstaat die zich gedraagt ​​als een kalligrafiepunt. De schuifregelaar **Volg richting** draait de hele ring zodat deze loodrecht op de lijn blijft staan, zodat de punt op natuurlijke wijze de richting volgt terwijl u schildert. Door meer koppen toe te voegen, worden ze geleidelijk rond de ring verspreid, tot een volledige spuitcirkel bij 16.
 
 De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.
 
 - **Aantal**: aantal gelijktijdige opzetborstels (1–16).
 - **Grootte**: weergegeven grootte van elk hoofd ten opzichte van de globale penseelgrootte (0,1–1,0).
-- **Hoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volg richting** lager is dan 1,0.
+- **Stijfheid borstelharen**: Hoe strak de baanradius de op dynamische schaal geschaalde penseelgrootte volgt. 0 = baan breidt zich uit en trekt samen met druk; 1 = baan blijft gefixeerd op de basisgrootte.
+- **Hoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volgrichting** lager is dan 1,0.
+- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Hoek**-waarde.
 - **Drukvariatie**: variatie in grootte per hoofd toegepast als een onafhankelijke drukafwijking via de dynamische curven.
 - **Dekkingsvariatie**: De dekkingsvariatie per hoofd, onafhankelijk van de groottevariatie.
-- **Stijfheid**: hoe strak de straal van de baan de dynamisch geschaalde penseelgrootte volgt. 0 = baan volgt de dynamische grootte; 1 = baan blijft gefixeerd op de basisgrootte.
-- **Volgt richting** (0,0–1,0): Hoe sterk de formatiering de bewegingsrichting van de slag volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Hoek**-waarde.
-- **Karakterzaad** (0–255): Vaste zaadwaarde voor karakter per hoofd (grootte, spreidingspositie, bereik). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Random Head Character** is ingeschakeld.
+- **Karakterzaad** (0–255): Vaste zaadwaarde voor karakters per hoofd (grootte, vulafstand). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Hoofdkarakter willekeurig maken** is ingeschakeld.
 
-#### Interpolatie
+#### Verstrooiing
 
 Verplaatst de koppen langs en rond het slagpad bij elke aanraking, waardoor uitstrijk- en sprayeffecten ontstaan.
 
-- **Overshoot** (0–5): Scatters gaan naar voren in de rijrichting. Bij 1,0 worden de koppen gespreid tot één volledig dab-afstandsinterval vooruit; waarden boven 1,0 maken een groter bereik mogelijk met een sterke zeldzaamheidsbias.
-- **Undershoot** (0–5): Hetzelfde als Overshoot, maar loopt achter op de huidige schar. Gecombineerd met Overshoot ontstaat er een leidende uitstrijkje of komeetstaart. Onderdrukt bij de eerste schar om retrograde artefacten te voorkomen.
-- **Spuithoek** (0–90°): Waait elke kop vanuit de slagrichting naar buiten met een willekeurige hoek per kop tot deze waarde. Geklemd tot 90° zodat geen enkel hoofd ooit naar achteren wijst. Standaard: 10°.
-- **Spray Seed** (0–255): Vast zaad voor spuithoeken per kop, onafhankelijk van Character Seed. Ongevoelig wanneer **Willekeurig spuitpatroon** is ingeschakeld.
+- **Vulafstand** (0,0–1,0): Verspreidt de hoofden over de opening tussen opeenvolgende scharposities. De stabiele karakterwaarde van elk hoofd bepaalt de richting waarin het hoofd leunt; bij 1,0 koppen vult u het volledige tussenruimte-interval. Karakter is stabiel per zaadje.
+- **Verspreidingshoek** (0–90°, standaard 10°): Fans bewegen elk vanuit de slagrichting naar buiten met een nieuw willekeurige hoek tot aan deze waarde. Geklemd tot 90° zodat geen enkel hoofd ooit naar achteren wijst.
+- **Voorwaartse verstrooiing** (0–4000 px): maximale willekeurige verstrooiing vóór de streekrichting. Bij elke schar afzonderlijk opnieuw gerold.
+- **Achterwaartse spreiding** (0–4000 px): maximale willekeurige spreiding achter de streek. De hoofden zijn nog steeds naar voren gericht; alleen de verplaatsingsrichting keert om. Zowel Vooruit als Achteruit kunnen tegelijkertijd niet nul zijn.
+- **Scattergroottebalans** (0,0–1,0): minimaal spreidingsgewicht voor grote kroppen. Bij 0 landen grote koppen dicht bij de slag; bij 1 verspreiden alle hoofden zich gelijkmatig, ongeacht hun grootte.
+- **Verspreidingsgroottedrempel** (1–100 px): koppen kleiner dan deze pixelradius verspreiden zich op volledige afstand; grotere koppen worden geleidelijk dichter bij de slag getrokken.
 
 #### Randomisatie
 
-- **Willekeurig hoofdkarakter**: tekent de karakterwaarden per hoofd opnieuw (grootte, spreidingspositie, bereik) bij elke schar, zodat de formatie langs de slag volledig chaotisch is. Overschrijft **Karakterzaad**.
-- **Willekeurig spuitpatroon**: Hertekent de spuithoeken bij elke druppel, zodat de ventilator continu langs de slag beweegt ("levende spray"). Overschrijft **Spuitzaad**.
-- **Willekeurige animatieframes**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
+- **Hoofdkarakter willekeurig maken**: Tekenwaarden per hoofd (grootte, spreidingspositie) worden bij elke stempel opnieuw getekend, zodat de formatie langs de lijn volledig chaotisch is. Overschrijft **Karakterzaad**.
+- **Animatieframes willekeurig maken**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
 
-### Extra opties
+### Extra optiesIn de uitbreiding **Aanvullende opties** (standaard samengevouwen):
 
-In de uitbreiding **Aanvullende opties** (standaard samengevouwen):- **Vergrendelen om te bekijken**: Houdt de weergave van het penseel vast ten opzichte van de canvasweergave: wanneer u het canvas roteert, draait het penseel mee.
+- **Vergrendelen om te bekijken**: Houdt de weergave van het penseel vast ten opzichte van de canvasweergave: wanneer u het canvas roteert, draait het penseel mee.
 - **Eenvoudige penseelgrens**: gebruikt een gewone cirkel voor de penseelcursoromtrek in plaats van de volledige penseelvorm weer te geven. Handig voor complexe of grote penselen waarbij het moeilijk is om een ​​nauwkeurige grens te tekenen.
 - **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling Gaussiaans (de verschuivingen clusteren naar het midden).
 - **Laatst gebruikte kleuren herstellen**: herstelt de voorgrond- en achtergrondkleuren van de vorige sessie bij het opstarten, in plaats van standaard zwart en wit te gebruiken.

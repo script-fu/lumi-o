@@ -100,37 +100,38 @@ Im Expander **Fade and Colour** (verschachtelt in Stroke Effects; nur sichtbar, 
 
 ### BürstenköpfeMit „Bürstenköpfe“ werden mehrere unabhängige Bürstenköpfe auf einem kreisförmigen **Umlaufring** platziert, der auf dem Strichpfad zentriert ist. Jeder Kopf malt bei jedem fortschreitenden Strich einen vollständigen Tupfer an seiner eigenen Position, wodurch mehrere parallele oder gefächerte Striche gleichzeitig erzeugt werden.
 
-Der Umlaufradius wird durch die globale Pinselgröße minus der Kopfgröße bestimmt: Größere Köpfe sitzen näher an der Mitte; kleinere Köpfe kreisen weiter draußen. Die Köpfe verteilen sich gleichmäßig um den Ring. Mit zwei Köpfen erhalten Sie einen auf jeder Seite des Strichs, wodurch eine symmetrische Ausbreitung entsteht, die sich wie eine Kalligraphiefeder verhält. Der Schieberegler **Folgt der Richtung** dreht den gesamten Ring so, dass er senkrecht zum Strich bleibt, sodass die Spitze beim Malen auf natürliche Weise der Richtung folgt. Durch das Hinzufügen weiterer Köpfe werden diese nach und nach um den Ring verteilt, bis hin zu einem vollständigen Sprühkreis bei 16.
+Der Umlaufradius wird durch die globale Pinselgröße minus der Kopfgröße bestimmt: Größere Köpfe sitzen näher an der Mitte; kleinere Köpfe kreisen weiter draußen. Die Köpfe verteilen sich gleichmäßig um den Ring. Mit zwei Köpfen erhalten Sie einen auf jeder Seite des Strichs, wodurch eine symmetrische Ausbreitung entsteht, die sich wie eine Kalligraphiefeder verhält. Der Schieberegler **Richtung folgen** dreht den gesamten Ring so, dass er senkrecht zum Strich bleibt, sodass die Spitze beim Malen auf natürliche Weise der Richtung folgt. Durch das Hinzufügen weiterer Köpfe werden diese nach und nach um den Ring verteilt, bis hin zu einem vollständigen Sprühkreis bei 16.
 
 Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.
 
 - **Anzahl**: Anzahl gleichzeitiger Bürstenköpfe (1–16).
 - **Größe**: Gerenderte Größe jedes Kopfes im Verhältnis zur globalen Pinselgröße (0,1–1,0).
-- **Winkel** (0–360°): Statische Ausrichtung des Formationsrings, verwendet, wenn **Follows Direction** unter 1,0 liegt.
+- **Borstensteifheit**: Wie steif der Umlaufradius der dynamikskalierten Pinselgröße folgt. 0 = Umlaufbahn dehnt sich durch Druck aus und zieht sich zusammen; 1 = Orbit bleibt auf der Basisgröße fixiert.
+- **Winkel** (0–360°): Statische Ausrichtung des Formationsrings, verwendet, wenn **Follow Direction** unter 1,0 liegt.
+- **Follow Direction** (0,0–1,0): Wie stark der Formationsring der Schlagrichtung folgt. Bei 1,0 steht der Ring immer senkrecht zur Fahrtrichtung; Bei 0,0 wird der statische **Winkel**-Wert festgelegt.
 - **Druckvariation**: Größenvariation pro Kopf, angewendet als unabhängige Druckvorspannung durch die Dynamikkurven.
 - **Deckkraftvariation**: Opazitätsvariation pro Kopf, unabhängig von der Größenvariation.
-- **Steifheit**: Wie steif der Umlaufradius der dynamikskalierten Pinselgröße folgt. 0 = Orbit verfolgt die Dynamikgröße; 1 = Orbit bleibt auf der Basisgröße fixiert.
-- **Folgt der Richtung** (0,0–1,0): Wie stark der Formationsring der Schlagrichtung folgt. Bei 1,0 steht der Ring immer senkrecht zur Fahrtrichtung; Bei 0,0 wird der statische **Winkel**-Wert festgelegt.
-- **Charakter-Seed** (0–255): Der Seed für Pro-Kopf-Charaktere wurde korrigiert (Größe, Streuposition, Reichweite). Derselbe Samen reproduziert bei jedem Schlag die gleiche Formation. Desensibilisiert, wenn **Zufälliger Kopfcharakter** aktiviert ist.
+- **Charakter-Seed** (0–255): Der Seed für Pro-Kopf-Charaktere wurde korrigiert (Größe, Position des Füllabstands). Derselbe Samen reproduziert bei jedem Schlag die gleiche Formation. Desensibilisiert, wenn **Kopfcharakter zufällig auswählen** aktiviert ist.
 
-#### Interpolation
+#### Streuung
 
 Verschiebt die Köpfe bei jedem Tupfer entlang und um den Strichpfad und erzeugt so Schmier- und Sprüheffekte.
 
-- **Overshoot** (0–5): Streut vorwärts in Fahrtrichtung. Bei 1,0 sind die Köpfe bis zu einem vollen Dab-Abstandsintervall nach vorne verteilt; Werte über 1,0 ermöglichen eine größere Reichweite mit einem starken Seltenheits-Bias.
-- **Unterschreitung** (0–5): Wie „Überschreitung“, jedoch hinter dem aktuellen Tupfer zurückliegend. In Kombination mit Overshoot entsteht ein führender Streifen oder Kometenschweif. Beim ersten Tupfer unterdrückt, um retrograde Artefakte zu vermeiden.
-- **Sprühwinkel** (0–90°): Fächert jeden Kopf von der Hubrichtung um einen zufälligen Winkel pro Kopf bis zu diesem Wert nach außen. Auf 90° geklemmt, sodass kein Kopf jemals nach hinten zeigt. Standard: 10°.
-- **Spray Seed** (0–255): Fixierter Seed für Sprühwinkel pro Kopf, unabhängig vom Character Seed. Desensibilisiert, wenn **Zufälliges Sprühmuster** aktiviert ist.
+- **Füllabstand** (0,0–1,0): Verteilt die Köpfe über die Lücke zwischen aufeinanderfolgenden Tupferpositionen. Der stabile Charakterwert jedes Kopfes bestimmt seine Neigungsrichtung; Bei 1,0 Köpfen wird das gesamte Abstandsintervall ausgefüllt. Der Charakter ist pro Samen stabil.
+- **Streuwinkel** (0–90°, Standard 10°): Fächert jeden Kopf von der Strichrichtung um einen frisch zufälligen Winkel bis zu diesem Wert nach außen. Auf 90° geklemmt, sodass kein Kopf jemals nach hinten zeigt.
+- **Vorwärtsstreuung** (0–4000 px): Maximale zufällige Streuung vor der Strichrichtung. Wird bei jedem Tupfer unabhängig neu aufgerollt.
+- **Rückwärtsstreuung** (0–4000 px): Maximale zufällige Streuung hinter dem Strich. Die Köpfe sind immer noch nach vorne gerichtet; nur die Verschiebungsrichtung kehrt sich um. Sowohl Vorwärts als auch Rückwärts können gleichzeitig ungleich Null sein.
+- **Scatter Size Balance** (0,0–1,0): Mindeststreugewicht für große Köpfe. Bei 0 landen große Köpfe nahe am Schlag; Bei 1 streuen alle Köpfe unabhängig von ihrer Größe gleichmäßig.
+- **Schwellenwert für die Streugröße** (1–100 px): Köpfe, die kleiner als dieser Pixelradius sind, streuen über die gesamte Distanz; Größere Köpfe werden zunehmend näher an den Strich herangezogen.
 
 #### Randomisierung
 
-- **Zufälliger Kopfcharakter**: Zeichnet die Zeichenwerte pro Kopf (Größe, Streuposition, Reichweite) bei jedem Tupfer neu, sodass die Formation entlang des Strichs völlig chaotisch ist. Überschreibt **Charakter-Seed**.
-- **Zufälliges Sprühmuster**: Der Sprühwinkel wird bei jedem Tupfer neu gezeichnet, sodass sich der Fächer kontinuierlich entlang des Strichs verschiebt („lebendiger Sprühstrahl“). Überschreibt **Spray Seed**.
-- **Zufällige Animationsrahmen**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.
+- **Kopfzeichen randomisieren**: Zeichnet die Zeichenwerte pro Kopf (Größe, Streuposition) bei jedem Stempel neu, sodass die Formation entlang des Strichs völlig chaotisch ist. Überschreibt **Charakter-Seed**.
+- **Animationsrahmen randomisieren**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.
 
-### Zusätzliche Optionen
+### Zusätzliche OptionenIm Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet):
 
-Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet):- **An Ansicht sperren**: Hält das Erscheinungsbild des Pinsels relativ zur Leinwandansicht fest: Wenn Sie die Leinwand drehen, dreht sich der Pinsel mit.
+- **An Ansicht sperren**: Hält das Erscheinungsbild des Pinsels relativ zur Leinwandansicht fest: Wenn Sie die Leinwand drehen, dreht sich der Pinsel mit.
 - **Einfache Pinselgrenze**: Verwendet einen einfachen Kreis als Umriss des Pinselcursors, anstatt die vollständige Pinselform darzustellen. Nützlich für komplexe oder große Pinsel, bei denen das Zeichnen der genauen Grenze aufwändig ist.
 - **Gleichmäßiger Jitter**: Wenn diese Option aktiviert ist, werden Spitzenversätze vom Schieberegler **Jitter** aus einer gleichmäßigen Verteilung gezogen (jeder Versatz ist innerhalb des Bereichs gleich wahrscheinlich). Wenn diese Option deaktiviert ist, ist die Verteilung eine Gaußsche Verteilung (versetzt den Cluster zur Mitte hin).
 - **Zuletzt verwendete Farben wiederherstellen**: Stellt beim Start die Vordergrund- und Hintergrundfarben der vorherigen Sitzung wieder her, anstatt standardmäßig Schwarz und Weiß zu verwenden.

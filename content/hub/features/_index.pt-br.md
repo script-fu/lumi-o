@@ -17,4 +17,5 @@ Esta seção descreve os principais recursos disponíveis no Lumi e onde localiz
   {{< card link="scripting" title="Script de esquema" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Mistura espectral de cores" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
   {{< card link="warp-tool" title="Ferramenta Warp" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
+  {{< card link="workspaces" title="Espaços de trabalho" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
 {{< /cards >}}

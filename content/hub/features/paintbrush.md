@@ -96,31 +96,32 @@ In the **Fade and Colour** expander (nested inside Stroke Effects; only visible 
 
 Brush Heads places multiple independent brush heads on a circular **orbit ring** centred on the stroke path. Every head paints a full dab at its own position each time the stroke advances, producing multiple parallel or fanned strokes simultaneously.
 
-The orbit radius is determined by the global brush size minus the head size: larger heads sit closer to the centre; smaller heads orbit further out. Heads space evenly around the ring. With two heads you get one on each side of the stroke, creating a symmetrical spread that behaves like a calligraphy nib. The **Follows Direction** slider rotates the whole ring to stay perpendicular to the stroke, so the nib tracks direction naturally as you paint. Adding more heads fans them progressively around the ring, up to a full spray circle at 16.
+The orbit radius is determined by the global brush size minus the head size: larger heads sit closer to the centre; smaller heads orbit further out. Heads space evenly around the ring. With two heads you get one on each side of the stroke, creating a symmetrical spread that behaves like a calligraphy nib. The **Follow Direction** slider rotates the whole ring to stay perpendicular to the stroke, so the nib tracks direction naturally as you paint. Adding more heads fans them progressively around the ring, up to a full spray circle at 16.
 
 Controls appear in the **Brush Heads** expander in the tool options panel.
 
 - **Count**: Number of simultaneous brush heads (1–16).
 - **Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
-- **Angle** (0–360°): Static orientation of the formation ring, used when **Follows Direction** is below 1.0.
+- **Bristle Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit expands and contracts with pressure; 1 = orbit stays fixed to the base size.
+- **Angle** (0–360°): Static orientation of the formation ring, used when **Follow Direction** is below 1.0.
+- **Follow Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Angle** value.
 - **Pressure Variation**: Per-head size variation applied as an independent pressure bias through the dynamics curves.
 - **Opacity Variation**: Per-head opacity variation, independent of size variation.
-- **Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit tracks the dynamics size; 1 = orbit stays fixed to the base size.
-- **Follows Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Angle** value.
-- **Character Seed** (0–255): Fixed seed for per-head character (size, scatter position, reach). The same seed reproduces the same formation every stroke. Desensitized when **Random Head Character** is on.
+- **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
 
-#### Interpolation
+#### Scatter
 Displaces heads along and around the stroke path each dab, creating smear and spray effects.
 
-- **Overshoot** (0–5): Scatters heads forward along the travel direction. At 1.0 heads spread up to one full dab-spacing interval ahead; values above 1.0 allow greater reach with a steep rarity bias.
-- **Undershoot** (0–5): Same as Overshoot but trailing behind the current dab. Combined with Overshoot this builds a leading smear or comet-tail. Suppressed on the first dab to avoid retrograde artefacts.
-- **Spray Angle** (0–90°): Fans each head outward from the stroke direction by a per-head random angle up to this value. Clamped to 90° so no head ever faces backwards. Default: 10°.
-- **Spray Seed** (0–255): Fixed seed for per-head spray angles, independent of Character Seed. Desensitized when **Random Spray Pattern** is on.
+- **Fill Spacing** (0.0–1.0): Spreads heads across the gap between consecutive dab positions. Each head's stable character value determines its lean direction; at 1.0 heads fill the full spacing interval. Character is stable per seed.
+- **Scatter Angle** (0–90°, default 10°): Fans each head outward from the stroke direction by a freshly randomised angle up to this value. Clamped to 90° so no head ever faces backwards.
+- **Forward Scatter** (0–4000 px): Maximum random scatter ahead of the stroke direction. Re-rolled independently every dab.
+- **Backward Scatter** (0–4000 px): Maximum random scatter behind the stroke. Heads still face forward; only the displacement direction reverses. Both Forward and Backward can be nonzero simultaneously.
+- **Scatter Size Balance** (0.0–1.0): Minimum scatter weight for large heads. At 0 big heads land close to the stroke; at 1 all heads scatter equally regardless of size.
+- **Scatter Size Threshold** (1–100 px): Heads smaller than this pixel radius scatter at full distance; larger heads are progressively pulled closer to the stroke.
 
 #### Randomization
-- **Random Head Character**: Re-draws per-head character values (size, scatter position, reach) every dab so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
-- **Random Spray Pattern**: Re-draws spray angles every dab so the fan shifts continuously along the stroke ("living spray"). Overrides **Spray Seed**.
-- **Random Animation Frames**: For animated brushes: each head advances its animation frame independently.
+- **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
+- **Randomize Animation Frames**: For animated brushes: each head advances its animation frame independently.
 
 ### Additional Options
 

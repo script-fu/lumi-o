@@ -100,37 +100,38 @@ Dans l'expandeur **Fade and Colour** (imbriqué dans Stroke Effects ; visible u
 
 ### Têtes de brosseLes têtes de brosse placent plusieurs têtes de brosse indépendantes sur un **anneau d'orbite** circulaire centré sur la trajectoire du trait. Chaque tête peint une touche complète à sa propre position à chaque fois que le trait avance, produisant simultanément plusieurs traits parallèles ou en éventail.
 
-Le rayon de l'orbite est déterminé par la taille globale de la brosse moins la taille de la tête : les têtes plus grandes sont plus proches du centre ; des têtes plus petites orbitent plus loin. Dirige l'espace uniformément autour de l'anneau. Avec deux têtes, vous en obtenez une de chaque côté du trait, créant ainsi une répartition symétrique qui se comporte comme une plume de calligraphie. Le curseur **Follows Direction** fait pivoter l'ensemble de l'anneau pour rester perpendiculaire au trait, de sorte que la plume suit naturellement la direction pendant que vous peignez. L'ajout de têtes supplémentaires les ventile progressivement autour de l'anneau, jusqu'à un cercle de pulvérisation complet à 16.
+Le rayon de l'orbite est déterminé par la taille globale de la brosse moins la taille de la tête : les têtes plus grandes sont plus proches du centre ; des têtes plus petites orbitent plus loin. Dirige l'espace uniformément autour de l'anneau. Avec deux têtes, vous en obtenez une de chaque côté du trait, créant ainsi une répartition symétrique qui se comporte comme une plume de calligraphie. Le curseur **Suivez la direction** fait pivoter l'ensemble de l'anneau pour rester perpendiculaire au trait, de sorte que la plume suit naturellement la direction pendant que vous peignez. L'ajout de têtes supplémentaires les ventile progressivement autour de l'anneau, jusqu'à un cercle de pulvérisation complet à 16.
 
 Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.
 
 - **Count** : Nombre de têtes de brosse simultanées (1 à 16).
 - **Taille** : taille rendue de chaque tête par rapport à la taille globale du pinceau (0,1 à 1,0).
-- **Angle** (0–360°) : orientation statique de l'anneau de formation, utilisée lorsque **Follows Direction** est inférieur à 1,0.
+- **Rigidité des poils** : la rigidité avec laquelle le rayon de l'orbite suit la taille du pinceau à l'échelle dynamique. 0 = l'orbite se dilate et se contracte sous l'effet de la pression ; 1 = l'orbite reste fixe à la taille de la base.
+- **Angle** (0–360°) : orientation statique de l'anneau de formation, utilisée lorsque **Suivez la direction** est inférieur à 1,0.
+- **Suivez la direction** (0,0–1,0) : la force avec laquelle l'anneau de formation suit la direction de déplacement de la course. À 1,0, l'anneau est toujours perpendiculaire à la direction du déplacement ; à 0,0, il se verrouille sur la valeur statique **Angle**.
 - **Variation de pression** : variation de taille par tête appliquée en tant que biais de pression indépendant à travers les courbes dynamiques.
 - **Variation d'opacité** : variation d'opacité par tête, indépendante de la variation de taille.
-- **Rigidité** : la rigidité avec laquelle le rayon de l'orbite suit la taille du pinceau à l'échelle dynamique. 0 = l'orbite suit la taille de la dynamique ; 1 = l'orbite reste fixe à la taille de la base.
-- **Suit la direction** (0,0–1,0) : la force avec laquelle l'anneau de formation suit la direction de déplacement de la course. À 1,0, l'anneau est toujours perpendiculaire à la direction du déplacement ; à 0,0, il se verrouille sur la valeur statique **Angle**.
-- **Character Seed** (0-255) : graine fixe pour le personnage par tête (taille, position de dispersion, portée). La même graine reproduit la même formation à chaque coup. Désensibilisé lorsque **Random Head Character** est activé.
+- **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). La même graine reproduit la même formation à chaque coup. Désensibilisé lorsque **Randomize Head Character** est activé.
 
-#### Interpolation
+#### Dispersion
 
 Déplace les têtes le long et autour du tracé du trait à chaque touche, créant des effets de frottis et de pulvérisation.
 
-- **Dépassement** (0–5) : disperse la tête vers l'avant dans le sens du déplacement. À 1,0, les têtes s'étalent jusqu'à un intervalle d'espacement complet en avant ; les valeurs supérieures à 1,0 permettent une plus grande portée avec un fort biais de rareté.
-- **Undershoot** (0–5) : identique à Overshoot mais en retard sur la touche actuelle. Combiné avec Overshoot, cela crée un frottis principal ou une queue de comète. Supprimé dès le premier coup pour éviter les artefacts rétrogrades.
-- **Angle de pulvérisation** (0–90°) : Ventile chaque tête vers l'extérieur par rapport à la direction du mouvement selon un angle aléatoire par tête jusqu'à cette valeur. Serré à 90° pour qu'aucune tête ne soit jamais tournée vers l'arrière. Par défaut : 10°.
-- **Spray Seed** (0–255) : graine fixe pour les angles de pulvérisation par tête, indépendamment de Character Seed. Désensibilisé lorsque **Modèle de pulvérisation aléatoire** est activé.
+- **Fill Spacing** (0,0–1,0) : répartit les têtes sur l'espace entre les positions de tamponnage consécutives. La valeur de caractère stable de chaque tête détermine sa direction d'inclinaison ; à 1,0, les têtes remplissent tout l'intervalle d'espacement. Le caractère est stable par graine.
+- **Angle de diffusion** (0–90°, 10° par défaut) : ventile chaque tête vers l'extérieur de la direction du trait selon un angle fraîchement randomisé jusqu'à cette valeur. Serré à 90° pour qu'aucune tête ne soit jamais tournée vers l'arrière.
+- **Forward Scatter** (0–4 000 px) : diffusion aléatoire maximale en avant de la direction du trait. Relance indépendamment à chaque touche.
+- **Backward Scatter** (0–4000 px) : diffusion aléatoire maximale derrière le trait. Les têtes sont toujours tournées vers l'avant ; seule la direction du déplacement s'inverse. Forward et Backward peuvent être différents de zéro simultanément.
+- **Scatter Size Balance** (0,0–1,0) : poids de dispersion minimum pour les grosses têtes. À 0, les grosses têtes atterrissent près du coup ; à 1, toutes les têtes se dispersent également quelle que soit leur taille.
+- **Seuil de taille de diffusion** (1 à 100 px) : les têtes plus petites que ce rayon de pixel se dispersent à pleine distance ; les têtes plus grosses sont progressivement rapprochées de la course.
 
 #### Randomisation
 
-- **Caractère de tête aléatoire** : redessine les valeurs de caractère par tête (taille, position de dispersion, portée) à chaque touche afin que la formation soit complètement chaotique le long du trait. Remplace **Character Seed**.
-- **Modèle de pulvérisation aléatoire** : redessine les angles de pulvérisation à chaque touche afin que le ventilateur se déplace continuellement le long de la course (« pulvérisation vivante »). Remplace **Spray Seed**.
-- **Images d'animation aléatoires** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.
+- **Randomiser le personnage de tête** : redessine les valeurs de caractère par tête (taille, position de dispersion) pour chaque tampon afin que la formation soit complètement chaotique le long du trait. Remplace **Character Seed**.
+- **Randomiser les images d'animation** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.
 
-### Options supplémentaires
+### Options supplémentairesDans l'expandeur **Options supplémentaires** (réduit par défaut) :
 
-Dans l'expandeur **Options supplémentaires** (réduit par défaut) :- **Verrouiller sur la vue** : maintient l'apparence du pinceau fixe par rapport à la vue du canevas : lorsque vous faites pivoter le canevas, le pinceau tourne avec lui.
+- **Verrouiller sur la vue** : maintient l'apparence du pinceau fixe par rapport à la vue du canevas : lorsque vous faites pivoter le canevas, le pinceau tourne avec lui.
 - **Bordure simple du pinceau** : utilise un cercle simple pour le contour du curseur du pinceau au lieu de restituer la forme complète du pinceau. Utile pour les pinceaux complexes ou volumineux où la limite précise est coûteuse à tracer.
 - **Jitter uniforme** : lorsque cette option est activée, les décalages du curseur **Jitter** sont tirés d'une distribution uniforme (chaque décalage est également probable dans la plage). Lorsqu'elle est désactivée, la distribution est gaussienne (décalages du cluster vers le centre).
 - **Restaurer les dernières couleurs utilisées** : restaure les couleurs de premier plan et d'arrière-plan de la session précédente au démarrage, au lieu de passer par défaut au noir et blanc.

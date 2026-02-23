@@ -4,7 +4,7 @@ type: docs
 ---
 Paintbrush es la herramienta de pintura principal, diseñada para una pincelada inteligente y receptiva con control total sobre la presión, la velocidad, la inclinación y la dinámica de espaciado.
 
-## Descripción general
+## Overview
 
 La herramienta Pincel admite tipos de pincel rasterizados, generados por procedimientos y animados. Los trazos se pueden estabilizar, suavizar y posprocesar. La dinámica del pincel responde a la entrada del lápiz, brindando un control preciso sobre la opacidad, el tamaño, el color, el ángulo y otras propiedades durante un trazo.
 
@@ -106,31 +106,32 @@ Los controles aparecen en el expansor **Cabezales de cepillo** en el panel de op
 
 - **Count**: Número de cabezales de cepillo simultáneos (1–16).
 - **Tamaño**: tamaño renderizado de cada cabeza en relación con el tamaño global del pincel (0,1–1,0).
-- **Ángulo** (0–360°): Orientación estática del anillo de formación, utilizada cuando **Sigue dirección** es inferior a 1,0.
+- **Rigidez de las cerdas**: La rigidez con la que el radio de la órbita sigue el tamaño del pincel en escala dinámica. 0 = la órbita se expande y contrae con la presión; 1 = la órbita permanece fija al tamaño base.
+- **Ángulo** (0–360°): Orientación estática del anillo de formación, utilizada cuando **Seguir dirección** es inferior a 1,0.
+- **Seguir dirección** (0,0–1,0): con qué fuerza el anillo de formación sigue la dirección de desplazamiento del trazo. En 1,0, el anillo siempre es perpendicular a la dirección de desplazamiento; en 0.0 se bloquea en el valor estático **Ángulo**.
 - **Variación de presión**: variación del tamaño por cabeza aplicada como un sesgo de presión independiente a través de las curvas dinámicas.
 - **Variación de opacidad**: variación de opacidad por cabeza, independiente de la variación de tamaño.
-- **Rigidez**: La rigidez con la que el radio de la órbita sigue el tamaño del pincel en escala dinámica. 0 = la órbita sigue el tamaño de la dinámica; 1 = la órbita permanece fija al tamaño base.
-- **Sigue la dirección** (0,0–1,0): con qué fuerza el anillo de formación sigue la dirección de desplazamiento del trazo. En 1,0, el anillo siempre es perpendicular a la dirección de desplazamiento; en 0.0 se bloquea en el valor estático **Ángulo**.
-- **Semilla de personaje** (0–255): Semilla fija para personaje por cabeza (tamaño, posición de dispersión, alcance). La misma semilla reproduce la misma formación en cada golpe. Insensibilizado cuando **Personaje principal aleatorio** está activado.
+- **Semilla de personaje** (0–255): Semilla fija para carácter por encabezado (tamaño, posición de relleno de espacio). La misma semilla reproduce la misma formación en cada golpe. Insensibilizado cuando **Aleatorizar personaje principal** está activado.
 
-#### Interpolación
+#### Scatter
 
 Desplaza las cabezas a lo largo y alrededor del trazo en cada toque, creando efectos de difuminado y rociado.
 
-- **Exceso** (0–5): Dispersa las cabezas hacia adelante a lo largo de la dirección de viaje. A 1,0, las cabezas se extienden hasta un intervalo completo de espaciado de toques hacia adelante; los valores superiores a 1,0 permiten un mayor alcance con un sesgo de rareza pronunciado.
-- **Undershoot** (0–5): Igual que Overshoot pero detrás del dab actual. Combinado con Overshoot, esto crea una mancha principal o cola de cometa. Suprimido en el primer toque para evitar artefactos retrógrados.
-- **Ángulo de pulverización** (0–90°): ventila cada cabezal hacia afuera desde la dirección del trazo en un ángulo aleatorio por cabezal hasta este valor. Sujetado a 90° para que ninguna cabeza mire hacia atrás. Predeterminado: 10°.
-- **Semilla de pulverización** (0–255): Semilla fija para ángulos de pulverización por cabezal, independiente de la semilla de carácter. Desensibilizado cuando **Patrón de pulverización aleatorio** está activado.
+- **Rellenar espacio** (0,0–1,0): extiende los cabezales a lo largo del espacio entre posiciones de dab consecutivas. El valor del carácter estable de cada cabeza determina su dirección de inclinación; a 1,0 cabezales llene todo el intervalo de espaciado. El carácter es estable por semilla.
+- **Ángulo de dispersión** (0–90°, predeterminado 10°): ventila cada cabeza hacia afuera desde la dirección del trazo en un nuevo ángulo aleatorio hasta este valor. Sujetado a 90° para que ninguna cabeza mire hacia atrás.
+- **Dispersión hacia adelante** (0–4000 px): dispersión aleatoria máxima delante de la dirección del trazo. Se vuelve a enrollar de forma independiente en cada toque.
+- **Dispersión hacia atrás** (0–4000 px): dispersión aleatoria máxima detrás del trazo. Las cabezas todavía miran hacia adelante; sólo se invierte la dirección del desplazamiento. Tanto Forward como Backward pueden ser distintos de cero simultáneamente.
+- **Equilibrio del tamaño de dispersión** (0,0–1,0): peso de dispersión mínimo para cabezas grandes. En 0 las cabezudas aterrizan cerca del trazo; en 1 todas las cabezas se dispersan por igual sin importar el tamaño.
+- **Umbral de tamaño de dispersión** (1–100 px): las cabezas más pequeñas que este radio de píxel se dispersan a toda la distancia; las cabezas más grandes se acercan progresivamente al trazo.
 
 #### Aleatorización
 
-- **Carácter de cabeza aleatorio**: vuelve a dibujar los valores de los caracteres por cabeza (tamaño, posición de dispersión, alcance) en cada toque para que la formación sea completamente caótica a lo largo del trazo. Anula **Semilla de personaje**.
-- **Patrón de pulverización aleatorio**: vuelve a dibujar los ángulos de pulverización en cada aplicación para que el abanico se mueva continuamente a lo largo del trazo ("spray vivo"). Anula **Spray Seed**.
-- **Cuadros de animación aleatorios**: Para pinceles animados: cada cabezal avanza su cuadro de animación de forma independiente.
+- **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Anula **Semilla de personaje**.
+- **Aleatorizar cuadros de animación**: Para pinceles animados: cada cabezal avanza su cuadro de animación de forma independiente.
 
-### Opciones adicionales
+### Opciones adicionalesEn el expansor **Opciones adicionales** (contraído de forma predeterminada):
 
-En el expansor **Opciones adicionales** (contraído de forma predeterminada):- **Bloquear para ver**: Mantiene la apariencia del pincel fija en relación con la vista del lienzo: cuando giras el lienzo, el pincel gira con él.
+- **Bloquear para ver**: Mantiene la apariencia del pincel fija en relación con la vista del lienzo: cuando giras el lienzo, el pincel gira con él.
 - **Límite de pincel simple**: utiliza un círculo simple para el contorno del cursor del pincel en lugar de representar la forma completa del pincel. Útil para pinceles complejos o grandes donde resulta costoso dibujar el límite preciso.
 - **Vibración uniforme**: cuando está activado, los desplazamientos de dab del control deslizante **Vibración** se extraen de una distribución uniforme (cada desplazamiento es igualmente probable dentro del rango). Cuando está desactivado, la distribución es gaussiana (desplaza el grupo hacia el centro).
 - **Restaurar los últimos colores utilizados**: Restaura los colores de primer plano y de fondo de la sesión anterior al inicio, en lugar de usar el blanco y negro de forma predeterminada.

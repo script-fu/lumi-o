@@ -17,4 +17,5 @@ In diesem Abschnitt werden die in Lumi verfügbaren Kernfunktionen und deren Pos
   {{< card link="scripting" title="Schema-Skripterstellung" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Spektrale Farbmischung" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
   {{< card link="warp-tool" title="Warp-Werkzeug" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
+  {{< card link="workspaces" title="Arbeitsbereiche" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
 {{< /cards >}}

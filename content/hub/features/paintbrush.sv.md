@@ -100,37 +100,38 @@ I expandern **Tona och färg** (kapslade inuti Stroke Effects; visas endast när
 
 ### BorsthuvudenBorsthuvuden placerar flera oberoende borsthuvuden på en cirkulär **omloppsring** centrerad på linjebanan. Varje huvud målar en hel klick i sin egen position varje gång slaget avancerar, vilket ger flera parallella eller fläktade drag samtidigt.
 
-Banradien bestäms av den globala borststorleken minus huvudstorleken: större huvuden sitter närmare mitten; mindre huvuden kretsar längre ut. Heads space jämnt runt ringen. Med två huvuden får du ett på varje sida av slaget, vilket skapar en symmetrisk spridning som beter sig som en kalligrafi-nib. Reglaget **Följer riktning** roterar hela ringen för att förbli vinkelrätt mot slaget, så att spetsen följer riktningen naturligt när du målar. Genom att lägga till fler huvuden fläktar de dem gradvis runt ringen, upp till en hel spraycirkel vid 16.
+Banradien bestäms av den globala borststorleken minus huvudstorleken: större huvuden sitter närmare mitten; mindre huvuden kretsar längre ut. Heads space jämnt runt ringen. Med två huvuden får du ett på varje sida av slaget, vilket skapar en symmetrisk spridning som beter sig som en kalligrafi-nib. Reglaget **Följ riktning** roterar hela ringen så att den förblir vinkelrät mot slaget, så att spetsen följer riktningen naturligt när du målar. Genom att lägga till fler huvuden fläktar de dem gradvis runt ringen, upp till en hel spraycirkel vid 16.
 
 Kontroller visas i expandern **Brush Heads** i verktygsalternativpanelen.
 
 - **Antal**: Antal samtidiga borsthuvuden (1–16).
 - **Storlek**: Återgiven storlek på varje huvud i förhållande till den globala borststorleken (0,1–1,0).
-- **Vinkel** (0–360°): Statisk orientering av formationsringen, används när **Följer riktning** är under 1,0.
+- **Briststyvhet**: Hur stelt omloppsradien följer den dynamiskt skalade borststorleken. 0 = omloppsbana expanderar och drar ihop sig med tryck; 1 = omloppsbana förblir fixerad till basstorleken.
+- **Vinkel** (0–360°): Statisk orientering av formationsringen, används när **Följ riktning** är under 1,0.
+- **Följ riktning** (0,0–1,0): Hur starkt formationsringen följer slagriktningen. Vid 1,0 är ringen alltid vinkelrät mot färdriktningen; vid 0,0 låser den till det statiska **Vinkel**-värdet.
 - **Tryckvariation**: Storleksvariation per huvud applicerad som en oberoende tryckförspänning genom dynamikkurvorna.
 - **Opacitetsvariation**: Opacitetsvariation per huvud, oberoende av storleksvariation.
-- **Styvhet**: Hur stelt omloppsradien följer den dynamiskt skalade borststorleken. 0 = omloppsbana spårar dynamikens storlek; 1 = omloppsbana förblir fixerad till basstorleken.
-- **Följer riktning** (0,0–1,0): Hur starkt formationsringen följer rörelseriktningen. Vid 1,0 är ringen alltid vinkelrät mot färdriktningen; vid 0,0 låser den till det statiska **Vinkel**-värdet.
-- **Teckenfrö** (0–255): Fast frö för karaktär per huvud (storlek, spridningsposition, räckvidd). Samma frö reproducerar samma formation varje slag. Desensibiliseras när **Random Head Character** är på.
+- **Teckenfrö** (0–255): Fast utsäde för karaktär per huvud (storlek, fyll-avståndsposition). Samma frö reproducerar samma formation varje slag. Desensibiliseras när **Randomize Head Character** är på.
 
-#### Interpolation
+#### Scatter
 
 Förskjuter huvuden längs och runt slagbanan varje dab, vilket skapar utsmetnings- och sprayeffekter.
 
-- **Overshoot** (0–5): Sprider huvuden framåt längs färdriktningen. Vid 1,0 huvuden spridda upp till ett helt dab-mellanrum framåt; värden över 1,0 tillåter större räckvidd med en brant sällsynthetsbias.
-- **Undershoot** (0–5): Samma som Overshoot men släpar efter nuvarande dab. I kombination med Overshoot skapar detta ett ledande utstryk eller komet-svans. Undertryckt vid första dubben för att undvika retrograda artefakter.
-- **Sprayvinkel** (0–90°): Fläktar pekar var och en utåt från slagriktningen med en slumpmässig vinkel per huvud upp till detta värde. Spänd till 90° så att inget huvud någonsin är vänt bakåt. Standard: 10°.
-- **Spray Seed** (0–255): Fast utsäde för per-head sprayvinklar, oberoende av Character Seed. Desensibiliseras när **Random Spray Pattern** är på.
+- **Fyllavstånd** (0,0–1,0): Sprider huvuden över gapet mellan på varandra följande dabpositioner. Varje huvuds stabila karaktärsvärde bestämmer dess lutande riktning; vid 1,0 huvuden fyller hela avståndsintervallet. Karaktären är stabil per frö.
+- **Spredningsvinkel** (0–90°, standard 10°): Fläktarna går utåt från slagriktningen med en ny slumpmässig vinkel upp till detta värde. Spänd till 90° så att inget huvud någonsin är vänt bakåt.
+- **Framåtspridning** (0–4000 px): Maximal slumpmässig spridning före slagriktningen. Rullas om oberoende varje dab.
+- **Backward Scatter** (0–4000 px): Maximal slumpmässig spridning bakom slaget. Huvuden är fortfarande vända framåt; endast förskjutningsriktningen vänder. Både Framåt och Bakåt kan vara lika med noll samtidigt.
+- **Scatter Size Balance** (0,0–1,0): Minsta spridningsvikt för stora huvuden. Vid 0 landar stora huvuden nära slaget; vid 1 sprids alla huvuden lika oavsett storlek.
+- **Tröskel för spridningsstorlek** (1–100 px): Huvuden mindre än denna pixelradie sprids på fullt avstånd; större huvuden dras gradvis närmare slaget.
 
 #### Randomisering
 
-- **Slumpmässigt huvudkaraktär**: Ritar om karaktärsvärden per huvud (storlek, spridningsposition, räckvidd) varje dab så att formationen är helt kaotisk längs slaget. Åsidosätter **Carakter Seed**.
-- **Slumpmässigt spraymönster**: Ritar om sprayvinklarna varje klick så att fläkten växlar kontinuerligt längs slaget ("living spray"). Åsidosätter **Spray Seed**.
-- **Slumpmässiga animationsramar**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.
+- **Slumpmässigt huvudkaraktär**: Ritar om värden per huvudkaraktär (storlek, spridningsposition) varje stämpel så att formationen är helt kaotisk längs slaget. Åsidosätter **Carakter Seed**.
+- **Randomisera animationsramar**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.
 
-### Ytterligare alternativ
+### Ytterligare alternativI expandern **Ytterligare alternativ** (komprimerad som standard):
 
-I expandern **Ytterligare alternativ** (komprimerad som standard):- **Lås för att visa**: Håller borstens utseende fixerat i förhållande till arbetsytan: när du roterar duken roterar borsten med den.
+- **Lås för att visa**: Håller borstens utseende fixerat i förhållande till arbetsytan: när du roterar duken roterar borsten med den.
 - **Enkel borstgräns**: Använder en vanlig cirkel för penselmarkörens kontur istället för att återge hela penselformen. Användbar för komplexa eller stora penslar där den exakta gränsen är dyr att dra.
 - **Uniform Jitter**: När den är på, dras dab-förskjutningar från **Jitter**-reglaget från en enhetlig fördelning (varje offset lika sannolikt inom intervallet). När den är avstängd är fördelningen Gaussisk (förskjuter klustret mot mitten).
 - **Återställ senast använda färger**: Återställer förgrunds- och bakgrundsfärgerna från föregående session vid uppstart, istället för att förinställa svartvitt.

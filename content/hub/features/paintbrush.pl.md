@@ -100,37 +100,38 @@ W ekspanderze **Zanikanie i kolor** (zagnieżdżonym w Efektach obrysu; widoczny
 
 ### Główki szczoteczekGłówki szczoteczek umieszczają wiele niezależnych główek szczoteczek na okrągłym **pierścieniu orbitalnym** wyśrodkowanym na ścieżce pociągnięć. Każda głowica maluje pełne muśnięcie w swojej własnej pozycji za każdym razem, gdy posuw jest postępowy, tworząc jednocześnie wiele równoległych lub wachlarzowych pociągnięć.
 
-Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podąża za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
+Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podążaj za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
 
 Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.
 
 - **Liczba**: Liczba jednoczesnych główek szczoteczki (1–16).
 - **Rozmiar**: Renderowany rozmiar każdej główki w stosunku do globalnego rozmiaru pędzla (0,1–1,0).
-- **Kąt** (0–360°): Statyczna orientacja pierścienia formującego, stosowana, gdy **Podąża za kierunkiem** jest poniżej 1,0.
+- **Sztywność włosia**: Jak sztywno promień orbity dopasowuje się do rozmiaru pędzla skalowanego dynamiką. 0 = orbita rozszerza się i kurczy pod wpływem ciśnienia; 1 = orbita pozostaje niezmienna w rozmiarze podstawowym.
+- **Kąt** (0–360°): Statyczna orientacja pierścienia formującego, stosowana, gdy **Kąt podążania** jest niższy niż 1,0.
+- **Podążaj za kierunkiem** (0,0–1,0): Jak silnie pierścień formujący śledzi kierunek ruchu skoku. Przy 1,0 pierścień jest zawsze prostopadły do ​​kierunku jazdy; przy 0,0 blokuje się statyczna wartość **Kąta**.
 - **Wahania ciśnienia**: Zmienność wielkości na głowicę stosowana jako niezależne odchylenie ciśnienia na krzywych dynamiki.
 - **Zmienność krycia**: Zmienność krycia na głowicę, niezależna od zmiany rozmiaru.
-- **Sztywność**: Jak sztywno promień orbity dopasowuje się do rozmiaru pędzla skalowanego dynamiką. 0 = orbita śledzi wielkość dynamiki; 1 = orbita pozostaje niezmienna w rozmiarze podstawowym.
-- **Podąża za kierunkiem** (0,0–1,0): Jak mocno pierścień formujący śledzi kierunek ruchu skoku. Przy 1,0 pierścień jest zawsze prostopadły do ​​kierunku jazdy; przy 0,0 blokuje się statyczna wartość **Kąta**.
-- **Rozstawienie postaci** (0–255): Naprawiono rozstawienie postaci przypadającej na głowę (rozmiar, pozycja rozproszenia, zasięg). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zniesiono czułość, gdy włączona jest **Losowa postać głowy**.
+- **Ziarno postaci** (0–255): Naprawiono ziarno znaku na głowę (rozmiar, pozycja wypełnienia). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zmniejszono czułość, gdy włączona jest opcja **Losowa postać głowy**.
 
-#### Interpolacja
+#### Rozproszenie
 
 Przesuwa głowice wzdłuż i wokół ścieżki pociągnięcia przy każdym pociągnięciu, tworząc efekty rozmazywania i rozpylania.
 
-- **Przekroczenie** (0–5): Rozrzuca głowy do przodu wzdłuż kierunku jazdy. Przy 1,0 głowice rozprzestrzeniają się do jednego pełnego odstępu między dotknięciami do przodu; wartości powyżej 1,0 umożliwiają większy zasięg przy dużym odchyleniu rzadkości.
-- **Niedoszacowanie** (0–5): To samo, co Przekroczenie, ale z tyłu za bieżącym dotknięciem. W połączeniu z Overshoot tworzy to wiodącą smugę lub ogon komety. Tłumiony przy pierwszym dotknięciu, aby uniknąć artefaktów wstecznych.
-- **Kąt natrysku** (0–90°): Każda głowica jest kierowana na zewnątrz od kierunku skoku o losowy kąt na głowicę aż do tej wartości. Zaciskany pod kątem 90°, dzięki czemu żadna głowa nie jest skierowana do tyłu. Domyślnie: 10°.
-- **Spray Seed** (0–255): Stałe ziarno dla kątów natrysku na głowicę, niezależne od Character Seed. Brak czułości, gdy włączony jest **Losowy wzór natryskiwania**.
+- **Odstępy wypełnienia** (0,0–1,0): Rozkłada główki w szczelinie pomiędzy kolejnymi pozycjami docisku. Stabilna wartość charakteru każdej głowicy określa jej kierunek pochylenia; przy 1,0 głowicy wypełnij pełny odstęp odstępu. Charakter jest stabilny w każdym nasionku.
+- **Kąt rozproszenia** (0–90°, domyślnie 10°): Każdy z wentylatorów kieruje się na zewnątrz od kierunku ruchu o świeżo losowy kąt aż do tej wartości. Zaciskany pod kątem 90°, dzięki czemu żadna głowa nie jest skierowana do tyłu.
+- **Rozproszenie w przód** (0–4000 px): Maksymalny losowy rozrzut przed kierunkiem obrysu. Przewijany niezależnie przy każdym dotknięciu.
+- **Rozproszenie wstecz** (0–4000 px): Maksymalne losowe rozproszenie za obrysem. Głowy nadal skierowane do przodu; zmienia się tylko kierunek przemieszczania. Zarówno Forward, jak i Backward mogą być jednocześnie różne od zera.
+- **Balans wielkości rozproszenia** (0,0–1,0): Minimalna masa rozproszenia dla dużych głów. Przy 0 duże głowy lądują blisko uderzenia; przy 1 wszystkie głowy rozpraszają się równomiernie, niezależnie od wielkości.
+- **Próg rozmiaru rozproszenia** (1–100 pikseli): Głowy mniejsze niż promień piksela rozpraszają się na pełnej odległości; większe główki są stopniowo przyciągane bliżej skoku.
 
 #### Randomizacja
 
-- **Losowa postać głowy**: Ponownie rysuje wartości postaci na głowę (rozmiar, położenie rozproszenia, zasięg) przy każdym dotknięciu, dzięki czemu formacja jest całkowicie chaotyczna wzdłuż pociągnięcia. Zastępuje **Ziarno postaci**.
-- **Losowy wzór natrysku**: Po każdym pociągnięciu zmienia kąt natrysku, dzięki czemu wentylator przesuwa się w sposób ciągły wzdłuż skoku („żywy strumień”). Zastępuje **Rozpylanie nasion**.
+- **Losuj postać głowy**: Ponownie rysuje wartości postaci na głowę (rozmiar, położenie rozproszenia) przy każdym stemplu, dzięki czemu formacja jest całkowicie chaotyczna wzdłuż pociągnięcia. Zastępuje **Ziarno postaci**.
 - **Losowe klatki animacji**: W przypadku pędzli animowanych: każda głowa niezależnie przesuwa klatkę animacji.
 
-### Dodatkowe opcje
+### Dodatkowe opcjeW ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym):
 
-W ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym):- **Zablokuj do widoku**: Zachowuje wygląd pędzla w stosunku do widoku płótna: kiedy obracasz płótno, pędzel obraca się wraz z nim.
+- **Zablokuj do widoku**: Zachowuje wygląd pędzla w stosunku do widoku płótna: kiedy obracasz płótno, pędzel obraca się wraz z nim.
 - **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.
 - **Jitter Jednolity**: Gdy jest włączony, przesunięcia dotknięć z suwaka **Dźwięk** są rysowane z jednolitego rozkładu (każde przesunięcie jest jednakowo prawdopodobne w danym zakresie). Gdy opcja jest wyłączona, rozkład jest gaussowski (przesuwa klaster w stronę środka).
 - **Przywróć ostatnio używane kolory**: Przywraca kolory pierwszego planu i tła z poprzedniej sesji podczas uruchamiania, zamiast domyślnych kolorów czarno-białych.
