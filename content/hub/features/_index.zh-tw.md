@@ -16,4 +16,5 @@ Lumi 的功能集專注於數位繪畫和結構化插圖工作流程，建立在
   {{< card link="palette-mixer" title="調色板混合器" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
   {{< card link="scripting" title="方案腳本" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="光譜混色" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
+  {{< card link="warp-tool" title="扭曲工具" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
 {{< /cards >}}

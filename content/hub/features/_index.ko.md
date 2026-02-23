@@ -16,4 +16,5 @@ Lumi의 기능 세트는 비파괴적인 레이어 기반 편집을 기반으로
   {{< card link="palette-mixer" title="팔레트 믹서" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
   {{< card link="scripting" title="계획 스크립팅" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="스펙트럼 색상 혼합" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
+  {{< card link="warp-tool" title="워프 도구" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
 {{< /cards >}}

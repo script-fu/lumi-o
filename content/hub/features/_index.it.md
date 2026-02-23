@@ -16,4 +16,5 @@ Questa sezione descrive le funzionalità principali disponibili in Lumi e dove i
   {{< card link="palette-mixer" title="Miscelatore di tavolozze" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
   {{< card link="scripting" title="Scripting dello schema" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Miscelazione dei colori spettrali" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
+  {{< card link="warp-tool" title="Strumento Deformazione" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
 {{< /cards >}}

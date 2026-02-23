@@ -16,4 +16,5 @@ In dit gedeelte worden de kernmogelijkheden beschreven die beschikbaar zijn in L
   {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
   {{< card link="scripting" title="Schemascripting" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
+  {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
 {{< /cards >}}
