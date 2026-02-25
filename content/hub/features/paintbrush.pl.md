@@ -38,31 +38,40 @@ Obecny cały czas, poza jakimkolwiek ekspanderem:
 - **Tryb**: Tryb mieszania farb (Normalny, Pomnóż, Ekran itp.)
 - **Krycie**: Ogólne krycie obrysu (0–100).
 
-### Opcje pędzla
+### Właściwości pędzla
 
-W ekspanderze **Opcje pędzla** (domyślnie rozwiniętym):
+W ekspanderze **Właściwości pędzla** (domyślnie rozwiniętym):
 - **Rozmiar**: średnica pędzla w pikselach.
-- **Stosunek**: Zmiażdż lub rozciągnij kształt pędzla (-1,0–1,0). 0 = niezmodyfikowany; wartości ujemne obracają squash o 90°.
+- **Współczynnik proporcji**: Zmiażdż lub rozciągnij kształt pędzla (-1,0–1,0). 0 = niezmodyfikowany; wartości ujemne obracają squash o 90°.
 - **Kąt**: Obraca stempel pędzla (-180–180°). Niezależne od dynamiki kierunku skoku.
-- **Odstępy**: Odległość pomiędzy malowanymi punktami jako procent rozmiaru pędzla. Niższe = gładsze pociągnięcia; wyższy = wzór rozproszony.
 - **Twardość**: Miękkie zanikanie (0,0) do ostrej krawędzi (1,0).
-- **Siła**: Siła nakładania pędzla (0,0–1,0). Ukryty dla narzędzia Ołówek.
+- **Odstępy**: Odległość pomiędzy malowanymi punktami jako procent rozmiaru pędzla. Niższe = gładsze pociągnięcia; wyższy = wzór rozproszony.
+- **Odchylenie tekstury**: Odchylenie od reakcji tekstury stempla; 50 jest neutralne. Niższe wartości sprzyjają rozbijaniu tekstury i odtłuszczonej powierzchni poprzez pociągnięcie w stronę szczytu krzywej wartości; wyższe wartości zaciskają się w kierunku pełnych wypełnień, popychając je w stronę barku. Widoczny efekt zależy od zakresu tonalnego tekstury.
 - **Drżenie**: Losowe przesuwanie każdej pozycji dotknięcia o maksymalnie określoną liczbę pikseli (0–1024).
 - **Gumka**: Mnożnik rozmiaru stosowany, gdy ten pędzel jest używany jako gumka (0,1–10,0). Niewidoczne na samym narzędziu Gumka.
 
-### Skutki udaru
+### Dynamika
 
-W ekspanderze **Efekty obrysu**:
+W ekspanderze **Dynamika**:
+- **Dynamika**: Główne włączenie aktywnego ustawienia dynamiki.
+- **Dynamics Preset**: Wybiera, które mapowania wejściowe mają być używane.
+- **Pomnóż przez ciśnienie**: Przełącznik mnożenia dodatkowego ciśnienia (pokazany, gdy włączona jest dynamika).### Zachowanie po udarze
+W ekspanderze **Zachowanie po uderzeniu**:
+- **Nakładanie**: Gdy jest włączone, każde dociśnięcie powoduje akumulację krycia, a nie łączenie go w pojedyncze pociągnięcie.
 - **Przetwarzanie końcowe**: Stosuje stabilizację, kompresję prędkości i korekcję odtwarzania po zakończeniu uderzenia, poprawiając spójność bez opóźnień.
   - **Próg skrętu**: Próg kąta (0–180°) do korekcji kierunku na ostrych narożnikach. 0 = pomiń korektę kierunku.
-  - **Preview Velocity**: Pomija podgląd postprocesowy, gdy prędkość skoku przekracza tę wartość (0 = zawsze podgląd).
-- **Nakładanie**: Gdy jest włączone, każde dociśnięcie powoduje akumulację krycia, a nie łączenie go w pojedyncze pociągnięcie.#### Kaligrafia
+  - **Próg podglądu**: Pomija podgląd postprocesowy, gdy prędkość skoku przekracza tę wartość (0 = zawsze podgląd).
+
+#### Kaligrafia
+
 Gdy jest aktywne, stemplowanie dotykowe jest zastępowane ciągłym korytarzem geometrycznym:
-- **Szerokość** i **Wysokość**: Wymiary korytarza kaligraficznego.
-- **Kąt**: Orientacja końcówki (w stopniach).
 - **Dynamiczne krycie**: Moduluje krycie w obrębie pociągnięcia w oparciu o zmiany prędkości i kierunku. Działa najlepiej przy delikatnych, kontrolowanych pociągnięciach; wyniki są mniej przewidywalne w przypadku szybkich bazgrołów. Eksperymentalny.
 - **Wzrost prędkości** (0–100%): Maksymalny dozwolony wzrost rozmiaru na próbkę jako procent rozmiaru poprzedniej próbki. Ogranicza szybkość wzrostu dynamiki rozmiaru zależnej od prędkości, zapobiegając nagłym skokom, gdy skok przyspiesza.
 - **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Ogranicza szybkość zmniejszania się rozmiaru w przypadku zmniejszania się skoku.
+
+#### Stabilizacja i wygładzanie
+
+- **Odległość stabilizacji kierunku** (0–100 pikseli): Minimalny ruch wskaźnika przed rozpoczęciem zachowania zależnego od kierunku, co pozwala uniknąć wczesnych skoków kąta.
 
 #### Wygładzanie
 
@@ -85,57 +94,65 @@ Przypisz dane wejściowe rysika lub inne wartości bieżące do parametrów malo
 
 Każde dynamiczne wejście można niezależnie przypisać do wielu właściwości. Otwórz **Opcje narzędzia** → **Dynamika**, aby skonfigurować.
 
-#### Blaknięcie i kolor
+### Modulacja skoku
 
-W ekspanderze **Zanikanie i kolor** (zagnieżdżonym w Efektach obrysu; widocznym tylko wtedy, gdy włączony jest **System dynamiki**):
-
-- **Względny kąt początkowy**: Wartość **Kąt początkowy** jest interpretowana w odniesieniu do kierunku pociągnięcia, a nie jako bezwzględny kąt obszaru roboczego.
+W ekspanderze **Modulacja obrysu** (pokazywanym tylko przy włączonej opcji **Dynamika**):- **Względny kąt początkowy**: Wartość **Kąt początkowy** jest interpretowana w odniesieniu do kierunku pociągnięcia, a nie jako bezwzględny kąt obszaru roboczego.
 - **Zanikanie początkowego kąta**: Zanika od **Początkowego kąta** na początku ruchu w stronę dynamicznego kąta w trakcie ruchu. Włączenie tej opcji wymusza włączenie **Względnego kąta początkowego**.
-- **Kąt początkowy** (-180–180°): Kąt pędzla na samym początku pociągnięcia, zanim przejmie dynamika.
-- **Współczynnik mieszania kąta** (0,0–1,0): kontroluje szybkość zmiany kąta pędzla od kąta początkowego do kąta dynamicznego. 0 = utrzymuje kąt początkowy; 1 = natychmiast wykorzystuje w pełni dynamiczny kąt.
-- **Stabilizacja kierunku** (0–100 pikseli): opóźnia dynamikę związaną z kierunkiem, wymagając od wskaźnika przebycia określonej liczby pikseli przed aktualizacją kierunku obrysu. Aktywne tylko wtedy, gdy **Post Process** jest wyłączony (Post Process zapewnia własną stabilizację). 0 = wyłączone (natychmiastowy kierunek, może skakać na początku skoku).
+- **Początkowy kąt pędzla** (-180–180°): Kąt pędzla na samym początku pociągnięcia, zanim przejmie dynamika.
+- **Początkowe mieszanie kąta** (0,0–1,0): kontroluje szybkość zmiany kąta pędzla od kąta początkowego do kąta dynamicznego. 0 = utrzymuje kąt początkowy; 1 = natychmiast wykorzystuje w pełni dynamiczny kąt.
 - **Długość zanikania**: Odległość w jednostkach płótna, na której następuje zanikanie.
 - **Powtórz**: Sposób powtarzania zanikania po wyczerpaniu się długości zanikania (Brak, Pętla, Piłokształtny, Trójkąt).
 
 
-### Główki szczoteczekGłówki szczoteczek umieszczają wiele niezależnych główek szczoteczek na okrągłym **pierścieniu orbitalnym** wyśrodkowanym na ścieżce pociągnięć. Każda głowica maluje pełne muśnięcie w swojej własnej pozycji za każdym razem, gdy posuw jest postępowy, tworząc jednocześnie wiele równoległych lub wachlarzowych pociągnięć.
+### Główki szczoteczek
+
+Główki szczoteczek umieszczają wiele niezależnych główek szczoteczek na okrągłym **pierścieniu orbitalnym** wyśrodkowanym na ścieżce pociągnięć. Każda głowica maluje pełne muśnięcie w swojej własnej pozycji za każdym razem, gdy posuw jest postępowy, tworząc jednocześnie wiele równoległych lub wachlarzowych pociągnięć.
 
 Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podążaj za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
 
 Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.
 
 - **Liczba**: Liczba jednoczesnych główek szczoteczki (1–16).
-- **Rozmiar**: Renderowany rozmiar każdej główki w stosunku do globalnego rozmiaru pędzla (0,1–1,0).
-- **Sztywność włosia**: Jak sztywno promień orbity dopasowuje się do rozmiaru pędzla skalowanego dynamiką. 0 = orbita rozszerza się i kurczy pod wpływem ciśnienia; 1 = orbita pozostaje niezmienna w rozmiarze podstawowym.
-- **Kąt** (0–360°): Statyczna orientacja pierścienia formującego, stosowana, gdy **Kąt podążania** jest niższy niż 1,0.
-- **Podążaj za kierunkiem** (0,0–1,0): Jak silnie pierścień formujący śledzi kierunek ruchu skoku. Przy 1,0 pierścień jest zawsze prostopadły do ​​kierunku jazdy; przy 0,0 blokuje się statyczna wartość **Kąta**.
+- **Rozmiar głowy**: Renderowany rozmiar każdej głowy w stosunku do globalnego rozmiaru pędzla (0,1–1,0).
+- **Współczynnik kształtu orbity** (0,1–1,0): Kształtuje orbitę formacji od koła do elipsy. 1,0 = orbita kołowa; niższe wartości zgniatają oś pomocniczą.
+- **Kąt formowania** (0–360°): Statyczna orientacja pierścienia formowania, stosowana, gdy **Kierunek podążania** jest niższy niż 1,0.
+- **Podążaj za kierunkiem** (0,0–1,0): Jak silnie pierścień formujący śledzi kierunek ruchu skoku. Przy 1,0 pierścień jest zawsze prostopadły do ​​kierunku jazdy; przy 0,0 blokuje się na statycznej wartości **Kąta formowania**.
 - **Wahania ciśnienia**: Zmienność wielkości na głowicę stosowana jako niezależne odchylenie ciśnienia na krzywych dynamiki.
 - **Zmienność krycia**: Zmienność krycia na głowicę, niezależna od zmiany rozmiaru.
-- **Ziarno postaci** (0–255): Naprawiono ziarno znaku na głowę (rozmiar, pozycja wypełnienia). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zmniejszono czułość, gdy włączona jest opcja **Losowa postać głowy**.
 
 #### Rozproszenie
 
-Przesuwa głowice wzdłuż i wokół ścieżki pociągnięcia przy każdym pociągnięciu, tworząc efekty rozmazywania i rozpylania.
+Główne elementy sterujące rozproszeniem w ekspanderze **Główki pędzli**:
 
+- **Kąt rozproszenia** (0–360°, domyślnie 10°): Obraca tylko losowy komponent rozproszenia (nie odstępy wypełnienia). Kąty na głowę/na dotknięcie są odchylone na zewnątrz z kontrolowanym skrzyżowaniem, aby uniknąć sztywnych, lustrzanych pióropuszów. Zamocowany do 360°.
+- **Odległość rozproszenia** (0–10000 pikseli): Losowe przesunięcie do przodu z pozycji wypełnienia każdej głowicy. Przewiń ponownie każde dotknięcie.
+- **Balans wielkości rozproszenia** (0,0–1,0): kontroluje stromość tłumienia dla głów powyżej progu. Przy wartości 1,0 wszystkie głowy rozpraszają się równomiernie; niższe wartości w coraz większym stopniu tłumią większe głowy, podczas gdy głowy na poziomie progu/poniżej pozostają w pełnej odległości rozproszenia.
+
+### Dodatkowe opcje
+
+W ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym) kontrolki są pogrupowane w sekcje przepełnione, które są rzadziej zmieniane. Dzięki temu główne ekspandery skupiają się na często dostosowywanych elementach sterujących malowaniem.#### Właściwości pędzla (przepełnienie)
+- **Zablokuj kąt do przestrzeni ekranu**: Blokuje kąt pędzla do przestrzeni ekranu, dzięki czemu kąt pozostaje równy podczas obracania/odwracania płótna. Brak efektu, gdy dynamika kontroluje kąt.
+- **Losowe obrócenie w poziomie**: 50% szans na odbicie lustrzane każdego stempla od lewej do prawej przy każdym dotknięciu.
+- **Losowe odwrócenie w pionie**: 50% szans na odwrócenie każdego stempla do góry nogami przy każdym dotknięciu.
+- **Losowy obrót**: Losowy obrót każdego stempla o 0°, 90°, 180° lub 270° na jedno dotknięcie.
+- **Jitter Jednolity**: Gdy jest włączony, przesunięcia dotknięć z suwaka **Dźwięk** są rysowane z jednolitego rozkładu (każde przesunięcie jest jednakowo prawdopodobne w danym zakresie). Gdy opcja jest wyłączona, rozkład jest gaussowski (przesuwa klaster w stronę środka).
+- **Resetuj animację**: W przypadku animowanych pędzli: po włączeniu animacja rozpoczyna się od klatki 0 przy każdym nowym pociągnięciu; gdy jest wyłączony, kontynuuje od miejsca, w którym zakończył się poprzedni skok.
+
+#### Główki szczoteczek (przelew)
+
+Formacja:
+- **Sztywność włosia**: Jak sztywno promień orbity dopasowuje się do rozmiaru pędzla skalowanego dynamiką. 0 = orbita rozszerza się i kurczy pod wpływem ciśnienia; 1 = orbita pozostaje niezmienna w rozmiarze podstawowym.
 - **Odstępy wypełnienia** (0,0–1,0): Rozkłada główki w szczelinie pomiędzy kolejnymi pozycjami docisku. Stabilna wartość charakteru każdej głowicy określa jej kierunek pochylenia; przy 1,0 głowicy wypełnij pełny odstęp odstępu. Charakter jest stabilny w każdym nasionku.
-- **Kąt rozproszenia** (0–90°, domyślnie 10°): Każdy z wentylatorów kieruje się na zewnątrz od kierunku ruchu o świeżo losowy kąt aż do tej wartości. Zaciskany pod kątem 90°, dzięki czemu żadna głowa nie jest skierowana do tyłu.
-- **Rozproszenie w przód** (0–4000 px): Maksymalny losowy rozrzut przed kierunkiem obrysu. Przewijany niezależnie przy każdym dotknięciu.
-- **Rozproszenie wstecz** (0–4000 px): Maksymalne losowe rozproszenie za obrysem. Głowy nadal skierowane do przodu; zmienia się tylko kierunek przemieszczania. Zarówno Forward, jak i Backward mogą być jednocześnie różne od zera.
-- **Balans wielkości rozproszenia** (0,0–1,0): Minimalna masa rozproszenia dla dużych głów. Przy 0 duże głowy lądują blisko uderzenia; przy 1 wszystkie głowy rozpraszają się równomiernie, niezależnie od wielkości.
-- **Próg rozmiaru rozproszenia** (1–100 pikseli): Głowy mniejsze niż promień piksela rozpraszają się na pełnej odległości; większe główki są stopniowo przyciągane bliżej skoku.
 
-#### Randomizacja
+Rozproszenie:
+- **Próg rozmiaru rozproszenia** (0,01–100 pikseli): promień progu dla pełnej odległości rozproszenia. Głowice w tym promieniu lub poniżej wykorzystują pełną odległość rozproszenia; większe główki są stopniowo przyciągane bliżej skoku.
 
+Randomizacja:
+- **Ziarno postaci** (0–255): Naprawiono ziarno znaku na głowę (rozmiar, pozycja wypełnienia). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zmniejszono czułość, gdy włączona jest opcja **Losowa postać głowy**.
 - **Losuj postać głowy**: Ponownie rysuje wartości postaci na głowę (rozmiar, położenie rozproszenia) przy każdym stemplu, dzięki czemu formacja jest całkowicie chaotyczna wzdłuż pociągnięcia. Zastępuje **Ziarno postaci**.
 - **Losowe klatki animacji**: W przypadku pędzli animowanych: każda głowa niezależnie przesuwa klatkę animacji.
 
-### Dodatkowe opcjeW ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym):
+#### Zachowanie po uderzeniu (przepełnienie)
 
-- **Zablokuj do widoku**: Zachowuje wygląd pędzla w stosunku do widoku płótna: kiedy obracasz płótno, pędzel obraca się wraz z nim.
-- **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.
-- **Jitter Jednolity**: Gdy jest włączony, przesunięcia dotknięć z suwaka **Dźwięk** są rysowane z jednolitego rozkładu (każde przesunięcie jest jednakowo prawdopodobne w danym zakresie). Gdy opcja jest wyłączona, rozkład jest gaussowski (przesuwa klaster w stronę środka).
 - **Przywróć ostatnio używane kolory**: Przywraca kolory pierwszego planu i tła z poprzedniej sesji podczas uruchamiania, zamiast domyślnych kolorów czarno-białych.
-- **Losowo w poziomie**: 50% szans na odbicie każdego stempla od lewej do prawej na dotknięcie.
-- **Losowy pion**: 50% szans na odwrócenie każdego stempla do góry nogami przy każdym dotknięciu.
-- **Losowy obrót**: Losowy obrót każdego stempla o 0°, 90°, 180° lub 270° na jedno dotknięcie.
-- **Resetuj animację**: W przypadku animowanych pędzli: po włączeniu animacja rozpoczyna się od klatki 0 przy każdym nowym pociągnięciu; gdy jest wyłączony, kontynuuje od miejsca, w którym zakończył się poprzedni skok.
+- **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.

@@ -35,31 +35,38 @@ Present at all times, outside any expander:
 - **Mode**: Paint blending mode (Normal, Multiply, Screen, etc.)
 - **Opacity**: Overall stroke opacity (0–100).
 
-### Brush Options
-In the **Brush Options** expander (expanded by default):
+### Brush Properties
+In the **Brush Properties** expander (expanded by default):
 - **Size**: Brush diameter in pixels.
-- **Ratio**: Squash or stretch the brush shape (-1.0–1.0). 0 = unmodified; negative values rotate the squash 90°.
+- **Aspect Ratio**: Squash or stretch the brush shape (-1.0–1.0). 0 = unmodified; negative values rotate the squash 90°.
 - **Angle**: Rotates the brush stamp (-180–180°). Independent of stroke direction dynamics.
-- **Spacing**: Distance between painted dabs as a percentage of brush size. Lower = smoother strokes; higher = scattered pattern.
 - **Hardness**: Soft fade (0.0) to sharp edge (1.0).
-- **Force**: Brush application force (0.0–1.0). Hidden for the Pencil tool.
+- **Spacing**: Distance between painted dabs as a percentage of brush size. Lower = smoother strokes; higher = scattered pattern.
+- **Texture Bias**: Bias the stamp texture response; 50 is neutral. Lower values favour texture breakup and a skimmed surface by pulling toward the toe of the value curve; higher values clamp toward solid fills by pushing toward the shoulder. The visible effect depends on the texture's tonal range.
 - **Jitter**: Randomly offsets each dab position by up to this many pixels (0–1024).
 - **Eraser**: Size multiplier applied when this brush is used as an eraser (0.1–10.0). Not shown on the Eraser tool itself.
 
-### Stroke Effects
-In the **Stroke Effects** expander:
+### Dynamics
+In the **Dynamics** expander:
+- **Dynamics**: Master enable for the active dynamics preset.
+- **Dynamics Preset**: Selects which input mappings are used.
+- **Multiply by Pressure**: Extra pressure multiplication toggle (shown when Dynamics is enabled).
+
+### Stroke Behaviour
+In the **Stroke Behaviour** expander:
+- **Build-Up**: When on, each dab accumulates opacity rather than being composited as a single stroke.
 - **Post Process**: Applies stabilization, velocity compression, and replay correction after the stroke is complete, improving consistency without latency.
   - **Turn Threshold**: Angle threshold (0–180°) for direction correction at sharp corners. 0 = skip direction fix.
-  - **Preview Velocity**: Suppresses the post-process preview when stroke velocity exceeds this value (0 = always preview).
-- **Build-Up**: When on, each dab accumulates opacity rather than being composited as a single stroke.
+  - **Preview Threshold**: Suppresses the post-process preview when stroke velocity exceeds this value (0 = always preview).
 
 #### Calligraphic
 When active, dab stamping is replaced by a continuous geometric corridor:
-- **Width** and **Height**: Dimensions of the calligraphic corridor.
-- **Angle**: Nib orientation (degrees).
 - **Dynamic Opacity**: Modulates opacity within the stroke based on velocity and direction changes. Works best on fine, controlled strokes; results are less predictable on rapid scribbles. Experimental.
 - **Velocity Growth** (0–100%): Maximum allowed size increase per sample as a percentage of the previous sample's size. Limits how quickly a velocity-driven size dynamic can grow, preventing sudden jumps when the stroke accelerates.
 - **Velocity Shrink** (0–100%): Maximum allowed size decrease per sample. Limits how quickly the size can drop when the stroke decelerates.
+
+#### Stabilization & Smoothing
+- **Direction Stabilization Distance** (0–100 px): Minimum pointer travel before direction-sensitive behavior starts, helping avoid early angle jumps.
 
 #### Smoothing
 Enables real-time input smoothing applied to the stroke path as you paint. Expands to reveal:
@@ -80,14 +87,13 @@ Assign stylus input or other live values to painting parameters:
 
 Each dynamic input can be mapped to multiple properties independently. Open **Tool Options** → **Dynamics** to configure.
 
-#### Fade and Colour
-In the **Fade and Colour** expander (nested inside Stroke Effects; only visible when **Dynamics System** is enabled):
+### Stroke Modulation
+In the **Stroke Modulation** expander (shown only when **Dynamics** is enabled):
 
 - **Relative Initial Angle**: The **Initial Angle** value is interpreted relative to the stroke direction rather than as an absolute canvas angle.
 - **Fade Initial Angle**: Fades from the **Initial Angle** at stroke start toward the live dynamic angle over the course of the stroke. Enabling this forces **Relative Initial Angle** on.
-- **Initial Angle** (-180–180°): The brush angle at the very start of a stroke, before dynamics take over.
-- **Angle Blend Factor** (0.0–1.0): Controls how quickly the brush angle transitions from the initial angle to the dynamic angle. 0 = holds the initial angle; 1 = immediately uses the fully dynamic angle.
-- **Direction Stabilization** (0–100 px): Delays direction-sensitive dynamics by requiring the pointer to travel this many pixels before updating the stroke direction. Only active when **Post Process** is off (Post Process provides its own stabilization). 0 = disabled (immediate direction, may jump at stroke start).
+- **Brush Initial Angle** (-180–180°): The brush angle at the very start of a stroke, before dynamics take over.
+- **Initial Angle Blend** (0.0–1.0): Controls how quickly the brush angle transitions from the initial angle to the dynamic angle. 0 = holds the initial angle; 1 = immediately uses the fully dynamic angle.
 - **Fade Length**: Distance in canvas units over which the fade plays out.
 - **Repeat**: How the fade is repeated once the fade length is exhausted (None, Loop, Sawtooth, Triangle).
 
@@ -101,38 +107,46 @@ The orbit radius is determined by the global brush size minus the head size: lar
 Controls appear in the **Brush Heads** expander in the tool options panel.
 
 - **Count**: Number of simultaneous brush heads (1–16).
-- **Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
-- **Bristle Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit expands and contracts with pressure; 1 = orbit stays fixed to the base size.
-- **Angle** (0–360°): Static orientation of the formation ring, used when **Follow Direction** is below 1.0.
-- **Follow Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Angle** value.
+- **Head Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
+- **Orbit Aspect Ratio** (0.1–1.0): Shapes the formation orbit from circle to ellipse. 1.0 = circular orbit; lower values squash the minor axis.
+- **Formation Angle** (0–360°): Static orientation of the formation ring, used when **Follow Direction** is below 1.0.
+- **Follow Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Formation Angle** value.
 - **Pressure Variation**: Per-head size variation applied as an independent pressure bias through the dynamics curves.
 - **Opacity Variation**: Per-head opacity variation, independent of size variation.
-- **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
 
 #### Scatter
-Displaces heads along and around the stroke path each dab, creating smear and spray effects.
+Main scatter controls in the **Brush Heads** expander:
 
-- **Fill Spacing** (0.0–1.0): Spreads heads across the gap between consecutive dab positions. Each head's stable character value determines its lean direction; at 1.0 heads fill the full spacing interval. Character is stable per seed.
-- **Scatter Angle** (0–90°, default 10°): Fans each head outward from the stroke direction by a freshly randomised angle up to this value. Clamped to 90° so no head ever faces backwards.
-- **Forward Scatter** (0–4000 px): Maximum random scatter ahead of the stroke direction. Re-rolled independently every dab.
-- **Backward Scatter** (0–4000 px): Maximum random scatter behind the stroke. Heads still face forward; only the displacement direction reverses. Both Forward and Backward can be nonzero simultaneously.
-- **Scatter Size Balance** (0.0–1.0): Minimum scatter weight for large heads. At 0 big heads land close to the stroke; at 1 all heads scatter equally regardless of size.
-- **Scatter Size Threshold** (1–100 px): Heads smaller than this pixel radius scatter at full distance; larger heads are progressively pulled closer to the stroke.
-
-#### Randomization
-- **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
-- **Randomize Animation Frames**: For animated brushes: each head advances its animation frame independently.
+- **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). Per-head/per-dab angles are outward-biased with controlled crossover to avoid rigid mirrored plumes. Clamped to 360°.
+- **Scatter Distance** (0–10000 px): Random forward displacement from each head's fill-spacing position. Re-rolled every dab.
+- **Scatter Size Balance** (0.0–1.0): Controls suppression steepness for heads above threshold. At 1.0, all heads scatter equally; lower values increasingly suppress larger heads while heads at/below threshold stay at full scatter distance.
 
 ### Additional Options
 
-In the **Additional Options** expander (collapsed by default):
+In the **Additional Options** expander (collapsed by default), controls are grouped as overflow sections that are changed less often. This keeps the main expanders focused on frequently adjusted painting controls.
 
-- **Lock to View**: Keeps the brush appearance fixed relative to the canvas view: when you rotate the canvas, the brush rotates with it.
-- **Simple Brush Boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
-- **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is Gaussian (offsets cluster toward centre).
-- **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
-- **Random Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
-- **Random Vertical**: 50% chance to flip each stamp upside-down per dab.
+#### Brush Properties (overflow)
+- **Lock Angle to Screen Space**: Locks brush angle to screen space, so angle stays level while the canvas rotates/flips. No effect when Dynamics controls angle.
+- **Random Flip Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
+- **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
+- **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is Gaussian (offsets cluster toward centre).
 - **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
+
+#### Brush Heads (overflow)
+Formation:
+- **Bristle Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit expands and contracts with pressure; 1 = orbit stays fixed to the base size.
+- **Fill Spacing** (0.0–1.0): Spreads heads across the gap between consecutive dab positions. Each head's stable character value determines its lean direction; at 1.0 heads fill the full spacing interval. Character is stable per seed.
+
+Scatter:
+- **Scatter Size Threshold** (0.01–100 px): Threshold radius for full scatter distance. Heads at or below this radius use full scatter distance; larger heads are progressively pulled closer to the stroke.
+
+Randomization:
+- **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
+- **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
+- **Randomize Animation Frames**: For animated brushes: each head advances its animation frame independently.
+
+#### Stroke Behaviour (overflow)
+- **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
+- **Simple Brush Boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
 
