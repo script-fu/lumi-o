@@ -24,7 +24,7 @@ The `.lum` format uses XML metadata and compressed binary buffers. You can inspe
 
 ### Incremental Saving
 
-Incremental saving must be enabled per-project in the **Save As dialog** (an **Incremental Save** checkbox and a **Max Saves** spin button). Once enabled, Ctrl+S writes only the modified layers rather than rewriting the entire project, drastically reducing save time. The setting is stored with the project and persists across sessions.
+Incremental saving is available through **File** → **Save Increment** (`Ctrl+I`). It creates a manual recovery checkpoint inside the project without replacing normal **File** → **Save** (`Ctrl+S`). Full saves still update the main `.lum` project, while Save Increment writes only the modified layers needed for a fast checkpoint.
 
 ### Lazy Loading
 
@@ -44,7 +44,8 @@ Lumi automatically saves changes to a **separate cache location** (`~/.cache/lum
 ### Save & Save As
 
 - **File** → **Save** (Ctrl+S): Save to the current `.lum` directory.
-- **File** → **Save As** (Shift+Ctrl+S): Save to a new `.lum` file. The Save As dialog includes options for compression type and an **Incremental Save** toggle (with a **Max Saves** limit) to enable or disable incremental saving for this project.
+- **File** → **Save Increment** (Ctrl+I): Create an incremental recovery checkpoint for the current `.lum` file.
+- **File** → **Save As** (Shift+Ctrl+S): Save to a new `.lum` file. The Save As dialog includes compression options for the new project file.
 
 Unsaved changes are indicated by an asterisk (*) in the window title.
 
@@ -97,16 +98,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Layer buffers are named after the layer (`layer-Background.geglbuf`), not numbered sequentially. Spaces in layer names are stored as underscores; group layers get a `-GROUP` suffix. Masks share the layer name (`mask-Background.geglbuf`).
 
-Each `recovery/primary-NN.lum/` is a full baseline save. Subsequent Ctrl+S presses append `delta-NNNN.lum/` subdirectories containing only the modified buffers since the last baseline, keeping checkpoint saves fast regardless of project size.
+Each `recovery/primary-NN.lum/` is a full baseline save. Subsequent `Ctrl+I` presses append `delta-NNNN.lum/` subdirectories containing only the modified buffers since the last baseline, keeping checkpoint saves fast regardless of project size.
 
 Autosaves follow the same structure but are stored separately in `~/.cache/lumi/autosave/`, leaving the working file untouched.
 - **Very Large Projects**: A project with 1000+ layers and terabytes of data will benefit most from lazy loading; however, final export to flat image format may take time.

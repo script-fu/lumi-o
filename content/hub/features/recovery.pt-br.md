@@ -36,19 +36,21 @@ O salvamento incremental é um sistema de ponto de verificação manual armazena
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Uma nova linha de base `primary-NN.lum/` é escrita após **Arquivo → Salvar**. Os pressionamentos subsequentes de Ctrl+S criam `delta-NNNN.lum/` subdiretórios contendo apenas os buffers que foram alterados desde a última linha de base. Deltas de salvamento automático e deltas de salvamento manual usam contadores separados para que não interfiram no histórico um do outro.
+Uma nova linha de base `primary-NN.lum/` é escrita após **Arquivo → Salvar**. Os pressionamentos subsequentes de **Arquivo → Salvar incremento** (`Ctrl+I`) criam subdiretórios `delta-NNNN.lum/` contendo apenas os buffers que foram alterados desde a última linha de base. Deltas de salvamento automático e deltas de salvamento manual usam contadores separados para que não interfiram no histórico um do outro.
 
-Os salvamentos incrementais estão **desabilitados por padrão** e devem ser habilitados por projeto:
+O incremento de salvamento está **sempre disponível** para arquivos `.lum` salvos:
 
-1. **Arquivo** → **Salvar como** (Shift+Ctrl+S).
-2. Na caixa de diálogo Salvar como, marque **Economia incremental** e, opcionalmente, defina um limite de **Economia máxima**.
-3. A configuração é armazenada com o projeto e se aplica a todos os pressionamentos subsequentes de Ctrl+S.
+1. Use **Arquivo** → **Salvar** (`Ctrl+S`) para criar ou atualizar o arquivo do projeto principal.
+2. Use **Arquivo** → **Salvar incremento** (`Ctrl+I`) para criar um ponto de verificação de recuperação.
+3. Após outro **Arquivo** → **Salvar** completo, o próximo `Ctrl+I` grava uma nova linha de base `primary-NN.lum/` antes de criar novos deltas.
+
+Os arquivos recuperados nomeados com o prefixo `RECOVERED_` devem ser salvos normalmente antes que Salvar incremento fique disponível para eles.
 
 Quando você abre um arquivo `.lum` que possui salvamentos incrementais mais recentes do que o salvamento primário, o Lumi mostra um prompt **Salvamento incremental detectado** oferecendo para carregar o ponto de verificação mais recente.
 
@@ -90,14 +92,16 @@ A guia padrão quando a caixa de diálogo é aberta. Identifica automaticamente 
 
 ---
 
-## Limpar estados antigosO acúmulo de estados de recuperação ao longo do tempo pode consumir espaço em disco significativo. O botão **Limpar estados antigos…** (canto inferior esquerdo da caixa de diálogo) abre um prompt de limpeza para a guia ativa (Salvamento automático ou Incremental).
+## Limpar estados antigos
+
+O acúmulo de estados de recuperação ao longo do tempo pode consumir espaço em disco significativo. O botão **Limpar estados antigos…** (canto inferior esquerdo da caixa de diálogo) abre um prompt de limpeza para a guia ativa (Salvamento automático ou Incremental).
 
 O prompt mostra:
 - Quantos salvamentos completos existem para o arquivo.
 - O espaço total em disco que ocupam.
 - Um botão giratório **Manter mais recente** para selecionar quantos salvamentos serão mantidos.
 
-Definir **Keep most recent** como `0` exclui todos os estados de recuperação. O próximo Ctrl+S após uma limpeza completa gravará um novo salvamento primário.
+Definir **Keep most recent** como `0` exclui todos os estados de recuperação. O próximo `Ctrl+I` após uma limpeza completa gravará um novo salvamento primário.
 
 ---
 

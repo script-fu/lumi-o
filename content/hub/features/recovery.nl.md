@@ -20,7 +20,7 @@ Lumi slaat tijdens het bewerken regelmatig een momentopname op de achtergrond va
 ~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
 ```
 
-De padcodering gebruikt `~` als scheidingsteken om een unieke cachemap per bestand te creëren. Dit betekent dat automatische opslag beschikbaar is, zelfs als het projectbestand zelf verloren of beschadigd is.
+De padcodering gebruikt `~` als scheidingsteken om een unieke cachemap per bestand te maken. Dit betekent dat automatische opslag beschikbaar is, zelfs als het projectbestand zelf verloren of beschadigd is.
 
 - **Frequentie**: configureerbaar in **Bewerken** → **Voorkeuren** → **Prestaties** → Interval voor automatisch opslaan.
 - **Opslaglocatie**: ook ingesteld in Voorkeuren → Prestaties.
@@ -36,19 +36,21 @@ Incrementeel opslaan is een handmatig controlepuntsysteem dat **in het projectbe
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Een nieuwe `primary-NN.lum/` basislijn wordt geschreven na **Bestand → Opslaan**. Als u vervolgens op Ctrl+S drukt, worden `delta-NNNN.lum/` submappen gemaakt die alleen de buffers bevatten die sinds de laatste basislijn zijn gewijzigd. Delta's voor automatisch opslaan en delta's voor handmatig opslaan gebruiken afzonderlijke tellers, zodat ze elkaars geschiedenis niet verstoren.
+Een nieuwe `primary-NN.lum/` basislijn wordt geschreven na **Bestand → Opslaan**. Volgende drukken op **Bestand → Stapgrootte opslaan** (`Ctrl+I`) creëren `delta-NNNN.lum/` submappen die alleen de buffers bevatten die sinds de laatste basislijn zijn gewijzigd. Delta's voor automatisch opslaan en delta's voor handmatig opslaan gebruiken afzonderlijke tellers, zodat ze elkaars geschiedenis niet verstoren.
 
-Incrementeel opslaan is **standaard uitgeschakeld** en moet per project worden ingeschakeld:
+Opslagverhoging is **altijd beschikbaar** voor opgeslagen `.lum` bestanden:
 
-1. **Bestand** → **Opslaan als** (Shift+Ctrl+S).
-2. In het dialoogvenster Opslaan als vinkt u **Incrementeel opslaan** aan en stelt u optioneel een **Max. aantal opgeslagen bestanden** in.
-3. De instelling wordt bij het project opgeslagen en geldt voor alle daaropvolgende Ctrl+S-drukken.
+1. Gebruik **Bestand** → **Opslaan** (`Ctrl+S`) om het hoofdprojectbestand te maken of bij te werken.
+2. Gebruik **Bestand** → **Save Increment** (`Ctrl+I`) om een ​​herstelcontrolepunt te maken.
+3. Na nog een volledig **Bestand** → **Opslaan**, schrijft de volgende `Ctrl+I` een nieuwe `primary-NN.lum/` basislijn voordat nieuwe delta's worden gemaakt.
+
+Herstelde bestanden met de naam `RECOVERED_` moeten eerst normaal worden opgeslagen voordat Save Increment voor hen beschikbaar wordt.
 
 Wanneer u een `.lum`-bestand opent dat nieuwere incrementele opslagbewerkingen heeft dan de primaire opslagbewerking, toont Lumi een **Incrementele opslagdetectie**-prompt die aanbiedt om het meest recente controlepunt te laden.
 
@@ -63,7 +65,7 @@ Het dialoogvenster heeft drie tabbladen en twee actieknoppen.
 Geeft een overzicht van alle beschikbare statussen voor automatisch opslaan voor het geselecteerde bestand, met tijdstempels en miniaturen (indien beschikbaar). Selecteer een staat en klik op **Herstellen** om deze te openen.
 
 Gebruik dit tabblad om:
-- Herstellen na een crash.
+- Herstel na een crash.
 - Terugkeren naar een eerdere status van dezelfde sessie.
 
 ### Incrementeel tabblad
@@ -90,14 +92,16 @@ Het standaardtabblad wanneer het dialoogvenster wordt geopend. Identificeert aut
 
 ---
 
-## Oude staten opruimenHet accumuleren van herstelstatussen in de loop van de tijd kan aanzienlijke schijfruimte in beslag nemen. De knop **Oude staten opschonen…** (linksonder in het dialoogvenster) opent een opschoonprompt voor het actieve tabblad (Automatisch opslaan of Incrementeel).
+## Oude staten opruimen
+
+Het accumuleren van herstelstatussen in de loop van de tijd kan aanzienlijke schijfruimte in beslag nemen. De knop **Oude staten opschonen…** (linksonder in het dialoogvenster) opent een opschoonprompt voor het actieve tabblad (Automatisch opslaan of Incrementeel).
 
 De prompt toont:
-- Hoeveel volledige opslagen er bestaan voor het bestand.
+- Hoeveel volledige opslagen er zijn voor het bestand.
 - De totale schijfruimte die ze in beslag nemen.
 - Een draaiknop **Bewaar meest recente** om te selecteren hoeveel saves je wilt behouden.
 
-Door **Keep most recent** in te stellen op `0` worden alle herstelstatussen verwijderd. De volgende Ctrl+S na een volledige opschoning zal een nieuwe primaire opslag schrijven.
+Door **Keep most recent** in te stellen op `0` worden alle herstelstatussen verwijderd. De volgende `Ctrl+I` na een volledige opschoning zal een nieuwe primaire opslag schrijven.
 
 ---
 

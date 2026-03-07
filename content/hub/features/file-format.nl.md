@@ -22,7 +22,7 @@ Het `.lum`-formaat maakt gebruik van XML-metagegevens en gecomprimeerde binaire 
 
 ### Incrementele besparing
 
-Incrementeel opslaan moet per project worden ingeschakeld in het dialoogvenster **Opslaan als** (een selectievakje **Incrementeel opslaan** en een draaiknop **Max. opslag**). Eenmaal ingeschakeld, schrijft Ctrl+S alleen de gewijzigde lagen in plaats van het hele project te herschrijven, waardoor de tijdwinst drastisch wordt verminderd. De instelling wordt bij het project opgeslagen en blijft gedurende sessies behouden.
+Incrementeel opslaan is mogelijk via **Bestand** → **Save Increment** (`Ctrl+I`). Het creëert een handmatig herstelcontrolepunt binnen het project zonder het normale **Bestand** → **Opslaan** (`Ctrl+S`) te vervangen. Bij volledige opslag wordt nog steeds het hoofdproject `.lum` bijgewerkt, terwijl Save Increment alleen de gewijzigde lagen schrijft die nodig zijn voor een snel controlepunt.
 
 ### Lui laden
 
@@ -42,7 +42,8 @@ Lumi slaat wijzigingen automatisch met regelmatige tussenpozen op een **afzonder
 ### Opslaan en opslaan als
 
 - **Bestand** → **Opslaan** (Ctrl+S): Opslaan in de huidige map `.lum`.
-- **Bestand** → **Opslaan als** (Shift+Ctrl+S): Opslaan in een nieuw `.lum` bestand. Het dialoogvenster Opslaan als bevat opties voor het compressietype en een schakelaar **Incrementeel opslaan** (met een limiet **Max. opslag**) om incrementeel opslaan voor dit project in of uit te schakelen.
+- **Bestand** → **Verhoging opslaan** (Ctrl+I): Creëer een incrementeel herstelcontrolepunt voor het huidige `.lum` bestand.
+- **Bestand** → **Opslaan als** (Shift+Ctrl+S): Opslaan in een nieuw `.lum` bestand. Het dialoogvenster Opslaan als bevat compressieopties voor het nieuwe projectbestand.
 
 Niet-opgeslagen wijzigingen worden aangegeven met een asterisk (*) in de venstertitel.
 
@@ -64,12 +65,14 @@ PSD- en XCF-bestanden worden bij het importeren geconverteerd naar het oorspronk
 ## Import- en exportcompatibiliteit
 
 ### Ondersteunde importformaten
+
 - **.lum**: eigen Lumi-formaat.
 - **.xcf**: eigen GIMP-indeling (lagen en basiseigenschappen blijven behouden).
 - **.psd**: Photoshop-formaat (lagen en overvloeimodi behouden).
 - **PNG, JPEG, TIFF, enz.**: Import van afgeplatte afbeeldingen.
 
 ### Ondersteunde exportformaten
+
 - **PNG**: verliesvrij, met alfatransparantie.
 -**JPEG**: verliesgevend, afgeplat.
 - **TIFF**: verliesvrij of LZW-gecomprimeerd.
@@ -79,7 +82,7 @@ PSD- en XCF-bestanden worden bij het importeren geconverteerd naar het oorspronk
 
 ## Organisatie
 
-Een `.lum` bestand is een directory met een vaste structuur:
+Een `.lum` bestand is een map met een vaste structuur:
 
 ```
 my-painting.lum/
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Laagbuffers worden genoemd naar de laag (`layer-Background.geglbuf`), en zijn niet opeenvolgend genummerd. Spaties in laagnamen worden opgeslagen als onderstrepingstekens; groepslagen krijgen het achtervoegsel `-GROUP`. Maskers delen de laagnaam (`mask-Background.geglbuf`).
 
-Elke `recovery/primary-NN.lum/` is een volledige basislijnopslag. Als u vervolgens op Ctrl+S drukt, worden `delta-NNNN.lum/` submappen toegevoegd die alleen de gewijzigde buffers bevatten sinds de laatste basislijn, waardoor de controlepuntopslag snel blijft, ongeacht de projectgrootte.
+Elke `recovery/primary-NN.lum/` is een volledige basislijnopslag. Als u vervolgens op `Ctrl+I` drukt, worden `delta-NNNN.lum/` submappen toegevoegd die alleen de gewijzigde buffers sinds de laatste basislijn bevatten, waardoor de controlepuntopslag snel blijft, ongeacht de projectgrootte.
 
 Automatische opslag volgt dezelfde structuur, maar wordt afzonderlijk opgeslagen in `~/.cache/lumi/autosave/`, waardoor het werkbestand onaangetast blijft.
 - **Zeer grote projecten**: een project met meer dan 1000 lagen en terabytes aan gegevens zal het meeste profiteren van lazyloading; De uiteindelijke export naar een plat afbeeldingsformaat kan echter enige tijd duren.

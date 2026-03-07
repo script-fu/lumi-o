@@ -36,21 +36,23 @@ Il salvataggio incrementale è un sistema di checkpoint manuale memorizzato **al
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Una nuova linea di base `primary-NN.lum/` viene scritta dopo **File → Salva**. Le successive pressioni di Ctrl+S creano sottodirectory `delta-NNNN.lum/` contenenti solo i buffer modificati dall'ultima linea di base. I delta di salvataggio automatico e quelli di salvataggio manuale utilizzano contatori separati in modo che non interferiscano reciprocamente con la cronologia.
+Una nuova linea di base `primary-NN.lum/` viene scritta dopo **File → Salva**. Le successive pressioni di **File → Salva incremento** (`Ctrl+I`) creano `delta-NNNN.lum/` sottodirectory contenenti solo i buffer modificati dall'ultima linea di base. I delta di salvataggio automatico e quelli di salvataggio manuale utilizzano contatori separati in modo che non interferiscano reciprocamente con la cronologia.
 
-I salvataggi incrementali sono **disabilitati per impostazione predefinita** e devono essere abilitati per progetto:
+L'incremento di salvataggio è **sempre disponibile** per i file `.lum` salvati:
 
-1. **File** → **Salva con nome** (Maiusc+Ctrl+S).
-2. Nella finestra di dialogo Salva con nome, seleziona **Salvataggio incrementale** e facoltativamente imposta un limite di **Salvataggi massimi**.
-3. L'impostazione viene memorizzata con il progetto e si applica a tutte le successive pressioni di Ctrl+S.
+1. Utilizzare **File** → **Salva** (`Ctrl+S`) per creare o aggiornare il file di progetto principale.
+2. Utilizzare **File** → **Salva incremento** (`Ctrl+I`) per creare un checkpoint di ripristino.
+3. Dopo un altro **File** completo → **Salva**, il successivo `Ctrl+I` scrive una nuova linea di base `primary-NN.lum/` prima di creare nuovi delta.
 
-Quando apri un file `.lum` che contiene salvataggi incrementali più recenti rispetto al salvataggio primario, Lumi mostra un messaggio **Salvataggio incrementale rilevato** che offre di caricare il checkpoint più recente.
+I file recuperati denominati con il prefisso `RECOVERED_` devono essere salvati normalmente prima che l'incremento di salvataggio diventi disponibile per loro.
+
+Quando apri un file `.lum` che contiene salvataggi incrementali più recenti rispetto al salvataggio primario, Lumi mostra un messaggio di **Salvataggio incrementale rilevato** che offre di caricare il checkpoint più recente.
 
 ---
 
@@ -90,14 +92,16 @@ La scheda predefinita all'apertura della finestra di dialogo. Identifica automat
 
 ---
 
-## Ripulisci i vecchi StatiL'accumulo di stati di ripristino nel tempo può consumare una quantità significativa di spazio su disco. Il pulsante **Ripulisci vecchi stati…** (in basso a sinistra della finestra di dialogo) apre una richiesta di pulizia per la scheda attiva (Salvataggio automatico o Incrementale).
+## Ripulisci i vecchi Stati
+
+L'accumulo di stati di ripristino nel tempo può consumare una quantità significativa di spazio su disco. Il pulsante **Ripulisci vecchi stati…** (in basso a sinistra della finestra di dialogo) apre una richiesta di pulizia per la scheda attiva (Salvataggio automatico o Incrementale).
 
 Il messaggio mostra:
 - Quanti salvataggi completi esistono per il file.
 - Lo spazio totale su disco che occupano.
 - Un pulsante di selezione **Conserva più recente** per selezionare il numero di salvataggi da conservare.
 
-L'impostazione di **Mantieni più recente** su `0` elimina tutti gli stati di ripristino. Il successivo Ctrl+S dopo una pulizia completa scriverà un nuovo salvataggio primario.
+L'impostazione di **Mantieni più recente** su `0` elimina tutti gli stati di ripristino. Il prossimo `Ctrl+I` dopo una pulizia completa scriverà un nuovo salvataggio primario.
 
 ---
 

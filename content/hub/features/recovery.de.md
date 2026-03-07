@@ -36,19 +36,21 @@ Beim inkrementellen Speichern handelt es sich um ein manuelles Prüfpunktsystem,
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Eine neue `primary-NN.lum/` Baseline wird nach **Datei → Speichern** geschrieben. Durch nachfolgendes Drücken von Strg+S werden `delta-NNNN.lum/` Unterverzeichnisse erstellt, die nur die Puffer enthalten, die sich seit der letzten Baseline geändert haben. Autosave-Deltas und manuelle Save-Deltas verwenden separate Zähler, sodass sie den Verlauf des anderen nicht beeinträchtigen.
+Eine neue `primary-NN.lum/` Baseline wird nach **Datei → Speichern** geschrieben. Nachfolgendes Drücken von **Datei → Inkrement speichern** (`Ctrl+I`) erstellt `delta-NNNN.lum/` Unterverzeichnisse, die nur die Puffer enthalten, die sich seit der letzten Baseline geändert haben. Autosave-Deltas und manuelle Save-Deltas verwenden separate Zähler, sodass sie den Verlauf des anderen nicht beeinträchtigen.
 
-Inkrementelle Speicherungen sind **standardmäßig deaktiviert** und müssen pro Projekt aktiviert werden:
+„Inkrement speichern“ ist **immer verfügbar** für gespeicherte `.lum` Dateien:
 
-1. **Datei** → **Speichern unter** (Umschalt+Strg+S).
-2. Aktivieren Sie im Dialogfeld „Speichern unter“ die Option **Inkrementelles Speichern** und legen Sie optional ein Limit für **Max. Speicherungen** fest.
-3. Die Einstellung wird mit dem Projekt gespeichert und gilt für alle nachfolgenden Tastenkombinationen Strg+S.
+1. Verwenden Sie **Datei** → **Speichern** (`Ctrl+S`), um die Hauptprojektdatei zu erstellen oder zu aktualisieren.
+2. Verwenden Sie **Datei** → **Inkrement speichern** (`Ctrl+I`), um einen Wiederherstellungsprüfpunkt zu erstellen.
+3. Nach einer weiteren vollständigen **Datei** → **Speichern** schreibt der nächste `Ctrl+I` eine neue `primary-NN.lum/` Basislinie, bevor neue Deltas erstellt werden.
+
+Wiederhergestellte Dateien mit dem Präfix `RECOVERED_` müssen zuerst normal gespeichert werden, bevor „Inkrement speichern“ für sie verfügbar wird.
 
 Wenn Sie eine `.lum`-Datei öffnen, die über neuere inkrementelle Speicherungen als die primäre Speicherung verfügt, zeigt Lumi die Eingabeaufforderung **Inkrementelle Speicherung erkannt** an und bietet an, den neuesten Prüfpunkt zu laden.
 
@@ -90,14 +92,16 @@ Die Standardregisterkarte, wenn das Dialogfeld geöffnet wird. Identifiziert aut
 
 ---
 
-## Bereinigen Sie alte ZuständeDie Anhäufung von Wiederherstellungszuständen im Laufe der Zeit kann erheblichen Speicherplatz beanspruchen. Die Schaltfläche **Alte Zustände bereinigen…** (unten links im Dialogfeld) öffnet eine Bereinigungsaufforderung für die aktive Registerkarte (Autosave oder Inkrementell).
+## Bereinigen Sie alte Zustände
+
+Die Anhäufung von Wiederherstellungszuständen im Laufe der Zeit kann erheblichen Speicherplatz beanspruchen. Die Schaltfläche **Alte Zustände bereinigen…** (unten links im Dialogfeld) öffnet eine Bereinigungsaufforderung für die aktive Registerkarte (Autosave oder Inkrementell).
 
 Die Eingabeaufforderung zeigt:
 – Wie viele vollständige Speicherungen gibt es für die Datei?
 – Der gesamte Speicherplatz, den sie belegen.
 - Eine Drehschaltfläche **Neueste behalten**, um auszuwählen, wie viele Speicherungen beibehalten werden sollen.
 
-Wenn Sie **Neueste beibehalten** auf `0` setzen, werden alle Wiederherstellungsstatus gelöscht. Mit der nächsten Strg+S-Taste nach einer vollständigen Bereinigung wird ein neuer Primärspeicher erstellt.
+Wenn Sie **Neueste beibehalten** auf `0` setzen, werden alle Wiederherstellungsstatus gelöscht. Beim nächsten `Ctrl+I` nach einer vollständigen Bereinigung wird ein neuer Primärspeicher geschrieben.
 
 ---
 

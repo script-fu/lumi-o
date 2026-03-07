@@ -36,19 +36,21 @@ La sauvegarde incrémentielle est un système de points de contrôle manuel stoc
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Une nouvelle ligne de base `primary-NN.lum/` est écrite après **Fichier → Enregistrer**. Les pressions suivantes sur Ctrl+S créent des sous-répertoires `delta-NNNN.lum/` contenant uniquement les tampons qui ont changé depuis la dernière ligne de base. Les deltas de sauvegarde automatique et les deltas de sauvegarde manuelle utilisent des compteurs distincts afin de ne pas interférer avec l'historique de chacun.
+Une nouvelle ligne de base `primary-NN.lum/` est écrite après **Fichier → Enregistrer**. Les pressions suivantes sur **Fichier → Enregistrer l'incrément** (`Ctrl+I`) créent des sous-répertoires `delta-NNNN.lum/` contenant uniquement les tampons qui ont changé depuis la dernière ligne de base. Les deltas de sauvegarde automatique et les deltas de sauvegarde manuelle utilisent des compteurs distincts afin de ne pas interférer avec l'historique de chacun.
 
-Les sauvegardes incrémentielles sont **désactivées par défaut** et doivent être activées par projet :
+L'incrément de sauvegarde est **toujours disponible** pour les fichiers `.lum` enregistrés :
 
-1. **Fichier** → **Enregistrer sous** (Maj+Ctrl+S).
-2. Dans la boîte de dialogue Enregistrer sous, cochez **Enregistrement incrémentiel** et définissez éventuellement une limite de **Enregistrements maximum**.
-3. Le paramètre est stocké avec le projet et s'applique à toutes les pressions ultérieures sur Ctrl+S.
+1. Utilisez **Fichier** → **Enregistrer** (`Ctrl+S`) pour créer ou mettre à jour le fichier principal du projet.
+2. Utilisez **Fichier** → **Save Increment** (`Ctrl+I`) pour créer un point de contrôle de récupération.
+3. Après un autre **Fichier** → **Enregistrer** complet, le `Ctrl+I` suivant écrit une nouvelle ligne de base `primary-NN.lum/` avant de créer de nouveaux deltas.
+
+Les fichiers récupérés nommés avec le préfixe `RECOVERED_` doivent d'abord être enregistrés normalement avant que Save Increment ne devienne disponible pour eux.
 
 Lorsque vous ouvrez un fichier `.lum` contenant des sauvegardes incrémentielles plus récentes que la sauvegarde principale, Lumi affiche une invite **Enregistrement incrémentiel détecté** proposant de charger le point de contrôle le plus récent.
 
@@ -90,14 +92,16 @@ L'onglet par défaut lorsque la boîte de dialogue s'ouvre. Identifie automatiqu
 
 ---
 
-## Nettoyer les anciens étatsL’accumulation d’états de récupération au fil du temps peut consommer une quantité importante d’espace disque. Le bouton **Nettoyer les anciens états…** (en bas à gauche de la boîte de dialogue) ouvre une invite de nettoyage pour l'onglet actif (enregistrement automatique ou incrémentiel).
+## Nettoyer les anciens états
+
+L’accumulation d’états de récupération au fil du temps peut consommer une quantité importante d’espace disque. Le bouton **Nettoyer les anciens états…** (en bas à gauche de la boîte de dialogue) ouvre une invite de nettoyage pour l'onglet actif (enregistrement automatique ou incrémentiel).
 
 L'invite affiche :
 - Combien de sauvegardes complètes existent pour le fichier.
 - L'espace disque total qu'ils occupent.
 - Un bouton rotatif **Conserver les plus récentes** pour sélectionner le nombre de sauvegardes à conserver.
 
-Le réglage de **Conserver le plus récent** sur `0` supprime tous les états de récupération. Le prochain Ctrl+S après un nettoyage complet écrira une nouvelle sauvegarde principale.
+Le réglage de **Conserver le plus récent** sur `0` supprime tous les états de récupération. Le prochain `Ctrl+I` après un nettoyage complet écrira une nouvelle sauvegarde principale.
 
 ---
 

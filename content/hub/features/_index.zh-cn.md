@@ -7,6 +7,7 @@ Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在
 本节介绍 Lumi 中可用的核心功能以及它们在界面中的位置。
 
 {{< cards >}}
+  {{< card link="brush-caching" title="刷机缓存" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="文件格式 (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="文件恢复" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="图层和无损编辑" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

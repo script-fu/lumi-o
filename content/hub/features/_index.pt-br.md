@@ -7,6 +7,7 @@ O conjunto de recursos do Lumi é focado em pintura digital e fluxos de trabalho
 Esta seção descreve os principais recursos disponíveis no Lumi e onde localizá-los na interface.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Cache de pincel" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Formato de arquivo (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Recuperação de arquivos" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Camadas e edição não destrutiva" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

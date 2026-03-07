@@ -22,7 +22,7 @@ Denna struktur möjliggör snabb lagring, lat inläsning av stora filer och åte
 
 ### Inkrementell besparing
 
-Inkrementell lagring måste vara aktiverad per projekt i **Spara som-dialogen** (en **Inkrementell besparing** kryssruta och en **Max Saves**-snurrknapp). När det är aktiverat skriver Ctrl+S bara de modifierade lagren istället för att skriva om hela projektet, vilket drastiskt minskar tidsbesparingen. Inställningen lagras med projektet och kvarstår över sessioner.
+Inkrementell lagring är tillgänglig via **File** → **Save Increment** (`Ctrl+I`). Den skapar en manuell återställningskontrollpunkt inuti projektet utan att ersätta normal **File** → **Spara** (`Ctrl+S`). Fullständiga lagringar uppdaterar fortfarande huvudprojektet `.lum`, medan Save Increment bara skriver de modifierade lagren som behövs för en snabb kontrollpunkt.
 
 ### Lat laddning
 
@@ -42,7 +42,8 @@ Lumi sparar automatiskt ändringar till en **separat cacheplats** (`~/.cache/lum
 ### Spara och spara som
 
 - **Arkiv** → **Spara** (Ctrl+S): Spara i den aktuella `.lum`-katalogen.
-- **Fil** → **Spara som** (Skift+Ctrl+S): Spara till en ny `.lum` fil. Dialogrutan Spara som innehåller alternativ för komprimeringstyp och en **Inkrementell spara**-växling (med en **Max Saves**-gräns) för att aktivera eller inaktivera inkrementell lagring för detta projekt.
+- **Fil** → **Spara inkrement** (Ctrl+I): Skapa en inkrementell återställningskontrollpunkt för den aktuella `.lum`-filen.
+- **Fil** → **Spara som** (Skift+Ctrl+S): Spara till en ny `.lum`-fil. Dialogrutan Spara som innehåller komprimeringsalternativ för den nya projektfilen.
 
 Osparade ändringar indikeras med en asterisk (*) i fönstrets titel.
 
@@ -64,12 +65,14 @@ PSD- och XCF-filer konverteras till Lumis ursprungliga format vid import.
 ## Import- och exportkompatibilitet
 
 ### Importformat som stöds
+
 - **.lum**: Lumi inbyggt format.
 - **.xcf**: Inbyggt GIMP-format (lager och grundläggande egenskaper bevarade).
 - **.psd**: Photoshop-format (lager och blandningslägen bevarade).
 - **PNG, JPEG, TIFF, etc.**: Import av tillplattad bild.
 
 ### Exportformat som stöds
+
 - **PNG**: Förlustfri, med alfatransparens.
 - **JPEG**: Förlustig, tillplattad.
 - **TIFF**: Förlustfri eller LZW-komprimerad.
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Lagerbuffertar är namngivna efter lagret (`layer-Background.geglbuf`), inte numrerade i följd. Mellanslag i lagernamn lagras som understreck; grupplager får ett `-GROUP` suffix. Masker delar lagernamnet (`mask-Background.geglbuf`).
 
-Varje `recovery/primary-NN.lum/` är en fullständig baslinjesparning. Efterföljande Ctrl+S-tryckningar lägg till `delta-NNNN.lum/` underkataloger som endast innehåller de modifierade buffertarna sedan den senaste baslinjen, vilket gör att kontrollpunkter sparas snabbt oavsett projektstorlek.
+Varje `recovery/primary-NN.lum/` är en fullständig baslinjesparning. Efterföljande `Ctrl+I`-tryckningar lägg till `delta-NNNN.lum/` underkataloger som endast innehåller de modifierade buffertarna sedan den senaste baslinjen, vilket gör att kontrollpunkter sparas snabbt oavsett projektstorlek.
 
 Autosparas följer samma struktur men lagras separat i `~/.cache/lumi/autosave/`, och lämnar arbetsfilen orörd.
 - **Mycket stora projekt**: Ett projekt med 1000+ lager och terabyte data kommer att dra mest nytta av lat inläsning; den slutliga exporten till platt bildformat kan dock ta tid.

@@ -7,6 +7,7 @@ Il set di funzionalità di Lumi è incentrato sulla pittura digitale e sui fluss
 Questa sezione descrive le funzionalità principali disponibili in Lumi e dove individuarle nell'interfaccia.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Caching del pennello" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Formato file (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Recupero file" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Livelli e modifica non distruttiva" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

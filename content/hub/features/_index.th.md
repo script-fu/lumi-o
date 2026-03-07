@@ -7,6 +7,7 @@ type: docs
 ส่วนนี้อธิบายความสามารถหลักที่มีอยู่ใน Lumi และตำแหน่งที่จะระบุตำแหน่งเหล่านั้นในอินเทอร์เฟซ
 
 {{< cards >}}
+  {{< card link="brush-caching" title="แปรงแคช" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="รูปแบบไฟล์ (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="การกู้คืนไฟล์" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="เลเยอร์และการแก้ไขแบบไม่ทำลาย" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

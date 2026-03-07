@@ -36,19 +36,21 @@ Zapisywanie przyrostowe to ręczny system punktów kontrolnych przechowywany **w
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Nowa linia bazowa `primary-NN.lum/` jest zapisywana po **Plik → Zapisz**. Kolejne naciśnięcia Ctrl+S tworzą podkatalogi `delta-NNNN.lum/` zawierające tylko bufory, które uległy zmianie od ostatniej linii bazowej. Różnice w automatycznym i ręcznym zapisywaniu korzystają z oddzielnych liczników, więc nie kolidują ze sobą w historii.
+Nowa linia bazowa `primary-NN.lum/` jest zapisywana po **Plik → Zapisz**. Kolejne naciśnięcia **Plik → Zapisz przyrost** (`Ctrl+I`) tworzą podkatalogi `delta-NNNN.lum/` zawierające tylko bufory, które zmieniły się od ostatniej linii bazowej. Różnice w automatycznym i ręcznym zapisywaniu korzystają z oddzielnych liczników, więc nie kolidują ze sobą w historii.
 
-Zapisywanie przyrostowe jest **domyślnie wyłączone** i musi być włączone dla każdego projektu:
+Zapisz przyrost jest **zawsze dostępny** dla zapisanych plików `.lum`:
 
-1. **Plik** → **Zapisz jako** (Shift+Ctrl+S).
-2. W oknie dialogowym Zapisz jako zaznacz opcję **Zapis przyrostowy** i opcjonalnie ustaw limit **Maksymalnych zapisów**.
-3. Ustawienie zostaje zapisane w projekcie i obowiązuje przy wszystkich kolejnych naciśnięciach Ctrl+S.
+1. Użyj **Plik** → **Zapisz** (`Ctrl+S`), aby utworzyć lub zaktualizować główny plik projektu.
+2. Użyj **Plik** → **Zapisz przyrost** (`Ctrl+I`), aby utworzyć punkt kontrolny odzyskiwania.
+3. Po kolejnym pełnym **Plik** → **Zapisz**, następny `Ctrl+I` zapisuje nową linię bazową `primary-NN.lum/` przed utworzeniem nowych delt.
+
+Odzyskane pliki o nazwie z prefiksem `RECOVERED_` muszą zostać najpierw normalnie zapisane, zanim funkcja Zapisz przyrost stanie się dla nich dostępna.
 
 Kiedy otwierasz plik `.lum`, który zawiera nowsze zapisy przyrostowe niż zapis podstawowy, Lumi wyświetla komunikat **Wykryto zapis przyrostowy** oferujący załadowanie najnowszego punktu kontrolnego.
 
@@ -90,14 +92,16 @@ Domyślna zakładka po otwarciu okna dialogowego. Automatycznie identyfikuje naj
 
 ---
 
-## Posprzątaj stare stanyNagromadzenie stanów odzyskiwania w miarę upływu czasu może zająć znaczną ilość miejsca na dysku. Przycisk **Wyczyść stare stany…** (w lewym dolnym rogu okna dialogowego) otwiera monit o oczyszczenie aktywnej karty (Autozapis lub Przyrostowy).
+## Posprzątaj stare stany
+
+Nagromadzenie stanów odzyskiwania w miarę upływu czasu może zająć znaczną ilość miejsca na dysku. Przycisk **Wyczyść stare stany…** (w lewym dolnym rogu okna dialogowego) otwiera monit o oczyszczenie aktywnej karty (Autozapis lub Przyrostowy).
 
 Komunikat wyświetla:
 - Ile pełnych zapisów istnieje dla pliku.
 - Całkowite miejsce na dysku, które zajmują.
 - Przycisk **Zachowaj najnowsze**, umożliwiający wybranie liczby zachowanych zapisów.
 
-Ustawienie **Zachowaj najnowsze** na `0` usuwa wszystkie stany odzyskiwania. Następne naciśnięcie Ctrl+S po pełnym oczyszczeniu spowoduje zapisanie nowego zapisu podstawowego.
+Ustawienie **Zachowaj najnowsze** na `0` usuwa wszystkie stany odzyskiwania. Następny `Ctrl+I` po pełnym oczyszczeniu zapisze nowy podstawowy zapis.
 
 ---
 

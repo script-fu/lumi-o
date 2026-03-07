@@ -7,6 +7,7 @@ Lumi의 기능 세트는 비파괴적인 레이어 기반 편집을 기반으로
 이 섹션에서는 Lumi에서 사용할 수 있는 핵심 기능과 인터페이스에서 해당 기능을 찾을 수 있는 위치에 대해 설명합니다.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="브러시 캐싱" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="파일 형식(.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="파일 복구" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="레이어 및 비파괴 편집" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

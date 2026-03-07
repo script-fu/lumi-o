@@ -7,6 +7,7 @@ L'ensemble des fonctionnalités de Lumi se concentre sur la peinture numérique 
 Cette section décrit les fonctionnalités de base disponibles dans Lumi et où les localiser dans l'interface.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Mise en cache des pinceaux" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Format de fichier (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Récupération de fichiers" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Calques et édition non destructive" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

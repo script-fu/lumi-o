@@ -7,6 +7,7 @@ type: docs
 В этом разделе описаны основные возможности, доступные в Lumi, и их расположение в интерфейсе.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Кэширование кистей" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Формат файла (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Восстановление файлов" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Слои и неразрушающее редактирование" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

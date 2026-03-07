@@ -22,7 +22,7 @@ Format `.lum` wykorzystuje metadane XML i skompresowane bufory binarne. Struktur
 
 ### Stopniowe oszczędzanie
 
-Zapisywanie przyrostowe musi być włączone dla każdego projektu w oknie dialogowym **Zapisz jako** (pole wyboru **Zapis przyrostowy** i przycisk obrotowy **Maksymalna liczba zapisów**). Po włączeniu Ctrl+S zapisuje tylko zmodyfikowane warstwy, zamiast przepisywać cały projekt, drastycznie skracając czas oszczędzania. Ustawienie jest przechowywane w projekcie i obowiązuje pomiędzy sesjami.
+Zapisywanie przyrostowe jest dostępne poprzez **Plik** → **Zapisz przyrost** (`Ctrl+I`). Tworzy punkt kontrolny ręcznego odzyskiwania w projekcie bez zastępowania normalnego **Plik** → **Zapisz** (`Ctrl+S`). Pełne zapisy nadal aktualizują główny projekt `.lum`, podczas gdy funkcja Save Increase zapisuje tylko zmodyfikowane warstwy potrzebne do szybkiego punktu kontrolnego.
 
 ### Leniwe ładowanie
 
@@ -42,7 +42,8 @@ Lumi automatycznie zapisuje zmiany w **oddzielnej lokalizacji pamięci podręczn
 ### Zapisz i zapisz jako
 
 - **Plik** → **Zapisz** (Ctrl+S): Zapisz w bieżącym katalogu `.lum`.
-- **Plik** → **Zapisz jako** (Shift+Ctrl+S): Zapisz do nowego pliku `.lum`. Okno dialogowe Zapisz jako zawiera opcje typu kompresji oraz przełącznik **Zapis przyrostowy** (z limitem **Maksymalna liczba zapisów**), umożliwiający włączenie lub wyłączenie zapisywania przyrostowego dla tego projektu.
+- **Plik** → **Zapisz przyrost** (Ctrl+I): Utwórz punkt kontrolny odzyskiwania przyrostowego dla bieżącego pliku `.lum`.
+- **Plik** → **Zapisz jako** (Shift+Ctrl+S): Zapisz do nowego pliku `.lum`. Okno dialogowe Zapisz jako zawiera opcje kompresji nowego pliku projektu.
 
 Niezapisane zmiany są oznaczone gwiazdką (*) w tytule okna.
 
@@ -64,12 +65,14 @@ Pliki PSD i XCF są podczas importu konwertowane do natywnego formatu Lumi.
 ## Zgodność importu i eksportu
 
 ### Obsługiwane formaty importu
+
 - **.lum**: natywny format Lumi.
 - **.xcf**: Natywny format GIMP (zachowane warstwy i podstawowe właściwości).
 - **.psd**: format Photoshopa (z zachowaniem warstw i trybów mieszania).
 - **PNG, JPEG, TIFF itp.**: Import spłaszczonych obrazów.
 
 ### Obsługiwane formaty eksportu
+
 - **PNG**: bezstratny, z przezroczystością alfa.
 - **JPEG**: Stratny, spłaszczony.
 - **TIFF**: bezstratny lub skompresowany LZW.
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Bufory warstw noszą nazwy warstw (`layer-Background.geglbuf`), a nie są numerowane sekwencyjnie. Spacje w nazwach warstw są zapisywane jako podkreślenia; warstwy grupowe otrzymują przyrostek `-GROUP`. Maski mają wspólną nazwę warstwy (`mask-Background.geglbuf`).
 
-Każdy `recovery/primary-NN.lum/` to pełny zapis stanu bazowego. Kolejne naciśnięcia klawiszy Ctrl+S dołączają podkatalogi `delta-NNNN.lum/` zawierające tylko zmodyfikowane bufory od ostatniej linii bazowej, co pozwala na szybkie zapisywanie punktów kontrolnych niezależnie od rozmiaru projektu.
+Każdy `recovery/primary-NN.lum/` to pełny zapis stanu bazowego. Kolejne naciśnięcia `Ctrl+I` dodają podkatalogi `delta-NNNN.lum/` zawierające tylko zmodyfikowane bufory od ostatniej linii bazowej, zapewniając szybkie zapisywanie punktów kontrolnych niezależnie od wielkości projektu.
 
 Autozapisy mają tę samą strukturę, ale są przechowywane oddzielnie w `~/.cache/lumi/autosave/`, pozostawiając plik roboczy nietknięty.
 - **Bardzo duże projekty**: Projekt zawierający ponad 1000 warstw i terabajty danych najbardziej skorzysta na leniwym ładowaniu; jednakże ostateczny eksport do formatu obrazu płaskiego może zająć trochę czasu.

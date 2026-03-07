@@ -22,7 +22,7 @@ Das Format `.lum` verwendet XML-Metadaten und komprimierte Binärpuffer. Sie kö
 
 ### Inkrementelles Speichern
 
-Das inkrementelle Speichern muss pro Projekt im Dialogfeld **Speichern unter** aktiviert werden (ein Kontrollkästchen **Inkrementelles Speichern** und eine Drehschaltfläche **Maximale Speicherung**). Sobald die Tastenkombination Strg+S aktiviert ist, werden nur die geänderten Ebenen geschrieben, anstatt das gesamte Projekt neu zu schreiben, was die Speicherzeit drastisch verkürzt. Die Einstellung wird mit dem Projekt gespeichert und bleibt sitzungsübergreifend bestehen.
+Inkrementelles Speichern ist über **Datei** → **Inkrement speichern** (`Ctrl+I`) verfügbar. Es erstellt einen manuellen Wiederherstellungskontrollpunkt innerhalb des Projekts, ohne das normale **Datei** → **Speichern** (`Ctrl+S`) zu ersetzen. Vollständige Speicherungen aktualisieren weiterhin das Hauptprojekt `.lum`, während „Inkrement speichern“ nur die geänderten Ebenen schreibt, die für einen schnellen Prüfpunkt erforderlich sind.
 
 ### Lazy Loading
 
@@ -42,7 +42,8 @@ Lumi speichert Änderungen automatisch in regelmäßigen Abständen an einem **s
 ### Speichern und Speichern unter
 
 - **Datei** → **Speichern** (Strg+S): Im aktuellen `.lum` Verzeichnis speichern.
-- **Datei** → **Speichern unter** (Umschalt+Strg+S): In einer neuen `.lum` Datei speichern. Das Dialogfeld „Speichern unter“ enthält Optionen für den Komprimierungstyp und einen Umschalter „Inkrementelles Speichern“ (mit einer Beschränkung für „maximale Speicherung“), um das inkrementelle Speichern für dieses Projekt zu aktivieren oder zu deaktivieren.
+- **Datei** → **Inkrement speichern** (Strg+I): Erstellen Sie einen inkrementellen Wiederherstellungsprüfpunkt für die aktuelle `.lum` Datei.
+- **Datei** → **Speichern unter** (Umschalt+Strg+S): In einer neuen `.lum` Datei speichern. Das Dialogfeld „Speichern unter“ enthält Komprimierungsoptionen für die neue Projektdatei.
 
 Nicht gespeicherte Änderungen werden durch ein Sternchen (*) im Fenstertitel gekennzeichnet.
 
@@ -64,12 +65,14 @@ PSD- und XCF-Dateien werden beim Import in das native Format von Lumi konvertier
 ## Import- und Exportkompatibilität
 
 ### Unterstützte Importformate
+
 - **.lum**: Natives Lumi-Format.
 - **.xcf**: natives GIMP-Format (Ebenen und grundlegende Eigenschaften bleiben erhalten).
 - **.psd**: Photoshop-Format (Ebenen und Mischmodi bleiben erhalten).
 - **PNG, JPEG, TIFF usw.**: Reduzierter Bildimport.
 
 ### Unterstützte Exportformate
+
 - **PNG**: Verlustfrei, mit Alpha-Transparenz.
 - **JPEG**: Verlustbehaftet, abgeflacht.
 - **TIFF**: Verlustfrei oder LZW-komprimiert.
@@ -93,17 +96,17 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Layer-Puffer werden nach dem Layer benannt (`layer-Background.geglbuf`) und nicht fortlaufend nummeriert. Leerzeichen in Ebenennamen werden als Unterstriche gespeichert; Gruppenebenen erhalten das Suffix `-GROUP`. Masken teilen sich den Ebenennamen (`mask-Background.geglbuf`).
 
-Jedes `recovery/primary-NN.lum/` ist eine vollständige Grundsicherung. Durch nachfolgendes Drücken von Strg+S werden `delta-NNNN.lum/` Unterverzeichnisse angehängt, die nur die seit der letzten Baseline geänderten Puffer enthalten, sodass Prüfpunktspeicherungen unabhängig von der Projektgröße schnell erfolgen.
+Jeder `recovery/primary-NN.lum/` ist ein vollständiger Basisspeicher. Durch nachfolgendes Drücken von `Ctrl+I` werden Unterverzeichnisse mit `delta-NNNN.lum/` angehängt, die nur die seit der letzten Baseline geänderten Puffer enthalten, sodass Prüfpunktspeicherungen unabhängig von der Projektgröße schnell erfolgen.
 
-Autosaves folgen derselben Struktur, werden jedoch separat in `~/.cache/lumi/autosave/` gespeichert, sodass die Arbeitsdatei unberührt bleibt.
+Autosaves folgen der gleichen Struktur, werden jedoch separat in `~/.cache/lumi/autosave/` gespeichert, sodass die Arbeitsdatei unberührt bleibt.
 - **Sehr große Projekte**: Ein Projekt mit mehr als 1000 Ebenen und Terabytes an Daten profitiert am meisten vom Lazy Loading; Der endgültige Export in das flache Bildformat kann jedoch einige Zeit dauern.
 - **Netzwerklaufwerke**: Das Speichern in im Netzwerk bereitgestellten Verzeichnissen wird unterstützt, ist jedoch aufgrund der E/A-Latenz langsamer als lokaler Speicher.

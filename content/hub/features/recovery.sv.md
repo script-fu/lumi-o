@@ -36,19 +36,21 @@ Inkrementell besparing är ett manuellt kontrollsystem lagrat **inuti projektfil
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-En ny `primary-NN.lum/` baslinje skrivs efter **Arkiv → Spara**. Efterföljande Ctrl+S-tryckningar skapar `delta-NNNN.lum/` underkataloger som endast innehåller de buffertar som ändrades sedan den senaste baslinjen. Autospara delta och manuella spara delta använder separata räknare så att de inte stör varandras historia.
+En ny `primary-NN.lum/` baslinje skrivs efter **Arkiv → Spara**. Efterföljande **File → Save Increment**-tryckningar (`Ctrl+I`) skapar `delta-NNNN.lum/` underkataloger som endast innehåller de buffertar som ändrades sedan den senaste baslinjen. Autospara delta och manuella spara delta använder separata räknare så att de inte stör varandras historia.
 
-Inkrementella lagringar är **inaktiverade som standard** och måste vara aktiverade per projekt:
+Spara inkrement är **alltid tillgänglig** för sparade `.lum`-filer:
 
-1. **Arkiv** → **Spara som** (Skift+Ctrl+S).
-2. I dialogrutan Spara som, markera **Inkrementell spara** och ange eventuellt en gräns för **Max Saves**.
-3. Inställningen lagras med projektet och gäller för alla efterföljande Ctrl+S-tryckningar.
+1. Använd **Arkiv** → **Spara** (`Ctrl+S`) för att skapa eller uppdatera huvudprojektfilen.
+2. Använd **File** → **Save Increment** (`Ctrl+I`) för att skapa en återställningskontrollpunkt.
+3. Efter ytterligare en fullständig **File** → **Spara**, skriver nästa `Ctrl+I` en ny `primary-NN.lum/` baslinje innan nya deltan skapas.
+
+Återställda filer namngivna med prefixet `RECOVERED_` måste sparas normalt först innan Save Increment blir tillgängligt för dem.
 
 När du öppnar en `.lum`-fil som har nyare inkrementella lagringar än den primära lagringen, visar Lumi en **Inkrementell lagring upptäckt**-prompt som erbjuder att ladda den senaste kontrollpunkten.
 
@@ -90,17 +92,19 @@ Standardfliken när dialogrutan öppnas. Identifierar automatiskt det senaste ti
 
 ---
 
-## Rensa upp gamla staterAckumulerande återställningstillstånd över tid kan konsumera betydande diskutrymme. Knappen **Rensa upp gamla tillstånd...** (nedre till vänster i dialogrutan) öppnar en rensningsprompt för den aktiva fliken (Autospara eller Inkrementell).
+## Rensa upp gamla stater
+
+Ackumulerande återställningstillstånd över tid kan konsumera betydande diskutrymme. Knappen **Rensa upp gamla tillstånd...** (nedre till vänster i dialogrutan) öppnar en rensningsprompt för den aktiva fliken (Autospara eller Inkrementell).
 
 Uppmaningen visar:
 - Hur många fullständiga lagringar finns för filen.
 - Det totala diskutrymmet de upptar.
 - En snurrknapp **Behåll senaste** för att välja hur många besparingar som ska sparas.
 
-Om du ställer in **Behåll senaste** till `0` raderas alla återställningstillstånd. Nästa Ctrl+S efter en fullständig rensning kommer att skriva en ny primär sparning.
+Om du ställer in **Behåll senaste** till `0` raderas alla återställningstillstånd. Nästa `Ctrl+I` efter en fullständig rensning kommer att skriva en ny primär sparning.
 
 ---
 
 ## Startup Recovery
 
-Vid start, om Lumi upptäcker att den senast öppnade filen har nyare autosave-data än den senaste fullständiga lagringen, visar den en återställningsprompt innan den laddas. Du kan acceptera (ladda in autospara) eller avvisa (öppna det primära sparandet som vanligt).
+Vid start, om Lumi upptäcker att den senast öppnade filen har nyare autosparadata än den senaste fullständiga lagringen, visar den en återställningsprompt innan den laddas. Du kan acceptera (ladda in autospara) eller avvisa (öppna det primära sparandet som vanligt).

@@ -22,7 +22,7 @@ O formato `.lum` usa metadados XML e buffers binários compactados. Você pode i
 
 ### Economia incremental
 
-O salvamento incremental deve ser habilitado por projeto na caixa de diálogo **Salvar como** (uma caixa de seleção **Salvar incremental** e um botão giratório **Max Saves**). Uma vez ativado, Ctrl+S grava apenas as camadas modificadas em vez de reescrever todo o projeto, reduzindo drasticamente o tempo de economia. A configuração é armazenada com o projeto e persiste entre as sessões.
+O salvamento incremental está disponível em **Arquivo** → **Salvar incremento** (`Ctrl+I`). Ele cria um ponto de verificação de recuperação manual dentro do projeto sem substituir **Arquivo** → **Salvar** (`Ctrl+S`) normal. Os salvamentos completos ainda atualizam o projeto `.lum` principal, enquanto o Save Increment grava apenas as camadas modificadas necessárias para um ponto de verificação rápido.
 
 ### Carregamento lento
 
@@ -42,7 +42,8 @@ Lumi salva automaticamente as alterações em um **local de cache separado** (`~
 ### Salvar e salvar como
 
 - **Arquivo** → **Salvar** (Ctrl+S): Salva no diretório `.lum` atual.
-- **Arquivo** → **Salvar como** (Shift+Ctrl+S): Salve em um novo arquivo `.lum`. A caixa de diálogo Salvar como inclui opções para o tipo de compactação e uma alternância **Salvar incremental** (com um limite de **Salvamentos máximos**) para ativar ou desativar o salvamento incremental para este projeto.
+- **Arquivo** → **Salvar incremento** (Ctrl+I): Crie um ponto de verificação de recuperação incremental para o arquivo `.lum` atual.
+- **Arquivo** → **Salvar como** (Shift+Ctrl+S): Salve em um novo arquivo `.lum`. A caixa de diálogo Salvar como inclui opções de compactação para o novo arquivo de projeto.
 
 As alterações não salvas são indicadas por um asterisco (*) no título da janela.
 
@@ -64,12 +65,14 @@ Os arquivos PSD e XCF são convertidos para o formato nativo do Lumi na importa�
 ## Compatibilidade de importação e exportação
 
 ### Formatos de importação suportados
+
 - **.lum**: formato nativo do Lumi.
 - **.xcf**: formato nativo do GIMP (camadas e propriedades básicas preservadas).
 - **.psd**: formato Photoshop (camadas e modos de mesclagem preservados).
 - **PNG, JPEG, TIFF, etc.**: Importação de imagem achatada.
 
 ### Formatos de exportação suportados
+
 - **PNG**: Sem perdas, com transparência alfa.
 - **JPEG**: com perdas, achatado.
 - **TIFF**: Sem perdas ou compactado em LZW.
@@ -93,17 +96,17 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Os buffers de camada recebem o nome da camada (`layer-Background.geglbuf`), não numerados sequencialmente. Os espaços nos nomes das camadas são armazenados como sublinhados; camadas de grupo recebem um sufixo `-GROUP`. As máscaras compartilham o nome da camada (`mask-Background.geglbuf`).
 
-Cada `recovery/primary-NN.lum/` é um salvamento de linha de base completo. Os pressionamentos subsequentes de Ctrl+S acrescentam `delta-NNNN.lum/` subdiretórios contendo apenas os buffers modificados desde a última linha de base, mantendo os pontos de verificação salvos rapidamente, independentemente do tamanho do projeto.
+Cada `recovery/primary-NN.lum/` é um salvamento de linha de base completo. As prensas `Ctrl+I` subsequentes acrescentam subdiretórios `delta-NNNN.lum/` contendo apenas os buffers modificados desde a última linha de base, mantendo os salvamentos do ponto de verificação rápidos, independentemente do tamanho do projeto.
 
 Os salvamentos automáticos seguem a mesma estrutura, mas são armazenados separadamente em `~/.cache/lumi/autosave/`, deixando o arquivo de trabalho intacto.
 - **Projetos muito grandes**: um projeto com mais de 1.000 camadas e terabytes de dados se beneficiará mais com o carregamento lento; entretanto, a exportação final para o formato de imagem plana pode levar algum tempo.
-- **Unidades de rede**: há suporte para salvar em diretórios montados na rede, mas é mais lento que o armazenamento local devido à latência de E/S.
+- **Unidades de rede**: há suporte para salvar em diretórios montados em rede, mas é mais lento que o armazenamento local devido à latência de E/S.

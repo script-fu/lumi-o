@@ -22,7 +22,7 @@ El formato `.lum` utiliza metadatos XML y buffers binarios comprimidos. Puede in
 
 ### Ahorro incremental
 
-El guardado incremental debe habilitarse por proyecto en el cuadro de diálogo **Guardar como** (una casilla de verificación **Guardado incremental** y un botón giratorio **Guardados máximos**). Una vez habilitado, Ctrl+S escribe solo las capas modificadas en lugar de reescribir todo el proyecto, lo que reduce drásticamente el tiempo de ahorro. La configuración se almacena con el proyecto y persiste en todas las sesiones.
+El guardado incremental está disponible a través de **Archivo** → **Guardar incremento** (`Ctrl+I`). Crea un punto de control de recuperación manual dentro del proyecto sin reemplazar **Archivo** → **Guardar** (`Ctrl+S`) normal. Los guardados completos aún actualizan el proyecto principal `.lum`, mientras que Guardar Incremento escribe solo las capas modificadas necesarias para un punto de control rápido.
 
 ### Carga diferida
 
@@ -42,7 +42,8 @@ Lumi guarda automáticamente los cambios en una **ubicación de caché separada*
 ### Guardar y guardar como
 
 - **Archivo** → **Guardar** (Ctrl+S): guardar en el directorio `.lum` actual.
-- **Archivo** → **Guardar como** (Shift+Ctrl+S): guardar en un nuevo archivo `.lum`. El cuadro de diálogo Guardar como incluye opciones para el tipo de compresión y una opción para **Guardar incremental** (con un límite de **Guardado máximo**) para habilitar o deshabilitar el guardado incremental para este proyecto.
+- **Archivo** → **Guardar incremento** (Ctrl+I): crea un punto de control de recuperación incremental para el archivo `.lum` actual.
+- **Archivo** → **Guardar como** (Shift+Ctrl+S): guardar en un nuevo archivo `.lum`. El cuadro de diálogo Guardar como incluye opciones de compresión para el nuevo archivo del proyecto.
 
 Los cambios no guardados se indican con un asterisco (*) en el título de la ventana.
 
@@ -64,12 +65,14 @@ Los archivos PSD y XCF se convierten al formato nativo de Lumi al importarlos.
 ## Compatibilidad de importación y exportación
 
 ### Formatos de importación admitidos
+
 - **.lum**: formato nativo Lumi.
 - **.xcf**: formato nativo de GIMP (se conservan las capas y propiedades básicas).
 - **.psd**: formato Photoshop (se conservan las capas y los modos de fusión).
 - **PNG, JPEG, TIFF, etc.**: Importación de imágenes aplanadas.
 
 ### Formatos de exportación admitidos
+
 - **PNG**: Sin pérdidas, con transparencia alfa.
 - **JPEG**: con pérdida, aplanado.
 - **TIFF**: Sin pérdidas o comprimido con LZW.
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 Los buffers de capa llevan el nombre de la capa (`layer-Background.geglbuf`), no están numerados secuencialmente. Los espacios en los nombres de las capas se almacenan como guiones bajos; las capas de grupo obtienen un sufijo `-GROUP`. Las máscaras comparten el nombre de la capa (`mask-Background.geglbuf`).
 
-Cada `recovery/primary-NN.lum/` es una partida guardada completa. Las pulsaciones posteriores de Ctrl+S agregan subdirectorios `delta-NNNN.lum/` que contienen solo los búferes modificados desde la última línea de base, lo que mantiene los puntos de control guardados rápidamente independientemente del tamaño del proyecto.
+Cada `recovery/primary-NN.lum/` es una partida guardada completa. Las pulsaciones posteriores de `Ctrl+I` agregan subdirectorios `delta-NNNN.lum/` que contienen solo los búferes modificados desde la última línea de base, lo que mantiene los puntos de control guardados rápidamente independientemente del tamaño del proyecto.
 
 Los guardados automáticos siguen la misma estructura pero se almacenan por separado en `~/.cache/lumi/autosave/`, dejando el archivo de trabajo intacto.
 - **Proyectos muy grandes**: un proyecto con más de 1000 capas y terabytes de datos será el que más se beneficiará de la carga diferida; sin embargo, la exportación final a formato de imagen plana puede llevar algún tiempo.

@@ -36,19 +36,21 @@ El ahorro incremental es un sistema de punto de control manual almacenado **dent
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-Se escribe una nueva línea base `primary-NN.lum/` después de **Archivo → Guardar**. Las pulsaciones posteriores de Ctrl+S crean subdirectorios `delta-NNNN.lum/` que contienen solo los búferes que cambiaron desde la última línea de base. Los deltas de guardado automático y los deltas de guardado manual utilizan contadores separados para que no interfieran con el historial de cada uno.
+Se escribe una nueva línea base `primary-NN.lum/` después de **Archivo → Guardar**. Las pulsaciones posteriores de **Archivo → Guardar incremento** (`Ctrl+I`) crean subdirectorios `delta-NNNN.lum/` que contienen solo los búferes que cambiaron desde la última línea de base. Los deltas de guardado automático y los deltas de guardado manual utilizan contadores separados para que no interfieran con el historial de cada uno.
 
-Los guardados incrementales están **deshabilitados de forma predeterminada** y deben habilitarse por proyecto:
+Guardar incremento está **siempre disponible** para archivos `.lum` guardados:
 
-1. **Archivo** → **Guardar como** (Mayús+Ctrl+S).
-2. En el cuadro de diálogo Guardar como, marque **Guardado incremental** y, opcionalmente, establezca un límite de **Guardado máximo**.
-3. La configuración se almacena con el proyecto y se aplica a todas las pulsaciones posteriores de Ctrl+S.
+1. Utilice **Archivo** → **Guardar** (`Ctrl+S`) para crear o actualizar el archivo principal del proyecto.
+2. Utilice **Archivo** → **Guardar incremento** (`Ctrl+I`) para crear un punto de control de recuperación.
+3. Después de otro **Archivo** → **Guardar** completo, el siguiente `Ctrl+I` escribe una nueva línea base `primary-NN.lum/` antes de crear nuevos deltas.
+
+Los archivos recuperados nombrados con el prefijo `RECOVERED_` deben guardarse normalmente primero antes de que Guardar Incremento esté disponible para ellos.
 
 Cuando abres un archivo `.lum` que tiene guardados incrementales más nuevos que el guardado principal, Lumi muestra un mensaje **Guardado incremental detectado** que ofrece cargar el punto de control más reciente.
 
@@ -90,14 +92,16 @@ La pestaña predeterminada cuando se abre el cuadro de diálogo. Identifica auto
 
 ---
 
-## Limpiar los viejos estadosLa acumulación de estados de recuperación a lo largo del tiempo puede consumir una cantidad significativa de espacio en disco. El botón **Limpiar estados antiguos...** (abajo a la izquierda del cuadro de diálogo) abre un mensaje de limpieza para la pestaña activa (Guardado automático o Incremental).
+## Limpiar los viejos estados
+
+La acumulación de estados de recuperación a lo largo del tiempo puede consumir una cantidad significativa de espacio en disco. El botón **Limpiar estados antiguos...** (abajo a la izquierda del cuadro de diálogo) abre un mensaje de limpieza para la pestaña activa (Guardado automático o Incremental).
 
 El mensaje muestra:
 - Cuántas partidas guardadas completas existen para el archivo.
 - El espacio total en disco que ocupan.
 - Un botón giratorio **Mantener más reciente** para seleccionar cuántos archivos guardados conservar.
 
-Configurar **Mantener más reciente** en `0` elimina todos los estados de recuperación. El siguiente Ctrl+S después de una limpieza completa escribirá un nuevo guardado primario.
+Configurar **Mantener más reciente** en `0` elimina todos los estados de recuperación. El próximo `Ctrl+I` después de una limpieza completa escribirá un nuevo guardado primario.
 
 ---
 

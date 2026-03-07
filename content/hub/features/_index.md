@@ -9,6 +9,7 @@ Lumi's feature set is focused on digital painting and structured illustration wo
 This section describes the core capabilities available in Lumi and where to locate them in the interface.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Brush Caching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="File Recovery" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Layers & Non-Destructive Editing" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

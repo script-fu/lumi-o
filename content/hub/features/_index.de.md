@@ -7,6 +7,7 @@ Der Funktionsumfang von Lumi konzentriert sich auf digitale Malerei und struktur
 In diesem Abschnitt werden die in Lumi verfügbaren Kernfunktionen und deren Position in der Benutzeroberfläche beschrieben.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Pinsel-Caching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Dateiformat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Dateiwiederherstellung" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Ebenen und zerstörungsfreie Bearbeitung" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

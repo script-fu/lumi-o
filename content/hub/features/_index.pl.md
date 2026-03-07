@@ -7,6 +7,7 @@ Zestaw funkcji Lumi koncentruje się na cyfrowym malowaniu i ustrukturyzowanych 
 W tej sekcji opisano podstawowe możliwości dostępne w Lumi oraz miejsce ich umieszczenia w interfejsie.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Buforowanie pędzli" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Format pliku (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Odzyskiwanie plików" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Warstwy i edycja nieniszcząca" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

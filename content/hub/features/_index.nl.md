@@ -7,6 +7,7 @@ De functies van Lumi zijn gericht op digitaal schilderen en gestructureerde illu
 In dit gedeelte worden de kernmogelijkheden beschreven die beschikbaar zijn in Lumi en waar u deze in de interface kunt vinden.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Lagen en niet-destructieve bewerking" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}

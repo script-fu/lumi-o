@@ -38,19 +38,21 @@ Incremental saving is a manual checkpoint system stored **inside the project fil
 
 ```
 my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+S)
-      ├── delta-0001.lum/   (Ctrl+S checkpoint, only modified buffers)
+  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
+      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
       ├── delta-0002.lum/
       └── ...
 ```
 
-A new `primary-NN.lum/` baseline is written after **File → Save**. Subsequent Ctrl+S presses create `delta-NNNN.lum/` subdirectories containing only the buffers that changed since the last baseline. Autosave deltas and manual save deltas use separate counters so they do not interfere with each other's history.
+A new `primary-NN.lum/` baseline is written after **File → Save**. Subsequent **File → Save Increment** presses (`Ctrl+I`) create `delta-NNNN.lum/` subdirectories containing only the buffers that changed since the last baseline. Autosave deltas and manual save deltas use separate counters so they do not interfere with each other's history.
 
-Incremental saves are **disabled by default** and must be enabled per-project:
+Save Increment is **always available** for saved `.lum` files:
 
-1. **File** → **Save As** (Shift+Ctrl+S).
-2. In the Save As dialog, check **Incremental Save** and optionally set a **Max Saves** limit.
-3. The setting is stored with the project and applies to all subsequent Ctrl+S presses.
+1. Use **File** → **Save** (`Ctrl+S`) to create or update the main project file.
+2. Use **File** → **Save Increment** (`Ctrl+I`) to create a recovery checkpoint.
+3. After another full **File** → **Save**, the next `Ctrl+I` writes a fresh `primary-NN.lum/` baseline before creating new deltas.
+
+Recovered files named with the `RECOVERED_` prefix must be saved normally first before Save Increment becomes available for them.
 
 When you open a `.lum` file that has newer incremental saves than the primary save, Lumi shows an **Incremental Save Detected** prompt offering to load the most recent checkpoint.
 
@@ -101,7 +103,7 @@ The prompt shows:
 - The total disk space they occupy.
 - A **Keep most recent** spin button to select how many saves to retain.
 
-Setting **Keep most recent** to `0` deletes all recovery states. The next Ctrl+S after a full cleanup will write a fresh primary save.
+Setting **Keep most recent** to `0` deletes all recovery states. The next `Ctrl+I` after a full cleanup will write a fresh primary save.
 
 ---
 

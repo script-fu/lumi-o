@@ -22,7 +22,7 @@ Lumi 使用開放的、基於目錄的檔案格式 (`.lum`)，專為效能、可
 
 ### 增量儲蓄
 
-必須在「另存為」對話方塊中為每個項目啟用增量儲存（「增量儲存」複選框和「最大儲存」旋轉按鈕）。啟用後，Ctrl+S 僅寫入修改的圖層，而不是重寫整個項目，從而大幅減少保存時間。此設定與項目一起儲存並在各個會話中持續存在。
+可透過 **檔案** → **儲存增量** (`Ctrl+I`) 進行增量儲存。它在專案內建立手動恢復檢查點，而不取代正常的 **檔案** → **儲存** (`Ctrl+S`)。完整保存仍然更新主`.lum`項目，而保存增量僅寫入快速檢查點所需的修改層。
 
 ### 延遲加載
 
@@ -42,7 +42,8 @@ Lumi 定期自動將變更儲存到**單獨的快取位置** (`~/.cache/lumi/aut
 ### 儲存並另存為
 
 - **檔案** → **儲存** (Ctrl+S)：儲存到目前`.lum` 目錄。
-- **檔案** → **另存為** (Shift+Ctrl+S)：儲存到新的 `.lum` 檔案。 「另存為」對話方塊包括壓縮類型選項和**增量儲存**開關（具有**最大儲存**限制），用於啟用或停用該項目的增量保存。
+- **檔案** → **儲存增量** (Ctrl+I)：為目前`.lum` 檔案建立增量復原檢查點。
+- **檔案** → **另存為** (Shift+Ctrl+S)：儲存到新的 `.lum` 檔案。 「另存為」對話方塊包含新項目檔案的壓縮選項。
 
 未儲存的變更在視窗標題中以星號 (*) 表示。
 
@@ -64,12 +65,14 @@ PSD 和 XCF 檔案在匯入時會轉換為 Lumi 的本機格式。
 ## 匯入和匯出相容性
 
 ### 支援的導入格式
+
 - **.lum**：Lumi 原生格式。
 - **.xcf**：GIMP 本機格式（保留圖層和基本屬性）。
 - **.psd**：Photoshop 格式（保留圖層和混合模式）。
 - **PNG、JPEG、TIFF 等**：平面影像導入。
 
 ### 支援的匯出格式
+
 - **PNG**：無損，具有 Alpha 透明度。
 - **JPEG**：有損、扁平化。
 - **TIFF**：無損或 LZW 壓縮。
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 層緩衝區以圖層 (`layer-Background.geglbuf`) 命名，而不是依序編號。圖層名稱中的空格儲存為底線；圖層群組有一個 `-GROUP` 後綴。蒙版共享圖層名稱 (`mask-Background.geglbuf`)。
 
-每個`recovery/primary-NN.lum/` 都是完整的基線保存。接著按 Ctrl+S 按下附加 `delta-NNNN.lum/` 子目錄，其中僅包含自上一個基線以來修改的緩衝區，無論項目大小如何，都能保持檢查點保存快速。
+每個`recovery/primary-NN.lum/` 都是完整的基線保存。隨後的 `Ctrl+I` 會按附加 `delta-NNNN.lum/` 子目錄，其中僅包含自上一個基線以來修改的緩衝區，無論項目大小如何，都能保持檢查點保存快速。
 
 自動儲存遵循相同的結構，但單獨儲存在 `~/.cache/lumi/autosave/` 中，使工作文件保持不變。
 - **非常大的項目**：具有 1000+ 層和 TB 資料的項目將從延遲加載中受益最多；但是，最終導出為平面圖像格式可能需要一些時間。

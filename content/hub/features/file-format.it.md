@@ -22,7 +22,7 @@ Il formato `.lum` utilizza metadati XML e buffer binari compressi. Puoi controll
 
 ### Salvataggio incrementale
 
-Il salvataggio incrementale deve essere abilitato per progetto nella **finestra di dialogo Salva con nome** (una casella di controllo **Salvataggio incrementale** e un pulsante di selezione **Risparmi massimi**). Una volta abilitato, Ctrl+S scrive solo i layer modificati anziché riscrivere l'intero progetto, riducendo drasticamente i tempi di salvataggio. L'impostazione viene archiviata con il progetto e persiste tra le sessioni.
+Il salvataggio incrementale è disponibile tramite **File** → **Incremento salvataggio** (`Ctrl+I`). Crea un checkpoint di ripristino manuale all'interno del progetto senza sostituire il normale **File** → **Salva** (`Ctrl+S`). I salvataggi completi aggiornano comunque il progetto `.lum` principale, mentre Save Increment scrive solo i livelli modificati necessari per un checkpoint veloce.
 
 ### Caricamento lento
 
@@ -42,7 +42,8 @@ Lumi salva automaticamente le modifiche in una **posizione cache separata** (`~/
 ### Salva e salva con nome
 
 - **File** → **Salva** (Ctrl+S): salva nella directory `.lum` corrente.
-- **File** → **Salva con nome** (Shift+Ctrl+S): salva in un nuovo file `.lum`. La finestra di dialogo Salva con nome include opzioni per il tipo di compressione e un interruttore **Salvataggio incrementale** (con un limite di **Salvataggi massimi**) per abilitare o disabilitare il salvataggio incrementale per questo progetto.
+- **File** → **Salva incremento** (Ctrl+I): crea un checkpoint di ripristino incrementale per il file `.lum` corrente.
+- **File** → **Salva con nome** (Shift+Ctrl+S): salva in un nuovo file `.lum`. La finestra di dialogo Salva con nome include le opzioni di compressione per il nuovo file di progetto.
 
 Le modifiche non salvate sono indicate da un asterisco (*) nel titolo della finestra.
 
@@ -64,12 +65,14 @@ I file PSD e XCF vengono convertiti nel formato nativo di Lumi al momento dell'i
 ## Compatibilità di importazione ed esportazione
 
 ### Formati di importazione supportati
+
 - **.lum**: formato nativo Lumi.
 - **.xcf**: formato nativo di GIMP (livelli e proprietà di base preservate).
 - **.psd**: formato Photoshop (livelli e metodi di fusione conservati).
 - **PNG, JPEG, TIFF, ecc.**: importazione di immagini appiattite.
 
 ### Formati di esportazione supportati
+
 - **PNG**: senza perdita di dati, con trasparenza alfa.
 - **JPEG**: con perdita, appiattito.
 - **TIFF**: senza perdita di dati o compresso LZW.
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 I buffer dei livelli prendono il nome dal livello (`layer-Background.geglbuf`), non numerati in sequenza. Gli spazi nei nomi dei livelli vengono memorizzati come trattini bassi; i livelli di gruppo ottengono un suffisso `-GROUP`. Le maschere condividono il nome del livello (`mask-Background.geglbuf`).
 
-Ogni `recovery/primary-NN.lum/` è un salvataggio di base completo. Le successive pressioni di Ctrl+S aggiungono `delta-NNNN.lum/` sottodirectory contenenti solo i buffer modificati dall'ultima linea di base, mantenendo rapidi i salvataggi del punto di controllo indipendentemente dalle dimensioni del progetto.
+Ogni `recovery/primary-NN.lum/` è un salvataggio di base completo. Le successive pressioni di `Ctrl+I` aggiungono `delta-NNNN.lum/` sottodirectory contenenti solo i buffer modificati dall'ultima linea di base, mantenendo rapidi i salvataggi del punto di controllo indipendentemente dalle dimensioni del progetto.
 
 I salvataggi automatici seguono la stessa struttura ma vengono archiviati separatamente in `~/.cache/lumi/autosave/`, lasciando intatto il file di lavoro.
 - **Progetti molto grandi**: un progetto con oltre 1000 livelli e terabyte di dati trarrà maggiori benefici dal caricamento lento; tuttavia, l'esportazione finale nel formato immagine flat potrebbe richiedere del tempo.

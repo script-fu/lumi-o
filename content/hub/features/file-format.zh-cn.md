@@ -22,7 +22,7 @@ Lumi 使用开放的、基于目录的文件格式 (`.lum`)，专为性能、可
 
 ### 增量储蓄
 
-必须在“另存为”对话框中为每个项目启用增量保存（“增量保存”复选框和“最大保存”旋转按钮）。启用后，Ctrl+S 仅写入修改的图层，而不是重写整个项目，从而大大减少保存时间。该设置与项目一起存储并在各个会话中持续存在。
+可通过 **文件** → **保存增量** (`Ctrl+I`) 进行增量保存。它在项目内创建手动恢复检查点，而不替换正常的 **文件** → **保存** (`Ctrl+S`)。完整保存仍然更新主`.lum`项目，而保存增量仅写入快速检查点所需的修改层。
 
 ### 延迟加载
 
@@ -42,7 +42,8 @@ Lumi 定期自动将更改保存到**单独的缓存位置** (`~/.cache/lumi/aut
 ### 保存并另存为
 
 - **文件** → **保存** (Ctrl+S)：保存到当前`.lum` 目录。
-- **文件** → **另存为** (Shift+Ctrl+S)：保存到新的 `.lum` 文件。 “另存为”对话框包括压缩类型选项和**增量保存**开关（具有**最大保存**限制），用于启用或禁用该项目的增量保存。
+- **文件** → **保存增量** (Ctrl+I)：为当前`.lum` 文件创建增量恢复检查点。
+- **文件** → **另存为** (Shift+Ctrl+S)：保存到新的 `.lum` 文件。 “另存为”对话框包括新项目文件的压缩选项。
 
 未保存的更改在窗口标题中用星号 (*) 表示。
 
@@ -64,12 +65,14 @@ PSD 和 XCF 文件在导入时会转换为 Lumi 的本机格式。
 ## 导入和导出兼容性
 
 ### 支持的导入格式
+
 - **.lum**：Lumi 原生格式。
 - **.xcf**：GIMP 本机格式（保留图层和基本属性）。
 - **.psd**：Photoshop 格式（保留图层和混合模式）。
 - **PNG、JPEG、TIFF 等**：扁平图像导入。
 
 ### 支持的导出格式
+
 - **PNG**：无损，具有 Alpha 透明度。
 - **JPEG**：有损、扁平化。
 - **TIFF**：无损或 LZW 压缩。
@@ -93,16 +96,16 @@ my-painting.lum/
   ├── paths/                             (vector paths as SVG)
   ├── configs/                           (non-destructive filter configurations)
   └── recovery/
-      └── primary-01.lum/                (incremental save checkpoint)
+      └── primary-01.lum/                (first Save Increment baseline)
           ├── metadata.xml
           ├── drawables/                 (only modified buffers)
-          ├── delta-0001.lum/            (Ctrl+S checkpoint)
+        ├── delta-0001.lum/            (Ctrl+I checkpoint)
           └── delta-0002.lum/
 ```
 
 层缓冲区以层 (`layer-Background.geglbuf`) 命名，而不是按顺序编号。图层名称中的空格存储为下划线；图层组有一个 `-GROUP` 后缀。蒙版共享图层名称 (`mask-Background.geglbuf`)。
 
-每个`recovery/primary-NN.lum/` 都是完整的基线保存。随后按 Ctrl+S 按下附加 `delta-NNNN.lum/` 子目录，其中仅包含自上一个基线以来修改的缓冲区，无论项目大小如何，都能保持检查点保存快速。
+每个`recovery/primary-NN.lum/` 都是完整的基线保存。随后的 `Ctrl+I` 会按附加 `delta-NNNN.lum/` 子目录，其中仅包含自上一个基线以来修改的缓冲区，无论项目大小如何，都能保持检查点保存快速。
 
 自动保存遵循相同的结构，但单独存储在 `~/.cache/lumi/autosave/` 中，使工作文件保持不变。
 - **非常大的项目**：具有 1000+ 层和 TB 数据的项目将从延迟加载中受益最多；但是，最终导出为平面图像格式可能需要一些时间。

@@ -7,6 +7,7 @@ Lumis funktionsuppsättning är fokuserad på digital målning och strukturerade
 Det här avsnittet beskriver de centrala funktionerna som är tillgängliga i Lumi och var man kan hitta dem i gränssnittet.
 
 {{< cards >}}
+  {{< card link="brush-caching" title="Caching av borstar" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
   {{< card link="file-format" title="Filformat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
   {{< card link="recovery" title="Filåterställning" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
   {{< card link="layers" title="Lager & icke-förstörande redigering" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
