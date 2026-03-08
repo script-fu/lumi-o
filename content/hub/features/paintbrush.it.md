@@ -20,7 +20,7 @@ Forme renderizzate proceduralmente (cerchio, quadrato, diamante, triangolo) con 
 
 ### Pennelli animati (.anim)
 
-Sequenze di fotogrammi sequenziali che avanzano durante i colpi. I fotogrammi possono essere ciclizzati in modo incrementale (avanzamenti dei fotogrammi per tocco), selezionati casualmente per tocco o indicizzati in base alla dinamica (pressione, velocità, inclinazione, angolo).
+Sequenze di fotogrammi sequenziali che avanzano durante i colpi. I fotogrammi possono essere spostati in modo incrementale (avanzamento dei fotogrammi per tocco), selezionati casualmente per tocco o indicizzati in base alla dinamica (pressione, velocità, inclinazione, angolo).
 
 ## Cursore di disegno
 
@@ -110,6 +110,8 @@ Testine della spazzola posiziona più testine della spazzola indipendenti su un 
 
 Il raggio dell'orbita è determinato dalla dimensione globale della spazzola meno la dimensione della testa: le teste più grandi si trovano più vicine al centro; le teste più piccole orbitano più lontano. Le teste si distanziano uniformemente attorno all'anello. Con due teste se ne ottiene una su ciascun lato del tratto, creando una stesura simmetrica che si comporta come un pennino per calligrafia. Il cursore **Segui direzione** ruota l'intero anello per rimanere perpendicolare al tratto, in modo che il pennino segua la direzione in modo naturale mentre dipingi. Aggiungendo più teste, le si ventaglio progressivamente attorno all'anello, fino a un cerchio di spruzzo completo a 16.
 
+Testine pennello controlla la posizione di ciascuna testina attorno al tratto. Se **Pivot X** o **Pivot Y** viene spostato dal centro predefinito, ogni testa segue comunque la stessa formazione, ma ogni tocco stampato ora atterra utilizzando il punto di contatto interno scelto invece del centro geometrico dell'immagine del pennello.
+
 I controlli vengono visualizzati nell'espansore **Teste di pennello** nel pannello delle opzioni dello strumento.
 
 - **Conteggio**: numero di testine simultanee (1–16).
@@ -122,21 +124,26 @@ I controlli vengono visualizzati nell'espansore **Teste di pennello** nel pannel
 
 #### Dispersione
 
-Principali controlli di dispersione nell'espansore **Teste di pennello**:
-
-- **Angolo di dispersione** (0–360°, predefinito 10°): ruota solo il componente di dispersione casuale (non la spaziatura di riempimento). Gli angoli per testa/per tocco sono polarizzati verso l'esterno con crossover controllato per evitare pennacchi specchiati rigidi. Bloccato a 360°.
+Principali controlli di dispersione nell'espansore **Teste di pennello**:- **Angolo di dispersione** (0–360°, predefinito 10°): ruota solo il componente di dispersione casuale (non la spaziatura di riempimento). Gli angoli per testa/per tocco sono polarizzati verso l'esterno con crossover controllato per evitare pennacchi specchiati rigidi. Bloccato a 360°.
 - **Distanza di dispersione** (0–10000 px): spostamento in avanti casuale dalla posizione di spaziatura di riempimento di ciascuna testa. Rilaminato ogni tocco.
 - **Bilanciamento dimensione dispersione** (0,0–1,0): controlla la pendenza della soppressione per le teste sopra la soglia. A 1.0, tutte le teste si disperdono equamente; valori più bassi sopprimono sempre più le teste più grandi mentre le teste al/sotto la soglia rimangono alla distanza di dispersione completa.
 
 ### Opzioni aggiuntive
 
-Nell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita), i controlli sono raggruppati come sezioni di overflow che vengono modificate meno spesso. Ciò mantiene gli espansori principali concentrati sui controlli di verniciatura regolati di frequente.#### Proprietà del pennello (overflow)
+Nell'espansore **Opzioni aggiuntive** (compresso per impostazione predefinita), i controlli sono raggruppati come sezioni di overflow che vengono modificate meno spesso. Ciò mantiene gli espansori principali concentrati sui controlli di verniciatura regolati di frequente.
+
+#### Proprietà del pennello (overflow)
+
 - **Blocca l'angolo sullo spazio sullo schermo**: blocca l'angolo del pennello sullo spazio dello schermo, in modo che l'angolo rimanga in piano mentre la tela ruota/capovolge. Nessun effetto quando Dynamics controlla l'angolo.
+- **Pivot X**: punto di contatto del timbro orizzontale all'interno dell'immagine del pennello (0,0 = bordo sinistro, 0,5 = centro, 1,0 = bordo destro). Spostandolo si consente alle parti decentrate del pennello di guidare il tratto.
+- **Pivot Y**: punto di contatto verticale del timbro all'interno dell'immagine del pennello (0,0 = bordo superiore, 0,5 = centro, 1,0 = bordo inferiore). Insieme a **Pivot X**, definisce quale parte del tocco si trova sulla posizione della vernice.
 - **Capovolgimento orizzontale casuale**: 50% di possibilità di specchiare ogni timbro da sinistra a destra per ogni tocco.
 - **Capovolgimento verticale casuale**: 50% di possibilità di capovolgere ciascun timbro per tocco.
 - **Rotazione casuale**: ruota casualmente ciascun timbro di 0°, 90°, 180° o 270° per tocco.
 - **Jitter uniforme**: quando attivato, gli offset dei tocchi dal cursore **Jitter** vengono ricavati da una distribuzione uniforme (ogni offset ha la stessa probabilità all'interno dell'intervallo). Quando è disattivata, la distribuzione è gaussiana (sposta il cluster verso il centro).
 - **Reimposta animazione**: Per i pennelli animati: quando è attivo, l'animazione riparte dal fotogramma 0 ad ogni nuovo tratto; quando è spento, continua da dove è terminata la corsa precedente.
+
+Quando uno dei valori del perno è diverso dal centro, l'anteprima del pennello mostra una sovrapposizione di mirino che contrassegna il punto di contatto del timbro attivo.
 
 #### Testine per spazzole (troppopieno)
 
@@ -150,9 +157,6 @@ Dispersione:
 Randomizzazione:
 - **Seme carattere** (0–255): numero fisso per carattere per testa (dimensione, posizione di spaziatura di riempimento). Lo stesso seme riproduce la stessa formazione ad ogni colpo. Desensibilizzato quando **Randomizza personaggio testa** è attivo.
 - **Randomizza carattere testa**: ridisegna i valori dei caratteri per testa (dimensioni, posizione di dispersione) ogni francobollo in modo che la formazione sia completamente caotica lungo il tratto. Sostituisce **Seme carattere**.
-- **Randomizza fotogrammi di animazione**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.
-
-#### Comportamento del tratto (overflow)
-
+- **Randomizza fotogrammi di animazione**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.#### Comportamento del tratto (overflow)
 - **Ripristina gli ultimi colori utilizzati**: ripristina i colori di primo piano e di sfondo della sessione precedente all'avvio, invece di tornare al bianco e nero per impostazione predefinita.
 - **Contorno pennello semplice**: utilizza un cerchio semplice per il contorno del cursore del pennello invece di riprodurre la forma completa del pennello. Utile per pennelli complessi o di grandi dimensioni in cui è costoso disegnare un contorno accurato.

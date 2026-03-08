@@ -20,7 +20,7 @@ Procedureel weergegeven vormen (cirkel, vierkant, ruit, driehoek) met instelbare
 
 ### Geanimeerde penselen (.anim)
 
-Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen incrementeel worden doorlopen (frame-voortgangen per dab), willekeurig worden geselecteerd per dab, of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
+Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen stapsgewijs worden doorlopen (frame-voortgangen per dab), willekeurig per dab worden geselecteerd of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
 
 ## Schildercursor
 
@@ -35,7 +35,7 @@ De cursor past zich aan de huidige gereedschapsstatus aan en geeft duidelijke, c
 ### Bediening op het hoogste niveau
 
 Altijd aanwezig, buiten elke expander:
-- **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, enz.)
+- **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, etc.)
 - **Dekking**: algehele dekking van de lijn (0–100).
 
 ### Penseeleigenschappen
@@ -110,6 +110,8 @@ Opzetborstels plaatsen meerdere onafhankelijke opzetborstels op een cirkelvormig
 
 De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: grotere koppen zitten dichter bij het midden; kleinere hoofden draaien verder naar buiten. De hoofden hebben een gelijkmatige ruimte rond de ring. Met twee koppen krijg je er één aan elke kant van de streek, waardoor een symmetrische spreiding ontstaat die zich gedraagt ​​als een kalligrafiepunt. De schuifregelaar **Volg richting** draait de hele ring zodat deze loodrecht op de lijn blijft staan, zodat de punt op natuurlijke wijze de richting volgt terwijl u schildert. Door meer koppen toe te voegen, worden ze geleidelijk rond de ring verspreid, tot een volledige spuitcirkel bij 16.
 
+Opzetborstels bepalen waar elke kop rond de streek wordt geplaatst. Als **Pivot X** of **Pivot Y** van het standaardcentrum wordt verwijderd, volgt elk hoofd nog steeds dezelfde formatie, maar elke gestempelde schar komt nu terecht op het gekozen interne contactpunt in plaats van op het geometrische midden van de penseelafbeelding.
+
 De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.
 
 - **Aantal**: aantal gelijktijdige opzetborstels (1–16).
@@ -122,21 +124,26 @@ De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het pa
 
 #### Verstrooiing
 
-Belangrijkste spreidingsregelaars in de uitbreiding **Opzetborstels**:
-
-- **Verspreidingshoek** (0–360°, standaard 10°): Roteert alleen de willekeurige spreidingscomponent (niet de vulafstand). De hoeken per kop/per schar zijn naar buiten gericht met gecontroleerde crossover om stijve gespiegelde pluimen te voorkomen. Geklemd tot 360°.
+Belangrijkste spreidingsregelaars in de uitbreiding **Opzetborstels**:- **Verspreidingshoek** (0–360°, standaard 10°): Roteert alleen de willekeurige spreidingscomponent (niet de vulafstand). De hoeken per kop/per schar zijn naar buiten gericht met gecontroleerde crossover om stijve gespiegelde pluimen te voorkomen. Geklemd tot 360°.
 - **Verspreidingsafstand** (0–10.000 px): willekeurige voorwaartse verplaatsing vanaf de vulafstandpositie van elke kop. Elke keer opnieuw gerold.
 - **Scatter Size Balance** (0,0–1,0): regelt de onderdrukkingssteilheid voor heads boven de drempel. Bij 1,0 verspreiden alle hoofden zich gelijkmatig; lagere waarden onderdrukken in toenemende mate grotere koppen, terwijl koppen op/onder de drempel op volledige verstrooiingsafstand blijven.
 
 ### Extra opties
 
-In de uitbreiding **Aanvullende opties** (standaard samengevouwen) zijn de bedieningselementen gegroepeerd als overloopsecties die minder vaak worden gewijzigd. Hierdoor blijven de belangrijkste expanders gefocust op vaak aangepaste verfbedieningen.#### Penseeleigenschappen (overloop)
+In de uitbreiding **Aanvullende opties** (standaard samengevouwen) zijn de bedieningselementen gegroepeerd als overloopsecties die minder vaak worden gewijzigd. Hierdoor blijven de belangrijkste expanders gefocust op vaak aangepaste verfbedieningen.
+
+#### Penseeleigenschappen (overloop)
+
 - **Hoek aan schermruimte vergrendelen**: Vergrendelt de penseelhoek aan de schermruimte, zodat de hoek waterpas blijft terwijl het canvas draait/omkeert. Geen effect wanneer Dynamics de hoek regelt.
+- **Pivot X**: Horizontaal stempelcontactpunt binnen de penseelafbeelding (0,0 = linkerrand, 0,5 = midden, 1,0 = rechterrand). Door het te verplaatsen, kunnen niet-gecentreerde delen van de borstel de streek leiden.
+- **Pivot Y**: Verticaal stempelcontactpunt binnen de penseelafbeelding (0,0 = bovenrand, 0,5 = midden, 1,0 = onderrand). Samen met **Pivot X** bepaalt dit welk deel van de schar zich op de verflocatie bevindt.
 - **Random Flip Horizontal**: 50% kans om elke stempel van links naar rechts te spiegelen per schar.
 - **Random Flip Vertical**: 50% kans om elke stempel ondersteboven te draaien per schar.
 - **Willekeurige rotatie**: Draait elke stempel willekeurig met 0°, 90°, 180° of 270° per schar.
 - **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling Gaussiaans (de verschuivingen clusteren naar het midden).
 - **Animatie opnieuw instellen**: voor geanimeerde penselen: indien ingeschakeld, begint de animatie bij elke nieuwe streek opnieuw vanaf frame 0; wanneer uitgeschakeld, gaat het verder vanaf het punt waar de vorige slag eindigde.
+
+Wanneer een van beide draaiwaarden afwijkt van het midden, toont het penseelvoorbeeld een draadkruisoverlay die het actieve stempelcontactpunt markeert.
 
 #### Opzetborstels (overloop)
 
@@ -149,10 +156,7 @@ Verstrooien:
 
 Randomisatie:
 - **Karakterzaad** (0–255): Vaste zaadwaarde voor karakters per hoofd (grootte, vulafstand). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Hoofdkarakter willekeurig maken** is ingeschakeld.
-- **Hoofdkarakter willekeurig maken**: Tekenwaarden per hoofd (grootte, spreidingspositie) worden bij elke stempel opnieuw getekend, zodat de formatie langs de streek volledig chaotisch is. Overschrijft **Karakterzaad**.
-- **Animatieframes willekeurig maken**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
-
-#### Beroertegedrag (overflow)
-
+- **Hoofdkarakter willekeurig maken**: Tekenwaarden per hoofd (grootte, spreidingspositie) worden bij elke stempel opnieuw getekend, zodat de formatie langs de lijn volledig chaotisch is. Overschrijft **Karakterzaad**.
+- **Animatieframes willekeurig maken**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.#### Beroertegedrag (overflow)
 - **Laatst gebruikte kleuren herstellen**: herstelt de voorgrond- en achtergrondkleuren van de vorige sessie bij het opstarten, in plaats van standaard zwart en wit te gebruiken.
 - **Eenvoudige penseelgrens**: gebruikt een gewone cirkel voor de penseelcursoromtrek in plaats van de volledige penseelvorm weer te geven. Handig voor complexe of grote penselen waarbij het moeilijk is om een ​​nauwkeurige grens te tekenen.

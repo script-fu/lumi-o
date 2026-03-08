@@ -110,11 +110,13 @@ Borsthuvuden placerar flera oberoende borsthuvuden på en cirkulär **omloppsrin
 
 Banradien bestäms av den globala borststorleken minus huvudstorleken: större huvuden sitter närmare mitten; mindre huvuden kretsar längre ut. Heads space jämnt runt ringen. Med två huvuden får du ett på varje sida av slaget, vilket skapar en symmetrisk spridning som beter sig som en kalligrafi-nib. Reglaget **Följ riktning** roterar hela ringen så att den förblir vinkelrät mot slaget, så att spetsen följer riktningen naturligt när du målar. Genom att lägga till fler huvuden fläktar de dem gradvis runt ringen, upp till en hel spraycirkel vid 16.
 
+Borsthuvuden styr var varje huvud placeras runt draget. Om **Pivot X** eller **Pivot Y** flyttas bort från standardcentrum, följer varje huvud fortfarande samma formation, men varje stämplad dab landar nu med den valda interna kontaktpunkten istället för den geometriska mitten av penselbilden.
+
 Kontroller visas i expandern **Brush Heads** i verktygsalternativpanelen.
 
 - **Antal**: Antal samtidiga borsthuvuden (1–16).
 - **Huvudstorlek**: Återgiven storlek på varje huvud i förhållande till den globala borststorleken (0,1–1,0).
-- **Orbit Aspect Ratio** (0,1–1,0): Formar formationens bana från cirkel till ellips. 1,0 = cirkulär bana; lägre värden klämmer ihop den mindre axeln.
+- **Orbit Aspect Ratio** (0,1–1,0): Formar formationens bana från cirkel till ellips. 1,0 = cirkulär bana; lägre värden klämmer ihop den lilla axeln.
 - **Formationsvinkel** (0–360°): Statisk orientering av formationsringen, används när **Följ riktning** är under 1,0.
 - **Följ riktning** (0,0–1,0): Hur starkt formationsringen följer slagriktningen. Vid 1,0 är ringen alltid vinkelrät mot färdriktningen; vid 0,0 låser den till det statiska värdet **Formationsvinkel**.
 - **Tryckvariation**: Storleksvariation per huvud applicerad som en oberoende tryckförspänning genom dynamikkurvorna.
@@ -122,21 +124,26 @@ Kontroller visas i expandern **Brush Heads** i verktygsalternativpanelen.
 
 #### Scatter
 
-Huvudspridningskontroller i expandern **Brush Heads**:
-
-- **Spredningsvinkel** (0–360°, standard 10°): Roterar endast den slumpmässiga spridningskomponenten (inte fyllavstånd). Per-head/per-dab-vinklarna är utåtriktade med kontrollerad crossover för att undvika stela spegelplymer. Fastspänd till 360°.
+Huvudspridningskontroller i expandern **Brush Heads**:- **Spredningsvinkel** (0–360°, standard 10°): Roterar endast den slumpmässiga spridningskomponenten (inte fyllavstånd). Per-head/per-dab-vinklarna är utåtriktade med kontrollerad crossover för att undvika stela spegelplymer. Fastspänd till 360°.
 - **Scatter Distance** (0–10000 px): Slumpmässig förskjutning framåt från varje huvuds fyllningsavståndsposition. Rullade om varje dab.
 - **Scatter Size Balance** (0,0–1,0): Kontrollerar undertryckande branthet för huvuden över tröskeln. Vid 1,0 sprids alla huvuden lika; lägre värden undertrycker allt mer större huvuden medan huvuden vid/under tröskeln stannar på fullt spridningsavstånd.
 
 ### Ytterligare alternativ
 
-I expandern **Ytterligare alternativ** (komprimerad som standard) grupperas kontrollerna som bräddavsnitt som ändras mindre ofta. Detta håller de viktigaste expanderarna fokuserade på ofta justerade målningskontroller.#### Borstens egenskaper (spill)
+I expandern **Ytterligare alternativ** (komprimerad som standard) grupperas kontrollerna som bräddavsnitt som ändras mindre ofta. Detta håller de viktigaste expanderarna fokuserade på ofta justerade målningskontroller.
+
+#### Borstens egenskaper (spill)
+
 - **Lås vinkel till skärmutrymme**: Låser borstvinkel till skärmutrymme, så vinkeln förblir jämn medan duken roterar/vänder. Ingen effekt när Dynamics styr vinkeln.
+- **Pivot X**: Horisontell stämpelkontaktpunkt inuti penselbilden (0,0 = vänster kant, 0,5 = mitten, 1,0 = höger kant). Om du flyttar den kan delar av borsten som inte är i mitten leda slaget.
+- **Vrid Y**: Vertikal stämpelkontaktpunkt inuti penselbilden (0,0 = övre kant, 0,5 = mitt, 1,0 = nedre kant). Tillsammans med **Pivot X** definierar detta vilken del av dabben som sitter på målningsplatsen.
 - **Slumpmässig vänd horisontell**: 50 % chans att spegla varje stämpel från vänster till höger per dab.
 - **Random Flip Vertical**: 50 % chans att vända varje stämpel upp och ner per klick.
 - **Slumpmässig rotation**: Roterar varje stämpel slumpmässigt med 0°, 90°, 180° eller 270° per klick.
 - **Uniform Jitter**: När den är på, dras dab-förskjutningar från **Jitter**-reglaget från en enhetlig fördelning (varje offset lika sannolikt inom intervallet). När den är avstängd är fördelningen Gaussisk (förskjuter klustret mot mitten).
 - **Återställ animering**: För animerade penslar: när den är på startar animeringen om från bildruta 0 vid varje nytt slag; när den är av, fortsätter den där det föregående slaget slutade.
+
+När något av pivotvärdena skiljer sig från mitten visar borstens förhandsgranskning ett hårkorsöverlägg som markerar den aktiva stämpelkontaktpunkten.
 
 #### Borsthuvuden (spill över)
 
@@ -150,9 +157,6 @@ Scatter:
 Randomisering:
 - **Teckenfrö** (0–255): Fast utsäde för karaktär per huvud (storlek, fyll-avståndsposition). Samma frö reproducerar samma formation varje slag. Desensibiliseras när **Randomize Head Character** är på.
 - **Slumpmässigt huvudkaraktär**: Ritar om värden per huvudkaraktär (storlek, spridningsposition) varje stämpel så att formationen är helt kaotisk längs slaget. Åsidosätter **Carakter Seed**.
-- **Randomisera animationsramar**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.
-
-#### Strokebeteende (overflow)
-
+- **Randomisera animationsramar**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.#### Strokebeteende (overflow)
 - **Återställ senast använda färger**: Återställer förgrunds- och bakgrundsfärgerna från föregående session vid uppstart, istället för att förinställa svartvitt.
 - **Enkel borstgräns**: Använder en vanlig cirkel för penselmarkörens kontur istället för att återge hela penselformen. Användbar för komplexa eller stora penslar där den exakta gränsen är dyr att dra.

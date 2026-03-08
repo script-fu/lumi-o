@@ -104,6 +104,8 @@ Brush Heads places multiple independent brush heads on a circular **orbit ring**
 
 The orbit radius is determined by the global brush size minus the head size: larger heads sit closer to the centre; smaller heads orbit further out. Heads space evenly around the ring. With two heads you get one on each side of the stroke, creating a symmetrical spread that behaves like a calligraphy nib. The **Follow Direction** slider rotates the whole ring to stay perpendicular to the stroke, so the nib tracks direction naturally as you paint. Adding more heads fans them progressively around the ring, up to a full spray circle at 16.
 
+Brush Heads controls where each head is placed around the stroke. If **Pivot X** or **Pivot Y** is moved away from the default centre, every head still follows the same formation, but each stamped dab now lands using the chosen internal contact point instead of the geometric centre of the brush image.
+
 Controls appear in the **Brush Heads** expander in the tool options panel.
 
 - **Count**: Number of simultaneous brush heads (1–16).
@@ -127,11 +129,15 @@ In the **Additional Options** expander (collapsed by default), controls are grou
 
 #### Brush Properties (overflow)
 - **Lock Angle to Screen Space**: Locks brush angle to screen space, so angle stays level while the canvas rotates/flips. No effect when Dynamics controls angle.
+- **Pivot X**: Horizontal stamp contact point inside the brush image (0.0 = left edge, 0.5 = centre, 1.0 = right edge). Moving it lets off-centre parts of the brush lead the stroke.
+- **Pivot Y**: Vertical stamp contact point inside the brush image (0.0 = top edge, 0.5 = centre, 1.0 = bottom edge). Together with **Pivot X**, this defines which part of the dab sits on the paint location.
 - **Random Flip Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
 - **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
 - **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is Gaussian (offsets cluster toward centre).
 - **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
+
+When either pivot value differs from centre, the brush preview shows a crosshair overlay marking the active stamp contact point.
 
 #### Brush Heads (overflow)
 Formation:

@@ -20,13 +20,13 @@ Proceduralnie renderowane kształty (Koło, Kwadrat, Diament, Trójkąt) z regul
 
 ### Animowane pędzle (.anim)
 
-Sekwencyjne sekwencje klatek, które postępują podczas pociągnięć. Ramki mogą być cyklicznie przełączane przyrostowo (postęp klatek na dotknięcie), wybierane losowo na dotknięcie lub indeksowane według dynamiki (nacisk, prędkość, pochylenie, kąt).
+Sekwencyjne sekwencje klatek, które postępują podczas pociągnięć. Ramki mogą być przełączane przyrostowo (postęp klatek na dotknięcie), losowo wybierane na dotknięcie lub indeksowane według dynamiki (nacisk, prędkość, pochylenie, kąt).
 
 ## Malowanie kursora
 
 Kursor dostosowuje się do bieżącego stanu narzędzia, zapewniając jasne, kontekstowe informacje zwrotne:
 
-- **Zarys pędzla**: Kursor śledzi dokładny kształt i rozmiar pędzla, dając podgląd na żywo miejsca, w którym wyląduje farba.
+- **Brush outline**: The cursor tracks the exact brush shape and size, giving a live preview of where paint will land.
 - **Tryb wymazywania**: Gdy wymazywanie jest aktywne, kontur zmienia się w przerywany okrąg, aby wizualnie odróżnić pociągnięcia wymazywane od pociągnięć farby.
 - **Prosta granica pędzla**: W przypadku złożonych lub bardzo dużych pędzli, gdzie renderowanie dokładnego konturu jest kosztowne, włącz opcję **Prosta granica pędzla** (w opcjach dodatkowych), aby zamiast tego używać zwykłego okręgu.
 
@@ -67,7 +67,7 @@ W ekspanderze **Zachowanie po uderzeniu**:
 Gdy jest aktywne, stemplowanie dotykowe jest zastępowane ciągłym korytarzem geometrycznym:
 - **Dynamiczne krycie**: Moduluje krycie w obrębie pociągnięcia w oparciu o zmiany prędkości i kierunku. Działa najlepiej przy delikatnych, kontrolowanych pociągnięciach; wyniki są mniej przewidywalne w przypadku szybkich bazgrołów. Eksperymentalny.
 - **Wzrost prędkości** (0–100%): Maksymalny dozwolony wzrost rozmiaru na próbkę jako procent rozmiaru poprzedniej próbki. Ogranicza szybkość wzrostu dynamiki rozmiaru zależnej od prędkości, zapobiegając nagłym skokom, gdy skok przyspiesza.
-- **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Ogranicza szybkość zmniejszania się rozmiaru w przypadku zmniejszania się skoku.
+- **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Limits how quickly the size can drop when the stroke decelerates.
 
 #### Stabilizacja i wygładzanie
 
@@ -110,6 +110,8 @@ Główki szczoteczek umieszczają wiele niezależnych główek szczoteczek na ok
 
 Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podążaj za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
 
+Główki szczotek kontrolują położenie każdej główki wokół pociągnięcia pędzla. If **Pivot X** or **Pivot Y** is moved away from the default centre, every head still follows the same formation, but each stamped dab now lands using the chosen internal contact point instead of the geometric centre of the brush image.
+
 Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.
 
 - **Liczba**: Liczba jednoczesnych główek szczoteczki (1–16).
@@ -122,21 +124,26 @@ Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu 
 
 #### Rozproszenie
 
-Główne elementy sterujące rozproszeniem w ekspanderze **Główki pędzli**:
-
-- **Kąt rozproszenia** (0–360°, domyślnie 10°): Obraca tylko losowy komponent rozproszenia (nie odstępy wypełnienia). Kąty na głowę/na dotknięcie są odchylone na zewnątrz z kontrolowanym skrzyżowaniem, aby uniknąć sztywnych, lustrzanych pióropuszów. Zamocowany do 360°.
+Główne elementy sterujące rozproszeniem w ekspanderze **Główki pędzli**:- **Kąt rozproszenia** (0–360°, domyślnie 10°): Obraca tylko losowy komponent rozproszenia (nie odstępy wypełnienia). Kąty na głowę/na dotknięcie są odchylone na zewnątrz z kontrolowanym skrzyżowaniem, aby uniknąć sztywnych, lustrzanych pióropuszów. Zamocowany do 360°.
 - **Odległość rozproszenia** (0–10000 pikseli): Losowe przesunięcie do przodu z pozycji wypełnienia każdej głowicy. Przewiń ponownie każde dotknięcie.
 - **Balans wielkości rozproszenia** (0,0–1,0): kontroluje stromość tłumienia dla głów powyżej progu. Przy wartości 1,0 wszystkie głowy rozpraszają się równomiernie; niższe wartości w coraz większym stopniu tłumią większe głowy, podczas gdy głowy na poziomie progu/poniżej pozostają w pełnej odległości rozproszenia.
 
 ### Dodatkowe opcje
 
-W ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym) kontrolki są pogrupowane w sekcje przepełnione, które są rzadziej zmieniane. Dzięki temu główne ekspandery skupiają się na często dostosowywanych elementach sterujących malowaniem.#### Właściwości pędzla (przepełnienie)
+W ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym) kontrolki są pogrupowane w sekcje przepełnione, które są rzadziej zmieniane. Dzięki temu główne ekspandery skupiają się na często dostosowywanych elementach sterujących malowaniem.
+
+#### Właściwości pędzla (przepełnienie)
+
 - **Zablokuj kąt do przestrzeni ekranu**: Blokuje kąt pędzla do przestrzeni ekranu, dzięki czemu kąt pozostaje równy podczas obracania/odwracania płótna. Brak efektu, gdy dynamika kontroluje kąt.
+- **Pivot X**: Poziomy punkt styku stempla wewnątrz obrazu pędzla (0,0 = lewa krawędź, 0,5 = środek, 1,0 = prawa krawędź). Przesuwanie go pozwala, aby niecentryczne części pędzla prowadziły pociągnięcie.
+- **Pivot Y**: Pionowy punkt styku stempla wewnątrz obrazu pędzla (0,0 = górna krawędź, 0,5 = środek, 1,0 = dolna krawędź). Razem z **Pivot X** określa, która część odrobiny znajduje się w miejscu malowania.
 - **Losowe obrócenie w poziomie**: 50% szans na odbicie lustrzane każdego stempla od lewej do prawej przy każdym dotknięciu.
 - **Losowe odwrócenie w pionie**: 50% szans na odwrócenie każdego stempla do góry nogami przy każdym dotknięciu.
 - **Losowy obrót**: Losowy obrót każdego stempla o 0°, 90°, 180° lub 270° na jedno dotknięcie.
 - **Jitter Jednolity**: Gdy jest włączony, przesunięcia dotknięć z suwaka **Dźwięk** są rysowane z jednolitego rozkładu (każde przesunięcie jest jednakowo prawdopodobne w danym zakresie). Gdy opcja jest wyłączona, rozkład jest gaussowski (przesuwa klaster w stronę środka).
 - **Resetuj animację**: W przypadku animowanych pędzli: po włączeniu animacja rozpoczyna się od klatki 0 przy każdym nowym pociągnięciu; gdy jest wyłączony, kontynuuje od miejsca, w którym zakończył się poprzedni skok.
+
+Gdy którakolwiek wartość obrotu różni się od środka, na podglądzie pędzla pojawia się nakładka z celownikiem zaznaczająca aktywny punkt styku stempla.
 
 #### Główki szczoteczek (przelew)
 
@@ -150,9 +157,6 @@ Rozproszenie:
 Randomizacja:
 - **Ziarno postaci** (0–255): Naprawiono ziarno znaku na głowę (rozmiar, pozycja wypełnienia). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zmniejszono czułość, gdy włączona jest opcja **Losowa postać głowy**.
 - **Losuj postać głowy**: Ponownie rysuje wartości postaci na głowę (rozmiar, położenie rozproszenia) przy każdym stemplu, dzięki czemu formacja jest całkowicie chaotyczna wzdłuż pociągnięcia. Zastępuje **Ziarno postaci**.
-- **Losowe klatki animacji**: W przypadku pędzli animowanych: każda głowa niezależnie przesuwa klatkę animacji.
-
-#### Zachowanie po uderzeniu (przepełnienie)
-
+- **Losowe klatki animacji**: W przypadku pędzli animowanych: każda głowa niezależnie przesuwa klatkę animacji.#### Zachowanie po uderzeniu (przepełnienie)
 - **Przywróć ostatnio używane kolory**: Przywraca kolory pierwszego planu i tła z poprzedniej sesji podczas uruchamiania, zamiast domyślnych kolorów czarno-białych.
 - **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.

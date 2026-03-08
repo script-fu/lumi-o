@@ -110,6 +110,8 @@ Mit „Bürstenköpfe“ werden mehrere unabhängige Bürstenköpfe auf einem kr
 
 Der Umlaufradius wird durch die globale Pinselgröße minus der Kopfgröße bestimmt: Größere Köpfe sitzen näher an der Mitte; kleinere Köpfe kreisen weiter draußen. Die Köpfe verteilen sich gleichmäßig um den Ring. Mit zwei Köpfen erhalten Sie einen auf jeder Seite des Strichs, wodurch eine symmetrische Ausbreitung entsteht, die sich wie eine Kalligraphiefeder verhält. Der Schieberegler **Richtung folgen** dreht den gesamten Ring so, dass er senkrecht zum Strich bleibt, sodass die Spitze beim Malen auf natürliche Weise der Richtung folgt. Durch das Hinzufügen weiterer Köpfe werden diese nach und nach um den Ring verteilt, bis hin zu einem vollständigen Sprühkreis bei 16.
 
+Pinselköpfe steuern, wo jeder Kopf um den Pinselstrich herum platziert wird. Wenn **Pivot
+
 Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.
 
 - **Anzahl**: Anzahl gleichzeitiger Bürstenköpfe (1–16).
@@ -122,21 +124,26 @@ Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeug
 
 #### Streuung
 
-Haupt-Scatter-Steuerelemente im **Brush Heads**-Expander:
-
-- **Streuungswinkel** (0–360°, Standard 10°): Dreht nur die zufällige Streuungskomponente (nicht den Füllabstand). Die Winkel pro Kopf/pro Tupfer sind mit kontrollierter Überkreuzung nach außen gerichtet, um starre Spiegelfahnen zu vermeiden. Auf 360° geklemmt.
+Haupt-Scatter-Steuerelemente im **Brush Heads**-Expander:- **Streuungswinkel** (0–360°, Standard 10°): Dreht nur die zufällige Streuungskomponente (nicht den Füllabstand). Die Winkel pro Kopf/pro Tupfer sind mit kontrollierter Überkreuzung nach außen gerichtet, um starre Spiegelfahnen zu vermeiden. Auf 360° geklemmt.
 - **Streuentfernung** (0–10.000 px): Zufällige Vorwärtsverschiebung von der Füllabstandsposition jedes Kopfes. Jeden Tupfer erneut aufrollen.
 - **Scatter Size Balance** (0,0–1,0): Steuert die Unterdrückungssteilheit für Köpfe über dem Schwellenwert. Bei 1,0 streuen alle Köpfe gleichmäßig; Niedrigere Werte unterdrücken zunehmend größere Köpfe, während Köpfe bei/unter dem Schwellenwert bei voller Streuentfernung bleiben.
 
 ### Zusätzliche Optionen
 
-Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet) werden Steuerelemente als Überlaufabschnitte gruppiert, die seltener geändert werden. Dadurch bleibt der Fokus der Hauptexpander auf häufig angepassten Malsteuerungen.#### Pinseleigenschaften (Überlauf)
+Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet) werden Steuerelemente als Überlaufabschnitte gruppiert, die seltener geändert werden. Dadurch bleibt der Fokus der Hauptexpander auf häufig angepassten Malsteuerungen.
+
+#### Pinseleigenschaften (Überlauf)
+
 - **Winkel an den Bildschirmbereich anpassen**: Der Pinselwinkel wird an den Bildschirmbereich angepasst, sodass der Winkel eben bleibt, während sich die Leinwand dreht/spiegelt. Keine Auswirkung, wenn Dynamics den Winkel steuert.
+- **Drehpunkt X**: Horizontaler Stempelkontaktpunkt innerhalb des Pinselbilds (0,0 = linker Rand, 0,5 = Mitte, 1,0 = rechter Rand). Durch Verschieben können außermittige Teile des Pinsels den Strich anführen.
+- **Drehpunkt Y**: Vertikaler Stempelkontaktpunkt innerhalb des Pinselbildes (0,0 = Oberkante, 0,5 = Mitte, 1,0 = Unterkante). Zusammen mit **Pivot X** definiert dies, welcher Teil des Tupfers auf der Farbstelle sitzt.
 - **Zufälliges horizontales Spiegeln**: 50 % Chance, jeden Stempel pro Tupfer von links nach rechts zu spiegeln.
 - **Zufälliges vertikales Spiegeln**: 50 % Chance, jeden Stempel pro Tupfer auf den Kopf zu stellen.
 - **Zufällige Drehung**: Rotiert jeden Stempel zufällig um 0°, 90°, 180° oder 270° pro Tupfer.
 - **Gleichmäßiger Jitter**: Wenn diese Option aktiviert ist, werden Spitzenversätze vom Schieberegler **Jitter** aus einer gleichmäßigen Verteilung gezogen (jeder Versatz ist innerhalb des Bereichs gleich wahrscheinlich). Wenn diese Option deaktiviert ist, ist die Verteilung eine Gaußsche Verteilung (versetzt den Cluster zur Mitte hin).
 - **Animation zurücksetzen**: Für animierte Pinsel: Wenn diese Option aktiviert ist, startet die Animation bei jedem neuen Strich ab Bild 0 neu. Wenn diese Option deaktiviert ist, wird an der Stelle fortgesetzt, an der der vorherige Strich endete.
+
+Wenn einer der Drehpunktwerte von der Mitte abweicht, wird in der Pinselvorschau ein überlagertes Fadenkreuz angezeigt, das den Kontaktpunkt des aktiven Stempels markiert.
 
 #### Bürstenköpfe (Überlauf)
 
@@ -150,9 +157,6 @@ Streuung:
 Randomisierung:
 - **Charakter-Seed** (0–255): Der Seed für Pro-Kopf-Charaktere wurde korrigiert (Größe, Position des Füllabstands). Derselbe Samen reproduziert bei jedem Schlag die gleiche Formation. Desensibilisiert, wenn **Kopfcharakter zufällig auswählen** aktiviert ist.
 - **Kopfzeichen randomisieren**: Zeichnet die Zeichenwerte pro Kopf (Größe, Streuposition) bei jedem Stempel neu, sodass die Formation entlang des Strichs völlig chaotisch ist. Überschreibt **Charakter-Seed**.
-- **Animationsrahmen randomisieren**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.
-
-#### Strichverhalten (Überlauf)
-
+- **Animationsrahmen randomisieren**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.#### Strichverhalten (Überlauf)
 - **Zuletzt verwendete Farben wiederherstellen**: Stellt beim Start die Vordergrund- und Hintergrundfarben der vorherigen Sitzung wieder her, anstatt standardmäßig Schwarz und Weiß zu verwenden.
 - **Einfache Pinselgrenze**: Verwendet einen einfachen Kreis als Umriss des Pinselcursors, anstatt die vollständige Pinselform darzustellen. Nützlich für komplexe oder große Pinsel, bei denen das Zeichnen der genauen Grenze aufwändig ist.

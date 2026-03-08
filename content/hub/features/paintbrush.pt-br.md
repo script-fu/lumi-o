@@ -110,6 +110,8 @@ Cabeças de pincel colocam várias cabeças de pincel independentes em um **anel
 
 O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; cabeças menores orbitam mais longe. As cabeças se espaçam uniformemente ao redor do anel. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
 
+Cabeças de pincel controlam onde cada cabeça é colocada ao redor do traço. Se **Pivô X** ou **Pivô Y** for afastado do centro padrão, cada cabeça ainda seguirá a mesma formação, mas cada pincelada estampada agora pousará usando o ponto de contato interno escolhido em vez do centro geométrico da imagem do pincel.
+
 Os controles aparecem no expansor **Cabeças de pincel** no painel de opções de ferramentas.
 
 - **Contagem**: Número de cabeças de escova simultâneas (1–16).
@@ -122,21 +124,26 @@ Os controles aparecem no expansor **Cabeças de pincel** no painel de opções d
 
 #### Dispersão
 
-Principais controles de dispersão no expansor **Cabeças de pincel**:
-
-- **Ângulo de dispersão** (0–360°, padrão 10°): gira apenas o componente de dispersão aleatório (não o espaçamento de preenchimento). Os ângulos por cabeça/por salpico são inclinados para fora com cruzamento controlado para evitar plumas espelhadas rígidas. Fixado a 360°.
+Principais controles de dispersão no expansor **Cabeças de pincel**:- **Ângulo de dispersão** (0–360°, padrão 10°): gira apenas o componente de dispersão aleatório (não o espaçamento de preenchimento). Os ângulos por cabeça/por salpico são inclinados para fora com cruzamento controlado para evitar plumas espelhadas rígidas. Fixado a 360°.
 - **Distância de dispersão** (0–10.000 px): deslocamento aleatório para frente a partir da posição de espaçamento de preenchimento de cada cabeça. Rolei novamente cada pincelada.
 - **Equilíbrio de tamanho de dispersão** (0,0–1,0): controla a inclinação da supressão para cabeças acima do limite. Em 1,0, todas as cabeças se espalham igualmente; valores mais baixos suprimem cada vez mais cabeças maiores, enquanto cabeças no limite/abaixo permanecem na distância total de dispersão.
 
 ### Opções Adicionais
 
-No expansor **Opções adicionais** (recolhido por padrão), os controles são agrupados como seções de estouro que são alteradas com menos frequência. Isso mantém os expansores principais focados nos controles de pintura ajustados com frequência.#### Propriedades do pincel (estouro)
+No expansor **Opções adicionais** (recolhido por padrão), os controles são agrupados como seções de estouro que são alteradas com menos frequência. Isso mantém os expansores principais focados nos controles de pintura ajustados com frequência.
+
+#### Propriedades do pincel (estouro)
+
 - **Bloquear ângulo no espaço da tela**: bloqueia o ângulo do pincel no espaço da tela, para que o ângulo permaneça nivelado enquanto a tela gira/vira. Nenhum efeito quando o Dynamics controla o ângulo.
+- **Pivô X**: Ponto de contato do carimbo horizontal dentro da imagem do pincel (0,0 = borda esquerda, 0,5 = centro, 1,0 = borda direita). Movê-lo permite que partes descentralizadas do pincel conduzam o traço.
+- **Pivô Y**: Ponto de contato do carimbo vertical dentro da imagem do pincel (0,0 = borda superior, 0,5 = centro, 1,0 = borda inferior). Juntamente com **Pivot X**, isso define qual parte do salpico fica no local da pintura.
 - **Random Flip Horizontal**: 50% de chance de espelhar cada carimbo da esquerda para a direita por pincelada.
 - **Random Flip Vertical**: 50% de chance de virar cada carimbo de cabeça para baixo por pincelada.
 - **Rotação aleatória**: gira aleatoriamente cada carimbo em 0°, 90°, 180° ou 270° por pincelada.
 - **Jitter uniforme**: Quando ativado, os deslocamentos de salpicos do controle deslizante **Jitter** são extraídos de uma distribuição uniforme (cada deslocamento é igualmente provável dentro do intervalo). Quando desativado, a distribuição é gaussiana (desloca o cluster em direção ao centro).
 - **Redefinir Animação**: Para pincéis animados: quando ativado, a animação reinicia a partir do quadro 0 a cada novo traço; quando desligado, continua de onde o golpe anterior terminou.
+
+Quando qualquer valor de pivô difere do centro, a visualização do pincel mostra uma sobreposição de retículo marcando o ponto de contato do carimbo ativo.
 
 #### Cabeças de escova (estouro)
 
@@ -150,9 +157,6 @@ Dispersão:
 Randomização:
 - **Semente de personagem** (0–255): Semente fixa para caractere por cabeça (tamanho, posição de espaçamento de preenchimento). A mesma semente reproduz a mesma formação a cada golpe. Dessensibilizado quando **Randomizar personagem principal** está ativado.
 - **Randomizar personagem principal**: redesenha os valores dos caracteres por cabeça (tamanho, posição de dispersão) em cada carimbo para que a formação seja totalmente caótica ao longo do traço. Substitui **Semente de personagem**.
-- **Randomizar quadros de animação**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.
-
-#### Comportamento do AVC (estouro)
-
+- **Randomizar quadros de animação**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.#### Comportamento do AVC (estouro)
 - **Restaurar as últimas cores usadas**: restaura as cores de primeiro plano e de fundo da sessão anterior na inicialização, em vez de usar preto e branco como padrão.
 - **Limite do pincel simples**: usa um círculo simples para o contorno do cursor do pincel em vez de renderizar a forma completa do pincel. Útil para pincéis complexos ou grandes onde o desenho do limite preciso é caro.
