@@ -1,8 +1,9 @@
 ---
-title: "Lumi·o"
 toc: false
 type: docs
 ---
+![Lumi logo placeholder](/images/lumi.png)
+
 Lumi·o (Lumi) é um aplicativo de pintura digital de código aberto projetado para fluxos de trabalho de ilustração estruturados.
 
 Construído sobre a arquitetura comprovada do GIMP, o Lumi reestrutura o software em torno da pintura digital, criando um ambiente enxuto somente Linux, focado na estabilidade e no desempenho.

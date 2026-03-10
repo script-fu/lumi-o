@@ -1,8 +1,9 @@
 ---
-title: "Lumi·o"
 toc: false
 type: docs
 ---
+![Lumi logo placeholder](/images/lumi.png)
+
 Lumi·o (Lumi) to aplikacja do malowania cyfrowego typu open source, zaprojektowana z myślą o ustrukturyzowanych procesach tworzenia ilustracji.
 
 Zbudowany w oparciu o sprawdzoną architekturę GIMP, Lumi restrukturyzuje oprogramowanie wokół cyfrowego malowania, tworząc smukłe środowisko oparte wyłącznie na systemie Linux, skupione na stabilności i wydajności.

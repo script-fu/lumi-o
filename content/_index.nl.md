@@ -1,8 +1,9 @@
 ---
-title: "Lumi·o"
 toc: false
 type: docs
 ---
+![Lumi logo placeholder](/images/lumi.png)
+
 Lumi·o (Lumi) is een open source digitale schildertoepassing ontworpen voor gestructureerde illustratieworkflows.
 
 Gebouwd op de beproefde architectuur van GIMP, herstructureert Lumi de software rond digitaal schilderen, waardoor een gestroomlijnde, uitsluitend Linux-omgeving ontstaat, gericht op stabiliteit en prestaties.

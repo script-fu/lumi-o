@@ -1,8 +1,9 @@
 ---
-title: "Lumi·o"
 toc: false
 type: docs
 ---
+![Lumi logo placeholder](/images/lumi.png)
+
 Lumi·o (Lumi) är en digital målningsapplikation med öppen källkod designad för strukturerade illustrationsarbetsflöden.
 
 Byggd på den beprövade arkitekturen hos GIMP, omstrukturerar Lumi mjukvaran kring digital målning, vilket skapar en slank, endast Linux-miljö fokuserad på stabilitet och prestanda.

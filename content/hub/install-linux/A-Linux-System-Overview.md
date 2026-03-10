@@ -6,15 +6,15 @@ url: "hub/install-linux/A-Linux-System-Overview"
 
 Linux is a powerful and versatile operating system with a vast community of developers. At its core, a Linux system consists of several key components that work together to provide a seamless user experience. This overview will outline the essential parts of a Linux system, including the kernel, distribution, package manager, display manager, desktop environment, and display server (X11 or Wayland).
 
-**Examples of Linux Distribution Configurations**
+**Common Current Linux Distribution Defaults**
 
 | **Distribution**   | **Package Manager** | **Display Manager** | **Desktop Environment** | **Display Server** |
 |--------------------|----------------------|----------------------|-------------------------|--------------------|
-| Debian             | APT                  | GDM                  | GNOME                   | X11                |
-| Debian             | APT                  | LightDM              | Cinnamon                | X11                |
-| Debian Testing     | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
 | Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
-| Arch Linux         | Pacman               | SDDM                 | KDE Plasma              | X11                |
+| Arch Linux         | Pacman               | User choice          | User choice             | User choice        |
 
 ### Key Terms
 

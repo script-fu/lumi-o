@@ -1,9 +1,9 @@
 ---
-title: "Lumi·o"
 toc: false
 type: docs
 url: ""
 ---
+![Lumi logo placeholder](/images/lumi.png)
 
 Lumi·o (Lumi) is an open source digital painting application designed for structured illustration workflows.
 

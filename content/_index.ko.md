@@ -1,8 +1,9 @@
 ---
-title: "루미오"
 toc: false
 type: docs
 ---
+![Lumi logo placeholder](/images/lumi.png)
+
 Lumi·o(Lumi)는 구조화된 일러스트레이션 워크플로우를 위해 설계된 오픈 소스 디지털 페인팅 애플리케이션입니다.
 
 GIMP의 입증된 아키텍처를 기반으로 구축된 Lumi는 디지털 페인팅을 중심으로 소프트웨어를 재구성하여 안정성과 성능에 중점을 둔 간결한 Linux 전용 환경을 만듭니다.

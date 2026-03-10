@@ -153,19 +153,13 @@ weight = 2
 name = "About"
 identifier = "menuAbout"
 pageRef = "hub/about/"
-weight = 8
+weight = 9
 
 [[menu.main]]
 name = "Patreon"
 identifier = "menuPatreon"
 pageRef = "hub/about/Patreon"
-weight = 7
-
-[[menu.main]]
-name = "How to Install Linux"
-identifier = "menuInstallLinux"
-pageRef = "hub/install-linux/"
-weight = 3
+weight = 8
 
 [[menu.main]]
 name = "Features"
@@ -174,14 +168,14 @@ pageRef = "hub/features/"
 weight = 5
 
 [[menu.main]]
-name = "Scripting"
-identifier = "menuScripting"
-pageRef = "hub/scripting/"
+name = "Made in Lumi·o"
+identifier = "menuMadeInLumio"
+pageRef = "hub/made-in-lumio/"
 weight = 6
 
 [[menu.main]]
 name = "Search"
-weight = 9
+weight = 10
 
   [menu.main.params]
   type = "search"
