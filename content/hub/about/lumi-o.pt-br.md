@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) é um aplicativo de pintura digital de código aberto projetado para fluxos de trabalho de ilustração estruturados.
-
-Construído sobre a arquitetura comprovada do GIMP, o Lumi reestrutura o software em torno da pintura digital, criando um ambiente enxuto somente Linux, focado na estabilidade e no desempenho.
-
 O Lumi é desenvolvido abertamente, com decisões de design, documentos de arquitetura e histórico de desenvolvimento disponíveis publicamente para que os usuários possam entender como o software evolui ao longo do tempo.
 
 Ele prioriza a acessibilidade de longo prazo às obras de arte. O formato do arquivo é aberto, baseado em diretório e legível sem software proprietário, garantindo que os projetos permaneçam acessíveis à medida que o software continua a mudar. A compatibilidade é suportada por meio de importação e exportação de XCF e PSD.
@@ -33,15 +29,16 @@ Esta combinação de prática artística e implementação técnica molda direta
 
 ## A Filosofia
 
-Lumi combina um sistema de cores baseado em pigmentos construído em torno da mistura física com um fluxo de trabalho de ilustração baseado em camadas altamente responsivo e não destrutivo.- **Pigment-Centric**: As cores são derivadas de perfis de pigmentos do mundo real (códigos de índice de cores) em vez de valores RGB arbitrários, suportando a construção de paleta intuitiva baseada na experiência real de pintura.
+Lumi combina um sistema de cores baseado em pigmentos construído em torno da mistura física com um fluxo de trabalho de ilustração baseado em camadas altamente responsivo e não destrutivo.
+
+- **Pigment-Centric**: As cores são derivadas de perfis de pigmentos do mundo real (códigos de índice de cores) em vez de valores RGB arbitrários, suportando a construção de paleta intuitiva baseada na experiência real de pintura.
 - **Ferramentas táteis**: Pincéis, pressão da caneta, inclinação e velocidade são totalmente integrados para se comportarem como ferramentas de pintura física, proporcionando controle diferenciado com atrito mínimo.
 - **Gerenciamento de cena**: fluxos de trabalho não destrutivos e em camadas aumentam em complexidade, permanecendo previsíveis e responsivos.
 - **Controles focados na intenção**: as ferramentas oferecem opções significativas sem sobrecarregar o artista, apoiando decisões deliberadas e baseadas em habilidades.
 
-## What the Software Prioritizes
+## O que o software prioriza- **Intenção artística**: as ferramentas se comportam de maneira previsível e apoiam a intuição do artista.
 
-- **Intenção artística**: as ferramentas se comportam de maneira previsível e apoiam a intuição do artista.
-- **Confiabilidade**: integridade e recuperação de dados são fundamentais; an artist should never lose work.
+- **Confiabilidade**: integridade e recuperação de dados são fundamentais; um artista nunca deve perder o trabalho.
 - **Clareza estrutural**: a interface mantém camadas, ferramentas e formatos de arquivo simples e legíveis, para que mesmo pinturas grandes com centenas de camadas permaneçam gerenciáveis.
 
 ## Não é

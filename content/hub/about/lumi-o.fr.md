@@ -3,13 +3,9 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) est une application de peinture numérique open source conçue pour les flux de travail d'illustration structurés.
-
-Construit sur l'architecture éprouvée de GIMP, Lumi restructure le logiciel autour de la peinture numérique, créant un environnement simple, uniquement Linux, axé sur la stabilité et les performances.
-
 Lumi est développé de manière ouverte, avec des décisions de conception, des documents d'architecture et un historique de développement accessibles au public afin que les utilisateurs puissent comprendre comment le logiciel évolue au fil du temps.
 
-Il donne la priorité à l’accessibilité à long terme des œuvres d’art. Le format de fichier est ouvert, basé sur un répertoire et lisible sans logiciel propriétaire, garantissant que les projets restent accessibles à mesure que le logiciel continue d'évoluer. Compatibility is supported through XCF and PSD import and export.
+Il donne la priorité à l’accessibilité à long terme des œuvres d’art. Le format de fichier est ouvert, basé sur un répertoire et lisible sans logiciel propriétaire, garantissant que les projets restent accessibles à mesure que le logiciel continue d'évoluer. La compatibilité est prise en charge via l'importation et l'exportation XCF et PSD.
 
 Lumi est conçu pour être compréhensible et puissant. L'interface réduit la complexité inutile, gardant l'espace de travail concentré sur la peinture et le dessin.
 
@@ -33,14 +29,15 @@ Cette combinaison de pratique artistique et de mise en œuvre technique façonne
 
 ## La philosophie
 
-Lumi combine un système de couleurs à base de pigments construit autour d'un mélange physique avec un flux de travail d'illustration hautement réactif et non destructif basé sur des calques.- **Pigment-Centric** : Les couleurs sont dérivées de profils de pigments réels (codes Color Index) plutôt que de valeurs RVB arbitraires, permettant une construction de palette intuitive fondée sur une expérience de peinture réelle.
+Lumi combine un système de couleurs à base de pigments construit autour d'un mélange physique avec un flux de travail d'illustration hautement réactif et non destructif basé sur des calques.
+
+- **Pigment-Centric** : Les couleurs sont dérivées de profils de pigments réels (codes Color Index) plutôt que de valeurs RVB arbitraires, permettant une construction de palette intuitive fondée sur une expérience de peinture réelle.
 - **Outils tactiles** : les pinceaux, la pression du stylet, l'inclinaison et la vitesse sont entièrement intégrés pour se comporter comme des outils de peinture physiques, offrant un contrôle nuancé avec un minimum de friction.
 - **Gestion de scènes** : les flux de travail en couches et non destructifs évoluent en complexité tout en restant prévisibles et réactifs.
 - **Contrôles axés sur l'intention** : les outils offrent des options significatives sans surcharger l'artiste, en soutenant des décisions délibérées et fondées sur les compétences.
 
-## Ce que le logiciel donne la priorité
+## Ce que le logiciel donne la priorité- **Intention artistique** : les outils se comportent de manière prévisible et soutiennent l'intuition de l'artiste.
 
-- **Intention artistique** : les outils se comportent de manière prévisible et soutiennent l'intuition de l'artiste.
 - **Fiabilité** : l'intégrité et la récupération des données sont primordiales ; un artiste ne devrait jamais perdre son travail.
 - **Clarté structurelle** : L'interface conserve les calques, les outils et les formats de fichiers simples et lisibles, de sorte que même les grandes peintures comportant des centaines de calques restent gérables.
 

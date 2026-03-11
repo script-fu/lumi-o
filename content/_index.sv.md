@@ -1,17 +1,18 @@
 ---
+title: "Digital Painting med öppen källkod för Linux"
 toc: false
 type: docs
 ---
-![Lumi logo placeholder](/images/lumi.png)
+[@@LUMI_TOKEN_5@@](/images/screens/gui-01.jpg)
 
-Lumi·o (Lumi) är en digital målningsapplikation med öppen källkod designad för strukturerade illustrationsarbetsflöden.
+Lumi·o är designad för skiktad rastermålning, magert och stabilt avsiktligt. Wacom-stöd för surfplattor har testats intensivt för den smidiga, lyhörda input som professionell illustration kräver.
 
-Byggd på den beprövade arkitekturen hos GIMP, omstrukturerar Lumi mjukvaran kring digital målning, vilket skapar en slank, endast Linux-miljö fokuserad på stabilitet och prestanda.
+Byggd på GIMP:s kärnarkitektur tar Lumi·o bort komplexitet för allmänna ändamål till förmån för en dedikerad målningsmiljö där dataintegritet kommer först. Snabbt automatiskt sparande och ett rullande inkrementellt sparsystem skyddar ditt arbete utan att avbryta ditt flöde.
+
+Lazy loading tar bort fasta minnestak, så att du kan hantera stora, komplexa projekt och massiva canvasdimensioner utan att komma in i RAM-gränser.
 
 {{< cards >}}
   {{< card link="hub/about/" title="Om" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Snabbstart" icon="play" >}}
-  {{< card link="hub/install-linux/" title="Hur man installerar Linux" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/" title="Tekniska guider" icon="book-open" >}}
-  {{< card link="hub/scripting/" title="Skript" icon="code" >}}
+  {{< card link="hub/features/" title="Drag" icon="book-open" >}}
 {{< /cards >}}

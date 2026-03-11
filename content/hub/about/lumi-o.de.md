@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) ist eine Open-Source-Anwendung für digitales Malen, die für strukturierte Illustrations-Workflows entwickelt wurde.
-
-Aufbauend auf der bewährten Architektur von GIMP strukturiert Lumi die Software rund um das digitale Malen neu und schafft so eine schlanke, reine Linux-Umgebung, die auf Stabilität und Leistung ausgerichtet ist.
-
 Lumi wird offen entwickelt, wobei Designentscheidungen, Architekturdokumente und Entwicklungsgeschichte öffentlich zugänglich sind, damit Benutzer nachvollziehen können, wie sich die Software im Laufe der Zeit weiterentwickelt.
 
 Dabei steht die langfristige Zugänglichkeit von Kunstwerken im Vordergrund. Das Dateiformat ist offen, verzeichnisbasiert und ohne proprietäre Software lesbar, sodass Projekte weiterhin zugänglich bleiben, auch wenn sich die Software ständig ändert. Die Kompatibilität wird durch XCF- und PSD-Import und -Export unterstützt.
@@ -33,14 +29,15 @@ Diese Kombination aus künstlerischer Praxis und technischer Umsetzung prägt di
 
 ## Die Philosophie
 
-Lumi kombiniert ein pigmentbasiertes Farbsystem, das auf physischer Mischung basiert, mit einem äußerst reaktionsschnellen, zerstörungsfreien, ebenenbasierten Illustrationsworkflow.- **Pigmentzentriert**: Farben werden aus realen Pigmentprofilen (Farbindexcodes) und nicht aus willkürlichen RGB-Werten abgeleitet und unterstützen so eine intuitive Palettenkonstruktion, die auf einem echten Malerlebnis basiert.
+Lumi kombiniert ein pigmentbasiertes Farbsystem, das auf physischer Mischung basiert, mit einem äußerst reaktionsschnellen, zerstörungsfreien, ebenenbasierten Illustrationsworkflow.
+
+- **Pigmentzentriert**: Farben werden aus realen Pigmentprofilen (Farbindexcodes) und nicht aus willkürlichen RGB-Werten abgeleitet und unterstützen so eine intuitive Palettenkonstruktion, die auf einem echten Malerlebnis basiert.
 - **Taktile Werkzeuge**: Pinsel, Stiftdruck, Neigung und Geschwindigkeit sind vollständig integriert, um sich wie physische Malwerkzeuge zu verhalten und eine differenzierte Steuerung mit minimaler Reibung zu ermöglichen.
 - **Szenenmanagement**: Mehrschichtige, zerstörungsfreie Arbeitsabläufe werden immer komplexer und bleiben gleichzeitig vorhersehbar und reaktionsfähig.
 - **Absichtsorientierte Steuerung**: Tools bieten sinnvolle Optionen, ohne den Künstler zu überfordern, und unterstützen bewusste, kompetenzbasierte Entscheidungen.
 
-## Was die Software priorisiert
+## Was die Software priorisiert- **Künstlerische Absicht**: Werkzeuge verhalten sich vorhersehbar und unterstützen die Intuition des Künstlers.
 
-- **Künstlerische Absicht**: Werkzeuge verhalten sich vorhersehbar und unterstützen die Intuition des Künstlers.
 - **Zuverlässigkeit**: Datenintegrität und -wiederherstellung sind von größter Bedeutung. Ein Künstler sollte niemals Arbeit verlieren.
 - **Strukturelle Klarheit**: Die Benutzeroberfläche sorgt dafür, dass Ebenen, Werkzeuge und Dateiformate übersichtlich und lesbar bleiben, sodass selbst große Gemälde mit Hunderten von Ebenen überschaubar bleiben.
 

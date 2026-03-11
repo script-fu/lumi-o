@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) är en digital målningsapplikation med öppen källkod designad för strukturerade illustrationsarbetsflöden.
-
-Byggd på den beprövade arkitekturen hos GIMP, omstrukturerar Lumi mjukvaran kring digital målning, vilket skapar en slank, endast Linux-miljö fokuserad på stabilitet och prestanda.
-
 Lumi är utvecklad i det fria, med designbeslut, arkitekturdokument och utvecklingshistorik offentligt tillgänglig så att användare kan förstå hur programvaran utvecklas över tiden.
 
 Den prioriterar långsiktig tillgänglighet av konstverk. Filformatet är öppet, katalogbaserat och läsbart utan proprietär programvara, vilket säkerställer att projekt förblir tillgängliga när programvaran fortsätter att förändras. Kompatibilitet stöds genom import och export av XCF och PSD.
@@ -33,14 +29,15 @@ Denna kombination av konstnärlig praktik och teknisk implementering formar dire
 
 ## Filosofin
 
-Lumi kombinerar ett pigmentbaserat färgsystem byggt kring fysisk blandning med ett mycket lyhört, icke-förstörande, lagerbaserat illustrationsarbetsflöde.- **Pigment-Centric**: Färger härrör från verkliga pigmentprofiler (Colour Index-koder) snarare än godtyckliga RGB-värden, vilket stöder intuitiv palettkonstruktion grundad i verklig målningsupplevelse.
+Lumi kombinerar ett pigmentbaserat färgsystem byggt kring fysisk blandning med ett mycket lyhört, icke-förstörande, lagerbaserat illustrationsarbetsflöde.
+
+- **Pigment-Centric**: Färger härrör från verkliga pigmentprofiler (Colour Index-koder) snarare än godtyckliga RGB-värden, vilket stöder intuitiv palettkonstruktion grundad i verklig målningsupplevelse.
 - **Taktila verktyg**: Penslar, penntryck, lutning och hastighet är helt integrerade för att bete sig som fysiska målningsverktyg, vilket ger nyanserad kontroll med minimal friktion.
 - **Scenhantering**: Lagrade, icke-destruktiva arbetsflöden skalas i komplexitet samtidigt som de förblir förutsägbara och lyhörda.
 - **Avsiktsfokuserade kontroller**: Verktygen erbjuder meningsfulla alternativ utan att överväldiga artisten och stödjer medvetna, skicklighetsdrivna beslut.
 
-## Vad programvaran prioriterar
+## Vad programvaran prioriterar- **Konstnärlig avsikt**: Verktygen beter sig förutsägbart och stödjer konstnärens intuition.
 
-- **Konstnärlig avsikt**: Verktygen beter sig förutsägbart och stödjer konstnärens intuition.
 - **Tillförlitlighet**: Dataintegritet och återställning är av största vikt; en konstnär får aldrig förlora sitt arbete.
 - **Strukturell tydlighet**: Gränssnittet håller lager, verktyg och filformat enkla och läsbara, så även stora målningar med hundratals lager förblir hanterbara.
 

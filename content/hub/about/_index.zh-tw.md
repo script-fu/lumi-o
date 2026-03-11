@@ -1,8 +1,7 @@
 ---
-title: "關於"
 type: docs
 ---
-Lumi·o 是一款僅針對 Linux 的繪畫應用程序，圍繞著真實的插圖練習而構建。 Linux 上對 Wacom 的直接硬體支援已經過針對流暢性和穩定性的深入測試。本節簡要概述了該軟體、它支援的工作流程以及它所服務的繪圖過程。
+本節簡要概述了該軟體、它支援的工作流程以及它所服務的繪圖過程。
 
 {{< cards >}}
 	{{< card link="lumi-o" title="盧米歐" icon="information-circle" subtitle="What Lumi is, why it exists, and the ideas shaping its development." >}}

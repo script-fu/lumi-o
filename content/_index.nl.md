@@ -1,17 +1,18 @@
 ---
+title: "Open Source digitaal schilderen voor Linux"
 toc: false
 type: docs
 ---
-![Lumi logo placeholder](/images/lumi.png)
+[@@LUMI_TOKEN_5@@](/images/screens/gui-01.jpg)
 
-Lumi·o (Lumi) is een open source digitale schildertoepassing ontworpen voor gestructureerde illustratieworkflows.
+Lumi·o is ontworpen voor gelaagd rasterschilderen, leunend en stabiel van opzet. Ondersteuning voor Wacom-tablets is intensief getest op de soepele, responsieve invoer die professionele illustratie vereist.
 
-Gebouwd op de beproefde architectuur van GIMP, herstructureert Lumi de software rond digitaal schilderen, waardoor een gestroomlijnde, uitsluitend Linux-omgeving ontstaat, gericht op stabiliteit en prestaties.
+Gebouwd op de kernarchitectuur van GIMP, ontdoet Lumi·o de complexiteit van algemene doeleinden ten gunste van een speciale schilderomgeving waarin gegevensintegriteit voorop staat. Automatisch opslaan op hoge snelheid en een doorlopend incrementeel opslagsysteem beschermen uw werk zonder uw stroom te onderbreken.
+
+Lazy Load verwijdert vaste geheugenplafonds, waardoor u grote, complexe projecten en enorme canvasafmetingen kunt beheren zonder tegen RAM-limieten aan te lopen.
 
 {{< cards >}}
   {{< card link="hub/about/" title="Over" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Snel beginnen" icon="play" >}}
-  {{< card link="hub/install-linux/" title="Hoe Linux te installeren" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/" title="Technische gidsen" icon="book-open" >}}
-  {{< card link="hub/scripting/" title="Scripten" icon="code" >}}
+  {{< card link="hub/features/" title="Functies" icon="book-open" >}}
 {{< /cards >}}

@@ -1,17 +1,18 @@
 ---
+title: "Pittura digitale open source per Linux"
 toc: false
 type: docs
 ---
-![Lumi logo placeholder](/images/lumi.png)
+[@@LUMI_TOKEN_5@@](/images/screens/gui-01.jpg)
 
-Lumi·o (Lumi) è un'applicazione di pittura digitale open source progettata per flussi di lavoro di illustrazione strutturati.
+Lumi·o è progettato per la pittura raster a strati, snello e stabile per intenzione. Il supporto per tablet Wacom è stato testato approfonditamente per garantire l'input fluido e reattivo richiesto dall'illustrazione professionale.
 
-Basato sulla comprovata architettura di GIMP, Lumi ristruttura il software attorno alla pittura digitale, creando un ambiente snello, esclusivamente Linux, incentrato sulla stabilità e sulle prestazioni.
+Basato sull'architettura principale di GIMP, Lumi·o elimina la complessità generale a favore di un ambiente di pittura dedicato in cui l'integrità dei dati viene prima di tutto. Il salvataggio automatico ad alta velocità e un sistema di salvataggio incrementale progressivo proteggono il tuo lavoro senza interrompere il flusso.
+
+Il caricamento lento rimuove i limiti di memoria fissi, consentendoti di gestire progetti grandi e complessi e dimensioni di tela enormi senza incorrere in limiti di RAM.
 
 {{< cards >}}
   {{< card link="hub/about/" title="Di" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Avvio rapido" icon="play" >}}
-  {{< card link="hub/install-linux/" title="Come installare Linux" icon="desktop-computer" >}}
-  {{< card link="hub/technical-guides/" title="Guide tecniche" icon="book-open" >}}
-  {{< card link="hub/scripting/" title="Scrittura" icon="code" >}}
+  {{< card link="hub/features/" title="Caratteristiche" icon="book-open" >}}
 {{< /cards >}}

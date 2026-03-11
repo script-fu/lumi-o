@@ -1,8 +1,7 @@
 ---
-title: "Over"
 type: docs
 ---
-Lumi·o is een op Linux gerichte applicatie die uitsluitend op schilderen is gericht en is opgebouwd rond echte illustratiepraktijk. Directe hardwareondersteuning voor Wacom op Linux is intensief getest op soepelheid en stabiliteit. Dit gedeelte geeft een kort overzicht van de software, de workflow die deze ondersteunt en het tekenproces waarvoor deze wordt vormgegeven.
+Dit gedeelte geeft een kort overzicht van de software, de workflow die deze ondersteunt en het tekenproces waarvoor deze wordt vormgegeven.
 
 {{< cards >}}
 	{{< card link="lumi-o" title="Lumi·o" icon="information-circle" subtitle="What Lumi is, why it exists, and the ideas shaping its development." >}}

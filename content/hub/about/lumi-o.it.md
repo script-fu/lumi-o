@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) è un'applicazione di pittura digitale open source progettata per flussi di lavoro di illustrazione strutturati.
-
-Basato sulla comprovata architettura di GIMP, Lumi ristruttura il software attorno alla pittura digitale, creando un ambiente snello, esclusivamente Linux, incentrato sulla stabilità e sulle prestazioni.
-
 Lumi è sviluppato all'aperto, con decisioni di progettazione, documenti di architettura e cronologia di sviluppo disponibili pubblicamente in modo che gli utenti possano comprendere come il software si evolve nel tempo.
 
 Dà priorità all’accessibilità a lungo termine delle opere d’arte. Il formato file è aperto, basato su directory e leggibile senza software proprietario, garantendo che i progetti rimangano accessibili mentre il software continua a cambiare. La compatibilità è supportata tramite l'importazione e l'esportazione di XCF e PSD.
@@ -33,14 +29,15 @@ Questa combinazione di pratica artistica e implementazione tecnica modella diret
 
 ## La Filosofia
 
-Lumi combina un sistema di colori basato su pigmenti costruito attorno alla miscelazione fisica con un flusso di lavoro di illustrazione altamente reattivo, non distruttivo e basato su livelli.- **Incentrato sui pigmenti**: i colori derivano da profili di pigmenti reali (codici Colour Index) anziché da valori RGB arbitrari, supportando la costruzione intuitiva di tavolozze basata sull'esperienza di pittura reale.
+Lumi combina un sistema di colori basato su pigmenti costruito attorno alla miscelazione fisica con un flusso di lavoro di illustrazione altamente reattivo, non distruttivo e basato su livelli.
+
+- **Incentrato sui pigmenti**: i colori derivano da profili di pigmenti reali (codici Colour Index) anziché da valori RGB arbitrari, supportando la costruzione intuitiva di tavolozze basata sull'esperienza di pittura reale.
 - **Strumenti tattili**: pennelli, pressione dello stilo, inclinazione e velocità sono completamente integrati per comportarsi come strumenti fisici di pittura, offrendo un controllo sfumato con un attrito minimo.
 - **Gestione delle scene**: flussi di lavoro stratificati e non distruttivi aumentano la complessità pur rimanendo prevedibili e reattivi.
 - **Controlli focalizzati sull'intento**: gli strumenti offrono opzioni significative senza sopraffare l'artista, supportando decisioni deliberate e guidate dalle competenze.
 
-## A cosa dà priorità il software
+## A cosa dà priorità il software- **Intento artistico**: gli strumenti si comportano in modo prevedibile e supportano l'intuizione dell'artista.
 
-- **Intento artistico**: gli strumenti si comportano in modo prevedibile e supportano l'intuizione dell'artista.
 - **Affidabilità**: l'integrità e il ripristino dei dati sono fondamentali; un artista non dovrebbe mai perdere il lavoro.
 - **Chiarezza strutturale**: l'interfaccia mantiene livelli, strumenti e formati di file semplici e leggibili, quindi anche i dipinti di grandi dimensioni con centinaia di livelli rimangono gestibili.
 

@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) to aplikacja do malowania cyfrowego typu open source, zaprojektowana z myślą o ustrukturyzowanych procesach tworzenia ilustracji.
-
-Zbudowany w oparciu o sprawdzoną architekturę GIMP, Lumi restrukturyzuje oprogramowanie wokół cyfrowego malowania, tworząc smukłe środowisko oparte wyłącznie na systemie Linux, skupione na stabilności i wydajności.
-
 Lumi jest rozwijany publicznie, a decyzje projektowe, dokumenty dotyczące architektury i historia rozwoju są publicznie dostępne, dzięki czemu użytkownicy mogą zrozumieć, jak oprogramowanie ewoluuje w czasie.
 
 Priorytetem jest długoterminowa dostępność dzieł sztuki. Format pliku jest otwarty, oparty na katalogach i możliwy do odczytania bez prawnie zastrzeżonego oprogramowania, co zapewnia dostępność projektów pomimo ciągłych zmian oprogramowania. Zgodność jest obsługiwana poprzez import i eksport XCF i PSD.
@@ -33,14 +29,15 @@ To połączenie praktyki artystycznej i realizacji technicznych bezpośrednio ks
 
 ## Filozofia
 
-Lumi łączy oparty na pigmentach system kolorów oparty na fizycznym mieszaniu z wysoce responsywnym, nieniszczącym, opartym na warstwach przepływem pracy nad ilustracjami.- **Pigment-Centric**: Kolory pochodzą z rzeczywistych profili pigmentów (kodów indeksu kolorów), a nie z dowolnych wartości RGB, co wspiera intuicyjną konstrukcję palety opartą na prawdziwym doświadczeniu malarskim.
+Lumi łączy oparty na pigmentach system kolorów oparty na fizycznym mieszaniu z wysoce responsywnym, nieniszczącym, opartym na warstwach przepływem pracy nad ilustracjami.
+
+- **Pigment-Centric**: Kolory pochodzą z rzeczywistych profili pigmentów (kodów indeksu kolorów), a nie z dowolnych wartości RGB, co wspiera intuicyjną konstrukcję palety opartą na prawdziwym doświadczeniu malarskim.
 - **Narzędzia dotykowe**: Pędzle, nacisk rysika, nachylenie i prędkość są w pełni zintegrowane, aby zachowywać się jak fizyczne narzędzia do malowania, zapewniając dopracowaną kontrolę przy minimalnym tarciu.
 - **Zarządzanie scenami**: warstwowe, nieniszczące przepływy pracy skalują się pod względem złożoności, zachowując jednocześnie przewidywalność i responsywność.
 - **Kontrola ukierunkowana na cel**: Narzędzia oferują znaczące opcje bez przytłaczania artysty, wspierając przemyślane, oparte na umiejętnościach decyzje.
 
-## Co jest priorytetem oprogramowania
+## Co jest priorytetem oprogramowania- **Zamiar artystyczny**: Narzędzia zachowują się przewidywalnie i wspierają intuicję artysty.
 
-- **Zamiar artystyczny**: Narzędzia zachowują się przewidywalnie i wspierają intuicję artysty.
 - **Niezawodność**: Integralność i odzyskiwanie danych są najważniejsze; artysta nigdy nie powinien tracić pracy.
 - **Przejrzystość struktury**: Interfejs sprawia, że ​​warstwy, narzędzia i formaty plików są proste i czytelne, dzięki czemu nawet duże obrazy składające się z setek warstw pozostają łatwe w zarządzaniu.
 

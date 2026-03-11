@@ -5,10 +5,6 @@ url: "hub/about/lumi-o"
 weight: 1
 ---
 
-Lumi·o (Lumi) is an open source digital painting application designed for structured illustration workflows.
-
-Built on the proven architecture of GIMP, Lumi restructures the software around digital painting, creating a lean, Linux-only environment focused on stability and performance.
-
 Lumi is developed in the open, with design decisions, architecture documents, and development history publicly available so users can understand how the software evolves over time.
 
 It prioritizes long-term accessibility of artwork. The file format is open, directory-based, and readable without proprietary software, ensuring projects remain accessible as the software continues to change. Compatibility is supported through XCF and PSD import and export.

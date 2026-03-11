@@ -3,10 +3,6 @@ title: "Lumi·o"
 type: docs
 weight: 1
 ---
-Lumi·o (Lumi) is een open source digitale schildertoepassing ontworpen voor gestructureerde illustratieworkflows.
-
-Gebouwd op de beproefde architectuur van GIMP, herstructureert Lumi de software rond digitaal schilderen, waardoor een gestroomlijnde, uitsluitend Linux-omgeving ontstaat, gericht op stabiliteit en prestaties.
-
 Lumi wordt in het openbaar ontwikkeld, waarbij ontwerpbeslissingen, architectuurdocumenten en ontwikkelingsgeschiedenis openbaar beschikbaar zijn, zodat gebruikers kunnen begrijpen hoe de software zich in de loop van de tijd ontwikkelt.
 
 Het geeft prioriteit aan de toegankelijkheid van kunstwerken op de lange termijn. Het bestandsformaat is open, directory-gebaseerd en leesbaar zonder eigen software, waardoor projecten toegankelijk blijven terwijl de software blijft veranderen. Compatibiliteit wordt ondersteund via XCF- en PSD-import en -export.
@@ -33,14 +29,15 @@ Deze combinatie van artistieke praktijk en technische implementatie vormt rechts
 
 ## De filosofie
 
-Lumi combineert een op pigmenten gebaseerd kleursysteem dat is opgebouwd rond fysieke menging met een zeer responsieve, niet-destructieve, op lagen gebaseerde illustratieworkflow.- **Pigmentgericht**: kleuren zijn afgeleid van pigmentprofielen uit de echte wereld (kleurindexcodes) in plaats van willekeurige RGB-waarden, waardoor een intuïtieve paletconstructie wordt ondersteund die is gebaseerd op een echte schilderervaring.
+Lumi combineert een op pigmenten gebaseerd kleursysteem dat is opgebouwd rond fysieke menging met een zeer responsieve, niet-destructieve, op lagen gebaseerde illustratieworkflow.
+
+- **Pigmentgericht**: kleuren zijn afgeleid van pigmentprofielen uit de echte wereld (kleurindexcodes) in plaats van willekeurige RGB-waarden, waardoor een intuïtieve paletconstructie wordt ondersteund die is gebaseerd op een echte schilderervaring.
 - **Tactiele gereedschappen**: Penselen, stylusdruk, kanteling en snelheid zijn volledig geïntegreerd en gedragen zich als fysieke schildergereedschappen, waardoor genuanceerde controle ontstaat met minimale wrijving.
 - **Scènebeheer**: gelaagde, niet-destructieve workflows worden steeds complexer en blijven voorspelbaar en responsief.
 - **Intent-Focused Controls**: Tools bieden zinvolle opties zonder de artiest te overweldigen, en ondersteunen weloverwogen, op vaardigheden gebaseerde beslissingen.
 
-## Wat de software prioriteit geeft
+## Wat de software prioriteit geeft- **Artistieke bedoeling**: Tools gedragen zich voorspelbaar en ondersteunen de intuïtie van de kunstenaar.
 
-- **Artistieke bedoeling**: Tools gedragen zich voorspelbaar en ondersteunen de intuïtie van de kunstenaar.
 - **Betrouwbaarheid**: gegevensintegriteit en herstel zijn van het grootste belang; een kunstenaar mag nooit werk verliezen.
 - **Structurele duidelijkheid**: de interface houdt lagen, gereedschappen en bestandsformaten eenvoudig en leesbaar, zodat zelfs grote schilderijen met honderden lagen beheersbaar blijven.
 
