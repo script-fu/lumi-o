@@ -1,7 +1,8 @@
 
 ---
-title: "請我喝杯咖啡"
+title: "派特隆"
 type: docs
+weight: 7
 ---
 嘿！
 
@@ -14,5 +15,5 @@ type: docs
 [Visit my Patreon page](https://www.patreon.com/pixelmixer) 支援。
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer" title="派特雷恩" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="派特隆" icon="heart" >}}
 {{< /cards >}}

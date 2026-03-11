@@ -1,8 +1,9 @@
 
 ---
-title: "Buy Me a Coffee"
+title: "Patreon"
 type: docs
 url: "hub/about/Patreon"
+weight: 7
 ---
 
 Hey there!

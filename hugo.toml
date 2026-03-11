@@ -147,13 +147,13 @@ categoryId = "<category ID>"
 name = "Quick Start"
 identifier = "menuQuickStart"
 pageRef = "hub/quick-start/"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "About"
 identifier = "menuAbout"
 pageRef = "hub/about/"
-weight = 9
+weight = 1
 
 [[menu.main]]
 name = "Patreon"

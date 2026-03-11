@@ -1,7 +1,8 @@
 
 ---
-title: "Achetez-moi un café"
+title: "Patréon"
 type: docs
+weight: 7
 ---
 Salut!
 

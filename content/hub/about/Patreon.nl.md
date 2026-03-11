@@ -1,7 +1,8 @@
 
 ---
-title: "Koop een koffie voor mij"
+title: "Patreon"
 type: docs
+weight: 7
 ---
 Hé daar!
 

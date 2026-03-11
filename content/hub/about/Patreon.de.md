@@ -1,7 +1,8 @@
 
 ---
-title: "Kauf mir einen Kaffee"
+title: "Patreon"
 type: docs
+weight: 7
 ---
 Hallo!
 

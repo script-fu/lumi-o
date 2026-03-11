@@ -1,7 +1,8 @@
 
 ---
-title: "Kup mi kawę"
+title: "Patreona"
 type: docs
+weight: 7
 ---
 Hej tam!
 

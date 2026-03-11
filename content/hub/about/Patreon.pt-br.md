@@ -1,7 +1,8 @@
 
 ---
-title: "Compre-me um café"
+title: "Patreon"
 type: docs
+weight: 7
 ---
 Ei!
 
@@ -11,7 +12,7 @@ Se você gostou do meu trabalho e o achou útil, considere mostrar seu apoio com
 
 Você pode fazer isso por meio do Patreon, uma plataforma que muitos criativos usam para receber suporte direto:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) para suporte.
+[Visit my Patreon page](https://www.patreon.com/pixelmixer) to support.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}

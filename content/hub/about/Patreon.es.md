@@ -1,13 +1,14 @@
 
 ---
-title: "Cómprame un café"
+title: "Patreón"
 type: docs
+weight: 7
 ---
 ¡Hola!
 
 He estado en un viaje creativo con píxeles y código desde 1984, comenzando con ZX Spectrum y explorando todo, desde Deluxe Paint y Photoshop hasta Maya y finalmente GIMP. Elaborar herramientas y crear obras de arte es mi pasión.
 
-Si disfrutó mi trabajo y lo encontró útil, considere mostrar su apoyo con una pequeña donación. ¡Es una manera sencilla de decir "gracias" y mantener la creatividad fluyendo! Su apoyo ayuda a cubrir los costos de desarrollo de software, tutoriales y proyectos artísticos en curso.
+Si disfrutó mi trabajo y lo encontró útil, considere mostrar su apoyo con una pequeña donación. It’s a simple way to say "thanks" and keep the creativity flowing! Su apoyo ayuda a cubrir los costos de desarrollo de software, tutoriales y proyectos artísticos en curso.
 
 Puedes hacerlo a través de Patreon, una plataforma que muchos creativos utilizan para recibir soporte directo:
 

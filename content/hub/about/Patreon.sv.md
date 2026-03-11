@@ -1,7 +1,8 @@
 
 ---
-title: "Köp mig en kaffe"
+title: "Patreon"
 type: docs
+weight: 7
 ---
 Hej där!
 
