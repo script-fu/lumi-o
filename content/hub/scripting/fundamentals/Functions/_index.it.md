@@ -32,7 +32,7 @@ Le funzioni svolgono un ruolo fondamentale in Scheme per diversi motivi:
 
 Scheme offre una varietà di costrutti di funzioni, ciascuno adatto a casi d'uso specifici:
 
-1. **Funzioni con nome**
+1. **Named Functions**
    Queste sono le funzioni standard definite con `define`. Costituiscono la spina dorsale della maggior parte degli script.
 
    ```scheme

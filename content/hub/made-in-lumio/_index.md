@@ -1,5 +1,5 @@
 ---
-title: "Made in Lumi·o"
+title: "Made in Lumi-o"
 type: docs
 url: "hub/made-in-lumio"
 ---

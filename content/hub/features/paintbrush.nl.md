@@ -20,7 +20,7 @@ Procedureel weergegeven vormen (cirkel, vierkant, ruit, driehoek) met instelbare
 
 ### Geanimeerde penselen (.anim)
 
-Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen stapsgewijs worden doorlopen (frame-voortgangen per dab), willekeurig per dab worden geselecteerd of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
+Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen incrementeel worden doorlopen (frame-voortgangen per dab), willekeurig worden geselecteerd per dab, of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
 
 ## Schildercursor
 
@@ -35,7 +35,7 @@ De cursor past zich aan de huidige gereedschapsstatus aan en geeft duidelijke, c
 ### Bediening op het hoogste niveau
 
 Altijd aanwezig, buiten elke expander:
-- **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, etc.)
+- **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, enz.)
 - **Dekking**: algehele dekking van de lijn (0–100).
 
 ### Penseeleigenschappen
@@ -118,7 +118,7 @@ De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het pa
 - **Kopgrootte**: weergegeven grootte van elke kop in verhouding tot de globale penseelgrootte (0,1–1,0).
 - **Baan-aspectratio** (0,1–1,0): Vormt de formatiebaan van cirkel naar ellips. 1,0 = cirkelvormige baan; lagere waarden verpletteren de secundaire as.
 - **Formatiehoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volgrichting** lager is dan 1,0.
-- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Formatiehoek**-waarde.
+- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. At 1.0 the ring is always perpendicular to the direction of travel; bij 0,0 wordt de waarde vergrendeld op de statische **Formatiehoek**-waarde.
 - **Drukvariatie**: variatie in grootte per hoofd toegepast als een onafhankelijke drukafwijking via de dynamische curven.
 - **Dekkingsvariatie**: De dekkingsvariatie per hoofd, onafhankelijk van de groottevariatie.
 

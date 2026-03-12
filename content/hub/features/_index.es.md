@@ -7,16 +7,16 @@ El conjunto de funciones de Lumi se centra en la pintura digital y los flujos de
 Esta sección describe las capacidades principales disponibles en Lumi y dónde ubicarlas en la interfaz.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Almacenamiento en caché de pincel" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Formato de archivo (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Recuperación de archivos" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Capas y edición no destructiva" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Herramienta Pincel" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Editor de paleta" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Mapa de paleta" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Mezclador de paleta" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Secuencia de comandos del esquema" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Mezcla de colores espectrales" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Herramienta de deformación" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Espacios de trabajo" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Almacenamiento en caché de pincel" icon="lightning-bolt" subtitle="Guarde cachés calentados para sus pinceles favoritos para que se sientan rápidos lo antes posible." >}}
+  {{< card link="file-format" title="Formato de archivo (.lum)" icon="document-text" subtitle="Formato de contenedor abierto que almacena capas, metadatos, perfiles ICC y datos de recuperación." >}}
+  {{< card link="recovery" title="Recuperación de archivos" icon="refresh" subtitle="Las instantáneas de recuperación incremental automática protegen el trabajo contra fallas y cortes de energía." >}}
+  {{< card link="layers" title="Capas y edición no destructiva" icon="collection" subtitle="Composición basada en capas con modos de fusión, máscaras, grupos y capas de ajuste no destructivas." >}}
+  {{< card link="paintbrush" title="Herramienta Pincel" icon="pencil-alt" subtitle="Dinámica de presión, velocidad, inclinación y espaciado con estabilización, suavizado y formaciones de cepillos de múltiples cabezales." >}}
+  {{< card link="palette-editor" title="Editor de paleta" icon="color-swatch" subtitle="Cree y administre paletas de pigmentos con nombre, con conjuntos incluidos que cubren paletas limitadas y de espectro completo." >}}
+  {{< card link="palette-map" title="Mapa de paleta" icon="view-grid" subtitle="Paleta de pigmentos de mapeo de cuadrícula 2D interactivo a ejes, que se utiliza para la selección y exploración directa de colores." >}}
+  {{< card link="palette-mixer" title="Mezclador de paleta" icon="adjustments" subtitle="Mezcle pigmentos de la paleta activa por tono, saturación y tono con vistas previas de espacios visuales." >}}
+  {{< card link="scripting" title="Secuencia de comandos del esquema" icon="code" subtitle="Automatice los flujos de trabajo y amplíe Lumi utilizando un intérprete de Scheme integrado." >}}
+  {{< card link="spectral-color" title="Mezcla de colores espectrales" icon="beaker" subtitle="Mezcla de pigmentos físicamente precisa mediante muestreo espectral, lo que produce un comportamiento de pintura realista." >}}
+  {{< card link="warp-tool" title="Herramienta de deformación" icon="cursor-click" subtitle="Desplaza los píxeles libremente con pinceladas. Deforma grupos de capas completos como un solo elemento, aplicando la misma transformación a todas las capas y máscaras anidadas." >}}
+  {{< card link="workspaces" title="Espacios de trabajo" icon="view-boards" subtitle="Guarde y cambie entornos de interfaz de usuario completos: diseños de paneles, configuraciones de herramientas, configuración de dispositivos, temas y paletas, de forma independiente por espacio de trabajo." >}}
 {{< /cards >}}

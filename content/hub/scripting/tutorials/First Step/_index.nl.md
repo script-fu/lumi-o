@@ -17,17 +17,17 @@ Zorg ervoor dat u over het volgende beschikt voordat u aan de slag gaat:
 ## Zelfstudiestappen
 
 {{< cards >}}
-  {{< card link="hello-world" title="Hallo wereld!" icon="sparkles" subtitle="Create your first Scheme plug-in with basic structure" >}}
-  {{< card link="refactoring" title="Refactoring" icon="code" subtitle="Improve code structure without changing behavior" >}}
-  {{< card link="loading" title="Laden" icon="upload" subtitle="Organize functions into reusable libraries" >}}
-  {{< card link="validation" title="Geldigmaking" icon="badge-check" subtitle="Add error handling and input validation" >}}
-  {{< card link="return-values" title="Waarden retourneren" icon="arrow-circle-left" subtitle="Understanding function outputs and data flow" >}}
-  {{< card link="messaging-library" title="Berichtenbibliotheek" icon="annotation" subtitle="Build a comprehensive messaging system" >}}
+  {{< card link="hello-world" title="Hallo wereld!" icon="sparkles" subtitle="Maak uw eerste Scheme-plug-in met basisstructuur" >}}
+  {{< card link="refactoring" title="Refactoring" icon="code" subtitle="Verbeter de codestructuur zonder het gedrag te veranderen" >}}
+  {{< card link="loading" title="Laden" icon="upload" subtitle="Organiseer functies in herbruikbare bibliotheken" >}}
+  {{< card link="validation" title="Geldigmaking" icon="badge-check" subtitle="Voeg foutafhandeling en invoervalidatie toe" >}}
+  {{< card link="return-values" title="Waarden retourneren" icon="arrow-circle-left" subtitle="Functie-uitvoer en gegevensstroom begrijpen" >}}
+  {{< card link="messaging-library" title="Berichtenbibliotheek" icon="annotation" subtitle="Bouw een uitgebreid berichtensysteem" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="reworking" title="Herwerken" icon="adjustments" subtitle="Advanced code restructuring techniques" >}}
-  {{< card link="refactor-again" title="Opnieuw refactoreren" icon="arrow-sm-right" subtitle="Iterative improvement and optimization" >}}
-  {{< card link="the-procedure-browser" title="Procedurebrowser" icon="book-open" subtitle="Exploring Lumi's procedure database" >}}
-  {{< card link="final-thoughts" title="Laatste gedachten" icon="academic-cap" subtitle="Summary and next steps in development" >}}
+  {{< card link="reworking" title="Herwerken" icon="adjustments" subtitle="Geavanceerde codeherstructureringstechnieken" >}}
+  {{< card link="refactor-again" title="Opnieuw refactoreren" icon="arrow-sm-right" subtitle="Iteratieve verbetering en optimalisatie" >}}
+  {{< card link="the-procedure-browser" title="Procedurebrowser" icon="book-open" subtitle="Lumi's proceduredatabase verkennen" >}}
+  {{< card link="final-thoughts" title="Laatste gedachten" icon="academic-cap" subtitle="Samenvatting en volgende stappen in de ontwikkeling" >}}
 {{< /cards >}}

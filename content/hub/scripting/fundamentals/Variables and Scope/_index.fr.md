@@ -70,6 +70,7 @@ La construction `define` crée des variables ou des fonctions avec une portée g
 | **Cas d'utilisation** | Variables temporaires pour des tâches spécifiques | Variables ou fonctions partagées utilisées partout |
 
 ### Résumé- **Les définitions et la portée des variables** sont fondamentales pour organiser et gérer les données dans vos scripts Scheme.
+
 - Utilisez **portée locale** (`let`, `let*`, nommé `let`) pour encapsuler les variables temporaires et éviter les conflits.
 - Utilisez la **portée globale** (`define`) pour les fonctions réutilisables ou les constantes partagées dans votre script.
 - Une compréhension claire de ces constructions améliorera la lisibilité, la maintenabilité et la fiabilité de votre code.

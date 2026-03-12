@@ -1,11 +1,12 @@
 ---
 title: "Debian installeren"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Dit document schetst het proces dat wordt gebruikt om Debian Stable te installeren als het Lumi·o-ontwikkelingsbesturingssysteem. Het kan nuttig zijn voor anderen die een soortgelijke omgeving opzetten.
+Dit document schetst het proces dat wordt gebruikt om Debian Stable te installeren als het Lumi-o-ontwikkelingsbesturingssysteem. Het kan nuttig zijn voor anderen die een soortgelijke omgeving opzetten.
 
 Debian Stable werd geselecteerd omdat Lumi ernaar streeft betrouwbaar te bouwen op een voorspelbaar platform voor de lange termijn. De ontwikkeling van GIMP is gericht op Debian Testing, waardoor Debian Stable een nauw op elkaar afgestemd basissysteem is.
+
+Lumi is op zijn best op Debian met Cinnamon (X11), en is in die omgeving ontwikkeld en getest. Cinnamon biedt een vertrouwde Windows-achtige desktopworkflow, terwijl X11 de meest stabiele omgeving voor Lumi-ontwikkeling biedt.
 
 Als u van Windows komt, is de belangrijkste conceptuele verandering dat de meeste software-installatie en -configuratie plaatsvindt via pakketbeheerders en eenvoudige terminalopdrachten in plaats van downloadbare installatieprogramma's.
 
@@ -65,16 +66,16 @@ Ervan uitgaande dat er al een doelpartitie en swapruimte bestaan:
    - Gebruikersaccount: uw volledige naam
    - Gebruikersnaam: terminal-inlognaam
 
-7. Selecteer **Cinnamon** als bureaubladomgeving.
+7. Het Debian-installatieprogramma biedt in dit stadium een keuze uit een desktopomgeving; selecteer **Kaneel** voor de door Lumi aanbevolen configuratie.
 8. Voltooi de installatie en start opnieuw op in Debian Stable.
 
 ## Systeeminstellingen
 
 ### Schermschalen
 
-Debian Stable gaat momenteel inconsistent om met fractionele schaling, vooral op 4K-beeldschermen. In plaats van de weergaveresolutie te verlagen, kunt u de interface-elementen rechtstreeks aanpassen.
+Debian Stable gaat momenteel inconsistent om met fractionele schaling, vooral op 4K-beeldschermen. In plaats van de weergaveresolutie te verlagen, kunt u de interface-elementen rechtstreeks aanpassen.Aanbevolen aanpassingen:
 
-Aanbevolen aanpassingen:- Vermijd fractionele weergaveschaling.
+- Vermijd fractionele weergaveschaling.
 - Menu → Lettertypeselectie → Lettertype-instellingen → Tekstschaalfactor: `2.5`
 - Bureaubladlettertype: `14`
 - Paneel → Aanpassen → Paneelhoogte: `60`
@@ -112,7 +113,7 @@ Opmerking: mappen die beginnen met `.` zijn verborgen configuratiemappen in Linu
 
 Alleen vereist als u Lumi wilt bouwen of opslagplaatsen wilt herstellen.
 
-### Git installeren
+### Installeer Git
 
 ```bash
 sudo apt install git
@@ -153,17 +154,22 @@ Lumi-buildscripts bevinden zich in:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

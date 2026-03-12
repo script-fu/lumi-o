@@ -40,7 +40,7 @@ Elke laag heeft een overvloeimodus die bepaalt hoe deze wordt gecombineerd met d
 
 ## Knippen en maskeren
 
-- **Samengestelde modus: Clip naar achtergrond**: Door de samengestelde modus van een laag in te stellen op **Clip naar achtergrond** wordt de compositie beperkt tot gebieden waar de verzamelde **Union**-lagen hieronder dekking hebben bereikt. De laag tekent alleen daar waar die lagen inhoud hebben en kan de alfavoetafdruk niet uitbreiden. Dit wordt per laag ingesteld in het dialoogvenster Laagkenmerken (vervolgkeuzelijst **Samengestelde modus**). Wanneer de effectieve samengestelde modus van een laag iets anders is dan Samenvoegen, wordt het oogpictogram in het deelvenster Lagen vervangen door een samengesteld pictogram om het niet-standaard compositiegedrag aan te geven.
+- **Samengestelde modus: Clip naar achtergrond**: Door de samengestelde modus van een laag in te stellen op **Clip naar achtergrond** wordt de compositie beperkt tot gebieden waar de verzamelde **Union**-lagen hieronder dekking hebben bereikt. De laag tekent alleen daar waar die lagen inhoud hebben en kan de alfavoetafdruk niet vergroten. Dit wordt per laag ingesteld in het dialoogvenster Laagkenmerken (vervolgkeuzelijst **Samengestelde modus**). Wanneer de effectieve samengestelde modus van een laag iets anders is dan Samenvoegen, wordt het oogpictogram in het deelvenster Lagen vervangen door een samengesteld pictogram om het niet-standaard compositiegedrag aan te geven.
 
   **Voorbeeld: gedeelde alfavorm:** In een groep bevat de onderste laag een gevulde cirkel op een transparante achtergrond, ingesteld op de standaard samengestelde **Union**-modus. Elke laag erboven in dezelfde groep is ingesteld op **Clip to Background**. Die lagen kunnen alleen schilderen waar de cirkel dekking biedt (één vorm, veel lagen). Dit is een gebruikelijk patroon voor kleuren, schaduwen en details binnen een gedefinieerd silhouet zonder dat u zich zorgen hoeft te maken over morsen.
 - **Laagmaskers**: pas een grijswaardenmasker toe om de zichtbaarheid van de laag pixel voor pixel te regelen. Wit schilderen op het masker onthult; zwarte huiden; grijs zorgt voor gedeeltelijke dekking.
@@ -157,7 +157,7 @@ Als de laag een masker heeft, worden hieronder **Maskeroffsets** (X- en Y-spinne
 
 Wanneer u een nieuwe laag maakt, vervangen de velden Breedte en Hoogte en een vervolgkeuzelijst **Vullen met** (Voorgrond, Achtergrond, Wit, Transparant) de alleen-lezen formaatweergave.
 
-### Laagkenmerken (Persistente parasieten)
+### Laagkenmerken (persistente parasieten)
 
 Het onderste gedeelte van het dialoogvenster bevat een schuifbare tabel Naam/Waarde voor persistente parasieten (willekeurige metagegevens van sleutelwaarden die aan de laag zijn gekoppeld). Deze waarden worden bij het project opgeslagen en zijn toegankelijk via de Scheme-scriptinterface.
 

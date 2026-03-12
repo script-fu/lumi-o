@@ -69,6 +69,7 @@ La prima riga garantisce che lo script funzioni come plug-in in Lumi 3:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Definizione della procedura
@@ -106,6 +107,7 @@ Il plug-in è registrato con Lumi come plug-in filtro:
 ```
 
 #### Registrazione nel menu
+
 Questa riga specifica la posizione del menu per il plug-in:
 
 ```scheme

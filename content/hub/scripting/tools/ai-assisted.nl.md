@@ -17,7 +17,7 @@ In plaats van slechts één regel code in te vullen, kan een agent:
 ## Toegang tot opslagplaatsen
 
 AI-hulp is het meest effectief wanneer de agent toegang heeft tot **lumi-dev** of uw specifieke projectrepository. Met inzicht in de bestaande codebase kan de Agent:
-- Gebruik **[Utility Libraries](@@LUMI_TOKEN_4@@)** als referentie voor helperfuncties.
+- Gebruik **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** als referentie voor helperfuncties.
 - Volg bestaande patronen voor GEGL-bewerkingen en laagbeheer.
 - Hergebruik standaardcode van bestaande plug-ins.
 

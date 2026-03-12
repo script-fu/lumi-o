@@ -4,11 +4,11 @@ type: docs
 В этом разделе дается краткий обзор программного обеспечения, поддерживаемого им рабочего процесса и процесса рисования, для которого оно предназначено.
 
 {{< cards >}}
-	{{< card link="lumi-o" title="Люми·о" icon="information-circle" subtitle="What Lumi is, why it exists, and the ideas shaping its development." >}}
-	{{< card link="workspace" title="Рабочая область" icon="view-boards" subtitle="A focused interface designed for structured, non-destructive painting workflows." >}}
-	{{< card link="pencils" title="Карандаши" icon="pencil" subtitle="Sketching and construction tools for loose drawing, planning, and early line work." >}}
-	{{< card link="inking" title="Чернила" icon="pencil-alt" subtitle="Controlled line work and clean finishing for deliberate illustration workflows." >}}
-	{{< card link="color" title="Цвет" icon="color-swatch" subtitle="Pigment-based palettes and colour handling shaped by traditional media practice." >}}
-	{{< card link="download" title="Скачать" icon="download" subtitle="Get the latest AppImage build or visit the source repository." >}}
-	{{< card link="Patreon" title="Патреон" icon="heart" subtitle="Support ongoing development and the artwork that guides Lumi’s direction." >}}
+	{{< card link="lumi-o" title="Люми-о" icon="information-circle" subtitle="Что такое Lumi, почему он существует и идеи, определяющие его развитие." >}}
+	{{< card link="workspace" title="Рабочая область" icon="view-boards" subtitle="Целенаправленный интерфейс, предназначенный для структурированных, неразрушающих рабочих процессов рисования." >}}
+	{{< card link="pencils" title="Карандаши" icon="pencil" subtitle="Инструменты для создания эскизов и построения для свободного рисования, планирования и ранней работы с линиями." >}}
+	{{< card link="inking" title="Чернила" icon="pencil-alt" subtitle="Контролируемая работа с линиями и чистая отделка для продуманных рабочих процессов с иллюстрациями." >}}
+	{{< card link="color" title="Цвет" icon="color-swatch" subtitle="Палитры на основе пигментов и обработка цвета, сформированная традиционной медиа-практикой." >}}
+	{{< card link="download" title="Скачать" icon="download" subtitle="Получите последнюю сборку AppImage или посетите репозиторий исходного кода." >}}
+	{{< card link="Patreon" title="Патреон" icon="heart" subtitle="Поддержите постоянное развитие и художественные работы, которые определяют направление Lumi." >}}
 {{< /cards >}}

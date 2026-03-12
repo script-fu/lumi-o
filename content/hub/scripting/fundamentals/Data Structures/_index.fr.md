@@ -10,6 +10,7 @@ Dans Scheme, les **structures de données** sont des outils essentiels pour orga
 Scheme fournit plusieurs structures de données puissantes et polyvalentes, chacune adaptée à des tâches spécifiques. Les structures de données principales comprennent :
 
 ### Listes
+
 Les listes sont des collections ordonnées d'éléments qui peuvent s'agrandir ou se réduire de manière dynamique. Ils sont idéaux pour les données séquentielles ou hiérarchiques et sont largement utilisés en programmation fonctionnelle.
 
 Principales caractéristiques :
@@ -24,6 +25,7 @@ Exemples d'utilisation :
 ---
 
 ### Vecteurs
+
 Les vecteurs sont des collections d'éléments de taille fixe, indexées pour un accès rapide. Ils conviennent mieux aux scénarios dans lesquels les performances et l’accès positionnel sont essentiels.
 
 Principales caractéristiques :

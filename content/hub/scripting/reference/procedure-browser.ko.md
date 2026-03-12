@@ -2,7 +2,7 @@
 title: "절차 브라우저"
 type: docs
 ---
-Procedure Browser는 Lumi의 PDB(Procedural Database)에서 사용할 수 있는 수백 가지 기능을 검색하기 위한 기본 참조 도구입니다. Lumi의 모든 도구, 필터 및 스크립트를 호출하려면 PDB에 등록해야 하기 때문에 이 브라우저는 사실상 완전한 PDB 탐색기입니다.
+Procedure Browser는 Lumi의 PDB(Procedural Database)에서 사용할 수 있는 수백 가지 기능을 검색하기 위한 기본 참조 도구입니다. Lumi의 모든 도구, 필터 및 스크립트를 호출하려면 PDB에 등록해야 하므로 이 브라우저는 사실상 완전한 PDB 탐색기입니다.
 
 ## 프로시저 브라우저 열기
 

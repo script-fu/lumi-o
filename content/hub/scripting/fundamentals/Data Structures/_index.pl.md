@@ -10,6 +10,7 @@ W schemacie **struktury danych** są niezbędnymi narzędziami do organizowania,
 Scheme udostępnia kilka potężnych i wszechstronnych struktur danych, z których każda jest dostosowana do określonych zadań. Podstawowe struktury danych obejmują:
 
 ### Listy
+
 Listy to uporządkowane zbiory elementów, które mogą dynamicznie rosnąć lub kurczyć się. Idealnie nadają się do danych sekwencyjnych lub hierarchicznych i są szeroko stosowane w programowaniu funkcjonalnym.
 
 Kluczowe cechy:
@@ -24,6 +25,7 @@ Przykłady użycia:
 ---
 
 ### Wektory
+
 Wektory to zbiory elementów o stałym rozmiarze, indeksowane w celu szybkiego dostępu. Najlepiej nadają się do scenariuszy, w których wydajność i dostęp pozycyjny mają kluczowe znaczenie.
 
 Kluczowe cechy:

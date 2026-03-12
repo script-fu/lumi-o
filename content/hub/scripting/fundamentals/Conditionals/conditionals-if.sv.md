@@ -82,7 +82,7 @@ I fall där du behöver utföra flera åtgärder när villkoret är sant eller f
 ```
 
 - I det här exemplet är `test` `(= 0 1)` (kontrollerar om 0 är lika med 1).
-- Eftersom testet utvärderas till falskt (`#f`), exekveras det **alternativa** blocket:
+- Eftersom testet utvärderas till falskt (`#f`), exekveras **alternativ**-blocket:
   - Först skriver den ut `"False condition met, calculating..."`.
   - Sedan beräknar den `(* 3 4)` och returnerar `12`.
 
@@ -110,5 +110,6 @@ Genom att använda en `let` kan vi deklarera lokala scope-variabler inom kodbloc
 Resultat: **Skriver ut "True condition uppfyllt, beräknar..." och returnerar -10.**
 
 ### Sammanfattning- `if` är ett kraftfullt verktyg i Scheme för att utvärdera tester och exekvera motsvarande kodblock.
+
 – Den kan hantera både enkla uttryck och komplexa kodblock som returnerar värden, modifierar variabler eller utför biverkningar.
 - Kom ihåg: Om det inte finns något explicit `else`-block, utvärderar och utför `if` endast **följande** om testet är sant. Annars utvärderar och exekverar den **alternativet**.

@@ -3,13 +3,13 @@ title: "Funções"
 type: docs
 weight: 7
 ---
-Functions are a core concept in Scheme, providing the means to encapsulate logic, enable code reuse, and structure your scripts effectively. Com funções, você pode criar scripts modulares e de fácil manutenção que lidam com uma ampla variedade de tarefas, desde operações básicas até fluxos de trabalho avançados no Lumi.
+Funções são um conceito central no Scheme, fornecendo os meios para encapsular a lógica, permitir a reutilização de código e estruturar seus scripts de maneira eficaz. Com funções, você pode criar scripts modulares e de fácil manutenção que lidam com uma ampla variedade de tarefas, desde operações básicas até fluxos de trabalho avançados no Lumi.
 
 Esta seção serve como uma introdução às funções no Scheme e estabelece as bases para a compreensão de seus tipos, definições e usos. As seções subsequentes se aprofundarão em tipos de funções específicas e em seus recursos exclusivos.
 
-## Minimal Syntax and Expressions
+## Sintaxe e expressões mínimas
 
-Scheme code is made of **expressions**. An expression evaluates to a value. The syntax is uniform: parentheses form a call, with the operator or function name first.
+O código do esquema é composto de **expressões**. Uma expressão é avaliada como um valor. A sintaxe é uniforme: os parênteses formam uma chamada, com o nome do operador ou da função primeiro.
 
 ```scheme
 (+ 1 2)         ; Adds 1 and 2, resulting in 3
@@ -17,7 +17,7 @@ Scheme code is made of **expressions**. An expression evaluates to a value. The 
 (list 1 2 3)    ; Creates a list: (1 2 3)
 ```
 
-Because everything is an expression, control flow fits naturally into the same style as function calls.
+Como tudo é uma expressão, o fluxo de controle se ajusta naturalmente ao mesmo estilo das chamadas de função.
 
 ## Por que as funções são importantes
 
@@ -28,12 +28,12 @@ As funções desempenham um papel fundamental no Scheme por vários motivos:
 - **Comportamento dinâmico:** Aceite parâmetros para lidar com diversas entradas ou se adapte a diferentes situações.
 - **Abstração superior:** Simplifique a lógica concentrando-se em "o que" uma função faz em vez de "como" ela faz.
 
-## Overview of Function Types
+## Visão geral dos tipos de função
 
 Scheme oferece uma variedade de construções de funções, cada uma adequada para casos de uso específicos:
 
 1. **Funções nomeadas**
-   These are standard functions defined with `define`. Eles formam a espinha dorsal da maioria dos scripts.
+   Estas são funções padrão definidas com `define`. Eles formam a espinha dorsal da maioria dos scripts.
 
    ```scheme
    (define (square x)
@@ -63,9 +63,9 @@ As funções no Scheme possuem uma sintaxe simples e consistente:
   body-expression)
 ```
 
-- **`function-name`:** The name of the function.
-- **`parameter1, parameter2, ...`:** The arguments the function takes.
-- **`body-expression`:** The logic executed when the function is called.
+- **`function-name`:** O nome da função.
+- **`parameter1, parameter2, ...`:** Os argumentos que a função recebe.
+- **`body-expression`:** A lógica executada quando a função é chamada.
 
 Exemplo:
 
@@ -76,10 +76,10 @@ Exemplo:
 (add 3 5)  ; Returns 8
 ```
 
-## Side Effects and Global State
+## Efeitos colaterais e estado global
 
-In Lumi, many useful procedures have **side effects**: they modify an image, change a drawable, write a file, or display output.
+No Lumi, muitos procedimentos úteis têm **efeitos colaterais**: eles modificam uma imagem, alteram um drawable, gravam um arquivo ou exibem a saída.
 
-- Isolate side effects in small, clearly named procedures.
-- Avoid changing global context unless you need to.
+- Isolar os efeitos colaterais em procedimentos pequenos e claramente nomeados.
+- Evite mudar o contexto global, a menos que seja necessário.
 - Ao alterar o contexto (cores, pincéis, etc), envolva o trabalho com `lumi-context-push` e `lumi-context-pop` para que o estado do usuário seja restaurado.

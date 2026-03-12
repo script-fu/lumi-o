@@ -35,7 +35,7 @@ Om du klickar på en post visas dess fullständiga docstring och biblioteket den
 
 ## Stdlib som omslag
 
-Verktygsbiblioteken är en praktisk tillämpning av omslagsmönstret: varje hjälpare ger ett tydligt namn till en lågnivåoperation, döljer plattan och ger en enda plats att uppdatera om det underliggande kommandot ändras. Om du vill förstå designstrategin bakom dem, se **[Wrapping](@@LUMI_TOKEN_11@@)** handledning.
+Verktygsbiblioteken är en praktisk tillämpning av omslagsmönstret: varje hjälpare ger ett tydligt namn till en lågnivåoperation, döljer plattan och ger en enda plats att uppdatera om det underliggande kommandot ändras. Om du vill förstå designstrategin bakom dem, se **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** handledning.
 
 ## Relation till procedurbläddraren
 

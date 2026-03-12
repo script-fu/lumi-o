@@ -33,12 +33,12 @@ As mixagens salvas são subdivididas em cinco faixas de valores:
 | Banda | Faixa de luminosidade padrão |
 | :--- | :--- |
 | Chave alta | 80 – 100% |
-| Médio Superior | 60 – 80% |
+| Médio superior | 60 – 80% |
 | Médio | 40 – 60% |
 | Médio Inferior | 20 – 40% |
 | Profundo | 0 – 20% |
 
-Lumi coloca cada mix salvo na banda apropriada automaticamente com base em sua luminosidade perceptiva (CIE L\*). Isso organiza suas mixagens por valor, em vez de pesquisar em uma lista simples, e normalmente corresponde à maneira como um artista pensa sobre a cor.
+Lumi coloca cada mix salvo na banda apropriada automaticamente com base em sua luminosidade perceptual (CIE L\*). Isso organiza suas mixagens por valor, em vez de pesquisar em uma lista simples, e normalmente corresponde à maneira como um artista pensa sobre a cor.
 
 As mixagens salvas podem ser renomeadas através do botão **Renomear personalizado** ou do menu de contexto.
 

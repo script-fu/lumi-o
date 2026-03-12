@@ -97,7 +97,9 @@ Um `let` nomeado é uma forma especial de `let` que fornece um nome para o próp
 
 ---
 
-## Tabela Resumo| Construir | Descrição | Caso de uso |
+## Tabela Resumo
+
+| Construir | Descrição | Caso de uso |
 |------------|------------------------------------------|--------------------------------------------------------------------------|
 | **`let`** | Define ligações locais para variáveis.    | Use quando todas as ligações forem independentes e não dependerem umas das outras.     |
 | **`let*`** | Define ligações locais sequenciais.       | Use quando as ligações posteriores dependerem dos resultados das anteriores.           |

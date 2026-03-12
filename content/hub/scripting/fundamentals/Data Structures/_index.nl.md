@@ -10,6 +10,7 @@ In Scheme zijn **datastructuren** essentiële hulpmiddelen voor het organiseren,
 Scheme biedt verschillende krachtige en veelzijdige datastructuren, elk geschikt voor specifieke taken. De primaire datastructuren omvatten:
 
 ### Lijsten
+
 Lijsten zijn geordende verzamelingen van elementen die dynamisch kunnen groeien of krimpen. Ze zijn ideaal voor sequentiële of hiërarchische gegevens en worden veel gebruikt bij functioneel programmeren.
 
 Belangrijkste kenmerken:
@@ -23,7 +24,8 @@ Voorbeelden van gebruik:
 
 ---
 
-### vectoren
+### Vectoren
+
 Vectoren zijn verzamelingen elementen van vaste grootte, geïndexeerd voor snelle toegang. Ze zijn het meest geschikt voor scenario's waarin prestaties en positionele toegang van cruciaal belang zijn.
 
 Belangrijkste kenmerken:

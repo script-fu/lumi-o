@@ -19,11 +19,13 @@ Il costrutto `define` ha molteplici scopi:
 Un utilizzo di base di `define` è creare variabili che contengano valori costanti o calcolati.
 
 #### Sintassi
+
 ```scheme
 (define variable-name value)
 ```
 
 #### Esempio: definizione di una costante
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Un utilizzo di base di `define` è creare variabili che contengano valori costan
 È possibile utilizzare `define` per creare procedure riutilizzabili.
 
 #### Sintassi
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### Esempio: definizione di una funzione semplice
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Un utilizzo di base di `define` è creare variabili che contengano valori costan
 Se utilizzato all'interno di una funzione, `define` crea associazioni locali accessibili solo all'interno della funzione di inclusione. Ciò evita di inquinare lo spazio dei nomi globale e aiuta a organizzare il codice.
 
 #### Esempio: funzioni di supporto locali
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

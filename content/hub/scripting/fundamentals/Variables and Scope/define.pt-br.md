@@ -19,11 +19,13 @@ A construção `define` serve a vários propósitos:
 Um uso básico de `define` é criar variáveis que contenham valores constantes ou computados.
 
 #### Sintaxe
+
 ```scheme
 (define variable-name value)
 ```
 
 #### Exemplo: Definindo uma Constante
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Um uso básico de `define` é criar variáveis que contenham valores constantes 
 Você pode usar `define` para criar procedimentos reutilizáveis.
 
 #### Sintaxe
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### Exemplo: Definindo uma Função Simples
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Você pode usar `define` para criar procedimentos reutilizáveis.
 Quando usado dentro de uma função, `define` cria ligações locais que são acessíveis apenas dentro da função envolvente. Isso evita poluir o namespace global e ajuda a organizar seu código.
 
 #### Exemplo: funções auxiliares locais
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

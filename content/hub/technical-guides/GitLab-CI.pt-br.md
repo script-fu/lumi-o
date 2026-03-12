@@ -31,7 +31,7 @@ O pipeline Lumi usa conteinerização para construções consistentes:
 
 1. **Criando o Build Container**: O primeiro estágio usa Buildah para criar uma imagem Docker com todas as dependências
 2. **Usando o contêiner**: os estágios subsequentes são executados dentro deste contêiner, garantindo um ambiente consistente
-3. **Construções reproduzíveis**: o isolamento do contêiner garante os mesmos resultados em diferentes executores
+3. **Builds reproduzíveis**: o isolamento do contêiner garante os mesmos resultados em diferentes executores
 
 Essa abordagem garante que os builds funcionem da mesma maneira em qualquer executor do GitLab e fornece um ambiente controlado para processos de build complexos.
 
@@ -113,7 +113,7 @@ build-lumi:
 
 Essas variáveis controlam o comportamento de construção e garantem consistência entre diferentes estágios e executores.
 
-## Exemplo de Estrutura
+## Exemplo de estrutura
 
 ```
 project-root/

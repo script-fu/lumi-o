@@ -1,7 +1,6 @@
 ---
 title: "Systemsicherung mit Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Es ist üblich, Ihre wichtigen Dateien zu sichern, um zu früheren Versionen zurückzukehren oder beschädigte Daten zu ersetzen. Eine weitere wichtige Art der Sicherung ist jedoch ein **Festplattenklon**, eine vollständige Sicherung des Zustands Ihres Systems.
 

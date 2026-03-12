@@ -1,7 +1,6 @@
 ---
 title: "如何安装Linux"
 type: docs
-url: "hub/install-linux"
 ---
 欢迎使用 Lumi 的 Linux 安装指南。
 

@@ -4,6 +4,8 @@ type: docs
 ---
 Linux är ett kraftfullt och mångsidigt operativsystem med en stor grupp av utvecklare. I kärnan består ett Linux-system av flera nyckelkomponenter som samverkar för att ge en sömlös användarupplevelse. Den här översikten kommer att beskriva de väsentliga delarna av ett Linux-system, inklusive kärnan, distributionen, pakethanteraren, displayhanteraren, skrivbordsmiljön och displayservern (X11 eller Wayland).
 
+Lumi är som bäst på Debian med Cinnamon (X11), och är utvecklad och testad i den miljön.
+
 **Vanliga nuvarande Linux-distributionsstandarder**
 
 | **Distribution** | **Pakethanterare** | **Display Manager** | **Skrivbordsmiljö** | **Display Server** |

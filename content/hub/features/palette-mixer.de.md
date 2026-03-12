@@ -51,7 +51,7 @@ Für die Ton- und Chroma-Stufen sind Referenzendpunkte erforderlich: ein Mischwe
 
 Diese können manuell überschrieben werden, indem Sie mit der rechten Maustaste auf einen Eintrag im Paletteneditor klicken.
 
-## Einen Mix speichernKlicken Sie auf **Zur Palette hinzufügen**, um das aktuelle Mischergebnis als **Gespeicherte Mischung** (benutzerdefinierter Eintrag) zu speichern. Vor dem Speichern wendet das System die **Best-Match-Verlagerung** an: Es durchsucht die Palette nach dem optimalen Rezept, das dieselbe Endfarbe mit der besten räumlichen Anpassung an die Palettenkarte erzeugt. Wenn ein näheres Rezept gefunden wird, springen die Mixer-Schieberegler, um es anzuzeigen. Dies bestätigt, dass das System einen besseren Ursprung gefunden hat, und die Position des gespeicherten Eintrags wird mit seinem visuellen Punkt auf der Karte ausgerichtet.
+## Einen Mix speichernKlicken Sie auf **Zur Palette hinzufügen**, um das aktuelle Mischergebnis als **Gespeicherte Mischung** (benutzerdefinierter Eintrag) zu speichern. Vor dem Speichern wendet das System die **Best-Match-Relocation** an: Es durchsucht die Palette nach dem optimalen Rezept, das dieselbe Endfarbe mit der besten räumlichen Anpassung an die Palettenkarte erzeugt. Wenn ein näheres Rezept gefunden wird, springen die Mixer-Schieberegler, um es anzuzeigen. Dies bestätigt, dass das System einen besseren Ursprung gefunden hat, und die Position des gespeicherten Eintrags wird mit seinem visuellen Punkt auf der Karte ausgerichtet.
 
 Gespeicherte Mischungen speichern ihr vollständiges Rezept (übergeordnete A/B-UIDs, Mischfaktor, Ton, Chroma), sodass sie exakt reproduziert werden können.
 

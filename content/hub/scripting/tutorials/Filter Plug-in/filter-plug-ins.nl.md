@@ -69,6 +69,7 @@ De eerste regel zorgt ervoor dat het script als plug-in in Lumi 3 werkt:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Proceduredefinitie
@@ -106,6 +107,7 @@ De plug-in wordt bij Lumi geregistreerd als filterplug-in:
 ```
 
 #### Menuregistratie
+
 Deze regel specificeert de menulocatie voor de plug-in:
 
 ```scheme

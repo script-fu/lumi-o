@@ -7,6 +7,7 @@ Questo tutorial illustra la struttura minima di un plug-in Scheme. Alcune righe 
 
 ```bash
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 Ad alto livello dovrai:

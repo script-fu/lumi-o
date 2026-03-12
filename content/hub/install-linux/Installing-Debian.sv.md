@@ -1,11 +1,12 @@
 ---
 title: "Installerar Debian"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Det här dokumentet beskriver processen som används för att installera Debian Stable som utvecklingsoperativsystemet Lumio. Det kan vara användbart för andra som sätter upp en liknande miljö.
+Det här dokumentet beskriver processen som används för att installera Debian Stable som utvecklingsoperativsystemet Lumi-o. Det kan vara användbart för andra som sätter upp en liknande miljö.
 
 Debian Stable valdes för att Lumi strävar efter att bygga tillförlitligt på en förutsägbar långsiktig plattform. GIMP-utvecklingen är inriktad på Debian-testning, vilket gör Debian Stable till ett nära anpassat bassystem.
+
+Lumi är som bäst på Debian med Cinnamon (X11), och är utvecklad och testad i den miljön. Cinnamon ger ett välbekant Windows-liknande skrivbordsarbetsflöde, medan X11 har tillhandahållit den mest stabila miljön för Lumi-utveckling.
 
 Om du kommer från Windows är den huvudsakliga konceptuella förändringen att de flesta programvaruinstallationer och konfigurationer sker genom pakethanterare och enkla terminalkommandon snarare än nedladdningsbara installationsprogram.
 
@@ -65,16 +66,16 @@ Förutsatt att en målpartition och växlingsutrymme redan finns:
    - Användarkonto: ditt fullständiga namn
    - Användarnamn: terminalens inloggningsnamn
 
-7. Välj **Cinnamon** som skrivbordsmiljö.
+7. Debians installationsprogram tillhandahåller ett val av skrivbordsmiljö i detta skede; välj **Cinnamon** för den av Lumi rekommenderade inställningen.
 8. Slutför installationen och starta om i Debian Stable.
 
 ## Systeminställningar
 
 ### Displayskalning
 
-Debian Stable hanterar för närvarande fraktionerad skalning inkonsekvent, särskilt på 4K-skärmar. Istället för att minska skärmupplösningen, justera gränssnittselement direkt.
+Debian Stable hanterar för närvarande fraktionerad skalning inkonsekvent, särskilt på 4K-skärmar. Istället för att minska skärmupplösningen, justera gränssnittselement direkt.Rekommenderade justeringar:
 
-Rekommenderade justeringar:- Undvik fraktionerad skärmskalning.
+- Undvik fraktionerad skärmskalning.
 - Meny → Teckensnittsval → Teckensnittsinställningar → Textskalningsfaktor: `2.5`
 - Skrivbordstypsnitt: `14`
 - Panel → Anpassa → Panelhöjd: `60`
@@ -153,17 +154,22 @@ Lumi build-skript finns i:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

@@ -35,7 +35,7 @@ Facendo clic su una voce viene mostrata la sua docstring completa e la libreria 
 
 ## Lo Stdlib come wrapper
 
-Le librerie di utilità sono un'applicazione pratica del modello di wrapper: ogni helper dà un nome chiaro a un'operazione di basso livello, nasconde il boilerplate e fornisce un unico posto in cui aggiornare se il comando sottostante cambia. Se vuoi comprendere l'approccio progettuale alla base di questi, guarda il tutorial **[Wrapping](@@LUMI_TOKEN_11@@)**.
+Le librerie di utilità sono un'applicazione pratica del modello di wrapper: ogni helper dà un nome chiaro a un'operazione di basso livello, nasconde il boilerplate e fornisce un unico posto in cui aggiornare se il comando sottostante cambia. Se vuoi comprendere l'approccio progettuale alla base di questi, guarda il tutorial **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Relazione con il browser delle procedure
 

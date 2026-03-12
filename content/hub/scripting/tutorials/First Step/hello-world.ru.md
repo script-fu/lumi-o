@@ -7,6 +7,7 @@ weight: 1
 
 ```bash
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 На высоком уровне вы:

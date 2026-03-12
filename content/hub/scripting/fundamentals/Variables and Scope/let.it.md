@@ -97,7 +97,9 @@ Un nome `let` è una forma speciale di `let` che fornisce un nome per il blocco 
 
 ---
 
-## Tabella riassuntiva| Costruisci | Descrizione | Caso d'uso |
+## Tabella riassuntiva
+
+| Costruisci | Descrizione | Caso d'uso |
 |------------|------------------------------------------|--------------------------------------------------------------------|
 | **`let`** | Definisce i collegamenti locali per le variabili.    | Utilizzare quando tutti gli attacchi sono indipendenti e non si basano l'uno sull'altro.     |
 | **`let*`** | Definisce associazioni locali sequenziali.       | Utilizzare quando le associazioni successive dipendono dai risultati di quelle precedenti.           |

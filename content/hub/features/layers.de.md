@@ -176,7 +176,7 @@ Wenn die Schicht keine hartnäckigen Parasiten aufweist, werden drei leere Start
   Der Schnellmodus ist deaktiviert, wenn eine der folgenden Bedingungen auf eine Vorfahrengruppe zutrifft:
   - Die Gruppe verfügt über sichtbare zerstörungsfreie Filter (Filter benötigen den Projektionspuffer).
   – Der Mischmodus der Gruppe ist etwas anderes als **Normal** oder **Durchgang**.
-  - Die Gruppe hat ein direktes untergeordnetes Element, das den zusammengesetzten Modus **Auf Hintergrund ausschneiden** oder **Schnittpunkt** verwendet (diese erfordern Hintergrunddaten aus dem Projektionspuffer).
+  - Die Gruppe verfügt über ein direktes untergeordnetes Element, das den zusammengesetzten Modus **Auf Hintergrund ausschneiden** oder **Schnittpunkt** verwendet (diese erfordern Hintergrunddaten aus dem Projektionspuffer).
 
   Der Schnellmodus wird auch nicht für Ebenen der obersten Ebene, schwebende Auswahlen oder wenn mehrere Ebenen gleichzeitig als Ziel ausgewählt werden, aktiviert.
 

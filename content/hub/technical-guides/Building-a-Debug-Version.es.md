@@ -1,7 +1,6 @@
 ---
 title: "Construyendo una versión de depuración"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 Esta guía describe el **flujo de trabajo de depuración local** para Lumi usando scripts en `build/lumi/scripts`.
 
@@ -109,8 +108,10 @@ Las compilaciones de depuración son más lentas por diseño. Cuando haya termin
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

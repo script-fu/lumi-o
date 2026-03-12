@@ -110,5 +110,6 @@ L'utilisation d'un `let` nous permet de déclarer des variables de portée local
 Résultat : **Imprime "Condition réelle remplie, calcul..." et renvoie -10.**
 
 ### Résumé- Le conditionnel `if` est un outil puissant dans Scheme pour évaluer les tests et exécuter les blocs de code correspondants.
+
 - Il peut gérer à la fois des expressions simples et des blocs de code complexes qui renvoient des valeurs, modifient des variables ou effectuent des effets secondaires.
 - N'oubliez pas : s'il n'y a pas de bloc `else` explicite, le `if` n'évalue et n'exécute le **conséquent** que si le test est vrai. Sinon, il évalue et exécute l'**alternative**.

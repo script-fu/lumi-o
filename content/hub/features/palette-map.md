@@ -48,7 +48,6 @@ Only Class A entries (Primaries and Custom mixes with intact provenance) are sel
 When the Palette Mixer has active Parent A and Parent B endpoints, both are marked on the Map with **diamond rings** (a diamond shape with a black border). These highlights remain visible even when other display elements are toggled, so the active blend parents are always identifiable.
 
 ## Origin vs Visual Position
-
 Each entry has two positions on the Map:
 
 - **Origin (Source Cell)**: The logical grid address the entry belongs to, fixed for its lifetime.

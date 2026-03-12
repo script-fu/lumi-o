@@ -36,7 +36,7 @@ weight: 5
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### คำอธิบาย:
+#### Explanation:
 
 1. **เงื่อนไข `if`**:
    - การทดสอบ `(= 0 1)` ตรวจสอบว่า 0 เท่ากับ 1 หรือไม่

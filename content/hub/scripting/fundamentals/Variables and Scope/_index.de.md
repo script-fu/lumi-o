@@ -70,6 +70,7 @@ Das `define`-Konstrukt erstellt Variablen oder Funktionen mit globalem Gültigke
 | **Anwendungsfall** | Temporäre Variablen für bestimmte Aufgaben | Gemeinsam genutzte Variablen oder Funktionen, die überall verwendet werden |
 
 ### Zusammenfassung- **Variablendefinitionen und -bereich** sind die Grundlage für die Organisation und Verwaltung von Daten in Ihren Scheme-Skripten.
+
 - Verwenden Sie den **lokalen Bereich** (`let`, `let*`, mit dem Namen `let`), um temporäre Variablen zu kapseln und Konflikte zu vermeiden.
 - Verwenden Sie den **globalen Bereich** (`define`) für wiederverwendbare Funktionen oder Konstanten, die in Ihrem Skript gemeinsam genutzt werden.
 - Ein klares Verständnis dieser Konstrukte verbessert die Lesbarkeit, Wartbarkeit und Zuverlässigkeit Ihres Codes.

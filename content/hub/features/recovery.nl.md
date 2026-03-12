@@ -65,7 +65,7 @@ Het dialoogvenster heeft drie tabbladen en twee actieknoppen.
 Geeft een overzicht van alle beschikbare statussen voor automatisch opslaan voor het geselecteerde bestand, met tijdstempels en miniaturen (indien beschikbaar). Selecteer een staat en klik op **Herstellen** om deze te openen.
 
 Gebruik dit tabblad om:
-- Herstel na een crash.
+- Herstellen na een crash.
 - Terugkeren naar een eerdere status van dezelfde sessie.
 
 ### Incrementeel tabblad

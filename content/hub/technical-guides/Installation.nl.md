@@ -6,7 +6,7 @@ Je hebt Git nodig voor de eerste kloonstap hieronder. Als Git nog niet is geïns
 
 ## 1) Lumi klonen (eerste installatie)
 
-Maak de map voor Lumi en gebruik Git om de broncode te klonen.
+Maak de directory voor Lumi en gebruik Git om de broncode te klonen.
 
 ```bash
 sudo apt install git
@@ -15,10 +15,13 @@ mkdir -p ~/code
 cd ~/code
 
 # Clone via SSH (matches the Git guide above)
+
 git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
 
 # Or clone via HTTPS (no SSH key setup)
+
 # git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
+
 ```
 
 ## 2) Afhankelijkheden installeren (eerste installatie)

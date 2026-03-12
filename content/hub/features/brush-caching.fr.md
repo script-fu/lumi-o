@@ -27,7 +27,7 @@ La mise en cache des pinceaux fonctionne avec la quantification des pinceaux.
 
 Lorsque la quantification est activée pour un préréglage de dynamique, les sorties affectant la transformation sont alignées sur des étapes discrètes. Cela donne à Lumi un ensemble fini d’états de pinceaux réutilisables. Pendant que vous peignez :
 
-1. Lumi vérifie si le tampon transformé existe déjà dans le cache.
+1. Lumi checks whether the transformed stamp already exists in cache.
 2. Si tel est le cas, le tampon est immédiatement réutilisé.
 3. Si ce n'est pas le cas, Lumi le construit une fois et le stocke.
 4. Au fil du temps, le cache se remplit avec les états de pinceau que vous utilisez réellement.

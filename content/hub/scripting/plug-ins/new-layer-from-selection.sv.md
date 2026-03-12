@@ -2,7 +2,7 @@
 title: "Nytt lager från urval"
 type: docs
 ---
-Skapar ett nytt namngivet lager från det aktiva urvalet.
+Creates a new named layer from the active selection.
 
 ## Där den bor
 

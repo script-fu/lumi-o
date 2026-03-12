@@ -7,16 +7,16 @@ type: docs
 В этом разделе описаны основные возможности, доступные в Lumi, и их расположение в интерфейсе.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Кэширование кистей" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Формат файла (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Восстановление файлов" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Слои и неразрушающее редактирование" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Инструмент «Кисть»" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Редактор палитр" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Карта палитры" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Палитра Миксер" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Сценарии схем" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Спектральное смешение цветов" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Инструмент деформации" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Рабочие пространства" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Кэширование кистей" icon="lightning-bolt" subtitle="Сохраняйте прогретые кэши для любимых кистей, чтобы они как можно быстрее почувствовали себя быстрыми." >}}
+  {{< card link="file-format" title="Формат файла (.lum)" icon="document-text" subtitle="Формат открытого контейнера, в котором хранятся слои, метаданные, профили ICC и данные восстановления." >}}
+  {{< card link="recovery" title="Восстановление файлов" icon="refresh" subtitle="Автоматические снимки инкрементального восстановления защищают работу от сбоев и потери питания." >}}
+  {{< card link="layers" title="Слои и неразрушающее редактирование" icon="collection" subtitle="Композитинг на основе слоев с режимами наложения, масками, группами и неразрушающими корректирующими слоями." >}}
+  {{< card link="paintbrush" title="Инструмент «Кисть»" icon="pencil-alt" subtitle="Динамика давления, скорости, наклона и расстояния со стабилизацией, сглаживанием и формированием кисти с несколькими головками." >}}
+  {{< card link="palette-editor" title="Редактор палитр" icon="color-swatch" subtitle="Создавайте именованные палитры пигментов и управляйте ими с помощью объединенных наборов, охватывающих полный и ограниченный спектр палитр." >}}
+  {{< card link="palette-map" title="Карта палитры" icon="view-grid" subtitle="Интерактивная 2D-сетка, отображающая пигменты палитры по осям, используемая для прямого выбора и исследования цвета." >}}
+  {{< card link="palette-mixer" title="Палитра Миксер" icon="adjustments" subtitle="Смешивайте пигменты из активной палитры по оттенку, насыщенности и тону с визуальным предварительным просмотром разрывов." >}}
+  {{< card link="scripting" title="Сценарии схем" icon="code" subtitle="Автоматизируйте рабочие процессы и расширяйте Lumi с помощью встроенного интерпретатора Scheme." >}}
+  {{< card link="spectral-color" title="Спектральное смешение цветов" icon="beaker" subtitle="Физически точное смешивание пигментов с использованием спектральной повышающей дискретизации, обеспечивающее реалистичное поведение краски." >}}
+  {{< card link="warp-tool" title="Инструмент деформации" icon="cursor-click" subtitle="Свободно перемещайте пиксели мазками кисти. Деформирует целые группы слоев как один элемент, применяя одно и то же преобразование ко всем вложенным слоям и маскам." >}}
+  {{< card link="workspaces" title="Рабочие пространства" icon="view-boards" subtitle="Сохраняйте и переключайте полные среды пользовательского интерфейса: макеты панелей, настройки инструментов, конфигурацию устройства, тему и палитру — независимо для каждой рабочей области." >}}
 {{< /cards >}}

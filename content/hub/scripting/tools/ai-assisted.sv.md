@@ -17,7 +17,7 @@ Istället för att bara fylla i en enda kodrad kan en agent:
 ## Repository Access
 
 AI-assistans är mest effektiv när agenten har tillgång till **lumi-dev** eller ditt specifika projektarkiv. Med insyn i den befintliga kodbasen kan agenten:
-- Använd **[Utility Libraries](@@LUMI_TOKEN_4@@)** som referens för hjälpfunktioner.
+- Använd **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** som referens för hjälpfunktioner.
 - Följ befintliga mönster för GEGL-drift och lagerhantering.
 - Återanvänd boilerplate-kod från etablerade plug-ins.
 

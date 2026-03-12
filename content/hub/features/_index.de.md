@@ -7,16 +7,16 @@ Der Funktionsumfang von Lumi konzentriert sich auf digitale Malerei und struktur
 In diesem Abschnitt werden die in Lumi verfügbaren Kernfunktionen und deren Position in der Benutzeroberfläche beschrieben.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Pinsel-Caching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Dateiformat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Dateiwiederherstellung" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Ebenen und zerstörungsfreie Bearbeitung" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Pinselwerkzeug" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Paletteneditor" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Palettenkarte" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Palettenmischer" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Schema-Skripterstellung" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Spektrale Farbmischung" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Warp-Werkzeug" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Arbeitsbereiche" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Pinsel-Caching" icon="lightning-bolt" subtitle="Speichern Sie aufgewärmte Caches für Lieblingspinsel, damit diese so schnell wie möglich schnell funktionieren." >}}
+  {{< card link="file-format" title="Dateiformat (.lum)" icon="document-text" subtitle="Offenes Containerformat zum Speichern von Ebenen, Metadaten, ICC-Profilen und Wiederherstellungsdaten." >}}
+  {{< card link="recovery" title="Dateiwiederherstellung" icon="refresh" subtitle="Automatische inkrementelle Wiederherstellungs-Snapshots schützen Ihre Arbeit vor Abstürzen und Stromausfällen." >}}
+  {{< card link="layers" title="Ebenen und zerstörungsfreie Bearbeitung" icon="collection" subtitle="Ebenenbasiertes Compositing mit Mischmodi, Masken, Gruppen und zerstörungsfreien Einstellungsebenen." >}}
+  {{< card link="paintbrush" title="Pinselwerkzeug" icon="pencil-alt" subtitle="Druck-, Geschwindigkeits-, Neigungs- und Abstandsdynamik mit Stabilisierung, Glättung und Mehrkopfbürstenformationen." >}}
+  {{< card link="palette-editor" title="Paletteneditor" icon="color-swatch" subtitle="Erstellen und verwalten Sie benannte Pigmentpaletten mit gebündelten Sets, die das gesamte Spektrum und begrenzte Paletten abdecken." >}}
+  {{< card link="palette-map" title="Palettenkarte" icon="view-grid" subtitle="Interaktives 2D-Gitter, das Palettenpigmente Achsen zuordnet und für die direkte Farbauswahl und -erkundung verwendet wird." >}}
+  {{< card link="palette-mixer" title="Palettenmischer" icon="adjustments" subtitle="Mischen Sie Pigmente aus der aktiven Palette nach Farbton, Sättigung und Ton mit visueller Lückenvorschau." >}}
+  {{< card link="scripting" title="Schema-Skripterstellung" icon="code" subtitle="Automatisieren Sie Arbeitsabläufe und erweitern Sie Lumi mithilfe eines eingebetteten Scheme-Interpreters." >}}
+  {{< card link="spectral-color" title="Spektrale Farbmischung" icon="beaker" subtitle="Physikalisch genaue Pigmentmischung durch spektrales Upsampling, wodurch ein realistisches Farbverhalten entsteht." >}}
+  {{< card link="warp-tool" title="Warp-Werkzeug" icon="cursor-click" subtitle="Verschieben Sie Pixel frei mit Pinselstrichen. Verzerrt ganze Ebenengruppen als ein Element und wendet dieselbe Transformation auf alle verschachtelten Ebenen und Masken an." >}}
+  {{< card link="workspaces" title="Arbeitsbereiche" icon="view-boards" subtitle="Speichern und wechseln Sie komplette UI-Umgebungen: Panel-Layouts, Werkzeugeinstellungen, Gerätekonfiguration, Design und Palette – unabhängig pro Arbeitsbereich." >}}
 {{< /cards >}}

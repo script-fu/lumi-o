@@ -20,7 +20,7 @@ Cada celda es una pequeña cuña en la rueda. Se dice que una entrada colocada e
 Cuando varios colores compiten por la misma celda, solo un **ganador** se muestra de manera destacada:
 
 1. Las entradas **principales** siempre ganan su celda, independientemente de los demás ocupantes.
-2. Si no hay ningún Primario presente, gana la mezcla generada (Secundario o Terciario) con el **croma más alto**.
+2. Si no hay ningún primario presente, gana la mezcla generada (secundaria o terciaria) con el **croma más alto**.
 
 Las inscripciones que no ganan quedan en segundo lugar y permanecen accesibles mediante ciclos de clics (ver más abajo).
 

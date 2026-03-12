@@ -63,13 +63,14 @@ Het `define` construct creëert variabelen of functies met een globale reikwijdt
 
 ### Scopevergelijking: lokaal versus mondiaal
 
-| Kenmerk | Lokaal bereik (`let`, `let*`) | Mondiale reikwijdte (`define`) |
+| Kenmerk | Lokaal bereik (`let`, `let*`) | Wereldwijd bereik (`define`) |
 |-----------------|--------------------------------------|-----------------------------------------|
 | **Toegankelijkheid** | Beperkt tot het blok waarin het is gedefinieerd | Toegankelijk gedurende het gehele script |
 | **Inkapseling** | Voorkomt onbedoelde interacties | Kan conflicteren met andere globaal gedefinieerde variabelen |
 | **Gebruiksscenario** | Tijdelijke variabelen voor specifieke taken | Gedeelde variabelen of functies die overal in |
 
 ### Samenvatting- **Definities en reikwijdte van variabelen** zijn van fundamenteel belang voor het organiseren en beheren van gegevens in uw schemascripts.
+
 - Gebruik **lokaal bereik** (`let`, `let*`, genaamd `let`) om tijdelijke variabelen in te kapselen en conflicten te vermijden.
 - Gebruik **global scope** (`define`) voor herbruikbare functies of constanten die in uw script worden gedeeld.
 - Een duidelijk begrip van deze constructies zal de leesbaarheid, onderhoudbaarheid en betrouwbaarheid van uw code verbeteren.

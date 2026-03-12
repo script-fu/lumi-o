@@ -20,7 +20,7 @@ type: docs
 | `files.scm` |檔案與路徑助手 |
 | `gegl.scm` | GEGL 緩衝區與色彩助理 |
 | `images.scm` |影像級助手（`image-get-open-list` 等）|
-| `layers.scm` |圖層與可繪製助手|
+| `layers.scm` |圖層與可繪製助手 |
 | `parasites.scm` |寄生蟲讀/寫助手 |
 | `paths.scm` |路徑與向量小幫手|
 
@@ -35,7 +35,7 @@ type: docs
 
 ## Stdlib 作為包裝器
 
-實用程式庫是包裝模式的實際應用：每個幫助程式都為低階操作提供清晰的名稱，隱藏樣板文件，並在底層命令發生變更時提供一個更新位置。如果您想了解它們背後的設計方法，請參閱 **[Wrapping](@@LUMI_TOKEN_11@@)** 教程。
+實用程式庫是包裝模式的實際應用：每個幫助程式都為低階操作提供清晰的名稱，隱藏樣板文件，並在底層命令發生變更時提供一個更新位置。如果您想了解它們背後的設計方法，請參閱 **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** 教程。
 
 ## 與過程瀏覽器的關係
 

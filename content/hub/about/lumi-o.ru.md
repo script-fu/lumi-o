@@ -1,5 +1,5 @@
 ---
-title: "Люми·о"
+title: "Люми-о"
 type: docs
 weight: 1
 ---

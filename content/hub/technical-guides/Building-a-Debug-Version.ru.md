@@ -1,7 +1,6 @@
 ---
 title: "Создание отладочной версии"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 В этом руководстве описывается **рабочий процесс локальной отладки** для Lumi с использованием сценариев в `build/lumi/scripts`.
 
@@ -109,8 +108,10 @@ bash lumi-debug-launch.sh --repo lumi-dev
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

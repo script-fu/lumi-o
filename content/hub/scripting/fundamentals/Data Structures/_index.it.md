@@ -10,6 +10,7 @@ In Scheme, le **strutture dati** sono strumenti essenziali per organizzare, arch
 Scheme fornisce diverse strutture dati potenti e versatili, ciascuna adatta per attività specifiche. Le strutture dati primarie includono:
 
 ### Elenchi
+
 Gli elenchi sono raccolte ordinate di elementi che possono crescere o ridursi dinamicamente. Sono ideali per dati sequenziali o gerarchici e sono ampiamente utilizzati nella programmazione funzionale.
 
 Caratteristiche principali:
@@ -24,6 +25,7 @@ Esempi di utilizzo:
 ---
 
 ### Vettori
+
 I vettori sono raccolte di elementi di dimensione fissa, indicizzati per un accesso rapido. Sono più adatti per scenari in cui le prestazioni e l'accesso posizionale sono fondamentali.
 
 Caratteristiche principali:

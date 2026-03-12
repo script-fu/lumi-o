@@ -34,7 +34,7 @@ La forma più semplice di `for-each` è simile alla seguente:
 
 ### Come funziona
 
-1. **Itera su ciascun elemento**:
+1. **Itera su ogni elemento**:
    - La procedura fornita viene eseguita per ogni elemento dell'elenco, in ordine.
 
 2. **Produce effetti collaterali**:

@@ -48,7 +48,7 @@ A paleta Master vem com os seguintes pigmentos. As amostras mostram a aparência
 | Amostra | Nome | Código CI | Família |
 | :---: | :--- | :--- | :--- |
 | {{< swatch "200,100,70" >}} | Siena queimada | PBr7:Queimado | Terra (Marrom Vermelho) |
-| {{< swatch "117,66,0" >}} | Umber Queimado | PBr7:Úmero | Terra (Neutro) |
+| {{< swatch "117,66,0" >}} | Umber Queimado | PBr7:Úmero | Terra (Neutra) |
 | {{< swatch "205,68,35" >}} | Siena crua | PBr7:Cru | Terra (marrom amarelo) |
 | {{< swatch "187,124,25" >}} | Ocre Amarelo | PY42 | Terra (Amarelo) |
 
@@ -77,7 +77,7 @@ A paleta Master vem com os seguintes pigmentos. As amostras mostram a aparência
 | Amostra | Nome | Código CI | Família |
 | :---: | :--- | :--- | :--- |
 | {{< swatch "124,65,153" >}} | Violeta Brilhante | PV23 | Violeta (dioxazina) |
-| {{< swatch "230,90,180" >}} | Rosa Permanente | PV19:Rosa | Magenta (Quinacridona) |
+| {{< swatch "230,90,180" >}} | Rosa Permanente | PV19:Rosa | Magenta (Quinacridone) |
 | {{< swatch "190,40,120" >}} | Quinacridona Magenta | PV19:Magenta | Magenta (Quinacridona) |
 | {{< swatch "160,30,65" >}} | Alizarina Permanente Carmesim | PV19:Carmesim | Magenta (Quinacridona) |
 | {{< swatch "120,35,65" >}} | Violeta Perileno | PV29 | Magenta (Quinacridona) |
@@ -127,4 +127,4 @@ As cores misturadas podem ser salvas na paleta como entradas **Personalizadas**,
 
 ## Pixels da tela são RGB
 
-O sistema espectral opera inteiramente na construção da paleta e na seleção de cores. Quando uma pincelada é aplicada, a cor do primeiro plano (já convertida em RGB linear) é o que é pintado. A tela armazena dados de pixels RGB padrão.A mistura espectral melhora a experiência de construção de uma paleta e escolha de cores de maneira consistente com o comportamento físico do pigmento, sem alterar a forma como os dados da imagem são armazenados ou compostos.
+O sistema espectral opera inteiramente na construção da paleta e na seleção de cores. Quando uma pincelada é aplicada, a cor do primeiro plano (já convertida em RGB linear) é o que é pintado. The canvas stores standard RGB pixel data.A mistura espectral melhora a experiência de construção de uma paleta e escolha de cores de maneira consistente com o comportamento físico do pigmento, sem alterar a forma como os dados da imagem são armazenados ou compostos.

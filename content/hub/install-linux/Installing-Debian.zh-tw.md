@@ -1,11 +1,12 @@
 ---
 title: "安裝Debian"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-本文檔概述了將 Debian Stable 安裝為 Lumi·o 開發作業系統的過程。對於其他設置類似環境的人來說可能很有用。
+本文檔概述了將 Debian Stable 安裝為 Lumi-o 開發作業系統的過程。對於其他設置類似環境的人來說可能很有用。
 
 選擇 Debian Stable 是因為 Lumi 的目標是在可預測的長期平台上可靠地建造。 GIMP 開發目標是 Debian 測試，使 Debian 穩定版成為一個緊密結合的基礎系統。
+
+Lumi 在 Debian with Cinnamon (X11) 上表現最佳，並且是在該環境中開發和測試的。 Cinnamon 提供了一個熟悉的類似 Windows 的桌面工作流程，而 X11 則為 Lumi 開發提供了最穩定的環境。
 
 如果您來自 Windows，主要的概念變更是大多數軟體安裝和設定是透過套件管理器和簡單的終端命令而不是可下載的安裝程式進行的。
 
@@ -65,16 +66,16 @@ url: "hub/install-linux/Installing-Debian"
    - 使用者帳戶：您的全名
    - 使用者名稱：終端登入名
 
-7. 選擇 **Cinnamon** 作為桌面環境。
+7. Debian安裝程式現階段提供桌面環境選擇；選擇 **Cinnamon** 作為 Lumi 建議的設定。
 8. 完成安裝並重新啟動進入 Debian Stable。
 
 ## 系統設定
 
 ### 顯示縮放
 
-Debian Stable 目前處理分數縮放的方式不一致，尤其是在 4K 顯示器上。不降低顯示分辨率，而是直接調整介面元素。
+Debian Stable 目前處理分數縮放的方式不一致，尤其是在 4K 顯示器上。不降低顯示分辨率，而是直接調整介面元素。建議調整：
 
-建議調整：- 避免分數顯示縮放。
+- 避免分數顯示縮放。
 - 選單 → 字型選擇 → 字型設定 → 文字縮放係數：`2.5`
 - 桌面字體：`14`
 - 面板→自訂→面板高度：`60`
@@ -153,17 +154,22 @@ Lumi 建置腳本位於：
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

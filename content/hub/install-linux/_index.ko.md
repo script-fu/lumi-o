@@ -1,7 +1,6 @@
 ---
 title: "리눅스를 설치하는 방법"
 type: docs
-url: "hub/install-linux"
 ---
 Lumi용 Linux 설치 가이드에 오신 것을 환영합니다.
 

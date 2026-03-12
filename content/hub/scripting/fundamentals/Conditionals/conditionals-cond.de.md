@@ -1,5 +1,5 @@
 ---
-title: "kond"
+title: "Kond"
 type: docs
 weight: 5
 ---

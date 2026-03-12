@@ -91,4 +91,4 @@ weight: 6
 
 - **Single Quote (`'`)**: สร้างรายการคงที่โดยที่องค์ประกอบทั้งหมดเป็นข้อมูลตามตัวอักษร
 - **ราคาย้อนกลับ (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`)
-- **Dot Notation (`.`)**: ใช้เพื่อสร้างคู่ การเชื่อมโยงคีย์กับค่าในรายการ
+- **Dot Notation (`.`)**: ใช้เพื่อสร้างคู่ เชื่อมโยงคีย์กับค่าในรายการ

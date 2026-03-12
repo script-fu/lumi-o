@@ -10,7 +10,7 @@ Praktyczny, kompleksowy przykład przetwarzania wielu plików za jednym razem.
 
 ## Gdzie pojawia się w Lumi
 
-- **Plik → Proces wsadowy**
+- **File → Batch Process**
 
 ## Co to pokazuje
 

@@ -116,6 +116,7 @@ Extraindo a lógica:
 ```
 
 #### Símbolos
+
 No exemplo acima, é usado um tipo de dados chamado símbolo, como 'gui. Os símbolos são passados ​​como parâmetros para a função de envio de mensagem e podem ser usados ​​para tomar decisões condicionais simples. Assim como as chaves simbólicas, elas são identificadores exclusivos. Para obter mais informações sobre símbolos, visite [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Simplificando a Função Principal

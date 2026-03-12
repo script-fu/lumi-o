@@ -15,11 +15,13 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
 ### Benannt `let`
 
 #### Eigenschaften:
+
 1. Kombiniert Variablenbindungen und Rekursion in einem einzigen Konstrukt.
 2. Bezogen auf den Hauptteil des `let`-Blocks.
 3. Ideal für **lokale Rekursion** oder iterative Prozesse speziell für eine einzelne Aufgabe.
 
 #### Syntax
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
 ```
 
 #### Beispiel: Elemente einer Liste summieren
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
 ### Lokal `define`
 
 #### Eigenschaften:
+
 1. Ermöglicht die Erstellung von Hilfsfunktionen oder Variablen, die innerhalb der umschließenden Funktion wiederverwendbar sind.
 2. Auf die umschließende Funktion beschränkt, aber im gesamten Körper sichtbar.
 3. Ideal für die Modularisierung von Code mit mehreren Schritten oder wiederverwendbarer Logik.
 
 #### Syntax
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -58,7 +63,8 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
   body-expression)
 ```
 
-#### Beispiel: Verarbeitung mehrerer Werte
+#### Example: Processing Multiple Values
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
 Eine der leistungsstärksten Funktionen eines benannten `let` ist seine Fähigkeit, **lokale Variablendeklaration** und **Eingabeparameter** für die Rekursion in einem einzigen Konstrukt zu kombinieren. Dies macht das benannte `let` sowohl prägnant als auch ausdrucksstark für iterative oder rekursive Aufgaben.
 
 #### Lokale Variablendeklaration
+
 In einem benannten `let` fungieren die Bindungen in den Klammern als **lokale Variablen**, die mit bestimmten Werten initialisiert werden. Diese Variablen beziehen sich auf den Hauptteil von `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ In einem benannten `let` fungieren die Bindungen in den Klammern als **lokale Va
 ---
 
 #### Eingabeparameter für die Rekursion
+
 Dieselben Variablen fungieren auch als **Eingabeparameter** für die rekursiven Aufrufe des benannten `let`. Wenn sich das benannte `let` selbst aufruft, aktualisiert es diese Variablen mit neuen Werten.
 
 ```scheme
@@ -164,6 +172,7 @@ Dieselben Variablen fungieren auch als **Eingabeparameter** für die rekursiven 
 Ein benanntes `let` beinhaltet die Variableninitialisierung als Teil seiner Syntax. Dadurch entfällt die Notwendigkeit eines separaten Schritts zum Einrichten der Anfangswerte. Die folgenden zwei Beispiele sind äquivalent:
 
 ##### Verwendung des benannten `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Ein benanntes `let` beinhaltet die Variableninitialisierung als Teil seiner Synt
 ```
 
 ##### Lokales `define` verwenden
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

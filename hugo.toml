@@ -2,7 +2,7 @@ baseURL = 'https://lumi-o.org/'
 languageCode = 'en-GB'
 defaultContentLanguage = 'en-gb'
 defaultContentLanguageInSubdir = false
-title = 'Lumi·o'
+title = 'Lumi-o'
 theme = 'hextra'
 
 [languages]
@@ -83,7 +83,7 @@ theme = 'hextra'
   weight = 15
 
 [params]
-description = "Lumi·o is a free, open-source digital painting and illustration app for Linux. Lightweight, focused, and easy to build from source."
+description = "Lumi-o is a free, open-source digital painting and illustration app for Linux. Lightweight, focused, and easy to build from source."
 keywords = "Lumi-o, Lumi, digital painting, illustration software, Linux art app, open-source art app, Debian, AppImage"
 
 [params.theme]
@@ -168,7 +168,7 @@ pageRef = "hub/features/"
 weight = 5
 
 [[menu.main]]
-name = "Made in Lumi·o"
+name = "Made in Lumi-o"
 identifier = "menuMadeInLumio"
 pageRef = "hub/made-in-lumio/"
 weight = 6

@@ -9,7 +9,7 @@ weight: 7
 
 ## 최소 구문 및 표현식
 
-스키마 코드는 **표현식**으로 구성됩니다. 표현식은 값으로 평가됩니다. The syntax is uniform: parentheses form a call, with the operator or function name first.
+스키마 코드는 **표현식**으로 구성됩니다. 표현식은 값으로 평가됩니다. 구문은 동일합니다. 괄호는 연산자 또는 함수 이름을 먼저 사용하여 호출을 형성합니다.
 
 ```scheme
 (+ 1 2)         ; Adds 1 and 2, resulting in 3
@@ -17,7 +17,7 @@ weight: 7
 (list 1 2 3)    ; Creates a list: (1 2 3)
 ```
 
-Because everything is an expression, control flow fits naturally into the same style as function calls.
+모든 것이 표현식이기 때문에 제어 흐름은 함수 호출과 동일한 스타일에 자연스럽게 맞습니다.
 
 ## 함수가 중요한 이유
 
@@ -33,7 +33,7 @@ Because everything is an expression, control flow fits naturally into the same s
 Scheme은 각각 특정 사용 사례에 적합한 다양한 기능 구성을 제공합니다.
 
 1. **명명된 함수**
-   These are standard functions defined with `define`. 이는 대부분의 스크립트의 중추를 형성합니다.
+   이는 `define`으로 정의된 표준 함수입니다. 이는 대부분의 스크립트의 중추를 형성합니다.
 
    ```scheme
    (define (square x)
@@ -63,9 +63,9 @@ Scheme의 함수에는 간단하고 일관된 구문이 있습니다.
   body-expression)
 ```
 
-- **`function-name`:** The name of the function.
-- **`parameter1, parameter2, ...`:** The arguments the function takes.
-- **`body-expression`:** The logic executed when the function is called.
+- **`function-name`:** 함수의 이름입니다.
+- **`parameter1, parameter2, ...`:** 함수가 취하는 인수입니다.
+- **`body-expression`:** 함수가 호출될 때 실행되는 로직입니다.
 
 예:
 
@@ -78,8 +78,8 @@ Scheme의 함수에는 간단하고 일관된 구문이 있습니다.
 
 ## 부작용과 전역 상태
 
-In Lumi, many useful procedures have **side effects**: they modify an image, change a drawable, write a file, or display output.
+Lumi의 많은 유용한 절차에는 **부작용**이 있습니다. 즉, 이미지 수정, 드로어블 변경, 파일 쓰기 또는 출력 표시 등이 있습니다.
 
-- Isolate side effects in small, clearly named procedures.
-- Avoid changing global context unless you need to.
+- 작고 명확하게 명명된 절차로 부작용을 분리합니다.
+- 필요한 경우가 아니면 전역 컨텍스트를 변경하지 마세요.
 - 컨텍스트(색상, 브러시 등)를 변경할 때 작업을 `lumi-context-push` 및 `lumi-context-pop`으로 래핑하여 사용자 상태를 복원합니다.

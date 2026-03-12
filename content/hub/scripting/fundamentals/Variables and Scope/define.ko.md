@@ -19,11 +19,13 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 `define`의 기본 용도는 상수 또는 계산된 값을 보유하는 변수를 생성하는 것입니다.
 
 #### 구문
+
 ```scheme
 (define variable-name value)
 ```
 
 #### 예: 상수 정의
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 `define`을 사용하여 재사용 가능한 프로시저를 생성할 수 있습니다.
 
 #### 구문
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### 예: 간단한 함수 정의
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 함수 내에서 사용될 때 `define`은 바깥쪽 함수 내에서만 액세스할 수 있는 로컬 바인딩을 생성합니다. 이렇게 하면 전역 네임스페이스 오염을 방지하고 코드를 구성하는 데 도움이 됩니다.
 
 #### 예: 로컬 도우미 함수
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

@@ -1,7 +1,6 @@
 ---
 title: "Usando Git no Linux"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 Bem-vindo a este guia para iniciantes no uso do Git no Linux! Este guia foi projetado para ajudá-lo a começar a usar o Git e o GitLab e para fornecer uma compreensão básica de como usar essas ferramentas.
 

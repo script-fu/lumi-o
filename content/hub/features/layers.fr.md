@@ -93,7 +93,7 @@ Dans le panneau Calques :
 
 ## Verrous de calque
 
-Les icônes de verrouillage sont affichées dans la ligne d'en-tête du panneau Calques. Chaque verrou peut être basculé indépendamment. Un clic droit sur une icône de verrouillage la définit exclusivement (verrouille uniquement ce type, déverrouillant tous les autres sur le même calque).
+Les icônes de verrouillage sont affichées dans la ligne d’en-tête du panneau Calques. Chaque verrou peut être basculé indépendamment. Un clic droit sur une icône de verrouillage la définit exclusivement (verrouille uniquement ce type, déverrouillant tous les autres sur le même calque).
 
 - **Lock Alpha** : empêche la peinture sur les zones transparentes. Les coups de pinceau n'affectent que les pixels qui ont déjà une opacité ; les pixels entièrement transparents ne sont pas modifiés. Utile pour peindre dans des formes existantes sans renverser à l'extérieur.
 

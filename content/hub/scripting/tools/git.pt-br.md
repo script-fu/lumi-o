@@ -60,7 +60,7 @@ Se você ainda não possui uma conta, visite [GitHub](https://github.com/) para 
 
 ### 3. Crie um repositório em branco no GitHub
 
-1. **Faça login no GitHub**: Vá para [GitHub](https://github.com/) e faça login em sua conta.
+1. **Faça login no GitHub**: Vá para [GitHub](https://github.com/) e faça login na sua conta.
 2. **Crie um novo repositório**:
    - Clique no ícone **+** no canto superior direito e selecione **Novo repositório**.
    - Insira um nome de repositório (por exemplo, `your-repository`).

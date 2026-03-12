@@ -15,6 +15,6 @@ Um exemplo prático e completo para processar muitos arquivos de uma só vez.
 ## O que demonstra
 
 - Parâmetros `SF-DIRNAME` para diretórios de origem/destino
-- Validando caminhos GUI com substitutos (`validate-path-and-dir`)
+- Validating GUI paths with fallbacks (`validate-path-and-dir`)
 - Verificação e iteração recursiva de diretórios
 - Relatórios de progresso para operações de longa duração

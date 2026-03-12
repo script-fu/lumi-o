@@ -1,5 +1,5 @@
 ---
-title: "Visual Studioコード"
+title: "Visual Studio コード"
 type: docs
 ---
 ## Visual Studio コードとは何ですか?

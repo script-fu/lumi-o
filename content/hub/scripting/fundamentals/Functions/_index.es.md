@@ -33,7 +33,7 @@ Las funciones desempeñan un papel fundamental en Scheme por varias razones:
 Scheme ofrece una variedad de construcciones de funciones, cada una adecuada para casos de uso específicos:
 
 1. **Funciones con nombre**
-   Estas son funciones estándar definidas con `define`. Forman la columna vertebral de la mayoría de los guiones.
+   These are standard functions defined with `define`. Forman la columna vertebral de la mayoría de los guiones.
 
    ```scheme
    (define (square x)

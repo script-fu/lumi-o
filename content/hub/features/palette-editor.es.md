@@ -30,7 +30,7 @@ La sección **Mezclas guardadas** contiene colores que has conservado explícita
 
 Las mezclas guardadas se subdividen en cinco bandas de valores:
 
-| Banda | Rango de luminosidad predeterminado |
+| Band | Rango de luminosidad predeterminado |
 | :--- | :--- |
 | Clave alta | 80 – 100% |
 | Medio superior | 60 – 80% |
@@ -66,7 +66,7 @@ El **expansor Bandas de valor** en el Editor de paleta contiene un control desli
 | **Valores predeterminados** | Restaura los valores predeterminados de división igual de fábrica |
 | **Aplicar** | Confirma los cambios y regenera la paleta |
 
-**Se requiere Aplicar** para que los cambios sean permanentes. Activa una regeneración completa de la paleta y eliminará cualquier mezcla guardada cuya luminosidad ya no esté dentro de ninguna banda. Lumi muestra un cuadro de diálogo de confirmación que enumera cuántas mezclas se eliminarán antes de continuar.
+**Apply** is required to make the changes permanent. Activa una regeneración completa de la paleta y eliminará cualquier mezcla guardada cuya luminosidad ya no esté dentro de ninguna banda. Lumi muestra un cuadro de diálogo de confirmación que enumera cuántas mezclas se eliminarán antes de continuar.
 
 ### Bandas de valor y el mapa de paleta
 

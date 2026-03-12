@@ -1,11 +1,12 @@
 ---
 title: "데비안 설치"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-이 문서에서는 Debian Stable을 Lumi·o 개발 운영 체제로 설치하는 데 사용되는 프로세스를 간략하게 설명합니다. 비슷한 환경을 설정하는 다른 사람들에게 유용할 수 있습니다.
+이 문서에서는 Debian Stable을 Lumi-o 개발 운영 체제로 설치하는 데 사용되는 프로세스를 간략하게 설명합니다. 비슷한 환경을 설정하는 다른 사람들에게 유용할 수 있습니다.
 
 Lumi는 예측 가능한 장기 플랫폼에서 안정적으로 구축하는 것을 목표로 하기 때문에 Debian Stable을 선택했습니다. GIMP 개발은 Debian Testing을 목표로 하여 Debian Stable을 긴밀하게 정렬된 기본 시스템으로 만듭니다.
+
+Lumi는 Cinnamon(X11)이 포함된 Debian에서 최고의 성능을 발휘하며 해당 환경에서 개발 및 테스트되었습니다. Cinnamon은 Windows와 유사한 친숙한 데스크탑 워크플로우를 제공하는 반면, X11은 Lumi 개발을 위한 가장 안정적인 환경을 제공합니다.
 
 Windows에서 오는 경우 주요 개념 변경은 대부분의 소프트웨어 설치 및 구성이 다운로드 가능한 설치 프로그램이 아닌 패키지 관리자 및 간단한 터미널 명령을 통해 수행된다는 것입니다.
 
@@ -65,16 +66,16 @@ Git 리포지토리를 사용하는 경우 중요한 변경 사항을 원본에 
    - 사용자 계정: 성명
    - 사용자 이름 : 단말기 로그인 이름
 
-7. 데스크탑 환경으로 **Cinnamon**을 선택합니다.
+7. 데비안 설치 프로그램은 이 단계에서 데스크탑 환경 선택을 제공합니다. Lumi 권장 설정에서 **Cinnamon**을 선택하세요.
 8. 설치를 완료하고 Debian Stable로 재부팅합니다.
 
 ## 시스템 설정
 
 ### 디스플레이 크기 조정
 
-Debian Stable은 현재 특히 4K 디스플레이에서 부분 스케일링을 일관되지 않게 처리합니다. 디스플레이 해상도를 줄이는 대신 인터페이스 요소를 직접 조정하세요.
+Debian Stable은 현재 특히 4K 디스플레이에서 부분 스케일링을 일관되지 않게 처리합니다. 디스플레이 해상도를 줄이는 대신 인터페이스 요소를 직접 조정하세요.권장 조정:
 
-권장 조정:- 분수 디스플레이 스케일링을 피하십시오.
+- 분수 디스플레이 스케일링을 피하십시오.
 - 메뉴 → 글꼴 선택 → 글꼴 설정 → 텍스트 배율: `2.5`
 - 데스크탑 글꼴: `14`
 - 패널 → 사용자 정의 → 패널 높이: `60`
@@ -153,17 +154,22 @@ Lumi 빌드 스크립트는 다음 위치에 있습니다.
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

@@ -1,7 +1,6 @@
 ---
 title: "Usando Git en Linux"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 ¡Bienvenido a esta guía para principiantes sobre el uso de Git en Linux! Esta guía está diseñada para ayudarlo a comenzar con Git y GitLab, y para brindarle una comprensión básica de cómo usar estas herramientas.
 
@@ -11,7 +10,7 @@ El código utilizado para crear aplicaciones se guarda en una colección de carp
 
 ## ¿Qué es un repositorio?
 
-Un _repo_, abreviatura de repositorio, es una carpeta local administrada por Git con una copia en línea. Un repositorio de Git Lab es una colección de archivos y carpetas que conforman un proyecto. Puede tener _ramas_ que sean copias independientes del mismo proyecto. Una rama es una versión separada de su proyecto que le permite realizar cambios sin afectar la versión principal. Esto es útil para probar nuevas funciones o corregir errores sin interrumpir el proyecto principal. Está su repositorio local, almacenado en su disco duro, y el repositorio remoto, almacenado en línea usando Git y GitLab.
+Un _repo_, abreviatura de repositorio, es una carpeta local administrada por Git con una copia en línea. Un repositorio de Git Lab es una colección de archivos y carpetas que componen un proyecto. Puede tener _ramas_ que sean copias independientes del mismo proyecto. Una rama es una versión separada de su proyecto que le permite realizar cambios sin afectar la versión principal. Esto es útil para probar nuevas funciones o corregir errores sin interrumpir el proyecto principal. Está su repositorio local, almacenado en su disco duro, y el repositorio remoto, almacenado en línea usando Git y GitLab.
 
 ## Usando Git
 

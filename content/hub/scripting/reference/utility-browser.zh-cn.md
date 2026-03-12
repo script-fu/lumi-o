@@ -20,7 +20,7 @@ type: docs
 | `files.scm` |文件和路径助手 |
 | `gegl.scm` | GEGL 缓冲区和颜色助手 |
 | `images.scm` |图像级助手（`image-get-open-list` 等）|
-| `layers.scm` |图层和可绘制助手|
+| `layers.scm` |图层和可绘制助手 |
 | `parasites.scm` |寄生虫读/写助手 |
 | `paths.scm` |路径和矢量助手|
 
@@ -35,7 +35,7 @@ type: docs
 
 ## Stdlib 作为包装器
 
-实用程序库是包装模式的实际应用：每个帮助程序都为低级操作提供清晰的名称，隐藏样板文件，并在底层命令发生更改时提供一个更新位置。如果您想了解它们背​​后的设计方法，请参阅 **[Wrapping](@@LUMI_TOKEN_11@@)** 教程。
+实用程序库是包装模式的实际应用：每个帮助程序都为低级操作提供清晰的名称，隐藏样板文件，并在底层命令发生更改时提供一个更新位置。如果您想了解它们背​​后的设计方法，请参阅 **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** 教程。
 
 ## 与过程浏览器的关系
 

@@ -19,11 +19,13 @@ Konstrukcja `define` służy wielu celom:
 Podstawowym zastosowaniem `define` jest tworzenie zmiennych przechowujących wartości stałe lub obliczone.
 
 #### Składnia
+
 ```scheme
 (define variable-name value)
 ```
 
 #### Przykład: Definiowanie stałej
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Podstawowym zastosowaniem `define` jest tworzenie zmiennych przechowujących war
 Możesz użyć `define` do tworzenia procedur wielokrotnego użytku.
 
 #### Składnia
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### Przykład: Definiowanie prostej funkcji
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Możesz użyć `define` do tworzenia procedur wielokrotnego użytku.
 Używane wewnątrz funkcji `define` tworzy lokalne powiązania, które są dostępne tylko w obrębie funkcji otaczającej. Pozwala to uniknąć zanieczyszczania globalnej przestrzeni nazw i pomaga uporządkować kod.
 
 #### Przykład: Lokalne funkcje pomocnicze
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

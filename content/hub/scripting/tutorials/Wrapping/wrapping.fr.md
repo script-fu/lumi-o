@@ -31,7 +31,7 @@ Exemples :
   (msrg-rand))
 ```
 
-Bien que nous puissions utiliser ***msrg-rand*** directement dans notre code, l'envelopper dans une fonction appelée ***random-seed*** améliore la lisibilité. En donnant à la fonction un nom clair et descriptif, il devient plus facile de comprendre son objectif en un coup d'œil.
+Bien que nous puissions utiliser ***msrg-rand*** directement dans notre code, l'envelopper dans une fonction appelée ***random-seed*** améliore la lisibilité. By giving the function a clear and descriptive name, it becomes easier to understand its purpose at a glance.
 
 De plus, définir ***random-seed*** comme fonction autonome nous permet de l'utiliser n'importe où dans nos plug-ins tout en centralisant l'implémentation en un seul emplacement. Si jamais nous devons modifier la façon dont la graine est générée, il nous suffit de mettre à jour cette fonction, en laissant le reste de notre code intact.
 
@@ -162,7 +162,7 @@ En englobant les fonctions de bas niveau dans des noms significatifs, nous créo
 
 Lumi fournit un ensemble de wrappers prêts à l'emploi chargés automatiquement au démarrage, ils sont donc disponibles dans n'importe quel plug-in ou dans la console Scheme sans aucun appel `(load ...)`. Ces bibliothèques (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` et `paths.scm`) sont construites exactement sur le même principe que les exemples ci-dessus : elles donnent des noms clairs aux opérations de bas niveau, masquent passe-partout répétitif et fournit un emplacement unique pour mettre à jour si la commande sous-jacente change.Par exemple, `images.scm` fournit `image-get-open-list` comme wrapper lisible autour de l'appel PDB brut, et `files.scm` expose des assistants de création de chemin qui nécessiteraient autrement des chaînes `string-append` répétées.
 
-Vous pouvez parcourir chaque nom exporté, lire sa docstring et voir de quelle bibliothèque il provient dans **[Utility Browser](@@LUMI_TOKEN_21@@)** (Aide → Programmation → Navigateur d'utilitaires). Il s'agit d'une démonstration pratique de l'encapsulation à grande échelle et d'une source utile de modèles à emprunter lors de la création de votre propre bibliothèque d'assistance.
+Vous pouvez parcourir chaque nom exporté, lire sa docstring et voir de quelle bibliothèque il provient dans **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Aide → Programmation → Navigateur d'utilitaires). Il s'agit d'une démonstration pratique de l'encapsulation à grande échelle et d'une source utile de modèles à emprunter lors de la création de votre propre bibliothèque d'assistance.
 
 ### Conclusion
 

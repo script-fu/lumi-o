@@ -19,11 +19,13 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 `define` 的基本用途是建立保存常數或計算值的變數。
 
 #### 語法
+
 ```scheme
 (define variable-name value)
 ```
 
 #### 範例：定義常數
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 您可以使用`define` 建立可重複使用的過程。
 
 #### 語法
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### 範例：定義一個簡單函數
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 在函數內部使用時，`define` 建立只能在封閉函數內存取的本地綁定。這可以避免污染全域命名空間並有助於組織程式碼。
 
 #### 範例：本機輔助函數
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

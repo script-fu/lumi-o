@@ -1,7 +1,6 @@
 ---
 title: "Een debugversie bouwen"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 Deze handleiding beschrijft de **lokale foutopsporingsworkflow** voor Lumi met behulp van scripts in `build/lumi/scripts`.
 
@@ -18,7 +17,7 @@ De werkstroom is ontworpen om:
 
 ## Eenmalige GDB-installatie (optioneel maar aanbevolen)
 
-GDB-tools installeren:
+Installeer GDB-tools:
 
 ```bash
 sudo apt update
@@ -109,8 +108,10 @@ Debug-builds zijn langzamer van opzet. Wanneer u klaar bent met het opsporen van
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

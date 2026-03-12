@@ -50,7 +50,7 @@ Ta sekcja jest przydatna do odzyskiwania koloru, którym namalowałeś, ale któ
 
 Używane mieszanki są przechowywane na palecie i pozostają pomiędzy sesjami.
 
-## Pasma wartościPasma wartości określają, gdzie przebiegają granice pomiędzy pięcioma strefami jasności. Domyślnie dzielą jasność równomiernie w zakresie 0–100%, ale można je dostosować, aby dopasować je do struktury tonalnej fotografowanego obiektu. Dla malarzy przydatne jest definiowanie i zarządzanie przedziałami wartości _i_ przerwami między nimi.
+## Pasma wartościPasma wartości określają, gdzie przebiegają granice pomiędzy pięcioma strefami jasności. Domyślnie rozdzielają jasność równomiernie w zakresie 0–100%, ale można je dostosować, aby dopasować je do struktury tonalnej fotografowanego obiektu. Dla malarzy przydatne jest definiowanie i zarządzanie przedziałami wartości _i_ przerwami między nimi.
 
 ### Suwak pasma wartości
 

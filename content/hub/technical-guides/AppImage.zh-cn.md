@@ -41,9 +41,11 @@ CI 生成工件 zip 文件（例如 `lumi-appimage*.zip`）。
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
+
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
+
 bash lumi-appimage-launch.sh
 ```
 

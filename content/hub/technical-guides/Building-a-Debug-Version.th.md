@@ -1,7 +1,6 @@
 ---
 title: "การสร้างเวอร์ชันดีบัก"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 คู่มือนี้จะอธิบาย **เวิร์กโฟลว์การแก้ไขจุดบกพร่องในตัวเครื่อง** สำหรับ Lumi โดยใช้สคริปต์ใน `build/lumi/scripts`
 
@@ -109,8 +108,10 @@ bash lumi-debug-launch.sh --repo lumi-dev
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

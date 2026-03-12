@@ -79,7 +79,7 @@ Borstcaching riktar sig mot transformerade borststämplar: de dyra rastrerade re
 Det är mest användbart när:- borsten har kostsamt förvandlingsarbete
 - samma förinställning används över många sessioner
 - borsten återbesöker liknande dynamiska tillstånd upprepade gånger
-- snabb uppstartslyhördhet är viktig
+- snabb uppstartsrespons är viktig
 
 Det är mindre användbart för penslar vars transformationstillstånd förändras vilt och sällan upprepas.
 

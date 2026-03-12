@@ -96,7 +96,7 @@ Takie podejście zapewnia, że funkcja zawsze otrzymuje prawidłowe dane wejści
 ```
 
 W tej wersji:
-- Funkcja sprawdza najpierw, czy `message` jest pusty lub nieprawidłowy. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z zaakceptowanych wartości (`gui`, `error-console`, lub `terminal`).
+- Funkcja sprawdza najpierw, czy `message` jest pusty lub nieprawidłowy. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z akceptowanych wartości (`gui`, `error-console`, lub `terminal`).
 - Jeżeli obydwa sprawdzenia przebiegną pomyślnie, wiadomość zostanie wysłana na odpowiednie wyjście. W przeciwnym razie zostanie wyświetlony komunikat o błędzie z jasnym wyjaśnieniem.
 - Przeprowadzana jest dodatkowa kontrola, aby upewnić się, że wiadomość jest również ciągiem znaków.
 

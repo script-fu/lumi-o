@@ -45,7 +45,7 @@ La imagen de dependencia de CI de Lumi construye la pila bifurcada a partir de *
 
 Estos directorios se copian en el contexto de compilación del contenedor y se compilan en el prefijo de dependencia (normalmente `/opt/lumi-deps`). Esto mantiene la CI reproducible y garantiza que la compilación de AppImage utilice la misma fuente de verdad que el desarrollo local.
 
-## Papel de los scripts de Shell
+## Función de los scripts de Shell
 
 Los trabajos en `.gitlab-ci.yml` normalmente invocan comandos de shell directamente. Las operaciones complejas a menudo se trasladan a scripts separados almacenados en el repositorio.
 

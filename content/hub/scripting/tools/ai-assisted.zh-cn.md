@@ -17,7 +17,7 @@ type: docs
 ## 存储库访问
 
 当代理有权访问 **lumi-dev** 或您的特定项目存储库时，AI 协助最为有效。通过了解现有代码库，代理可以：
-- 使用 **[Utility Libraries](@@LUMI_TOKEN_4@@)** 作为辅助函数的参考。
+- 使用 **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** 作为辅助函数的参考。
 - 遵循 GEGL 运营和层管理的现有模式。
 - 重复使用已建立插件中的样板代码。
 

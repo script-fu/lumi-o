@@ -41,9 +41,11 @@ CI는 아티팩트 zip 파일(예: `lumi-appimage*.zip`)을 생성합니다.
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
+
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
+
 bash lumi-appimage-launch.sh
 ```
 

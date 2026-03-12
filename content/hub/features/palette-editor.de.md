@@ -2,7 +2,7 @@
 title: "Paletteneditor"
 type: docs
 ---
-Im Paletteneditor erstellen und verwalten Sie eine Lumi-Palette. Es enthält Ihren Pigmentsatz, speichert die Mischungen, die Sie im Palettenmixer gespeichert haben, zeichnet die Farben auf, die Sie tatsächlich beim Malen verwendet haben, und ermöglicht Ihnen die Konfiguration der Wertestruktur und Farbverläufe für die Palette.
+Im Paletteneditor erstellen und verwalten Sie eine Lumi-Palette. Es enthält Ihren Pigmentsatz, speichert die Mischungen, die Sie im Palettenmixer gespeichert haben, zeichnet die Farben auf, die Sie beim Malen tatsächlich verwendet haben, und ermöglicht Ihnen die Konfiguration der Wertestruktur und Farbverläufe für die Palette.
 
 ## Auswählen einer Palette
 
@@ -44,7 +44,7 @@ Gespeicherte Mischungen können über die Schaltfläche **Benutzerdefiniert umbe
 
 ## Gebrauchte Mischungen
 
-Der Abschnitt **Gebrauchte Mischungen** ist eine durch Farbe ausgelöste Geschichte. Jedes Mal, wenn eine Farbe aus der Palette auf die Leinwand aufgetragen wird, wird dies hier aufgezeichnet. Gebrauchte Mischungen werden von der neuesten zur neuesten Version sortiert.
+Der Abschnitt **Gebrauchte Mischungen** ist eine durch Farbe ausgelöste Geschichte. Jedes Mal, wenn eine Farbe aus der Palette auf die Leinwand aufgetragen wird, wird dies hier aufgezeichnet. Used Mixes are ordered from most to least recent.
 
 Dieser Abschnitt ist nützlich, um eine Farbe abzurufen, mit der Sie gemalt, aber nicht explizit gespeichert haben. Um einen verwendeten Mix dauerhaft zu behalten, wählen Sie ihn aus und klicken Sie auf **Heraufstufen**. Anschließend wird er in die Liste „Gespeicherte Mixe“ im entsprechenden Wertebereich verschoben.
 

@@ -97,7 +97,9 @@ Un `let` nommé est une forme spéciale de `let` qui fournit un nom pour le bloc
 
 ---
 
-## Tableau récapitulatif| Construire | Descriptif | Cas d'utilisation |
+## Tableau récapitulatif
+
+| Construire | Descriptif | Cas d'utilisation |
 |------------|-----------------------------------------------|-------------------------------------------------------------------------------------------------|
 | **`let`** | Définit les liaisons locales pour les variables.    | À utiliser lorsque toutes les liaisons sont indépendantes et ne dépendent pas les unes des autres.     |
 | **`let*`** | Définit les liaisons locales séquentielles.       | À utiliser lorsque les liaisons ultérieures dépendent des résultats des liaisons antérieures.           |

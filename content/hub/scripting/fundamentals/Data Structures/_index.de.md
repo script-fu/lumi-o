@@ -10,6 +10,7 @@ In Scheme sind **Datenstrukturen** wesentliche Werkzeuge zum Organisieren, Speic
 Scheme bietet mehrere leistungsstarke und vielseitige Datenstrukturen, die jeweils für bestimmte Aufgaben geeignet sind. Zu den primären Datenstrukturen gehören:
 
 ### Listen
+
 Listen sind geordnete Sammlungen von Elementen, die dynamisch wachsen oder schrumpfen können. Sie eignen sich ideal für sequentielle oder hierarchische Daten und werden häufig in der funktionalen Programmierung verwendet.
 
 Hauptmerkmale:
@@ -24,6 +25,7 @@ Anwendungsbeispiele:
 ---
 
 ### Vektoren
+
 Vektoren sind Sammlungen von Elementen fester Größe, die für einen schnellen Zugriff indiziert sind. Sie eignen sich am besten für Szenarien, in denen Leistung und Positionszugriff von entscheidender Bedeutung sind.
 
 Hauptmerkmale:

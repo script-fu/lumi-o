@@ -1,7 +1,6 @@
 ---
 title: "构建调试版本"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 本指南介绍了使用 `build/lumi/scripts` 中的脚本进行 Lumi 的**本地调试工作流程**。
 
@@ -109,8 +108,10 @@ bash lumi-debug-launch.sh --repo lumi-dev
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

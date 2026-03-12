@@ -4,11 +4,11 @@ type: docs
 ส่วนนี้ให้ภาพรวมโดยย่อของซอฟต์แวร์ ขั้นตอนการทำงานที่สนับสนุน และกระบวนการวาดภาพที่ซอฟต์แวร์กำลังจัดทำขึ้นเพื่อให้บริการ
 
 {{< cards >}}
-	{{< card link="lumi-o" title="ลูมิ·โอ" icon="information-circle" subtitle="What Lumi is, why it exists, and the ideas shaping its development." >}}
-	{{< card link="workspace" title="พื้นที่ทำงาน" icon="view-boards" subtitle="A focused interface designed for structured, non-destructive painting workflows." >}}
-	{{< card link="pencils" title="ดินสอ" icon="pencil" subtitle="Sketching and construction tools for loose drawing, planning, and early line work." >}}
-	{{< card link="inking" title="การใช้หมึก" icon="pencil-alt" subtitle="Controlled line work and clean finishing for deliberate illustration workflows." >}}
-	{{< card link="color" title="สี" icon="color-swatch" subtitle="Pigment-based palettes and colour handling shaped by traditional media practice." >}}
-	{{< card link="download" title="ดาวน์โหลด" icon="download" subtitle="Get the latest AppImage build or visit the source repository." >}}
-	{{< card link="Patreon" title="แพทเรียน" icon="heart" subtitle="Support ongoing development and the artwork that guides Lumi’s direction." >}}
+	{{< card link="lumi-o" title="ลูมิโอ" icon="information-circle" subtitle="Lumi คืออะไร เหตุใดจึงมีอยู่ และแนวคิดที่เป็นตัวกำหนดการพัฒนา" >}}
+	{{< card link="workspace" title="พื้นที่ทำงาน" icon="view-boards" subtitle="อินเทอร์เฟซเฉพาะที่ออกแบบมาสำหรับเวิร์กโฟลว์การลงสีที่มีโครงสร้างและไม่ทำลาย" >}}
+	{{< card link="pencils" title="ดินสอ" icon="pencil" subtitle="เครื่องมือการร่างและการก่อสร้างสำหรับการวาดแบบหลวมๆ การวางแผน และงานลายเส้นเบื้องต้น" >}}
+	{{< card link="inking" title="การใช้หมึก" icon="pencil-alt" subtitle="ควบคุมงานเส้นและการตกแต่งที่สะอาดตาสำหรับเวิร์กโฟลว์ภาพประกอบโดยเจตนา" >}}
+	{{< card link="color" title="สี" icon="color-swatch" subtitle="จานสีที่ใช้เม็ดสีและการจัดการสีที่เกิดจากการฝึกฝนสื่อแบบดั้งเดิม" >}}
+	{{< card link="download" title="ดาวน์โหลด" icon="download" subtitle="รับ AppImage บิวด์ล่าสุดหรือไปที่แหล่งเก็บข้อมูลต้นทาง" >}}
+	{{< card link="Patreon" title="แพทเรียน" icon="heart" subtitle="สนับสนุนการพัฒนาอย่างต่อเนื่องและงานศิลปะที่เป็นแนวทางของ Lumi" >}}
 {{< /cards >}}

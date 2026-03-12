@@ -17,7 +17,7 @@ type: docs
 ## 저장소 액세스
 
 AI 지원은 에이전트가 **lumi-dev** 또는 특정 프로젝트 저장소에 액세스할 수 있을 때 가장 효과적입니다. 기존 코드베이스에 대한 가시성을 통해 에이전트는 다음을 수행할 수 있습니다.
-- **[Utility Libraries](@@LUMI_TOKEN_4@@)**을 도우미 기능에 대한 참조로 사용하세요.
+- **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})**을 도우미 기능에 대한 참조로 사용하세요.
 - GEGL 작업 및 레이어 관리에 대한 기존 패턴을 따릅니다.
 - 기존 플러그인의 상용구 코드를 재사용합니다.
 

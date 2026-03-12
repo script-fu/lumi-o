@@ -29,7 +29,7 @@ Pozycje rodzica A i rodzica B miksera są pokazane na mapie jako wyróżnione **
 
 | Suwak | Efekt |
 | :--- | :--- |
-| **Mieszanka** | Przechodzi pomiędzy rodzicem A (koniec CCW) i rodzicem B (koniec CW). Przy wartości 0,0 wynik jest zgodny z rodzicem A; przy 1.0 pasuje do Rodzica B. |
+| **Mieszana** | Przechodzi pomiędzy rodzicem A (koniec CCW) i rodzicem B (koniec CW). Przy wartości 0,0 wynik jest zgodny z rodzicem A; przy 1.0 pasuje do Rodzica B. |
 | **Barwa** | Zmniejsza nasycenie mieszanki w stronę neutralności palety. Wyższe wartości dają bardziej stonowane, ziemiste rezultaty. |
 | **Ton** | Przesuwa jasność w kierunku mieszania bieli (kierunek odcienia) lub mieszania czerni (kierunek cienia). |
 
@@ -41,7 +41,7 @@ Pozycje rodzica A i rodzica B miksera są pokazane na mapie jako wyróżnione **
 
 Suwak Ton odzwierciedla także wszelkie luki wartości skonfigurowane w Edytorze palet. Zakresy jasności mieszczące się w szczelinie są pokazane jako półprzezroczyste szare paski na suwaku. Uchwyt suwaka automatycznie przeskakuje nad tymi przerwami: przeciągnięcie przez szary obszar powoduje przeskok do najbliższej prawidłowej granicy pasma po drugiej stronie.
 
-## Mieszanie punktów końcowych (biały, czarny, neutralny)
+## Mixing Endpoints (White, Black, Neutral)
 
 Etapy tonu i chrominancji wymagają punktów końcowych odniesienia: mieszana biel, mieszana czerń i neutralny. Lumi odkrywa je automatycznie, przeszukując aktywną paletę najlepszych kandydatów:
 

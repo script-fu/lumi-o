@@ -115,7 +115,7 @@ Les têtes de pinceau contrôlent l'endroit où chaque tête est placée autour 
 Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.
 
 - **Count** : Nombre de têtes de brosse simultanées (1 à 16).
-- **Taille de la tête** : taille rendue de chaque tête par rapport à la taille globale du pinceau (0,1 à 1,0).
+- **Head Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
 - **Rapport d'aspect de l'orbite** (0,1–1,0) : façonne l'orbite de la formation du cercle à l'ellipse. 1,0 = orbite circulaire ; des valeurs inférieures écrasent l’axe mineur.
 - **Angle de formation** (0–360°) : orientation statique de l'anneau de formation, utilisée lorsque **Suivre la direction** est inférieur à 1,0.
 - **Suivez la direction** (0,0–1,0) : la force avec laquelle l'anneau de formation suit la direction de déplacement de la course. À 1,0, l'anneau est toujours perpendiculaire à la direction du déplacement ; à 0,0, il se verrouille sur la valeur statique de l'**Angle de formation**.
@@ -124,7 +124,7 @@ Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'op
 
 #### Dispersion
 
-Principaux contrôles de dispersion dans l'extenseur **Têtes de brosse** :- **Angle de diffusion** (0 à 360°, 10° par défaut) : fait pivoter uniquement le composant de diffusion aléatoire (pas l'espacement de remplissage). Les angles par tête/par touche sont biaisés vers l'extérieur avec un croisement contrôlé pour éviter les panaches rigides en miroir. Serré à 360°.
+Principaux contrôles de dispersion dans l'extenseur **Têtes de brosse** :- **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). Les angles par tête/par touche sont biaisés vers l'extérieur avec un croisement contrôlé pour éviter les panaches rigides en miroir. Serré à 360°.
 - **Distance de diffusion** (0 à 10 000 px) : déplacement aléatoire vers l'avant à partir de la position d'espacement de remplissage de chaque tête. J'ai relancé chaque touche.
 - **Scatter Size Balance** (0,0–1,0) : contrôle l'inclinaison de la suppression pour les têtes au-dessus du seuil. À 1,0, toutes les têtes se dispersent de manière égale ; des valeurs plus faibles suppriment de plus en plus les têtes plus grosses tandis que les têtes au niveau/en dessous du seuil restent à la distance de diffusion complète.
 
@@ -155,7 +155,7 @@ Dispersion :
 - **Seuil de taille de diffusion** (0,01 à 100 px) : rayon de seuil pour une distance de diffusion complète. Les têtes égales ou inférieures à ce rayon utilisent la distance de diffusion complète ; les têtes plus grosses sont progressivement rapprochées de la course.
 
 Randomisation :
-- **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). La même graine reproduit la même formation à chaque coup. Désensibilisé lorsque **Randomize Head Character** est activé.
+- **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). The same seed reproduces the same formation every stroke. Désensibilisé lorsque **Randomize Head Character** est activé.
 - **Randomiser le personnage de tête** : redessine les valeurs de caractère par tête (taille, position de dispersion) pour chaque tampon afin que la formation soit complètement chaotique le long du trait. Remplace **Character Seed**.
 - **Randomiser les images d'animation** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.#### Comportement de l'AVC (débordement)
 - **Restaurer les dernières couleurs utilisées** : restaure les couleurs de premier plan et d'arrière-plan de la session précédente au démarrage, au lieu de passer par défaut au noir et blanc.

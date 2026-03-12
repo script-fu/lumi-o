@@ -11,7 +11,7 @@ In elke benoemde werkruimte wordt het volgende onafhankelijk opgeslagen:
 | Onderdeel | Wat het omvat |
 | :--- | :--- |
 | **Indeling** | Vensterpositie en -grootte, dockindeling (linker- en rechterpaneelkolommen, welke panelen open zijn en in welke volgorde), modus voor één of meerdere vensters, gemaximaliseerde status, zichtbaarheid en positie van de tabbalk |
-| **Gereedschapsopties** | De huidige instellingen voor elk gereedschap (penseelgrootte, hardheid, kromtrekkingsgedrag, etc.) |
+| **Gereedschapsopties** | De huidige instellingen voor elk gereedschap (penseelgrootte, hardheid, kromtrekkingsgedrag, enz.) |
 | **Invoerapparaten** | Configuratie van invoerapparaat: drukcurven, knoptoewijzingen, astoewijzingen voor stylus en andere apparaten |
 | **Canvasdecoraties** | Standaardinstellingen per werkruimte voor linialen, schuifbalken, hulplijnen, raster, selectiemarkering, laaggrens en canvasgrens — ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** en **Volledige schermweergave**, onafhankelijk voor normale en volledige schermweergave |
 | **Canvasvulling** | Opvullingsmodus en kleur per werkruimte voor normale en volledige schermweergave - ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** |
@@ -48,7 +48,7 @@ De nieuwe werkruimte verschijnt in de vervolgkeuzelijst **Actieve indeling** en 
 
 ## Van werkruimte wisselen
 
-Er zijn twee manieren om te wisselen:
+Er zijn twee manieren om over te stappen:
 
 - **Venstersmenu**: de lay-outnamen verschijnen onder **Vensters → Lay-out** voor snelle toegang vanaf het canvas.
 - **Voorkeuren → Werkruimte**: Selecteer een lay-out in de vervolgkeuzelijst **Actieve lay-out** en klik op **Laad lay-out opnieuw**.
@@ -60,7 +60,7 @@ Overschakelen gebeurt onmiddellijk: Lumi herbouwt de paneelindeling, herstelt ge
 Vanuit **Bewerken → Voorkeuren → Werkruimte**:| Actie | Effect |
 | :--- | :--- |
 | **Indeling opslaan** | Overschrijft de huidige werkruimte met uw huidige instellingen. |
-| **Indeling opslaan als...** | Creëert een nieuwe benoemde werkruimte op basis van uw huidige instellingen. |
+| **Indeling opslaan als…** | Creëert een nieuwe benoemde werkruimte op basis van uw huidige instellingen. |
 | **Lay-out hernoemen…** | Hernoemt de geselecteerde werkruimte. |
 | **Indeling opnieuw laden** | Past de geselecteerde werkruimte onmiddellijk toe. |
 | **Indeling verwijderen...** | Verwijdert permanent de geselecteerde werkruimte en de bijbehorende bestanden. |
@@ -83,5 +83,5 @@ Een paar manieren waarop kunstenaars meerdere werkruimtes kunnen gebruiken:
 - **Schilderij** — grote penseeldocks, warme opvulkleur (ingesteld in Voorkeuren → Afbeeldingsvensters → Standaarduiterlijk), uw favoriete themavariant
 - **Inkt** — hulplijnen en canvasgrens ingeschakeld, schuifbalken ingeschakeld (ingesteld in Voorkeuren → Standaardweergave), neutrale opvulkleur
 - **Roughs** — dokken verborgen, geen linialen of raster, donkere opvulling, compacte pictogramgrootte om de canvasruimte te maximaliseren
-- **Focus op volledig scherm** — verschillende opvulkleur- en decoratie-instellingen in weergave op volledig scherm versus standaardweergave, dus het schakelen tussen volledig scherm geeft een echt andere werkomgeving
+- **Focus op volledig scherm** — verschillende opvulkleur- en decoratie-instellingen in weergave op volledig scherm versus standaardweergave, dus het wisselen van volledig scherm geeft een echt andere werkomgeving
 - **Scripting** — scriptpaneel geopend, lettergrootte verhoogd voor leesbaarheid, andere pictogrammenset

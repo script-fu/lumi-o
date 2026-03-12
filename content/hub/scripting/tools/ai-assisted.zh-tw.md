@@ -17,7 +17,7 @@ type: docs
 ## 儲存庫訪問
 
 當代理有權存取 **lumi-dev** 或您的特定專案儲存庫時，AI 協助最為有效。透過了解現有程式碼庫，代理可以：
-- 使用 **[Utility Libraries](@@LUMI_TOKEN_4@@)** 作為輔助函數的參考。
+- 使用 **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** 作為輔助函數的參考。
 - 遵循 GEGL 營運和層管理的現有模式。
 - 重複使用已建立外掛程式中的樣板程式碼。
 

@@ -1,5 +1,5 @@
 ---
-title: "ลูมิ·โอ"
+title: "ลูมิโอ"
 type: docs
 weight: 1
 ---

@@ -7,16 +7,16 @@ De functies van Lumi zijn gericht op digitaal schilderen en gestructureerde illu
 In dit gedeelte worden de kernmogelijkheden beschreven die beschikbaar zijn in Lumi en waar u deze in de interface kunt vinden.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Lagen en niet-destructieve bewerking" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Penseel gereedschap" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Palet-editor" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Paletkaart" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Schemascripting" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Werkruimtes" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Bewaar opgewarmde caches voor favoriete penselen, zodat ze zo snel mogelijk snel aanvoelen." >}}
+  {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Open containerformaat waarin lagen, metagegevens, ICC-profielen en herstelgegevens worden opgeslagen." >}}
+  {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Automatische incrementele herstel-snapshots beschermen het werk tegen crashes en stroomuitval." >}}
+  {{< card link="layers" title="Lagen en niet-destructieve bewerking" icon="collection" subtitle="Op lagen gebaseerde composities met overvloeimodi, maskers, groepen en niet-destructieve aanpassingslagen." >}}
+  {{< card link="paintbrush" title="Penseel gereedschap" icon="pencil-alt" subtitle="Druk-, snelheids-, kantel- en afstandsdynamiek met stabilisatie, verzachting en borstelformaties met meerdere koppen." >}}
+  {{< card link="palette-editor" title="Palet-editor" icon="color-swatch" subtitle="Creëer en beheer benoemde pigmentpaletten, met gebundelde sets die het volledige spectrum en beperkte paletten bestrijken." >}}
+  {{< card link="palette-map" title="Paletkaart" icon="view-grid" subtitle="Interactief 2D-raster brengt paletpigmenten in kaart op assen, gebruikt voor directe kleurkeuze en verkenning." >}}
+  {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Meng pigmenten uit het actieve palet op tint, verzadiging en toon met visuele voorvertoningen van openingen." >}}
+  {{< card link="scripting" title="Schemascripting" icon="code" subtitle="Automatiseer workflows en breid Lumi uit met behulp van een ingebouwde Scheme-interpreter." >}}
+  {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Fysisch nauwkeurige pigmentmenging met behulp van spectrale upsampling, waardoor realistisch verfgedrag ontstaat." >}}
+  {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Verplaats pixels vrijelijk met penseelstreken. Vervormt volledige laaggroepen als één item, waarbij dezelfde transformatie wordt toegepast op alle geneste lagen en maskers." >}}
+  {{< card link="workspaces" title="Werkruimtes" icon="view-boards" subtitle="Bewaar en schakel complete UI-omgevingen: paneelindelingen, toolinstellingen, apparaatconfiguratie, thema en palet – onafhankelijk per werkruimte." >}}
 {{< /cards >}}

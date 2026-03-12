@@ -17,17 +17,17 @@ weight: 1
 ## Этапы обучения
 
 {{< cards >}}
-  {{< card link="hello-world" title="Привет, мир!" icon="sparkles" subtitle="Create your first Scheme plug-in with basic structure" >}}
-  {{< card link="refactoring" title="Рефакторинг" icon="code" subtitle="Improve code structure without changing behavior" >}}
-  {{< card link="loading" title="Загрузка" icon="upload" subtitle="Organize functions into reusable libraries" >}}
-  {{< card link="validation" title="Валидация" icon="badge-check" subtitle="Add error handling and input validation" >}}
-  {{< card link="return-values" title="Возвращаемые значения" icon="arrow-circle-left" subtitle="Understanding function outputs and data flow" >}}
-  {{< card link="messaging-library" title="Библиотека сообщений" icon="annotation" subtitle="Build a comprehensive messaging system" >}}
+  {{< card link="hello-world" title="Привет, мир!" icon="sparkles" subtitle="Создайте свой первый плагин Scheme с базовой структурой." >}}
+  {{< card link="refactoring" title="Рефакторинг" icon="code" subtitle="Улучшите структуру кода без изменения поведения" >}}
+  {{< card link="loading" title="Загрузка" icon="upload" subtitle="Организуйте функции в многоразовые библиотеки." >}}
+  {{< card link="validation" title="Валидация" icon="badge-check" subtitle="Добавьте обработку ошибок и проверку ввода" >}}
+  {{< card link="return-values" title="Возвращаемые значения" icon="arrow-circle-left" subtitle="Понимание выходных данных функции и потока данных" >}}
+  {{< card link="messaging-library" title="Библиотека сообщений" icon="annotation" subtitle="Создайте комплексную систему обмена сообщениями" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="reworking" title="Переработка" icon="adjustments" subtitle="Advanced code restructuring techniques" >}}
-  {{< card link="refactor-again" title="Снова рефакторинг" icon="arrow-sm-right" subtitle="Iterative improvement and optimization" >}}
-  {{< card link="the-procedure-browser" title="Браузер процедур" icon="book-open" subtitle="Exploring Lumi's procedure database" >}}
-  {{< card link="final-thoughts" title="Заключительные мысли" icon="academic-cap" subtitle="Summary and next steps in development" >}}
+  {{< card link="reworking" title="Переработка" icon="adjustments" subtitle="Расширенные методы реструктуризации кода" >}}
+  {{< card link="refactor-again" title="Снова рефакторинг" icon="arrow-sm-right" subtitle="Итеративное улучшение и оптимизация" >}}
+  {{< card link="the-procedure-browser" title="Браузер процедур" icon="book-open" subtitle="Изучение базы данных процедур Lumi" >}}
+  {{< card link="final-thoughts" title="Заключительные мысли" icon="academic-cap" subtitle="Итоги и дальнейшие шаги в разработке" >}}
 {{< /cards >}}

@@ -11,5 +11,5 @@ type: docs
   {{< card link="tutorials/" title="教學" icon="sparkles" >}}
   {{< card link="tools/" title="工具" icon="cog" >}}
   {{< card link="plug-ins/" title="外掛" icon="collection" >}}
-  {{< card link="reference/" title="參考" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
+  {{< card link="reference/" title="參考" icon="book-open" subtitle="內建實用程式和應用程式內瀏覽工具" >}}
 {{< /cards >}}

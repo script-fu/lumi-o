@@ -69,6 +69,7 @@ La primera línea garantiza que el script funcione como un complemento en Lumi 3
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Definición del procedimiento
@@ -106,6 +107,7 @@ El complemento está registrado en Lumi como complemento de filtro:
 ```
 
 #### Registro de menú
+
 Esta línea especifica la ubicación del menú para el complemento:
 
 ```scheme

@@ -15,11 +15,13 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 ### Namngiven `let`
 
 #### Egenskaper:
+
 1. Kombinerar variabla bindningar och rekursion till en enda konstruktion.
 2. Räckvidd till kroppen av `let`-blocket.
 3. Idealisk för **lokaliserad rekursion** eller iterativa processer specifika för en enskild uppgift.
 
 #### Syntax
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 ```
 
 #### Exempel: Summering av element i en lista
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 ### Lokal `define`
 
 #### Egenskaper:
+
 1. Tillåter skapandet av hjälpfunktioner eller variabler som är återanvändbara inom den omslutande funktionen.
 2. Avstånd till omslutande funktion men synlig i hela kroppen.
 3. Idealisk för modularisering av kod med flera steg eller återanvändbar logik.
 
 #### Syntax
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 ```
 
 #### Exempel: Bearbetar flera värden
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 En av de mest kraftfulla funktionerna hos en namngiven `let` är dess förmåga att kombinera **lokal variabeldeklaration** och **indataparametrar** för rekursion till en enda konstruktion. Detta gör den namngivna `let` både kortfattad och uttrycksfull för iterativa eller rekursiva uppgifter.
 
 #### Lokal variabeldeklaration
+
 I en namngiven `let` fungerar bindningarna inom parentes som **lokala variabler** som initieras med specifika värden. Dessa variabler omfångas till kroppen av `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ I en namngiven `let` fungerar bindningarna inom parentes som **lokala variabler*
 ---
 
 #### Inmatningsparametrar för rekursion
+
 Samma variabler fungerar också som **indataparametrar** för de rekursiva anropen till det namngivna `let`. När den namngivna `let` anropar sig själv uppdaterar den dessa variabler med nya värden.
 
 ```scheme
@@ -164,6 +172,7 @@ Samma variabler fungerar också som **indataparametrar** för de rekursiva anrop
 En namngiven `let` inkluderar variabelinitiering som en del av sin syntax. Detta eliminerar behovet av ett separat steg för att ställa in de initiala värdena. Följande två exempel är likvärdiga:
 
 ##### Använder namngiven `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ En namngiven `let` inkluderar variabelinitiering som en del av sin syntax. Detta
 ```
 
 ##### Använda lokala `define`
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

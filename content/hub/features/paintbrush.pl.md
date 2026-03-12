@@ -20,13 +20,13 @@ Proceduralnie renderowane kształty (Koło, Kwadrat, Diament, Trójkąt) z regul
 
 ### Animowane pędzle (.anim)
 
-Sekwencyjne sekwencje klatek, które postępują podczas pociągnięć. Ramki mogą być przełączane przyrostowo (postęp klatek na dotknięcie), losowo wybierane na dotknięcie lub indeksowane według dynamiki (nacisk, prędkość, pochylenie, kąt).
+Sekwencyjne sekwencje klatek, które postępują podczas pociągnięć. Ramki mogą być cyklicznie przełączane przyrostowo (postęp klatek na dotknięcie), wybierane losowo na dotknięcie lub indeksowane według dynamiki (nacisk, prędkość, pochylenie, kąt).
 
 ## Malowanie kursora
 
 Kursor dostosowuje się do bieżącego stanu narzędzia, zapewniając jasne, kontekstowe informacje zwrotne:
 
-- **Brush outline**: The cursor tracks the exact brush shape and size, giving a live preview of where paint will land.
+- **Zarys pędzla**: Kursor śledzi dokładny kształt i rozmiar pędzla, dając podgląd na żywo miejsca, w którym wyląduje farba.
 - **Tryb wymazywania**: Gdy wymazywanie jest aktywne, kontur zmienia się w przerywany okrąg, aby wizualnie odróżnić pociągnięcia wymazywane od pociągnięć farby.
 - **Prosta granica pędzla**: W przypadku złożonych lub bardzo dużych pędzli, gdzie renderowanie dokładnego konturu jest kosztowne, włącz opcję **Prosta granica pędzla** (w opcjach dodatkowych), aby zamiast tego używać zwykłego okręgu.
 
@@ -67,7 +67,7 @@ W ekspanderze **Zachowanie po uderzeniu**:
 Gdy jest aktywne, stemplowanie dotykowe jest zastępowane ciągłym korytarzem geometrycznym:
 - **Dynamiczne krycie**: Moduluje krycie w obrębie pociągnięcia w oparciu o zmiany prędkości i kierunku. Działa najlepiej przy delikatnych, kontrolowanych pociągnięciach; wyniki są mniej przewidywalne w przypadku szybkich bazgrołów. Eksperymentalny.
 - **Wzrost prędkości** (0–100%): Maksymalny dozwolony wzrost rozmiaru na próbkę jako procent rozmiaru poprzedniej próbki. Ogranicza szybkość wzrostu dynamiki rozmiaru zależnej od prędkości, zapobiegając nagłym skokom, gdy skok przyspiesza.
-- **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Limits how quickly the size can drop when the stroke decelerates.
+- **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Ogranicza szybkość zmniejszania się rozmiaru w przypadku zmniejszania się skoku.
 
 #### Stabilizacja i wygładzanie
 
@@ -110,7 +110,7 @@ Główki szczoteczek umieszczają wiele niezależnych główek szczoteczek na ok
 
 Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podążaj za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
 
-Główki szczotek kontrolują położenie każdej główki wokół pociągnięcia pędzla. If **Pivot X** or **Pivot Y** is moved away from the default centre, every head still follows the same formation, but each stamped dab now lands using the chosen internal contact point instead of the geometric centre of the brush image.
+Główki szczotek kontrolują położenie każdej główki wokół pociągnięcia pędzla. Jeśli **Pivot X** lub **Pivot Y** zostanie odsunięty od domyślnego środka, każda głowa nadal będzie miała tę samą formację, ale każde stemplowane dotknięcie będzie teraz lądować w wybranym wewnętrznym punkcie styku, a nie w geometrycznym środku obrazu pędzla.
 
 Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.
 

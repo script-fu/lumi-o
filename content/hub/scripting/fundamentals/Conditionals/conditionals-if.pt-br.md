@@ -110,5 +110,6 @@ Usar um `let` nos permite declarar variáveis de escopo local dentro do bloco de
 Resultado: **Imprime "Condição verdadeira atendida, calculando..." e retorna -10.**
 
 ### Resumo- A condicional `if` é uma ferramenta poderosa no Scheme para avaliar testes e executar blocos de código correspondentes.
+
 - Ele pode lidar com expressões simples e blocos de código complexos que retornam valores, modificam variáveis ​​ou executam efeitos colaterais.
 - Lembre-se: Se não houver nenhum bloco `else` explícito, o `if` apenas avalia e executa o **consequente** se o teste for verdadeiro. Caso contrário, ele avalia e executa a **alternativa**.

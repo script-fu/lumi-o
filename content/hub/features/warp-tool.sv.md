@@ -2,27 +2,27 @@
 title: "Varpverktyg"
 type: docs
 ---
-The Warp Tool pushes, pulls, and flows pixels freely across the canvas. I Lumi går det längre än de flesta implementeringar: det kan förvränga en hel lagergrupp – oavsett hur många kapslade lager och masker den innehåller – som ett enda enhetligt objekt, utan att platta till eller förlora någon struktur.
+Warp Tool skjuter, drar och flödar pixlar fritt över duken. I Lumi går det längre än de flesta implementeringar: det kan förvränga en hel lagergrupp – oavsett hur många kapslade lager och masker den innehåller – som ett enda enhetligt objekt, utan att platta till eller förlora någon struktur.
 
 ## Översikt
 
-Select a layer and drag across it to displace pixels in any direction. Varpen är oförstörande medan du arbetar: du kan ångra och göra om enskilda drag, ändra penselstorleken eller beteendet mellan dragen och fortsätta förfina tills du begår. Committing tillämpar den ackumulerade förskjutningskartan destruktivt på lagrets pixeldata.
+Välj ett lager och dra över det för att förskjuta pixlar i valfri riktning. Varpen är oförstörande medan du arbetar: du kan ångra och göra om enskilda drag, ändra penselstorleken eller beteendet mellan dragen och fortsätta förfina tills du begår. Committing tillämpar den ackumulerade förskjutningskartan destruktivt på lagrets pixeldata.
 
 När ett **grupplager** är valt, fungerar verktyget på gruppen som helhet. Du ser och interagerar med en liveförhandsvisning av hela den sammansatta gruppen. Vid commit appliceras samma varp exakt och oberoende på varje underordnat lager och mask i gruppen, vilket bevarar hela lagerstrukturen.
 
 ## Gruppvarp
 
-Warping a group is the primary capability that sets Lumi's warp tool apart.
+Att förvränga en grupp är den primära förmågan som skiljer Lumis varpverktyg åt.
 
 ### Problemet det löser
 
 I de flesta målarprogram kräver förvrängning av en illustration med flera lager antingen att man plattar ut gruppen först (förstör lagerstrukturen) eller att varje lager förvrängs separat och försöker matcha dem med ögat (tråkigt och oprecist). Inget av tillvägagångssätten bevarar den ursprungliga strukturen för ytterligare oförstörande redigering.
 
-Lumi warps the entire group as one item and then distributes the exact same transformation to every layer inside it.
+Lumi förvränger hela gruppen som ett föremål och distribuerar sedan exakt samma transformation till varje lager inuti den.
 
 ### Hur det fungerar
 
-When you select a group and begin a warp stroke, Lumi builds a **floating preview layer** from the group's composited projection. Om gruppen har en mask, bakas masken in i förhandsgranskningen så att förhandsgranskningen exakt representerar det slutliga utseendet. Du målar dina varpdrag direkt på den här förhandsvisningen - det du ser är precis vad du får.
+När du väljer en grupp och börjar ett varpslag bygger Lumi ett **svävande förhandsgranskningslager** från gruppens sammansatta projektion. Om gruppen har en mask, bakas masken in i förhandsgranskningen så att förhandsgranskningen exakt representerar det slutliga utseendet. Du målar dina varpdrag direkt på den här förhandsvisningen - det du ser är precis vad du får.
 
 På commit, Lumi:
 
@@ -56,9 +56,9 @@ När **Warp Masks** är avstängd förskjuts endast lagerinnehåll; masker behå
 
 ### Borstkontroller
 
-- **Storlek**: Varpborstens diameter i pixlar. Larger brushes displace broader areas with a softer falloff; mindre borstar ger exakt, lokaliserad kontroll.
+- **Storlek**: Varpborstens diameter i pixlar. Större borstar förskjuter bredare områden med ett mjukare fall; mindre borstar ger exakt, lokaliserad kontroll.
 - **Hårdhet**: Falloff från mitten till kanten. Hög hårdhet ger en jämn förskjutning över hela borstområdet; låg hårdhet koncentrerar effekten i centrum.
-- **Styrka**: Hur långt pixlar förskjuts per slag. Lägre styrka tillåter subtil, gradvis formning; higher strength produces dramatic, fast movement.
+- **Styrka**: Hur långt pixlar förskjuts per slag. Lägre styrka tillåter subtil, gradvis formning; högre styrka ger dramatiska, snabba rörelser.
 
 ### Stroke Timing
 
@@ -78,10 +78,10 @@ När **Warp Masks** är avstängd förskjuts endast lagerinnehåll; masker behå
 
 ## Ångra och gör om
 
-Varje slag är ett diskret ångrasteg inom varpsessionen. **Ctrl+Z** tar bort det sista strecket och återställer förskjutningskartan till dess tidigare tillstånd. **Ctrl+Y** (eller **Ctrl+Skift+Z**) tillämpar det igen. You can walk back through the entire stroke history before committing.
+Varje slag är ett diskret ångrasteg inom varpsessionen. **Ctrl+Z** tar bort det sista strecket och återställer förskjutningskartan till dess tidigare tillstånd. **Ctrl+Y** (eller **Ctrl+Skift+Z**) tillämpar det igen. Du kan gå tillbaka genom hela strokehistoriken innan du begår.
 
-Om du trycker på **Escape** eller växlar verktyg förkastas alla oengagerade streck och återställer lagret/lagren till sitt ursprungliga tillstånd. No changes are written until you explicitly commit.
+Om du trycker på **Escape** eller växlar verktyg förkastas alla oengagerade streck och återställer lagret/lagren till sitt ursprungliga tillstånd. Inga ändringar skrivs förrän du uttryckligen åtar dig.
 
 ## Engagerar sig
 
-Klicka på knappen **Commit** (eller tryck på **Enter**) för att applicera den ackumulerade warpen destruktivt. For group warps, this triggers the full multi-layer application described above. The undo history for the committed warp is then a single entry in the image undo stack, reversible with the standard **Edit → Undo**.
+Klicka på knappen **Commit** (eller tryck på **Enter**) för att applicera den ackumulerade warpen destruktivt. För gruppvarpar utlöser detta den fullständiga flerskiktsapplikationen som beskrivs ovan. Ångra historiken för den begångna förvrängningen är sedan en enstaka post i bildångstacken, vändbar med standarden **Redigera → Ångra**.

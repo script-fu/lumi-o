@@ -7,6 +7,7 @@ W tym samouczku omówiono minimalną strukturę wtyczki Scheme. Niektóre linie 
 
 ```bash
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 Na wysokim poziomie będziesz:

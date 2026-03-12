@@ -7,9 +7,10 @@ En Scheme, las **estructuras de datos** son herramientas esenciales para organiz
 
 ## Estructuras de datos clave en el esquema
 
-Scheme proporciona varias estructuras de datos potentes y versátiles, cada una adecuada para tareas específicas. Las estructuras de datos primarias incluyen:
+Scheme proporciona varias estructuras de datos potentes y versátiles, cada una de ellas adecuada para tareas específicas. Las estructuras de datos primarias incluyen:
 
 ### Listas
+
 Las listas son colecciones ordenadas de elementos que pueden crecer o reducirse dinámicamente. Son ideales para datos secuenciales o jerárquicos y se utilizan ampliamente en programación funcional.
 
 Características clave:
@@ -24,6 +25,7 @@ Ejemplos de uso:
 ---
 
 ### Vectores
+
 Los vectores son colecciones de elementos de tamaño fijo, indexados para un acceso rápido. Son más adecuados para escenarios donde el rendimiento y el acceso posicional son críticos.
 
 Características clave:

@@ -97,7 +97,9 @@ Een genaamd `let` is een speciale vorm van `let` die een naam geeft voor het `le
 
 ---
 
-## Overzichtstabel| Construct | Beschrijving | Gebruiksscenario |
+## Overzichtstabel
+
+| Construct | Beschrijving | Gebruiksscenario |
 |------------|-------------------------------------|--------- ---------------------------------------------------------|
 | **`let`** | Definieert lokale bindingen voor variabelen.    | Te gebruiken wanneer alle bindingen onafhankelijk zijn en niet op elkaar vertrouwen.     |
 | **`let*`** | Definieert opeenvolgende lokale bindingen.       | Gebruik dit wanneer latere bindingen afhankelijk zijn van de resultaten van eerdere bindingen.           |

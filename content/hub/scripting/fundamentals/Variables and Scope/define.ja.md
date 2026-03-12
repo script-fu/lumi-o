@@ -19,11 +19,13 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 `define` の基本的な使用法は、定数値または計算値を保持する変数を作成することです。
 
 #### 構文
+
 ```scheme
 (define variable-name value)
 ```
 
 #### 例: 定数の定義
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 `define` を使用して、再利用可能なプロシージャを作成できます。
 
 #### 構文
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### 例: 単純な関数の定義
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 関数内で使用される場合、`define` は、外側の関数内でのみアクセスできるローカル バインディングを作成します。これにより、グローバル名前空間の汚染が回避され、コードの整理に役立ちます。
 
 #### 例: ローカル ヘルパー関数
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

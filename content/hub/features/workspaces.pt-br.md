@@ -13,7 +13,7 @@ Cada espaço de trabalho nomeado armazena o seguinte de forma independente:
 | **Layout** | Posição e tamanho da janela, disposição de encaixe (colunas do painel esquerdo e direito, quais painéis estão abertos e em que ordem), modo de janela única versus janela múltipla, estado maximizado, visibilidade e posição da barra de guias |
 | **Opções de ferramentas** | As configurações atuais para cada ferramenta (tamanho do pincel, dureza, comportamento de deformação, etc.) |
 | **Dispositivos de entrada** | Configuração do dispositivo de entrada: curvas de pressão, atribuições de botões, mapeamentos de eixos para caneta e outros dispositivos |
-| **Decorações em tela** | Padrões por espaço de trabalho para réguas, barras de rolagem, guias, grade, realce de seleção, limite de camada e limite de tela — definidos via **Preferências → Janelas de imagem → Aparência padrão** e **Aparência de tela cheia**, independentemente para visualização Normal e Tela cheia |
+| **Decorações em tela** | Padrões por espaço de trabalho para réguas, barras de rolagem, guias, grade, realce de seleção, limite de camada e limite de tela — definidos via **Preferências → Janelas de imagem → Aparência padrão** e **Aparência de tela inteira**, independentemente para visualização Normal e Tela cheia |
 | **Preenchimento de tela** | Modo de preenchimento por área de trabalho e cor para visualização Normal e Tela Cheia — definido em **Preferências → Janelas de imagem → Aparência padrão** |
 | **Tema e ícones** | Tema ativo, variante de cor clara/escura, conjunto de ícones, substituição de tamanho de ícone e escala de fonte |
 | **Caixa de ferramentas** | Posição do widget FG/BG (superior/inferior/esquerda/direita), escala FG/BG, visibilidade do mascote Wilber, cabeçalhos de grupos de ferramentas |
@@ -40,7 +40,7 @@ A seção superior da página de preferências do espaço de trabalho lista todo
 
 Configure seus painéis, ferramentas e paleta exatamente como você deseja e então:
 
-1. Abra **Editar → Preferências → Área de Trabalho**.
+1. Abra **Editar → Preferências → Área de trabalho**.
 2. Clique em **Salvar layout como…**.
 3. Insira um nome e clique em **Salvar**.
 
@@ -83,5 +83,5 @@ Algumas maneiras pelas quais os artistas podem usar vários espaços de trabalho
 - **Pintura** — encaixes de pincéis grandes, cores de preenchimento quentes (definidas em Preferências → Janelas de imagem → Aparência padrão), sua variante de tema preferida
 - **Tinta** — guias e limites da tela ativados, barras de rolagem ativadas (definidas em Preferências → Aparência padrão), cor de preenchimento neutra
 - **Ásperos** — encaixes ocultos, sem réguas ou grade, preenchimento escuro, tamanho de ícone compacto para maximizar o espaço da tela
-- **Foco em tela cheia** — diferentes cores de preenchimento e configurações de decoração em Aparência de tela cheia versus Aparência padrão, portanto, alternar a tela cheia proporciona um ambiente de trabalho genuinamente diferente
+- **Foco em tela cheia** — diferentes cores de preenchimento e configurações de decoração em Aparência de tela inteira versus Aparência padrão, portanto, alternar a tela cheia proporciona um ambiente de trabalho genuinamente diferente
 - **Scripting** — painel de script aberto, aumento no tamanho da fonte para facilitar a leitura, conjunto de ícones diferente

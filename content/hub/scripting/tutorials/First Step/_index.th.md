@@ -17,17 +17,17 @@ weight: 1
 ## ขั้นตอนการสอน
 
 {{< cards >}}
-  {{< card link="hello-world" title="สวัสดีชาวโลก!" icon="sparkles" subtitle="Create your first Scheme plug-in with basic structure" >}}
-  {{< card link="refactoring" title="การปรับโครงสร้างใหม่" icon="code" subtitle="Improve code structure without changing behavior" >}}
-  {{< card link="loading" title="กำลังโหลด" icon="upload" subtitle="Organize functions into reusable libraries" >}}
-  {{< card link="validation" title="การตรวจสอบ" icon="badge-check" subtitle="Add error handling and input validation" >}}
-  {{< card link="return-values" title="ส่งกลับค่า" icon="arrow-circle-left" subtitle="Understanding function outputs and data flow" >}}
-  {{< card link="messaging-library" title="ห้องสมุดข้อความ" icon="annotation" subtitle="Build a comprehensive messaging system" >}}
+  {{< card link="hello-world" title="สวัสดีชาวโลก!" icon="sparkles" subtitle="สร้างปลั๊กอิน Scheme แรกของคุณด้วยโครงสร้างพื้นฐาน" >}}
+  {{< card link="refactoring" title="การปรับโครงสร้างใหม่" icon="code" subtitle="ปรับปรุงโครงสร้างโค้ดโดยไม่เปลี่ยนพฤติกรรม" >}}
+  {{< card link="loading" title="กำลังโหลด" icon="upload" subtitle="จัดระเบียบฟังก์ชันต่างๆ ให้เป็นไลบรารีที่ใช้ซ้ำได้" >}}
+  {{< card link="validation" title="การตรวจสอบ" icon="badge-check" subtitle="เพิ่มการจัดการข้อผิดพลาดและการตรวจสอบอินพุต" >}}
+  {{< card link="return-values" title="ส่งกลับค่า" icon="arrow-circle-left" subtitle="ทำความเข้าใจเกี่ยวกับผลลัพธ์ของฟังก์ชันและการไหลของข้อมูล" >}}
+  {{< card link="messaging-library" title="ห้องสมุดข้อความ" icon="annotation" subtitle="สร้างระบบการส่งข้อความที่ครอบคลุม" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="reworking" title="การทำงานซ้ำ" icon="adjustments" subtitle="Advanced code restructuring techniques" >}}
-  {{< card link="refactor-again" title="รีแฟคเตอร์อีกครั้ง" icon="arrow-sm-right" subtitle="Iterative improvement and optimization" >}}
-  {{< card link="the-procedure-browser" title="เบราว์เซอร์ขั้นตอน" icon="book-open" subtitle="Exploring Lumi's procedure database" >}}
-  {{< card link="final-thoughts" title="ความคิดสุดท้าย" icon="academic-cap" subtitle="Summary and next steps in development" >}}
+  {{< card link="reworking" title="การทำงานซ้ำ" icon="adjustments" subtitle="เทคนิคการปรับโครงสร้างโค้ดขั้นสูง" >}}
+  {{< card link="refactor-again" title="รีแฟคเตอร์อีกครั้ง" icon="arrow-sm-right" subtitle="การปรับปรุงและการเพิ่มประสิทธิภาพซ้ำ" >}}
+  {{< card link="the-procedure-browser" title="เบราว์เซอร์ขั้นตอน" icon="book-open" subtitle="สำรวจฐานข้อมูลขั้นตอนของ Lumi" >}}
+  {{< card link="final-thoughts" title="ความคิดสุดท้าย" icon="academic-cap" subtitle="สรุปและขั้นตอนต่อไปในการพัฒนา" >}}
 {{< /cards >}}

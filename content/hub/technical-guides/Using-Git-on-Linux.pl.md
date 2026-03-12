@@ -1,7 +1,6 @@
 ---
 title: "Korzystanie z Gita w systemie Linux"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 Witamy w tym przewodniku dla początkujących dotyczącym korzystania z Git w systemie Linux! Ten przewodnik ma na celu pomóc Ci rozpocząć pracę z Git i GitLab oraz zapewnić podstawową wiedzę na temat korzystania z tych narzędzi.
 

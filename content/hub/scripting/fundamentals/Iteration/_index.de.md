@@ -20,7 +20,7 @@ Scheme bietet mehrere Konstrukte zur Iteration, die jeweils auf spezifische Anfo
 - **do:** Ein allgemeines Schleifenkonstrukt, das eine Vielzahl iterativer Prozesse abwickelt.
 - **Rekursion:** Eine leistungsstarke Technik, bei der sich Funktionen selbst aufrufen, um Probleme inkrementell zu lösen.
 
-### Wie Iteration funktioniert
+### How Iteration Works
 
 Die Iteration umfasst typischerweise Folgendes:
 1. **Definieren einer Wiederholung:** Angeben der zu wiederholenden Aktion und der zu verarbeitenden Daten oder Bereiche.

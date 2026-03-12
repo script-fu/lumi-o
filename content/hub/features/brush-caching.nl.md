@@ -2,7 +2,7 @@
 title: "Borstelcaching"
 type: docs
 ---
-Brush caching is ontworpen om je favoriete penselen zo snel mogelijk snel te laten aanvoelen. In plaats van steeds opnieuw dezelfde getransformeerde penseelstempel te berekenen, kan Lumi een opgeslagen cache bewaren van de penseelvormen die u daadwerkelijk gebruikt en die cache later automatisch opnieuw laden.
+Brush caching is ontworpen om je favoriete penselen zo snel mogelijk snel te laten voelen. In plaats van steeds opnieuw dezelfde getransformeerde penseelstempel te berekenen, kan Lumi een opgeslagen cache bewaren van de penseelvormen die u daadwerkelijk gebruikt en die cache later automatisch opnieuw laden.
 
 ## Overzicht
 

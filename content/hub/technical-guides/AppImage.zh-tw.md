@@ -27,7 +27,7 @@ https://gitlab.gnome.org/pixelmixer/lumi-dev/-/artifacts
 
 ## CI AppImage 下載基礎知識
 
-CI 產生工件 zip 檔案（例如`lumi-appimage*.zip`）。
+CI 產生工件 zip 檔案（例如 `lumi-appimage*.zip`）。
 
 基本手動流程：
 
@@ -41,9 +41,11 @@ CI 產生工件 zip 檔案（例如`lumi-appimage*.zip`）。
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
+
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
+
 bash lumi-appimage-launch.sh
 ```
 

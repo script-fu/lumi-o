@@ -69,6 +69,7 @@ A primeira linha garante que o script funcione como um plug-in no Lumi 3:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Definição de procedimento
@@ -89,7 +90,7 @@ Uma instrução `let` define uma variável e executa operações no drawable.
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
 ```
 
-### Registro de plug-in
+### Registro de plug-ins
 
 O plug-in está registrado no Lumi como um plug-in de filtro:
 
@@ -106,6 +107,7 @@ O plug-in está registrado no Lumi como um plug-in de filtro:
 ```
 
 #### Registro do Menu
+
 Esta linha especifica a localização do menu do plug-in:
 
 ```scheme

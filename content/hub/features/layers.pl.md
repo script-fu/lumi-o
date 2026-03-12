@@ -40,7 +40,7 @@ Każda warstwa ma tryb mieszania określający sposób łączenia jej z warstwam
 
 ## Przycinanie i maskowanie
 
-- **Tryb kompozytowy: Przytnij do tła**: Ustawienie trybu złożonego warstwy na **Przytnij do tła** ogranicza komponowanie do obszarów, w których skumulowane warstwy **Łączące** poniżej mają ustaloną nieprzezroczystość. Warstwa maluje tylko te warstwy, które zawierają treść i nie mogą rozszerzać śladu alfa. Ustawia się to dla poszczególnych warstw w oknie dialogowym Atrybuty warstw (menu **Tryb kompozytowy**). Jeśli efektywnym trybem złożonym warstwy jest inny niż Union, ikona oka w panelu Warstwy zostaje zastąpiona ikoną złożoną, aby wskazać niestandardowe zachowanie podczas komponowania.
+- **Tryb złożony: Przytnij do tła**: Ustawienie trybu złożonego warstwy na **Przytnij do tła** ogranicza komponowanie do obszarów, w których skumulowane warstwy **Łączące** poniżej mają ustaloną nieprzezroczystość. Warstwa maluje tylko te warstwy, które zawierają treść i nie mogą rozszerzać śladu alfa. Ustawia się to dla poszczególnych warstw w oknie dialogowym Atrybuty warstw (menu **Tryb kompozytowy**). Jeśli efektywnym trybem złożonym warstwy jest inny niż Union, ikona oka w panelu Warstwy zostaje zastąpiona ikoną złożoną, aby wskazać niestandardowe zachowanie podczas komponowania.
 
   **Przykład: wspólny kształt alfa:** w grupie dolna warstwa zawiera wypełniony okrąg na przezroczystym tle, ustawiony na domyślny tryb złożony **Unia**. Każda warstwa powyżej w tej samej grupie ma ustawioną opcję **Przytnij do tła**. Warstwy te mogą malować tylko tam, gdzie okrąg zapewnia krycie (jeden kształt, wiele warstw). Jest to powszechny wzór do kolorowania, cieniowania i opracowywania szczegółów w ramach określonej sylwetki bez obawy o rozlanie.
 - **Maski warstw**: Zastosuj maskę w skali szarości, aby kontrolować widoczność warstwy piksel po pikselu. Malowanie na biało maski ujawnia; czarne kryjówki; szary zapewnia częściowe krycie.
@@ -144,7 +144,7 @@ Kliknij dwukrotnie warstwę w panelu Warstwy, aby otworzyć okno dialogowe Atryb
 
 ### Złożona przestrzeń i tryb
 
-- **Przestrzeń złożona**: Przestrzeń kolorów używana podczas łączenia tej warstwy z warstwami poniżej. Opcje: Auto, Liniowy (RGB), Percepcyjny (RGB).
+- **Przestrzeń złożona**: Przestrzeń kolorów używana podczas łączenia tej warstwy z warstwami poniżej. Options: Auto, Linear (RGB), Perceptual (RGB).
 - **Tryb złożony**: Kontroluje interakcję warstwy alfa z tłem. Opcje obejmują Łączenie (wpływa na wszystkie obszary, ustawienie domyślne w trybie normalnym), Przytnij do tła (wpływa tylko na obszary z istniejącą zawartością, ustawienie domyślne w większości innych trybów mieszania) i Przecięcie.
 
 ### Rozmiar i przesunięcia

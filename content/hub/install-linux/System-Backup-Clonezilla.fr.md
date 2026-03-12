@@ -1,7 +1,6 @@
 ---
 title: "Sauvegarde du système à l'aide de Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Il est courant de sauvegarder vos fichiers importants pour revenir à des versions antérieures ou remplacer des données corrompues. Cependant, un autre type de sauvegarde essentiel est un **clone de disque**, une sauvegarde complète de l'état de votre système.
 
@@ -61,7 +60,7 @@ Si vous devez restaurer votre système Debian à partir de la sauvegarde, procé
 
 4. **Sélectionnez le périphérique cible** : sélectionnez le lecteur interne sur lequel vous souhaitez restaurer la sauvegarde.
 
-5. **Démarrez le processus de restauration** : Clonezilla commencera le processus de restauration. Comme pour la sauvegarde, le temps requis dépendra de la taille du disque et de la vitesse de votre matériel.
+5. **Démarrez le processus de restauration** : Clonezilla commencera le processus de restauration. Comme pour la sauvegarde, le temps requis dépendra de la taille du lecteur et de la vitesse de votre matériel.
 
 ---
 

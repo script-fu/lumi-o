@@ -1,11 +1,12 @@
 ---
 title: "Instalando o Debian"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Este documento descreve o processo usado para instalar o Debian Stable como sistema operacional de desenvolvimento do Lumi·o. Pode ser útil para outras pessoas que criem um ambiente semelhante.
+Este documento descreve o processo usado para instalar o Debian Stable como sistema operacional de desenvolvimento do Lumi-o. Pode ser útil para outras pessoas que criem um ambiente semelhante.
 
 O Debian Stable foi selecionado porque a Lumi pretende construir de forma confiável em uma plataforma previsível de longo prazo. O desenvolvimento do GIMP tem como alvo o Debian Testing, tornando o Debian Stable um sistema base estreitamente alinhado.
+
+Lumi está no seu melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente. O Cinnamon fornece um fluxo de trabalho de desktop semelhante ao do Windows, enquanto o X11 fornece o ambiente mais estável para o desenvolvimento do Lumi.
 
 Se você vem do Windows, a principal mudança conceitual é que a maior parte da instalação e configuração do software ocorre por meio de gerenciadores de pacotes e comandos de terminal simples, em vez de instaladores para download.
 
@@ -65,16 +66,16 @@ Supondo que já exista uma partição de destino e um espaço de troca:
    - Conta de usuário: seu nome completo
    - Nome de usuário: nome de login do terminal
 
-7. Selecione **Cinnamon** como ambiente de área de trabalho.
+7. O instalador Debian fornece uma opção de ambiente de desktop neste estágio; selecione **Canela** para a configuração recomendada pela Lumi.
 8. Conclua a instalação e reinicie no Debian Stable.
 
 ## Configuração do sistema
 
 ### Escala de exibição
 
-O Debian Stable atualmente lida com escalamento fracionário de forma inconsistente, especialmente em monitores 4K. Em vez de reduzir a resolução da tela, ajuste os elementos da interface diretamente.
+O Debian Stable atualmente lida com escalamento fracionário de forma inconsistente, especialmente em monitores 4K. Em vez de reduzir a resolução da tela, ajuste os elementos da interface diretamente.Ajustes recomendados:
 
-Ajustes recomendados:- Evite escala de exibição fracionária.
+- Evite escala de exibição fracionária.
 - Menu → Seleção de fonte → Configurações de fonte → Fator de escala de texto: `2.5`
 - Fonte da área de trabalho: `14`
 - Painel → Personalizar → Altura do painel: `60`
@@ -153,17 +154,22 @@ Os scripts de construção do Lumi estão localizados em:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

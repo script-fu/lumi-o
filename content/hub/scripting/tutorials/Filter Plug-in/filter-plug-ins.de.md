@@ -65,10 +65,11 @@ In Lumi Version 3 müssen Plug-Ins nicht aktualisiert werden, damit gespeicherte
 
 #### Shebang-Linie
 
-Die erste Zeile stellt sicher, dass das Skript als Plug-In in Lumi 3 funktioniert:
+Die erste Zeile stellt sicher, dass das Skript als Plug-in in Lumi 3 funktioniert:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Prozedurdefinition
@@ -106,6 +107,7 @@ Das Plug-in ist bei Lumi als Filter-Plug-in registriert:
 ```
 
 #### Menüregistrierung
+
 Diese Zeile gibt die Menüposition für das Plug-in an:
 
 ```scheme

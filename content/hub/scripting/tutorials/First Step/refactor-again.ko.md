@@ -54,7 +54,7 @@ weight: 5
 
 ### 추가 분석: 각 출력 핸들러 분리
 
-각 메시지 출력 유형(GUI, 오류 콘솔, 터미널)을 자체 기능으로 이동할 수 있습니다. 이를 통해 향후 테스트, 수정 및 잠재적인 확장이 더 쉬워집니다.
+각 메시지 출력 유형(GUI, 오류 콘솔, 터미널)을 자체 기능으로 이동할 수 있습니다. This allows for easier testing, modification, and potential extension in the future.
 
 ```scheme
 (define (send-to-gui message)

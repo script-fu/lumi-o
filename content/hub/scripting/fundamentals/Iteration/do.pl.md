@@ -50,7 +50,7 @@ Ogólna forma `do` to:
    - Na początku każdej iteracji sprawdzany jest warunek zakończenia. Jeśli ma wartość true, pętla zatrzymuje się i oceniane jest wyrażenie wynikowe.
 
 3. **Iteracja**:
-   - If the termination condition is false, the body is executed, and the loop variables are updated using their respective update expressions.
+   - Jeśli warunek zakończenia jest fałszywy, treść jest wykonywana, a zmienne pętli są aktualizowane przy użyciu odpowiednich wyrażeń aktualizacji.
 
 ---
 

@@ -15,10 +15,13 @@ mkdir -p ~/code
 cd ~/code
 
 # Clone via SSH (matches the Git guide above)
+
 git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
 
 # Or clone via HTTPS (no SSH key setup)
+
 # git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
+
 ```
 
 ## 2) 安裝依賴項（首次設定）
@@ -37,7 +40,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 ```
 
-## 4) 啟動 Lumi
+## 4) 启动 Lumi
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
@@ -53,7 +56,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev
 ```
 
-快速僅編譯路徑：
+快速仅编译路径：
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
@@ -67,7 +70,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
 ```
 
-## 可選：建置類型
+## 可选：构建类型
 
 需要時使用`--type`：
 

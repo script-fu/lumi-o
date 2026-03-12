@@ -35,7 +35,7 @@ Cliquer sur une entrée affiche sa docstring complète et la bibliothèque dont 
 
 ## Le Stdlib comme Wrappers
 
-Les bibliothèques d'utilitaires sont une application pratique du modèle d'encapsulation : chaque assistant donne un nom clair à une opération de bas niveau, masque le passe-partout et fournit un emplacement unique pour mettre à jour si la commande sous-jacente change. Si vous souhaitez comprendre l'approche de conception qui les sous-tend, consultez le didacticiel **[Wrapping](@@LUMI_TOKEN_11@@)**.
+Les bibliothèques d'utilitaires sont une application pratique du modèle d'encapsulation : chaque assistant donne un nom clair à une opération de bas niveau, masque le passe-partout et fournit un emplacement unique pour mettre à jour si la commande sous-jacente change. Si vous souhaitez comprendre l'approche de conception qui les sous-tend, consultez le didacticiel **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Relation avec le navigateur de procédures
 

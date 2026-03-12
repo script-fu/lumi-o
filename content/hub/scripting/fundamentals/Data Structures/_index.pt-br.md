@@ -10,6 +10,7 @@ No Scheme, **estruturas de dados** são ferramentas essenciais para organizar, a
 O Scheme fornece diversas estruturas de dados poderosas e versáteis, cada uma adequada para tarefas específicas. As estruturas de dados primárias incluem:
 
 ### Listas
+
 Listas são coleções ordenadas de elementos que podem aumentar ou diminuir dinamicamente. Eles são ideais para dados sequenciais ou hierárquicos e são amplamente utilizados em programação funcional.
 
 Principais recursos:
@@ -24,6 +25,7 @@ Exemplos de uso:
 ---
 
 ### Vetores
+
 Vetores são coleções de elementos de tamanho fixo, indexados para acesso rápido. Eles são mais adequados para cenários onde o desempenho e o acesso posicional são críticos.
 
 Principais recursos:

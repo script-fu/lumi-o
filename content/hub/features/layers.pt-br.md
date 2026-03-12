@@ -16,11 +16,11 @@ As camadas são a base da ilustração estruturada. Cada camada é independente,
 
 ### Pintar Camadas
 
-Camadas raster padrão para conteúdo pintado. Armazene dados de pixels como buffers GEGL com transparência alfa opcional.
+Camadas raster padrão para conteúdo pintado. Armazene dados de pixel como buffers GEGL com transparência alfa opcional.
 
 ### Camadas de Grupo
 
-Contêineres hierárquicos para organizar camadas relacionadas. Os grupos podem ter seu próprio modo de mesclagem, opacidade e máscaras de corte. As projeções do grupo são compostas sob demanda.
+Contêineres hierárquicos para organizar camadas relacionadas. Os grupos podem ter seu próprio modo de mesclagem, opacidade e máscaras de recorte. As projeções do grupo são compostas sob demanda.
 
 ### Máscaras de camada
 
@@ -35,7 +35,7 @@ Cada camada possui um modo de mesclagem que determina como ela se combina com as
 - **Tela**: Ilumine invertendo, multiplicando e invertendo novamente.
 - **Sobreposição**: Combinação de Multiplicação e Tela.
 - **Adicionar**: Mistura de aditivos (soma os valores das cores).
-- **Subtrair**: Mistura subtrativa.
+- **Subtract**: Subtractive blending.
 - **Cor, Matiz, Saturação, Luminosidade**: Mistura de componentes HSL.
 
 ## Recorte e mascaramento
@@ -93,7 +93,7 @@ No painel Camadas:
 
 ## Bloqueios de camada
 
-Os ícones de bloqueio são mostrados na linha do cabeçalho do painel Camadas. Cada bloqueio pode ser alternado de forma independente. Clicar com o botão direito em um ícone de cadeado o define como exclusivo (bloqueia apenas aquele tipo, desbloqueando todos os outros na mesma camada).
+Lock icons are shown in the Layers panel header row. Cada bloqueio pode ser alternado de forma independente. Clicar com o botão direito em um ícone de cadeado o define como exclusivo (bloqueia apenas aquele tipo, desbloqueando todos os outros na mesma camada).
 
 - **Lock Alpha**: Evita pintura em áreas transparentes. As pinceladas afetam apenas os pixels que já possuem opacidade; pixels totalmente transparentes não são modificados. Útil para pintar dentro de formas existentes sem derramar fora delas.
 
@@ -124,7 +124,7 @@ O popover exibe a pilha de filtros da camada, com cada efeito confirmado listado
 - **Editar**: Abre a caixa de diálogo de configurações do filtro selecionado, permitindo que seus parâmetros sejam ajustados de forma não destrutiva.
 - **Aumentar / Diminuir**: Move o filtro selecionado para cima ou para baixo na pilha, alterando a ordem em que os efeitos são aplicados.
 - **Mesclar**: Confirma todos os efeitos atualmente visíveis nos pixels da camada, tornando as alterações permanentes. O ícone fx é removido se todos os efeitos forem mesclados. A mesclagem não está disponível em camadas de grupo.
-- **Remover**: Exclui totalmente o filtro selecionado. O popover fecha automaticamente se nenhum efeito permanecer.
+- **Remove**: Deletes the selected filter entirely. O popover fecha automaticamente se nenhum efeito permanecer.
 
 Clicar duas vezes em um filtro na lista também abre sua caixa de diálogo de edição.
 
@@ -153,7 +153,7 @@ Para uma camada existente, **Tamanhos** mostra as dimensões da camada e da más
 
 **Deslocamentos de camada**: controles giratórios X e Y que controlam a posição da camada na tela. As alterações são aplicadas imediatamente e não no fechamento da caixa de diálogo.
 
-Se a camada tiver uma máscara, **Deslocamentos de máscara** (giradores X e Y para a posição independente da máscara) serão mostrados abaixo.
+Se a camada tiver uma máscara, **Deslocamentos de máscara** (controles giratórios X e Y para a posição independente da máscara) serão mostrados abaixo.
 
 Ao criar uma nova camada, os campos Largura e Altura e um menu suspenso **Preencher com** (Primeiro plano, Plano de fundo, Branco, Transparente) substituem a exibição do tamanho somente leitura.
 

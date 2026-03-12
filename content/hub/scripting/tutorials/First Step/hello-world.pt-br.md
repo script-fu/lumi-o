@@ -3,10 +3,11 @@ title: "Olá mundo!"
 type: docs
 weight: 1
 ---
-Este tutorial percorre a estrutura mínima de um plug-in do Scheme. Algumas linhas são “boilerplate”: são necessárias para que o Lumi carregue o arquivo, mesmo que você ainda não as entenda completamente.
+Este tutorial percorre a estrutura mínima de um plug-in do Scheme. Algumas linhas são “padrão”: são necessárias para que o Lumi carregue o arquivo, mesmo que você ainda não as entenda completamente.
 
 ```bash
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 Em um nível alto você irá:
@@ -42,7 +43,7 @@ Isso exibe o menu "Funky" na barra de menu principal. Altere o caminho para colo
 
 ### Comentários
 
-No Scheme, a linguagem base do Scheme, os comentários geralmente são feitos precedendo uma linha de texto útil com `;;`. O uso de comentários dependerá de sua fluência como codificador – se você codificar ocasionalmente, mais comentários ajudarão. Se você codificar o tempo todo, o código será tão fácil de ler quanto o comentário. Além disso, ao programar funcionalmente, o código tende a se tornar descritivo o suficiente para ser lido como um script.
+No Scheme, a linguagem base do Scheme, os comentários geralmente são feitos precedendo uma linha de texto útil com `;;`. O uso de comentários dependerá de sua fluência como codificador – se você codificar ocasionalmente, mais comentários ajudarão. Se você codifica o tempo todo, o código será tão fácil de ler quanto o comentário. Além disso, ao programar funcionalmente, o código tende a se tornar descritivo o suficiente para ser lido como um script.
 
 ### Sintaxe
 

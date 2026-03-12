@@ -70,6 +70,7 @@ Il costrutto `define` crea variabili o funzioni con ambito globale:
 | **Caso d'uso** | Variabili temporanee per compiti specifici | Variabili o funzioni condivise utilizzate in |
 
 ### Riepilogo- **Le definizioni e l'ambito delle variabili** sono fondamentali per organizzare e gestire i dati negli script di Scheme.
+
 - Utilizzare l'**ambito locale** (`let`, `let*`, denominato `let`) per incapsulare variabili temporanee ed evitare conflitti.
 - Utilizza **ambito globale** (`define`) per funzioni riutilizzabili o costanti condivise nel tuo script.
 - Una chiara comprensione di questi costrutti migliorerà la leggibilità, la manutenibilità e l'affidabilità del codice.

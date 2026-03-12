@@ -50,7 +50,7 @@ Eine neue `primary-NN.lum/` Baseline wird nach **Datei → Speichern** geschrieb
 2. Verwenden Sie **Datei** → **Inkrement speichern** (`Ctrl+I`), um einen Wiederherstellungsprüfpunkt zu erstellen.
 3. Nach einer weiteren vollständigen **Datei** → **Speichern** schreibt der nächste `Ctrl+I` eine neue `primary-NN.lum/` Basislinie, bevor neue Deltas erstellt werden.
 
-Wiederhergestellte Dateien mit dem Präfix `RECOVERED_` müssen zuerst normal gespeichert werden, bevor „Inkrement speichern“ für sie verfügbar wird.
+Recovered files named with the `RECOVERED_` prefix must be saved normally first before Save Increment becomes available for them.
 
 Wenn Sie eine `.lum`-Datei öffnen, die über neuere inkrementelle Speicherungen als die primäre Speicherung verfügt, zeigt Lumi die Eingabeaufforderung **Inkrementelle Speicherung erkannt** an und bietet an, den neuesten Prüfpunkt zu laden.
 

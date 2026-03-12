@@ -19,11 +19,13 @@ weight: 3
 การใช้งานพื้นฐานของ `define` คือการสร้างตัวแปรที่เก็บค่าคงที่หรือค่าที่คำนวณได้
 
 #### ไวยากรณ์
+
 ```scheme
 (define variable-name value)
 ```
 
 #### ตัวอย่าง: การกำหนดค่าคงที่
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ weight: 3
 คุณสามารถใช้ `define` เพื่อสร้างขั้นตอนที่นำมาใช้ซ้ำได้
 
 #### ไวยากรณ์
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### ตัวอย่าง: การกำหนดฟังก์ชันอย่างง่าย
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ weight: 3
 เมื่อใช้ภายในฟังก์ชัน `define` จะสร้างการเชื่อมโยงเฉพาะที่สามารถเข้าถึงได้ภายในฟังก์ชันปิดล้อมเท่านั้น วิธีนี้จะหลีกเลี่ยงไม่ให้เนมสเปซส่วนกลางเสียหายและช่วยจัดระเบียบโค้ดของคุณ
 
 #### ตัวอย่าง: ฟังก์ชั่น Local Helper
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

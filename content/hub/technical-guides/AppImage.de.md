@@ -41,9 +41,11 @@ Die folgenden Skripte sind optionale Helfer, die diese Schritte automatisieren.
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
+
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
+
 bash lumi-appimage-launch.sh
 ```
 

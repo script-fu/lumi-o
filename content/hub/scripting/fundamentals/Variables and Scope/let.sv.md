@@ -97,7 +97,9 @@ Ett namngivet `let` är en speciell form av `let` som ger ett namn för själva 
 
 ---
 
-## Sammanfattningstabell| Konstruera | Beskrivning | Användningsfall |
+## Sammanfattningstabell
+
+| Konstruera | Beskrivning | Användningsfall |
 |------------|--------------------------------------------------------------------------------------------------------------------------------|
 | **`let`** | Definierar lokala bindningar för variabler.    | Använd när alla bindningar är oberoende och inte litar på varandra.     |
 | **`let*`** | Definierar sekventiella lokala bindningar.       | Använd när senare bindningar beror på resultatet av tidigare.           |

@@ -4,6 +4,10 @@
   translation: "เกี่ยวกับ"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "คุณสมบัติ"
+- id: menuMadeInLumio
+  translation: "ผลิตในลูมิ-โอ"
 - id: menuInstallLinux
   translation: "ติดตั้ง Linux"
 - id: menuTechnicalGuides

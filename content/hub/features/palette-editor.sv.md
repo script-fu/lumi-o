@@ -8,7 +8,7 @@ Palettredigeraren är där du bygger och hanterar en Lumi-palett. Den håller di
 
 En palett är mer än en samling pigment: det är ett stilistiskt engagemang. Många konstnärer arbetar med en liten, fast uppsättning pigment som de känner intimt: hur de blandar, de neutrala de producerar, temperaturen skiftar mellan dem. Den förtrogenheten blir en del av deras visuella röst. En målare kan ha en varm palett med låg kromatografi för figurarbete och en separat högtonad palett för landskap, eller så kan de göra allt sitt arbete inom en enda fyra-pigmentuppsättning som en avsiktlig begränsning som förenar ett verk.
 
-Lumi stödjer detta sätt att arbeta. Varje palett har sina egna pigment, blandningar, värdestruktur och gradienter. Att byta paletter ändrar hela färgsystemet: kartan, mixern och de tillgängliga blandningarna uppdateras alla för att återspegla den nya uppsättningen.
+Lumi supports this way of working. Varje palett har sina egna pigment, blandningar, värdestruktur och gradienter. Att byta paletter ändrar hela färgsystemet: kartan, mixern och de tillgängliga blandningarna uppdateras alla för att återspegla den nya uppsättningen.
 
 En rullgardinsmeny högst upp i palettredigeraren väljer den aktiva paletten. Lumi levereras med tre paletter i gruppen **Standard**:
 
@@ -30,7 +30,7 @@ Avsnittet **Sparade blandningar** innehåller färger som du uttryckligen har be
 
 Sparade mixar är uppdelade i fem värdeband:
 
-| Band | Standard ljusstyrka |
+| Band | Standard ljushetsområde |
 | :--- | :--- |
 | High Key | 80 – 100 % |
 | Övre mitten | 60 – 80 % |
@@ -62,8 +62,8 @@ Expanderaren **Värdeband** i palettredigeraren innehåller ett skjutreglage med
 | :--- | :--- |
 | **Avbryt** | Återställer skjutreglaget till det senast tillämpade läget |
 | **Kopiera** | Kopierar den aktuella bandkonfigurationen till urklipp |
-| **Klistra** | Klistrar in en kopierad bandkonfiguration från en annan palett |
-| **Standardinställningar** | Återställer fabriksinställningarna för lika division |
+| **Klistra in** | Klistrar in en kopierad bandkonfiguration från en annan palett |
+| **Standard** | Återställer fabriksinställningarna för lika division |
 | **Ansök** | Bekräftar ändringarna och regenererar paletten |
 
 **Ansök** krävs för att göra ändringarna permanenta. Det utlöser en hel palettförnyelse och tar bort alla sparade mixar vars lätthet inte längre faller inom något band. Lumi visar en bekräftelsedialog som visar hur många mixar som skulle tas bort innan du fortsätter.

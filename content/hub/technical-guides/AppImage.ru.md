@@ -41,9 +41,11 @@ CI создает zip-файлы артефактов (например, `lumi-a
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
+
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
+
 bash lumi-appimage-launch.sh
 ```
 
@@ -60,7 +62,7 @@ bash lumi-appimage-launch.sh
 
 ## Общие примечания
 
-- Если вы запускаете AppImage вручную (без вспомогательных сценариев), сначала сделайте его исполняемым:
+- Если вы запускаете AppImage вручную (без вспомогательных скриптов), сначала сделайте его исполняемым:
 
 ```bash
 chmod +x ~/AppImage/Lumi/Lumi_CI.AppImage

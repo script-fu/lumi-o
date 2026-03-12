@@ -35,7 +35,7 @@ Wenn Sie auf einen Eintrag klicken, werden dessen vollständiger Dokumentstring 
 
 ## Die Stdlib als Wrapper
 
-Die Dienstprogrammbibliotheken sind eine praktische Anwendung des Umbruchmusters: Jeder Helfer gibt einem Low-Level-Vorgang einen eindeutigen Namen, verbirgt Boilerplate und bietet einen einzigen Ort zum Aktualisieren, wenn sich der zugrunde liegende Befehl ändert. Wenn Sie den Designansatz dahinter verstehen möchten, sehen Sie sich das Tutorial **[Wrapping](@@LUMI_TOKEN_11@@)** an.
+Die Dienstprogrammbibliotheken sind eine praktische Anwendung des Umbruchmusters: Jeder Helfer gibt einem Low-Level-Vorgang einen eindeutigen Namen, verbirgt Boilerplate und bietet einen einzigen Ort zum Aktualisieren, wenn sich der zugrunde liegende Befehl ändert. Wenn Sie den Designansatz dahinter verstehen möchten, sehen Sie sich das Tutorial **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** an.
 
 ## Beziehung zum Prozedurbrowser
 

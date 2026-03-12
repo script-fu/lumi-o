@@ -1,7 +1,6 @@
 ---
 title: "디버그 버전 빌드"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 이 가이드에서는 `build/lumi/scripts`의 스크립트를 사용하여 Lumi의 **로컬 디버그 워크플로**를 설명합니다.
 
@@ -11,7 +10,7 @@ url: "hub/technical-guides/Building-a-Debug-Version"
 - 디버그 기호가 실제로 존재하는지 확인합니다.
 - 기본적으로 오프라인 기호 모드로 GDB를 시작합니다.
 
-## 전제조건
+## 전제 조건
 
 - Debian 기반 Linux(프로젝트 기준: Debian 13)
 - 이미 복제된 Lumi 소스 트리
@@ -109,8 +108,10 @@ bash lumi-debug-launch.sh --repo lumi-dev
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

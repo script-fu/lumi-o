@@ -24,7 +24,7 @@ Wenn mehrere Farben um dieselbe Zelle konkurrieren, wird nur ein **Gewinner** pr
 
 Beiträge, die nicht gewinnen, werden Zweitplatzierte und bleiben über Click-Cycling zugänglich (siehe unten).
 
-Benutzerdefinierte Einträge (gespeicherte Mischungen) werden als quadratische Punkte dargestellt. Erzeugte Mischungen und Primärfarben werden als runde Punkte dargestellt.
+Benutzerdefinierte Einträge (gespeicherte Mischungen) werden als quadratische Punkte dargestellt. Generierte Mischungen und Primärfarben werden als runde Punkte dargestellt.
 
 ## Klicken Sie auf Radfahren
 

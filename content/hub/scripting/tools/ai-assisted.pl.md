@@ -17,7 +17,7 @@ Zamiast wypełniać tylko jedną linię kodu, Agent może:
 ## Dostęp do repozytorium
 
 Pomoc AI jest najskuteczniejsza, gdy Agent ma dostęp do **lumi-dev** lub repozytorium konkretnego projektu. Dzięki wglądowi w istniejącą bazę kodu Agent może:
-- Użyj **[Utility Libraries](@@LUMI_TOKEN_4@@)** jako odniesienia do funkcji pomocniczych.
+- Użyj **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** jako odniesienia do funkcji pomocniczych.
 - Postępuj zgodnie z istniejącymi wzorcami operacji GEGL i zarządzania warstwami.
 - Ponownie użyj standardowego kodu z ustalonych wtyczek.
 

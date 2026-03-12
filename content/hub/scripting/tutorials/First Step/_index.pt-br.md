@@ -17,17 +17,17 @@ Antes de começar, certifique-se de ter o seguinte:
 ## Etapas do tutorial
 
 {{< cards >}}
-  {{< card link="hello-world" title="Olá mundo!" icon="sparkles" subtitle="Create your first Scheme plug-in with basic structure" >}}
-  {{< card link="refactoring" title="Refatoração" icon="code" subtitle="Improve code structure without changing behavior" >}}
-  {{< card link="loading" title="Carregando" icon="upload" subtitle="Organize functions into reusable libraries" >}}
-  {{< card link="validation" title="Validação" icon="badge-check" subtitle="Add error handling and input validation" >}}
-  {{< card link="return-values" title="Valores de retorno" icon="arrow-circle-left" subtitle="Understanding function outputs and data flow" >}}
-  {{< card link="messaging-library" title="Biblioteca de mensagens" icon="annotation" subtitle="Build a comprehensive messaging system" >}}
+  {{< card link="hello-world" title="Olá mundo!" icon="sparkles" subtitle="Crie seu primeiro plug-in de Scheme com estrutura básica" >}}
+  {{< card link="refactoring" title="Refatoração" icon="code" subtitle="Melhore a estrutura do código sem alterar o comportamento" >}}
+  {{< card link="loading" title="Carregando" icon="upload" subtitle="Organize funções em bibliotecas reutilizáveis" >}}
+  {{< card link="validation" title="Validação" icon="badge-check" subtitle="Adicione tratamento de erros e validação de entrada" >}}
+  {{< card link="return-values" title="Valores de retorno" icon="arrow-circle-left" subtitle="Noções básicas sobre saídas de função e fluxo de dados" >}}
+  {{< card link="messaging-library" title="Biblioteca de mensagens" icon="annotation" subtitle="Crie um sistema de mensagens abrangente" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="reworking" title="Retrabalho" icon="adjustments" subtitle="Advanced code restructuring techniques" >}}
-  {{< card link="refactor-again" title="Refatorar novamente" icon="arrow-sm-right" subtitle="Iterative improvement and optimization" >}}
-  {{< card link="the-procedure-browser" title="Navegador de procedimentos" icon="book-open" subtitle="Exploring Lumi's procedure database" >}}
-  {{< card link="final-thoughts" title="Considerações Finais" icon="academic-cap" subtitle="Summary and next steps in development" >}}
+  {{< card link="reworking" title="Retrabalho" icon="adjustments" subtitle="Técnicas avançadas de reestruturação de código" >}}
+  {{< card link="refactor-again" title="Refatorar novamente" icon="arrow-sm-right" subtitle="Melhoria iterativa e otimização" >}}
+  {{< card link="the-procedure-browser" title="Navegador de procedimentos" icon="book-open" subtitle="Explorando o banco de dados de procedimentos do Lumi" >}}
+  {{< card link="final-thoughts" title="Considerações Finais" icon="academic-cap" subtitle="Resumo e próximas etapas do desenvolvimento" >}}
 {{< /cards >}}

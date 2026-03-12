@@ -15,10 +15,13 @@ mkdir -p ~/code
 cd ~/code
 
 # Clone via SSH (matches the Git guide above)
+
 git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
 
 # Or clone via HTTPS (no SSH key setup)
+
 # git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
+
 ```
 
 ## 2) Installa le dipendenze (prima configurazione)

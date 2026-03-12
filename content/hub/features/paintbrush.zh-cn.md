@@ -35,7 +35,7 @@ type: docs
 ### 顶级控件
 
 始终存在于任何扩展器之外：
-- **模式**：绘画混合模式（正常、正片叠底、滤色等）
+- **Mode**: Paint blending mode (Normal, Multiply, Screen, etc.)
 - **不透明度**：整体描边不透明度 (0–100)。
 
 ### 画笔属性

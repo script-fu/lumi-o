@@ -97,7 +97,9 @@ Un `let` con nombre es una forma especial de `let` que proporciona un nombre par
 
 ---
 
-## Tabla resumen| Construir | Descripción | Caso de uso |
+## Tabla resumen
+
+| Construir | Descripción | Caso de uso |
 |------------|------------------------------------------|--------------------------------------------------------------------|
 | **`let`** | Define enlaces locales para variables.    | Utilícelo cuando todos los enlaces sean independientes y no dependan unos de otros.     |
 | **`let*`** | Define enlaces locales secuenciales.       | Úselo cuando las vinculaciones posteriores dependan de los resultados de las anteriores.           |

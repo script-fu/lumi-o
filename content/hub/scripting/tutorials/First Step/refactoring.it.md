@@ -68,7 +68,7 @@ Nel nostro esempio abbiamo utilizzato una variabile chiamata "messaggio" legata 
 Nella programmazione funzionale, il refactoring del codice per estrarre la logica riutilizzabile in funzioni separate è una pratica comune. In questo modo, la **funzione principale** diventa molto più semplice e più focalizzata sul suo obiettivo di alto livello, mentre la **funzione estratta** appare più complessa perché gestisce la logica dettagliata. Ciò è intenzionale e in linea con i principi fondamentali della programmazione funzionale, come modularità, separazione delle preoccupazioni e leggibilità. Ecco il refactoring
 Ciao mondo! dopo l'estrazione.
 
-Estrarre la logica:
+Estrazione della logica:
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
 
@@ -116,6 +116,7 @@ Estrarre la logica:
 ```
 
 #### Simboli
+
 Nell'esempio sopra viene utilizzato un tipo di dati chiamato simbolo, come "gui". I simboli vengono passati come parametri alla funzione di invio del messaggio e possono essere utilizzati per prendere semplici decisioni condizionali. Come le chiavi simboliche, sono identificatori univoci. Per ulteriori informazioni sui simboli, visitare [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Semplificazione della funzione principale

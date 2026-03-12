@@ -19,11 +19,13 @@ weight: 3
 En grundläggande användning av `define` är att skapa variabler som håller konstanta eller beräknade värden.
 
 #### Syntax
+
 ```scheme
 (define variable-name value)
 ```
 
 #### Exempel: Definiera en konstant
+
 ```scheme
 (define pi 3.14159)
 (* pi 2) ;; Computes 2π
@@ -38,12 +40,14 @@ En grundläggande användning av `define` är att skapa variabler som håller ko
 Du kan använda `define` för att skapa återanvändbara procedurer.
 
 #### Syntax
+
 ```scheme
 (define (function-name parameter1 parameter2 ...)
   body-expression)
 ```
 
 #### Exempel: Definiera en enkel funktion
+
 ```scheme
 (define (square x)
   (* x x))
@@ -59,6 +63,7 @@ Du kan använda `define` för att skapa återanvändbara procedurer.
 När den används i en funktion skapar `define` lokala bindningar som endast är tillgängliga inom den omslutande funktionen. Detta undviker att förorena det globala namnområdet och hjälper till att organisera din kod.
 
 #### Exempel: Lokala hjälpfunktioner
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function

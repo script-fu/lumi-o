@@ -15,11 +15,13 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 ### Nomeado `let`
 
 #### Características:
+
 1. Combina ligações variáveis e recursão em uma única construção.
 2. Escopo do corpo do bloco `let`.
 3. Ideal para **recursão localizada** ou processos iterativos específicos para uma única tarefa.
 
 #### Sintaxe
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 ```
 
 #### Exemplo: somando elementos de uma lista
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 ### Local `define`
 
 #### Características:
+
 1. Permite a criação de funções auxiliares ou variáveis que são reutilizáveis dentro da função envolvente.
 2. Com escopo definido para a função envolvente, mas visível em todo o seu corpo.
 3. Ideal para modularizar código com múltiplas etapas ou lógica reutilizável.
 
 #### Sintaxe
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 ```
 
 #### Exemplo: Processando Vários Valores
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 Um dos recursos mais poderosos de um `let` nomeado é sua capacidade de combinar **declaração de variável local** e **parâmetros de entrada** para recursão em uma única construção. Isso torna o `let` nomeado conciso e expressivo para tarefas iterativas ou recursivas.
 
 #### Declaração de variável local
+
 Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis locais** que são inicializadas com valores específicos. Essas variáveis ​​têm como escopo o corpo do `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis loc
 ---
 
 #### Parâmetros de entrada para recursão
+
 As mesmas variáveis também atuam como **parâmetros de entrada** para as chamadas recursivas para o `let` nomeado. Quando o `let` nomeado chama a si mesmo, ele atualiza essas variáveis ​​​​com novos valores.
 
 ```scheme
@@ -164,6 +172,7 @@ As mesmas variáveis também atuam como **parâmetros de entrada** para as chama
 Um `let` nomeado inclui inicialização de variável como parte de sua sintaxe. Isto elimina a necessidade de uma etapa separada para configurar os valores iniciais. Os dois exemplos a seguir são equivalentes:
 
 ##### Usando Nomeado `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Um `let` nomeado inclui inicialização de variável como parte de sua sintaxe. 
 ```
 
 ##### Usando local `define`
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

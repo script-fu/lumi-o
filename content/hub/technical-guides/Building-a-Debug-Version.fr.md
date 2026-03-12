@@ -1,7 +1,6 @@
 ---
 title: "Construire une version de débogage"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 Ce guide décrit le **workflow de débogage local** pour Lumi à l'aide de scripts dans `build/lumi/scripts`.
 
@@ -109,8 +108,10 @@ Les builds de débogage sont de par leur conception plus lentes. Une fois le dé
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

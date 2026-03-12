@@ -69,6 +69,7 @@ Den första raden säkerställer att skriptet fungerar som en plug-in i Lumi 3:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Definition av procedur
@@ -106,6 +107,7 @@ Plug-in är registrerad hos Lumi som en filterplugin:
 ```
 
 #### Menyregistrering
+
 Den här raden anger menyplatsen för plugin-programmet:
 
 ```scheme

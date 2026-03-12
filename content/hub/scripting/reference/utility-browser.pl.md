@@ -24,7 +24,7 @@ Przeglądarka wyświetla listę wszystkich procedur, zmiennych i formularzy skł
 | `parasites.scm` | Pomocnicy do odczytu/zapisu pasożytów |
 | `paths.scm` | Pomocnicy ścieżek i wektorów |
 
-Wszystko to jest dostępne w dowolnej wtyczce Scheme lub w konsoli Scheme.
+All of these are available in any Scheme plug-in or in the Scheme Console.
 
 ## Wyszukiwanie i filtrowanie
 
@@ -35,7 +35,7 @@ Kliknięcie wpisu powoduje wyświetlenie jego pełnej dokumentacji i biblioteki,
 
 ## Stdlib jako opakowania
 
-Biblioteki narzędziowe stanowią praktyczne zastosowanie wzorca zawijania: każdy pomocnik nadaje jasną nazwę operacji niskiego poziomu, ukrywa szablon i zapewnia jedno miejsce do aktualizacji, jeśli zmieni się podstawowe polecenie. Jeśli chcesz zrozumieć podejście do projektowania, które się za nimi kryje, zapoznaj się z samouczkiem **[Wrapping](@@LUMI_TOKEN_11@@)**.
+Biblioteki narzędziowe stanowią praktyczne zastosowanie wzorca zawijania: każdy pomocnik nadaje jasną nazwę operacji niskiego poziomu, ukrywa szablon i zapewnia jedno miejsce do aktualizacji, jeśli zmieni się podstawowe polecenie. Jeśli chcesz zrozumieć podejście do projektowania, które się za nimi kryje, zapoznaj się z samouczkiem **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Związek z przeglądarką procedur
 

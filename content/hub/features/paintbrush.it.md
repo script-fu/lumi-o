@@ -67,7 +67,7 @@ Nell'espansore **Comportamento del tratto**:
 Quando è attivo, il dab stamping viene sostituito da un corridoio geometrico continuo:
 - **Opacità dinamica**: modula l'opacità all'interno del tratto in base ai cambiamenti di velocità e direzione. Funziona meglio con colpi fini e controllati; i risultati sono meno prevedibili negli scarabocchi rapidi. Sperimentale.
 - **Crescita velocità** (0–100%): aumento massimo consentito delle dimensioni per campione come percentuale delle dimensioni del campione precedente. Limita la velocità con cui può crescere una dinamica dimensionale guidata dalla velocità, prevenendo salti improvvisi quando la corsa accelera.
-- **Velocity Shrink** (0–100%): riduzione massima consentita delle dimensioni per campione. Limita la velocità con cui le dimensioni possono diminuire quando il tratto decelera.
+- **Velocity Shrink** (0–100%): Maximum allowed size decrease per sample. Limita la velocità con cui le dimensioni possono diminuire quando il tratto decelera.
 
 #### Stabilizzazione e levigatura
 
@@ -97,7 +97,7 @@ Ogni input dinamico può essere mappato su più proprietà in modo indipendente.
 ### Modulazione della corsa
 
 Nell'espansore **Modulazione corsa** (mostrato solo quando **Dinamica** è abilitata):- **Angolo iniziale relativo**: il valore dell'**Angolo iniziale** viene interpretato rispetto alla direzione del tratto anziché come un angolo assoluto della tela.
-- **Angolo iniziale dissolvenza**: sfuma dall'**Angolo iniziale** all'inizio del tratto verso l'angolo dinamico in tempo reale nel corso del tratto. L'attivazione di questa opzione forza l'attivazione dell'**Angolo iniziale relativo**.
+- **Angolo iniziale dissolvenza**: sfuma dall'**Angolo iniziale** all'inizio del tratto verso l'angolo dinamico in tempo reale nel corso del tratto. Enabling this forces **Relative Initial Angle** on.
 - **Angolo iniziale del pennello** (-180–180°): l'angolo del pennello all'inizio di un tratto, prima che la dinamica prenda il sopravvento.
 - **Miscela angolo iniziale** (0,0–1,0): controlla la velocità con cui l'angolo del pennello passa dall'angolo iniziale all'angolo dinamico. 0 = mantiene l'angolo iniziale; 1 = utilizza immediatamente l'angolo completamente dinamico.
 - **Lunghezza dissolvenza**: distanza in unità di tela su cui viene riprodotta la dissolvenza.
@@ -155,7 +155,7 @@ Dispersione:
 - **Soglia dimensione dispersione** (0,01–100 px): raggio di soglia per la distanza di dispersione completa. Le teste pari o inferiori a questo raggio utilizzano la distanza di dispersione completa; le teste più grandi vengono progressivamente avvicinate alla corsa.
 
 Randomizzazione:
-- **Seme carattere** (0–255): numero fisso per carattere per testa (dimensione, posizione di spaziatura di riempimento). Lo stesso seme riproduce la stessa formazione ad ogni colpo. Desensibilizzato quando **Randomizza personaggio testa** è attivo.
+- **Seme carattere** (0–255): numero fisso per carattere per testa (dimensione, posizione di spaziatura di riempimento). The same seed reproduces the same formation every stroke. Desensibilizzato quando **Randomizza personaggio testa** è attivo.
 - **Randomizza carattere testa**: ridisegna i valori dei caratteri per testa (dimensioni, posizione di dispersione) ogni francobollo in modo che la formazione sia completamente caotica lungo il tratto. Sostituisce **Seme carattere**.
 - **Randomizza fotogrammi di animazione**: per i pennelli animati: ciascuna testa fa avanzare il proprio fotogramma di animazione in modo indipendente.#### Comportamento del tratto (overflow)
 - **Ripristina gli ultimi colori utilizzati**: ripristina i colori di primo piano e di sfondo della sessione precedente all'avvio, invece di tornare al bianco e nero per impostazione predefinita.

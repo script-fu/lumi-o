@@ -70,6 +70,7 @@ A construção `define` cria variáveis ou funções com escopo global:
 | **Caso de uso** | Variáveis ​​temporárias para tarefas específicas | Variáveis ​​ou funções compartilhadas usadas em todo |
 
 ### Resumo- **Definições e escopo de variáveis** são fundamentais para organizar e gerenciar dados em seus scripts de esquema.
-- Use **local scope** (`let`, `let*`, named `let`) to encapsulate temporary variables and avoid conflicts.
-- Use **global scope** (`define`) for reusable functions or constants shared across your script.
+
+- Use **escopo local** (`let`, `let*`, denominado `let`) para encapsular variáveis ​​temporárias e evitar conflitos.
+- Use **escopo global** (`define`) para funções reutilizáveis ​​ou constantes compartilhadas em seu script.
 - Uma compreensão clara dessas construções melhorará a legibilidade, a capacidade de manutenção e a confiabilidade do seu código.

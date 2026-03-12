@@ -113,7 +113,7 @@ weight: 5
 ```
 
 - การทดสอบสองรายการแรกไม่ประเมินว่าเป็นจริง
-- The `else` clause is executed and returns `"Fallback value"`.
+- ส่วนคำสั่ง `else` จะถูกดำเนินการและส่งกลับ `"Fallback value"`
 
 ผลลัพธ์: **"ค่าทางเลือก"**
 

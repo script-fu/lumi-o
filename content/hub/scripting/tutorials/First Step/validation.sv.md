@@ -65,7 +65,7 @@ Exempel på hantering av ett tomt meddelande:
 
 Detta tillvägagångssätt säkerställer att funktionen alltid får giltig input, vilket förbättrar dess tillförlitlighet och förhindrar oväntat beteende.
 
-### Exempel på kombinerad validering
+### Kombinerad valideringsexempel
 
 ```scheme
 ;; Function to handle message output to various destinations

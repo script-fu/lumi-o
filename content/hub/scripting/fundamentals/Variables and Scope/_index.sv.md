@@ -3,7 +3,7 @@ title: "Variabler och omfattning"
 type: docs
 weight: 1
 ---
-I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variabler lagrar datavärden som ditt skript kan manipulera, medan scope definierar var dessa variabler är tillgängliga. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
+I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variables store data values that your script can manipulate, while scope defines where those variables are accessible. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
 
 ### Dynamisk typning
 
@@ -70,6 +70,7 @@ Variabeldefinitioner och omfattning innefattar vanligtvis:
 | **Användningsfall** | Tillfälliga variabler för specifika uppgifter | Delade variabler eller funktioner som används genomgående |
 
 ### Sammanfattning- **Variabeldefinitioner och omfattning** är grundläggande för att organisera och hantera data i dina Scheme-skript.
+
 - Använd **local scope** (`let`, `let*`, heter `let`) för att kapsla in temporära variabler och undvika konflikter.
 - Använd **globalt omfång** (`define`) för återanvändbara funktioner eller konstanter som delas över ditt skript.
 - En tydlig förståelse för dessa konstruktioner kommer att förbättra läsbarheten, underhållbarheten och tillförlitligheten för din kod.

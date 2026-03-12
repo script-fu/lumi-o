@@ -1,7 +1,6 @@
 ---
 title: "Linux에서 Git 사용"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 Linux에서 Git 사용에 대한 초보자 가이드에 오신 것을 환영합니다! 이 가이드는 Git 및 GitLab을 시작하는 데 도움을 주고 이러한 도구를 사용하는 방법에 대한 기본적인 이해를 제공하기 위해 작성되었습니다.
 

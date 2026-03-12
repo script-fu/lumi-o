@@ -4,6 +4,10 @@
   translation: "О проекте"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "Функции"
+- id: menuMadeInLumio
+  translation: "Сделано в Люми-о"
 - id: menuInstallLinux
   translation: "Установка Linux"
 - id: menuTechnicalGuides

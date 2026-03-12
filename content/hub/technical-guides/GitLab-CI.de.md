@@ -133,7 +133,7 @@ In dieser Struktur:
 - Die Dateien im Unterverzeichnis `meson.build` verarbeiten Kompilierungsdetails für bestimmte Komponenten oder Module
 - Durch dieses hierarchische Layout bleibt die Build-Logik modular und wartbar
 
-## Artefakte zwischen den Phasen
+## Artefakte zwischen den Stufen
 
 Artefakte sind von Jobs generierte Dateien, die in nachfolgenden Phasen benötigt werden:
 

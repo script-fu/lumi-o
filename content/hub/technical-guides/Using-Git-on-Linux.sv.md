@@ -1,7 +1,6 @@
 ---
 title: "Använder Git på Linux"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 Välkommen till denna nybörjarguide för att använda Git på Linux! Den här guiden är utformad för att hjälpa dig komma igång med Git och GitLab, och för att ge en grundläggande förståelse för hur du använder dessa verktyg.
 
@@ -13,7 +12,7 @@ Koden som används för att skapa applikationer sparas i en samling mappar och f
 
 En _repo_, förkortning för repository, är en Git-hanterad lokal mapp med en onlinekopia. En Git Lab-repo är en samling filer och mappar som utgör ett projekt. Det kan ha _grenar_ som är oberoende kopior av samma projekt. En filial är en separat version av ditt projekt som låter dig göra ändringar utan att påverka huvudversionen. Detta är användbart för att testa nya funktioner eller fixa buggar utan att störa huvudprojektet. Det finns ditt lokala repo, lagrat på din hårddisk, och fjärrrepo, lagrat online med Git och GitLab.
 
-## Använda Git
+## Använder Git
 
 Du måste installera Git på ditt system. På Debian-baserade system kan du använda kommandot apt för att installera programpaket. I det här fallet använder vi det för att installera Git, som är ett paket som tillhandahåller Git versionskontrollsystem. Kommandot sudo ger installationsprogrammet behörighet att installera på ditt system.
 

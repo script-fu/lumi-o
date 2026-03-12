@@ -15,11 +15,13 @@ weight: 5
 ### Nommé `let`
 
 #### Caractéristiques :
+
 1. Combine les liaisons de variables et la récursivité en une seule construction.
 2. Portée sur le corps du bloc `let`.
 3. Idéal pour la **récursion localisée** ou les processus itératifs spécifiques à une seule tâche.
 
 #### Syntaxe
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ weight: 5
 ```
 
 #### Exemple : additionner les éléments d'une liste
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ weight: 5
 ### Local `define`
 
 #### Caractéristiques :
+
 1. Permet la création de fonctions d'assistance ou de variables réutilisables dans la fonction englobante.
 2. Limité à la fonction enveloppante mais visible dans tout son corps.
 3. Idéal pour modulariser le code avec plusieurs étapes ou une logique réutilisable.
 
 #### Syntaxe
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ weight: 5
 ```
 
 #### Exemple : traitement de plusieurs valeurs
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ weight: 5
 L'une des fonctionnalités les plus puissantes d'un `let` nommé est sa capacité à combiner la **déclaration de variable locale** et les **paramètres d'entrée** pour la récursivité en une seule construction. Cela rend le nom `let` à la fois concis et expressif pour les tâches itératives ou récursives.
 
 #### Déclaration de variable locale
+
 Dans un `let` nommé, les liaisons entre parenthèses agissent comme des **variables locales** initialisées avec des valeurs spécifiques. Ces variables sont limitées au corps du `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ Dans un `let` nommé, les liaisons entre parenthèses agissent comme des **varia
 ---
 
 #### Paramètres d'entrée pour la récursivité
+
 Les mêmes variables agissent également comme **paramètres d'entrée** pour les appels récursifs au `let` nommé. Lorsque le `let` nommé s'appelle, il met à jour ces variables avec de nouvelles valeurs.
 
 ```scheme
@@ -164,6 +172,7 @@ Les mêmes variables agissent également comme **paramètres d'entrée** pour le
 Un `let` nommé inclut l'initialisation des variables dans le cadre de sa syntaxe. Cela élimine le besoin d’une étape distincte pour configurer les valeurs initiales. Les deux exemples suivants sont équivalents :
 
 ##### Utilisation de Named `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Un `let` nommé inclut l'initialisation des variables dans le cadre de sa syntax
 ```
 
 ##### Utilisation locale `define`
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

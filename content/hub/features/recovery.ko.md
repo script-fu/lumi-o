@@ -32,7 +32,7 @@ Lumi는 편집하는 동안 정기적으로 작업의 배경 스냅샷을 저장
 
 ## 증분 저장
 
-증분 저장은 `recovery/` 아래 **프로젝트 파일 내부**에 저장되는 수동 체크포인트 시스템입니다. 구조는 다음과 같습니다.
+Incremental saving is a manual checkpoint system stored **inside the project file** under `recovery/`. 구조는 다음과 같습니다.
 
 ```
 my-painting.lum/recovery/

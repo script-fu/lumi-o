@@ -116,6 +116,7 @@ Extrahera logiken:
 ```
 
 #### Symboler
+
 I exemplet ovan används en datatyp som kallas en symbol, till exempel 'gui. Symboler skickas som parametrar till skicka-meddelande-funktionen och kan användas för att fatta enkla villkorade beslut. Liksom symboliska nycklar är de unika identifierare. För mer information om symboler, besök [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Förenkla huvudfunktionen

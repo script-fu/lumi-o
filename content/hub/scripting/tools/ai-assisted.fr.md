@@ -4,7 +4,7 @@ type: docs
 ---
 Les outils d'IA modernes peuvent accélérer considérablement le développement du plug-in Lumi en agissant en tant que partenaire de codage collaboratif.
 
-## VS Code en mode Agent
+## VS Code en mode agent
 
 L'utilisation de Visual Studio Code avec un assistant IA en **mode Agent** (tel que le mode Agent de GitHub Copilot ou d'autres assistants activés par des outils) vous permet d'effectuer des tâches complexes en plusieurs étapes en utilisant le langage naturel.
 
@@ -17,7 +17,7 @@ Au lieu de simplement compléter une seule ligne de code, un agent peut :
 ## Accès au référentiel
 
 L'assistance de l'IA est plus efficace lorsque l'agent a accès au **lumi-dev** ou au référentiel de votre projet spécifique. Avec une visibilité sur la base de code existante, l'agent peut :
-- Utilisez le **[Utility Libraries](@@LUMI_TOKEN_4@@)** comme référence pour les fonctions d'assistance.
+- Utilisez le **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** comme référence pour les fonctions d'assistance.
 - Suivez les modèles existants pour les opérations GEGL et la gestion des couches.
 - Réutilisez le code passe-partout des plug-ins établis.
 

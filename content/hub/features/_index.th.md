@@ -7,16 +7,16 @@ type: docs
 ส่วนนี้อธิบายความสามารถหลักที่มีอยู่ใน Lumi และตำแหน่งที่จะระบุตำแหน่งเหล่านั้นในอินเทอร์เฟซ
 
 {{< cards >}}
-  {{< card link="brush-caching" title="แปรงแคช" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="รูปแบบไฟล์ (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="การกู้คืนไฟล์" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="เลเยอร์และการแก้ไขแบบไม่ทำลาย" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="เครื่องมือพู่กัน" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="เครื่องมือแก้ไขจานสี" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="แผนที่จานสี" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="พาเลทมิกเซอร์" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="การเขียนสคริปต์โครงการ" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="การผสมสีสเปกตรัม" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="เครื่องมือวาร์ป" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="พื้นที่ทำงาน" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="แปรงแคช" icon="lightning-bolt" subtitle="บันทึกแคชที่อุ่นเครื่องสำหรับแปรงที่คุณชื่นชอบเพื่อให้รู้สึกรวดเร็วโดยเร็วที่สุด" >}}
+  {{< card link="file-format" title="รูปแบบไฟล์ (.lum)" icon="document-text" subtitle="เปิดรูปแบบคอนเทนเนอร์เพื่อจัดเก็บเลเยอร์ ข้อมูลเมตา โปรไฟล์ ICC และข้อมูลการกู้คืน" >}}
+  {{< card link="recovery" title="การกู้คืนไฟล์" icon="refresh" subtitle="สแน็ปช็อตการกู้คืนส่วนเพิ่มอัตโนมัติช่วยปกป้องงานจากการขัดข้องและการสูญเสียพลังงาน" >}}
+  {{< card link="layers" title="เลเยอร์และการแก้ไขแบบไม่ทำลาย" icon="collection" subtitle="การจัดวางแบบอิงเลเยอร์พร้อมโหมดผสมผสาน มาสก์ กลุ่ม และเลเยอร์การปรับแบบไม่ทำลาย" >}}
+  {{< card link="paintbrush" title="เครื่องมือพู่กัน" icon="pencil-alt" subtitle="แรงกด ความเร็ว ความเอียง และไดนามิกของระยะห่าง พร้อมการสร้างความเสถียร การปรับให้เรียบ และการสร้างแปรงหลายหัว" >}}
+  {{< card link="palette-editor" title="เครื่องมือแก้ไขจานสี" icon="color-swatch" subtitle="สร้างและจัดการจานสีที่มีชื่อ โดยมีชุดรวมที่ครอบคลุมทั้งจานสีแบบเต็มสเปกตรัมและจานสีที่มีจำนวนจำกัด" >}}
+  {{< card link="palette-map" title="แผนที่จานสี" icon="view-grid" subtitle="จานสีการทำแผนที่ตาราง 2D แบบโต้ตอบจากเม็ดสีถึงแกน ใช้สำหรับการเลือกและสำรวจสีโดยตรง" >}}
+  {{< card link="palette-mixer" title="พาเลทมิกเซอร์" icon="adjustments" subtitle="ผสมเม็ดสีจากจานสีที่ใช้งานอยู่ตามเฉดสี ความอิ่มตัวของสี และโทนสีด้วยการแสดงตัวอย่างช่องว่างทางภาพ" >}}
+  {{< card link="scripting" title="การเขียนสคริปต์โครงการ" icon="code" subtitle="ทำให้เวิร์กโฟลว์เป็นแบบอัตโนมัติและขยาย Lumi โดยใช้ตัวแปล Scheme ที่ฝังไว้" >}}
+  {{< card link="spectral-color" title="การผสมสีสเปกตรัม" icon="beaker" subtitle="การผสมเม็ดสีที่แม่นยำทางกายภาพโดยใช้การสุ่มตัวอย่างสเปกตรัม ทำให้เกิดพฤติกรรมสีที่สมจริง" >}}
+  {{< card link="warp-tool" title="เครื่องมือวาร์ป" icon="cursor-click" subtitle="ย้ายพิกเซลได้อย่างอิสระด้วยลายเส้นแปรง บิดกลุ่มเลเยอร์ทั้งหมดเป็นรายการเดียว โดยใช้การเปลี่ยนแปลงแบบเดียวกันกับเลเยอร์และมาสก์ที่ซ้อนกันทั้งหมด" >}}
+  {{< card link="workspaces" title="พื้นที่ทำงาน" icon="view-boards" subtitle="บันทึกและสลับสภาพแวดล้อม UI ที่สมบูรณ์: เค้าโครงแผง การตั้งค่าเครื่องมือ การกำหนดค่าอุปกรณ์ ธีม และจานสี — แยกกันตามพื้นที่ทำงาน" >}}
 {{< /cards >}}

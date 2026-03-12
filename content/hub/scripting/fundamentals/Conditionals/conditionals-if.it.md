@@ -110,5 +110,6 @@ L'utilizzo di `let` ci consente di dichiarare variabili di ambito locale all'int
 Risultato: **Stampa "Vera condizione soddisfatta, calcolo in corso..." e restituisce -10.**
 
 ### Riepilogo- Il condizionale `if` è un potente strumento in Scheme per valutare i test ed eseguire i blocchi di codice corrispondenti.
+
 - Può gestire sia espressioni semplici che blocchi di codice complessi che restituiscono valori, modificano variabili o eseguono effetti collaterali.
 - Ricorda: se non è presente un blocco `else` esplicito, `if` valuta ed esegue il **conseguente** solo se il test è vero. Altrimenti valuta ed esegue l'**alternativa**.

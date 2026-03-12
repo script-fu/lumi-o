@@ -4,6 +4,8 @@ type: docs
 ---
 Linux is een krachtig en veelzijdig besturingssysteem met een enorme gemeenschap van ontwikkelaars. In de kern bestaat een Linux-systeem uit verschillende belangrijke componenten die samenwerken om een ​​naadloze gebruikerservaring te bieden. Dit overzicht schetst de essentiële onderdelen van een Linux-systeem, inclusief de kernel, distributie, pakketbeheerder, displaymanager, desktopomgeving en displayserver (X11 of Wayland).
 
+Lumi is op zijn best op Debian met Cinnamon (X11), en is in die omgeving ontwikkeld en getest.
+
 **Algemene standaardinstellingen voor de huidige Linux-distributie**
 
 | **Distributie** | **Pakketbeheer** | **Displaybeheer** | **Desktopomgeving** | **Weergaveserver** |

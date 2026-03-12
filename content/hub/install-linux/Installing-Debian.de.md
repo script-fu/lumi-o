@@ -1,11 +1,12 @@
 ---
 title: "Debian installieren"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Dieses Dokument beschreibt den Prozess zur Installation von Debian Stable als Lumi·o-Entwicklungsbetriebssystem. Es kann für andere nützlich sein, die eine ähnliche Umgebung einrichten.
+Dieses Dokument beschreibt den Prozess zur Installation von Debian Stable als Lumi-o-Entwicklungsbetriebssystem. Es kann für andere nützlich sein, die eine ähnliche Umgebung einrichten.
 
 Debian Stable wurde ausgewählt, weil Lumi darauf abzielt, zuverlässig auf einer vorhersehbaren langfristigen Plattform aufzubauen. Die GIMP-Entwicklung zielt auf Debian-Tests ab und macht Debian Stable zu einem eng abgestimmten Basissystem.
+
+Lumi läuft unter Debian mit Cinnamon (X11) am besten und wurde in dieser Umgebung entwickelt und getestet. Cinnamon bietet einen vertrauten Windows-ähnlichen Desktop-Workflow, während X11 die stabilste Umgebung für die Lumi-Entwicklung bietet.
 
 Wenn Sie mit Windows arbeiten, besteht die wichtigste konzeptionelle Änderung darin, dass die meisten Softwareinstallationen und -konfigurationen über Paketmanager und einfache Terminalbefehle statt über herunterladbare Installationsprogramme erfolgen.
 
@@ -60,21 +61,21 @@ Vorausgesetzt, eine Zielpartition und ein Auslagerungsbereich sind bereits vorha
    - Dateisystem: ext4 (Journaling)
    - Swap: vorhandene Swap-Partition
    - Einhängepunkt: `/`
-   - Beschriftung: `linux`
+   - Label: `linux`
    - Hostname: Systemname, angezeigt als `user@hostname`
    - Benutzerkonto: Ihr vollständiger Name
    - Benutzername: Terminal-Anmeldename
 
-7. Wählen Sie **Cinnamon** als Desktop-Umgebung.
+7. Das Debian-Installationsprogramm bietet zu diesem Zeitpunkt eine Desktop-Umgebungsauswahl; Wählen Sie **Zimt** für das von Lumi empfohlene Setup.
 8. Schließen Sie die Installation ab und starten Sie Debian Stable neu.
 
 ## System-Setup
 
 ### Skalierung anzeigen
 
-Debian Stable verarbeitet die fraktionierte Skalierung derzeit inkonsistent, insbesondere auf 4K-Displays. Anstatt die Bildschirmauflösung zu reduzieren, passen Sie die Elemente der Benutzeroberfläche direkt an.
+Debian Stable verarbeitet die fraktionierte Skalierung derzeit inkonsistent, insbesondere auf 4K-Displays. Anstatt die Bildschirmauflösung zu reduzieren, passen Sie die Elemente der Benutzeroberfläche direkt an.Empfohlene Anpassungen:
 
-Empfohlene Anpassungen:- Vermeiden Sie eine fraktionierte Anzeigeskalierung.
+- Vermeiden Sie eine fraktionierte Anzeigeskalierung.
 - Menü → Schriftartenauswahl → Schriftarteneinstellungen → Textskalierungsfaktor: `2.5`
 - Desktop-Schriftart: `14`
 - Panel → Anpassen → Panelhöhe: `60`
@@ -153,17 +154,22 @@ Lumi-Build-Skripte befinden sich in:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

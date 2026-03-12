@@ -70,6 +70,7 @@ La construcción `define` crea variables o funciones con alcance global:
 | **Caso de uso** | Variables temporales para tareas específicas | Variables o funciones compartidas utilizadas en todo |
 
 ### Resumen- **Las definiciones y el alcance de las variables** son fundamentales para organizar y administrar datos en sus scripts de Scheme.
+
 - Utilice **alcance local** (`let`, `let*`, llamado `let`) para encapsular variables temporales y evitar conflictos.
 - Utilice **alcance global** (`define`) para funciones reutilizables o constantes compartidas en su secuencia de comandos.
 - Una comprensión clara de estas construcciones mejorará la legibilidad, mantenibilidad y confiabilidad de su código.

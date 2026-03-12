@@ -13,7 +13,7 @@ Las funciones de envoltura ofrecen varios beneficios clave:
 - **Mejora la legibilidad**: Dar a nuestras funciones empaquetadas nombres claros y descriptivos hace que nuestro código sea más fácil de entender de un vistazo.
 - **Encapsula la complejidad**: en lugar de lidiar con listas largas y crípticas de comandos, bucles profundamente anidados o declaraciones de mensajes complejos, podemos dividirlos en funciones auxiliares más pequeñas y bien estructuradas.
 - **Mejora la capacidad de mantenimiento**: si la funcionalidad principal de un comando cambia, solo necesitamos actualizar nuestra función empaquetada una vez, aislando nuestros complementos de los detalles de esos cambios.
-- **Fomenta la reutilización de código**: cada ayudante se convierte en parte de su biblioteca, lo que hace que los scripts futuros se escriban y depuren más rápido.
+- **Fomenta la reutilización de código**: cada ayudante se convierte en parte de su biblioteca, lo que hace que los scripts futuros se escriban y depuren más rápidamente.
 
 A medida que sus complementos crecen, los contenedores lo ayudan a mantener legible la lógica central y aislar los detalles repetitivos.
 
@@ -71,7 +71,7 @@ La función de exportación JPEG en Scheme viene con muchos parámetros, lo que 
                       #:dct "integer")))
 ```
 
-En esta función contenedora, la mayoría de las opciones de exportación están codificadas, exponiendo solo los parámetros que es probable que ajustemos: nombre del archivo y calidad. Este enfoque mejora la legibilidad y simplifica el almacenamiento de imágenes.Además, si el exportador de Lumi cambia en el futuro, solo necesitamos actualizar esta función en lugar de modificar cada script que exporta un JPEG.
+En esta función contenedora, la mayoría de las opciones de exportación están codificadas, exponiendo solo los parámetros que probablemente ajustemos: nombre del archivo y calidad. Este enfoque mejora la legibilidad y simplifica el almacenamiento de imágenes.Además, si el exportador de Lumi cambia en el futuro, solo necesitamos actualizar esta función en lugar de modificar cada script que exporta un JPEG.
 
 ### Usando el contenedor
 
@@ -160,13 +160,13 @@ Al incluir funciones de bajo nivel en nombres significativos, creamos una forma 
 
 ### Envoltorios enviados: la utilidad Stdlib
 
-Lumi envía un conjunto de contenedores listos para usar que se cargan automáticamente al inicio, por lo que están disponibles en cualquier complemento o en Scheme Console sin ninguna llamada `(load ...)`. Estas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` y `paths.scm`) se basan exactamente en el mismo principio que los ejemplos anteriores: dan nombres claros. a operaciones de bajo nivel, ocultar texto repetitivo y proporcionar un único lugar para actualizar si el comando subyacente cambia.Por ejemplo, `images.scm` proporciona `image-get-open-list` como un contenedor legible alrededor de la llamada PDB sin procesar, y `files.scm` expone ayudas de creación de rutas que de otro modo requerirían cadenas `string-append` repetidas.
+Lumi envía un conjunto de contenedores listos para usar que se cargan automáticamente al inicio, por lo que están disponibles en cualquier complemento o en Scheme Console sin ninguna llamada `(load ...)`. Estas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` y `paths.scm`) se basan exactamente en el mismo principio que los ejemplos anteriores: dan nombres claros. a operaciones de bajo nivel, ocultar texto repetitivo y proporcionar un lugar único para actualizar si el comando subyacente cambia.Por ejemplo, `images.scm` proporciona `image-get-open-list` como un contenedor legible alrededor de la llamada PDB sin procesar, y `files.scm` expone ayudas de creación de rutas que de otro modo requerirían cadenas `string-append` repetidas.
 
-Puede explorar cada nombre exportado, leer su cadena de documentación y ver de qué biblioteca proviene en **[Utility Browser](@@LUMI_TOKEN_21@@)** (Ayuda → Programación → Explorador de utilidades). Es una demostración práctica de envoltura a escala y una fuente útil de patrones para tomar prestados al crear su propia biblioteca auxiliar.
+Puede explorar cada nombre exportado, leer su cadena de documentación y ver de qué biblioteca proviene en **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Ayuda → Programación → Explorador de utilidades). Es una demostración práctica de envoltura a escala y una fuente útil de patrones para tomar prestados al crear su propia biblioteca auxiliar.
 
 ### Conclusión
 
-Ajustar funciones es una manera poderosa de simplificar el desarrollo de Scheme, haciendo que los scripts sean más legibles, fáciles de mantener y robustos. Al encapsular la complejidad y exponer solo los detalles necesarios, creamos un enfoque más estructurado para escribir complementos.
+Ajustar funciones es una forma poderosa de simplificar el desarrollo de Scheme, haciendo que los scripts sean más legibles, fáciles de mantener y robustos. Al encapsular la complejidad y exponer solo los detalles necesarios, creamos un enfoque más estructurado para escribir complementos.
 
 Conclusiones clave de este enfoque:
 

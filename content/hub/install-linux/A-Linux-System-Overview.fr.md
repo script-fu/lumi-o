@@ -4,6 +4,8 @@ type: docs
 ---
 Linux est un système d'exploitation puissant et polyvalent doté d'une vaste communauté de développeurs. À la base, un système Linux se compose de plusieurs composants clés qui fonctionnent ensemble pour offrir une expérience utilisateur transparente. Cet aperçu décrira les parties essentielles d'un système Linux, notamment le noyau, la distribution, le gestionnaire de packages, le gestionnaire d'affichage, l'environnement de bureau et le serveur d'affichage (X11 ou Wayland).
 
+Lumi est à son meilleur sur Debian avec Cinnamon (X11) et est développé et testé dans cet environnement.
+
 **Paramètres par défaut courants de la distribution Linux actuelle**
 
 | **Distribution** | **Gestionnaire de paquets** | **Gestionnaire d'affichage** | **Environnement de bureau** | **Serveur d'affichage** |

@@ -6,6 +6,8 @@ url: "hub/install-linux/A-Linux-System-Overview"
 
 Linux is a powerful and versatile operating system with a vast community of developers. At its core, a Linux system consists of several key components that work together to provide a seamless user experience. This overview will outline the essential parts of a Linux system, including the kernel, distribution, package manager, display manager, desktop environment, and display server (X11 or Wayland).
 
+Lumi is at its best on Debian with Cinnamon (X11), and is developed and tested in that environment.
+
 **Common Current Linux Distribution Defaults**
 
 | **Distribution**   | **Package Manager** | **Display Manager** | **Desktop Environment** | **Display Server** |

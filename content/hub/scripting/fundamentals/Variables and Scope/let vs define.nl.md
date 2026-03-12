@@ -15,11 +15,13 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 ### Genaamd `let`
 
 #### Kenmerken:
+
 1. Combineert variabele bindingen en recursie in één enkel construct.
 2. Bereikt tot de hoofdtekst van het `let` blok.
 3. Ideaal voor **gelokaliseerde recursie** of iteratieve processen die specifiek zijn voor één taak.
 
 #### Syntaxis
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 ```
 
 #### Voorbeeld: elementen van een lijst optellen
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 ### Lokaal `define`
 
 #### Kenmerken:
+
 1. Maakt het mogelijk om helperfuncties of variabelen te creëren die herbruikbaar zijn binnen de omsluitende functie.
 2. Bereikt de omhullende functie, maar is zichtbaar door het hele lichaam.
 3. Ideaal voor het modulariseren van code met meerdere stappen of herbruikbare logica.
 
 #### Syntaxis
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 ```
 
 #### Voorbeeld: meerdere waarden verwerken
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 Een van de krachtigste kenmerken van een benoemde `let` is de mogelijkheid om **declaratie van lokale variabelen** en **invoerparameters** voor recursie te combineren in één enkele constructie. Dit maakt de genoemde `let` zowel beknopt als expressief voor iteratieve of recursieve taken.
 
 #### Lokale variabelendeclaratie
+
 In een benoemde `let` fungeren de bindingen tussen haakjes als **lokale variabelen** die worden geïnitialiseerd met specifieke waarden. Deze variabelen zijn beperkt tot de hoofdtekst van `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ In een benoemde `let` fungeren de bindingen tussen haakjes als **lokale variabel
 ---
 
 #### Invoerparameters voor recursie
+
 Dezelfde variabelen fungeren ook als **invoerparameters** voor de recursieve aanroepen naar de genoemde `let`. Wanneer de genoemde `let` zichzelf aanroept, worden deze variabelen bijgewerkt met nieuwe waarden.
 
 ```scheme
@@ -164,6 +172,7 @@ Dezelfde variabelen fungeren ook als **invoerparameters** voor de recursieve aan
 Een naam `let` bevat initialisatie van variabelen als onderdeel van de syntaxis. Hierdoor is er geen aparte stap meer nodig om de initiële waarden in te stellen. De volgende twee voorbeelden zijn gelijkwaardig:
 
 ##### Met de naam `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Een naam `let` bevat initialisatie van variabelen als onderdeel van de syntaxis.
 ```
 
 ##### Lokaal `define` gebruiken
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

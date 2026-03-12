@@ -97,7 +97,9 @@ Nazwany `let` jest specjalną formą `let`, która dostarcza nazwę samego bloku
 
 ---
 
-## Tabela podsumowująca| Konstruuj | Opis | Przypadek użycia |
+## Tabela podsumowująca
+
+| Konstruuj | Opis | Przypadek użycia |
 |------------|------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **`let`** | Definiuje lokalne powiązania dla zmiennych.    | Użyj, gdy wszystkie powiązania są niezależne i nie zależą od siebie.     |
 | **`let*`** | Definiuje sekwencyjne powiązania lokalne.       | Użyj, gdy późniejsze wiązania zależą od wyników wcześniejszych.           |

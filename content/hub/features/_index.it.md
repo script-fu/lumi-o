@@ -7,16 +7,16 @@ Il set di funzionalità di Lumi è incentrato sulla pittura digitale e sui fluss
 Questa sezione descrive le funzionalità principali disponibili in Lumi e dove individuarle nell'interfaccia.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Caching del pennello" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Formato file (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Recupero file" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Livelli e modifica non distruttiva" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Strumento Pennello" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Editor della tavolozza" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Mappa delle tavolozze" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Miscelatore di tavolozze" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Scripting dello schema" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Miscelazione dei colori spettrali" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Strumento Deformazione" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Spazi di lavoro" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Caching del pennello" icon="lightning-bolt" subtitle="Salva le cache riscaldate per i pennelli preferiti in modo che siano veloci il prima possibile." >}}
+  {{< card link="file-format" title="Formato file (.lum)" icon="document-text" subtitle="Formato contenitore aperto che memorizza livelli, metadati, profili ICC e dati di ripristino." >}}
+  {{< card link="recovery" title="Recupero file" icon="refresh" subtitle="Gli snapshot di ripristino incrementali automatici proteggono il lavoro da arresti anomali e interruzioni di corrente." >}}
+  {{< card link="layers" title="Livelli e modifica non distruttiva" icon="collection" subtitle="Composizione basata su livelli con modalità di fusione, maschere, gruppi e livelli di regolazione non distruttivi." >}}
+  {{< card link="paintbrush" title="Strumento Pennello" icon="pencil-alt" subtitle="Dinamiche di pressione, velocità, inclinazione e spaziatura con formazioni di stabilizzazione, levigatura e pennello a più teste." >}}
+  {{< card link="palette-editor" title="Editor della tavolozza" icon="color-swatch" subtitle="Crea e gestisci tavolozze di pigmenti con nome, con set in bundle che coprono tavolozze a spettro completo e limitate." >}}
+  {{< card link="palette-map" title="Mappa delle tavolozze" icon="view-grid" subtitle="Griglia 2D interattiva per la mappatura dei pigmenti della tavolozza sugli assi, utilizzata per la selezione e l'esplorazione diretta dei colori." >}}
+  {{< card link="palette-mixer" title="Miscelatore di tavolozze" icon="adjustments" subtitle="Mescola i pigmenti dalla tavolozza attiva per tonalità, saturazione e tono con anteprime visive degli spazi." >}}
+  {{< card link="scripting" title="Scripting dello schema" icon="code" subtitle="Automatizza i flussi di lavoro ed estendi Lumi utilizzando un interprete Scheme integrato." >}}
+  {{< card link="spectral-color" title="Miscelazione dei colori spettrali" icon="beaker" subtitle="Miscelazione dei pigmenti fisicamente accurata utilizzando l'upsampling spettrale, producendo un comportamento realistico della vernice." >}}
+  {{< card link="warp-tool" title="Strumento Deformazione" icon="cursor-click" subtitle="Sposta liberamente i pixel con tratti di pennello. Deforma interi gruppi di livelli come un unico elemento, applicando la stessa trasformazione a tutti i livelli e le maschere nidificati." >}}
+  {{< card link="workspaces" title="Spazi di lavoro" icon="view-boards" subtitle="Salva e cambia ambienti dell'interfaccia utente completi: layout dei pannelli, impostazioni degli strumenti, configurazione del dispositivo, tema e tavolozza, in modo indipendente per area di lavoro." >}}
 {{< /cards >}}

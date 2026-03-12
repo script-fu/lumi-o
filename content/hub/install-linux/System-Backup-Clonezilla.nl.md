@@ -1,7 +1,6 @@
 ---
 title: "Systeemback-up met Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Het is gebruikelijk om een ​​back-up te maken van uw belangrijke bestanden om terug te keren naar eerdere versies of beschadigde gegevens te vervangen. Een ander essentieel type back-up is echter een **schijfkloon**, een volledige back-up van de systeemstatus.
 

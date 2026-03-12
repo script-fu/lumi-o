@@ -24,7 +24,7 @@ So beginnen Sie mit der Verwendung von VSC:
 
 - **Erkunden Sie die Benutzeroberfläche**: Wenn Sie VSC öffnen, werden Ihnen mehrere Bedienfelder auffallen. Auf der linken Seite befindet sich die **Aktivitätsleiste**, in der Sie zwischen Dateien navigieren, suchen, Git verwenden und Erweiterungen installieren können.
 
-- **Öffnen Sie eine Datei oder einen Ordner**: Richten Sie Ihren Arbeitsbereich ein, indem Sie den Ordner hinzufügen, in dem Ihr Projekt gespeichert ist, und speichern Sie die aktive Konfiguration in einer Arbeitsbereichsdatei.
+- **Open a File or Folder**: Set-up your workspace by adding the folder where your project is stored, and save the active configuration to a workspace file.
 
 Ein Arbeitsbereich ist lediglich eine gespeicherte Ordneransicht plus Editoreinstellungen für Ihr Projekt.
 

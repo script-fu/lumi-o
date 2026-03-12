@@ -1,7 +1,6 @@
 ---
 title: "Kopia zapasowa systemu za pomocą Clonezilli"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Często tworzy się kopie zapasowe ważnych plików, aby powrócić do wcześniejszych wersji lub zastąpić uszkodzone dane. Jednakże innym istotnym typem kopii zapasowej jest **klon dysku**, czyli pełna kopia zapasowa stanu systemu.
 

@@ -4,6 +4,8 @@ type: docs
 ---
 Linux ist ein leistungsstarkes und vielseitiges Betriebssystem mit einer großen Entwicklergemeinschaft. Im Kern besteht ein Linux-System aus mehreren Schlüsselkomponenten, die zusammenarbeiten, um ein nahtloses Benutzererlebnis zu bieten. In dieser Übersicht werden die wesentlichen Teile eines Linux-Systems beschrieben, einschließlich Kernel, Distribution, Paketmanager, Display-Manager, Desktop-Umgebung und Display-Server (X11 oder Wayland).
 
+Lumi läuft unter Debian mit Cinnamon (X11) am besten und wurde in dieser Umgebung entwickelt und getestet.
+
 **Allgemeine aktuelle Standardeinstellungen für die Linux-Distribution**
 
 | **Verteilung** | **Paketmanager** | **Anzeigemanager** | **Desktop-Umgebung** | **Anzeigeserver** |

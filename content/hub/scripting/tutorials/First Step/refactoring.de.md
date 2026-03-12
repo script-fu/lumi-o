@@ -116,6 +116,7 @@ Extrahieren der Logik:
 ```
 
 #### Symbole
+
 Im obigen Beispiel wird ein Datentyp namens Symbol verwendet, z. B. „gui“. Symbole werden als Parameter an die Funktion „Nachricht senden“ übergeben und können zum Treffen einfacher bedingter Entscheidungen verwendet werden. Wie symbolische Schlüssel sind sie eindeutige Bezeichner. Weitere Informationen zu Symbolen finden Sie unter [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Vereinfachung der Hauptfunktion

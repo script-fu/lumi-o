@@ -1,7 +1,6 @@
 ---
 title: "Jak zainstalować Linuksa"
 type: docs
-url: "hub/install-linux"
 ---
 Witamy w przewodnikach instalacji systemu Linux dla Lumi.
 

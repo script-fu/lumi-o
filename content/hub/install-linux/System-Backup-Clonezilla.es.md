@@ -1,7 +1,6 @@
 ---
 title: "Copia de seguridad del sistema usando Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Es común hacer una copia de seguridad de sus archivos importantes para volver a versiones anteriores o reemplazar datos dañados. Sin embargo, otro tipo esencial de copia de seguridad es un **clon de disco**, una copia de seguridad completa del estado de su sistema.
 

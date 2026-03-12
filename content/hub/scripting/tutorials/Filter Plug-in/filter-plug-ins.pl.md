@@ -69,6 +69,7 @@ Pierwsza linijka gwarantuje, że skrypt będzie działać jako wtyczka w Lumi 3:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
+
 ```
 
 #### Definicja procedury
@@ -106,6 +107,7 @@ Wtyczka jest zarejestrowana w Lumi jako wtyczka filtrująca:
 ```
 
 #### Rejestracja menu
+
 Ta linia określa lokalizację menu wtyczki:
 
 ```scheme

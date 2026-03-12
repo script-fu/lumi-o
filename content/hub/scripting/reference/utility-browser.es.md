@@ -35,7 +35,7 @@ Al hacer clic en una entrada se muestra su cadena de documentación completa y l
 
 ## El Stdlib como envoltorios
 
-Las bibliotecas de utilidades son una aplicación práctica del patrón de ajuste: cada ayudante da un nombre claro a una operación de bajo nivel, oculta el texto repetitivo y proporciona un lugar único para actualizar si el comando subyacente cambia. Si desea comprender el enfoque de diseño detrás de ellos, consulte el tutorial **[Wrapping](@@LUMI_TOKEN_11@@)**.
+Las bibliotecas de utilidades son una aplicación práctica del patrón de ajuste: cada ayudante da un nombre claro a una operación de bajo nivel, oculta el texto repetitivo y proporciona un lugar único para actualizar si el comando subyacente cambia. Si desea comprender el enfoque de diseño detrás de ellos, consulte el tutorial **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Relación con el Navegador de Procedimientos
 

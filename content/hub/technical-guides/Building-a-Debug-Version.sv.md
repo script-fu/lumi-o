@@ -1,7 +1,6 @@
 ---
 title: "Bygga en felsökningsversion"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 Den här guiden beskriver **lokalt felsökningsarbetsflöde** för Lumi med skript i `build/lumi/scripts`.
 
@@ -109,8 +108,10 @@ Felsökningsbyggen är långsammare till sin design. När du är klar med felsö
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

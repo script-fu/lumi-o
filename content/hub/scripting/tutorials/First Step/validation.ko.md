@@ -65,7 +65,7 @@ weight: 4
 
 이 접근 방식은 함수가 항상 유효한 입력을 받도록 보장하여 안정성을 향상하고 예상치 못한 동작을 방지합니다.
 
-### 결합 검증 예시
+### 결합 검증 예
 
 ```scheme
 ;; Function to handle message output to various destinations

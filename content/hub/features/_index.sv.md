@@ -7,16 +7,16 @@ Lumis funktionsuppsättning är fokuserad på digital målning och strukturerade
 Det här avsnittet beskriver de centrala funktionerna som är tillgängliga i Lumi och var man kan hitta dem i gränssnittet.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Caching av borstar" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="Filformat (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="Filåterställning" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Lager & icke-förstörande redigering" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Penselverktyg" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Palettredigerare" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Palettkarta" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Palettmixer" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
-  {{< card link="scripting" title="Schema Scripting" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Spektral färgblandning" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Varpverktyg" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Arbetsytor" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="brush-caching" title="Caching av borstar" icon="lightning-bolt" subtitle="Spara uppvärmda cacher för favoritpenslar så att de känns snabba så snart som möjligt." >}}
+  {{< card link="file-format" title="Filformat (.lum)" icon="document-text" subtitle="Öppna behållarformat som lagrar lager, metadata, ICC-profiler och återställningsdata." >}}
+  {{< card link="recovery" title="Filåterställning" icon="refresh" subtitle="Automatiska inkrementella återställningsbilder skyddar arbetet mot krascher och strömavbrott." >}}
+  {{< card link="layers" title="Lager & icke-förstörande redigering" icon="collection" subtitle="Lagerbaserad sammansättning med blandningslägen, masker, grupper och oförstörande justeringslager." >}}
+  {{< card link="paintbrush" title="Penselverktyg" icon="pencil-alt" subtitle="Tryck, hastighet, lutning och avståndsdynamik med stabilisering, utjämning och borstformationer med flera huvuden." >}}
+  {{< card link="palette-editor" title="Palettredigerare" icon="color-swatch" subtitle="Skapa och hantera namngivna pigmentpaletter, med buntade uppsättningar som täcker fullspektrum och begränsade paletter." >}}
+  {{< card link="palette-map" title="Palettkarta" icon="view-grid" subtitle="Interaktivt 2D-rutnät kartlägger palettpigment till axlar, används för direkt färgplockning och utforskning." >}}
+  {{< card link="palette-mixer" title="Palettmixer" icon="adjustments" subtitle="Blanda pigment från den aktiva paletten efter nyans, mättnad och ton med visuella förhandsvisningar." >}}
+  {{< card link="scripting" title="Schema Scripting" icon="code" subtitle="Automatisera arbetsflöden och utöka Lumi med hjälp av en inbäddad Scheme-tolk." >}}
+  {{< card link="spectral-color" title="Spektral färgblandning" icon="beaker" subtitle="Fysiskt exakt pigmentblandning med spektral uppsampling, vilket ger realistiskt färgbeteende." >}}
+  {{< card link="warp-tool" title="Varpverktyg" icon="cursor-click" subtitle="Förskjut pixlar fritt med penseldrag. Förvränger hela lagergrupper som ett objekt och tillämpar samma transformation på alla kapslade lager och masker." >}}
+  {{< card link="workspaces" title="Arbetsytor" icon="view-boards" subtitle="Spara och byt kompletta UI-miljöer: panellayouter, verktygsinställningar, enhetskonfiguration, tema och palett – oberoende per arbetsyta." >}}
 {{< /cards >}}

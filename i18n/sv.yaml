@@ -4,6 +4,10 @@
   translation: "Om"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "Drag"
+- id: menuMadeInLumio
+  translation: "Tillverkad i Lumi-o"
 - id: menuInstallLinux
   translation: "Installera Linux"
 - id: menuTechnicalGuides

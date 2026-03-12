@@ -82,7 +82,7 @@ To polecenie inicjuje puste repozytorium Git w folderze projektu.
 
 ### 5. Połącz swoje lokalne repozytorium z GitHubem
 
-Następnie połącz swoje lokalne repozytorium z GitHub. Po utworzeniu pustego repozytorium na GitHubie dodaj je jako zdalne do swojego lokalnego projektu:
+Następnie połącz swoje lokalne repozytorium z GitHub. Po utworzeniu pustego repozytorium w GitHubie dodaj je jako zdalne do swojego lokalnego projektu:
 
 ```sh
 cd code/your/project/folder

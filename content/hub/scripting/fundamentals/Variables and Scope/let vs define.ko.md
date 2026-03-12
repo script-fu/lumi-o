@@ -15,11 +15,13 @@ weight: 5
 ### 이름은 `let`
 
 #### 특성:
+
 1. 변수 바인딩과 재귀를 단일 구성으로 결합합니다.
 2. `let` 블록의 본문으로 범위가 지정됩니다.
 3. 단일 작업과 관련된 **국지적 재귀** 또는 반복 프로세스에 이상적입니다.
 
 #### 구문
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ weight: 5
 ```
 
 #### 예: 목록의 요소 합산
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ weight: 5
 ### 로컬 `define`
 
 #### 특성:
+
 1. 바깥쪽 함수 내에서 재사용할 수 있는 도우미 함수 또는 변수를 생성할 수 있습니다.
 2. 둘러싸는 기능으로 범위가 지정되지만 본문 전체에 표시됩니다.
 3. 여러 단계 또는 재사용 가능한 논리를 사용하여 코드를 모듈화하는 데 이상적입니다.
 
 #### 구문
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ weight: 5
 ```
 
 #### 예: 여러 값 처리
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ weight: 5
 명명된 `let`의 가장 강력한 기능 중 하나는 **지역 변수 선언**과 재귀를 위한 **입력 매개변수**를 단일 구문으로 결합하는 기능입니다. 이로 인해 `let`이라는 이름이 반복적이거나 재귀적인 작업에 대해 간결하고 표현력이 풍부해집니다.
 
 #### 지역 변수 선언
+
 명명된 `let`에서 괄호 안의 바인딩은 특정 값으로 초기화되는 **로컬 변수** 역할을 합니다. 이러한 변수의 범위는 `let`의 본문으로 지정됩니다.
 
 ```scheme
@@ -143,6 +150,7 @@ weight: 5
 ---
 
 #### 재귀를 위한 입력 매개변수
+
 동일한 변수는 `let`이라는 이름의 재귀 호출에 대한 **입력 매개변수** 역할도 합니다. `let`이라는 이름이 자신을 호출하면 이러한 변수가 새 값으로 업데이트됩니다.
 
 ```scheme
@@ -164,6 +172,7 @@ weight: 5
 `let`이라는 이름은 구문의 일부로 변수 초기화를 포함합니다. 이렇게 하면 초기 값을 설정하기 위한 별도의 단계가 필요하지 않습니다. 다음 두 예는 동일합니다.
 
 ##### `let` 이름 사용
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ weight: 5
 ```
 
 ##### 로컬 사용 `define`
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

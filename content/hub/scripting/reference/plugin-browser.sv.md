@@ -4,7 +4,7 @@ type: docs
 ---
 Plug-In Browser låter dig utforska menysystemet och se var specifika plug-ins är installerade.
 
-## Öppna plug-in webbläsaren
+## Öppna plugin-webbläsaren
 
 Gå till **Hjälp → Programmering → Plug-In Browser**.
 

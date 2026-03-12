@@ -116,6 +116,7 @@ Extrayendo la lógica:
 ```
 
 #### Símbolos
+
 En el ejemplo anterior, se utiliza un tipo de datos llamado símbolo, como 'gui. Los símbolos se pasan como parámetros a la función de envío de mensaje y se pueden utilizar para tomar decisiones condicionales simples. Al igual que las claves simbólicas, son identificadores únicos. Para obtener más información sobre los símbolos, visite [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Simplificando la función principal
@@ -126,7 +127,7 @@ La función principal refactorizada es más simple:
 
 - Establece claramente su propósito: enviar el mismo mensaje a múltiples salidas.
 - Evita saturar la lógica principal con código repetitivo, como configurar controladores de mensajes para diferentes salidas.
-- Es más fácil de leer y entender de un vistazo.
+- Es más fácil de leer y comprender de un vistazo.
 
 ### La complejidad de la función extraída
 

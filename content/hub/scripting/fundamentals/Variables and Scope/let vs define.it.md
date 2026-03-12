@@ -15,11 +15,13 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 ### Chiamato `let`
 
 #### Caratteristiche:
+
 1. Combina associazioni di variabili e ricorsione in un unico costrutto.
 2. Limitato al corpo del blocco `let`.
 3. Ideale per la **ricorsione localizzata** o processi iterativi specifici per una singola attività.
 
 #### Sintassi
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 ```
 
 #### Esempio: somma degli elementi di una lista
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 ### Locale `define`
 
 #### Caratteristiche:
+
 1. Consente la creazione di funzioni o variabili di supporto riutilizzabili all'interno della funzione di inclusione.
 2. Destinato alla funzione di contenimento ma visibile in tutto il suo corpo.
 3. Ideale per modularizzare il codice con più passaggi o logica riutilizzabile.
 
 #### Sintassi
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 ```
 
 #### Esempio: elaborazione di più valori
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -130,6 +136,7 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 Una delle caratteristiche più potenti di un nome `let` è la sua capacità di combinare la **dichiarazione di variabili locali** e i **parametri di input** per la ricorsione in un unico costrutto. Ciò rende il nome `let` conciso ed espressivo per attività iterative o ricorsive.
 
 #### Dichiarazione di variabile locale
+
 In un denominato `let`, i collegamenti tra parentesi agiscono come **variabili locali** che vengono inizializzate con valori specifici. Queste variabili hanno come ambito il corpo di `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ In un denominato `let`, i collegamenti tra parentesi agiscono come **variabili l
 ---
 
 #### Parametri di input per la ricorsione
+
 Le stesse variabili fungono anche da **parametri di input** per le chiamate ricorsive al nome `let`. Quando il nome `let` richiama se stesso, aggiorna queste variabili con nuovi valori.
 
 ```scheme
@@ -164,6 +172,7 @@ Le stesse variabili fungono anche da **parametri di input** per le chiamate rico
 Un nome `let` include l'inizializzazione della variabile come parte della sua sintassi. Ciò elimina la necessità di un passaggio separato per impostare i valori iniziali. I due esempi seguenti sono equivalenti:
 
 ##### Utilizzo del nome `let`
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Un nome `let` include l'inizializzazione della variabile come parte della sua si
 ```
 
 ##### Utilizzo locale `define`
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

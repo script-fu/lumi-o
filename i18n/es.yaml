@@ -4,6 +4,10 @@
   translation: "Acerca de"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "Características"
+- id: menuMadeInLumio
+  translation: "Hecho en Lumi-o"
 - id: menuInstallLinux
   translation: "Instalar Linux"
 - id: menuTechnicalGuides

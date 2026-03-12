@@ -83,7 +83,7 @@ Resultat: "klar"
 
 ---
 
-### Exempel 2: Blandade typer
+### Example 2: Mixed Types
 
 Listor kan innehålla element av olika typer, inklusive strängar, booleaner, siffror, andra listor eller till och med resultatet av uttryck:
 

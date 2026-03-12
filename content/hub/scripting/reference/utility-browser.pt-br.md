@@ -35,7 +35,7 @@ Clicar em uma entrada mostra sua documentação completa e a biblioteca de onde 
 
 ## O Stdlib como wrappers
 
-As bibliotecas de utilitários são uma aplicação prática do padrão de encapsulamento: cada auxiliar fornece um nome claro para uma operação de baixo nível, oculta o padrão e fornece um único local para atualização se o comando subjacente for alterado. Se você quiser entender a abordagem de design por trás deles, consulte o tutorial **[Wrapping](@@LUMI_TOKEN_11@@)**.
+As bibliotecas de utilitários são uma aplicação prática do padrão de encapsulamento: cada auxiliar fornece um nome claro para uma operação de baixo nível, oculta o padrão e fornece um único local para atualização se o comando subjacente for alterado. Se você quiser entender a abordagem de design por trás deles, consulte o tutorial **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Relacionamento com o navegador de procedimentos
 

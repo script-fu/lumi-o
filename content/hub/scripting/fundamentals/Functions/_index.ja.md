@@ -65,7 +65,7 @@ Scheme の関数には、シンプルで一貫した構文があります。
 
 - **`function-name`:** 関数の名前。
 - **`parameter1, parameter2, ...`:** 関数が取る引数。
-- **`body-expression`:** The logic executed when the function is called.
+- **`body-expression`:** 関数が呼び出されたときに実行されるロジック。
 
 例:
 

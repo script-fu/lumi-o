@@ -1,5 +1,5 @@
 ---
-title: "Lumi·o"
+title: "Lumi-o"
 type: docs
 url: "hub/about/lumi-o"
 weight: 1

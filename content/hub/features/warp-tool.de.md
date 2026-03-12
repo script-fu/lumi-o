@@ -73,7 +73,7 @@ Wenn **Warp-Masken** deaktiviert ist, wird nur der Ebeneninhalt verschoben; Mask
 
 ### Gruppenoptionen
 
-- **Warp-Bereich erweitern** (nur Gruppen-Warp): Die Anzahl der Pixel, die als transparenter Rand um die Gruppenvorschau auf allen Seiten hinzugefügt werden. Dies gibt verdrängten Inhalten Raum zum Einzug. Die Standardeinstellung von 256 Pixel ist für die meisten Arbeiten ausreichend; Reduzieren Sie den Wert für große Bilder, bei denen es auf den Speicher ankommt, oder erhöhen Sie ihn für sehr große Verschiebungsstriche.
+- **Warp-Bereich erweitern** (nur Gruppen-Warp): Die Anzahl der Pixel, die als transparenter Rand um die Gruppenvorschau auf allen Seiten hinzugefügt werden. Dies gibt verdrängten Inhalten Raum zum Einzug. Die Standardeinstellung von 256 Pixel ist für die meisten Arbeiten ausreichend. Reduzieren Sie den Wert für große Bilder, bei denen es auf den Speicher ankommt, oder erhöhen Sie ihn für sehr große Verschiebungsstriche.
 - **Warp-Masken**: Legt fest, ob derselbe Warp auf Ebenen- und Gruppenmasken angewendet werden soll. Standardmäßig aktiviert.
 
 ## Rückgängig machen und Wiederherstellen

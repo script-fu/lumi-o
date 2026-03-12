@@ -15,11 +15,13 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 ### Nombrado `let`
 
 #### Características:
+
 1. Combina enlaces de variables y recursividad en una sola construcción.
 2. Con alcance en el cuerpo del bloque `let`.
 3. Ideal para **recursividad localizada** o procesos iterativos específicos de una sola tarea.
 
 #### Sintaxis
+
 ```scheme
 (let name ((variable1 value1)
            (variable2 value2))
@@ -27,6 +29,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 ```
 
 #### Ejemplo: suma de elementos de una lista
+
 ```scheme
 (define (sum-list lst)
   (let loop ((remaining lst)
@@ -46,11 +49,13 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 ### Local `define`
 
 #### Características:
+
 1. Permite la creación de funciones auxiliares o variables que son reutilizables dentro de la función adjunta.
 2. Limitado a la función envolvente pero visible en todo su cuerpo.
 3. Ideal para modularizar código con múltiples pasos o lógica reutilizable.
 
 #### Sintaxis
+
 ```scheme
 (define (function-name parameters)
   (define (helper-function parameters)
@@ -59,6 +64,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 ```
 
 #### Ejemplo: procesamiento de múltiples valores
+
 ```scheme
 (define (process-values a b c)
   (define (square x) (* x x))  ;; Local helper function
@@ -108,7 +114,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 
 ### Cuándo utilizar `define` local
 
-1. **Ayudantes reutilizables**: cuando es necesario reutilizar la lógica en varias partes de la función.
+1. **Reusable Helpers**: When logic needs to be reused in multiple parts of the function.
 2. **Diseño modular**: para dividir cálculos complejos en subtareas más pequeñas con nombres.
 3. **Múltiples pasos**: cuando se necesitan múltiples funciones auxiliares para diferentes partes del cálculo.**Ejemplo: Procesamiento de entradas**
 ```scheme
@@ -130,6 +136,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 Una de las características más poderosas de un `let` con nombre es su capacidad de combinar **declaración de variable local** y **parámetros de entrada** para la recursividad en una sola construcción. Esto hace que el `let` nombrado sea conciso y expresivo para tareas iterativas o recursivas.
 
 #### Declaración de variable local
+
 En un `let` llamado, los enlaces entre paréntesis actúan como **variables locales** que se inicializan con valores específicos. Estas variables tienen como alcance el cuerpo de `let`.
 
 ```scheme
@@ -143,6 +150,7 @@ En un `let` llamado, los enlaces entre paréntesis actúan como **variables loca
 ---
 
 #### Parámetros de entrada para recursividad
+
 Las mismas variables también actúan como **parámetros de entrada** para las llamadas recursivas al `let`. Cuando el `let` llamado se llama a sí mismo, actualiza estas variables con nuevos valores.
 
 ```scheme
@@ -164,6 +172,7 @@ Las mismas variables también actúan como **parámetros de entrada** para las l
 Un `let` llamado incluye la inicialización de variables como parte de su sintaxis. Esto elimina la necesidad de un paso separado para configurar los valores iniciales. Los dos ejemplos siguientes son equivalentes:
 
 ##### Usando `let` con nombre
+
 ```scheme
 (let loop ((x 1)
            (y 2))
@@ -173,6 +182,7 @@ Un `let` llamado incluye la inicialización de variables como parte de su sintax
 ```
 
 ##### Usando `define` local
+
 ```scheme
 (define (outer-function)
   (define (loop x y)

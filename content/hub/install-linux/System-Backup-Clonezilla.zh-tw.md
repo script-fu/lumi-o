@@ -1,7 +1,6 @@
 ---
 title: "使用 Clonezilla 進行系統備份"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 備份重要文件以返回早期版本或替換損壞的資料是很常見的。然而，另一種重要的備份類型是**磁碟克隆**，即係統狀態的完整備份。
 

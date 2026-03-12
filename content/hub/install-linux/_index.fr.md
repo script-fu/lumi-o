@@ -1,7 +1,6 @@
 ---
 title: "Comment installer Linux"
 type: docs
-url: "hub/install-linux"
 ---
 Bienvenue dans les guides d'installation Linux pour Lumi.
 

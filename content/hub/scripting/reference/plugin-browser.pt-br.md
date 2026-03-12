@@ -10,7 +10,7 @@ Vá para **Ajuda → Programação → Navegador de plug-ins**.
 
 ## O que mostra
 
-Enquanto o Navegador de Procedimento se concentra nas *funções* brutas do PDB, o Navegador de Plug-In é uma visualização de subconjunto focada na descoberta da interface do usuário. Ele filtra especificamente o PDB para mostrar "coisas que parecem plug-ins instalados em menus".
+Enquanto o Navegador de Procedimento se concentra nas *funções* brutas do PDB, o Navegador de Plug-In é uma visualização de subconjunto focada na descoberta da interface do usuário. It specifically filters the PDB to show "things that look like menu-installed plug-ins."
 
 Internamente, utiliza uma consulta que retorna apenas procedimentos que possuem um arquivo associado em disco e um caminho de menu registrado.
 

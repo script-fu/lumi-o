@@ -53,7 +53,7 @@ En el expansor **Propiedades del pincel** (ampliado de forma predeterminada):
 ### Dinámica
 
 En el expansor **Dinámica**:
-- **Dinámica**: Habilitación maestra para el preajuste de dinámica activo.
+- **Dinámica**: Habilitación maestra para el preajuste de dinámica activa.
 - **Preset dinámico**: selecciona qué asignaciones de entrada se utilizan.
 - **Multiplicar por presión**: alternancia de multiplicación de presión adicional (se muestra cuando la dinámica está habilitada).### Comportamiento del accidente cerebrovascular
 En el expansor **Comportamiento del trazo**:
@@ -97,7 +97,7 @@ Cada entrada dinámica se puede asignar a varias propiedades de forma independie
 ### Modulación de trazo
 
 En el expansor **Modulación de trazo** (se muestra solo cuando **Dinámica** está habilitada):- **Ángulo inicial relativo**: el valor del **Ángulo inicial** se interpreta en relación con la dirección del trazo en lugar de como un ángulo absoluto del lienzo.
-- **Ángulo inicial de desvanecimiento**: se desvanece desde el **Ángulo inicial** al inicio del trazo hacia el ángulo dinámico en vivo a lo largo del trazo. Al habilitar esto se activa **Ángulo inicial relativo**.
+- **Ángulo inicial de desvanecimiento**: se desvanece desde el **Ángulo inicial** al inicio del trazo hacia el ángulo dinámico en vivo a lo largo del trazo. Al habilitar esto se activa el **Ángulo inicial relativo**.
 - **Ángulo inicial del pincel** (-180–180°): el ángulo del pincel al comienzo de un trazo, antes de que la dinámica tome el control.
 - **Fusión de ángulo inicial** (0,0–1,0): controla la rapidez con la que el ángulo del pincel pasa del ángulo inicial al ángulo dinámico. 0 = mantiene el ángulo inicial; 1 = utiliza inmediatamente el ángulo completamente dinámico.
 - **Duración del desvanecimiento**: Distancia en unidades de lienzo sobre la cual se desarrolla el desvanecimiento.
@@ -138,7 +138,7 @@ En el expansor **Opciones adicionales** (contraído de forma predeterminada), lo
 - **Pivote X**: Punto de contacto del sello horizontal dentro de la imagen del pincel (0,0 = borde izquierdo, 0,5 = centro, 1,0 = borde derecho). Al moverlo, las partes descentradas del pincel guían el trazo.
 - **Pivote Y**: Punto de contacto del sello vertical dentro de la imagen del pincel (0,0 = borde superior, 0,5 = centro, 1,0 = borde inferior). Junto con **Pivote X**, esto define qué parte de la pincelada se asienta en la ubicación de la pintura.
 - **Inversión horizontal aleatoria**: 50 % de probabilidad de reflejar cada sello de izquierda a derecha por toque.
-- **Volteo vertical aleatorio**: 50% de probabilidad de voltear cada sello al revés por toque.
+- **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Rotación aleatoria**: rota aleatoriamente cada sello 0°, 90°, 180° o 270° por toque.
 - **Vibración uniforme**: cuando está activado, los desplazamientos de dab del control deslizante **Vibración** se extraen de una distribución uniforme (cada desplazamiento es igualmente probable dentro del rango). Cuando está desactivado, la distribución es gaussiana (desplaza el grupo hacia el centro).
 - **Restablecer animación**: para pinceles animados: cuando está activado, la animación se reinicia desde el cuadro 0 con cada nuevo trazo; cuando está apagado, continúa desde donde terminó el trazo anterior.
@@ -157,6 +157,6 @@ Dispersión:
 Aleatorización:
 - **Semilla de personaje** (0–255): Semilla fija para carácter por encabezado (tamaño, posición de relleno de espacio). La misma semilla reproduce la misma formación en cada golpe. Insensibilizado cuando **Aleatorizar personaje principal** está activado.
 - **Aleatorizar carácter de cabeza**: vuelve a dibujar los valores de los caracteres por cabeza (tamaño, posición de dispersión) en cada sello para que la formación sea completamente caótica a lo largo del trazo. Anula **Semilla de personaje**.
-- **Aleatorizar cuadros de animación**: Para pinceles animados: cada cabeza avanza su cuadro de animación de forma independiente.#### Comportamiento del accidente cerebrovascular (desbordamiento)
+- **Aleatorizar cuadros de animación**: Para pinceles animados: cada cabezal avanza su cuadro de animación de forma independiente.#### Comportamiento del accidente cerebrovascular (desbordamiento)
 - **Restaurar los últimos colores utilizados**: Restaura los colores de primer plano y de fondo de la sesión anterior al inicio, en lugar de usar el blanco y negro de forma predeterminada.
 - **Límite de pincel simple**: utiliza un círculo simple para el contorno del cursor del pincel en lugar de representar la forma completa del pincel. Útil para pinceles complejos o grandes donde resulta costoso dibujar el límite preciso.

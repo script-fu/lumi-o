@@ -11,5 +11,5 @@ Utilisez ces guides pour apprendre les bases du langage, suivre des didacticiels
   {{< card link="tutorials/" title="Tutoriels" icon="sparkles" >}}
   {{< card link="tools/" title="Outils" icon="cog" >}}
   {{< card link="plug-ins/" title="Plugins" icon="collection" >}}
-  {{< card link="reference/" title="Référence" icon="book-open" subtitle="Built-in utilities and in-app browsing tools" >}}
+  {{< card link="reference/" title="Référence" icon="book-open" subtitle="Utilitaires intégrés et outils de navigation dans l'application" >}}
 {{< /cards >}}

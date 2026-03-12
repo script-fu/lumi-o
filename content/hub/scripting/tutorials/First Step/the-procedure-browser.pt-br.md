@@ -11,7 +11,7 @@ Você pode acessar o Navegador de Procedimentos no Lumi através do menu **Ajuda
 
 - **Ajuda** -> **Navegador de procedimentos**
 
-### O que o navegador de procedimento faz
+### O que o navegador de procedimentos faz
 
 O Navegador de Procedimentos lista todos os procedimentos internos do Lumi, juntamente com aqueles adicionados por plug-ins, incluindo aquele que você acabou de instalar. Cada entrada de procedimento fornece informações úteis, incluindo:
 

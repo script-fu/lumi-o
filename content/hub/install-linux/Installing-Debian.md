@@ -4,9 +4,11 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 ---
 
-This document outlines the process used to install Debian Stable as the Lumi·o development operating system. It may be useful for others setting up a similar environment.
+This document outlines the process used to install Debian Stable as the Lumi-o development operating system. It may be useful for others setting up a similar environment.
 
 Debian Stable was selected because Lumi aims to build reliably on a predictable long-term platform. GIMP development targets Debian Testing, making Debian Stable a closely aligned base system.
+
+Lumi is at its best on Debian with Cinnamon (X11), and is developed and tested in that environment. Cinnamon provides a familiar Windows-like desktop workflow, while X11 has provided the most stable environment for Lumi development.
 
 If you are coming from Windows, the main conceptual change is that most software installation and configuration happens through package managers and simple terminal commands rather than downloadable installers.
 
@@ -66,7 +68,7 @@ Assuming a target partition and swap space already exist:
    - User account: your full name
    - Username: terminal login name
 
-7. Select **Cinnamon** as the desktop environment.
+7. Debian installer provides a desktop environment choice at this stage; select **Cinnamon** for the Lumi-recommended setup.
 8. Complete installation and reboot into Debian Stable.
 
 ## System Setup

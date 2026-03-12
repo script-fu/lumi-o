@@ -1,7 +1,6 @@
 ---
 title: "Systemsäkerhetskopiering med Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 Det är vanligt att du säkerhetskopierar dina viktiga filer för att återgå till tidigare versioner eller ersätta skadad data. En annan viktig typ av säkerhetskopiering är dock en **diskklon**, en komplett säkerhetskopia av ditt systems tillstånd.
 
@@ -19,7 +18,7 @@ Det är alltid bättre att ha en backup och inte behöva den än att behöva en 
 - **Gratis och öppen källkod**: Clonezilla är helt gratis att använda, och källkoden är tillgänglig för modifiering och anpassning.
 
 
-## Använda Clonezilla för att säkerhetskopiera
+## Använder Clonezilla för att säkerhetskopiera
 
 ### Förberedelsesteg
 

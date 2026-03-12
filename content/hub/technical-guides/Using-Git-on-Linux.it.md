@@ -1,7 +1,6 @@
 ---
 title: "Utilizzo di Git su Linux"
 type: docs
-url: "hub/technical-guides/Using-Git-on-Linux"
 ---
 Benvenuto in questa guida per principianti sull'utilizzo di Git su Linux! Questa guida è progettata per aiutarti a iniziare con Git e GitLab e per fornire una conoscenza di base su come utilizzare questi strumenti.
 
@@ -108,7 +107,7 @@ Questo comando recupera le ultime modifiche dal repository remoto ma non le unis
 
 ### 5. **Reimpostare il repository locale**
 
-Se desideri reimpostare il tuo repository locale in modo che corrisponda esattamente al repository remoto, puoi utilizzare un ripristino "hard". **Attenzione:** questa operazione sovrascriverà tutte le modifiche locali apportate.
+Se desideri reimpostare il tuo repository locale in modo che corrisponda esattamente al repository remoto, puoi utilizzare un ripristino "hard". **Warning:** This will overwrite any local changes you've made.
 
 ```sh
 git reset --hard origin/branch-name

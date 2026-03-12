@@ -109,7 +109,7 @@ Les gris de contrôle sont des neutralisants standardisés utilisés pour désat
 
 ## La carte des palettes
 
-La carte de palette visualise la palette active sous la forme d'une roue de teinte : 36 secteurs de teinte (pas de 10°) × 15 cellules de luminosité. Lorsque des primaires sont ajoutées, le système génère des mélanges secondaires et tertiaires et les place aux positions appropriées sur la carte.
+La carte de palette visualise la palette active sous la forme d'une roue de teinte : 36 secteurs de teinte (pas de 10°) × 15 cellules de luminosité. When primaries are added, the system generates secondary and tertiary mixes and places them in the appropriate map positions.
 
 Cliquer sur une cellule sélectionne une couleur comme premier plan. Maj-clic l'affecte en tant que point de terminaison parent dans le mélangeur de palettes.
 

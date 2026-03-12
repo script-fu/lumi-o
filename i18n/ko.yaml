@@ -4,6 +4,10 @@
   translation: "소개"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "특징"
+- id: menuMadeInLumio
+  translation: "메이드 인 루미오"
 - id: menuInstallLinux
   translation: "Linux 설치"
 - id: menuTechnicalGuides

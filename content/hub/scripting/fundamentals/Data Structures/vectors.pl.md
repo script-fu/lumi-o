@@ -145,7 +145,7 @@ Wynik: `#(10 99 30)`
 
 #### Konsekwencje przekazywania przez odwołanie
 
-- **Wydajność:** Przekazywanie wektorów przez referencje jest wydajne, ponieważ pozwala uniknąć kopiowania dużych struktur.
+- **Performance:** Passing vectors by reference is efficient because it avoids copying large structures.
 - **Skutki uboczne:** Zachowaj ostrożność podczas udostępniania wektorów między funkcjami, aby uniknąć niezamierzonych modyfikacji udostępnianych danych.
 
 ### Operacje na wektorach

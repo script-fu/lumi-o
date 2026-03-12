@@ -3,7 +3,7 @@ title: "Felsökning"
 type: docs
 weight: 5
 ---
-I scripting är ingen funktion ofelbar. Även de mest tillförlitliga kommandona kan misslyckas när de ställs inför oväntade inmatningar eller förhållanden. För att skydda oss mot detta kan vi implementera ett anpassat felsökningssystem och använda defensiva programmeringstekniker. Genom att slå in standardfunktioner med felhanteringsmekanismer och ge informativ feedback kan vi göra våra skript mer robusta och lättare att felsöka.
+I skript är ingen funktion ofelbar. Även de mest tillförlitliga kommandona kan misslyckas när de ställs inför oväntade inmatningar eller förhållanden. För att skydda oss mot detta kan vi implementera ett anpassat felsökningssystem och använda defensiva programmeringstekniker. Genom att slå in standardfunktioner med felhanteringsmekanismer och ge informativ feedback kan vi göra våra skript mer robusta och lättare att felsöka.
 
 En viktig del av denna strategi är att använda en global felsökningsflagga för att kontrollera utförlig utdata, vilket gör att vi kan aktivera detaljerad felsökningsinformation när det behövs samtidigt som utdata hålls rent under normal körning.
 
@@ -49,7 +49,7 @@ Detta gör att vi kan styra felsökningen dynamiskt:
 (debug-off) ;; Disable verbose output
 ```
 
-## Felsök meddelandesystem
+## Felsöka meddelandesystem
 
 För att effektivt hantera felsökningsutdata i Scheme använder vi ett strukturerat tillvägagångssätt som involverar flera hjälpfunktioner. Dessa funktioner säkerställer att felsöknings- och varningsmeddelanden är tydliga, läsbara och underhållsbara.
 
@@ -145,7 +145,7 @@ list:
 3
 ```
 
-### Sammansättning för meddelanden
+### Sammankoppling för meddelanden
 
 För att slå samman flera meddelandekomponenter till en enda sträng använder vi `concat`.
 

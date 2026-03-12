@@ -77,7 +77,7 @@ L'espansore **Preset Cache** mostra anche il tasso di successo in tempo reale, l
 La memorizzazione nella cache dei pennelli ha come target i timbri dei pennelli trasformati: i costosi risultati rasterizzati dopo che dimensioni, angolo, durezza, proporzioni e i relativi input di trasformazione sono stati risolti.
 
 È particolarmente utile quando:- Il pennello ha un lavoro di trasformazione costoso
-- la stessa preimpostazione viene utilizzata in più sessioni
+- la stessa preimpostazione viene utilizzata in molte sessioni
 - il pennello rivisita ripetutamente stati dinamici simili
 - La rapidità di risposta all'avvio è importante
 

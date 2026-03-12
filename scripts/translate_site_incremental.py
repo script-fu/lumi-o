@@ -63,6 +63,7 @@ def protect_tokens(text: str):
         re.compile(r"(?m)(?:^(?: {4}|\t).*(?:\n|$))+"),
         re.compile(r"`[^`\n]+`"),
         re.compile(r"\{\{[%<][\s\S]*?[%>]\}\}"),
+        re.compile(r"\[!\[[^\]]*\]\([^\)]+\)\]\([^\)]+\)"),
         re.compile(r"!\[[^\]]*\]\([^\)]+\)"),
         re.compile(r"\[[^\]]*\]\([^\)]+\)"),
         re.compile(r"https?://\S+"),
@@ -82,25 +83,49 @@ def protect_tokens(text: str):
 
 
 def safe_translate(translator, text: str, *, label: str) -> str:
+    cache = getattr(translator, "_lumi_cache", None)
+    if cache is None:
+        cache = {}
+        setattr(translator, "_lumi_cache", cache)
+
+    if text in cache:
+        return cache[text]
+
     try:
-        return translator.translate(text)
+        translated = translator.translate(text)
+        cache[text] = translated
+        return translated
     except Exception as exc:
         print(f"[translate] warning: translate failed ({label}): {exc}")
+        cache[text] = text
         return text
 
 
 def translate_card_shortcodes(text: str, translator):
-    pattern = re.compile(r'(\{\{<\s*card\b[^>]*\btitle=")([^"]+)("[^>]*>\}\})')
+    shortcode_pattern = re.compile(r'\{\{<\s*card\b[^>]*>\}\}')
+    translatable_attributes = ("title", "subtitle", "tag")
+
+    def translate_attribute(shortcode: str, attribute: str) -> str:
+        attribute_pattern = re.compile(rf'(\b{attribute}=")([^"]+)(")')
+
+        def attribute_repl(match):
+            prefix, value, suffix = match.groups()
+            if not re.search(r"[A-Za-z]", value):
+                return match.group(0)
+
+            translated_value = safe_translate(translator, value, label=f"card.{attribute}")
+            translated_value = translated_value.replace('"', "\\\"")
+            return f"{prefix}{translated_value}{suffix}"
+
+        return attribute_pattern.sub(attribute_repl, shortcode)
 
     def repl(match):
-        prefix, title, suffix = match.groups()
-        if not re.search(r"[A-Za-z]", title):
-            return match.group(0)
-        translated_title = safe_translate(translator, title, label="card.title")
-        translated_title = translated_title.replace('"', "\\\"")
-        return f"{prefix}{translated_title}{suffix}"
+        shortcode = match.group(0)
+        for attribute in translatable_attributes:
+            shortcode = translate_attribute(shortcode, attribute)
+        return shortcode
 
-    return pattern.sub(repl, text)
+    return shortcode_pattern.sub(repl, text)
 
 
 def restore_tokens(text: str, tokens):
@@ -110,7 +135,14 @@ def restore_tokens(text: str, tokens):
             return tokens[index]
         return match.group(0)
 
-    return PLACEHOLDER_RE.sub(repl, text)
+    restored = text
+    for _ in range(len(tokens) + 1):
+        updated = PLACEHOLDER_RE.sub(repl, restored)
+        if updated == restored or not PLACEHOLDER_RE.search(updated):
+            return updated
+        restored = updated
+
+    return restored
 
 
 def chunk_text(text: str, max_size: int = 3500):
@@ -323,6 +355,11 @@ def main():
         print("[translate] No valid target languages configured.")
         return 0
 
+    translators = {
+        lang: GoogleTranslator(source="en", target=LANGUAGE_TARGETS[lang])
+        for lang in languages
+    }
+
     state = load_state(state_path)
     files_state = state.setdefault("files", {})
 
@@ -356,8 +393,7 @@ def main():
         front_matter, body = split_front_matter(raw_text)
 
         for lang in languages:
-            target_code = LANGUAGE_TARGETS[lang]
-            translator = GoogleTranslator(source="en", target=target_code)
+            translator = translators[lang]
             translated_front_matter = ensure_translated_title(front_matter, source_file, translator)
             # Avoid language redirect/meta-refresh pages by not pinning translated files to the same URL.
             translated_front_matter = strip_front_matter_keys(translated_front_matter, {"url", "aliases"})

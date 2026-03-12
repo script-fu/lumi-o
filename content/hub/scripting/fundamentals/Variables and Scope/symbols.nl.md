@@ -24,7 +24,7 @@ Voorbeelden:
 
 ## Symbolen maken
 
-Symbolen worden doorgaans gemaakt met behulp van de **quote**-operator (`'`), die Scheme vertelt de naam als een symbool te behandelen in plaats van deze als een variabele of functie te evalueren.
+Symbolen worden doorgaans gemaakt met behulp van de operator **quote** (`'`), die Scheme vertelt de naam als een symbool te behandelen in plaats van deze als een variabele of functie te evalueren.
 
 ### Voorbeeld
 

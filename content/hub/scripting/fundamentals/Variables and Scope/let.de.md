@@ -97,7 +97,9 @@ Ein benannter `let` ist eine Sonderform von `let`, der einen Namen für den `let
 
 ---
 
-## Übersichtstabelle| Konstruieren | Beschreibung | Anwendungsfall |
+## Übersichtstabelle
+
+| Konstruieren | Beschreibung | Anwendungsfall |
 |------------|-------------|-------------------------------------------------------------------------|
 | **`let`** | Definiert lokale Bindungen für Variablen.    | Verwenden Sie diese Option, wenn alle Bindungen unabhängig sind und nicht voneinander abhängig sind.     |
 | **`let*`** | Definiert sequentielle lokale Bindungen.       | Verwenden Sie diese Option, wenn spätere Bindungen von den Ergebnissen früherer Bindungen abhängen.           |

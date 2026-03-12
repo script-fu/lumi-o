@@ -17,7 +17,7 @@ La forma general de `do` es:
 
 - **Variable**: Las variables del bucle.
 - **Valor inicial**: el valor inicial de cada variable de bucle.
-- **Expresión-actualización**: La expresión para actualizar las variables del bucle al final de cada iteración.
+- **Update-expression**: La expresión para actualizar las variables del bucle al final de cada iteración.
 - **Condición de terminación**: La condición para detener el bucle.
 - **Expresión-resultado**: el valor que se devolverá cuando finalice el ciclo.
 - **Cuerpo**: El código a ejecutar en cada iteración.

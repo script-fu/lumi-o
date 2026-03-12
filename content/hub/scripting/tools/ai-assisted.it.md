@@ -17,7 +17,7 @@ Invece di completare semplicemente una singola riga di codice, un agente può:
 ## Accesso al repository
 
 L'assistenza AI è più efficace quando l'agente ha accesso a **lumi-dev** o al repository del tuo progetto specifico. Grazie alla visibilità sulla codebase esistente, l'agente può:
-- Utilizzare **[Utility Libraries](@@LUMI_TOKEN_4@@)** come riferimento per le funzioni di supporto.
+- Utilizzare **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** come riferimento per le funzioni di supporto.
 - Segui i modelli esistenti per le operazioni GEGL e la gestione dei livelli.
 - Riutilizzare il codice boilerplate dei plug-in esistenti.
 

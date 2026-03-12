@@ -7,7 +7,7 @@ Scheme에서 변수와 그 범위를 관리하는 것은 효율적이고 유지 
 
 ### 동적 타이핑
 
-Scheme is dynamically typed: you don’t declare types up front, and a variable can hold values of different kinds over time.
+구성표는 동적으로 유형이 지정됩니다. 유형을 미리 선언하지 않으며 변수는 시간이 지남에 따라 다양한 종류의 값을 보유할 수 있습니다.
 
 ```scheme
 (define x 42)       ; x is a number
@@ -25,21 +25,21 @@ Scheme is dynamically typed: you don’t declare types up front, and a variable 
 ### 변수 정의 유형 및 범위
 
 Scheme은 변수를 정의하고 범위 지정하기 위한 여러 구성을 제공합니다.
-- **`let`:** Creates local bindings for variables within a specific block of code.
-- **`let*`:** A sequential version of `let` where each binding can depend on the previous ones.
-- **Named `let`:** A powerful construct for defining recursive local procedures or loops.
-- **`define`:** Creates global variables or functions that are accessible throughout your script.
+- **`let`:** 특정 코드 블록 내의 변수에 대한 로컬 바인딩을 생성합니다.
+- **`let*`:** 각 바인딩이 이전 바인딩에 종속될 수 있는 `let`의 순차 버전입니다.
+- **`let`으로 명명됨:** 재귀 로컬 프로시저 또는 루프를 정의하기 위한 강력한 구성입니다.
+- **`define`:** 스크립트 전체에서 액세스할 수 있는 전역 변수 또는 함수를 생성합니다.
 
 ### 변수 정의 및 범위 작동 방식
 
 변수 정의 및 범위에는 일반적으로 다음이 포함됩니다.
 1. **변수 선언:** 특정 컨텍스트에서 변수에 값을 할당합니다.
-2. **Limiting Scope:** Controlling where the variable is accessible (e.g., within a `let` block or globally).
+2. **범위 제한:** 변수에 액세스할 수 있는 위치를 제어합니다(예: `let` 블록 내에서 또는 전역적으로).
 3. **변수 사용:** 계산, 논리 또는 절차적 작업을 수행하기 위해 변수 값에 액세스하고 수정합니다.
 
-### Example: Using `let` for Local Variables
+### 예: 지역 변수에 `let` 사용
 
-The `let` construct allows you to define temporary variables that are available only within a specific block:
+`let` 구성을 사용하면 특정 블록 내에서만 사용할 수 있는 임시 변수를 정의할 수 있습니다.
 
 ```scheme
 (let ((x 10)
@@ -47,11 +47,11 @@ The `let` construct allows you to define temporary variables that are available 
   (+ x y))
 ```
 
-- This example declares `x` and `y` with local values and computes their sum.
+- 이 예에서는 `x` 및 `y`을 로컬 값으로 선언하고 해당 합계를 계산합니다.
 
-### Example: Using `define` for Global Variables
+### 예: 전역 변수에 `define` 사용
 
-The `define` construct creates variables or functions with global scope:
+`define` 구문은 전역 범위의 변수 또는 함수를 생성합니다.
 
 ```scheme
 (define pi 3.14159)
@@ -59,17 +59,18 @@ The `define` construct creates variables or functions with global scope:
   (* pi radius radius))
 ```
 
-- This script defines a global constant `pi` and a function `circle-area` that uses it.
+- 이 스크립트는 전역 상수 `pi`과 이를 사용하는 `circle-area` 함수를 정의합니다.
 
 ### 범위 비교: 로컬 및 글로벌
 
-| 기능 | Local Scope (`let`, `let*`)               | Global Scope (`define`)                       |
-|------------------|------------------------------------------|-----------------------------------------------|
+| 기능 | 로컬 범위(`let`, `let*`) | 글로벌 범위(`define`) |
+|------|-------------------|-----------------------------------------------|
 | **접근성** | 정의된 블록으로 제한됨 | 전체 스크립트에서 액세스 가능 |
 | **캡슐화** | 의도하지 않은 상호작용 방지 | 전역적으로 정의된 다른 변수와 충돌할 수 있음 |
 | **사용 사례** | 특정 작업을 위한 임시 변수 | 전체에서 사용되는 공유 변수 또는 함수 |
 
 ### 요약- **변수 정의 및 범위**는 Scheme 스크립트에서 데이터를 구성하고 관리하는 데 기초가 됩니다.
-- Use **local scope** (`let`, `let*`, named `let`) to encapsulate temporary variables and avoid conflicts.
-- Use **global scope** (`define`) for reusable functions or constants shared across your script.
+
+- **로컬 범위**(`let`, `let*`, `let`)를 사용하여 임시 변수를 캡슐화하고 충돌을 방지합니다.
+- 스크립트 전체에서 공유되는 재사용 가능한 함수 또는 상수에 **전역 범위**(`define`)를 사용하세요.
 - 이러한 구문을 명확하게 이해하면 코드의 가독성, 유지 관리성 및 안정성이 향상됩니다.

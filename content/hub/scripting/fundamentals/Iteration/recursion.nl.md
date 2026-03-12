@@ -108,7 +108,7 @@ Resultaat: *"klaar"*
 
 - Eenvoudige recursie bestaat uit:
   1. **Basisscenario**: stopt de recursie.
-  2. **Recursief geval**: verkleint het probleem richting het basisscenario.
+  2. **Recursive case**: Reduces the problem toward the base case.
 - Elke recursieve aanroep zorgt ervoor dat de berekening voltooid wordt.
 - Zodra het basisscenario is bereikt, worden de resultaten gecombineerd naarmate de recursie is voltooid.
 

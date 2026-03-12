@@ -4,6 +4,8 @@ type: docs
 ---
 Linux to potężny i wszechstronny system operacyjny z ogromną społecznością programistów. W swej istocie system Linux składa się z kilku kluczowych komponentów, które współpracują ze sobą, zapewniając płynną obsługę użytkownika. W tym przeglądzie zostaną przedstawione podstawowe części systemu Linux, w tym jądro, dystrybucja, menedżer pakietów, menedżer wyświetlania, środowisko graficzne i serwer wyświetlania (X11 lub Wayland).
 
+Lumi działa najlepiej na Debianie z Cinnamon (X11) i jest rozwijany i testowany w tym środowisku.
+
 **Wspólne aktualne ustawienia domyślne dystrybucji Linuksa**
 
 | **Dystrybucja** | **Menedżer pakietów** | **Menedżer wyświetlania** | **Środowisko pulpitu** | **Serwer wyświetlacza** |

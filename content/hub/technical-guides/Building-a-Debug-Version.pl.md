@@ -1,7 +1,6 @@
 ---
 title: "Tworzenie wersji debugującej"
 type: docs
-url: "hub/technical-guides/Building-a-Debug-Version"
 ---
 Ten przewodnik opisuje **lokalny przebieg debugowania** dla Lumi przy użyciu skryptów w `build/lumi/scripts`.
 
@@ -109,8 +108,10 @@ Kompilacje debugowania są z założenia wolniejsze. Po zakończeniu debugowania
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
+
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
+
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

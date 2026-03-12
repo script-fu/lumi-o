@@ -4,6 +4,8 @@ type: docs
 ---
 Linux é um sistema operacional poderoso e versátil com uma vasta comunidade de desenvolvedores. Basicamente, um sistema Linux consiste em vários componentes principais que trabalham juntos para fornecer uma experiência de usuário perfeita. Esta visão geral descreverá as partes essenciais de um sistema Linux, incluindo o kernel, distribuição, gerenciador de pacotes, gerenciador de exibição, ambiente de desktop e servidor de exibição (X11 ou Wayland).
 
+Lumi está no seu melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente.
+
 **Padrões atuais comuns de distribuição do Linux**
 
 | **Distribuição** | **Gerenciador de Pacotes** | **Gerenciador de exibição** | **Ambiente de área de trabalho** | **Servidor de exibição** |

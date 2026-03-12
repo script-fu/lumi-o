@@ -5,7 +5,7 @@ weight: 4
 ---
 Bij het bouwen van robuuste plug-ins is het belangrijk ervoor te zorgen dat onze functies fouten netjes afhandelen en werken zoals verwacht, zelfs in geval van misbruik of onverwachte invoer. Validatie helpt de integriteit van de functie te beschermen en crashes of onbedoeld gedrag te voorkomen.
 
-Laten we eens kijken hoe we de functie `send-message` kunnen verbeteren door validatiecontroles toe te voegen om ervoor te zorgen dat de invoer correct wordt verwerkt.
+Laten we eens kijken hoe we de functie `send-message` kunnen verbeteren door validatiecontroles toe te voegen om ervoor te zorgen dat de invoer correct wordt afgehandeld.
 
 ### Valideer invoer
 

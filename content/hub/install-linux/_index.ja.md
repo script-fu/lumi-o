@@ -1,7 +1,6 @@
 ---
 title: "Linuxのインストール方法"
 type: docs
-url: "hub/install-linux"
 ---
 Lumi の Linux インストール ガイドへようこそ。
 

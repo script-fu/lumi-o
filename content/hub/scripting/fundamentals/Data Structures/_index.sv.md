@@ -10,6 +10,7 @@ I Scheme är **datastrukturer** viktiga verktyg för att organisera, lagra och m
 Scheme tillhandahåller flera kraftfulla och mångsidiga datastrukturer, var och en lämpad för specifika uppgifter. De primära datastrukturerna inkluderar:
 
 ### Listor
+
 Listor är ordnade samlingar av element som dynamiskt kan växa eller krympa. De är idealiska för sekventiell eller hierarkisk data och används ofta i funktionell programmering.
 
 Nyckelfunktioner:
@@ -24,6 +25,7 @@ Exempel på användning:
 ---
 
 ### Vektorer
+
 Vektorer är samlingar av element med fast storlek, indexerade för snabb åtkomst. De är bäst lämpade för scenarier där prestanda och positionsåtkomst är avgörande.
 
 Nyckelfunktioner:

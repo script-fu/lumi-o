@@ -65,7 +65,7 @@ El cuadro de diálogo tiene tres pestañas y dos botones de acción.
 Enumera todos los estados de guardado automático disponibles para el archivo seleccionado con marcas de tiempo y miniaturas (donde estén disponibles). Seleccione un estado y haga clic en **Recuperar** para abrirlo.
 
 Utilice esta pestaña para:
-- Recuperarse después de un accidente.
+- Recover after a crash.
 - Volver a un estado anterior de la misma sesión.
 
 ### Pestaña incremental

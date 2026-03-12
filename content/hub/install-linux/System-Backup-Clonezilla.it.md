@@ -1,7 +1,6 @@
 ---
 title: "Backup del sistema utilizzando Clonezilla"
 type: docs
-url: "hub/install-linux/System-Backup-Clonezilla"
 ---
 È normale eseguire il backup dei file importanti per tornare alle versioni precedenti o sostituire i dati danneggiati. Tuttavia, un altro tipo di backup essenziale è un **clone del disco**, un backup completo dello stato del sistema.
 

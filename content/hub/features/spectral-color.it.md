@@ -65,7 +65,7 @@ La tavolozza Master viene fornita con i seguenti pigmenti. I campioni mostrano l
 
 | Campione | Nome | Codice CI | Famiglia |
 | :---: | :--- | :--- | :--- |
-| {{< swatch "0,177,176" >}} | Turchese cobalto chiaro | PG50| Ciano (minerale) |
+| {{< swatch "0,177,176" >}} | Turchese cobalto chiaro | PG50 | Ciano (minerale) |
 | {{< swatch "0,148,214" >}} | Blu ceruleo | PB35 | Ciano (minerale) |
 | {{< swatch "0,100,110" >}} | Turchese ftalo | PB16 | Blu (ftalo) |
 | {{< swatch "0,123,194" >}} | Blu cobalto | PB28 | Blu (viola-magro) |

@@ -4,6 +4,10 @@
   translation: "关于"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuFeatures
+  translation: "特征"
+- id: menuMadeInLumio
+  translation: "Lumi-o制造"
 - id: menuInstallLinux
   translation: "安装 Linux"
 - id: menuTechnicalGuides

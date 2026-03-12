@@ -1,11 +1,12 @@
 ---
 title: "Instalación de Debian"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Este documento describe el proceso utilizado para instalar Debian Stable como sistema operativo de desarrollo Lumi·o. Puede resultar útil para otros que establezcan un entorno similar.
+Este documento describe el proceso utilizado para instalar Debian Stable como sistema operativo de desarrollo Lumi-o. Puede resultar útil para otros que establezcan un entorno similar.
 
 Se seleccionó Debian Stable porque Lumi pretende construir de manera confiable sobre una plataforma predecible a largo plazo. El desarrollo de GIMP apunta a Debian Testing, lo que convierte a Debian Stable en un sistema base estrechamente alineado.
+
+Lumi está en su mejor momento en Debian con Cinnamon (X11) y está desarrollado y probado en ese entorno. Cinnamon proporciona un flujo de trabajo de escritorio familiar similar al de Windows, mientras que X11 ha proporcionado el entorno más estable para el desarrollo de Lumi.
 
 Si viene de Windows, el principal cambio conceptual es que la mayor parte de la instalación y configuración del software se realiza a través de administradores de paquetes y comandos simples de terminal en lugar de instaladores descargables.
 
@@ -65,16 +66,16 @@ Suponiendo que ya existen una partición de destino y un espacio de intercambio:
    - Cuenta de usuario: su nombre completo
    - Nombre de usuario: nombre de inicio de sesión del terminal
 
-7. Seleccione **Cinnamon** como entorno de escritorio.
+7. El instalador de Debian proporciona una opción de entorno de escritorio en esta etapa; seleccione **Canela** para la configuración recomendada por Lumi.
 8. Complete la instalación y reinicie en Debian Stable.
 
 ## Configuración del sistema
 
 ### Escala de visualización
 
-Actualmente, Debian Stable maneja el escalado fraccionario de manera inconsistente, especialmente en pantallas 4K. En lugar de reducir la resolución de la pantalla, ajuste los elementos de la interfaz directamente.
+Actualmente, Debian Stable maneja el escalado fraccionario de manera inconsistente, especialmente en pantallas 4K. En lugar de reducir la resolución de la pantalla, ajuste los elementos de la interfaz directamente.Ajustes recomendados:
 
-Ajustes recomendados:- Evite el escalado de visualización fraccional.
+- Evite el escalado de visualización fraccional.
 - Menú → Selección de fuente → Configuración de fuente → Factor de escala de texto: `2.5`
 - Fuente de escritorio: `14`
 - Panel → Personalizar → Altura del panel: `60`
@@ -153,17 +154,22 @@ Los scripts de compilación de Lumi se encuentran en:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

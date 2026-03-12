@@ -99,7 +99,7 @@ Cada entrada dinâmica pode ser mapeada para diversas propriedades de forma inde
 No expansor **Stroke Modulation** (mostrado apenas quando **Dynamics** está ativado):- **Ângulo Inicial Relativo**: O valor do **Ângulo Inicial** é interpretado em relação à direção do traço e não como um ângulo absoluto da tela.
 - **Fade Initial Angle**: Desvanece do **Initial Angle** no início do traço em direção ao ângulo dinâmico ao vivo ao longo do curso do traço. Ativar isso força o **Ângulo Inicial Relativo** ativado.
 - **Ângulo inicial do pincel** (-180–180°): O ângulo do pincel bem no início de uma pincelada, antes que a dinâmica assuma o controle.
-- **Mescla de ângulo inicial** (0,0–1,0): controla a rapidez com que o ângulo do pincel faz a transição do ângulo inicial para o ângulo dinâmico. 0 = mantém o ângulo inicial; 1 = utiliza imediatamente o ângulo totalmente dinâmico.
+- **Mescla de ângulo inicial** (0,0–1,0): controla a rapidez com que o ângulo do pincel faz a transição do ângulo inicial para o ângulo dinâmico. 0 = mantém o ângulo inicial; 1 = immediately uses the fully dynamic angle.
 - **Fade Length**: Distância em unidades de tela sobre a qual o fade ocorre.
 - **Repeat**: Como o fade é repetido quando o comprimento do fade se esgota (None, Loop, Sawtooth, Triangle).
 
@@ -108,7 +108,7 @@ No expansor **Stroke Modulation** (mostrado apenas quando **Dynamics** está ati
 
 Cabeças de pincel colocam várias cabeças de pincel independentes em um **anel de órbita** circular centralizado no caminho do traço. Cada cabeça pinta um pincel completo em sua própria posição cada vez que o traço avança, produzindo vários traços paralelos ou em leque simultaneamente.
 
-O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; cabeças menores orbitam mais longe. As cabeças se espaçam uniformemente ao redor do anel. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
+O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; smaller heads orbit further out. Heads space evenly around the ring. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
 
 Cabeças de pincel controlam onde cada cabeça é colocada ao redor do traço. Se **Pivô X** ou **Pivô Y** for afastado do centro padrão, cada cabeça ainda seguirá a mesma formação, mas cada pincelada estampada agora pousará usando o ponto de contato interno escolhido em vez do centro geométrico da imagem do pincel.
 
@@ -116,7 +116,7 @@ Os controles aparecem no expansor **Cabeças de pincel** no painel de opções d
 
 - **Contagem**: Número de cabeças de escova simultâneas (1–16).
 - **Tamanho da cabeça**: tamanho renderizado de cada cabeça em relação ao tamanho global do pincel (0,1–1,0).
-- **Proporção de aspecto da órbita** (0,1–1,0): molda a órbita da formação do círculo à elipse. 1,0 = órbita circular; valores mais baixos comprimem o eixo menor.
+- **Proporção de aspecto da órbita** (0,1–1,0): molda a órbita da formação do círculo à elipse. 1,0 = órbita circular; lower values squash the minor axis.
 - **Ângulo de formação** (0–360°): Orientação estática do anel de formação, usado quando **Seguir direção** está abaixo de 1,0.
 - **Seguir direção** (0,0–1,0): quão fortemente o anel de formação acompanha a direção de deslocamento do curso. Em 1,0 o anel é sempre perpendicular à direção de deslocamento; em 0,0 ele trava no valor estático **Formation Angle**.
 - **Variação de pressão**: variação de tamanho por cabeça aplicada como um viés de pressão independente através das curvas dinâmicas.

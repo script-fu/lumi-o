@@ -1,11 +1,12 @@
 ---
 title: "Instalowanie Debiana"
 type: docs
-url: "hub/install-linux/Installing-Debian"
 ---
-Ten dokument opisuje proces instalacji Debian Stable jako rozwojowego systemu operacyjnego Lumi·o. Może być przydatne dla innych osób tworzących podobne środowisko.
+Ten dokument opisuje proces instalacji Debian Stable jako rozwojowego systemu operacyjnego Lumi-o. Może być przydatne dla innych osób tworzących podobne środowisko.
 
 Wybrano Debian Stable, ponieważ celem Lumi jest niezawodne budowanie na przewidywalnej, długoterminowej platformie. Rozwój GIMP jest ukierunkowany na testowanie Debiana, dzięki czemu Debian Stable jest ściśle dostosowanym systemem podstawowym.
+
+Lumi działa najlepiej na Debianie z Cinnamon (X11) i jest rozwijany i testowany w tym środowisku. Cinnamon zapewnia znajomy przepływ pracy podobny do systemu Windows, podczas gdy X11 zapewnia najbardziej stabilne środowisko do programowania Lumi.
 
 Jeśli korzystasz z systemu Windows, główna zmiana koncepcyjna polega na tym, że większość instalacji i konfiguracji oprogramowania odbywa się za pomocą menedżerów pakietów i prostych poleceń terminala, a nie instalatorów do pobrania.
 
@@ -65,16 +66,16 @@ Zakładając, że docelowa partycja i przestrzeń wymiany już istnieją:
    - Konto użytkownika: Twoje imię i nazwisko
    - Nazwa użytkownika: nazwa logowania terminala
 
-7. Wybierz **Cynamon** jako środowisko pulpitu.
+7. Na tym etapie instalator Debiana umożliwia wybór środowiska graficznego; wybierz **Cynamon** dla konfiguracji zalecanej przez Lumi.
 8. Zakończ instalację i uruchom ponownie system Debian Stable.
 
 ## Konfiguracja systemu
 
 ### Skalowanie wyświetlacza
 
-Debian Stable obecnie obsługuje skalowanie ułamkowe niekonsekwentnie, szczególnie na wyświetlaczach 4K. Zamiast zmniejszać rozdzielczość wyświetlacza, dostosuj bezpośrednio elementy interfejsu.
+Debian Stable obecnie obsługuje skalowanie ułamkowe niekonsekwentnie, szczególnie na wyświetlaczach 4K. Zamiast zmniejszać rozdzielczość wyświetlacza, dostosuj bezpośrednio elementy interfejsu.Zalecane korekty:
 
-Zalecane korekty:- Unikaj ułamkowego skalowania wyświetlania.
+- Unikaj ułamkowego skalowania wyświetlania.
 - Menu → Wybór czcionki → Ustawienia czcionki → Współczynnik skalowania tekstu: `2.5`
 - Czcionka na pulpicie: `14`
 - Panel → Dostosuj → Wysokość panelu: `60`
@@ -153,17 +154,22 @@ Skrypty kompilacji Lumi znajdują się w:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
+
 sudo bash lumi-install-packages.sh
 
 # First full setup build
+
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
+
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
+
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
+
 bash lumi-launch-active.sh lumi-dev
 ```

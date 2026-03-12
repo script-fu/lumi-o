@@ -29,7 +29,7 @@ De posities van Parent A en Parent B van de Mixer worden op de kaart weergegeven
 
 | Schuifregelaar | Effect |
 | :--- | :--- |
-| **Meng** | Beweegt tussen Parent A (CCW-einde) en Parent B (CW-einde). Bij 0,0 komt het resultaat overeen met Ouder A; bij 1.0 komt het overeen met Ouder B. |
+| **Meng** | Beweegt tussen Parent A (CCW-einde) en Parent B (CW-einde). Bij 0,0 komt het resultaat overeen met ouder A; bij 1.0 komt het overeen met Ouder B. |
 | **Chroma** | Desatureert de overvloei naar de neutrale kleur van het palet. Hogere waarden produceren meer gedempte, aardse resultaten. |
 | **Toon** | Verschuift de lichtheid naar het mengen van wit (tintrichting) of het mengen van zwart (schaduwrichting). |
 

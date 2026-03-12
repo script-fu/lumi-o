@@ -1,4 +1,4 @@
-# Lumi·o Website
+# Lumi-o Website
 
 Hugo site source for https://lumi-o.org.
 

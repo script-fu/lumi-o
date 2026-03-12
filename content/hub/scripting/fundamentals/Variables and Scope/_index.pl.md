@@ -70,6 +70,7 @@ Konstrukcja `define` tworzy zmienne lub funkcje o zasięgu globalnym:
 | **Przypadek użycia** | Zmienne tymczasowe dla konkretnych zadań | Wspólne zmienne lub funkcje używane w całym programie |
 
 ### Streszczenie- **Definicje i zakres zmiennych** są podstawą organizowania danych i zarządzania nimi w skryptach Scheme.
+
 - Użyj **zakresu lokalnego** (`let`, `let*`, o nazwie `let`), aby hermetzować zmienne tymczasowe i uniknąć konfliktów.
 - Użyj **zakresu globalnego** (`define`) dla funkcji lub stałych wielokrotnego użytku współdzielonych w całym skrypcie.
 - Jasne zrozumienie tych konstrukcji poprawi czytelność, łatwość konserwacji i niezawodność kodu.

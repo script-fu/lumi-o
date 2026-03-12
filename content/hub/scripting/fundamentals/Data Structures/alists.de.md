@@ -37,7 +37,7 @@ Das einfache Anführungszeichen (`'`) ist eine Abkürzung für **quoting**, was 
 (define updated-alist (cons '(country . "France") alist))
 ```
 
-**Ergebnis**:
+**Result**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
 #### Verwendung des Backquotes („` ` ``) and Comma (`,`)

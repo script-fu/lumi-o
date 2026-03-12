@@ -51,7 +51,7 @@ Las etapas de tono y croma requieren puntos finales de referencia: una mezcla de
 
 Estos se pueden anular manualmente haciendo clic derecho en una entrada en el Editor de paleta.
 
-## Guardar una mezclaHaga clic en **Agregar a la paleta** para guardar el resultado actual del mezclador como una **Mezcla guardada** (entrada personalizada). Antes de guardar, el sistema aplica **Reubicación de mejor coincidencia**: busca en la paleta la receta óptima que produce el mismo color final con el mejor ajuste espacial en el mapa de paleta. Si se encuentra una receta más cercana, los controles deslizantes del mezclador saltarán para reflejarla, confirmando que el sistema encontró un origen mejor y la posición de la entrada guardada se alineará con su punto visual en el mapa.
+## Saving a MixHaga clic en **Agregar a la paleta** para guardar el resultado actual del mezclador como una **Mezcla guardada** (entrada personalizada). Antes de guardar, el sistema aplica **Reubicación de mejor coincidencia**: busca en la paleta la receta óptima que produce el mismo color final con el mejor ajuste espacial en el mapa de paleta. Si se encuentra una receta más cercana, los controles deslizantes del mezclador saltarán para reflejarla, confirmando que el sistema encontró un origen mejor y la posición de la entrada guardada se alineará con su punto visual en el mapa.
 
 Las mezclas guardadas almacenan su receta completa (UID A/B principal, factor de mezcla, tono, croma) para que puedan reproducirse exactamente.
 

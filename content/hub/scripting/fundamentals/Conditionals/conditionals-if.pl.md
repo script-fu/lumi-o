@@ -54,7 +54,7 @@ Zarówno bloki kodu `consequent`, jak i `alternative` mogą wykonywać dowolną 
 
 ### Przykłady
 
-#### Przykład 1: Zwracanie wartości
+#### Example 1: Returning a Value
 
 ```scheme
 (if (< 0 1)
@@ -110,5 +110,6 @@ Użycie `let` pozwala nam zadeklarować zmienne o zasięgu lokalnym za pomocą b
 Wynik: **Wypisuje „Prawdziwy warunek spełniony, obliczanie…” i zwraca -10,**
 
 ### Podsumowanie- Warunek `if` jest potężnym narzędziem w schemacie do oceny testów i wykonywania odpowiednich bloków kodu.
+
 - Może obsługiwać zarówno proste wyrażenia, jak i złożone bloki kodu, które zwracają wartości, modyfikują zmienne lub wykonują efekty uboczne.
 - Pamiętaj: Jeśli nie ma wyraźnego bloku `else`, `if` ocenia i wykonuje **następnik** tylko wtedy, gdy test jest prawdziwy. W przeciwnym razie ocenia i wykonuje **alternatywę**.

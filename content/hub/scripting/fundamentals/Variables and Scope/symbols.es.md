@@ -24,7 +24,7 @@ Ejemplos:
 
 ## Creando símbolos
 
-Los símbolos normalmente se crean usando el operador **comilla** (`'`), que le indica a Scheme que trate el nombre como un símbolo en lugar de evaluarlo como una variable o función.
+Los símbolos generalmente se crean usando el operador **comilla** (`'`), que le indica a Scheme que trate el nombre como un símbolo en lugar de evaluarlo como una variable o función.
 
 ### Ejemplo
 

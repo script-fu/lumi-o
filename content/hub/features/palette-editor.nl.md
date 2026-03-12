@@ -82,7 +82,7 @@ Verlopen worden beheerd in de **Verlopen-expander**. De combo bovenaan geeft een
 
 ### Verloopeditor
 
-De **Gradient Editor-expander** configureert het geselecteerde verloop. Elke kleurovergang heeft drie eindpunten (**A**, **B** en **C**), weergegeven als kleurstalen. Klik op een staal om dit tot het actieve eindpunt voor bewerking te maken.
+De **Gradient Editor-expander** configureert het geselecteerde verloop. Elke kleurovergang heeft drie eindpunten (**A**, **B** en **C**) die worden weergegeven als kleurstalen. Klik op een staal om dit tot het actieve eindpunt voor bewerking te maken.
 
 Elk eindpunt kan worden ingesteld door op **Kies** te klikken en vervolgens op een paletitem in de Paletkaart of de paletweergave te klikken. Het eindpunt is via UID aan dat paletitem gekoppeld; als de invoer verandert, wordt de gradiënt bijgewerkt.
 

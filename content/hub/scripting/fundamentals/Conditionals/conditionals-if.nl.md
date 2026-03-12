@@ -10,7 +10,7 @@ In zijn eenvoudigste vorm evalueert de voorwaarde `if` in Scheme een test en voe
   do-this)
 ```
 
-- Als de `test` evalueert naar true (`#t`), wordt het **codeblok in de consequentie** uitgevoerd. Het blok kan een waarde retourneren of andere acties uitvoeren, zoals het toewijzen van een variabele of het afdrukken van uitvoer.
+- If the `test` evaluates to true (`#t`), the **code block in the consequent** is executed. Het blok kan een waarde retourneren of andere acties uitvoeren, zoals het toewijzen van een variabele of het afdrukken van uitvoer.
 
 ### Voorbeeld
 
@@ -110,5 +110,6 @@ Door een `let` te gebruiken, kunnen we lokale scopevariabelen binnen het codeblo
 Resultaat: **Er wordt afgedrukt "Aan ware voorwaarde voldaan, berekening..." en retourneert -10.**
 
 ### Samenvatting- De voorwaarde `if` is een krachtig hulpmiddel in Scheme voor het evalueren van tests en het uitvoeren van overeenkomstige codeblokken.
+
 - Het kan zowel eenvoudige expressies als complexe codeblokken verwerken die waarden retourneren, variabelen wijzigen of bijwerkingen veroorzaken.
 - Onthoud: als er geen expliciet `else` blok is, evalueert en voert `if` alleen het **gevolg** uit als de test waar is. Anders wordt het **alternatief** geëvalueerd en uitgevoerd.

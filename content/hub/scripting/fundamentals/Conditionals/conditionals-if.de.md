@@ -50,7 +50,7 @@ Bei Verwendung einer `if`-Bedingung mit einem alternativen Codeblock (der `else`
    – Wenn das `test` als wahr ausgewertet wird (`#t`), wird der **konsequente Codeblock** ausgeführt.
    - Wenn `test` als falsch ausgewertet wird (`#f`), wird der **alternative Codeblock** ausgeführt.
 
-Sowohl die Codeblöcke `consequent` als auch `alternative` können jede gültige Scheme-Operation ausführen, einschließlich der Rückgabe von Werten, der Änderung von Variablen oder der Ausführung von Prozeduren.
+Both the `consequent` and `alternative` code blocks can perform any valid Scheme operation, including returning values, modifying variables, or running procedures.
 
 ### Beispiele
 
@@ -110,5 +110,6 @@ Durch die Verwendung eines `let` können wir lokale Bereichsvariablen innerhalb 
 Ergebnis: **Gibt „Wahre Bedingung erfüllt, Berechnung...“ aus und gibt -10 zurück.**
 
 ### Zusammenfassung- Die Bedingung `if` ist ein leistungsstarkes Tool in Scheme zum Auswerten von Tests und zum Ausführen entsprechender Codeblöcke.
+
 – Es kann sowohl einfache Ausdrücke als auch komplexe Codeblöcke verarbeiten, die Werte zurückgeben, Variablen ändern oder Nebenwirkungen ausführen.
 - Denken Sie daran: Wenn es keinen expliziten `else`-Block gibt, wertet der `if` die **Konsequenz** nur aus und führt sie aus, wenn der Test wahr ist. Andernfalls wertet es die **Alternative** aus und führt sie aus.
