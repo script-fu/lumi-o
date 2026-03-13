@@ -1,5 +1,5 @@
 ---
-title: "Capas y edición no destructiva"
+title: "capas"
 type: docs
 ---
 El sistema de capas de Lumi permite flujos de trabajo complejos y no destructivos con control total sobre la combinación, el enmascaramiento y la composición.

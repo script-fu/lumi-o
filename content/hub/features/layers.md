@@ -1,5 +1,5 @@
 ---
-title: "Layers & Non-Destructive Editing"
+title: "Layers"
 type: docs
 url: "hub/features/layers"
 ---

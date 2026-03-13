@@ -1,5 +1,5 @@
 ---
-title: "Livelli e modifica non distruttiva"
+title: "Strati"
 type: docs
 ---
 Il sistema a livelli di Lumi consente flussi di lavoro complessi e non distruttivi con il pieno controllo su fusione, mascheramento e composizione.

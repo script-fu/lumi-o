@@ -1,5 +1,5 @@
 ---
-title: "Lagen en niet-destructieve bewerking"
+title: "Lagen"
 type: docs
 ---
 Het lagensysteem van Lumi maakt complexe, niet-destructieve workflows mogelijk met volledige controle over overvloeien, maskeren en compositie.

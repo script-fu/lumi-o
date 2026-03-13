@@ -1,5 +1,5 @@
 ---
-title: "Lager & icke-förstörande redigering"
+title: "Lager"
 type: docs
 ---
 Lumis lagersystem möjliggör komplexa, oförstörande arbetsflöden med full kontroll över blandning, maskering och sammansättning.

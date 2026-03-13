@@ -1,5 +1,5 @@
 ---
-title: "Warstwy i edycja nieniszcząca"
+title: "Warstwy"
 type: docs
 ---
 System warstw Lumi umożliwia złożone, nieniszczące przepływy pracy z pełną kontrolą nad mieszaniem, maskowaniem i kompozycją.
@@ -144,7 +144,7 @@ Kliknij dwukrotnie warstwę w panelu Warstwy, aby otworzyć okno dialogowe Atryb
 
 ### Złożona przestrzeń i tryb
 
-- **Przestrzeń złożona**: Przestrzeń kolorów używana podczas łączenia tej warstwy z warstwami poniżej. Options: Auto, Linear (RGB), Perceptual (RGB).
+- **Przestrzeń złożona**: Przestrzeń kolorów używana podczas łączenia tej warstwy z warstwami poniżej. Opcje: Auto, Liniowy (RGB), Percepcyjny (RGB).
 - **Tryb złożony**: Kontroluje interakcję warstwy alfa z tłem. Opcje obejmują Łączenie (wpływa na wszystkie obszary, ustawienie domyślne w trybie normalnym), Przytnij do tła (wpływa tylko na obszary z istniejącą zawartością, ustawienie domyślne w większości innych trybów mieszania) i Przecięcie.
 
 ### Rozmiar i przesunięcia

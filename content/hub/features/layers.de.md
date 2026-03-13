@@ -1,5 +1,5 @@
 ---
-title: "Ebenen und zerstörungsfreie Bearbeitung"
+title: "Schichten"
 type: docs
 ---
 Das Ebenensystem von Lumi ermöglicht komplexe, zerstörungsfreie Arbeitsabläufe mit vollständiger Kontrolle über Mischung, Maskierung und Komposition.

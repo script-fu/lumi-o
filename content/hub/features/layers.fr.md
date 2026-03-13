@@ -1,5 +1,5 @@
 ---
-title: "Calques et édition non destructive"
+title: "Calques"
 type: docs
 ---
 Le système de calques de Lumi permet des flux de travail complexes et non destructifs avec un contrôle total sur le mélange, le masquage et la composition.
