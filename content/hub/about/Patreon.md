@@ -19,3 +19,5 @@ You can do this through Patreon, a platform many creatives use to receive direct
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}
+
+For any questions you can contact me directly at **pixelmixer@lumi-o.org**

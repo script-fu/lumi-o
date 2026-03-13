@@ -104,7 +104,7 @@ height = 40
 width = "normal"
 
 [params.footer]
-enable = false
+enable = true
 displayCopyright = false
 displayPoweredBy = false
 width = "normal"

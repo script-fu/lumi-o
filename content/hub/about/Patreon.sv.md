@@ -17,3 +17,5 @@ Du kan göra detta genom Patreon, en plattform som många annonsörer använder 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}
+
+För alla frågor kan du kontakta mig direkt på **pixelmixer@lumi-o.org**

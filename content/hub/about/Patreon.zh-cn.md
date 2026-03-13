@@ -17,3 +17,5 @@ weight: 7
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="帕特隆" icon="heart" >}}
 {{< /cards >}}
+
+如有任何问题，您可以直接联系我 **pixelmixer@lumi-o.org**

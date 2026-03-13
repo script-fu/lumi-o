@@ -17,3 +17,5 @@ weight: 7
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="派特隆" icon="heart" >}}
 {{< /cards >}}
+
+如有任何問題，您可以直接與我聯繫 **pixelmixer@lumi-o.org**

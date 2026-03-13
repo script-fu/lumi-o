@@ -1,0 +1,42 @@
+<style>
+  .custom-site-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .custom-site-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .custom-site-footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    .custom-site-footer-nav {
+      justify-content: center;
+    }
+  }
+</style>
+<div class="custom-site-footer hx:border-t hx:border-gray-200 hx:dark:border-neutral-800 hx:mt-8 hx:py-12">
+  <div class="hx:font-semibold hx:text-lg hx:text-gray-900 hx:dark:text-gray-100">
+    Lumi-o
+  </div>
+  <nav aria-label="Footer" class="custom-site-footer-nav hx:text-sm hx:font-medium">
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ site.Home.RelPermalink }}">Home</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/quick-start/" | relLangURL }}">Quick Start</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/install-linux/" | relLangURL }}">Install Linux</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/features/" | relLangURL }}">Features</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/made-in-lumio/" | relLangURL }}">Made in Lumi-o</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/scripting/" | relLangURL }}">Scripting</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/technical-guides/" | relLangURL }}">Technical Guides</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="{{ "hub/about/" | relLangURL }}">About</a>
+    <a class="hx:text-gray-600 hover:hx:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:transition-colors" href="mailto:pixelmixer@lumi-o.org">Contact</a>
+  </nav>
+</div>

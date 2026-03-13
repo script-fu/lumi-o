@@ -17,3 +17,5 @@ weight: 7
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="パトレオン" icon="heart" >}}
 {{< /cards >}}
+
+ご質問がございましたら、**pixelmixer@lumi-o.org** まで直接ご連絡ください。

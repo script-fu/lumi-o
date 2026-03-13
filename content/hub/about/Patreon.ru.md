@@ -17,3 +17,5 @@ weight: 7
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Патреон" icon="heart" >}}
 {{< /cards >}}
+
+По любым вопросам вы можете связаться со мной напрямую по адресу **pixelmixer@lumi-o.org**.
