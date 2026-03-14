@@ -3,7 +3,7 @@ title: "Wtyczka filtrująca"
 type: docs
 weight: 2
 ---
-W samouczku [First Step](../../first-step/) użyliśmy wtyczki _procedure_. Tego typu wtyczki działają bez potrzeby wprowadzania obrazu lub możliwości rysowania jako danych wejściowych. Zwykle używamy wtyczki do zmiany obrazu i jego rysunków. Wtyczki takie jak te nazywane są wtyczkami _filter_.
+W samouczku [Pierwszy krok](../../first-step/) użyliśmy wtyczki _procedure_. Tego typu wtyczki działają bez potrzeby wprowadzania obrazu lub możliwości rysowania jako danych wejściowych. Zwykle używamy wtyczki do zmiany obrazu i jego rysunków. Wtyczki takie jak te nazywane są wtyczkami _filter_.
 
 ### Co to jest rysunkowy?
 

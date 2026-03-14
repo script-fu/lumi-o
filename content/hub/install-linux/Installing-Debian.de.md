@@ -61,7 +61,7 @@ Vorausgesetzt, eine Zielpartition und ein Auslagerungsbereich sind bereits vorha
    - Dateisystem: ext4 (Journaling)
    - Swap: vorhandene Swap-Partition
    - Einhängepunkt: `/`
-   - Label: `linux`
+   - Beschriftung: `linux`
    - Hostname: Systemname, angezeigt als `user@hostname`
    - Benutzerkonto: Ihr vollständiger Name
    - Benutzername: Terminal-Anmeldename

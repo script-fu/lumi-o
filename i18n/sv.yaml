@@ -12,3 +12,9 @@
   translation: "Installera Linux"
 - id: menuTechnicalGuides
   translation: "Tekniska guider"
+- id: menuHome
+  translation: "Hem"
+- id: menuScripting
+  translation: "Skript"
+- id: menuContact
+  translation: "Kontakta"

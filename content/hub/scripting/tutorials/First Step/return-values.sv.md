@@ -25,7 +25,7 @@ I den här funktionen, om meddelandet är ogiltigt, skapas ett fel. Men om medde
 
 ### Gör returvärden explicita
 
-We can improve this by making the return value more explicit. Till exempel kan vi returnera `#t` (true) om meddelandet är giltigt:
+Vi kan förbättra detta genom att göra returvärdet mer explicit. Till exempel kan vi returnera `#t` (true) om meddelandet är giltigt:
 
 ```scheme
 ;; Purpose: Validates that the message is sent to a valid output

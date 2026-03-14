@@ -6,7 +6,7 @@ type: docs
 
 ## มันอาศัยอยู่ที่ไหน
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [ดูแหล่งที่มา](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## ปรากฏใน Lumi ที่ไหน
 

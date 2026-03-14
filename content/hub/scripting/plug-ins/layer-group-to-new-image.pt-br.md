@@ -6,7 +6,7 @@ Copia o grupo de camadas ativo em uma nova imagem (útil quando a pilha completa
 
 ## Onde mora
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Ver a fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Onde aparece no Lumi
 

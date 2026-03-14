@@ -34,7 +34,7 @@ Um **repositório** (ou **repo**) é essencialmente uma pasta com conteúdo que 
 
 Depois que sua estrutura de pastas estiver definida, você poderá inicializar o Git e conectar seus projetos locais ao GitHub. Siga estas etapas para começar:
 
-### Etapas básicas para usar Git e GitHub
+### Basic Steps for Using Git and GitHub
 
 1. **Instale o Git**
 2. **Crie uma conta GitHub**
@@ -109,7 +109,7 @@ git commit -m "Add new feature"
 
 O sinalizador `-m` permite que você escreva uma mensagem que resume as alterações feitas. Esta mensagem ajuda você e outras pessoas a entender o que foi modificado neste commit.
 
-### 8. Envie suas alterações para o GitHub
+### 8. Push Your Changes to GitHub
 
 Depois de confirmar as alterações localmente, você pode "enviá-las" para o GitHub para que seu repositório remoto seja atualizado. Execute o seguinte comando para fazer upload de suas alterações:
 
@@ -133,7 +133,7 @@ Git e plataformas como GitHub e GitLab são ferramentas poderosas e, embora poss
 
 Aqui estão alguns termos comuns que você encontrará ao trabalhar com Git e GitHub:- **Commit**: um instantâneo de suas alterações no repositório. Cada commit inclui uma mensagem descrevendo o que foi alterado e cria um registro histórico que você pode consultar ou reverter posteriormente.
 - **Repositório (Repo)**: Uma coleção de arquivos e seu histórico rastreado pelo Git. Os repositórios podem existir localmente no seu computador ou remotamente em plataformas como GitHub. Cada projeto normalmente é armazenado em seu próprio repositório.
-- **Remoto**: um repositório remoto é uma versão do seu projeto hospedada em uma plataforma como o GitHub. A versão local do seu projeto no seu computador está vinculada a este controle remoto para que você possa fazer upload (push) e download (pull) de alterações.
+- **Remote**: A remote repository is a version of your project hosted on a platform like GitHub. A versão local do seu projeto no seu computador está vinculada a este controle remoto para que você possa fazer upload (push) e download (pull) de alterações.
 - **Staging**: O processo de preparação de arquivos para um commit. Ao preparar um arquivo, você está dizendo ao Git que deseja incluí-lo no próximo commit. O teste permite que você escolha quais alterações incluir em um commit.
 - **Push**: O ato de enviar suas alterações confirmadas do seu repositório local para um repositório remoto (por exemplo, GitHub), para que outros possam acessar a versão atualizada do seu código.
 - **Pull**: O ato de buscar alterações de um repositório remoto para atualizar sua cópia local. Você obtém alterações quando deseja sincronizar seu repositório local com a versão mais recente do controle remoto.

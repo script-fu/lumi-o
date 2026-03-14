@@ -133,7 +133,7 @@ git config --global --edit
 2. 將使用者加入新的 Git 安裝：`ssh-add ~/.ssh/id_rsa`
 3. 測試連線：`ssh -T git@ssh.gitlab.gnome.org` 或 `ssh -T git@github.com`
 
-對於每個儲存庫，獲取來源並重置本機分支以匹配：
+對於每個儲存庫，取得來源並重置本機分支以匹配：
 
 ```bash
 git reset --hard remote-name/branch-name

@@ -12,7 +12,7 @@ weight: 1
 
 - ติดตั้ง Lumi แล้ว (บิลด์ล่าสุดหรือ AppImage)
 - โปรแกรมแก้ไขข้อความสำหรับไฟล์ `.scm` (VS Code ทำงานได้ดี): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
-- [Git](/hub/scripting/tools/git/) เพื่อสำรองโค้ดของคุณและควบคุมเวอร์ชัน
+- [Git](/hub/scripting/tools/git/) เพื่อสำรองโค้ดและควบคุมเวอร์ชัน
 
 ## ขั้นตอนการสอน
 

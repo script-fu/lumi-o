@@ -24,9 +24,9 @@ Zawsze lepiej mieć kopię zapasową i jej nie potrzebować, niż potrzebować k
 
 Będziesz potrzebował dysku USB dla Clonezilli i zewnętrznego dysku twardego, który jest większy niż dysk wewnętrzny, który chcesz sklonować.
 
-Te kroki upraszczają proces w oparciu o [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Dobrym pomysłem jest przejrzenie pełnego przewodnika, który zawiera zrzuty ekranu dla większej przejrzystości.
+Poniższe kroki upraszczają proces w oparciu o [oficjalny przewodnik](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Dobrym pomysłem jest przejrzenie pełnego przewodnika, który zawiera zrzuty ekranu dla większej przejrzystości.
 
-1. **Utwórz Clonezilla Live USB lub CD/DVD**: Postępuj zgodnie ze szczegółowymi instrukcjami na Clonezilla [website](https://clonezilla.org/liveusb.php), aby utworzyć bootowalną płytę USB lub CD/DVD.
+1. **Utwórz Clonezilla Live USB lub CD/DVD**: Postępuj zgodnie ze szczegółowymi instrukcjami na [stronie internetowej] Clonezilla(https://clonezilla.org/liveusb.php), aby utworzyć bootowalną pamięć USB lub CD/DVD.
 
 2. **Podłącz zewnętrzny dysk kopii zapasowej**: Podłącz dysk zewnętrzny i upewnij się, że jest rozpoznawany przez system. To będzie miejsce docelowe Twojej kopii zapasowej.
 

@@ -25,7 +25,7 @@ CI ถูกควบคุมโดยไฟล์ชื่อ `.gitlab-ci.yml`
 - `build lumi`
 - `appimage`
 
-## งานสร้างตามคอนเทนเนอร์
+## งานสร้างบนคอนเทนเนอร์
 
 ไปป์ไลน์ Lumi ใช้คอนเทนเนอร์สำหรับบิลด์ที่สอดคล้องกัน:
 
@@ -187,4 +187,4 @@ Lumi ใช้ GitLab CI เพื่อสร้าง AppImage สำหรั
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-สำหรับรายละเอียดทางเทคนิคที่ครอบคลุมเกี่ยวกับกระบวนการสร้าง Lumi CI รวมถึงการตั้งค่าสภาพแวดล้อม สถาปัตยกรรมสคริปต์ และการแก้ไขปัญหา โปรดดูที่ [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)
+หากต้องการรายละเอียดทางเทคนิคที่ครอบคลุมเกี่ยวกับกระบวนการสร้าง Lumi CI รวมถึงการตั้งค่าสภาพแวดล้อม สถาปัตยกรรมสคริปต์ และการแก้ไขปัญหา โปรดดูที่ [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)

@@ -21,7 +21,7 @@ Podemos tomar la función de enviar mensaje y crear un nuevo archivo con eso com
 
 - **scheme/**: Este es su directorio principal para almacenar su código Scheme.
   - **biblioteca/**: Aquí es donde viven funciones compartidas como `send-message.scm`.
-  - **plug-ins/**: aquí es donde se almacenan sus complementos individuales.
+  - **plugins/**: aquí es donde se almacenan sus complementos individuales.
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 

@@ -35,13 +35,13 @@ Pozycje rodzica A i rodzica B miksera są pokazane na mapie jako wyróżnione **
 
 ## Kontrola wartości
 
-**Blokada wartości** zamraża percepcyjną lekkość (CIE L\*) na bieżącym poziomie, podczas gdy pozostałe suwaki się poruszają. Użyj tej opcji, aby zbadać różnice w nasyceniu lub odcieniu bez zmiany wartości miksu.
+**Blokada wartości** zamraża percepcyjną lekkość (CIE L\*) na bieżącym poziomie, podczas gdy pozostałe suwaki się poruszają. Use this to explore chroma or hue variation without changing the value of a mix.
 
 **Band Clamp** ogranicza wynik do granic bieżącego zakresu wartości (np. w obrębie Lower Mid). Suwak tonów można nadal przeciągać, ale jasność wyjściowa jest ograniczona.
 
 Suwak Ton odzwierciedla także wszelkie luki wartości skonfigurowane w Edytorze palet. Zakresy jasności mieszczące się w szczelinie są pokazane jako półprzezroczyste szare paski na suwaku. Uchwyt suwaka automatycznie przeskakuje nad tymi przerwami: przeciągnięcie przez szary obszar powoduje przeskok do najbliższej prawidłowej granicy pasma po drugiej stronie.
 
-## Mixing Endpoints (White, Black, Neutral)
+## Mieszanie punktów końcowych (biały, czarny, neutralny)
 
 Etapy tonu i chrominancji wymagają punktów końcowych odniesienia: mieszana biel, mieszana czerń i neutralny. Lumi odkrywa je automatycznie, przeszukując aktywną paletę najlepszych kandydatów:
 

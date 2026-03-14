@@ -1,5 +1,5 @@
 ---
-title: "過程瀏覽器"
+title: "程式瀏覽器"
 type: docs
 weight: 1
 ---

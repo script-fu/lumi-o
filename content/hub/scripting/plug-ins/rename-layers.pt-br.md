@@ -6,7 +6,7 @@ Renomeia todas as camadas na pilha (ou as camadas selecionadas). Útil para pilh
 
 ## Onde mora
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Ver a fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## Onde aparece no Lumi
 

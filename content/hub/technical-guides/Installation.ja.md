@@ -2,7 +2,7 @@
 title: "インストール"
 type: docs
 ---
-以下の最初のクローン手順には Git が必要です。 Git がまだインストールされていない場合は、最初にインストールするか (Debian/Ubuntu: `sudo apt install git`)、またはフォローしてください: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+以下の最初のクローン手順には Git が必要です。 Git がまだインストールされていない場合は、最初にインストールするか (Debian/Ubuntu: `sudo apt install git`)、または次の手順に従ってください: [Linux での Git の使用](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Lumi のクローン (初回セットアップ)
 
@@ -75,7 +75,7 @@ bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
 必要に応じて `--type` を使用します。
 
 - `debug` – ワークフローのデバッグ
-- `debugoptimized` – 開発用のバランスの取れたデフォルト
+- `debugoptimized` – 開発用のバランスのとれたデフォルト
 - `release` – 最速の実行時間
 
 例:

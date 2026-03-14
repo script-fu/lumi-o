@@ -1,5 +1,5 @@
 ---
-title: "Nazwany niech lub lokalnie definiuje"
+title: "Nazwany niech lub lokalny definiuje"
 type: docs
 weight: 5
 ---
@@ -151,7 +151,7 @@ W nazwanym `let` powiązania w nawiasach działają jak **zmienne lokalne**, kt�
 
 #### Parametry wejściowe dla rekurencji
 
-Te same zmienne działają również jako **parametry wejściowe** dla rekursywnych wywołań nazwanego `let`. Kiedy nazwany `let` wywołuje sam siebie, aktualizuje te zmienne o nowe wartości.
+Te same zmienne działają również jako **parametry wejściowe** dla rekurencyjnych wywołań nazwanego `let`. Kiedy nazwany `let` wywołuje sam siebie, aktualizuje te zmienne o nowe wartości.
 
 ```scheme
 (let loop ((x 1)

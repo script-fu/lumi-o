@@ -60,7 +60,7 @@ sudo apt install git
 
 ### 3. GitHub に空のリポジトリを作成する
 
-1. **GitHub にログイン**: [GitHub](https://github.com/) に移動し、アカウントにログインします。
+1. **GitHub にログイン**: [GitHub](https://github.com/) にアクセスし、アカウントにログインします。
 2. **新しいリポジトリを作成**:
    - 右上隅の **+** アイコンをクリックし、**新しいリポジトリ** を選択します。
    - リポジトリ名を入力します (例: `your-repository`)。

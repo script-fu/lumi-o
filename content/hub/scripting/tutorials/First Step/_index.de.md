@@ -12,7 +12,7 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
 
 - Lumi installiert (ein aktueller Build oder AppImage).
 - Ein Texteditor für `.scm` Dateien (VS-Code funktioniert gut): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
-- [Git](/hub/scripting/tools/git/) um die Sicherung und Versionskontrolle Ihres Codes zu gewährleisten.
+- [Git](/hub/scripting/tools/git/) um Ihren Code zu sichern und die Versionskontrolle zu gewährleisten.
 
 ## Tutorial-Schritte
 

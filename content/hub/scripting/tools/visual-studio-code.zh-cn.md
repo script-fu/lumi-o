@@ -4,7 +4,7 @@ type: docs
 ---
 ## 什么是 Visual Studio Code？
 
-[Visual Studio Code](https://code.visualstudio.com/)（通常缩写为“VS Code”或“VSC”）是由 Microsoft 开发的免费开源文本编辑器，专为编码而设计。它轻量、快速且高度可定制，使其成为开发人员中最受欢迎的代码编辑器之一。这就是为什么 VSC 是一个不错的选择：
+[Visual Studio Code](https://code.visualstudio.com/)（通常缩写为“VS Code”或“VSC”）是 Microsoft 开发的免费开源文本编辑器，专为编码而设计。它轻量、快速且高度可定制，使其成为开发人员中最受欢迎的代码编辑器之一。这就是为什么 VSC 是一个不错的选择：
 
 - **语法突出显示**：语法突出显示对代码进行颜色编码，使您更容易发现错误、理解结构和阅读复杂的代码。
 - **扩展**：您可以使用数千个扩展来增强 VSC。无论您需要特定语言、主题还是工具的支持，您都可以找到适合的扩展。
@@ -20,7 +20,7 @@ type: docs
 
 要开始使用 VSC：
 
-- **下载并安装**：前往[Visual Studio Code website](https://code.visualstudio.com/)并下载Linux版本。
+- **下载并安装**：前往 [Visual Studio Code 网站](https://code.visualstudio.com/) 并下载 Linux 版本。
 
 - **探索界面**：当您打开 VSC 时，您会注意到几个面板。左侧有**活动栏**，您可以在其中在文件之间导航、搜索、使用 Git 和安装扩展。
 

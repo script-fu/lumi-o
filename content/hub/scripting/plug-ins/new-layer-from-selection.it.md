@@ -6,7 +6,7 @@ Crea un nuovo livello con nome dalla selezione attiva.
 
 ## Dove vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## Dove appare in Lumi
 

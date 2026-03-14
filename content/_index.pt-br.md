@@ -11,7 +11,7 @@ Construído na arquitetura central do GIMP, o Lumi-o elimina a complexidade de u
 
 O carregamento lento remove limites fixos de memória, permitindo gerenciar projetos grandes e complexos e dimensões enormes de tela sem atingir limites de RAM.
 
-Lumi-o é desenvolvido no Debian 13 com o desktop Cinnamon. Se você vem do Windows, instalar o Debian é o primeiro passo: [How to Install Linux](/hub/install-linux/).
+Lumi-o é desenvolvido no Debian 13 com o desktop Cinnamon. Se você vem do Windows, instalar o Debian é o primeiro passo: [Como instalar o Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="Sobre" icon="information-circle" >}}

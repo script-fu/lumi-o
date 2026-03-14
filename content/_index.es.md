@@ -11,7 +11,7 @@ Construido sobre la arquitectura central de GIMP, Lumi-o elimina la complejidad 
 
 La carga diferida elimina los límites fijos de memoria, lo que le permite gestionar proyectos grandes y complejos y dimensiones de lienzo enormes sin toparse con límites de RAM.
 
-Lumi-o está desarrollado en Debian 13 con el escritorio Cinnamon. Si vienes de Windows, instalar Debian es el primer paso: [How to Install Linux](/hub/install-linux/).
+Lumi-o está desarrollado en Debian 13 con el escritorio Cinnamon. Si vienes de Windows, instalar Debian es el primer paso: [Cómo instalar Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="Acerca de" icon="information-circle" >}}

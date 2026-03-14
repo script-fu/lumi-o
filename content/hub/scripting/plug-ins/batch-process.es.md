@@ -6,7 +6,7 @@ Un ejemplo práctico de extremo a extremo para procesar muchos archivos de una s
 
 ## Donde vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Ver la fuente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Dónde aparece en Lumi
 

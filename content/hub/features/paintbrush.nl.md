@@ -103,6 +103,20 @@ In de **Stroke Modulation**-expander (alleen weergegeven als **Dynamics** is ing
 - **Vervagingslengte**: afstand in canvaseenheden waarover de vervaging zich afspeelt.
 - **Herhalen**: hoe de fade wordt herhaald zodra de fade-lengte is uitgeput (Geen, Loop, Sawtooth, Triangle).
 
+#### Vervagingsvermenigvuldigers
+
+Vier selectievakjes die bepalen of wijzigen hoe de fade-waarde wordt toegepast:
+- **Fade Reverse**: keert de fade-richting om, zodat de streken vager worden en volledig ondoorzichtig worden.
+- **Fade Multiply**: Vermenigvuldigt de fade-uitvoer naar de betreffende eigenschap in plaats van deze te vervangen.
+- **Fade Multiply Angular**: past de fade-vermenigvuldiger alleen toe op hoekdynamiek (hoek, kanteling).
+- **Fade Multiply Ratio**: past de fade-vermenigvuldiger alleen toe op eigenschappen van het verhoudingstype (beeldverhouding).
+
+#### Kleurtoewijzing
+
+Beschikbaar voor de gereedschappen Penseel en Uitsmeren wanneer Dynamics actief is:
+- **Verloop**: de verloopbron die wordt gebruikt voor kleurtoewijzing langs de streek.
+- **Blend Color Space**: kleurruimte waarin gradiëntkleuren worden geïnterpoleerd tijdens het schilderen.
+
 
 ### Opzetborstels
 
@@ -112,35 +126,34 @@ De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: 
 
 Opzetborstels bepalen waar elke kop rond de streek wordt geplaatst. Als **Pivot X** of **Pivot Y** van het standaardcentrum wordt verwijderd, volgt elk hoofd nog steeds dezelfde formatie, maar elke gestempelde schar komt nu terecht op het gekozen interne contactpunt in plaats van op het geometrische midden van de penseelafbeelding.
 
-De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.
-
-- **Aantal**: aantal gelijktijdige opzetborstels (1–16).
+De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.- **Aantal**: aantal gelijktijdige opzetborstels (1–16).
 - **Kopgrootte**: weergegeven grootte van elke kop in verhouding tot de globale penseelgrootte (0,1–1,0).
 - **Baan-aspectratio** (0,1–1,0): Vormt de formatiebaan van cirkel naar ellips. 1,0 = cirkelvormige baan; lagere waarden verpletteren de secundaire as.
 - **Formatiehoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volgrichting** lager is dan 1,0.
-- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. At 1.0 the ring is always perpendicular to the direction of travel; bij 0,0 wordt de waarde vergrendeld op de statische **Formatiehoek**-waarde.
+- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Formatiehoek**-waarde.
 - **Drukvariatie**: variatie in grootte per hoofd toegepast als een onafhankelijke drukafwijking via de dynamische curven.
 - **Dekkingsvariatie**: De dekkingsvariatie per hoofd, onafhankelijk van de groottevariatie.
 
 #### Verstrooiing
 
-Belangrijkste spreidingsregelaars in de uitbreiding **Opzetborstels**:- **Verspreidingshoek** (0–360°, standaard 10°): Roteert alleen de willekeurige spreidingscomponent (niet de vulafstand). De hoeken per kop/per schar zijn naar buiten gericht met gecontroleerde crossover om stijve gespiegelde pluimen te voorkomen. Geklemd tot 360°.
+Belangrijkste spreidingsregelaars in de uitbreiding **Opzetborstels**:
+
+- **Verspreidingshoek** (0–360°, standaard 10°): Roteert alleen de willekeurige spreidingscomponent (niet de vulafstand). De hoeken per kop/per schar zijn naar buiten gericht met gecontroleerde crossover om stijve gespiegelde pluimen te voorkomen. Geklemd tot 360°.
 - **Verspreidingsafstand** (0–10.000 px): willekeurige voorwaartse verplaatsing vanaf de vulafstandpositie van elke kop. Elke keer opnieuw gerold.
+- **Willekeurigheid van de verspreiding** (0,0–1,0): extra variatie per schar bovenop de basisverspreidingsafstand en -hoek, waardoor een lossere, meer organische spray ontstaat.
+- **Snelheidsinvloed** (0,0–1,0): Schaalt de spreiding op basis van de slagsnelheid. Bij 1,0 verspreiden snelle slagen de hoofden veel verder dan langzame slagen; bij 0,0 is de verstrooiing constant, ongeacht de snelheid.
 - **Scatter Size Balance** (0,0–1,0): regelt de onderdrukkingssteilheid voor heads boven de drempel. Bij 1,0 verspreiden alle hoofden zich gelijkmatig; lagere waarden onderdrukken in toenemende mate grotere koppen, terwijl koppen op/onder de drempel op volledige verstrooiingsafstand blijven.
 
 ### Extra opties
 
-In de uitbreiding **Aanvullende opties** (standaard samengevouwen) zijn de bedieningselementen gegroepeerd als overloopsecties die minder vaak worden gewijzigd. Hierdoor blijven de belangrijkste expanders gefocust op vaak aangepaste verfbedieningen.
-
-#### Penseeleigenschappen (overloop)
-
+In de uitbreiding **Aanvullende opties** (standaard samengevouwen) zijn de bedieningselementen gegroepeerd als overloopsecties die minder vaak worden gewijzigd. Hierdoor blijven de belangrijkste expanders gefocust op vaak aangepaste verfbedieningen.#### Penseeleigenschappen (overloop)
 - **Hoek aan schermruimte vergrendelen**: Vergrendelt de penseelhoek aan de schermruimte, zodat de hoek waterpas blijft terwijl het canvas draait/omkeert. Geen effect wanneer Dynamics de hoek regelt.
-- **Pivot X**: Horizontaal stempelcontactpunt binnen de penseelafbeelding (0,0 = linkerrand, 0,5 = midden, 1,0 = rechterrand). Door het te verplaatsen, kunnen niet-gecentreerde delen van de borstel de streek leiden.
-- **Pivot Y**: Verticaal stempelcontactpunt binnen de penseelafbeelding (0,0 = bovenrand, 0,5 = midden, 1,0 = onderrand). Samen met **Pivot X** bepaalt dit welk deel van de schar zich op de verflocatie bevindt.
 - **Random Flip Horizontal**: 50% kans om elke stempel van links naar rechts te spiegelen per schar.
 - **Random Flip Vertical**: 50% kans om elke stempel ondersteboven te draaien per schar.
 - **Willekeurige rotatie**: Draait elke stempel willekeurig met 0°, 90°, 180° of 270° per schar.
-- **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling Gaussiaans (de verschuivingen clusteren naar het midden).
+- **Pivot X** (0,0–1,0): horizontaal contactpunt binnen het penseelbeeld. 0,0 = linkerrand, 0,5 = midden (standaard), 1,0 = rechterrand. Het gekozen punt is wat uitgelijnd is met de verfpositie op het canvas, dus als je het van het midden af ​​beweegt, verschuift elke vlek in die richting. Rotaties en salto's blijven visueel verankerd aan het draaipunt, omdat de plaatsingsoffset na de transformatie wordt toegepast.
+- **Pivot Y** (0,0–1,0): Verticaal contactpunt binnen de penseelafbeelding. 0,0 = bovenrand, 0,5 = midden (standaard), 1,0 = onderrand. Werkt samen met **Pivot X** om het exacte deel van de schar te definiëren dat zich op het slagpad bevindt.
+- **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling naar het midden gericht.
 - **Animatie opnieuw instellen**: voor geanimeerde penselen: indien ingeschakeld, begint de animatie bij elke nieuwe streek opnieuw vanaf frame 0; wanneer uitgeschakeld, gaat het verder vanaf het punt waar de vorige slag eindigde.
 
 Wanneer een van beide draaiwaarden afwijkt van het midden, toont het penseelvoorbeeld een draadkruisoverlay die het actieve stempelcontactpunt markeert.
@@ -157,6 +170,12 @@ Verstrooien:
 Randomisatie:
 - **Karakterzaad** (0–255): Vaste zaadwaarde voor karakters per hoofd (grootte, vulafstand). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Hoofdkarakter willekeurig maken** is ingeschakeld.
 - **Hoofdkarakter willekeurig maken**: Tekenwaarden per hoofd (grootte, spreidingspositie) worden bij elke stempel opnieuw getekend, zodat de formatie langs de lijn volledig chaotisch is. Overschrijft **Karakterzaad**.
-- **Animatieframes willekeurig maken**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.#### Beroertegedrag (overflow)
+- **Animatieframes willekeurig maken**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
+
+#### Dynamiek (overloop)
+
+Besturingselementen die de belangrijkste Dynamics-expander uitbreiden, hier gegroepeerd omdat ze zelden worden aangepast:
+- **Voorbeeld van willekeurige grootte**: toont willekeurige groottevariaties in het voorbeeld van de penseelomtrek wanneer de actieve dynamiekvoorinstelling de grootte willekeurig bepaalt.
+- **Voorbeeld willekeurige rotatie**: toont willekeurige rotatievariatie in het voorbeeld van de penseelomtrek wanneer de actieve dynamiekvoorinstelling de hoek willekeurig aandrijft.#### Beroertegedrag (overflow)
 - **Laatst gebruikte kleuren herstellen**: herstelt de voorgrond- en achtergrondkleuren van de vorige sessie bij het opstarten, in plaats van standaard zwart en wit te gebruiken.
 - **Eenvoudige penseelgrens**: gebruikt een gewone cirkel voor de penseelcursoromtrek in plaats van de volledige penseelvorm weer te geven. Handig voor complexe of grote penselen waarbij het moeilijk is om een ​​nauwkeurige grens te tekenen.

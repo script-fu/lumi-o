@@ -148,4 +148,4 @@ Ett namngivet `let` är en speciell form av `let` som ger ett namn för själva 
 
 ---
 
-Genom att använda `let`, `let*`, och namngiven `let`, möjliggör Scheme modulär, rekursiv och sekventiell programmering med tydliga omfattningsregler.
+Genom att använda `let`, `let*`, och namngivna `let`, möjliggör Scheme modulär, rekursiv och sekventiell programmering med tydliga omfattningsregler.

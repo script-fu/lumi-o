@@ -18,9 +18,9 @@ type: docs
 |---|---|
 | `common.scm` |通用幫助程式（字串、數字、列表實用程式）|
 | `files.scm` |檔案與路徑助手 |
-| `gegl.scm` | GEGL 緩衝區與色彩助理 |
+| `gegl.scm` | GEGL 缓冲区和颜色助手 |
 | `images.scm` |影像級助手（`image-get-open-list` 等）|
-| `layers.scm` |圖層與可繪製助手 |
+| `layers.scm` |圖層與可繪製助手|
 | `parasites.scm` |寄生蟲讀/寫助手 |
 | `paths.scm` |路徑與向量小幫手|
 

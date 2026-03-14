@@ -59,7 +59,7 @@ A troca é imediata – o Lumi reconstrói o layout do painel, restaura as opç�
 
 Em **Editar → Preferências → Área de trabalho**:| Ação | Efeito |
 | :--- | :--- |
-| **Salvar layout** | Substitui o espaço de trabalho atual pelas configurações atuais. |
+| **Salvar Layout** | Substitui o espaço de trabalho atual pelas configurações atuais. |
 | **Salvar layout como…** | Cria um novo espaço de trabalho nomeado a partir das configurações atuais. |
 | **Renomear layout…** | Renomeia o espaço de trabalho selecionado. |
 | **Recarregar Layout** | Aplica o espaço de trabalho selecionado imediatamente. |

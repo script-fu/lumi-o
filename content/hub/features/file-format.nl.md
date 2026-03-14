@@ -74,11 +74,11 @@ PSD- en XCF-bestanden worden bij het importeren geconverteerd naar het oorspronk
 ### Ondersteunde exportformaten
 
 - **PNG**: verliesvrij, met alfatransparantie.
--**JPEG**: verliesgevend, afgeplat.
+-**JPEG**: verliesgevend, afgevlakt.
 - **TIFF**: verliesvrij of LZW-gecomprimeerd.
 - **XCF**: GIMP-compatibiliteitsformaat. Alleen exporteren; lagen en basiseigenschappen behouden.
 
-## ProjectherstelLumi onderhoudt automatische opslag op de achtergrond en handmatige incrementele controlepunten, beide toegankelijk via **Bestand** → **Afbeelding herstellen**. Zie de [File Recovery](../recovery) pagina voor volledige details.
+## ProjectherstelLumi onderhoudt automatische opslag op de achtergrond en handmatige incrementele controlepunten, beide toegankelijk via **Bestand** → **Afbeelding herstellen**. Zie de pagina [Bestandsherstel](../recovery) voor volledige details.
 
 ## Organisatie
 

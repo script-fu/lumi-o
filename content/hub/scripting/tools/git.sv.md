@@ -38,7 +38,7 @@ När din mappstruktur är på plats kan du initiera Git och ansluta dina lokala 
 
 1. **Installera Git**
 2. **Skapa ett GitHub-konto**
-3. **Create a Blank Repository on GitHub**
+3. **Skapa ett tomt arkiv på GitHub**
 4. **Initiera Git i ditt lokala projekt**
 5. **Anslut ditt lokala repo till GitHub**
 6. **Iscenesätt dina filer**
@@ -56,7 +56,7 @@ sudo apt install git
 
 ### 2. Skapa ett GitHub-konto
 
-Om du inte redan har ett konto, besök [GitHub](https://github.com/) för att registrera dig. När du väl har registrerat dig kan du skapa repositories på GitHub för att lagra din kod online.
+Om du inte redan har ett konto besöker du [GitHub](https://github.com/) för att registrera dig. När du väl har registrerat dig kan du skapa repositories på GitHub för att lagra din kod online.
 
 ### 3. Skapa ett tomt arkiv på GitHub
 

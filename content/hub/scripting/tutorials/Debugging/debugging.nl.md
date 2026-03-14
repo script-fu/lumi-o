@@ -191,7 +191,7 @@ De functie `list->string` converteert een lijst naar een opgemaakte tekenreeks.
 
 Zodra er een foutopsporingssysteem aanwezig is, kunnen we onze bibliotheek met functies uitbreiden door gedetailleerde berichten op te nemen. Dit geeft inzicht in itemstatussen, variabelewaarden en functieaanroepen.
 
-Een veelvoorkomend voorbeeld is `item-is-valid?`, waarbij `lumi-item-id-is-valid` wordt verpakt om `#t` of `#f` te retourneren. Als `#f` wordt geretourneerd, kunnen we een `warning-message` activeren in de aanroepcode. Als de invoer geen getal is, kunnen we een waarschuwing geven in de functie.
+Een veelvoorkomend voorbeeld is `item-is-valid?`, waarbij `lumi-item-id-is-valid` wordt verpakt om `#t` of `#f` te retourneren. If `#f` is returned, we can trigger a `warning-message` in the calling code, if the input is not a number we a can give a warning in the function.
 
 ```scheme
 ;; Purpose: Check if an item is valid, returning #t or #f.

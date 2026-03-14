@@ -6,7 +6,7 @@ Kopiuje aktywną grupę warstw do nowego obrazu (przydatne, gdy pełny stos jest
 
 ## Gdzie mieszka
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Wyświetl źródło](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Gdzie pojawia się w Lumi
 

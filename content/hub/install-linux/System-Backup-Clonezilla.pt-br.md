@@ -24,9 +24,9 @@ Depois de ter seu sistema configurado e funcionando bem, criar um backup complet
 
 Você precisará de uma unidade USB para o Clonezilla e de um disco rígido externo maior que a unidade interna que você pretende clonar.
 
-Essas etapas simplificam o processo com base no [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). É uma boa ideia revisar o guia completo, que inclui capturas de tela para maior clareza.
+Essas etapas simplificam o processo com base no [guia oficial](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). É uma boa ideia revisar o guia completo, que inclui capturas de tela para maior clareza.
 
-1. **Crie um Clonezilla Live USB ou CD/DVD**: Siga as instruções detalhadas no Clonezilla [website](https://clonezilla.org/liveusb.php) para criar um USB ou CD/DVD inicializável.
+1. **Crie um Clonezilla Live USB ou CD/DVD**: Siga as instruções detalhadas no [website](https://clonezilla.org/liveusb.php) do Clonezilla para criar um USB ou CD/DVD inicializável.
 
 2. **Conecte sua unidade de backup externa**: Conecte sua unidade externa e certifique-se de que ela seja reconhecida pelo seu sistema. Este será o destino do seu backup.
 

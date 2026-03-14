@@ -17,7 +17,7 @@ En lugar de simplemente completar una sola línea de código, un Agente puede:
 ## Acceso al repositorio
 
 La asistencia de IA es más efectiva cuando el Agente tiene acceso a **lumi-dev** o al repositorio de su proyecto específico. Con visibilidad del código base existente, el Agente puede:
-- Utilice **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** como referencia para las funciones auxiliares.
+- Utilice **[Bibliotecas de utilidades]({{< ref "/hub/scripting/reference/utility-browser" >}})** como referencia para las funciones auxiliares.
 - Seguir patrones existentes para operaciones GEGL y gestión de capas.
 - Reutilizar código repetitivo de complementos establecidos.
 

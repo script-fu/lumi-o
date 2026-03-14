@@ -6,7 +6,7 @@ Un exemple pratique de bout en bout pour traiter plusieurs fichiers en une seule
 
 ## Où il vit
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Voir la source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Où il apparaît dans Lumi
 

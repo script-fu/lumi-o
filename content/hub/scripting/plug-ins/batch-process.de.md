@@ -6,7 +6,7 @@ Ein praktisches, durchgängiges Beispiel für die Verarbeitung vieler Dateien au
 
 ## Wo es lebt
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Quelle anzeigen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Wo es in Lumi erscheint
 

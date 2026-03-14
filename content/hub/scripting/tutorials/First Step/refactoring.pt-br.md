@@ -117,9 +117,9 @@ Extraindo a lógica:
 
 #### Símbolos
 
-No exemplo acima, é usado um tipo de dados chamado símbolo, como 'gui. Os símbolos são passados ​​como parâmetros para a função de envio de mensagem e podem ser usados ​​para tomar decisões condicionais simples. Assim como as chaves simbólicas, elas são identificadores exclusivos. Para obter mais informações sobre símbolos, visite [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+No exemplo acima, é usado um tipo de dados chamado símbolo, como 'gui. Os símbolos são passados ​​como parâmetros para a função de envio de mensagem e podem ser usados ​​para tomar decisões condicionais simples. Assim como as chaves simbólicas, elas são identificadores exclusivos. Para obter mais informações sobre símbolos, visite [esta página.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
-### Simplificando a Função Principal
+### Simplificando a função principal
 
 Na função original (scheme-hello-world), toda a lógica de envio de mensagens para diferentes saídas (GUI, Console de erros, Terminal) foi misturada na função principal. Após a refatoração, a função principal simplesmente se concentra em **o que precisa ser feito**, enviando a mensagem para diferentes destinos.
 

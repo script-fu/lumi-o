@@ -24,7 +24,7 @@ Het is altijd beter om een ​​back-up te hebben en deze niet nodig te hebben 
 
 Voor Clonezilla hebt u een USB-station nodig en een externe harde schijf die groter is dan de interne schijf die u wilt klonen.
 
-Deze stappen vereenvoudigen het proces op basis van de [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Het is een goed idee om de volledige handleiding door te nemen, inclusief schermafbeeldingen voor extra duidelijkheid.
+Deze stappen vereenvoudigen het proces op basis van de [officiële gids](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Het is een goed idee om de volledige handleiding door te nemen, inclusief schermafbeeldingen voor extra duidelijkheid.
 
 1. **Maak een Clonezilla Live USB of CD/DVD**: Volg de gedetailleerde instructies op de Clonezilla [website](https://clonezilla.org/liveusb.php) om een ​​opstartbare USB of CD/DVD te maken.
 

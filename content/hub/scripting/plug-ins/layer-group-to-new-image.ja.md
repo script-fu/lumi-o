@@ -6,7 +6,7 @@ type: docs
 
 ## それが住んでいる場所
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [ソースを表示](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Lumi で登場する場所
 

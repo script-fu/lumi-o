@@ -3,7 +3,7 @@ title: "Le plugin de filtre"
 type: docs
 weight: 2
 ---
-Nous avons utilisé un plug-in _procedure_ pour le tutoriel [First Step](../../first-step/). Ces types de plug-ins fonctionnent sans avoir besoin d’une image ou d’un dessin en entrée. Habituellement, nous utilisons un plug-in pour modifier une image et ses dessins. Les plug-ins comme ceux-ci sont appelés plug-ins _filter_.
+Nous avons utilisé un plug-in _procedure_ pour le didacticiel [Première étape](../../first-step/). Ces types de plug-ins fonctionnent sans avoir besoin d’une image ou d’un dessin en entrée. Habituellement, nous utilisons un plug-in pour modifier une image et ses dessins. Les plug-ins comme ceux-ci sont appelés plug-ins _filter_.
 
 ### Qu'est-ce qu'un Drawable ?
 

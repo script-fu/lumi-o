@@ -12,7 +12,7 @@ Jeśli spodobała Ci się moja praca i okazała się pomocna, rozważ okazanie w
 
 Możesz to zrobić za pośrednictwem Patreona, platformy, z której korzysta wielu twórców, aby uzyskać bezpośrednie wsparcie:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) do wsparcia.
+[Odwiedź moją stronę na Patreonie](https://www.patreon.com/pixelmixer), aby wesprzeć.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreona" icon="heart" >}}

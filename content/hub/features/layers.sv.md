@@ -115,7 +115,7 @@ Icke-förstörande GEGL-filter som appliceras via menyn **Filter** lagras som co
 
 Klicka på ikonen **fx** på en lagerrad i panelen Lager för att öppna popover-fönstret **Lagereffekter** för det lagret.
 
-Popover-fönstret visar filterstapeln för lagret, med varje begången effekt listad efter namn med en synlighetsomkopplare bredvid.
+The popover displays the filter stack for the layer, with each committed effect listed by name with a visibility toggle beside it.
 
 ### Kontroller
 

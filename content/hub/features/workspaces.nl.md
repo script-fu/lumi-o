@@ -11,11 +11,11 @@ In elke benoemde werkruimte wordt het volgende onafhankelijk opgeslagen:
 | Onderdeel | Wat het omvat |
 | :--- | :--- |
 | **Indeling** | Vensterpositie en -grootte, dockindeling (linker- en rechterpaneelkolommen, welke panelen open zijn en in welke volgorde), modus voor één of meerdere vensters, gemaximaliseerde status, zichtbaarheid en positie van de tabbalk |
-| **Gereedschapsopties** | De huidige instellingen voor elk gereedschap (penseelgrootte, hardheid, kromtrekkingsgedrag, enz.) |
+| **Gereedschapsopties** | De huidige instellingen voor elk gereedschap (penseelgrootte, hardheid, kromtrekkingsgedrag, etc.) |
 | **Invoerapparaten** | Configuratie van invoerapparaat: drukcurven, knoptoewijzingen, astoewijzingen voor stylus en andere apparaten |
 | **Canvasdecoraties** | Standaardinstellingen per werkruimte voor linialen, schuifbalken, hulplijnen, raster, selectiemarkering, laaggrens en canvasgrens — ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** en **Volledige schermweergave**, onafhankelijk voor normale en volledige schermweergave |
 | **Canvasvulling** | Opvullingsmodus en kleur per werkruimte voor normale en volledige schermweergave - ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** |
-| **Thema en pictogrammen** | Actief thema, donkere/lichte kleurvariant, pictogrammenset, overschrijven van pictogramgrootte en lettertypeschaal |
+| **Thema en pictogrammen** | Actief thema, donker/lichte kleurvariant, pictogrammenset, overschrijven van pictogramgrootte en lettertypeschaal |
 | **Gereedschapskist** | FG/BG-widgetpositie (boven/onder/links/rechts), FG/BG-schaal, zichtbaarheid van de Wilber-mascotte, kopteksten van gereedschapsgroepen |
 
 Het actieve **palet** en **tool preset** worden ook per werkruimte vastgelegd en hersteld wanneer u overschakelt.

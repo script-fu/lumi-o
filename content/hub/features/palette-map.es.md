@@ -20,7 +20,7 @@ Cada celda es una pequeña cuña en la rueda. Se dice que una entrada colocada e
 Cuando varios colores compiten por la misma celda, solo un **ganador** se muestra de manera destacada:
 
 1. Las entradas **principales** siempre ganan su celda, independientemente de los demás ocupantes.
-2. Si no hay ningún primario presente, gana la mezcla generada (secundaria o terciaria) con el **croma más alto**.
+2. Si no hay ningún Primario presente, gana la mezcla generada (Secundario o Terciario) con el **croma más alto**.
 
 Las inscripciones que no ganan quedan en segundo lugar y permanecen accesibles mediante ciclos de clics (ver más abajo).
 
@@ -56,7 +56,7 @@ Con **Reubicación de mejor coincidencia**, cuando se guarda una mezcla, el sist
 
 ## Arrastrar mezclas guardadas
 
-Las entradas personalizadas (mezclas guardadas) se pueden reposicionar arrastrando:1. Haga clic y mantenga presionada una entrada personalizada (punto cuadrado) y arrastre más allá del umbral de 5 píxeles.
+Custom entries (Saved Mixes) can be repositioned by dragging:1. Haga clic y mantenga presionada una entrada personalizada (punto cuadrado) y arrastre más allá del umbral de 5 píxeles.
 2. El cursor cambia para indicar el modo de arrastre. Los aspectos destacados de los padres se actualizan en vivo a medida que se mueve por el mapa para mostrar los nuevos padres combinados en cada puesto de candidato.
 3. El punto arrastrado se ajusta a la posición de muestra válida más cercana.
 4. Liberación para comprometerse. La entrada adopta la receta de la celda de destino: sus padres, mezcla, tono y croma se actualizan para que coincidan, y su origen se actualiza para que coincida con la nueva posición visual.

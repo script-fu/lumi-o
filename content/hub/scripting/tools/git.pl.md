@@ -125,7 +125,7 @@ Po przesłaniu kodu do GitHub możesz wyświetlić swoje repozytorium w interfej
 
 ## Wniosek
 
-Organizując swój kod w dedykowane foldery i używając GitHuba do zarządzania repozytoriami i tworzenia ich kopii zapasowych, zapewnisz dobrą strukturę swoich projektów i będziesz łatwo dostępny. Kiedy już będziesz miał działającą wersję swojego kodu, wypchnij ją do GitHuba. Następnie można łatwo śledzić wszelkie zmiany za pomocą interfejsu internetowego GitHub lub programu Visual Studio Code, który wyróżnia zmodyfikowane linie. Takie podejście pozwala na dalsze udoskonalanie i rozszerzanie kodu bez utraty śledzenia postępu i zmian.
+Organizując swój kod w dedykowane foldery i używając GitHuba do zarządzania repozytoriami i tworzenia kopii zapasowych, zapewnisz dobrą strukturę swoich projektów i będziesz łatwo dostępny. Kiedy już będziesz miał działającą wersję swojego kodu, wypchnij ją do GitHuba. Następnie można łatwo śledzić wszelkie zmiany za pomocą interfejsu internetowego GitHub lub programu Visual Studio Code, który wyróżnia zmodyfikowane linie. Takie podejście pozwala na dalsze udoskonalanie i rozszerzanie kodu bez utraty śledzenia postępu i zmian.
 
 Git i platformy takie jak GitHub i GitLab to potężne narzędzia i chociaż mogą być skomplikowane, w Internecie dostępnych jest wiele zasobów, które pomogą Ci lepiej je zrozumieć. Jednym z najcenniejszych zasobów, jakie znalazłem, są pomocnicy AI, tacy jak ChatGPT. Możesz opisać, co musisz osiągnąć, a te narzędzia cierpliwie poprowadzą Cię przez proces krok po kroku.
 

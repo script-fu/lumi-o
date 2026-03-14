@@ -3,7 +3,7 @@ title: "Variabler och omfattning"
 type: docs
 weight: 1
 ---
-I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variables store data values that your script can manipulate, while scope defines where those variables are accessible. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
+I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variabler lagrar datavärden som ditt skript kan manipulera, medan scope definierar var dessa variabler är tillgängliga. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
 
 ### Dynamisk typning
 

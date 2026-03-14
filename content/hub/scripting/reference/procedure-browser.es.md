@@ -4,7 +4,7 @@ type: docs
 ---
 El Explorador de Procedimientos es la principal herramienta de referencia para descubrir los cientos de funciones disponibles en la Base de Datos de Procedimientos (PDB) de Lumi. Debido a que cada herramienta, filtro y script en Lumi debe estar registrado en PDB para poder ser invocado, este navegador es efectivamente un explorador de PDB completo.
 
-## Abrir el navegador de procedimientos
+## Opening the Procedure Browser
 
 Vaya a **Ayuda → Programación → Explorador de procedimientos**.
 
@@ -17,7 +17,7 @@ El Navegador de Procedimientos puede enumerar todos los procedimientos actualmen
 - **Procedimientos internos**: Funciones principales para manipulación de imágenes, gestión de capas y control de herramientas.
 - **Complementos externos**: procedimientos proporcionados por complementos compilados de C/C++ o extensiones persistentes.
 
-## Búsqueda y filtrado
+## Searching and Filtering
 
 - **Cuadro de búsqueda**: Filtra procedimientos por nombre, descripción o autor. Al borrar el campo de búsqueda se muestran todos los procedimientos disponibles.
 - **Tipo de búsqueda**: el menú desplegable de búsqueda le permite filtrar por campos específicos. Si lo configura en **por tipo** y busca "interno", la lista se reducirá para mostrar solo los procedimientos principales registrados internamente.

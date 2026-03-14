@@ -56,7 +56,7 @@ Dotknięcie **Alt** (lewy Alt) podczas przesuwania wskaźnika myszy nad obszarem
 - **Release Alt**: Lumi wybiera najwyższą nieprzezroczystą warstwę w pozycji kursora (krycie > 25%) i zaznacza ją. Warstwa zostanie podświetlona w panelu Warstwy, a na pasku stanu pojawi się komunikat **„Wybrana warstwa: 'nazwa warstwy'”**.
 - W środkowym punkcie wybranej warstwy na płótnie rysowany jest uchwyt. Uchwyt zmniejsza się i zanika w miarę oddalania się kursora.
 
-### Cykliczne przełączanie warstwKażde kolejne naciśnięcie klawisza Alt w tym samym miejscu powoduje wybranie **następnej warstwy w dół** na stosie w tym momencie. Lumi zapamiętuje ostatnią wybraną warstwę i przechodzi obok niej do warstwy znajdującej się poniżej. Po osiągnięciu dna stosu kolejne dotknięcie powoduje powrót do najwyższej warstwy w tej pozycji. Ułatwia to dostęp do zagnieżdżonych warstw w złożonych scenach poprzez wielokrotne naciśnięcie klawisza Alt.
+### Cykliczne przełączanie warstwKażde kolejne naciśnięcie klawisza Alt w tym samym miejscu powoduje wybranie **następnej warstwy w dół** na stosie w tym miejscu. Lumi zapamiętuje ostatnią wybraną warstwę i przechodzi obok niej do warstwy znajdującej się poniżej. Po osiągnięciu dna stosu kolejne dotknięcie powoduje powrót do najwyższej warstwy w tej pozycji. Ułatwia to dostęp do zagnieżdżonych warstw w złożonych scenach poprzez wielokrotne naciśnięcie klawisza Alt.
 
 ### Zasady anulowania
 

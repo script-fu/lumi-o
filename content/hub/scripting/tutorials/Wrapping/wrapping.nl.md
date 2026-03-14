@@ -162,7 +162,7 @@ Door functies op laag niveau in betekenisvolle namen te verpakken, creëren we e
 
 Lumi levert een set kant-en-klare wrappers die automatisch worden geladen bij het opstarten, zodat ze beschikbaar zijn in elke plug-in of in de Scheme Console zonder enige `(load ...)` aanroep. Deze bibliotheken (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` en `paths.scm`) zijn gebouwd op precies hetzelfde principe als de bovenstaande voorbeelden: ze geven duidelijke namen aan bewerkingen op laag niveau, verbergen repetitieve standaardtekst, en zorg voor één plek waar u kunt bijwerken als de onderliggende opdracht verandert.`images.scm` biedt bijvoorbeeld `image-get-open-list` als een leesbare wrapper rond de onbewerkte PDB-aanroep, en `files.scm` biedt hulp bij het bouwen van paden waarvoor anders herhaalde `string-append`-ketens nodig zouden zijn.
 
-U kunt door elke geëxporteerde naam bladeren, de bijbehorende docstring lezen en zien uit welke bibliotheek deze afkomstig is in **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Help → Programmeren → Hulpprogrammabrowser). Het is een praktische demonstratie van inpakken op schaal, en een nuttige bron van patronen die u kunt lenen bij het bouwen van uw eigen helperbibliotheek.
+U kunt door elke geëxporteerde naam bladeren, de bijbehorende docstring lezen en zien uit welke bibliotheek deze afkomstig is in **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Help → Programmeren → Utility Browser). Het is een praktische demonstratie van inpakken op schaal, en een nuttige bron van patronen die u kunt lenen bij het bouwen van uw eigen helperbibliotheek.
 
 ### Conclusie
 

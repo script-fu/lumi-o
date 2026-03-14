@@ -12,7 +12,7 @@ weight: 7
 
 您可以透過 Patreon 來做到這一點，這是許多創意人員用來獲得直接支援的平台：
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) 支援。
+[造訪我的 Patreon 頁面](https://www.patreon.com/pixelmixer) 進行支援。
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="派特隆" icon="heart" >}}

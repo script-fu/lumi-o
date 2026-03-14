@@ -9,7 +9,7 @@ Detta avsnitt fungerar som en introduktion till funktioner i Scheme och lägger 
 
 ## Minimal syntax och uttryck
 
-Schemakoden är gjord av **uttryck**. Ett uttryck utvärderas till ett värde. Syntaxen är enhetlig: parenteser bildar ett anrop, med operatörens eller funktionsnamnet först.
+Scheme code is made of **expressions**. Ett uttryck utvärderas till ett värde. Syntaxen är enhetlig: parenteser bildar ett anrop, med operatörens eller funktionsnamnet först.
 
 ```scheme
 (+ 1 2)         ; Adds 1 and 2, resulting in 3

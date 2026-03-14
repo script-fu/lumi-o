@@ -12,3 +12,9 @@
   translation: "Установка Linux"
 - id: menuTechnicalGuides
   translation: "Технические руководства"
+- id: menuHome
+  translation: "Главная"
+- id: menuScripting
+  translation: "Сценарии"
+- id: menuContact
+  translation: "Контакт"

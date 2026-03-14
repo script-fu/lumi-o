@@ -96,7 +96,7 @@ Essa abordagem garante que a função sempre receba entradas válidas, melhorand
 ```
 
 Nesta versão:
-- A função verifica primeiro se `message` está vazio ou inválido. Se a mensagem for válida, ele passa a verificar se `output` é um dos valores aceitos (`gui`, `error-console` ou `terminal`).
+- A função verifica primeiro se `message` está vazio ou inválido. Se a mensagem for válida, passa a verificar se `output` é um dos valores aceitos (`gui`, `error-console` ou `terminal`).
 - Se ambas as verificações forem aprovadas, a mensagem será enviada para a saída apropriada. Caso contrário, uma mensagem de erro será gerada com uma explicação clara.
 - Uma verificação adicional é feita para garantir que a mensagem também seja uma string.
 

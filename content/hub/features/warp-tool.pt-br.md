@@ -69,7 +69,7 @@ Quando **Warp Masks** está desativado, apenas o conteúdo da camada é deslocad
 ### Qualidade
 
 - **Interpolação**: o método de amostragem usado ao confirmar. Linear é rápido e suave para a maioria dos trabalhos; Cubic e Nohalo proporcionam maior fidelidade para detalhes finos.
-- **Visualização de alta qualidade**: usa o amostrador de qualidade de confirmação durante a visualização interativa. Mais lento, mas a visualização corresponde exatamente ao resultado confirmado.
+- **High Quality Preview**: Uses the commit-quality sampler during the interactive preview. Mais lento, mas a visualização corresponde exatamente ao resultado confirmado.
 
 ### Opções de grupo
 

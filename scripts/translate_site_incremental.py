@@ -11,6 +11,7 @@ try:
 except Exception:
     GoogleTranslator = None
 
+TRANSLATION_FAILED_FOR_CURRENT_FILE = False
 
 LANGUAGE_TARGETS = {
     "de": "de",
@@ -65,7 +66,7 @@ def protect_tokens(text: str):
         re.compile(r"\{\{[%<][\s\S]*?[%>]\}\}"),
         re.compile(r"\[!\[[^\]]*\]\([^\)]+\)\]\([^\)]+\)"),
         re.compile(r"!\[[^\]]*\]\([^\)]+\)"),
-        re.compile(r"\[[^\]]*\]\([^\)]+\)"),
+        re.compile(r"(?<=\])\([^\)]+\)"),
         re.compile(r"https?://\S+"),
     ]
 
@@ -97,7 +98,8 @@ def safe_translate(translator, text: str, *, label: str) -> str:
         return translated
     except Exception as exc:
         print(f"[translate] warning: translate failed ({label}): {exc}")
-        cache[text] = text
+        global TRANSLATION_FAILED_FOR_CURRENT_FILE
+        TRANSLATION_FAILED_FOR_CURRENT_FILE = True
         return text
 
 
@@ -373,7 +375,10 @@ def main():
     translated_count = 0
     skipped_count = 0
 
+    global TRANSLATION_FAILED_FOR_CURRENT_FILE
+
     for source_file in source_files:
+        TRANSLATION_FAILED_FOR_CURRENT_FILE = False
         rel_key = str(source_file.relative_to(content_dir)).replace("\\", "/")
         source_keys.add(rel_key)
         src_hash = file_hash(source_file)
@@ -405,9 +410,12 @@ def main():
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_text(output, encoding="utf-8")
 
-        files_state[rel_key] = src_hash
-        translated_count += 1
-        print(f"[translate] updated: {rel_key}")
+        if not TRANSLATION_FAILED_FOR_CURRENT_FILE:
+            files_state[rel_key] = src_hash
+            translated_count += 1
+            print(f"[translate] updated: {rel_key}")
+        else:
+            print(f"[translate] failed partially, hash not updated for: {rel_key}")
 
     removed = 0
     stale_keys = [key for key in files_state.keys() if key not in source_keys]

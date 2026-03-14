@@ -93,7 +93,7 @@ weight: 1
 ### 安装插件
 
 1. 转到 **Lumi -> 编辑 -> 首选项 -> 文件夹 -> 插件**。
-2. 将[repo](/hub/scripting/tools/git) 插件文件夹添加到列表中。
+2. 将您的 [repo](/hub/scripting/tools/git) 插件文件夹添加到列表中。
 3. 为插件创建一个文件夹，并将上面的示例代码保存为`hello-world.scm`：
   - `your-plug-ins-repo/hello-world/hello-world.scm`
 4. 右键单击`hello-world.scm` 文件。

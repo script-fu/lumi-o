@@ -8,7 +8,7 @@ L'intégration continue (CI) est un moyen de tester, créer et valider automatiq
 
 Ce document décrit le fonctionnement du pipeline GitLab CI/CD de Lumi, y compris le rôle du fichier `.gitlab-ci.yml`, des scripts shell et des outils externes tels que Meson et Ninja.
 
-Pour une documentation technique détaillée du processus de construction Lumi CI, voir [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) dans le référentiel.
+Pour une documentation technique détaillée du processus de construction de Lumi CI, voir [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) dans le référentiel.
 
 ## Bases de GitLab CI/CD
 

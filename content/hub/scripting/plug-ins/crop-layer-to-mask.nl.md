@@ -6,7 +6,7 @@ Snijdt lagen bij tot het maskergebied, met een optionele pixelmarge.
 
 ## Waar het leeft
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
+- [Bekijk de bron](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
 ## Waar het verschijnt in Lumi
 

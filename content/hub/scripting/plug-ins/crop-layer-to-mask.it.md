@@ -6,7 +6,7 @@ Ritaglia i livelli nell'area della maschera, con un margine di pixel opzionale.
 
 ## Dove vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
+- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
 ## Dove appare in Lumi
 

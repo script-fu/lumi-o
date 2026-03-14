@@ -14,7 +14,7 @@ Es ist immer besser, ein Backup zu haben und es nicht zu brauchen, als ein Backu
 ## Hauptfunktionen von Clonezilla
 
 - **Festplatten-Imaging**: Clonezilla erstellt eine exakte Kopie einer Festplatte, einschließlich des Betriebssystems, der Anwendungen und der Daten.
-- **Sichern und Wiederherstellen**: Damit können Sie ein Backup-Image einer Festplatte erstellen und es im Falle eines Fehlers oder einer Migration auf ein neues Laufwerk wiederherstellen.
+- **Sichern und Wiederherstellen**: Damit können Sie ein Backup-Image einer Festplatte erstellen und es im Falle eines Fehlers oder einer Migration auf eine neue Festplatte wiederherstellen.
 - **Kostenlos und Open Source**: Die Nutzung von Clonezilla ist völlig kostenlos und der Quellcode steht zur Änderung und Anpassung zur Verfügung.
 
 
@@ -24,9 +24,9 @@ Es ist immer besser, ein Backup zu haben und es nicht zu brauchen, als ein Backu
 
 Sie benötigen ein USB-Laufwerk für Clonezilla und eine externe Festplatte, die größer ist als die interne Festplatte, die Sie klonen möchten.
 
-Diese Schritte vereinfachen den Prozess basierend auf dem [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Es empfiehlt sich, die vollständige Anleitung durchzulesen, die zur besseren Verdeutlichung auch Screenshots enthält.
+Diese Schritte vereinfachen den Prozess basierend auf dem [offiziellen Leitfaden](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Es empfiehlt sich, die vollständige Anleitung durchzulesen, die zur besseren Verdeutlichung auch Screenshots enthält.
 
-1. **Erstellen Sie einen Clonezilla Live-USB oder eine CD/DVD**: Befolgen Sie die detaillierten Anweisungen auf dem Clonezilla [website](https://clonezilla.org/liveusb.php), um einen bootfähigen USB-Stick oder eine bootfähige CD/DVD zu erstellen.
+1. **Erstellen Sie einen Clonezilla Live-USB oder eine CD/DVD**: Befolgen Sie die detaillierten Anweisungen auf der Clonezilla-[Website](https://clonezilla.org/liveusb.php), um einen bootfähigen USB-Stick oder eine bootfähige CD/DVD zu erstellen.
 
 2. **Schließen Sie Ihr externes Backup-Laufwerk an**: Schließen Sie Ihr externes Laufwerk an und stellen Sie sicher, dass es von Ihrem System erkannt wird. Dies ist das Ziel für Ihr Backup.
 

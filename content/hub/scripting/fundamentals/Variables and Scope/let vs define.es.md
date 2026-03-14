@@ -40,7 +40,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 (sum-list '(1 2 3 4))
 ```
 
-**Resultado**: `10`
+**Result**: `10`
 
 - **Cómo funciona**: la función `loop` se define dentro de `let`, lo que permite llamadas recursivas con enlaces actualizados.
 
@@ -114,7 +114,7 @@ Tanto **llamado `let`** como **local `define`** son herramientas poderosas en Sc
 
 ### Cuándo utilizar `define` local
 
-1. **Reusable Helpers**: When logic needs to be reused in multiple parts of the function.
+1. **Ayudantes reutilizables**: cuando es necesario reutilizar la lógica en varias partes de la función.
 2. **Diseño modular**: para dividir cálculos complejos en subtareas más pequeñas con nombres.
 3. **Múltiples pasos**: cuando se necesitan múltiples funciones auxiliares para diferentes partes del cálculo.**Ejemplo: Procesamiento de entradas**
 ```scheme

@@ -84,7 +84,7 @@ weight: 8
 
 这使您可以处理更复杂的情况，其中需要根据条件测试的结果执行多个表达式或语句。
 
-好的，这是嵌入返回值的库代码，用于控制执行过程。
+Okay, here is the library code with return values embedded and used to control the executing process.
 
 ### 用返回值重构
 

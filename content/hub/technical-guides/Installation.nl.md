@@ -2,7 +2,7 @@
 title: "Installatie"
 type: docs
 ---
-Je hebt Git nodig voor de eerste kloonstap hieronder. Als Git nog niet is geïnstalleerd, installeer het dan eerst (Debian/Ubuntu: `sudo apt install git`) of volg: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+Je hebt Git nodig voor de eerste kloonstap hieronder. Als Git nog niet is geïnstalleerd, installeer het dan eerst (Debian/Ubuntu: `sudo apt install git`) of volg: [Git gebruiken op Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Lumi klonen (eerste installatie)
 

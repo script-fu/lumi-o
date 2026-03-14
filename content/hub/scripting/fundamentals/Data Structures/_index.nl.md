@@ -24,7 +24,7 @@ Voorbeelden van gebruik:
 
 ---
 
-### Vectoren
+### vectoren
 
 Vectoren zijn verzamelingen elementen van vaste grootte, geïndexeerd voor snelle toegang. Ze zijn het meest geschikt voor scenario's waarin prestaties en positionele toegang van cruciaal belang zijn.
 

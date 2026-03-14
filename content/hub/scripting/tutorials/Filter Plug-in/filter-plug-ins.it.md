@@ -3,7 +3,7 @@ title: "Il plugin filtro"
 type: docs
 weight: 2
 ---
-Abbiamo utilizzato un plug-in _procedure_ per il tutorial [First Step](../../first-step/). Questi tipi di plug-in funzionano senza bisogno di un'immagine o di un elemento disegnabile come input. Di solito, utilizziamo un plug-in per modificare un'immagine e i suoi disegni. Plug-in come questi sono chiamati plug-in _filter_.
+Abbiamo utilizzato un plug-in _procedure_ per il tutorial [Primo passaggio](../../first-step/). Questi tipi di plug-in funzionano senza bisogno di un'immagine o di un elemento disegnabile come input. Di solito, utilizziamo un plug-in per modificare un'immagine e i suoi disegni. Plug-in come questi sono chiamati plug-in _filter_.
 
 ### Cos'è un Drawable?
 

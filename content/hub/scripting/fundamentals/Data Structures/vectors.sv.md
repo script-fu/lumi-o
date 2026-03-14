@@ -119,7 +119,7 @@ Resultat:
 - `(vector? (vector 1 2 3))` returnerar `#t` (sant)
 - `(vector? 42)` returnerar `#f` (falskt)
 
-### Vektorer och passerande referensbeteendeI Schema är vektorer föränderliga och skickas med referens. Detta innebär att när du skickar en vektor till en funktion kan funktionen modifiera den ursprungliga vektorn direkt. Alla ändringar som görs i vektorn inuti funktionen kommer att reflekteras utanför funktionen. This behavior is useful for efficiently sharing and updating data across multiple functions, but it also requires caution to avoid unintended side effects.
+### Vektorer och passerande referensbeteendeI Schema är vektorer föränderliga och skickas med referens. Detta innebär att när du skickar en vektor till en funktion kan funktionen modifiera den ursprungliga vektorn direkt. Alla ändringar som görs i vektorn inuti funktionen kommer att reflekteras utanför funktionen. Detta beteende är användbart för att effektivt dela och uppdatera data över flera funktioner, men det kräver också försiktighet för att undvika oavsiktliga biverkningar.
 
 #### Exempel: Modifiera en vektor i en funktion
 

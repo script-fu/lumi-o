@@ -64,7 +64,7 @@ O `SF-DIRNAME` fornece um navegador para um diretório.
 
 Aqui validamos as duas entradas de diretório (origem e destino) e voltamos aos padrões se os caminhos da GUI estiverem vazios/inválidos.
 
-[/hub/scripting/plug-ins/batch-process/](/hub/scripting/plug-ins/batch-process/)
+[/hub/scripting/plug-ins/processo em lote/](/hub/scripting/plug-ins/batch-process/)
 
 Se você estiver interessado nos detalhes da implementação, pesquise `validate-path-and-dir` na fonte do plug-in.
 

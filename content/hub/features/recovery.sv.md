@@ -107,4 +107,4 @@ Om du ställer in **Behåll senaste** till `0` raderas alla återställningstill
 
 ## Startup Recovery
 
-Vid start, om Lumi upptäcker att den senast öppnade filen har nyare autosparadata än den senaste fullständiga lagringen, visar den en återställningsprompt innan den laddas. Du kan acceptera (ladda in autospara) eller avvisa (öppna det primära sparandet som vanligt).
+Vid start, om Lumi upptäcker att den senast öppnade filen har nyare autosave-data än den senaste fullständiga lagringen, visar den en återställningsprompt innan den laddas. Du kan acceptera (ladda in autospara) eller avvisa (öppna det primära sparandet som vanligt).

@@ -14,9 +14,9 @@ weight: 4
 
 ### 사용 가능한 반복 유형
 
-Scheme은 반복을 위한 여러 구성을 제공하며 각각은 특정 요구 사항에 맞게 조정됩니다.
+Scheme은 반복을 위한 여러 구성을 제공하며 각 구성은 특정 요구 사항에 맞게 조정됩니다.
 - **map:** 목록의 각 요소에 함수를 적용하여 결과와 함께 새 목록을 반환합니다.
-- **for-each:** `map`과 유사하지만 결과를 반환하지 않고 각 요소에 대해 함수를 실행하는 데 사용됩니다.
+- **for-each:** Similar to `map`, but used for executing a function on each element without returning a result.
 - **do:** 다양한 반복 프로세스를 처리하는 범용 루프 구성입니다.
 - **재귀:** 함수가 스스로를 호출하여 문제를 점진적으로 해결하는 강력한 기술입니다.
 

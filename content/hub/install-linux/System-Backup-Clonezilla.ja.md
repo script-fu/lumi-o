@@ -24,9 +24,9 @@ type: docs
 
 Clonezilla 用の USB ドライブと、クローンを作成する内部ドライブより大きい外付けハード ドライブが必要です。
 
-これらの手順により、[official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc) に基づいてプロセスが簡素化されます。より明確にするためにスクリーンショットが含まれている完全なガイドを確認することをお勧めします。
+これらの手順は、[公式ガイド](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc) に基づいてプロセスを簡素化します。より明確にするためにスクリーンショットが含まれている完全なガイドを確認することをお勧めします。
 
-1. **Clonezilla Live USB または CD/DVD を作成します**: Clonezilla [website](https://clonezilla.org/liveusb.php) の詳細な手順に従って、起動可能な USB または CD/DVD を作成します。
+1. **Clonezilla Live USB または CD/DVD を作成します**: Clonezilla [Web サイト](https://clonezilla.org/liveusb.php) の詳細な手順に従って、起動可能な USB または CD/DVD を作成します。
 
 2. **外部バックアップ ドライブを接続します**: 外部ドライブを接続し、システムによって認識されていることを確認します。これがバックアップの保存先になります。
 

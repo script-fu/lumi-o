@@ -16,7 +16,7 @@ Die einfachste Form von `for-each` sieht so aus:
 
 ---
 
-### Beispiel: Eine Liste drucken
+### Example: Print a List
 
 ```scheme
 (define (print-item x)

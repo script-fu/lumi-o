@@ -12,3 +12,9 @@
   translation: "Instalacja Linuksa"
 - id: menuTechnicalGuides
   translation: "Przewodniki techniczne"
+- id: menuHome
+  translation: "Strona główna"
+- id: menuScripting
+  translation: "Skrypty"
+- id: menuContact
+  translation: "Kontakt"

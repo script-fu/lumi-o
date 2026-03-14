@@ -12,7 +12,7 @@ weight: 7
 
 คุณสามารถดำเนินการนี้ได้ผ่าน Patreon ซึ่งเป็นแพลตฟอร์มที่ครีเอทีฟจำนวนมากใช้เพื่อรับการสนับสนุนโดยตรง:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) เพื่อสนับสนุน
+[ไปที่หน้า Patreon ของฉัน](https://www.patreon.com/pixelmixer) เพื่อสนับสนุน
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="แพทเรียน" icon="heart" >}}

@@ -79,7 +79,7 @@ El almacenamiento en caché de pincel apunta a sellos de pincel transformados: s
 Es más útil cuando:- el cepillo tiene un costoso trabajo de transformación
 - el mismo preset se utiliza en muchas sesiones
 - el pincel vuelve a visitar estados dinámicos similares repetidamente
-- quick startup responsiveness matters
+- la capacidad de respuesta de inicio rápido es importante
 
 Es menos útil para pinceles cuyo estado de transformación cambia enormemente y rara vez se repite.
 

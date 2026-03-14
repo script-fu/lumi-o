@@ -12,7 +12,7 @@ Als je van mijn werk hebt genoten en het nuttig hebt gevonden, overweeg dan om j
 
 Dit kun je doen via Patreon, een platform dat veel creatieven gebruiken om directe ondersteuning te krijgen:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) ter ondersteuning.
+[Bezoek mijn Patreon-pagina](https://www.patreon.com/pixelmixer) om te ondersteunen.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}

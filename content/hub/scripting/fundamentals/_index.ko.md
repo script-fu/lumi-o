@@ -3,7 +3,7 @@ title: "기초"
 type: docs
 weight: 2
 ---
-기초에서는 Lumi Scheme 플러그인에서 사용하는 핵심 구성 요소(변수, 함수, 공통 데이터 구조, 조건 및 반복)를 다룹니다.
+기초에서는 Lumi Scheme 플러그인에서 사용하는 핵심 구성 요소인 변수, 함수, 공통 데이터 구조, 조건 및 반복을 다룹니다.
 
 {{< cards >}}
   {{< card link="variables-and-scope" title="변수 및 범위" icon="variable" subtitle="Scheme의 변수 및 범위 이해" >}}

@@ -6,7 +6,7 @@ type: docs
 
 ## Где он живет
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Просмотреть источник](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Где он появляется в Lumi
 

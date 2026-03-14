@@ -6,7 +6,7 @@ Przycina warstwy do obszaru maski, z opcjonalnym marginesem w pikselach.
 
 ## Gdzie mieszka
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
+- [Wyświetl źródło](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
 ## Gdzie pojawia się w Lumi
 

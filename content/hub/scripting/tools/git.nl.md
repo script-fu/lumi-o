@@ -56,7 +56,7 @@ sudo apt install git
 
 ### 2. Maak een GitHub-account
 
-Als u nog geen account heeft, gaat u naar [GitHub](https://github.com/) om u aan te melden. Eenmaal geregistreerd, kunt u opslagplaatsen op GitHub maken om uw code online op te slaan.
+Als je nog geen account hebt, ga dan naar [GitHub](https://github.com/) om je aan te melden. Eenmaal geregistreerd, kunt u opslagplaatsen op GitHub maken om uw code online op te slaan.
 
 ### 3. Maak een lege repository op GitHub
 

@@ -6,6 +6,6 @@ type: docs
 
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="スキーム開発のためのバージョン管理" >}}
-  {{< card link="visual-studio-code" title="Visual Studio コード" icon="code" subtitle="Scheme のコード エディターのセットアップと拡張機能" >}}
+  {{< card link="visual-studio-code" title="Visual Studioコード" icon="code" subtitle="Scheme のコード エディターのセットアップと拡張機能" >}}
   {{< card link="ai-assisted" title="AI支援" icon="sparkles" subtitle="AI エージェントを使用してプラグインを作成およびリファクタリングする" >}}
 {{< /cards >}}

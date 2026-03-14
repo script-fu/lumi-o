@@ -20,14 +20,14 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
   {{< card link="hello-world" title="Bonjour le monde!" icon="sparkles" subtitle="Créez votre premier plug-in Scheme avec une structure de base" >}}
   {{< card link="refactoring" title="Refactorisation" icon="code" subtitle="Améliorer la structure du code sans changer le comportement" >}}
   {{< card link="loading" title="Chargement" icon="upload" subtitle="Organisez les fonctions dans des bibliothèques réutilisables" >}}
-  {{< card link="validation" title="Validation" icon="badge-check" subtitle="Ajouter la gestion des erreurs et la validation des entrées" >}}
+  {{< card link="validation" title="Validation" icon="badge-check" subtitle="Add error handling and input validation" >}}
   {{< card link="return-values" title="Valeurs de retour" icon="arrow-circle-left" subtitle="Comprendre les sorties de fonction et le flux de données" >}}
-  {{< card link="messaging-library" title="Bibliothèque de messagerie" icon="annotation" subtitle="Construire un système de messagerie complet" >}}
+  {{< card link="messaging-library" title="Bibliothèque de messagerie" icon="annotation" subtitle="Build a comprehensive messaging system" >}}
 {{< /cards >}}
 
 {{< cards >}}
   {{< card link="reworking" title="Retravailler" icon="adjustments" subtitle="Techniques avancées de restructuration du code" >}}
-  {{< card link="refactor-again" title="Refactoriser à nouveau" icon="arrow-sm-right" subtitle="Amélioration et optimisation itératives" >}}
+  {{< card link="refactor-again" title="Refactor Again" icon="arrow-sm-right" subtitle="Amélioration et optimisation itératives" >}}
   {{< card link="the-procedure-browser" title="Navigateur de procédures" icon="book-open" subtitle="Explorer la base de données de procédures de Lumi" >}}
   {{< card link="final-thoughts" title="Pensées finales" icon="academic-cap" subtitle="Résumé et prochaines étapes de développement" >}}
 {{< /cards >}}

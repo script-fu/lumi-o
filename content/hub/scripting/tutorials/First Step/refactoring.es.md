@@ -66,7 +66,7 @@ En nuestro ejemplo hemos utilizado una variable llamada "mensaje" vinculada a un
 ### Extrayendo funciones
 
 En programación funcional, refactorizar código para extraer lógica reutilizable en funciones separadas es una práctica común. Al hacer esto, la **función principal** se vuelve mucho más simple y más enfocada en su objetivo de alto nivel, mientras que la **función extraída** parece más compleja porque maneja la lógica detallada. Esto es intencional y se alinea con los principios básicos de la programación funcional, como la modularidad, la separación de preocupaciones y la legibilidad. Aquí está el refactorizado.
-¡Hola mundo! después de la extracción.
+¡Hola Mundo! después de la extracción.
 
 Extrayendo la lógica:
 ```scheme
@@ -117,7 +117,7 @@ Extrayendo la lógica:
 
 #### Símbolos
 
-En el ejemplo anterior, se utiliza un tipo de datos llamado símbolo, como 'gui. Los símbolos se pasan como parámetros a la función de envío de mensaje y se pueden utilizar para tomar decisiones condicionales simples. Al igual que las claves simbólicas, son identificadores únicos. Para obtener más información sobre los símbolos, visite [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+En el ejemplo anterior, se utiliza un tipo de datos llamado símbolo, como 'gui. Los símbolos se pasan como parámetros a la función de envío de mensaje y se pueden utilizar para tomar decisiones condicionales simples. Al igual que las claves simbólicas, son identificadores únicos. Para obtener más información sobre los símbolos, visite [esta página.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Simplificando la función principal
 

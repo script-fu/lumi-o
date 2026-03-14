@@ -117,7 +117,7 @@ Estrazione della logica:
 
 #### Simboli
 
-Nell'esempio sopra viene utilizzato un tipo di dati chiamato simbolo, come "gui". I simboli vengono passati come parametri alla funzione di invio del messaggio e possono essere utilizzati per prendere semplici decisioni condizionali. Come le chiavi simboliche, sono identificatori univoci. Per ulteriori informazioni sui simboli, visitare [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+Nell'esempio sopra viene utilizzato un tipo di dati chiamato simbolo, come "gui". I simboli vengono passati come parametri alla funzione di invio del messaggio e possono essere utilizzati per prendere semplici decisioni condizionali. Come le chiavi simboliche, sono identificatori univoci. Per ulteriori informazioni sui simboli, visitare [questa pagina.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Semplificazione della funzione principale
 

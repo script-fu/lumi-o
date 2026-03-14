@@ -20,7 +20,7 @@ type: docs
 
 Para comenzar a usar VSC:
 
-- **Descargar e instalar**: Vaya a [Visual Studio Code website](https://code.visualstudio.com/) y descargue la versión de Linux.
+- **Descargar e instalar**: vaya al [sitio web de Visual Studio Code](https://code.visualstudio.com/) y descargue la versión de Linux.
 
 - **Explora la interfaz**: cuando abres VSC, verás varios paneles. A la izquierda, tienes la **Barra de actividad**, donde puedes navegar entre archivos, buscar, usar Git e instalar extensiones.
 

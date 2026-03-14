@@ -82,7 +82,7 @@ I fall där du behöver utföra flera åtgärder när villkoret är sant eller f
 ```
 
 - I det här exemplet är `test` `(= 0 1)` (kontrollerar om 0 är lika med 1).
-- Eftersom testet utvärderas till falskt (`#f`), exekveras **alternativ**-blocket:
+- Eftersom testet utvärderas till falskt (`#f`), exekveras det **alternativa** blocket:
   - Först skriver den ut `"False condition met, calculating..."`.
   - Sedan beräknar den `(* 3 4)` och returnerar `12`.
 

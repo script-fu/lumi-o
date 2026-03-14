@@ -20,7 +20,7 @@ type: docs
 
 Så här börjar du använda VSC:
 
-- **Ladda ner och installera**: Gå till [Visual Studio Code website](https://code.visualstudio.com/) och ladda ner Linux-versionen.
+- **Ladda ner och installera**: Gå till webbplatsen [Visual Studio Code](https://code.visualstudio.com/) och ladda ner Linux-versionen.
 
 - **Utforska gränssnittet**: När du öppnar VSC kommer du att märka flera paneler. Till vänster har du **Aktivitetsfältet**, där du kan navigera mellan filer, söka, använda Git och installera tillägg.
 

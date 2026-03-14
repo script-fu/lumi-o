@@ -9,7 +9,7 @@ Lumi 기술 가이드에 오신 것을 환영합니다.
 다루는 주제에는 Lumi 개발, 디버깅, 자동화, 시스템 설정 및 일상적인 생산 작업 흐름에 사용되는 지원 도구가 포함됩니다.
 
 {{< cards >}}
-  {{< card link="AppImage" title="앱 이미지">}}
+  {{< card link="AppImage" title="앱이미지">}}
   {{< card link="Building-a-Debug-Version" title="디버그 버전 빌드">}}
   {{< card link="Installation" title="설치">}}
   {{< card link="Using-Git-on-Linux" title="Linux에서 Git 사용">}}

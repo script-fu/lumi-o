@@ -2,7 +2,7 @@
 title: "Riferimento"
 type: docs
 ---
-Riferimento rapido per le utilità Scheme integrate e gli strumenti di navigazione in-app disponibili durante la scrittura dei plug-in Lumi. Per informazioni generali sullo schema e riferimenti, consulta [Scheme Cookbook](https://cookbook.scheme.org/) e [Scheme.org](https://www.scheme.org/).
+Riferimento rapido per le utilità Scheme integrate e gli strumenti di navigazione in-app disponibili durante la scrittura dei plug-in Lumi. Per informazioni generali e riferimenti allo Schema, consulta [Scheme Cookbook](https://cookbook.scheme.org/) e [Scheme.org](https://www.scheme.org/).
 
 {{< cards >}}
   {{< card link="utility-browser" title="Navigatore di utilità" icon="search" subtitle="Sfoglia e cerca l'utilità Scheme integrata stdlib" >}}

@@ -23,7 +23,7 @@ Uma função, também conhecida como _procedimento_, é um pedaço de código co
 
 **Entrada** > **_Função_** > **Saída**
 
-### Registre a função
+### Registre a Função
 
 Cadastrar é o ato de colocar o nome da função em uma lista para que Lumi saiba disso.
 
@@ -43,7 +43,7 @@ Isso exibe o menu "Funky" na barra de menu principal. Altere o caminho para colo
 
 ### Comentários
 
-No Scheme, a linguagem base do Scheme, os comentários geralmente são feitos precedendo uma linha de texto útil com `;;`. O uso de comentários dependerá de sua fluência como codificador – se você codificar ocasionalmente, mais comentários ajudarão. Se você codifica o tempo todo, o código será tão fácil de ler quanto o comentário. Além disso, ao programar funcionalmente, o código tende a se tornar descritivo o suficiente para ser lido como um script.
+No Scheme, a linguagem base do Scheme, os comentários geralmente são feitos precedendo uma linha de texto útil com `;;`. O uso de comentários dependerá de sua fluência como codificador – se você codificar ocasionalmente, mais comentários ajudarão. Se você codificar o tempo todo, o código será tão fácil de ler quanto o comentário. Além disso, ao programar funcionalmente, o código tende a se tornar descritivo o suficiente para ser lido como um script.
 
 ### Sintaxe
 

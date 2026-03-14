@@ -6,7 +6,7 @@ Copie le groupe de calques actif dans une nouvelle image (utile lorsque la pile 
 
 ## Où il vit
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Voir la source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Où il apparaît dans Lumi
 

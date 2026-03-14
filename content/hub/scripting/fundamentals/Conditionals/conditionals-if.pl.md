@@ -54,7 +54,7 @@ Zarówno bloki kodu `consequent`, jak i `alternative` mogą wykonywać dowolną 
 
 ### Przykłady
 
-#### Example 1: Returning a Value
+#### Przykład 1: Zwracanie wartości
 
 ```scheme
 (if (< 0 1)

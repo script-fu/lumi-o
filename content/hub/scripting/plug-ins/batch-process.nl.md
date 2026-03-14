@@ -6,7 +6,7 @@ Een praktisch, end-to-end voorbeeld voor het in één keer verwerken van veel be
 
 ## Waar het leeft
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Bekijk de bron](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Waar het verschijnt in Lumi
 

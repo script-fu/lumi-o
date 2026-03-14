@@ -8,7 +8,7 @@ type: docs
 
 - **Syntaxisaccentuering**: Syntaxisaccentuering geeft kleurcodes aan uw code, waardoor het gemakkelijker wordt om fouten op te sporen, de structuur te begrijpen en complexe code te lezen.
 - **Extensies**: u kunt VSC uitbreiden met duizenden extensies. Of u nu ondersteuning nodig heeft voor een specifieke taal, thema of tool, er is altijd een extensie die bij u past.
-- **Versiebeheerintegratie**: VSC heeft ingebouwde Git-ondersteuning, waardoor u eenvoudig uw codewijzigingen kunt volgen, branches kunt beheren en services als [GitHub](https://github.com/) of [GitLab](https://gitlab.com/) kunt gebruiken.
+- **Versiebeheerintegratie**: VSC heeft ingebouwde Git-ondersteuning, waardoor het eenvoudig is om uw codewijzigingen bij te houden, branches te beheren en services als [GitHub](https://github.com/) of [GitLab](https://gitlab.com/) te gebruiken.
 
 ### Belangrijkste kenmerken voor beginners
 
@@ -20,7 +20,7 @@ type: docs
 
 Om VSC te gaan gebruiken:
 
-- **Downloaden en installeren**: Ga naar [Visual Studio Code website](https://code.visualstudio.com/) en download de Linux-versie.
+- **Downloaden en installeren**: Ga naar de [Visual Studio Code-website](https://code.visualstudio.com/) en download de Linux-versie.
 
 - **Verken de interface**: wanneer u VSC opent, ziet u verschillende panelen. Aan de linkerkant heb je de **Activiteitenbalk**, waar je tussen bestanden kunt navigeren, zoeken, Git kunt gebruiken en extensies kunt installeren.
 

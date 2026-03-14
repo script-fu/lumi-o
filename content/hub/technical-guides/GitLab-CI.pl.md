@@ -187,4 +187,4 @@ Aby uzyskać szczegółowe informacje na poziomie źródła, użyj:
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-Szczegółowe informacje techniczne dotyczące procesu kompilacji Lumi CI, w tym konfiguracji środowiska, architektury skryptów i rozwiązywania problemów, można znaleźć w artykule [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).
+Szczegółowe informacje techniczne dotyczące procesu kompilacji Lumi CI, w tym konfiguracji środowiska, architektury skryptów i rozwiązywania problemów, można znaleźć w [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).

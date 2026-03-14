@@ -6,7 +6,7 @@ Kopierar den aktiva lagergruppen till en ny bild (användbart när hela stacken 
 
 ## Där den bor
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Visa källan](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Där det visas i Lumi
 

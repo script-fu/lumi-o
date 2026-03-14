@@ -103,6 +103,20 @@ Dans l'expandeur **Stroke Modulation** (affiché uniquement lorsque **Dynamics**
 - **Longueur du fondu** : Distance en unités de canevas sur laquelle le fondu se déroule.
 - **Répéter** : Comment le fondu est répété une fois la longueur du fondu épuisée (Aucun, Boucle, Dents de scie, Triangle).
 
+#### Fade Multipliers
+
+Quatre cases à cocher qui contrôlent ou modifient la manière dont la valeur de fondu est appliquée :
+- **Fade Reverse** : Inverse la direction du fondu afin que les traits commencent à s'estomper et deviennent complètement opaques.
+- **Fade Multiply** : multiplie la sortie de fondu dans la propriété affectée plutôt que de la remplacer.
+- **Fade Multiply Angular** : applique le multiplicateur de fondu uniquement à la dynamique angulaire (angle, inclinaison).
+- **Fade Multiply Ratio** : applique le multiplicateur de fondu uniquement aux propriétés de type rapport (rapport hauteur/largeur).
+
+#### Cartographie des couleurs
+
+Disponible pour les outils Pinceau et Smudge lorsque Dynamics est actif :
+- **Gradient** : La ressource de dégradé utilisée pour le mappage des couleurs le long du trait.
+- **Blend Color Space** : Espace colorimétrique dans lequel les couleurs dégradées sont interpolées pendant la peinture.
+
 
 ### Têtes de brosse
 
@@ -112,10 +126,8 @@ Le rayon de l'orbite est déterminé par la taille globale de la brosse moins la
 
 Les têtes de pinceau contrôlent l'endroit où chaque tête est placée autour du trait. Si **Pivot X** ou **Pivot Y** est éloigné du centre par défaut, chaque tête suit toujours la même formation, mais chaque touche estampée atterrit désormais en utilisant le point de contact interne choisi au lieu du centre géométrique de l'image du pinceau.
 
-Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.
-
-- **Count** : Nombre de têtes de brosse simultanées (1 à 16).
-- **Head Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
+Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.- **Count** : Nombre de têtes de brosse simultanées (1 à 16).
+- **Taille de la tête** : taille rendue de chaque tête par rapport à la taille globale du pinceau (0,1 à 1,0).
 - **Rapport d'aspect de l'orbite** (0,1–1,0) : façonne l'orbite de la formation du cercle à l'ellipse. 1,0 = orbite circulaire ; des valeurs inférieures écrasent l’axe mineur.
 - **Angle de formation** (0–360°) : orientation statique de l'anneau de formation, utilisée lorsque **Suivre la direction** est inférieur à 1,0.
 - **Suivez la direction** (0,0–1,0) : la force avec laquelle l'anneau de formation suit la direction de déplacement de la course. À 1,0, l'anneau est toujours perpendiculaire à la direction du déplacement ; à 0,0, il se verrouille sur la valeur statique de l'**Angle de formation**.
@@ -124,23 +136,24 @@ Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'op
 
 #### Dispersion
 
-Principaux contrôles de dispersion dans l'extenseur **Têtes de brosse** :- **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). Les angles par tête/par touche sont biaisés vers l'extérieur avec un croisement contrôlé pour éviter les panaches rigides en miroir. Serré à 360°.
+Principaux contrôles de dispersion dans l'extenseur **Têtes de brosse** :
+
+- **Angle de diffusion** (0 à 360°, 10° par défaut) : fait pivoter uniquement le composant de diffusion aléatoire (pas l'espacement de remplissage). Les angles par tête/par touche sont biaisés vers l'extérieur avec un croisement contrôlé pour éviter les panaches rigides en miroir. Serré à 360°.
 - **Distance de diffusion** (0 à 10 000 px) : déplacement aléatoire vers l'avant à partir de la position d'espacement de remplissage de chaque tête. J'ai relancé chaque touche.
+- **Scatter Randomness** (0,0–1,0) : variation supplémentaire par touche superposée à la distance et à l'angle de diffusion de base, produisant une pulvérisation plus lâche et plus organique.
+- **Influence de la vitesse** (0,0–1,0) : met à l'échelle la dispersion en fonction de la vitesse de course. À 1,0, les coups rapides dispersent les têtes beaucoup plus loin que les coups lents ; à 0,0, la dispersion est constante quelle que soit la vitesse.
 - **Scatter Size Balance** (0,0–1,0) : contrôle l'inclinaison de la suppression pour les têtes au-dessus du seuil. À 1,0, toutes les têtes se dispersent de manière égale ; des valeurs plus faibles suppriment de plus en plus les têtes plus grosses tandis que les têtes au niveau/en dessous du seuil restent à la distance de diffusion complète.
 
 ### Options supplémentaires
 
-Dans l'expandeur **Options supplémentaires** (réduit par défaut), les contrôles sont regroupés sous forme de sections de débordement qui sont modifiées moins souvent. Cela permet aux principaux expandeurs de se concentrer sur les commandes de peinture fréquemment ajustées.
-
-#### Propriétés du pinceau (débordement)
-
+Dans l'expandeur **Options supplémentaires** (réduit par défaut), les contrôles sont regroupés sous forme de sections de débordement qui sont modifiées moins souvent. Cela permet aux principaux expandeurs de se concentrer sur les commandes de peinture fréquemment ajustées.#### Propriétés du pinceau (débordement)
 - **Verrouiller l'angle sur l'espace de l'écran** : verrouille l'angle du pinceau sur l'espace de l'écran, de sorte que l'angle reste au même niveau pendant que la toile tourne/se retourne. Aucun effet lorsque Dynamics contrôle l’angle.
-- **Pivot X** : point de contact horizontal du tampon à l'intérieur de l'image du pinceau (0,0 = bord gauche, 0,5 = centre, 1,0 = bord droit). Le déplacer permet aux parties excentrées du pinceau de diriger le trait.
-- **Pivot Y** : point de contact vertical du tampon à l'intérieur de l'image du pinceau (0,0 = bord supérieur, 0,5 = centre, 1,0 = bord inférieur). Avec **Pivot X**, cela définit quelle partie de la touche se trouve sur l'emplacement de peinture.
 - **Random Flip Horizontal** : 50 % de chances de refléter chaque tampon de gauche à droite par touche.
 - **Renversement vertical aléatoire** : 50 % de chances de retourner chaque tampon à l'envers par touche.
 - **Rotation aléatoire** : fait pivoter chaque tampon de manière aléatoire de 0°, 90°, 180° ou 270° par touche.
-- **Jitter uniforme** : lorsque cette option est activée, les décalages du curseur **Jitter** sont tirés d'une distribution uniforme (chaque décalage est également probable dans la plage). Lorsqu'elle est désactivée, la distribution est gaussienne (décalages du cluster vers le centre).
+- **Pivot X** (0,0–1,0) : point de contact horizontal dans l'image du pinceau. 0,0 = bord gauche, 0,5 = centre (par défaut), 1,0 = bord droit. Le point choisi est ce qui s'aligne avec la position de la peinture sur la toile, donc l'éloigner du centre décale chaque touche dans cette direction. Les rotations et les retournements restent visuellement ancrés au pivot car le décalage de placement est appliqué après la transformation.
+- **Pivot Y** (0,0–1,0) : point de contact vertical dans l'image du pinceau. 0,0 = bord supérieur, 0,5 = centre (par défaut), 1,0 = bord inférieur. Fonctionne avec **Pivot X** pour définir la partie exacte de la touche qui se trouve sur le tracé du trait.
+- **Jitter uniforme** : lorsque cette option est activée, les décalages du curseur **Jitter** sont tirés d'une distribution uniforme (chaque décalage est également probable dans la plage). Lorsqu'elle est désactivée, la distribution est biaisée vers le centre.
 - **Réinitialiser l'animation** : Pour les pinceaux animés : lorsqu'elle est activée, l'animation redémarre à partir de l'image 0 à chaque nouveau trait ; lorsqu'elle est désactivée, elle continue à partir de l'endroit où le trait précédent s'est terminé.
 
 Lorsque l’une ou l’autre des valeurs de pivot diffère du centre, l’aperçu du pinceau affiche une superposition de réticule marquant le point de contact actif du tampon.
@@ -155,8 +168,14 @@ Dispersion :
 - **Seuil de taille de diffusion** (0,01 à 100 px) : rayon de seuil pour une distance de diffusion complète. Les têtes égales ou inférieures à ce rayon utilisent la distance de diffusion complète ; les têtes plus grosses sont progressivement rapprochées de la course.
 
 Randomisation :
-- **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). The same seed reproduces the same formation every stroke. Désensibilisé lorsque **Randomize Head Character** est activé.
+- **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). La même graine reproduit la même formation à chaque coup. Désensibilisé lorsque **Randomize Head Character** est activé.
 - **Randomiser le personnage de tête** : redessine les valeurs de caractère par tête (taille, position de dispersion) pour chaque tampon afin que la formation soit complètement chaotique le long du trait. Remplace **Character Seed**.
-- **Randomiser les images d'animation** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.#### Comportement de l'AVC (débordement)
+- **Randomiser les images d'animation** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.
+
+#### Dynamique (débordement)
+
+Commandes qui étendent l'expandeur Dynamics principal, regroupées ici car elles sont rarement ajustées :
+- **Aperçu de la taille aléatoire** : affiche la variation de taille aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne une taille aléatoire.
+- **Aperçu de la rotation aléatoire** : affiche la variation de rotation aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne l'angle de manière aléatoire.#### Comportement de l'AVC (débordement)
 - **Restaurer les dernières couleurs utilisées** : restaure les couleurs de premier plan et d'arrière-plan de la session précédente au démarrage, au lieu de passer par défaut au noir et blanc.
 - **Bordure simple du pinceau** : utilise un cercle simple pour le contour du curseur du pinceau au lieu de restituer la forme complète du pinceau. Utile pour les pinceaux complexes ou volumineux où la limite précise est coûteuse à tracer.

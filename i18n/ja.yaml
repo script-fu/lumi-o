@@ -12,3 +12,9 @@
   translation: "Linuxのインストール"
 - id: menuTechnicalGuides
   translation: "技術ガイド"
+- id: menuHome
+  translation: "ホーム"
+- id: menuScripting
+  translation: "スクリプト作成"
+- id: menuContact
+  translation: "連絡先"

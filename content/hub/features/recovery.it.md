@@ -60,7 +60,7 @@ Quando apri un file `.lum` che contiene salvataggi incrementali più recenti ris
 
 La finestra di dialogo ha tre schede e due pulsanti di azione.
 
-### Autosave Tab
+### Scheda Salvataggio automatico
 
 Elenca tutti gli stati di salvataggio automatico disponibili per il file selezionato con timestamp e miniature (ove disponibili). Seleziona uno stato e fai clic su **Ripristina** per aprirlo.
 

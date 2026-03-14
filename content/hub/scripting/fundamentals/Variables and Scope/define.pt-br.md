@@ -96,5 +96,5 @@ Quando usado dentro de uma função, `define` cria ligações locais que são ac
 |------------------------------------|--------------------------------------------------|--------------------------------------------------|
 | **Objetivo** | Cria ligações globais ou locais para variáveis ​​ou funções. | Cria vinculações temporárias em um escopo localizado. |
 | **Escopo** | Global quando no nível superior; local quando dentro de outra função. | Sempre local para o bloco `let`.       |
-| **Reutilização** | Funções e variáveis ​​podem ser reutilizadas em vários locais. | As variáveis ​​são vinculadas temporariamente a um único bloco. |
+| **Reutilização** | Funções e variáveis ​​podem ser reutilizadas em vários lugares. | As variáveis ​​são vinculadas temporariamente a um único bloco. |
 | **Sintaxe** | Define explicitamente variáveis ​​ou funções.       | Combina ligação de variável com avaliação de expressão. |

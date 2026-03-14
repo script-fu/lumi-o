@@ -28,7 +28,7 @@ Lambda 関数は独自に定義できます...
  argument1 argument2 ...)
 ```
 
-- **`parameter1, parameter2, ...`:** 関数が受け入れるパラメーター。
+- **`parameter1, parameter2, ...`:** 関数が受け入れるパラメータ。
 - **`body-expression`:** 関数が呼び出されたときに実行されるロジック。
 - **即時呼び出し:** 2 番目の形式は、引数を指定してすぐに呼び出されるラムダを示します。
 
@@ -137,7 +137,7 @@ Lambda 関数は、多くの場合、`map` や `filter` などの高階関数に
 ### Lambda 関数の利点
 
 - **簡潔さ:** Lambda は、個別の名前付き関数を定義する必要性を排除することで定型コードを削減します。
-- **Flexibility:** You can define and use them wherever they are needed, making code more modular.
+- **柔軟性:** 必要に応じて定義して使用できるため、コードがよりモジュール化されます。
 - **可読性の向上:** 短く特定のタスクの場合、ラムダは追加の名前付き関数でコードを乱雑にすることなく、意図を明確にします。
 
 ### Lambda 関数を使用する場合

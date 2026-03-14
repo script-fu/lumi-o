@@ -8,7 +8,7 @@ Continuous Integration (CI) ist eine Möglichkeit, Ihren Code automatisch zu tes
 
 Dieses Dokument beschreibt die Funktionsweise der GitLab CI/CD-Pipeline von Lumi, einschließlich der Rolle der Datei `.gitlab-ci.yml`, Shell-Skripts und externer Tools wie Meson und Ninja.
 
-Eine ausführliche technische Dokumentation des Lumi CI-Build-Prozesses finden Sie unter [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) im Repository.
+Eine ausführliche technische Dokumentation des Lumi CI-Erstellungsprozesses finden Sie unter [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) im Repository.
 
 ## GitLab CI/CD-Grundlagen
 
@@ -133,7 +133,7 @@ In dieser Struktur:
 - Die Dateien im Unterverzeichnis `meson.build` verarbeiten Kompilierungsdetails für bestimmte Komponenten oder Module
 - Durch dieses hierarchische Layout bleibt die Build-Logik modular und wartbar
 
-## Artefakte zwischen den Stufen
+## Artefakte zwischen den Phasen
 
 Artefakte sind von Jobs generierte Dateien, die in nachfolgenden Phasen benötigt werden:
 

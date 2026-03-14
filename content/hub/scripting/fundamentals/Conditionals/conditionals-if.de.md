@@ -50,7 +50,7 @@ Bei Verwendung einer `if`-Bedingung mit einem alternativen Codeblock (der `else`
    – Wenn das `test` als wahr ausgewertet wird (`#t`), wird der **konsequente Codeblock** ausgeführt.
    - Wenn `test` als falsch ausgewertet wird (`#f`), wird der **alternative Codeblock** ausgeführt.
 
-Both the `consequent` and `alternative` code blocks can perform any valid Scheme operation, including returning values, modifying variables, or running procedures.
+Sowohl die Codeblöcke `consequent` als auch `alternative` können jede gültige Scheme-Operation ausführen, einschließlich der Rückgabe von Werten, der Änderung von Variablen oder der Ausführung von Prozeduren.
 
 ### Beispiele
 

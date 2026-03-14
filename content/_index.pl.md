@@ -11,7 +11,7 @@ Zbudowany w oparciu o podstawową architekturę GIMP, Lumi-o eliminuje złożono
 
 Leniwe ładowanie eliminuje stałe pułapy pamięci, umożliwiając zarządzanie dużymi, złożonymi projektami i ogromnymi wymiarami płótna bez ograniczania limitów pamięci RAM.
 
-Lumi-o jest rozwijany na Debianie 13 z pulpitem Cinnamon. Jeśli używasz systemu Windows, pierwszym krokiem będzie instalacja Debiana: [How to Install Linux](/hub/install-linux/).
+Lumi-o jest rozwijany na Debianie 13 z pulpitem Cinnamon. Jeśli używasz systemu Windows, pierwszym krokiem będzie instalacja Debiana: [Jak zainstalować Linuksa](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="O" icon="information-circle" >}}

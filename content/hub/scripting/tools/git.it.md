@@ -127,7 +127,7 @@ Dopo aver inviato il codice a GitHub, puoi visualizzare il tuo repository nell'i
 
 Organizzando il tuo codice in cartelle dedicate e utilizzando GitHub per gestire ed eseguire il backup dei tuoi repository, manterrai i tuoi progetti ben strutturati e facilmente accessibili. Una volta che hai una versione funzionante del tuo codice, inviala a GitHub. Puoi quindi tenere facilmente traccia di eventuali modifiche utilizzando l'interfaccia Web GitHub o Visual Studio Code, che evidenzia le righe modificate. Questo approccio ti consente di continuare a perfezionare ed espandere il tuo codice senza perdere traccia dei progressi o delle modifiche.
 
-Git e piattaforme come GitHub e GitLab sono strumenti potenti e, sebbene possano essere complessi, sono disponibili numerose risorse online per aiutarti a comprenderli meglio. Una delle risorse più preziose che ho trovato sono gli aiutanti AI come ChatGPT. Puoi descrivere ciò che devi realizzare e questi strumenti ti guideranno pazientemente attraverso il processo passo dopo passo.
+Git e piattaforme come GitHub e GitLab sono strumenti potenti e, sebbene possano essere complessi, sono disponibili numerose risorse online per aiutarti a comprenderli meglio. One of the most valuable resources I've found are AI helpers like ChatGPT. Puoi descrivere ciò che devi realizzare e questi strumenti ti guideranno pazientemente attraverso il processo passo dopo passo.
 
 ## Glossario
 

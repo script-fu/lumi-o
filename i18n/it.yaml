@@ -12,3 +12,9 @@
   translation: "Installare Linux"
 - id: menuTechnicalGuides
   translation: "Guide tecniche"
+- id: menuHome
+  translation: "Home"
+- id: menuScripting
+  translation: "Scripting"
+- id: menuContact
+  translation: "Contatto"

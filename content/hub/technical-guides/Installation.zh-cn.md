@@ -2,7 +2,7 @@
 title: "安装"
 type: docs
 ---
-您需要 Git 来执行下面的初始克隆步骤。如果尚未安装 Git，请先安装它（Debian/Ubuntu：`sudo apt install git`）或按照：[Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+您需要 Git 来执行下面的初始克隆步骤。如果尚未安装 Git，请先安装它（Debian/Ubuntu：`sudo apt install git`）或按照：[在 Linux 上使用 Git](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) 克隆 Lumi（首次设置）
 

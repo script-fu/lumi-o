@@ -24,9 +24,9 @@ type: docs
 
 您将需要一个用于 Clonezilla 的 USB 驱动器和一个比您要克隆的内部驱动器更大的外部硬盘驱动器。
 
-这些步骤简化了基于 [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc) 的流程。最好查看完整的指南，其中包括屏幕截图以提高清晰度。
+这些步骤根据[官方指南](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc)简化了流程。最好查看完整的指南，其中包括屏幕截图以提高清晰度。
 
-1. **创建 Clonezilla Live USB 或 CD/DVD**：按照 Clonezilla [website](https://clonezilla.org/liveusb.php) 上的详细说明创建可启动 USB 或 CD/DVD。
+1. **创建 Clonezilla Live USB 或 CD/DVD**：按照 Clonezilla [网站](https://clonezilla.org/liveusb.php) 上的详细说明创建可启动 USB 或 CD/DVD。
 
 2. **连接您的外部备份驱动器**：插入外部驱动器并确保您的系统可以识别它。这将是您备份的目的地。
 

@@ -21,16 +21,16 @@ En Scheme, el condicional `cond` se utiliza para seleccionar uno de varios bloqu
 
 ### Cómo funciona
 
-1. **Pruebe cada condición**:
+1. **Test Each Condition**:
    - `cond` evalúa las pruebas en el orden en que aparecen.
 
-2. **Ejecutar el consecuente coincidente**:
+2. **Execute the Matching Consequent**:
    - Cuando se encuentra la primera prueba que se evalúa como verdadera (`#t`), se ejecuta su **consecuente**.
    - Si ninguna prueba se evalúa como verdadera y hay una cláusula `else`, se ejecuta **fallback-consequent**.
 
 ### Ejemplos
 
-#### Ejemplo 1: Consecuentes de expresión única
+#### Example 1: Single Expression Consequents
 
 ```scheme
 (cond
@@ -43,7 +43,7 @@ En Scheme, el condicional `cond` se utiliza para seleccionar uno de varios bloqu
 - La segunda prueba `(= 3 3)` se evalúa como verdadera (`#t`), por lo que se devuelve `"This will run"`.
 - La cláusula `else` no se ejecuta porque ya se encontró una coincidencia.
 
-Resultado: **"Esto se ejecutará"**
+Result: **"This will run"**
 
 #### Ejemplo 2: Acciones múltiples usando `begin`
 
@@ -67,7 +67,7 @@ Cuando un consecuente implica múltiples acciones, use `begin` para agruparlas:
 
 - La primera prueba `(< 5 3)` se evalúa como falsa (`#f`).
 - La segunda prueba `(> 5 3)` se evalúa como verdadera (`#t`):
-  - Imprime `"Condition met"`.
+  - It prints `"Condition met"`.
   - Luego calcula `(* 5 5)` y devuelve `25`.
 
 Resultado: **Imprime "Condición cumplida" y devuelve 25.**
@@ -95,15 +95,15 @@ Cuando necesites introducir variables locales, utiliza un bloque `let`:
       z)))
 ```
 
-- La primera prueba `(< 0 -1)` es falsa.
-- La segunda prueba `(> 0 -1)` es verdadera, entonces:
+- The first test `(< 0 -1)` is false.
+- The second test `(> 0 -1)` is true, so:
   - Se ejecuta un bloque `let`, vinculando `y` a `20`.
-  - Imprime `"Positive condition met"`.
+  - It prints `"Positive condition met"`.
   - Luego calcula `(+ y y)` y devuelve `40`.
 
 Resultado: **Imprime "Condición positiva cumplida" y devuelve 40.**
 
-#### Ejemplo 4: respaldo con `else`
+#### Example 4: Fallback with `else`
 
 ```scheme
 (cond
@@ -115,7 +115,7 @@ Resultado: **Imprime "Condición positiva cumplida" y devuelve 40.**
 - Ninguna de las dos primeras pruebas se evalúa como verdadera.
 - La cláusula `else` se ejecuta y devuelve `"Fallback value"`.
 
-Resultado: **"Valor de reserva"**
+Result: **"Fallback value"**
 
 ### Resumen
 

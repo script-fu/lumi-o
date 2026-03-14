@@ -12,7 +12,7 @@ Zorg ervoor dat u over het volgende beschikt voordat u aan de slag gaat:
 
 - Lumi geïnstalleerd (een recente build of AppImage).
 - Een teksteditor voor `.scm` bestanden (VS Code werkt goed): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
-- [Git](/hub/scripting/tools/git/) om een back-up van uw code te maken en de versie ervan te controleren.
+- [Git](/hub/scripting/tools/git/) om een back-up van uw code te maken en de versie te controleren.
 
 ## Zelfstudiestappen
 

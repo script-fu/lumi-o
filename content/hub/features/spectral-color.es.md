@@ -37,7 +37,7 @@ La paleta Master se envía con los siguientes pigmentos. Las muestras muestran l
 | :---: | :--- | :--- | :--- |
 | {{< swatch "245,135,20" >}} | Naranja pirrol | PO73 | Rojo (escarlata) |
 | {{< swatch "243,114,64" >}} | Naranja Cadmio | PO20 | Amarillo (Cuerpo) |
-| {{< swatch "240,180,80" >}} | Amarillo Cadmio | PY35 | Amarillo (Cuerpo) |
+| {{< swatch "240,180,80" >}} | Amarillo cadmio | PY35 | Amarillo (Cuerpo) |
 | {{< swatch "245,210,25" >}} | Amarillo cadmio pálido | PY35: Pálido | Amarillo (cadmio pálido) |
 | {{< swatch "250,230,5" >}} | Amarillo limón | PY3 | Amarillo (Limón) |
 | {{< swatch "225,155,10" >}} | Níquel Azo Amarillo | PY150 | Amarillo (Medio) |

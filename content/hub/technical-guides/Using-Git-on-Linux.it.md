@@ -75,7 +75,7 @@ I repository remoti sono versioni del tuo progetto ospitate online, ad esempio s
 
   Questo comando elenca tutti i telecomandi e i relativi URL. In genere, vedrai `origin` elencato qui.
 
-- **Aggiunta di un telecomando:**
+- **Adding a Remote:**
 
   Se devi aggiungere un nuovo repository remoto, puoi farlo con:
 
@@ -107,7 +107,7 @@ Questo comando recupera le ultime modifiche dal repository remoto ma non le unis
 
 ### 5. **Reimpostare il repository locale**
 
-Se desideri reimpostare il tuo repository locale in modo che corrisponda esattamente al repository remoto, puoi utilizzare un ripristino "hard". **Warning:** This will overwrite any local changes you've made.
+Se desideri reimpostare il tuo repository locale in modo che corrisponda esattamente al repository remoto, puoi utilizzare un ripristino "hard". **Attenzione:** questa operazione sovrascriverà tutte le modifiche locali apportate.
 
 ```sh
 git reset --hard origin/branch-name

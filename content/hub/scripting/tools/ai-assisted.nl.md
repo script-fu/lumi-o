@@ -17,7 +17,7 @@ In plaats van slechts één regel code in te vullen, kan een agent:
 ## Toegang tot opslagplaatsen
 
 AI-hulp is het meest effectief wanneer de agent toegang heeft tot **lumi-dev** of uw specifieke projectrepository. Met inzicht in de bestaande codebase kan de Agent:
-- Gebruik **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** als referentie voor helperfuncties.
+- Gebruik de **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** als referentie voor helperfuncties.
 - Volg bestaande patronen voor GEGL-bewerkingen en laagbeheer.
 - Hergebruik standaardcode van bestaande plug-ins.
 
@@ -27,7 +27,7 @@ U kunt de Agent direct vragen een volledige plug-in te genereren door het gewens
 
 > "Schrijf met behulp van de beschikbare Schema-hulpprogramma's en voorbeelden in de werkruimte een nieuwe plug-in die een 50% horizontale hulplijn op de actieve afbeelding creëert en deze 'Middengids' noemt."
 
-De Agent zoekt naar manieren om handleidingen te maken, identificeert de juiste nutsfunctie (zoals `lumi-image-add-hguide-percent` van `common.scm`) en genereert het volledige `.scm` bestand met de juiste registratieboilerplate.
+The Agent will search for how to create guides, identify the correct utility function (like `lumi-image-add-hguide-percent` from `common.scm`), and generate the complete `.scm` file with the correct registration boilerplate.
 
 ## Beste praktijken
 

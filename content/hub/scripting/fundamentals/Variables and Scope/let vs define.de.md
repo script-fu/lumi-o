@@ -63,7 +63,7 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
   body-expression)
 ```
 
-#### Example: Processing Multiple Values
+#### Beispiel: Verarbeitung mehrerer Werte
 
 ```scheme
 (define (process-values a b c)

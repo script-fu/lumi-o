@@ -6,7 +6,7 @@ Det är vanligt att du säkerhetskopierar dina viktiga filer för att återgå t
 
 När du väl har installerat ditt system och fungerar bra är det avgörande att skapa en fullständig säkerhetskopia för att återställa din miljö om en katastrof skulle inträffa. Denna säkerhetskopia kompletterar att regelbundet spara dina arbetsdata.
 
-[Clonezilla](https://clonezilla.org/) är en gratis programvara för diskavbildning och kloning med öppen källkod. Det låter användare skapa och återställa fullständiga säkerhetskopior av sin dators hårddisk, vilket gör det till ett populärt verktyg för både IT-proffs och hemanvändare.
+[Clonezilla](https://clonezilla.org/) är en gratis och öppen källkod för diskavbildning och kloning. Det låter användare skapa och återställa fullständiga säkerhetskopior av sin dators hårddisk, vilket gör det till ett populärt verktyg för både IT-proffs och hemanvändare.
 
 Det är alltid bättre att ha en backup och inte behöva den än att behöva en backup och inte ha den.
 
@@ -24,9 +24,9 @@ Det är alltid bättre att ha en backup och inte behöva den än att behöva en 
 
 Du behöver en USB-enhet för Clonezilla och en extern hårddisk som är större än den interna enhet du tänker klona.
 
-Dessa steg förenklar processen baserat på [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Det är en bra idé att granska hela guiden, som inkluderar skärmdumpar för ökad tydlighet.
+Dessa steg förenklar processen baserat på den [officiella guiden](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Det är en bra idé att granska hela guiden, som inkluderar skärmdumpar för ökad tydlighet.
 
-1. **Skapa en Clonezilla Live USB eller CD/DVD**: Följ de detaljerade instruktionerna på Clonezilla [website](https://clonezilla.org/liveusb.php) för att skapa en startbar USB eller CD/DVD.
+1. **Skapa en Clonezilla Live USB eller CD/DVD**: Följ de detaljerade instruktionerna på Clonezillas [webbplats](https://clonezilla.org/liveusb.php) för att skapa en startbar USB eller CD/DVD.
 
 2. **Anslut din externa backup-enhet**: Anslut din externa enhet och se till att den känns igen av ditt system. Detta kommer att vara destinationen för din säkerhetskopiering.
 

@@ -6,7 +6,7 @@ Hernoemt alle lagen in de stapel (of de geselecteerde lagen). Handig voor geanim
 
 ## Waar het leeft
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Bekijk de bron](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## Waar het verschijnt in Lumi
 

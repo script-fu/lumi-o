@@ -97,6 +97,18 @@ In the **Stroke Modulation** expander (shown only when **Dynamics** is enabled):
 - **Fade Length**: Distance in canvas units over which the fade plays out.
 - **Repeat**: How the fade is repeated once the fade length is exhausted (None, Loop, Sawtooth, Triangle).
 
+#### Fade Multipliers
+Four checkboxes that gate or modify how the fade value is applied:
+- **Fade Reverse**: Reverses the fade direction so strokes start faded and become fully opaque.
+- **Fade Multiply**: Multiplies the fade output into the affected property rather than replacing it.
+- **Fade Multiply Angular**: Applies the fade multiplier only to angular dynamics (angle, tilt).
+- **Fade Multiply Ratio**: Applies the fade multiplier only to ratio-type properties (aspect ratio).
+
+#### Colour Mapping
+Available for Paintbrush and Smudge tools when Dynamics is active:
+- **Gradient**: The gradient resource used for colour mapping along the stroke.
+- **Blend Color Space**: Colour space in which gradient colours are interpolated during painting.
+
 
 ### Brush Heads
 
@@ -121,6 +133,8 @@ Main scatter controls in the **Brush Heads** expander:
 
 - **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). Per-head/per-dab angles are outward-biased with controlled crossover to avoid rigid mirrored plumes. Clamped to 360°.
 - **Scatter Distance** (0–10000 px): Random forward displacement from each head's fill-spacing position. Re-rolled every dab.
+- **Scatter Randomness** (0.0–1.0): Additional per-dab variation layered on top of the base scatter distance and angle, producing a looser, more organic spray.
+- **Velocity Influence** (0.0–1.0): Scales the scatter by stroke velocity. At 1.0, fast strokes scatter heads much further than slow strokes; at 0.0, scatter is constant regardless of speed.
 - **Scatter Size Balance** (0.0–1.0): Controls suppression steepness for heads above threshold. At 1.0, all heads scatter equally; lower values increasingly suppress larger heads while heads at/below threshold stay at full scatter distance.
 
 ### Additional Options
@@ -129,12 +143,12 @@ In the **Additional Options** expander (collapsed by default), controls are grou
 
 #### Brush Properties (overflow)
 - **Lock Angle to Screen Space**: Locks brush angle to screen space, so angle stays level while the canvas rotates/flips. No effect when Dynamics controls angle.
-- **Pivot X**: Horizontal stamp contact point inside the brush image (0.0 = left edge, 0.5 = centre, 1.0 = right edge). Moving it lets off-centre parts of the brush lead the stroke.
-- **Pivot Y**: Vertical stamp contact point inside the brush image (0.0 = top edge, 0.5 = centre, 1.0 = bottom edge). Together with **Pivot X**, this defines which part of the dab sits on the paint location.
 - **Random Flip Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
 - **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
-- **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is Gaussian (offsets cluster toward centre).
+- **Pivot X** (0.0–1.0): Horizontal contact point within the brush image. 0.0 = left edge, 0.5 = centre (default), 1.0 = right edge. The chosen point is what aligns with the paint position on the canvas, so moving it away from centre shifts every dab in that direction. Rotations and flips stay visually anchored to the pivot because the placement offset is applied after the transform.
+- **Pivot Y** (0.0–1.0): Vertical contact point within the brush image. 0.0 = top edge, 0.5 = centre (default), 1.0 = bottom edge. Works together with **Pivot X** to define the exact part of the dab that sits on the stroke path.
+- **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is biased toward the centre.
 - **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
 
 When either pivot value differs from centre, the brush preview shows a crosshair overlay marking the active stamp contact point.
@@ -151,6 +165,11 @@ Randomization:
 - **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
 - **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
 - **Randomize Animation Frames**: For animated brushes: each head advances its animation frame independently.
+
+#### Dynamics (overflow)
+Controls that extend the main Dynamics expander, grouped here as they are rarely adjusted:
+- **Preview Random Size**: Shows randomised size variation in the brush outline preview when the active dynamics preset drives size randomly.
+- **Preview Random Rotation**: Shows randomised rotation variation in the brush outline preview when the active dynamics preset drives angle randomly.
 
 #### Stroke Behaviour (overflow)
 - **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.

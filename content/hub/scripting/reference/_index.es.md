@@ -2,7 +2,7 @@
 title: "Referencia"
 type: docs
 ---
-Referencia rápida para las utilidades Scheme integradas y las herramientas de navegación en la aplicación disponibles al escribir complementos Lumi. Para obtener información y referencias generales sobre el esquema, consulte [Scheme Cookbook](https://cookbook.scheme.org/) y [Scheme.org](https://www.scheme.org/).
+Referencia rápida para las utilidades Scheme integradas y las herramientas de navegación en la aplicación disponibles al escribir complementos Lumi. Para obtener información y referencias generales sobre Scheme, consulte el [Scheme Cookbook](https://cookbook.scheme.org/) y [Scheme.org](https://www.scheme.org/).
 
 {{< cards >}}
   {{< card link="utility-browser" title="Navegador de utilidades" icon="search" subtitle="Explore y busque la utilidad Scheme incorporada stdlib" >}}

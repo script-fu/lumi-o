@@ -3,7 +3,7 @@ title: "El complemento de filtro"
 type: docs
 weight: 2
 ---
-Usamos un complemento _procedure_ para el tutorial [First Step](../../first-step/). Esos tipos de complementos funcionan sin necesidad de una imagen o un elemento de diseño como entrada. Por lo general, usamos un complemento para cambiar una imagen y sus elementos de diseño. Los complementos como estos se denominan complementos de filtro.
+Usamos un complemento _procedure_ para el tutorial [Primer paso](../../first-step/). Esos tipos de complementos funcionan sin necesidad de una imagen o un elemento de diseño como entrada. Por lo general, usamos un complemento para cambiar una imagen y sus elementos de diseño. Los complementos como estos se denominan complementos de filtro.
 
 ### ¿Qué es un dibujable?
 

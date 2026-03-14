@@ -12,7 +12,7 @@ weight: 7
 
 これは、多くのクリエイターが直接サポートを受けるために使用するプラットフォームである Patreon を通じて行うことができます。
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) をサポートします。
+[Patreon ページにアクセスしてください](https://www.patreon.com/pixelmixer) をサポートしてください。
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="パトレオン" icon="heart" >}}

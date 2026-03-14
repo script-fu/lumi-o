@@ -40,7 +40,7 @@ Recursie werkt door het oorspronkelijke probleem in kleinere stukjes op te split
 #### Stap-voor-stap tracering van som-naar-n 3
 
 1. **Eerste oproep**: *sum-to-n 3*
-   → *(+ 3 (som-naar-n 2))*
+   → *(+ 3 (som-tot-n 2))*
 
 2. **Tweede oproep**: *som-tot-n 2*
    → *(+ 2 (som-tot-n 1))*
@@ -108,7 +108,7 @@ Resultaat: *"klaar"*
 
 - Eenvoudige recursie bestaat uit:
   1. **Basisscenario**: stopt de recursie.
-  2. **Recursive case**: Reduces the problem toward the base case.
+  2. **Recursief geval**: verkleint het probleem richting het basisscenario.
 - Elke recursieve aanroep zorgt ervoor dat de berekening voltooid wordt.
 - Zodra het basisscenario is bereikt, worden de resultaten gecombineerd naarmate de recursie is voltooid.
 

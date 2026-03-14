@@ -117,7 +117,7 @@ De logica extraheren:
 
 #### Symbolen
 
-In het bovenstaande voorbeeld wordt een gegevenstype gebruikt dat een symbool wordt genoemd, zoals 'gui. Symbolen worden als parameters doorgegeven aan de functie voor het verzenden van berichten en kunnen worden gebruikt om eenvoudige voorwaardelijke beslissingen te nemen. Net als symbolische sleutels zijn het unieke identificatiegegevens. Ga voor meer informatie over symbolen naar [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+In het bovenstaande voorbeeld wordt een gegevenstype gebruikt dat een symbool wordt genoemd, zoals 'gui. Symbolen worden als parameters doorgegeven aan de functie voor het verzenden van berichten en kunnen worden gebruikt om eenvoudige voorwaardelijke beslissingen te nemen. Net als symbolische sleutels zijn het unieke identificatiegegevens. Bezoek [deze pagina] voor meer informatie over symbolen.(/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Vereenvoudiging van de hoofdfunctie
 

@@ -2,7 +2,7 @@
 title: "安裝"
 type: docs
 ---
-您需要 Git 來執行下面的初始克隆步驟。如果尚未安裝 Git，請先安裝它（Debian/Ubuntu：`sudo apt install git`）或依照：[Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+您需要 Git 來執行下面的初始克隆步驟。如果尚未安裝 Git，請先安裝它（Debian/Ubuntu：`sudo apt install git`）或依照：[在 Linux 上使用 Git](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) 克隆 Lumi（首次設定）
 
@@ -40,7 +40,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 ```
 
-## 4) 启动 Lumi
+## 4) 啟動 Lumi
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
@@ -56,7 +56,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev
 ```
 
-快速仅编译路径：
+快速僅編譯路徑：
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
@@ -70,7 +70,7 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
 ```
 
-## 可选：构建类型
+## 可選：建置類型
 
 需要時使用`--type`：
 

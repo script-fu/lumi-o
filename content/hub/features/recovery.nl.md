@@ -42,7 +42,7 @@ my-painting.lum/recovery/
       └── ...
 ```
 
-Een nieuwe `primary-NN.lum/` basislijn wordt geschreven na **Bestand → Opslaan**. Volgende drukken op **Bestand → Stapgrootte opslaan** (`Ctrl+I`) creëren `delta-NNNN.lum/` submappen die alleen de buffers bevatten die sinds de laatste basislijn zijn gewijzigd. Delta's voor automatisch opslaan en delta's voor handmatig opslaan gebruiken afzonderlijke tellers, zodat ze elkaars geschiedenis niet verstoren.
+Een nieuwe `primary-NN.lum/` basislijn wordt geschreven na **Bestand → Opslaan**. De daaropvolgende drukken op **Bestand → Increment opslaan** (`Ctrl+I`) creëren `delta-NNNN.lum/` submappen die alleen de buffers bevatten die sinds de laatste basislijn zijn gewijzigd. Delta's voor automatisch opslaan en delta's voor handmatig opslaan gebruiken afzonderlijke tellers, zodat ze elkaars geschiedenis niet verstoren.
 
 Opslagverhoging is **altijd beschikbaar** voor opgeslagen `.lum` bestanden:
 
@@ -65,7 +65,7 @@ Het dialoogvenster heeft drie tabbladen en twee actieknoppen.
 Geeft een overzicht van alle beschikbare statussen voor automatisch opslaan voor het geselecteerde bestand, met tijdstempels en miniaturen (indien beschikbaar). Selecteer een staat en klik op **Herstellen** om deze te openen.
 
 Gebruik dit tabblad om:
-- Herstellen na een crash.
+- Herstel na een crash.
 - Terugkeren naar een eerdere status van dezelfde sessie.
 
 ### Incrementeel tabblad
@@ -97,7 +97,7 @@ Het standaardtabblad wanneer het dialoogvenster wordt geopend. Identificeert aut
 Het accumuleren van herstelstatussen in de loop van de tijd kan aanzienlijke schijfruimte in beslag nemen. De knop **Oude staten opschonen…** (linksonder in het dialoogvenster) opent een opschoonprompt voor het actieve tabblad (Automatisch opslaan of Incrementeel).
 
 De prompt toont:
-- Hoeveel volledige opslagen er zijn voor het bestand.
+- Hoeveel volledige opslagen er bestaan voor het bestand.
 - De totale schijfruimte die ze in beslag nemen.
 - Een draaiknop **Bewaar meest recente** om te selecteren hoeveel saves je wilt behouden.
 

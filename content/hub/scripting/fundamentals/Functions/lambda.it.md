@@ -89,7 +89,7 @@ Le funzioni Lambda vengono spesso passate direttamente a funzioni di ordine supe
 (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
 ```
 
-- The `lambda` function squares each element of the list.
+- La funzione `lambda` quadra ogni elemento dell'elenco.
 - La funzione `map` applica `lambda` a ciascun elemento.
 
 #### Funzioni Lambda come valori restituiti

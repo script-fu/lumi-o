@@ -78,7 +78,7 @@ Os arquivos PSD e XCF são convertidos para o formato nativo do Lumi na importa�
 - **TIFF**: Sem perdas ou compactado em LZW.
 - **XCF**: formato de compatibilidade com GIMP. Somente exportação; camadas e propriedades básicas preservadas.
 
-## Recuperação de ProjetoO Lumi mantém salvamentos automáticos em segundo plano e pontos de verificação incrementais manuais, ambos acessíveis em **Arquivo** → **Recuperar imagem**. Consulte a página [File Recovery](../recovery) para obter detalhes completos.
+## Recuperação de ProjetoO Lumi mantém salvamentos automáticos em segundo plano e pontos de verificação incrementais manuais, ambos acessíveis em **Arquivo** → **Recuperar imagem**. Consulte a página [Recuperação de arquivos](../recovery) para obter detalhes completos.
 
 ## Organização
 
@@ -109,4 +109,4 @@ Cada `recovery/primary-NN.lum/` é um salvamento de linha de base completo. As p
 
 Os salvamentos automáticos seguem a mesma estrutura, mas são armazenados separadamente em `~/.cache/lumi/autosave/`, deixando o arquivo de trabalho intacto.
 - **Projetos muito grandes**: um projeto com mais de 1.000 camadas e terabytes de dados se beneficiará mais com o carregamento lento; entretanto, a exportação final para o formato de imagem plana pode levar algum tempo.
-- **Unidades de rede**: há suporte para salvar em diretórios montados em rede, mas é mais lento que o armazenamento local devido à latência de E/S.
+- **Unidades de rede**: há suporte para salvar em diretórios montados na rede, mas é mais lento que o armazenamento local devido à latência de E/S.

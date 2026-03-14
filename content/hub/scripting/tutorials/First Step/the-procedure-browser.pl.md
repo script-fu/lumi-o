@@ -28,7 +28,7 @@ Wyszukaj `lumi-message`, aby zobaczyć jego parametry i wartości zwracane.
 
 ### Znajdowanie wtyczki
 
-Po zainstalowaniu programu „Hello World!” wtyczkę, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „schemat-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
+Once you've installed the "Hello World!" wtyczkę, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „schemat-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
 
 ```scheme
 (scheme-register-procedure "scheme-hello-world"   ;; Procedure name

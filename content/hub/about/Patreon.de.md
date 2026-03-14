@@ -12,7 +12,7 @@ Wenn Ihnen meine Arbeit gefallen hat und Sie sie hilfreich fanden, denken Sie da
 
 Sie können dies über Patreon tun, eine Plattform, über die viele Kreative direkte Unterstützung erhalten:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) zur Unterstützung.
+[Besuchen Sie meine Patreon-Seite](https://www.patreon.com/pixelmixer) zur Unterstützung.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}

@@ -162,7 +162,7 @@ Indem wir Low-Level-Funktionen in aussagekräftige Namen verpacken, schaffen wir
 
 Lumi liefert einen Satz vorgefertigter Wrapper aus, die beim Start automatisch geladen werden, sodass sie in jedem Plug-in oder in der Scheme-Konsole ohne `(load ...)` Aufruf verfügbar sind. Diese Bibliotheken (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` und `paths.scm`) basieren auf genau dem gleichen Prinzip wie die obigen Beispiele: Sie geben Operationen auf niedriger Ebene klare Namen, Blenden Sie sich wiederholende Boilerplates aus und stellen Sie einen einzigen Ort zum Aktualisieren bereit, wenn sich der zugrunde liegende Befehl ändert.Beispielsweise stellt `images.scm` `image-get-open-list` als lesbaren Wrapper um den rohen PDB-Aufruf bereit, und `files.scm` stellt pfadbildende Helfer bereit, die andernfalls wiederholte `string-append` Ketten erfordern würden.
 
-Sie können jeden exportierten Namen durchsuchen, seine Dokumentzeichenfolge lesen und sehen, aus welcher Bibliothek er stammt, im **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Hilfe → Programmierung → Dienstprogramm-Browser). Es ist eine praktische Demonstration des Umwickelns im großen Maßstab und eine nützliche Quelle für Muster, die Sie beim Aufbau Ihrer eigenen Hilfsbibliothek ausleihen können.
+Sie können jeden exportierten Namen durchsuchen, seinen Dokumentstring lesen und sehen, aus welcher Bibliothek er stammt, im **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Hilfe → Programmierung → Utility Browser). Es ist eine praktische Demonstration des Umwickelns im großen Maßstab und eine nützliche Quelle für Muster, die Sie beim Aufbau Ihrer eigenen Hilfsbibliothek ausleihen können.
 
 ### Fazit
 

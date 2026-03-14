@@ -32,7 +32,7 @@ CI produz arquivos zip de artefato (por exemplo `lumi-appimage*.zip`).
 Fluxo manual básico:
 
 1. Baixe o zip do artefato CI mais recente.
-2. Extraia-o.
+2. Extract it.
 3. Execute o arquivo `Lumi*.AppImage` incluído.
 
 Os scripts abaixo são auxiliares opcionais que automatizam essas etapas.
@@ -56,7 +56,7 @@ bash lumi-appimage-launch.sh
   - instala AppImage em `~/AppImage/Lumi/Lumi_CI.AppImage`
   - instala recursos de desktop em `~/.local/share/applications/lumi.desktop`
 
-- `lumi-appimage-launch.sh`
+-`lumi-appimage-launch.sh`
   - inicia o AppImage em um terminal
   - habilita a saída em tempo de execução (`APPIMAGE_DEBUG=1`)
 

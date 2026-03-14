@@ -99,24 +99,36 @@ Cada entrada dinâmica pode ser mapeada para diversas propriedades de forma inde
 No expansor **Stroke Modulation** (mostrado apenas quando **Dynamics** está ativado):- **Ângulo Inicial Relativo**: O valor do **Ângulo Inicial** é interpretado em relação à direção do traço e não como um ângulo absoluto da tela.
 - **Fade Initial Angle**: Desvanece do **Initial Angle** no início do traço em direção ao ângulo dinâmico ao vivo ao longo do curso do traço. Ativar isso força o **Ângulo Inicial Relativo** ativado.
 - **Ângulo inicial do pincel** (-180–180°): O ângulo do pincel bem no início de uma pincelada, antes que a dinâmica assuma o controle.
-- **Mescla de ângulo inicial** (0,0–1,0): controla a rapidez com que o ângulo do pincel faz a transição do ângulo inicial para o ângulo dinâmico. 0 = mantém o ângulo inicial; 1 = immediately uses the fully dynamic angle.
+- **Mescla de ângulo inicial** (0,0–1,0): controla a rapidez com que o ângulo do pincel faz a transição do ângulo inicial para o ângulo dinâmico. 0 = mantém o ângulo inicial; 1 = utiliza imediatamente o ângulo totalmente dinâmico.
 - **Fade Length**: Distância em unidades de tela sobre a qual o fade ocorre.
 - **Repeat**: Como o fade é repetido quando o comprimento do fade se esgota (None, Loop, Sawtooth, Triangle).
+
+#### Multiplicadores de esmaecimento
+
+Quatro caixas de seleção que controlam ou modificam como o valor de fade é aplicado:
+- **Fade Reverse**: Inverte a direção do fade para que os traços comecem a desbotar e se tornem totalmente opacos.
+- **Fade Multiply**: Multiplica a saída de fade na propriedade afetada em vez de substituí-la.
+- **Fade Multiply Angular**: Aplica o multiplicador de fade apenas à dinâmica angular (ângulo, inclinação).
+- **Fade Multiply Ratio**: Aplica o multiplicador de fade apenas às propriedades do tipo proporção (proporção).
+
+#### Mapeamento de cores
+
+Disponível para ferramentas Pincel e Borrar quando o Dynamics está ativo:
+- **Gradiente**: O recurso de gradiente usado para mapeamento de cores ao longo do traço.
+- **Blend Color Space**: Espaço de cores no qual as cores gradientes são interpoladas durante a pintura.
 
 
 ### Cabeças de escova
 
 Cabeças de pincel colocam várias cabeças de pincel independentes em um **anel de órbita** circular centralizado no caminho do traço. Cada cabeça pinta um pincel completo em sua própria posição cada vez que o traço avança, produzindo vários traços paralelos ou em leque simultaneamente.
 
-O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; smaller heads orbit further out. Heads space evenly around the ring. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
+O raio da órbita é determinado pelo tamanho global do pincel menos o tamanho da cabeça: cabeças maiores ficam mais próximas do centro; cabeças menores orbitam mais longe. As cabeças se espaçam uniformemente ao redor do anel. Com duas cabeças você obtém uma de cada lado do traço, criando uma propagação simétrica que se comporta como uma ponta de caligrafia. O controle deslizante **Seguir direção** gira todo o anel para permanecer perpendicular ao traço, de modo que a ponta siga a direção naturalmente enquanto você pinta. Adicionar mais cabeças espalha-as progressivamente ao redor do anel, até um círculo de pulverização completo em 16.
 
 Cabeças de pincel controlam onde cada cabeça é colocada ao redor do traço. Se **Pivô X** ou **Pivô Y** for afastado do centro padrão, cada cabeça ainda seguirá a mesma formação, mas cada pincelada estampada agora pousará usando o ponto de contato interno escolhido em vez do centro geométrico da imagem do pincel.
 
-Os controles aparecem no expansor **Cabeças de pincel** no painel de opções de ferramentas.
-
-- **Contagem**: Número de cabeças de escova simultâneas (1–16).
+Os controles aparecem no expansor **Cabeças de pincel** no painel de opções de ferramentas.- **Contagem**: Número de cabeças de escova simultâneas (1–16).
 - **Tamanho da cabeça**: tamanho renderizado de cada cabeça em relação ao tamanho global do pincel (0,1–1,0).
-- **Proporção de aspecto da órbita** (0,1–1,0): molda a órbita da formação do círculo à elipse. 1,0 = órbita circular; lower values squash the minor axis.
+- **Proporção de aspecto da órbita** (0,1–1,0): molda a órbita da formação do círculo à elipse. 1,0 = órbita circular; valores mais baixos comprimem o eixo menor.
 - **Ângulo de formação** (0–360°): Orientação estática do anel de formação, usado quando **Seguir direção** está abaixo de 1,0.
 - **Seguir direção** (0,0–1,0): quão fortemente o anel de formação acompanha a direção de deslocamento do curso. Em 1,0 o anel é sempre perpendicular à direção de deslocamento; em 0,0 ele trava no valor estático **Formation Angle**.
 - **Variação de pressão**: variação de tamanho por cabeça aplicada como um viés de pressão independente através das curvas dinâmicas.
@@ -124,23 +136,24 @@ Os controles aparecem no expansor **Cabeças de pincel** no painel de opções d
 
 #### Dispersão
 
-Principais controles de dispersão no expansor **Cabeças de pincel**:- **Ângulo de dispersão** (0–360°, padrão 10°): gira apenas o componente de dispersão aleatório (não o espaçamento de preenchimento). Os ângulos por cabeça/por salpico são inclinados para fora com cruzamento controlado para evitar plumas espelhadas rígidas. Fixado a 360°.
+Principais controles de dispersão no expansor **Cabeças de pincel**:
+
+- **Ângulo de dispersão** (0–360°, padrão 10°): gira apenas o componente de dispersão aleatório (não o espaçamento de preenchimento). Os ângulos por cabeça/por salpico são inclinados para fora com cruzamento controlado para evitar plumas espelhadas rígidas. Fixado a 360°.
 - **Distância de dispersão** (0–10.000 px): deslocamento aleatório para frente a partir da posição de espaçamento de preenchimento de cada cabeça. Rolei novamente cada pincelada.
+- **Aleatoriedade de dispersão** (0,0–1,0): variação adicional por pincelada em camadas sobre a distância e o ângulo de dispersão da base, produzindo um spray mais solto e orgânico.
+- **Influência da velocidade** (0,0–1,0): Dimensiona a dispersão pela velocidade do golpe. Em 1,0, os golpes rápidos dispersam as cabeças muito mais do que os golpes lentos; em 0,0, a dispersão é constante independentemente da velocidade.
 - **Equilíbrio de tamanho de dispersão** (0,0–1,0): controla a inclinação da supressão para cabeças acima do limite. Em 1,0, todas as cabeças se espalham igualmente; valores mais baixos suprimem cada vez mais cabeças maiores, enquanto cabeças no limite/abaixo permanecem na distância total de dispersão.
 
 ### Opções Adicionais
 
-No expansor **Opções adicionais** (recolhido por padrão), os controles são agrupados como seções de estouro que são alteradas com menos frequência. Isso mantém os expansores principais focados nos controles de pintura ajustados com frequência.
-
-#### Propriedades do pincel (estouro)
-
+No expansor **Opções adicionais** (recolhido por padrão), os controles são agrupados como seções de estouro que são alteradas com menos frequência. Isso mantém os expansores principais focados nos controles de pintura ajustados com frequência.#### Propriedades do pincel (estouro)
 - **Bloquear ângulo no espaço da tela**: bloqueia o ângulo do pincel no espaço da tela, para que o ângulo permaneça nivelado enquanto a tela gira/vira. Nenhum efeito quando o Dynamics controla o ângulo.
-- **Pivô X**: Ponto de contato do carimbo horizontal dentro da imagem do pincel (0,0 = borda esquerda, 0,5 = centro, 1,0 = borda direita). Movê-lo permite que partes descentralizadas do pincel conduzam o traço.
-- **Pivô Y**: Ponto de contato do carimbo vertical dentro da imagem do pincel (0,0 = borda superior, 0,5 = centro, 1,0 = borda inferior). Juntamente com **Pivot X**, isso define qual parte do salpico fica no local da pintura.
 - **Random Flip Horizontal**: 50% de chance de espelhar cada carimbo da esquerda para a direita por pincelada.
 - **Random Flip Vertical**: 50% de chance de virar cada carimbo de cabeça para baixo por pincelada.
 - **Rotação aleatória**: gira aleatoriamente cada carimbo em 0°, 90°, 180° ou 270° por pincelada.
-- **Jitter uniforme**: Quando ativado, os deslocamentos de salpicos do controle deslizante **Jitter** são extraídos de uma distribuição uniforme (cada deslocamento é igualmente provável dentro do intervalo). Quando desativado, a distribuição é gaussiana (desloca o cluster em direção ao centro).
+- **Pivô X** (0,0–1,0): Ponto de contato horizontal dentro da imagem do pincel. 0,0 = borda esquerda, 0,5 = centro (padrão), 1,0 = borda direita. O ponto escolhido é o que se alinha com a posição da pintura na tela, portanto, afastá-lo do centro muda cada pincelada nessa direção. As rotações e inversões permanecem visualmente ancoradas ao pivô porque o deslocamento de posicionamento é aplicado após a transformação.
+- **Pivô Y** (0,0–1,0): Ponto de contato vertical dentro da imagem do pincel. 0,0 = borda superior, 0,5 = centro (padrão), 1,0 = borda inferior. Funciona em conjunto com **Pivot X** para definir a parte exata do salpico que fica no caminho do traço.
+- **Jitter uniforme**: Quando ativado, os deslocamentos de salpicos do controle deslizante **Jitter** são extraídos de uma distribuição uniforme (cada deslocamento é igualmente provável dentro do intervalo). Quando desativado, a distribuição é tendenciosa para o centro.
 - **Redefinir Animação**: Para pincéis animados: quando ativado, a animação reinicia a partir do quadro 0 a cada novo traço; quando desligado, continua de onde o golpe anterior terminou.
 
 Quando qualquer valor de pivô difere do centro, a visualização do pincel mostra uma sobreposição de retículo marcando o ponto de contato do carimbo ativo.
@@ -157,6 +170,12 @@ Dispersão:
 Randomização:
 - **Semente de personagem** (0–255): Semente fixa para caractere por cabeça (tamanho, posição de espaçamento de preenchimento). A mesma semente reproduz a mesma formação a cada golpe. Dessensibilizado quando **Randomizar personagem principal** está ativado.
 - **Randomizar personagem principal**: redesenha os valores dos caracteres por cabeça (tamanho, posição de dispersão) em cada carimbo para que a formação seja totalmente caótica ao longo do traço. Substitui **Semente de personagem**.
-- **Randomizar quadros de animação**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.#### Comportamento do AVC (estouro)
+- **Randomizar quadros de animação**: Para pincéis animados: cada cabeça avança seu quadro de animação de forma independente.
+
+#### Dinâmica (estouro)
+
+Controles que estendem o expansor principal do Dynamics, agrupados aqui porque raramente são ajustados:
+- **Visualizar tamanho aleatório**: mostra a variação aleatória de tamanho na visualização do contorno do pincel quando a predefinição de dinâmica ativa determina o tamanho aleatoriamente.
+- **Visualizar rotação aleatória**: mostra a variação de rotação aleatória na visualização do contorno do pincel quando a predefinição de dinâmica ativa direciona o ângulo aleatoriamente.#### Comportamento do AVC (estouro)
 - **Restaurar as últimas cores usadas**: restaura as cores de primeiro plano e de fundo da sessão anterior na inicialização, em vez de usar preto e branco como padrão.
 - **Limite do pincel simples**: usa um círculo simples para o contorno do cursor do pincel em vez de renderizar a forma completa do pincel. Útil para pincéis complexos ou grandes onde o desenho do limite preciso é caro.

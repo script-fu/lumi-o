@@ -6,7 +6,7 @@ Zmienia nazwę wszystkich warstw w stosie (lub wybranych warstw). Przydatne w pr
 
 ## Gdzie mieszka
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Wyświetl źródło](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## Gdzie pojawia się w Lumi
 

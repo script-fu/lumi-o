@@ -64,7 +64,7 @@ Lumi предназначен только для Linux, поэтому дома
 
 Здесь мы проверяем два входных параметра каталога (источник и пункт назначения) и возвращаемся к значениям по умолчанию, если пути графического интерфейса пусты/недействительны.
 
-[/hub/scripting/plug-ins/batch-process/](/hub/scripting/plug-ins/batch-process/)
+[/hub/scripting/plugins/batch-process/](/hub/scripting/plug-ins/batch-process/)
 
 Если вас интересуют подробности реализации, найдите исходный код плагина `validate-path-and-dir`.
 
@@ -114,7 +114,7 @@ Lumi предназначен только для Linux, поэтому дома
 
 Чтобы перестроить путь, используйте ```string-append```:
 
-### Построение путей Linux
+### Построение пути Linux
 
 ```scheme
 > (string-append (getenv "HOME") DIR-SEPARATOR "myfolder" DIR-SEPARATOR "myfile.xcf")

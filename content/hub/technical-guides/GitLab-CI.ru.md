@@ -8,7 +8,7 @@ type: docs
 
 В этом документе описывается, как работает конвейер Lumi GitLab CI/CD, включая роль файла `.gitlab-ci.yml`, сценариев оболочки и внешних инструментов, таких как Meson и Ninja.
 
-Подробную техническую документацию по процессу сборки Lumi CI см. в репозитории [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).
+Подробную техническую документацию по процессу сборки Lumi CI см. в [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) в репозитории.
 
 ## Основы GitLab CI/CD
 
@@ -187,4 +187,4 @@ Lumi использует GitLab CI для автоматической сбор
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-Подробные технические сведения о процессе сборки Lumi CI, включая настройку среды, архитектуру сценариев и устранение неполадок, см. на странице [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).
+Подробные технические сведения о процессе сборки Lumi CI, включая настройку среды, архитектуру сценариев и устранение неполадок, см. в [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).

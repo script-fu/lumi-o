@@ -6,7 +6,7 @@ Kopiert die aktive Ebenengruppe in ein neues Bild (nützlich, wenn der gesamte S
 
 ## Wo es lebt
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Quelle anzeigen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Wo es in Lumi erscheint
 

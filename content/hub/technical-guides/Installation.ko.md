@@ -2,7 +2,7 @@
 title: "설치"
 type: docs
 ---
-아래의 초기 복제 단계에는 Git이 필요합니다. Git이 아직 설치되지 않은 경우 먼저 설치하거나(Debian/Ubuntu: `sudo apt install git`) 다음을 따르세요: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+아래의 초기 복제 단계에는 Git이 필요합니다. Git이 아직 설치되지 않은 경우 먼저 설치하거나(Debian/Ubuntu: `sudo apt install git`) 다음을 따르세요. [Linux에서 Git 사용](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) 루미 복제(최초 설정)
 

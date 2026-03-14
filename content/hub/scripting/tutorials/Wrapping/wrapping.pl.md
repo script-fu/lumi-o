@@ -162,7 +162,7 @@ Zawijając funkcje niskiego poziomu w znaczące nazwy, tworzymy bardziej intuicy
 
 Lumi dostarcza zestaw gotowych opakowań ładowanych automatycznie przy uruchomieniu, dzięki czemu są one dostępne w dowolnej wtyczce lub w Scheme Console bez żadnego wywołania `(load ...)`. Biblioteki te (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` i `paths.scm`) są zbudowane dokładnie na tej samej zasadzie, co powyższe przykłady: nadają jasne nazwy do operacji niskiego poziomu, ukryj powtarzalne schematy i zapewnij jedno miejsce do aktualizacji, jeśli zmieni się podstawowe polecenie.Na przykład `images.scm` zapewnia `image-get-open-list` jako czytelne opakowanie wokół surowego wywołania PDB, a `files.scm` udostępnia pomocników tworzących ścieżki, które w innym przypadku wymagałyby powtarzanych łańcuchów `string-append`.
 
-Możesz przeglądać każdą wyeksportowaną nazwę, czytać jej dokumentację i zobaczyć, z której biblioteki pochodzi, w **[Utility Browser]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Pomoc → Programowanie → Przeglądarka narzędzi). Jest to praktyczna demonstracja owijania na dużą skalę i przydatne źródło wzorców do zapożyczenia podczas tworzenia własnej biblioteki pomocniczej.
+Możesz przeglądać każdą wyeksportowaną nazwę, czytać jej dokumentację i zobaczyć, z której biblioteki pochodzi, w **[Przeglądarka narzędzi]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Pomoc → Programowanie → Przeglądarka narzędzi). Jest to praktyczna demonstracja owijania na dużą skalę i przydatne źródło wzorców do zapożyczenia podczas tworzenia własnej biblioteki pomocniczej.
 
 ### Wniosek
 

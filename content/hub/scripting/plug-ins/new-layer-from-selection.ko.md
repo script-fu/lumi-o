@@ -6,7 +6,7 @@ type: docs
 
 ## 사는 곳
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [출처보기](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## 루미에 나타나는 위치
 

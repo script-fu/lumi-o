@@ -5,7 +5,7 @@ weight: 3
 ---
 Non appena una funzione di supporto cresce, spostala in un piccolo file di libreria. Ciò mantiene il plug-in focalizzato e rende l'helper riutilizzabile su più plug-in.
 
-### Crea una funzione di libreria
+### Make a Library Function
 
 Possiamo prendere la funzione di invio del messaggio e creare un nuovo file con quello come contenuto. Salva il file nella cartella del repository, non nella parte dei plugin, magari vicino al livello più alto;
 
@@ -25,7 +25,7 @@ Possiamo prendere la funzione di invio del messaggio e creare un nuovo file con 
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
-Esempio di una funzione di libreria send-message.scm
+Example of a library function send-message.scm
 
 ```scheme
 ;; Function to handle message output to various destinations
@@ -52,7 +52,7 @@ Esempio di una funzione di libreria send-message.scm
   (lumi-message-set-handler 2))
 ```
 
-### Carica la funzione di libreria
+### Load the Library Function
 
 Possiamo caricare quella funzione di libreria con il comando Scheme `load`;
 

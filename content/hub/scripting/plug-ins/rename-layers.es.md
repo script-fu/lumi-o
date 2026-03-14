@@ -6,7 +6,7 @@ Cambia el nombre de todas las capas de la pila (o las capas seleccionadas). Úti
 
 ## Donde vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Ver la fuente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## Dónde aparece en Lumi
 

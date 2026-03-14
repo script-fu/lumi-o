@@ -117,7 +117,7 @@ Extraire la logique :
 
 #### Symboles
 
-Dans l'exemple ci-dessus, un type de données appelé symbole est utilisé, tel que 'gui. Les symboles sont transmis en tant que paramètres à la fonction d'envoi de message et peuvent être utilisés pour prendre des décisions conditionnelles simples. Comme les clés symboliques, ce sont des identifiants uniques. Pour plus d'informations sur les symboles, visitez [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+Dans l'exemple ci-dessus, un type de données appelé symbole est utilisé, tel que 'gui. Les symboles sont transmis en tant que paramètres à la fonction d'envoi de message et peuvent être utilisés pour prendre des décisions conditionnelles simples. Comme les clés symboliques, ce sont des identifiants uniques. Pour plus d'informations sur les symboles, visitez [cette page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Simplifier la fonction principale
 

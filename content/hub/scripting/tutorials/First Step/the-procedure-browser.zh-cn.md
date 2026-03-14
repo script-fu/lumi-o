@@ -1,5 +1,5 @@
 ---
-title: "过程浏览器"
+title: "程序浏览器"
 type: docs
 weight: 1
 ---

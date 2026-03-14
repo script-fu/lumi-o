@@ -4,7 +4,7 @@ type: docs
 ---
 ## O que é código do Visual Studio?
 
-[Visual Studio Code](https://code.visualstudio.com/) (frequentemente abreviado para "VS Code" ou "VSC") é um editor de texto gratuito e de código aberto desenvolvido pela Microsoft, projetado especificamente para codificação. É leve, rápido e altamente personalizável, o que o torna um dos editores de código mais populares entre os desenvolvedores. Veja por que o VSC é uma ótima escolha:
+[Visual Studio Code](https://code.visualstudio.com/) (geralmente abreviado para "VS Code" ou "VSC") é um editor de texto gratuito e de código aberto desenvolvido pela Microsoft, projetado especificamente para codificação. É leve, rápido e altamente personalizável, o que o torna um dos editores de código mais populares entre os desenvolvedores. Veja por que o VSC é uma ótima escolha:
 
 - **Destaque de sintaxe**: o realce de sintaxe codifica seu código por cores, facilitando a detecção de erros, a compreensão da estrutura e a leitura de códigos complexos.
 - **Extensões**: você pode aprimorar o VSC com milhares de extensões. Se você precisa de suporte para um idioma, tema ou ferramenta específico, você pode encontrar uma extensão adequada.
@@ -20,7 +20,7 @@ type: docs
 
 Para começar a usar o VSC:
 
-- **Baixar e instalar**: Acesse [Visual Studio Code website](https://code.visualstudio.com/) e baixe a versão Linux.
+- **Baixar e instalar**: Vá para o [site do Visual Studio Code](https://code.visualstudio.com/) e baixe a versão Linux.
 
 - **Explore a interface**: Ao abrir o VSC, você notará vários painéis. À esquerda, você tem a **Barra de atividades**, onde você pode navegar entre arquivos, pesquisar, usar o Git e instalar extensões.
 

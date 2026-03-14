@@ -103,6 +103,20 @@ Im **Stroke Modulation**-Expander (wird nur angezeigt, wenn **Dynamics** aktivie
 - **Fade-Länge**: Abstand in Leinwandeinheiten, über den der Fade abläuft.
 - **Wiederholen**: Wie der Fade wiederholt wird, sobald die Fade-Länge erschöpft ist (Keine, Schleife, Sägezahn, Dreieck).
 
+#### Fade-Multiplikatoren
+
+Vier Kontrollkästchen, die steuern oder ändern, wie der Fade-Wert angewendet wird:
+- **Fade Reverse**: Kehrt die Fade-Richtung um, sodass die Striche zunächst verblassen und vollständig undurchsichtig werden.
+- **Fade-Multiplikation**: Multipliziert die Fade-Ausgabe in die betroffene Eigenschaft, anstatt sie zu ersetzen.
+- **Fade Multiply Angular**: Wendet den Fade-Multiplikator nur auf Winkeldynamiken (Winkel, Neigung) an.
+- **Fade-Multiplikationsverhältnis**: Wendet den Fade-Multiplikator nur auf Eigenschaften vom Typ Verhältnis (Seitenverhältnis) an.
+
+#### Farbzuordnung
+
+Verfügbar für Pinsel- und Wischwerkzeuge, wenn Dynamics aktiv ist:
+- **Verlauf**: Die Verlaufsressource, die für die Farbzuordnung entlang des Strichs verwendet wird.
+- **Blend Color Space**: Farbraum, in dem Verlaufsfarben während des Malens interpoliert werden.
+
 
 ### Bürstenköpfe
 
@@ -112,9 +126,7 @@ Der Umlaufradius wird durch die globale Pinselgröße minus der Kopfgröße best
 
 Pinselköpfe steuern, wo jeder Kopf um den Pinselstrich herum platziert wird. Wenn **Pivot
 
-Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.
-
-- **Anzahl**: Anzahl gleichzeitiger Bürstenköpfe (1–16).
+Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeugoptionen“ angezeigt.- **Anzahl**: Anzahl gleichzeitiger Bürstenköpfe (1–16).
 - **Kopfgröße**: Gerenderte Größe jedes Kopfes im Verhältnis zur globalen Pinselgröße (0,1–1,0).
 - **Orbit Aspect Ratio** (0,1–1,0): Formt die Formationsbahn von einem Kreis in eine Ellipse. 1,0 = Kreisbahn; niedrigere Werte quetschen die Nebenachse.
 - **Formationswinkel** (0–360°): Statische Ausrichtung des Formationsrings, verwendet, wenn **Follow Direction** unter 1,0 liegt.
@@ -124,24 +136,25 @@ Die Steuerelemente werden im Expander **Pinselköpfe** im Bedienfeld „Werkzeug
 
 #### Streuung
 
-Haupt-Scatter-Steuerelemente im **Brush Heads**-Expander:- **Streuungswinkel** (0–360°, Standard 10°): Dreht nur die zufällige Streuungskomponente (nicht den Füllabstand). Die Winkel pro Kopf/pro Tupfer sind mit kontrollierter Überkreuzung nach außen gerichtet, um starre Spiegelfahnen zu vermeiden. Auf 360° geklemmt.
+Haupt-Scatter-Steuerelemente im **Brush Heads**-Expander:
+
+- **Streuungswinkel** (0–360°, Standard 10°): Dreht nur die zufällige Streuungskomponente (nicht den Füllabstand). Die Winkel pro Kopf/pro Tupfer sind mit kontrollierter Überkreuzung nach außen gerichtet, um starre Spiegelfahnen zu vermeiden. Auf 360° geklemmt.
 - **Streuentfernung** (0–10.000 px): Zufällige Vorwärtsverschiebung von der Füllabstandsposition jedes Kopfes. Jeden Tupfer erneut aufrollen.
+- **Streuungszufälligkeit** (0,0–1,0): Zusätzliche Variation pro Tupfer, die über dem Basisstreuabstand und -winkel liegt und einen lockereren, organischeren Sprühstrahl erzeugt.
+- **Geschwindigkeitseinfluss** (0,0–1,0): Skaliert die Streuung anhand der Schlaggeschwindigkeit. Bei 1,0 streuen schnelle Schläge den Kopf viel weiter als langsame Schläge; Bei 0,0 ist die Streuung unabhängig von der Geschwindigkeit konstant.
 - **Scatter Size Balance** (0,0–1,0): Steuert die Unterdrückungssteilheit für Köpfe über dem Schwellenwert. Bei 1,0 streuen alle Köpfe gleichmäßig; Niedrigere Werte unterdrücken zunehmend größere Köpfe, während Köpfe bei/unter dem Schwellenwert bei voller Streuentfernung bleiben.
 
 ### Zusätzliche Optionen
 
-Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet) werden Steuerelemente als Überlaufabschnitte gruppiert, die seltener geändert werden. Dadurch bleibt der Fokus der Hauptexpander auf häufig angepassten Malsteuerungen.
-
-#### Pinseleigenschaften (Überlauf)
-
+Im Expander **Zusätzliche Optionen** (standardmäßig ausgeblendet) werden Steuerelemente als Überlaufabschnitte gruppiert, die seltener geändert werden. Dadurch bleibt der Fokus der Hauptexpander auf häufig angepassten Malsteuerungen.#### Pinseleigenschaften (Überlauf)
 - **Winkel an den Bildschirmbereich anpassen**: Der Pinselwinkel wird an den Bildschirmbereich angepasst, sodass der Winkel eben bleibt, während sich die Leinwand dreht/spiegelt. Keine Auswirkung, wenn Dynamics den Winkel steuert.
-- **Drehpunkt X**: Horizontaler Stempelkontaktpunkt innerhalb des Pinselbilds (0,0 = linker Rand, 0,5 = Mitte, 1,0 = rechter Rand). Durch Verschieben können außermittige Teile des Pinsels den Strich anführen.
-- **Drehpunkt Y**: Vertikaler Stempelkontaktpunkt innerhalb des Pinselbildes (0,0 = Oberkante, 0,5 = Mitte, 1,0 = Unterkante). Zusammen mit **Pivot X** definiert dies, welcher Teil des Tupfers auf der Farbstelle sitzt.
 - **Zufälliges horizontales Spiegeln**: 50 % Chance, jeden Stempel pro Tupfer von links nach rechts zu spiegeln.
 - **Zufälliges vertikales Spiegeln**: 50 % Chance, jeden Stempel pro Tupfer auf den Kopf zu stellen.
 - **Zufällige Drehung**: Rotiert jeden Stempel zufällig um 0°, 90°, 180° oder 270° pro Tupfer.
-- **Gleichmäßiger Jitter**: Wenn diese Option aktiviert ist, werden Spitzenversätze vom Schieberegler **Jitter** aus einer gleichmäßigen Verteilung gezogen (jeder Versatz ist innerhalb des Bereichs gleich wahrscheinlich). Wenn diese Option deaktiviert ist, ist die Verteilung eine Gaußsche Verteilung (versetzt den Cluster zur Mitte hin).
-- **Animation zurücksetzen**: Für animierte Pinsel: Wenn diese Option aktiviert ist, startet die Animation bei jedem neuen Strich ab Bild 0 neu. Wenn diese Option deaktiviert ist, wird an der Stelle fortgesetzt, an der der vorherige Strich endete.
+- **Pivot X** (0,0–1,0): Horizontaler Kontaktpunkt innerhalb des Pinselbildes. 0,0 = linker Rand, 0,5 = Mitte (Standard), 1,0 = rechter Rand. Der gewählte Punkt richtet sich nach der Farbposition auf der Leinwand. Wenn Sie ihn also von der Mitte weg bewegen, wird jeder Tupfer in diese Richtung verschoben. Drehungen und Spiegelungen bleiben optisch am Drehpunkt verankert, da der Platzierungsversatz nach der Transformation angewendet wird.
+- **Pivot Y** (0,0–1,0): Vertikaler Kontaktpunkt innerhalb des Pinselbildes. 0,0 = Oberkante, 0,5 = Mitte (Standard), 1,0 = Unterkante. Arbeitet mit **Pivot X** zusammen, um den genauen Teil des Tupfers zu definieren, der auf dem Strichpfad liegt.
+- **Gleichmäßiger Jitter**: Wenn diese Option aktiviert ist, werden Spitzenversätze vom Schieberegler **Jitter** aus einer gleichmäßigen Verteilung gezogen (jeder Versatz ist innerhalb des Bereichs gleich wahrscheinlich). Wenn diese Option deaktiviert ist, ist die Verteilung zur Mitte hin ausgerichtet.
+- **Animation zurücksetzen**: Für animierte Pinsel: Wenn diese Option aktiviert ist, startet die Animation bei jedem neuen Strich ab Bild 0 neu; Wenn diese Option deaktiviert ist, wird an der Stelle fortgesetzt, an der der vorherige Strich endete.
 
 Wenn einer der Drehpunktwerte von der Mitte abweicht, wird in der Pinselvorschau ein überlagertes Fadenkreuz angezeigt, das den Kontaktpunkt des aktiven Stempels markiert.
 
@@ -157,6 +170,12 @@ Streuung:
 Randomisierung:
 - **Charakter-Seed** (0–255): Der Seed für Pro-Kopf-Charaktere wurde korrigiert (Größe, Position des Füllabstands). Derselbe Samen reproduziert bei jedem Schlag die gleiche Formation. Desensibilisiert, wenn **Kopfcharakter zufällig auswählen** aktiviert ist.
 - **Kopfzeichen randomisieren**: Zeichnet die Zeichenwerte pro Kopf (Größe, Streuposition) bei jedem Stempel neu, sodass die Formation entlang des Strichs völlig chaotisch ist. Überschreibt **Charakter-Seed**.
-- **Animationsrahmen randomisieren**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.#### Strichverhalten (Überlauf)
+- **Animationsrahmen randomisieren**: Für animierte Pinsel: Jeder Kopf bewegt seinen Animationsrahmen unabhängig weiter.
+
+#### Dynamik (Überlauf)
+
+Steuerelemente, die den Haupt-Dynamics-Expander erweitern, hier gruppiert, da sie selten angepasst werden:
+- **Vorschau zufällige Größe**: Zeigt zufällige Größenvariationen in der Pinselumrissvorschau an, wenn die aktive Dynamikvoreinstellung die Größe zufällig steuert.
+- **Vorschau der zufälligen Rotation**: Zeigt zufällige Rotationsvariationen in der Pinselumrissvorschau an, wenn die aktive Dynamikvoreinstellung den Winkel zufällig steuert.#### Strichverhalten (Überlauf)
 - **Zuletzt verwendete Farben wiederherstellen**: Stellt beim Start die Vordergrund- und Hintergrundfarben der vorherigen Sitzung wieder her, anstatt standardmäßig Schwarz und Weiß zu verwenden.
 - **Einfache Pinselgrenze**: Verwendet einen einfachen Kreis als Umriss des Pinselcursors, anstatt die vollständige Pinselform darzustellen. Nützlich für komplexe oder große Pinsel, bei denen das Zeichnen der genauen Grenze aufwändig ist.

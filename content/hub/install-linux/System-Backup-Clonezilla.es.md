@@ -24,9 +24,9 @@ Siempre es mejor tener una copia de seguridad y no necesitarla que necesitarla y
 
 Necesitará una unidad USB para Clonezilla y un disco duro externo que sea más grande que el disco interno que desea clonar.
 
-Estos pasos simplifican el proceso basado en [official guide](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Es una buena idea revisar la guía completa, que incluye capturas de pantalla para mayor claridad.
+Estos pasos simplifican el proceso según la [guía oficial](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Es una buena idea revisar la guía completa, que incluye capturas de pantalla para mayor claridad.
 
-1. **Cree un USB o CD/DVD de Clonezilla Live**: siga las instrucciones detalladas en Clonezilla [website](https://clonezilla.org/liveusb.php) para crear un USB o CD/DVD de arranque.
+1. **Cree un USB o CD/DVD de Clonezilla Live**: Siga las instrucciones detalladas en el [sitio web] de Clonezilla(https://clonezilla.org/liveusb.php) para crear un USB o CD/DVD de arranque.
 
 2. **Conecte su unidad de respaldo externa**: conecte su unidad externa y asegúrese de que su sistema la reconozca. Este será el destino de su copia de seguridad.
 

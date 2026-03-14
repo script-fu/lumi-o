@@ -90,7 +90,7 @@ Het Master-palet wordt geleverd met de volgende pigmenten. Stalen tonen het typi
 | Staal | Naam | CI-code | Familie |
 | :---: | :--- | :--- | :--- |
 | {{< swatch "22,15,10" >}} | Mars Zwart (Warm) | PBk11 | Zwart (Mars) |
-| {{< swatch "18,28,12" >}} | Peryleengroen | PBk31 | Zwart (peryleengroen) |
+| {{< swatch "18,28,12" >}} | Peryleen Groen | PBk31 | Zwart (peryleengroen) |
 | {{< swatch "10,18,19" >}} | Ivoorzwart (koel) | PBk9 | Zwart (ivoor) |
 | {{< swatch "18,18,18" >}} | Lamp Zwart (Neutraal) | PBk7 | Zwart (lamp) |
 | {{< swatch "255,249,235" >}} | Titaanwit (warm) | PW6: Warm | Wit (Titanium Warm) |

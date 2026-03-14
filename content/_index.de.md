@@ -11,7 +11,7 @@ Lumi-o basiert auf der Kernarchitektur von GIMP und reduziert die allgemeine Kom
 
 Lazy Loading beseitigt feste Speichergrenzen und ermöglicht Ihnen die Verwaltung großer, komplexer Projekte und riesiger Leinwandgrößen, ohne an RAM-Grenzen zu stoßen.
 
-Lumi-o wurde auf Debian 13 mit dem Cinnamon-Desktop entwickelt. Wenn Sie Windows verwenden, ist die Installation von Debian der erste Schritt: [How to Install Linux](/hub/install-linux/).
+Lumi-o wurde auf Debian 13 mit dem Cinnamon-Desktop entwickelt. Wenn Sie Windows verwenden, ist die Installation von Debian der erste Schritt: [So installieren Sie Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="Um" icon="information-circle" >}}

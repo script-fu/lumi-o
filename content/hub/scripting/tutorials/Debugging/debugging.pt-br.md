@@ -3,7 +3,7 @@ title: "Depuração"
 type: docs
 weight: 5
 ---
-Em scripts, nenhuma função é infalível. Mesmo os comandos mais confiáveis ​​podem falhar quando confrontados com entradas ou condições inesperadas. Para nos proteger contra isso, podemos implementar um sistema de depuração personalizado e adotar técnicas de programação defensivas. Ao agrupar funções padrão com mecanismos de tratamento de erros e fornecer feedback informativo, podemos tornar nossos scripts mais robustos e fáceis de solucionar.
+Em scripts, nenhuma função é infalível. Mesmo os comandos mais confiáveis ​​podem falhar quando confrontados com entradas ou condições inesperadas. Para nos proteger contra isso, podemos implementar um sistema de depuração personalizado e adotar técnicas de programação defensivas. By wrapping standard functions with error-handling mechanisms and providing informative feedback, we can make our scripts more robust and easier to troubleshoot.
 
 Uma parte importante desta estratégia é usar um sinalizador de depuração global para controlar a saída detalhada, permitindo-nos ativar informações detalhadas de depuração quando necessário, mantendo a saída limpa durante a execução normal.
 

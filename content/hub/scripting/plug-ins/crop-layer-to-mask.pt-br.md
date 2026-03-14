@@ -6,7 +6,7 @@ Corta camadas na área da máscara, com uma margem de pixel opcional.
 
 ## Onde mora
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
+- [Ver a fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
 ## Onde aparece no Lumi
 

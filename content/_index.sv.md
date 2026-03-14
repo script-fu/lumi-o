@@ -11,7 +11,7 @@ Byggd på GIMP:s kärnarkitektur tar Lumi-o bort komplexitet för allmän ändam
 
 Lazy loading tar bort fasta minnestak, så att du kan hantera stora, komplexa projekt och massiva canvasdimensioner utan att komma in i RAM-gränser.
 
-Lumi-o är utvecklad på Debian 13 med skrivbordet Cinnamon. Om du kommer från Windows är installation av Debian det första steget: [How to Install Linux](/hub/install-linux/).
+Lumi-o är utvecklad på Debian 13 med skrivbordet Cinnamon. Om du kommer från Windows är installation av Debian det första steget: [Hur man installerar Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="Om" icon="information-circle" >}}

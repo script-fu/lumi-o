@@ -69,7 +69,7 @@ Dadurch wird sichergestellt, dass Alt-Ziehgesten (z. B. Anpassung der Pinselgrö
 
 ### Einschränkungen
 
-- Die Ebenenauswahl wird während der Werkzeugoperationen **Transformieren** nicht aktiviert. Alt hat dort eine andere Bedeutung.
+- Die Ebenenauswahl wird während der Werkzeugoperationen **Transformieren** nicht aktiviert; Alt hat dort eine andere Bedeutung.
 - Die Auswahl erfolgt nicht, wenn eine schwebende Auswahl vorhanden ist.
 - Nur die linke Alt-Taste löst das Auswählen aus; Die rechte Alt-Taste wird als Standardmodifikator behandelt.
 

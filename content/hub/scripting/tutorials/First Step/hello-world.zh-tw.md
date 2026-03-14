@@ -93,7 +93,7 @@ weight: 1
 ### 安裝插件
 
 1. 前往 **Lumi -> 編輯 -> 首選項 -> 資料夾 -> 外掛程式**。
-2. 將[repo](/hub/scripting/tools/git) 外掛程式資料夾新增至清單。
+2. 將您的 [repo](/hub/scripting/tools/git) 外掛程式資料夾新增至清單。
 3. 為外掛程式建立一個資料夾，並將上面的範例程式碼儲存為`hello-world.scm`：
   - `your-plug-ins-repo/hello-world/hello-world.scm`
 4. 右鍵點選`hello-world.scm` 檔案。

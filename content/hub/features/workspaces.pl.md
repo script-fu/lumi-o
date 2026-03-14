@@ -84,4 +84,4 @@ Kilka sposobów, w jakie artyści mogą wykorzystywać wiele przestrzeni roboczy
 - **Inking** — linie pomocnicze i obramowanie obszaru roboczego włączone, paski przewijania włączone (ustawiane w Preferencjach → Wygląd domyślny), neutralny kolor wypełnienia
 - **Roughs** — doki ukryte, bez linijek i siatki, ciemne wypełnienie, niewielki rozmiar ikon, aby zmaksymalizować przestrzeń płótna
 - **Ostrość na pełnym ekranie** — różne ustawienia kolorów wypełnienia i dekoracji w przypadku wyglądu pełnoekranowego i wyglądu domyślnego, więc przełączanie trybu pełnoekranowego zapewnia naprawdę inne środowisko pracy
-- **Skrypty** — panel skryptów otwarty, zwiększenie rozmiaru czcionki w celu zwiększenia czytelności, inny zestaw ikon
+- **Skrypty** — otwarty panel skryptów, zwiększenie rozmiaru czcionki w celu zwiększenia czytelności, inny zestaw ikon

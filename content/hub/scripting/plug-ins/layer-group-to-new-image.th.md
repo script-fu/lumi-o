@@ -6,11 +6,11 @@ type: docs
 
 ## มันอาศัยอยู่ที่ไหน
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [ดูแหล่งที่มา](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## ปรากฏใน Lumi ที่ไหน
 
-- **เลเยอร์ → กลุ่มเลเยอร์ไปยังรูปภาพใหม่**
+- **เลเยอร์ → กลุ่มเลเยอร์เป็นรูปภาพใหม่**
 
 ## ขั้นตอน
 

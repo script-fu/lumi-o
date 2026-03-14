@@ -56,7 +56,7 @@ sudo apt install git
 
 ### 2. Créez un compte GitHub
 
-Si vous n'avez pas déjà de compte, visitez [GitHub](https://github.com/) pour vous inscrire. Une fois inscrit, vous pouvez créer des référentiels sur GitHub pour stocker votre code en ligne.
+Si vous n'avez pas encore de compte, visitez [GitHub](https://github.com/) pour vous inscrire. Une fois inscrit, vous pouvez créer des référentiels sur GitHub pour stocker votre code en ligne.
 
 ### 3. Créez un référentiel vierge sur GitHub
 
@@ -134,7 +134,7 @@ Git et les plateformes comme GitHub et GitLab sont des outils puissants et, mêm
 Voici quelques termes courants que vous rencontrerez lorsque vous travaillerez avec Git et GitHub :- **Commit** : un instantané de vos modifications dans le référentiel. Chaque validation comprend un message décrivant ce qui a été modifié et crée un enregistrement historique auquel vous pouvez vous référer ou revenir ultérieurement.
 - **Dépôt (Repo)** : Une collection de fichiers et leur historique suivis par Git. Les référentiels peuvent exister localement sur votre ordinateur ou à distance sur des plateformes comme GitHub. Chaque projet est généralement stocké dans son propre référentiel.
 - **Remote** : Un référentiel distant est une version de votre projet hébergée sur une plateforme comme GitHub. La version locale de votre projet sur votre ordinateur est liée à cette télécommande afin que vous puissiez télécharger (push) et télécharger (pull) les modifications.
-- **Staging** : processus de préparation des fichiers pour une validation. Lorsque vous préparez un fichier, vous indiquez à Git que vous souhaitez l'inclure dans la prochaine validation. La mise en scène vous permet de choisir les modifications à inclure dans une validation.
+- **Staging** : processus de préparation des fichiers pour une validation. When you stage a file, you're telling Git that you want to include it in the next commit. La mise en scène vous permet de choisir les modifications à inclure dans une validation.
 - **Push** : action d'envoyer vos modifications validées depuis votre référentiel local vers un référentiel distant (par exemple, GitHub), afin que d'autres puissent accéder à la version mise à jour de votre code.
 - **Pull** : action de récupérer les modifications depuis un référentiel distant pour mettre à jour votre copie locale. Vous extrayez les modifications lorsque vous souhaitez synchroniser votre référentiel local avec la dernière version de la télécommande.
 - **Origin** : Le nom par défaut d'un référentiel distant lorsque vous connectez pour la première fois votre référentiel local à un référentiel distant. Fait généralement référence à l'URL principale de votre projet sur GitHub.

@@ -6,7 +6,7 @@ Un esempio pratico e completo per elaborare molti file in una volta sola.
 
 ## Dove vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Dove appare in Lumi
 

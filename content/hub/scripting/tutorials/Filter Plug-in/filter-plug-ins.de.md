@@ -3,7 +3,7 @@ title: "Das Filter-Plugin"
 type: docs
 weight: 2
 ---
-Für das [First Step](../../first-step/) Tutorial haben wir ein _procedure_ Plug-in verwendet. Diese Arten von Plug-Ins funktionieren, ohne dass ein Bild oder eine Zeichendatei als Eingabe erforderlich ist. Normalerweise verwenden wir ein Plug-In, um ein Bild und seine Zeichenelemente zu ändern. Plug-ins wie diese werden als _Filter_-Plug-ins bezeichnet.
+Für das Tutorial [Erster Schritt](../../first-step/) haben wir ein _procedure_-Plug-in verwendet. Diese Arten von Plug-Ins funktionieren, ohne dass ein Bild oder eine Zeichendatei als Eingabe erforderlich ist. Normalerweise verwenden wir ein Plug-In, um ein Bild und seine Zeichenelemente zu ändern. Plug-ins wie diese werden als _Filter_-Plug-ins bezeichnet.
 
 ### Was ist ein Drawable?
 
@@ -65,7 +65,7 @@ In Lumi Version 3 müssen Plug-Ins nicht aktualisiert werden, damit gespeicherte
 
 #### Shebang-Linie
 
-Die erste Zeile stellt sicher, dass das Skript als Plug-in in Lumi 3 funktioniert:
+Die erste Zeile stellt sicher, dass das Skript als Plug-In in Lumi 3 funktioniert:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1

@@ -70,7 +70,7 @@ Le funzioni variadiche vengono definite utilizzando il simbolo `.` prima del nom
 
 - **Spiegazione**:
   - `collection-name` è un parametro fisso.
-  - `items` raccoglie argomenti aggiuntivi in ​​un elenco.
+  - `items` collects additional arguments into a list.
   - La funzione concatena il nome della raccolta e gli elementi in un'unica stringa.
 
 **Utilizzo**:

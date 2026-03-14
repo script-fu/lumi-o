@@ -7,7 +7,7 @@ En Scheme, las **estructuras de datos** son herramientas esenciales para organiz
 
 ## Estructuras de datos clave en el esquema
 
-Scheme proporciona varias estructuras de datos potentes y versátiles, cada una de ellas adecuada para tareas específicas. Las estructuras de datos primarias incluyen:
+Scheme proporciona varias estructuras de datos potentes y versátiles, cada una adecuada para tareas específicas. Las estructuras de datos primarias incluyen:
 
 ### Listas
 

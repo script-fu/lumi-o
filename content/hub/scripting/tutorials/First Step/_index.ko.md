@@ -12,7 +12,7 @@ weight: 1
 
 - Lumi가 설치되었습니다(최근 빌드 또는 AppImage).
 - `.scm` 파일용 텍스트 편집기(VS Code는 잘 작동함): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
-- [Git](/hub/scripting/tools/git/) 코드 백업 및 버전 제어를 유지합니다.
+- [Git](/hub/scripting/tools/git/) 코드 백업 및 버전 관리를 유지합니다.
 
 ## 튜토리얼 단계
 

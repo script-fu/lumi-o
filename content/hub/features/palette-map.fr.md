@@ -52,7 +52,7 @@ Chaque entrée a deux positions sur la carte :
 - **Origin (Source Cell)** : L'adresse de grille logique à laquelle appartient l'entrée, fixe pour sa durée de vie.
 - **Position visuelle du point** : où la couleur est réellement rendue en fonction de sa teinte et de sa luminosité perceptuelles.
 
-Avec **Best-Match Relocation**, lorsqu'un mélange est enregistré, le système calcule la recette optimale pour la couleur finale et définit l'origine pour qu'elle corresponde à la position visuelle de la couleur. Cela maintient les couleurs enregistrées proches de leur emplacement visuel sur la roue et rend la carte spatialement cohérente.
+With **Best-Match Relocation**, when a mix is saved the system computes the optimal recipe for the final color and sets the origin to match the color's visual position. Cela maintient les couleurs enregistrées proches de leur emplacement visuel sur la roue et rend la carte spatialement cohérente.
 
 ## Faire glisser les mix enregistrés
 

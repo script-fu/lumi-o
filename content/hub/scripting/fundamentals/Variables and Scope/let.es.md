@@ -58,7 +58,7 @@ La construcción `let*` es similar a `let`, pero los enlaces se evalúan **secue
 ```
 
 - El primer enlace asigna `10` a `x`.
-- El segundo enlace calcula `y` como `(+ x 5)`, usando el valor de `x`.
+- El segundo enlace calcula `y` como `(+ x 5)`, utilizando el valor de `x`.
 - El cuerpo calcula `(* x y)`.
 
 **Resultado**: `150`

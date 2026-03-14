@@ -2,7 +2,7 @@
 title: "Widmowe mieszanie kolorów"
 type: docs
 ---
-System palet Lumi wykorzystuje widmowy model kolorów do symulacji mieszania się prawdziwych pigmentów. Celem jest, aby doświadczenie budowania i wybierania kolorów z cyfrowej palety przypominało mieszanie fizycznych farb. Po nałożeniu koloru na płótno jest to standardowy kolor RGB.
+System palet Lumi wykorzystuje spektralny model kolorów do symulacji mieszania się prawdziwych pigmentów. Celem jest, aby doświadczenie budowania i wybierania kolorów z cyfrowej palety przypominało mieszanie fizycznych farb. Po nałożeniu koloru na płótno jest to standardowy kolor RGB.
 
 ## Co oznacza mieszanie widmowe
 

@@ -40,7 +40,7 @@ In Scheme wird die Bedingung `cond` verwendet, um basierend auf mehreren Tests e
 ```
 
 – Der erste Test `(< 3 2)` ergibt „falsch“ (`#f`).
-– Der zweite Test `(= 3 3)` ergibt „true“ (`#t`), daher wird `"This will run"` zurückgegeben.
+– Der zweite Test `(= 3 3)` ergibt „true“ (`#t`), sodass `"This will run"` zurückgegeben wird.
 – Die Klausel `else` wird nicht ausgeführt, da bereits eine Übereinstimmung gefunden wurde.
 
 Ergebnis: **"Dies wird ausgeführt"**

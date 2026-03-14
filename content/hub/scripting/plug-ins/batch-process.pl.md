@@ -6,11 +6,11 @@ Praktyczny, kompleksowy przykład przetwarzania wielu plików za jednym razem.
 
 ## Gdzie mieszka
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Zobacz źródło](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Gdzie pojawia się w Lumi
 
-- **File → Batch Process**
+- **Plik → Proces wsadowy**
 
 ## Co to pokazuje
 

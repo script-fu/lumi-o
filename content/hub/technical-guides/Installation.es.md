@@ -2,7 +2,7 @@
 title: "Instalación"
 type: docs
 ---
-Necesitas Git para el paso de clonación inicial a continuación. Si Git aún no está instalado, instálelo primero (Debian/Ubuntu: `sudo apt install git`) o siga: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+Necesitas Git para el paso de clonación inicial a continuación. Si Git aún no está instalado, instálelo primero (Debian/Ubuntu: `sudo apt install git`) o siga: [Usando Git en Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Clonar Lumi (configuración por primera vez)
 

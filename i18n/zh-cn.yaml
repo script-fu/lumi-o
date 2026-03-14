@@ -12,3 +12,9 @@
   translation: "安装 Linux"
 - id: menuTechnicalGuides
   translation: "技术指南"
+- id: menuHome
+  translation: "首页"
+- id: menuScripting
+  translation: "脚本"
+- id: menuContact
+  translation: "联系"

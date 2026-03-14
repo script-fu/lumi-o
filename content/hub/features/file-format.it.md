@@ -78,7 +78,7 @@ I file PSD e XCF vengono convertiti nel formato nativo di Lumi al momento dell'i
 - **TIFF**: senza perdita di dati o compresso LZW.
 - **XCF**: formato compatibile con GIMP. Solo esportazione; strati e proprietà di base preservate.
 
-## Recupero del progettoLumi mantiene salvataggi automatici in background e checkpoint incrementali manuali, entrambi accessibili da **File** → **Recupera immagine**. Consulta la pagina [File Recovery](../recovery) per i dettagli completi.
+## Recupero del progettoLumi mantiene salvataggi automatici in background e checkpoint incrementali manuali, entrambi accessibili da **File** → **Recupera immagine**. Consulta la pagina [Ripristino file](../recovery) per i dettagli completi.
 
 ## Organizzazione
 

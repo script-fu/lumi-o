@@ -11,7 +11,7 @@ I slutet kommer du att ha byggt ditt eget anpassade meddelandebibliotek och ha e
 Innan du börjar, se till att du har följande:
 
 - Lumi installerad (en nyligen byggd eller AppImage).
-- En textredigerare för `.scm`-filer (VS-kod fungerar bra): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- En textredigerare för `.scm` filer (VS Code fungerar bra): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) för att hålla din kod säkerhetskopierad och versionskontrollerad.
 
 ## Handledningssteg
@@ -28,6 +28,6 @@ Innan du börjar, se till att du har följande:
 {{< cards >}}
   {{< card link="reworking" title="Omarbetning" icon="adjustments" subtitle="Avancerade tekniker för kodomstrukturering" >}}
   {{< card link="refactor-again" title="Refaktor igen" icon="arrow-sm-right" subtitle="Iterativ förbättring och optimering" >}}
-  {{< card link="the-procedure-browser" title="Procedur webbläsare" icon="book-open" subtitle="Utforskar Lumis procedurdatabas" >}}
+  {{< card link="the-procedure-browser" title="Procedur webbläsare" icon="book-open" subtitle="Utforska Lumis procedurdatabas" >}}
   {{< card link="final-thoughts" title="Slutliga tankar" icon="academic-cap" subtitle="Sammanfattning och nästa steg i utvecklingen" >}}
 {{< /cards >}}

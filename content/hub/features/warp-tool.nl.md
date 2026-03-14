@@ -46,7 +46,7 @@ Wanneer **Warp Masks** is uitgeschakeld, wordt alleen de laaginhoud verplaatst; 
 
 | Modus | Effect |
 | :--- | :--- |
-| **Verplaatsen** | Duwt pixels in de richting van de lijn. De primaire modus voor het meeste kromtrekwerk. |
+| **Verplaatsen** | Duwt pixels in de richting van de streek. De primaire modus voor het meeste kromtrekwerk. |
 | **Groeien** | Vergroot pixels naar buiten vanuit het midden van het penseel. |
 | **Krimpen** | Trekt pixels naar binnen, richting het midden van het penseel. |
 | ** Met de klok mee draaien ** | Roteert pixels met de klok mee rond het midden van het penseel. |

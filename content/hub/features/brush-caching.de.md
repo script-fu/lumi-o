@@ -38,13 +38,13 @@ Wenn Sie diesen Cache speichern, kann Lumi ihn später automatisch laden, sodass
 
 1. Wählen Sie eine Pinselvoreinstellung, die Sie häufig verwenden.
 2. Aktivieren Sie die Quantisierung für die Dynamik.
-3. Paint normally for a while so the cache fills organically.
+3. Malen Sie eine Weile normal, damit sich der Cache organisch füllt.
 4. Öffnen Sie den **Tool Preset Editor** und überprüfen Sie den Abschnitt **Preset Cache**.
 5. Sehen Sie sich die Live-Metriken an:
    - **Trefferquote**
    - **Abdeckung**
    - **Speicher**
-6. Klicken Sie auf **Speichern**, wenn der Cache sinnvoll erscheint.
+6. Klicken Sie auf **Speichern**, wenn der Cache sinnvoll aussieht.
 7. Bei späteren Sitzungen lädt Lumi den gespeicherten Cache automatisch, wenn die Voreinstellung aktiv wird.
 
 Dadurch fühlt sich die Voreinstellung schneller an, insbesondere bei Pinseln mit teuren Transformationen oder großen Stempeln.

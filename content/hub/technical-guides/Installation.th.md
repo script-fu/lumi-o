@@ -2,7 +2,7 @@
 title: "การติดตั้ง"
 type: docs
 ---
-คุณต้องมี Git สำหรับขั้นตอนการโคลนเริ่มต้นด้านล่าง หากยังไม่ได้ติดตั้ง Git ให้ติดตั้งก่อน (Debian/Ubuntu: `sudo apt install git`) หรือติดตาม: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+คุณต้องมี Git สำหรับขั้นตอนการโคลนเริ่มต้นด้านล่าง หากยังไม่ได้ติดตั้ง Git ให้ติดตั้งก่อน (Debian/Ubuntu: `sudo apt install git`) หรือติดตาม: [การใช้ Git บน Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Clone Lumi (การตั้งค่าครั้งแรก)
 

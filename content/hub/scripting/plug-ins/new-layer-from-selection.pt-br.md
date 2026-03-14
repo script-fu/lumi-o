@@ -6,7 +6,7 @@ Cria uma nova camada nomeada a partir da seleção ativa.
 
 ## Onde mora
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Ver a fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## Onde aparece no Lumi
 

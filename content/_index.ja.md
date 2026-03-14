@@ -11,7 +11,7 @@ GIMP のコア アーキテクチャに基づいて構築された Lumi-o は、
 
 遅延読み込みにより、メモリの固定上限がなくなり、RAM の制限に達することなく、大規模で複雑なプロジェクトや巨大なキャンバスのサイズを管理できるようになります。
 
-Lumi-o は、Cinnamon デスクトップを備えた Debian 13 上で開発されています。 Windows を使用している場合は、Debian をインストールすることが最初のステップです:[How to Install Linux](/hub/install-linux/)。
+Lumi-o は、Cinnamon デスクトップを備えた Debian 13 上で開発されています。 Windows を使用している場合は、最初のステップとして Debian をインストールします: [Linux のインストール方法](/hub/install-linux/)。
 
 {{< cards >}}
   {{< card link="hub/about/" title="について" icon="information-circle" >}}

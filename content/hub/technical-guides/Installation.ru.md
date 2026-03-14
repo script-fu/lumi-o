@@ -2,7 +2,7 @@
 title: "Установка"
 type: docs
 ---
-Вам понадобится Git для начального этапа клонирования, описанного ниже. Если Git еще не установлен, сначала установите его (Debian/Ubuntu: `sudo apt install git`) или следуйте инструкциям: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
+Вам понадобится Git для начального этапа клонирования, описанного ниже. Если Git еще не установлен, сначала установите его (Debian/Ubuntu: `sudo apt install git`) или следуйте инструкциям: [Использование Git в Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Клонировать Люми (первая установка)
 

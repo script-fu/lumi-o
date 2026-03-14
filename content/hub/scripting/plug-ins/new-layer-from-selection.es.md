@@ -6,7 +6,7 @@ Crea una nueva capa con nombre a partir de la selección activa.
 
 ## Donde vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Ver la fuente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## Dónde aparece en Lumi
 

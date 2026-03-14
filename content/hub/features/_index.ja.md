@@ -11,7 +11,7 @@ Lumi の機能セットは、非破壊的なレイヤーベースの編集に基
   {{< card link="file-format" title="ファイル形式 (.lum)" icon="document-text" subtitle="レイヤー、メタデータ、ICC プロファイル、リカバリ データを保存するオープン コンテナ形式。" >}}
   {{< card link="recovery" title="ファイルの回復" icon="refresh" subtitle="自動増分回復スナップショットにより、クラッシュや電源喪失から作業を保護します。" >}}
   {{< card link="layers" title="レイヤーと非破壊編集" icon="collection" subtitle="ブレンド モード、マスク、グループ、非破壊調整レイヤーを使用したレイヤーベースの合成。" >}}
-  {{< card link="paintbrush" title="ペイントブラシツール" icon="pencil-alt" subtitle="安定化、平滑化、およびマルチヘッド ブラシ形成による圧力、速度、傾き、間隔のダイナミクス。" >}}
+  {{< card link="paintbrush" title="ペイントブラシツール" icon="pencil-alt" subtitle="安定化、平滑化、およびマルチヘッド ブラシ形成による圧力、速度、傾き、および間隔のダイナミクス。" >}}
   {{< card link="palette-editor" title="パレットエディタ" icon="color-swatch" subtitle="フルスペクトルおよび限定されたパレットをカバーするバンドル セットを使用して、名前付き顔料パレットを作成および管理します。" >}}
   {{< card link="palette-map" title="パレットマップ" icon="view-grid" subtitle="パレットの顔料を軸にマッピングするインタラクティブな 2D グリッド。直接の色の選択と探索に使用されます。" >}}
   {{< card link="palette-mixer" title="パレットミキサー" icon="adjustments" subtitle="視覚的なギャップ プレビューを使用して、アクティブなパレットから色相、彩度、トーンごとに顔料を混合します。" >}}

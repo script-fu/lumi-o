@@ -17,7 +17,7 @@ Anstatt nur eine einzige Codezeile fertigzustellen, kann ein Agent:
 ## Repository-Zugriff
 
 Die KI-Unterstützung ist am effektivsten, wenn der Agent Zugriff auf **lumi-dev** oder Ihr spezifisches Projekt-Repository hat. Mit Einblick in die vorhandene Codebasis kann der Agent:
-- Verwenden Sie **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** als Referenz für Hilfsfunktionen.
+- Verwenden Sie die **[Dienstprogrammbibliotheken]({{< ref "/hub/scripting/reference/utility-browser" >}})** als Referenz für Hilfsfunktionen.
 - Befolgen Sie bestehende Muster für GEGL-Operationen und Layer-Management.
 - Boilerplate-Code aus etablierten Plug-Ins wiederverwenden.
 

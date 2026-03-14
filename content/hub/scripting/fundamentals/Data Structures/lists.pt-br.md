@@ -41,7 +41,7 @@ Resultado:
 
 #### Recursão simples: iterando por meio de uma lista
 
-Chamando recursivamente `car` no `cdr` de uma lista, você pode processar cada elemento um por um até que a lista seja percorrida. Isso forma a base de muitos algoritmos de processamento de lista.
+Chamando recursivamente `car` no `cdr` de uma lista, você pode processar cada elemento um por um até que a lista seja percorrida. This forms the basis of many list-processing algorithms.
 
 #### Exemplo: Imprimindo cada elemento de uma lista
 

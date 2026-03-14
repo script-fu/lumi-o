@@ -20,7 +20,7 @@ type: docs
 | `files.scm` |文件和路径助手 |
 | `gegl.scm` | GEGL 缓冲区和颜色助手 |
 | `images.scm` |图像级助手（`image-get-open-list` 等）|
-| `layers.scm` |图层和可绘制助手 |
+| `layers.scm` |图层和可绘制助手|
 | `parasites.scm` |寄生虫读/写助手 |
 | `paths.scm` |路径和矢量助手|
 

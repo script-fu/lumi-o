@@ -12,3 +12,9 @@
   translation: "ติดตั้ง Linux"
 - id: menuTechnicalGuides
   translation: "คู่มือทางเทคนิค"
+- id: menuHome
+  translation: "หน้าหลัก"
+- id: menuScripting
+  translation: "การเขียนสคริปต์"
+- id: menuContact
+  translation: "ติดต่อ"

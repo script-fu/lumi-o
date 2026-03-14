@@ -35,7 +35,7 @@ Scheme の `for-each` 関数は、リスト (または複数のリスト) の各
 ### 仕組み
 
 1. **各要素を反復処理**:
-   - The provided procedure is executed for every element in the list, in order.
+   - 提供されたプロシージャは、リスト内のすべての要素に対して順番に実行されます。
 
 2. **副作用を実行します**:
    - 一般的な副作用には、外部変数の印刷、ログ記録、または変更が含まれます。 `map` とは異なり、`for-each` は新しいリストを返しません。

@@ -24,7 +24,7 @@ Da alles ein Ausdruck ist, passt der Kontrollfluss natürlich in denselben Stil 
 Funktionen spielen in Scheme aus mehreren Gründen eine zentrale Rolle:
 
 - **Wiederverwendbarkeit des Codes:** Vermeiden Sie Wiederholungen, indem Sie die Logik in wiederverwendbare Komponenten kapseln.
-- **Modularity:** Break down complex tasks into smaller, manageable pieces.
+- **Modularität:** Teilen Sie komplexe Aufgaben in kleinere, überschaubare Teile auf.
 - **Dynamisches Verhalten:** Akzeptieren Sie Parameter, um verschiedene Eingaben zu verarbeiten oder sich an verschiedene Situationen anzupassen.
 - **Höhere Abstraktion:** Vereinfachen Sie die Logik, indem Sie sich darauf konzentrieren, „was“ eine Funktion tut, und nicht darauf, „wie“ sie es tut.
 

@@ -6,7 +6,7 @@ Crée un nouveau calque nommé à partir de la sélection active.
 
 ## Où il vit
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Voir la source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
 ## Où il apparaît dans Lumi
 

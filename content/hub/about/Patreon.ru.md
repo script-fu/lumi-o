@@ -12,7 +12,7 @@ weight: 7
 
 Вы можете сделать это через Patreon, платформу, которую многие креативщики используют для получения прямой поддержки:
 
-[Visit my Patreon page](https://www.patreon.com/pixelmixer) для поддержки.
+[Посетите мою страницу Patreon](https://www.patreon.com/pixelmixer) для поддержки.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Патреон" icon="heart" >}}

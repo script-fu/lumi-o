@@ -2,7 +2,7 @@
 title: "Procedur webbläsare"
 type: docs
 ---
-Procedurbläddraren är det primära referensverktyget för att upptäcka de hundratals funktioner som finns tillgängliga i Lumis procedurdatabas (PDB). Eftersom alla verktyg, filter och skript i Lumi måste registreras i PDB för att kunna anropas, är den här webbläsaren i praktiken en komplett PDB-utforskare.
+Procedurbläddraren är det primära referensverktyget för att upptäcka de hundratals funktioner som finns tillgängliga i Lumis procedurdatabas (PDB). Eftersom alla verktyg, filter och skript i Lumi måste registreras i PDB för att kunna anropas, är den här webbläsaren faktiskt en komplett PDB-utforskare.
 
 ## Öppna procedurbläddraren
 

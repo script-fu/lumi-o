@@ -7,11 +7,11 @@ type: docs
 
 Lumi-o 專為分層光柵繪畫而設計，刻意精簡且穩定。 Wacom 數位板支援經過廣泛測試，可提供專業插畫所需的流暢、反應靈敏的輸入。
 
-Lumi-o 基於 GIMP 的核心架構構建，消除了通用的複雜性，轉而採用資料完整性優先的專用繪畫環境。高速自動儲存和滾動增量保存系統可保護您的工作，而不會中斷您的流程。
+Lumi-o 基于 GIMP 的核心架构构建，消除了通用的复杂性，转而采用数据完整性优先的专用绘画环境。高速自动保存和滚动增量保存系统可保护您的工作，而不会中断您的流程。
 
-延遲載入消除了固定的記憶體上限，讓您可以管理大型、複雜的專案和巨大的畫布尺寸，而不會遇到 RAM 限制。
+延迟加载消除了固定的内存上限，让您可以管理大型、复杂的项目和巨大的画布尺寸，而不会遇到 RAM 限制。
 
-Lumi-o 是在 Debian 13 上使用 Cinnamon 桌面開發的。如果您來自 Windows，安裝 Debian 是第一步：[How to Install Linux](/hub/install-linux/)。
+Lumi-o 是在 Debian 13 上使用 Cinnamon 桌面開發的。如果您来自 Windows，安装 Debian 是第一步：[如何安装 Linux](/hub/install-linux/)。
 
 {{< cards >}}
   {{< card link="hub/about/" title="關於" icon="information-circle" >}}

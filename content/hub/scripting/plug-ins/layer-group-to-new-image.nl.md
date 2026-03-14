@@ -6,7 +6,7 @@ Kopieert de actieve laaggroep naar een nieuwe afbeelding (handig als de volledig
 
 ## Waar het leeft
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Bekijk de bron](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Waar het verschijnt in Lumi
 

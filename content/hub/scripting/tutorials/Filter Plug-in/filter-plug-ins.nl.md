@@ -3,7 +3,7 @@ title: "De filterplug-in"
 type: docs
 weight: 2
 ---
-We hebben een _procedure_ plug-in gebruikt voor de [First Step](../../first-step/) tutorial. Dit soort plug-ins werken zonder dat er een afbeelding of tekenbaar bestand als invoer nodig is. Meestal gebruiken we een plug-in om een ​​afbeelding en de tekenbare bestanden te wijzigen. Dergelijke plug-ins worden _filter_plug-ins genoemd.
+We hebben een _procedure_ plug-in gebruikt voor de [Eerste stap](../../first-step/) tutorial. Dit soort plug-ins werken zonder dat er een afbeelding of tekenbaar bestand als invoer nodig is. Meestal gebruiken we een plug-in om een ​​afbeelding en de tekenbare bestanden te wijzigen. Dergelijke plug-ins worden _filter_plug-ins genoemd.
 
 ### Wat is een tekenbaar bestand?
 

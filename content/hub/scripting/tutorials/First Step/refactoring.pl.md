@@ -117,7 +117,7 @@ Wyodrębnianie logiki:
 
 #### Symbole
 
-W powyższym przykładzie używany jest typ danych zwany symbolem, taki jak „gui. Symbole są przekazywane jako parametry do funkcji wysyłania wiadomości i można ich używać do podejmowania prostych decyzji warunkowych. Podobnie jak klucze symboliczne, są one unikalnymi identyfikatorami. Więcej informacji na temat symboli można znaleźć na stronie [this page.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+W powyższym przykładzie używany jest typ danych zwany symbolem, taki jak „gui. Symbole są przekazywane jako parametry do funkcji wysyłania wiadomości i można ich używać do podejmowania prostych decyzji warunkowych. Podobnie jak klucze symboliczne, są one unikalnymi identyfikatorami. Więcej informacji na temat symboli można znaleźć na [tej stronie.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Uproszczenie funkcji głównej
 

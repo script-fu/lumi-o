@@ -65,7 +65,7 @@ Le mosse di trascinamento possono essere annullate tramite **Modifica → Annull
 
 ## Doppio clic: commutazione dell'area di lavoro della mappa
 
-Nell'**Editor tavolozza**, facendo doppio clic su qualsiasi voce della tavolozza si attiva e disattiva la visualizzazione dell'area di lavoro Mappa tavolozza. Questo è un modo rapido per passare dalla navigazione dei colori salvati alla miscelazione sulla mappa senza utilizzare un menu. Il comportamento del clic singolo (ripristino della ricetta della voce nel Mixer) non viene influenzato.
+In the **Palette Editor**, double-clicking any palette entry toggles the Palette Map workspace view on and off. Questo è un modo rapido per passare dalla navigazione dei colori salvati alla miscelazione sulla mappa senza utilizzare un menu. Il comportamento del clic singolo (ripristino della ricetta della voce nel Mixer) non viene influenzato.
 
 ## Sovrapposizione tela
 

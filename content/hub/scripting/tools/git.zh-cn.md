@@ -60,7 +60,7 @@ sudo apt install git
 
 ### 3. 在 GitHub 上创建一个空白存储库
 
-1. **登录GitHub**：转到[GitHub](https://github.com/)并登录您的帐户。
+1. **登录GitHub**：前往[GitHub](https://github.com/)并登录您的帐户。
 2. **创建新存储库**：
    - 单击右上角的 **+** 图标，然后选择 **新存储库**。
    - 输入存储库名称（例如`your-repository`）。
@@ -127,7 +127,7 @@ git push -u origin main
 
 通过将代码组织到专用文件夹中并使用 GitHub 管理和备份存储库，您将保持项目结构良好且易于访问。获得代码的工作版本后，将其推送到 GitHub。然后，您可以使用 GitHub Web 界面或 Visual Studio Code 轻松跟踪任何更改，它会突出显示修改的行。这种方法允许您继续完善和扩展代码，而不会丢失进度或更改的跟踪。
 
-Git 以及 GitHub 和 GitLab 等平台都是功能强大的工具，虽然它们可能很复杂，但网上有大量资源可以帮助您更好地理解它们。我发现的最有价值的资源之一是像 ChatGPT 这样的人工智能助手。您可以描述需要完成的任务，这些工具将耐心地指导您逐步完成该过程。
+Git 以及 GitHub 和 GitLab 等平台都是功能强大的工具，虽然它们可能很复杂，但网上有大量资源可以帮助您更好地理解它们。我发现的最有价值的资源之一是像 ChatGPT 这样的人工智能助手。 You can describe what you need to accomplish, and these tools will patiently guide you through the process step by step.
 
 ## 术语表
 

@@ -6,7 +6,7 @@ type: docs
 
 ## 它居住的地方
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [查看來源](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## 它出現在 Lumi 中的位置
 

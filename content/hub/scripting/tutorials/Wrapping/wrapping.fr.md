@@ -31,9 +31,9 @@ Exemples :
   (msrg-rand))
 ```
 
-Bien que nous puissions utiliser ***msrg-rand*** directement dans notre code, l'envelopper dans une fonction appelée ***random-seed*** améliore la lisibilité. By giving the function a clear and descriptive name, it becomes easier to understand its purpose at a glance.
+Bien que nous puissions utiliser ***msrg-rand*** directement dans notre code, l'envelopper dans une fonction appelée ***random-seed*** améliore la lisibilité. En donnant à la fonction un nom clair et descriptif, il devient plus facile de comprendre son objectif en un coup d'œil.
 
-De plus, définir ***random-seed*** comme fonction autonome nous permet de l'utiliser n'importe où dans nos plug-ins tout en centralisant l'implémentation en un seul emplacement. Si jamais nous devons modifier la façon dont la graine est générée, il nous suffit de mettre à jour cette fonction, en laissant le reste de notre code intact.
+De plus, définir ***random-seed*** comme fonction autonome nous permet de l'utiliser n'importe où dans nos plug-ins tout en centralisant l'implémentation en un seul endroit. Si jamais nous devons modifier la façon dont la graine est générée, il nous suffit de mettre à jour cette fonction, en laissant le reste de notre code intact.
 
 Par exemple, si nous décidons de passer à ***aléatoire*** à la place :
 

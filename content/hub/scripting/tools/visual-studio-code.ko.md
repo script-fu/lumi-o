@@ -8,7 +8,7 @@ type: docs
 
 - **구문 강조**: 구문 강조는 코드를 색상으로 구분하여 더 쉽게 오류를 찾아내고, 구조를 이해하고, 복잡한 코드를 읽을 수 있게 해줍니다.
 - **확장**: 수천 개의 확장으로 VSC를 향상할 수 있습니다. 특정 언어, 테마 또는 도구에 대한 지원이 필요한 경우 적합한 확장 프로그램을 찾을 수 있습니다.
-- **버전 제어 통합**: VSC에는 Git 지원이 내장되어 있어 [GitHub](https://github.com/) 또는 [GitLab](https://gitlab.com/)과 같은 서비스를 사용하여 쉽게 코드 변경 사항을 추적하고 분기를 관리할 수 있습니다.
+- **버전 제어 통합**: VSC에는 Git 지원이 내장되어 있어 [GitHub](https://github.com/) 또는 [GitLab](https://gitlab.com/)과 같은 서비스를 사용하여 코드 변경 사항을 쉽게 추적하고 분기를 관리할 수 있습니다.
 
 ### 초보자를 위한 주요 기능
 
@@ -20,7 +20,7 @@ type: docs
 
 VSC 사용을 시작하려면:
 
-- **다운로드 및 설치**: [Visual Studio Code website](https://code.visualstudio.com/)으로 이동하여 Linux 버전을 다운로드합니다.
+- **다운로드 및 설치**: [Visual Studio Code 웹사이트](https://code.visualstudio.com/)으로 이동하여 Linux 버전을 다운로드합니다.
 
 - **인터페이스 탐색**: VSC를 열면 여러 패널이 표시됩니다. 왼쪽에는 파일 간 탐색, 검색, Git 사용, 확장 프로그램 설치 등을 수행할 수 있는 **작업 표시줄**이 있습니다.
 

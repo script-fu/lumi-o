@@ -6,7 +6,7 @@ Copia il gruppo di livelli attivo in una nuova immagine (utile quando la pila co
 
 ## Dove vive
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
 ## Dove appare in Lumi
 

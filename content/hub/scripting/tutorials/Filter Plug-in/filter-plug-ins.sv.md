@@ -3,7 +3,7 @@ title: "Filterplugin"
 type: docs
 weight: 2
 ---
-Vi använde en _procedure_ plug-in för [First Step](../../first-step/) handledning. Dessa typer av plugin-program fungerar utan att behöva en bild eller ritbar som indata. Vanligtvis använder vi en plug-in för att ändra en bild och dess dragbara bilder. Plug-ins som dessa kallas _filter_ plug-ins.
+Vi använde ett plugin-program _procedure_ för handledningen [Första steget](../../first-step/). Dessa typer av plugin-program fungerar utan att behöva en bild eller ritbar som indata. Vanligtvis använder vi en plug-in för att ändra en bild och dess dragbara bilder. Plug-ins som dessa kallas _filter_ plug-ins.
 
 ### Vad är en Drawable?
 

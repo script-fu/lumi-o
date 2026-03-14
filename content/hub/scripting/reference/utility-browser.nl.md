@@ -35,7 +35,7 @@ Als u op een item klikt, wordt de volledige docstring weergegeven, evenals de bi
 
 ## De Stdlib als wrappers
 
-De hulpprogrammabibliotheken zijn een praktische toepassing van het inpakpatroon: elke helper geeft een duidelijke naam aan een bewerking op laag niveau, verbergt de boilerplate en biedt één plek om bij te werken als de onderliggende opdracht verandert. Als je de ontwerpbenadering erachter wilt begrijpen, bekijk dan de **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** tutorial.
+De hulpprogrammabibliotheken zijn een praktische toepassing van het inpakpatroon: elke helper geeft een duidelijke naam aan een bewerking op laag niveau, verbergt de boilerplate en biedt één plek om bij te werken als de onderliggende opdracht verandert. Als je de ontwerpbenadering erachter wilt begrijpen, bekijk dan de tutorial **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})**.
 
 ## Relatie met de procedurebrowser
 

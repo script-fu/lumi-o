@@ -10,7 +10,7 @@ In zijn eenvoudigste vorm evalueert de voorwaarde `if` in Scheme een test en voe
   do-this)
 ```
 
-- If the `test` evaluates to true (`#t`), the **code block in the consequent** is executed. Het blok kan een waarde retourneren of andere acties uitvoeren, zoals het toewijzen van een variabele of het afdrukken van uitvoer.
+- Als de `test` evalueert naar true (`#t`), wordt het **codeblok in de consequentie** uitgevoerd. Het blok kan een waarde retourneren of andere acties uitvoeren, zoals het toewijzen van een variabele of het afdrukken van uitvoer.
 
 ### Voorbeeld
 

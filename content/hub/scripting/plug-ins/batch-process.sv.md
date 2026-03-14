@@ -6,7 +6,7 @@ Ett praktiskt, heltäckande exempel för att bearbeta många filer på en gång.
 
 ## Där den bor
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Visa källan](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
 ## Där det visas i Lumi
 

@@ -6,7 +6,7 @@ Renomme tous les calques de la pile (ou les calques sélectionnés). Utile pour 
 
 ## Où il vit
 
-- [View the source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Voir la source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
 ## Où il apparaît dans Lumi
 

@@ -16,11 +16,11 @@ As camadas são a base da ilustração estruturada. Cada camada é independente,
 
 ### Pintar Camadas
 
-Camadas raster padrão para conteúdo pintado. Armazene dados de pixel como buffers GEGL com transparência alfa opcional.
+Camadas raster padrão para conteúdo pintado. Armazene dados de pixels como buffers GEGL com transparência alfa opcional.
 
 ### Camadas de Grupo
 
-Contêineres hierárquicos para organizar camadas relacionadas. Os grupos podem ter seu próprio modo de mesclagem, opacidade e máscaras de recorte. As projeções do grupo são compostas sob demanda.
+Contêineres hierárquicos para organizar camadas relacionadas. Os grupos podem ter seu próprio modo de mesclagem, opacidade e máscaras de corte. As projeções do grupo são compostas sob demanda.
 
 ### Máscaras de camada
 
