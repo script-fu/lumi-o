@@ -8,7 +8,7 @@ Für digitales Malen in Lumi wird ein einfaches **Lineardruck-Setup** empfohlen.
 - Halten Sie die Druck-/Eingangskurven in Lumi weitgehend linear.
 - Gestalten Sie das Gefühl mit dem Pinsel selbst, da die Pinseldynamik bereits nichtlinear sein kann.
 
-Wir empfehlen, die standardmäßige lineare Druckkurve auf Betriebssystemtreiberebene beizubehalten. Die Zusammenführung mehrerer nichtlinearer Kurven führt oft zu unvorhersehbarem Eingabeverhalten; Indem Sie den Treiber neutral halten, stellen Sie sicher, dass alle in Lumi·o vorgenommenen Anpassungen intuitiv und reproduzierbar bleiben. Eine leichte Anpassung der globalen Kurve von Lumi kann bei Bedarf immer noch sinnvoll sein.
+Wir empfehlen, die standardmäßige lineare Druckkurve auf Betriebssystemtreiberebene beizubehalten. Die Zusammenführung mehrerer nichtlinearer Kurven führt oft zu unvorhersehbarem Eingabeverhalten; Indem Sie den Treiber neutral halten, stellen Sie sicher, dass alle in Lumi-o vorgenommenen Anpassungen intuitiv und reproduzierbar bleiben. Eine leichte Anpassung der globalen Kurve von Lumi kann bei Bedarf immer noch sinnvoll sein.
 
 ## Globale Stylus-Kurve in Lumi
 

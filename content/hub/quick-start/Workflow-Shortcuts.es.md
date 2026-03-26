@@ -2,7 +2,7 @@
 title: "Atajos de flujo de trabajo"
 type: docs
 ---
-Lumi·o está diseñado para un flujo de trabajo basado en atajos. Una vez que establezca la memoria muscular para estos comandos, podrá navegar por su lienzo y sus herramientas mucho más rápido.
+Lumi-o está diseñado para un flujo de trabajo basado en atajos. Una vez que establezca la memoria muscular para estos comandos, podrá navegar por su lienzo y sus herramientas mucho más rápido.
 
 ## Controles esenciales del lienzo
 

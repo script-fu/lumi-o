@@ -2,7 +2,7 @@
 title: "Arbetsflödesgenvägar"
 type: docs
 ---
-Lumi·o är byggd för ett genvägsdrivet arbetsflöde. När du väl har etablerat muskelminne för dessa kommandon kan du navigera din duk och verktyg betydligt snabbare.
+Lumi-o är byggd för ett genvägsdrivet arbetsflöde. När du väl har etablerat muskelminne för dessa kommandon kan du navigera din duk och verktyg betydligt snabbare.
 
 ## Viktiga Canvas-kontroller
 

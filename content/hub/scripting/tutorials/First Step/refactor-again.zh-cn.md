@@ -34,7 +34,7 @@ weight: 5
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ weight: 5
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### 进一步细分：分离每个输出处理程序
 
-每种类型的消息输出（GUI、错误控制台、终端）都可以移至其自己的函数中。这使得将来的测试、修改和潜在扩展变得更加容易。
+每种类型的消息输出（GUI、消息控制台、终端）都可以移至其自己的函数中。这使得将来的测试、修改和潜在扩展变得更加容易。
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ weight: 5
   (display message))
 ```
 
-请注意，我们已经从发送消息函数中删除了验证，并将责任转移到每个单独的输出函数。此更改可确保每个目标（GUI、错误控制台、终端）处理自己的验证，简化发送消息功能并使验证逻辑更接近需要的位置。
+请注意，我们已经从发送消息函数中删除了验证，并将责任转移到每个单独的输出函数。此更改可确保每个目标（GUI、消息控制台、终端）处理自己的验证，简化发送消息功能并使验证逻辑更接近需要的位置。
 
 这种方法可以简化发送消息函数，使其成为_dispatcher_，同时确保每个发送到*函数在处理之前正确验证消息。
 
@@ -125,7 +125,7 @@ weight: 5
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

@@ -3,7 +3,7 @@ title: "Biblioteca de mensagens"
 type: docs
 weight: 6
 ---
-Com o tempo, o que começou como uma função única para enviar mensagens evoluiu para uma coleção de funções relacionadas. Essas funções agora formam a base de uma **Biblioteca de Mensagens**, projetada para lidar com saídas para diferentes destinos, como GUI, Console de Erros e Terminal.
+Com o tempo, o que começou como uma função única para enviar mensagens evoluiu para uma coleção de funções relacionadas. Essas funções agora formam a base de uma **Biblioteca de mensagens**, projetada para lidar com saídas para diferentes destinos, como GUI, console de mensagens e terminal de sistema operacional.
 
 ### Por que uma biblioteca de mensagens?
 
@@ -14,7 +14,7 @@ Com o tempo, o que começou como uma função única para enviar mensagens evolu
 A Biblioteca de Mensagens inclui atualmente as seguintes funções:
 
 - **send-to-gui**: Envia mensagens para a caixa de diálogo Lumi GUI.
-- **send-to-error-console**: Envia mensagens para o Lumi Error Console.
+- **send-to-error-console**: Envia mensagens para o console Lumi Message.
 - **send-to-terminal**: Envia mensagens para a janela do terminal.
 - **send-message**: Uma função de despachante que direciona mensagens para a saída apropriada.
 - **validate-message**: Garante que a mensagem e a saída sejam válidas antes do envio.

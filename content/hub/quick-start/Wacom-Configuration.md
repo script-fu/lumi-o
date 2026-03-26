@@ -10,7 +10,7 @@ For digital painting in Lumi, a simple **linear pressure setup** is recommended.
 - Keep pressure/input curves in Lumi mostly linear.
 - Shape the feel with the brush itself, since brush dynamics can already be non-linear.
 
-We recommend maintaining the default linear pressure curve at the OS driver level. Compounding multiple non-linear curves often leads to unpredictable input behavior; by keeping the driver neutral, you ensure that any adjustments made within Lumi·o remain intuitive and reproducible. A slight adjustment to Lumi's global curve can still be reasonable when needed.
+We recommend maintaining the default linear pressure curve at the OS driver level. Compounding multiple non-linear curves often leads to unpredictable input behavior; by keeping the driver neutral, you ensure that any adjustments made within Lumi-o remain intuitive and reproducible. A slight adjustment to Lumi's global curve can still be reasonable when needed.
 
 ## Global Stylus Curve in Lumi
 

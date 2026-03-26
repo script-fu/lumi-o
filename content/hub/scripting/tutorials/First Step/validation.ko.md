@@ -19,7 +19,7 @@ weight: 4
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,7 +33,7 @@ weight: 4
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -65,7 +65,7 @@ weight: 4
 
 이 접근 방식은 함수가 항상 유효한 입력을 받도록 보장하여 안정성을 향상하고 예상치 못한 동작을 방지합니다.
 
-### 결합 검증 예시
+### 결합 검증 예
 
 ```scheme
 ;; Function to handle message output to various destinations
@@ -77,7 +77,7 @@ weight: 4
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,7 +91,7 @@ weight: 4
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 

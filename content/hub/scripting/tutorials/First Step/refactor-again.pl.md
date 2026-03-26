@@ -34,7 +34,7 @@ Teraz, gdy sprawdzanie poprawności zostało przeniesione do osobnej funkcji, fu
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Teraz, gdy sprawdzanie poprawności zostało przeniesione do osobnej funkcji, fu
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Dalsze rozbicie: oddziel każdą procedurę obsługi wyjścia
 
-Każdy typ komunikatu wyjściowego (GUI, konsola błędów, terminal) można przenieść do własnej funkcji. Pozwala to na łatwiejsze testowanie, modyfikację i potencjalną rozbudowę w przyszłości.
+Każdy typ komunikatu wyjściowego (GUI, konsola komunikatów, terminal) można przenieść do własnej funkcji. Pozwala to na łatwiejsze testowanie, modyfikację i potencjalną rozbudowę w przyszłości.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ Każdy typ komunikatu wyjściowego (GUI, konsola błędów, terminal) można prz
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ Ponieważ walidacja jest ważną częścią zapewnienia, że zarówno komunikat,
   (display message))
 ```
 
-Zobacz, że usunęliśmy sprawdzanie poprawności z funkcji wysyłania wiadomości i przenieśliśmy odpowiedzialność na każdą indywidualną funkcję wyjściową. Ta zmiana zapewnia, że ​​każde miejsce docelowe (GUI, konsola błędów, terminal) obsługuje własną weryfikację, usprawniając funkcję wysyłania wiadomości i utrzymując logikę sprawdzania bliżej miejsca, w którym jest to potrzebne.
+Zobacz, że usunęliśmy sprawdzanie poprawności z funkcji wysyłania wiadomości i przenieśliśmy odpowiedzialność na każdą indywidualną funkcję wyjściową. Ta zmiana zapewnia, że ​​każde miejsce docelowe (GUI, konsola komunikatów, terminal) obsługuje własną weryfikację, usprawniając funkcję wysyłania wiadomości i utrzymując logikę sprawdzania bliżej miejsca, w którym jest to potrzebne.
 
 Takie podejście może uprościć funkcję wysyłania wiadomości, czyniąc ją _dyspozytorem_, zapewniając jednocześnie, że każda funkcja wysyłania do* poprawnie sprawdza poprawność wiadomości przed przetworzeniem.
 
@@ -125,7 +125,7 @@ Zrefaktoryzowana wersja biblioteki:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ Zrefaktoryzowana wersja biblioteki:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

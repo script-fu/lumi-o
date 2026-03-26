@@ -34,7 +34,7 @@ weight: 5
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ weight: 5
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### さらに細分化: 各出力ハンドラーを分離する
 
-各タイプのメッセージ出力 (GUI、エラー コンソール、ターミナル) は、独自の機能に移動できます。これにより、テスト、変更、将来の拡張が容易になります。
+メッセージ出力の各タイプ (GUI、メッセージ コンソール、ターミナル) は、独自の機能に移動できます。これにより、テスト、変更、将来の拡張が容易になります。
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ weight: 5
   (display message))
 ```
 
-メッセージ送信関数から検証を削除し、責任を個々の出力関数に移したことを確認してください。この変更により、各宛先 (GUI、エラー コンソール、ターミナル) が独自の検証を処理するようになり、メッセージ送信機能が合理化され、検証ロジックが必要な場所に近づけられるようになります。
+メッセージ送信関数から検証を削除し、責任を個々の出力関数に移したことを確認してください。この変更により、各宛先 (GUI、メッセージ コンソール、ターミナル) が独自の検証を処理するようになり、メッセージ送信機能が合理化され、検証ロジックが必要な場所に近づけられるようになります。
 
 このアプローチでは、メッセージ送信関数を単純化して _dispatcher_ にすると同時に、各 send-to-* 関数が処理前にメッセージを正しく検証することを保証できます。
 
@@ -125,7 +125,7 @@ weight: 5
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

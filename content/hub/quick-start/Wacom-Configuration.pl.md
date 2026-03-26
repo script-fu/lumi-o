@@ -8,7 +8,7 @@ Do malowania cyfrowego w Lumi zalecana jest prosta **liniowa konfiguracja ciśni
 - Utrzymuj krzywe ciśnienia/wejściowe w Lumi w większości liniowe.
 - Kształtuj wrażenie za pomocą samego pędzla, ponieważ dynamika pędzla może już być nieliniowa.
 
-Zalecamy zachowanie domyślnej krzywej ciśnienia liniowego na poziomie sterownika systemu operacyjnego. Łączenie wielu nieliniowych krzywych często prowadzi do nieprzewidywalnych zachowań wejściowych; zachowując neutralność kierowcy, masz pewność, że wszelkie regulacje dokonane w Lumi·o pozostaną intuicyjne i powtarzalne. W razie potrzeby niewielka korekta globalnej krzywej Lumi może być nadal uzasadniona.
+Zalecamy zachowanie domyślnej krzywej ciśnienia liniowego na poziomie sterownika systemu operacyjnego. Łączenie wielu nieliniowych krzywych często prowadzi do nieprzewidywalnych zachowań wejściowych; zachowując neutralność kierowcy, masz pewność, że wszelkie regulacje dokonane w Lumi-o pozostaną intuicyjne i powtarzalne. W razie potrzeby niewielka korekta globalnej krzywej Lumi może być nadal uzasadniona.
 
 ## Globalna krzywa rysika w Lumi
 

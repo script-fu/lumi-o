@@ -34,7 +34,7 @@ Agora que a validação foi movida para uma função separada, a função `send-
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Agora que a validação foi movida para uma função separada, a função `send-
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Dividindo ainda mais: separe cada manipulador de saída
 
-Cada tipo de saída de mensagem (GUI, Console de Erros, Terminal) pode ser movido para sua própria função. Isso permite testes, modificações e extensões potenciais mais fáceis no futuro.
+Cada tipo de saída de mensagem (GUI, console de mensagens, Terminal) pode ser movido para sua própria função. Isso permite testes, modificações e extensões potenciais mais fáceis no futuro.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ Cada tipo de saída de mensagem (GUI, Console de Erros, Terminal) pode ser movid
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ Como a validação é uma parte importante para garantir que a mensagem e a saí
   (display message))
 ```
 
-Veja que removemos a validação da função de envio de mensagem e transferimos a responsabilidade para cada função de saída individual. Essa mudança garante que cada destino (GUI, Console de Erros, Terminal) lide com sua própria validação, agilizando a função de envio de mensagem e mantendo a lógica de validação mais próxima de onde é necessária.
+Veja que removemos a validação da função de envio de mensagem e transferimos a responsabilidade para cada função de saída individual. Essa mudança garante que cada destino (GUI, console de mensagens, Terminal) lide com sua própria validação, agilizando a função de envio de mensagem e mantendo a lógica de validação mais próxima de onde é necessária.
 
 Essa abordagem pode simplificar a função de envio de mensagem, tornando-a um _dispatcher_, ao mesmo tempo em que garante que cada função enviar para * valide a mensagem corretamente antes do processamento.
 
@@ -125,7 +125,7 @@ Uma versão refatorada da biblioteca:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ Uma versão refatorada da biblioteca:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

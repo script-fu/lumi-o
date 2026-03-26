@@ -3,13 +3,13 @@ title: "Validazione"
 type: docs
 weight: 4
 ---
-Quando creiamo plug-in robusti, è importante garantire che le nostre funzioni gestiscano gli errori in modo corretto e funzionino come previsto, anche in caso di uso improprio o input imprevisti. La convalida aiuta a proteggere l'integrità della funzione e a prevenire arresti anomali o comportamenti non intenzionali.
+Quando creiamo plug-in robusti, è importante garantire che le nostre funzioni gestiscano gli errori in modo corretto e funzionino come previsto, anche in caso di uso improprio o input imprevisti. Validation helps protect the integrity of the function and prevent crashes or unintended behavior.
 
-Diamo un'occhiata a come possiamo migliorare la funzione `send-message` aggiungendo controlli di convalida per garantire che gestisca correttamente gli input.
+Let’s look at how we can improve the `send-message` function by adding validation checks to ensure it handles inputs correctly.
 
 ### Convalida gli input
 
-Prima di inviare un messaggio, dobbiamo assicurarci che l'argomento `output` passato alla funzione `send-message` sia valido. Possiamo aggiungere un controllo per confermare che la destinazione dell'output sia uno dei valori attesi (gui, console di errore o terminale).
+Before sending a message, we should ensure the `output` argument passed to the `send-message` function is valid. We can add a check to confirm that the output destination is one of the expected values (gui, error-console, or terminal).
 
 Esempio:
 
@@ -19,7 +19,7 @@ Esempio:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,15 +33,15 @@ Esempio:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
-In questo esempio, utilizziamo `member` per verificare se l'argomento `output` è valido. In caso contrario, la funzione genera un errore con un messaggio chiaro, impedendo che valori non validi causino problemi.
+In this example, we use `member` to check if the `output` argument is valid. If not, the function raises an error with a clear message, preventing invalid values from causing issues.
 
 ### Gestisci i messaggi vuoti
 
-È anche utile assicurarsi che l'argomento `message` sia valido. Ad esempio, se come messaggio viene passata una stringa vuota o #f (falso), la funzione dovrebbe gestirlo in modo corretto.
+It’s also useful to ensure that the `message` argument is valid. For example, if an empty string or #f (false) is passed as the message, the function should handle this gracefully.
 
 Esempio di gestione di un messaggio vuoto:
 
@@ -63,7 +63,7 @@ Esempio di gestione di un messaggio vuoto:
   (lumi-message-set-handler 2))
 ```
 
-Questo approccio garantisce che la funzione riceva sempre input validi, migliorandone l'affidabilità e prevenendo comportamenti imprevisti.
+This approach ensures that the function always receives valid input, improving its reliability and preventing unexpected behavior.
 
 ### Esempio di convalida combinata
 
@@ -77,7 +77,7 @@ Questo approccio garantisce che la funzione riceva sempre input validi, migliora
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,17 +91,17 @@ Questo approccio garantisce che la funzione riceva sempre input validi, migliora
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 In questa versione:
-- La funzione controlla prima se `message` è vuoto o non valido. Se il messaggio è valido, si passa alla verifica se `output` è uno dei valori accettati (`gui`, `error-console` o `terminal`).
-- Se entrambi i controlli vengono superati, il messaggio viene inviato all'output appropriato. In caso contrario, verrà generato un messaggio di errore con una spiegazione chiara.
-- Viene effettuato un ulteriore controllo per garantire che anche il messaggio sia una stringa.
+- The function checks if the `message` is empty or invalid first. Se il messaggio è valido, si passa alla verifica se `output` è uno dei valori accettati (`gui`, `error-console` o `terminal`).
+- If both checks pass, the message is sent to the appropriate output. Otherwise, an error message is raised with a clear explanation.
+- An additional check is made to ensure the message is also a string.
 
-Questa funzione di convalida combinata mantiene il codice più pulito e garantisce che entrambi gli input vengano convalidati prima che venga intrapresa qualsiasi azione, rendendo la funzione più robusta. Nota: stiamo anche creando un sistema di messaggistica di debug. Quando il
-il codice fallisce, otteniamo un motivo, un motivo che abbiamo scritto noi stessi.
+Questa funzione di convalida combinata mantiene il codice più pulito e garantisce che entrambi gli input vengano convalidati prima che venga intrapresa qualsiasi azione, rendendo la funzione più robusta. Notice, we are also building in a debug messaging system. Quando il
+code fails, we get a reason, a reason we wrote ourselves.
 
 ```
 Execution error for 'Hello loaded!':

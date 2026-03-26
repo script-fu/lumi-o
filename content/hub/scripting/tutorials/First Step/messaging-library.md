@@ -4,7 +4,7 @@ type: docs
 weight: 6
 ---
 
-Over time, what began as a single function to send messages has evolved into a collection of related functions. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Error Console, and Terminal.
+Over time, what began as a single function to send messages has evolved into a collection of related functions. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
 
 ### Why a Messaging Library?
 
@@ -15,7 +15,7 @@ As our needs grow, handling messages across multiple outputs requires a more mod
 The Messaging Library currently includes the following functions:
 
 - **send-to-gui**: Sends messages to the Lumi GUI dialog box.
-- **send-to-error-console**: Sends messages to the Lumi Error Console.
+- **send-to-error-console**: Sends messages to the Lumi Message console.
 - **send-to-terminal**: Sends messages to the terminal window.
 - **send-message**: A dispatcher function that directs messages to the appropriate output.
 - **validate-message**: Ensures that the message and output are valid before sending.

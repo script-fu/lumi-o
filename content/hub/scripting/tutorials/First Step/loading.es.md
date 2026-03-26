@@ -21,7 +21,7 @@ Podemos tomar la función de enviar mensaje y crear un nuevo archivo con eso com
 
 - **scheme/**: Este es su directorio principal para almacenar su código Scheme.
   - **biblioteca/**: Aquí es donde viven funciones compartidas como `send-message.scm`.
-  - **plugins/**: aquí es donde se almacenan sus complementos individuales.
+  - **plug-ins/**: aquí es donde se almacenan sus complementos individuales.
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
@@ -31,9 +31,9 @@ Ejemplo de una función de biblioteca send-message.scm
 ;; Function to handle message output to various destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Set the handler to Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -48,7 +48,7 @@ Ejemplo de una función de biblioteca send-message.scm
        ;; Terminal output is handled with display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 

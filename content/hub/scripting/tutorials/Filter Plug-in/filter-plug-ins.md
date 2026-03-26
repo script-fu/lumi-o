@@ -48,7 +48,7 @@ In Linux, right-click the `simple-filter-plug-in.scm` file, go to **Properties >
 ### Running the Plug-in
 
 1. Open an image (this filter plug-in requires an image to work).
-2. Open **Windows > Dockable Dialogs > Error Console** to see a message.
+2. Open **Tools > Debug > Message console** to see a message.
 3. Select **Simple Filter Plug-in Demo** from the **Plug-in** menu.
 4. One of the selected layers will have its colors inverted and a message will be printed to the error console.
 
@@ -124,4 +124,4 @@ The file name must match the name of the containing folder.
 The file must be set as executable.
 
 
-The **Error Console** is a valuable tool for troubleshooting custom plug-ins. If your plug-in doesn't behave as expected, check here for error messages or logs. The **Terminal** window can also provide debugging information and report loading issues.
+The **Message console** is a valuable tool for troubleshooting custom plug-ins. If your plug-in doesn't behave as expected, check here for error messages or logs. The **Terminal** window can also provide debugging information and report loading issues.

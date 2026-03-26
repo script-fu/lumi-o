@@ -47,7 +47,7 @@ W systemie Linux kliknij prawym przyciskiem myszy plik `simple-filter-plug-in.sc
 ### Uruchamianie wtyczki
 
 1. Otwórz obraz (ta wtyczka filtrująca wymaga do działania obrazu).
-2. Otwórz **Windows > Dokowalne okna dialogowe > Konsola błędów**, aby zobaczyć komunikat.
+2. Otwórz **Narzędzia > Debugowanie > Konsola wiadomości**, aby zobaczyć komunikat.
 3. Z menu **Wtyczka** wybierz opcję **Prosta wersja demonstracyjna wtyczki filtrującej**.
 4. Kolory jednej z wybranych warstw zostaną odwrócone, a w konsoli błędów zostanie wyświetlony komunikat.
 
@@ -125,4 +125,4 @@ Nazwa pliku musi być zgodna z nazwą folderu zawierającego.
 Plik musi być ustawiony jako wykonywalny.
 
 
-**Konsola błędów** to cenne narzędzie do rozwiązywania problemów z niestandardowymi wtyczkami. Jeśli Twoja wtyczka nie zachowuje się zgodnie z oczekiwaniami, sprawdź tutaj komunikaty o błędach lub dzienniki. Okno **Terminalu** może również udostępniać informacje dotyczące debugowania i raportować problemy z ładowaniem.
+**Konsola wiadomości** to cenne narzędzie do rozwiązywania problemów z niestandardowymi wtyczkami. Jeśli Twoja wtyczka nie zachowuje się zgodnie z oczekiwaniami, sprawdź tutaj komunikaty o błędach lub dzienniki. Okno **Terminalu** może również udostępniać informacje dotyczące debugowania i raportować problemy z ładowaniem.

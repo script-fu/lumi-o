@@ -47,7 +47,7 @@ I Linux, högerklicka på filen `simple-filter-plug-in.scm`, gå till **Egenskap
 ### Kör plugin-programmet
 
 1. Öppna en bild (det här filterpluginprogrammet kräver en bild för att fungera).
-2. Öppna **Windows > Dockningsbara dialogrutor > Error Console** för att se ett meddelande.
+2. Öppna **Verktyg > Felsökning > Meddelandekonsol** för att se ett meddelande.
 3. Välj **Simple Filter Plug-in Demo** från **Plug-in**-menyn.
 4. Ett av de valda lagren kommer att ha sina färger inverterade och ett meddelande kommer att skrivas ut till felkonsolen.
 
@@ -125,4 +125,4 @@ Filnamnet måste matcha namnet på mappen som innehåller.
 Filen måste ställas in som körbar.
 
 
-**Felkonsolen** är ett värdefullt verktyg för att felsöka anpassade plugin-program. Om din plug-in inte fungerar som förväntat, kolla här för felmeddelanden eller loggar. Fönstret **Terminal** kan också tillhandahålla felsökningsinformation och rapportera laddningsproblem.
+**Meddelandekonsolen** är ett värdefullt verktyg för att felsöka anpassade plugin-program. Om din plug-in inte fungerar som förväntat, kolla här för felmeddelanden eller loggar. Fönstret **Terminal** kan också tillhandahålla felsökningsinformation och rapportera laddningsproblem.

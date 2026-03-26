@@ -5,7 +5,7 @@ weight: 5
 ---
 Je größer die Hilfsbibliothek wird, desto schwieriger wird es, sie auf einen Blick zu verfolgen. Erneut umgestalten, um jede Funktion klein und zweckgebunden zu halten.
 
-### Komplexität aufschlüsseln
+### Breaking Down Complexity
 
 Um die Funktion einfacher verfolgen und warten zu können, unterteilen Sie sie in kleinere, fokussierte Funktionen. Trennen Sie zunächst die Validierung vom Nachrichtenrouting.
 
@@ -34,7 +34,7 @@ Nachdem die Validierung nun in eine separate Funktion verschoben wurde, kann sic
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Nachdem die Validierung nun in eine separate Funktion verschoben wurde, kann sic
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Weitere Aufschlüsselung: Trennen Sie jeden Ausgabehandler
 
-Jede Art der Meldungsausgabe (GUI, Fehlerkonsole, Terminal) kann in eine eigene Funktion verschoben werden. Dies ermöglicht einfachere Tests, Änderungen und mögliche Erweiterungen in der Zukunft.
+Jede Art der Nachrichtenausgabe (GUI, Nachrichtenkonsole, Terminal) kann in eine eigene Funktion verschoben werden. Dies ermöglicht einfachere Tests, Änderungen und mögliche Erweiterungen in der Zukunft.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ Jede Art der Meldungsausgabe (GUI, Fehlerkonsole, Terminal) kann in eine eigene 
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ Da die Validierung ein wichtiger Teil der Sicherstellung ist, dass sowohl die Na
   (display message))
 ```
 
-Beachten Sie, dass wir die Validierung aus der Funktion zum Senden von Nachrichten entfernt und die Verantwortung auf jede einzelne Ausgabefunktion verlagert haben. Diese Änderung stellt sicher, dass jedes Ziel (GUI, Fehlerkonsole, Terminal) seine eigene Validierung durchführt, wodurch die Funktion zum Senden von Nachrichten rationalisiert wird und die Validierungslogik näher an der Stelle bleibt, an der sie benötigt wird.
+Beachten Sie, dass wir die Validierung aus der Funktion zum Senden von Nachrichten entfernt und die Verantwortung auf jede einzelne Ausgabefunktion verlagert haben. Diese Änderung stellt sicher, dass jedes Ziel (GUI, Nachrichtenkonsole, Terminal) seine eigene Validierung durchführt, wodurch die Funktion zum Senden von Nachrichten optimiert wird und die Validierungslogik näher an der Stelle bleibt, an der sie benötigt wird.
 
 Dieser Ansatz kann die Funktion „Nachricht senden“ vereinfachen und sie zu einem _Dispatcher_ machen, während gleichzeitig sichergestellt wird, dass jede Funktion „Senden an*“ die Nachricht vor der Verarbeitung korrekt validiert.
 
@@ -125,7 +125,7 @@ Eine überarbeitete Bibliotheksversion:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ Eine überarbeitete Bibliotheksversion:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

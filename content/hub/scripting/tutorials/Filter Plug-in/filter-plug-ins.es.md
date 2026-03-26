@@ -47,7 +47,7 @@ En Linux, haga clic derecho en el archivo `simple-filter-plug-in.scm`, vaya a **
 ### Ejecutando el complemento
 
 1. Abra una imagen (este complemento de filtro requiere una imagen para funcionar).
-2. Abra **Windows > Diálogos acoplables > Consola de errores** para ver un mensaje.
+2. Abra **Herramientas > Depurar > Consola de mensajes** para ver un mensaje.
 3. Seleccione **Demostración del complemento de filtro simple** en el menú **Complemento**.
 4. Una de las capas seleccionadas tendrá sus colores invertidos y se imprimirá un mensaje en la consola de error.
 
@@ -125,4 +125,4 @@ El nombre del archivo debe coincidir con el nombre de la carpeta que lo contiene
 El archivo debe configurarse como ejecutable.
 
 
-La **Consola de errores** es una herramienta valiosa para solucionar problemas de complementos personalizados. Si su complemento no se comporta como se esperaba, consulte aquí para ver mensajes de error o registros. La ventana **Terminal** también puede proporcionar información de depuración e informar problemas de carga.
+La **consola de mensajes** es una herramienta valiosa para solucionar problemas de complementos personalizados. Si su complemento no se comporta como se esperaba, consulte aquí para ver mensajes de error o registros. La ventana **Terminal** también puede proporcionar información de depuración e informar problemas de carga.

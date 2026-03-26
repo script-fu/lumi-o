@@ -2,7 +2,7 @@
 title: "Herramienta Pincel"
 type: docs
 ---
-Paintbrush es la herramienta de pintura principal, diseñada para una pincelada inteligente y receptiva con control total sobre la presión, la velocidad, la inclinación y la dinámica de espaciado.
+El Pincel es la herramienta principal de pintura y dibujo, diseñada para una pincelada inteligente y responsiva con control total sobre la presión, la velocidad, la inclinación y la dinámica de espaciado.
 
 ## Descripción general
 
@@ -27,24 +27,30 @@ Secuencias de cuadros secuenciales que avanzan durante los trazos. Los fotograma
 El cursor se adapta al estado actual de la herramienta para proporcionar información contextual clara:
 
 - **Contorno del pincel**: el cursor sigue la forma y el tamaño exactos del pincel, brindando una vista previa en vivo de dónde aterrizará la pintura.
-- **Modo de borrado**: cuando el borrado está activo, el contorno cambia a un círculo discontinuo para distinguir visualmente los trazos de borrado de los trazos de pintura.
+- **Erase mode**: When erasing is active, the outline switches to a dashed circle to visually distinguish erase strokes from paint strokes.
 - **Límite de pincel simple**: para pinceles complejos o muy grandes donde representar el contorno preciso es costoso, habilite **Límite de pincel simple** (en Opciones adicionales) para usar un círculo simple en su lugar.
 
 ## Opciones de herramienta
 
 ### Controles de nivel superior
 
-Presente en todo momento, fuera de cualquier expansor:
+- **Pincel**: selecciona el sello de pincel o edita el activo.
 - **Modo**: Modo de fusión de pintura (Normal, Multiplicar, Trama, etc.)
-- **Opacidad**: opacidad general del trazo (0–100).
 
 ### Propiedades del pincel
 
 En el expansor **Propiedades del pincel** (ampliado de forma predeterminada):
+
+#### Forma
+
 - **Tamaño**: Diámetro del pincel en píxeles.
 - **Relación de aspecto**: aplasta o estira la forma del pincel (-1,0–1,0). 0 = sin modificar; los valores negativos rotan la calabaza 90°.
 - **Ángulo**: Gira el sello del pincel (-180–180°). Independiente de la dinámica de la dirección del trazo.
 - **Dureza**: Desvanecimiento suave (0,0) a borde afilado (1,0).
+
+#### Aplicación
+
+- **Opacidad**: opacidad general del trazo (0–100).
 - **Espaciado**: Distancia entre pinceladas pintadas como porcentaje del tamaño del pincel. Inferior = trazos más suaves; superior = patrón disperso.
 - **Sesgo de textura**: polariza la respuesta de la textura del sello; 50 es neutral. Los valores más bajos favorecen la ruptura de la textura y una superficie alisada al tirar hacia el pie de la curva de valores; los valores más altos se sujetan hacia rellenos sólidos empujando hacia el hombro. El efecto visible depende de la gama tonal de la textura.
 - **Jitter**: compensa aleatoriamente cada posición de dab hasta esta cantidad de píxeles (0–1024).
@@ -53,11 +59,11 @@ En el expansor **Propiedades del pincel** (ampliado de forma predeterminada):
 ### Dinámica
 
 En el expansor **Dinámica**:
-- **Dinámica**: Habilitación maestra para el preajuste de dinámica activa.
-- **Preset dinámico**: selecciona qué asignaciones de entrada se utilizan.
-- **Multiplicar por presión**: alternancia de multiplicación de presión adicional (se muestra cuando la dinámica está habilitada).### Comportamiento del accidente cerebrovascular
+- **Habilitar dinámica**: Habilitación principal para el preset de dinámica activa.
+- **Multiplicación de presión**: Deje que la presión domine la salida dinámica.
+- **Dinámica**: selecciona qué asignaciones de entrada se utilizan.### Comportamiento del trazo
 En el expansor **Comportamiento del trazo**:
-- **Acumulación**: cuando está activado, cada toque acumula opacidad en lugar de componerse como un solo trazo.
+- **Acumulación de opacidad**: cuando está activado, cada toque acumula opacidad en lugar de componerse como un solo trazo.
 - **Postproceso**: aplica estabilización, compresión de velocidad y corrección de repetición una vez completado el golpe, lo que mejora la consistencia sin latencia.
   - **Umbral de giro**: Umbral de ángulo (0–180°) para corrección de dirección en esquinas cerradas. 0 = corrección de dirección de salto.
   - **Umbral de vista previa**: suprime la vista previa posterior al proceso cuando la velocidad del trazo excede este valor (0 = siempre vista previa).
@@ -68,6 +74,12 @@ Cuando está activo, el estampado dab se reemplaza por un corredor geométrico c
 - **Opacidad dinámica**: Modula la opacidad dentro del trazo según los cambios de velocidad y dirección. Funciona mejor con trazos finos y controlados; Los resultados son menos predecibles en garabatos rápidos. Experimental.
 - **Crecimiento de velocidad** (0–100%): aumento de tamaño máximo permitido por muestra como porcentaje del tamaño de la muestra anterior. Limita la rapidez con la que puede crecer una dinámica de tamaño impulsada por la velocidad, evitando saltos repentinos cuando se acelera el golpe.
 - **Reducción de velocidad** (0–100%): disminución máxima permitida del tamaño por muestra. Limita la rapidez con la que el tamaño puede disminuir cuando el trazo se desacelera.
+
+#### Solo movimiento
+
+Cuando está activado (predeterminado), el pincel pinta solo mientras el puntero se mueve. Apágalo para que el cepillo siga estampando mientras está quieto.
+- **Velocidad**: controla la rapidez con la que se emiten las marcas de tiempo estacionarias cuando **Sólo movimiento** está desactivado.
+- **Flujo**: controla la opacidad por pincelada de esas marcas de tiempo cuando **Solo movimiento** está desactivado.
 
 #### Estabilización y suavizado
 
@@ -97,7 +109,7 @@ Cada entrada dinámica se puede asignar a varias propiedades de forma independie
 ### Modulación de trazo
 
 En el expansor **Modulación de trazo** (se muestra solo cuando **Dinámica** está habilitada):- **Ángulo inicial relativo**: el valor del **Ángulo inicial** se interpreta en relación con la dirección del trazo en lugar de como un ángulo absoluto del lienzo.
-- **Ángulo inicial de desvanecimiento**: se desvanece desde el **Ángulo inicial** al inicio del trazo hacia el ángulo dinámico en vivo a lo largo del trazo. Al habilitar esto se activa **Ángulo inicial relativo**.
+- **Ángulo inicial de desvanecimiento**: se desvanece desde el **Ángulo inicial** al inicio del trazo hacia el ángulo dinámico en vivo a lo largo del trazo. Al habilitar esto se activa el **Ángulo inicial relativo**.
 - **Ángulo inicial del pincel** (-180–180°): el ángulo del pincel al comienzo de un trazo, antes de que la dinámica tome el control.
 - **Fusión de ángulo inicial** (0,0–1,0): controla la rapidez con la que el ángulo del pincel pasa del ángulo inicial al ángulo dinámico. 0 = mantiene el ángulo inicial; 1 = utiliza inmediatamente el ángulo completamente dinámico.
 - **Duración del desvanecimiento**: Distancia en unidades de lienzo sobre la cual se desarrolla el desvanecimiento.
@@ -124,9 +136,9 @@ Cabezales de cepillo coloca varios cabezales de cepillo independientes en un **a
 
 El radio de la órbita está determinado por el tamaño global del cepillo menos el tamaño de la cabeza: las cabezas más grandes se sitúan más cerca del centro; las cabezas más pequeñas orbitan más lejos. Las cabezas se espacian uniformemente alrededor del ring. Con dos cabezas, obtienes una a cada lado del trazo, creando una extensión simétrica que se comporta como una punta de caligrafía. El control deslizante **Seguir dirección** gira todo el anillo para permanecer perpendicular al trazo, de modo que la punta sigue la dirección de forma natural mientras pintas. Agregar más cabezas las abanica progresivamente alrededor del anillo, hasta un círculo de rociado completo en 16.
 
-Cabezales de pincel controla dónde se coloca cada cabezal alrededor del trazo. Si **Pivote X** o **Pivote Y** se aleja del centro predeterminado, cada cabeza seguirá la misma formación, pero cada toque estampado ahora aterriza usando el punto de contacto interno elegido en lugar del centro geométrico de la imagen del pincel.
-
-Los controles aparecen en el expansor **Cabezales de cepillo** en el panel de opciones de herramientas.- **Count**: Número de cabezales de cepillo simultáneos (1–16).
+Cabezales de pincel controla dónde se coloca cada cabezal alrededor del trazo. Si **Pivote X** o **Pivote Y** se aleja del centro predeterminado, cada cabeza seguirá la misma formación, pero cada toque estampado ahora aterriza usando el punto de contacto interno elegido en lugar del centro geométrico de la imagen del pincel.Los controles aparecen en el expansor **Cabezales de cepillo** en el panel de opciones de herramientas.
+- **Habilitar cabezales de cepillo**: Habilitación principal para el sistema de cabezales de cepillo.
+- **Count**: Número de cabezales de cepillo simultáneos (1–16).
 - **Tamaño de cabeza**: tamaño renderizado de cada cabeza en relación con el tamaño global del pincel (0,1–1,0).
 - **Relación de aspecto de la órbita** (0,1–1,0): da forma a la órbita de la formación de círculo a elipse. 1,0 = órbita circular; los valores más bajos aplastan el eje menor.
 - **Ángulo de formación** (0–360°): Orientación estática del anillo de formación, utilizada cuando **Seguir dirección** es inferior a 1,0.
@@ -144,19 +156,30 @@ Controles de dispersión principales en el expansor **Cabezales de cepillo**:
 - **Influencia de la velocidad** (0,0–1,0): escala la dispersión según la velocidad del trazo. En 1,0, los golpes rápidos dispersan las cabezas mucho más que los golpes lentos; a 0,0, la dispersión es constante independientemente de la velocidad.
 - **Equilibrio del tamaño de dispersión** (0,0–1,0): controla la inclinación de la supresión para los parches por encima del umbral. En 1,0, todas las cabezas se dispersan por igual; los valores más bajos suprimen cada vez más las cabezas más grandes, mientras que las cabezas en o por debajo del umbral permanecen en la distancia de dispersión completa.
 
-### Opciones adicionales
+### Configuración de herramientas
 
-En el expansor **Opciones adicionales** (contraído de forma predeterminada), los controles se agrupan como secciones adicionales que se cambian con menos frecuencia. Esto mantiene a los principales expansores centrados en los controles de pintura que se ajustan con frecuencia.#### Propiedades del pincel (desbordamiento)
+En el expansor **Configuración de herramientas** (contraído de forma predeterminada), los controles se agrupan como secciones adicionales que se cambian con menos frecuencia. Esto mantiene a los principales expansores centrados en los controles de pintura que se ajustan con frecuencia.#### Propiedades del pincel (desbordamiento)
 - **Bloquear ángulo en el espacio de la pantalla**: bloquea el ángulo del pincel en el espacio de la pantalla, de modo que el ángulo permanezca nivelado mientras el lienzo gira/voltea. No hay efecto cuando Dynamics controla el ángulo.
 - **Inversión horizontal aleatoria**: 50 % de probabilidad de reflejar cada sello de izquierda a derecha por toque.
-- **Volteo vertical aleatorio**: 50% de probabilidad de voltear cada sello al revés por toque.
+- **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Rotación aleatoria**: rota aleatoriamente cada sello 0°, 90°, 180° o 270° por toque.
-- **Pivote X** (0,0–1,0): punto de contacto horizontal dentro de la imagen del pincel. 0,0 = borde izquierdo, 0,5 = centro (predeterminado), 1,0 = borde derecho. El punto elegido es el que se alinea con la posición de la pintura en el lienzo, por lo que al alejarlo del centro se desplaza cada toque en esa dirección. Las rotaciones y los giros permanecen visualmente anclados al pivote porque el desplazamiento de ubicación se aplica después de la transformación.
-- **Pivote Y** (0,0–1,0): punto de contacto vertical dentro de la imagen del pincel. 0,0 = borde superior, 0,5 = centro (predeterminado), 1,0 = borde inferior. Funciona junto con **Pivot X** para definir la parte exacta de la pincelada que se encuentra en la ruta del trazo.
+- **Pivote horizontal** (0,0–1,0): punto de contacto horizontal dentro de la imagen del pincel. 0,0 = borde izquierdo, 0,5 = centro (predeterminado), 1,0 = borde derecho. El punto elegido es el que se alinea con la posición de la pintura en el lienzo, por lo que al alejarlo del centro se desplaza cada toque en esa dirección. Las rotaciones y los giros permanecen visualmente anclados al pivote porque el desplazamiento de ubicación se aplica después de la transformación.
+- **Pivote vertical** (0,0–1,0): punto de contacto vertical dentro de la imagen del pincel. 0,0 = borde superior, 0,5 = centro (predeterminado), 1,0 = borde inferior. Funciona junto con **Pivotar horizontal** para definir la parte exacta de la pincelada que se encuentra en la ruta del trazo.
 - **Vibración uniforme**: cuando está activado, los desplazamientos de dab del control deslizante **Vibración** se extraen de una distribución uniforme (cada desplazamiento es igualmente probable dentro del rango). Cuando está desactivada, la distribución está sesgada hacia el centro.
 - **Restablecer animación**: para pinceles animados: cuando está activado, la animación se reinicia desde el cuadro 0 con cada nuevo trazo; cuando está apagado, continúa desde donde terminó el trazo anterior.
 
 Cuando cualquiera de los valores de pivote difiere del centro, la vista previa del pincel muestra una superposición en forma de cruz que marca el punto de contacto del sello activo.
+
+#### Comportamiento del trazo (desbordamiento)
+
+- **Restaurar los últimos colores utilizados**: Restaura los colores de primer plano y de fondo de la sesión anterior al inicio, en lugar de usar el blanco y negro de forma predeterminada.
+- **Límite de pincel simple**: utiliza un círculo simple para el contorno del cursor del pincel en lugar de representar la forma completa del pincel. Útil para pinceles complejos o grandes donde resulta costoso dibujar el límite preciso.
+
+#### Dinámica (desbordamiento)
+
+Controles que amplían el expansor principal de Dinámica, agrupados aquí ya que rara vez se ajustan:
+- **Vista previa del tamaño aleatorio**: muestra la variación aleatoria del tamaño en la vista previa del contorno del pincel cuando la dinámica activa preestablecida controla el tamaño de forma aleatoria.
+- **Vista previa de rotación aleatoria**: muestra la variación de rotación aleatoria en la vista previa del contorno del pincel cuando la dinámica activa preestablecida impulsa el ángulo de forma aleatoria.
 
 #### Cabezales de cepillo (desbordamiento)
 
@@ -165,17 +188,7 @@ Formación:
 - **Rellenar espacio** (0,0–1,0): extiende los cabezales a lo largo del espacio entre posiciones de dab consecutivas. El valor del carácter estable de cada cabeza determina su dirección de inclinación; a 1,0 cabezales llene todo el intervalo de espaciado. El carácter es estable por semilla.
 
 Dispersión:
-- **Umbral de tamaño de dispersión** (0,01–100 px): radio de umbral para la distancia de dispersión completa. Las cabezas en este radio o por debajo de él utilizan la distancia de dispersión completa; las cabezas más grandes se acercan progresivamente al trazo.
-
-Aleatorización:
+- **Umbral de tamaño de dispersión** (0,01–100 px): radio de umbral para la distancia de dispersión completa. Las cabezas en este radio o por debajo de él utilizan la distancia de dispersión completa; las cabezas más grandes se acercan progresivamente al trazo.Aleatorización:
 - **Semilla de personaje** (0–255): Semilla fija para carácter por encabezado (tamaño, posición de relleno de espacio). La misma semilla reproduce la misma formación en cada golpe. Insensibilizado cuando **Aleatorizar personaje principal** está activado.
 - **Aleatorizar carácter de cabeza**: vuelve a dibujar los valores de los caracteres por cabeza (tamaño, posición de dispersión) en cada sello para que la formación sea completamente caótica a lo largo del trazo. Anula **Semilla de personaje**.
-- **Aleatorizar cuadros de animación**: Para pinceles animados: cada cabeza avanza su cuadro de animación de forma independiente.
-
-#### Dinámica (desbordamiento)
-
-Controles que amplían el expansor principal de Dinámica, agrupados aquí ya que rara vez se ajustan:
-- **Vista previa del tamaño aleatorio**: muestra la variación aleatoria del tamaño en la vista previa del contorno del pincel cuando la dinámica activa preestablecida controla el tamaño de forma aleatoria.
-- **Vista previa de rotación aleatoria**: muestra la variación de rotación aleatoria en la vista previa del contorno del pincel cuando la dinámica activa preestablecida impulsa el ángulo de forma aleatoria.#### Comportamiento del accidente cerebrovascular (desbordamiento)
-- **Restaurar los últimos colores utilizados**: Restaura los colores de primer plano y de fondo de la sesión anterior al inicio, en lugar de usar el blanco y negro de forma predeterminada.
-- **Límite de pincel simple**: utiliza un círculo simple para el contorno del cursor del pincel en lugar de representar la forma completa del pincel. Útil para pinceles complejos o grandes donde resulta costoso dibujar el límite preciso.
+- **Animación de tubería independiente**: Para pinceles animados: cada cabeza avanza su cuadro de animación de forma independiente.

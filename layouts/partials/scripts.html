@@ -9,7 +9,7 @@
 // Fix for extremely long sidebar content glitch (Features section)
 document.addEventListener("DOMContentLoaded", function () {
   const sidebarScrollbar = document.querySelector("aside.sidebar-container > .hextra-scrollbar");
-  
+
   if (sidebarScrollbar) {
     // Disable any problematic instant scroll behavior that causes glitches with long content
     if (window.scrollToActiveItem) {
@@ -19,5 +19,87 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     }
   }
+});
+
+// Inline-styled image lightbox — no CSS classes, immune to theme styles
+document.addEventListener("DOMContentLoaded", function () {
+  var extensions = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"];
+  var overlay = null;
+  var img = null;
+
+  function close() {
+    if (overlay) {
+      overlay.style.display = "none";
+      img.removeAttribute("src");
+      img.removeAttribute("style");
+      document.body.style.overflow = "";
+    }
+  }
+
+  function open(src, alt) {
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.setAttribute("style",
+        "display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;" +
+        "z-index:10000;background:rgba(10,10,10,0.92);" +
+        "cursor:pointer;overflow:auto;"
+      );
+
+      img = document.createElement("img");
+      img.alt = "";
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", function (e) {
+        if (e.target !== img) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") close();
+      });
+    }
+
+    // Load image off-screen to get natural dimensions
+    var probe = new Image();
+    probe.onload = function () {
+      var nw = probe.naturalWidth;
+      var nh = probe.naturalHeight;
+      var vw = window.innerWidth - 64;
+      var vh = window.innerHeight - 64;
+      var scale = Math.min(1, vw / nw, vh / nh);
+      var w = Math.round(nw * scale);
+      var h = Math.round(nh * scale);
+
+      // Calculate centering margins
+      var mx = Math.max(0, Math.round((window.innerWidth - w) / 2));
+      var my = Math.max(0, Math.round((window.innerHeight - h) / 2));
+
+      img.setAttribute("style",
+        "display:block;" +
+        "width:" + w + "px;" +
+        "height:" + h + "px;" +
+        "margin:" + my + "px " + mx + "px;" +
+        "cursor:default;"
+      );
+      img.src = src;
+      img.alt = alt || "";
+      overlay.style.display = "block";
+      document.body.style.overflow = "hidden";
+    };
+    probe.src = src;
+  }
+
+  document.querySelectorAll(".content a[href]").forEach(function (link) {
+    var child = link.querySelector(":scope > img");
+    if (!child) return;
+    var href = link.getAttribute("href") || "";
+    var lower = href.toLowerCase();
+    var isImage = extensions.some(function (ext) { return lower.endsWith(ext); });
+    if (!isImage) return;
+
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      open(link.href, child.alt);
+    });
+  });
 });
 </script>

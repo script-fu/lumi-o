@@ -1,12 +1,12 @@
 ---
-title: "Penselverktyg"
+title: "Borstverktyg"
 type: docs
 ---
-Penseln är det primära målningsverktyget, designat för responsivt, intelligent penselarbete med full kontroll över tryck, hastighet, lutning och avståndsdynamik.
+Penseln är det primära målnings- och ritverktyget, designat för responsivt, intelligent penselarbete med full kontroll över tryck, hastighet, lutning och avståndsdynamik.
 
 ## Översikt
 
-Penselverktyget stöder raster, procedurgenererade och animerade penseltyper. Stroke kan stabiliseras, utjämnas och efterbehandlas. Penseldynamik svarar på penninmatning, vilket ger exakt kontroll över opacitet, storlek, färg, vinkel och andra egenskaper under ett slag.
+Penselverktyget stöder raster, procedurgenererade och animerade borsttyper. Stroke kan stabiliseras, utjämnas och efterbehandlas. Penseldynamik svarar på penninmatning, vilket ger exakt kontroll över opacitet, storlek, färg, vinkel och andra egenskaper under ett slag.
 
 ## Borsttyper
 
@@ -28,23 +28,29 @@ Markören anpassar sig till det aktuella verktygsläget för att ge tydlig, kont
 
 - **Penselkontur**: Markören spårar penselns exakta form och storlek, vilket ger en liveförhandsvisning av var färgen kommer att landa.
 - **Radera läge**: När radering är aktiv växlar konturen till en streckad cirkel för att visuellt skilja raderingsdrag från målardrag.
-- **Enkel borstgräns**: För komplexa eller mycket stora penslar där det är kostsamt att återge den exakta konturen, aktivera **Enkel borstgräns** (i ytterligare alternativ) för att använda en vanlig cirkel istället.
+- **Enkel borstgräns**: För komplexa eller mycket stora penslar där det är kostsamt att återge den exakta konturen, aktivera **Enkel borstgräns** (i Ytterligare alternativ) för att använda en vanlig cirkel istället.
 
 ## Verktygsalternativ
 
 ### Kontroller på toppnivå
 
-Närvarande hela tiden, utanför alla expanderare:
+- **Brush** : Välj borststämpeln eller redigera den aktiva.
 - **Läge**: Färgblandningsläge (Normal, Multiplicera, Screen, etc.)
-- **Opacitet**: Total slagopacitet (0–100).
 
 ### Penselegenskaper
 
 I expandern **Brush Properties** (expanderat som standard):
+
+#### Form
+
 - **Storlek**: Borstens diameter i pixlar.
 - **Aspektförhållande**: Squash eller sträck ut penselformen (-1,0–1,0). 0 = oförändrad; negativa värden roterar squashen 90°.
 - **Vinkel**: Roterar borststämpeln (-180–180°). Oberoende av slagriktningens dynamik.
 - **Hårdhet**: Mjuk blekning (0,0) till skarp kant (1,0).
+
+#### Applikation
+
+- **Opacitet**: Total slagopacitet (0–100).
 - **Avstånd**: Avstånd mellan målade dubbar i procent av penselstorleken. Lägre = jämnare slag; högre = spritt mönster.
 - **Texturbias**: Bias stämpelns textursvar; 50 är neutralt. Lägre värden gynnar strukturuppdelning och en skum yta genom att dra mot tån på värdekurvan; högre värden klämmer mot fasta fyllningar genom att trycka mot axeln. Den synliga effekten beror på texturens tonomfång.
 - **Jitter**: Förskjuter slumpmässigt varje dab-position med upp till så många pixlar (0–1024).
@@ -53,11 +59,11 @@ I expandern **Brush Properties** (expanderat som standard):
 ### Dynamik
 
 I expandern **Dynamics**:
-- **Dynamics**: Masteraktivering för den aktiva dynamikförinställningen.
-- **Dynamics Preset**: Väljer vilka inmatningsmappningar som används.
-- **Multiplicera med tryck**: Extra tryckmultiplikationsväxling (visas när Dynamics är aktiverat).### Strokebeteende
-I expandern **Stroke Behaviour**:
-- **Uppbyggnad**: När den är på, ackumulerar varje dab opacitet snarare än att vara sammansatt som ett enda slag.
+- **Aktivera dynamik**: Huvudaktivering för den aktiva dynamikförinställningen.
+- **Tryckmultiplicera**: Låt trycket dominera dynamiken.
+- **Dynamik**: Väljer vilka inmatningsmappningar som används.### Strokebeteende
+I expandern **Stroke beteende**:
+- **Opacitetsuppbyggnad**: När den är på, ackumulerar varje dab opacitet snarare än att vara sammansatt som ett enda slag.
 - **Efterprocess**: Tillämpar stabilisering, hastighetskompression och replay-korrigering efter att slaget är klart, vilket förbättrar konsistensen utan latens.
   - **Vridtröskel**: Vinkeltröskel (0–180°) för riktningskorrigering vid skarpa hörn. 0 = hoppa över riktningsfix.
   - **Tröskel för förhandsgranskning**: Undertrycker förhandsgranskningen efter bearbetning när slaghastigheten överskrider detta värde (0 = alltid förhandsgranskning).
@@ -69,6 +75,12 @@ När den är aktiv ersätts dab-stämpling med en kontinuerlig geometrisk korrid
 - **Velocity Growth** (0–100%): Maximal tillåten storleksökning per prov i procent av föregående provs storlek. Begränsar hur snabbt en hastighetsdriven storleksdynamik kan växa, vilket förhindrar plötsliga hopp när slaget accelererar.
 - **Velocity Shrink** (0–100%): Maximal tillåten storleksminskning per prov. Begränsar hur snabbt storleken kan sjunka när slaget bromsar in.
 
+#### Endast rörelse
+
+När den är på (standard) målar penseln bara när pekaren rör sig. Stäng av den för att låta borsten fortsätta stämpla medan den hålls stilla.
+- **Rate**: Styr hur snabbt stationära timer-stämplar sänds ut när **Motion Only** är avstängd.
+- **Flöde**: Styr opaciteten per klick för dessa timerstämplar när **Endast rörelse** är avstängd.
+
 #### Stabilisering och utjämning
 
 - **Riktningsstabiliseringsavstånd** (0–100 px): Minsta pekarrörelse innan riktningskänsligt beteende börjar, vilket hjälper till att undvika tidiga vinkelhopp.
@@ -76,7 +88,7 @@ När den är aktiv ersätts dab-stämpling med en kontinuerlig geometrisk korrid
 #### Utjämning
 
 Möjliggör realtidsinmatningsutjämning som tillämpas på linjebanan när du målar. Expanderar för att avslöja:
-  - **Djup** (2–256): Antal tidigare ingångssamplingar som beaktas vid beräkning av den utjämnade positionen. Högre värden ger en längre, mer engagerad fördröjning.
+  - **Depth** (2–256): Number of previous input samples considered when computing the smoothed position. Högre värden ger en längre, mer engagerad fördröjning.
   - **Position** (0–100): Utjämningsintensitet som appliceras på borstens position. Högre värden avrundar skarpa riktningsförändringar.
   - **Tryck** (0–100): Utjämning appliceras på pennans trycksignal, vilket minskar tryckspikar och jitter.
   - **Riktning** (0–100): Utjämning applicerad på slagriktningen, stabiliserar vinkelkänslig dynamik.
@@ -109,11 +121,11 @@ Fyra kryssrutor som styr eller ändrar hur toningsvärdet tillämpas:
 - **Fade Reverse**: Vänder om toningsriktningen så att drag börjar blekna och blir helt ogenomskinliga.
 - **Fademultiplicera**: Multiplicerar fade-utgången till den påverkade egenskapen istället för att ersätta den.
 - **Fade Multiply Angular**: Tillämpar toningsmultiplikatorn endast på vinkeldynamik (vinkel, tilt).
-- **Toningsmultiplikationsförhållande**: Tillämpar toningsmultiplikatorn endast på egenskaper av proportionstyp (bildförhållande).
+- **Fade Multiply Ratio**: Applies the fade multiplier only to ratio-type properties (aspect ratio).
 
-#### Färgmappning
+#### Färgkartläggning
 
-Tillgängligt för Paintbrush och Smudge-verktyg när Dynamics är aktivt:
+Tillgängligt för Brush och Smudge-verktyg när Dynamics är aktivt:
 - **Gradient**: Gradientresursen som används för färgkartläggning längs linjen.
 - **Blanda färgrymd**: Färgrymd där gradientfärger interpoleras under målning.
 
@@ -124,9 +136,9 @@ Borsthuvuden placerar flera oberoende borsthuvuden på en cirkulär **omloppsrin
 
 Banradien bestäms av den globala borststorleken minus huvudstorleken: större huvuden sitter närmare mitten; mindre huvuden kretsar längre ut. Heads space jämnt runt ringen. Med två huvuden får du ett på varje sida av slaget, vilket skapar en symmetrisk spridning som beter sig som en kalligrafi-nib. Reglaget **Följ riktning** roterar hela ringen så att den förblir vinkelrät mot slaget, så att spetsen följer riktningen naturligt när du målar. Genom att lägga till fler huvuden fläktar de dem gradvis runt ringen, upp till en hel spraycirkel vid 16.
 
-Borsthuvuden styr var varje huvud placeras runt draget. Om **Pivot X** eller **Pivot Y** flyttas bort från standardcentrum, följer varje huvud fortfarande samma formation, men varje stämplad dab landar nu med den valda interna kontaktpunkten istället för den geometriska mitten av penselbilden.
-
-Kontroller visas i expandern **Brush Heads** i verktygsalternativpanelen.- **Antal**: Antal samtidiga borsthuvuden (1–16).
+Borsthuvuden styr var varje huvud placeras runt draget. Om **Pivot X** eller **Pivot Y** flyttas bort från standardcentrum, följer varje huvud fortfarande samma formation, men varje stämplad dab landar nu med den valda interna kontaktpunkten istället för den geometriska mitten av penselbilden.Kontroller visas i expandern **Brush Heads** i verktygsalternativpanelen.
+- **Aktivera borsthuvuden**: Huvudaktivering för borsthuvudssystemet.
+- **Antal**: Antal samtidiga borsthuvuden (1–16).
 - **Huvudstorlek**: Återgiven storlek på varje huvud i förhållande till den globala borststorleken (0,1–1,0).
 - **Orbit Aspect Ratio** (0,1–1,0): Formar formationens bana från cirkel till ellips. 1,0 = cirkulär bana; lägre värden klämmer ihop den lilla axeln.
 - **Formationsvinkel** (0–360°): Statisk orientering av formationsringen, används när **Följ riktning** är under 1,0.
@@ -142,21 +154,32 @@ Huvudspridningskontroller i expandern **Brush Heads**:
 - **Scatter Distance** (0–10000 px): Slumpmässig förskjutning framåt från varje huvuds fyllningsavståndsposition. Rullade om varje dab.
 - **Slumpmässig spridning** (0,0–1,0): Ytterligare variation per skård skiktad ovanpå basens spridningsavstånd och vinkel, vilket ger en lösare, mer organisk spray.
 - **Velocity Influence** (0,0–1,0): Skalar spridningen efter slaghastighet. Vid 1,0 sprider snabba slag huvuden mycket längre än långsamma slag; vid 0,0 är spridningen konstant oavsett hastighet.
-- **Scatter Size Balance** (0,0–1,0): Kontrollerar undertryckande branthet för huvuden över tröskeln. Vid 1,0 sprids alla huvuden lika; lägre värden undertrycker allt mer större huvuden medan huvuden vid/under tröskeln stannar på fullt spridningsavstånd.
+- **Scatter Size Balance** (0,0–1,0): Kontrollerar undertryckande branthet för huvuden över tröskeln. Vid 1,0 sprids alla huvuden lika; lower values increasingly suppress larger heads while heads at/below threshold stay at full scatter distance.
 
-### Ytterligare alternativ
+### Verktygsinställning
 
-I expandern **Ytterligare alternativ** (komprimerad som standard) grupperas kontrollerna som bräddavsnitt som ändras mindre ofta. Detta håller de viktigaste expanderarna fokuserade på ofta justerade målningskontroller.#### Borstens egenskaper (spill)
+I expandern **Verktygsinställning** (komprimerad som standard) grupperas kontrollerna som bräddavsnitt som ändras mer sällan. Detta håller de viktigaste expanderarna fokuserade på ofta justerade målningskontroller.#### Borstens egenskaper (spill)
 - **Lås vinkel till skärmutrymme**: Låser borstvinkel till skärmutrymme, så vinkeln förblir jämn medan duken roterar/vänder. Ingen effekt när Dynamics styr vinkeln.
 - **Slumpmässig vänd horisontell**: 50 % chans att spegla varje stämpel från vänster till höger per dab.
 - **Random Flip Vertical**: 50 % chans att vända varje stämpel upp och ner per klick.
 - **Slumpmässig rotation**: Roterar varje stämpel slumpmässigt med 0°, 90°, 180° eller 270° per klick.
-- **Pivot X** (0,0–1,0): Horisontell kontaktpunkt inom penselbilden. 0,0 = vänster kant, 0,5 = mitten (standard), 1,0 = höger kant. Den valda punkten är den som är i linje med färgpositionen på duken, så att flytta den bort från mitten förskjuter varje klick i den riktningen. Rotationer och vändningar förblir visuellt förankrade vid pivoten eftersom placeringsförskjutningen tillämpas efter transformationen.
-- **Vrid Y** (0,0–1,0): Vertikal kontaktpunkt inom penselbilden. 0,0 = övre kant, 0,5 = mitt (standard), 1,0 = nedre kant. Fungerar tillsammans med **Pivot X** för att definiera den exakta delen av dabben som sitter på slagbanan.
+- **Vrid horisontell** (0,0–1,0): Horisontell kontaktpunkt inom penselbilden. 0,0 = vänster kant, 0,5 = mitten (standard), 1,0 = höger kant. Den valda punkten är den som är i linje med färgpositionen på duken, så att flytta den bort från mitten förskjuter varje klick i den riktningen. Rotationer och vändningar förblir visuellt förankrade vid pivoten eftersom placeringsförskjutningen tillämpas efter transformationen.
+- **Vrid vertikal** (0,0–1,0): Vertikal kontaktpunkt inom penselbilden. 0,0 = övre kant, 0,5 = mitt (standard), 1,0 = nedre kant. Fungerar tillsammans med **Vrid horisontellt** för att definiera den exakta delen av dabben som sitter på slagbanan.
 - **Uniform Jitter**: När den är på, dras dab-förskjutningar från **Jitter**-reglaget från en enhetlig fördelning (varje offset lika sannolikt inom intervallet). När den är avstängd är fördelningen snedställd mot mitten.
 - **Återställ animering**: För animerade penslar: när den är på startar animeringen om från bildruta 0 vid varje nytt slag; när den är av, fortsätter den där det föregående slaget slutade.
 
 När något av pivotvärdena skiljer sig från mitten visar borstens förhandsgranskning ett hårkorsöverlägg som markerar den aktiva stämpelkontaktpunkten.
+
+#### Strokebeteende (overflow)
+
+- **Återställ senast använda färger**: Återställer förgrunds- och bakgrundsfärgerna från föregående session vid uppstart, istället för att förinställa svartvitt.
+- **Enkel penselgräns**: Använder en vanlig cirkel för penselmarkörens kontur istället för att återge hela penselformen. Användbar för komplexa eller stora penslar där den exakta gränsen är dyr att dra.
+
+#### Dynamik (spill)
+
+Kontroller som utökar den huvudsakliga Dynamics expandern, grupperade här eftersom de sällan justeras:
+- **Förhandsgranska slumpmässig storlek**: Visar slumpmässig storleksvariation i förhandsgranskningen av penselkonturen när den aktiva dynamikförinställningen driver storlek slumpmässigt.
+- **Förhandsgranska slumpmässig rotation**: Visar slumpmässig rotationsvariation i förhandsgranskningen av borstkonturen när den aktiva dynamikförinställningen kör slumpmässigt med vinkeln.
 
 #### Borsthuvuden (spill över)
 
@@ -164,18 +187,8 @@ Formation:
 - **Briststyvhet**: Hur stelt omloppsradien följer den dynamiskt skalade borststorleken. 0 = omloppsbana expanderar och drar ihop sig med tryck; 1 = omloppsbana förblir fixerad till basstorleken.
 - **Fyllavstånd** (0,0–1,0): Sprider huvuden över gapet mellan på varandra följande dabpositioner. Varje huvuds stabila karaktärsvärde bestämmer dess lutande riktning; vid 1,0 huvuden fyller hela avståndsintervallet. Karaktären är stabil per frö.
 
-Spridning:
-- **Tröskel för spridningsstorlek** (0,01–100 px): Tröskelradie för fullt spridningsavstånd. Huvuden vid eller under denna radie använder hela spridningsavståndet; större huvuden dras gradvis närmare slaget.
-
-Randomisering:
+Scatter:
+- **Tröskel för spridningsstorlek** (0,01–100 px): Tröskelradie för fullt spridningsavstånd. Huvuden vid eller under denna radie använder hela spridningsavståndet; större huvuden dras gradvis närmare slaget.Randomisering:
 - **Teckenfrö** (0–255): Fast utsäde för karaktär per huvud (storlek, fyll-avståndsposition). Samma frö reproducerar samma formation varje slag. Desensibiliseras när **Randomize Head Character** är på.
 - **Slumpmässigt huvudkaraktär**: Ritar om värden per huvudkaraktär (storlek, spridningsposition) varje stämpel så att formationen är helt kaotisk längs slaget. Åsidosätter **Carakter Seed**.
-- **Randomisera animationsramar**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.
-
-#### Dynamik (spill)
-
-Kontroller som utökar den huvudsakliga Dynamics expandern, grupperade här eftersom de sällan justeras:
-- **Förhandsgranska slumpmässig storlek**: Visar slumpmässig storleksvariation i förhandsgranskningen av penselkonturen när den aktiva dynamikförinställningen driver storlek slumpmässigt.
-- **Förhandsgranska slumpmässig rotation**: Visar slumpmässig rotationsvariation i förhandsgranskningen av borstkonturen när den aktiva dynamikförinställningen kör slumpmässigt med vinkeln.#### Strokebeteende (overflow)
-- **Återställ senast använda färger**: Återställer förgrunds- och bakgrundsfärgerna från föregående session vid uppstart, istället för att förinställa svartvitt.
-- **Enkel borstgräns**: Använder en vanlig cirkel för penselmarkörens kontur istället för att återge hela penselformen. Användbar för komplexa eller stora penslar där den exakta gränsen är dyr att dra.
+- **Oberoende röranimering**: För animerade penslar: varje huvud flyttar fram sin animeringsram oberoende av varandra.

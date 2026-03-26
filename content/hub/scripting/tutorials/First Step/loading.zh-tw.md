@@ -3,11 +3,11 @@ title: "載入中"
 type: docs
 weight: 3
 ---
-一旦輔助函數增長，就將其移動到一個小的庫檔案中。這可以使插件保持專注，並使幫助程序可以在多個插件之間重複使用。
+一旦辅助函数增长，就将其移动到一个小的库文件中。这可以使插件保持专注，并使帮助程序可以在多个插件之间重复使用。
 
 ### 建立一個庫函數
 
-我們可以使用發送訊息函數並以其內容建立一個新檔案。將檔案儲存到您的儲存庫資料夾中，而不是插件部分，可能靠近頂層；
+我们可以使用发送消息函数并以其内容创建一个新文件。将文件保存到您的存储库文件夹中，而不是插件部分，可能靠近顶层；
 
 ```plaintext
 /home/your-username/code/
@@ -19,9 +19,9 @@ weight: 3
                   └── hello-world.scm
 ```
 
-- **scheme/**：這是儲存Scheme程式碼的主目錄。
-  - **library/**：這是 `send-message.scm` 等共享函數的所在。
-  - **plug-ins/**：這是儲存您的個人插件的位置。
+- **scheme/**：这是存储Scheme代码的主目录。
+  - **library/**：这是 `send-message.scm` 等共享函数的所在。
+  - **plug-ins/**：这是存储您的个人插件的位置。
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
@@ -31,9 +31,9 @@ weight: 3
 ;; Function to handle message output to various destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Set the handler to Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -48,13 +48,13 @@ weight: 3
        ;; Terminal output is handled with display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### 載入函式庫函數
 
-我們可以使用Scheme `load`命令來載入該函式庫函數；
+我们可以使用Scheme `load`命令加载该库函数；
 
 載入庫檔案：
 
@@ -81,4 +81,4 @@ weight: 3
   "<Image>/Funky")
 ```
 
-嘿！我們現在有了更簡單、更短的內容，可以閱讀，無需評論即可進行自我描述。這就是重構的令人滿意的結論。
+嘿！我们现在有了更简单、更短的内容，可以阅读，无需评论即可进行自我描述。這就是重構的令人滿意的結論。

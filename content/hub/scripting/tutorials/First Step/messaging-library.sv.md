@@ -3,7 +3,7 @@ title: "Meddelandebibliotek"
 type: docs
 weight: 6
 ---
-Med tiden har det som började som en enda funktion för att skicka meddelanden utvecklats till en samling relaterade funktioner. Dessa funktioner utgör nu grunden för ett **Meddelandebibliotek**, designat för att hantera utdata till olika destinationer, såsom GUI, Error Console och Terminal.
+Med tiden har det som började som en enda funktion för att skicka meddelanden utvecklats till en samling relaterade funktioner. Dessa funktioner utgör nu grunden för ett **Meddelandebibliotek**, designat för att hantera utdata till olika destinationer, såsom GUI, meddelandekonsol och OS-terminal.
 
 ### Varför ett meddelandebibliotek?
 
@@ -14,7 +14,7 @@ När våra behov växer kräver hantering av meddelanden över flera utgångar e
 Meddelandebiblioteket innehåller för närvarande följande funktioner:
 
 - **send-to-gui**: Skickar meddelanden till Lumi GUI-dialogrutan.
-- **send-to-error-console**: Skickar meddelanden till Lumi Error Console.
+- **send-to-error-console**: Skickar meddelanden till Lumi Message-konsolen.
 - **sänd-till-terminal**: Skickar meddelanden till terminalfönstret.
 - **sänd-meddelande**: En avsändarfunktion som dirigerar meddelanden till lämplig utgång.
 - **validera-meddelande**: Säkerställer att meddelandet och utdata är giltiga innan det skickas.
@@ -29,7 +29,7 @@ Meddelandebiblioteket innehåller för närvarande följande funktioner:
 
 Genom att följa samma mönster av modulär design och återanvändbara funktioner kan detta bibliotek växa till ett omfattande verktyg för att hantera alla typer av meddelandeuppgifter.
 
-## Fördelar med ett meddelandebibliotek
+## Benefits of a Messaging Library
 
 - **Återanvändbarhet**: Funktionerna kan återanvändas över olika plugin-program eller projekt.
 - **Modularitet**: Varje funktion hanterar en specifik uppgift, vilket gör koden lättare att underhålla och utöka.

@@ -3,7 +3,7 @@ title: "Messaging-Bibliothek"
 type: docs
 weight: 6
 ---
-Was als einzelne Funktion zum Senden von Nachrichten begann, hat sich im Laufe der Zeit zu einer Sammlung verwandter Funktionen entwickelt. Diese Funktionen bilden nun die Grundlage einer **Messaging-Bibliothek**, die für die Ausgabe an verschiedene Ziele wie die GUI, die Fehlerkonsole und das Terminal konzipiert ist.
+Was als einzelne Funktion zum Senden von Nachrichten begann, hat sich im Laufe der Zeit zu einer Sammlung verwandter Funktionen entwickelt. Diese Funktionen bilden nun die Grundlage einer **Messaging-Bibliothek**, die für die Ausgabe an verschiedene Ziele wie die GUI, die Nachrichtenkonsole und das Betriebssystem-Terminal konzipiert ist.
 
 ### Warum eine Messaging-Bibliothek?
 
@@ -14,7 +14,7 @@ Da unsere Anforderungen wachsen, erfordert die Verarbeitung von Nachrichten übe
 Die Messaging-Bibliothek umfasst derzeit die folgenden Funktionen:
 
 - **send-to-gui**: Sendet Nachrichten an das Lumi GUI-Dialogfeld.
-- **send-to-error-console**: Sendet Nachrichten an die Lumi Error Console.
+- **send-to-error-console**: Sendet Nachrichten an die Lumi Message-Konsole.
 - **send-to-terminal**: Sendet Nachrichten an das Terminalfenster.
 - **Nachricht senden**: Eine Dispatcher-Funktion, die Nachrichten an die entsprechende Ausgabe weiterleitet.
 - **validate-message**: Stellt sicher, dass die Nachricht und die Ausgabe vor dem Senden gültig sind.

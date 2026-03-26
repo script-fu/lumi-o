@@ -47,7 +47,7 @@ Sous Linux, cliquez avec le bouton droit sur le fichier `simple-filter-plug-in.s
 ### Exécution du plug-in
 
 1. Ouvrez une image (ce plug-in de filtre nécessite une image pour fonctionner).
-2. Ouvrez **Windows > Boîtes de dialogue ancrables > Console d'erreurs** pour voir un message.
+2. Ouvrez **Outils > Débogage > Console de messages** pour afficher un message.
 3. Sélectionnez **Démo du plug-in de filtre simple** dans le menu **Plug-in**.
 4. L'un des calques sélectionnés verra ses couleurs inversées et un message sera imprimé sur la console d'erreur.
 
@@ -125,4 +125,4 @@ Le nom du fichier doit correspondre au nom du dossier contenant.
 Le fichier doit être défini comme exécutable.
 
 
-La **Console d'erreurs** est un outil précieux pour dépanner les plug-ins personnalisés. Si votre plug-in ne se comporte pas comme prévu, recherchez ici les messages d'erreur ou les journaux. La fenêtre **Terminal** peut également fournir des informations de débogage et signaler les problèmes de chargement.
+La **Console de messages** est un outil précieux pour dépanner les plug-ins personnalisés. Si votre plug-in ne se comporte pas comme prévu, recherchez ici les messages d'erreur ou les journaux. La fenêtre **Terminal** peut également fournir des informations de débogage et signaler les problèmes de chargement.

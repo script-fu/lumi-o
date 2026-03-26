@@ -19,7 +19,7 @@ Exemple :
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,7 +33,7 @@ Exemple :
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -77,7 +77,7 @@ Cette approche garantit que la fonction reçoit toujours des entrées valides, a
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,16 +91,16 @@ Cette approche garantit que la fonction reçoit toujours des entrées valides, a
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 Dans cette version :
-- La fonction vérifie d'abord si le `message` est vide ou invalide. Si le message est valide, il vérifie si `output` est l'une des valeurs acceptées (`gui`, `error-console` ou `terminal`).
+- La fonction vérifie d'abord si le `message` est vide ou invalide. If the message is valid, it moves on to checking if the `output` is one of the accepted values (`gui`, `error-console`, or `terminal`).
 - Si les deux vérifications réussissent, le message est envoyé à la sortie appropriée. Sinon, un message d'erreur s'affiche avec une explication claire.
 - Une vérification supplémentaire est effectuée pour s'assurer que le message est également une chaîne.
 
-Cette fonction de validation combinée maintient le code plus propre et garantit que les deux entrées sont validées avant qu'une action ne soit entreprise, ce qui rend la fonction plus robuste. Remarquez que nous intégrons également un système de messagerie de débogage. Quand le
+Cette fonction de validation combinée maintient le code plus propre et garantit que les deux entrées sont validées avant qu'une action ne soit entreprise, ce qui rend la fonction plus robuste. Notice, we are also building in a debug messaging system. Quand le
 le code échoue, nous obtenons une raison, une raison que nous avons écrite nous-mêmes.
 
 ```

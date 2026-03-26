@@ -2,7 +2,7 @@
 title: "Outil Pinceau"
 type: docs
 ---
-Le pinceau est le principal outil de peinture, conçu pour un travail au pinceau réactif et intelligent avec un contrôle total sur la dynamique de la pression, de la vitesse, de l'inclinaison et de l'espacement.
+Le pinceau est le principal outil de peinture et de dessin, conçu pour un travail au pinceau réactif et intelligent avec un contrôle total sur la dynamique de la pression, de la vitesse, de l'inclinaison et de l'espacement.
 
 ## Aperçu
 
@@ -34,17 +34,23 @@ Le curseur s'adapte à l'état actuel de l'outil pour fournir un retour clair et
 
 ### Contrôles de niveau supérieur
 
-Présent à tout moment, en dehors de tout expandeur :
+- **Pinceau** : Sélectionnez le tampon du pinceau ou modifiez celui actif.
 - **Mode** : Mode de fusion de peinture (Normal, Multiplier, Écran, etc.)
-- **Opacité** : Opacité globale du trait (0–100).
 
 ### Propriétés du pinceau
 
 Dans l'expandeur **Propriétés du pinceau** (développé par défaut) :
+
+#### Forme
+
 - **Taille** : Diamètre du pinceau en pixels.
 - **Aspect Ratio** : écrasez ou étirez la forme du pinceau (-1,0–1,0). 0 = non modifié ; les valeurs négatives font pivoter la courge de 90°.
 - **Angle** : fait pivoter le tampon du pinceau (-180–180°). Indépendant de la dynamique de la direction de la course.
 - **Dureté** : fondu doux (0,0) à bord net (1,0).
+
+#### Candidature
+
+- **Opacité** : Opacité globale du trait (0–100).
 - **Espacement** : Distance entre les touches peintes en pourcentage de la taille du pinceau. Inférieur = traits plus doux ; plus haut = motif dispersé.
 - **Texture Bias** : biaise la réponse de la texture du tampon ; 50 est neutre. Les valeurs inférieures favorisent la rupture de la texture et une surface écrémée en tirant vers le bas de la courbe de valeur ; des valeurs plus élevées se resserrent vers les remplissages solides en poussant vers l'épaule. L'effet visible dépend de la gamme tonale de la texture.
 - **Jitter** : décale de manière aléatoire chaque position de touche jusqu'à ce nombre de pixels (0 à 1 024).
@@ -53,11 +59,11 @@ Dans l'expandeur **Propriétés du pinceau** (développé par défaut) :
 ### Dynamique
 
 Dans l'expandeur **Dynamics** :
-- **Dynamique** : activation principale pour le préréglage de dynamique actif.
-- **Dynamics Preset** : Sélectionne les mappages d'entrée utilisés.
-- **Multiplier par pression** : bascule de multiplication de pression supplémentaire (affichée lorsque la dynamique est activée).### Comportement en cas d'AVC
-Dans l'expandeur **Stroke Behaviour** :
-- **Build-Up** : lorsque cette option est activée, chaque touche accumule de l'opacité plutôt que d'être composée en un seul trait.
+- **Activer la dynamique** : activation principale du préréglage de dynamique actif.
+- **La pression se multiplie** : laissez la pression dominer la sortie dynamique.
+- **Dynamique** : sélectionne les mappages d'entrée utilisés.### Comportement des traits
+Dans l'expandeur **Comportement de trait** :
+- **Création d'opacité** : lorsque cette option est activée, chaque touche accumule de l'opacité plutôt que d'être composée en un seul trait.
 - **Post-traitement** : applique la stabilisation, la compression de la vitesse et la correction de la relecture une fois le trait terminé, améliorant ainsi la cohérence sans latence.
   - **Seuil de virage** : seuil d'angle (0–180°) pour la correction de direction dans les virages serrés. 0 = correction de la direction de saut.
   - **Seuil d'aperçu** : supprime l'aperçu post-traitement lorsque la vitesse de trait dépasse cette valeur (0 = toujours aperçu).
@@ -68,6 +74,12 @@ Lorsqu'il est actif, le tamponnage est remplacé par un couloir géométrique co
 - **Opacité dynamique** : module l'opacité du trait en fonction des changements de vitesse et de direction. Fonctionne mieux sur des traits fins et contrôlés ; les résultats sont moins prévisibles sur des gribouillages rapides. Expérimental.
 - **Velocity Growth** (0–100 %) : augmentation maximale autorisée de la taille par échantillon en pourcentage de la taille de l'échantillon précédent. Limite la rapidité avec laquelle une dynamique de taille basée sur la vitesse peut croître, empêchant ainsi les sauts soudains lorsque la course accélère.
 - **Velocity Shrink** (0–100 %) : diminution de la taille maximale autorisée par échantillon. Limite la rapidité avec laquelle la taille peut diminuer lorsque le trait décélère.
+
+#### Mouvement uniquement
+
+Lorsqu'il est activé (par défaut), le pinceau peint uniquement lorsque le pointeur se déplace. Éteignez-le pour laisser le pinceau continuer à tamponner tout en restant immobile.
+- **Taux** : contrôle la rapidité avec laquelle les horodatages stationnaires sont émis lorsque **Motion Only** est désactivé.
+- **Flow** : contrôle l'opacité par touche de ces horodatages lorsque **Motion Only** est désactivé.
 
 #### Stabilisation et lissage
 
@@ -85,7 +97,7 @@ Permet le lissage des entrées en temps réel appliqué au tracé du trait penda
 
 Attribuez une entrée de stylet ou d'autres valeurs en direct aux paramètres de peinture :
 
-- **Pression** (stylet) : contrôle la taille, l'opacité, le taux, la dureté, la couleur et bien plus encore en fonction de la pression du stylet.
+- **Pressure** (stylus): Controls size, opacity, rate, hardness, color, and more based on stylus pressure.
 - **Vitesse** : mappe la vitesse de trait aux propriétés du pinceau.
 - **Inclinaison** : les angles d'inclinaison X et Y du stylet affectent l'angle et d'autres paramètres.
 - **Roue** : saisie avec la molette de la souris ou la molette du stylet.
@@ -103,7 +115,7 @@ Dans l'expandeur **Stroke Modulation** (affiché uniquement lorsque **Dynamics**
 - **Longueur du fondu** : Distance en unités de canevas sur laquelle le fondu se déroule.
 - **Répéter** : Comment le fondu est répété une fois la longueur du fondu épuisée (Aucun, Boucle, Dents de scie, Triangle).
 
-#### Fade Multipliers
+#### Multiplicateurs de fondu
 
 Quatre cases à cocher qui contrôlent ou modifient la manière dont la valeur de fondu est appliquée :
 - **Fade Reverse** : Inverse la direction du fondu afin que les traits commencent à s'estomper et deviennent complètement opaques.
@@ -124,9 +136,9 @@ Les têtes de brosse placent plusieurs têtes de brosse indépendantes sur un **
 
 Le rayon de l'orbite est déterminé par la taille globale de la brosse moins la taille de la tête : les têtes plus grandes sont plus proches du centre ; des têtes plus petites orbitent plus loin. Dirige l'espace uniformément autour de l'anneau. Avec deux têtes, vous en obtenez une de chaque côté du trait, créant ainsi une répartition symétrique qui se comporte comme une plume de calligraphie. Le curseur **Suivez la direction** fait pivoter l'ensemble de l'anneau pour rester perpendiculaire au trait, de sorte que la plume suit naturellement la direction pendant que vous peignez. L'ajout de têtes supplémentaires les ventile progressivement autour de l'anneau, jusqu'à un cercle de pulvérisation complet à 16.
 
-Les têtes de pinceau contrôlent l'endroit où chaque tête est placée autour du trait. Si **Pivot X** ou **Pivot Y** est éloigné du centre par défaut, chaque tête suit toujours la même formation, mais chaque touche estampée atterrit désormais en utilisant le point de contact interne choisi au lieu du centre géométrique de l'image du pinceau.
-
-Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.- **Count** : Nombre de têtes de brosse simultanées (1 à 16).
+Les têtes de pinceau contrôlent l'endroit où chaque tête est placée autour du trait. Si **Pivot X** ou **Pivot Y** est éloigné du centre par défaut, chaque tête suit toujours la même formation, mais chaque touche estampée atterrit désormais en utilisant le point de contact interne choisi au lieu du centre géométrique de l'image du pinceau.Les commandes apparaissent dans l'extenseur **Têtes de brosse** du panneau d'options de l'outil.
+- **Activer les têtes de brosse** : activation principale du système de têtes de brosse.
+- **Count** : Nombre de têtes de brosse simultanées (1 à 16).
 - **Taille de la tête** : taille rendue de chaque tête par rapport à la taille globale du pinceau (0,1 à 1,0).
 - **Rapport d'aspect de l'orbite** (0,1–1,0) : façonne l'orbite de la formation du cercle à l'ellipse. 1,0 = orbite circulaire ; des valeurs inférieures écrasent l’axe mineur.
 - **Angle de formation** (0–360°) : orientation statique de l'anneau de formation, utilisée lorsque **Suivre la direction** est inférieur à 1,0.
@@ -144,19 +156,30 @@ Principaux contrôles de dispersion dans l'extenseur **Têtes de brosse** :
 - **Influence de la vitesse** (0,0–1,0) : met à l'échelle la dispersion en fonction de la vitesse de course. À 1,0, les coups rapides dispersent les têtes beaucoup plus loin que les coups lents ; à 0,0, la dispersion est constante quelle que soit la vitesse.
 - **Scatter Size Balance** (0,0–1,0) : contrôle l'inclinaison de la suppression pour les têtes au-dessus du seuil. À 1,0, toutes les têtes se dispersent de manière égale ; des valeurs plus faibles suppriment de plus en plus les têtes plus grosses tandis que les têtes au niveau/en dessous du seuil restent à la distance de diffusion complète.
 
-### Options supplémentaires
+### Configuration de l'outil
 
-Dans l'expandeur **Options supplémentaires** (réduit par défaut), les contrôles sont regroupés sous forme de sections de débordement qui sont modifiées moins souvent. Cela permet aux principaux expandeurs de se concentrer sur les commandes de peinture fréquemment ajustées.#### Propriétés du pinceau (débordement)
+Dans l'expandeur **Configuration de l'outil** (réduit par défaut), les contrôles sont regroupés en sections de débordement qui sont modifiées moins souvent. Cela permet aux principaux expandeurs de se concentrer sur les commandes de peinture fréquemment ajustées.#### Propriétés du pinceau (débordement)
 - **Verrouiller l'angle sur l'espace de l'écran** : verrouille l'angle du pinceau sur l'espace de l'écran, de sorte que l'angle reste au même niveau pendant que la toile tourne/se retourne. Aucun effet lorsque Dynamics contrôle l’angle.
 - **Random Flip Horizontal** : 50 % de chances de refléter chaque tampon de gauche à droite par touche.
 - **Renversement vertical aléatoire** : 50 % de chances de retourner chaque tampon à l'envers par touche.
 - **Rotation aléatoire** : fait pivoter chaque tampon de manière aléatoire de 0°, 90°, 180° ou 270° par touche.
-- **Pivot X** (0,0–1,0) : point de contact horizontal dans l'image du pinceau. 0,0 = bord gauche, 0,5 = centre (par défaut), 1,0 = bord droit. Le point choisi est ce qui s'aligne avec la position de la peinture sur la toile, donc l'éloigner du centre décale chaque touche dans cette direction. Les rotations et les retournements restent visuellement ancrés au pivot car le décalage de placement est appliqué après la transformation.
-- **Pivot Y** (0,0–1,0) : point de contact vertical dans l'image du pinceau. 0,0 = bord supérieur, 0,5 = centre (par défaut), 1,0 = bord inférieur. Fonctionne avec **Pivot X** pour définir la partie exacte de la touche qui se trouve sur le tracé du trait.
+- **Pivot horizontal** (0,0–1,0) : point de contact horizontal dans l'image du pinceau. 0,0 = bord gauche, 0,5 = centre (par défaut), 1,0 = bord droit. Le point choisi est ce qui s'aligne avec la position de la peinture sur la toile, donc l'éloigner du centre décale chaque touche dans cette direction. Les rotations et les retournements restent visuellement ancrés au pivot car le décalage de placement est appliqué après la transformation.
+- **Pivot vertical** (0,0–1,0) : point de contact vertical dans l'image du pinceau. 0,0 = bord supérieur, 0,5 = centre (par défaut), 1,0 = bord inférieur. Fonctionne avec **Pivot horizontal** pour définir la partie exacte de la touche qui se trouve sur le tracé du trait.
 - **Jitter uniforme** : lorsque cette option est activée, les décalages du curseur **Jitter** sont tirés d'une distribution uniforme (chaque décalage est également probable dans la plage). Lorsqu'elle est désactivée, la distribution est biaisée vers le centre.
 - **Réinitialiser l'animation** : Pour les pinceaux animés : lorsqu'elle est activée, l'animation redémarre à partir de l'image 0 à chaque nouveau trait ; lorsqu'elle est désactivée, elle continue à partir de l'endroit où le trait précédent s'est terminé.
 
 Lorsque l’une ou l’autre des valeurs de pivot diffère du centre, l’aperçu du pinceau affiche une superposition de réticule marquant le point de contact actif du tampon.
+
+#### Comportement du trait (débordement)
+
+- **Restaurer les dernières couleurs utilisées** : restaure les couleurs de premier plan et d'arrière-plan de la session précédente au démarrage, au lieu de passer par défaut au noir et blanc.
+- **Limite de pinceau simple** : utilise un cercle simple pour le contour du curseur du pinceau au lieu de restituer la forme complète du pinceau. Utile pour les pinceaux complexes ou volumineux où la limite précise est coûteuse à tracer.
+
+#### Dynamique (débordement)
+
+Commandes qui étendent l'expandeur Dynamics principal, regroupées ici car elles sont rarement ajustées :
+- **Aperçu de la taille aléatoire** : affiche la variation de taille aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne une taille aléatoire.
+- **Aperçu de la rotation aléatoire** : affiche la variation de rotation aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne l'angle de manière aléatoire.
 
 #### Têtes de brosse (débordement)
 
@@ -165,17 +188,7 @@ Formation :
 - **Fill Spacing** (0,0–1,0) : répartit les têtes sur l'espace entre les positions de tamponnage consécutives. La valeur de caractère stable de chaque tête détermine sa direction d'inclinaison ; à 1,0, les têtes remplissent tout l'intervalle d'espacement. Le caractère est stable par graine.
 
 Dispersion :
-- **Seuil de taille de diffusion** (0,01 à 100 px) : rayon de seuil pour une distance de diffusion complète. Les têtes égales ou inférieures à ce rayon utilisent la distance de diffusion complète ; les têtes plus grosses sont progressivement rapprochées de la course.
-
-Randomisation :
+- **Seuil de taille de diffusion** (0,01 à 100 px) : rayon de seuil pour une distance de diffusion complète. Les têtes égales ou inférieures à ce rayon utilisent la distance de diffusion complète ; les têtes plus grosses sont progressivement rapprochées de la course.Randomisation :
 - **Character Seed** (0–255) : graine fixe pour le caractère par tête (taille, position d'espacement de remplissage). La même graine reproduit la même formation à chaque coup. Désensibilisé lorsque **Randomize Head Character** est activé.
 - **Randomiser le personnage de tête** : redessine les valeurs de caractère par tête (taille, position de dispersion) pour chaque tampon afin que la formation soit complètement chaotique le long du trait. Remplace **Character Seed**.
-- **Randomiser les images d'animation** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.
-
-#### Dynamique (débordement)
-
-Commandes qui étendent l'expandeur Dynamics principal, regroupées ici car elles sont rarement ajustées :
-- **Aperçu de la taille aléatoire** : affiche la variation de taille aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne une taille aléatoire.
-- **Aperçu de la rotation aléatoire** : affiche la variation de rotation aléatoire dans l'aperçu du contour du pinceau lorsque le préréglage de dynamique actif entraîne l'angle de manière aléatoire.#### Comportement de l'AVC (débordement)
-- **Restaurer les dernières couleurs utilisées** : restaure les couleurs de premier plan et d'arrière-plan de la session précédente au démarrage, au lieu de passer par défaut au noir et blanc.
-- **Bordure simple du pinceau** : utilise un cercle simple pour le contour du curseur du pinceau au lieu de restituer la forme complète du pinceau. Utile pour les pinceaux complexes ou volumineux où la limite précise est coûteuse à tracer.
+- **Animation de tuyaux indépendante** : Pour les pinceaux animés : chaque tête avance indépendamment son image d'animation.

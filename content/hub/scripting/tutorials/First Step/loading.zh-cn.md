@@ -31,9 +31,9 @@ weight: 3
 ;; Function to handle message output to various destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Set the handler to Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -48,7 +48,7 @@ weight: 3
        ;; Terminal output is handled with display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 

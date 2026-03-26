@@ -1,14 +1,14 @@
 ---
-title: "Paintbrush Tool"
+title: "Brush Tool"
 type: docs
 url: "hub/features/paintbrush"
 ---
 
-The Paintbrush is the primary painting tool, designed for responsive, intelligent brushwork with full control over pressure, velocity, tilt, and spacing dynamics.
+The Brush is the primary painting and drawing tool, designed for responsive, intelligent brushwork with full control over pressure, velocity, tilt, and spacing dynamics.
 
 ## Overview
 
-The Paintbrush tool supports raster, procedurally generated, and animated brush types. Strokes can be stabilized, smoothed, and post-processed. Brush dynamics respond to stylus input, giving precise control over opacity, size, color, angle, and other properties during a stroke.
+The Brush tool supports raster, procedurally generated, and animated brush types. Strokes can be stabilized, smoothed, and post-processed. Brush dynamics respond to stylus input, giving precise control over opacity, size, color, angle, and other properties during a stroke.
 
 ## Brush Types
 
@@ -26,21 +26,25 @@ The cursor adapts to the current tool state to provide clear, contextual feedbac
 
 - **Brush outline**: The cursor tracks the exact brush shape and size, giving a live preview of where paint will land.
 - **Erase mode**: When erasing is active, the outline switches to a dashed circle to visually distinguish erase strokes from paint strokes.
-- **Simple Brush Boundary**: For complex or very large brushes where rendering the accurate outline is costly, enable **Simple Brush Boundary** (in Additional Options) to use a plain circle instead.
+- **Simple brush boundary**: For complex or very large brushes where rendering the accurate outline is costly, enable **Simple brush boundary** (in Additional Options) to use a plain circle instead.
 
 ## Tool Options
 
 ### Top-Level Controls
-Present at all times, outside any expander:
+- **Brush** : Select the brush stamp or edit the active one.
 - **Mode**: Paint blending mode (Normal, Multiply, Screen, etc.)
-- **Opacity**: Overall stroke opacity (0–100).
 
 ### Brush Properties
 In the **Brush Properties** expander (expanded by default):
+
+#### Shape
 - **Size**: Brush diameter in pixels.
 - **Aspect Ratio**: Squash or stretch the brush shape (-1.0–1.0). 0 = unmodified; negative values rotate the squash 90°.
 - **Angle**: Rotates the brush stamp (-180–180°). Independent of stroke direction dynamics.
 - **Hardness**: Soft fade (0.0) to sharp edge (1.0).
+
+#### Application
+- **Opacity**: Overall stroke opacity (0–100).
 - **Spacing**: Distance between painted dabs as a percentage of brush size. Lower = smoother strokes; higher = scattered pattern.
 - **Texture Bias**: Bias the stamp texture response; 50 is neutral. Lower values favour texture breakup and a skimmed surface by pulling toward the toe of the value curve; higher values clamp toward solid fills by pushing toward the shoulder. The visible effect depends on the texture's tonal range.
 - **Jitter**: Randomly offsets each dab position by up to this many pixels (0–1024).
@@ -48,13 +52,13 @@ In the **Brush Properties** expander (expanded by default):
 
 ### Dynamics
 In the **Dynamics** expander:
-- **Dynamics**: Master enable for the active dynamics preset.
-- **Dynamics Preset**: Selects which input mappings are used.
-- **Multiply by Pressure**: Extra pressure multiplication toggle (shown when Dynamics is enabled).
+- **Enable dynamics**: Main enable for the active dynamics preset.
+- **Pressure multiply**: Let pressure dominate the dynamics output.
+- **Dynamics**: Selects which input mappings are used.
 
-### Stroke Behaviour
-In the **Stroke Behaviour** expander:
-- **Build-Up**: When on, each dab accumulates opacity rather than being composited as a single stroke.
+### Stroke behavior
+In the **Stroke behavior** expander:
+- **Opacity build-Up**: When on, each dab accumulates opacity rather than being composited as a single stroke.
 - **Post Process**: Applies stabilization, velocity compression, and replay correction after the stroke is complete, improving consistency without latency.
   - **Turn Threshold**: Angle threshold (0–180°) for direction correction at sharp corners. 0 = skip direction fix.
   - **Preview Threshold**: Suppresses the post-process preview when stroke velocity exceeds this value (0 = always preview).
@@ -65,7 +69,12 @@ When active, dab stamping is replaced by a continuous geometric corridor:
 - **Velocity Growth** (0–100%): Maximum allowed size increase per sample as a percentage of the previous sample's size. Limits how quickly a velocity-driven size dynamic can grow, preventing sudden jumps when the stroke accelerates.
 - **Velocity Shrink** (0–100%): Maximum allowed size decrease per sample. Limits how quickly the size can drop when the stroke decelerates.
 
-#### Stabilization & Smoothing
+#### Motion only
+When on (default), the brush paints only while the pointer is moving. Turn it off to let the brush continue stamping while held still.
+- **Rate**: Controls how quickly stationary timer-stamps are emitted when **Motion Only** is off.
+- **Flow**: Controls the per-dab opacity of those timer-stamps when **Motion Only** is off.
+
+#### Stabilization and smoothing
 - **Direction Stabilization Distance** (0–100 px): Minimum pointer travel before direction-sensitive behavior starts, helping avoid early angle jumps.
 
 #### Smoothing
@@ -104,9 +113,9 @@ Four checkboxes that gate or modify how the fade value is applied:
 - **Fade Multiply Angular**: Applies the fade multiplier only to angular dynamics (angle, tilt).
 - **Fade Multiply Ratio**: Applies the fade multiplier only to ratio-type properties (aspect ratio).
 
-#### Colour Mapping
-Available for Paintbrush and Smudge tools when Dynamics is active:
-- **Gradient**: The gradient resource used for colour mapping along the stroke.
+#### Color mapping
+Available for Brush and Smudge tools when Dynamics is active:
+- **Gradient**: The gradient resource used for color mapping along the stroke.
 - **Blend Color Space**: Colour space in which gradient colours are interpolated during painting.
 
 
@@ -119,7 +128,7 @@ The orbit radius is determined by the global brush size minus the head size: lar
 Brush Heads controls where each head is placed around the stroke. If **Pivot X** or **Pivot Y** is moved away from the default centre, every head still follows the same formation, but each stamped dab now lands using the chosen internal contact point instead of the geometric centre of the brush image.
 
 Controls appear in the **Brush Heads** expander in the tool options panel.
-
+- **Enable brush heads**: Main enable for the brush heads system.
 - **Count**: Number of simultaneous brush heads (1–16).
 - **Head Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
 - **Orbit Aspect Ratio** (0.1–1.0): Shapes the formation orbit from circle to ellipse. 1.0 = circular orbit; lower values squash the minor axis.
@@ -137,21 +146,30 @@ Main scatter controls in the **Brush Heads** expander:
 - **Velocity Influence** (0.0–1.0): Scales the scatter by stroke velocity. At 1.0, fast strokes scatter heads much further than slow strokes; at 0.0, scatter is constant regardless of speed.
 - **Scatter Size Balance** (0.0–1.0): Controls suppression steepness for heads above threshold. At 1.0, all heads scatter equally; lower values increasingly suppress larger heads while heads at/below threshold stay at full scatter distance.
 
-### Additional Options
+### Tool setup
 
-In the **Additional Options** expander (collapsed by default), controls are grouped as overflow sections that are changed less often. This keeps the main expanders focused on frequently adjusted painting controls.
+In the **Tool setup** expander (collapsed by default), controls are grouped as overflow sections that are changed less often. This keeps the main expanders focused on frequently adjusted painting controls.
 
 #### Brush Properties (overflow)
 - **Lock Angle to Screen Space**: Locks brush angle to screen space, so angle stays level while the canvas rotates/flips. No effect when Dynamics controls angle.
 - **Random Flip Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
 - **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
-- **Pivot X** (0.0–1.0): Horizontal contact point within the brush image. 0.0 = left edge, 0.5 = centre (default), 1.0 = right edge. The chosen point is what aligns with the paint position on the canvas, so moving it away from centre shifts every dab in that direction. Rotations and flips stay visually anchored to the pivot because the placement offset is applied after the transform.
-- **Pivot Y** (0.0–1.0): Vertical contact point within the brush image. 0.0 = top edge, 0.5 = centre (default), 1.0 = bottom edge. Works together with **Pivot X** to define the exact part of the dab that sits on the stroke path.
+- **Pivot horizontal** (0.0–1.0): Horizontal contact point within the brush image. 0.0 = left edge, 0.5 = centre (default), 1.0 = right edge. The chosen point is what aligns with the paint position on the canvas, so moving it away from centre shifts every dab in that direction. Rotations and flips stay visually anchored to the pivot because the placement offset is applied after the transform.
+- **Pivot vertical** (0.0–1.0): Vertical contact point within the brush image. 0.0 = top edge, 0.5 = centre (default), 1.0 = bottom edge. Works together with **Pivot horizontal** to define the exact part of the dab that sits on the stroke path.
 - **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is biased toward the centre.
 - **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
 
 When either pivot value differs from centre, the brush preview shows a crosshair overlay marking the active stamp contact point.
+
+#### Stroke behavior (overflow)
+- **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
+- **Simple brush boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
+
+#### Dynamics (overflow)
+Controls that extend the main Dynamics expander, grouped here as they are rarely adjusted:
+- **Preview Random Size**: Shows randomised size variation in the brush outline preview when the active dynamics preset drives size randomly.
+- **Preview Random Rotation**: Shows randomised rotation variation in the brush outline preview when the active dynamics preset drives angle randomly.
 
 #### Brush Heads (overflow)
 Formation:
@@ -164,14 +182,8 @@ Scatter:
 Randomization:
 - **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
 - **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
-- **Randomize Animation Frames**: For animated brushes: each head advances its animation frame independently.
+- **Independent pipe animation**: For animated brushes: each head advances its animation frame independently.
 
-#### Dynamics (overflow)
-Controls that extend the main Dynamics expander, grouped here as they are rarely adjusted:
-- **Preview Random Size**: Shows randomised size variation in the brush outline preview when the active dynamics preset drives size randomly.
-- **Preview Random Rotation**: Shows randomised rotation variation in the brush outline preview when the active dynamics preset drives angle randomly.
 
-#### Stroke Behaviour (overflow)
-- **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
-- **Simple Brush Boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
+
 

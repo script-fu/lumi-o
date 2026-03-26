@@ -3,15 +3,15 @@ title: "Refactoring di nuovo"
 type: docs
 weight: 5
 ---
-Man mano che la libreria helper cresce, diventa più difficile seguirla a colpo d'occhio. Effettuare nuovamente il refactoring per mantenere ciascuna funzione piccola e monouso.
+As the helper library grows, it becomes harder to follow at a glance. Refactor again to keep each function small and single-purpose.
 
 ### Abbattere la complessità
 
-Per rendere la funzione più facile da seguire e gestire, suddividila in funzioni più piccole e mirate. Inizia separando la convalida dal routing dei messaggi.
+To make the function easier to follow and maintain, break it down into smaller, focused functions. Start by separating validation from message routing.
 
 ### Crea una funzione di convalida
 
-Possiamo prendere la parte della funzione che convalida gli argomenti `message` e `output` e spostarla in una funzione separata. In questo modo, la funzione principale `send-message` non deve preoccuparsi della convalida, rendendola più facile da seguire.
+We can take the part of the function that validates the `message` and `output` arguments and move it into a separate function. This way, the core `send-message` function doesn’t need to worry about validation, making it easier to follow.
 
 ```scheme
 (define (validate-message message output)
@@ -26,7 +26,7 @@ Possiamo prendere la parte della funzione che convalida gli argomenti `message` 
 
 ### Semplifica l'invio dei messaggi
 
-Ora che la convalida è stata spostata in una funzione separata, la funzione `send-message` può concentrarsi solo sull'invio del messaggio. Sarà molto più semplice, poiché si occuperà solo del compito specifico di indirizzare il messaggio alla destinazione corretta.
+Now that the validation has been moved to a separate function, the `send-message` function can focus on just sending the message. It will be much simpler, as it only handles the specific task of directing the message to the correct destination.
 
 ```scheme
 (define (send-message message output)
@@ -34,7 +34,7 @@ Ora che la convalida è stata spostata in una funzione separata, la funzione `se
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Ora che la convalida è stata spostata in una funzione separata, la funzione `se
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
-### Ulteriore analisi: separare ciascun gestore di output
+### Breaking Down Further: Separate Each Output Handler
 
-Ogni tipo di output del messaggio (GUI, Console errori, Terminale) può essere spostato nella propria funzione. Ciò consente test, modifiche e potenziali estensioni più semplici in futuro.
+Each type of message output (GUI, Message console, Terminal) can be moved into its own function. This allows for easier testing, modification, and potential extension in the future.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,13 +75,13 @@ Ogni tipo di output del messaggio (GUI, Console errori, Terminale) può essere s
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Riutilizzo della convalida in ciascuna funzione di invio
 
-Poiché la convalida è una parte importante per garantire che sia il messaggio che l'output siano corretti, è opportuno che ciascuna funzione `send-*` esegua la propria convalida. Ciò garantisce che, indipendentemente dall'output chiamato, controlliamo sempre prima gli input.
+Poiché la convalida è una parte importante per garantire che sia il messaggio che l'output siano corretti, è opportuno che ciascuna funzione `send-*` esegua la propria convalida. This ensures that no matter which output is called, we always check the inputs first.
 
 ```scheme
 (define (send-to-gui message)
@@ -102,17 +102,17 @@ Poiché la convalida è una parte importante per garantire che sia il messaggio 
   (display message))
 ```
 
-Nota che abbiamo rimosso la convalida dalla funzione di invio del messaggio e spostato la responsabilità su ogni singola funzione di output. Questa modifica garantisce che ciascuna destinazione (GUI, Console errori, Terminale) gestisca la propria convalida, semplificando la funzione di invio del messaggio e mantenendo la logica di convalida più vicina a dove è necessaria.
+See that we've removed the validation from the send-message function and shifted the responsibility to each individual output function. Questa modifica garantisce che ciascuna destinazione (GUI, console messaggi, terminale) gestisca la propria convalida, semplificando la funzione di invio del messaggio e mantenendo la logica di convalida più vicina a dove è necessaria.
 
 Questo approccio può semplificare la funzione send-message, rendendola un _dispatcher_, garantendo al contempo che ciascuna funzione send-to-* convalidi correttamente il messaggio prima dell'elaborazione.
 
-Spostando la convalida in ciascuna funzione send-to-*, le abbiamo rese riutilizzabili come funzioni autonome. Ciò significa che possiamo chiamare direttamente qualsiasi funzione send-to-gui, send-to-error-console o send-to-terminal senza fare affidamento sulla funzione send-message dispatcher. Ognuna di queste funzioni ora gestisce completamente la propria logica e può essere utilizzata indipendentemente in altre parti del codice o in altri plug-in, rendendo il codice più modulare e flessibile.
+By moving the validation into each send-to-* function, we’ve made them reusable as standalone functions. Ciò significa che possiamo chiamare direttamente qualsiasi funzione send-to-gui, send-to-error-console o send-to-terminal senza fare affidamento sulla funzione send-message dispatcher. Ognuna di queste funzioni ora gestisce completamente la propria logica e può essere utilizzata indipendentemente in altre parti del codice o in altri plug-in, rendendo il codice più modulare e flessibile.
 
 ## Vantaggi del refactoring
 
-- **Chiara separazione delle preoccupazioni**: ogni funzione ora gestisce solo una responsabilità, rendendo il codice più facile da comprendere.
-- **Estensibilità**: aggiungere nuovi tipi di output è semplice. È sufficiente definire una nuova funzione come `send-to-file` o `send-to-logger`, quindi aggiungere un caso nell'istruzione `cond`.
-- **Riutilizzabilità**: ciascuna di queste funzioni di gestione dell'output può essere riutilizzata altrove nel progetto o condivisa tra più plug-in.
+- **Clear Separation of Concerns**: Each function now handles only one responsibility, making the code easier to understand.
+- **Extensibility**: Adding new output types is straightforward. You simply define a new function like `send-to-file` or `send-to-logger`, and then add a case in the `cond` statement.
+- **Reusability**: Each of these output handling functions can be reused elsewhere in your project or shared among multiple plug-ins.
 - **Coerenza**: riutilizzando la funzione di convalida in ciascuna funzione `send-to-*`, ti assicuri che tutti gli output siano correttamente convalidati, rendendo il codice più robusto.
 
 Una versione della libreria rifattorizzata:
@@ -125,7 +125,7 @@ Una versione della libreria rifattorizzata:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ Una versione della libreria rifattorizzata:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

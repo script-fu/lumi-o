@@ -11,7 +11,7 @@ Lumi의 기능 세트는 비파괴적인 레이어 기반 편집을 기반으로
   {{< card link="file-format" title="파일 형식(.lum)" icon="document-text" subtitle="레이어, 메타데이터, ICC 프로필 및 복구 데이터를 저장하는 개방형 컨테이너 형식입니다." >}}
   {{< card link="recovery" title="파일 복구" icon="refresh" subtitle="자동 증분 복구 스냅샷은 충돌 및 정전으로부터 작업을 보호합니다." >}}
   {{< card link="layers" title="레이어 및 비파괴 편집" icon="collection" subtitle="블렌드 모드, 마스크, 그룹 및 비파괴 조정 레이어를 사용한 레이어 기반 합성." >}}
-  {{< card link="paintbrush" title="페인트브러시 도구" icon="pencil-alt" subtitle="안정화, 스무딩 및 다중 헤드 브러시 형성을 통한 압력, 속도, 기울기 및 간격 역학." >}}
+  {{< card link="paintbrush" title="브러시 도구" icon="pencil-alt" subtitle="안정화, 스무딩 및 다중 헤드 브러시 형성을 통한 압력, 속도, 기울기 및 간격 역학." >}}
   {{< card link="palette-editor" title="팔레트 에디터" icon="color-swatch" subtitle="전체 스펙트럼 및 제한된 팔레트를 포괄하는 번들 세트를 사용하여 명명된 안료 팔레트를 생성하고 관리합니다." >}}
   {{< card link="palette-map" title="팔레트 맵" icon="view-grid" subtitle="직접 색상 선택 및 탐색에 사용되는 대화형 2D 그리드 매핑 팔레트 안료를 축에 사용합니다." >}}
   {{< card link="palette-mixer" title="팔레트 믹서" icon="adjustments" subtitle="시각적 간격 미리보기를 통해 활성 팔레트의 색상, 채도, 톤별로 안료를 혼합하세요." >}}

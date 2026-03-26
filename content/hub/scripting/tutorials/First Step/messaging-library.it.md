@@ -3,7 +3,7 @@ title: "Libreria di messaggistica"
 type: docs
 weight: 6
 ---
-Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. Queste funzioni ora costituiscono la base di una **Libreria di messaggistica**, progettata per gestire l'output verso destinazioni diverse, come la GUI, la Console degli errori e il Terminale.
+Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. Queste funzioni ora costituiscono la base di una **Libreria di messaggistica**, progettata per gestire l'output verso destinazioni diverse, come la GUI, la console dei messaggi e il terminale del sistema operativo.
 
 ### Perché una libreria di messaggistica?
 
@@ -14,7 +14,7 @@ Man mano che le nostre esigenze crescono, la gestione dei messaggi su più outpu
 La Libreria Messaggistica attualmente include le seguenti funzioni:
 
 - **send-to-gui**: invia messaggi alla finestra di dialogo della GUI di Lumi.
-- **send-to-error-console**: invia messaggi alla console degli errori Lumi.
+- **send-to-error-console**: invia messaggi alla console Lumi Message.
 - **send-to-terminal**: invia messaggi alla finestra del terminale.
 - **send-message**: una funzione dispatcher che indirizza i messaggi all'output appropriato.
 - **validate-message**: garantisce che il messaggio e l'output siano validi prima dell'invio.

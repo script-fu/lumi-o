@@ -8,7 +8,7 @@ Para pintura digital em Lumi, recomenda-se uma **configuração de pressão line
 - Mantenha as curvas de pressão/entrada no Lumi principalmente lineares.
 - Modele a sensação com o próprio pincel, pois a dinâmica do pincel já pode ser não linear.
 
-Recomendamos manter a curva de pressão linear padrão no nível do driver do sistema operacional. A composição de múltiplas curvas não lineares geralmente leva a um comportamento de entrada imprevisível; ao manter o driver neutro, você garante que quaisquer ajustes feitos no Lumi·o permaneçam intuitivos e reproduzíveis. Um ligeiro ajuste na curva global da Lumi ainda pode ser razoável quando necessário.
+Recomendamos manter a curva de pressão linear padrão no nível do driver do sistema operacional. A composição de múltiplas curvas não lineares geralmente leva a um comportamento de entrada imprevisível; ao manter o driver neutro, você garante que quaisquer ajustes feitos no Lumi-o permaneçam intuitivos e reproduzíveis. Um ligeiro ajuste na curva global da Lumi ainda pode ser razoável quando necessário.
 
 ## Curva global da caneta em Lumi
 
