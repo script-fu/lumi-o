@@ -2,9 +2,9 @@
 title: "特徵"
 type: docs
 ---
-Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在非破坏性、基于图层的编辑基础上。
+Lumi 的功能集專注於數位繪畫和結構化插圖工作流程，建立在非破壞性、基於圖層的編輯基礎上。
 
-本节介绍 Lumi 中可用的核心功能以及它们在界面中的位置。
+本節介紹 Lumi 中可用的核心功能以及它們在介面中的位置。
 
 {{< cards >}}
   {{< card link="brush-caching" title="刷機快取" icon="lightning-bolt" subtitle="為最喜歡的畫筆保存預熱緩存，以便它們盡快感覺更快。" >}}
@@ -17,6 +17,6 @@ Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在
   {{< card link="palette-mixer" title="調色板混合器" icon="adjustments" subtitle="透過視覺間隙預覽，按色調、飽和度和色調混合活動調色板中的顏料。" >}}
   {{< card link="scripting" title="方案腳本" icon="code" subtitle="使用嵌入式方案解釋器自動化工作流程並擴展 Lumi。" >}}
   {{< card link="spectral-color" title="光譜混色" icon="beaker" subtitle="使用光譜上採樣進行物理精確的顏料混合，產生逼真的油漆行為。" >}}
-  {{< card link="warp-tool" title="變形工具" icon="cursor-click" subtitle="使用畫筆描邊自由置換像素。將整個圖層群組作為一項進行變形，對所有嵌套圖層和蒙版套用相同的變換。" >}}
+  {{< card link="warp-tool" title="扭曲工具" icon="cursor-click" subtitle="使用畫筆描邊自由置換像素。將整個圖層群組作為一項進行變形，對所有嵌套圖層和蒙版套用相同的變換。" >}}
   {{< card link="workspaces" title="工作空間" icon="view-boards" subtitle="儲存並切換完整的 UI 環境：面板佈局、工具設定、裝置配置、主題和調色板 - 每個工作區獨立。" >}}
 {{< /cards >}}

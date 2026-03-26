@@ -2,7 +2,7 @@
 title: "Workflow-Verknüpfungen"
 type: docs
 ---
-Lumi·o ist für einen Shortcut-gesteuerten Workflow konzipiert. Sobald Sie Ihr Muskelgedächtnis für diese Befehle aufgebaut haben, können Sie deutlich schneller auf Ihrer Leinwand und Ihren Werkzeugen navigieren.
+Lumi-o ist für einen Shortcut-gesteuerten Workflow konzipiert. Sobald Sie Ihr Muskelgedächtnis für diese Befehle aufgebaut haben, können Sie deutlich schneller auf Ihrer Leinwand und Ihren Werkzeugen navigieren.
 
 ## Grundlegende Canvas-Steuerelemente
 

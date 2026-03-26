@@ -34,7 +34,7 @@ weight: 5
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ weight: 5
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Далее: отдельный обработчик вывода
 
-Каждый тип вывода сообщений (графический интерфейс, консоль ошибок, терминал) можно переместить в отдельную функцию. Это упрощает тестирование, модификацию и потенциальное расширение в будущем.
+Каждый тип вывода сообщений (графический интерфейс, консоль сообщений, терминал) можно поместить в отдельную функцию. Это упрощает тестирование, модификацию и потенциальное расширение в будущем.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ weight: 5
   (display message))
 ```
 
-Обратите внимание, что мы удалили проверку из функции отправки сообщения и переложили ответственность на каждую отдельную функцию вывода. Это изменение гарантирует, что каждый пункт назначения (графический интерфейс пользователя, консоль ошибок, терминал) выполняет собственную проверку, оптимизируя функцию отправки сообщения и сохраняя логику проверки ближе к тому месту, где это необходимо.
+Обратите внимание, что мы удалили проверку из функции отправки сообщения и переложили ответственность на каждую отдельную функцию вывода. Это изменение гарантирует, что каждый пункт назначения (графический интерфейс пользователя, консоль сообщений, терминал) выполняет собственную проверку, оптимизируя функцию отправки сообщения и сохраняя логику проверки ближе к тому месту, где это необходимо.
 
 Этот подход может упростить функцию отправки сообщения, сделав ее _диспетчером_, гарантируя при этом, что каждая функция отправки-* правильно проверяет сообщение перед обработкой.
 
@@ -125,7 +125,7 @@ weight: 5
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

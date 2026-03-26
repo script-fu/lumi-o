@@ -3,11 +3,11 @@ title: "Il plugin filtro"
 type: docs
 weight: 2
 ---
-Abbiamo utilizzato un plug-in _procedure_ per il tutorial [Primo passaggio](../../first-step/). Questi tipi di plug-in funzionano senza bisogno di un'immagine o di un elemento disegnabile come input. Di solito, utilizziamo un plug-in per modificare un'immagine e i suoi disegni. Plug-in come questi sono chiamati plug-in _filter_.
+We used a _procedure_ plug-in for the [First Step](../../first-step/) tutorial. Those types of plug-ins work without needing an image or drawable as input. Usually, we use a plug-in to change an image and its drawables. Plug-ins like these are called _filter_ plug-ins.
 
 ### Cos'è un Drawable?
 
-Un **disegnabile** in Lumi si riferisce a un elemento dell'immagine su cui è possibile disegnare, come un livello o un canale. I plug-in di filtro in genere funzionano su questi elementi.
+A **drawable** in Lumi refers to an image element that can be drawn on, such as a layer or channel. Filter plug-ins typically operate on these elements.
 
 ### Un semplice esempio di plug-in di filtro
 
@@ -39,33 +39,33 @@ Un **disegnabile** in Lumi si riferisce a un elemento dell'immagine su cui è po
   "<Image>/Plug-in")
 ```
 
-Copia il testo e salvalo come `simple-filter-plug-in.scm` in una cartella denominata `simple-filter-plug-in` all'interno di una delle cartelle dei plug-in di Lumi. Una cartella di plug-in Lumi è _qualsiasi_ cartella elencata in:
- **Lumi > Modifica > Preferenze > Cartelle > Plug-in**
+Copy the text and save it as `simple-filter-plug-in.scm` in a folder called `simple-filter-plug-in` within one of Lumi's plug-ins folders. A Lumi plug-ins folder is _any_ folder listed under:
+ **Lumi > Edit > Preferences > Folders > Plug-ins**
 
-In Linux, fare clic con il pulsante destro del mouse sul file `simple-filter-plug-in.scm`, andare su **Proprietà > Autorizzazioni** e selezionare **Consenti l'esecuzione del file come programma**. Una volta che il file è nel posto giusto, eseguibile e privo di errori di sintassi, al riavvio di Lumi apparirà nella barra di intestazione del menu in alto, all'interno di un menu chiamato **Plug-in**.
+In Linux, right-click the `simple-filter-plug-in.scm` file, go to **Properties > Permissions**, and check **Allow executing file as program**. Una volta che il file è nel posto giusto, eseguibile e privo di errori di sintassi, al riavvio di Lumi apparirà nella barra di intestazione del menu in alto, all'interno di un menu chiamato **Plug-in**.
 
 ### Esecuzione del plug-in
 
-1. Apri un'immagine (questo plug-in del filtro richiede un'immagine per funzionare).
-2. Aprire **Finestre > Finestre di dialogo agganciabili > Console errori** per visualizzare un messaggio.
-3. Selezionare **Demo plug-in filtro semplice** dal menu **Plug-in**.
-4. Uno dei livelli selezionati avrà i colori invertiti e verrà stampato un messaggio sulla console degli errori.
+1. Open an image (this filter plug-in requires an image to work).
+2. Open **Tools > Debug > Message console** to see a message.
+3. Select **Simple Filter Plug-in Demo** from the **Plug-in** menu.
+4. One of the selected layers will have its colors inverted and a message will be printed to the error console.
 
 ### Modifica del plug-in
 
-È possibile personalizzare il plug-in modificando il relativo file `.scm`. Ad esempio, per modificare il messaggio visualizzato:
+You can customize the plug-in by editing its `.scm` file. Ad esempio, per modificare il messaggio visualizzato:
 
-1. Aprire il file e individuare la riga che definisce `message`.
-2. Sostituisci `"hello, world"` con il testo personalizzato.
+1. Open the file and locate the line defining `message`.
+2. Replace `"hello, world"` with your custom text.
 3. Salvare il file.
 
-Nella versione 3 di Lumi, i plug-in non necessitano di aggiornamento affinché le modifiche salvate abbiano effetto. È sufficiente eseguire nuovamente il plug-in per visualizzare il messaggio aggiornato.
+In Lumi version 3, plug-ins do not need refreshing for saved changes to take effect. Simply re-run the plug-in to see the updated message.
 
 ### Esame dei plug-in
 
-#### Linea Shebang
+#### Shebang Line
 
-La prima riga garantisce che lo script funzioni come plug-in in Lumi 3:
+The first line ensures the script works as a plug-in in Lumi 3:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
@@ -74,7 +74,7 @@ La prima riga garantisce che lo script funzioni come plug-in in Lumi 3:
 
 #### Definizione della procedura
 
-La procedura accetta due argomenti: l'immagine attiva e i drawable selezionati.
+The procedure accepts two arguments: the active image and the selected drawables.
 
 ```scheme
 (define (scheme-simple-filter-plug-in image drawables)
@@ -82,7 +82,7 @@ La procedura accetta due argomenti: l'immagine attiva e i drawable selezionati.
 
 #### Logica fondamentale
 
-Un'istruzione `let` definisce una variabile ed esegue operazioni sul drawable.
+A `let` statement defines a variable and performs operations on the drawable.
 
 ```scheme
 (let ((message "hello, world"))
@@ -92,7 +92,7 @@ Un'istruzione `let` definisce una variabile ed esegue operazioni sul drawable.
 
 ### Registrazione del plug-in
 
-Il plug-in è registrato con Lumi come plug-in filtro:
+The plug-in is registered with Lumi as a filter plug-in:
 
 ```scheme
 (scheme-register-filter
@@ -108,7 +108,7 @@ Il plug-in è registrato con Lumi come plug-in filtro:
 
 #### Registrazione nel menu
 
-Questa riga specifica la posizione del menu per il plug-in:
+This line specifies the menu location for the plug-in:
 
 ```scheme
 (scheme-menu-register
@@ -118,11 +118,11 @@ Questa riga specifica la posizione del menu per il plug-in:
 
 ### Risoluzione dei problemi
 
-Se un plug-in non viene visualizzato, controllane la posizione, il nome e la proprietà eseguibile.
+If a plug-in does not appear, check its location, name, and executable property.
 
 La posizione deve trovarsi in un percorso di ricerca del plug-in.
-Il nome del file deve corrispondere al nome della cartella che lo contiene.
+The file name must match the name of the containing folder.
 Il file deve essere impostato come eseguibile.
 
 
-La **Console degli errori** è uno strumento prezioso per la risoluzione dei problemi relativi ai plug-in personalizzati. Se il tuo plug-in non si comporta come previsto, controlla qui i messaggi di errore o i registri. La finestra **Terminale** può anche fornire informazioni di debug e segnalare problemi di caricamento.
+The **Message console** is a valuable tool for troubleshooting custom plug-ins. If your plug-in doesn't behave as expected, check here for error messages or logs. The **Terminal** window can also provide debugging information and report loading issues.

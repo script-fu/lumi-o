@@ -34,7 +34,7 @@ weight: 5
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ weight: 5
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### พังทลายเพิ่มเติม: แยกตัวจัดการเอาต์พุตแต่ละตัว
 
-เอาต์พุตข้อความแต่ละประเภท (GUI, Error Console, Terminal) สามารถย้ายไปยังฟังก์ชันของตัวเองได้ ซึ่งช่วยให้ทดสอบ แก้ไข และขยายศักยภาพได้ง่ายขึ้นในอนาคต
+เอาต์พุตข้อความแต่ละประเภท (GUI, คอนโซลข้อความ, เทอร์มินัล) สามารถย้ายไปยังฟังก์ชันของตัวเองได้ ซึ่งช่วยให้ทดสอบ แก้ไข และขยายศักยภาพได้ง่ายขึ้นในอนาคต
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ weight: 5
   (display message))
 ```
 
-ดูว่าเราได้ลบการตรวจสอบความถูกต้องออกจากฟังก์ชันส่งข้อความแล้ว และเปลี่ยนความรับผิดชอบไปที่ฟังก์ชันเอาต์พุตแต่ละรายการ การเปลี่ยนแปลงนี้ทำให้มั่นใจได้ว่าแต่ละปลายทาง (GUI, Error Console, Terminal) จะจัดการการตรวจสอบของตัวเอง ปรับปรุงฟังก์ชันส่งข้อความ และรักษาตรรกะการตรวจสอบให้ใกล้กับจุดที่จำเป็นมากขึ้น
+ดูว่าเราได้ลบการตรวจสอบความถูกต้องออกจากฟังก์ชันส่งข้อความแล้ว และเปลี่ยนความรับผิดชอบไปที่ฟังก์ชันเอาต์พุตแต่ละรายการ การเปลี่ยนแปลงนี้ทำให้แน่ใจได้ว่าแต่ละปลายทาง (GUI, คอนโซลข้อความ, เทอร์มินัล) จะจัดการการตรวจสอบของตัวเอง ปรับปรุงฟังก์ชันส่งข้อความให้มีประสิทธิภาพมากขึ้น และรักษาตรรกะการตรวจสอบให้ใกล้กับจุดที่จำเป็นมากขึ้น
 
 วิธีการนี้สามารถลดความซับซ้อนของฟังก์ชันส่งข้อความ ทำให้เป็น _dispatcher_ ในขณะที่ทำให้มั่นใจได้ว่าแต่ละฟังก์ชัน send-to-* จะตรวจสอบข้อความอย่างถูกต้องก่อนประมวลผล
 
@@ -125,7 +125,7 @@ weight: 5
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

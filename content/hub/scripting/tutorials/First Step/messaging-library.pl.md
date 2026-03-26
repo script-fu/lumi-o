@@ -3,7 +3,7 @@ title: "Biblioteka wiadomości"
 type: docs
 weight: 6
 ---
-Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. Funkcje te stanowią obecnie podstawę **Biblioteki wiadomości**, zaprojektowanej do obsługi danych wyjściowych do różnych miejsc docelowych, takich jak GUI, konsola błędów i terminal.
+Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. Funkcje te stanowią obecnie podstawę **Biblioteki wiadomości**, zaprojektowanej do obsługi danych wyjściowych do różnych miejsc docelowych, takich jak GUI, konsola wiadomości i terminal systemu operacyjnego.
 
 ### Dlaczego biblioteka wiadomości?
 
@@ -14,7 +14,7 @@ W miarę wzrostu naszych potrzeb obsługa komunikatów przesyłanych na wiele wy
 Biblioteka wiadomości zawiera obecnie następujące funkcje:
 
 - **send-to-gui**: Wysyła wiadomości do okna dialogowego GUI Lumi.
-- **send-to-error-console**: Wysyła wiadomości do konsoli błędów Lumi.
+- **send-to-error-console**: Wysyła wiadomości do konsoli Lumi Message.
 - **wyślij do terminala**: Wysyła wiadomości do okna terminala.
 - **send-message**: Funkcja dyspozytora, która kieruje wiadomości do odpowiedniego wyjścia.
 - **validate-message**: Zapewnia, że ​​wiadomość i dane wyjściowe są prawidłowe przed wysłaniem.

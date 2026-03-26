@@ -3,11 +3,11 @@ title: "Caricamento"
 type: docs
 weight: 3
 ---
-Non appena una funzione di supporto cresce, spostala in un piccolo file di libreria. Ciò mantiene il plug-in focalizzato e rende l'helper riutilizzabile su più plug-in.
+As soon as a helper function grows, move it into a small library file. That keeps the plug-in focused and makes the helper reusable across multiple plug-ins.
 
-### Make a Library Function
+### Crea una funzione di libreria
 
-Possiamo prendere la funzione di invio del messaggio e creare un nuovo file con quello come contenuto. Salva il file nella cartella del repository, non nella parte dei plugin, magari vicino al livello più alto;
+We can take the send-message function and make a new file with that as its content. Save the file into your repo folder, not the plugins part, perhaps near the top level;
 
 ```plaintext
 /home/your-username/code/
@@ -19,21 +19,21 @@ Possiamo prendere la funzione di invio del messaggio e creare un nuovo file con 
                   └── hello-world.scm
 ```
 
-- **scheme/**: questa è la directory principale in cui memorizzare il codice Scheme.
-  - **library/**: qui risiedono le funzioni condivise come `send-message.scm`.
-  - **plug-in/**: qui sono memorizzati i tuoi plug-in individuali.
+- **scheme/**: This is your main directory for storing your Scheme code.
+  - **library/**: This is where shared functions like `send-message.scm` live.
+  - **plug-ins/**: This is where your individual plug-ins are stored.
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
-Example of a library function send-message.scm
+Esempio di una funzione di libreria send-message.scm
 
 ```scheme
 ;; Function to handle message output to various destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Set the handler to Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -48,13 +48,13 @@ Example of a library function send-message.scm
        ;; Terminal output is handled with display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
-### Load the Library Function
+### Carica la funzione di libreria
 
-Possiamo caricare quella funzione di libreria con il comando Scheme `load`;
+We can load that library function with the Scheme `load` command;
 
 Caricamento di un file di libreria:
 
@@ -81,4 +81,4 @@ Caricamento di un file di libreria:
   "<Image>/Funky")
 ```
 
-Ehi! Ora abbiamo qualcosa di più semplice e più breve da leggere, che si descrive da solo senza commenti. Questa è la conclusione soddisfacente del refactoring.
+Ehi! We've now got something simpler and shorter to read, that kind of describes itself without comments. This is the satisfying conclusion of refactoring.

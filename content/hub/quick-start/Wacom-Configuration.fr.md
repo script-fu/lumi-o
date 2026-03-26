@@ -8,7 +8,7 @@ Pour la peinture numérique dans Lumi, une simple **configuration de pression li
 - Gardez les courbes de pression/entrée dans Lumi principalement linéaires.
 - Façonnez la sensation avec le pinceau lui-même, car la dynamique du pinceau peut déjà être non linéaire.
 
-Nous recommandons de conserver la courbe de pression linéaire par défaut au niveau du pilote du système d'exploitation. La combinaison de plusieurs courbes non linéaires conduit souvent à un comportement d'entrée imprévisible ; en gardant le conducteur neutre, vous garantissez que tous les ajustements effectués dans Lumi·o restent intuitifs et reproductibles. Un léger ajustement de la courbe globale de Lumi peut toujours être raisonnable en cas de besoin.
+Nous recommandons de conserver la courbe de pression linéaire par défaut au niveau du pilote du système d'exploitation. La combinaison de plusieurs courbes non linéaires conduit souvent à un comportement d'entrée imprévisible ; en gardant le conducteur neutre, vous garantissez que tous les ajustements effectués dans Lumi-o restent intuitifs et reproductibles. Un léger ajustement de la courbe globale de Lumi peut toujours être raisonnable en cas de besoin.
 
 ## Courbe globale du stylet dans Lumi
 

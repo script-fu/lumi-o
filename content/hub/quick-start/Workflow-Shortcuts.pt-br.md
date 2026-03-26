@@ -2,7 +2,7 @@
 title: "Atalhos de fluxo de trabalho"
 type: docs
 ---
-O Lumi·o foi desenvolvido para um fluxo de trabalho baseado em atalhos. Depois de estabelecer a memória muscular para esses comandos, você poderá navegar pela tela e pelas ferramentas com muito mais rapidez.
+O Lumi-o foi desenvolvido para um fluxo de trabalho baseado em atalhos. Depois de estabelecer a memória muscular para esses comandos, você poderá navegar pela tela e pelas ferramentas com muito mais rapidez.
 
 ## Controles essenciais do Canvas
 

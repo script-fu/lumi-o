@@ -8,7 +8,7 @@ För digital målning i Lumi rekommenderas en enkel **linjär tryckinställning*
 - Håll tryck/ingångskurvor i Lumi mestadels linjära.
 - Forma känslan med själva borsten, eftersom borstdynamiken redan kan vara olinjär.
 
-Vi rekommenderar att den linjära standardtryckkurvan bibehålls på drivrutinnivån för operativsystemet. Att sammansätta flera icke-linjära kurvor leder ofta till oförutsägbart indatabeteende; genom att hålla föraren neutral säkerställer du att alla justeringar som görs inom Lumi·o förblir intuitiva och reproducerbara. En liten justering av Lumis globala kurva kan ändå vara rimlig när det behövs.
+Vi rekommenderar att den linjära standardtryckkurvan bibehålls på drivrutinnivån för operativsystemet. Att sammansätta flera icke-linjära kurvor leder ofta till oförutsägbart indatabeteende; genom att hålla föraren neutral säkerställer du att alla justeringar som görs inom Lumi-o förblir intuitiva och reproducerbara. En liten justering av Lumis globala kurva kan ändå vara rimlig när det behövs.
 
 ## Global Stylus Curve i Lumi
 

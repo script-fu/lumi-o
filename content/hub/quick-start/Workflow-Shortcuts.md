@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 ---
 
-Lumi·o is built for a shortcut-driven workflow. Once you establish muscle memory for these commands, you can navigate your canvas and tools significantly faster.
+Lumi-o is built for a shortcut-driven workflow. Once you establish muscle memory for these commands, you can navigate your canvas and tools significantly faster.
 
 ## Essential Canvas Controls
 

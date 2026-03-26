@@ -19,7 +19,7 @@ Przykład:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,7 +33,7 @@ Przykład:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -77,7 +77,7 @@ Takie podejście zapewnia, że funkcja zawsze otrzymuje prawidłowe dane wejści
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,12 +91,12 @@ Takie podejście zapewnia, że funkcja zawsze otrzymuje prawidłowe dane wejści
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 W tej wersji:
-- Funkcja sprawdza najpierw, czy `message` jest pusty lub nieprawidłowy. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z akceptowanych wartości (`gui`, `error-console`, lub `terminal`).
+- Funkcja sprawdza najpierw, czy `message` jest pusty lub nieprawidłowy. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z zaakceptowanych wartości (`gui`, `error-console`, lub `terminal`).
 - Jeżeli obydwa sprawdzenia przebiegną pomyślnie, wiadomość zostanie wysłana na odpowiednie wyjście. W przeciwnym razie zostanie wyświetlony komunikat o błędzie z jasnym wyjaśnieniem.
 - Przeprowadzana jest dodatkowa kontrola, aby upewnić się, że wiadomość jest również ciągiem znaków.
 

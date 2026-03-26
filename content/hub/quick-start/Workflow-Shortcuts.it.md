@@ -2,7 +2,7 @@
 title: "Scorciatoie del flusso di lavoro"
 type: docs
 ---
-Lumi·o è progettato per un flusso di lavoro basato sulle scorciatoie. Una volta stabilita la memoria muscolare per questi comandi, puoi navigare nella tela e negli strumenti molto più velocemente.
+Lumi-o è progettato per un flusso di lavoro basato sulle scorciatoie. Una volta stabilita la memoria muscolare per questi comandi, puoi navigare nella tela e negli strumenti molto più velocemente.
 
 ## Controlli essenziali della tela
 

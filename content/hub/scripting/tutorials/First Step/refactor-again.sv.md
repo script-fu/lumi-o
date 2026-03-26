@@ -34,7 +34,7 @@ Nu när valideringen har flyttats till en separat funktion kan `send-message`-fu
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Nu när valideringen har flyttats till en separat funktion kan `send-message`-fu
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Nedbrytning ytterligare: Separera varje utdatahanterare
 
-Varje typ av meddelandeutgång (GUI, Error Console, Terminal) kan flyttas till sin egen funktion. Detta möjliggör enklare testning, modifiering och potentiell förlängning i framtiden.
+Varje typ av meddelandeutgång (GUI, meddelandekonsol, terminal) kan flyttas till sin egen funktion. Detta möjliggör enklare testning, modifiering och potentiell förlängning i framtiden.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ Varje typ av meddelandeutgång (GUI, Error Console, Terminal) kan flyttas till s
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ Eftersom validering är en viktig del för att säkerställa att både meddeland
   (display message))
 ```
 
-Se att vi har tagit bort valideringen från skicka-meddelande-funktionen och flyttat ansvaret till varje enskild utdatafunktion. Denna ändring säkerställer att varje destination (GUI, Error Console, Terminal) hanterar sin egen validering, effektiviserar funktionen för att skicka meddelanden och håller valideringslogiken närmare där den behövs.
+Se att vi har tagit bort valideringen från skicka-meddelande-funktionen och flyttat ansvaret till varje enskild utdatafunktion. Denna ändring säkerställer att varje destination (GUI, meddelandekonsol, terminal) hanterar sin egen validering, effektiviserar funktionen för att skicka meddelanden och håller valideringslogiken närmare där den behövs.
 
 Detta tillvägagångssätt kan förenkla sänd-meddelande-funktionen, vilket gör den till en _dispatcher_, samtidigt som man säkerställer att varje sänd-till-*-funktion validerar meddelandet korrekt innan bearbetning.
 
@@ -125,7 +125,7 @@ En refaktorerad biblioteksversion:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ En refaktorerad biblioteksversion:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

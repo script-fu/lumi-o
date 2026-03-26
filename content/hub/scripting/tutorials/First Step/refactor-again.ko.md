@@ -34,7 +34,7 @@ weight: 5
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ weight: 5
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### 추가 분석: 각 출력 핸들러 분리
 
-각 메시지 출력 유형(GUI, 오류 콘솔, 터미널)을 자체 기능으로 이동할 수 있습니다. 이를 통해 향후 테스트, 수정 및 잠재적인 확장이 더 쉬워집니다.
+각 메시지 출력 유형(GUI, 메시지 콘솔, 터미널)을 자체 기능으로 이동할 수 있습니다. 이를 통해 향후 테스트, 수정 및 잠재적인 확장이 더 쉬워집니다.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ weight: 5
   (display message))
 ```
 
-메시지 보내기 기능에서 유효성 검사를 제거하고 책임을 각 개별 출력 기능으로 옮겼는지 확인하세요. 이러한 변경을 통해 각 대상(GUI, 오류 콘솔, 터미널)이 자체 유효성 검사를 처리하고 메시지 보내기 기능을 간소화하며 유효성 검사 논리를 필요한 위치에 더 가깝게 유지할 수 있습니다.
+메시지 보내기 기능에서 유효성 검사를 제거하고 책임을 각 개별 출력 기능으로 옮겼는지 확인하세요. 이러한 변경을 통해 각 대상(GUI, 메시지 콘솔, 터미널)이 자체 유효성 검사를 처리하고 메시지 보내기 기능을 간소화하며 유효성 검사 논리를 필요한 위치에 더 가깝게 유지할 수 있습니다.
 
 이 접근 방식은 메시지 전송 기능을 단순화하여 _디스패처_로 만드는 동시에 각 전송* 기능이 처리 전에 메시지의 유효성을 올바르게 검사하도록 보장할 수 있습니다.
 
@@ -125,7 +125,7 @@ weight: 5
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ weight: 5
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

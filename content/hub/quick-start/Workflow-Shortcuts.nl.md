@@ -2,7 +2,7 @@
 title: "Workflow-snelkoppelingen"
 type: docs
 ---
-Lumi·o is gebouwd voor een op snelkoppelingen gebaseerde workflow. Zodra u spiergeheugen voor deze opdrachten heeft opgebouwd, kunt u aanzienlijk sneller door uw canvas en gereedschappen navigeren.
+Lumi-o is gebouwd voor een snelkoppelingsgestuurde workflow. Zodra u spiergeheugen voor deze opdrachten heeft opgebouwd, kunt u aanzienlijk sneller door uw canvas en gereedschappen navigeren.
 
 ## Essentiële canvasbedieningen
 

@@ -47,7 +47,7 @@ No Linux, clique com o botão direito no arquivo `simple-filter-plug-in.scm`, v�
 ### Executando o plug-in
 
 1. Abra uma imagem (este plug-in de filtro requer uma imagem para funcionar).
-2. Abra **Windows > Caixas de diálogo encaixáveis ​​> Console de erros** para ver uma mensagem.
+2. Abra **Ferramentas > Depuração > Console de mensagens** para ver uma mensagem.
 3. Selecione **Demonstração de plug-in de filtro simples** no menu **Plug-in**.
 4. Uma das camadas selecionadas terá suas cores invertidas e uma mensagem será impressa no console de erros.
 
@@ -125,4 +125,4 @@ O nome do arquivo deve corresponder ao nome da pasta que o contém.
 O arquivo deve ser definido como executável.
 
 
-O **Error Console** é uma ferramenta valiosa para solucionar problemas de plug-ins personalizados. Se o seu plug-in não se comportar conforme o esperado, verifique aqui se há mensagens de erro ou logs. A janela **Terminal** também pode fornecer informações de depuração e relatar problemas de carregamento.
+O **Console de mensagens** é uma ferramenta valiosa para solucionar problemas de plug-ins personalizados. Se o seu plug-in não se comportar conforme o esperado, verifique aqui se há mensagens de erro ou logs. A janela **Terminal** também pode fornecer informações de depuração e relatar problemas de carregamento.

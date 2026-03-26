@@ -42,12 +42,12 @@ Ein **Zeichenbares** in Lumi bezieht sich auf ein Bildelement, auf das gezeichne
 Kopieren Sie den Text und speichern Sie ihn als `simple-filter-plug-in.scm` in einem Ordner namens `simple-filter-plug-in` in einem der Plug-In-Ordner von Lumi. Ein Lumi-Plug-In-Ordner ist _jeder_ Ordner, der unten aufgeführt ist:
  **Lumi > Bearbeiten > Einstellungen > Ordner > Plug-ins**
 
-Klicken Sie unter Linux mit der rechten Maustaste auf die Datei `simple-filter-plug-in.scm`, gehen Sie zu **Eigenschaften > Berechtigungen** und aktivieren Sie **Ausführung der Datei als Programm zulassen**. Sobald sich die Datei am richtigen Ort befindet, ausführbar und frei von Syntaxfehlern ist, wird sie beim Neustart von Lumi in der oberen Menükopfleiste in einem Menü namens **Plug-in** angezeigt.
+Klicken Sie unter Linux mit der rechten Maustaste auf die Datei `simple-filter-plug-in.scm`, gehen Sie zu **Eigenschaften > Berechtigungen** und aktivieren Sie **Ausführung der Datei als Programm zulassen**. Sobald sich die Datei an der richtigen Stelle befindet, ausführbar und frei von Syntaxfehlern ist, wird sie beim Neustart von Lumi in der oberen Menükopfleiste in einem Menü namens **Plug-in** angezeigt.
 
 ### Ausführen des Plug-Ins
 
 1. Öffnen Sie ein Bild (für dieses Filter-Plug-in ist ein Bild erforderlich).
-2. Öffnen Sie **Windows > Andockbare Dialoge > Fehlerkonsole**, um eine Meldung anzuzeigen.
+2. Öffnen Sie **Tools > Debug > Nachrichtenkonsole**, um eine Nachricht anzuzeigen.
 3. Wählen Sie **Simple Filter Plug-in Demo** aus dem **Plug-in**-Menü.
 4. Die Farben einer der ausgewählten Ebenen werden invertiert und eine Meldung wird an die Fehlerkonsole ausgegeben.
 
@@ -65,7 +65,7 @@ In Lumi Version 3 müssen Plug-Ins nicht aktualisiert werden, damit gespeicherte
 
 #### Shebang-Linie
 
-Die erste Zeile stellt sicher, dass das Skript als Plug-In in Lumi 3 funktioniert:
+Die erste Zeile stellt sicher, dass das Skript als Plug-in in Lumi 3 funktioniert:
 
 ```scheme
 # !/usr/bin/env lumi-scheme-interpreter-0.1
@@ -125,4 +125,4 @@ Der Dateiname muss mit dem Namen des enthaltenen Ordners übereinstimmen.
 Die Datei muss als ausführbar festgelegt sein.
 
 
-Die **Fehlerkonsole** ist ein wertvolles Tool zur Fehlerbehebung bei benutzerdefinierten Plug-Ins. Wenn sich Ihr Plug-in nicht wie erwartet verhält, suchen Sie hier nach Fehlermeldungen oder Protokollen. Das **Terminal**-Fenster kann auch Debugging-Informationen bereitstellen und Ladeprobleme melden.
+Die **Nachrichtenkonsole** ist ein wertvolles Tool zur Fehlerbehebung bei benutzerdefinierten Plug-Ins. Wenn sich Ihr Plug-in nicht wie erwartet verhält, suchen Sie hier nach Fehlermeldungen oder Protokollen. Das **Terminal**-Fenster kann auch Debugging-Informationen bereitstellen und Ladeprobleme melden.

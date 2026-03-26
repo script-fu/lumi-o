@@ -2,11 +2,11 @@
 title: "Narzędzie Pędzel"
 type: docs
 ---
-Pędzel to podstawowe narzędzie do malowania, zaprojektowane z myślą o responsywnym, inteligentnym malowaniu pędzlem z pełną kontrolą nad naciskiem, prędkością, pochyleniem i dynamiką odstępów.
+Pędzel to podstawowe narzędzie do malowania i rysowania, zaprojektowane z myślą o responsywnym, inteligentnym działaniu pędzla z pełną kontrolą nad dynamiką nacisku, prędkości, pochylenia i odstępów.
 
 ## Przegląd
 
-Narzędzie Pędzel obsługuje typy pędzli rastrowych, generowanych proceduralnie i animowanych. Pociągnięcia można stabilizować, wygładzać i poddawać obróbce końcowej. Dynamika pędzla reaguje na polecenia rysika, zapewniając precyzyjną kontrolę nad kryciem, rozmiarem, kolorem, kątem i innymi właściwościami podczas pociągnięcia.
+Narzędzie Pędzel obsługuje pędzle rastrowe, generowane proceduralnie i animowane. Pociągnięcia można stabilizować, wygładzać i poddawać obróbce końcowej. Dynamika pędzla reaguje na polecenia rysika, zapewniając precyzyjną kontrolę nad kryciem, rozmiarem, kolorem, kątem i innymi właściwościami podczas pociągnięcia.
 
 ## Typy pędzli
 
@@ -34,17 +34,23 @@ Kursor dostosowuje się do bieżącego stanu narzędzia, zapewniając jasne, kon
 
 ### Sterowanie najwyższego poziomu
 
-Obecny cały czas, poza jakimkolwiek ekspanderem:
+- **Pędzel**: Wybierz stempel pędzla lub edytuj aktywny.
 - **Tryb**: Tryb mieszania farb (Normalny, Pomnóż, Ekran itp.)
-- **Krycie**: Ogólne krycie obrysu (0–100).
 
 ### Właściwości pędzla
 
 W ekspanderze **Właściwości pędzla** (domyślnie rozwiniętym):
+
+#### Kształt
+
 - **Rozmiar**: średnica pędzla w pikselach.
 - **Współczynnik proporcji**: Zmiażdż lub rozciągnij kształt pędzla (-1,0–1,0). 0 = niezmodyfikowany; wartości ujemne obracają squash o 90°.
 - **Kąt**: Obraca stempel pędzla (-180–180°). Niezależne od dynamiki kierunku skoku.
 - **Twardość**: Miękkie zanikanie (0,0) do ostrej krawędzi (1,0).
+
+#### Aplikacja
+
+- **Krycie**: Ogólne krycie obrysu (0–100).
 - **Odstępy**: Odległość pomiędzy malowanymi punktami jako procent rozmiaru pędzla. Niższe = gładsze pociągnięcia; wyższy = wzór rozproszony.
 - **Odchylenie tekstury**: Odchylenie od reakcji tekstury stempla; 50 jest neutralne. Niższe wartości sprzyjają rozbijaniu tekstury i odtłuszczonej powierzchni poprzez pociągnięcie w stronę szczytu krzywej wartości; wyższe wartości zaciskają się w kierunku pełnych wypełnień, popychając je w stronę barku. Widoczny efekt zależy od zakresu tonalnego tekstury.
 - **Drżenie**: Losowe przesuwanie każdej pozycji dotknięcia o maksymalnie określoną liczbę pikseli (0–1024).
@@ -53,11 +59,11 @@ W ekspanderze **Właściwości pędzla** (domyślnie rozwiniętym):
 ### Dynamika
 
 W ekspanderze **Dynamika**:
-- **Dynamika**: Główne włączenie aktywnego ustawienia dynamiki.
-- **Dynamics Preset**: Wybiera, które mapowania wejściowe mają być używane.
-- **Pomnóż przez ciśnienie**: Przełącznik mnożenia dodatkowego ciśnienia (pokazany, gdy włączona jest dynamika).### Zachowanie po udarze
-W ekspanderze **Zachowanie po uderzeniu**:
-- **Nakładanie**: Gdy jest włączone, każde dociśnięcie powoduje akumulację krycia, a nie łączenie go w pojedyncze pociągnięcie.
+- **Włącz dynamikę**: Główne włączenie aktywnego ustawienia dynamiki.
+- **Pomnożenie ciśnienia**: Pozwól, aby ciśnienie zdominowało dynamikę.
+- **Dynamika**: Wybiera, które mapowania wejściowe mają być używane.### Zachowanie podczas udaru
+W ekspanderze **Zachowanie obrysu**:
+- **Narastanie krycia**: Gdy jest włączone, każda muśnięcie gromadzi krycie, a nie jest łączone w jednym pociągnięciu.
 - **Przetwarzanie końcowe**: Stosuje stabilizację, kompresję prędkości i korekcję odtwarzania po zakończeniu uderzenia, poprawiając spójność bez opóźnień.
   - **Próg skrętu**: Próg kąta (0–180°) do korekcji kierunku na ostrych narożnikach. 0 = pomiń korektę kierunku.
   - **Próg podglądu**: Pomija podgląd postprocesowy, gdy prędkość skoku przekracza tę wartość (0 = zawsze podgląd).
@@ -68,6 +74,12 @@ Gdy jest aktywne, stemplowanie dotykowe jest zastępowane ciągłym korytarzem g
 - **Dynamiczne krycie**: Moduluje krycie w obrębie pociągnięcia w oparciu o zmiany prędkości i kierunku. Działa najlepiej przy delikatnych, kontrolowanych pociągnięciach; wyniki są mniej przewidywalne w przypadku szybkich bazgrołów. Eksperymentalny.
 - **Wzrost prędkości** (0–100%): Maksymalny dozwolony wzrost rozmiaru na próbkę jako procent rozmiaru poprzedniej próbki. Ogranicza szybkość wzrostu dynamiki rozmiaru zależnej od prędkości, zapobiegając nagłym skokom, gdy skok przyspiesza.
 - **Velocity Shrink** (0–100%): Maksymalne dozwolone zmniejszenie rozmiaru na próbkę. Ogranicza szybkość zmniejszania się rozmiaru w przypadku zmniejszania się skoku.
+
+#### Tylko ruch
+
+Gdy ta opcja jest włączona (domyślnie), pędzel maluje tylko wtedy, gdy porusza się wskaźnik. Wyłącz go, aby pędzel mógł kontynuować stemplowanie, gdy jest trzymany nieruchomo.
+- **Część**: Kontroluje szybkość emitowania nieruchomych znaczników czasowych, gdy opcja **Tylko ruch** jest wyłączona.
+- **Przepływ**: Kontroluje nieprzezroczystość znaczników czasomierza na każde dotknięcie, gdy wyłączona jest opcja **Tylko ruch**.
 
 #### Stabilizacja i wygładzanie
 
@@ -113,7 +125,7 @@ Cztery pola wyboru ograniczające lub modyfikujące sposób stosowania wartości
 
 #### Mapowanie kolorów
 
-Dostępne dla narzędzi Pędzel i Smuga, gdy aktywna jest dynamika:
+Dostępne dla narzędzi Pędzel i Smużenie, gdy aktywna jest dynamika:
 - **Gradient**: Zasób gradientu używany do mapowania kolorów wzdłuż obrysu.
 - **Przestrzeń mieszania kolorów**: Przestrzeń kolorów, w której kolory gradientu są interpolowane podczas malowania.
 
@@ -124,9 +136,9 @@ Główki szczoteczek umieszczają wiele niezależnych główek szczoteczek na ok
 
 Promień orbity jest określony przez globalny rozmiar pędzla pomniejszony o rozmiar główki: większe główki znajdują się bliżej środka; mniejsze głowy krążą dalej. Głowy rozmieszczone równomiernie wokół pierścienia. Dzięki dwóm głowicom otrzymujesz po jednej z każdej strony pociągnięcia, tworząc symetryczny rozkład, który zachowuje się jak stalówka kaligraficzna. Suwak **Podążaj za kierunkiem** obraca cały pierścień tak, aby pozostawał prostopadły do ​​pociągnięcia, dzięki czemu stalówka naturalnie śledzi kierunek podczas malowania. Dodawanie kolejnych głowic stopniowo wachluje je wokół pierścienia, aż do pełnego koła natryskiwania przy 16.
 
-Główki szczotek kontrolują położenie każdej główki wokół pociągnięcia pędzla. Jeśli **Pivot X** lub **Pivot Y** zostanie odsunięty od domyślnego środka, każda głowa nadal będzie miała tę samą formację, ale każde stemplowane dotknięcie będzie teraz lądować w wybranym wewnętrznym punkcie styku, a nie w geometrycznym środku obrazu pędzla.
-
-Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.- **Liczba**: Liczba jednoczesnych główek szczoteczki (1–16).
+Główki szczotek kontrolują położenie każdej główki wokół pociągnięcia pędzla. Jeśli **Pivot X** lub **Pivot Y** zostanie odsunięty od domyślnego środka, każda głowa nadal będzie miała tę samą formację, ale każde stemplowane dotknięcie będzie teraz lądować w wybranym wewnętrznym punkcie styku, a nie w geometrycznym środku obrazu pędzla.Elementy sterujące pojawiają się w ekspanderze **Główki pędzli** w panelu opcji narzędzia.
+- **Włącz główki szczoteczki**: Główne włączenie systemu główek szczoteczek.
+- **Liczba**: Liczba jednoczesnych główek szczoteczki (1–16).
 - **Rozmiar głowy**: Renderowany rozmiar każdej głowy w stosunku do globalnego rozmiaru pędzla (0,1–1,0).
 - **Współczynnik kształtu orbity** (0,1–1,0): Kształtuje orbitę formacji od koła do elipsy. 1,0 = orbita kołowa; niższe wartości zgniatają oś pomocniczą.
 - **Kąt formowania** (0–360°): Statyczna orientacja pierścienia formowania, stosowana, gdy **Kierunek podążania** jest niższy niż 1,0.
@@ -144,19 +156,30 @@ Główne elementy sterujące rozproszeniem w ekspanderze **Główki pędzli**:
 - **Wpływ na prędkość** (0,0–1,0): Skaluje rozproszenie według prędkości ruchu. Przy wartości 1,0 szybkie uderzenia rozpraszają głowy znacznie dalej niż powolne uderzenia; przy 0,0 rozproszenie jest stałe niezależnie od prędkości.
 - **Balans wielkości rozproszenia** (0,0–1,0): kontroluje stromość tłumienia dla głów powyżej progu. Przy wartości 1,0 wszystkie głowy rozpraszają się równomiernie; niższe wartości w coraz większym stopniu tłumią większe głowy, podczas gdy głowy na poziomie progu/poniżej pozostają w pełnej odległości rozproszenia.
 
-### Dodatkowe opcje
+### Konfiguracja narzędzia
 
-W ekspanderze **Opcje dodatkowe** (domyślnie zwiniętym) kontrolki są pogrupowane w sekcje przepełnione, które są rzadziej zmieniane. Dzięki temu główne ekspandery skupiają się na często dostosowywanych elementach sterujących malowaniem.#### Właściwości pędzla (przepełnienie)
+W ekspanderze **Ustawienia narzędzia** (domyślnie zwiniętym) kontrolki są pogrupowane jako sekcje nadmiarowe, które są rzadziej zmieniane. Dzięki temu główne ekspandery skupiają się na często dostosowywanych elementach sterujących malowaniem.#### Właściwości pędzla (przepełnienie)
 - **Zablokuj kąt do przestrzeni ekranu**: Blokuje kąt pędzla do przestrzeni ekranu, dzięki czemu kąt pozostaje równy podczas obracania/odwracania płótna. Brak efektu, gdy dynamika kontroluje kąt.
 - **Losowe obrócenie w poziomie**: 50% szans na odbicie lustrzane każdego stempla od lewej do prawej przy każdym dotknięciu.
-- **Losowe odwrócenie w pionie**: 50% szans na odwrócenie każdego stempla do góry nogami przy każdym dotknięciu.
+- **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
 - **Losowy obrót**: Losowy obrót każdego stempla o 0°, 90°, 180° lub 270° na jedno dotknięcie.
-- **Pivot X** (0,0–1,0): Poziomy punkt styku na obrazie pędzla. 0,0 = lewa krawędź, 0,5 = środek (domyślnie), 1,0 = prawa krawędź. Wybrany punkt pokrywa się z pozycją farby na płótnie, więc odsunięcie go od środka powoduje przesunięcie każdego muśnięcia w tym kierunku. Obroty i odwrócenia pozostają wizualnie zakotwiczone w osi obrotu, ponieważ po przekształceniu stosowane jest przesunięcie umieszczenia.
-- **Pivot Y** (0,0–1,0): Pionowy punkt styku na obrazie pędzla. 0,0 = górna krawędź, 0,5 = środek (domyślnie), 1,0 = dolna krawędź. Współpracuje z **Pivot X**, aby zdefiniować dokładną część muśnięcia, która znajduje się na ścieżce pociągnięcia.
+- **Obrót w poziomie** (0,0–1,0): Poziomy punkt styku na obrazie pędzla. 0,0 = lewa krawędź, 0,5 = środek (domyślnie), 1,0 = prawa krawędź. Wybrany punkt pokrywa się z pozycją farby na płótnie, więc odsunięcie go od środka powoduje przesunięcie każdego muśnięcia w tym kierunku. Obroty i odwrócenia pozostają wizualnie zakotwiczone w osi obrotu, ponieważ po przekształceniu stosowane jest przesunięcie umieszczenia.
+- **Obrót w pionie** (0,0–1,0): Pionowy punkt styku na obrazie pędzla. 0,0 = górna krawędź, 0,5 = środek (domyślnie), 1,0 = dolna krawędź. Współpracuje z **Pivot w poziomie**, aby zdefiniować dokładną część muśnięcia, która znajduje się na ścieżce obrysu.
 - **Jitter Jednolity**: Gdy jest włączony, przesunięcia dotknięć z suwaka **Dźwięk** są rysowane z jednolitego rozkładu (każde przesunięcie jest jednakowo prawdopodobne w danym zakresie). Gdy jest wyłączony, rozkład jest przesunięty w stronę środka.
 - **Resetuj animację**: W przypadku animowanych pędzli: po włączeniu animacja rozpoczyna się od klatki 0 przy każdym nowym pociągnięciu; gdy jest wyłączony, kontynuuje od miejsca, w którym zakończył się poprzedni skok.
 
 Gdy którakolwiek wartość obrotu różni się od środka, na podglądzie pędzla pojawia się nakładka z celownikiem zaznaczająca aktywny punkt styku stempla.
+
+#### Zachowanie po pociągnięciu (przepełnienie)
+
+- **Przywróć ostatnio używane kolory**: Przywraca kolory pierwszego planu i tła z poprzedniej sesji podczas uruchamiania, zamiast domyślnych kolorów czarno-białych.
+- **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.
+
+#### Dynamika (przepełnienie)
+
+Kontrole rozszerzające główny ekspander Dynamics, pogrupowane tutaj, ponieważ rzadko są dostosowywane:
+- **Podgląd losowego rozmiaru**: Pokazuje losową zmianę rozmiaru w podglądzie konturu pędzla, gdy aktywny, wstępnie ustawiony rozmiar dynamiki steruje losowo.
+- **Podgląd losowego obrotu**: Pokazuje losową zmianę obrotu w podglądzie konturu pędzla, gdy aktywne ustawienie wstępne dynamiki powoduje losowe ustawienie kąta.
 
 #### Główki szczoteczek (przelew)
 
@@ -165,17 +188,7 @@ Formacja:
 - **Odstępy wypełnienia** (0,0–1,0): Rozkłada główki w szczelinie pomiędzy kolejnymi pozycjami docisku. Stabilna wartość charakteru każdej głowicy określa jej kierunek pochylenia; przy 1,0 głowicy wypełnij pełny odstęp odstępu. Charakter jest stabilny w każdym nasionku.
 
 Rozproszenie:
-- **Próg rozmiaru rozproszenia** (0,01–100 pikseli): promień progu dla pełnej odległości rozproszenia. Głowice w tym promieniu lub poniżej wykorzystują pełną odległość rozproszenia; większe główki są stopniowo przyciągane bliżej skoku.
-
-Randomizacja:
+- **Próg rozmiaru rozproszenia** (0,01–100 pikseli): promień progu dla pełnej odległości rozproszenia. Głowice w tym promieniu lub poniżej wykorzystują pełną odległość rozproszenia; większe główki są stopniowo przyciągane bliżej skoku.Randomizacja:
 - **Ziarno postaci** (0–255): Naprawiono ziarno znaku na głowę (rozmiar, pozycja wypełnienia). To samo ziarno odtwarza tę samą formację przy każdym pociągnięciu. Zmniejszono czułość, gdy włączona jest opcja **Losowa postać głowy**.
 - **Losuj postać głowy**: Ponownie rysuje wartości postaci na głowę (rozmiar, położenie rozproszenia) przy każdym stemplu, dzięki czemu formacja jest całkowicie chaotyczna wzdłuż pociągnięcia. Zastępuje **Ziarno postaci**.
-- **Losowe klatki animacji**: W przypadku pędzli animowanych: każda głowa niezależnie przesuwa klatkę animacji.
-
-#### Dynamika (przepełnienie)
-
-Kontrole rozszerzające główny ekspander Dynamics, pogrupowane tutaj, ponieważ rzadko są dostosowywane:
-- **Podgląd losowego rozmiaru**: Pokazuje losową zmianę rozmiaru w podglądzie konturu pędzla, gdy aktywny, wstępnie ustawiony rozmiar dynamiki steruje losowo.
-- **Podgląd losowego obrotu**: Pokazuje losową zmianę obrotu w podglądzie konturu pędzla, gdy aktywne ustawienie wstępne dynamiki powoduje losowe ustawienie kąta.#### Zachowanie po uderzeniu (przepełnienie)
-- **Przywróć ostatnio używane kolory**: Przywraca kolory pierwszego planu i tła z poprzedniej sesji podczas uruchamiania, zamiast domyślnych kolorów czarno-białych.
-- **Prosta granica pędzla**: Używa zwykłego koła dla konturu kursora pędzla zamiast renderowania pełnego kształtu pędzla. Przydatne w przypadku złożonych lub dużych pędzli, w przypadku których narysowanie dokładnej granicy jest kosztowne.
+- **Niezależna animacja rury**: W przypadku animowanych pędzli: każda głowica niezależnie przesuwa klatkę animacji.

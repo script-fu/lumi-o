@@ -3,7 +3,7 @@ title: "Biblioteca de mensajería"
 type: docs
 weight: 6
 ---
-Con el tiempo, lo que comenzó como una única función para enviar mensajes ha evolucionado hasta convertirse en una colección de funciones relacionadas. Estas funciones ahora forman la base de una **Biblioteca de mensajería**, diseñada para manejar la salida a diferentes destinos, como la GUI, la Consola de errores y la Terminal.
+Con el tiempo, lo que comenzó como una única función para enviar mensajes ha evolucionado hasta convertirse en una colección de funciones relacionadas. Estas funciones ahora forman la base de una **Biblioteca de mensajería**, diseñada para manejar la salida a diferentes destinos, como la GUI, la consola de mensajes y el terminal del sistema operativo.
 
 ### ¿Por qué una biblioteca de mensajería?
 
@@ -14,7 +14,7 @@ A medida que nuestras necesidades crecen, el manejo de mensajes en múltiples sa
 La Biblioteca de mensajería incluye actualmente las siguientes funciones:
 
 - **send-to-gui**: envía mensajes al cuadro de diálogo de Lumi GUI.
-- **send-to-error-console**: Envía mensajes a la Lumi Error Console.
+- **send-to-error-console**: Envía mensajes a la consola Lumi Message.
 - **send-to-terminal**: Envía mensajes a la ventana del terminal.
 - **enviar mensaje**: una función de despachador que dirige los mensajes a la salida adecuada.
 - **validate-message**: Garantiza que el mensaje y la salida sean válidos antes de enviarlos.

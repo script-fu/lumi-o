@@ -2,7 +2,7 @@
 title: "Raccourcis de flux de travail"
 type: docs
 ---
-Lumi·o est conçu pour un flux de travail piloté par des raccourcis. Une fois que vous avez établi une mémoire musculaire pour ces commandes, vous pouvez naviguer beaucoup plus rapidement dans votre canevas et vos outils.
+Lumi-o est conçu pour un flux de travail piloté par des raccourcis. Une fois que vous avez établi une mémoire musculaire pour ces commandes, vous pouvez naviguer beaucoup plus rapidement dans votre canevas et vos outils.
 
 ## Contrôles essentiels du canevas
 

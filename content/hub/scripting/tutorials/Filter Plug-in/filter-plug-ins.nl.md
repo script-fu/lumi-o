@@ -47,7 +47,7 @@ Klik in Linux met de rechtermuisknop op het bestand `simple-filter-plug-in.scm`,
 ### De plug-in uitvoeren
 
 1. Open een afbeelding (deze filterplug-in vereist een afbeelding om te werken).
-2. Open **Windows > Dockbare dialoogvensters > Foutconsole** om een ​​bericht te zien.
+2. Open **Extra > Foutopsporing > Berichtenconsole** om een ​​bericht te bekijken.
 3. Selecteer **Demo van eenvoudige filterplug-in** in het menu **Plug-in**.
 4. De kleuren van een van de geselecteerde lagen zijn omgekeerd en er wordt een bericht afgedrukt op de foutconsole.
 
@@ -74,7 +74,7 @@ De eerste regel zorgt ervoor dat het script als plug-in in Lumi 3 werkt:
 
 #### Proceduredefinitie
 
-De procedure accepteert twee argumenten: de actieve afbeelding en de geselecteerde tekenbare bestanden.
+De procedure accepteert twee argumenten: de actieve afbeelding en de geselecteerde tekenbare afbeeldingen.
 
 ```scheme
 (define (scheme-simple-filter-plug-in image drawables)
@@ -125,4 +125,4 @@ De bestandsnaam moet overeenkomen met de naam van de map die deze bevat.
 Het bestand moet zijn ingesteld als uitvoerbaar bestand.
 
 
-De **Error Console** is een waardevol hulpmiddel voor het oplossen van problemen met aangepaste plug-ins. Als uw plug-in zich niet gedraagt ​​zoals verwacht, kijk dan hier voor foutmeldingen of logbestanden. Het **Terminal**-venster kan ook foutopsporingsinformatie bieden en laadproblemen melden.
+De **Berichtconsole** is een waardevol hulpmiddel voor het oplossen van problemen met aangepaste plug-ins. Als uw plug-in zich niet gedraagt ​​zoals verwacht, kijk dan hier voor foutmeldingen of logbestanden. Het **Terminal**-venster kan ook foutopsporingsinformatie bieden en laadproblemen melden.

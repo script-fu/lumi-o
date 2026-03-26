@@ -19,7 +19,7 @@ Beispiel:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,7 +33,7 @@ Beispiel:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -77,7 +77,7 @@ Dieser Ansatz stellt sicher, dass die Funktion immer gültige Eingaben erhält, 
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,7 +91,7 @@ Dieser Ansatz stellt sicher, dass die Funktion immer gültige Eingaben erhält, 
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 

@@ -3,7 +3,7 @@ title: "Bibliothèque de messagerie"
 type: docs
 weight: 6
 ---
-Au fil du temps, ce qui a commencé comme une fonction unique pour envoyer des messages a évolué vers un ensemble de fonctions liées. Ces fonctions constituent désormais la base d'une **bibliothèque de messagerie**, conçue pour gérer les sorties vers différentes destinations, telles que l'interface graphique, la console d'erreurs et le terminal.
+Au fil du temps, ce qui a commencé comme une fonction unique pour envoyer des messages a évolué vers un ensemble de fonctions liées. Ces fonctions constituent désormais la base d'une **bibliothèque de messagerie**, conçue pour gérer les sorties vers différentes destinations, telles que l'interface graphique, la console de messages et le terminal du système d'exploitation.
 
 ### Pourquoi une bibliothèque de messagerie ?
 
@@ -14,7 +14,7 @@ Au fil du temps, ce qui a commencé comme une fonction unique pour envoyer des m
 La bibliothèque de messagerie comprend actuellement les fonctions suivantes :
 
 - **send-to-gui** : envoie des messages à la boîte de dialogue Lumi GUI.
-- **send-to-error-console** : envoie des messages à la console d'erreur Lumi.
+- **send-to-error-console** : envoie des messages à la console Lumi Message.
 - **envoyer au terminal** : envoie des messages à la fenêtre du terminal.
 - **send-message** : une fonction de répartiteur qui dirige les messages vers la sortie appropriée.
 - **validate-message** : garantit que le message et la sortie sont valides avant l'envoi.
@@ -25,7 +25,7 @@ La **Bibliothèque de messagerie** peut facilement être étendue pour prendre e
 
 - **envoyer vers un fichier** : enregistre les messages dans un fichier journal.
 - **send-to-logger** : intégration à un système de journalisation externe.
-- **envoyer à une notification** : afficher les messages sous forme de notifications système.
+- **send-to-notification**: Display messages as system notifications.
 
 En suivant le même modèle de conception modulaire et de fonctions réutilisables, cette bibliothèque peut devenir un outil complet permettant de gérer toutes sortes de tâches de messagerie.
 

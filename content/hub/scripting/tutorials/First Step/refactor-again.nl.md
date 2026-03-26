@@ -34,7 +34,7 @@ Nu de validatie naar een aparte functie is verplaatst, kan de functie `send-mess
   (validate-message message output)
 
   (cond
-    ;; Send to the Error Console
+    ;; Send to the Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -48,13 +48,13 @@ Nu de validatie naar een aparte functie is verplaatst, kan de functie `send-mess
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Verder uitgesplitst: scheid elke uitvoerhandler
 
-Elk type berichtuitvoer (GUI, Error Console, Terminal) kan naar zijn eigen functie worden verplaatst. Dit maakt het eenvoudiger om te testen, aan te passen en mogelijk uit te breiden in de toekomst.
+Elk type berichtuitvoer (GUI, berichtenconsole, terminal) kan naar een eigen functie worden verplaatst. Dit maakt het eenvoudiger om te testen, aan te passen en mogelijk uit te breiden in de toekomst.
 
 ```scheme
 (define (send-to-gui message)
@@ -75,7 +75,7 @@ Elk type berichtuitvoer (GUI, Error Console, Terminal) kan naar zijn eigen funct
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -102,7 +102,7 @@ Omdat validatie een belangrijk onderdeel is om ervoor te zorgen dat zowel het be
   (display message))
 ```
 
-Zie dat we de validatie van de functie voor het verzenden van berichten hebben verwijderd en de verantwoordelijkheid hebben verschoven naar elke individuele uitvoerfunctie. Deze wijziging zorgt ervoor dat elke bestemming (GUI, Error Console, Terminal) zijn eigen validatie afhandelt, waardoor de functie voor het verzenden van berichten wordt gestroomlijnd en de validatielogica dichter bij de plaats blijft waar deze nodig is.
+Zie dat we de validatie van de functie voor het verzenden van berichten hebben verwijderd en de verantwoordelijkheid hebben verschoven naar elke individuele uitvoerfunctie. Deze wijziging zorgt ervoor dat elke bestemming (GUI, berichtenconsole, terminal) zijn eigen validatie afhandelt, waardoor de functie voor het verzenden van berichten wordt gestroomlijnd en de validatielogica dichter bij de plaats blijft waar deze nodig is.
 
 Deze aanpak kan de functie voor het verzenden van berichten vereenvoudigen, waardoor deze een _dispatcher_ wordt, terwijl ervoor wordt gezorgd dat elke functie voor verzenden naar* het bericht correct valideert voordat het wordt verwerkt.
 
@@ -125,7 +125,7 @@ Een opnieuw opgebouwde bibliotheekversie:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Error Console
+;; Purpose: Sends a message to the Message console
 (define (send-to-error-console message)
   ;; Validate the message before proceeding
   (validate-message message 'error-console)
@@ -145,7 +145,7 @@ Een opnieuw opgebouwde bibliotheekversie:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 
 ;; Purpose: Validates that the message is a non-empty string and the output is valid

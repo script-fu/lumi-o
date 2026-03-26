@@ -11,7 +11,7 @@ Det här avsnittet beskriver de centrala funktionerna som är tillgängliga i Lu
   {{< card link="file-format" title="Filformat (.lum)" icon="document-text" subtitle="Öppna behållarformat som lagrar lager, metadata, ICC-profiler och återställningsdata." >}}
   {{< card link="recovery" title="Filåterställning" icon="refresh" subtitle="Automatiska inkrementella återställningsbilder skyddar arbetet mot krascher och strömavbrott." >}}
   {{< card link="layers" title="Lager & icke-förstörande redigering" icon="collection" subtitle="Lagerbaserad sammansättning med blandningslägen, masker, grupper och oförstörande justeringslager." >}}
-  {{< card link="paintbrush" title="Penselverktyg" icon="pencil-alt" subtitle="Tryck, hastighet, lutning och avståndsdynamik med stabilisering, utjämning och borstformationer med flera huvuden." >}}
+  {{< card link="paintbrush" title="Borstverktyg" icon="pencil-alt" subtitle="Tryck, hastighet, lutning och avståndsdynamik med stabilisering, utjämning och borstformationer med flera huvuden." >}}
   {{< card link="palette-editor" title="Palettredigerare" icon="color-swatch" subtitle="Skapa och hantera namngivna pigmentpaletter, med buntade uppsättningar som täcker fullspektrum och begränsade paletter." >}}
   {{< card link="palette-map" title="Palettkarta" icon="view-grid" subtitle="Interaktivt 2D-rutnät kartlägger palettpigment till axlar, används för direkt färgplockning och utforskning." >}}
   {{< card link="palette-mixer" title="Palettmixer" icon="adjustments" subtitle="Blanda pigment från den aktiva paletten efter nyans, mättnad och ton med visuella förhandsvisningar." >}}

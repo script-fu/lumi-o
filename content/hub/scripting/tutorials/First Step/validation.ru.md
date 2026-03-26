@@ -19,7 +19,7 @@ weight: 4
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Error Console
+      ;; Send to the Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -33,7 +33,7 @@ weight: 4
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -77,7 +77,7 @@ weight: 4
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Error Console
+        ;; Send to the Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -91,16 +91,16 @@ weight: 4
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restore the default message handler to the Message console
   (lumi-message-set-handler 2))
 ```
 
 В этой версии:
-- Функция сначала проверяет, является ли `message` пустым или недействительным. Если сообщение действительно, происходит проверка, является ли `output` одним из принятых значений (`gui`, `error-console` или `terminal`).
+- Функция сначала проверяет, является ли `message` пустым или недействительным. Если сообщение действительно, происходит переход к проверке, является ли `output` одним из принятых значений (`gui`, `error-console` или `terminal`).
 - Если обе проверки пройдены, сообщение отправляется на соответствующий выход. В противном случае выдается сообщение об ошибке с четким объяснением.
 - Выполняется дополнительная проверка, чтобы убедиться, что сообщение также является строкой.
 
-Эта комбинированная функция проверки обеспечивает чистоту кода и гарантирует, что оба входных данных проверяются перед выполнением каких-либо действий, что делает функцию более надежной. Обратите внимание: мы также создаем систему обмена сообщениями отладки. Когда
+Эта комбинированная функция проверки обеспечивает чистоту кода и гарантирует, что оба входных данных проверяются до того, как будут предприняты какие-либо действия, что делает функцию более надежной. Обратите внимание: мы также создаем систему обмена сообщениями отладки. Когда
 код терпит неудачу, мы получаем причину, причину, которую мы написали сами.
 
 ```
