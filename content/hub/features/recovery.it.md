@@ -2,109 +2,34 @@
 title: "Recupero file"
 type: docs
 ---
-Lumi mantiene due sistemi di ripristino indipendenti (salvataggio automatico in background e checkpoint incrementali manuali), entrambi accessibili da un'unica finestra di dialogo.
+Il sistema di recupero di Lumi è progettato per proteggere il lavoro di verniciatura da arresti anomali, errori e sessioni interrotte. Fornisce ai progetti una rete di sicurezza senza costringere gli artisti a duplicare costantemente i file a mano.
 
-## Accesso
+Il ripristino si basa su due idee: protezione automatica in background e checkpoint intenzionali. Insieme aiutano a preservare il lavoro recente consentendo comunque all'artista di tornare ai momenti precedenti di un progetto.
 
-**File** → **Recupera immagine**
+## Protezione automatica
 
-La finestra di dialogo si apre precompilata con gli stati di ripristino per il file attualmente aperto. Utilizza il selettore file in alto per passare a un file `.lum` diverso.
+Mentre un'immagine viene modificata, Lumi può mantenere i dati di ripristino separati dal file di lavoro principale. Ciò significa che non è necessario riscrivere il progetto stesso ogni volta che viene creata un'istantanea di sicurezza.
 
----
+Se qualcosa va storto, lo stato di ripristino automatico può fornire una versione recente dell'opera d'arte che potrebbe essere più recente dell'ultimo salvataggio intenzionale. L'obiettivo è semplice: ridurre la quantità di lavoro perso quando una sessione termina inaspettatamente.
 
-## Salvataggio automatico
+## Checkpoint intenzionali
 
-Lumi salva un'istantanea in background del tuo lavoro a intervalli regolari durante la modifica. I salvataggi automatici vengono scritti in una **directory cache separata**, lasciando intatto il file `.lum` funzionante:
+Alcuni momenti in un dipinto meritano di essere preservati deliberatamente: prima di un importante cambiamento di colore, dopo uno schizzo riuscito, prima di prendere decisioni appiattite o quando si tenta una direzione rischiosa.
 
-```
-~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
-```
+Lumi supporta i checkpoint a livello di progetto per questi momenti. Sono più leggeri che tenere una copia completa separata per ogni esperimento, ma danno comunque all'artista un modo per tornare indietro a punti significativi nella storia dell'opera.
 
-La codifica del percorso utilizza `~` come separatore per creare una directory cache univoca per file. Ciò significa che i salvataggi automatici sono disponibili anche se il file di progetto stesso viene perso o danneggiato.
+## Recuperare con il contesto
 
-- **Frequenza**: configurabile in **Modifica** → **Preferenze** → **Prestazioni** → Intervallo di salvataggio automatico.
-- **Posizione di archiviazione**: impostata anche in Preferenze → Prestazioni.
-- **Scopo**: recupero da crash. La scheda Salvataggio automatico nella finestra di dialogo Recupera immagine mostra gli stati di salvataggio automatico disponibili con timestamp.
+Gli stati di ripristino vengono presentati come versioni dell'opera d'arte anziché come file grezzi da cercare manualmente. Ciò consente a un artista di confrontare i recenti salvataggi automatici e i checkpoint deliberati, quindi di aprire lo stato che meglio corrisponde al lavoro da cui desidera continuare.
 
-Quando apri un file che contiene dati di salvataggio automatico più recenti, Lumi ti avvisa all'apertura.
+Le immagini recuperate si aprono come documenti di lavoro, consentendo all'artista di esaminarle prima di decidere come salvarle o continuare.
 
----
+## Mantenere il recupero pratico
 
-## Salvataggi incrementali
+Un sistema di recupero utile deve anche rimanere gestibile. Lumi è progettato per mantenere organizzati i dati di ripristino e rendere i vecchi stati rimovibili quando non sono più necessari.
 
-Il salvataggio incrementale è un sistema di checkpoint manuale memorizzato **all'interno del file di progetto** in `recovery/`. La struttura è:
+Ciò evita che la sicurezza diventi disordinata. Il recupero può rimanere attivo in background, mentre gli artisti hanno ancora un modo per controllare quanta storia viene conservata nel tempo.
 
-```
-my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
-      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
-      ├── delta-0002.lum/
-      └── ...
-```
+## Fiducia mentre lavori
 
-Una nuova linea di base `primary-NN.lum/` viene scritta dopo **File → Salva**. Le successive pressioni di **File → Salva incremento** (`Ctrl+I`) creano `delta-NNNN.lum/` sottodirectory contenenti solo i buffer modificati dall'ultima linea di base. I delta di salvataggio automatico e quelli di salvataggio manuale utilizzano contatori separati in modo che non interferiscano reciprocamente con la cronologia.
-
-L'incremento di salvataggio è **sempre disponibile** per i file `.lum` salvati:
-
-1. Utilizzare **File** → **Salva** (`Ctrl+S`) per creare o aggiornare il file di progetto principale.
-2. Utilizzare **File** → **Salva incremento** (`Ctrl+I`) per creare un checkpoint di ripristino.
-3. Dopo un altro **File** completo → **Salva**, il successivo `Ctrl+I` scrive una nuova linea di base `primary-NN.lum/` prima di creare nuovi delta.
-
-I file recuperati denominati con il prefisso `RECOVERED_` devono essere salvati normalmente prima che l'incremento di salvataggio diventi disponibile per loro.
-
-Quando apri un file `.lum` che contiene salvataggi incrementali più recenti rispetto al salvataggio primario, Lumi mostra un messaggio di **Salvataggio incrementale rilevato** che offre di caricare il checkpoint più recente.
-
----
-
-## Finestra di dialogo Recupera immagine
-
-La finestra di dialogo ha tre schede e due pulsanti di azione.
-
-### Scheda Salvataggio automatico
-
-Elenca tutti gli stati di salvataggio automatico disponibili per il file selezionato con timestamp e miniature (ove disponibili). Seleziona uno stato e fai clic su **Ripristina** per aprirlo.
-
-Utilizza questa scheda per:
-- Recuperare dopo un incidente.
-- Ripristina uno stato precedente dalla stessa sessione.
-
-### Scheda incrementale
-
-Elenca tutti gli stati dei checkpoint archiviati nel file di progetto. Ogni voce mostra il timestamp del checkpoint. Seleziona un checkpoint e fai clic su **Ripristina** per aprirlo.
-
-Utilizza questa scheda per:
-- Ritorna a un punto precedente di una sessione senza aver salvato file separati.
-- Sfoglia la cronologia delle versioni di un progetto.
-
-### Scheda più recente
-
-La scheda predefinita all'apertura della finestra di dialogo. Identifica automaticamente lo stato di ripristino più recente disponibile sia nei salvataggi automatici che nei checkpoint incrementali e ne mostra il timestamp. Fai clic su **Ripristina** per caricarlo immediatamente senza sfogliare i singoli stati.
-
----
-
-## Pulsanti
-
-| Pulsante | Azione |
-|--------|--------|
-| **Recupera** | Apre lo stato di ripristino selezionato come una nuova immagine. |
-| **Chiudi** | Chiude la finestra di dialogo senza ripristinare. |
-| **Ripulisci i vecchi Stati…** | Apre un prompt di pulizia (vedi sotto). |
-
----
-
-## Ripulisci i vecchi Stati
-
-L'accumulo di stati di ripristino nel tempo può consumare una quantità significativa di spazio su disco. Il pulsante **Ripulisci vecchi stati…** (in basso a sinistra della finestra di dialogo) apre una richiesta di pulizia per la scheda attiva (Salvataggio automatico o Incrementale).
-
-Il messaggio mostra:
-- Quanti salvataggi completi esistono per il file.
-- Lo spazio totale su disco che occupano.
-- Un pulsante di selezione **Conserva più recente** per selezionare il numero di salvataggi da conservare.
-
-L'impostazione di **Mantieni più recente** su `0` elimina tutti gli stati di ripristino. Il prossimo `Ctrl+I` dopo una pulizia completa scriverà un nuovo salvataggio primario.
-
----
-
-## Ripristino all'avvio
-
-All'avvio, se Lumi rileva che il file aperto più recentemente contiene dati di salvataggio automatico più recenti rispetto all'ultimo salvataggio completo, presenta una richiesta di ripristino prima del caricamento. Puoi accettare (caricare il salvataggio automatico) o ignorare (aprire il salvataggio principale normalmente).
+Lo scopo del recupero dei file non è sostituire il salvataggio, ma rendere il lavoro creativo meno fragile. Gli artisti possono dipingere, sperimentare e correre rischi sapendo che Lumi mantiene ulteriori modi per tornare indietro quando una sessione, un file o una decisione vanno storte.

@@ -2,86 +2,36 @@
 title: "Espaces de travail"
 type: docs
 ---
-Un espace de travail est un instantané enregistré de l'ensemble de votre environnement d'interface utilisateur : quels panneaux sont ouverts et où, les décorations et le remplissage du canevas pour les vues normale et plein écran, le thème et le jeu d'icônes actifs, la disposition de la boîte à outils, la palette active et les paramètres de vos outils. Lumi vous permet d'enregistrer autant d'espaces de travail nommés que vous le souhaitez et de basculer instantanément entre eux : toutes les images ouvertes sont mises à jour en place, aucun redémarrage n'est requis.
+Les espaces de travail permettent à Lumi de s'adapter à différentes façons de travailler. Un espace de travail capture l'ambiance de l'environnement du studio : disposition des panneaux, état de l'outil, présentation du canevas, chemins de ressources, choix de palette, thème et autres préférences d'interface qui façonnent la session de peinture.
 
-## Ce qu'un espace de travail permet d'économiser
+Au lieu de conserver un arrangement fixe pour chaque tâche, les artistes peuvent conserver des environnements séparés pour le dessin, la peinture, l'encrage, le travail de couleur, la présentation, la rédaction de scripts ou des sessions ciblées en plein écran. Chaque environnement peut mettre en avant les ressources qui appartiennent à ce type de travail, de sorte qu'un espace de travail de dessin peut sembler doté de préréglages de dessin tandis qu'un espace de travail de peinture peut passer à des outils de peinture.
 
-Chaque espace de travail nommé stocke les éléments suivants indépendamment :
+## Un studio qui évolue avec la tâche
 
-| Composant | Ce qu'il couvre |
-| :--- | :--- |
-| **Mise en page** | Position et taille de la fenêtre, disposition des quais (colonnes des panneaux gauche et droit, quels panneaux sont ouverts et dans quel ordre), mode simple ou multi-fenêtre, état maximisé, visibilité et position de la barre d'onglets |
-| **Options des outils** | Les paramètres actuels pour chaque outil (taille du pinceau, dureté, comportement de déformation, etc.) |
-| **Périphériques d'entrée** | Configuration du périphérique d'entrée : courbes de pression, affectations de boutons, mappages d'axes pour stylet et autres appareils |
-| **Décorations en toile** | Paramètres par défaut par espace de travail pour les règles, les barres de défilement, les guides, la grille, la surbrillance de la sélection, la limite du calque et la limite du canevas — définis via **Préférences → Fenêtres d'image → Apparence par défaut** et **Apparence plein écran**, indépendamment pour les vues normale et plein écran |
-| **Rembourrage en toile** | Mode de remplissage et couleur par espace de travail pour les vues normale et plein écran — définis via **Préférences → Fenêtres d'image → Apparence par défaut** |
-| **Thème et icônes** | Thème actif, variante de couleur sombre/claire, jeu d'icônes, remplacement de la taille des icônes et échelle de police |
-| **Boîte à outils** | Position du widget FG/BG (haut/bas/gauche/droite), échelle FG/BG, visibilité de la mascotte Wilber, en-têtes de groupe d'outils |
+Différentes étapes d’une œuvre d’art bénéficient d’environnements différents. Les croquis approximatifs peuvent nécessiter une toile claire et un minimum de panneaux. La peinture peut nécessiter des paramètres de pinceau et un accès à la palette à portée de main. L’encrage peut nécessiter des guides, des options d’outils stables et une vue neutre. La révision ou la présentation peut nécessiter une configuration plein écran plus propre.
 
-La **palette** et le **préréglage d'outils** actifs sont également enregistrés par espace de travail et restaurés lorsque vous changez.
+Les espaces de travail rendent ces changements délibérés. L'interface peut changer pour s'adapter à la tâche sans que l'artiste ait à reconstruire le studio à la main à chaque fois.
 
-> **Les décorations et le rembourrage des toiles** sont contrôlés par
-> **Préférences → Fenêtres d'images → Options avancées de la fenêtre → Apparence par défaut** (Vue normale)
-> et **Apparence plein écran** (affichage plein écran). Ajustez ces paramètres à votre guise,
-> puis enregistrez l'espace de travail. Les éléments du **menu Affichage** (règles, guides, etc.) sont locaux au
-> fenêtre d'image actuelle et ne sont pas enregistrés par espace de travail.
+## Plus que le placement des panneaux
 
-### Mises à jour en direct sur le commutateur
+Un espace de travail n’est pas seulement une disposition de quai. Il peut préserver le contexte de travail plus large : la façon dont le canevas est cadré, comment se comporte la boîte à outils, quelles ressources de couleurs et d'outils sont prêtes, comment les outils sont configurés et comment les périphériques d'entrée sont censés réagir.
 
-Lorsque vous changez d'espace de travail, toutes les fenêtres d'images ouvertes sont immédiatement mises à jour : les règles, les guides, les barres de défilement, la couleur de remplissage et tous les autres paramètres d'affichage changent en place sans qu'il soit nécessaire de fermer et de rouvrir les images.
+Cela rend le changement d’espace de travail utile même lorsque les panneaux se ressemblent. Deux environnements peuvent partager une présentation générale mais différer par la sensation de l'outil, le confort visuel, l'identité de la palette, les préréglages disponibles ou le comportement de l'appareil.
 
-## Accès
+## Commutation immédiate
 
-**Modifier → Préférences → Espace de travail**
+Les espaces de travail se veulent fluides. La commutation devrait donner l'impression de se déplacer entre des bureaux préparés dans le même studio plutôt que de redémarrer l'application ou d'ouvrir une configuration distincte.
 
-La section supérieure de la page des préférences de l'espace de travail répertorie tous vos espaces de travail enregistrés et fournit des contrôles pour les gérer.
+Les images ouvertes peuvent rester en place tandis que l'environnement change, permettant à l'artiste de passer d'une phase de travail à une autre sans rompre sa concentration.
 
-## Création d'un espace de travail
+## Configurations personnelles et basées sur des projets
 
-Configurez vos panneaux, outils et palettes exactement comme vous le souhaitez, puis :
+Certains espaces de travail peuvent être des paramètres personnels par défaut : une configuration de peinture confortable, une configuration d'ordinateur portable compact ou un mode de mise au point plein écran. D'autres peuvent appartenir à un projet : une palette particulière, un thème, une disposition des panneaux, une collection de ressources ou une configuration de périphérique adaptée à une série spécifique d'images.
 
-1. Ouvrez **Modifier → Préférences → Espace de travail**.
-2. Cliquez sur **Enregistrer la mise en page sous…**.
-3. Saisissez un nom et cliquez sur **Enregistrer**.
+Parce que les espaces de travail sont nommés et réutilisables, ils peuvent faire partie du rythme d'un artiste. Le bon environnement peut être rétabli lorsque les travaux l’exigent.
 
-Le nouvel espace de travail apparaît dans la liste déroulante **Mise en page active** et dans le menu **Windows**.
+## Réduire les frictions
 
-## Changer d'espace de travail
+Le but des espaces de travail est de supprimer les configurations répétées du processus de création. Une fois qu’un arrangement semble bon, Lumi peut s’en souvenir. Lorsque la tâche change, l'interface peut suivre.
 
-Il existe deux manières de changer :
-
-- **Menu Windows** : les noms de mise en page apparaissent sous **Windows → Mise en page** pour un accès rapide depuis le canevas.
-- **Préférences → Espace de travail** : sélectionnez une mise en page dans la liste déroulante **Mise en page active** et cliquez sur **Recharger la mise en page**.
-
-La commutation est immédiate : Lumi reconstruit la disposition des panneaux, restaure les options des outils, recharge les paramètres de l'appareil, met à jour les décorations du canevas, le remplissage, le thème et la disposition de la boîte à outils, le tout sans redémarrer.
-
-## Gestion des espaces de travail
-
-Depuis **Modifier → Préférences → Espace de travail** :| Actions | Effet |
-| :--- | :--- |
-| **Enregistrer la mise en page** | Remplace l'espace de travail actuel par vos paramètres actuels. |
-| **Enregistrer la mise en page sous…** | Crée un nouvel espace de travail nommé à partir de vos paramètres actuels. |
-| **Renommer la mise en page…** | Renomme l'espace de travail sélectionné. |
-| **Recharger la mise en page** | Applique immédiatement l’espace de travail sélectionné. |
-| **Supprimer la mise en page…** | Supprime définitivement l'espace de travail sélectionné et ses fichiers. |
-
-## Paramètres de persistance
-
-La partie inférieure de la page des préférences de Workspace contrôle ce que Lumi enregistre automatiquement :
-
-- **Enregistrer les positions des fenêtres à la sortie** : Lorsque cette option est activée, les positions du dock et des fenêtres sont écrites sur le disque à chaque fois que vous quittez.
-- **Ouvrir les fenêtres sur le même moniteur** : Rouvre chaque fenêtre du moniteur sur lequel elle se trouvait lors de la dernière session.
-- **Enregistrer les options de l'outil à la sortie** : Enregistre les paramètres actuels de l'outil lors de la fermeture.
-- **Enregistrer les paramètres du périphérique d'entrée à la sortie** : enregistre la configuration du stylet et du périphérique lors de la fermeture.
-
-Ces paramètres s'appliquent à chaque espace de travail : chaque mise en page conserve indépendamment son propre état enregistré.
-
-## Exemples de flux de travail
-
-Voici quelques façons dont les artistes peuvent utiliser plusieurs espaces de travail :
-
-- **Peinture** — grands quais de pinceaux, couleur de remplissage chaude (définie dans Préférences → Fenêtres d'images → Apparence par défaut), votre variante de thème préférée
-- **Encrage** — guides et limites du canevas activés, barres de défilement activées (définies dans Préférences → Apparence par défaut), couleur de remplissage neutre
-- **Roughs** — quais cachés, pas de règles ni de grille, remplissage sombre, taille d'icône compacte pour maximiser l'espace du canevas
-- **Mise au point plein écran** — différents paramètres de couleur de remplissage et de décoration dans l'apparence plein écran par rapport à l'apparence par défaut, donc basculer en plein écran donne un environnement de travail véritablement différent
-- **Scripting** — panneau de script ouvert, modification de la taille de la police pour plus de lisibilité, jeu d'icônes différent
+Cela permet de garder l'attention sur les illustrations plutôt que sur la gestion des fenêtres, ce qui fait que Lumi ressemble moins à une application statique unique qu'à un studio numérique flexible.

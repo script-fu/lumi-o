@@ -2,109 +2,34 @@
 title: "Dateiwiederherstellung"
 type: docs
 ---
-Lumi unterhält zwei unabhängige Wiederherstellungssysteme (automatische Hintergrundspeicherungen und manuelle inkrementelle Prüfpunkte), auf die beide über einen einzigen Dialog zugegriffen werden können.
+Das Wiederherstellungssystem von Lumi ist darauf ausgelegt, Malarbeiten vor Abstürzen, Fehlern und unterbrochenen Sitzungen zu schützen. Es bietet Projekten ein Sicherheitsnetz, ohne dass Künstler ständig Dateien von Hand duplizieren müssen.
 
-## Zugriff
+Die Wiederherstellung basiert auf zwei Ideen: automatischem Hintergrundschutz und absichtlichen Prüfpunkten. Zusammen tragen sie dazu bei, aktuelle Arbeiten zu bewahren und ermöglichen es dem Künstler gleichzeitig, zu früheren Momenten eines Projekts zurückzukehren.
 
-**Datei** → **Bild wiederherstellen**
+## Automatischer Schutz
 
-Das Dialogfeld wird mit den Wiederherstellungsstatus für die aktuell geöffnete Datei vorab gefüllt geöffnet. Verwenden Sie die Dateiauswahl oben, um zu einer anderen `.lum` Datei zu wechseln.
+Während ein Bild bearbeitet wird, kann Lumi die Wiederherstellungsdaten von der Hauptarbeitsdatei getrennt halten. Dies bedeutet, dass das Projekt selbst nicht jedes Mal neu geschrieben werden muss, wenn ein Sicherheits-Snapshot erstellt wird.
 
----
+Wenn etwas schief geht, kann der automatische Wiederherstellungsstatus eine aktuelle Version des Bildmaterials bereitstellen, die möglicherweise neuer ist als die letzte absichtliche Speicherung. Das Ziel ist einfach: Reduzieren Sie den Arbeitsverlust, wenn eine Sitzung unerwartet endet.
 
-## Automatisch speichern
+## Absichtliche Kontrollpunkte
 
-Lumi speichert während der Bearbeitung in regelmäßigen Abständen einen Hintergrund-Schnappschuss Ihrer Arbeit. Automatische Speicherungen werden in ein **separates Cache-Verzeichnis** geschrieben, sodass die funktionierende `.lum`-Datei unberührt bleibt:
+Manche Momente in einem Gemälde sind es wert, bewusst festgehalten zu werden: vor einem großen Farbwechsel, nach einer gelungenen Skizze, vor vernachlässigenden Entscheidungen oder beim Versuch, eine riskante Richtung einzuschlagen.
 
-```
-~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
-```
+Lumi unterstützt für diese Momente Prüfpunkte auf Projektebene. Sie sind einfacher, als für jedes Experiment eine separate vollständige Kopie anzufertigen, geben dem Künstler aber dennoch die Möglichkeit, zu bedeutungsvollen Punkten in der Geschichte des Werks zurückzukehren.
 
-Die Pfadkodierung verwendet `~` als Trennzeichen, um ein eindeutiges Cache-Verzeichnis pro Datei zu erstellen. Dies bedeutet, dass automatische Speicherungen auch dann verfügbar sind, wenn die Projektdatei selbst verloren geht oder beschädigt ist.
+## Wiederherstellung mit Kontext
 
-- **Häufigkeit**: Konfigurierbar unter **Bearbeiten** → **Einstellungen** → **Leistung** → Intervall für automatische Speicherung.
-- **Speicherort**: Auch unter Einstellungen → Leistung festgelegt.
-- **Zweck**: Wiederherstellung nach einem Absturz. Auf der Registerkarte „Automatische Speicherung“ im Dialogfeld „Bild wiederherstellen“ werden die verfügbaren Status der automatischen Speicherung mit Zeitstempel angezeigt.
+Wiederherstellungsstatus werden als Versionen des Bildmaterials dargestellt und nicht als Rohdateien, die manuell durchsucht werden müssen. Auf diese Weise kann ein Künstler aktuelle automatische Speicherungen und absichtliche Prüfpunkte vergleichen und dann den Status öffnen, der am besten zu der Arbeit passt, von der aus er fortfahren möchte.
 
-Wenn Sie eine Datei öffnen, die über neuere Autosave-Daten verfügt, benachrichtigt Sie Lumi zum Zeitpunkt des Öffnens.
+Wiederhergestellte Bilder werden als Arbeitsdokumente geöffnet, sodass der Künstler sie prüfen kann, bevor er entscheidet, wie er speichert oder fortfährt.
 
----
+## Genesung praktikabel halten
 
-## Inkrementelle Speicherungen
+Ein nützliches Wiederherstellungssystem muss auch beherrschbar bleiben. Lumi wurde entwickelt, um Wiederherstellungsdaten organisiert zu halten und alte Zustände zu entfernen, wenn sie nicht mehr benötigt werden.
 
-Beim inkrementellen Speichern handelt es sich um ein manuelles Prüfpunktsystem, das **in der Projektdatei** unter `recovery/` gespeichert wird. Die Struktur ist:
+So wird verhindert, dass Sicherheit zu Unordnung wird. Die Wiederherstellung kann im Hintergrund aktiv bleiben, während Künstler weiterhin steuern können, wie viel Geschichte im Laufe der Zeit erhalten bleibt.
 
-```
-my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
-      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
-      ├── delta-0002.lum/
-      └── ...
-```
+## Vertrauen beim Arbeiten
 
-Eine neue `primary-NN.lum/` Baseline wird nach **Datei → Speichern** geschrieben. Nachfolgendes Drücken von **Datei → Inkrement speichern** (`Ctrl+I`) erstellt `delta-NNNN.lum/` Unterverzeichnisse, die nur die Puffer enthalten, die sich seit der letzten Baseline geändert haben. Autosave-Deltas und manuelle Save-Deltas verwenden separate Zähler, sodass sie den Verlauf des anderen nicht beeinträchtigen.
-
-„Inkrement speichern“ ist **immer verfügbar** für gespeicherte `.lum` Dateien:
-
-1. Verwenden Sie **Datei** → **Speichern** (`Ctrl+S`), um die Hauptprojektdatei zu erstellen oder zu aktualisieren.
-2. Verwenden Sie **Datei** → **Inkrement speichern** (`Ctrl+I`), um einen Wiederherstellungsprüfpunkt zu erstellen.
-3. Nach einer weiteren vollständigen **Datei** → **Speichern** schreibt der nächste `Ctrl+I` eine neue `primary-NN.lum/` Basislinie, bevor neue Deltas erstellt werden.
-
-Wiederhergestellte Dateien mit dem Präfix `RECOVERED_` müssen zuerst normal gespeichert werden, bevor „Inkrement speichern“ für sie verfügbar wird.
-
-Wenn Sie eine `.lum`-Datei öffnen, die über neuere inkrementelle Speicherungen als die primäre Speicherung verfügt, zeigt Lumi die Eingabeaufforderung **Inkrementelle Speicherung erkannt** an und bietet an, den neuesten Prüfpunkt zu laden.
-
----
-
-## Dialogfeld „Bild wiederherstellen“.
-
-Der Dialog verfügt über drei Registerkarten und zwei Aktionsschaltflächen.
-
-### Registerkarte „Automatisch speichern“.
-
-Listet alle verfügbaren Autosave-Status für die ausgewählte Datei mit Zeitstempeln und Miniaturansichten (sofern verfügbar) auf. Wählen Sie einen Status aus und klicken Sie auf **Wiederherstellen**, um ihn zu öffnen.
-
-Verwenden Sie diese Registerkarte, um:
-- Wiederherstellung nach einem Absturz.
-- Kehren Sie aus derselben Sitzung zu einem früheren Zustand zurück.
-
-### Inkrementelle Registerkarte
-
-Listet alle in der Projektdatei gespeicherten Prüfpunktzustände auf. Jeder Eintrag zeigt den Checkpoint-Zeitstempel. Wählen Sie einen Prüfpunkt aus und klicken Sie auf **Wiederherstellen**, um ihn zu öffnen.
-
-Verwenden Sie diese Registerkarte, um:
-- Kehren Sie zu einem früheren Punkt in einer Sitzung zurück, ohne separate Dateien gespeichert zu haben.
-- Durchsuchen Sie den Versionsverlauf eines Projekts.
-
-### Neuester Tab
-
-Die Standardregisterkarte, wenn das Dialogfeld geöffnet wird. Identifiziert automatisch den neuesten verfügbaren Wiederherstellungsstatus sowohl bei automatischen Speicherungen als auch bei inkrementellen Prüfpunkten und zeigt seinen Zeitstempel an. Klicken Sie auf **Wiederherstellen**, um es sofort zu laden, ohne einzelne Status durchsuchen zu müssen.
-
----
-
-## Schaltflächen
-
-| Knopf | Aktion |
-|--------|--------|
-| **Wiederherstellen** | Öffnet den ausgewählten Wiederherstellungsstatus als neues Bild. |
-| **Schließen** | Schließt den Dialog ab, ohne ihn wiederherzustellen. |
-| **Alte Zustände aufräumen…** | Öffnet eine Bereinigungsaufforderung (siehe unten). |
-
----
-
-## Bereinigen Sie alte Zustände
-
-Die Anhäufung von Wiederherstellungszuständen im Laufe der Zeit kann erheblichen Speicherplatz beanspruchen. Die Schaltfläche **Alte Zustände bereinigen…** (unten links im Dialogfeld) öffnet eine Bereinigungsaufforderung für die aktive Registerkarte (Autosave oder Inkrementell).
-
-Die Eingabeaufforderung zeigt:
-– Wie viele vollständige Speicherungen gibt es für die Datei?
-– Der gesamte Speicherplatz, den sie belegen.
-- Eine Drehschaltfläche **Neueste behalten**, um auszuwählen, wie viele Speicherungen beibehalten werden sollen.
-
-Wenn Sie **Neueste beibehalten** auf `0` setzen, werden alle Wiederherstellungsstatus gelöscht. Beim nächsten `Ctrl+I` nach einer vollständigen Bereinigung wird ein neuer Primärspeicher geschrieben.
-
----
-
-## Startwiederherstellung
-
-Wenn Lumi beim Start erkennt, dass die zuletzt geöffnete Datei neuere automatische Speicherdaten enthält als die letzte vollständige Speicherung, wird vor dem Laden eine Wiederherstellungsaufforderung angezeigt. Sie können akzeptieren (die automatische Speicherung laden) oder ablehnen (die primäre Speicherung wie gewohnt öffnen).
+Der Zweck der Dateiwiederherstellung besteht nicht darin, das Speichern zu ersetzen, sondern die kreative Arbeit weniger anfällig zu machen. Künstler können malen, experimentieren und Risiken eingehen, da sie wissen, dass Lumi zusätzliche Möglichkeiten bietet, wenn eine Sitzung, Datei oder Entscheidung schief geht.

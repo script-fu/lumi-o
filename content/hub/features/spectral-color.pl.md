@@ -2,129 +2,36 @@
 title: "Widmowe mieszanie kolorów"
 type: docs
 ---
-System palet Lumi wykorzystuje spektralny model kolorów do symulacji mieszania się prawdziwych pigmentów. Celem jest, aby doświadczenie budowania i wybierania kolorów z cyfrowej palety przypominało mieszanie fizycznych farb. Po nałożeniu koloru na płótno jest to standardowy kolor RGB.
+System palet Lumi wykorzystuje spektralne mieszanie kolorów, aby cyfrowy wybór kolorów zachowywał się bardziej jak mieszanie fizycznej farby. Zamiast traktować kolory jako proste wartości ekranowe, Lumi modeluje sposób, w jaki pigmenty absorbują i odbijają światło podczas generowania i mieszania palety kolorów.
 
-## Co oznacza mieszanie widmowe
+Rezultatem jest przepływ kolorów, w którym malarze wydają się bardziej znajomymi mieszaninami: żółcie i błękity mogą przechodzić w kierunku zieleni, nasycone kolory mogą przejść w wiarygodne neutralne, a ograniczone palety tworzą rozpoznawalną harmonię.
 
-Tradycyjne mieszanie RGB ma charakter addytywny: zmieszanie dwóch wartości RGB uśrednia je w kierunku punktu środkowego. Mieszanie pigmentów ma charakter subtraktywny: każdy pigment pochłania określone długości fal, a ich łączny efekt jest ciemniejszy i często zmienia odcień.
+## Zachowanie podobne do pigmentu
 
-Lumi modeluje to przy użyciu 10-pasmowej reprezentacji widmowego współczynnika odbicia dla palety kolorów, a nie RGB.
+Tradycyjne cyfrowe mieszanie kolorów często przechodzi przez matematyczne punkty środkowe, które nie przypominają farby. Mieszanie spektralne daje Lumi bogatszą podstawę do konstrukcji palety, umożliwiając interakcję kolorów zgodnie z tendencjami podobnymi do pigmentu.
 
-Daje to rezultaty przypominające farbę: zmieszanie koloru niebieskiego i żółtego daje kolor zielony, a nie szary. Mieszanie dwóch nasyconych kolorów daje kolor, który zmienia się w kierunku neutralnym, tak jak robią to pigmenty fizyczne.
+Dzięki temu eksploracja palety jest bardziej intuicyjna dla artystów, którzy myślą w kategoriach farby, a nie tylko wartości kolorów ekranu. Mieszanka może przyciemniać, wyciszać, ocieplać, chłodzić lub zmieniać odcień w sposób, który wydaje się powiązany z kolorami źródłowymi.
 
-Obliczenia widmowe są przeprowadzane podczas konstruowania palety, podczas generowania wpisów palety drugorzędnej i trzeciorzędnej oraz podczas mieszania dwóch kolorów nadrzędnych w programie Palette Mixer. Wynikowy kolor jest konwertowany do liniowego RGB na potrzeby wyświetlania i malowania.
+## Palety z charakterem
 
-## Profile pigmentów
+Ponieważ zachowanie widmowe jest częścią systemu palet, każda paleta rozwija swoją własną osobowość. Mała, ograniczona paleta może zapewnić silną jedność i stonowane przejścia, podczas gdy szersza paleta może otworzyć szerszą gamę czystych odcieni i kontrolowanych neutralnych odcieni.
 
-Wpisy w palecie mogą opierać się na rzeczywistych danych dotyczących pigmentów przy użyciu **kodów indeksu kolorów (CI)**. Każda rodzina pigmentów CI ma charakterystyczne odchylenie widmowe, które wpływa na sposób mieszania.
+Tożsamość pigmentu ma znaczenie. Ten sam widoczny kolor może się różnić w zależności od rodzaju pigmentu, który reprezentuje, co pomaga Lumi uchwycić niektóre praktyczne różnice, jakich malarze oczekują od prawdziwych materiałów.
 
-| Rola pigmentu | Mieszanie zachowań | Przykład |
-| :--- | :--- | :--- |
-| **Podstawowy** | Wysokie nasycenie, czyste elementy wtórne | PY3 (żółty cytrynowy), PR122 (magenta) |
-| **Ciało** | Kryjący, mocny ton masowy, w zielonych mieszankach przechodzi w oliwkowy | PY35 (żółcień kadmowa), PR108 (czerwień kadmowa) |
-| **Neutralizator** | Szybko desaturacji i wyciszenia | PBk11 (Czarny Mars), PBr7 (Sienna) |
-| **Kotwica Chroma** | Wysoka siła barwienia, dominuje w mieszaninach | PB29 (niebieski ultramarynowy), PG7 (zielony ftalowy) |
+## Mieszanie przed malowaniem
 
-Dodanie kolorów podstawowych z kodami CI do palety zapewnia silnikowi miksującemu dokładne odchylenie widmowe dla tych kolorów, dzięki czemu wygenerowane mieszanki drugorzędne i trzeciorzędne odzwierciedlają zachowanie mieszania w świecie rzeczywistym.
+Kolor widmowy w Lumi jest używany podczas budowania palet, generowania powiązanych kolorów i miksowania nowych wpisów palety. Po nałożeniu koloru na płótno staje się on normalnym kolorem obrazu do celów malowania i komponowania.
 
-## Pigmenty Lumi
+Dzięki temu proces malowania jest praktyczny, a jednocześnie poprawia doświadczenie artysty w zakresie wyboru i konstruowania koloru. Model widmowy kształtuje paletę; płótno pozostaje wydajne i kompatybilne ze standardowymi procesami przetwarzania obrazu.
 
-Paleta Master zawiera następujące pigmenty. Próbki pokazują typowy wygląd kamienia kamiennego dla każdego pigmentu (o pełnej mocy, nierozcieńczony).
+## Pomost między kolorem cyfrowym i fizycznym
 
-### Pomarańcze i żółcie
+Celem mieszania spektralnego nie jest imitowanie wszystkich fizycznych właściwości farby, ale wprowadzenie do malarstwa cyfrowego najbardziej przydatnej części zachowania pigmentu: wiarygodnych relacji między mieszaninami.
 
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "245,135,20" >}} | Pirolowa Pomarańcza | PO73 | Czerwony (Szkarłatny) |
-| {{< swatch "243,114,64" >}} | Pomarańcz kadmowy | PO20 | Żółty (korpus) |
-| {{< swatch "240,180,80" >}} | Żółcień kadmowa | PY35 | Żółty (korpus) |
-| {{< swatch "245,210,25" >}} | Kadm Żółty Blady | PY35: Blady | Żółty (jasny kadm) |
-| {{< swatch "250,230,5" >}} | Cytrynowo Żółty | PY3 | Żółty (cytrynowy) |
-| {{< swatch "225,155,10" >}} | Żółcień niklowo-azowa | PY150 | Żółty (środkowy) |
-| {{< swatch "180,175,45" >}} | Zielone złoto | PY129 | Żółto-zielony (złoty) |
+Dla artystów oznacza to, że paletę można eksplorować z większym zaufaniem. Kolory powstałe z tego samego zestawu pigmentów zwykle do siebie pasują, a zapisane mieszanki zachowują poczucie pochodzenia w palecie, zamiast sprawiać wrażenie niepowiązanych, próbkowanych wartości.
 
-### Kolory Ziemi
+## Kolor jako system
 
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "200,100,70" >}} | Spalona Sienna | PBr7:Spalony | Ziemia (czerwony brąz) |
-| {{< swatch "117,66,0" >}} | Spalony Umber | PBr7:Umber | Ziemia (neutralny) |
-| {{< swatch "205,68,35" >}} | Surowa Sienna | PBr7:Surowy | Ziemia (żółty brąz) |
-| {{< swatch "187,124,25" >}} | Żółta ochra | PY42 | Ziemia (żółty) |
+Mieszanie spektralne łączy Edytor palet, Mapę palet i Mikser palet w jeden system kolorów. Pigmenty definiują punkt wyjścia, mapa pokazuje, co może osiągnąć paleta, a mikser pozwala artystom wyszukiwać przydatne kolory w tej przestrzeni.
 
-### Zieloni
-
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "0,166,81" >}} | Zieleń ftalowa (YS) | PG36 | Zielony (odcień żółci Phtalo) |
-| {{< swatch "64,130,109" >}} | Wiridian | PG18 | Zielony (Viridian) |
-| {{< swatch "128,138,112" >}} | Terre Verte | PG23 | Zielony (zimny spokój) |
-| {{< swatch "0,110,100" >}} | Winsor Zielony (BS) | PG7 | Zielony (odcień Phthalo Blue) |
-
-### Błękit i cyjan
-
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "0,177,176" >}} | Kobaltowy Turkusowy Jasny | PG50 | Cyjan (minerał) |
-| {{< swatch "0,148,214" >}} | Błękit Cerulean | PB35 | Cyjan (minerał) |
-| {{< swatch "0,100,110" >}} | Turkus Phtalo | PB16 | Niebieski (Ftalo) |
-| {{< swatch "0,123,194" >}} | Kobaltowy błękit | PB28 | Niebieski (fioletowy) |
-| {{< swatch "0,75,115" >}} | Winsor Niebieski | PB15 | Niebieski (Ftalo) |
-| {{< swatch "27,63,148" >}} | Ultramaryna | PB29 | Niebieski (fioletowy) |
-
-### Fiołki, magenty i czerwienie
-
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "124,65,153" >}} | Genialny fiolet | PV23 | Fioletowy (Dioksazyna) |
-| {{< swatch "230,90,180" >}} | Trwała Róża | PV19:Róża | Magenta (chinakrydon) |
-| {{< swatch "190,40,120" >}} | Quinakrydon Magenta | PV19:Magenta | Magenta (chinakrydon) |
-| {{< swatch "160,30,65" >}} | Stały alizarynowy karmazyn | PV19:Szkarłat | Magenta (chinakrydon) |
-| {{< swatch "120,35,65" >}} | Fiolet perylenowy | PV29 | Magenta (chinakrydon) |
-| {{< swatch "135,10,45" >}} | Perylen Bordowy | PR179 | Czerwony (karmazynowy) |
-| {{< swatch "215,30,60" >}} | Czerwony Pirol | PR254 | Czerwony (Szkarłatny) |
-| {{< swatch "225,55,65" >}} | Czerwone światło pirolu | PR255 | Czerwony (światło pirolowe) |
-
-### Czarni i biali
-
-| Próbka | Imię | Kod CI | Rodzina |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "22,15,10" >}} | Mars Czarny (Ciepły) | PBk11 | Czarny (Mars) |
-| {{< swatch "18,28,12" >}} | Zieleń perylenowa | PBk31 | Czarny (zielony perylenowy) |
-| {{< swatch "10,18,19" >}} | Kość słoniowa czarna (fajna) | PBk9 | Czarny (kość słoniowa) |
-| {{< swatch "18,18,18" >}} | Lampa Czarna (Neutralna) | PBk7 | Czarny (Lampa) |
-| {{< swatch "255,249,235" >}} | Tytanowa biel (ciepła) | PW6:Ciepły | Biały (tytanowy ciepły) |
-| {{< swatch "255,255,255" >}} | Biel tytanowa (neutralna) | PW6 | Biały (neutralny tytan) |
-| {{< swatch "245,250,255" >}} | Cynk biały (chłodny) | PW4 | Biały (cynkowy chłodny) |
-
-### Kontroluj szarości
-
-Szarości kontrolne to standaryzowane neutralizatory stosowane do przewidywalnej desaturacji mieszanek.
-
-| Próbka | Imię | Kod CI |
-| :---: | :--- | :--- |
-| {{< swatch "135,128,120" >}} | Ciepły szary | N_CIEPŁY |
-| {{< swatch "128,128,128" >}} | Neutralny szary | N_NEUTRALNY |
-| {{< swatch "120,128,135" >}} | Chłodny Szary | N_COOL |
-
-## Mapa palet
-
-Mapa palet wizualizuje aktywną paletę w postaci koła odcieni: 36 sektorów odcieni (w krokach co 10°) × 15 komórek jasności. Po dodaniu składników podstawowych system generuje miksy wtórne i trzeciorzędowe i umieszcza je w odpowiednich pozycjach na mapie.
-
-Kliknięcie komórki powoduje wybranie koloru jako pierwszego planu. Kliknięcie z wciśniętym klawiszem Shift przypisuje go jako nadrzędny punkt końcowy w mikserze palet.
-
-## Mikser palet
-
-Palette Mixer uzyskuje nowe kolory z dwóch wpisów nadrzędnych przy użyciu stałego, trzyetapowego potoku:
-
-1. **Mieszanka**: Widmowe WGM pomiędzy rodzicem A (CCW) i rodzicem B (CW).
-2. **Chroma**: Mieszaj w kierunku neutralnego spektrum palety, zmniejszając nasycenie.
-3. **Ton**: Mieszaj w kierunku mieszania bieli lub czerni, dostosowując jasność.
-
-Ton jest stosowany jako ostatni, więc korekty jasności nie są osłabiane przez zmiany chrominancji. Elementy sterujące Blokada wartości i Zacisk pasma ograniczają wyniki do określonego poziomu jasności lub pasma wartości.
-
-Mieszane kolory można zapisać na palecie jako wpisy **Niestandardowe**, przechowując pełną recepturę (nadrzędne identyfikatory UID, współczynnik mieszania, ton, wartości nasycenia barwy) w celu późniejszego odzyskania.
-
-## Piksele płótna są RGB
-
-System widmowy działa całkowicie w oparciu o konstrukcję palety i dobór kolorów. Po zastosowaniu pociągnięcia pędzlem malowany jest kolor pierwszego planu (już przekonwertowany na liniowy RGB). Płótno przechowuje standardowe dane pikseli RGB.Mieszanie widmowe usprawnia budowanie palety i wybieranie kolorów w sposób zgodny z fizycznym zachowaniem pigmentu, bez zmiany sposobu przechowywania lub komponowania danych obrazu.
+Dzięki temu Lumi może pracować nad kolorami skupiając się na decyzjach dotyczących malowania: wybierz pigmenty, poznaj ich mieszaniny, zachowaj istotne kolory i maluj za pomocą palety, która zachowuje się jak spójna całość.

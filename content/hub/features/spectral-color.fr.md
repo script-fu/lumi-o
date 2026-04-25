@@ -2,129 +2,36 @@
 title: "Mélange de couleurs spectrales"
 type: docs
 ---
-Le système de palette de Lumi utilise un modèle de couleur spectrale pour simuler la manière dont les vrais pigments se mélangent. L’objectif est de faire en sorte que l’expérience de création et de sélection de couleurs à partir d’une palette numérique se comporte comme un mélange de peintures physiques. Une fois qu’une couleur est appliquée à la toile, elle est RVB standard.
+Le système de palette de Lumi utilise un mélange spectral de couleurs pour que la sélection numérique des couleurs se comporte davantage comme un mélange de peinture physique. Au lieu de traiter les couleurs comme de simples valeurs d'écran, Lumi modélise la manière dont les pigments absorbent et réfléchissent la lumière pendant que les couleurs de la palette sont générées et mélangées.
 
-## Que signifie le mélange spectral
+Le résultat est un flux de couleurs où les mélanges semblent plus familiers aux peintres : les jaunes et les bleus peuvent évoluer vers les verts, les couleurs saturées peuvent se transformer en neutres crédibles et les palettes limitées développent une harmonie reconnaissable.
 
-Le mélange RVB traditionnel est additif : le mélange de deux valeurs RVB les fait atteindre un point médian. Le mélange de pigments est soustractif : chaque pigment absorbe certaines longueurs d'onde et leur effet combiné est plus sombre et change souvent de teinte.
+## Comportement semblable à celui d'un pigment
 
-Lumi modélise cela en utilisant une représentation de réflectance spectrale à 10 bandes pour les couleurs de la palette, plutôt que RVB.
+Le mélange de couleurs numérique traditionnel passe souvent par des points médians mathématiques qui ne ressemblent pas à de la peinture. Le mélange spectral donne à Lumi une base plus riche pour la construction de la palette, permettant aux couleurs d'interagir selon les tendances pigmentaires.
 
-Cela produit des résultats semblables à ceux de la peinture : le mélange du bleu et du jaune produit du vert et non du gris. Le mélange de deux couleurs saturées produit une couleur qui vire au neutre comme le font les pigments physiques.
+Cela rend l’exploration des palettes plus intuitive pour les artistes qui pensent en termes de peinture, et pas seulement en termes de valeurs de couleurs à l’écran. Un mélange peut assombrir, assourdir, réchauffer, refroidir ou modifier la teinte d'une manière qui semble liée aux couleurs sources.
 
-Le calcul spectral s'exécute pendant la construction de la palette, lors de la génération des entrées de palette secondaire et tertiaire et lorsque le mélangeur de palette mélange deux couleurs parentes. La couleur résultante est convertie en RVB linéaire pour l'affichage et la peinture.
+## Des palettes de caractère
 
-## Profils de pigments
+Le comportement spectral faisant partie du système de palettes, chaque palette développe sa propre personnalité. Une petite palette limitée peut produire une unité forte et des transitions douces, tandis qu'une palette plus large peut ouvrir une gamme plus large de teintes nettes et de neutres contrôlés.
 
-Les entrées de palette peuvent être basées sur des données réelles sur les pigments à l'aide des **codes Colour Index (CI)**. Chaque famille de pigments CI présente un biais spectral caractéristique qui influence la manière dont elle se mélange.
+L’identité des pigments est importante. La même couleur visible peut se mélanger différemment selon le type de pigment qu'elle représente, ce qui aide Lumi à capturer certaines des différences pratiques que les peintres attendent des matériaux réels.
 
-| Rôle des pigments | Comportement de mélange | Exemple |
-| :--- | :--- | :--- |
-| **Primaire** | Chroma élevé, secondaires propres | PY3 (jaune citron), PR122 (magenta) |
-| **Corps** | Ton de masse opaque et fort, vire à l'olive dans les mélanges verts | PY35 (jaune de cadmium), PR108 (rouge de cadmium) |
-| **Neutraliseur** | Désature rapidement et met en sourdine | PBk11 (Mars Black), PBr7 (Sienne) |
-| **Ancre Chroma** | Haut pouvoir colorant, domine les mélanges | PB29 (bleu outremer), PG7 (vert phtalo) |
+## Mélanger avant de peindre
 
-L'ajout de primaires avec des codes CI à une palette donne au moteur de mélange un biais spectral précis pour ces couleurs, de sorte que les mélanges secondaires et tertiaires générés reflètent le comportement de mélange réel.
+La couleur spectrale dans Lumi est utilisée lors de la création de palettes, de la génération de couleurs associées et du mélange de nouvelles entrées de palette. Une fois qu'une couleur est appliquée à la toile, elle devient une donnée de couleur d'image normale pour la peinture et la composition.
 
-## LumiPigments
+Cela maintient le pipeline de peinture pratique tout en améliorant l'expérience de l'artiste en matière de choix et de construction des couleurs. Le modèle spectral façonne la palette ; le canevas reste efficace et compatible avec les flux de travail d’images standards.
 
-La palette Master est livrée avec les pigments suivants. Les échantillons montrent l’apparence masstone typique de chaque pigment (pleine résistance, non diluée).
+## Un pont entre la couleur numérique et physique
 
-### Oranges et jaunes
+Le but du mélange spectral n'est pas d'imiter toutes les propriétés physiques de la peinture, mais d'intégrer la partie la plus utile du comportement des pigments dans la peinture numérique : des relations de mélange crédibles.
 
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "245,135,20" >}} | Orange Pyrrole | PO73 | Rouge (écarlate) |
-| {{< swatch "243,114,64" >}} | Orange de cadmium | PO20 | Jaune (Corps) |
-| {{< swatch "240,180,80" >}} | Jaune de cadmium | PY35 | Jaune (Corps) |
-| {{< swatch "245,210,25" >}} | Jaune de cadmium pâle | PY35 : Pâle | Jaune (cadmium pâle) |
-| {{< swatch "250,230,5" >}} | Jaune citron | PY3 | Jaune (Citron) |
-| {{< swatch "225,155,10" >}} | Nickel Azo Jaune | PY150 | Jaune (milieu) |
-| {{< swatch "180,175,45" >}} | Or vert | PY129 | Jaune-Vert (Or) |
+Pour les artistes, cela signifie qu’une palette peut être explorée avec plus de confiance. Les couleurs produites à partir du même ensemble de pigments ont tendance à aller ensemble, et les mélanges enregistrés conservent un sentiment d'origine au sein de la palette plutôt que de ressembler à des valeurs échantillonnées sans rapport.
 
-### Couleurs de la Terre
+## La couleur comme système
 
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "200,100,70" >}} | Sienne brûlée | PBr7 : Brûlé | Terre (Brun Rouge) |
-| {{< swatch "117,66,0" >}} | Ombre brûlée | PBr7:Ombre | Terre (Neutre) |
-| {{< swatch "205,68,35" >}} | Sienne crue | PBr7:Brut | Terre (jaune brun) |
-| {{< swatch "187,124,25" >}} | Ocre jaune | PY42 | Terre (Jaune) |
+Le mélange spectral connecte l'éditeur de palette, la carte de palette et le mélangeur de palette en un seul système de couleurs. Les pigments définissent le point de départ, la carte montre ce que la palette peut atteindre et le mélangeur permet aux artistes de rechercher des couleurs utiles dans cet espace.
 
-### Verts
-
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "0,166,81" >}} | Vert de phtalo (YS) | PG36 | Vert (teinte jaune phtalo) |
-| {{< swatch "64,130,109" >}} | Viridien | PG18 | Vert (Viridien) |
-| {{< swatch "128,138,112" >}} | Terre Verte | PG23 | Vert (Terre Cool) |
-| {{< swatch "0,110,100" >}} | Winsor Vert (BS) | PG7 | Vert (nuance bleu phtalo) |
-
-### Bleus et Cyans
-
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "0,177,176" >}} | Lumière turquoise cobalt | PG50 | Cyan (minéral) |
-| {{< swatch "0,148,214" >}} | Bleu céruléen | PB35 | Cyan (minéral) |
-| {{< swatch "0,100,110" >}} | Phthalo Turquoise | PB16 | Bleu (Phthalo) |
-| {{< swatch "0,123,194" >}} | Bleu cobalt | PB28 | Bleu (Violet-Maigre) |
-| {{< swatch "0,75,115" >}} | Bleu Winsor | PB15 | Bleu (Phthalo) |
-| {{< swatch "27,63,148" >}} | Outremer | PB29 | Bleu (Violet-Maigre) |
-
-### Violettes, Magentas et Rouges
-
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "124,65,153" >}} | Violette Brillante | PV23 | Violette (Dioxazine) |
-| {{< swatch "230,90,180" >}} | Roses permanentes | PV19:Rose | Magenta (Quinacridone) |
-| {{< swatch "190,40,120" >}} | Quinacridone Magenta | PV19:Magenta | Magenta (Quinacridone) |
-| {{< swatch "160,30,65" >}} | Alizarine permanente pourpre | PV19 : Pourpre | Magenta (Quinacridone) |
-| {{< swatch "120,35,65" >}} | Violette de Pérylène | PV29 | Magenta (Quinacridone) |
-| {{< swatch "135,10,45" >}} | Pérylène Marron | PR179 | Rouge (cramoisi) |
-| {{< swatch "215,30,60" >}} | Rouge Pyrrole | PR254 | Rouge (écarlate) |
-| {{< swatch "225,55,65" >}} | Feu Rouge Pyrrole | PR255 | Rouge (lumière pyrrole) |
-
-### Noirs et Blancs
-
-| Échantillon | Nom | Code CI | Famille |
-| :---: | :--- | :--- | :--- |
-| {{< swatch "22,15,10" >}} | Mars Noir (Chaud) | PBk11 | Noir (Mars) |
-| {{< swatch "18,28,12" >}} | Vert pérylène | PBk31 | Noir (vert pérylène) |
-| {{< swatch "10,18,19" >}} | Noir ivoire (Froid) | PBk9 | Noir (ivoire) |
-| {{< swatch "18,18,18" >}} | Lampe noire (neutre) | PBk7 | Noir (Lampe) |
-| {{< swatch "255,249,235" >}} | Blanc de titane (chaud) | PW6 : Chaud | Blanc (Titane Chaud) |
-| {{< swatch "255,255,255" >}} | Blanc de titane (neutre) | PW6 | Blanc (Titane Neutre) |
-| {{< swatch "245,250,255" >}} | Blanc de zinc (froid) | PW4 | Blanc (Zinc Cool) |
-
-### Contrôler les gris
-
-Les gris de contrôle sont des neutralisants standardisés utilisés pour désaturer les mélanges de manière prévisible.
-
-| Échantillon | Nom | Code CI |
-| :---: | :--- | :--- |
-| {{< swatch "135,128,120" >}} | Gris chaud | N_CHAUD |
-| {{< swatch "128,128,128" >}} | Gris neutre | N_NEUTRE |
-| {{< swatch "120,128,135" >}} | Gris froid | N_COOL |
-
-## La carte des palettes
-
-La carte de palette visualise la palette active sous la forme d'une roue de teinte : 36 secteurs de teinte (pas de 10°) × 15 cellules de luminosité. Lorsque des primaires sont ajoutées, le système génère des mélanges secondaires et tertiaires et les place aux positions appropriées sur la carte.
-
-Cliquer sur une cellule sélectionne une couleur comme premier plan. Maj-clic l'affecte en tant que point de terminaison parent dans le mélangeur de palettes.
-
-## Le mélangeur de palettes
-
-Le Palette Mixer dérive de nouvelles couleurs à partir de deux entrées parentes à l'aide d'un pipeline fixe en trois étapes :
-
-1. **Mélange** : WGM spectral entre le parent A (CCW) et le parent B (CW).
-2. **Chroma** : Mélangez vers le spectre neutre de la palette, réduisant ainsi la saturation.
-3. **Ton** : Mélangez vers le mélange du blanc ou le mélange du noir, en ajustant la luminosité.
-
-Le ton est appliqué en dernier afin que les ajustements de luminosité ne soient pas dilués par les changements de chrominance. Les commandes Value Lock et Band Clamp contraignent les résultats à un niveau de luminosité ou une bande de valeurs spécifique.
-
-Les couleurs mélangées peuvent être enregistrées dans la palette en tant qu'entrées **Personnalisées**, stockant la recette complète (UID parents, facteur de mélange, tonalité, valeurs de chrominance) pour une récupération ultérieure.
-
-## Les pixels du canevas sont RVB
-
-Le système spectral fonctionne entièrement dans la construction de palettes et la sélection de couleurs. Lorsqu'un coup de pinceau est appliqué, la couleur de premier plan (déjà convertie en RVB linéaire) est ce qui est peint. Le canevas stocke les données de pixels RVB standard.Le mélange spectral améliore l'expérience de création d'une palette et de choix des couleurs d'une manière cohérente avec le comportement physique des pigments, sans modifier la façon dont les données d'image sont stockées ou composées.
+Cela donne à Lumi un flux de travail couleur centré sur les décisions de peinture : choisir les pigments, explorer leurs mélanges, conserver les couleurs qui comptent et peindre avec une palette qui se comporte comme un tout cohérent.

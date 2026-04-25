@@ -2,91 +2,36 @@
 title: "Mapa palet"
 type: docs
 ---
-Mapa Palet odpowiada na praktyczne pytanie malarzy: mając zestaw pigmentów, jakie kolory można z nich właściwie mieszać? Zaczynając od pigmentów wejściowych palety, proceduralnie bada każdą kombinację (mieszanki dwóch pigmentów, mieszanki trójskładnikowe, różnice tonalne) i odwzorowuje wyniki na kole kolorów. Wynikiem jest obraz osiągalnej przestrzeni kolorów dla tego konkretnego zestawu pigmentów.
+Mapa palet wizualizuje, co może wytworzyć aktywna paleta. Zaczynając od pigmentów palety i zapisanych kolorów, przedstawia osiągalną przestrzeń barw jako przyjazną dla malarza mapę odcieni i wartości.
 
-Mapa jest także narzędziem do nawigacji opartej na współrzędnych. Organizuje każdą wygenerowaną mieszankę według odcienia i jasności w okrągłą siatkę, dzięki czemu cała paleta jest czytelna na pierwszy rzut oka, a każdy kolor ma stabilny adres domowy.
+Jego cel jest praktyczny: zamiast przeglądać płaską listę próbek, artyści mogą zobaczyć, gdzie kolory żyją względem siebie i poruszać się przestrzennie po palecie.
 
-## Struktura siatki
+## Mapa osiągalnych kolorów
 
-Mapa jest podzielona na siatkę 36 × 15:
+Każda paleta ma charakter. Niektóre palety otwierają się na wyraźne zielenie i fiołki; inne szybko zapadają się w ciepłe neutralne, kolory ziemi lub stonowane cienie. Mapa palet sprawia, że ​​ten znak jest widoczny.
 
-- **36 sektorów odcieni**: kroki co 10° wokół koła, wyśrodkowane na nazwach głównych odcieni.
-- **15 komórek jasności**: 3 komórki na pasmo wartości × 5 pasm (High Key, Upper Mid, Middle, Lower Mid, Deep), biegnących od bieli na zewnątrz do czerni w środku.
+Wygenerowane mieszanki, pigmenty podstawowe i zapisane kolory pojawiają się jako część jednego zorganizowanego pola kolorów. Ułatwia to zrozumienie nie tylko istniejących kolorów, ale także ich związku z ogólną gamą palety.
 
-Każda komórka jest małym klinem na kole. Mówi się, że wpis umieszczony w komórce ma tę komórkę jako swoje **pochodzenie**: logiczny adres domowy na mapie.
+## Barwa, wartość i orientacja
 
-## Kolory w komórkach
+Mapa jest ułożona wokół odcieni i jasności, więc wybrane kolory mają stabilny adres wizualny. Jasne kolory, ciemne kolory, ciepłe przesunięcia, chłodne przesunięcia, nasycone obszary i wyciszone przejścia stają się łatwiejsze do porównania na pierwszy rzut oka.
 
-Gdy o tę samą komórkę rywalizuje wiele kolorów, w widocznym miejscu wyświetlany jest tylko jeden **zwycięzca**:
+Ta struktura przestrzenna jest szczególnie przydatna przy wyborze kolejnego koloru na obrazie. Artysta może skierować się w stronę pobliskiego odcienia, pozostać w tej samej rodzinie wartości, szukać silniejszej barwy lub celowo przejść w spokojniejszy neutralny.
 
-1. Zgłoszenia **główne** zawsze wygrywają swoją komórkę, niezależnie od innych osób.
-2. Jeśli nie ma żadnego podstawowego, wygenerowana mieszanka (drugorzędna lub trzeciorzędna) z **najwyższą barwą** wygrywa.
+## Więcej niż zbieracz
 
-Zgłoszenia, które nie wygrają, zajmują drugie miejsce i pozostają dostępne poprzez przełączanie kliknięć (patrz poniżej).
+Mapa palet jest także pomostem do miksowania. Kolory na mapie mogą służyć jako punkty początkowe dla nowych mieszanin, a zapisane mieszanki mogą zachować swój związek z mapą, zamiast stać się odłączonymi próbkami.
 
-Wpisy niestandardowe (zapisane miksy) są renderowane jako kwadratowe kropki; wygenerowane mieszanki i kolory podstawowe są renderowane jako okrągłe kropki.
+Pomaga to Lumi traktować kolor jako ciągłą przestrzeń roboczą. Wybieranie, mieszanie, zapisywanie i powrót do kolorów odbywa się w ramach tej samej palety geograficznej.
 
-## Kliknij Jazda na rowerze
+## Eksploracja skupiona na płótnie
 
-Kliknięcie zajętej komórki powoduje wybranie zwycięzcy jako koloru pierwszego planu. Ponowne kliknięcie tej samej komórki powoduje przejście do następnego mieszkańca (miksy wygenerowane na drugim miejscu, a następnie dowolne wpisy niestandardowe zapisane pod tym adresem siatki). Każde kliknięcie powoduje przejście o jeden krok w stosie.
+Mapę można wykorzystać jako dużą powierzchnię wizualną, gdy decyzje dotyczące koloru wymagają więcej miejsca. Dzięki temu jest przydatny do porównywania potencjalnego koloru z samym obrazem, przeglądania rodzin tonalnych lub szybkiego poruszania się po palecie bez polegania na małym panelu.
 
-**Kliknięcie lewym przyciskiem** powoduje wyświetlenie na pierwszym planie. Gdy docelowy kolor jest ustawiony na tło (z przybornika), zamiast tego klika opcję Trasa do tła.
+Zamiarem jest sprawienie, aby nawigacja po palecie była natychmiastowa i wizualna: spójrz na świat kolorów, poruszaj się po nim i wybierz następny znak.
 
-## Shift-Select: Ładowanie punktów końcowych miksera
+## Tożsamość palety
 
-Przytrzymaj **Shift**, aby przejść do trybu ładowania punktu końcowego:
+Ponieważ mapa palet jest generowana z aktywnej palety, przełączanie palet powoduje zmianę kształtu i wyróżnienia mapy. Ograniczona paleta portretów, paleta studyjna o pełnym spektrum i wyciszona paleta krajobrazów tworzą inną geografię kolorów.
 
-- **Kliknięcie lewym przyciskiem** przypisuje kliknięty wpis jako **Nadrzędny A (CCW)** w Mikserze palet.
-- **Kliknięcie prawym przyciskiem** przypisuje go jako **Nadrzędny B (CW)**.
-
-W tym trybie można wybierać tylko wpisy klasy A (mieszanki podstawowe i niestandardowe o nienaruszonym pochodzeniu). Trzecie wartości są ukryte, a kropki nie należące do klasy A są przyciemnione. Krótka nakładka potwierdza, że ​​tryb jest aktywny.
-
-## Najważniejsze cechy nadrzędne miksera
-
-Gdy Mikser Palet ma aktywne punkty końcowe Rodzica A i Rodzica B, oba są zaznaczone na Mapie **diamentowymi pierścieniami** (kształt rombu z czarną obwódką). Te podświetlenia pozostają widoczne nawet wtedy, gdy inne elementy wyświetlacza są przełączane, więc aktywne elementy nadrzędne mieszania są zawsze możliwe do zidentyfikowania.
-
-## Pochodzenie a pozycja wizualna
-
-Każdy wpis ma dwie pozycje na Mapie:
-
-- **Pochodzenie (komórka źródłowa)**: Adres siatki logicznej, do którego należy wpis, ustalony na czas jego istnienia.
-- **Wizualna pozycja punktu**: Miejsce, w którym kolor faktycznie jest renderowany na podstawie jego percepcyjnej barwy i jasności.
-
-Dzięki **Przeniesieniu najlepszego dopasowania** po zapisaniu mieszanki system oblicza optymalną recepturę ostatecznego koloru i ustawia początek tak, aby pasował do wizualnej pozycji koloru. Dzięki temu zapisane kolory są zbliżone do ich wizualnej lokalizacji na kole i sprawia, że ​​mapa jest spójna przestrzennie.
-
-## Przeciąganie zapisanych miksów
-
-Pozycje niestandardowe (zapisane miksy) można zmieniać, przeciągając:1. Kliknij i przytrzymaj wpis Niestandardowy (kropka kwadratowa) i przeciągnij poza próg 5 pikseli.
-2. Kursor zmieni się, wskazując tryb przeciągania. Najważniejsze elementy nadrzędne są aktualizowane na bieżąco w miarę poruszania się po mapie, aby pokazać nowe elementy nadrzędne łączące na każdej pozycji kandydata.
-3. Przeciągnięta kropka zostanie przyciągnięta do najbliższej prawidłowej pozycji próbki.
-4. Zwolnij, aby zatwierdzić. Wpis przyjmuje recepturę komórki docelowej: jej elementy nadrzędne, mieszanka, ton i nasycenie są aktualizowane w celu dopasowania, a jej początek jest aktualizowany w celu dopasowania do nowej pozycji wizualnej.
-
-Ruchy przeciągania można cofnąć poprzez **Edycja → Cofnij**.
-
-## Dwukrotne kliknięcie: przełączanie obszaru roboczego mapy
-
-W **Edytorze palet** dwukrotne kliknięcie dowolnego wpisu palety powoduje włączenie i wyłączenie widoku obszaru roboczego Mapa palet. Jest to szybki sposób na przełączanie pomiędzy przeglądaniem zapisanych kolorów a mieszaniem na Mapie bez korzystania z menu. Nie ma to wpływu na działanie pojedynczego kliknięcia (przywracanie przepisu wpisu do miksera).
-
-## Nakładka płótna
-
-Mapę palet można przywołać bezpośrednio na kanwę obrazu jako nakładkę pełnoekranową, klikając **próbkę pierwszego planu/tła** w przyborniku. Daje to dużą powierzchnię miksowania bez konieczności poświęcania stałego panelu na Mapę.
-
-## Centralna próbka koloru
-
-Okrągła próbka znajduje się pośrodku dziury w kształcie pierścienia i odzwierciedla kolor dowolnej komórki, nad którą znajduje się kursor:
-
-- **Kolor najechania**: gdy kursor zatrzyma się na wpisie mapy, próbka zostanie natychmiast zaktualizowana, aby pokazać kolor tego wpisu.
-- **Wybrany kolor jako zastępczy**: gdy nie jest najechana żadna komórka, próbka pokazuje wynik obliczony przez Mikser palet dla aktualnie wybranego wpisu. Jeśli mikser nie został jeszcze rozwiązany, używa podstawowego koloru wyświetlanego wpisu, więc miejsce nigdy nie staje się puste.
-- Cienka ciemna ramka przez cały czas wyznacza próbkę.
-- Gdy kursor zatrzyma się na chwilę nad środkową próbką, pojawi się biało-czarny pierścień zewnętrzny, sygnalizujący, że obszar jest interaktywny.
-- **Kliknięcie środkowej próbki** zamyka nakładkę płótna i powraca do normalnego widoku obrazu (tak samo jak kliknięcie poza zewnętrznym pierścieniem).
-
-## Klawisz Alt: tryb porównania płótna
-
-Kiedy nakładka płótna mapy palet jest otwarta, przytrzymanie **Alt** tymczasowo powoduje odsłonięcie obrazu poniżej:
-
-- Cały interfejs mapy palety staje się niewidoczny (jego krycie spada do zera), odsłaniając płótno.
-- Za kursorem podąża 64-pikselowa okrągła próbka wypełniona aktualnie próbkowanym kolorem Palette Mixer, dzięki czemu podczas sprawdzania obrazu pozostajesz świadomy aktywnego miksu.
-- Zwolnienie Alt przywraca mapę palety z pełnym kryciem.
-
-Etykieta podpowiedzi „Przytrzymaj klawisz Alt, aby zobaczyć obraz”* jest wyświetlana w widoku obszaru roboczego jako przypomnienie.
+W ten sposób Mapa Palet staje się portretem samej palety: czytelnym obrazem możliwości danego systemu kolorów.

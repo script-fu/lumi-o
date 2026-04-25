@@ -4,19 +4,20 @@ type: docs
 ---
 De functies van Lumi zijn gericht op digitaal schilderen en gestructureerde illustratieworkflows, gebouwd op niet-destructieve, op lagen gebaseerde bewerking.
 
-In dit gedeelte worden de kernmogelijkheden beschreven die beschikbaar zijn in Lumi en waar u deze in de interface kunt vinden.
+In dit gedeelte worden de kernmogelijkheden van Lumi geïntroduceerd en de creatieve workflows die ze ondersteunen.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Bewaar opgewarmde caches voor favoriete penselen, zodat ze zo snel mogelijk snel aanvoelen." >}}
-  {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Open containerformaat waarin lagen, metagegevens, ICC-profielen en herstelgegevens worden opgeslagen." >}}
-  {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Automatische incrementele herstel-snapshots beschermen het werk tegen crashes en stroomuitval." >}}
-  {{< card link="layers" title="Lagen en niet-destructieve bewerking" icon="collection" subtitle="Op lagen gebaseerde composities met overvloeimodi, maskers, groepen en niet-destructieve aanpassingslagen." >}}
-  {{< card link="paintbrush" title="Penseel gereedschap" icon="pencil-alt" subtitle="Druk-, snelheids-, kantel- en afstandsdynamiek met stabilisatie, verzachting en borstelformaties met meerdere koppen." >}}
-  {{< card link="palette-editor" title="Palet-editor" icon="color-swatch" subtitle="Creëer en beheer benoemde pigmentpaletten, met gebundelde sets die het volledige spectrum en beperkte paletten bestrijken." >}}
-  {{< card link="palette-map" title="Paletkaart" icon="view-grid" subtitle="Interactief 2D-raster brengt paletpigmenten in kaart op assen, gebruikt voor directe kleurkeuze en verkenning." >}}
-  {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Meng pigmenten uit het actieve palet op tint, verzadiging en toon met visuele voorvertoningen van openingen." >}}
+  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Zorg ervoor dat uw favoriete penselen responsief blijven door de penseeltoestanden te hergebruiken die er bij het echte schilderen toe doen." >}}
+  {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Een gestructureerd projectformaat voor gelaagde illustraties, herstel, kleurgegevens en langetermijnbewerking." >}}
+  {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Achtergrondbescherming en opzettelijke controlepunten zorgen ervoor dat schildersessies niet kwetsbaar worden." >}}
+  {{< card link="layers" title="Lagen en niet-destructieve bewerking" icon="collection" subtitle="Gestructureerd schilderen met bewerkbare lagen, groepen, maskers, effecten en beschermde werkstatussen." >}}
+  {{< card link="paintbrush" title="Penseel gereedschap" icon="pencil-alt" subtitle="Expressief schilderen met responsieve markeringen, dynamische invoer, textuur, vloeiend maken en penseelgedrag met meerdere koppen." >}}
+  {{< card link="palette-editor" title="Palet-editor" icon="color-swatch" subtitle="Bouw paletten als complete kleursystemen met pigmenten, opgeslagen mengsels, gebruikte kleuren, waarden en verlopen." >}}
+  {{< card link="palette-map" title="Paletkaart" icon="view-grid" subtitle="Bekijk de bereikbare kleurenwereld van een palet als een visuele kaart voor verkenning en selectie." >}}
+  {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Creëer nieuwe kleuren op basis van paletrelaties met behulp van pigmentachtige meng-, toon- en chromabeslissingen." >}}
   {{< card link="scripting" title="Schemascripting" icon="code" subtitle="Automatiseer workflows en breid Lumi uit met behulp van een ingebouwde Scheme-interpreter." >}}
-  {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Fysisch nauwkeurige pigmentmenging met behulp van spectrale upsampling, waardoor realistisch verfgedrag ontstaat." >}}
-  {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Verplaats pixels vrijelijk met penseelstreken. Vervormt volledige laaggroepen als één item, waarbij dezelfde transformatie wordt toegepast op alle geneste lagen en maskers." >}}
-  {{< card link="workspaces" title="Werkruimtes" icon="view-boards" subtitle="Bewaar en schakel complete UI-omgevingen: paneelindelingen, toolinstellingen, apparaatconfiguratie, thema en palet – onafhankelijk per werkruimte." >}}
+  {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Paletkleuren vermengen zich met pigmentachtig gedrag, waardoor digitale kleurselectie een schilderachtiger gevoel krijgt." >}}
+  {{< card link="tool-presets" title="Voorinstellingen voor gereedschap" icon="template" subtitle="Bouw een kleine, vertrouwde set handgemaakte tools met stabiel gedrag, middelen en aangepaste identiteiten." >}}
+  {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Geef geschilderde inhoud direct een nieuwe vorm, terwijl de gelaagde structuur van complexe kunstwerken behouden blijft." >}}
+  {{< card link="workspaces" title="Werkruimtes" icon="view-boards" subtitle="Schakel tussen voorbereide studioomgevingen voor schetsen, schilderen, inkten, kleurenwerk en focus." >}}
 {{< /cards >}}

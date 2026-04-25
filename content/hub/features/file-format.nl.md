@@ -2,111 +2,34 @@
 title: "Bestandsformaat (.lum)"
 type: docs
 ---
-Lumi gebruikt een open, op directory's gebaseerd bestandsformaat (`.lum`) dat is ontworpen voor prestaties, betrouwbaarheid en langdurige toegankelijkheid.
+Het oorspronkelijke bestandsformaat van Lumi is ontwikkeld voor gelaagde schilderprojecten die in de loop van de tijd betrouwbaar, inspecteerbaar en herstelbaar moeten blijven. Het is ontworpen rond de realiteit van illustratiewerk: veel lagen, grote doeken, ingebedde kleurinformatie, maskers, effecten en herstelgegevens.
 
-## Overzicht
+In plaats van een project als een enkele ondoorzichtige klodder te behandelen, houdt het formaat de structuur van het kunstwerk zichtbaar voor de toepassing. Hierdoor kan Lumi grote afbeeldingen op een intelligentere manier opslaan, laden en herstellen, terwijl de organisatie waarvan artiesten afhankelijk zijn, behouden blijft.
 
-Een `.lum` bestand is eigenlijk een directory met daarin:
-- **Metadata** (lagen, overvloeimodi, eigenschappen).
-- **Laagbuffers** (individuele pixelgegevens voor elke laag).
-- **Maskers** (grijswaardengegevens voor laagmaskers).
-- **Herstelgeschiedenis** (incrementele snapshots).
+## Open projectstructuur
 
-Deze structuur maakt snel opslaan, lui laden van grote bestanden en herstel van werk mogelijk, zelfs na een crash.
+Een Lumi-project houdt de onderdelen van het kunstwerk gescheiden: beeldstructuur, laaginhoud, maskers, kleurgegevens, metadata en herstelinformatie hebben elk een duidelijke rol. Dit maakt het formaat gemakkelijker om over te redeneren en beter geschikt voor langdurige toegang dan een gesloten, monolithische container.
 
-## Belangrijkste eigenschappen
+Het doel is niet alleen om pixels op te slaan, maar ook om de werkende staat van een illustratie op te slaan. Lagen blijven lagen, maskers blijven maskers en het bestand weerspiegelt nog steeds de manier waarop het kunstwerk is opgebouwd.
 
-### Open en leesbaar
+## Ontworpen voor grote schilderijen
 
-Het `.lum`-formaat maakt gebruik van XML-metagegevens en gecomprimeerde binaire buffers. U kunt de laagstructuur, eigenschappen en overvloeimodi in platte tekst inspecteren. Geen eigen codec; pixelgegevens worden opgeslagen in het standaard GEGL-bufferformaat.
+Grote gelaagde afbeeldingen kunnen snel zwaar worden. Het Lumi-formaat ondersteunt workflows waarbij niet elk stukje beeldgegevens in één keer in het geheugen hoeft te worden opgehaald. Projecten kunnen responsief blijven door de delen van de afbeelding te laden die daadwerkelijk nodig zijn voor weergave, bewerking, compositie of export.
 
-### Incrementele besparing
+Deze aanpak zorgt ervoor dat complexe bestanden beheersbaar aanvoelen, vooral wanneer een kunstwerk veel verborgen, gearchiveerde, experimentele of gegroepeerde lagen bevat.
 
-Incrementeel opslaan is mogelijk via **Bestand** → **Save Increment** (`Ctrl+I`). Het creëert een handmatig herstelcontrolepunt binnen het project zonder het normale **Bestand** → **Opslaan** (`Ctrl+S`) te vervangen. Bij volledige opslag wordt nog steeds het hoofdproject `.lum` bijgewerkt, terwijl Save Increment alleen de gewijzigde lagen schrijft die nodig zijn voor een snel controlepunt.
+## Besparen zonder de stroom te onderbreken
 
-### Lui laden
+Het bestandsformaat ondersteunt zowel normale projectopslag als lichtgewicht snapshots in herstelstijl. Dit geeft kunstenaars een manier om hun werk regelmatig te beschermen zonder van elk controlepunt een volledig duplicaat van de hele afbeelding te maken.
 
-Grote projecten gaan snel open. Laagpixels worden alleen van schijf geladen wanneer:
-- De laag wordt zichtbaar gemaakt.
-- Je schildert op de laag.
-- De laag wordt geëxporteerd of samengesteld.
+Omdat herstelinformatie tot de projectstructuur behoort, kan Lumi de nuttige geschiedenis dicht bij het kunstwerk houden, terwijl automatische veiligheidsopslagen toch afzonderlijk van het werkbestand kunnen worden uitgevoerd.
 
-Zeer grote projecten (meer dan 500 lagen, meerdere gigabytes aan gegevens) blijven responsief. Lui laden is standaard ingeschakeld en kan worden gewijzigd in **Bewerken → Voorkeuren → Prestaties → Geheugenbronnen**.
+## Uitwisselen en exporteren
 
-### Automatisch opslaan
+Het oorspronkelijke formaat is bedoeld voor doorlopend Lumi-werk, terwijl exportformaten worden gebruikt voor het delen van afgevlakte of op compatibiliteit gerichte resultaten. Importondersteuning helpt bestaande illustraties in de gelaagde omgeving van Lumi te brengen, en exportondersteuning zorgt ervoor dat voltooide stukken het projectformaat verlaten wanneer ze klaar zijn voor publicatie, levering of verdere verwerking.
 
-Lumi slaat wijzigingen automatisch met regelmatige tussenpozen op een **afzonderlijke cachelocatie** (`~/.cache/lumi/autosave/`) op. Automatisch opslaan is onafhankelijk van het werkbestand en wijzigt dit niet. Het interval en de cachelocatie kunnen worden geconfigureerd in **Bewerken → Voorkeuren → Prestaties**.
+Het onderscheid zorgt ervoor dat het werkbestand rijk en bewerkbaar blijft, terwijl de uiteindelijke afbeeldingen in gangbare externe formaten kunnen worden geproduceerd.
 
-## Toegang
+## Betrouwbaarheid op lange termijn
 
-### Opslaan en opslaan als
-
-- **Bestand** → **Opslaan** (Ctrl+S): Opslaan in de huidige map `.lum`.
-- **Bestand** → **Verhoging opslaan** (Ctrl+I): Creëer een incrementeel herstelcontrolepunt voor het huidige `.lum` bestand.
-- **Bestand** → **Opslaan als** (Shift+Ctrl+S): Opslaan in een nieuw `.lum` bestand. Het dialoogvenster Opslaan als bevat compressieopties voor het nieuwe projectbestand.
-
-Niet-opgeslagen wijzigingen worden aangegeven met een asterisk (*) in de venstertitel.
-
-### Exporteren
-
-- **Bestand** → **Exporteren als** (Shift+Ctrl+E): Exporteren naar PNG, JPEG, TIFF of andere formaten.
-- **Bestand** → **Overschrijven** (Ctrl+E): Opnieuw exporteren naar het laatst geëxporteerde bestand.
-
-Bij het exporteren worden zichtbare lagen afgevlakt en wordt de spectrale kleurruimte naar sRGB geconverteerd.
-
-### Importeren
-
-- **Bestand** → **Open** (Ctrl+O): Laad een `.lum` project.
-- **Bestand** → **Openen als lagen** (Shift+Ctrl+O): Importeer `.lum`-, XCF- of PSD-bestanden als nieuwe lagen.
-- **Bestand** → **Recente bestanden**: snelle toegang tot recent geopende projecten.
-
-PSD- en XCF-bestanden worden bij het importeren geconverteerd naar het oorspronkelijke Lumi-formaat.
-
-## Import- en exportcompatibiliteit
-
-### Ondersteunde importformaten
-
-- **.lum**: eigen Lumi-formaat.
-- **.xcf**: eigen GIMP-indeling (lagen en basiseigenschappen blijven behouden).
-- **.psd**: Photoshop-formaat (lagen en overvloeimodi behouden).
-- **PNG, JPEG, TIFF, enz.**: Import van afgeplatte afbeeldingen.
-
-### Ondersteunde exportformaten
-
-- **PNG**: verliesvrij, met alfatransparantie.
--**JPEG**: verliesgevend, afgevlakt.
-- **TIFF**: verliesvrij of LZW-gecomprimeerd.
-- **XCF**: GIMP-compatibiliteitsformaat. Alleen exporteren; lagen en basiseigenschappen behouden.
-
-## ProjectherstelLumi onderhoudt automatische opslag op de achtergrond en handmatige incrementele controlepunten, beide toegankelijk via **Bestand** → **Afbeelding herstellen**. Zie de pagina [Bestandsherstel](../recovery) voor volledige details.
-
-## Organisatie
-
-Een `.lum` bestand is een map met een vaste structuur:
-
-```
-my-painting.lum/
-  ├── metadata.xml                       (image structure, layer tree, properties)
-  ├── thumbnail-YYYYMMDD-HHMMSS.png      (last-saved thumbnail)
-  ├── drawables/
-  │   ├── layer-<name>.geglbuf           (pixel data per layer)
-  │   └── mask-<name>.geglbuf            (mask data, shares layer name)
-  ├── icc/                               (embedded colour profiles)
-  ├── parasites/                         (per-image metadata)
-  ├── paths/                             (vector paths as SVG)
-  ├── configs/                           (non-destructive filter configurations)
-  └── recovery/
-      └── primary-01.lum/                (first Save Increment baseline)
-          ├── metadata.xml
-          ├── drawables/                 (only modified buffers)
-        ├── delta-0001.lum/            (Ctrl+I checkpoint)
-          └── delta-0002.lum/
-```
-
-Laagbuffers worden genoemd naar de laag (`layer-Background.geglbuf`), en zijn niet opeenvolgend genummerd. Spaties in laagnamen worden opgeslagen als onderstrepingstekens; groepslagen krijgen het achtervoegsel `-GROUP`. Maskers delen de laagnaam (`mask-Background.geglbuf`).
-
-Elke `recovery/primary-NN.lum/` is een volledige basislijnopslag. Als u vervolgens op `Ctrl+I` drukt, worden `delta-NNNN.lum/` submappen toegevoegd die alleen de gewijzigde buffers sinds de laatste basislijn bevatten, waardoor de controlepuntopslag snel blijft, ongeacht de projectgrootte.
-
-Automatische opslag volgt dezelfde structuur, maar wordt afzonderlijk opgeslagen in `~/.cache/lumi/autosave/`, waardoor het werkbestand onaangetast blijft.
-- **Zeer grote projecten**: een project met meer dan 1000 lagen en terabytes aan gegevens zal het meeste profiteren van lazyloading; De uiteindelijke export naar een plat afbeeldingsformaat kan echter enige tijd duren.
-- **Netwerkschijven**: opslaan in op het netwerk gekoppelde mappen wordt ondersteund, maar langzamer dan lokale opslag vanwege I/O-latentie.
+Kortom, het `.lum` formaat is een praktische container voor serieus schilderwerk: open genoeg om te inspecteren, gestructureerd genoeg om te herstellen en flexibel genoeg om economisch met complexe gelaagde afbeeldingen om te gaan.

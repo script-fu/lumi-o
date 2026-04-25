@@ -2,109 +2,34 @@
 title: "Récupération de fichiers"
 type: docs
 ---
-Lumi maintient deux systèmes de récupération indépendants (sauvegardes automatiques en arrière-plan et points de contrôle incrémentiels manuels), tous deux accessibles à partir d'une seule boîte de dialogue.
+Le système de récupération de Lumi est conçu pour protéger le travail de peinture contre les plantages, les erreurs et les sessions interrompues. Il donne aux projets un filet de sécurité sans obliger les artistes à dupliquer constamment les fichiers à la main.
 
-## Accès
+La récupération s'articule autour de deux idées : la protection automatique de l'arrière-plan et les points de contrôle intentionnels. Ensemble, ils aident à préserver les œuvres récentes tout en permettant à un artiste de revenir à des moments antérieurs d'un projet.
 
-**Fichier** → **Récupérer l'image**
+## Protection automatique
 
-La boîte de dialogue s'ouvre pré-remplie avec les états de récupération pour le fichier actuellement ouvert. Utilisez le sélecteur de fichier en haut pour passer à un autre fichier `.lum`.
+Pendant qu'une image est en cours de modification, Lumi peut conserver les données de récupération séparées du fichier de travail principal. Cela signifie que le projet lui-même n'a pas besoin d'être réécrit à chaque fois qu'un instantané de sécurité est réalisé.
 
----
+En cas de problème, l'état de récupération automatique peut fournir une version récente de l'illustration qui peut être plus récente que la dernière sauvegarde délibérée. L’objectif est simple : réduire la quantité de travail perdue lorsqu’une session se termine de manière inattendue.
 
-## Sauvegarde automatique
+## Points de contrôle intentionnels
 
-Lumi enregistre un instantané en arrière-plan de votre travail à intervalles réguliers pendant l'édition. Les sauvegardes automatiques sont écrites dans un **répertoire de cache séparé**, laissant le fichier de travail `.lum` intact :
+Certains moments d'un tableau méritent d'être délibérément préservés : avant un changement de couleur majeur, après une esquisse réussie, avant de prendre une décision aplatie ou lorsque l'on tente une direction risquée.
 
-```
-~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
-```
+Lumi prend en charge les points de contrôle au niveau du projet pour ces moments. Ils sont plus légers que de conserver une copie complète distincte pour chaque expérience, mais donnent néanmoins à l'artiste un moyen de revenir à des moments significatifs de l'histoire de l'œuvre.
 
-L'encodage du chemin utilise `~` comme séparateur pour créer un répertoire de cache unique par fichier. Cela signifie que les sauvegardes automatiques sont disponibles même si le fichier de projet lui-même est perdu ou corrompu.
+## Récupération avec le contexte
 
-- **Fréquence** : configurable dans **Modifier** → **Préférences** → **Performances** → Intervalle d'enregistrement automatique.
-- **Emplacement de stockage** : également défini dans Préférences → Performances.
-- **Objectif** : Récupération après incident. L'onglet Enregistrement automatique de la boîte de dialogue Récupérer l'image affiche les états d'enregistrement automatique disponibles avec des horodatages.
+Les états de récupération sont présentés sous forme de versions de l’illustration plutôt que sous forme de fichiers bruts à parcourir manuellement. Cela permet à un artiste de comparer les sauvegardes automatiques récentes et les points de contrôle délibérés, puis d'ouvrir l'état qui correspond le mieux à l'œuvre à partir de laquelle il souhaite continuer.
 
-Lorsque vous ouvrez un fichier contenant des données de sauvegarde automatique plus récentes, Lumi vous en informe au moment de l'ouverture.
+Les images récupérées s'ouvrent sous forme de documents de travail, permettant à l'artiste de les inspecter avant de décider comment les enregistrer ou continuer.
 
----
+## Garder la récupération pratique
 
-## Sauvegardes incrémentielles
+Un système de récupération utile doit également rester gérable. Lumi est conçu pour organiser les données de récupération et rendre les anciens états amovibles lorsqu'ils ne sont plus nécessaires.
 
-La sauvegarde incrémentielle est un système de points de contrôle manuel stocké **dans le fichier de projet** sous `recovery/`. La structure est :
+Cela évite que la sécurité ne devienne un encombrement. La récupération peut rester active en arrière-plan, tandis que les artistes disposent toujours d'un moyen de contrôler la quantité d'histoire conservée au fil du temps.
 
-```
-my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
-      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
-      ├── delta-0002.lum/
-      └── ...
-```
+## Confiance en travaillant
 
-Une nouvelle ligne de base `primary-NN.lum/` est écrite après **Fichier → Enregistrer**. Les pressions suivantes sur **Fichier → Enregistrer l'incrément** (`Ctrl+I`) créent des sous-répertoires `delta-NNNN.lum/` contenant uniquement les tampons qui ont changé depuis la dernière ligne de base. Les deltas de sauvegarde automatique et les deltas de sauvegarde manuelle utilisent des compteurs distincts afin de ne pas interférer avec l'historique de chacun.
-
-L'incrément de sauvegarde est **toujours disponible** pour les fichiers `.lum` enregistrés :
-
-1. Utilisez **Fichier** → **Enregistrer** (`Ctrl+S`) pour créer ou mettre à jour le fichier principal du projet.
-2. Utilisez **Fichier** → **Save Increment** (`Ctrl+I`) pour créer un point de contrôle de récupération.
-3. Après un autre **Fichier** → **Enregistrer** complet, le `Ctrl+I` suivant écrit une nouvelle ligne de base `primary-NN.lum/` avant de créer de nouveaux deltas.
-
-Les fichiers récupérés nommés avec le préfixe `RECOVERED_` doivent d'abord être enregistrés normalement avant que Save Increment ne devienne disponible pour eux.
-
-Lorsque vous ouvrez un fichier `.lum` contenant des sauvegardes incrémentielles plus récentes que la sauvegarde principale, Lumi affiche une invite **Enregistrement incrémentiel détecté** proposant de charger le point de contrôle le plus récent.
-
----
-
-## Boîte de dialogue Récupérer l'image
-
-La boîte de dialogue comporte trois onglets et deux boutons d'action.
-
-### Onglet Sauvegarde automatique
-
-Répertorie tous les états d'enregistrement automatique disponibles pour le fichier sélectionné avec des horodatages et des vignettes (le cas échéant). Sélectionnez un état et cliquez sur **Récupérer** pour l'ouvrir.
-
-Utilisez cet onglet pour :
-- Récupérer après un crash.
-- Revenir à un état antérieur de la même session.
-
-### Onglet incrémentiel
-
-Répertorie tous les états de point de contrôle stockés dans le fichier projet. Chaque entrée affiche l'horodatage du point de contrôle. Sélectionnez un point de contrôle et cliquez sur **Récupérer** pour l'ouvrir.
-
-Utilisez cet onglet pour :
-- Revenir à un point antérieur d'une session sans avoir enregistré des fichiers séparés.
-- Parcourez l'historique des versions d'un projet.
-
-### Dernier onglet
-
-L'onglet par défaut lorsque la boîte de dialogue s'ouvre. Identifie automatiquement l'état de récupération disponible le plus récent à travers les sauvegardes automatiques et les points de contrôle incrémentiels, et affiche son horodatage. Cliquez sur **Récupérer** pour le charger immédiatement sans parcourir les états individuels.
-
----
-
-## Boutons
-
-| Bouton | Actions |
-|--------|--------|
-| **Récupérer** | Ouvre l'état de récupération sélectionné en tant que nouvelle image. |
-| **Fermer** | Ferme la boîte de dialogue sans récupérer. |
-| **Nettoyer les anciens États…** | Ouvre une invite de nettoyage (voir ci-dessous). |
-
----
-
-## Nettoyer les anciens états
-
-L’accumulation d’états de récupération au fil du temps peut consommer une quantité importante d’espace disque. Le bouton **Nettoyer les anciens états…** (en bas à gauche de la boîte de dialogue) ouvre une invite de nettoyage pour l'onglet actif (enregistrement automatique ou incrémentiel).
-
-L'invite affiche :
-- Combien de sauvegardes complètes existent pour le fichier.
-- L'espace disque total qu'ils occupent.
-- Un bouton rotatif **Conserver les plus récentes** pour sélectionner le nombre de sauvegardes à conserver.
-
-Le réglage de **Conserver le plus récent** sur `0` supprime tous les états de récupération. Le prochain `Ctrl+I` après un nettoyage complet écrira une nouvelle sauvegarde principale.
-
----
-
-## Récupération de démarrage
-
-Au démarrage, si Lumi détecte que le fichier le plus récemment ouvert contient des données de sauvegarde automatique plus récentes que celles de la dernière sauvegarde complète, il présente une invite de récupération avant le chargement. Vous pouvez accepter (charger la sauvegarde automatique) ou rejeter (ouvrir la sauvegarde principale normalement).
+Le but de la récupération de fichiers n'est pas de remplacer la sauvegarde, mais de rendre le travail créatif moins fragile. Les artistes peuvent peindre, expérimenter et prendre des risques en sachant que Lumi dispose de moyens supplémentaires pour revenir en arrière lorsqu'une session, un fichier ou une décision tourne mal.

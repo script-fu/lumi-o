@@ -2,111 +2,34 @@
 title: "Format de fichier (.lum)"
 type: docs
 ---
-Lumi utilise un format de fichier ouvert basé sur un répertoire (`.lum`) conçu pour les performances, la fiabilité et l'accessibilité à long terme.
+Le format de fichier natif de Lumi est conçu pour les projets de peinture en couches qui doivent rester fiables, inspectables et récupérables au fil du temps. Il est conçu autour des réalités du travail d’illustration : de nombreux calques, de grandes toiles, des informations de couleur intégrées, des masques, des effets et des données de récupération.
 
-## Aperçu
+Plutôt que de traiter un projet comme une seule goutte opaque, le format maintient la structure de l'œuvre d'art visible pour l'application. Cela permet à Lumi d'enregistrer, de charger et de récupérer des images volumineuses de manière plus intelligente tout en préservant l'organisation dont dépendent les artistes.
 
-Un fichier `.lum` est en fait un répertoire contenant :
-- **Métadonnées** (calques, modes de fusion, propriétés).
-- **Tampons de calque** (données de pixels individuelles pour chaque calque).
-- **Masques** (données en niveaux de gris pour les masques de calque).
-- **Historique de récupération** (instantanés incrémentiels).
+## Ouvrir la structure du projet
 
-Cette structure permet une sauvegarde rapide, un chargement paresseux de fichiers volumineux et une récupération du travail même après un crash.
+Un projet Lumi sépare les parties de l'œuvre d'art : la structure de l'image, le contenu des calques, les masques, les données de couleur, les métadonnées et les informations de récupération ont chacun un rôle clair. Cela rend le format plus facile à raisonner et mieux adapté à un accès à long terme qu’un conteneur fermé et monolithique.
 
-## Propriétés clés
+Le but n’est pas seulement de stocker des pixels, mais aussi de stocker l’état de fonctionnement d’une illustration. Les calques restent des calques, les masques restent des masques et le fichier continue de refléter la façon dont l'illustration a été construite.
 
-### Ouvert et lisible
+## Conçu pour les grands tableaux
 
-Le format `.lum` utilise des métadonnées XML et des tampons binaires compressés. Vous pouvez inspecter la structure des calques, les propriétés et les modes de fusion en texte brut. Pas de codec propriétaire ; les données de pixels sont stockées au format tampon GEGL standard.
+Les grandes images superposées peuvent rapidement devenir lourdes. Le format de Lumi prend en charge les flux de travail dans lesquels il n'est pas nécessaire d'extraire toutes les données d'image en même temps. Les projets peuvent rester réactifs en chargeant les parties de l'image qui sont réellement nécessaires à l'affichage, à l'édition, à la composition ou à l'exportation.
 
-### Économie incrémentielle
+Cette approche permet de gérer les fichiers complexes, en particulier lorsqu'une illustration contient de nombreux calques cachés, archivés, expérimentaux ou regroupés.
 
-L'économie incrémentielle est disponible via **Fichier** → **Enregistrer l'incrément** (`Ctrl+I`). Il crée un point de contrôle de récupération manuelle à l'intérieur du projet sans remplacer le **Fichier** → **Enregistrer** normal (`Ctrl+S`). Les sauvegardes complètes mettent toujours à jour le projet principal `.lum`, tandis que Save Increment écrit uniquement les couches modifiées nécessaires pour un point de contrôle rapide.
+## Économiser sans interrompre le flux
 
-### Chargement paresseux
+Le format de fichier prend en charge à la fois l'enregistrement normal du projet et les instantanés légers de style récupération. Cela donne aux artistes un moyen de protéger fréquemment leurs œuvres sans transformer chaque point de contrôle en une copie complète de l’image entière.
 
-Les grands projets s'ouvrent rapidement. Les pixels du calque sont chargés à partir du disque uniquement lorsque :
-- Le calque est rendu visible.
-- Vous peignez sur le calque.
-- Le calque est exporté ou composé.
+Étant donné que les informations de récupération appartiennent à la structure du projet, Lumi peut conserver un historique utile proche de l'illustration tout en permettant aux sauvegardes de sécurité automatiques de vivre séparément du fichier de travail.
 
-Les très gros projets (plus de 500 couches, plusieurs gigaoctets de données) restent réactifs. Le chargement différé est activé par défaut et peut être activé dans **Édition → Préférences → Performances → Ressources mémoire**.
+## Échange et exportation
 
-### Sauvegarde automatique
+Le format natif est destiné au travail Lumi en cours, tandis que les formats d'exportation sont utilisés pour partager des résultats aplatis ou axés sur la compatibilité. La prise en charge de l'importation permet d'intégrer les illustrations existantes dans l'environnement en couches de Lumi, et la prise en charge de l'exportation permet aux pièces finies de quitter le format du projet lorsqu'elles sont prêtes à être publiées, livrées ou traitées ultérieurement.
 
-Lumi enregistre automatiquement les modifications dans un **emplacement de cache distinct** (`~/.cache/lumi/autosave/`) à intervalles réguliers. Les sauvegardes automatiques sont indépendantes du fichier de travail et ne le modifient pas. L'intervalle et l'emplacement du cache sont configurables dans **Édition → Préférences → Performances**.
+Cette distinction permet de conserver le fichier de travail riche et modifiable tout en permettant aux images finales d'être produites dans des formats externes courants.
 
-## Accès
+## Fiabilité à long terme
 
-### Enregistrer et enregistrer sous
-
-- **Fichier** → **Enregistrer** (Ctrl+S) : Enregistrer dans le répertoire `.lum` actuel.
-- **Fichier** → **Enregistrer l'incrément** (Ctrl+I) : crée un point de contrôle de récupération incrémentielle pour le fichier `.lum` actuel.
-- **Fichier** → **Enregistrer sous** (Maj+Ctrl+S) : enregistrez dans un nouveau fichier `.lum`. La boîte de dialogue Enregistrer sous inclut des options de compression pour le nouveau fichier de projet.
-
-Les modifications non enregistrées sont indiquées par un astérisque (*) dans le titre de la fenêtre.
-
-### Exporter
-
-- **Fichier** → **Exporter sous** (Maj+Ctrl+E) : exporter au format PNG, JPEG, TIFF ou autres formats.
-- **Fichier** → **Écraser** (Ctrl+E) : réexporter vers le dernier fichier exporté.
-
-L’exportation aplatit les calques visibles et convertit l’espace colorimétrique spectral en espace colorimétrique sRGB.
-
-### Importer
-
-- **Fichier** → **Ouvrir** (Ctrl+O) : charger un projet `.lum`.
-- **Fichier** → **Ouvrir en tant que calques** (Maj+Ctrl+O) : importez des fichiers `.lum`, XCF ou PSD en tant que nouveaux calques.
-- **Fichier** → **Fichiers récents** : accès rapide aux projets récemment ouverts.
-
-Les fichiers PSD et XCF sont convertis au format natif de Lumi lors de l'importation.
-
-## Compatibilité d'importation et d'exportation
-
-### Formats d'importation pris en charge
-
-- **.lum** : format natif Lumi.
-- **.xcf** : format natif de GIMP (calques et propriétés de base préservés).
-- **.psd** : format Photoshop (calques et modes de fusion conservés).
-- **PNG, JPEG, TIFF, etc.** : Importation d'images aplaties.
-
-### Formats d'exportation pris en charge
-
-- **PNG** : Sans perte, avec transparence alpha.
-- **JPEG** : avec perte, aplati.
-- **TIFF** : sans perte ou compressé LZW.
-- **XCF** : format de compatibilité GIMP. Exportation uniquement ; couches et propriétés de base préservées.
-
-## Récupération de projetLumi maintient des sauvegardes automatiques en arrière-plan et des points de contrôle incrémentiels manuels, tous deux accessibles depuis **Fichier** → **Récupérer l'image**. Consultez la page [Récupération de fichiers](../recovery) pour plus de détails.
-
-## Organisation
-
-Un fichier `.lum` est un répertoire avec une structure fixe :
-
-```
-my-painting.lum/
-  ├── metadata.xml                       (image structure, layer tree, properties)
-  ├── thumbnail-YYYYMMDD-HHMMSS.png      (last-saved thumbnail)
-  ├── drawables/
-  │   ├── layer-<name>.geglbuf           (pixel data per layer)
-  │   └── mask-<name>.geglbuf            (mask data, shares layer name)
-  ├── icc/                               (embedded colour profiles)
-  ├── parasites/                         (per-image metadata)
-  ├── paths/                             (vector paths as SVG)
-  ├── configs/                           (non-destructive filter configurations)
-  └── recovery/
-      └── primary-01.lum/                (first Save Increment baseline)
-          ├── metadata.xml
-          ├── drawables/                 (only modified buffers)
-        ├── delta-0001.lum/            (Ctrl+I checkpoint)
-          └── delta-0002.lum/
-```
-
-Les tampons de couche portent le nom de la couche (`layer-Background.geglbuf`), et non numérotés séquentiellement. Les espaces dans les noms de calques sont stockés sous forme de traits de soulignement ; les calques de groupe reçoivent un suffixe `-GROUP`. Les masques partagent le nom du calque (`mask-Background.geglbuf`).
-
-Chaque `recovery/primary-NN.lum/` est une sauvegarde de base complète. Les pressions suivantes sur `Ctrl+I` ajoutent des sous-répertoires `delta-NNNN.lum/` contenant uniquement les tampons modifiés depuis la dernière ligne de base, ce qui permet d'enregistrer rapidement les points de contrôle, quelle que soit la taille du projet.
-
-Les sauvegardes automatiques suivent la même structure mais sont stockées séparément dans `~/.cache/lumi/autosave/`, laissant le fichier de travail intact.
-- **Très grands projets** : un projet avec plus de 1 000 couches et téraoctets de données bénéficiera le plus du chargement paresseux ; cependant, l'exportation finale au format d'image plate peut prendre du temps.
-- **Lecteurs réseau** : l'enregistrement dans des répertoires montés en réseau est pris en charge mais plus lent que le stockage local en raison de la latence d'E/S.
+En bref, le format `.lum` est un conteneur pratique pour les travaux de peinture sérieux : suffisamment ouvert pour inspecter, suffisamment structuré pour récupérer et suffisamment flexible pour gérer des images complexes en couches de manière économique.

@@ -2,86 +2,36 @@
 title: "Werkruimtes"
 type: docs
 ---
-Een werkruimte is een opgeslagen momentopname van uw gehele UI-omgeving: welke panelen open zijn en waar, de canvasdecoraties en opvulling voor zowel de normale als de volledige schermweergave, het actieve thema en de pictogrammenset, de lay-out van de gereedschapskist, het actieve palet en uw gereedschapsinstellingen. Met Lumi kunt u zoveel benoemde werkruimten opslaan als u wilt en er direct tussen schakelen: alle geopende afbeeldingen worden ter plekke bijgewerkt, opnieuw opstarten is niet nodig.
+Dankzij werkruimten kan Lumi zich aanpassen aan verschillende manieren van werken. Een werkruimte geeft het gevoel van de studioomgeving weer: paneelindeling, gereedschapsstatus, canvaspresentatie, bronpaden, paletkeuze, thema en andere interfacevoorkeuren die de schildersessie vormgeven.
 
-## Wat een werkruimte bespaart
+In plaats van één vast arrangement voor elke taak aan te houden, kunnen kunstenaars aparte omgevingen onderhouden voor schetsen, schilderen, inkten, kleurenwerk, presentatie, scripting of gerichte sessies op volledig scherm. Elke omgeving kan de middelen naar voren brengen die bij dat soort werk horen, zodat een tekenwerkruimte het gevoel kan hebben gevuld te zijn met tekenvoorinstellingen, terwijl een schilderwerkruimte kan overschakelen naar schildergereedschappen.
 
-In elke benoemde werkruimte wordt het volgende onafhankelijk opgeslagen:
+## Een studio die verandert met de taak
 
-| Onderdeel | Wat het omvat |
-| :--- | :--- |
-| **Indeling** | Vensterpositie en -grootte, dockindeling (linker- en rechterpaneelkolommen, welke panelen open zijn en in welke volgorde), modus voor één of meerdere vensters, gemaximaliseerde status, zichtbaarheid en positie van de tabbalk |
-| **Gereedschapsopties** | De huidige instellingen voor elk gereedschap (penseelgrootte, hardheid, kromtrekkingsgedrag, etc.) |
-| **Invoerapparaten** | Configuratie van invoerapparaat: drukcurven, knoptoewijzingen, astoewijzingen voor stylus en andere apparaten |
-| **Canvasdecoraties** | Standaardinstellingen per werkruimte voor linialen, schuifbalken, hulplijnen, raster, selectiemarkering, laaggrens en canvasgrens — ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** en **Volledige schermweergave**, onafhankelijk voor normale en volledige schermweergave |
-| **Canvasvulling** | Opvullingsmodus en kleur per werkruimte voor normale en volledige schermweergave - ingesteld via **Voorkeuren → Afbeeldingsvensters → Standaardweergave** |
-| **Thema en pictogrammen** | Actief thema, donker/lichte kleurvariant, pictogrammenset, overschrijven van pictogramgrootte en lettertypeschaal |
-| **Gereedschapskist** | FG/BG-widgetpositie (boven/onder/links/rechts), FG/BG-schaal, zichtbaarheid van de Wilber-mascotte, kopteksten van gereedschapsgroepen |
+Verschillende stadia van een kunstwerk profiteren van verschillende omgevingen. Voor ruwe schetsen zijn mogelijk een helder canvas en minimale panelen nodig. Voor het schilderen zijn mogelijk penseelinstellingen en toegang tot het palet binnen handbereik nodig. Voor het inkten zijn mogelijk hulplijnen, stabiele gereedschapsopties en een neutrale weergave nodig. Voor een recensie of presentatie is mogelijk een schonere configuratie op volledig scherm nodig.
 
-Het actieve **palet** en **tool preset** worden ook per werkruimte vastgelegd en hersteld wanneer u overschakelt.
+Werkruimtes maken deze verschuivingen bewust. De interface kan worden aangepast aan de taak, zonder dat de kunstenaar de studio elke keer met de hand opnieuw hoeft op te bouwen.
 
-> **Canvasdecoraties en opvulling** worden beheerd door
-> **Voorkeuren → Afbeeldingsvensters → Geavanceerde vensteropties → Standaardweergave** (normale weergave)
-> en **Verschijning op volledig scherm** (volledig scherm). Pas die instellingen naar wens aan,
-> sla vervolgens de werkruimte op. De **Bekijk menu**-items (linialen, hulplijnen, etc.) zijn lokaal voor de
-> huidige afbeeldingsvenster en worden niet per werkruimte opgeslagen.
+## Meer dan paneelplaatsing
 
-### Live updates op schakelaar
+Een werkruimte is niet alleen een dock-indeling. Het kan de bredere werkcontext behouden: de manier waarop het canvas is ingekaderd, hoe de gereedschapskist zich gedraagt, welke kleuren en gereedschapsbronnen gereed zijn, hoe gereedschappen zijn geconfigureerd en hoe invoerapparaten naar verwachting zullen reageren.
 
-Wanneer u van werkruimte wisselt, worden alle geopende afbeeldingsvensters onmiddellijk bijgewerkt: linialen, hulplijnen, schuifbalken, opvulkleur en alle andere weergave-instellingen veranderen op hun plaats zonder dat u afbeeldingen hoeft te sluiten en opnieuw te openen.
+Dit maakt het wisselen van werkruimte nuttig, zelfs als de panelen er hetzelfde uitzien. Twee omgevingen kunnen een algemene lay-out delen, maar verschillen qua gereedschapsgevoel, visueel comfort, paletidentiteit, beschikbare voorinstellingen of apparaatgedrag.
 
-## Toegang
+## Direct overstappen
 
-**Bewerken → Voorkeuren → Werkruimte**
+Werkruimtes zijn bedoeld om vloeiend te zijn. Schakelen zou moeten aanvoelen alsof u tussen voorbereide bureaus in dezelfde studio beweegt, in plaats van de applicatie opnieuw te starten of een afzonderlijke configuratie te openen.
 
-Het bovenste gedeelte van de pagina Werkruimtevoorkeuren bevat al uw opgeslagen werkruimten en biedt bedieningselementen om deze te beheren.
+Open beelden kunnen op hun plaats blijven terwijl de omringende omgeving verandert, waardoor de kunstenaar van de ene fase van het werk naar de andere kan gaan zonder de concentratie te onderbreken.
 
-## Een werkruimte creëren
+## Persoonlijke en projectmatige opstellingen
 
-Stel uw panelen, gereedschappen en palet precies in zoals u dat wilt, en doe dan het volgende:
+Sommige werkruimtes kunnen persoonlijke standaardinstellingen zijn: een comfortabele schilderopstelling, een compacte laptopopstelling of een focusmodus op volledig scherm. Andere kunnen tot een project behoren: een bepaald palet, thema, paneelopstelling, bronnenverzameling of apparaatconfiguratie die bij een specifieke reeks afbeeldingen past.
 
-1. Open **Bewerken → Voorkeuren → Werkruimte**.
-2. Klik op **Indeling opslaan als…**.
-3. Voer een naam in en klik op **Opslaan**.
+Omdat werkruimtes een naam hebben en herbruikbaar zijn, kunnen ze onderdeel worden van het ritme van een kunstenaar. De juiste omgeving kan worden hersteld wanneer het werk daarom vraagt.
 
-De nieuwe werkruimte verschijnt in de vervolgkeuzelijst **Actieve indeling** en in het menu **Windows**.
+## Wrijving verminderen
 
-## Van werkruimte wisselen
+Het doel van werkruimten is om herhaalde instellingen uit het creatieve proces te verwijderen. Zodra een arrangement goed voelt, kan Lumi het zich herinneren. Wanneer de taak verandert, kan de interface volgen.
 
-Er zijn twee manieren om over te stappen:
-
-- **Venstersmenu**: de lay-outnamen verschijnen onder **Vensters → Lay-out** voor snelle toegang vanaf het canvas.
-- **Voorkeuren → Werkruimte**: Selecteer een lay-out in de vervolgkeuzelijst **Actieve lay-out** en klik op **Laad lay-out opnieuw**.
-
-Overschakelen gebeurt onmiddellijk: Lumi herbouwt de paneelindeling, herstelt gereedschapsopties, herlaadt apparaatinstellingen, werkt canvasdecoraties, opvulling, thema en gereedschapskistindeling bij, allemaal zonder opnieuw op te starten.
-
-## Werkruimten beheren
-
-Vanuit **Bewerken → Voorkeuren → Werkruimte**:| Actie | Effect |
-| :--- | :--- |
-| **Indeling opslaan** | Overschrijft de huidige werkruimte met uw huidige instellingen. |
-| **Indeling opslaan als…** | Creëert een nieuwe benoemde werkruimte op basis van uw huidige instellingen. |
-| **Lay-out hernoemen…** | Hernoemt de geselecteerde werkruimte. |
-| **Indeling opnieuw laden** | Past de geselecteerde werkruimte onmiddellijk toe. |
-| **Indeling verwijderen...** | Verwijdert permanent de geselecteerde werkruimte en de bijbehorende bestanden. |
-
-## Persistentie-instellingen
-
-Het onderste deel van de Workspace-voorkeurenpagina bepaalt wat Lumi automatisch opslaat:
-
-- **Sla vensterposities op bij afsluiten**: Wanneer ingeschakeld, worden de dock- en vensterposities elke keer dat u afsluit naar schijf geschreven.
-- **Open vensters op dezelfde monitor**: Opent elk venster opnieuw op de monitor waarop het zich tijdens de laatste sessie bevond.
-- **Toolopties opslaan bij afsluiten**: slaat de huidige gereedschapsinstellingen op bij het afsluiten.
-- **Invoerapparaatinstellingen opslaan bij afsluiten**: slaat de stylus- en apparaatconfiguratie op bij het afsluiten.
-
-Deze instellingen gelden per werkruimte: elke lay-out behoudt zijn eigen opgeslagen status, onafhankelijk van elkaar.
-
-## Voorbeeldworkflows
-
-Een paar manieren waarop kunstenaars meerdere werkruimtes kunnen gebruiken:
-
-- **Schilderij** — grote penseeldocks, warme opvulkleur (ingesteld in Voorkeuren → Afbeeldingsvensters → Standaarduiterlijk), uw favoriete themavariant
-- **Inkt** — hulplijnen en canvasgrens ingeschakeld, schuifbalken ingeschakeld (ingesteld in Voorkeuren → Standaardweergave), neutrale opvulkleur
-- **Roughs** — dokken verborgen, geen linialen of raster, donkere opvulling, compacte pictogramgrootte om de canvasruimte te maximaliseren
-- **Focus op volledig scherm** — verschillende opvulkleur- en decoratie-instellingen in weergave op volledig scherm versus standaardweergave, dus het wisselen van volledig scherm geeft een echt andere werkomgeving
-- **Scripting** — scriptpaneel geopend, lettergrootte verhoogd voor leesbaarheid, andere pictogrammenset
+Hierdoor blijft de aandacht gevestigd op het artwork in plaats van op het raambeheer, waardoor Lumi minder aanvoelt als een enkele statische applicatie en meer als een flexibele digitale studio.

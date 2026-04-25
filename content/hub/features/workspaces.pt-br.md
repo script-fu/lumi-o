@@ -2,86 +2,36 @@
 title: "Espaços de trabalho"
 type: docs
 ---
-Um espaço de trabalho é um instantâneo salvo de todo o seu ambiente de UI: quais painéis estão abertos e onde, as decorações e preenchimento da tela para visualização Normal e Tela Cheia, o tema ativo e o conjunto de ícones, o layout da caixa de ferramentas, a paleta ativa e as configurações de sua ferramenta. O Lumi permite que você salve quantos espaços de trabalho nomeados desejar e alterne entre eles instantaneamente – todas as imagens abertas são atualizadas no local, sem necessidade de reinicialização.
+Os espaços de trabalho permitem que o Lumi se adapte a diferentes formas de trabalhar. Um espaço de trabalho captura a sensação do ambiente de estúdio: layout do painel, estado da ferramenta, apresentação da tela, caminhos de recursos, escolha de paleta, tema e outras preferências de interface que moldam a sessão de pintura.
 
-## O que um espaço de trabalho economiza
+Em vez de manter um arranjo fixo para cada tarefa, os artistas podem manter ambientes separados para esboços, pinturas, tintas, trabalhos coloridos, apresentações, scripts ou sessões focadas em tela cheia. Cada ambiente pode trazer os recursos que pertencem a esse tipo de trabalho, de modo que um espaço de trabalho de desenho pode parecer abastecido com predefinições de desenho, enquanto um espaço de trabalho de pintura pode mudar para ferramentas de pintura.
 
-Cada espaço de trabalho nomeado armazena o seguinte de forma independente:
+## Um estúdio que muda com a tarefa
 
-| Componente | O que cobre |
-| :--- | :--- |
-| **Layout** | Posição e tamanho da janela, disposição de encaixe (colunas do painel esquerdo e direito, quais painéis estão abertos e em que ordem), modo de janela única versus janela múltipla, estado maximizado, visibilidade e posição da barra de guias |
-| **Opções de ferramentas** | As configurações atuais para cada ferramenta (tamanho do pincel, dureza, comportamento de deformação, etc.) |
-| **Dispositivos de entrada** | Configuração do dispositivo de entrada: curvas de pressão, atribuições de botões, mapeamentos de eixos para caneta e outros dispositivos |
-| **Decorações em tela** | Padrões por espaço de trabalho para réguas, barras de rolagem, guias, grade, realce de seleção, limite de camada e limite de tela — definidos via **Preferências → Janelas de imagem → Aparência padrão** e **Aparência de tela inteira**, independentemente para visualização Normal e Tela cheia |
-| **Preenchimento de tela** | Modo de preenchimento por área de trabalho e cor para visualização Normal e Tela Cheia — definido em **Preferências → Janelas de imagem → Aparência padrão** |
-| **Tema e ícones** | Tema ativo, variante de cor clara/escura, conjunto de ícones, substituição de tamanho de ícone e escala de fonte |
-| **Caixa de ferramentas** | Posição do widget FG/BG (superior/inferior/esquerda/direita), escala FG/BG, visibilidade do mascote Wilber, cabeçalhos de grupos de ferramentas |
+Diferentes estágios de uma obra de arte se beneficiam de diferentes ambientes. O esboço aproximado pode exigir uma tela transparente e painéis mínimos. A pintura pode precisar de configurações de pincel e acesso à paleta à mão. A tinta pode precisar de guias, opções de ferramentas estáveis ​​e uma visão neutra. A revisão ou apresentação pode precisar de uma configuração de tela cheia mais limpa.
 
-A **paleta** ativa e a **predefinição de ferramenta** também são registradas por espaço de trabalho e restauradas quando você alterna.
+Os espaços de trabalho tornam essas mudanças deliberadas. A interface pode mudar para corresponder à tarefa sem exigir que o artista reconstrua o estúdio manualmente a cada vez.
 
-> **As decorações e o preenchimento da tela** são controlados por
-> **Preferências → Janelas de imagem → Opções avançadas da janela → Aparência padrão** (Visualização normal)
-> e **Aparência em tela cheia** (visualização em tela cheia). Ajuste essas configurações ao seu gosto,
-> salve o espaço de trabalho. Os itens do **menu Exibir** (réguas, guias, etc.) são locais para o
-> janela de imagem atual e não são salvos por espaço de trabalho.
+## Mais do que posicionamento do painel
 
-### Atualizações ao vivo no switch
+Um espaço de trabalho não é apenas um layout de doca. Ele pode preservar o contexto de trabalho mais amplo: a forma como a tela é enquadrada, como a caixa de ferramentas se comporta, quais cores e recursos de ferramentas estão prontos, como as ferramentas são configuradas e como se espera que os dispositivos de entrada respondam.
 
-Quando você alterna os espaços de trabalho, todas as janelas de imagem abertas são atualizadas imediatamente – réguas, guias, barras de rolagem, cores de preenchimento e todas as outras configurações de visualização são alteradas sem a necessidade de fechar e reabrir as imagens.
+Isso torna a troca de espaço de trabalho útil mesmo quando os painéis parecem semelhantes. Dois ambientes podem compartilhar um layout geral, mas diferem na sensação da ferramenta, no conforto visual, na identidade da paleta, nas predefinições disponíveis ou no comportamento do dispositivo.
 
-## Acesso
+## Troca imediata
 
-**Editar → Preferências → Espaço de trabalho**
+Os espaços de trabalho devem ser fluidos. A troca deve ser semelhante à movimentação entre mesas preparadas no mesmo estúdio, em vez de reiniciar o aplicativo ou abrir uma configuração separada.
 
-A seção superior da página de preferências do espaço de trabalho lista todos os seus espaços de trabalho salvos e fornece controles para gerenciá-los.
+As imagens abertas podem permanecer no lugar enquanto o ambiente circundante muda, permitindo ao artista passar de uma fase do trabalho para outra sem perder a concentração.
 
-## Criando um espaço de trabalho
+## Configurações pessoais e baseadas em projetos
 
-Configure seus painéis, ferramentas e paleta exatamente como você deseja e então:
+Alguns espaços de trabalho podem ser padrões pessoais: uma configuração de pintura confortável, uma configuração de laptop compacta ou um modo de foco em tela cheia. Outros podem pertencer a um projeto: uma paleta específica, um tema, uma disposição de painéis, uma coleção de recursos ou uma configuração de dispositivo que se adapte a uma série específica de imagens.
 
-1. Abra **Editar → Preferências → Área de trabalho**.
-2. Clique em **Salvar layout como…**.
-3. Insira um nome e clique em **Salvar**.
+Como os espaços de trabalho são nomeados e reutilizáveis, eles podem se tornar parte do ritmo de um artista. O ambiente certo pode ser restaurado quando o trabalho assim o exigir.
 
-O novo espaço de trabalho aparece no menu suspenso **Layout ativo** e no menu **Windows**.
+## Reduzindo o atrito
 
-## Alternando espaços de trabalho
+O objetivo dos espaços de trabalho é remover configurações repetidas do processo criativo. Quando um arranjo parece certo, Lumi consegue se lembrar dele. Quando a tarefa muda, a interface pode acompanhá-la.
 
-Existem duas maneiras de mudar:
-
-- **Menu Windows**: os nomes dos layouts aparecem em **Janelas → Layout** para acesso rápido na tela.
-- **Preferências → Espaço de trabalho**: selecione um layout no menu suspenso **Layout ativo** e clique em **Recarregar layout**.
-
-A troca é imediata – o Lumi reconstrói o layout do painel, restaura as opções de ferramentas, recarrega as configurações do dispositivo, atualiza as decorações da tela, o preenchimento, o tema e o layout da caixa de ferramentas, tudo sem reiniciar.
-
-## Gerenciando espaços de trabalho
-
-Em **Editar → Preferências → Área de trabalho**:| Ação | Efeito |
-| :--- | :--- |
-| **Salvar Layout** | Substitui o espaço de trabalho atual pelas configurações atuais. |
-| **Salvar layout como…** | Cria um novo espaço de trabalho nomeado a partir das configurações atuais. |
-| **Renomear layout…** | Renomeia o espaço de trabalho selecionado. |
-| **Recarregar Layout** | Aplica o espaço de trabalho selecionado imediatamente. |
-| **Excluir layout…** | Remove permanentemente o espaço de trabalho selecionado e seus arquivos. |
-
-## Configurações de persistência
-
-A parte inferior da página de preferências do Workspace controla o que o Lumi salva automaticamente:
-
-- **Salvar posições de janela ao sair**: Quando ativado, as posições de encaixe e de janela são gravadas no disco sempre que você sai.
-- **Abrir janelas no mesmo monitor**: Reabre cada janela do monitor em que estava durante a última sessão.
-- **Salvar opções da ferramenta ao sair**: salva as configurações atuais da ferramenta ao sair.
-- **Salvar configurações do dispositivo de entrada ao sair**: salva a caneta e a configuração do dispositivo ao sair.
-
-Essas configurações se aplicam a cada espaço de trabalho – cada layout mantém seu próprio estado salvo de forma independente.
-
-## Exemplos de fluxos de trabalho
-
-Algumas maneiras pelas quais os artistas podem usar vários espaços de trabalho:
-
-- **Pintura** — encaixes de pincéis grandes, cores de preenchimento quentes (definidas em Preferências → Janelas de imagem → Aparência padrão), sua variante de tema preferida
-- **Tinta** — guias e limites da tela ativados, barras de rolagem ativadas (definidas em Preferências → Aparência padrão), cor de preenchimento neutra
-- **Ásperos** — encaixes ocultos, sem réguas ou grade, preenchimento escuro, tamanho de ícone compacto para maximizar o espaço da tela
-- **Foco em tela cheia** — diferentes cores de preenchimento e configurações de decoração em Aparência de tela inteira versus Aparência padrão, portanto, alternar a tela cheia proporciona um ambiente de trabalho genuinamente diferente
-- **Scripting** — painel de script aberto, aumento no tamanho da fonte para facilitar a leitura, conjunto de ícones diferente
+Isso mantém a atenção na arte e não no gerenciamento de janelas, fazendo com que o Lumi pareça menos um único aplicativo estático e mais um estúdio digital flexível.

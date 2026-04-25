@@ -2,111 +2,34 @@
 title: "Filformat (.lum)"
 type: docs
 ---
-Lumi använder ett öppet, katalogbaserat filformat (`.lum`) designat för prestanda, tillförlitlighet och långsiktig tillgänglighet.
+Lumis ursprungliga filformat är byggt för skiktade målningsprojekt som måste förbli tillförlitliga, inspekterbara och återställbara över tid. Den är designad kring verkligheten i illustrationsarbete: många lager, stora dukar, inbäddad färginformation, masker, effekter och återställningsdata.
 
-## Översikt
+I stället för att behandla ett projekt som en enda ogenomskinlig blob, håller formatet strukturen på konstverket synlig för applikationen. Detta gör att Lumi kan spara, ladda och återställa stora bilder på ett mer intelligent sätt samtidigt som den bevarar organisationen artister är beroende av.
 
-En `.lum`-fil är faktiskt en katalog som innehåller:
-- **Metadata** (lager, blandningslägen, egenskaper).
-- **Lagerbuffertar** (individuella pixeldata för varje lager).
-- **Masker** (gråskaledata för lagermasker).
-- **Återställningshistorik** (inkrementella ögonblicksbilder).
+## Öppen projektstruktur
 
-Denna struktur möjliggör snabb lagring, lat inläsning av stora filer och återställning av arbete även efter en krasch.
+Ett Lumi-projekt håller konstverkets delar åtskilda: bildstruktur, lagerinnehåll, masker, färgdata, metadata och återställningsinformation har alla en tydlig roll. Detta gör formatet lättare att resonera kring och bättre lämpat för långtidsaccess än en sluten, monolitisk behållare.
 
-## Nyckelegenskaper
+Målet är inte bara att lagra pixlar, utan att lagra arbetstillståndet för en illustration. Lager förblir lager, masker förblir masker och filen fortsätter att spegla hur konstverket byggdes.
 
-### Öppen och läsbar
+## Designad för stora målningar
 
-`.lum`-formatet använder XML-metadata och komprimerade binära buffertar. Du kan inspektera lagerstruktur, egenskaper och blandningslägen i vanlig text. Ingen proprietär codec; pixeldata lagras i standard GEGL-buffertformat.
+Stora lagerbilder kan snabbt bli tunga. Lumis format stöder arbetsflöden där inte varje bit bilddata behöver dras in i minnet på en gång. Projekt kan förbli lyhörda genom att ladda de delar av bilden som faktiskt behövs för visning, redigering, sammansättning eller export.
 
-### Inkrementell besparing
+Detta tillvägagångssätt hjälper komplexa filer att kännas hanterbara, särskilt när ett konstverk innehåller många dolda, arkiverade, experimentella eller grupperade lager.
 
-Inkrementell lagring är tillgänglig via **File** → **Save Increment** (`Ctrl+I`). Den skapar en manuell återställningskontrollpunkt inuti projektet utan att ersätta normal **File** → **Spara** (`Ctrl+S`). Fullständiga lagringar uppdaterar fortfarande huvudprojektet `.lum`, medan Save Increment bara skriver de modifierade lagren som behövs för en snabb kontrollpunkt.
+## Spara utan att bryta flödet
 
-### Lat laddning
+Filformatet stöder både normal projektsparning och lätta ögonblicksbilder i återställningsstil. Detta ger konstnärer ett sätt att skydda verk ofta utan att förvandla varje kontrollpunkt till en fullständig kopia av hela bilden.
 
-Stora projekt öppnar snabbt. Lagerpixlar laddas endast från disk när:
-– Lagret görs synligt.
-– Man målar på lagret.
-- Lagret är exporterat eller sammansatt.
+Eftersom återställningsinformation hör till projektstrukturen kan Lumi hålla användbar historik nära teckningen samtidigt som den tillåter automatiska säkerhetslagringar att leva separat från arbetsfilen.
 
-Mycket stora projekt (500+ lager, flera gigabyte data) förblir responsiva. Lazy loading är aktiverat som standard och kan växlas i **Redigera → Inställningar → Prestanda → Minnesresurser**.
+## Utbyte och export
 
-### Autospara
+Det ursprungliga formatet är avsett för pågående Lumi-arbete, medan exportformat används för att dela tillplattade eller kompatibilitetsfokuserade resultat. Importstöd hjälper till att föra in befintliga konstverk till Lumis skiktade miljö, och exportstöd låter färdiga bitar lämna projektformatet när de är redo för publicering, leverans eller vidare bearbetning.
 
-Lumi sparar automatiskt ändringar till en **separat cacheplats** (`~/.cache/lumi/autosave/`) med jämna mellanrum. Autosave är oberoende av arbetsfilen och ändrar den inte. Intervallet och cacheplatsen kan konfigureras i **Redigera → Inställningar → Prestanda**.
+Distinktionen håller arbetsfilen rik och redigerbar samtidigt som slutbilderna kan produceras i vanliga externa format.
 
-## Åtkomst
+## Långsiktig tillförlitlighet
 
-### Spara och spara som
-
-- **Arkiv** → **Spara** (Ctrl+S): Spara i den aktuella `.lum`-katalogen.
-- **Fil** → **Spara inkrement** (Ctrl+I): Skapa en inkrementell återställningskontrollpunkt för den aktuella `.lum`-filen.
-- **Fil** → **Spara som** (Skift+Ctrl+S): Spara till en ny `.lum`-fil. Dialogrutan Spara som innehåller komprimeringsalternativ för den nya projektfilen.
-
-Osparade ändringar indikeras med en asterisk (*) i fönstrets titel.
-
-### Exportera
-
-- **Arkiv** → **Exportera som** (Skift+Ctrl+E): Exportera till PNG, JPEG, TIFF eller andra format.
-- **Fil** → **Skriv över** (Ctrl+E): Exportera om till den senast exporterade filen.
-
-Exporterar plattar ut synliga lager och konverterar från spektral till sRGB-färgrymd.
-
-### Importera
-
-- **Fil** → **Öppna** (Ctrl+O): Ladda ett `.lum`-projekt.
-- **Fil** → **Öppna som lager** (Shift+Ctrl+O): Importera `.lum`, XCF eller PSD-filer som nya lager.
-- **Fil** → **Senaste filer**: Snabb åtkomst till nyligen öppnade projekt.
-
-PSD- och XCF-filer konverteras till Lumis ursprungliga format vid import.
-
-## Import- och exportkompatibilitet
-
-### Importformat som stöds
-
-- **.lum**: Lumi inbyggt format.
-- **.xcf**: Inbyggt GIMP-format (lager och grundläggande egenskaper bevarade).
-- **.psd**: Photoshop-format (lager och blandningslägen bevarade).
-- **PNG, JPEG, TIFF, etc.**: Import av tillplattad bild.
-
-### Exportformat som stöds
-
-- **PNG**: Förlustfri, med alfatransparens.
-- **JPEG**: Förlustig, tillplattad.
-- **TIFF**: Förlustfri eller LZW-komprimerad.
-- **XCF**: GIMP-kompatibilitetsformat. Endast export; lager och grundläggande egenskaper bevarade.
-
-## ProjektåterställningLumi upprätthåller automatiska bakgrundssparningar och manuella inkrementella kontrollpunkter, båda tillgängliga från **File** → **Återställ bild**. Se sidan [File Recovery](../recovery) för fullständig information.
-
-## Organisation
-
-En `.lum` fil är en katalog med en fast struktur:
-
-```
-my-painting.lum/
-  ├── metadata.xml                       (image structure, layer tree, properties)
-  ├── thumbnail-YYYYMMDD-HHMMSS.png      (last-saved thumbnail)
-  ├── drawables/
-  │   ├── layer-<name>.geglbuf           (pixel data per layer)
-  │   └── mask-<name>.geglbuf            (mask data, shares layer name)
-  ├── icc/                               (embedded colour profiles)
-  ├── parasites/                         (per-image metadata)
-  ├── paths/                             (vector paths as SVG)
-  ├── configs/                           (non-destructive filter configurations)
-  └── recovery/
-      └── primary-01.lum/                (first Save Increment baseline)
-          ├── metadata.xml
-          ├── drawables/                 (only modified buffers)
-        ├── delta-0001.lum/            (Ctrl+I checkpoint)
-          └── delta-0002.lum/
-```
-
-Lagerbuffertar är namngivna efter lagret (`layer-Background.geglbuf`), inte numrerade i följd. Mellanslag i lagernamn lagras som understreck; grupplager får ett `-GROUP` suffix. Masker delar lagernamnet (`mask-Background.geglbuf`).
-
-Varje `recovery/primary-NN.lum/` är en fullständig baslinjesparning. Efterföljande `Ctrl+I`-tryckningar lägg till `delta-NNNN.lum/` underkataloger som endast innehåller de modifierade buffertarna sedan den senaste baslinjen, vilket gör att kontrollpunkter sparas snabbt oavsett projektstorlek.
-
-Autosparas följer samma struktur men lagras separat i `~/.cache/lumi/autosave/`, och lämnar arbetsfilen orörd.
-- **Mycket stora projekt**: Ett projekt med 1000+ lager och terabyte data kommer att dra mest nytta av lat inläsning; den slutliga exporten till platt bildformat kan dock ta tid.
-- **Nätverksenheter**: Spara i nätverksmonterade kataloger stöds men långsammare än lokal lagring på grund av I/O-latens.
+Kort sagt är formatet `.lum` en praktisk behållare för seriöst målningsarbete: tillräckligt öppet för att inspektera, tillräckligt strukturerat för att återhämta sig och tillräckligt flexibelt för att hantera komplexa skiktade bilder ekonomiskt.

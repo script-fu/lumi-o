@@ -2,108 +2,38 @@
 title: "Paletteneditor"
 type: docs
 ---
-Im Paletteneditor erstellen und verwalten Sie eine Lumi-Palette. Es enthält Ihren Pigmentsatz, speichert die Mischungen, die Sie im Palettenmixer gespeichert haben, zeichnet die Farben auf, die Sie beim Malen tatsächlich verwendet haben, und ermöglicht Ihnen die Konfiguration der Wertestruktur und Farbverläufe für die Palette.
+Im Paletten-Editor wird eine Lumi-Palette zu einer vollständigen Farbumgebung. Es vereint die Pigmente, aus denen eine Palette besteht, die Mischungen, die ein Künstler beibehält, die beim Malen verwendeten Farben und die Tonstruktur, die die Art und Weise prägt, wie die Palette erkundet wird.
 
-## Auswählen einer Palette
+Eine Palette in Lumi ist mehr als eine Liste von Farbfeldern. Es handelt sich um ein funktionierendes Farbsystem: eine Reihe von Zutaten, einprägsamen Mischungen, Wertbeziehungen und Farbverläufen, die ein ganzes Gemälde oder Werk leiten können.
 
-Eine Palette ist mehr als eine Sammlung von Pigmenten: Sie ist eine stilistische Verpflichtung. Viele Künstler arbeiten mit einem kleinen, festen Satz von Pigmenten, die sie genau kennen: die Art und Weise, wie sie sich mischen, die Neutraltöne, die sie erzeugen, die Temperaturunterschiede zwischen ihnen. Diese Vertrautheit wird Teil ihrer visuellen Stimme. Ein Maler könnte eine warme Palette mit niedrigem Chroma für Figurenarbeiten und eine separate High-Key-Palette für Landschaften beibehalten, oder er könnte seine gesamte Arbeit innerhalb eines einzigen Vier-Pigment-Sets erledigen, als bewusste Einschränkung, die ein Gesamtwerk vereinheitlicht.
+## Paletten als künstlerische Zwänge
 
-Lumi unterstützt diese Arbeitsweise. Jede Palette hat ihre eigenen Pigmente, Mischungen, Wertestrukturen und Farbverläufe. Durch das Wechseln der Paletten ändert sich das gesamte Farbsystem: Die Karte, der Mixer und die verfügbaren Mischungen werden alle aktualisiert, um den neuen Satz widerzuspiegeln.
+Viele Maler arbeiten am besten mit einer begrenzten Auswahl vertrauter Farben. Ein kleiner Pigmentsatz kann Einheit schaffen, Stimmung schaffen und Farbentscheidungen schneller treffen, da jede Mischung zur gleichen visuellen Familie gehört.
 
-Ein Dropdown-Menü oben im Paletteneditor wählt die aktive Palette aus. Lumi wird mit drei Paletten in der **Standard**-Gruppe ausgeliefert:
+Der Paletteneditor unterstützt diese Art der absichtlichen Einschränkung sowie breitere Vollspektrumpaletten. Künstler können separate Paletten für verschiedene Themen, Projekte, Stile oder Lichtverhältnisse verwalten, jede mit ihrem eigenen Charakter und Mischverhalten.
 
-| Palette | Charakter |
-| :--- | :--- |
-| **Standard** | Eine vielseitige Palette mit warmem Farbton, die das gesamte Farbspektrum abdeckt. Guter Ausgangspunkt für die meisten Themen. |
-| **Meister** | Eine große Vollspektrumpalette für Maler, die eine maximale Farbtonabdeckung und explizite Kontrolle über die Vergrauungsachsen wünschen. |
-| **Zorn** | Eine auf vier Pigmente begrenzte Palette, die auf dem Ansatz von Anders Zorn basiert. Deckt eine überraschend große Auswahl an warmen Hauttönen und Neutraltönen mit geringem Chroma aus einem minimalen Pigmentsatz ab. |
+## Pigmente, Mischungen und Gedächtnis
 
-Paletten können auch über die Registerkarte „Paletten“ erstellt, importiert oder dupliziert werden.
+Als Grundierung dienen Palettenpigmente. Sie definieren die Farben, aus denen der Rest des Systems entsteht, und beeinflussen die erzeugten Mischungen, die an anderer Stelle in den Farbwerkzeugen von Lumi verfügbar sind.
 
-## Palettenpigmente
+Gespeicherte Mischungen stellen bewusste Entdeckungen dar: Farben, die es wert sind, behalten, benannt und zu denen man zurückkehren sollte. Verwendete Farben bilden eine ruhigere Art von Erinnerung und bewahren die Farben, die es tatsächlich auf die Leinwand geschafft haben, auch wenn sie nicht vorher gespeichert wurden.
 
-Der Abschnitt **Palettenpigmente** oben in der Palettenansicht listet Ihre primären Einträge auf: die Basispigmente, aus denen der Rest der Palette besteht. Dies sind die Eingaben für das Spektralmischsystem. Sekundäre und tertiäre Elemente werden daraus automatisch generiert und zum Füllen der Palettenzuordnung verwendet
+Zusammen lassen diese Bereiche eine Palette auf natürliche Weise entstehen. Es kann als Pigmentset beginnen, beim Malen nützliche Mischungen zusammentragen und nach und nach zu einem personalisierten Farbvokabular werden.
 
-## Gespeicherte Mischungen
+## Werteorientierte Organisation
 
-Der Abschnitt **Gespeicherte Mischungen** enthält Farben, die Sie mit **Zur Palette hinzufügen** explizit aus dem Palettenmixer behalten haben. Dies sind Ihre abgeleiteten Farben: die Ergebnisse der Spektralmischung, Ton- und Chroma-Anpassungen, die zur Wiederverwendung gespeichert werden.
+Lumi organisiert Palettenfarben unter Berücksichtigung des Werts, da Maler oft in Hell und Dunkel denken, bevor sie an Farbtöne denken. Durch das Gruppieren von Mischungen nach Tonrolle ist es einfacher, eine Farbe zu finden, die in den richtigen Teil des Bildes gehört, und nicht nur eine Farbe, die den richtigen Namen hat.
 
-Gespeicherte Mixe sind in fünf Wertebereiche unterteilt:
+Paletten können auch ihr eigenes Gefühl für Tonabstände vermitteln. Eine prägnante Illustration, ein zurückhaltendes Porträt und eine gedämpfte Landschaft können alle von einer unterschiedlichen Wertbetonung profitieren, und die Palette kann diese Struktur widerspiegeln.
 
-| Band | Standardhelligkeitsbereich |
-| :--- | :--- |
-| Hoher Schlüssel | 80 – 100 % |
-| Obere Mitte | 60 – 80 % |
-| Mitte | 40 – 60 % |
-| Untere Mitte | 20 – 40 % |
-| Tief | 0 – 20 % |
+## Farbverläufe und Übergänge
 
-Lumi ordnet jede gespeicherte Mischung basierend auf ihrer wahrnehmbaren Helligkeit (CIE L\*) automatisch dem entsprechenden Band zu. Dies organisiert Ihre Mischungen nach Wert, anstatt eine flache Liste zu durchsuchen, und entspricht normalerweise der Art und Weise, wie ein Künstler über Farben denkt.
+Eine Palette kann Farbverläufe enthalten, die von ihren eigenen Farben abgeleitet sind. Diese Farbverläufe eignen sich für weiche Übergänge, Referenzstreifen, Beleuchtungsstudien und Farbbewegungen, die innerhalb der Identität der Palette bleiben.
 
-Gespeicherte Mischungen können über die Schaltfläche **Benutzerdefiniert umbenennen** oder das Kontextmenü umbenannt werden.
+Da die Farbverläufe zur Palette gehören, verstärken sie die gleiche Farbsprache wie die Pigmente und gespeicherten Mischungen, anstatt wie unzusammenhängende Ergänzungen zu wirken.
 
-## Gebrauchte Mischungen
+## Lackier-Workflow
 
-Der Abschnitt **Gebrauchte Mischungen** ist eine durch Farbe ausgelöste Geschichte. Jedes Mal, wenn eine Farbe aus der Palette auf die Leinwand aufgetragen wird, wird dies hier aufgezeichnet. Gebrauchte Mischungen werden von der neuesten zur neuesten Version sortiert.
+Der Paletteneditor ist der Ort zum Erstellen und Verfeinern des Farbsystems, während hellere Palettenansichten einen schnellen Zugriff während des Malens unterstützen. Dadurch bleibt ein tiefes Palettendesign verfügbar, ohne dass es bei jeder Farbauswahl in den Vordergrund gedrängt wird.
 
-Dieser Abschnitt ist nützlich, um eine Farbe abzurufen, mit der Sie gemalt, aber nicht explizit gespeichert haben. Um einen verwendeten Mix dauerhaft zu behalten, wählen Sie ihn aus und klicken Sie auf **Heraufstufen**. Anschließend wird er in die Liste „Gespeicherte Mixe“ im entsprechenden Wertebereich verschoben.
-
-Verwendete Mischungen werden pro Palette gespeichert und bleiben zwischen Sitzungen bestehen.
-
-## WertebänderWertebänder definieren, wo die Grenzen zwischen den fünf Helligkeitszonen liegen. Standardmäßig verteilen sie die Helligkeit gleichmäßig über den Bereich von 0–100 %, Sie können sie jedoch anpassen, um sie an die Tonstruktur Ihres Motivs anzupassen. Für Maler ist es nützlich, Wertebereiche und die Lücken zwischen ihnen zu definieren und zu verwalten.
-
-### Der Werteband-Schieberegler
-
-Der **Wertebänder-Expander** im Paletteneditor enthält einen Schieberegler mit fünf verschiebbaren Trennlinien. Ziehen Sie eine beliebige Trennlinie, um die Grenze zwischen benachbarten Bändern zu verschieben. Die Beschriftung über dem Schieberegler zeigt den Namen und den genauen Prozentbereich des aktiven Bandes.
-
-**Tasten:**
-
-| Knopf | Wirkung |
-| :--- | :--- |
-| **Abbrechen** | Setzt den Schieberegler auf den zuletzt angewendeten Zustand zurück |
-| **Kopieren** | Kopiert die aktuelle Bandkonfiguration in die Zwischenablage |
-| **Einfügen** | Fügt eine kopierte Bandkonfiguration aus einer anderen Palette ein |
-| **Standardeinstellungen** | Stellt die werkseitigen Standardeinstellungen für gleiche Divisionen wieder her |
-| **Anwenden** | Übernimmt die Änderungen und generiert die Palette neu |
-
-**Übernehmen** ist erforderlich, um die Änderungen dauerhaft zu machen. Es löst eine vollständige Regeneration der Palette aus und entfernt alle gespeicherten Mischungen, deren Helligkeit nicht mehr in ein Band fällt. Lumi zeigt einen Bestätigungsdialog an, in dem aufgeführt wird, wie viele Mischungen entfernt werden, bevor fortgefahren wird.
-
-### Wertebänder und die Palettenzuordnung
-
-Die Palettenkarte zeigt die Palette als Farbtonrad mit 36 Farbtonsektoren (jeweils 10°) und 15 Helligkeitszellen an, die als konzentrische Ringe angeordnet sind. Jedes Band entspricht drei Ringen: die fünf Bänder × 3 Ringe = insgesamt 15 Zellen.
-
-Durch Anpassen der Wertebänder wird verschoben, welche Helligkeitswerte in den einzelnen Ringebenen landen. Durch ein zum dunklen Ende hin verdichtetes Band decken die drei Ringe einen engeren Tonumfang ab; Ein breites Band verleiht den drei Ringen eine größere Klangverbreitung. Auf diese Weise passt sich dieselbe Palettenzuordnungsstruktur an Paletten an, die auf unterschiedliche Tonprioritäten abgestimmt sind.
-
-## Palettenverläufe
-
-Jede Palette kann einen oder mehrere **Verläufe** speichern: sanfte Verläufe, die aus Paletteneinträgen abgeleitet werden und als Verlaufsfüllungen auf die Leinwand angewendet oder als Referenzstreifen verwendet werden können.
-
-Farbverläufe werden im **Verläufe-Expander** verwaltet. Die Kombination oben listet die Farbverläufe in der aktuellen Palette auf. **Hinzufügen** erstellt einen neuen Farbverlauf. **Entfernen** löscht das ausgewählte. **Umbenennen** benennt es um.
-
-### Verlaufseditor
-
-Der **Verlaufseditor-Expander** konfiguriert den ausgewählten Verlauf. Jeder Farbverlauf verfügt über drei Endpunkte (**A**, **B** und **C**), die als Farbfelder angezeigt werden. Klicken Sie auf ein Farbfeld, um es zum aktiven Endpunkt für die Bearbeitung zu machen.
-
-Jeder Endpunkt kann festgelegt werden, indem Sie auf **Auswählen** und dann auf einen Paletteneintrag in der Palettenübersicht oder der Palettenansicht klicken. Der Endpunkt ist über die UID mit diesem Paletteneintrag verknüpft. Wenn sich der Eintrag ändert, wird der Farbverlauf aktualisiert.
-
-**Kontrollen pro Endpunkt:**
-
-| Kontrolle | Wirkung |
-| :--- | :--- |
-| **Stärke** | Wie stark die Endpunktfarbe im Verhältnis zu ihren Nachbarn beiträgt |
-| **Deckkraft** | Alpha der Endpunktfarbe im Farbverlauf |
-| **Kurve** | Gamma-Anpassung für den Farbabfall von diesem Endpunkt |
-
-**Verteilungsschieberegler** (S1, S2, S3) legen fest, wo die drei Mittelpunkte zwischen den Endpunkten entlang des Verlaufsstreifens liegen. Durch das Zurücksetzen werden die Mittelpunkte auf den gleichen Abstand zurückgesetzt.
-
-Der Verlaufsvorschaustreifen oben im Verlaufseditor-Block zeigt das Ergebnis der aktuellen Endpunkt- und Verteilungseinstellungen.
-
-## Palette andockbarDie andockbare **Palette** (**Panels > Palette**) ist ein einfacheres, leseorientiertes Panel zum Durchsuchen und Auswählen von Farben aus jeder Palette. Es zeigt die gleiche dreiteilige Ansicht (Palettenpigmente, gespeicherte Mischungen, verwendete Mischungen) ohne die Expander „Wertebänder“ und „Verläufe“.
-
-Über ein Palettenauswahl-Dropdown-Menü oben können Sie zwischen allen verfügbaren Paletten wechseln. Klicken Sie auf einen beliebigen Eintrag, um ihn als Vordergrundfarbe festzulegen. Doppelklicken Sie, um den Farbnamen-Editor zu öffnen. Für beschreibbare Paletten sind in der Schaltflächenleiste die Aktionen „Farbe bearbeiten“, „Neue Farbe aus FG“ und „Farbe löschen“ verfügbar.
-
-Die andockbare Palette ist für den schnellen Farbzugriff während des Malens gedacht, wenn der vollständige Paletteneditor zu viel Platz beanspruchen würde.
-
-## Registerkarte „Paletten“.
-
-Die **Registerkarte „Paletten“** (verfügbar als andockbare Registerkarte) zeigt die aktive Palette im Kompaktmodus. Es schließt die Pigmente aus, um sich auf gespeicherte Mischungen zu konzentrieren
+Insgesamt hilft der Paletten-Editor dabei, die Farbauswahl in eine kohärente Praxis zu verwandeln: Wählen Sie die Pigmente aus, erkunden Sie ihre Mischungen, bewahren Sie die nützlichen Ergebnisse auf und lassen Sie die Palette Teil der Stimme des Kunstwerks werden.

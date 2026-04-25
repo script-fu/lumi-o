@@ -2,91 +2,36 @@
 title: "Mappa delle tavolozze"
 type: docs
 ---
-La Mappa della Tavolozza risponde a una domanda pratica per i pittori: dato un insieme di pigmenti, quali colori possono effettivamente essere miscelati da essi? Partendo dai pigmenti di input della tavolozza, esplora proceduralmente ogni combinazione (miscele di due pigmenti, miscele a tre vie, variazioni tonali) e mappa i risultati su una ruota di colori. Il risultato è un'immagine dello spazio colore raggiungibile per quello specifico set di pigmenti.
+La mappa delle tavolozze visualizza ciò che una tavolozza attiva può produrre. Partendo dai pigmenti della tavolozza e dai colori salvati, presenta lo spazio colore raggiungibile come una mappa di tonalità e valore a misura di pittore.
 
-La Mappa è anche uno strumento di navigazione basato sulle coordinate. Organizza ogni mix generato per tonalità e luminosità in una griglia circolare, quindi l'intera tavolozza è leggibile a colpo d'occhio e ogni colore ha un indirizzo di casa stabile.
+Il suo scopo è pratico: invece di sfogliare un elenco piatto di campioni, gli artisti possono vedere dove vivono i colori in relazione tra loro e muoversi spazialmente attraverso la tavolozza.
 
-## Struttura della griglia
+## Una mappa dei colori raggiungibili
 
-La Mappa è divisa in una griglia 36×15:
+Ogni tavolozza ha un carattere. Alcune tavolozze si aprono su verdi e viola chiari; altri collassano rapidamente in caldi neutri, colori della terra o ombre tenui. La mappa della tavolozza rende visibile quel personaggio.
 
-- **36 settori tonalità**: passi di 10° attorno alla ruota, centrati sui nomi delle tonalità principali.
-- **15 celle di luminosità**: 3 celle per banda di valori × 5 bande (High Key, Upper Mid, Middle, Lower Mid, Deep), che vanno dal bianco all'esterno al nero al centro.
+Le miscele generate, i pigmenti primari e i colori salvati appaiono come parte di un unico campo colore organizzato. Ciò rende più semplice comprendere non solo quali colori esistono, ma anche come si relazionano alla gamma complessiva della tavolozza.
 
-Ogni cella è un piccolo cuneo sulla ruota. Si dice che una voce inserita in una cella abbia quella cella come **origine**: il suo indirizzo di casa logico sulla mappa.
+## Tonalità, valore e orientamento
 
-## Colori nelle celle
+La mappa è organizzata in base alla tonalità e alla luminosità, quindi le scelte cromatiche hanno un indirizzo visivo stabile. Colori brillanti, colori scuri, spostamenti caldi, spostamenti freddi, aree saturate e passaggi attenuati diventano più facili da confrontare a colpo d'occhio.
 
-Quando più colori competono per la stessa cella, solo un **vincitore** viene visualizzato in evidenza:
+Questa struttura spaziale è particolarmente utile quando si sceglie il colore successivo in un dipinto. Un artista può spostarsi verso una tonalità vicina, rimanere nella stessa famiglia di valori, cercare una crominanza più forte o entrare deliberatamente in una tonalità neutra più tranquilla.
 
-1. Le voci **primarie** vincono sempre nella loro cella, indipendentemente dagli altri occupanti.
-2. Se non è presente alcun Primario, vince il mix generato (Secondario o Terziario) con il **chroma più alto**.
+## Più di un raccoglitore
 
-Le candidature che non vincono si classificano seconde e rimangono accessibili tramite il clic ciclico (vedi sotto).
+La Palette Map è anche un ponte verso il mixaggio. I colori sulla mappa possono fungere da punti di partenza per nuove miscele e le miscele salvate possono mantenere la loro relazione con la mappa anziché diventare campioni sconnessi.
 
-Le voci personalizzate (mix salvati) vengono visualizzate come punti quadrati; i mix e i primari generati vengono visualizzati come punti rotondi.
+Ciò aiuta Lumi a trattare il colore come uno spazio di lavoro continuo. La selezione, la miscelazione, il salvataggio e il ritorno ai colori avvengono tutti all'interno della stessa geografia della tavolozza.
 
-## Fai clic su Ciclismo
+## Esplorazione incentrata sul Canvas
 
-Facendo clic su una cella occupata si seleziona il vincitore come colore di primo piano. Facendo nuovamente clic sulla stessa cella si passa all'occupante successivo (mix generati dal secondo classificato, quindi eventuali voci personalizzate salvate in quell'indirizzo di griglia). Ogni clic avanza di un passo nello stack.
+La mappa può essere utilizzata come un'ampia superficie visiva quando le decisioni sui colori necessitano di più spazio. Ciò lo rende utile per confrontare un potenziale colore con il dipinto stesso, sfogliare le famiglie tonali o spostarsi rapidamente attraverso la tavolozza senza fare affidamento su un piccolo pannello.
 
-Il **clic sinistro** porta in primo piano. Quando il colore target è impostato sullo sfondo (dalla casella degli strumenti), i clic vengono invece indirizzati allo sfondo.
+L'intento è quello di rendere la navigazione nella tavolozza immediata e visiva: guarda il mondo dei colori, muoviti al suo interno e scegli il segno a cui appartiene successivo.
 
-## Maiusc-Seleziona: caricamento degli endpoint del mixer
+## Identità della tavolozza
 
-Tieni premuto **Shift** per accedere alla modalità di caricamento dell'endpoint:
+Poiché la mappa tavolozza viene generata dalla tavolozza attiva, il cambio di tavolozza modifica la forma e l'enfasi della mappa. Una tavolozza di ritratti limitata, una tavolozza di studio a spettro completo e una tavolozza di paesaggi attenuati producono ciascuna una diversa geografia dei colori.
 
-- **Clic sinistro** assegna la voce su cui si è fatto clic come **Genitore A (CCW)** nel Mixer tavolozza.
-- **Click destro** lo assegna come **Genitore B (CW)**.
-
-In questa modalità sono selezionabili solo le voci di Classe A (miscele primarie e personalizzate con provenienza intatta). I terziari sono nascosti e i punti non di Classe A sono oscurati. Una breve sovrapposizione conferma che la modalità è attiva.
-
-## Punti salienti del genitore mixer
-
-Quando il Mixer tavolozza ha endpoint Genitore A e Genitore B attivi, entrambi sono contrassegnati sulla mappa con **anelli di diamante** (una forma di diamante con un bordo nero). Queste evidenziazioni rimangono visibili anche quando vengono attivati/disattivati ​​altri elementi di visualizzazione, quindi gli elementi principali della fusione attiva sono sempre identificabili.
-
-## Origine e posizione visiva
-
-Ogni voce ha due posizioni sulla mappa:
-
-- **Origine (cella sorgente)**: l'indirizzo della griglia logica a cui appartiene la voce, fissato per tutta la sua vita.
-- **Posizione visiva del punto**: dove il colore viene effettivamente visualizzato in base alla tonalità e alla luminosità percettive.
-
-Con **Best-Match Relocation**, quando una miscela viene salvata, il sistema calcola la ricetta ottimale per il colore finale e imposta l'origine in modo che corrisponda alla posizione visiva del colore. Ciò mantiene i colori salvati vicini alla loro posizione visiva sulla ruota e rende la mappa coerente dal punto di vista spaziale.
-
-## Trascinando i mix salvati
-
-Le voci personalizzate (mix salvati) possono essere riposizionate trascinando:1. Fare clic e tenere premuta una voce personalizzata (punto quadrato) e trascinare oltre la soglia di 5 pixel.
-2. Il cursore cambia per indicare la modalità di trascinamento. Le evidenziazioni dei genitori si aggiornano in tempo reale mentre ti sposti sulla mappa per mostrare i nuovi genitori della fusione in ciascuna posizione del candidato.
-3. Il punto trascinato si aggancia alla posizione del campione valido più vicina.
-4. Rilascia per impegnare. La voce adotta la ricetta della cella di destinazione: i suoi genitori, la fusione, il tono e la crominanza vengono aggiornati per corrispondere e la sua origine viene aggiornata per corrispondere alla nuova posizione visiva.
-
-Le mosse di trascinamento possono essere annullate tramite **Modifica → Annulla**.
-
-## Doppio clic: commutazione dell'area di lavoro della mappa
-
-In the **Palette Editor**, double-clicking any palette entry toggles the Palette Map workspace view on and off. Questo è un modo rapido per passare dalla navigazione dei colori salvati alla miscelazione sulla mappa senza utilizzare un menu. Il comportamento del clic singolo (ripristino della ricetta della voce nel Mixer) non viene influenzato.
-
-## Sovrapposizione tela
-
-La Mappa tavolozza può essere richiamata direttamente sulla tela dell'immagine come sovrapposizione a schermo intero facendo clic sul **campione Primo piano/Sfondo** nella casella degli strumenti. Ciò fornisce un'ampia superficie di miscelazione senza dedicare un pannello permanente alla Mappa.
-
-## Campione colore centrale
-
-Un campione circolare si trova al centro del foro della ciambella e riflette il colore di qualunque cella su cui si trova il cursore:
-
-- **Colore al passaggio del mouse**: quando il cursore si posiziona su una voce della mappa, il campione si aggiorna immediatamente per mostrare il colore di quella voce.
-- **Colore selezionato come fallback**: quando non si passa il mouse su alcuna cella, il campione mostra il risultato calcolato dal Mixer tavolozza per la voce attualmente selezionata. Se il mixer non ha ancora risolto il problema, utilizza il colore di visualizzazione di base della voce in modo che lo spot non diventi mai vuoto.
-- Un sottile bordo scuro delinea sempre il campione.
-- Dopo che il cursore si è fermato brevemente sul campione centrale, appare un anello esterno bianco e nero per segnalare che l'area è interattiva.
-- **Facendo clic sul campione centrale** si chiude la sovrapposizione della tela, tornando alla normale visualizzazione dell'immagine (come fare clic all'esterno dell'anello esterno).
-
-## Tasto Alt: modalità di confronto tela
-
-Quando la sovrapposizione della tela Mappa tavolozza è aperta, tenendo premuto **Alt** viene temporaneamente visualizzata l'immagine sottostante:
-
-- L'intera interfaccia utente della mappa della tavolozza diventa invisibile (la sua opacità scende a zero), scoprendo la tela.
-- Un campione circolare da 64 pixel segue il cursore, riempito con il colore campionato corrente del Mixer tavolozza, in modo da rimanere consapevoli del mix attivo mentre si ispeziona l'immagine.
-- Rilasciando Alt si ripristina la mappa della tavolozza alla massima opacità.
-
-Un'etichetta di suggerimento, *"Tieni premuto il tasto Alt per vedere l'immagine"*, viene mostrata all'interno della vista dell'area di lavoro come promemoria.
+In questo modo, la mappa della tavolozza diventa un ritratto della tavolozza stessa: un'immagine leggibile di ciò che quel sistema di colore può fare.

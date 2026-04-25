@@ -2,86 +2,36 @@
 title: "Arbeitsbereiche"
 type: docs
 ---
-Ein Arbeitsbereich ist eine gespeicherte Momentaufnahme Ihrer gesamten UI-Umgebung: welche Bedienfelder geöffnet sind und wo, die Leinwanddekorationen und -abstände für die Normal- und Vollbildansicht, das aktive Design und Symbolset, das Toolbox-Layout, die aktive Palette und Ihre Werkzeugeinstellungen. Mit Lumi können Sie beliebig viele benannte Arbeitsbereiche speichern und sofort zwischen ihnen wechseln – alle geöffneten Bilder werden an Ort und Stelle aktualisiert, ein Neustart ist nicht erforderlich.
+Mithilfe von Arbeitsbereichen kann sich Lumi an unterschiedliche Arbeitsweisen anpassen. Ein Arbeitsbereich fängt das Gefühl der Studioumgebung ein: Panel-Layout, Werkzeugstatus, Leinwandpräsentation, Ressourcenpfade, Palettenauswahl, Thema und andere Benutzeroberflächenpräferenzen, die die Malsitzung prägen.
 
-## Was ein Arbeitsbereich spart
+Anstatt für jede Aufgabe eine feste Anordnung beizubehalten, können Künstler separate Umgebungen zum Skizzieren, Malen, Tuschen, Farbarbeiten, Präsentieren, Skripten oder gezielten Vollbildsitzungen verwalten. Jede Umgebung kann die Ressourcen bereitstellen, die zu dieser Art von Arbeit gehören, sodass ein Zeichenarbeitsplatz mit Zeichnungsvoreinstellungen ausgestattet sein kann, während ein Malarbeitsplatz auf malerische Werkzeuge umsteigen kann.
 
-Jeder benannte Arbeitsbereich speichert unabhängig voneinander Folgendes:
+## Ein Studio, das sich mit der Aufgabe verändert
 
-| Komponente | Was es abdeckt |
-| :--- | :--- |
-| **Layout** | Fensterposition und -größe, Dockanordnung (linke und rechte Bedienfeldspalten, welche Bedienfelder geöffnet sind und in welcher Reihenfolge), Einzel- oder Mehrfenstermodus, maximierter Zustand, Sichtbarkeit und Position der Registerkartenleiste |
-| **Werkzeugoptionen** | Die aktuellen Einstellungen für jedes Werkzeug (Pinselgröße, Härte, Verzerrungsverhalten usw.) |
-| **Eingabegeräte** | Konfiguration der Eingabegeräte: Druckkurven, Tastenbelegungen, Achsenzuordnungen für Stift und andere Geräte |
-| **Leinwanddekorationen** | Standardeinstellungen pro Arbeitsbereich für Lineale, Bildlaufleisten, Hilfslinien, Raster, Auswahlhervorhebung, Ebenengrenze und Leinwandgrenze – eingestellt über **Einstellungen → Bildfenster → Standarddarstellung** und **Vollbilddarstellung**, unabhängig für Normal- und Vollbildansicht |
-| **Leinwandpolsterung** | Auffüllmodus und Farbe pro Arbeitsbereich für die Normal- und Vollbildansicht – eingestellt über **Einstellungen → Bildfenster → Standarddarstellung** |
-| **Thema & Symbole** | Aktives Design, dunkle/helle Farbvariante, Symbolsatz, Überschreibung der Symbolgröße und Schriftskalierung |
-| **Werkzeugkasten** | FG/BG-Widget-Position (oben/unten/links/rechts), FG/BG-Skalierung, Wilber-Maskottchen-Sichtbarkeit, Werkzeuggruppen-Header |
+Verschiedene Phasen eines Kunstwerks profitieren von unterschiedlichen Umgebungen. Für grobe Skizzen sind möglicherweise eine klare Leinwand und minimale Tafeln erforderlich. Beim Malen sind möglicherweise Pinseleinstellungen und Palettenzugriff in unmittelbarer Nähe erforderlich. Für das Einfärben sind möglicherweise Führungen, stabile Werkzeugoptionen und eine neutrale Ansicht erforderlich. Für eine Rezension oder Präsentation ist möglicherweise ein übersichtlicheres Vollbild-Setup erforderlich.
 
-Die aktive **Palette** und **Werkzeugvoreinstellung** werden ebenfalls pro Arbeitsbereich aufgezeichnet und beim Wechseln wiederhergestellt.
+Arbeitsbereiche machen diese Veränderungen bewusst. Die Benutzeroberfläche kann je nach Aufgabe geändert werden, ohne dass der Künstler das Studio jedes Mal von Hand neu aufbauen muss.
 
-> **Leinwanddekorationen und Polsterung** unterliegen der Kontrolle von
-> **Einstellungen → Bildfenster → Erweiterte Fensteroptionen → Standarddarstellung** (Normalansicht)
-> und **Vollbilddarstellung** (Vollbildansicht). Passen Sie diese Einstellungen nach Ihren Wünschen an.
-> Speichern Sie dann den Arbeitsbereich. Die Elemente im **Ansichtsmenü** (Lineale, Hilfslinien usw.) sind lokal für die
-> aktuelles Bildfenster und werden nicht pro Arbeitsbereich gespeichert.
+## Mehr als nur Panel-Platzierung
 
-### Live-Updates beim Switch
+Ein Arbeitsbereich ist nicht nur ein Dock-Layout. Dadurch kann der breitere Arbeitskontext erhalten bleiben: die Art und Weise, wie die Leinwand gerahmt ist, wie sich die Toolbox verhält, welche Farb- und Werkzeugressourcen bereitstehen, wie Werkzeuge konfiguriert sind und wie Eingabegeräte voraussichtlich reagieren.
 
-Wenn Sie den Arbeitsbereich wechseln, werden alle geöffneten Bildfenster sofort aktualisiert – Lineale, Hilfslinien, Bildlaufleisten, Füllfarben und alle anderen Ansichtseinstellungen ändern sich, ohne dass Bilder geschlossen und erneut geöffnet werden müssen.
+Dies macht den Wechsel des Arbeitsbereichs auch dann sinnvoll, wenn die Panels ähnlich aussehen. Zwei Umgebungen können ein gemeinsames allgemeines Layout haben, unterscheiden sich jedoch in der Werkzeugbedienung, dem visuellen Komfort, der Palettenidentität, den verfügbaren Voreinstellungen oder dem Geräteverhalten.
 
-## Zugriff
+## Sofortiges Umschalten
 
-**Bearbeiten → Einstellungen → Arbeitsbereich**
+Arbeitsbereiche sollen fließend sein. Der Wechsel sollte sich anfühlen, als würde man zwischen vorbereiteten Schreibtischen im selben Studio wechseln, anstatt die Anwendung neu zu starten oder eine separate Konfiguration zu öffnen.
 
-Im oberen Abschnitt der Seite „Arbeitsbereichseinstellungen“ werden alle Ihre gespeicherten Arbeitsbereiche aufgelistet und Steuerelemente für deren Verwaltung bereitgestellt.
+Offene Bilder können an Ort und Stelle bleiben, während sich die Umgebung verändert, sodass der Künstler von einer Arbeitsphase zur nächsten wechseln kann, ohne die Konzentration zu beeinträchtigen.
 
-## Einen Arbeitsbereich erstellen
+## Persönliche und projektbasierte Setups
 
-Richten Sie Ihre Bedienfelder, Werkzeuge und Paletten genau nach Ihren Wünschen ein und gehen Sie dann wie folgt vor:
+Bei einigen Arbeitsbereichen kann es sich um persönliche Standardeinstellungen handeln: ein komfortables Mal-Setup, ein kompaktes Laptop-Setup oder ein Vollbild-Fokusmodus. Andere können zu einem Projekt gehören: eine bestimmte Palette, ein bestimmtes Thema, eine bestimmte Panelanordnung, eine Ressourcensammlung oder eine Gerätekonfiguration, die zu einer bestimmten Bildserie passt.
 
-1. Öffnen Sie **Bearbeiten → Einstellungen → Arbeitsbereich**.
-2. Klicken Sie auf **Layout speichern unter…**.
-3. Geben Sie einen Namen ein und klicken Sie auf **Speichern**.
+Da Arbeitsbereiche benannt und wiederverwendbar sind, können sie Teil des Rhythmus eines Künstlers werden. Die richtige Umgebung kann wiederhergestellt werden, wenn die Arbeit es erfordert.
 
-Der neue Arbeitsbereich wird im Dropdown-Menü **Aktives Layout** und im Menü **Windows** angezeigt.
+## Reibung reduzieren
 
-## Arbeitsbereiche wechseln
+Der Zweck von Arbeitsbereichen besteht darin, wiederholte Einrichtungsvorgänge aus dem kreativen Prozess zu entfernen. Sobald sich ein Arrangement richtig anfühlt, kann sich Lumi daran erinnern. Wenn sich die Aufgabe ändert, kann die Schnittstelle folgen.
 
-Es gibt zwei Möglichkeiten zum Wechseln:
-
-- **Windows-Menü**: Die Layoutnamen werden unter **Windows → Layout** angezeigt, um über die Leinwand schnell darauf zugreifen zu können.
-- **Einstellungen → Arbeitsbereich**: Wählen Sie ein Layout aus der Dropdown-Liste **Aktives Layout** aus und klicken Sie auf **Layout neu laden**.
-
-Der Wechsel erfolgt sofort – Lumi baut das Panel-Layout neu auf, stellt die Werkzeugoptionen wieder her, lädt die Geräteeinstellungen neu, aktualisiert die Leinwanddekorationen, den Abstand, das Design und das Toolbox-Layout – und das alles ohne Neustart.
-
-## Arbeitsbereiche verwalten
-
-Von **Bearbeiten → Einstellungen → Arbeitsbereich**:| Aktion | Wirkung |
-| :--- | :--- |
-| **Layout speichern** | Überschreibt den aktuellen Arbeitsbereich mit Ihren aktuellen Einstellungen. |
-| **Layout speichern unter…** | Erstellt einen neuen benannten Arbeitsbereich aus Ihren aktuellen Einstellungen. |
-| **Layout umbenennen…** | Benennt den ausgewählten Arbeitsbereich um. |
-| **Layout neu laden** | Wendet den ausgewählten Arbeitsbereich sofort an. |
-| **Layout löschen…** | Entfernt den ausgewählten Arbeitsbereich und seine Dateien dauerhaft. |
-
-## Persistenzeinstellungen
-
-Der untere Teil der Workspace-Einstellungsseite steuert, was Lumi automatisch speichert:
-
-- **Fensterpositionen beim Beenden speichern**: Wenn diese Option aktiviert ist, werden Dock- und Fensterpositionen bei jedem Beenden auf die Festplatte geschrieben.
-- **Fenster auf demselben Monitor öffnen**: Öffnet jedes Fenster auf dem Monitor erneut, auf dem es während der letzten Sitzung war.
-- **Werkzeugoptionen beim Beenden speichern**: Speichert die aktuellen Werkzeugeinstellungen beim Beenden.
-- **Eingabegeräteeinstellungen beim Beenden speichern**: Speichert die Stift- und Gerätekonfiguration beim Beenden.
-
-Diese Einstellungen gelten pro Arbeitsbereich – jedes Layout behält seinen eigenen gespeicherten Status unabhängig bei.
-
-## Beispiel-Workflows
-
-Einige Möglichkeiten, wie Künstler mehrere Arbeitsbereiche nutzen können:
-
-- **Malerei** – große Pinseldocks, warme Füllfarbe (eingestellt in Einstellungen → Bildfenster → Standarddarstellung), Ihre bevorzugte Designvariante
-- **Färbung** – Hilfslinien und Leinwandbegrenzung aktiviert, Bildlaufleisten aktiviert (eingestellt in „Einstellungen“ → „Standarddarstellung“), neutrale Füllfarbe
-- **Roughs** – versteckte Docks, keine Lineale oder Raster, dunkle Polsterung, kompakte Symbolgröße, um den Platz auf der Leinwand zu maximieren
-- **Vollbild-Fokus** – unterschiedliche Füllfarben- und Dekorationseinstellungen im Vollbild-Erscheinungsbild im Vergleich zum Standard-Erscheinungsbild, sodass das Umschalten auf den Vollbildmodus eine wirklich andere Arbeitsumgebung bietet
-- **Scripting** – Scripting-Bedienfeld geöffnet, Schriftgröße zur besseren Lesbarkeit erhöht, anderer Symbolsatz
+Dadurch bleibt die Aufmerksamkeit auf dem Bildmaterial und nicht auf der Fensterverwaltung, sodass sich Lumi weniger wie eine einzelne statische Anwendung, sondern eher wie ein flexibles digitales Studio anfühlt.

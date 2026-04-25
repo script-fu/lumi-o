@@ -2,111 +2,34 @@
 title: "Dateiformat (.lum)"
 type: docs
 ---
-Lumi verwendet ein offenes, verzeichnisbasiertes Dateiformat (`.lum`), das auf Leistung, Zuverlässigkeit und langfristige Zugänglichkeit ausgelegt ist.
+Das native Dateiformat von Lumi wurde für mehrschichtige Malprojekte entwickelt, die im Laufe der Zeit zuverlässig, überprüfbar und wiederherstellbar bleiben müssen. Es ist auf die Realitäten der Illustrationsarbeit abgestimmt: viele Ebenen, große Leinwände, eingebettete Farbinformationen, Masken, Effekte und Wiederherstellungsdaten.
 
-## Übersicht
+Anstatt ein Projekt als einen einzigen undurchsichtigen Fleck zu behandeln, sorgt das Format dafür, dass die Struktur des Bildmaterials für die Anwendung sichtbar bleibt. Dadurch kann Lumi große Bilder intelligenter speichern, laden und wiederherstellen und gleichzeitig die Organisation bewahren, auf die Künstler angewiesen sind.
 
-Eine `.lum`-Datei ist eigentlich ein Verzeichnis, das Folgendes enthält:
-- **Metadaten** (Ebenen, Mischmodi, Eigenschaften).
-- **Ebenenpuffer** (einzelne Pixeldaten für jede Ebene).
-- **Masken** (Graustufendaten für Ebenenmasken).
-- **Wiederherstellungsverlauf** (inkrementelle Snapshots).
+## Projektstruktur öffnen
 
-Diese Struktur ermöglicht schnelles Speichern, verzögertes Laden großer Dateien und Wiederherstellung der Arbeit auch nach einem Absturz.
+Ein Lumi-Projekt hält die Teile des Kunstwerks getrennt: Bildstruktur, Ebeneninhalt, Masken, Farbdaten, Metadaten und Wiederherstellungsinformationen haben jeweils eine klare Rolle. Dadurch ist das Format leichter zu verstehen und eignet sich besser für den langfristigen Zugriff als ein geschlossener, monolithischer Container.
 
-## Schlüsseleigenschaften
+Das Ziel besteht nicht nur darin, Pixel zu speichern, sondern auch den Arbeitszustand einer Illustration zu speichern. Ebenen bleiben Ebenen, Masken bleiben Masken und die Datei spiegelt weiterhin die Art und Weise wider, wie das Bildmaterial erstellt wurde.
 
-### Offen und lesbar
+## Für große Gemälde konzipiert
 
-Das Format `.lum` verwendet XML-Metadaten und komprimierte Binärpuffer. Sie können Ebenenstruktur, Eigenschaften und Mischmodi im Klartext überprüfen. Kein proprietärer Codec; Pixeldaten werden im Standard-GEGL-Pufferformat gespeichert.
+Große Bilder mit mehreren Ebenen können schnell schwer werden. Das Format von Lumi unterstützt Arbeitsabläufe, bei denen nicht alle Bilddaten auf einmal in den Speicher geladen werden müssen. Projekte können reaktionsfähig bleiben, indem die Teile des Bildes geladen werden, die tatsächlich zum Anzeigen, Bearbeiten, Zusammenstellen oder Exportieren benötigt werden.
 
-### Inkrementelles Speichern
+Dieser Ansatz trägt dazu bei, dass sich komplexe Dateien überschaubar anfühlen, insbesondere wenn ein Kunstwerk viele versteckte, archivierte, experimentelle oder gruppierte Ebenen enthält.
 
-Inkrementelles Speichern ist über **Datei** → **Inkrement speichern** (`Ctrl+I`) verfügbar. Es erstellt einen manuellen Wiederherstellungskontrollpunkt innerhalb des Projekts, ohne das normale **Datei** → **Speichern** (`Ctrl+S`) zu ersetzen. Vollständige Speicherungen aktualisieren weiterhin das Hauptprojekt `.lum`, während „Inkrement speichern“ nur die geänderten Ebenen schreibt, die für einen schnellen Prüfpunkt erforderlich sind.
+## Sparen, ohne den Fluss zu unterbrechen
 
-### Lazy Loading
+Das Dateiformat unterstützt sowohl das normale Speichern von Projekten als auch einfache Snapshots im Wiederherstellungsstil. Dies gibt Künstlern die Möglichkeit, ihre Arbeit häufig zu schützen, ohne jeden Kontrollpunkt in ein vollständiges Duplikat des gesamten Bildes zu verwandeln.
 
-Große Projekte werden schnell eröffnet. Ebenenpixel werden nur dann von der Festplatte geladen, wenn:
-- Die Ebene wird sichtbar gemacht.
-- Sie malen auf der Ebene.
-- Die Ebene wird exportiert oder zusammengesetzt.
+Da Wiederherstellungsinformationen zur Projektstruktur gehören, kann Lumi den nützlichen Verlauf nah am Kunstwerk aufbewahren und gleichzeitig automatische Sicherheitsspeicherungen getrennt von der Arbeitsdatei ermöglichen.
 
-Sehr große Projekte (mehr als 500 Schichten, mehrere Gigabyte Daten) bleiben reaktionsfähig. Lazy Loading ist standardmäßig aktiviert und kann unter **Bearbeiten → Einstellungen → Leistung → Speicherressourcen** umgeschaltet werden.
+## Austausch und Export
 
-### Automatisch speichern
+Das native Format ist für die fortlaufende Lumi-Arbeit gedacht, während Exportformate für die Weitergabe abgeflachter oder kompatibilitätsorientierter Ergebnisse verwendet werden. Die Importunterstützung hilft dabei, vorhandene Kunstwerke in die Ebenenumgebung von Lumi zu übertragen, und die Exportunterstützung ermöglicht es fertigen Stücken, das Projektformat zu verlassen, wenn sie zur Veröffentlichung, Lieferung oder Weiterverarbeitung bereit sind.
 
-Lumi speichert Änderungen automatisch in regelmäßigen Abständen an einem **separaten Cache-Speicherort** (`~/.cache/lumi/autosave/`). Automatische Speicherungen sind unabhängig von der Arbeitsdatei und verändern diese nicht. Das Intervall und der Cache-Speicherort können unter **Bearbeiten → Einstellungen → Leistung** konfiguriert werden.
+Durch die Unterscheidung bleibt die Arbeitsdatei umfangreich und bearbeitbar, während die endgültigen Bilder in gängigen externen Formaten erstellt werden können.
 
-## Zugriff
+## Langfristige Zuverlässigkeit
 
-### Speichern und Speichern unter
-
-- **Datei** → **Speichern** (Strg+S): Im aktuellen `.lum` Verzeichnis speichern.
-- **Datei** → **Inkrement speichern** (Strg+I): Erstellen Sie einen inkrementellen Wiederherstellungsprüfpunkt für die aktuelle `.lum` Datei.
-- **Datei** → **Speichern unter** (Umschalt+Strg+S): In einer neuen `.lum` Datei speichern. Das Dialogfeld „Speichern unter“ enthält Komprimierungsoptionen für die neue Projektdatei.
-
-Nicht gespeicherte Änderungen werden durch ein Sternchen (*) im Fenstertitel gekennzeichnet.
-
-### Exportieren
-
-- **Datei** → **Exportieren als** (Umschalt+Strg+E): Export in PNG, JPEG, TIFF oder andere Formate.
-- **Datei** → **Überschreiben** (Strg+E): Erneuter Export zur zuletzt exportierten Datei.
-
-Durch den Export werden sichtbare Ebenen abgeflacht und vom Spektralfarbraum in den sRGB-Farbraum konvertiert.
-
-### Importieren
-
-- **Datei** → **Öffnen** (Strg+O): Laden Sie ein `.lum` Projekt.
-- **Datei** → **Als Ebenen öffnen** (Umschalt+Strg+O): Importieren Sie `.lum`-, XCF- oder PSD-Dateien als neue Ebenen.
-- **Datei** → **Zuletzt verwendete Dateien**: Schneller Zugriff auf kürzlich geöffnete Projekte.
-
-PSD- und XCF-Dateien werden beim Import in das native Format von Lumi konvertiert.
-
-## Import- und Exportkompatibilität
-
-### Unterstützte Importformate
-
-- **.lum**: Natives Lumi-Format.
-- **.xcf**: natives GIMP-Format (Ebenen und grundlegende Eigenschaften bleiben erhalten).
-- **.psd**: Photoshop-Format (Ebenen und Mischmodi bleiben erhalten).
-- **PNG, JPEG, TIFF usw.**: Reduzierter Bildimport.
-
-### Unterstützte Exportformate
-
-- **PNG**: Verlustfrei, mit Alpha-Transparenz.
-- **JPEG**: Verlustbehaftet, abgeflacht.
-- **TIFF**: Verlustfrei oder LZW-komprimiert.
-- **XCF**: GIMP-Kompatibilitätsformat. Nur Export; Schichten und Grundeigenschaften bleiben erhalten.
-
-## ProjektwiederherstellungLumi verfügt über automatische Hintergrundspeicherungen und manuelle inkrementelle Prüfpunkte, die beide über **Datei** → **Bild wiederherstellen** zugänglich sind. Ausführliche Informationen finden Sie auf der Seite [Dateiwiederherstellung](../recovery).
-
-## Organisation
-
-Eine `.lum` Datei ist ein Verzeichnis mit einer festen Struktur:
-
-```
-my-painting.lum/
-  ├── metadata.xml                       (image structure, layer tree, properties)
-  ├── thumbnail-YYYYMMDD-HHMMSS.png      (last-saved thumbnail)
-  ├── drawables/
-  │   ├── layer-<name>.geglbuf           (pixel data per layer)
-  │   └── mask-<name>.geglbuf            (mask data, shares layer name)
-  ├── icc/                               (embedded colour profiles)
-  ├── parasites/                         (per-image metadata)
-  ├── paths/                             (vector paths as SVG)
-  ├── configs/                           (non-destructive filter configurations)
-  └── recovery/
-      └── primary-01.lum/                (first Save Increment baseline)
-          ├── metadata.xml
-          ├── drawables/                 (only modified buffers)
-        ├── delta-0001.lum/            (Ctrl+I checkpoint)
-          └── delta-0002.lum/
-```
-
-Layer-Puffer werden nach dem Layer benannt (`layer-Background.geglbuf`) und nicht fortlaufend nummeriert. Leerzeichen in Ebenennamen werden als Unterstriche gespeichert; Gruppenebenen erhalten das Suffix `-GROUP`. Masken teilen sich den Ebenennamen (`mask-Background.geglbuf`).
-
-Jeder `recovery/primary-NN.lum/` ist ein vollständiger Basisspeicher. Durch nachfolgendes Drücken von `Ctrl+I` werden Unterverzeichnisse mit `delta-NNNN.lum/` angehängt, die nur die seit der letzten Baseline geänderten Puffer enthalten, sodass Prüfpunktspeicherungen unabhängig von der Projektgröße schnell erfolgen.
-
-Autosaves folgen der gleichen Struktur, werden jedoch separat in `~/.cache/lumi/autosave/` gespeichert, sodass die Arbeitsdatei unberührt bleibt.
-- **Sehr große Projekte**: Ein Projekt mit mehr als 1000 Ebenen und Terabytes an Daten profitiert am meisten vom Lazy Loading; Der endgültige Export in das flache Bildformat kann jedoch einige Zeit dauern.
-- **Netzwerklaufwerke**: Das Speichern in im Netzwerk bereitgestellten Verzeichnissen wird unterstützt, ist jedoch aufgrund der E/A-Latenz langsamer als lokaler Speicher.
+Kurz gesagt, das `.lum`-Format ist ein praktischer Behälter für ernsthafte Malarbeiten: offen genug zum Inspizieren, strukturiert genug zum Wiederherstellen und flexibel genug, um komplexe Schichtbilder wirtschaftlich zu verarbeiten.

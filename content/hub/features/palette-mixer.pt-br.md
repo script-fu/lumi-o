@@ -2,65 +2,30 @@
 title: "Misturador de paleta"
 type: docs
 ---
-O Palette Mixer deriva novas cores de pares de entradas de paleta usando um pipeline fixo de três estágios. Como a mistura ocorre no domínio espectral e não no RGB, os resultados se comportam como pigmentos físicos: azul e amarelo produzem cores verdes e saturadas mudam para neutras à medida que se misturam.
+O Palette Mixer é o espaço da Lumi para derivar novas cores da paleta ativa. Ele trata a mistura como um processo pictórico, em vez de uma simples média digital, para que as cores possam mudar, suavizar, escurecer e harmonizar de maneiras que pareçam mais próximas dos pigmentos físicos.
 
-## O pipeline
+O Mixer trabalha com a identidade de cores própria da paleta. Novas misturas não são cores arbitrárias extraídas de fora do sistema; são relações entre cores já presentes na paleta.
 
-Cada cor produzida pelo Mixer passa por três estágios em uma ordem fixa:
+## Misturando a partir de relacionamentos de paleta
 
-1. **Mistura**: WGM espectral entre o Pai A (CCW) e o Pai B (CW).
-2. **Chroma**: Misture em direção ao espectro neutro da paleta, reduzindo a saturação.
-3. **Tom**: Misture para misturar o branco (matiz) ou misturar o preto (sombra).
+Uma mistura começa com as cores originais da paleta. Ao mover-se entre eles, um artista pode explorar a passagem de uma família de matizes para outra enquanto permanece dentro do caráter da paleta.
 
-O tom é sempre aplicado por último. Isso torna a luminosidade dominante: um ajuste de tom atinge exatamente o nível de luminosidade pretendido sem ser diluído pelo ajuste de croma que o precede.
+Como a paleta é construída a partir de ingredientes semelhantes a pigmentos, o caminho entre duas cores pode produzir notas intermediárias úteis: verdes de amarelos e azuis, violetas temperadas, cinzas quentes, terras suaves ou mudanças sutis de temperatura.
 
-## Selecionando Pais
+## Croma e tom
 
-Pai A e Pai B são as duas entradas entre as quais o controle deslizante de mistura se mistura. Eles são carregados no Mapa da Paleta:
+O Mixer separa a sensação de uma cor em decisões práticas de pintura. Uma cor pode ser empurrada para uma versão mais limpa ou mais neutra, iluminada, escurecida ou mantida próxima de um valor específico enquanto seu matiz e saturação são explorados.
 
-- Segure **Shift** no Mapa da Paleta e **clique com o botão esquerdo** para definir o Pai A (CCW).
-- Segure **Shift** e **clique com o botão direito** para definir o Pai B (CW).
+Isso facilita a busca pela cor que uma pintura precisa: não apenas "mais vermelho" ou "mais azul", mas mais silenciosa, mais profunda, mais pálida, mais quente, mais fria ou mais contida, embora ainda pertença à mesma família de paletas.
 
-Somente inscrições de **Classe A** (misturas primárias e personalizadas com procedência intacta) são aceitas como pais. Excluem-se os terciários e entradas com ascendência perdida.
+## Salvando descobertas úteis
 
-As posições Parent A e Parent B do Mixer são mostradas no mapa como destaques de **anel de diamante** para que você possa sempre ver quais entradas estão carregadas.
+Quando uma mistura se torna importante, ela pode passar a fazer parte da paleta. As mixagens salvas mantêm sua relação com as cores que as produziram, para que possam ser revisitadas, ajustadas e reutilizadas em vez de se tornarem amostras isoladas.
 
-## Os controles deslizantes
+Com o tempo, isso permite que uma paleta cresça de um conjunto de ingredientes para um registro de decisões artísticas. As misturas úteis de uma sessão podem se tornar as cores iniciais da próxima.
 
-| Controle deslizante | Efeito |
-| :--- | :--- |
-| **Mistura** | Move entre o Pai A (extremidade anti-horária) e o Pai B (extremidade CW). Em 0,0 o resultado corresponde ao Pai A; em 1,0 corresponde ao Pai B. |
-| **Croma** | Dessatura a mistura em direção ao neutro da paleta. Valores mais altos produzem resultados mais suaves e terrosos. |
-| **Tom** | Muda a luminosidade para misturar branco (direção da tonalidade) ou misturar preto (direção da sombra). |
+## Um complemento para o Mapa de Paleta
 
-## Controles de valor
+O Palette Mixer e o Palette Map foram projetados para funcionarem juntos. O mapa mostra a paleta como um espaço de cores navegável, enquanto o mixer permite que o artista se mova deliberadamente entre pontos escolhidos dentro desse espaço.
 
-**Value Lock** congela a luminosidade perceptiva (CIE L\*) em seu nível atual enquanto os outros controles deslizantes se movem. Use isto para explorar a variação de croma ou matiz sem alterar o valor de uma mixagem.
-
-**Band Clamp** limita o resultado para permanecer dentro dos limites de sua faixa de valor atual (por exemplo, dentro de Lower Mid). O controle deslizante de tom ainda pode ser arrastado, mas a luminosidade de saída é fixada.
-
-O controle deslizante Tom também reflete quaisquer lacunas de valor configuradas no Editor de paleta. As faixas de luminosidade que ficam dentro de uma lacuna são mostradas como faixas cinzas semitransparentes na barra deslizante. A alça do controle deslizante salta automaticamente sobre essas lacunas: arrastar através de uma região cinza salta para o limite de banda válido mais próximo do outro lado.
-
-## Mixagem de pontos finais (branco, preto, neutro)
-
-Os estágios de tom e croma requerem pontos finais de referência: um branco de mistura, um preto de mistura e um neutro. Lumi os descobre automaticamente pesquisando na paleta ativa os melhores candidatos:
-
-- **Mixing White**: o primário de maior croma mais próximo do branco puro.
-- **Mixing Black**: o primário de menor luminosidade.
-- **Neutro**: o Primário mais próximo do acromático (croma mais baixo).
-
-Eles podem ser substituídos manualmente clicando com o botão direito em uma entrada no Editor de Paleta.
-
-## Salvando uma mixagemClique em **Adicionar à paleta** para salvar o resultado do mixer atual como uma **Mixagem salva** (entrada personalizada). Antes de salvar, o sistema aplica **Relocação de Melhor Correspondência**: ele pesquisa na paleta a receita ideal que produz a mesma cor final com o melhor ajuste espacial no Mapa de Paleta. Se uma receita mais próxima for encontrada, os controles deslizantes do mixer saltarão para refleti-la, confirmando que o sistema encontrou uma origem melhor e a posição da entrada salva se alinhará com seu ponto visual no Mapa.
-
-As mixagens salvas armazenam sua receita completa (UIDs A/B principais, fator de mistura, tom, croma) para que possam ser reproduzidas com exatidão.
-
-## Recuperação de receita
-
-Clicar uma vez em uma entrada personalizada no Palette Editor restaura a receita dessa entrada no Mixer:
-
-- Pai A e Pai B são recarregados.
-- Os controles deslizantes de mistura, tom e croma retornam às suas posições originais.
-- Qualquer Value Lock ou Band Clamp que estava ativo durante a criação é reativado.
-
-Isso torna mais fácil retornar a uma cor e ajustá-la ainda mais, ou usá-la como ponto de partida para uma nova mistura.
+Juntos, eles suportam um fluxo de trabalho que se aproxima da mistura de tintas em uma paleta: escolha cores vizinhas ou contrastantes, busque o equilíbrio certo, mantenha as cores que importam e continue pintando dentro de um mundo de cores coerente.

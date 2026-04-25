@@ -2,109 +2,34 @@
 title: "Odzyskiwanie plików"
 type: docs
 ---
-Lumi utrzymuje dwa niezależne systemy odzyskiwania (automatyczne zapisywanie w tle i ręczne, przyrostowe punkty kontrolne), oba dostępne z jednego okna dialogowego.
+System odzyskiwania Lumi został zaprojektowany, aby chronić prace malarskie przed awariami, błędami i przerwami w sesjach. Zapewnia projektom zabezpieczenie, nie zmuszając artystów do ciągłego ręcznego kopiowania plików.
 
-## Dostęp
+Odzyskiwanie opiera się na dwóch koncepcjach: automatycznej ochronie w tle i celowych punktach kontrolnych. Razem pomagają zachować najnowsze prace, jednocześnie umożliwiając artyście powrót do wcześniejszych momentów w projekcie.
 
-**Plik** → **Odzyskaj obraz**
+## Automatyczna ochrona
 
-Otworzy się okno dialogowe wstępnie wypełnione stanami odzyskiwania aktualnie otwartego pliku. Użyj selektora plików u góry, aby przełączyć się na inny plik `.lum`.
+Podczas edycji obrazu Lumi może przechowywać dane odzyskiwania oddzielnie od głównego pliku roboczego. Oznacza to, że sam projekt nie musi być przepisywany za każdym razem, gdy tworzona jest migawka bezpieczeństwa.
 
----
+Jeśli coś pójdzie nie tak, stan automatycznego odzyskiwania może udostępnić najnowszą wersję grafiki, która może być nowsza niż ostatni celowy zapis. Cel jest prosty: zmniejszyć ilość pracy utraconej w przypadku nieoczekiwanego zakończenia sesji.
 
-## Autozapis
+## Zamierzone punkty kontrolne
 
-Lumi zapisuje migawkę tła Twojej pracy w regularnych odstępach czasu podczas edycji. Autozapisy są zapisywane w **oddzielnym katalogu pamięci podręcznej**, pozostawiając działający plik `.lum` nietknięty:
+Niektóre momenty na obrazie warto świadomie utrwalić: przed poważną zmianą koloru, po udanym szkicu, przed podjęciem decyzji o spłaszczeniu lub przy próbie ryzykownego kierunku.
 
-```
-~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
-```
+Lumi obsługuje w takich momentach punkty kontrolne na poziomie projektu. Są lżejsze niż trzymanie osobnej pełnej kopii dla każdego eksperymentu, ale nadal dają artyście możliwość cofnięcia się do znaczących punktów w historii dzieła.
 
-Kodowanie ścieżki wykorzystuje `~` jako separator w celu utworzenia unikalnego katalogu pamięci podręcznej na plik. Oznacza to, że automatyczne zapisywanie jest dostępne nawet w przypadku utraty lub uszkodzenia samego pliku projektu.
+## Odzyskiwanie z kontekstem
 
-- **Częstotliwość**: Konfigurowalna w **Edycja** → **Preferencje** → **Wydajność** → Interwał automatycznego zapisywania.
-- **Lokalizacja przechowywania**: Ustawiana także w Preferencjach → Wydajność.
-- **Cel**: Odzyskiwanie po awarii. Zakładka Autozapis w oknie dialogowym Odzyskaj obraz pokazuje dostępne stany automatycznego zapisywania wraz ze znacznikami czasu.
+Stany odzyskiwania są prezentowane jako wersje kompozycji, a nie jako surowe pliki, które można przeglądać ręcznie. Pozwala to artyście porównać ostatnie automatyczne zapisy i zamierzone punkty kontrolne, a następnie otworzyć stan, który najlepiej pasuje do pracy, od której chce kontynuować.
 
-Gdy otworzysz plik zawierający nowsze dane z automatycznym zapisem, Lumi powiadomi Cię o tym w momencie otwarcia.
+Odzyskane obrazy otwierają się jako dokumenty robocze, umożliwiając artyście sprawdzenie ich przed podjęciem decyzji o zapisaniu lub kontynuowaniu.
 
----
+## Dbanie o praktyczną rekonwalescencję
 
-## Zapisywanie przyrostowe
+Przydatny system odzyskiwania danych musi także być łatwy w zarządzaniu. Lumi został zaprojektowany, aby uporządkować dane odzyskiwania i usuwać stare stany, gdy nie są już potrzebne.
 
-Zapisywanie przyrostowe to ręczny system punktów kontrolnych przechowywany **w pliku projektu** pod adresem `recovery/`. Struktura jest następująca:
+Dzięki temu bezpieczeństwo nie stanie się bałaganem. Odzyskiwanie może pozostać aktywne w tle, a artyści nadal mają możliwość kontrolowania ilości historii zachowywanej w czasie.
 
-```
-my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
-      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
-      ├── delta-0002.lum/
-      └── ...
-```
+## Pewność podczas pracy
 
-Nowa linia bazowa `primary-NN.lum/` jest zapisywana po **Plik → Zapisz**. Kolejne naciśnięcia **Plik → Zapisz przyrost** (`Ctrl+I`) tworzą podkatalogi `delta-NNNN.lum/` zawierające tylko bufory, które zmieniły się od ostatniej linii bazowej. Różnice w automatycznym i ręcznym zapisywaniu korzystają z oddzielnych liczników, więc nie kolidują ze sobą w historii.
-
-Zapisz przyrost jest **zawsze dostępny** dla zapisanych plików `.lum`:
-
-1. Użyj **Plik** → **Zapisz** (`Ctrl+S`), aby utworzyć lub zaktualizować główny plik projektu.
-2. Użyj **Plik** → **Zapisz przyrost** (`Ctrl+I`), aby utworzyć punkt kontrolny odzyskiwania.
-3. Po kolejnym pełnym **Plik** → **Zapisz**, następny `Ctrl+I` zapisuje nową linię bazową `primary-NN.lum/` przed utworzeniem nowych delt.
-
-Odzyskane pliki o nazwie z prefiksem `RECOVERED_` muszą zostać najpierw normalnie zapisane, zanim funkcja Zapisz przyrost stanie się dla nich dostępna.
-
-Kiedy otwierasz plik `.lum`, który zawiera nowsze zapisy przyrostowe niż zapis podstawowy, Lumi wyświetla komunikat **Wykryto zapis przyrostowy** oferujący załadowanie najnowszego punktu kontrolnego.
-
----
-
-## Okno dialogowe Odzyskaj obraz
-
-Okno dialogowe składa się z trzech zakładek i dwóch przycisków akcji.
-
-### Zakładka Autozapis
-
-Wyświetla listę wszystkich dostępnych stanów automatycznego zapisywania wybranego pliku wraz ze znacznikami czasu i miniaturami (jeśli są dostępne). Wybierz stan i kliknij **Odzyskaj**, aby go otworzyć.
-
-Użyj tej zakładki, aby:
-- Odzyskaj siły po wypadku.
-- Przywróć wcześniejszy stan z tej samej sesji.
-
-### Tablica przyrostowa
-
-Wyświetla listę wszystkich stanów punktów kontrolnych przechowywanych w pliku projektu. Każdy wpis zawiera znacznik czasu punktu kontrolnego. Wybierz punkt kontrolny i kliknij **Odzyskaj**, aby go otworzyć.
-
-Użyj tej zakładki, aby:
-- Powrót do wcześniejszego punktu sesji bez zapisywania oddzielnych plików.
-- Przeglądaj historię wersji projektu.
-
-### Najnowsza zakładka
-
-Domyślna zakładka po otwarciu okna dialogowego. Automatycznie identyfikuje najnowszy dostępny stan odzyskiwania zarówno w przypadku automatycznych zapisów, jak i przyrostowych punktów kontrolnych, i wyświetla jego sygnaturę czasową. Kliknij **Odzyskaj**, aby załadować go natychmiast, bez przeglądania poszczególnych stanów.
-
----
-
-## Przyciski
-
-| Przycisk | Akcja |
-|------------|------------|
-| **Odzyskaj** | Otwiera wybrany stan odzyskiwania jako nowy obraz. |
-| **Zamknij** | Zamyka okno dialogowe bez odzyskiwania. |
-| **Posprzątaj stare stany…** | Otwiera monit czyszczenia (patrz poniżej). |
-
----
-
-## Posprzątaj stare stany
-
-Nagromadzenie stanów odzyskiwania w miarę upływu czasu może zająć znaczną ilość miejsca na dysku. Przycisk **Wyczyść stare stany…** (w lewym dolnym rogu okna dialogowego) otwiera monit o oczyszczenie aktywnej karty (Autozapis lub Przyrostowy).
-
-Komunikat wyświetla:
-- Ile pełnych zapisów istnieje dla pliku.
-- Całkowite miejsce na dysku, które zajmują.
-- Przycisk **Zachowaj najnowsze**, umożliwiający wybranie liczby zachowanych zapisów.
-
-Ustawienie **Zachowaj najnowsze** na `0` usuwa wszystkie stany odzyskiwania. Następny `Ctrl+I` po pełnym oczyszczeniu zapisze nowy podstawowy zapis.
-
----
-
-## Odzyskiwanie po uruchomieniu
-
-Jeśli podczas uruchamiania Lumi wykryje, że ostatnio otwarty plik zawiera nowsze dane autozapisu niż ostatni pełny zapis, przed załadowaniem wyświetli się monit o odzyskanie. Możesz zaakceptować (wczytać autozapis) lub odrzucić (normalnie otworzyć podstawowy zapis).
+Celem odzyskiwania plików nie jest zastąpienie zapisywania, ale zmniejszenie kruchości pracy twórczej. Artyści mogą malować, eksperymentować i podejmować ryzyko, wiedząc, że Lumi zapewnia dodatkowe sposoby powrotu do zdrowia, gdy sesja, plik lub decyzja pójdzie nie tak.

@@ -2,108 +2,38 @@
 title: "Editor de paleta"
 type: docs
 ---
-El Editor de paletas es donde creas y administras una paleta Lumi. Contiene su conjunto de pigmentos, almacena las mezclas que guarda desde el Mezclador de paletas, registra los colores que realmente usó mientras pintaba y le permite configurar la estructura de valores y los degradados de la paleta.
+El Editor de paletas es donde una paleta Lumi se convierte en un entorno de color completo. Reúne los pigmentos a partir de los cuales se construye una paleta, las mezclas que un artista elige conservar, los colores utilizados durante la pintura y la estructura tonal que da forma a la forma en que se explora la paleta.
 
-## Seleccionar una paleta
+Una paleta en Lumi es más que una lista de muestras. Es un sistema de color funcional: un conjunto de ingredientes, mezclas recordadas, relaciones de valores y degradados que pueden guiar una pintura o un conjunto de obras completo.
 
-Una paleta es más que una colección de pigmentos: es un compromiso estilístico. Muchos artistas trabajan con un conjunto pequeño y fijo de pigmentos que conocen íntimamente: la forma en que se mezclan, los neutros que producen, los cambios de temperatura entre ellos. Esa familiaridad se convierte en parte de su voz visual. Un pintor puede mantener una paleta cálida y de bajo croma para el trabajo de figuras y una paleta separada de alto nivel para los paisajes, o puede hacer todo su trabajo dentro de un solo conjunto de cuatro pigmentos como una restricción deliberada que unifica un cuerpo de trabajo.
+## Paletas como limitaciones artísticas
 
-Lumi apoya esta forma de trabajar. Cada paleta tiene sus propios pigmentos, mezclas, estructura de valores y degradados. Al cambiar de paleta se cambia todo el sistema de colores: el mapa, el mezclador y las mezclas disponibles se actualizan para reflejar el nuevo conjunto.
+Muchos pintores trabajan mejor con un conjunto limitado de colores familiares. Un pequeño conjunto de pigmentos puede crear unidad, establecer un estado de ánimo y tomar decisiones sobre el color más rápidamente porque cada mezcla pertenece a la misma familia visual.
 
-Un menú desplegable en la parte superior del Editor de paletas selecciona la paleta activa. Lumi se envía con tres paletas en el grupo **Estándar**:
+El Editor de paletas admite ese tipo de limitación intencional, así como paletas más amplias de espectro completo. Los artistas pueden mantener paletas separadas para diferentes temas, proyectos, estilos o condiciones de iluminación, cada uno con su propio carácter y comportamiento de mezcla.
 
-| Paleta | Personaje |
-| :--- | :--- |
-| **Predeterminado** | Una paleta versátil y de tendencia cálida que cubre toda la rueda de tonos. Buen punto de partida para la mayoría de las materias. |
-| **Maestro** | Una paleta grande de espectro completo para pintores que desean una máxima cobertura de tonos y un control explícito sobre los ejes de gris. |
-| **Zorn** | Una paleta limitada de cuatro pigmentos basada en el enfoque de Anders Zorn. Cubre una gama sorprendentemente amplia de tonos carnales cálidos y neutros de croma baja a partir de un conjunto de pigmentos mínimo. |
+## Pigmentos, mezclas y memoria
 
-Las paletas también se pueden crear, importar o duplicar desde la pestaña Paletas.
+Los pigmentos de la paleta actúan como base. Definen los colores a partir de los cuales crece el resto del sistema e influyen en las mezclas generadas disponibles en otras partes de las herramientas de color de Lumi.
 
-## pigmentos de paleta
+Las mezclas guardadas representan descubrimientos deliberados: colores que vale la pena conservar, nombrar y regresar. Los colores usados ​​forman un tipo de memoria más tranquila, preservando los colores que realmente aparecieron en el lienzo incluso si no se guardaron con anticipación.
 
-La sección **Pigmentos de paleta** en la parte superior de la vista de paleta enumera sus entradas principales: los pigmentos base a partir de los cuales se construye el resto de la paleta. Estas son las entradas al sistema de mezcla espectral. Los secundarios y terciarios se generan a partir de ellos automáticamente y se utilizan para completar el mapa de paletas.
+Juntas, estas áreas permiten que la paleta evolucione de forma natural. Puede comenzar como un conjunto de pigmentos, reunir mezclas útiles durante la pintura y convertirse gradualmente en un vocabulario de colores personalizado.
 
-## Mezclas guardadas
+## Organización basada en valores
 
-La sección **Mezclas guardadas** contiene colores que has conservado explícitamente del Mezclador de paleta usando **Agregar a paleta**. Estos son sus colores derivados: los resultados de la mezcla espectral, los ajustes de tono y croma guardados para su reutilización.
+Lumi organiza la paleta de colores teniendo en cuenta el valor porque los pintores suelen pensar en la luz y la oscuridad antes de pensar en el tono. Agrupar mezclas por función tonal hace que sea más fácil encontrar un color que pertenezca a la parte correcta de la imagen, no solo uno que tenga el nombre correcto.
 
-Las mezclas guardadas se subdividen en cinco bandas de valores:
+Las paletas también pueden tener su propio sentido de espaciado tonal. Una ilustración llamativa, un retrato discreto y un paisaje apagado pueden beneficiarse de un énfasis de valor diferente, y la paleta puede reflejar esa estructura.
 
-| Banda | Rango de luminosidad predeterminado |
-| :--- | :--- |
-| Clave alta | 80 – 100% |
-| Medio superior | 60 – 80% |
-| Medio | 40 – 60% |
-| Medio Bajo | 20 – 40% |
-| Profundo | 0 – 20% |
+## Degradados y transiciones
 
-Lumi coloca cada mezcla guardada en la banda apropiada automáticamente según su luminosidad perceptiva (CIE L\*). Esto organiza sus mezclas por valor en lugar de buscar en una lista plana y, por lo general, coincide con la forma en que un artista piensa sobre el color.
+Una paleta puede incluir degradados derivados de sus propios colores. Estos degradados son útiles para transiciones suaves, franjas de referencia, estudios de iluminación y movimientos de color que permanecen dentro de la identidad de la paleta.
 
-Se puede cambiar el nombre de las mezclas guardadas mediante el botón **Cambiar nombre personalizado** o el menú contextual.
+Debido a que los degradados pertenecen a la paleta, refuerzan el mismo lenguaje de color que los pigmentos y las mezclas guardadas en lugar de parecer adiciones no relacionadas.
 
-## Mezclas usadas
+## Flujo de trabajo de pintura
 
-La sección **Mezclas usadas** es un historial activado por pintura. Cada vez que se aplica un color de la paleta al lienzo, se registra aquí. Las mezclas usadas se ordenan de más a menos reciente.
+El Editor de paleta es el lugar para crear y perfeccionar el sistema de color, mientras que las vistas de paleta más claras permiten un acceso rápido durante la pintura. Esto mantiene disponible el diseño de paleta profunda sin forzarlo a pasar al primer plano cada vez que se elige un color.
 
-Esta sección es útil para recuperar un color con el que pintó pero que no guardó explícitamente. Para conservar una mezcla usada de forma permanente, selecciónela y haga clic en **Promocionar** y pasará a Mezclas guardadas en la banda de valores adecuada.
-
-Las mezclas utilizadas se almacenan por paleta y persisten entre sesiones.
-
-## Bandas de valorLas bandas de valores definen dónde se ubican los límites entre las cinco zonas de luminosidad. De forma predeterminada, dividen la luminosidad de manera uniforme en el rango de 0 a 100%, pero puedes ajustarlos para que coincidan con la estructura tonal del sujeto. Es útil para los pintores definir y gestionar bandas de valores _y_ los espacios entre ellas.
-
-### El control deslizante de banda de valor
-
-El **expansor Bandas de valor** en el Editor de paleta contiene un control deslizante con cinco divisores que se pueden arrastrar. Arrastre cualquier divisor para cambiar el límite entre bandas adyacentes. La etiqueta encima del control deslizante muestra el nombre y el rango de porcentaje exacto de la banda activa.
-
-**Botones:**
-
-| Botón | Efecto |
-| :--- | :--- |
-| **Cancelar** | Revierte el control deslizante al último estado aplicado |
-| **Copiar** | Copia la configuración de banda actual al portapapeles |
-| **Pegar** | Pega una configuración de banda copiada de otra paleta |
-| **Valores predeterminados** | Restaura los valores predeterminados de división igual de fábrica |
-| **Aplicar** | Confirma los cambios y regenera la paleta |
-
-**Se requiere Aplicar** para que los cambios sean permanentes. Activa una regeneración completa de la paleta y eliminará cualquier mezcla guardada cuya luminosidad ya no esté dentro de ninguna banda. Lumi muestra un cuadro de diálogo de confirmación que enumera cuántas mezclas se eliminarán antes de continuar.
-
-### Bandas de valor y el mapa de paleta
-
-El Mapa de paleta muestra la paleta como una rueda de tonos con 36 sectores de tonos (de 10° cada uno) y 15 celdas de luminosidad dispuestas como anillos concéntricos. Cada banda corresponde a tres anillos: las cinco bandas × 3 anillos = 15 celdas en total.
-
-Al ajustar las bandas de valores se cambian los valores de luminosidad que aparecen en cada nivel de anillo. Una banda comprimida hacia el extremo oscuro hace que sus tres anillos abarquen una gama tonal más estrecha; una banda ancha le da a sus tres anillos una mayor distribución tonal. Así es como la misma estructura del Mapa de paletas se adapta a paletas ajustadas a diferentes prioridades tonales.
-
-## Degradados de paleta
-
-Cada paleta puede almacenar uno o más **Degradados**: progresiones suaves derivadas de entradas de paleta que se pueden aplicar al lienzo como rellenos degradados o usarse como franjas de referencia.
-
-Los degradados se gestionan en el **Expansor de degradados**. El combo en la parte superior enumera los degradados en la paleta actual. **Agregar** crea un nuevo degradado. **Eliminar** elimina el seleccionado. **Cambiar nombre** le cambia el nombre.
-
-### Editor de degradado
-
-El **expansor del Editor de degradado** configura el degradado seleccionado. Cada degradado tiene tres puntos finales (**A**, **B** y **C**) que se muestran como muestras de color. Haga clic en una muestra para convertirla en el punto final activo para la edición.
-
-Cada punto final se puede configurar haciendo clic en **Seleccionar** y luego haciendo clic en una entrada de paleta en el Mapa de paleta o en la vista de paleta. El punto final está vinculado a esa entrada de paleta mediante UID; si la entrada cambia, el gradiente se actualiza.
-
-**Controles por punto final:**
-
-| Controlar | Efecto |
-| :--- | :--- |
-| **Fuerza** | En qué medida contribuye el color del punto final en relación con sus vecinos |
-| **Opacidad** | Alfa del color del punto final en el degradado |
-| **Curva** | Ajuste de gamma para la caída del color desde este punto final |
-
-**Controles deslizantes de distribución** (S1, S2, S3) establecen dónde caen los tres puntos medios entre los puntos finales a lo largo de la franja de degradado. Al restablecerlos, los puntos medios vuelven al mismo espacio.
-
-La franja de vista previa del degradado en la parte superior del bloque del Editor de degradado muestra el resultado de la configuración actual del punto final y la distribución.
-
-## Paleta acoplableLa **Paleta** acoplable (**Paneles > Paleta**) es un panel más sencillo centrado en la lectura para explorar y seleccionar colores de cualquier paleta. Muestra la misma vista de tres secciones (Pigmentos de paleta, Mezclas guardadas, Mezclas usadas) sin los expansores Bandas de valor y Degradados.
-
-Un menú desplegable de selección de paleta en la parte superior le permite cambiar entre todas las paletas disponibles. Haga clic en cualquier entrada para establecerla como color de primer plano. Haga doble clic para abrir el editor de nombres de colores. Para paletas grabables, las acciones Editar color, Nuevo color desde FG y Eliminar color están disponibles en la barra de botones.
-
-La paleta acoplable está diseñada para un acceso rápido al color durante la pintura cuando el editor de paleta completo ocuparía demasiado espacio.
-
-## Pestaña Paletas
-
-La **Pestaña Paletas** (disponible como pestaña acoplable) muestra la paleta activa en modo compacto. Excluye los pigmentos para centrarse en las mezclas guardadas.
+En general, el Editor de paletas ayuda a convertir la selección de colores en una práctica coherente: elija los pigmentos, explore sus mezclas, preserve los resultados útiles y deje que la paleta se convierta en parte de la voz de la obra de arte.

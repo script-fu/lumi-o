@@ -4,109 +4,34 @@ type: docs
 url: "hub/features/recovery"
 ---
 
-Lumi maintains two independent recovery systems (automatic background saves and manual incremental checkpoints), both accessible from a single dialog.
+Lumi's recovery system is designed to protect painting work from crashes, mistakes, and interrupted sessions. It gives projects a safety net without forcing artists to constantly duplicate files by hand.
 
-## Access
+Recovery is built around two ideas: automatic background protection and intentional checkpoints. Together they help preserve recent work while still allowing an artist to return to earlier moments in a project.
 
-**File** → **Recover Image**
+## Automatic protection
 
-The dialog opens pre-populated with recovery states for the currently open file. Use the file chooser at the top to switch to a different `.lum` file.
+While an image is being edited, Lumi can keep recovery data separate from the main working file. This means the project itself does not need to be rewritten every time a safety snapshot is made.
 
----
+If something goes wrong, the automatic recovery state can provide a recent version of the artwork that may be newer than the last deliberate save. The goal is simple: reduce the amount of work lost when a session ends unexpectedly.
 
-## Autosave
+## Intentional checkpoints
 
-Lumi saves a background snapshot of your work at regular intervals while editing. Autosaves are written to a **separate cache directory**, leaving the working `.lum` file untouched:
+Some moments in a painting are worth preserving deliberately: before a major colour change, after a successful sketch, before flattening decisions, or when trying a risky direction.
 
-```
-~/.cache/lumi/autosave/~home~user~projects~my-painting.lum/
-```
+Lumi supports project-level checkpoints for these moments. They are lighter than keeping a separate full copy for every experiment, but still give the artist a way to step back to meaningful points in the work's history.
 
-The path encoding uses `~` as a separator to create a unique cache directory per file. This means autosaves are available even if the project file itself is lost or corrupted.
+## Recovering with context
 
-- **Frequency**: Configurable in **Edit** → **Preferences** → **Performance** → Autosave interval.
-- **Storage location**: Also set in Preferences → Performance.
-- **Purpose**: Crash recovery. The Autosave tab in the Recover Image dialog shows available autosave states with timestamps.
+Recovery states are presented as versions of the artwork rather than as raw files to hunt through manually. This lets an artist compare recent automatic saves and deliberate checkpoints, then open the state that best matches the work they want to continue from.
 
-When you open a file that has newer autosave data, Lumi notifies you at open time.
+Recovered images open as working documents, allowing the artist to inspect them before deciding how to save or continue.
 
----
+## Keeping recovery practical
 
-## Incremental Saves
+A useful recovery system must also stay manageable. Lumi is designed to keep recovery data organised and make old states removable when they are no longer needed.
 
-Incremental saving is a manual checkpoint system stored **inside the project file** under `recovery/`. The structure is:
+This keeps safety from becoming clutter. Recovery can remain active in the background, while artists still have a way to control how much history is retained over time.
 
-```
-my-painting.lum/recovery/
-  └── primary-01.lum/       (full baseline, created on first Ctrl+I)
-      ├── delta-0001.lum/   (Ctrl+I checkpoint, only modified buffers)
-      ├── delta-0002.lum/
-      └── ...
-```
+## Confidence while working
 
-A new `primary-NN.lum/` baseline is written after **File → Save**. Subsequent **File → Save Increment** presses (`Ctrl+I`) create `delta-NNNN.lum/` subdirectories containing only the buffers that changed since the last baseline. Autosave deltas and manual save deltas use separate counters so they do not interfere with each other's history.
-
-Save Increment is **always available** for saved `.lum` files:
-
-1. Use **File** → **Save** (`Ctrl+S`) to create or update the main project file.
-2. Use **File** → **Save Increment** (`Ctrl+I`) to create a recovery checkpoint.
-3. After another full **File** → **Save**, the next `Ctrl+I` writes a fresh `primary-NN.lum/` baseline before creating new deltas.
-
-Recovered files named with the `RECOVERED_` prefix must be saved normally first before Save Increment becomes available for them.
-
-When you open a `.lum` file that has newer incremental saves than the primary save, Lumi shows an **Incremental Save Detected** prompt offering to load the most recent checkpoint.
-
----
-
-## Recover Image Dialog
-
-The dialog has three tabs and two action buttons.
-
-### Autosave Tab
-
-Lists all available autosave states for the selected file with timestamps and thumbnails (where available). Select a state and click **Recover** to open it.
-
-Use this tab to:
-- Recover after a crash.
-- Revert to an earlier state from the same session.
-
-### Incremental Tab
-
-Lists all checkpoint states stored inside the project file. Each entry shows the checkpoint timestamp. Select a checkpoint and click **Recover** to open it.
-
-Use this tab to:
-- Return to an earlier point in a session without having saved separate files.
-- Browse through the version history of a project.
-
-### Latest Tab
-
-The default tab when the dialog opens. Automatically identifies the newest available recovery state across both autosaves and incremental checkpoints, and shows its timestamp. Click **Recover** to load it immediately without browsing individual states.
-
----
-
-## Buttons
-
-| Button | Action |
-|--------|--------|
-| **Recover** | Opens the selected recovery state as a new image. |
-| **Close** | Dismisses the dialog without recovering. |
-| **Clean Up Old States…** | Opens a cleanup prompt (see below). |
-
----
-
-## Clean Up Old States
-
-Accumulating recovery states over time can consume significant disk space. The **Clean Up Old States…** button (bottom-left of the dialog) opens a cleanup prompt for the active tab (Autosave or Incremental).
-
-The prompt shows:
-- How many full saves exist for the file.
-- The total disk space they occupy.
-- A **Keep most recent** spin button to select how many saves to retain.
-
-Setting **Keep most recent** to `0` deletes all recovery states. The next `Ctrl+I` after a full cleanup will write a fresh primary save.
-
----
-
-## Startup Recovery
-
-On startup, if Lumi detects that the most recently opened file has newer autosave data than the last full save, it presents a recovery prompt before loading. You can accept (load the autosave) or dismiss (open the primary save as normal).
+The purpose of file recovery is not to replace saving, but to make creative work less fragile. Artists can paint, experiment, and take risks knowing that Lumi is maintaining additional ways back when a session, file, or decision goes wrong.

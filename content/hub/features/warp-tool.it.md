@@ -2,86 +2,36 @@
 title: "Strumento Deformazione"
 type: docs
 ---
-Lo strumento Warp spinge, tira e fa scorrere liberamente i pixel sulla tela. In Lumi va oltre la maggior parte delle implementazioni: può deformare un intero gruppo di livelli – non importa quanti livelli e maschere nidificati contenga – come un singolo oggetto unificato, senza appiattirsi o perdere alcuna struttura.
+Lo strumento Warp consente agli artisti di spingere, tirare, piegare, ammorbidire e rimodellare il contenuto dipinto direttamente sulla tela. È progettato per la regolazione espressiva: correggere le proporzioni, aggiungere flusso, spostare le sagome o dare più movimento a una forma finita senza ridipingerla da zero.
 
-## Panoramica
+In Lumi, la deformazione è particolarmente focalizzata sulla conservazione delle opere d'arte stratificate. Un soggetto complesso può essere rimodellato come un tutto visivo mentre i suoi livelli e le maschere sottostanti rimangono disponibili per ulteriori modifiche.
 
-Seleziona un livello e trascinalo su di esso per spostare i pixel in qualsiasi direzione. La deformazione non è distruttiva mentre lavori: puoi annullare e ripetere singoli tratti, modificare la dimensione del pennello o il comportamento tra i tratti e continuare a perfezionare fino al commit. Il commit applica la mappa di spostamento accumulata in modo distruttivo ai dati dei pixel del livello.
+## Modellazione diretta della tela
 
-Quando è selezionato un **livello di gruppo**, lo strumento opera sul gruppo nel suo insieme. Vedi e interagisci con un'anteprima dal vivo dell'intero gruppo composito. Al momento del commit, la stessa distorsione viene applicata in modo preciso e indipendente a ogni livello figlio e maschera all'interno del gruppo, preservando la struttura completa dei livelli.
+La deformazione sembra come se si applicasse movimento all'immagine. Invece di selezionare una casella di trasformazione rigida, l'artista può lavorare localmente, costruendo lo spostamento attraverso i tratti finché la forma non si adatta correttamente.
 
-## Deformazione del gruppo
+Ciò rende lo strumento utile per correzioni sottili e distorsioni drammatiche. Una guancia può essere ammorbidita, una manica può essere portata al ritmo, il fogliame può essere reso fluido o uno schizzo può essere avvicinato al gesto desiderato.
 
-Deformare un gruppo è la capacità principale che distingue lo strumento di deformazione di Lumi.
+## Deformazione consapevole del gruppo
 
-### Il problema che risolve
+Le illustrazioni a strati spesso separano disegni al tratto, colori, ombreggiature, texture, maschere ed effetti. Rimodellare una parte di quella struttura appiattindola distruggerebbe l'organizzazione stessa che rende l'immagine modificabile.
 
-Nella maggior parte dei programmi di pittura, per deformare un'illustrazione multistrato è necessario prima appiattire il gruppo (distruggendo la struttura degli strati) oppure deformare ogni strato separatamente e cercare di abbinarli a occhio (noioso e impreciso). Nessuno dei due approcci preserva la struttura originale per ulteriori modifiche non distruttive.
+Lo strumento Warp di Lumi è progettato per trattare un gruppo di livelli come un singolo soggetto visibile preservando comunque i pezzi al suo interno. L'artista può modellare l'aspetto combinato e mantenere intatti gli strati interni dopo l'applicazione della modifica.
 
-Lumi deforma l'intero gruppo come un unico oggetto e quindi distribuisce la stessa identica trasformazione su ogni strato al suo interno.
+## Maschere e struttura
 
-### Come funziona
+Le maschere sono parte della struttura dell'opera d'arte, non un ripensamento. Quando un soggetto deformato dipende da maschere per bordi, ritagli, ombreggiature o confini di gruppo, tali relazioni devono spostarsi con l'immagine.
 
-Quando selezioni un gruppo e inizi un tratto di distorsione, Lumi crea un **livello di anteprima mobile** dalla proiezione composita del gruppo. Se il gruppo ha una maschera, la maschera viene inserita nell'anteprima in modo che l'anteprima rappresenti accuratamente l'aspetto finale. Dipingi i tuoi tratti di curvatura direttamente su questa anteprima: ciò che vedi è esattamente ciò che ottieni.
+L'approccio di Lumi mantiene contenuti e maschere allineati in modo che il risultato modificato rimanga coerente. L'obiettivo è che l'ordito previsto e il risultato stratificato corrispondano visivamente, senza richiedere all'artista di riparare manualmente ogni strato figlio.
 
-Al momento dell'impegno, Lumi:
+## Aggiustamento iterativo
 
-1. Applica lo spostamento a ogni livello base all'interno del gruppo (compresi i livelli profondamente annidati nei sottogruppi), espandendo la tela di ogni livello quanto basta per catturare l'intera area di distorsione.
-2. Applica lo stesso spostamento a ogni maschera all'interno del gruppo nello stesso passaggio.
-3. Riprende il calcolo automatico dei limiti del gruppo in modo che il gruppo si ridimensioni per adattarsi ai suoi figli appena deformati.
-4. Ritaglia ogni strato deformato riportandolo al suo contenuto effettivamente dipinto per mantenere compatte le dimensioni del file.
-5. Rimuove il livello di anteprima e rigenera la proiezione di gruppo dai figli aggiornati.
+Il warping è naturalmente esplorativo. Gli artisti spesso hanno bisogno di provare un tratto, confrontare il risultato, ammorbidirlo, annullarlo o creare gradualmente un cambiamento più forte.
 
-Tutto ciò avviene in un unico passaggio di annullamento. Dopo il commit, il gruppo appare esattamente come nell'anteprima, con ogni livello e maschera intatti.
+Lo strumento Warp supporta questo tipo di iterazione lasciando che la distorsione di lavoro rimanga regolabile durante la sessione. L'artista può perfezionare lo spostamento prima di inserire la modifica nella normale cronologia di annullamento dell'immagine.
 
-### Maschere
+## Usi creativi
 
-L'opzione **Maschere Warp** (abilitata per impostazione predefinita) fa sì che le maschere su ogni livello e gruppo all'interno del target di warp ricevano la stessa trasformazione di spostamento. Le maschere di livello si spostano con i rispettivi livelli: una maschera che stava ritagliando il contorno di un personaggio continua a ritagliare lo stesso contorno dopo la deformazione.
+Oltre alla correzione, la deformazione può essere uno strumento per la creazione di segni e la progettazione. Può aggiungere movimento a capelli e tessuti, esagerare l'espressione, piegare forme grafiche, increspare trame o creare distorsioni pittoriche che sarebbero difficili da disegnare manualmente.
 
-Quando **Maschere deformazioni** è disattivato, viene spostato solo il contenuto del livello; le maschere mantengono le loro posizioni originali.
-
-## Opzioni dello strumento
-
-### Comportamento
-
-| Modalità | Effetto |
-| :--- | :--- |
-| **Sposta** | Spinge i pixel nella direzione del tratto. La modalità principale per la maggior parte dei lavori di deformazione. |
-| **Crescere** | Espande i pixel verso l'esterno dal centro del pennello. |
-| **Riduci** | Tira i pixel verso l'interno verso il centro del pennello. |
-| **Ruota in senso orario** | Ruota i pixel in senso orario attorno al centro del pennello. |
-| **Ricciolo in senso antiorario** | Ruota i pixel in senso antiorario attorno al centro del pennello. |
-| **Cancella** | Rimuove lo spostamento della distorsione, ripristinando i pixel nelle loro posizioni originali. |
-| **Liscio** | Diffonde lo spostamento, ammorbidendo le transizioni brusche tra aree deformate e non deformate. |
-
-### Controlli del pennello
-
-- **Dimensione**: diametro del pennello di ordito in pixel. I pennelli più grandi spostano aree più ampie con una caduta più morbida; le spazzole più piccole danno un controllo preciso e localizzato.
-- **Durezza**: caduta dal centro al bordo. L'elevata durezza produce uno spostamento uniforme su tutta l'area della spazzola; la bassa durezza concentra l'effetto al centro.
-- **Intensità**: la distanza di spostamento dei pixel per tratto. La resistenza inferiore consente una modellatura sottile e graduale; una forza maggiore produce movimenti drammatici e veloci.
-
-### Cronometraggio dei colpi
-
-- **Tratto durante il movimento** (solo modalità Movimento): applica la distorsione continuamente mentre il mouse si muove, anziché solo in base a un impulso del timer. Utilizzare per tratti fluidi, simili a pennelli in cui si desidera che lo spostamento segua direttamente il cursore.
-- **Tratto periodico**: applica la distorsione a un intervallo di tempo fisso mentre si tiene premuto il pulsante del mouse. Utilizzare per le modalità Aumenta, Riduci e Vortice in cui lo scopo è l'applicazione circolare continua.
-- **Frequenza**: la frequenza dell'applicazione della corsa periodica.
-
-### Qualità
-
-- **Interpolazione**: il metodo di campionamento utilizzato durante il commit. Lineare è veloce e fluido per la maggior parte del lavoro; Cubic e Nohalo offrono una maggiore fedeltà per i dettagli più fini.
-- **Anteprima di alta qualità**: utilizza il campionatore di qualità di commit durante l'anteprima interattiva. Più lento, ma l'anteprima corrisponde esattamente al risultato confermato.
-
-### Opzioni di gruppo
-
-- **Espandi area distorsione** (solo distorsione gruppo): il numero di pixel aggiunti come margine trasparente attorno all'anteprima del gruppo su tutti i lati. Ciò offre spazio ai contenuti spostati in cui spostarsi. I 256 px predefiniti sono sufficienti per la maggior parte dei lavori; ridurlo per immagini di grandi dimensioni in cui la memoria è importante o aumentarlo per tratti di spostamento molto grandi.
-- **Maschere di distorsione**: se applicare la stessa distorsione alle maschere di livello e di gruppo. Attivo per impostazione predefinita.
-
-## Annulla e ripristina
-
-Ogni tratto è un passaggio di annullamento distinto all'interno della sessione di deformazione. **Ctrl+Z** rimuove l'ultimo tratto e ripristina la mappa di spostamento allo stato precedente. **Ctrl+Y** (o **Ctrl+Shift+Z**) lo riapplica. Puoi ripercorrere l'intera cronologia dei tratti prima di impegnarti.
-
-Premendo **Esc** o cambiando strumento si eliminano tutti i tratti non salvati e si ripristinano i livelli al loro stato originale. Nessuna modifica viene scritta finché non si effettua un commit esplicito.
-
-## Impegno
-
-Fare clic sul pulsante **Conferma** (o premere **Invio**) per applicare la distorsione accumulata in modo distruttivo. Per gli orditi di gruppo, ciò avvia l'applicazione multistrato completa sopra descritta. La cronologia degli annullamenti per l'ordito impegnato è quindi una singola voce nello stack di annullamento dell'immagine, reversibile con lo standard **Modifica → Annulla**.
+Poiché funziona con soggetti a più livelli, lo strumento è adatto sia per la modellatura iniziale che per la lucidatura in fase avanzata, aiutando gli artisti a rimodellare un'immagine mantenendo flessibile il processo di pittura.

@@ -2,193 +2,48 @@
 title: "Penseel gereedschap"
 type: docs
 ---
-Het penseel is het belangrijkste schilder- en tekengereedschap, ontworpen voor responsief, intelligent penseelwerk met volledige controle over de dynamiek van druk, snelheid, kanteling en afstand.
+Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een beroerte zich gedraagt.
 
-## Overzicht
+In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, beweging, druk, timing en kleur kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen en meerkoppige penseelformaties.
 
-Het penseelgereedschap ondersteunt raster-, procedureel gegenereerde en geanimeerde penseeltypen. Slagen kunnen worden gestabiliseerd, afgevlakt en nabewerkt. De penseeldynamiek reageert op stylusinvoer en geeft nauwkeurige controle over de dekking, grootte, kleur, hoek en andere eigenschappen tijdens een streek.
+## Expressieve penseelstreken
 
-## Penseeltypen
+Penselen kunnen gebaseerd zijn op bitmapstempels, procedurele vormen of op frames gebaseerde geanimeerde bronnen. Hierdoor kan een penseelstreek variëren van een eenvoudige, zachte, ronde markering tot een rijk gestructureerde of evoluerende borstelkop. Dezelfde schilderengine ondersteunt nauwkeurig tekenen, schilderkunstige opbouw, decoratieve markeringen en uiteenvallen in natuurlijke mediastijl.
 
-### Rasterpenselen (.raster)
+Wanneer een penseel visueel complex wordt, kan het voorbeeld vereenvoudigd blijven, zodat het schilderen responsief en gemakkelijk leesbaar blijft.
 
-Bitmappenseelafbeeldingen die alfatransparantie ondersteunen.
+## Dynamiek en invoerreactie
 
-### Gegenereerde penselen (.param)
+Het penseel reageert op live invoer, zoals stylusdruk, snelheid, richting, kanteling en andere controllerwaarden. Deze signalen kunnen de zichtbare streek op veel manieren beïnvloeden: dikte, dekking, hoek, textuurreactie, kleurgedrag, afstand en andere eigenschappen kunnen allemaal veranderen als de hand beweegt.
 
-Procedureel weergegeven vormen (cirkel, vierkant, ruit, driehoek) met instelbare parameters: hardheid, beeldverhouding, hoek, rondheid en hoekradius. Gegenereerde penselen zijn lichtgewicht en schaalbaar.
+Hierdoor voelt de Brush minder aan als een gestempeld patroon en meer als een fysiek tekeninstrument. Een lichte aanraking kan delicate vlekken veroorzaken, snellere bewegingen kunnen textuur of vorm onthullen, en richtinggevoelig gedrag kan ertoe bijdragen dat de bewegingen het gebaar van de hand volgen.
 
-### Geanimeerde penselen (.anim)
+## Beroertegedrag
 
-Opeenvolgende framesequenties die tijdens de slagen vooruitgaan. Frames kunnen incrementeel worden doorlopen (frame-voortgangen per dab), willekeurig worden geselecteerd per dab, of worden geïndexeerd op basis van dynamiek (druk, snelheid, kanteling, hoek).
+Beroertes kunnen direct en onmiddellijk zijn, of ze kunnen worden ondersteund door verzachting en stabilisatie. Deze functies helpen ongewenste trillingen te verminderen, abrupte veranderingen te verzachten en ervoor te zorgen dat langere bewegingen meer gecontroleerd aanvoelen, zonder het karakter van de inbreng van de artiest weg te nemen.
 
-## Schildercursor
+De Brush ondersteunt ook verschillende benaderingen van verfopbouw. Het kan zich gedragen als een ononderbroken streek, herhaaldelijke deppen verzamelen of na verloop van tijd sporen afgeven terwijl de wijzer op zijn plaats wordt gehouden. Deze flexibiliteit maakt het bruikbaar voor zowel opzettelijk lijnwerk als langzamere tonale constructie.
 
-De cursor past zich aan de huidige gereedschapsstatus aan en geeft duidelijke, contextuele feedback:
+Voor kalligrafische of inktachtige markeringen kan het penseel een meer continu gevormde lijn genereren in plaats van alleen te vertrouwen op herhaalde stempels. Dit levert vloeiende, lintachtige vormen op die op natuurlijke wijze reageren op gebaren en snelheid.
 
-- **Penseelomtrek**: de cursor volgt de exacte vorm en grootte van het penseel en geeft een live voorbeeld van waar de verf terechtkomt.
-- **Wismodus**: wanneer wissen actief is, verandert de omtrek in een gestippelde cirkel om wisstreken visueel te onderscheiden van verfstreken.
-- **Eenvoudige penseelgrens**: voor complexe of zeer grote penselen waarbij het weergeven van de nauwkeurige omtrek kostbaar is, schakelt u **Eenvoudige penseelgrens** in (in Extra opties) om in plaats daarvan een gewone cirkel te gebruiken.
+## Kleur en textuur
 
-## Gereedschapsopties
+Penseelstreken kunnen de actieve verfkleur gebruiken, reageren op verlopen of kleur variëren door middel van dynamiek. Door het hanteren van texturen kan het penseel wisselen tussen effen dekking en gebroken, oppervlakkige vlekken, wat handig is voor droge penseeleffecten, korreligheid en expressieve schaduwen.
 
-### Bediening op het hoogste niveau
+Omdat kleur en textuur deel kunnen uitmaken van hetzelfde dynamische systeem als vorm en dekking, kan een enkele streek evolueren terwijl deze over het canvas beweegt in plaats van visueel uniform te blijven.
 
-- **Penseel**: Selecteer de penseelstempel of bewerk de actieve.
-- **Modus**: Verfovervloeimodus (Normaal, Vermenigvuldigen, Scherm, enz.)
+## Opzetborstels en formaties
 
-### Penseeleigenschappen
+Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kunnen meerdere koppen rond het streekpad worden geplaatst om gepaarde markeringen, uitwaaierende lijnen, borstelachtig gedrag, spuitpatronen of brede textuurformaties te creëren.
 
-In de uitbreiding **Penseeleigenschappen** (standaard uitgevouwen):
+Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.## Animatie en variatie
 
-#### Vorm
+Geanimeerde penseelbronnen kunnen van frame veranderen naarmate een streek vordert, waardoor penselen een gevoel van beweging en variatie krijgen. Randomisatie en variatie per slag kunnen ervoor zorgen dat herhaalde markeringen er niet identiek uitzien, terwijl stabiel zaaien een consistent karakter kan behouden wanneer herhaalbaarheid nodig is.
 
-- **Grootte**: Penseeldiameter in pixels.
-- **Beeldverhouding**: De penseelvorm platdrukken of uitrekken (-1,0–1,0). 0 = ongewijzigd; negatieve waarden roteren de pompoen 90°.
-- **Hoek**: Roteert de penseelstempel (-180–180°). Onafhankelijk van de dynamiek van de slagrichting.
-- **Hardheid**: zachte vervaging (0,0) tot scherpe rand (1,0).
+Dit gedrag is handig voor penselen die levend moeten aanvoelen: borstelharen die tijdens een streek verschuiven, gestructureerde stempels die in de loop van de tijd subtiel veranderen, of gereedschappen met meerdere koppen waarbij elk hoofd zijn eigen persoonlijkheid heeft.
 
-#### Toepassing
+## Artiestgerichte workflow
 
-- **Dekking**: algehele dekking van de streek (0–100).
-- **Spatiëring**: afstand tussen geverfde klodders als percentage van de penseelgrootte. Lager = vloeiendere bewegingen; hoger = verspreid patroon.
-- **Textuurafwijking**: verteken de respons van de stempeltextuur; 50 is neutraal. Lagere waarden bevorderen het uiteenvallen van de textuur en een afgestreken oppervlak door naar de teen van de waardecurve te trekken; hogere waarden klemmen zich vast in de richting van vaste vullingen door naar de schouder te duwen. Het zichtbare effect is afhankelijk van het toonbereik van de textuur.
-- **Jitter**: Verschuift willekeurig elke schar-positie met maximaal dit aantal pixels (0-1024).
-- **Gum**: Groottevermenigvuldiger wordt toegepast wanneer dit penseel als gum wordt gebruikt (0,1–10,0). Niet weergegeven op het gummetje zelf.
+Het Penseel is zo georganiseerd dat algemene schilderbeslissingen binnen handbereik blijven, terwijl minder frequente configuratiekeuzes uit de weg blijven. De bedoeling is om het gereedschap tijdens het schilderen benaderbaar te houden en toch diepgaande aanpassingen voor penseelontwerp te ondersteunen.
 
-### Dynamiek
-
-In de **Dynamics**-expander:
-- **Dynamiek inschakelen**: hoofdinschakeling voor de actieve dynamiekvoorinstelling.
-- **Druk vermenigvuldigen**: laat druk de dynamische uitvoer domineren.
-- **Dynamiek**: Selecteert welke invoertoewijzingen worden gebruikt.### Beroertegedrag
-In de uitbreiding **Slaggedrag**:
-- **Dekkingsopbouw**: wanneer deze optie is ingeschakeld, wordt bij elke schar de dekking opgebouwd in plaats van dat deze als één enkele streek wordt samengevoegd.
-- **Postproces**: past stabilisatie, snelheidscompressie en herhalingscorrectie toe nadat de slag is voltooid, waardoor de consistentie zonder latentie wordt verbeterd.
-  - **Draaidrempel**: Hoekdrempel (0–180°) voor richtingscorrectie bij scherpe hoeken. 0 = fix richting overslaan.
-  - **Voorbeelddrempel**: onderdrukt het nabewerkingsvoorbeeld wanneer de slagsnelheid deze waarde overschrijdt (0 = altijd voorbeeld).
-
-#### Kalligrafisch
-
-Wanneer actief, wordt dab stamping vervangen door een doorlopende geometrische gang:
-- **Dynamische dekking**: moduleert de dekking binnen de streek op basis van snelheids- en richtingsveranderingen. Werkt het beste bij fijne, gecontroleerde bewegingen; de resultaten zijn minder voorspelbaar bij snelle krabbels. Experimenteel.
-- **Snelheidsgroei** (0–100%): Maximaal toegestane toename van de grootte per monster als percentage van de grootte van het vorige monster. Beperkt hoe snel een snelheidsgedreven maatdynamiek kan groeien, waardoor plotselinge sprongen worden voorkomen wanneer de slag versnelt.
-- **Snelheidskrimp** (0–100%): Maximaal toegestane afname van de grootte per monster. Beperkt hoe snel de maat kan afnemen als de slag vertraagt.
-
-#### Alleen beweging
-
-Indien ingeschakeld (standaard), schildert het penseel alleen terwijl de aanwijzer beweegt. Schakel hem uit om de borstel te laten blijven stempelen terwijl hij stil wordt gehouden.
-- **Snelheid**: bepaalt hoe snel stationaire timerstempels worden uitgezonden wanneer **Alleen beweging** is uitgeschakeld.
-- **Flow**: regelt de dekking per dab van die timerstempels wanneer **Motion Only** is uitgeschakeld.
-
-#### Stabilisatie en verzachting
-
-- **Richtingsstabilisatieafstand** (0–100 px): minimale beweging van de wijzer voordat richtingsgevoelig gedrag begint, waardoor vroege hoeksprongen worden voorkomen.
-
-#### Gladmaken
-
-Maakt real-time invoerverzachting mogelijk die wordt toegepast op het lijnpad terwijl u tekent. Breidt uit om te onthullen:
-  - **Diepte** (2–256): aantal eerdere invoermonsters die in aanmerking zijn genomen bij het berekenen van de afgevlakte positie. Hogere waarden produceren een langere, meer toegewijde vertraging.
-  - **Positie** (0–100): Intensiteit van de verzachting toegepast op de penseelpositie. Hogere waarden ronden scherpe richtingsveranderingen af.
-  - **Druk** (0–100): Afvlakking toegepast op het stylusdruksignaal, waardoor drukpieken en trillingen worden verminderd.
-  - **Richting** (0–100): Afvlakking toegepast op de streekrichting, waardoor de hoekgevoelige dynamiek wordt gestabiliseerd.
-
-#### Dynamiek
-
-Wijs stylusinvoer of andere livewaarden toe aan schilderparameters:
-
-- **Druk** (stylus): regelt de grootte, dekking, snelheid, hardheid, kleur en meer op basis van de stylusdruk.
-- **Snelheid**: brengt de streeksnelheid in kaart aan de penseeleigenschappen.
-- **Kantelen**: X- en Y-kantelhoeken van de stylus beïnvloeden de hoek en andere parameters.
-- **Wiel**: invoer van muiswiel of styluswiel.
-- **Richting**: hoek van de slagrichting.
-- **Vervagen**: vervaag de dekking of grootte over een vast aantal scharren.
-
-Elke dynamische invoer kan onafhankelijk aan meerdere eigenschappen worden toegewezen. Open **Toolopties** → **Dynamiek** om te configureren.
-
-### Slagmodulatie
-
-In de **Stroke Modulation**-expander (alleen weergegeven als **Dynamics** is ingeschakeld):- **Relatieve initiële hoek**: de **Initiële hoek**-waarde wordt geïnterpreteerd ten opzichte van de lijnrichting in plaats van als een absolute canvashoek.
-- **Initiële hoek vervagen**: Vervaagt van de **Initiële hoek** bij het begin van de slag naar de live dynamische hoek in de loop van de streek. Als u dit inschakelt, wordt **Relatieve initiële hoek** ingeschakeld.
-- **Initiële penseelhoek** (-180–180°): De penseelhoek helemaal aan het begin van een streek, voordat de dynamiek het overneemt.
-- **Initiële hoekovervloeiing** (0,0–1,0): bepaalt hoe snel de penseelhoek overgaat van de initiële hoek naar de dynamische hoek. 0 = houdt de beginhoek vast; 1 = gebruikt onmiddellijk de volledig dynamische hoek.
-- **Vervagingslengte**: afstand in canvaseenheden waarover de vervaging zich afspeelt.
-- **Herhalen**: hoe de fade wordt herhaald zodra de fade-lengte is uitgeput (Geen, Loop, Sawtooth, Triangle).
-
-#### Vervagingsvermenigvuldigers
-
-Vier selectievakjes die bepalen of wijzigen hoe de fade-waarde wordt toegepast:
-- **Fade Reverse**: keert de fade-richting om, zodat de streken vager worden en volledig ondoorzichtig worden.
-- **Fade Multiply**: Vermenigvuldigt de fade-uitvoer naar de betreffende eigenschap in plaats van deze te vervangen.
-- **Fade Multiply Angular**: past de fade-multiplier alleen toe op hoekdynamiek (hoek, kanteling).
-- **Fade Multiply Ratio**: past de fade-vermenigvuldiger alleen toe op eigenschappen van het verhoudingstype (beeldverhouding).
-
-#### Kleurtoewijzing
-
-Beschikbaar voor de gereedschappen Penseel en Uitsmeren wanneer Dynamics actief is:
-- **Verloop**: de verloopbron die wordt gebruikt voor kleurtoewijzing langs de streek.
-- **Blend Color Space**: kleurruimte waarin gradiëntkleuren worden geïnterpoleerd tijdens het schilderen.
-
-
-### Opzetborstels
-
-Opzetborstels plaatsen meerdere onafhankelijke opzetborstels op een cirkelvormige **baanring** gecentreerd op het streekpad. Elke kop schildert een volledige schar op zijn eigen positie, elke keer dat de streek verder gaat, waardoor meerdere parallelle of uitwaaierende bewegingen tegelijk worden geproduceerd.
-
-De baanradius wordt bepaald door de globale penseelgrootte minus de kopgrootte: grotere koppen zitten dichter bij het midden; kleinere hoofden draaien verder naar buiten. De hoofden hebben een gelijkmatige ruimte rond de ring. Met twee koppen krijg je er één aan elke kant van de streek, waardoor een symmetrische spreiding ontstaat die zich gedraagt ​​als een kalligrafiepunt. De schuifregelaar **Volg richting** draait de hele ring zodat deze loodrecht op de lijn blijft staan, zodat de punt op natuurlijke wijze de richting volgt terwijl u schildert. Door meer koppen toe te voegen, worden ze geleidelijk rond de ring verspreid, tot een volledige spuitcirkel bij 16.
-
-Opzetborstels bepalen waar elke kop rond de streek wordt geplaatst. Als **Pivot X** of **Pivot Y** van het standaardcentrum wordt verwijderd, volgt elk hoofd nog steeds dezelfde formatie, maar elke gestempelde schar komt nu terecht op het gekozen interne contactpunt in plaats van op het geometrische midden van de penseelafbeelding.De bedieningselementen verschijnen in de uitbreiding **Borstelkoppen** in het paneel met gereedschapsopties.
-- **Opzetborstels inschakelen**: Hoofdinschakeling voor het opzetborstelsysteem.
-- **Aantal**: aantal gelijktijdige opzetborstels (1–16).
-- **Kopgrootte**: weergegeven grootte van elke kop in verhouding tot de globale penseelgrootte (0,1–1,0).
-- **Baan-aspectratio** (0,1–1,0): Vormt de formatiebaan van cirkel tot ellips. 1,0 = cirkelvormige baan; lagere waarden verpletteren de secundaire as.
-- **Formatiehoek** (0–360°): Statische oriëntatie van de formatiering, gebruikt wanneer **Volgrichting** lager is dan 1,0.
-- **Volg richting** (0,0–1,0): Hoe sterk de formatiering de slagrichting volgt. Bij 1,0 staat de ring altijd loodrecht op de rijrichting; bij 0,0 wordt de waarde vergrendeld op de statische **Formatiehoek**-waarde.
-- **Drukvariatie**: variatie in grootte per hoofd toegepast als een onafhankelijke drukafwijking via de dynamische curven.
-- **Dekkingsvariatie**: De dekkingsvariatie per hoofd, onafhankelijk van de groottevariatie.
-
-#### Verstrooiing
-
-Belangrijkste spreidingsregelaars in de uitbreiding **Opzetborstels**:
-
-- **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). De hoeken per kop/per schar zijn naar buiten gericht met gecontroleerde crossover om stijve gespiegelde pluimen te voorkomen. Geklemd tot 360°.
-- **Verspreidingsafstand** (0–10.000 px): willekeurige voorwaartse verplaatsing vanaf de vulafstandpositie van elke kop. Elke keer opnieuw gerold.
-- **Willekeurigheid van de verspreiding** (0,0–1,0): extra variatie per schar bovenop de basisverspreidingsafstand en -hoek, waardoor een lossere, meer organische spray ontstaat.
-- **Snelheidsinvloed** (0,0–1,0): Schaalt de spreiding op basis van de slagsnelheid. Bij 1,0 verspreiden snelle slagen de hoofden veel verder dan langzame slagen; bij 0,0 is de verstrooiing constant, ongeacht de snelheid.
-- **Scatter Size Balance** (0,0–1,0): regelt de onderdrukkingssteilheid voor heads boven de drempel. Bij 1,0 verspreiden alle hoofden zich gelijkmatig; lagere waarden onderdrukken in toenemende mate grotere koppen, terwijl koppen op/onder de drempel op volledige verstrooiingsafstand blijven.
-
-### Gereedschap instellen
-
-In de uitbreiding **Toolinstellingen** (standaard samengevouwen) zijn de bedieningselementen gegroepeerd als overloopsecties die minder vaak worden gewijzigd. Hierdoor blijven de belangrijkste expanders gefocust op vaak aangepaste verfbedieningen.#### Penseeleigenschappen (overloop)
-- **Hoek aan schermruimte vergrendelen**: Vergrendelt de penseelhoek aan de schermruimte, zodat de hoek waterpas blijft terwijl het canvas draait/omkeert. Geen effect wanneer Dynamics de hoek regelt.
-- **Random Flip Horizontal**: 50% kans om elke stempel van links naar rechts te spiegelen per schar.
-- **Random Flip Vertical**: 50% kans om elke stempel ondersteboven te draaien per schar.
-- **Willekeurige rotatie**: Draait elke stempel willekeurig met 0°, 90°, 180° of 270° per schar.
-- **Horizontaal draaien** (0,0–1,0): horizontaal contactpunt binnen het penseelbeeld. 0,0 = linkerrand, 0,5 = midden (standaard), 1,0 = rechterrand. Het gekozen punt is wat uitgelijnd is met de verfpositie op het canvas, dus als je het van het midden af ​​beweegt, verschuift elke vlek in die richting. Rotaties en salto's blijven visueel verankerd aan het draaipunt, omdat de plaatsingsoffset na de transformatie wordt toegepast.
-- **Verticaal draaien** (0,0–1,0): Verticaal contactpunt binnen de penseelafbeelding. 0,0 = bovenrand, 0,5 = midden (standaard), 1,0 = onderrand. Werkt samen met **Draai horizontaal** om het exacte deel van de schar te definiëren dat zich op het slagpad bevindt.
-- **Uniforme Jitter**: Indien ingeschakeld, worden de schar-offsets van de **Jitter**-schuifregelaar uit een uniforme verdeling gehaald (elke offset is even waarschijnlijk binnen het bereik). Wanneer uitgeschakeld, is de verdeling naar het midden gericht.
-- **Animatie opnieuw instellen**: voor geanimeerde penselen: indien ingeschakeld, begint de animatie bij elke nieuwe streek opnieuw vanaf frame 0; wanneer uitgeschakeld, gaat het verder vanaf het punt waar de vorige slag eindigde.
-
-Wanneer een van beide draaiwaarden afwijkt van het midden, toont het penseelvoorbeeld een draadkruisoverlay die het actieve stempelcontactpunt markeert.
-
-#### Slaggedrag (overloop)
-
-- **Laatst gebruikte kleuren herstellen**: herstelt de voorgrond- en achtergrondkleuren van de vorige sessie bij het opstarten, in plaats van standaard zwart en wit te gebruiken.
-- **Eenvoudige penseelgrens**: gebruikt een gewone cirkel voor de penseelcursoromtrek in plaats van de volledige penseelvorm weer te geven. Handig voor complexe of grote penselen waarbij het moeilijk is om een ​​nauwkeurige grens te tekenen.
-
-#### Dynamiek (overloop)
-
-Besturingselementen die de belangrijkste Dynamics-expander uitbreiden, hier gegroepeerd omdat ze zelden worden aangepast:
-- **Voorbeeld van willekeurige grootte**: toont willekeurige groottevariaties in het voorbeeld van de penseelomtrek wanneer de actieve dynamiekvoorinstelling de grootte willekeurig bepaalt.
-- **Voorbeeld willekeurige rotatie**: toont willekeurige rotatievariatie in het voorbeeld van de penseelomtrek wanneer de actieve dynamiekvoorinstelling de hoek willekeurig aandrijft.
-
-#### Opzetborstels (overloop)
-
-Vorming:
-- **Stijfheid borstelharen**: Hoe strak de baanradius de op dynamische schaal geschaalde penseelgrootte volgt. 0 = baan breidt zich uit en trekt samen met druk; 1 = baan blijft gefixeerd op de basisgrootte.
-- **Vulafstand** (0,0–1,0): Verspreidt de hoofden over de opening tussen opeenvolgende scharposities. De stabiele karakterwaarde van elk hoofd bepaalt de richting waarin het hoofd leunt; bij 1,0 koppen vult u het volledige tussenruimte-interval. Karakter is stabiel per zaadje.
-
-Verstrooien:
-- **Verstrooiingsgroottedrempel** (0,01–100 px): drempelradius voor volledige verstrooiingsafstand. Koppen op of onder deze straal gebruiken de volledige verstrooiingsafstand; grotere koppen worden geleidelijk dichter bij de slag getrokken.Randomisatie:
-- **Karakterzaad** (0–255): Vaste zaadwaarde voor karakters per hoofd (grootte, vulafstand). Hetzelfde zaad reproduceert elke slag dezelfde formatie. Gedesensibiliseerd wanneer **Hoofdkarakter willekeurig maken** is ingeschakeld.
-- **Hoofdkarakter willekeurig maken**: Tekenwaarden per hoofd (grootte, spreidingspositie) worden bij elke stempel opnieuw getekend, zodat de formatie langs de streek volledig chaotisch is. Overschrijft **Karakterzaad**.
-- **Onafhankelijke pijpanimatie**: voor geanimeerde penselen: elk hoofd verplaatst zijn animatieframe onafhankelijk.
+Over het geheel genomen is de Brush gebouwd voor zowel het dagelijkse schilderwerk als het maken van gespecialiseerde markeringen: snelle schetsen, gepolijste illustraties, gestructureerde weergave, expressief inktwerk en complexe procedurele penseeleffecten delen allemaal dezelfde flexibele basis.

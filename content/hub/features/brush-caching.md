@@ -4,111 +4,30 @@ type: docs
 url: "hub/features/brush-caching"
 ---
 
-Brush caching is designed to make your favourite brushes feel fast as early as possible. Instead of recomputing the same transformed brush stamp over and over, Lumi can keep a saved cache of the brush shapes you actually use and reload that cache automatically later.
+Brush caching is a performance feature for keeping favourite brushes feeling ready when they are used again. It helps Lumi avoid repeating expensive brush-shape work when a brush returns to familiar states during painting.
 
-## Overview
+Instead of treating every dab as a completely new problem, Lumi can remember useful transformed brush shapes and reuse them when the same kind of mark appears again. The result is a smoother experience with brushes that are large, textured, animated, or otherwise costly to prepare.
 
-The feature is built around the idea that many expressive brushes still revisit the same practical combinations of size, angle, hardness, and aspect ratio during painting. When those combinations are reused, Lumi can serve the transformed brush stamp directly from cache instead of rebuilding it.
+## Faster familiar brushes
 
-The result is:
+Many expressive brushes move through a recognisable range of sizes, angles, shapes, and textures. Brush caching takes advantage of that repetition. As a brush is used, Lumi can keep the most valuable prepared forms close at hand, reducing the delay between gesture and mark.
 
-- faster stroke startup after a cache has been saved
-- smoother repeated use of favourite presets
-- less wasted recomputation during long painting sessions
-- automatic restore of saved caches when the preset is used again
+This is especially useful for daily painting presets: the inking brush, the favourite dry brush, the soft shading brush, or any tool that becomes part of an artist's routine. The more a brush is reused in practical ways, the more valuable its warmed-up states become.
 
-## Intent
+## Built around real use
 
-Brush caching is meant for brushes you return to often: core painting presets, favourite inking tools, textured dry brushes, and other brushes whose transformed stamps are expensive enough to notice.
+Brush caching is not intended to precompute every possible variation. A dynamic brush can move through far too many subtle combinations for that to be useful. Instead, Lumi focuses on the states that actually appear while painting.
 
-The goal is not to pre-bake every theoretical brush state. The goal is to let real painting usage populate the most valuable states first, then save that populated cache so the brush is already warm the next time you use it.
+This makes the cache artist-led rather than theoretical. The brush becomes faster around the way it is really used: repeated pressure ranges, common angles, habitual sizes, and the marks that naturally occur during a session.
 
-## How it Works
+## A practical speed layer
 
-Brush caching works together with brush quantization.
+Caching sits quietly underneath the painting experience. It does not change the look of a brush or limit the expressive quality of a stroke. Its role is to make repeated work feel more immediate by avoiding unnecessary recomputation.
 
-When quantization is enabled for a dynamics preset, transform-affecting outputs are snapped to discrete steps. That gives Lumi a finite set of reusable brush states. As you paint:
+When a saved cache is available, a familiar brush can begin closer to its warmed-up state, so the first strokes of a new session feel more like the middle of an established one.
 
-1. Lumi checks whether the transformed stamp already exists in cache.
-2. If it does, the stamp is reused immediately.
-3. If it does not, Lumi builds it once and stores it.
-4. Over time, the cache fills with the brush states you actually use.
+## Balanced resource use
 
-If you save that cache, Lumi can autoload it later so the brush starts closer to a warmed-up state instead of rebuilding everything from scratch.
+Brush caching is designed to improve responsiveness without turning brush performance into a memory-management task. Lumi tracks the cost of cached brush data and keeps the system bounded so speed gains remain practical during long sessions.
 
-## Typical Workflow
-
-1. Choose a brush preset you use frequently.
-2. Enable quantization for its dynamics.
-3. Paint normally for a while so the cache fills organically.
-4. Open the **Tool Preset Editor** and inspect the **Preset Cache** section.
-5. Watch the live metrics:
-   - **Hit Rate**
-   - **Coverage**
-   - **Memory**
-6. Click **Save** when the cache looks worthwhile.
-7. On later sessions, Lumi autoloads that saved cache when the preset becomes active.
-
-This makes the preset feel fast sooner, especially for brushes with expensive transforms or large stamps.
-
-## Where to Find It
-
-### Dynamics Editor
-
-Use the **Dynamics Editor** to control quantization:
-
-- enable quantization
-- choose the global step count
-- optionally override step counts per output axis
-
-Quantization is what makes the cache practical by reducing continuous variation into reusable bins.
-
-### Tool Preset Editor
-
-Use the **Tool Preset Editor** to manage the cache for the current preset:
-
-- **Save** — persist the current in-memory cache to disk
-- **Load** — restore a previously saved cache
-- **Free Memory** — release the in-memory cache without deleting the saved copy
-- **Remove** — delete the saved cache from disk
-
-The **Preset Cache** expander also shows live hit rate, coverage, and memory use.
-
-## What Gets Cached
-
-Brush caching targets transformed brush stamps: the expensive rasterised results after size, angle, hardness, aspect ratio, and related transform inputs have been resolved.
-
-It is most useful when:
-
-- the brush has costly transform work
-- the same preset is used across many sessions
-- the brush revisits similar dynamic states repeatedly
-- quick startup responsiveness matters
-
-It is less useful for brushes whose transform state changes wildly and rarely repeats.
-
-## Automatic Loading
-
-Saved caches are intended to help from the start of a session, not only after you have already painted for a while.
-
-When a saved cache exists for the active preset, Lumi can load it automatically so your favourite brush starts with many useful states already available. That reduces the cold-start period and gets the brush closer to peak responsiveness immediately.
-
-## Memory Safety
-
-Brush caching is designed to improve speed without taking over the machine.
-
-Lumi tracks cache memory usage, exposes it in the UI, and applies runtime limits under memory pressure. If the system is short on available RAM, cache growth is constrained automatically.
-
-## Best Use Cases
-
-Brush caching is especially good for:
-
-- favourite daily-driver brushes
-- textured brushes used throughout a painting
-- large expressive brushes with heavy transform cost
-- brush presets shared across repeated illustration workflows
-- presets you want to feel "ready" as soon as you select them
-
-## In Short
-
-Brush caching lets Lumi learn the brush states you actually use, save them, and bring them back automatically later. It is a practical speed feature for favourite presets: paint with the brush, let the cache fill, save it, and future sessions start faster.
+For artists, the feature is simple in spirit: use the brushes that matter, let Lumi learn the expensive states worth keeping, and return to those brushes with less waiting the next time.

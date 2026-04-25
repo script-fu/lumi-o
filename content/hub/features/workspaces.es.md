@@ -2,86 +2,36 @@
 title: "Espacios de trabajo"
 type: docs
 ---
-Un espacio de trabajo es una instantánea guardada de todo su entorno de interfaz de usuario: qué paneles están abiertos y dónde, las decoraciones del lienzo y el relleno para la vista Normal y de Pantalla completa, el tema activo y el conjunto de íconos, el diseño de la caja de herramientas, la paleta activa y la configuración de sus herramientas. Lumi te permite guardar tantos espacios de trabajo con nombre como quieras y cambiar entre ellos al instante: todas las imágenes abiertas se actualizan en su lugar, no es necesario reiniciar.
+Los espacios de trabajo permiten a Lumi adaptarse a diferentes formas de trabajar. Un espacio de trabajo captura la sensación del entorno del estudio: diseño del panel, estado de las herramientas, presentación del lienzo, rutas de recursos, elección de paleta, tema y otras preferencias de interfaz que dan forma a la sesión de pintura.
 
-## Lo que ahorra un espacio de trabajo
+En lugar de mantener una disposición fija para cada tarea, los artistas pueden mantener entornos separados para dibujar, pintar, entintar, trabajar con color, presentaciones, guiones o sesiones enfocadas en pantalla completa. Cada entorno puede presentar los recursos que pertenecen a ese tipo de trabajo, por lo que un espacio de trabajo de dibujo puede sentirse abastecido con ajustes preestablecidos de dibujo, mientras que un espacio de trabajo de pintura puede cambiar a herramientas pictóricas.
 
-Cada espacio de trabajo con nombre almacena lo siguiente de forma independiente:
+## Un estudio que cambia con la tarea.
 
-| Componente | Qué cubre |
-| :--- | :--- |
-| **Diseño** | Posición y tamaño de la ventana, disposición del muelle (columnas del panel izquierdo y derecho, qué paneles están abiertos y en qué orden), modo de ventana única o múltiple, estado maximizado, visibilidad y posición de la barra de pestañas |
-| **Opciones de herramientas** | La configuración actual para cada herramienta (tamaño del pincel, dureza, comportamiento de deformación, etc.) |
-| **Dispositivos de entrada** | Configuración del dispositivo de entrada: curvas de presión, asignaciones de botones, asignaciones de ejes para lápiz óptico y otros dispositivos |
-| **Decoraciones de lienzo** | Valores predeterminados por espacio de trabajo para reglas, barras de desplazamiento, guías, cuadrícula, resaltado de selección, límite de capa y límite del lienzo: establecidos a través de **Preferencias → Ventanas de imagen → Apariencia predeterminada** y **Apariencia de pantalla completa**, de forma independiente para la vista Normal y Pantalla completa |
-| **Acolchado de lona** | Modo de relleno por espacio de trabajo y color para la vista Normal y Pantalla completa: se configura mediante **Preferencias → Ventanas de imagen → Apariencia predeterminada** |
-| **Tema e íconos** | Tema activo, variante de color oscuro/claro, conjunto de iconos, anulación del tamaño de los iconos y escala de fuente |
-| **Caja de herramientas** | Posición del widget FG/BG (arriba/abajo/izquierda/derecha), escala FG/BG, visibilidad de la mascota Wilber, encabezados de grupos de herramientas |
+Las diferentes etapas de una obra de arte se benefician de diferentes entornos. Para realizar bocetos aproximados es posible que necesites un lienzo claro y paneles mínimos. Es posible que para pintar necesite tener a mano la configuración del pincel y el acceso a la paleta. El entintado puede necesitar guías, opciones de herramientas estables y una vista neutral. Es posible que la revisión o presentación necesite una configuración de pantalla completa más limpia.
 
-La **paleta** activa y la **herramienta preestablecida** también se registran por espacio de trabajo y se restauran cuando cambia.
+Los espacios de trabajo hacen que estos cambios sean deliberados. La interfaz puede cambiar para adaptarse a la tarea sin necesidad de que el artista reconstruya el estudio a mano cada vez.
 
-> **Las decoraciones y el relleno del lienzo** están controlados por
-> **Preferencias → Ventanas de imagen → Opciones avanzadas de ventana → Apariencia predeterminada** (Vista normal)
-> y **Apariencia de pantalla completa** (vista de pantalla completa). Ajusta esas configuraciones a tu gusto,
-> luego guarde el espacio de trabajo. Los elementos del menú **Ver** (reglas, guías, etc.) son locales para el
-> ventana de imagen actual y no se guardan por espacio de trabajo.
+## Más que colocación de paneles
 
-### Actualizaciones en vivo en Switch
+Un espacio de trabajo no es sólo un diseño de muelle. Puede preservar el contexto de trabajo más amplio: la forma en que se enmarca el lienzo, cómo se comporta la caja de herramientas, qué colores y recursos de herramientas están listos, cómo se configuran las herramientas y cómo se espera que respondan los dispositivos de entrada.
 
-Cuando cambia de espacio de trabajo, todas las ventanas de imágenes abiertas se actualizan inmediatamente: reglas, guías, barras de desplazamiento, colores de relleno y cualquier otra configuración de visualización cambian sin necesidad de cerrar y volver a abrir las imágenes.
+Esto hace que cambiar el espacio de trabajo sea útil incluso cuando los paneles parecen similares. Dos entornos pueden compartir un diseño general pero diferir en la sensación de la herramienta, la comodidad visual, la identidad de la paleta, los ajustes preestablecidos disponibles o el comportamiento del dispositivo.
 
-## Acceso
+## Cambio inmediato
 
-**Editar → Preferencias → Espacio de trabajo**
+Los espacios de trabajo están destinados a ser fluidos. El cambio debería ser como moverse entre escritorios preparados en el mismo estudio en lugar de reiniciar la aplicación o abrir una configuración separada.
 
-La sección superior de la página de preferencias del espacio de trabajo enumera todos sus espacios de trabajo guardados y proporciona controles para administrarlos.
+Las imágenes abiertas pueden permanecer en su lugar mientras el entorno circundante cambia, permitiendo al artista pasar de una fase del trabajo a otra sin romper la concentración.
 
-## Creando un espacio de trabajo
+## Configuraciones personales y basadas en proyectos
 
-Configure sus paneles, herramientas y paleta exactamente como los desee y luego:
+Algunos espacios de trabajo pueden ser valores predeterminados personales: una configuración cómoda para pintar, una configuración de computadora portátil compacta o un modo de enfoque de pantalla completa. Otros pueden pertenecer a un proyecto: una paleta particular, un tema, una disposición de paneles, una colección de recursos o una configuración de dispositivo que se adapte a una serie específica de imágenes.
 
-1. Abra **Editar → Preferencias → Espacio de trabajo**.
-2. Haga clic en **Guardar diseño como…**.
-3. Ingrese un nombre y haga clic en **Guardar**.
+Debido a que los espacios de trabajo tienen nombre y son reutilizables, pueden convertirse en parte del ritmo de un artista. El entorno adecuado puede restablecerse cuando el trabajo lo requiera.
 
-El nuevo espacio de trabajo aparece en el menú desplegable **Diseño activo** y en el menú **Windows**.
+## Reducir la fricción
 
-## Cambiar espacios de trabajo
+El propósito de los espacios de trabajo es eliminar la configuración repetida del proceso creativo. Una vez que un arreglo le parece correcto, Lumi puede recordarlo. Cuando la tarea cambia, la interfaz puede seguirla.
 
-Hay dos formas de cambiar:
-
-- **Menú de Windows**: los nombres de los diseños aparecen en **Windows → Diseño** para un acceso rápido desde el lienzo.
-- **Preferencias → Espacio de trabajo**: seleccione un diseño del menú desplegable **Diseño activo** y haga clic en **Recargar diseño**.
-
-El cambio es inmediato: Lumi reconstruye el diseño del panel, restaura las opciones de herramientas, recarga la configuración del dispositivo, actualiza las decoraciones del lienzo, el relleno, el tema y el diseño de la caja de herramientas, todo sin reiniciar.
-
-## Gestión de espacios de trabajo
-
-Desde **Editar → Preferencias → Espacio de trabajo**:| Acción | Efecto |
-| :--- | :--- |
-| **Guardar diseño** | Sobrescribe el espacio de trabajo actual con su configuración actual. |
-| **Guardar diseño como…** | Crea un nuevo espacio de trabajo con nombre a partir de su configuración actual. |
-| **Cambiar nombre de diseño…** | Cambia el nombre del espacio de trabajo seleccionado. |
-| **Recargar diseño** | Aplica el espacio de trabajo seleccionado inmediatamente. |
-| **Eliminar diseño…** | Elimina permanentemente el espacio de trabajo seleccionado y sus archivos. |
-
-## Configuración de persistencia
-
-La parte inferior de la página de preferencias del espacio de trabajo controla lo que Lumi guarda automáticamente:
-
-- **Guardar posiciones de ventana al salir**: cuando está activado, las posiciones de acoplamiento y ventana se escriben en el disco cada vez que sale.
-- **Abrir ventanas en el mismo monitor**: Vuelve a abrir cada ventana en el monitor en el que estaba durante la última sesión.
-- **Guardar opciones de herramienta al salir**: guarda la configuración actual de la herramienta al salir.
-- **Guardar configuración del dispositivo de entrada al salir**: guarda la configuración del lápiz y del dispositivo al salir.
-
-Estas configuraciones se aplican por espacio de trabajo: cada diseño mantiene su propio estado guardado de forma independiente.
-
-## Flujos de trabajo de ejemplo
-
-Algunas formas en que los artistas pueden utilizar múltiples espacios de trabajo:
-
-- **Pintura**: bases de pincel grandes, color de relleno cálido (establecido en Preferencias → Ventanas de imagen → Apariencia predeterminada), su variante de tema preferida
-- **Entintado**: guías y límites del lienzo activados, barras de desplazamiento activadas (configuradas en Preferencias → Apariencia predeterminada), color de relleno neutro
-- **Roughs**: muelles ocultos, sin reglas ni cuadrículas, relleno oscuro, tamaño de icono compacto para maximizar el espacio del lienzo
-- **Enfoque de pantalla completa**: diferentes colores de relleno y configuraciones de decoración en la apariencia de pantalla completa versus la apariencia predeterminada, por lo que alternar entre pantalla completa brinda un entorno de trabajo genuinamente diferente.
-- **Secuencias de comandos**: panel de secuencias de comandos abierto, aumento del tamaño de fuente para facilitar la lectura, conjunto de íconos diferente
+Esto mantiene la atención en la obra de arte en lugar de en la gestión de ventanas, lo que hace que Lumi se sienta menos como una única aplicación estática y más como un estudio digital flexible.

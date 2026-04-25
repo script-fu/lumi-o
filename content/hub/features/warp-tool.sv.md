@@ -2,86 +2,36 @@
 title: "Varpverktyg"
 type: docs
 ---
-Warp Tool skjuter, drar och flödar pixlar fritt över duken. I Lumi går det längre än de flesta implementeringar: det kan förvränga en hel lagergrupp – oavsett hur många kapslade lager och masker den innehåller – som ett enda enhetligt objekt, utan att platta till eller förlora någon struktur.
+Warp Tool låter konstnärer trycka, dra, böja, mjuka upp och omforma målat innehåll direkt på duken. Den är designad för uttrycksfull justering: korrigera proportioner, lägga till flöde, knuffa silhuetter eller ge en färdig form mer rörelse utan att måla om den från grunden.
 
-## Översikt
+I Lumi är skevning särskilt fokuserat på att bevara konstverk i lager. Ett komplext ämne kan omformas till en visuell helhet medan dess underliggande lager och masker förblir tillgängliga för ytterligare redigering.
 
-Välj ett lager och dra över det för att förskjuta pixlar i valfri riktning. Varpen är oförstörande medan du arbetar: du kan ångra och göra om enskilda drag, ändra penselstorleken eller beteendet mellan dragen och fortsätta förfina tills du begår. Committing tillämpar den ackumulerade förskjutningskartan destruktivt på lagrets pixeldata.
+## Direkt formning av canvas
 
-När ett **grupplager** är valt, fungerar verktyget på gruppen som helhet. Du ser och interagerar med en liveförhandsvisning av hela den sammansatta gruppen. Vid commit appliceras samma varp exakt och oberoende på varje underordnat lager och mask i gruppen, vilket bevarar hela lagerstrukturen.
+Vridning känns som att borsta in rörelser i bilden. Istället för att välja en stel transformationslåda kan konstnären arbeta lokalt och bygga förskjutning genom drag tills formen sitter korrekt.
 
-## Gruppvarp
+Detta gör verktyget användbart för subtila korrigeringar såväl som dramatisk förvrängning. En kind kan mjukas upp, en ärm kan dras i rytm, lövverk kan få flyt eller en skiss kan skjutas närmare den avsedda gesten.
 
-Att förvränga en grupp är den primära förmågan som skiljer Lumis varpverktyg åt.
+## Gruppmedveten skevhet
 
-### Problemet det löser
+Skiktade illustrationer separerar ofta linjeteckning, färg, skuggning, textur, masker och effekter. Att omforma en del av den strukturen genom att platta till den skulle förstöra själva organisationen som gör bilden redigerbar.
 
-I de flesta målarprogram kräver förvrängning av en illustration med flera lager antingen att man plattar ut gruppen först (förstör lagerstrukturen) eller att varje lager förvrängs separat och försöker matcha dem med ögat (tråkigt och oprecist). Inget av tillvägagångssätten bevarar den ursprungliga strukturen för ytterligare oförstörande redigering.
+Lumis Warp Tool är designat för att behandla en lagergrupp som ett enda synligt motiv samtidigt som de bevarar bitarna inuti den. Konstnären kan forma det kombinerade utseendet och behålla de interna lagren intakta efter att ändringen applicerats.
 
-Lumi förvränger hela gruppen som ett föremål och distribuerar sedan exakt samma transformation till varje lager inuti den.
+## Masker och struktur
 
-### Hur det fungerar
+Masker är en del av konstverkets struktur, inte en eftertanke. När ett skevt motiv är beroende av masker för kanter, utskärningar, skuggningar eller gruppgränser, måste dessa relationer flyttas med bilden.
 
-När du väljer en grupp och börjar ett varpslag bygger Lumi ett **svävande förhandsgranskningslager** från gruppens sammansatta projektion. Om gruppen har en mask, bakas masken in i förhandsgranskningen så att förhandsgranskningen exakt representerar det slutliga utseendet. Du målar dina varpdrag direkt på den här förhandsvisningen - det du ser är precis vad du får.
+Lumis tillvägagångssätt håller innehåll och masker anpassade så att det redigerade resultatet förblir sammanhängande. Målet är att den förhandsgranskade varpen och det engagerade lagerresultatet matchar visuellt, utan att artisten behöver reparera varje barnlager för hand.
 
-På commit, Lumi:
+## Iterativ justering
 
-1. Tillämpar förskjutningen på varje grundläggande lager i gruppen (inklusive djupt kapslade lager i undergrupper), expanderar varje lagers duk precis tillräckligt för att fånga hela varpområdet.
-2. Applicerar samma förskjutning på varje mask i gruppen i samma pass.
-3. Återupptar gruppens automatiska gränsberäkning så att gruppen ändrar storlek för att passa sina nyligen skeva barn.
-4. Beskär varje skevt lager till dess faktiska målade innehåll för att hålla filstorlekarna kompakta.
-5. Tar bort förhandsgranskningsskiktet och återskapar gruppprojektionen från de uppdaterade barnen.
+Förvrängning är naturligtvis utforskande. Artister behöver ofta prova en stroke, jämföra resultatet, mjuka upp det, ångra det eller bygga upp en starkare förändring gradvis.
 
-Allt detta sker inom ett enda ångra steg. Efter att ha begått ser gruppen ut exakt som den gjorde i förhandsgranskningen, med varje lager och mask intakta.
+Warp Tool stöder den typen av iteration genom att låta arbetsvarpen förbli justerbar under sessionen. Konstnären kan förfina förskjutningen innan han gör ändringen i bildens vanliga ångrahistorik.
 
-### Masker
+## Kreativa användningsområden
 
-Alternativet **Warp Masks** (aktiverat som standard) gör att masker på varje lager och grupp inuti varpmålet får samma förskjutningstransformation. Lagermasker rör sig med sina lager: en mask som klippte bort en karaktärs kontur fortsätter att klippa ut samma kontur efter skevning.
+Utöver korrigering kan skevning vara ett verktyg för att skapa märken och designa. Det kan lägga till rörelse till hår och tyg, överdriva uttryck, böja grafiska former, krusa texturer eller skapa målariska förvrängningar som skulle vara svåra att rita manuellt.
 
-När **Warp Masks** är avstängd förskjuts endast lagerinnehåll; masker behåller sina ursprungliga positioner.
-
-## Verktygsalternativ
-
-### Beteende
-
-| Läge | Effekt |
-| :--- | :--- |
-| **Flytta** | Trycker pixlar i riktningen för linjen. Det primära läget för de flesta skevningsarbeten. |
-| **Väx** | Expanderar pixlar utåt från borstens mitt. |
-| **Skrymp** | Dra pixlar inåt mot borstens mitt. |
-| **Snurra medurs** | Roterar pixlar medurs runt borstens mitt. |
-| **Snurra moturs** | Roterar pixlar moturs runt borstens mitt. |
-| **Radera** | Tar bort varpförskjutning och återställer pixlar till sina ursprungliga positioner. |
-| **Smidig** | Diffuserar förskjutning, mjukar upp abrupta övergångar mellan skeva och oförvridna områden. |
-
-### Borstkontroller
-
-- **Storlek**: Varpborstens diameter i pixlar. Större borstar förskjuter bredare områden med ett mjukare fall; mindre borstar ger exakt, lokaliserad kontroll.
-- **Hårdhet**: Falloff från mitten till kanten. Hög hårdhet ger en jämn förskjutning över hela borstområdet; låg hårdhet koncentrerar effekten i centrum.
-- **Styrka**: Hur långt pixlar förskjuts per slag. Lägre styrka tillåter subtil, gradvis formning; högre styrka ger dramatiska, snabba rörelser.
-
-### Stroke Timing
-
-- **Stroke under rörelse** (endast rörelseläge): Tillämpar warp kontinuerligt när musen rör sig, snarare än bara på en timerpuls. Använd för flytande, penselliknande drag där du vill att förskjutningen ska följa markören direkt.
-- **Stroke periodiskt**: Tillämpar varp vid ett fast tidsintervall medan musknappen hålls nedtryckt. Använd för Grow, Shrink och Swirl lägen där kontinuerlig cirkulär applicering är avsikten.
-- **Rate**: Frekvensen av periodisk strokeapplicering.
-
-### Kvalitet
-
-- **Interpolation**: Den samplingsmetod som används vid commit. Linjär är snabb och smidig för de flesta arbeten; Cubic och Nohalo ger högre trohet för fina detaljer.
-- **Högkvalitetsförhandsgranskning**: Använder commit-kvalitetsprovtagaren under den interaktiva förhandsgranskningen. Långsammare, men förhandsvisningen matchar det engagerade resultatet exakt.
-
-### Gruppalternativ
-
-- **Utöka förvrängningsområde** (endast gruppförvrängning): Antalet pixlar som lagts till som en genomskinlig marginal runt gruppförhandsvisningen på alla sidor. Detta ger förskjutet innehåll utrymme att flytta in i. Standardvärdet 256 px är tillräckligt för de flesta arbeten; minska det för stora bilder där minnet är viktigt, eller öka det för mycket stora förskjutningsslag.
-- **Warp Masks**: Om samma varp ska appliceras på lager- och gruppmasker. På som standard.
-
-## Ångra och gör om
-
-Varje slag är ett diskret ångrasteg inom varpsessionen. **Ctrl+Z** tar bort det sista strecket och återställer förskjutningskartan till dess tidigare tillstånd. **Ctrl+Y** (eller **Ctrl+Skift+Z**) tillämpar det igen. Du kan gå tillbaka genom hela strokehistoriken innan du begår.
-
-Om du trycker på **Escape** eller växlar verktyg förkastas alla oengagerade streck och återställer lagret/lagren till sitt ursprungliga tillstånd. Inga ändringar skrivs förrän du uttryckligen åtar dig.
-
-## Engagerar sig
-
-Klicka på knappen **Commit** (eller tryck på **Enter**) för att applicera den ackumulerade warpen destruktivt. För gruppvarpar utlöser detta den fullständiga flerskiktsapplikationen som beskrivs ovan. Ångra historiken för den begångna förvrängningen är sedan en enstaka post i bildångstacken, vändbar med standarden **Redigera → Ångra**.
+Eftersom det fungerar med skiktade motiv är verktyget lämpligt för både tidig grovformning och polering i sena stadier, vilket hjälper konstnärer att omforma en bild samtidigt som målningsprocessen är flexibel.

@@ -2,109 +2,30 @@
 title: "Almacenamiento en caché de pincel"
 type: docs
 ---
-El almacenamiento en caché de pinceles está diseñado para que tus pinceles favoritos se sientan rápidos lo antes posible. En lugar de volver a calcular el mismo sello de pincel transformado una y otra vez, Lumi puede mantener un caché guardado de las formas de pincel que realmente usas y recargar ese caché automáticamente más tarde.
+El almacenamiento en caché de pinceles es una característica de rendimiento para mantener los pinceles favoritos listos cuando se vuelven a utilizar. Ayuda a Lumi a evitar repetir costosos trabajos con la forma del pincel cuando un pincel vuelve a estados familiares durante la pintura.
 
-## Descripción general
+En lugar de tratar cada toque como un problema completamente nuevo, Lumi puede recordar útiles formas de pincel transformadas y reutilizarlas cuando vuelve a aparecer el mismo tipo de marca. El resultado es una experiencia más fluida con pinceles grandes, texturizados, animados o costosos de preparar.
 
-La función se basa en la idea de que muchos pinceles expresivos todavía utilizan las mismas combinaciones prácticas de tamaño, ángulo, dureza y relación de aspecto durante la pintura. Cuando esas combinaciones se reutilizan, Lumi puede entregar el sello de pincel transformado directamente desde el caché en lugar de reconstruirlo.
+## Pinceles familiares más rápidos
 
-El resultado es:
+Muchos pinceles expresivos se mueven a través de una gama reconocible de tamaños, ángulos, formas y texturas. El almacenamiento en caché de pincel aprovecha esa repetición. A medida que se utiliza un pincel, Lumi puede mantener a mano las formas preparadas más valiosas, reduciendo el retraso entre el gesto y la marca.
 
-- inicio de trazo más rápido después de guardar un caché
-- uso repetido más suave de los ajustes preestablecidos favoritos
-- menos cálculos desperdiciados durante largas sesiones de pintura
-- restauración automática de cachés guardados cuando se vuelve a utilizar el valor preestablecido
+Esto es especialmente útil para los ajustes preestablecidos de pintura diaria: el pincel entintado, el pincel seco favorito, el pincel de sombreado suave o cualquier herramienta que se convierta en parte de la rutina de un artista. Cuanto más se reutiliza un cepillo de manera práctica, más valiosos se vuelven sus estados calentados.
 
-## Intención
+## Construido en torno al uso real
 
-El almacenamiento en caché de pinceles está diseñado para pinceles que utiliza con frecuencia: ajustes preestablecidos de pintura central, herramientas de entintado favoritas, pinceles secos texturizados y otros pinceles cuyos sellos transformados son lo suficientemente caros como para notarlos.
+El almacenamiento en caché de pinceles no pretende calcular previamente todas las variaciones posibles. Un pincel dinámico puede moverse a través de demasiadas combinaciones sutiles como para que sea útil. En cambio, Lumi se centra en los estados que realmente aparecen al pintar.
 
-El objetivo no es precocer todos los estados teóricos del cepillo. El objetivo es permitir que el uso real de pintura complete primero los estados más valiosos y luego guardar ese caché lleno para que el pincel ya esté caliente la próxima vez que lo use.
+Esto hace que el caché sea más artístico que teórico. El cepillo se vuelve más rápido según la forma en que realmente se usa: rangos de presión repetidos, ángulos comunes, tamaños habituales y las marcas que ocurren naturalmente durante una sesión.
 
-## Cómo funciona
+## Una capa de velocidad práctica
 
-El almacenamiento en caché de pinceles funciona junto con la cuantización de pinceles.
+El almacenamiento en caché se encuentra silenciosamente debajo de la experiencia de pintar. No cambia el aspecto de un pincel ni limita la calidad expresiva de un trazo. Su función es hacer que el trabajo repetido parezca más inmediato evitando recalculos innecesarios.
 
-Cuando la cuantización está habilitada para un ajuste preestablecido de dinámica, las salidas que afectan a la transformación se ajustan a pasos discretos. Eso le da a Lumi un conjunto finito de estados de pincel reutilizables. Mientras pintas:
+Cuando un caché guardado está disponible, un pincel familiar puede comenzar más cerca de su estado de calentamiento, por lo que los primeros trazos de una nueva sesión se sienten más como la mitad de una ya establecida.
 
-1. Lumi comprueba si el sello transformado ya existe en la caché.
-2. Si es así, el sello se reutiliza inmediatamente.
-3. Si no es así, Lumi lo construye una vez y lo almacena.
-4. Con el tiempo, el caché se llena con los estados del pincel que realmente utilizas.
+## Uso equilibrado de recursos
 
-Si guarda ese caché, Lumi puede cargarlo automáticamente más tarde para que el pincel comience más cerca de un estado de calentamiento en lugar de reconstruir todo desde cero.
+El almacenamiento en caché del pincel está diseñado para mejorar la capacidad de respuesta sin convertir el rendimiento del pincel en una tarea de administración de memoria. Lumi rastrea el costo de los datos del pincel almacenados en caché y mantiene el sistema limitado para que las ganancias de velocidad sigan siendo prácticas durante sesiones largas.
 
-## Flujo de trabajo típico
-
-1. Elija un pincel preestablecido que utilice con frecuencia.
-2. Habilite la cuantificación por su dinámica.
-3. Pinte normalmente durante un tiempo para que el caché se llene orgánicamente.
-4. Abra el **Editor de ajustes preestablecidos de herramientas** e inspeccione la sección **Caché de ajustes preestablecidos**.
-5. Mire las métricas en vivo:
-   - **Tasa de aciertos**
-   - **Cobertura**
-   - **Memoria**
-6. Haga clic en **Guardar** cuando el caché parezca útil.
-7. En sesiones posteriores, Lumi carga automáticamente el caché guardado cuando el ajuste preestablecido se activa.
-
-Esto hace que el ajuste preestablecido se sienta rápido antes, especialmente para pinceles con transformaciones costosas o sellos grandes.
-
-## Dónde encontrarlo
-
-### Editor de dinámica
-
-Utilice el **Editor dinámico** para controlar la cuantización:
-
-- habilitar la cuantificación
-- elige el recuento global de pasos
-- opcionalmente anular el recuento de pasos por eje de salida
-
-La cuantificación es lo que hace que el caché sea práctico al reducir la variación continua en contenedores reutilizables.
-
-### Editor de ajustes preestablecidos de herramientas
-
-Utilice el **Editor de ajustes preestablecidos de herramientas** para administrar el caché del ajuste preestablecido actual:
-
-- **Guardar**: conserva la caché en memoria actual en el disco
-- **Cargar**: restaura un caché previamente guardado
-- **Memoria libre**: libera la memoria caché sin eliminar la copia guardada.
-- **Eliminar**: elimina el caché guardado del disco.
-
-El expansor **Preset Cache** también muestra la tasa de aciertos en vivo, la cobertura y el uso de memoria.
-
-## Qué se almacena en caché
-
-El almacenamiento en caché de pincel apunta a sellos de pincel transformados: se han resuelto los costosos resultados rasterizados después de que se hayan resuelto el tamaño, el ángulo, la dureza, la relación de aspecto y las entradas de transformación relacionadas.
-
-Es más útil cuando:- el cepillo tiene un costoso trabajo de transformación
-- el mismo preset se utiliza en muchas sesiones
-- el pincel vuelve a visitar estados dinámicos similares repetidamente
-- la capacidad de respuesta de inicio rápido es importante
-
-Es menos útil para pinceles cuyo estado de transformación cambia enormemente y rara vez se repite.
-
-## Carga automática
-
-Los cachés guardados están destinados a ayudar desde el inicio de una sesión, no sólo después de haber pintado por un tiempo.
-
-Cuando existe un caché guardado para el ajuste preestablecido activo, Lumi puede cargarlo automáticamente para que su pincel favorito comience con muchos estados útiles ya disponibles. Esto reduce el período de arranque en frío y acerca el cepillo a la máxima capacidad de respuesta de inmediato.
-
-## Seguridad de la memoria
-
-El almacenamiento en caché de pinceles está diseñado para mejorar la velocidad sin hacerse cargo de la máquina.
-
-Lumi rastrea el uso de la memoria caché, la expone en la interfaz de usuario y aplica límites de tiempo de ejecución bajo presión de memoria. Si el sistema tiene poca RAM disponible, el crecimiento de la caché se restringe automáticamente.
-
-## Mejores casos de uso
-
-El almacenamiento en caché de pinceles es especialmente bueno para:
-
-- cepillos diarios favoritos
-- pinceles texturizados utilizados en toda una pintura
-- pinceles grandes y expresivos con un alto coste de transformación
-- ajustes preestablecidos de pincel compartidos en flujos de trabajo de ilustración repetidos
-- ajustes preestablecidos que deseas sentir "listos" tan pronto como los selecciones
-
-## En resumen
-
-El almacenamiento en caché del pincel le permite a Lumi conocer los estados del pincel que realmente usa, guardarlos y recuperarlos automáticamente más tarde. Es una función de velocidad práctica para los ajustes preestablecidos favoritos: pinte con el pincel, deje que el caché se llene, guárdelo y las sesiones futuras comenzarán más rápido.
+Para los artistas, la característica es simple en espíritu: use los pinceles que importan, deje que Lumi aprenda los estados costosos que vale la pena conservar y regrese a esos pinceles con menos espera la próxima vez.

@@ -4,19 +4,20 @@ type: docs
 ---
 Lumi の機能セットは、非破壊的なレイヤーベースの編集に基づいて構築された、デジタル ペインティングと構造化されたイラストレーションのワークフローに重点を置いています。
 
-このセクションでは、Lumi で利用できるコア機能と、それらの機能がインターフェイス内でどこにあるかについて説明します。
+このセクションでは、Lumi で利用できるコア機能と、それらがサポートするクリエイティブ ワークフローを紹介します。
 
 {{< cards >}}
-  {{< card link="brush-caching" title="ブラシ キャッシング" icon="lightning-bolt" subtitle="お気に入りのブラシのウォームアップしたキャッシュを保存して、できるだけ早くブラシの速さを感じられるようにします。" >}}
-  {{< card link="file-format" title="ファイル形式 (.lum)" icon="document-text" subtitle="レイヤー、メタデータ、ICC プロファイル、リカバリ データを保存するオープン コンテナ形式。" >}}
-  {{< card link="recovery" title="ファイルの回復" icon="refresh" subtitle="自動増分回復スナップショットにより、クラッシュや電源喪失から作業を保護します。" >}}
-  {{< card link="layers" title="レイヤーと非破壊編集" icon="collection" subtitle="ブレンド モード、マスク、グループ、非破壊調整レイヤーを使用したレイヤーベースの合成。" >}}
-  {{< card link="paintbrush" title="ブラシツール" icon="pencil-alt" subtitle="安定化、平滑化、およびマルチヘッド ブラシ形成による圧力、速度、傾き、および間隔のダイナミクス。" >}}
-  {{< card link="palette-editor" title="パレットエディタ" icon="color-swatch" subtitle="フルスペクトルおよび限定されたパレットをカバーするバンドル セットを使用して、名前付き顔料パレットを作成および管理します。" >}}
-  {{< card link="palette-map" title="パレットマップ" icon="view-grid" subtitle="パレットの顔料を軸にマッピングするインタラクティブな 2D グリッド。直接の色の選択と探索に使用されます。" >}}
-  {{< card link="palette-mixer" title="パレットミキサー" icon="adjustments" subtitle="視覚的なギャップ プレビューを使用して、アクティブなパレットから色相、彩度、トーンごとに顔料を混合します。" >}}
+  {{< card link="brush-caching" title="ブラシ キャッシング" icon="lightning-bolt" subtitle="実際のペイントで重要なブラシの状態を再利用することで、お気に入りのブラシの応答性を維持します。" >}}
+  {{< card link="file-format" title="ファイル形式 (.lum)" icon="document-text" subtitle="レイヤー化されたアートワーク、リカバリ、カラー データ、および長期編集のための構造化されたプロジェクト形式。" >}}
+  {{< card link="recovery" title="ファイルの回復" icon="refresh" subtitle="背景の保護と意図的なチェックポイントは、ペイント セッションが脆弱になるのを防ぐのに役立ちます。" >}}
+  {{< card link="layers" title="レイヤーと非破壊編集" icon="collection" subtitle="編集可能なレイヤー、グループ、マスク、エフェクト、保護された作業状態を備えた構造化されたペイント。" >}}
+  {{< card link="paintbrush" title="ブラシツール" icon="pencil-alt" subtitle="応答性の高いマーク、ダイナミックな入力、テクスチャ、スムージング、マルチヘッド ブラシの動作を備えた表現力豊かなペイント。" >}}
+  {{< card link="palette-editor" title="パレットエディタ" icon="color-swatch" subtitle="顔料、保存されたミックス、使用された色、値、グラデーションを含む完全なカラー システムとしてパレットを構築します。" >}}
+  {{< card link="palette-map" title="パレットマップ" icon="view-grid" subtitle="パレットの到達可能な色の世界を、探索と選択のための視覚的なマップとして表示します。" >}}
+  {{< card link="palette-mixer" title="パレットミキサー" icon="adjustments" subtitle="顔料のような混合、トーン、彩度の決定を使用して、パレットの関係から新しい色を作成します。" >}}
   {{< card link="scripting" title="スキームスクリプト作成" icon="code" subtitle="ワークフローを自動化し、埋め込み Scheme インタープリターを使用して Lumi を拡張します。" >}}
-  {{< card link="spectral-color" title="スペクトル色の混合" icon="beaker" subtitle="スペクトル アップサンプリングを使用した物理的に正確な顔料の混合により、リアルなペイントの動作が生成されます。" >}}
-  {{< card link="warp-tool" title="ワープツール" icon="cursor-click" subtitle="ブラシ ストロークでピクセルを自由に移動します。レイヤー グループ全体を 1 つのアイテムとしてワープし、すべてのネストされたレイヤーとマスクに同じ変換を適用します。" >}}
-  {{< card link="workspaces" title="ワークスペース" icon="view-boards" subtitle="完全な UI 環境 (パネル レイアウト、ツール設定、デバイス構成、テーマ、パレット) をワークスペースごとに個別に保存して切り替えます。" >}}
+  {{< card link="spectral-color" title="スペクトル色の混合" icon="beaker" subtitle="パレットのカラーは顔料のような動作と混ざり合い、デジタルカラーの選択により絵画的な雰囲気を与えます。" >}}
+  {{< card link="tool-presets" title="ツールプリセット" icon="template" subtitle="安定した動作、リソース、カスタム ID を備えた、小さくて使い慣れた手作りツールのセットを構築します。" >}}
+  {{< card link="warp-tool" title="ワープツール" icon="cursor-click" subtitle="複雑なアートワークのレイヤー構造を維持しながら、ペイントされたコンテンツの形状を直接変更します。" >}}
+  {{< card link="workspaces" title="ワークスペース" icon="view-boards" subtitle="準備されたスタジオ環境を切り替えて、スケッチ、ペイント、インク入れ、カラー作業、集中を行います。" >}}
 {{< /cards >}}

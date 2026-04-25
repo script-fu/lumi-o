@@ -2,65 +2,30 @@
 title: "Palettenmischer"
 type: docs
 ---
-Der Palettenmischer leitet mithilfe einer festen dreistufigen Pipeline neue Farben aus Paaren von Paletteneinträgen ab. Da das Mischen im Spektralbereich und nicht im RGB-Bereich erfolgt, verhalten sich die Ergebnisse wie physikalische Pigmente: Blau und Gelb ergeben Grün, gesättigte Farben verschieben sich beim Mischen in Richtung Neutral.
+Der Palettenmischer ist Lumis Raum zum Ableiten neuer Farben aus der aktiven Palette. Es behandelt das Mischen als einen malerischen Prozess und nicht als einen einfachen digitalen Durchschnitt, sodass Farben auf eine Weise verschoben, weicher, dunkler und harmonisiert werden können, die physischen Pigmenten näher kommt.
 
-## Die Pipeline
+Der Mixer arbeitet mit der eigenen Farbidentität der Palette. Neue Mischungen sind keine willkürlichen Farben, die von außerhalb des Systems gezogen werden; es handelt sich um Beziehungen zwischen Farben, die bereits in der Palette vorhanden sind.
 
-Jede vom Mixer erzeugte Farbe durchläuft in einer festen Reihenfolge drei Stufen:
+## Mischen aus Palettenbeziehungen
 
-1. **Mischung**: Spektrale WGM zwischen Elternteil A (CCW) und Elternteil B (CW).
-2. **Chroma**: In Richtung des neutralen Spektrums der Palette mischen, um die Sättigung zu reduzieren.
-3. **Ton**: Zum Mischen von Weiß (Tönung) oder Schwarz (Farbton) mischen.
+Eine Mischung beginnt mit den Quellfarben aus der Palette. Durch das Wechseln zwischen ihnen kann ein Künstler den Übergang von einer Farbtonfamilie zur anderen erkunden und dabei im Charakter der Palette bleiben.
 
-Der Ton wird immer zuletzt angewendet. Dadurch wird die Helligkeit dominant: Eine Tonwertanpassung erreicht genau den beabsichtigten Helligkeitswert, ohne dass sie durch die vorangehende Chroma-Anpassung verwässert wird.
+Da die Palette aus pigmentähnlichen Inhaltsstoffen besteht, kann der Übergang zwischen zwei Farben nützliche Zwischentöne erzeugen: Grüntöne aus Gelb- und Blautönen, gedämpftes Violett, warme Grautöne, gedämpfte Erdtöne oder subtile Temperaturschwankungen.
 
-## Eltern auswählen
+## Chroma und Ton
 
-Übergeordnetes A und übergeordnetes B sind die beiden Einträge, zwischen denen der Blend-Schieberegler mischt. Sie werden aus der Palettenkarte geladen:
+Der Mixer trennt das Gefühl einer Farbe in praktische Malentscheidungen. Eine Farbe kann in eine klarere oder neutralere Version verschoben, aufgehellt oder abgedunkelt oder nahe einem bestimmten Wert gehalten werden, während Farbton und Sättigung untersucht werden.
 
-- Halten Sie **Shift** auf der Palettenzuordnung gedrückt und **klicken Sie**, um Parent A (CCW) festzulegen.
-- Halten Sie **Shift** gedrückt und **klicken Sie mit der rechten Maustaste**, um Parent B (CW) einzustellen.
+Dies erleichtert die Suche nach der Farbe, die ein Gemälde benötigt: nicht nur „mehr Rot“ oder „mehr Blau“, sondern auch ruhiger, tiefer, blasser, wärmer, kühler oder zurückhaltender und dennoch zur gleichen Palettenfamilie gehörend.
 
-Als Eltern werden nur Einträge der **Klasse A** (Primär- und Sondermischungen mit intakter Herkunft) akzeptiert. Tertiäre und Einträge mit verlorener Abstammung sind ausgeschlossen.
+## Nützliche Entdeckungen speichern
 
-Die Positionen „Parent A“ und „Parent B“ des Mixers werden auf der Karte als **Diamantring**-Hervorhebungen angezeigt, sodass Sie immer sehen können, welche Einträge geladen sind.
+Wenn eine Mischung wichtig wird, kann sie Teil der Palette werden. Gespeicherte Mischungen behalten ihre Beziehung zu den Farben, die sie erzeugt haben, sodass sie erneut aufgerufen, angepasst und wiederverwendet werden können, anstatt zu isolierten Farbfeldern zu werden.
 
-## Die Slider
+Mit der Zeit kann so eine Palette von einer Reihe von Zutaten zu einer Aufzeichnung künstlerischer Entscheidungen heranwachsen. Die nützlichen Mischungen einer Sitzung können die Ausgangsfarben für die nächste sein.
 
-| Schieberegler | Wirkung |
-| :--- | :--- |
-| **Mischung** | Bewegt sich zwischen Parent A (CCW-Ende) und Parent B (CW-Ende). Bei 0,0 stimmt das Ergebnis mit Parent A überein; Bei 1,0 stimmt es mit Parent B überein. |
-| **Chroma** | Entsättigt die Mischung in Richtung Neutral der Palette. Höhere Werte führen zu gedämpfteren, erdigeren Ergebnissen. |
-| **Ton** | Verschiebt die Helligkeit in Richtung der Mischung von Weiß (Tönungsrichtung) oder der Mischung von Schwarz (Richtung des Farbtons). |
+## Ein Begleiter zur Palette Map
 
-## Wertkontrollen
+Der Palettenmixer und die Palettenkarte sind für die Zusammenarbeit konzipiert. Die Karte zeigt die Palette als navigierbaren Farbraum, während der Mixer es einem Künstler ermöglicht, sich gezielt zwischen ausgewählten Punkten innerhalb dieses Raums zu bewegen.
 
-**Value Lock** friert die Wahrnehmungshelligkeit (CIE L\*) auf ihrem aktuellen Niveau ein, während sich die anderen Schieberegler bewegen. Verwenden Sie dies, um Chroma- oder Farbtonvariationen zu erkunden, ohne den Wert einer Mischung zu ändern.
-
-**Band Clamp** begrenzt das Ergebnis so, dass es innerhalb der Grenzen seines aktuellen Wertebands bleibt (z. B. innerhalb der unteren Mitte). Der Tonregler lässt sich weiterhin verschieben, aber die Ausgabehelligkeit ist begrenzt.
-
-Der Tone-Schieberegler spiegelt auch alle im Paletten-Editor konfigurierten Wertelücken wider. Helligkeitsbereiche, die in eine Lücke fallen, werden als halbtransparente graue Bänder auf dem Schieberegler angezeigt. Der Schieberegler springt automatisch über diese Lücken: Wenn Sie durch einen grauen Bereich ziehen, springen Sie zur nächsten gültigen Bandgrenze auf der anderen Seite.
-
-## Endpunkte mischen (Weiß, Schwarz, Neutral)
-
-Für die Ton- und Chroma-Stufen sind Referenzendpunkte erforderlich: ein Mischweiß, ein Mischschwarz und ein Neutralton. Lumi erkennt diese automatisch, indem es die aktive Palette nach den besten Kandidaten durchsucht:
-
-- **Mischen von Weiß**: Primärfarbe mit dem höchsten Chroma-Wert, die reinem Weiß am nächsten kommt.
-- **Mischen von Schwarz**: Primärfarbe mit der geringsten Helligkeit.
-- **Neutral**: die Primärfarbe, die der Achromatik am nächsten kommt (geringste Chroma).
-
-Diese können manuell überschrieben werden, indem Sie mit der rechten Maustaste auf einen Eintrag im Paletteneditor klicken.
-
-## Einen Mix speichernKlicken Sie auf **Zur Palette hinzufügen**, um das aktuelle Mischergebnis als **Gespeicherte Mischung** (benutzerdefinierter Eintrag) zu speichern. Vor dem Speichern wendet das System die **Best-Match-Relocation** an: Es durchsucht die Palette nach dem optimalen Rezept, das dieselbe Endfarbe mit der besten räumlichen Anpassung an die Palettenkarte erzeugt. Wenn ein näheres Rezept gefunden wird, springen die Mixer-Schieberegler, um es anzuzeigen. Dies bestätigt, dass das System einen besseren Ursprung gefunden hat, und die Position des gespeicherten Eintrags wird mit seinem visuellen Punkt auf der Karte ausgerichtet.
-
-Gespeicherte Mischungen speichern ihr vollständiges Rezept (übergeordnete A/B-UIDs, Mischfaktor, Ton, Chroma), sodass sie exakt reproduziert werden können.
-
-## Rezeptwiederherstellung
-
-Durch einmaliges Klicken auf einen benutzerdefinierten Eintrag im Paletteneditor wird das Rezept dieses Eintrags im Mixer wiederhergestellt:
-
-- Parent A und Parent B werden neu geladen.
-- Die Schieberegler für Mischung, Ton und Chroma kehren in ihre ursprüngliche Position zurück.
-- Jede Wertesperre oder Bandklemme, die während der Erstellung aktiv war, wird wieder aktiviert.
-
-Dies macht es einfacher, zu einer Farbe zurückzukehren und sie weiter anzupassen oder sie als Ausgangspunkt für eine neue Mischung zu verwenden.
+Zusammen unterstützen sie einen Arbeitsablauf, der dem Mischen von Farbe auf einer Palette ähnelt: Wählen Sie benachbarte oder kontrastierende Farben, suchen Sie nach der richtigen Balance, behalten Sie die Farben bei, die wichtig sind, und malen Sie in einer kohärenten Farbwelt weiter.

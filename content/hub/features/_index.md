@@ -6,19 +6,20 @@ url: "hub/features"
 
 Lumi's feature set is focused on digital painting and structured illustration workflows, built on non-destructive, layer-based editing.
 
-This section describes the core capabilities available in Lumi and where to locate them in the interface.
+This section introduces the core capabilities available in Lumi and the creative workflows they support.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Brush Caching" icon="lightning-bolt" subtitle="Save warmed-up caches for favourite brushes so they feel fast as soon as possible." >}}
-  {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="Open container format storing layers, metadata, ICC profiles, and recovery data." >}}
-  {{< card link="recovery" title="File Recovery" icon="refresh" subtitle="Automatic incremental recovery snapshots protect work against crashes and power loss." >}}
-  {{< card link="layers" title="Layers & Non-Destructive Editing" icon="collection" subtitle="Layer-based compositing with blend modes, masks, groups, and non-destructive adjustment layers." >}}
-  {{< card link="paintbrush" title="Brush Tool" icon="pencil-alt" subtitle="Pressure, velocity, tilt, and spacing dynamics with stabilization, smoothing, and multi-head brush formations." >}}
-  {{< card link="palette-editor" title="Palette Editor" icon="color-swatch" subtitle="Create and manage named pigment palettes, with bundled sets covering full-spectrum and limited palettes." >}}
-  {{< card link="palette-map" title="Palette Map" icon="view-grid" subtitle="Interactive 2D grid mapping palette pigments to axes, used for direct color picking and exploration." >}}
-  {{< card link="palette-mixer" title="Palette Mixer" icon="adjustments" subtitle="Mix pigments from the active palette by hue, saturation, and tone with visual gap previews." >}}
+  {{< card link="brush-caching" title="Brush Caching" icon="lightning-bolt" subtitle="Keep favourite brushes feeling responsive by reusing the brush states that matter in real painting." >}}
+  {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="A structured project format for layered artwork, recovery, colour data, and long-term editing." >}}
+  {{< card link="recovery" title="File Recovery" icon="refresh" subtitle="Background protection and intentional checkpoints help keep painting sessions from becoming fragile." >}}
+  {{< card link="layers" title="Layers & Non-Destructive Editing" icon="collection" subtitle="Structured painting with editable layers, groups, masks, effects, and protected work states." >}}
+  {{< card link="paintbrush" title="Brush Tool" icon="pencil-alt" subtitle="Expressive painting with responsive marks, dynamic input, texture, smoothing, and multi-head brush behaviour." >}}
+  {{< card link="palette-editor" title="Palette Editor" icon="color-swatch" subtitle="Build palettes as complete colour systems with pigments, saved mixes, used colours, values, and gradients." >}}
+  {{< card link="palette-map" title="Palette Map" icon="view-grid" subtitle="See the reachable colour world of a palette as a visual map for exploration and selection." >}}
+  {{< card link="palette-mixer" title="Palette Mixer" icon="adjustments" subtitle="Create new colours from palette relationships using pigment-like mixing, tone, and chroma decisions." >}}
   {{< card link="scripting" title="Scheme Scripting" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
-  {{< card link="spectral-color" title="Spectral Color Mixing" icon="beaker" subtitle="Physically accurate pigment mixing using spectral upsampling, producing realistic paint behaviour." >}}
-  {{< card link="warp-tool" title="Warp Tool" icon="cursor-click" subtitle="Displace pixels freely with brush strokes. Warps entire layer groups as one item, applying the same transformation to all nested layers and masks." >}}
-  {{< card link="workspaces" title="Workspaces" icon="view-boards" subtitle="Save and switch complete UI environments: panel layouts, tool settings, device configuration, theme, and palette — independently per workspace." >}}
+  {{< card link="spectral-color" title="Spectral Color Mixing" icon="beaker" subtitle="Palette colours mix with pigment-like behaviour, giving digital colour selection a more painterly feel." >}}
+  {{< card link="tool-presets" title="Tool Presets" icon="template" subtitle="Build a small, familiar set of handmade tools with stable behaviour, resources, and custom identities." >}}
+  {{< card link="warp-tool" title="Warp Tool" icon="cursor-click" subtitle="Reshape painted content directly while preserving the layered structure of complex artwork." >}}
+  {{< card link="workspaces" title="Workspaces" icon="view-boards" subtitle="Switch between prepared studio environments for sketching, painting, inking, colour work, and focus." >}}
 {{< /cards >}}

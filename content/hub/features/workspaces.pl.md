@@ -2,86 +2,36 @@
 title: "Obszary robocze"
 type: docs
 ---
-Obszar roboczy to zapisana migawka całego środowiska interfejsu użytkownika: które panele są otwarte i gdzie, dekoracje płótna i dopełnienie zarówno w widoku normalnym, jak i pełnoekranowym, aktywny motyw i zestaw ikon, układ przybornika, aktywna paleta i ustawienia narzędzi. Lumi pozwala zapisać dowolną liczbę nazwanych obszarów roboczych i błyskawicznie się między nimi przełączać — wszystkie otwarte obrazy są aktualizowane na miejscu, bez konieczności ponownego uruchamiania.
+Przestrzenie robocze pozwalają Lumi dostosować się do różnych sposobów pracy. Przestrzeń robocza oddaje atmosferę środowiska studyjnego: układ paneli, stan narzędzi, prezentację płótna, ścieżki zasobów, wybór palety, motyw i inne preferencje interfejsu, które kształtują sesję malowania.
 
-## Co oszczędza obszar roboczy
+Zamiast utrzymywać jeden stały układ dla każdego zadania, artyści mogą utrzymywać oddzielne środowiska do szkicowania, malowania, pisania odręcznego, kolorowania, prezentacji, pisania skryptów lub skupionych sesji pełnoekranowych. Każde środowisko może udostępniać zasoby związane z tego rodzaju pracą, więc przestrzeń robocza do rysowania może wydawać się wypełniona gotowymi ustawieniami rysunku, a przestrzeń robocza do malowania może zostać przełączona na narzędzia malarskie.
 
-Każdy nazwany obszar roboczy przechowuje niezależnie następujące informacje:
+## Studio, które zmienia się wraz z zadaniem
 
-| Składnik | Co obejmuje |
-| :--- | :--- |
-| **Układ** | Położenie i rozmiar okna, układ doków (kolumny lewego i prawego panelu, które panele są otwarte i w jakiej kolejności), tryb jednego lub wielu okien, stan zmaksymalizowany, widoczność i położenie paska zakładek |
-| **Opcje narzędzia** | Bieżące ustawienia dla każdego narzędzia (rozmiar pędzla, twardość, zachowanie przy wypaczaniu itp.) |
-| **Urządzenia wejściowe** | Konfiguracja urządzenia wejściowego: krzywe ciśnienia, przypisania przycisków, mapowania osi dla rysika i innych urządzeń |
-| **Dekoracje na płótnie** | Domyślne ustawienia linijek, pasków przewijania, linii pomocniczych, siatki, podświetlenia zaznaczenia, granicy warstwy i granicy obszaru roboczego dla każdego obszaru roboczego — ustawiane za pomocą **Preferencje → Okna obrazu → Wygląd domyślny** i **Wygląd pełnego ekranu**, niezależnie dla widoku normalnego i pełnego ekranu |
-| **Wyściółka z płótna** | Tryb i kolor dopełniania obszaru roboczego dla widoku normalnego i pełnoekranowego — ustaw za pomocą **Preferencje → Okna obrazu → Wygląd domyślny** |
-| **Motyw i ikony** | Aktywny motyw, ciemny/jasny wariant kolorów, zestaw ikon, zastąpienie rozmiaru ikon i skala czcionki |
-| **Przybornik** | Pozycja widżetu FG/BG (góra/dół/lewo/prawo), skala FG/BG, widoczność maskotki Wilbera, nagłówki grup narzędzi |
+Różne etapy dzieła sztuki korzystają z różnych otoczenia. Zgrubne szkicowanie może wymagać przezroczystego płótna i minimalnej liczby paneli. Malowanie może wymagać ustawienia pędzla i dostępu do palety pod ręką. Pisanie odręczne może wymagać prowadnic, stabilnych opcji narzędzi i neutralnego widoku. Recenzja lub prezentacja może wymagać bardziej przejrzystej konfiguracji pełnoekranowej.
 
-Aktywna **paleta** i **ustawienie narzędzia** są również rejestrowane dla każdego obszaru roboczego i przywracane po przełączeniu.
+Przestrzenie robocze sprawiają, że te zmiany są zamierzone. Interfejs można zmieniać w zależności od zadania, bez konieczności ręcznego przebudowywania studia przez artystę za każdym razem.
 
-> **Dekoracje płócienne i wyściółka** są kontrolowane przez
-> **Preferencje → Okna obrazu → Zaawansowane opcje okna → Wygląd domyślny** (Widok normalny)
-> i **Wygląd pełnoekranowy** (Widok pełnoekranowy). Dostosuj te ustawienia do swoich upodobań,
-> następnie zapisz obszar roboczy. Elementy menu **Widok** (linijki, linie pomocnicze itp.) są dostępne lokalnie
-> bieżącego okna obrazu i nie są zapisywane dla poszczególnych obszarów roboczych.
+## Więcej niż rozmieszczenie paneli
 
-### Aktualizacje na żywo na przełączniku
+Obszar roboczy to nie tylko układ doku. Może zachować szerszy kontekst roboczy: sposób obramowania płótna, zachowanie przybornika, dostępne kolory i zasoby narzędzi, sposób konfiguracji narzędzi oraz oczekiwaną reakcję urządzeń wejściowych.
 
-Kiedy przełączasz obszary robocze, wszystkie otwarte okna obrazów są natychmiast aktualizowane — linijki, linie pomocnicze, paski przewijania, kolor wypełnienia i wszystkie inne ustawienia widoku zmieniają się na miejscu, bez konieczności zamykania i ponownego otwierania obrazów.
+Dzięki temu przełączanie obszarów roboczych jest przydatne nawet wtedy, gdy panele wyglądają podobnie. Dwa środowiska mogą mieć taki sam ogólny układ, ale różnić się wyczuciem narzędzia, komfortem wizualnym, tożsamością palety, dostępnymi ustawieniami wstępnymi lub zachowaniem urządzenia.
 
-## Dostęp
+## Natychmiastowe przełączanie
 
-**Edycja → Preferencje → Przestrzeń robocza**
+Przestrzenie robocze mają być płynne. Przełączanie powinno przypominać poruszanie się pomiędzy przygotowanymi biurkami w tym samym studiu, a nie ponowne uruchamianie aplikacji lub otwieranie osobnej konfiguracji.
 
-Górna część strony preferencji obszaru roboczego zawiera listę wszystkich zapisanych obszarów roboczych i umożliwia zarządzanie nimi.
+Otwarte obrazy mogą pozostać na miejscu, gdy zmienia się otaczające środowisko, pozwalając artyście przechodzić z jednego etapu pracy do drugiego bez zakłócania koncentracji.
 
-## Tworzenie obszaru roboczego
+## Konfiguracje osobiste i oparte na projektach
 
-Skonfiguruj panele, narzędzia i paletę dokładnie tak, jak chcesz, a następnie:
+Niektóre obszary robocze mogą być domyślnymi ustawieniami osobistymi: wygodna konfiguracja do malowania, konfiguracja kompaktowego laptopa lub tryb ustawiania ostrości na pełnym ekranie. Inne mogą należeć do projektu: określonej palety, motywu, układu paneli, kolekcji zasobów lub konfiguracji urządzenia, która pasuje do określonej serii obrazów.
 
-1. Otwórz **Edycja → Preferencje → Przestrzeń robocza**.
-2. Kliknij **Zapisz układ jako…**.
-3. Wpisz nazwę i kliknij **Zapisz**.
+Ponieważ przestrzenie robocze są nazwane i nadają się do wielokrotnego użytku, mogą stać się częścią rytmu artysty. Gdy praca tego wymaga, można przywrócić odpowiednie środowisko.
 
-Nowy obszar roboczy pojawi się na liście rozwijanej **Aktywny układ** i w menu **Windows**.
+## Zmniejszenie tarcia
 
-## Przełączanie obszarów roboczych
+Celem obszarów roboczych jest usunięcie powtarzających się ustawień z procesu twórczego. Kiedy aranżacja wydaje się właściwa, Lumi może ją zapamiętać. Gdy zadanie się zmieni, interfejs może podążać.
 
-Istnieją dwa sposoby przełączania:
-
-- **Menu Windows**: Nazwy układów pojawiają się w obszarze **Okna → Układ**, co umożliwia szybki dostęp z obszaru roboczego.
-- **Preferencje → Przestrzeń robocza**: Wybierz układ z listy rozwijanej **Aktywny układ** i kliknij **Załaduj ponownie układ**.
-
-Przełączanie jest natychmiastowe — Lumi przebudowuje układ panelu, przywraca opcje narzędzi, ponownie ładuje ustawienia urządzenia, aktualizuje dekoracje płótna, wyściółkę, motyw i układ skrzynki narzędziowej, a wszystko to bez ponownego uruchamiania.
-
-## Zarządzanie obszarami roboczymi
-
-Z **Edycja → Preferencje → Przestrzeń robocza**:| Akcja | Efekt |
-| :--- | :--- |
-| **Zapisz układ** | Zastępuje bieżący obszar roboczy bieżącymi ustawieniami. |
-| **Zapisz układ jako…** | Tworzy nowy nazwany obszar roboczy na podstawie bieżących ustawień. |
-| **Zmień nazwę układu…** | Zmienia nazwę wybranego obszaru roboczego. |
-| **Załaduj ponownie układ** | Natychmiast stosuje wybrany obszar roboczy. |
-| **Usuń układ…** | Trwale usuwa wybrany obszar roboczy i jego pliki. |
-
-## Ustawienia trwałości
-
-Dolna część strony preferencji Workspace kontroluje, co Lumi zapisuje automatycznie:
-
-- **Zapisz pozycje okien przy wyjściu**: Gdy opcja ta jest włączona, pozycje doków i okien są zapisywane na dysku przy każdym wyjściu.
-- **Otwórz okna na tym samym monitorze**: Ponownie otwiera każde okno na monitorze, na którym było włączone podczas ostatniej sesji.
-- **Zapisz opcje narzędzia przy wyjściu**: Zapisuje bieżące ustawienia narzędzia przy wychodzeniu.
-- **Zapisz ustawienia urządzenia wejściowego przy wyjściu**: zapisuje konfigurację rysika i urządzenia po wyjściu.
-
-Te ustawienia dotyczą poszczególnych obszarów roboczych — każdy układ niezależnie zachowuje swój zapisany stan.
-
-## Przykładowe przepływy pracy
-
-Kilka sposobów, w jakie artyści mogą wykorzystywać wiele przestrzeni roboczych:
-
-- **Malowanie** — duże doki pędzli, ciepły kolor wypełnienia (ustawiany w Preferencjach → Okna obrazu → Wygląd domyślny), preferowany wariant motywu
-- **Inking** — linie pomocnicze i obramowanie obszaru roboczego włączone, paski przewijania włączone (ustawiane w Preferencjach → Wygląd domyślny), neutralny kolor wypełnienia
-- **Roughs** — doki ukryte, bez linijek i siatki, ciemne wypełnienie, niewielki rozmiar ikon, aby zmaksymalizować przestrzeń płótna
-- **Ostrość na pełnym ekranie** — różne ustawienia kolorów wypełnienia i dekoracji w przypadku wyglądu pełnoekranowego i wyglądu domyślnego, więc przełączanie trybu pełnoekranowego zapewnia naprawdę inne środowisko pracy
-- **Skrypty** — otwarty panel skryptów, zwiększenie rozmiaru czcionki w celu zwiększenia czytelności, inny zestaw ikon
+Dzięki temu uwaga skupia się na grafice, a nie na zarządzaniu oknami, dzięki czemu Lumi nie przypomina pojedynczej statycznej aplikacji, a bardziej elastycznego studia cyfrowego.

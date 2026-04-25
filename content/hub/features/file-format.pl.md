@@ -2,111 +2,34 @@
 title: "Format pliku (.lum)"
 type: docs
 ---
-Lumi wykorzystuje otwarty format plików oparty na katalogach (`.lum`) zaprojektowany z myślą o wydajności, niezawodności i długoterminowej dostępności.
+Natywny format pliku Lumi jest przeznaczony do projektów malowania warstwowego, które muszą pozostać niezawodne, możliwe do sprawdzenia i możliwe do odzyskania w miarę upływu czasu. Został zaprojektowany w oparciu o realia pracy ilustracyjnej: wiele warstw, duże płótna, osadzone informacje o kolorach, maski, efekty i dane do odzyskiwania.
 
-## Przegląd
+Zamiast traktować projekt jako pojedynczą nieprzezroczystą plamę, format utrzymuje strukturę grafiki widoczną dla aplikacji. Dzięki temu Lumi może zapisywać, ładować i odzyskiwać duże obrazy w bardziej inteligentny sposób, zachowując przy tym organizację, na której polegają artyści.
 
-Plik `.lum` jest w rzeczywistości katalogiem zawierającym:
-- **Metadane** (warstwy, tryby mieszania, właściwości).
-- **Bufory warstw** (indywidualne dane pikseli dla każdej warstwy).
-- **Maski** (dane w skali szarości dla masek warstw).
-- **Historia odzyskiwania** (migawki przyrostowe).
+## Otwarta struktura projektu
 
-Taka struktura umożliwia szybkie zapisywanie, leniwe ładowanie dużych plików i przywracanie pracy nawet po awarii.
+Projekt Lumi oddziela części dzieła sztuki: struktura obrazu, zawartość warstw, maski, dane o kolorach, metadane i informacje o odtwarzaniu odgrywają wyraźną rolę. Dzięki temu format jest łatwiejszy do zrozumienia i lepiej dostosowany do długoterminowego dostępu niż zamknięty, monolityczny pojemnik.
 
-## Właściwości klucza
+Celem jest nie tylko przechowywanie pikseli, ale także przechowywanie roboczego stanu ilustracji. Warstwy pozostają warstwami, maski pozostają maskami, a plik nadal odzwierciedla sposób, w jaki została zbudowana grafika.
 
-### Otwarte i czytelne
+## Zaprojektowany do dużych obrazów
 
-Format `.lum` wykorzystuje metadane XML i skompresowane bufory binarne. Strukturę warstw, właściwości i tryby mieszania można sprawdzić za pomocą zwykłego tekstu. Brak zastrzeżonego kodeka; dane pikseli są przechowywane w standardowym formacie bufora GEGL.
+Duże, warstwowe obrazy mogą szybko stać się ciężkie. Format Lumi obsługuje przepływ pracy, w którym nie wszystkie dane obrazu muszą zostać wciągnięte do pamięci na raz. Projekty mogą pozostać responsywne, ładując części obrazu, które są faktycznie potrzebne do przeglądania, edycji, komponowania lub eksportowania.
 
-### Stopniowe oszczędzanie
+Takie podejście ułatwia zarządzanie złożonymi plikami, szczególnie gdy grafika zawiera wiele ukrytych, zarchiwizowanych, eksperymentalnych lub pogrupowanych warstw.
 
-Zapisywanie przyrostowe jest dostępne poprzez **Plik** → **Zapisz przyrost** (`Ctrl+I`). Tworzy punkt kontrolny ręcznego odzyskiwania w projekcie bez zastępowania normalnego **Plik** → **Zapisz** (`Ctrl+S`). Pełne zapisy nadal aktualizują główny projekt `.lum`, podczas gdy funkcja Save Increase zapisuje tylko zmodyfikowane warstwy potrzebne do szybkiego punktu kontrolnego.
+## Oszczędzanie bez przerywania przepływu
 
-### Leniwe ładowanie
+Format pliku obsługuje zarówno normalne zapisywanie projektów, jak i lekkie migawki w stylu odzyskiwania. Daje to artystom możliwość częstej ochrony pracy bez przekształcania każdego punktu kontrolnego w pełną kopię całego obrazu.
 
-Duże projekty otwierają się szybko. Piksele warstw są ładowane z dysku tylko wtedy, gdy:
-- Warstwa staje się widoczna.
-- Malujesz na warstwie.
-- Warstwa zostanie wyeksportowana lub złożona.
+Ponieważ informacje o odzyskiwaniu należą do struktury projektu, Lumi może przechowywać użyteczną historię blisko grafiki, jednocześnie umożliwiając automatyczne zapisywanie bezpieczeństwa niezależnie od pliku roboczego.
 
-Bardzo duże projekty (ponad 500 warstw, wiele gigabajtów danych) pozostają responsywne. Leniwe ładowanie jest domyślnie włączone i można je włączyć w **Edycja → Preferencje → Wydajność → Zasoby pamięci**.
+## Wymiana i eksport
 
-### Autozapis
+Natywny format jest przeznaczony do bieżącej pracy z Lumi, natomiast formaty eksportu służą do udostępniania spłaszczonych lub zorientowanych na kompatybilność wyników. Obsługa importu pomaga przenieść istniejącą grafikę do warstwowego środowiska Lumi, a obsługa eksportu pozwala gotowym elementom opuścić format projektu, gdy są gotowe do publikacji, dostarczenia lub dalszego przetwarzania.
 
-Lumi automatycznie zapisuje zmiany w **oddzielnej lokalizacji pamięci podręcznej** (`~/.cache/lumi/autosave/`) w regularnych odstępach czasu. Autozapisy są niezależne od pliku roboczego i nie modyfikują go. Interwał i lokalizację pamięci podręcznej można skonfigurować w **Edycja → Preferencje → Wydajność**.
+To rozróżnienie sprawia, że ​​plik roboczy jest bogaty i edytowalny, a jednocześnie pozwala na tworzenie ostatecznych obrazów w popularnych formatach zewnętrznych.
 
-## Dostęp
+## Długoterminowa niezawodność
 
-### Zapisz i zapisz jako
-
-- **Plik** → **Zapisz** (Ctrl+S): Zapisz w bieżącym katalogu `.lum`.
-- **Plik** → **Zapisz przyrost** (Ctrl+I): Utwórz punkt kontrolny odzyskiwania przyrostowego dla bieżącego pliku `.lum`.
-- **Plik** → **Zapisz jako** (Shift+Ctrl+S): Zapisz do nowego pliku `.lum`. Okno dialogowe Zapisz jako zawiera opcje kompresji nowego pliku projektu.
-
-Niezapisane zmiany są oznaczone gwiazdką (*) w tytule okna.
-
-### Eksportuj
-
-- **Plik** → **Eksportuj jako** (Shift+Ctrl+E): Eksportuj do formatu PNG, JPEG, TIFF lub innego.
-- **Plik** → **Nadpisz** (Ctrl+E): Ponowny eksport do ostatnio eksportowanego pliku.
-
-Eksportowanie spłaszcza widoczne warstwy i konwertuje przestrzeń kolorów widmowych na sRGB.
-
-### Importuj
-
-- **Plik** → **Otwórz** (Ctrl+O): Załaduj projekt `.lum`.
-- **Plik** → **Otwórz jako warstwy** (Shift+Ctrl+O): Importuj pliki `.lum`, XCF lub PSD jako nowe warstwy.
-- **Plik** → **Ostatnie pliki**: Szybki dostęp do ostatnio otwartych projektów.
-
-Pliki PSD i XCF są podczas importu konwertowane do natywnego formatu Lumi.
-
-## Zgodność importu i eksportu
-
-### Obsługiwane formaty importu
-
-- **.lum**: natywny format Lumi.
-- **.xcf**: Natywny format GIMP (zachowane warstwy i podstawowe właściwości).
-- **.psd**: format Photoshopa (z zachowaniem warstw i trybów mieszania).
-- **PNG, JPEG, TIFF itp.**: Import spłaszczonych obrazów.
-
-### Obsługiwane formaty eksportu
-
-- **PNG**: bezstratny, z przezroczystością alfa.
-- **JPEG**: Stratny, spłaszczony.
-- **TIFF**: bezstratny lub skompresowany LZW.
-- **XCF**: format zgodny z GIMP. Tylko eksport; warstwy i podstawowe właściwości zachowane.
-
-## Odzyskiwanie projektuLumi utrzymuje automatyczne zapisywanie w tle i ręczne przyrostowe punkty kontrolne, oba dostępne z **Plik** → **Odzyskaj obraz**. Zobacz stronę [Odzyskiwanie plików](../recovery), aby uzyskać szczegółowe informacje.
-
-## Organizacja
-
-Plik `.lum` jest katalogiem o ustalonej strukturze:
-
-```
-my-painting.lum/
-  ├── metadata.xml                       (image structure, layer tree, properties)
-  ├── thumbnail-YYYYMMDD-HHMMSS.png      (last-saved thumbnail)
-  ├── drawables/
-  │   ├── layer-<name>.geglbuf           (pixel data per layer)
-  │   └── mask-<name>.geglbuf            (mask data, shares layer name)
-  ├── icc/                               (embedded colour profiles)
-  ├── parasites/                         (per-image metadata)
-  ├── paths/                             (vector paths as SVG)
-  ├── configs/                           (non-destructive filter configurations)
-  └── recovery/
-      └── primary-01.lum/                (first Save Increment baseline)
-          ├── metadata.xml
-          ├── drawables/                 (only modified buffers)
-        ├── delta-0001.lum/            (Ctrl+I checkpoint)
-          └── delta-0002.lum/
-```
-
-Bufory warstw noszą nazwy warstw (`layer-Background.geglbuf`), a nie są numerowane sekwencyjnie. Spacje w nazwach warstw są zapisywane jako podkreślenia; warstwy grupowe otrzymują przyrostek `-GROUP`. Maski mają wspólną nazwę warstwy (`mask-Background.geglbuf`).
-
-Każdy `recovery/primary-NN.lum/` to pełny zapis stanu bazowego. Kolejne naciśnięcia `Ctrl+I` dodają podkatalogi `delta-NNNN.lum/` zawierające tylko zmodyfikowane bufory od ostatniej linii bazowej, zapewniając szybkie zapisywanie punktów kontrolnych niezależnie od wielkości projektu.
-
-Autozapisy mają tę samą strukturę, ale są przechowywane oddzielnie w `~/.cache/lumi/autosave/`, pozostawiając plik roboczy nietknięty.
-- **Bardzo duże projekty**: Projekt zawierający ponad 1000 warstw i terabajty danych najbardziej skorzysta na leniwym ładowaniu; jednakże ostateczny eksport do formatu obrazu płaskiego może zająć trochę czasu.
-- **Dyski sieciowe**: Zapisywanie w katalogach podłączonych do sieci jest obsługiwane, ale jest wolniejsze niż pamięć lokalna ze względu na opóźnienia we/wy.
+Krótko mówiąc, format `.lum` to praktyczny pojemnik do poważnych prac malarskich: wystarczająco otwarty, aby można go było sprawdzić, wystarczająco zorganizowany, aby można go było odzyskać i wystarczająco elastyczny, aby ekonomicznie obsługiwać złożone obrazy warstwowe.

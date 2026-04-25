@@ -4,186 +4,50 @@ type: docs
 url: "hub/features/paintbrush"
 ---
 
-The Brush is the primary painting and drawing tool, designed for responsive, intelligent brushwork with full control over pressure, velocity, tilt, and spacing dynamics.
+The Brush tool is Lumi's core painting instrument: a responsive, expressive way to draw, paint, shade, texture, and build marks directly on the canvas. It is designed to feel immediate while still giving artists room to shape how a stroke behaves.
 
-## Overview
+Rather than being a single fixed brush, it acts as a painting system. Brush shape, texture, movement, pressure, timing, and colour can all contribute to the final mark, making it suitable for clean line work, soft painting, dry media effects, calligraphic strokes, scattered textures, and multi-headed brush formations.
 
-The Brush tool supports raster, procedurally generated, and animated brush types. Strokes can be stabilized, smoothed, and post-processed. Brush dynamics respond to stylus input, giving precise control over opacity, size, color, angle, and other properties during a stroke.
+## Expressive brush marks
 
-## Brush Types
+Brushes can be based on bitmap stamps, procedural shapes, or frame-based animated sources. This allows a stroke to range from a simple soft round mark to a richly textured or evolving brush head. The same painting engine can support precise drawing, painterly buildup, decorative marks, and natural-media-style breakup.
 
-### Raster Brushes (.raster)
-Bitmap brush images that supports alpha transparency.
+When a brush becomes visually complex, the preview can remain simplified so painting stays responsive and easy to read.
 
-### Generated Brushes (.param)
-Procedurally rendered shapes (Circle, Square, Diamond, Triangle) with adjustable parameters: hardness, aspect ratio, angle, roundness, and corner radius. Generated brushes are lightweight and scalable.
+## Dynamics and input response
 
-### Animated Brushes (.anim)
-Sequential frame sequences that advance during strokes. Frames can be cycled incrementally (frame advances per dab), randomly selected per dab, or indexed by dynamics (pressure, velocity, tilt, angle).
+The Brush tool responds to live input such as stylus pressure, speed, direction, tilt, and other controller values. These signals can influence the visible stroke in many ways: thickness, opacity, angle, texture response, colour behaviour, spacing, and other qualities can all change as the hand moves.
 
-## Painting Cursor
-The cursor adapts to the current tool state to provide clear, contextual feedback:
+This makes the Brush feel less like a stamped pattern and more like a physical drawing instrument. A light touch can produce delicate marks, faster motion can open up texture or shape, and direction-sensitive behaviour can help strokes follow the gesture of the hand.
 
-- **Brush outline**: The cursor tracks the exact brush shape and size, giving a live preview of where paint will land.
-- **Erase mode**: When erasing is active, the outline switches to a dashed circle to visually distinguish erase strokes from paint strokes.
-- **Simple brush boundary**: For complex or very large brushes where rendering the accurate outline is costly, enable **Simple brush boundary** (in Additional Options) to use a plain circle instead.
+## Stroke behaviour
 
-## Tool Options
+Strokes can be direct and immediate, or they can be assisted by smoothing and stabilization. These features help reduce unwanted jitter, soften abrupt changes, and make longer movements feel more controlled without removing the character of the artist's input.
 
-### Top-Level Controls
-- **Brush** : Select the brush stamp or edit the active one.
-- **Mode**: Paint blending mode (Normal, Multiply, Screen, etc.)
+The Brush also supports different approaches to paint buildup. It can behave like a continuous stroke, accumulate repeated dabs, or emit marks over time while the pointer is held in place. This flexibility makes it useful for both deliberate line work and slower tonal construction.
 
-### Brush Properties
-In the **Brush Properties** expander (expanded by default):
+For calligraphic or ink-like marks, the Brush can generate a more continuous shaped stroke rather than relying only on repeated stamps. This produces flowing, ribbon-like forms that respond naturally to gesture and speed.
 
-#### Shape
-- **Size**: Brush diameter in pixels.
-- **Aspect Ratio**: Squash or stretch the brush shape (-1.0–1.0). 0 = unmodified; negative values rotate the squash 90°.
-- **Angle**: Rotates the brush stamp (-180–180°). Independent of stroke direction dynamics.
-- **Hardness**: Soft fade (0.0) to sharp edge (1.0).
+## Colour and texture
 
-#### Application
-- **Opacity**: Overall stroke opacity (0–100).
-- **Spacing**: Distance between painted dabs as a percentage of brush size. Lower = smoother strokes; higher = scattered pattern.
-- **Texture Bias**: Bias the stamp texture response; 50 is neutral. Lower values favour texture breakup and a skimmed surface by pulling toward the toe of the value curve; higher values clamp toward solid fills by pushing toward the shoulder. The visible effect depends on the texture's tonal range.
-- **Jitter**: Randomly offsets each dab position by up to this many pixels (0–1024).
-- **Eraser**: Size multiplier applied when this brush is used as an eraser (0.1–10.0). Not shown on the Eraser tool itself.
+Brush strokes can use the active paint colour, respond to gradients, or vary colour through dynamics. Texture handling lets a brush shift between solid coverage and broken, surface-skimming marks, which is useful for dry brush effects, grain, and expressive shading.
 
-### Dynamics
-In the **Dynamics** expander:
-- **Enable dynamics**: Main enable for the active dynamics preset.
-- **Pressure multiply**: Let pressure dominate the dynamics output.
-- **Dynamics**: Selects which input mappings are used.
+Because colour and texture can be part of the same dynamic system as shape and opacity, a single stroke can evolve as it moves across the canvas instead of remaining visually uniform.
 
-### Stroke behavior
-In the **Stroke behavior** expander:
-- **Opacity build-Up**: When on, each dab accumulates opacity rather than being composited as a single stroke.
-- **Post Process**: Applies stabilization, velocity compression, and replay correction after the stroke is complete, improving consistency without latency.
-  - **Turn Threshold**: Angle threshold (0–180°) for direction correction at sharp corners. 0 = skip direction fix.
-  - **Preview Threshold**: Suppresses the post-process preview when stroke velocity exceeds this value (0 = always preview).
+## Brush heads and formations
 
-#### Calligraphic
-When active, dab stamping is replaced by a continuous geometric corridor:
-- **Dynamic Opacity**: Modulates opacity within the stroke based on velocity and direction changes. Works best on fine, controlled strokes; results are less predictable on rapid scribbles. Experimental.
-- **Velocity Growth** (0–100%): Maximum allowed size increase per sample as a percentage of the previous sample's size. Limits how quickly a velocity-driven size dynamic can grow, preventing sudden jumps when the stroke accelerates.
-- **Velocity Shrink** (0–100%): Maximum allowed size decrease per sample. Limits how quickly the size can drop when the stroke decelerates.
+The Brush tool can paint with more than one head at a time. Multiple heads can be arranged around the stroke path to create paired marks, fanned strokes, bristle-like behaviour, spray patterns, or broad textured formations.
 
-#### Motion only
-When on (default), the brush paints only while the pointer is moving. Turn it off to let the brush continue stamping while held still.
-- **Rate**: Controls how quickly stationary timer-stamps are emitted when **Motion Only** is off.
-- **Flow**: Controls the per-dab opacity of those timer-stamps when **Motion Only** is off.
+These heads can follow the direction of travel, vary from one another, and scatter in ways that make the stroke feel organic rather than mechanically repeated. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.
 
-#### Stabilization and smoothing
-- **Direction Stabilization Distance** (0–100 px): Minimum pointer travel before direction-sensitive behavior starts, helping avoid early angle jumps.
+## Animation and variation
 
-#### Smoothing
-Enables real-time input smoothing applied to the stroke path as you paint. Expands to reveal:
-  - **Depth** (2–256): Number of previous input samples considered when computing the smoothed position. Higher values produce a longer, more committed lag.
-  - **Position** (0–100): Intensity of smoothing applied to the brush position. Higher values round out sharp direction changes.
-  - **Pressure** (0–100): Smoothing applied to the stylus pressure signal, reducing pressure spikes and jitter.
-  - **Direction** (0–100): Smoothing applied to the stroke direction, stabilising angle-sensitive dynamics.
+Animated brush sources can change frame as a stroke progresses, giving brushes a sense of movement and variety. Randomisation and per-stroke variation can keep repeated marks from looking identical, while stable seeding can preserve a consistent character when repeatability is needed.
 
-#### Dynamics
-Assign stylus input or other live values to painting parameters:
+These behaviours are useful for brushes that should feel alive: bristles shifting through a stroke, textured stamps changing subtly over time, or multi-head tools where each head has its own personality.
 
-- **Pressure** (stylus): Controls size, opacity, rate, hardness, color, and more based on stylus pressure.
-- **Velocity**: Maps stroke speed to brush properties.
-- **Tilt**: X and Y tilt angles of the stylus affect angle and other parameters.
-- **Wheel**: Mouse wheel or stylus wheel input.
-- **Direction**: Angle of stroke direction.
-- **Fade**: Fade opacity or size over a fixed number of dabs.
+## Artist-focused workflow
 
-Each dynamic input can be mapped to multiple properties independently. Open **Tool Options** → **Dynamics** to configure.
+The Brush tool is organised so common painting decisions stay close at hand, while less frequent setup choices remain out of the way. The intent is to keep the tool approachable during painting while still supporting deep customisation for brush design.
 
-### Stroke Modulation
-In the **Stroke Modulation** expander (shown only when **Dynamics** is enabled):
-
-- **Relative Initial Angle**: The **Initial Angle** value is interpreted relative to the stroke direction rather than as an absolute canvas angle.
-- **Fade Initial Angle**: Fades from the **Initial Angle** at stroke start toward the live dynamic angle over the course of the stroke. Enabling this forces **Relative Initial Angle** on.
-- **Brush Initial Angle** (-180–180°): The brush angle at the very start of a stroke, before dynamics take over.
-- **Initial Angle Blend** (0.0–1.0): Controls how quickly the brush angle transitions from the initial angle to the dynamic angle. 0 = holds the initial angle; 1 = immediately uses the fully dynamic angle.
-- **Fade Length**: Distance in canvas units over which the fade plays out.
-- **Repeat**: How the fade is repeated once the fade length is exhausted (None, Loop, Sawtooth, Triangle).
-
-#### Fade Multipliers
-Four checkboxes that gate or modify how the fade value is applied:
-- **Fade Reverse**: Reverses the fade direction so strokes start faded and become fully opaque.
-- **Fade Multiply**: Multiplies the fade output into the affected property rather than replacing it.
-- **Fade Multiply Angular**: Applies the fade multiplier only to angular dynamics (angle, tilt).
-- **Fade Multiply Ratio**: Applies the fade multiplier only to ratio-type properties (aspect ratio).
-
-#### Color mapping
-Available for Brush and Smudge tools when Dynamics is active:
-- **Gradient**: The gradient resource used for color mapping along the stroke.
-- **Blend Color Space**: Colour space in which gradient colours are interpolated during painting.
-
-
-### Brush Heads
-
-Brush Heads places multiple independent brush heads on a circular **orbit ring** centred on the stroke path. Every head paints a full dab at its own position each time the stroke advances, producing multiple parallel or fanned strokes simultaneously.
-
-The orbit radius is determined by the global brush size minus the head size: larger heads sit closer to the centre; smaller heads orbit further out. Heads space evenly around the ring. With two heads you get one on each side of the stroke, creating a symmetrical spread that behaves like a calligraphy nib. The **Follow Direction** slider rotates the whole ring to stay perpendicular to the stroke, so the nib tracks direction naturally as you paint. Adding more heads fans them progressively around the ring, up to a full spray circle at 16.
-
-Brush Heads controls where each head is placed around the stroke. If **Pivot X** or **Pivot Y** is moved away from the default centre, every head still follows the same formation, but each stamped dab now lands using the chosen internal contact point instead of the geometric centre of the brush image.
-
-Controls appear in the **Brush Heads** expander in the tool options panel.
-- **Enable brush heads**: Main enable for the brush heads system.
-- **Count**: Number of simultaneous brush heads (1–16).
-- **Head Size**: Rendered size of each head relative to the global brush size (0.1–1.0).
-- **Orbit Aspect Ratio** (0.1–1.0): Shapes the formation orbit from circle to ellipse. 1.0 = circular orbit; lower values squash the minor axis.
-- **Formation Angle** (0–360°): Static orientation of the formation ring, used when **Follow Direction** is below 1.0.
-- **Follow Direction** (0.0–1.0): How strongly the formation ring tracks the stroke travel direction. At 1.0 the ring is always perpendicular to the direction of travel; at 0.0 it locks to the static **Formation Angle** value.
-- **Pressure Variation**: Per-head size variation applied as an independent pressure bias through the dynamics curves.
-- **Opacity Variation**: Per-head opacity variation, independent of size variation.
-
-#### Scatter
-Main scatter controls in the **Brush Heads** expander:
-
-- **Scatter Angle** (0–360°, default 10°): Rotates only the random scatter component (not Fill Spacing). Per-head/per-dab angles are outward-biased with controlled crossover to avoid rigid mirrored plumes. Clamped to 360°.
-- **Scatter Distance** (0–10000 px): Random forward displacement from each head's fill-spacing position. Re-rolled every dab.
-- **Scatter Randomness** (0.0–1.0): Additional per-dab variation layered on top of the base scatter distance and angle, producing a looser, more organic spray.
-- **Velocity Influence** (0.0–1.0): Scales the scatter by stroke velocity. At 1.0, fast strokes scatter heads much further than slow strokes; at 0.0, scatter is constant regardless of speed.
-- **Scatter Size Balance** (0.0–1.0): Controls suppression steepness for heads above threshold. At 1.0, all heads scatter equally; lower values increasingly suppress larger heads while heads at/below threshold stay at full scatter distance.
-
-### Tool setup
-
-In the **Tool setup** expander (collapsed by default), controls are grouped as overflow sections that are changed less often. This keeps the main expanders focused on frequently adjusted painting controls.
-
-#### Brush Properties (overflow)
-- **Lock Angle to Screen Space**: Locks brush angle to screen space, so angle stays level while the canvas rotates/flips. No effect when Dynamics controls angle.
-- **Random Flip Horizontal**: 50% chance to mirror each stamp left-to-right per dab.
-- **Random Flip Vertical**: 50% chance to flip each stamp upside-down per dab.
-- **Random Rotation**: Randomly rotates each stamp by 0°, 90°, 180°, or 270° per dab.
-- **Pivot horizontal** (0.0–1.0): Horizontal contact point within the brush image. 0.0 = left edge, 0.5 = centre (default), 1.0 = right edge. The chosen point is what aligns with the paint position on the canvas, so moving it away from centre shifts every dab in that direction. Rotations and flips stay visually anchored to the pivot because the placement offset is applied after the transform.
-- **Pivot vertical** (0.0–1.0): Vertical contact point within the brush image. 0.0 = top edge, 0.5 = centre (default), 1.0 = bottom edge. Works together with **Pivot horizontal** to define the exact part of the dab that sits on the stroke path.
-- **Uniform Jitter**: When on, dab offsets from the **Jitter** slider are drawn from a uniform distribution (every offset equally likely within the range). When off, the distribution is biased toward the centre.
-- **Reset Animation**: For animated brushes: when on, the animation restarts from frame 0 at each new stroke; when off, it continues from where the previous stroke ended.
-
-When either pivot value differs from centre, the brush preview shows a crosshair overlay marking the active stamp contact point.
-
-#### Stroke behavior (overflow)
-- **Restore Last Used Colors**: Restores the foreground and background colors from the previous session at startup, instead of defaulting to black and white.
-- **Simple brush boundary**: Uses a plain circle for the brush cursor outline instead of rendering the full brush shape. Useful for complex or large brushes where the accurate boundary is expensive to draw.
-
-#### Dynamics (overflow)
-Controls that extend the main Dynamics expander, grouped here as they are rarely adjusted:
-- **Preview Random Size**: Shows randomised size variation in the brush outline preview when the active dynamics preset drives size randomly.
-- **Preview Random Rotation**: Shows randomised rotation variation in the brush outline preview when the active dynamics preset drives angle randomly.
-
-#### Brush Heads (overflow)
-Formation:
-- **Bristle Stiffness**: How rigidly the orbit radius follows the dynamics-scaled brush size. 0 = orbit expands and contracts with pressure; 1 = orbit stays fixed to the base size.
-- **Fill Spacing** (0.0–1.0): Spreads heads across the gap between consecutive dab positions. Each head's stable character value determines its lean direction; at 1.0 heads fill the full spacing interval. Character is stable per seed.
-
-Scatter:
-- **Scatter Size Threshold** (0.01–100 px): Threshold radius for full scatter distance. Heads at or below this radius use full scatter distance; larger heads are progressively pulled closer to the stroke.
-
-Randomization:
-- **Character Seed** (0–255): Fixed seed for per-head character (size, fill-spacing position). The same seed reproduces the same formation every stroke. Desensitized when **Randomize Head Character** is on.
-- **Randomize Head Character**: Re-draws per-head character values (size, scatter position) every stamp so the formation is fully chaotic along the stroke. Overrides **Character Seed**.
-- **Independent pipe animation**: For animated brushes: each head advances its animation frame independently.
-
-
-
-
+Overall, the Brush is built to cover both everyday painting and specialised mark-making: quick sketching, polished illustration, textured rendering, expressive ink work, and complex procedural brush effects all share the same flexible foundation.
