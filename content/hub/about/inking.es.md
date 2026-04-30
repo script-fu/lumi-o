@@ -8,4 +8,4 @@ El entintado en Lumi tiene como objetivo el trabajo de línea deliberado: trazos
 El objetivo es hacer que el trabajo de líneas limpias parezca confiable, ya sea que se use para ilustración, representación estilo cómic o bordes pintados muy estructurados.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

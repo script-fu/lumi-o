@@ -8,4 +8,4 @@ Lumi でのインキングは、制御されたストローク、明確なエッ
 目標は、イラスト、コミック スタイルのレンダリング、またはしっかりと構造化されたペイント エッジのいずれに使用される場合でも、きれいな線の作業に信頼性を感じられるようにすることです。
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

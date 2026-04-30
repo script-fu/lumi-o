@@ -8,4 +8,4 @@ L'encrage dans Lumi est destiné au travail au trait délibéré : des traits c
 L'objectif est de rendre le travail aux lignes épurées fiable, qu'il soit utilisé à des fins d'illustration, de rendu de style bande dessinée ou de bords peints étroitement structurés.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

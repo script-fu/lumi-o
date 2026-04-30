@@ -8,4 +8,4 @@ Inking in Lumi syftar till avsiktligt linjearbete: kontrollerade drag, tydlig ka
 Målet är att få rena linjer att kännas pålitligt, oavsett om det används för illustration, rendering i seriestil eller tätt strukturerade målade kanter.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

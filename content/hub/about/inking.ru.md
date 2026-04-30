@@ -8,4 +8,4 @@ weight: 4
 Цель состоит в том, чтобы сделать работу с чистыми линиями надежной, независимо от того, используется ли она для иллюстрации, рендеринга в стиле комиксов или четко структурированных окрашенных краев.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

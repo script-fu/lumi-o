@@ -8,4 +8,4 @@ Das Einfärben in Lumi zielt auf bewusste Linienführung ab: kontrollierte Stric
 Das Ziel besteht darin, die Arbeit mit klaren Linien zuverlässig wirken zu lassen, unabhängig davon, ob sie zur Illustration, zur Wiedergabe im Comic-Stil oder für eng strukturierte Farbkanten verwendet wird.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

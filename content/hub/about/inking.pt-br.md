@@ -8,4 +8,4 @@ A tinta no Lumi visa o trabalho de linha deliberado: traços controlados, defini
 O objetivo é fazer com que o trabalho com linhas limpas pareça confiável, seja ele usado para ilustração, renderização em estilo de quadrinhos ou bordas pintadas bem estruturadas.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)

@@ -8,4 +8,4 @@ Lumi의 잉크 입력은 제어된 획, 명확한 가장자리 정의, 도구와
 목표는 일러스트레이션, 만화 스타일 렌더링 또는 긴밀하게 구조화된 페인트 가장자리에 사용되는 깔끔한 선 작업을 신뢰할 수 있게 만드는 것입니다.
 
 
-[![ink-01](/images/strokes/ink-01_share.jpg)](/images/strokes/ink-01_final_compressed.jpg)
+[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)
