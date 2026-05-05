@@ -3,9 +3,18 @@ title: "Tuszowanie"
 type: docs
 weight: 4
 ---
-Pisanie odręczne w Lumi ma na celu celową pracę z liniami: kontrolowane pociągnięcia, wyraźną definicję krawędzi i przepływ pracy, który wspiera wykańczanie, a nie walkę z narzędziem. Nacisk, odstępy i zachowanie pędzla są dostosowane do spójności i powtarzalności.
+Przestrzeń robocza Inking została stworzona z myślą o celowej pracy liniowej. Jest to etap, na którym rysowanie przestaje być odkrywcze, a zaczyna wymagać zaangażowania: kontrolowane pociągnięcia, wyraźna definicja krawędzi i znaki, które muszą pewnie trzymać swój kształt.
 
-Celem jest sprawienie, aby czysta linia sprawiała wrażenie niezawodnej, niezależnie od tego, czy jest używana do ilustracji, renderowania w stylu komiksu, czy też malowanych krawędzi o wąskiej strukturze.
+Poniżej znajdują się niektóre narzędzia i tryby, które to umożliwiają.
 
+## Wstępne ustawienie pędzla kaligraficznego
 
-[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)
+W trybie kaligraficznym narzędzie Pędzel staje się ciągłym pociągnięciem dłuta, a nie rzędem odbitych punktów. Dołączone ustawienie wstępne kaligrafii wykorzystuje również kąt pochylenia rysika jako dodatkową oś kontroli, dzięki czemu pociągnięcie może reagować nie tylko na nacisk, ale także na sposób trzymania pióra. Jest to przydatne w przypadku twardych, ukształtowanych znaków, które należy czytać jak pojedynczą wstęgę atramentu, nawet gdy zmienia się kąt i nacisk.
+
+![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
+
+## Wstępne ustawienie pędzla zygzakowatego
+
+Ustawienie wstępne Zig-zag wyostrza narożniki, gdy pociągnięcie szybko zmienia kierunek, tworząc ostre, kątowe zakręty. Przydatny do energicznych, graficznych szkiców często spotykanych w rysunku tuszem.
+
+![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)

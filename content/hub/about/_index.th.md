@@ -6,7 +6,7 @@ type: docs
 {{< cards >}}
 	{{< card link="lumi-o" title="ลูมิโอ" icon="information-circle" subtitle="Lumi คืออะไร เหตุใดจึงมีอยู่ และแนวคิดที่เป็นตัวกำหนดการพัฒนา" >}}
 	{{< card link="workspace" title="พื้นที่ทำงาน" icon="view-boards" subtitle="อินเทอร์เฟซเฉพาะที่ออกแบบมาสำหรับเวิร์กโฟลว์การลงสีที่มีโครงสร้างและไม่ทำลาย" >}}
-	{{< card link="pencils" title="ดินสอ" icon="pencil" subtitle="เครื่องมือการร่างและการก่อสร้างสำหรับการวาดแบบหลวมๆ การวางแผน และงานลายเส้นเบื้องต้น" >}}
+	{{< card link="construction" title="การก่อสร้าง" icon="pencil" subtitle="พื้นที่ทำงานแบบ Lay-in ที่กระจัดกระจายสำหรับการตัดสินใจเรื่องรูปทรง รูปทรง และการวาดตั้งแต่เนิ่นๆ" >}}
 	{{< card link="inking" title="การใช้หมึก" icon="pencil-alt" subtitle="ควบคุมงานเส้นและการตกแต่งที่สะอาดตาสำหรับเวิร์กโฟลว์ภาพประกอบโดยเจตนา" >}}
 	{{< card link="color" title="สี" icon="color-swatch" subtitle="จานสีที่ใช้เม็ดสีและการจัดการสีที่เกิดจากการฝึกฝนสื่อแบบดั้งเดิม" >}}
 	{{< card link="download" title="ดาวน์โหลด" icon="download" subtitle="รับ AppImage บิวด์ล่าสุดหรือไปที่แหล่งเก็บข้อมูลต้นทาง" >}}

@@ -3,6 +3,10 @@ title: "Arbetsyta"
 type: docs
 weight: 2
 ---
-Lumis arbetsyta är designad för fokuserad målning snarare än allmän bildredigering. Paneler, verktyg och vyer är arrangerade för att hålla ritprocessen tydlig, lyhörd och lätt att hantera under långa sessioner.
+Arbetsytor är en grundläggande del av Lumi, tillgänglig direkt från menyn Arbetsytor. De växlar snabbt och smidigt, så att flytta från ett steg i ett projekt till ett annat är som att välja ett applikationsläge.
 
-Målet är strukturell klarhet: lager förblir läsbara, färgverktyg finns nära till hands och gränssnittet minskar distraktioner som inte stöder illustrationsarbete. När programvaran växer fortsätter arbetsytan att formas kring verklig produktionsanvändning snarare än funktionsspridning.
+Målet är inte att tvinga in varje kontroll, panel och resurs i ett universellt utrymme. Varje arbetsyta kan formas för ett specifikt jobb, med endast de verktyg, plugins, paletter och resursvägar som faktiskt behövs för det stadiet av arbetet. Om du till exempel ritar konstruktion kan det räcka med en enda verktygsförinställning, uppstarten förblir snabb och gränssnittet förblir enkelt eftersom det är byggt för den uppgiften snarare än för alla möjliga uppgifter.
+
+Lumi kombinerar tre kärnarbetsytor för arbetsflöden: Konstruktion, Färgning och Färgning. Dessa är avsedda som de huvudsakliga produktionsutrymmena. Det paketerar också ett antal alternativa layouter och temalayouter så att användare kan se hur flexibelt arbetsplatssystemet är, experimentera med olika arrangemang och anpassa programvaran till det sätt de föredrar att arbeta.
+
+![workspace-01](/images/screens/workspace-construction_share.jpg)

@@ -3,6 +3,10 @@ title: "Espacio de trabajo"
 type: docs
 weight: 2
 ---
-El espacio de trabajo de Lumi está diseñado para pintar enfocado en lugar de editar imágenes de propósito general. Los paneles, herramientas y vistas están organizados para mantener el proceso de dibujo claro, receptivo y fácil de administrar durante sesiones largas.
+Los espacios de trabajo son una parte fundamental de Lumi, disponibles directamente desde el menú Espacios de trabajo. Cambian rápida y suavemente, por lo que pasar de una etapa de un proyecto a otra es como seleccionar un modo de aplicación.
 
-El objetivo es la claridad estructural: las capas siguen siendo legibles, las herramientas de color permanecen al alcance de la mano y la interfaz reduce las distracciones que no respaldan el trabajo de ilustración. A medida que el software crece, el espacio de trabajo sigue dependiendo del uso de producción real en lugar de la proliferación de funciones.
+El objetivo no es obligar a todos los controles, paneles y recursos a estar en un espacio universal. Cada espacio de trabajo se puede configurar para un trabajo específico, con solo las herramientas, complementos, paletas y rutas de recursos que realmente se necesitan para esa etapa del trabajo. Si está haciendo un dibujo de construcción, por ejemplo, una sola herramienta preestablecida puede ser suficiente, el inicio sigue siendo rápido y la interfaz sigue siendo simple porque está diseñada para esa tarea en lugar de para todas las tareas posibles.
+
+Lumi incluye tres espacios de trabajo principales de flujo de trabajo: construcción, entintado y coloración. Estos están pensados ​​como los principales espacios de producción. También incluye una serie de diseños alternativos y temáticos para que los usuarios puedan ver cuán flexible es el sistema del espacio de trabajo, experimentar con diferentes disposiciones y adaptar el software a la forma en que prefieren trabajar.
+
+![workspace-01](/images/screens/workspace-construction_share.jpg)

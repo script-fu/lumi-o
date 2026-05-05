@@ -3,6 +3,10 @@ title: "Espace de travail"
 type: docs
 weight: 2
 ---
-L'espace de travail de Lumi est conçu pour la peinture ciblée plutôt que pour l'édition d'images à usage général. Les panneaux, les outils et les vues sont disposés pour que le processus de dessin reste clair, réactif et facile à gérer pendant de longues sessions.
+Les espaces de travail sont un élément fondamental de Lumi, disponible directement depuis le menu Espaces de travail. Ils basculent rapidement et en douceur, donc passer d'une étape d'un projet à une autre revient à sélectionner un mode d'application.
 
-L'objectif est la clarté structurelle : les calques restent lisibles, les outils de couleur restent à portée de main et l'interface réduit les distractions qui ne prennent pas en charge le travail d'illustration. À mesure que le logiciel se développe, l'espace de travail continue d'être façonné autour d'une utilisation réelle en production plutôt que d'une prolifération de fonctionnalités.
+L’objectif n’est pas de regrouper tous les contrôles, panneaux et ressources dans un seul espace universel. Chaque espace de travail peut être conçu pour une tâche spécifique, avec uniquement les outils, plugins, palettes et chemins de ressources réellement nécessaires pour cette étape de travail. Si vous réalisez des dessins de construction, par exemple, un seul outil prédéfini peut suffire, le démarrage reste rapide et l'interface reste simple car elle est conçue pour cette tâche plutôt que pour toutes les tâches possibles.
+
+Lumi regroupe trois espaces de travail de flux de travail principaux : construction, encrage et coloration. Ceux-ci sont destinés à constituer les principaux espaces de production. Il regroupe également un certain nombre de dispositions alternatives et thématiques afin que les utilisateurs puissent voir à quel point le système d'espace de travail est flexible, expérimenter différentes dispositions et adapter le logiciel à la façon dont ils préfèrent travailler.
+
+![workspace-01](/images/screens/workspace-construction_share.jpg)

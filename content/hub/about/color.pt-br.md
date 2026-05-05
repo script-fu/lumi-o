@@ -3,6 +3,8 @@ title: "Cor"
 type: docs
 weight: 5
 ---
-A cor no Lumi é moldada pela prática da mídia tradicional. Em vez de tratar a cor como um problema RGB puramente abstrato, Lumi dá forte ênfase aos pigmentos, à estrutura da paleta e ao comportamento de mistura que parece útil para os pintores.
+A área de trabalho Coloração foi criada para decisões deliberadas de cores, em vez de ajustes de imagem de uso geral. É moldado pela prática da mídia tradicional, com ênfase nos pigmentos, na estrutura da paleta e no comportamento de mistura que permanece compreensível enquanto a pintura se torna mais complexa.
 
-Isso ajuda os artistas a construir paletas controladas, tomar decisões deliberadas sobre cores e trabalhar com harmonias que permanecem compreensíveis em ilustrações complexas.
+O objetivo não é sobrecarregar o pintor com todos os controles de cores possíveis de uma só vez. O espaço de trabalho pode manter o foco nas paletas, ferramentas e recursos necessários para a etapa de coloração, para que as decisões sobre harmonia, valor e material sejam mais claras e fáceis de gerenciar.
+
+Isso torna mais fácil construir paletas controladas, trabalhar com intenção e manter as relações de cores legíveis em toda a imagem. Como parte dos três principais espaços de fluxo de trabalho do Lumi, o Coloring pretende dar à pintura seu próprio ambiente dedicado, em vez de tratá-la como algo anexado ao desenho ou ao trabalho de linha.

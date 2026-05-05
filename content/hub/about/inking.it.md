@@ -3,9 +3,18 @@ title: "Inchiostrazione"
 type: docs
 weight: 4
 ---
-L'inchiostrazione in Lumi è finalizzata al lavoro in linea deliberato: tratti controllati, definizione chiara dei bordi e un flusso di lavoro che supporta la finitura anziché contrastare lo strumento. La pressione, la spaziatura e il comportamento del pennello sono ottimizzati per garantire coerenza e ripetibilità.
+L'area di lavoro Inchiostrazione è progettata per il lavoro in linea intenzionale. È la fase in cui il disegno smette di essere esplorativo e inizia a diventare impegnativo: tratti controllati, definizione chiara dei bordi e segni che devono mantenere la loro forma con sicurezza.
 
-L'obiettivo è rendere affidabile il lavoro con linee pulite, sia che venga utilizzato per illustrazioni, rendering in stile fumetto o bordi dipinti strettamente strutturati.
+Di seguito sono riportati alcuni degli strumenti e delle modalità che lo rendono possibile.
 
+## Preimpostazione pennello calligrafico
 
-[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)
+La modalità calligrafica trasforma lo strumento Pennello in un tratto continuo di penna a scalpello anziché in una fila di tocchi stampati. La preimpostazione calligrafica in bundle utilizza anche l'angolo di inclinazione dello stilo come asse di controllo aggiuntivo, quindi il tratto può rispondere non solo alla pressione ma al modo in cui viene tenuta la penna. È utile per segni solidi e sagomati che devono essere letti come un unico nastro di inchiostro, anche quando l'angolo e la pressione cambiano.
+
+![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
+
+## Preimpostazione pennello zig-zag
+
+La preimpostazione Zig-zag rende più nitidi gli angoli quando il tratto cambia direzione rapidamente, producendo curve nette e angolari. Utile per lavori al tratto energici e grafici spesso visti nel disegno a inchiostro.
+
+![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)

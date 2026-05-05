@@ -3,9 +3,18 @@ title: "Einfärben"
 type: docs
 weight: 4
 ---
-Das Einfärben in Lumi zielt auf bewusste Linienführung ab: kontrollierte Striche, klare Kantendefinition und ein Arbeitsablauf, der die Endbearbeitung unterstützt, statt gegen das Werkzeug anzukämpfen. Druck, Abstand und Bürstenverhalten sind auf Konsistenz und Wiederholbarkeit abgestimmt.
+Der Freihand-Arbeitsbereich ist für bewusste Linienarbeit konzipiert. Es ist die Phase, in der das Zeichnen aufhört, forschend zu sein, und beginnt, sich zu engagieren: kontrollierte Striche, klare Kantendefinition und Markierungen, die ihre Form souverän beibehalten müssen.
 
-Das Ziel besteht darin, die Arbeit mit klaren Linien zuverlässig wirken zu lassen, unabhängig davon, ob sie zur Illustration, zur Wiedergabe im Comic-Stil oder für eng strukturierte Farbkanten verwendet wird.
+Nachfolgend finden Sie einige der Tools und Modi, die dies ermöglichen.
 
+## Kalligrafische Pinselvoreinstellung
 
-[![ink-01](/images/strokes/ink-blank_share.jpg)](/images/strokes/ink-blank_final_compressed.jpg)
+Der kalligrafische Modus verwandelt das Pinselwerkzeug in einen kontinuierlichen Meißelstrich und nicht in eine Reihe geprägter Tupfer. Die mitgelieferte kalligrafische Voreinstellung nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse, sodass der Strich nicht nur auf Druck, sondern auch darauf reagieren kann, wie der Stift gehalten wird. Es ist nützlich für feste, geformte Markierungen, die als einzelnes Farbband lesbar sein müssen, selbst wenn sich Winkel und Druck ändern.
+
+![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
+
+## Zick-Zack-Pinselvoreinstellung
+
+Die Zick-Zack-Voreinstellung schärft Ecken, wenn sich die Richtung des Strichs schnell ändert, und erzeugt so scharfe, eckige Kurven. Nützlich für energische, grafische Linienführung, die häufig in Tuschezeichnungen zu finden ist.
+
+![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)

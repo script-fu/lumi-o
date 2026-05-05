@@ -3,6 +3,8 @@ title: "Kolor"
 type: docs
 weight: 5
 ---
-Kolor w Lumi kształtowany jest przez tradycyjną praktykę medialną. Zamiast traktować kolor jako czysto abstrakcyjny problem RGB, Lumi kładzie duży nacisk na pigmenty, strukturę palety i zachowanie mieszania, które jest przydatne dla malarzy.
+Przestrzeń robocza Kolorowanie została stworzona z myślą o świadomych decyzjach dotyczących kolorów, a nie o ogólnej regulacji obrazu. Jest kształtowany przez tradycyjną praktykę medialną, z naciskiem na pigmenty, strukturę palety i zachowanie podczas mieszania, które pozostaje zrozumiałe, gdy obraz staje się bardziej złożony.
 
-Pomaga to artystom w tworzeniu kontrolowanych palet, podejmowaniu przemyślanych decyzji dotyczących kolorów i pracy z harmoniami, które pozostają zrozumiałe na złożonych ilustracjach.
+Chodzi o to, aby nie przeciążać malarza wszystkimi możliwymi kontrolami koloru na raz. Przestrzeń robocza może skupiać się na paletach, narzędziach i zasobach potrzebnych na etapie kolorowania, dzięki czemu decyzje dotyczące harmonii, wartości i materiału wydają się jaśniejsze i łatwiejsze w zarządzaniu.
+
+Ułatwia to budowanie kontrolowanych palet, celową pracę i utrzymywanie czytelnych relacji kolorów na całym obrazie. Kolorowanie, będące częścią trzech głównych obszarów przepływu pracy Lumi, ma zapewnić malowanie własne, dedykowane środowisko, a nie traktować je jako coś przyczepionego do rysunku lub pracy liniowej.
