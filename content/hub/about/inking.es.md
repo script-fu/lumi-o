@@ -7,14 +7,20 @@ El espacio de trabajo Inking está diseñado para el trabajo de líneas delibera
 
 A continuación se muestran algunas de las herramientas y modos que lo hacen posible.
 
-## Preestablecido de pincel caligráfico
+## Preajuste caligráfico
 
 El modo Caligráfico convierte la herramienta Pincel en un trazo continuo de cincel en lugar de una fila de pinceladas estampadas. El ajuste preestablecido caligráfico incluido también utiliza el ángulo de inclinación del lápiz como un eje de control adicional, por lo que el trazo puede responder no solo a la presión sino también a la forma en que se sostiene el lápiz. Es útil para marcas firmes y con forma que deben leerse como una sola cinta de tinta, incluso cuando cambian el ángulo y la presión.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Preajuste de pincel en zig-zag
+## Preestablecido en zig-zag
 
-El ajuste preestablecido Zig-zag agudiza las esquinas cuando el trazo cambia de dirección rápidamente, produciendo giros angulares y nítidos. Útil para líneas gráficas y enérgicas que a menudo se ven en dibujos con tinta.
+El ajuste preestablecido Zig-zag afina las esquinas cuando el trazo cambia de dirección rápidamente, produciendo giros angulares y nítidos con un chasquido que las curvas suaves no pueden lograr. Útil para líneas y sombreados gráficos y energéticos.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
+
+## Preajuste de tinta
+
+La clásica línea de pinceles de cómic. Trazos fluidos y de peso variable con un ritmo seguro de grueso a fino; el tipo de línea que Watterson o Uderzo reconocerían.
+
+![ink-01](/images/strokes/ink-brush_share.jpg)

@@ -17,6 +17,12 @@ Calligraphic mode turns the Brush tool into a continuous chisel-pen stroke rathe
 
 ## Zig-zag Preset
 
-The Zig-zag preset sharpens corners when the stroke changes direction quickly, producing crisp, angular turns. Useful for energetic, graphic linework often seen in ink drawing.
+The Zig-zag preset sharpens corners when the stroke changes direction quickly, producing crisp, angular turns with a snap that smooth curves can't achieve. Useful for energetic, graphic linework and hatching.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
+
+## Ink Preset
+
+The classic comic brush line. Fluid, variable-weight strokes with a confident thick-to-thin rhythm; the kind of line Watterson or Uderzo would recognise.
+
+![ink-01](/images/strokes/ink-brush_share.jpg)
