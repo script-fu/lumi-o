@@ -19,8 +19,18 @@ Ustawienie wstępne Zig-zag wyostrza rogi, gdy pociągnięcie szybko zmienia kie
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Wstępne ustawienie atramentu
+## Ustawienie sobolowe
 
 Klasyczna linia pędzli komiksowych. Płynne uderzenia o zmiennej masie i pewnym rytmie od grubych do cienkich; taki rodzaj wypowiedzi, jaki Watterson lub Uderzo rozpoznaliby.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Wstępne ustawienie końcówki
+
+Zainspirowany stalówką Waverly, ustawienie wstępne toleruje szybki ruch i zmiany kierunku, jednocześnie tworząc ostre, wyraziste linie atramentu. Ponieważ ilość atramentu wyczerpuje się w miarę pracy, pociągnięcia mogą zaczynać się od ciemnych i nasyconych, a następnie w miarę opróżniania stalówki zamieniać się w bardziej zarysowane, zaschnięte ślady.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Wstępnie ustawione wskazówki
+
+Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawędzie i niewielkie lub żadne różnice w obrysach. Przydatny do linii konstrukcyjnych, diagramów, liter i kontrolowanych prac graficznych, gdzie jednolitość jest ważniejsza niż ekspresja.

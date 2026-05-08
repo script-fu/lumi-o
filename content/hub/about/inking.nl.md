@@ -19,8 +19,18 @@ De voorinstelling Zigzag scherpt de hoeken wanneer de slag snel van richting ver
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Inktvoorinstelling
+## Sable-voorinstelling
 
 De klassieke komische penseellijn. Vloeiende slagen met variabel gewicht en een zelfverzekerd dik-naar-dun ritme; het soort lijn dat Watterson of Uderzo zouden herkennen.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Penpunt-voorinstelling
+
+Geïnspireerd door de Waverly-punt, tolereert de preset snelle bewegingen en richtingsveranderingen terwijl hij nog steeds scherpe, expressieve inktlijnen produceert. Omdat de inktvoorraad afneemt terwijl u werkt, kunnen de streken donker en verzadigd beginnen en vervolgens uitmonden in krassende, uitgehongerde vlekken naarmate de punt leeg raakt.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Tipvoorinstelling
+
+De dode lijn van een technische tekenpen. Consistente breedte, strakke randen en weinig tot geen lijnvariatie. Handig voor constructielijnen, diagrammen, letters en gecontroleerd grafisch werk waarbij uniformiteit belangrijker is dan expressie.

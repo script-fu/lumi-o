@@ -19,8 +19,18 @@ Die Voreinstellung „Zick-Zack“ schärft Ecken, wenn sich die Richtung des St
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Tintenvoreinstellung
+## Sable-Voreinstellung
 
 Die klassische Comic-Pinsellinie. Flüssige Striche mit variablem Gewicht und einem sicheren Dick-zu-Dünn-Rhythmus; die Art von Linie, die Watterson oder Uderzo erkennen würden.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Federvoreinstellung
+
+Inspiriert von der Waverly-Feder toleriert die Voreinstellung schnelle Bewegungen und Richtungsänderungen und erzeugt dennoch scharfe, ausdrucksstarke Tintenlinien. Da die Tintenmenge mit der Arbeit abnimmt, können die Striche zunächst dunkel und gesättigt sein und sich beim Entleeren der Spitze in kratzigere, ausgehungerte Flecken verwandeln.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Spitzenvoreinstellung
+
+Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten und geringe bis keine Strichabweichung. Nützlich für Konstruktionslinien, Diagramme, Beschriftungen und kontrollierte grafische Arbeiten, bei denen Einheitlichkeit wichtiger ist als Ausdruck.

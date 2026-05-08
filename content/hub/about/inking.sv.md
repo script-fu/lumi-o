@@ -19,8 +19,18 @@ Zig-zag-förinställningen skärper hörn när slaget ändrar riktning snabbt, v
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Ink Preset
+## Sable Preset
 
 Den klassiska komiska borstlinjen. Flytande slag med variabel vikt med en säker tjock-till-tunn rytm; den typ av linje Watterson eller Uderzo skulle känna igen.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Nib Preset
+
+Inspirerad av Waverly-spetsen, tolererar förinställningen snabba rörelser och riktningsändringar samtidigt som den producerar skarpa, uttrycksfulla bläcklinjer. Eftersom bläcket tar slut när du arbetar, kan dragen börja mörka och mättade och sedan bryta upp i skrapare, utsvultna märken när spetsen töms.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Tips förinställd
+
+Deadline för en teknisk ritpenna. Konsekvent bredd, rena kanter och liten eller ingen slagvariation. Användbar för konstruktionslinjer, diagram, bokstäver och kontrollerat grafiskt arbete där enhetlighet är viktigare än uttryck.

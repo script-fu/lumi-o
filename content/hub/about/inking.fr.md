@@ -19,8 +19,18 @@ Le préréglage Zigzag accentue les coins lorsque le trait change rapidement de 
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Préréglage d'encre
+## Préréglage de sable
 
 La ligne de pinceau classique de la bande dessinée. Des mouvements fluides et à poids variable avec un rythme épais à fin confiant ; le genre de ligne que Watterson ou Uderzo reconnaîtraient.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Préréglage de la plume
+
+Inspiré de la plume Waverly, le préréglage tolère des mouvements rapides et des changements de direction tout en produisant des lignes d'encre nettes et expressives. Étant donné que la charge d'encre s'épuise à mesure que vous travaillez, les traits peuvent commencer sombres et saturés, puis se transformer en marques plus grattées et affamées à mesure que la plume se vide.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Astuce prédéfinie
+
+La ligne morte d’un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression.

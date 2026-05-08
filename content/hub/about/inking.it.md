@@ -19,8 +19,18 @@ La preimpostazione Zig-zag rende più nitidi gli angoli quando il tratto cambia 
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Preimpostazione inchiostro
+## Preimpostazione zibellino
 
 La classica linea di pennelli comici. Colpi fluidi e di peso variabile con un ritmo sicuro da spesso a sottile; il tipo di linea che Watterson o Uderzo riconoscerebbero.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Pennino preimpostato
+
+Ispirato al pennino Waverly, il preset tollera movimenti rapidi e cambi di direzione pur producendo linee di inchiostro nitide ed espressive. Poiché il carico di inchiostro si esaurisce mentre si lavora, i tratti possono iniziare scuri e saturi, per poi trasformarsi in segni più graffianti e affamati quando il pennino si svuota.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Suggerimento preimpostato
+
+La linea morta di un pennarello da disegno tecnico. Larghezza uniforme, bordi puliti e variazione del tratto minima o nulla. Utile per linee di costruzione, diagrammi, caratteri e lavori grafici controllati in cui l'uniformità conta più dell'espressione.

@@ -21,8 +21,19 @@ The Zig-zag preset sharpens corners when the stroke changes direction quickly, p
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Ink Preset
+## Sable Preset
 
 The classic comic brush line. Fluid, variable-weight strokes with a confident thick-to-thin rhythm; the kind of line Watterson or Uderzo would recognise.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Nib Preset
+
+Inspired by the Waverly nib, the preset tolerates fast movement and directional changes while still producing sharp, expressive ink lines. Because the ink load depletes as you work, strokes can begin dark and saturated, then break into scratchier, starved marks as the nib empties.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Tip Preset
+
+The dead line of a technical drawing pen. Consistent width, clean edges, and little to no stroke variation. Useful for construction lines, diagrams, lettering, and controlled graphic work where uniformity matters more than expression.
+

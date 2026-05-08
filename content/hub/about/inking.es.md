@@ -19,8 +19,18 @@ El ajuste preestablecido Zig-zag afina las esquinas cuando el trazo cambia de di
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Preajuste de tinta
+## Preestablecido de Sable
 
 La clásica línea de pinceles de cómic. Trazos fluidos y de peso variable con un ritmo seguro de grueso a fino; el tipo de línea que Watterson o Uderzo reconocerían.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
+
+## Preestablecido de punta
+
+Inspirado en la punta Waverly, el ajuste preestablecido tolera movimientos rápidos y cambios de dirección sin dejar de producir líneas de tinta nítidas y expresivas. Debido a que la carga de tinta se agota a medida que trabaja, los trazos pueden comenzar oscuros y saturados, y luego convertirse en marcas más ásperas y hambrientas a medida que la punta se vacía.
+
+![ink-01](/images/strokes/ink-nib_share.jpg)
+
+## Consejo preestablecido
+
+La fecha límite de un lápiz de dibujo técnico. Ancho constante, bordes limpios y poca o ninguna variación de trazo. Útil para líneas de construcción, diagramas, letras y trabajos gráficos controlados donde la uniformidad importa más que la expresión.
