@@ -40,6 +40,12 @@ The Brush tool can paint with more than one head at a time. Multiple heads can b
 
 These heads can follow the direction of travel, vary from one another, and scatter in ways that make the stroke feel organic rather than mechanically repeated. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.
 
+## Brush load and paint pickup
+
+The Brush can also simulate how much paint or material is currently carried on the brush. As a stroke continues, that load can gradually run down, letting marks become lighter, drier, thinner, rougher, or otherwise more broken up depending on how the brush dynamics are set.
+
+Load can be reintroduced between strokes, held at a chosen level, or used as a live control signal for other brush behaviours. This makes it possible to build brushes that feel more like real media: wet at the start of a stroke, progressively exhausted through distance, and then dipped again for the next pass.
+
 ## Animation and variation
 
 Animated brush sources can change frame as a stroke progresses, giving brushes a sense of movement and variety. Randomisation and per-stroke variation can keep repeated marks from looking identical, while stable seeding can preserve a consistent character when repeatability is needed.

@@ -36,7 +36,13 @@ Les coups de pinceau peuvent utiliser la couleur de peinture active, réagir aux
 
 L'outil Pinceau peut peindre avec plusieurs têtes à la fois. Plusieurs têtes peuvent être disposées autour de la trajectoire du trait pour créer des marques appariées, des traits en éventail, un comportement semblable à des poils, des motifs de pulvérisation ou de larges formations texturées.
 
-Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait une sensation organique plutôt que mécaniquement répétée. Ceci est particulièrement utile pour les pinceaux naturels, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques bénéficiant d’une irrégularité contrôlée.## Animation et variation
+Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait une sensation organique plutôt que mécaniquement répétée. Ceci est particulièrement utile pour les pinceaux naturels, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques bénéficiant d’une irrégularité contrôlée.## Chargement des pinceaux et ramassage de la peinture
+
+Le pinceau peut également simuler la quantité de peinture ou de matériau actuellement transportée sur le pinceau. Au fur et à mesure qu'un trait se poursuit, cette charge peut diminuer progressivement, laissant les marques devenir plus claires, plus sèches, plus fines, plus rugueuses ou autrement plus fragmentées en fonction de la manière dont la dynamique du pinceau est définie.
+
+La charge peut être réintroduite entre les coups, maintenue à un niveau choisi ou utilisée comme signal de contrôle en direct pour d'autres comportements de brosse. Cela permet de créer des pinceaux qui ressemblent davantage à de vrais supports : mouillés au début d'un trait, progressivement épuisés au fil de la distance, puis plongés à nouveau pour le passage suivant.
+
+## Animation et variation
 
 Les sources de pinceaux animées peuvent changer de cadre à mesure que le trait progresse, donnant aux pinceaux une impression de mouvement et de variété. La randomisation et la variation par trait peuvent empêcher les marques répétées de paraître identiques, tandis qu'un ensemencement stable peut préserver un caractère cohérent lorsque la répétabilité est nécessaire.
 

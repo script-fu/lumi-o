@@ -14,7 +14,7 @@ Wanneer een penseel visueel complex wordt, kan het voorbeeld vereenvoudigd blijv
 
 ## Dynamiek en invoerreactie
 
-Het penseel reageert op live invoer, zoals stylusdruk, snelheid, richting, kanteling en andere controllerwaarden. Deze signalen kunnen de zichtbare streek op veel manieren beïnvloeden: dikte, dekking, hoek, textuurreactie, kleurgedrag, afstand en andere eigenschappen kunnen allemaal veranderen als de hand beweegt.
+The Brush tool responds to live input such as stylus pressure, speed, direction, tilt, and other controller values. Deze signalen kunnen de zichtbare streek op veel manieren beïnvloeden: dikte, dekking, hoek, textuurreactie, kleurgedrag, afstand en andere eigenschappen kunnen allemaal veranderen als de hand beweegt.
 
 Hierdoor voelt de Brush minder aan als een gestempeld patroon en meer als een fysiek tekeninstrument. Een lichte aanraking kan delicate vlekken veroorzaken, snellere bewegingen kunnen textuur of vorm onthullen, en richtinggevoelig gedrag kan ertoe bijdragen dat de bewegingen het gebaar van de hand volgen.
 
@@ -36,7 +36,13 @@ Omdat kleur en textuur deel kunnen uitmaken van hetzelfde dynamische systeem als
 
 Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kunnen meerdere koppen rond het streekpad worden geplaatst om gepaarde markeringen, uitwaaierende lijnen, borstelachtig gedrag, spuitpatronen of brede textuurformaties te creëren.
 
-Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.## Animatie en variatie
+Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.## Borstelbelasting en verfopname
+
+De Brush kan ook simuleren hoeveel verf of materiaal er momenteel op de kwast zit. Naarmate een streek voortduurt, kan die belasting geleidelijk afnemen, waardoor markeringen lichter, droger, dunner, ruwer of anderszins meer gebroken worden, afhankelijk van hoe de penseeldynamiek is ingesteld.
+
+De belasting kan opnieuw worden geïntroduceerd tussen de poetsbewegingen, op een gekozen niveau worden gehouden of worden gebruikt als een live controlesignaal voor ander poetsgedrag. Dit maakt het mogelijk om penselen te bouwen die meer aanvoelen als echte media: nat aan het begin van een streek, geleidelijk uitgeput door de afstand, en dan weer ondergedompeld voor de volgende passage.
+
+## Animatie en variatie
 
 Geanimeerde penseelbronnen kunnen van frame veranderen naarmate een streek vordert, waardoor penselen een gevoel van beweging en variatie krijgen. Randomisatie en variatie per slag kunnen ervoor zorgen dat herhaalde markeringen er niet identiek uitzien, terwijl stabiel zaaien een consistent karakter kan behouden wanneer herhaalbaarheid nodig is.
 

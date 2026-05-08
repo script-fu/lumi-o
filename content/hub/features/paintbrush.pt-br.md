@@ -36,7 +36,13 @@ Como a cor e a textura podem fazer parte do mesmo sistema dinâmico que a forma 
 
 A ferramenta Pincel pode pintar com mais de uma cabeça por vez. Várias cabeças podem ser dispostas ao redor do caminho do traço para criar marcas emparelhadas, traços em leque, comportamento semelhante a cerdas, padrões de pulverização ou formações texturizadas amplas.
 
-Essas cabeças podem seguir a direção do deslocamento, variar umas das outras e se espalhar de maneiras que fazem com que o golpe pareça orgânico, em vez de repetido mecanicamente. Isso é especialmente útil para pincéis de mídia natural, traços decorativos, folhagens, pêlos, hachuras e outras marcas que se beneficiam de irregularidades controladas.## Animação e variação
+Essas cabeças podem seguir a direção do deslocamento, variar umas das outras e se espalhar de maneiras que fazem com que o golpe pareça orgânico, em vez de repetido mecanicamente. Isso é especialmente útil para pincéis de mídia natural, traços decorativos, folhagens, pêlos, hachuras e outras marcas que se beneficiam de irregularidades controladas.## Carregamento de pincel e coleta de tinta
+
+O Pincel também pode simular a quantidade de tinta ou material que está atualmente carregado no pincel. À medida que um traço continua, essa carga pode diminuir gradualmente, deixando as marcas ficarem mais claras, mais secas, mais finas, mais ásperas ou mais fragmentadas, dependendo de como a dinâmica do pincel é definida.
+
+A carga pode ser reintroduzida entre as pinceladas, mantida em um nível escolhido ou usada como um sinal de controle ao vivo para outros comportamentos da escova. Isso torna possível construir pincéis que se parecem mais com mídia real: molhados no início de uma pincelada, esgotados progressivamente ao longo da distância e depois mergulhados novamente para a próxima passagem.
+
+## Animação e variação
 
 As fontes de pincéis animados podem mudar de quadro à medida que o traço avança, dando aos pincéis uma sensação de movimento e variedade. A randomização e a variação por traço podem evitar que marcas repetidas pareçam idênticas, enquanto a propagação estável pode preservar um caráter consistente quando a repetibilidade é necessária.
 

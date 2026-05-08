@@ -36,7 +36,13 @@ Debido a que el color y la textura pueden ser parte del mismo sistema dinámico 
 
 La herramienta Pincel puede pintar con más de un cabezal a la vez. Se pueden disponer varios cabezales alrededor del recorrido del trazo para crear marcas emparejadas, trazos en abanico, comportamiento similar a cerdas, patrones de pulverización o formaciones de textura amplia.
 
-Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y dispersarse de manera que el trazo se sienta orgánico en lugar de repetido mecánicamente. Esto es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelaje, sombreado y otras marcas que se benefician de una irregularidad controlada.## Animación y variación.
+Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y dispersarse de manera que el trazo se sienta orgánico en lugar de repetido mecánicamente. Esto es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelaje, sombreado y otras marcas que se benefician de una irregularidad controlada.## Carga de pincel y recogida de pintura
+
+El Pincel también puede simular cuánta pintura o material se encuentra actualmente en el pincel. A medida que continúa el trazo, esa carga puede disminuir gradualmente, permitiendo que las marcas se vuelvan más claras, más secas, más delgadas, más ásperas o más fragmentadas dependiendo de cómo se establezca la dinámica del pincel.
+
+La carga se puede reintroducir entre pasadas, mantener en un nivel elegido o utilizar como señal de control en vivo para otros comportamientos del cepillo. Esto hace posible crear pinceles que se sienten más como medios reales: húmedos al comienzo de un trazo, agotados progresivamente a lo largo de la distancia y luego sumergidos nuevamente para la siguiente pasada.
+
+## Animación y variación.
 
 Las fuentes de pincel animadas pueden cambiar de marco a medida que avanza el trazo, dando a los pinceles una sensación de movimiento y variedad. La aleatorización y la variación por trazo pueden evitar que las marcas repetidas parezcan idénticas, mientras que la siembra estable puede preservar un carácter consistente cuando se necesita repetibilidad.
 

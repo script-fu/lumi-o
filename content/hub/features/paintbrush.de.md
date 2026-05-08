@@ -36,7 +36,13 @@ Da Farbe und Textur Teil desselben dynamischen Systems sein können wie Form und
 
 Das Pinselwerkzeug kann mit mehr als einem Kopf gleichzeitig malen. Mehrere Köpfe können um den Strichpfad herum angeordnet werden, um paarweise Markierungen, gefächerte Striche, borstenartiges Verhalten, Sprühmuster oder breite Strukturformationen zu erzeugen.
 
-Diese Köpfe können der Bewegungsrichtung folgen, voneinander abweichen und sich so verteilen, dass sich der Strich eher organisch als mechanisch wiederholt anfühlt. Dies ist besonders nützlich für Pinsel mit natürlichen Medien, dekorative Striche, Blätter, Fell, Schraffuren und andere Markierungen, die von einer kontrollierten Unregelmäßigkeit profitieren.## Animation und Variation
+Diese Köpfe können der Bewegungsrichtung folgen, voneinander abweichen und sich so verteilen, dass sich der Strich eher organisch als mechanisch wiederholt anfühlt. Dies ist besonders nützlich für Pinsel mit natürlichen Medien, dekorative Striche, Blätter, Fell, Schraffuren und andere Markierungen, die von kontrollierten Unregelmäßigkeiten profitieren.## Pinselladung und Farbaufnahme
+
+Der Pinsel kann auch simulieren, wie viel Farbe oder Material sich gerade auf dem Pinsel befindet. Mit fortschreitendem Strich kann diese Ladung allmählich nachlassen, wodurch die Markierungen je nach Einstellung der Pinseldynamik heller, trockener, dünner, rauer oder auf andere Weise stärker aufgelöst werden.
+
+Die Belastung kann zwischen den Strichen wieder eingeführt, auf einem gewählten Niveau gehalten oder als Live-Steuersignal für andere Pinselverhaltensweisen verwendet werden. Dadurch ist es möglich, Pinsel zu bauen, die sich eher wie echte Medien anfühlen: zu Beginn eines Strichs nass, mit zunehmender Entfernung erschöpft und dann beim nächsten Durchgang wieder eingetaucht.
+
+## Animation und Variation
 
 Animierte Pinselquellen können den Rahmen mit fortschreitendem Strich ändern und den Pinseln ein Gefühl von Bewegung und Abwechslung verleihen. Randomisierung und Variation pro Strich können verhindern, dass wiederholte Markierungen identisch aussehen, während stabiles Seeding einen konsistenten Charakter bewahren kann, wenn Wiederholbarkeit erforderlich ist.
 

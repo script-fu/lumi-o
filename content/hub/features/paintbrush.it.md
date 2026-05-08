@@ -36,7 +36,13 @@ Poiché colore e texture possono far parte dello stesso sistema dinamico di form
 
 Lo strumento Pennello può dipingere con più di una testa alla volta. È possibile disporre più teste attorno al percorso del tratto per creare segni accoppiati, tratti a ventaglio, comportamento simile a setole, modelli di spruzzo o formazioni con texture ampie.
 
-Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. Ciò è particolarmente utile per i pennelli naturali, i tratti decorativi, il fogliame, la pelliccia, i tratteggi e altri segni che traggono vantaggio dall'irregolarità controllata.## Animazione e variazione
+Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.## Carico spazzole e prelievo vernice
+
+Il Pennello può anche simulare la quantità di vernice o materiale attualmente trasportata sul pennello. Man mano che un tratto continua, il carico può gradualmente ridursi, lasciando che i segni diventino più leggeri, più asciutti, più sottili, più ruvidi o comunque più spezzati a seconda di come sono impostate le dinamiche del pennello.
+
+Il carico può essere reintrodotto tra una passata e l'altra, mantenuto al livello prescelto o utilizzato come segnale di controllo in tempo reale per altri comportamenti della spazzola. Ciò rende possibile costruire pennelli che sembrano più dei veri e propri media: bagnati all'inizio di una pennellata, progressivamente esausti attraverso la distanza e poi immersi nuovamente per la passata successiva.
+
+## Animazione e variazione
 
 Le sorgenti dei pennelli animati possono cambiare cornice man mano che il tratto avanza, conferendo ai pennelli un senso di movimento e varietà. La randomizzazione e la variazione per tratto possono evitare che i segni ripetuti sembrino identici, mentre la semina stabile può preservare un carattere coerente quando è necessaria la ripetibilità.
 

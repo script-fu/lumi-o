@@ -26,7 +26,7 @@ Penseln stöder också olika tillvägagångssätt för färguppbyggnad. Den kan 
 
 För kalligrafiska eller bläckliknande märken kan borsten generera ett mer kontinuerligt format i stället för att bara förlita sig på upprepade stämplar. Detta ger flödande, bandliknande former som svarar naturligt på gester och hastighet.
 
-## Färg och textur
+## Färg och struktur
 
 Penseldrag kan använda den aktiva färgen, svara på övertoningar eller variera färg genom dynamik. Texturhantering låter en pensel skifta mellan solid täckning och trasiga, ytavskumningsmärken, vilket är användbart för torra borsteffekter, ådring och uttrycksfull skuggning.
 
@@ -36,7 +36,13 @@ Eftersom färg och textur kan vara en del av samma dynamiska system som form och
 
 Penselverktyget kan måla med mer än ett huvud åt gången. Flera huvuden kan ordnas runt slagbanan för att skapa parade märken, blåsade slag, borstliknande beteende, spraymönster eller breda texturerade formationer.
 
-Dessa huvuden kan följa färdriktningen, variera från varandra och sprida sig på ett sätt som gör att slaget känns organiskt snarare än att det upprepas mekaniskt. Detta är särskilt användbart för naturliga mediapenslar, dekorativa drag, lövverk, päls, kläckning och andra märken som drar nytta av kontrollerade oregelbundenheter.## Animation och variation
+Dessa huvuden kan följa färdriktningen, variera från varandra och sprida sig på ett sätt som gör att slaget känns organiskt snarare än att det upprepas mekaniskt. Detta är särskilt användbart för naturliga mediapenslar, dekorativa drag, lövverk, päls, kläckning och andra märken som drar nytta av kontrollerade oregelbundenheter.## Penselladdning och färgupptagning
+
+Penseln kan också simulera hur mycket färg eller material som för närvarande bärs på borsten. När ett slag fortsätter kan den belastningen gradvis rinna ner, vilket gör att märken blir lättare, torrare, tunnare, grövre eller på annat sätt mer brutna beroende på hur borstdynamiken är inställd.
+
+Belastningen kan återinföras mellan dragen, hållas på en vald nivå eller användas som en direkt styrsignal för andra borstbeteenden. Detta gör det möjligt att bygga penslar som känns mer som riktiga media: blöta i början av ett slag, gradvis utmattade genom sträckan och sedan doppade igen för nästa pass.
+
+## Animation och variation
 
 Animerade borstkällor kan ändra ram när ett streck fortskrider, vilket ger borstarna en känsla av rörelse och variation. Randomisering och variation per slag kan förhindra att upprepade märken ser identiska ut, medan stabil sådd kan bevara en konsekvent karaktär när repeterbarhet behövs.
 

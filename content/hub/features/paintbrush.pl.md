@@ -22,7 +22,7 @@ Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny in
 
 Uderzenia mogą być bezpośrednie i natychmiastowe lub mogą być wspomagane przez wygładzenie i stabilizację. Funkcje te pomagają zredukować niepożądane drgania, złagodzić nagłe zmiany i sprawić, że dłuższe ruchy będą bardziej kontrolowane, bez usuwania charakteru wkładu artysty.
 
-Pędzel obsługuje również różne podejścia do gromadzenia się farby. Może zachowywać się jak ciągłe pociągnięcie, gromadzić powtarzające się muśnięcia lub z czasem emitować ślady, gdy wskaźnik jest trzymany w miejscu. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
+Pędzel obsługuje również różne podejścia do gromadzenia się farby. It can behave like a continuous stroke, accumulate repeated dabs, or emit marks over time while the pointer is held in place. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
 
 W przypadku znaków kaligraficznych lub przypominających atrament pędzel może generować bardziej ciągły kształt, zamiast polegać tylko na powtarzających się stemplach. W ten sposób powstają płynne, przypominające wstążki formy, które naturalnie reagują na gesty i prędkość.
 
@@ -36,7 +36,13 @@ Ponieważ kolor i tekstura mogą być częścią tego samego dynamicznego system
 
 Narzędzie Pędzel może malować więcej niż jedną głowicą na raz. Wokół ścieżki pociągnięcia można ustawić wiele głowic, aby utworzyć sparowane znaki, pociągnięcia wachlarzowe, zachowanie przypominające włosie, wzory natryskiwania lub szerokie formacje teksturowane.
 
-Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.## Animacja i wariacje
+Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.## Załadunek pędzla i pobieranie farby
+
+Pędzel może również symulować ilość farby lub materiału aktualnie znajdującą się na pędzlu. W miarę kontynuacji pociągnięcia obciążenie może stopniowo spadać, przez co ślady stają się jaśniejsze, bardziej suche, cieńsze, bardziej szorstkie lub w inny sposób bardziej rozdrobnione, w zależności od ustawienia dynamiki pędzla.
+
+Obciążenie można ponownie wprowadzić pomiędzy pociągnięciami, utrzymać na wybranym poziomie lub wykorzystać jako sygnał sterujący na żywo dla innych zachowań pędzla. Umożliwia to budowanie pędzli, które w dotyku bardziej przypominają prawdziwe media: mokre na początku pociągnięcia, stopniowo zużywające się wraz z upływem dystansu, a następnie ponownie zanurzane przy następnym przejściu.
+
+## Animacja i wariacje
 
 Animowane źródła pędzli mogą zmieniać klatkę w miarę postępu pociągnięcia, dając pędzlom wrażenie ruchu i różnorodności. Randomizacja i zmienność poszczególnych pociągnięć mogą sprawić, że powtarzające się znaki nie będą wyglądać identycznie, podczas gdy stabilne wysiewanie może zachować spójny charakter, gdy wymagana jest powtarzalność.
 
