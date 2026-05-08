@@ -33,4 +33,6 @@ Geïnspireerd door de Waverly-punt, tolereert de preset snelle bewegingen en ric
 
 ## Tipvoorinstelling
 
-De dode lijn van een technische tekenpen. Consistente breedte, strakke randen en weinig tot geen lijnvariatie. Handig voor constructielijnen, diagrammen, letters en gecontroleerd grafisch werk waarbij uniformiteit belangrijker is dan expressie.
+De dode lijn van een technische tekenpen. Consistente breedte, strakke randen en weinig tot geen lijnvariatie. Handig voor constructielijnen, diagrammen, letters en gecontroleerd grafisch werk waarbij uniformiteit belangrijker is dan expressie. Sommige van onze favoriete animaties gebruiken deze lijn.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

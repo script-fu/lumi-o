@@ -33,4 +33,6 @@ Ispirato al pennino Waverly, il preset tollera movimenti rapidi e cambi di direz
 
 ## Suggerimento preimpostato
 
-La linea morta di un pennarello da disegno tecnico. Larghezza uniforme, bordi puliti e variazione del tratto minima o nulla. Utile per linee di costruzione, diagrammi, caratteri e lavori grafici controllati in cui l'uniformità conta più dell'espressione.
+La linea morta di un pennarello da disegno tecnico. Larghezza uniforme, bordi puliti e variazione del tratto minima o nulla. Utile per linee di costruzione, diagrammi, caratteri e lavori grafici controllati in cui l'uniformità conta più dell'espressione. Alcune delle nostre animazioni preferite utilizzano questa linea.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

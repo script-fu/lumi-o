@@ -33,4 +33,6 @@ Inspirado en la punta Waverly, el ajuste preestablecido tolera movimientos rápi
 
 ## Consejo preestablecido
 
-La fecha límite de un lápiz de dibujo técnico. Ancho constante, bordes limpios y poca o ninguna variación de trazo. Útil para líneas de construcción, diagramas, letras y trabajos gráficos controlados donde la uniformidad importa más que la expresión.
+La fecha límite de un lápiz de dibujo técnico. Ancho constante, bordes limpios y poca o ninguna variación de trazo. Útil para líneas de construcción, diagramas, letras y trabajos gráficos controlados donde la uniformidad importa más que la expresión. Algunas de nuestras animaciones favoritas utilizan esta línea.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

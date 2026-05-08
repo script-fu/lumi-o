@@ -15,7 +15,7 @@ Kalligrafiskt läge förvandlar penselverktyget till en kontinuerlig mejselpenna
 
 ## Sicksack-förinställning
 
-Zig-zag-förinställningen skärper hörn när slaget ändrar riktning snabbt, vilket ger skarpa, kantiga svängar med ett snäpp som mjuka kurvor inte kan uppnå. Användbar för energiskt, grafiskt linjearbete och kläckning.
+Zig-zag-förinställningen skärper hörn när slaget ändrar riktning snabbt, vilket ger skarpa, vinklade svängar med ett snäpp som mjuka kurvor inte kan uppnå. Användbar för energiskt, grafiskt linjearbete och kläckning.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
@@ -33,4 +33,6 @@ Inspirerad av Waverly-spetsen, tolererar förinställningen snabba rörelser och
 
 ## Tips förinställd
 
-Deadline för en teknisk ritpenna. Konsekvent bredd, rena kanter och liten eller ingen slagvariation. Användbar för konstruktionslinjer, diagram, bokstäver och kontrollerat grafiskt arbete där enhetlighet är viktigare än uttryck.
+Deadline för en teknisk ritpenna. Konsekvent bredd, rena kanter och liten eller ingen slagvariation. Användbar för konstruktionslinjer, diagram, bokstäver och kontrollerat grafiskt arbete där enhetlighet är viktigare än uttryck. Några av våra favoritanimationer använder denna linje.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

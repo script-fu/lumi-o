@@ -33,4 +33,6 @@ Inspiriert von der Waverly-Feder toleriert die Voreinstellung schnelle Bewegunge
 
 ## Spitzenvoreinstellung
 
-Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten und geringe bis keine Strichabweichung. Nützlich für Konstruktionslinien, Diagramme, Beschriftungen und kontrollierte grafische Arbeiten, bei denen Einheitlichkeit wichtiger ist als Ausdruck.
+Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten und geringe bis keine Strichabweichung. Nützlich für Konstruktionslinien, Diagramme, Beschriftungen und kontrollierte grafische Arbeiten, bei denen Einheitlichkeit wichtiger ist als Ausdruck. Einige unserer Lieblingsanimationen verwenden diese Zeile.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

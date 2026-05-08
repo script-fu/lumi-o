@@ -15,7 +15,7 @@ O modo caligráfico transforma a ferramenta Pincel em um traço contínuo de can
 
 ## Predefinição em zigue-zague
 
-A predefinição Zig-zag torna os cantos mais nítidos quando o traço muda de direção rapidamente, produzindo curvas angulares nítidas com um encaixe que curvas suaves não conseguem alcançar. Útil para linhas e hachuras energéticas e gráficas.
+A predefinição Zig-zag torna os cantos mais nítidos quando o traço muda de direção rapidamente, produzindo curvas angulares nítidas com um encaixe que curvas suaves não conseguem. Útil para linhas e hachuras energéticas e gráficas.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
@@ -33,4 +33,6 @@ Inspirada na ponta da Waverly, a predefinição tolera movimentos rápidos e mud
 
 ## Dica predefinida
 
-O prazo de uma caneta de desenho técnico. Largura consistente, bordas limpas e pouca ou nenhuma variação de traçado. Útil para linhas de construção, diagramas, letras e trabalhos gráficos controlados onde a uniformidade é mais importante do que a expressão.
+O prazo de uma caneta de desenho técnico. Largura consistente, bordas limpas e pouca ou nenhuma variação de traçado. Útil para linhas de construção, diagramas, letras e trabalhos gráficos controlados onde a uniformidade é mais importante do que a expressão. Algumas de nossas animações favoritas usam essa linha.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

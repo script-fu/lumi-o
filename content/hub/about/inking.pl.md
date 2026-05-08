@@ -33,4 +33,6 @@ Zainspirowany stalówką Waverly, ustawienie wstępne toleruje szybki ruch i zmi
 
 ## Wstępnie ustawione wskazówki
 
-Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawędzie i niewielkie lub żadne różnice w obrysach. Przydatny do linii konstrukcyjnych, diagramów, liter i kontrolowanych prac graficznych, gdzie jednolitość jest ważniejsza niż ekspresja.
+Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawędzie i niewielkie lub żadne różnice w obrysach. Przydatny do linii konstrukcyjnych, diagramów, liter i kontrolowanych prac graficznych, gdzie jednolitość jest ważniejsza niż ekspresja. Niektóre z naszych ulubionych animacji korzystają z tej linii.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)

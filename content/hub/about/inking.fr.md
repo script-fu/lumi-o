@@ -33,4 +33,6 @@ Inspiré de la plume Waverly, le préréglage tolère des mouvements rapides et 
 
 ## Astuce prédéfinie
 
-La ligne morte d’un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression.
+La ligne morte d’un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression. Certaines de nos animations préférées utilisent cette ligne.
+
+![ink-01](/images/strokes/ink-tip_share.jpg)
