@@ -7,6 +7,15 @@ Przestrzeń robocza Inking została stworzona z myślą o celowej pracy liniowej
 
 Poniżej znajdują się niektóre narzędzia i tryby, które to umożliwiają.
 
+## Wstępne ustawienie Sumi
+
+Pędzel sumi nie jest do końca ujarzmiony. Zamiast zachowywać się jak pojedyncza końcówka szczoteczki, jest zbudowana z wielu niezależnych główek szczoteczek lub wiązek włosia, które współpracują ze sobą tworząc dynamiczną formację. Rezultatem mogą być mokre smugi, połamane, suche smugi, splątane włókna lub wybuchowe teksturowane krawędzie, w zależności od nacisku, prędkości, odstępów i gestów.
+
+Istnieje szeroki zakres kontroli nad zachowaniem formacji, a połączenie jej z dynamiką, teksturami i zmianami stempla może dać ogromną gamę znaków.
+
+![sumi-01](/images/strokes/sumi_share.jpg)
+
+
 ## Wstępne ustawienie kaligraficzne
 
 W trybie kaligraficznym narzędzie Pędzel staje się ciągłym pociągnięciem dłuta, a nie rzędem odbitych punktów. Dołączone ustawienie wstępne kaligrafii wykorzystuje również kąt pochylenia rysika jako dodatkową oś kontroli, dzięki czemu pociągnięcie może reagować nie tylko na nacisk, ale także na sposób trzymania pióra. Jest to przydatne w przypadku twardych, ukształtowanych znaków, które należy czytać jak pojedynczą wstęgę atramentu, nawet gdy zmienia się kąt i nacisk.
@@ -29,10 +38,16 @@ Klasyczna linia pędzli komiksowych. Płynne uderzenia o zmiennej masie i pewnym
 
 Zainspirowany stalówką Waverly, ustawienie wstępne toleruje szybki ruch i zmiany kierunku, jednocześnie tworząc ostre, wyraziste linie atramentu. Ponieważ ilość atramentu wyczerpuje się w miarę pracy, pociągnięcia mogą zaczynać się od ciemnych i nasyconych, a następnie w miarę opróżniania stalówki zamieniać się w bardziej zarysowane, zaschnięte ślady.
 
-![ink-01](/images/strokes/ink-nib_share.jpg)
+![ink-02](/images/strokes/ink-nib_share.jpg)
 
 ## Wstępnie ustawione wskazówki
 
 Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawędzie i niewielkie lub żadne różnice w obrysach. Przydatny do linii konstrukcyjnych, diagramów, liter i kontrolowanych prac graficznych, gdzie jednolitość jest ważniejsza niż ekspresja. Niektóre z naszych ulubionych animacji korzystają z tej linii.
 
-![ink-01](/images/strokes/ink-tip_share.jpg)
+![ink-03](/images/strokes/ink-tip_share.jpg)
+
+## Ustawienie wstępne szybkiego przesuwania
+
+Zaprojektowany do wykonywania gestów i rozproszonych sprayów kierunkowych. W zależności od prędkości, ciśnienia i odstępów, uderzenia mogą wahać się od subtelnego i lekkiego rozproszenia po cięższe rzucane kropelki. Przydatny do prac teksturalnych i wyrazistych wykończeń.
+
+![flick-01](/images/strokes/flick_final_compressed.jpg)

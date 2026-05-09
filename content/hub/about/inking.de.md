@@ -7,6 +7,15 @@ Der Freihand-Arbeitsbereich ist für bewusste Linienarbeit konzipiert. Es ist di
 
 Nachfolgend finden Sie einige der Tools und Modi, die dies ermöglichen.
 
+## Sumi-Voreinstellung
+
+Der Sumi-Pinsel ist nicht ganz gezähmt. Anstatt sich wie eine einzelne Bürstenspitze zu verhalten, besteht sie aus vielen unabhängigen Bürstenköpfen oder Borstenbündeln, die als dynamische Formation zusammenarbeiten. Das Ergebnis kann je nach Druck, Geschwindigkeit, Abstand und Geste von nassen Streifen zu gebrochenen trockenen Streifen, verwickelten Fasern oder explosiven strukturierten Kanten wechseln.
+
+Das Verhalten der Formation lässt sich in weiten Grenzen steuern, und durch die Kombination mit Dynamik, Texturen und Stempelvariationen kann eine enorme Bandbreite an Markierungen entstehen.
+
+![sumi-01](/images/strokes/sumi_share.jpg)
+
+
 ## Kalligrafische Voreinstellung
 
 Der kalligrafische Modus verwandelt das Pinselwerkzeug in einen kontinuierlichen Meißelstrich und nicht in eine Reihe geprägter Tupfer. Die mitgelieferte kalligrafische Voreinstellung nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse, sodass der Strich nicht nur auf Druck, sondern auch darauf reagieren kann, wie der Stift gehalten wird. Es ist nützlich für feste, geformte Markierungen, die als einzelnes Farbband lesbar sein müssen, selbst wenn sich Winkel und Druck ändern.
@@ -29,10 +38,16 @@ Die klassische Comic-Pinsellinie. Flüssige Striche mit variablem Gewicht und ei
 
 Inspiriert von der Waverly-Feder toleriert die Voreinstellung schnelle Bewegungen und Richtungsänderungen und erzeugt dennoch scharfe, ausdrucksstarke Tintenlinien. Da die Tintenmenge mit der Arbeit abnimmt, können die Striche zunächst dunkel und gesättigt sein und sich beim Entleeren der Spitze in kratzigere, ausgehungerte Flecken verwandeln.
 
-![ink-01](/images/strokes/ink-nib_share.jpg)
+![ink-02](/images/strokes/ink-nib_share.jpg)
 
 ## Spitzenvoreinstellung
 
 Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten und geringe bis keine Strichabweichung. Nützlich für Konstruktionslinien, Diagramme, Beschriftungen und kontrollierte grafische Arbeiten, bei denen Einheitlichkeit wichtiger ist als Ausdruck. Einige unserer Lieblingsanimationen verwenden diese Zeile.
 
-![ink-01](/images/strokes/ink-tip_share.jpg)
+![ink-03](/images/strokes/ink-tip_share.jpg)
+
+## Flick-Voreinstellung
+
+Konzipiert für schnippende Gesten und verstreute Richtungssprays. Je nach Geschwindigkeit, Druck und Abstand können die Striche von subtiler und leichter Streuung bis hin zu schwereren Tröpfchen reichen. Nützlich für Strukturarbeiten und ausdrucksstarke Feinarbeiten.
+
+![flick-01](/images/strokes/flick_final_compressed.jpg)
