@@ -3,7 +3,7 @@ title: "Inking"
 type: docs
 weight: 4
 ---
-Inking-arbetsytan är byggd för avsiktligt linjearbete. Det är scenen där ritningen slutar vara utforskande och börjar bli engagerad: kontrollerade drag, tydlig kantdefinition och märken som måste behålla sin form med självförtroende.
+Inking-arbetsytan är byggd för avsiktligt linjearbete eller bläckkaos. Det är scenen där ritningen slutar vara utforskande och börjar bli engagerad: kontrollerade drag, tydlig kantdefinition och märken som måste behålla sin form med självförtroende. Eller bara släpp loss med uttrycksfulla stänk, looping linjer, torra nib repor och vilda sumi stroke.
 
 Nedan är några av de verktyg och lägen som gör det möjligt.
 
@@ -50,4 +50,4 @@ Deadline för en teknisk ritpenna. Konsekvent bredd, rena kanter och liten eller
 
 Designad för snärtande gester och spridda riktningssprayer. Beroende på hastighet, tryck och avstånd kan slag variera från subtil och lätt spridning till tyngre kastade droppar. Användbar för texturarbete och uttrycksfulla finesser.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

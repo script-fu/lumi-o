@@ -3,7 +3,7 @@ title: "Einfärben"
 type: docs
 weight: 4
 ---
-Der Freihand-Arbeitsbereich ist für bewusste Linienarbeit konzipiert. Es ist die Phase, in der das Zeichnen aufhört, forschend zu sein, und beginnt, sich zu engagieren: kontrollierte Striche, klare Kantendefinition und Markierungen, die ihre Form souverän beibehalten müssen.
+Der Freihand-Arbeitsbereich ist für bewusste Linienarbeit oder Tintenchaos konzipiert. Es ist die Phase, in der das Zeichnen aufhört, forschend zu sein, und beginnt, sich zu engagieren: kontrollierte Striche, klare Kantendefinition und Markierungen, die ihre Form souverän beibehalten müssen. Oder lassen Sie sich einfach mit ausdrucksstarken Spritzern, geschlungenen Linien, trockenen Federkratzern und wilden Sumi-Strichen austoben.
 
 Nachfolgend finden Sie einige der Tools und Modi, die dies ermöglichen.
 
@@ -50,4 +50,4 @@ Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Ka
 
 Konzipiert für schnippende Gesten und verstreute Richtungssprays. Je nach Geschwindigkeit, Druck und Abstand können die Striche von subtiler und leichter Streuung bis hin zu schwereren Tröpfchen reichen. Nützlich für Strukturarbeiten und ausdrucksstarke Feinarbeiten.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

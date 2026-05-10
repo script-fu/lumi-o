@@ -3,7 +3,7 @@ title: "Tuszowanie"
 type: docs
 weight: 4
 ---
-Przestrzeń robocza Inking została stworzona z myślą o celowej pracy liniowej. Jest to etap, na którym rysowanie przestaje być odkrywcze, a zaczyna wymagać zaangażowania: kontrolowane pociągnięcia, wyraźna definicja krawędzi i znaki, które muszą pewnie trzymać swój kształt.
+Przestrzeń robocza Inking została stworzona z myślą o celowej pracy liniowej lub atramentowym chaosie. Jest to etap, na którym rysowanie przestaje być odkrywcze, a zaczyna wymagać zaangażowania: kontrolowane pociągnięcia, wyraźna definicja krawędzi i znaki, które muszą pewnie trzymać swój kształt. Lub po prostu uwolnij się dzięki wyrazistemu rozpryskiwaniu, zapętlonym liniom, zadrapaniom suchą stalówką i dzikim uderzeniom sumi.
 
 Poniżej znajdują się niektóre narzędzia i tryby, które to umożliwiają.
 
@@ -50,4 +50,4 @@ Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawę
 
 Zaprojektowany do wykonywania gestów i rozproszonych sprayów kierunkowych. W zależności od prędkości, ciśnienia i odstępów, uderzenia mogą wahać się od subtelnego i lekkiego rozproszenia po cięższe rzucane kropelki. Przydatny do prac teksturalnych i wyrazistych wykończeń.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

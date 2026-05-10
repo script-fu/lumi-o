@@ -3,7 +3,7 @@ title: "Tinta"
 type: docs
 weight: 4
 ---
-O espaço de trabalho Inking foi criado para trabalhos de linha deliberados. É a fase em que o desenho deixa de ser exploratório e passa a ser comprometido: traços controlados, definição clara de bordas e marcas que precisam manter sua forma com confiança.
+O espaço de trabalho Inking foi criado para trabalhos de linha deliberados ou para caos de tinta. É a fase em que o desenho deixa de ser exploratório e passa a ser comprometido: traços controlados, definição clara de bordas e marcas que precisam manter sua forma com confiança. Ou simplesmente solte-se com respingos expressivos, linhas em loop, arranhões de ponta seca e traços selvagens de sumi.
 
 Abaixo estão algumas das ferramentas e modos que tornam isso possível.
 
@@ -50,4 +50,4 @@ O prazo de uma caneta de desenho técnico. Largura consistente, bordas limpas e 
 
 Projetado para gestos rápidos e sprays direcionais dispersos. Dependendo da velocidade, pressão e espaçamento, os traços podem variar de dispersão sutil e leve a gotículas mais pesadas. Útil para trabalhos texturais e acabamentos expressivos.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

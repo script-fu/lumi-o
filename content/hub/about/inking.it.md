@@ -3,7 +3,7 @@ title: "Inchiostrazione"
 type: docs
 weight: 4
 ---
-L'area di lavoro Inchiostrazione è progettata per il lavoro in linea intenzionale. È la fase in cui il disegno smette di essere esplorativo e inizia a diventare impegnativo: tratti controllati, definizione chiara dei bordi e segni che devono mantenere la loro forma con sicurezza.
+L'area di lavoro di inchiostrazione è progettata per lavori di linea intenzionali o caos di inchiostro. È la fase in cui il disegno smette di essere esplorativo e inizia a diventare impegnativo: tratti controllati, definizione chiara dei bordi e segni che devono mantenere la loro forma con sicurezza. Oppure semplicemente scatenati con schizzi espressivi, linee sinuose, graffi con pennino asciutto e tratti selvaggi di sumi.
 
 Di seguito sono riportati alcuni degli strumenti e delle modalità che lo rendono possibile.
 
@@ -50,4 +50,4 @@ La linea morta di un pennarello da disegno tecnico. Larghezza uniforme, bordi pu
 
 Progettato per gesti rapidi e getti direzionali sparsi. A seconda della velocità, della pressione e della spaziatura, i tratti possono variare da una dispersione lieve e leggera a goccioline lanciate più pesanti. Utile per lavori materici e ritocchi finali espressivi.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

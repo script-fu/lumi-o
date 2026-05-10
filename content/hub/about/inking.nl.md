@@ -3,7 +3,7 @@ title: "Inkten"
 type: docs
 weight: 4
 ---
-De Inking-werkruimte is gebouwd voor doelbewust lijnwerk. Het is de fase waarin tekenen niet langer verkennend is, maar toegewijd begint te worden: gecontroleerde streken, duidelijke randdefinitie en markeringen die met vertrouwen hun vorm moeten behouden.
+De Inking-werkruimte is gebouwd voor doelbewust lijnwerk of inktzwarte chaos. Het is de fase waarin tekenen niet langer verkennend is, maar toegewijd begint te worden: gecontroleerde streken, duidelijke randdefinitie en markeringen die met vertrouwen hun vorm moeten behouden. Of ga gewoon los met expressieve spetters, loopinglijnen, droge puntkrassen en wilde sumi-streken.
 
 Hieronder staan ​​enkele tools en modi die dat mogelijk maken.
 
@@ -50,4 +50,4 @@ De dode lijn van een technische tekenpen. Consistente breedte, strakke randen en
 
 Ontworpen voor bewegende gebaren en verspreide gerichte sprays. Afhankelijk van de snelheid, druk en afstand kunnen de slagen variëren van subtiele en lichte verstrooiing tot zwaarder weggeworpen druppels. Handig voor textuurwerk en expressieve afwerkingen.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

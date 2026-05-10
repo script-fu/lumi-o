@@ -3,7 +3,7 @@ title: "Encrage"
 type: docs
 weight: 4
 ---
-L’espace de travail Encrage est conçu pour un travail en ligne délibéré. C'est l'étape où le dessin cesse d'être exploratoire et commence à devenir engagé : des traits contrôlés, une définition claire des bords et des marques qui doivent conserver leur forme en toute confiance.
+L’espace de travail Inking est conçu pour le travail en ligne délibéré ou le chaos d’encre. C'est l'étape où le dessin cesse d'être exploratoire et commence à devenir engagé : des traits contrôlés, une définition claire des bords et des marques qui doivent conserver leur forme en toute confiance. Ou tout simplement lâchez-vous avec des éclaboussures expressives, des lignes en boucle, des rayures à la plume sèche et des traits de sumi sauvages.
 
 Vous trouverez ci-dessous quelques-uns des outils et modes qui rendent cela possible.
 
@@ -42,7 +42,7 @@ Inspiré de la plume Waverly, le préréglage tolère des mouvements rapides et 
 
 ## Astuce prédéfinie
 
-La ligne morte d’un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression. Certaines de nos animations préférées utilisent cette ligne.
+La ligne morte d'un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression. Certaines de nos animations préférées utilisent cette ligne.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
@@ -50,4 +50,4 @@ La ligne morte d’un stylo à dessin technique. Largeur constante, bords nets e
 
 Conçu pour les gestes effleurants et les pulvérisations directionnelles dispersées. En fonction de la vitesse, de la pression et de l'espacement, les coups peuvent aller d'une diffusion subtile et légère à des gouttelettes plus lourdes. Utile pour le travail de texture et les touches finales expressives.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)

@@ -5,7 +5,7 @@ url: "hub/about/inking"
 weight: 4
 ---
 
-The Inking workspace is built for deliberate line work. It is the stage where drawing stops being exploratory and starts becoming committed: controlled strokes, clear edge definition, and marks that need to hold their shape with confidence.
+The Inking workspace is built for deliberate line work or inky chaos. It is the stage where drawing stops being exploratory and starts becoming committed: controlled strokes, clear edge definition, and marks that need to hold their shape with confidence. Or just let loose with expressive splattering, looping lines, dry nib scratches, and wild sumi strokes.
 
 Below are some of the tools and modes that make that possible.
 

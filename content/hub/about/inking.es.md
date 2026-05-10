@@ -3,7 +3,7 @@ title: "entintado"
 type: docs
 weight: 4
 ---
-El espacio de trabajo Inking está diseñado para el trabajo de líneas deliberado. Es la etapa en la que el dibujo deja de ser exploratorio y comienza a comprometerse: trazos controlados, definición clara de los bordes y marcas que deben mantener su forma con confianza.
+El espacio de trabajo Inking está diseñado para el trabajo de líneas deliberado o el caos entintado. Es la etapa en la que el dibujo deja de ser exploratorio y comienza a comprometerse: trazos controlados, definición clara de los bordes y marcas que deben mantener su forma con confianza. O simplemente déjate llevar con salpicaduras expresivas, líneas en bucle, rasguños de puntas secas y trazos salvajes de sumi.
 
 A continuación se muestran algunas de las herramientas y modos que lo hacen posible.
 
@@ -50,4 +50,4 @@ La fecha límite de un lápiz de dibujo técnico. Ancho constante, bordes limpio
 
 Diseñado para gestos rápidos y sprays direccionales dispersos. Dependiendo de la velocidad, la presión y el espaciado, los trazos pueden variar desde una dispersión sutil y ligera hasta gotas arrojadas más pesadas. Útil para trabajos de textura y toques finales expresivos.
 
-![flick-01](/images/strokes/flick_final_compressed.jpg)
+![flick-01](/images/strokes/flick_share.jpg)
