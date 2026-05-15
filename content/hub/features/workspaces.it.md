@@ -1,5 +1,5 @@
 ---
-title: "Spazi di lavoro"
+title: "Spazio di lavoro"
 type: docs
 ---
 Gli spazi di lavoro consentono a Lumi di adattarsi a diversi modi di lavorare. Uno spazio di lavoro cattura l'atmosfera dell'ambiente dello studio: layout del pannello, stato dello strumento, presentazione della tela, percorsi delle risorse, scelta della tavolozza, tema e altre preferenze dell'interfaccia che modellano la sessione di pittura.

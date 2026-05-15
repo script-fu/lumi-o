@@ -1,10 +1,10 @@
 ---
-title: "Obszary robocze"
+title: "Obszar roboczy"
 type: docs
 ---
 Przestrzenie robocze pozwalają Lumi dostosować się do różnych sposobów pracy. Przestrzeń robocza oddaje atmosferę środowiska studyjnego: układ paneli, stan narzędzi, prezentację płótna, ścieżki zasobów, wybór palety, motyw i inne preferencje interfejsu, które kształtują sesję malowania.
 
-Zamiast utrzymywać jeden stały układ dla każdego zadania, artyści mogą utrzymywać oddzielne środowiska do szkicowania, malowania, pisania odręcznego, kolorowania, prezentacji, pisania skryptów lub skupionych sesji pełnoekranowych. Każde środowisko może udostępniać zasoby związane z tego rodzaju pracą, więc przestrzeń robocza do rysowania może wydawać się wypełniona gotowymi ustawieniami rysunku, a przestrzeń robocza do malowania może zostać przełączona na narzędzia malarskie.
+Zamiast utrzymywać jeden stały układ dla każdego zadania, artyści mogą utrzymywać oddzielne środowiska do szkicowania, malowania, pisania odręcznego, kolorowania, prezentacji, pisania skryptów lub skupionych sesji pełnoekranowych. Każde środowisko może udostępnić zasoby związane z tego rodzaju pracą, więc przestrzeń robocza do rysowania może wydawać się wypełniona gotowymi ustawieniami rysunku, a przestrzeń robocza do malowania może zostać przełączona na narzędzia malarskie.
 
 ## Studio, które zmienia się wraz z zadaniem
 

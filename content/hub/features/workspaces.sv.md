@@ -1,5 +1,5 @@
 ---
-title: "Arbetsytor"
+title: "Arbetsyta"
 type: docs
 ---
 Arbetsytor låter Lumi anpassa sig till olika sätt att arbeta. En arbetsyta fångar känslan av studiomiljön: panellayout, verktygstillstånd, dukpresentation, resursvägar, palettval, tema och andra gränssnittsinställningar som formar målningssessionen.

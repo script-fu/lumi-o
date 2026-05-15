@@ -1,5 +1,5 @@
 ---
-title: "Werkruimtes"
+title: "Werkruimte"
 type: docs
 ---
 Dankzij werkruimten kan Lumi zich aanpassen aan verschillende manieren van werken. Een werkruimte geeft het gevoel van de studioomgeving weer: paneelindeling, gereedschapsstatus, canvaspresentatie, bronpaden, paletkeuze, thema en andere interfacevoorkeuren die de schildersessie vormgeven.
@@ -26,7 +26,7 @@ Open beelden kunnen op hun plaats blijven terwijl de omringende omgeving verande
 
 ## Persoonlijke en projectmatige opstellingen
 
-Sommige werkruimtes kunnen persoonlijke standaardinstellingen zijn: een comfortabele schilderopstelling, een compacte laptopopstelling of een focusmodus op volledig scherm. Andere kunnen tot een project behoren: een bepaald palet, thema, paneelopstelling, bronnenverzameling of apparaatconfiguratie die bij een specifieke reeks afbeeldingen past.
+Sommige werkruimtes kunnen persoonlijke standaardinstellingen zijn: een comfortabele schilderopstelling, een compacte laptopopstelling of een focusmodus op volledig scherm. Anderen kunnen tot een project behoren: een bepaald palet, thema, paneelopstelling, bronnenverzameling of apparaatconfiguratie die bij een specifieke reeks afbeeldingen past.
 
 Omdat werkruimtes een naam hebben en herbruikbaar zijn, kunnen ze onderdeel worden van het ritme van een kunstenaar. De juiste omgeving kan worden hersteld wanneer het werk daarom vraagt.
 

@@ -1,5 +1,5 @@
 ---
-title: "Espaces de travail"
+title: "Espace de travail"
 type: docs
 ---
 Les espaces de travail permettent à Lumi de s'adapter à différentes façons de travailler. Un espace de travail capture l'ambiance de l'environnement du studio : disposition des panneaux, état de l'outil, présentation du canevas, chemins de ressources, choix de palette, thème et autres préférences d'interface qui façonnent la session de peinture.
@@ -8,7 +8,7 @@ Au lieu de conserver un arrangement fixe pour chaque tâche, les artistes peuven
 
 ## Un studio qui évolue avec la tâche
 
-Différentes étapes d’une œuvre d’art bénéficient d’environnements différents. Les croquis approximatifs peuvent nécessiter une toile claire et un minimum de panneaux. La peinture peut nécessiter des paramètres de pinceau et un accès à la palette à portée de main. L’encrage peut nécessiter des guides, des options d’outils stables et une vue neutre. La révision ou la présentation peut nécessiter une configuration plein écran plus propre.
+Différentes étapes d’une œuvre d’art bénéficient d’un environnement différent. Les croquis approximatifs peuvent nécessiter une toile claire et un minimum de panneaux. La peinture peut nécessiter des paramètres de pinceau et un accès à la palette à portée de main. L’encrage peut nécessiter des guides, des options d’outils stables et une vue neutre. La révision ou la présentation peut nécessiter une configuration plein écran plus propre.
 
 Les espaces de travail rendent ces changements délibérés. L'interface peut changer pour s'adapter à la tâche sans que l'artiste ait à reconstruire le studio à la main à chaque fois.
 

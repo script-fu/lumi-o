@@ -1,5 +1,5 @@
 ---
-title: "Workspaces"
+title: "Workspace"
 type: docs
 url: "hub/features/workspaces"
 ---

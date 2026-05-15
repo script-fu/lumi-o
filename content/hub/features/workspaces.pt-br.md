@@ -1,5 +1,5 @@
 ---
-title: "Espaços de trabalho"
+title: "Espaço de trabalho"
 type: docs
 ---
 Os espaços de trabalho permitem que o Lumi se adapte a diferentes formas de trabalhar. Um espaço de trabalho captura a sensação do ambiente de estúdio: layout do painel, estado da ferramenta, apresentação da tela, caminhos de recursos, escolha de paleta, tema e outras preferências de interface que moldam a sessão de pintura.

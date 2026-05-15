@@ -1,5 +1,5 @@
 ---
-title: "Arbeitsbereiche"
+title: "Arbeitsplatz"
 type: docs
 ---
 Mithilfe von Arbeitsbereichen kann sich Lumi an unterschiedliche Arbeitsweisen anpassen. Ein Arbeitsbereich fängt das Gefühl der Studioumgebung ein: Panel-Layout, Werkzeugstatus, Leinwandpräsentation, Ressourcenpfade, Palettenauswahl, Thema und andere Benutzeroberflächenpräferenzen, die die Malsitzung prägen.
@@ -26,7 +26,7 @@ Offene Bilder können an Ort und Stelle bleiben, während sich die Umgebung ver�
 
 ## Persönliche und projektbasierte Setups
 
-Bei einigen Arbeitsbereichen kann es sich um persönliche Standardeinstellungen handeln: ein komfortables Mal-Setup, ein kompaktes Laptop-Setup oder ein Vollbild-Fokusmodus. Andere können zu einem Projekt gehören: eine bestimmte Palette, ein bestimmtes Thema, eine bestimmte Panelanordnung, eine Ressourcensammlung oder eine Gerätekonfiguration, die zu einer bestimmten Bildserie passt.
+Bei einigen Arbeitsbereichen handelt es sich möglicherweise um persönliche Standardeinstellungen: ein komfortables Mal-Setup, ein kompaktes Laptop-Setup oder ein Vollbild-Fokusmodus. Andere können zu einem Projekt gehören: eine bestimmte Palette, ein bestimmtes Thema, eine bestimmte Panelanordnung, eine Ressourcensammlung oder eine Gerätekonfiguration, die zu einer bestimmten Bildserie passt.
 
 Da Arbeitsbereiche benannt und wiederverwendbar sind, können sie Teil des Rhythmus eines Künstlers werden. Die richtige Umgebung kann wiederhergestellt werden, wenn die Arbeit es erfordert.
 
