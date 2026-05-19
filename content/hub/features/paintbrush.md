@@ -28,6 +28,12 @@ The Brush also supports different approaches to paint buildup. It can behave lik
 
 For calligraphic or ink-like marks, the Brush can generate a more continuous shaped stroke rather than relying only on repeated stamps. This produces flowing, ribbon-like forms that respond naturally to gesture and speed.
 
+## Stroke capture and simulated rendering
+
+The Brush can capture a small sample of how a preset is normally drawn by hand, then use that profile when rendering strokes that are defined by geometry rather than live movement. Straight Shift-click lines, stroked paths, and stroked selections can all use the active tool preset's captured pressure and velocity pattern instead of behaving like a flat mechanical line.
+
+This keeps constructed strokes closer to the character of the brush. A line drawn from a path can start softly, build pressure, taper away, or vary speed response in the same broad way as the sampled hand stroke, while still following the exact shape of the path, selection edge, or straight-line gesture.
+
 ## Colour and texture
 
 Brush strokes can use the active paint colour, respond to gradients, or vary colour through dynamics. Texture handling lets a brush shift between solid coverage and broken, surface-skimming marks, which is useful for dry brush effects, grain, and expressive shading.
