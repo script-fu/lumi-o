@@ -9,6 +9,7 @@ W tej sekcji przedstawiono podstawowe możliwości dostępne w Lumi i obsługiwa
 {{< cards >}}
   {{< card link="brush-caching" title="Buforowanie pędzli" icon="lightning-bolt" subtitle="Zachowaj responsywność ulubionych pędzli, ponownie wykorzystując stany pędzli, które mają znaczenie w prawdziwym malowaniu." >}}
   {{< card link="file-format" title="Format pliku (.lum)" icon="document-text" subtitle="Ustrukturyzowany format projektu do warstwowej grafiki, odzyskiwania, danych kolorów i długoterminowej edycji." >}}
+  {{< card link="filters" title="Filtry" icon="filter" subtitle="Poprawiaj, stylizuj, generuj i przechowuj efekty warstw z możliwością edycji za pomocą filtrów rozmycia, oświetlenia, tekstury, druku i analizy." >}}
   {{< card link="recovery" title="Odzyskiwanie plików" icon="refresh" subtitle="Ochrona tła i celowe punkty kontrolne zapobiegają kruchości sesji malarskich." >}}
   {{< card link="layers" title="Warstwy i edycja nieniszcząca" icon="collection" subtitle="Malowanie strukturalne z edytowalnymi warstwami, grupami, maskami, efektami i chronionymi stanami pracy." >}}
   {{< card link="paintbrush" title="Narzędzie Pędzel" icon="pencil-alt" subtitle="Ekspresyjne malowanie z responsywnymi znakami, dynamicznym wprowadzaniem, teksturą, wygładzaniem i zachowaniem pędzla z wieloma główkami." >}}

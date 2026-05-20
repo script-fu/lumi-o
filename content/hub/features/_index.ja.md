@@ -9,6 +9,7 @@ Lumi の機能セットは、非破壊的なレイヤーベースの編集に基
 {{< cards >}}
   {{< card link="brush-caching" title="ブラシ キャッシング" icon="lightning-bolt" subtitle="実際のペイントで重要なブラシの状態を再利用することで、お気に入りのブラシの応答性を維持します。" >}}
   {{< card link="file-format" title="ファイル形式 (.lum)" icon="document-text" subtitle="レイヤー化されたアートワーク、リカバリ、カラー データ、および長期編集のための構造化されたプロジェクト形式。" >}}
+  {{< card link="filters" title="フィルター" icon="filter" subtitle="ブラー、ライティング、テクスチャ、印刷、分析フィルターを使用してレイヤー効果を修正、スタイル設定、生成し、編集可能な状態に保ちます。" >}}
   {{< card link="recovery" title="ファイルの回復" icon="refresh" subtitle="背景の保護と意図的なチェックポイントは、ペイント セッションが脆弱になるのを防ぐのに役立ちます。" >}}
   {{< card link="layers" title="レイヤーと非破壊編集" icon="collection" subtitle="編集可能なレイヤー、グループ、マスク、エフェクト、保護された作業状態を備えた構造化されたペイント。" >}}
   {{< card link="paintbrush" title="ブラシツール" icon="pencil-alt" subtitle="応答性の高いマーク、ダイナミックな入力、テクスチャ、スムージング、マルチヘッド ブラシの動作を備えた表現力豊かなペイント。" >}}

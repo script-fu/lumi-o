@@ -9,6 +9,7 @@ In diesem Abschnitt werden die Kernfunktionen von Lumi und die von ihnen unterst
 {{< cards >}}
   {{< card link="brush-caching" title="Pinsel-Caching" icon="lightning-bolt" subtitle="Sorgen Sie dafür, dass Ihre Lieblingspinsel reaktionsfähig bleiben, indem Sie die Pinselzustände wiederverwenden, die beim echten Malen wichtig sind." >}}
   {{< card link="file-format" title="Dateiformat (.lum)" icon="document-text" subtitle="Ein strukturiertes Projektformat für mehrschichtige Grafiken, Wiederherstellung, Farbdaten und langfristige Bearbeitung." >}}
+  {{< card link="filters" title="Filter" icon="filter" subtitle="Korrigieren, stilisieren, generieren und halten Sie Ebeneneffekte mit Unschärfe-, Beleuchtungs-, Textur-, Druck- und Analysefiltern bearbeitbar." >}}
   {{< card link="recovery" title="Dateiwiederherstellung" icon="refresh" subtitle="Hintergrundschutz und gezielte Kontrollpunkte tragen dazu bei, dass Malsitzungen nicht brüchig werden." >}}
   {{< card link="layers" title="Ebenen und zerstörungsfreie Bearbeitung" icon="collection" subtitle="Strukturiertes Malen mit bearbeitbaren Ebenen, Gruppen, Masken, Effekten und geschützten Arbeitszuständen." >}}
   {{< card link="paintbrush" title="Pinselwerkzeug" icon="pencil-alt" subtitle="Ausdrucksstarkes Malen mit reaktionsschnellen Markierungen, dynamischer Eingabe, Textur, Glättung und Mehrkopf-Pinselverhalten." >}}

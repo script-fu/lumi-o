@@ -9,6 +9,7 @@ Esta sección presenta las capacidades principales disponibles en Lumi y los flu
 {{< cards >}}
   {{< card link="brush-caching" title="Almacenamiento en caché de pincel" icon="lightning-bolt" subtitle="Mantenga los pinceles favoritos con capacidad de respuesta reutilizando los estados del pincel que importan en la pintura real." >}}
   {{< card link="file-format" title="Formato de archivo (.lum)" icon="document-text" subtitle="Un formato de proyecto estructurado para ilustraciones en capas, recuperación, datos de color y edición a largo plazo." >}}
+  {{< card link="filters" title="Filtros" icon="filter" subtitle="Corrija, estilice, genere y mantenga efectos de capa editables con filtros de desenfoque, iluminación, textura, impresión y análisis." >}}
   {{< card link="recovery" title="Recuperación de archivos" icon="refresh" subtitle="La protección del fondo y los puntos de control intencionales ayudan a evitar que las sesiones de pintura se vuelvan frágiles." >}}
   {{< card link="layers" title="Capas y edición no destructiva" icon="collection" subtitle="Pintura estructurada con capas, grupos, máscaras, efectos y estados de trabajo protegidos editables." >}}
   {{< card link="paintbrush" title="Herramienta Pincel" icon="pencil-alt" subtitle="Pintura expresiva con marcas sensibles, entrada dinámica, textura, suavizado y comportamiento de pincel con múltiples cabezales." >}}

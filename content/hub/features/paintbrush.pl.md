@@ -22,21 +22,27 @@ Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny in
 
 Uderzenia mogą być bezpośrednie i natychmiastowe lub mogą być wspomagane przez wygładzenie i stabilizację. Funkcje te pomagają zredukować niepożądane drgania, złagodzić nagłe zmiany i sprawić, że dłuższe ruchy będą bardziej kontrolowane, bez usuwania charakteru wkładu artysty.
 
-Pędzel obsługuje również różne podejścia do gromadzenia się farby. It can behave like a continuous stroke, accumulate repeated dabs, or emit marks over time while the pointer is held in place. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
+Pędzel obsługuje również różne podejścia do gromadzenia się farby. Może zachowywać się jak ciągłe pociągnięcie, gromadzić powtarzające się muśnięcia lub z czasem emitować ślady, gdy wskaźnik jest trzymany w miejscu. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
 
 W przypadku znaków kaligraficznych lub przypominających atrament pędzel może generować bardziej ciągły kształt, zamiast polegać tylko na powtarzających się stemplach. W ten sposób powstają płynne, przypominające wstążki formy, które naturalnie reagują na gesty i prędkość.
 
+## Przechwytywanie obrysów i symulowane renderowanie
+
+Pędzel może przechwycić małą próbkę sposobu, w jaki ustawienie wstępne jest zwykle rysowane ręcznie, a następnie użyć tego profilu podczas renderowania pociągnięć zdefiniowanych przez geometrię, a nie ruch na żywo. Proste linie z wciśniętym klawiszem Shift, obrysowane ścieżki i obrysowane zaznaczenia mogą wykorzystywać przechwycony wzór ciśnienia i prędkości aktywnego narzędzia wstępnego, zamiast zachowywać się jak płaska linia mechaniczna.
+
+Dzięki temu konstruowane pociągnięcia są bliżej charakteru pędzla. Linia narysowana ze ścieżki może zaczynać się delikatnie, zwiększać nacisk, zwężać się lub zmieniać reakcję na prędkość w taki sam szeroki sposób, jak próbkowany ruch dłoni, zachowując jednocześnie dokładny kształt ścieżki, krawędzi zaznaczenia lub gestu linii prostej.
+
 ## Kolor i tekstura
 
-Pociągnięcia pędzla mogą wykorzystywać aktywny kolor farby, reagować na gradienty lub zmieniać kolor poprzez dynamikę. Obsługa tekstur umożliwia przełączanie pędzla między pełnym pokryciem a przerywanymi, muskającymi po powierzchni śladami, co jest przydatne w przypadku efektów suchego pędzla, ziarnistości i wyrazistego cieniowania.
-
-Ponieważ kolor i tekstura mogą być częścią tego samego dynamicznego systemu, co kształt i krycie, pojedyncze pociągnięcie może ewoluować w miarę przesuwania się po płótnie, zamiast pozostać wizualnie jednolite.
+Pociągnięcia pędzla mogą wykorzystywać aktywny kolor farby, reagować na gradienty lub zmieniać kolor poprzez dynamikę. Obsługa tekstur umożliwia przełączanie pędzla między pełnym pokryciem a przerywanymi, muskającymi po powierzchni śladami, co jest przydatne w przypadku efektów suchego pędzla, ziarnistości i wyrazistego cieniowania.Ponieważ kolor i tekstura mogą być częścią tego samego dynamicznego systemu, co kształt i krycie, pojedyncze pociągnięcie może ewoluować w miarę przesuwania się po płótnie, zamiast pozostać wizualnie jednolite.
 
 ## Główki i formacje szczotek
 
 Narzędzie Pędzel może malować więcej niż jedną głowicą na raz. Wokół ścieżki pociągnięcia można ustawić wiele głowic, aby utworzyć sparowane znaki, pociągnięcia wachlarzowe, zachowanie przypominające włosie, wzory natryskiwania lub szerokie formacje teksturowane.
 
-Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.## Załadunek pędzla i pobieranie farby
+Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.
+
+## Załadunek pędzla i pobieranie farby
 
 Pędzel może również symulować ilość farby lub materiału aktualnie znajdującą się na pędzlu. W miarę kontynuacji pociągnięcia obciążenie może stopniowo spadać, przez co ślady stają się jaśniejsze, bardziej suche, cieńsze, bardziej szorstkie lub w inny sposób bardziej rozdrobnione, w zależności od ustawienia dynamiki pędzla.
 

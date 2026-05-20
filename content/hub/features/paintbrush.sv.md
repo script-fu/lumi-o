@@ -26,17 +26,23 @@ Penseln stöder också olika tillvägagångssätt för färguppbyggnad. Den kan 
 
 För kalligrafiska eller bläckliknande märken kan borsten generera ett mer kontinuerligt format i stället för att bara förlita sig på upprepade stämplar. Detta ger flödande, bandliknande former som svarar naturligt på gester och hastighet.
 
+## Stroke fånga och simulerad rendering
+
+Penseln kan fånga ett litet urval av hur en förinställning normalt ritas för hand, och sedan använda den profilen när du återger drag som definieras av geometri snarare än levande rörelse. Raka skift-klicka linjer, streckade banor och streckade markeringar kan alla använda den aktiva verktygsförinställningens infångade tryck- och hastighetsmönster istället för att bete sig som en platt mekanisk linje.
+
+Detta håller konstruerade drag närmare borstens karaktär. En linje som dras från en bana kan börja mjukt, bygga upp tryck, avta eller variera hastighetssvaret på samma breda sätt som det samplade handslaget, samtidigt som det fortfarande följer banans exakta form, markeringskant eller raklinjegest.
+
 ## Färg och struktur
 
-Penseldrag kan använda den aktiva färgen, svara på övertoningar eller variera färg genom dynamik. Texturhantering låter en pensel skifta mellan solid täckning och trasiga, ytavskumningsmärken, vilket är användbart för torra borsteffekter, ådring och uttrycksfull skuggning.
-
-Eftersom färg och textur kan vara en del av samma dynamiska system som form och opacitet, kan ett enda streck utvecklas när det rör sig över duken istället för att förbli visuellt enhetligt.
+Penseldrag kan använda den aktiva färgen, svara på övertoningar eller variera färg genom dynamik. Texturhantering låter en pensel skifta mellan solid täckning och trasiga, ytavskumningsmärken, vilket är användbart för torra borsteffekter, ådring och uttrycksfull skuggning.Eftersom färg och textur kan vara en del av samma dynamiska system som form och opacitet, kan ett enda streck utvecklas när det rör sig över duken istället för att förbli visuellt enhetligt.
 
 ## Borsthuvuden och formationer
 
 Penselverktyget kan måla med mer än ett huvud åt gången. Flera huvuden kan ordnas runt slagbanan för att skapa parade märken, blåsade slag, borstliknande beteende, spraymönster eller breda texturerade formationer.
 
-Dessa huvuden kan följa färdriktningen, variera från varandra och sprida sig på ett sätt som gör att slaget känns organiskt snarare än att det upprepas mekaniskt. Detta är särskilt användbart för naturliga mediapenslar, dekorativa drag, lövverk, päls, kläckning och andra märken som drar nytta av kontrollerade oregelbundenheter.## Penselladdning och färgupptagning
+Dessa huvuden kan följa färdriktningen, variera från varandra och sprida sig på ett sätt som gör att slaget känns organiskt snarare än att det upprepas mekaniskt. Detta är särskilt användbart för naturliga mediapenslar, dekorativa drag, lövverk, päls, kläckning och andra märken som drar nytta av kontrollerade oregelbundenheter.
+
+## Penselladdning och färgupptagning
 
 Penseln kan också simulera hur mycket färg eller material som för närvarande bärs på borsten. När ett slag fortsätter kan den belastningen gradvis rinna ner, vilket gör att märken blir lättare, torrare, tunnare, grövre eller på annat sätt mer brutna beroende på hur borstdynamiken är inställd.
 

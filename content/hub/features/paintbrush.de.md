@@ -12,7 +12,7 @@ Pinsel können auf Bitmap-Stempeln, prozeduralen Formen oder rahmenbasierten ani
 
 Wenn ein Pinsel optisch komplex wird, kann die Vorschau vereinfacht bleiben, sodass die Malerei reaktionsschnell und leicht lesbar bleibt.
 
-## Dynamik und Eingabereaktion
+## Dynamik und Eingabeantwort
 
 Das Pinselwerkzeug reagiert auf Live-Eingaben wie Stiftdruck, Geschwindigkeit, Richtung, Neigung und andere Controller-Werte. Diese Signale können den sichtbaren Strich auf viele Arten beeinflussen: Dicke, Deckkraft, Winkel, Texturreaktion, Farbverhalten, Abstände und andere Eigenschaften können sich alle ändern, wenn sich die Hand bewegt.
 
@@ -26,17 +26,23 @@ Der Pinsel unterstützt auch verschiedene Ansätze zum Farbaufbau. Es kann sich 
 
 Bei kalligrafischen oder tintenähnlichen Markierungen kann der Pinsel einen kontinuierlicheren, geformten Strich erzeugen, anstatt sich nur auf wiederholte Stempel zu verlassen. Dadurch entstehen fließende, bandartige Formen, die natürlich auf Gesten und Geschwindigkeit reagieren.
 
+## Stricherfassung und simuliertes Rendering
+
+Der Pinsel kann ein kleines Beispiel davon erfassen, wie eine Voreinstellung normalerweise von Hand gezeichnet wird, und dieses Profil dann verwenden, wenn Striche gerendert werden, die durch Geometrie und nicht durch Live-Bewegungen definiert werden. Gerade Umschalt-Klicklinien, gestrichelte Pfade und gestrichelte Auswahlen können alle das erfasste Druck- und Geschwindigkeitsmuster der aktiven Werkzeugvoreinstellung verwenden, anstatt sich wie eine flache mechanische Linie zu verhalten.
+
+Dadurch bleiben die konstruierten Striche näher am Charakter des Pinsels. Eine von einem Pfad gezeichnete Linie kann sanft beginnen, Druck aufbauen, sich verjüngen oder die Geschwindigkeitsreaktion auf die gleiche Weise wie der gesampelte Handstrich variieren, während sie dennoch der exakten Form des Pfads, der Auswahlkante oder der geradlinigen Geste folgt.
+
 ## Farbe und Textur
 
-Pinselstriche können die aktive Malfarbe verwenden, auf Farbverläufe reagieren oder die Farbe durch Dynamik variieren. Durch die Texturbearbeitung kann ein Pinsel zwischen einer festen Abdeckung und unterbrochenen, über die Oberfläche gleitenden Markierungen wechseln, was für Trockenpinseleffekte, Körnung und ausdrucksstarke Schattierungen nützlich ist.
-
-Da Farbe und Textur Teil desselben dynamischen Systems sein können wie Form und Deckkraft, kann sich ein einzelner Strich entwickeln, während er sich über die Leinwand bewegt, anstatt optisch einheitlich zu bleiben.
+Pinselstriche können die aktive Malfarbe verwenden, auf Farbverläufe reagieren oder die Farbe durch Dynamik variieren. Durch die Texturbearbeitung kann ein Pinsel zwischen einer festen Abdeckung und unterbrochenen, über die Oberfläche gleitenden Markierungen wechseln, was für Trockenpinseleffekte, Körnung und ausdrucksstarke Schattierungen nützlich ist.Da Farbe und Textur Teil desselben dynamischen Systems sein können wie Form und Deckkraft, kann sich ein einzelner Strich entwickeln, während er sich über die Leinwand bewegt, anstatt optisch einheitlich zu bleiben.
 
 ## Bürstenköpfe und Formationen
 
 Das Pinselwerkzeug kann mit mehr als einem Kopf gleichzeitig malen. Mehrere Köpfe können um den Strichpfad herum angeordnet werden, um paarweise Markierungen, gefächerte Striche, borstenartiges Verhalten, Sprühmuster oder breite Strukturformationen zu erzeugen.
 
-Diese Köpfe können der Bewegungsrichtung folgen, voneinander abweichen und sich so verteilen, dass sich der Strich eher organisch als mechanisch wiederholt anfühlt. Dies ist besonders nützlich für Pinsel mit natürlichen Medien, dekorative Striche, Blätter, Fell, Schraffuren und andere Markierungen, die von kontrollierten Unregelmäßigkeiten profitieren.## Pinselladung und Farbaufnahme
+Diese Köpfe können der Bewegungsrichtung folgen, voneinander abweichen und sich so verteilen, dass sich der Strich eher organisch als mechanisch wiederholt anfühlt. Dies ist besonders nützlich für Pinsel mit natürlichen Medien, dekorative Striche, Blätter, Fell, Schraffuren und andere Markierungen, die von kontrollierten Unregelmäßigkeiten profitieren.
+
+## Pinselladung und Farbaufnahme
 
 Der Pinsel kann auch simulieren, wie viel Farbe oder Material sich gerade auf dem Pinsel befindet. Mit fortschreitendem Strich kann diese Ladung allmählich nachlassen, wodurch die Markierungen je nach Einstellung der Pinseldynamik heller, trockener, dünner, rauer oder auf andere Weise stärker aufgelöst werden.
 
@@ -50,6 +56,6 @@ Diese Verhaltensweisen sind nützlich für Pinsel, die sich lebendig anfühlen s
 
 ## Künstlerorientierter Workflow
 
-Das Pinsel-Werkzeug ist so organisiert, dass häufige Malentscheidungen immer griffbereit sind, während weniger häufige Einrichtungsoptionen nicht im Weg sind. Die Absicht besteht darin, das Werkzeug während des Malens zugänglich zu halten und gleichzeitig eine umfassende Anpassung des Pinseldesigns zu unterstützen.
+Das Pinsel-Werkzeug ist so organisiert, dass häufige Malentscheidungen stets griffbereit sind, während weniger häufige Einrichtungsoptionen nicht im Weg sind. Die Absicht besteht darin, das Werkzeug während des Malens zugänglich zu halten und gleichzeitig eine umfassende Anpassung des Pinseldesigns zu unterstützen.
 
 Insgesamt ist der Pinsel so konzipiert, dass er sowohl das alltägliche Malen als auch das Erstellen spezieller Markierungen abdeckt: Schnelles Skizzieren, ausgefeilte Illustrationen, strukturierte Wiedergabe, ausdrucksstarke Tuschearbeiten und komplexe prozedurale Pinseleffekte nutzen alle die gleiche flexible Grundlage.

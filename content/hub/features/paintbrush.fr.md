@@ -20,23 +20,29 @@ Cela fait que le pinceau ressemble moins à un motif estampé qu'à un instrumen
 
 ## Comportement de l'AVC
 
-Les coups peuvent être directs et immédiats, ou ils peuvent être assistés par un lissage et une stabilisation. Ces fonctionnalités aident à réduire les vibrations indésirables, à adoucir les changements brusques et à donner l'impression que les mouvements plus longs sont plus contrôlés sans supprimer le caractère de l'entrée de l'artiste.
+Les mouvements peuvent être directs et immédiats, ou ils peuvent être assistés par un lissage et une stabilisation. Ces fonctionnalités aident à réduire les vibrations indésirables, à adoucir les changements brusques et à donner l'impression que les mouvements plus longs sont plus contrôlés sans supprimer le caractère de l'entrée de l'artiste.
 
 Le pinceau prend également en charge différentes approches d’accumulation de peinture. Il peut se comporter comme un trait continu, accumuler des touches répétées ou émettre des marques au fil du temps pendant que le pointeur est maintenu en place. Cette flexibilité le rend utile à la fois pour le travail en ligne délibéré et pour la construction tonale plus lente.
 
 Pour les marques calligraphiques ou semblables à de l'encre, le pinceau peut générer un trait de forme plus continu plutôt que de s'appuyer uniquement sur des tampons répétés. Cela produit des formes fluides, semblables à des rubans, qui répondent naturellement au geste et à la vitesse.
 
+## Capture de trait et rendu simulé
+
+Le pinceau peut capturer un petit échantillon de la façon dont un préréglage est normalement dessiné à la main, puis utiliser ce profil lors du rendu de traits définis par la géométrie plutôt que par le mouvement en direct. Les lignes droites Maj-clic, les tracés tracés et les sélections tracées peuvent tous utiliser le modèle de pression et de vitesse capturé par le préréglage d'outil actif au lieu de se comporter comme une ligne mécanique plate.
+
+Cela permet de garder les traits construits plus proches du caractère du pinceau. Une ligne tracée à partir d'un chemin peut commencer doucement, augmenter la pression, diminuer ou varier la réponse en vitesse de la même manière que le coup de main échantillonné, tout en suivant la forme exacte du chemin, du bord de sélection ou du geste en ligne droite.
+
 ## Couleur et texture
 
-Les coups de pinceau peuvent utiliser la couleur de peinture active, réagir aux dégradés ou faire varier la couleur grâce à la dynamique. La gestion de la texture permet au pinceau de passer d'une couverture solide à des marques brisées qui effleurent la surface, ce qui est utile pour les effets de pinceau sec, le grain et les ombrages expressifs.
-
-Étant donné que la couleur et la texture peuvent faire partie du même système dynamique que la forme et l’opacité, un seul trait peut évoluer à mesure qu’il se déplace sur la toile au lieu de rester visuellement uniforme.
+Les coups de pinceau peuvent utiliser la couleur de peinture active, réagir aux dégradés ou faire varier la couleur grâce à la dynamique. La gestion de la texture permet au pinceau de passer d'une couverture solide à des marques brisées qui effleurent la surface, ce qui est utile pour les effets de pinceau sec, le grain et les ombrages expressifs.Étant donné que la couleur et la texture peuvent faire partie du même système dynamique que la forme et l’opacité, un seul trait peut évoluer à mesure qu’il se déplace sur la toile au lieu de rester visuellement uniforme.
 
 ## Têtes et formations de brosse
 
 L'outil Pinceau peut peindre avec plusieurs têtes à la fois. Plusieurs têtes peuvent être disposées autour de la trajectoire du trait pour créer des marques appariées, des traits en éventail, un comportement semblable à des poils, des motifs de pulvérisation ou de larges formations texturées.
 
-Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait une sensation organique plutôt que mécaniquement répétée. Ceci est particulièrement utile pour les pinceaux naturels, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques bénéficiant d’une irrégularité contrôlée.## Chargement des pinceaux et ramassage de la peinture
+Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait une sensation organique plutôt que mécaniquement répétée. Ceci est particulièrement utile pour les pinceaux naturels, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques bénéficiant d’une irrégularité contrôlée.
+
+## Chargement des pinceaux et ramassage de la peinture
 
 Le pinceau peut également simuler la quantité de peinture ou de matériau actuellement transportée sur le pinceau. Au fur et à mesure qu'un trait se poursuit, cette charge peut diminuer progressivement, laissant les marques devenir plus claires, plus sèches, plus fines, plus rugueuses ou autrement plus fragmentées en fonction de la manière dont la dynamique du pinceau est définie.
 

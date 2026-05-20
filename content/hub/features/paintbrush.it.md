@@ -26,17 +26,23 @@ Il pennello supporta anche diversi approcci all'accumulo di vernice. Può compor
 
 Per i segni calligrafici o simili all'inchiostro, il Pennello può generare un tratto dalla forma più continua invece di fare affidamento solo su timbri ripetuti. Ciò produce forme fluide, simili a nastri, che rispondono naturalmente al gesto e alla velocità.
 
+## Acquisizione di tratti e rendering simulato
+
+Il pennello può catturare un piccolo esempio di come un'impostazione predefinita viene normalmente disegnata a mano, quindi utilizzare quel profilo durante il rendering di tratti definiti dalla geometria anziché dal movimento dal vivo. Le linee diritte premendo Maiusc, i tracciati e le selezioni tracciate possono tutti utilizzare il modello di pressione e velocità catturato dalla preimpostazione dello strumento attivo invece di comportarsi come una linea meccanica piatta.
+
+Ciò mantiene i tratti costruiti più vicini al carattere del pennello. Una linea tracciata da un tracciato può iniziare dolcemente, aumentare la pressione, assottigliarsi o variare la risposta della velocità allo stesso modo del tratto della mano campionato, pur seguendo la forma esatta del tracciato, del bordo di selezione o del gesto in linea retta.
+
 ## Colore e consistenza
 
-I tratti del pennello possono utilizzare il colore di pittura attivo, rispondere alle sfumature o variare il colore attraverso la dinamica. La gestione delle texture consente al pennello di passare dalla copertura solida ai segni spezzati e radenti alla superficie, utile per effetti di pennello asciutto, grana e ombreggiature espressive.
-
-Poiché colore e texture possono far parte dello stesso sistema dinamico di forma e opacità, un singolo tratto può evolversi mentre si sposta sulla tela invece di rimanere visivamente uniforme.
+I tratti del pennello possono utilizzare il colore di pittura attivo, rispondere alle sfumature o variare il colore attraverso la dinamica. La gestione delle texture consente al pennello di passare dalla copertura solida ai segni spezzati e radenti alla superficie, utile per effetti di pennello asciutto, grana e ombreggiature espressive.Poiché colore e texture possono far parte dello stesso sistema dinamico di forma e opacità, un singolo tratto può evolversi mentre si sposta sulla tela invece di rimanere visivamente uniforme.
 
 ## Teste e formazioni di spazzole
 
 Lo strumento Pennello può dipingere con più di una testa alla volta. È possibile disporre più teste attorno al percorso del tratto per creare segni accoppiati, tratti a ventaglio, comportamento simile a setole, modelli di spruzzo o formazioni con texture ampie.
 
-Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.## Carico spazzole e prelievo vernice
+Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. Ciò è particolarmente utile per i pennelli naturali, i tratti decorativi, il fogliame, la pelliccia, i tratteggi e altri segni che traggono vantaggio dall'irregolarità controllata.
+
+## Carico spazzole e prelievo vernice
 
 Il Pennello può anche simulare la quantità di vernice o materiale attualmente trasportata sul pennello. Man mano che un tratto continua, il carico può gradualmente ridursi, lasciando che i segni diventino più leggeri, più asciutti, più sottili, più ruvidi o comunque più spezzati a seconda di come sono impostate le dinamiche del pennello.
 

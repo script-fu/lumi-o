@@ -26,17 +26,23 @@ The Brush también admite diferentes enfoques para la acumulación de pintura. P
 
 Para marcas caligráficas o similares a tinta, el Pincel puede generar un trazo de forma más continua en lugar de depender únicamente de sellos repetidos. Esto produce formas fluidas, parecidas a cintas, que responden naturalmente al gesto y la velocidad.
 
+## Captura de trazos y renderizado simulado
+
+El pincel puede capturar una pequeña muestra de cómo se dibuja normalmente a mano un ajuste preestablecido y luego usar ese perfil al representar trazos definidos por geometría en lugar de movimiento en vivo. Las líneas rectas con Mayús y clic, los trazados con trazos y las selecciones con trazos pueden utilizar el patrón de presión y velocidad capturado del ajuste preestablecido de herramienta activa en lugar de comportarse como una línea mecánica plana.
+
+Esto mantiene los trazos construidos más cerca del carácter del pincel. Una línea dibujada a partir de un camino puede comenzar suavemente, generar presión, disminuir o variar la respuesta de velocidad de la misma manera amplia que el trazo de la mano muestreado, sin dejar de seguir la forma exacta del camino, el borde de selección o el gesto de línea recta.
+
 ## Color y textura
 
-Las pinceladas pueden utilizar el color de pintura activo, responder a degradados o variar el color mediante dinámicas. El manejo de texturas permite que el pincel cambie entre una cobertura sólida y marcas discontinuas que rozan la superficie, lo cual es útil para efectos de pincel seco, vetas y sombreados expresivos.
-
-Debido a que el color y la textura pueden ser parte del mismo sistema dinámico que la forma y la opacidad, un solo trazo puede evolucionar a medida que se mueve por el lienzo en lugar de permanecer visualmente uniforme.
+Las pinceladas pueden utilizar el color de pintura activo, responder a degradados o variar el color mediante dinámicas. El manejo de texturas permite que el pincel cambie entre una cobertura sólida y marcas discontinuas que rozan la superficie, lo cual es útil para efectos de pincel seco, vetas y sombreados expresivos.Debido a que el color y la textura pueden ser parte del mismo sistema dinámico que la forma y la opacidad, un solo trazo puede evolucionar a medida que se mueve por el lienzo en lugar de permanecer visualmente uniforme.
 
 ## Cabezales y formaciones de cepillos.
 
 La herramienta Pincel puede pintar con más de un cabezal a la vez. Se pueden disponer varios cabezales alrededor del recorrido del trazo para crear marcas emparejadas, trazos en abanico, comportamiento similar a cerdas, patrones de pulverización o formaciones de textura amplia.
 
-Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y dispersarse de manera que el trazo se sienta orgánico en lugar de repetido mecánicamente. Esto es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelaje, sombreado y otras marcas que se benefician de una irregularidad controlada.## Carga de pincel y recogida de pintura
+Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y dispersarse de manera que el trazo se sienta orgánico en lugar de repetido mecánicamente. Esto es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelaje, sombreado y otras marcas que se benefician de una irregularidad controlada.
+
+## Carga de pincel y recogida de pintura
 
 El Pincel también puede simular cuánta pintura o material se encuentra actualmente en el pincel. A medida que continúa el trazo, esa carga puede disminuir gradualmente, permitiendo que las marcas se vuelvan más claras, más secas, más delgadas, más ásperas o más fragmentadas dependiendo de cómo se establezca la dinámica del pincel.
 

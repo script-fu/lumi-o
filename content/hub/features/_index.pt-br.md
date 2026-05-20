@@ -9,6 +9,7 @@ Esta seção apresenta os principais recursos disponíveis no Lumi e os fluxos d
 {{< cards >}}
   {{< card link="brush-caching" title="Cache de pincel" icon="lightning-bolt" subtitle="Mantenha os pincéis favoritos responsivos reutilizando os estados do pincel que são importantes na pintura real." >}}
   {{< card link="file-format" title="Formato de arquivo (.lum)" icon="document-text" subtitle="Um formato de projeto estruturado para arte em camadas, recuperação, dados de cores e edição de longo prazo." >}}
+  {{< card link="filters" title="Filtros" icon="filter" subtitle="Corrija, estilize, gere e mantenha efeitos de camada editáveis ​​com filtros de desfoque, iluminação, textura, impressão e análise." >}}
   {{< card link="recovery" title="Recuperação de arquivos" icon="refresh" subtitle="A proteção do fundo e os pontos de verificação intencionais ajudam a evitar que as sessões de pintura se tornem frágeis." >}}
   {{< card link="layers" title="Camadas e edição não destrutiva" icon="collection" subtitle="Pintura estruturada com camadas editáveis, grupos, máscaras, efeitos e estados de trabalho protegidos." >}}
   {{< card link="paintbrush" title="Ferramenta Pincel" icon="pencil-alt" subtitle="Pintura expressiva com marcas responsivas, entrada dinâmica, textura, suavização e comportamento de pincel com várias cabeças." >}}
