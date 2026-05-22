@@ -19,6 +19,6 @@ Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在
   {{< card link="scripting" title="方案脚本" icon="code" subtitle="使用嵌入式方案解释器自动化工作流程并扩展 Lumi。" >}}
   {{< card link="spectral-color" title="光谱混色" icon="beaker" subtitle="调色板颜色与类似颜料的行为混合在一起，使数字颜色选择更具绘画感。" >}}
   {{< card link="tool-presets" title="工具预设" icon="template" subtitle="构建一套小型、熟悉的手工工具，具有稳定的行为、资源和自定义身份。" >}}
-  {{< card link="warp-tool" title="变形工具" icon="cursor-click" subtitle="直接重塑绘制的内容，同时保留复杂艺术品的分层结构。" >}}
+  {{< card link="warp-tool" title="扭曲工具" icon="cursor-click" subtitle="直接重塑绘制的内容，同时保留复杂艺术品的分层结构。" >}}
   {{< card link="workspaces" title="工作空间" icon="view-boards" subtitle="在准备好的工作室环境之间切换以进行素描、绘画、上墨、色彩工作和对焦。" >}}
 {{< /cards >}}

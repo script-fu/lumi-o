@@ -92,6 +92,14 @@ Pick ersetzt jedes Pixel durch einen zufällig ausgewählten Nachbarn, sodass da
 
 ### VerbreitenSpread streut Pixel, indem es sie zufällig innerhalb eines Radius verschiebt. Dies ist nützlich, wenn Sie eine bewegungslose Störung wünschen: eine gebrochene Oberfläche, eine verschmierte Kante oder eine abgenutzte Textur, die noch die Farbbeziehungen des Quellbilds aufweist.
 
+### Fraktale Ausbreitung
+
+Fractal Spread ist eine kohärentere, malerischere Version des Spreads, die für faseriges Verlaufen der Tinte entwickelt wurde. Anstatt jedes Pixel in eine unabhängige, zufällige Richtung zu bewegen, folgt es einem fraktalen Faserfeld, sodass benachbarte Pixel in entsprechende Richtungen ziehen und so Ranken, gefiederte Tintenlinien und eine Papierkörnungsdiffusion erzeugen, die immer noch durch Winkel und Stärke beeinflusst werden kann.
+
+### Pigmentrauschen
+
+Pigment Noise fügt transparenten Farbschichten ein aquarellartiges Pigmentverhalten hinzu: einen dunklen Rand entlang der Alpha-Kante, unterbrochene Kontaktlinienvariation, innere Körnung und spärliche dunklere Flecken. Es ist so konzipiert, dass es nach Arbeiten mit nassen Kanten oder Auslaufkanten natürlich sitzt und eine sauber bemalte Form in etwas mit einer physischeren Pigmentkonzentration verwandelt.
+
 ### Fraktal
 
 Fractal erzeugt kachelbares fraktales Perlin-Rauschen, was es als wiederverwendbare Quelle für Masken, Wolken, Papiertexturen, geländeähnliche Aufteilungen und prozedurale Überlagerungen besonders wertvoll macht. Da es kachelbar ist, kann es größere Arbeitsabläufe unterstützen, ohne dass offensichtliche Nähte entstehen.
@@ -130,9 +138,7 @@ Erode führt die komplementäre Bewegung aus, indem es dunklere Bereiche wachsen
 
 ## Muster
 
-### Schachbrett
-
-Schachbrett erzeugt ein regelmäßig wechselndes Kachelmuster. Es ist einfach, aber diese Einfachheit macht es nützlich zum Testen der Transparenz, zum Erstellen von Masken, zum Blockieren grafischer Hintergründe oder zum Erstellen sauberer geometrischer Quellmaterialien.
+### SchachbrettSchachbrett erzeugt ein regelmäßig wechselndes Kachelmuster. Es ist einfach, aber diese Einfachheit macht es nützlich zum Testen der Transparenz, zum Erstellen von Masken, zum Blockieren grafischer Hintergründe oder zum Erstellen sauberer geometrischer Quellmaterialien.
 
 ### Raster
 
@@ -142,7 +148,9 @@ Grid zeichnet wiederholte horizontale und vertikale Unterteilungen und eignet si
 
 Voronoi generiert aus gesetzten Punkten eine kachelbare Zelltextur mit Steuerelementen für Feature-Typ, Distanzmetrik, Zufälligkeit, fraktale Details und nahtlose Umhüllung. In der Praxis kann es von sauberen, rissigen Zellstrukturen zu organischeren Stein-, Haut-, Karten- oder abstrakten Netzwerkmustern übergehen.
 
-### WelleWave erzeugt Streifen- oder Ringmuster, die durch Wellenformprofil, geometrische Anordnung, Verzerrung, fraktale Details und Phasenversatz geformt sind. Das macht es zu mehr als einem einfachen Streifenwerkzeug: Es kann kontrollierte Wellen, topografische Bänder, Moiré-ähnliche Grafiken oder verrauschte konzentrische Musterfelder erzeugen.
+### Welle
+
+Wave erzeugt Streifen- oder Ringmuster, die durch Wellenformprofil, geometrische Anordnung, Verzerrung, fraktale Details und Phasenversatz geformt sind. Das macht es zu mehr als einem einfachen Streifenwerkzeug: Es kann kontrollierte Wellen, topografische Bänder, Moiré-ähnliche Grafiken oder verrauschte konzentrische Musterfelder erzeugen.
 
 ### Halbton (AM)
 

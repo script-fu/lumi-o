@@ -92,6 +92,14 @@ Pick remplace chaque pixel par un voisin choisi au hasard, de sorte que l'image 
 
 ### PropagéRépartissez les pixels en les déplaçant de manière aléatoire dans un rayon. C'est utile lorsque vous souhaitez une perturbation immobile : une surface brisée, un bord maculé ou une texture vieillie qui porte toujours les relations de couleurs de l'image source.
 
+### Propagation fractale
+
+Fractal Spread est une version picturale plus cohérente de la pâte à tartiner conçue pour les saignements d'encre fibreux. Au lieu de déplacer chaque pixel dans une direction aléatoire sans rapport, il suit un champ de fibres fractales de sorte que les pixels voisins tirent dans des directions connexes, créant des vrilles, des lignes d'encre en plumes et une diffusion du grain du papier qui peut toujours être biaisée par l'angle et la force.
+
+### Bruit pigmentaire
+
+Pigment Noise ajoute un comportement pigmentaire de type aquarelle aux couches de peinture transparentes : un bord sombre le long du bord alpha, une variation de ligne de contact brisée, une granulation intérieure et des taches plus foncées clairsemées. Il est conçu pour reposer naturellement après un travail sur bord mouillé ou fond perdu, transformant une forme peinte propre en quelque chose avec une concentration de pigments plus physique.
+
 ### Fractale
 
 Fractal génère du bruit Perlin fractal carrelable, ce qui le rend particulièrement précieux en tant que source réutilisable pour les masques, les nuages, la texture du papier, la rupture de type terrain et les superpositions procédurales. Grâce à sa mosaïque, il peut alimenter des flux de travail plus importants sans créer de joints évidents.
@@ -130,9 +138,7 @@ Erode effectue le mouvement complémentaire, en agrandissant les régions les pl
 
 ## Modèle
 
-### Damier
-
-Le damier génère un motif de tuiles alterné régulier. C'est simple, mais cette simplicité le rend utile pour tester la transparence, créer des masques, bloquer des arrière-plans graphiques ou créer un matériau source géométrique propre.
+### DamierLe damier génère un motif de tuiles alterné régulier. C'est simple, mais cette simplicité le rend utile pour tester la transparence, créer des masques, bloquer des arrière-plans graphiques ou créer un matériau source géométrique propre.
 
 ### Grille
 
@@ -142,7 +148,9 @@ Grid dessine des divisions horizontales et verticales répétées, ce qui le ren
 
 Voronoi génère une texture cellulaire carrelable à partir de points prédéfinis, avec des contrôles pour le type de caractéristique, la métrique de distance, le caractère aléatoire, les détails fractals et l'habillage transparent. En pratique, il peut passer de structures de cellules fissurées propres à des motifs de pierre, de peau, de carte ou de réseau plus organiques.
 
-### VagueWave produit des motifs en bandes ou en anneaux façonnés par le profil de forme d'onde, la disposition géométrique, la distorsion, les détails fractals et le décalage de phase. Cela en fait plus qu'un simple outil de bande : il peut générer des ondulations contrôlées, des bandes topographiques, des graphiques de type moiré ou des champs de motifs concentriques bruyants.
+### Vague
+
+Wave produit des motifs en bandes ou en anneaux façonnés par le profil de forme d'onde, la disposition géométrique, la distorsion, les détails fractals et le décalage de phase. Cela en fait plus qu'un simple outil de bande : il peut générer des ondulations contrôlées, des bandes topographiques, des graphiques de type moiré ou des champs de motifs concentriques bruyants.
 
 ### Demi-teintes (AM)
 

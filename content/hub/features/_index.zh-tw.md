@@ -7,7 +7,7 @@ Lumi 的功能集專注於數位繪畫和結構化插圖工作流程，建立在
 本節介紹 Lumi 中提供的核心功能及其支援的創意工作流程。
 
 {{< cards >}}
-  {{< card link="brush-caching" title="刷機快取" icon="lightning-bolt" subtitle="透過重複使用真實繪畫中重要的畫筆狀態，讓喜愛的畫筆保持靈敏順手。" >}}
+  {{< card link="brush-caching" title="刷機快取" icon="lightning-bolt" subtitle="透過重複使用在真實繪畫中重要的畫筆狀態，保持最喜歡的畫筆的反應能力。" >}}
   {{< card link="file-format" title="文件格式 (.lum)" icon="document-text" subtitle="用於分層圖稿、復原、色彩資料和長期編輯的結構化專案格式。" >}}
   {{< card link="filters" title="過濾器" icon="filter" subtitle="使用模糊、照明、紋理、列印和分析濾鏡校正、風格化、產生圖層效果並保持圖層效果可編輯。" >}}
   {{< card link="recovery" title="文件恢復" icon="refresh" subtitle="背景保護和有意的檢查點有助於防止繪畫過程變得脆弱。" >}}

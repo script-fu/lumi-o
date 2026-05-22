@@ -98,6 +98,14 @@ Pick replaces each pixel with a randomly chosen neighbour, so the image stays re
 
 Spread scatters pixels by randomly displacing them within a radius. It is useful when you want motionless disruption: a broken surface, a smeared edge, or a distressed texture that still carries the source image's colour relationships.
 
+### Fractal Spread
+
+Fractal Spread is a more coherent, painterly version of spread built for fibrous ink bleed. Instead of moving each pixel in an unrelated random direction, it follows a fractal fibre field so neighbouring pixels pull in related directions, creating tendrils, feathered inklines, and paper-grain diffusion that can still be biased by angle and strength.
+
+### Pigment Noise
+
+Pigment Noise adds watercolour-style pigment behaviour to transparent paint layers: a darkened rim along the alpha edge, broken contact-line variation, interior granulation, and sparse darker flecks. It is designed to sit naturally after wet-edge or bleed work, turning a clean painted shape into something with more physical pigment concentration.
+
 ### Fractal
 
 Fractal generates tileable fractal Perlin noise, which makes it especially valuable as a reusable source for masks, clouds, paper texture, terrain-like breakup, and procedural overlays. Because it tiles, it can feed larger workflows without creating obvious seams.
