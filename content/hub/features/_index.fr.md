@@ -7,7 +7,6 @@ L'ensemble des fonctionnalités de Lumi se concentre sur la peinture numérique 
 Cette section présente les principales fonctionnalités disponibles dans Lumi et les flux de travail créatifs qu'ils prennent en charge.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Mise en cache des pinceaux" icon="lightning-bolt" subtitle="Gardez vos pinceaux préférés réactifs en réutilisant les états de pinceau qui comptent dans la vraie peinture." >}}
   {{< card link="file-format" title="Format de fichier (.lum)" icon="document-text" subtitle="Un format de projet structuré pour les illustrations en couches, la récupération, les données de couleur et l'édition à long terme." >}}
   {{< card link="filters" title="Filtres" icon="filter" subtitle="Corrigez, stylisez, générez et conservez les effets de calque modifiables avec des filtres de flou, d'éclairage, de texture, d'impression et d'analyse." >}}
   {{< card link="recovery" title="Récupération de fichiers" icon="refresh" subtitle="La protection de l’arrière-plan et les points de contrôle intentionnels aident à empêcher les séances de peinture de se fragiliser." >}}

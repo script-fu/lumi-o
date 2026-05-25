@@ -7,7 +7,6 @@ De functies van Lumi zijn gericht op digitaal schilderen en gestructureerde illu
 In dit gedeelte worden de kernmogelijkheden van Lumi geïntroduceerd en de creatieve workflows die ze ondersteunen.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Borstelcaching" icon="lightning-bolt" subtitle="Zorg ervoor dat uw favoriete penselen responsief blijven door de penseeltoestanden te hergebruiken die er bij het echte schilderen toe doen." >}}
   {{< card link="file-format" title="Bestandsformaat (.lum)" icon="document-text" subtitle="Een gestructureerd projectformaat voor gelaagde illustraties, herstel, kleurgegevens en langetermijnbewerking." >}}
   {{< card link="filters" title="Filters" icon="filter" subtitle="Corrigeer, stileer, genereer en houd laageffecten bewerkbaar met filters voor vervaging, belichting, textuur, afdrukken en analyse." >}}
   {{< card link="recovery" title="Bestandsherstel" icon="refresh" subtitle="Achtergrondbescherming en opzettelijke controlepunten zorgen ervoor dat schildersessies niet kwetsbaar worden." >}}

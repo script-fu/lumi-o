@@ -46,9 +46,9 @@ This makes tool switching feel stable. The pencil, brush, transform tool, or sel
 
 ## Portable authorship
 
-A preset owns the resources that make it feel unique. For a brush preset, the brush, dynamics, and icon can live inside the preset itself, so the tool remains complete even when the wider resource library changes.
+A preset owns the resources that make it feel unique. For a brush preset, the brush, dynamics, and icon live inside the preset itself, so the tool remains complete even when the wider resource library changes.
 
-This is a deliberate simplification: a saved tool is not a fragile pointer to several separate moving parts. Brushes and dynamics can still be saved to reusable libraries, but when they are chosen for a preset they are copied into that authored tool.
+This is a deliberate simplification: a saved tool is not a fragile pointer to several separate moving parts. Brushes can still be saved to a reusable library, but when they are chosen for a preset they are copied into that authored tool.
 
 For artists, the important part is that a tool can be saved as a complete creative decision. Its behaviour, identity, and resources travel together, making tool presets a practical foundation for personal workflows, project-specific toolkits, and shared studio setups.
 

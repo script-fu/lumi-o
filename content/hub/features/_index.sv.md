@@ -7,7 +7,6 @@ Lumis funktionsuppsättning är fokuserad på digital målning och strukturerade
 Det här avsnittet introducerar de centrala funktionerna som är tillgängliga i Lumi och de kreativa arbetsflöden som de stöder.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Caching av borstar" icon="lightning-bolt" subtitle="Se till att favoritpenslar känns lyhörda genom att återanvända penseltillstånden som betyder något i riktig målning." >}}
   {{< card link="file-format" title="Filformat (.lum)" icon="document-text" subtitle="Ett strukturerat projektformat för lagerkonst, återställning, färgdata och långtidsredigering." >}}
   {{< card link="filters" title="Filter" icon="filter" subtitle="Korrigera, stilisera, generera och håll lagereffekter redigerbara med filter för oskärpa, belysning, textur, utskrift och analys." >}}
   {{< card link="recovery" title="Filåterställning" icon="refresh" subtitle="Bakgrundsskydd och avsiktliga kontrollpunkter hjälper till att hålla målningssessioner från att bli ömtåliga." >}}

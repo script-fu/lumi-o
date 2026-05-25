@@ -9,7 +9,6 @@ Lumi's feature set is focused on digital painting and structured illustration wo
 This section introduces the core capabilities available in Lumi and the creative workflows they support.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Brush Caching" icon="lightning-bolt" subtitle="Keep favourite brushes feeling responsive by reusing the brush states that matter in real painting." >}}
   {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="A structured project format for layered artwork, recovery, colour data, and long-term editing." >}}
   {{< card link="filters" title="Filters" icon="filter" subtitle="Correct, stylize, generate, and keep layer effects editable with blur, lighting, texture, print, and analysis filters." >}}
   {{< card link="recovery" title="File Recovery" icon="refresh" subtitle="Background protection and intentional checkpoints help keep painting sessions from becoming fragile." >}}

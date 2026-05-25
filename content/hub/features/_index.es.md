@@ -7,7 +7,6 @@ El conjunto de funciones de Lumi se centra en la pintura digital y los flujos de
 Esta sección presenta las capacidades principales disponibles en Lumi y los flujos de trabajo creativos que admiten.
 
 {{< cards >}}
-  {{< card link="brush-caching" title="Almacenamiento en caché de pincel" icon="lightning-bolt" subtitle="Mantenga los pinceles favoritos con capacidad de respuesta reutilizando los estados del pincel que importan en la pintura real." >}}
   {{< card link="file-format" title="Formato de archivo (.lum)" icon="document-text" subtitle="Un formato de proyecto estructurado para ilustraciones en capas, recuperación, datos de color y edición a largo plazo." >}}
   {{< card link="filters" title="Filtros" icon="filter" subtitle="Corrija, estilice, genere y mantenga efectos de capa editables con filtros de desenfoque, iluminación, textura, impresión y análisis." >}}
   {{< card link="recovery" title="Recuperación de archivos" icon="refresh" subtitle="La protección del fondo y los puntos de control intencionales ayudan a evitar que las sesiones de pintura se vuelvan frágiles." >}}
