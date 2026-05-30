@@ -42,9 +42,9 @@ Omdat elk gereedschap via een preset werkt, hoeft het wisselen van gereedschap n
 
 ## Draagbaar auteurschap
 
-Een preset bezit de bronnen waardoor hij uniek aanvoelt. Bij een penseelvoorinstelling kunnen het penseel, de dynamiek en het pictogram binnen de voorinstelling zelf leven, zodat de tool compleet blijft, zelfs als de bredere bronnenbibliotheek verandert.
+Een preset bezit de bronnen waardoor hij uniek aanvoelt. Bij een penseelvoorinstelling bevinden het penseel, de dynamiek en het pictogram zich in de voorinstelling zelf, zodat de tool compleet blijft, zelfs als de bredere bronnenbibliotheek verandert.
 
-Dit is een bewuste vereenvoudiging: een opgeslagen stuk gereedschap is geen kwetsbare verwijzing naar verschillende afzonderlijke bewegende delen. Penselen en dynamiek kunnen nog steeds worden opgeslagen in herbruikbare bibliotheken, maar wanneer ze voor een voorinstelling worden gekozen, worden ze naar dat geschreven hulpmiddel gekopieerd.
+Dit is een bewuste vereenvoudiging: een opgeslagen stuk gereedschap is geen kwetsbare verwijzing naar verschillende afzonderlijke bewegende delen. Penselen kunnen nog steeds worden opgeslagen in een herbruikbare bibliotheek, maar wanneer ze voor een voorinstelling worden gekozen, worden ze naar dat geschreven hulpmiddel gekopieerd.
 
 Voor kunstenaars is het belangrijkste dat een hulpmiddel kan worden bewaard als een volledige creatieve beslissing. Het gedrag, de identiteit en de middelen reizen samen, waardoor tool-presets een praktische basis vormen voor persoonlijke workflows, projectspecifieke toolkits en gedeelde studio-opstellingen.
 

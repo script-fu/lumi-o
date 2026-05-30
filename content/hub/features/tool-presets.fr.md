@@ -42,9 +42,9 @@ Cela signifie que changer d’espace de travail peut également modifier la boî
 
 ## Paternité portable
 
-Un préréglage possède les ressources qui le rendent unique. Pour un préréglage de pinceau, le pinceau, la dynamique et l'icône peuvent vivre à l'intérieur du préréglage lui-même, de sorte que l'outil reste complet même lorsque la bibliothèque de ressources plus large change.
+Un préréglage possède les ressources qui le rendent unique. Pour un préréglage de pinceau, le pinceau, la dynamique et l'icône vivent à l'intérieur du préréglage lui-même, de sorte que l'outil reste complet même lorsque la bibliothèque de ressources plus large change.
 
-Il s'agit d'une simplification volontaire : un outil sauvegardé n'est pas un pointeur fragile vers plusieurs pièces mobiles distinctes. Les pinceaux et les dynamiques peuvent toujours être enregistrés dans des bibliothèques réutilisables, mais lorsqu'ils sont choisis pour un préréglage, ils sont copiés dans cet outil créé.
+Il s'agit d'une simplification volontaire : un outil sauvegardé n'est pas un pointeur fragile vers plusieurs pièces mobiles distinctes. Les pinceaux peuvent toujours être enregistrés dans une bibliothèque réutilisable, mais lorsqu'ils sont choisis pour un préréglage, ils sont copiés dans cet outil créé.
 
 Pour les artistes, l’important est qu’un outil puisse être enregistré comme une décision créative complète. Son comportement, son identité et ses ressources voyagent ensemble, faisant des préréglages d'outils une base pratique pour les flux de travail personnels, les boîtes à outils spécifiques aux projets et les configurations de studio partagées.
 

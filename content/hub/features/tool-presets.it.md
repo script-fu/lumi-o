@@ -42,9 +42,9 @@ Poiché ogni strumento funziona secondo una preimpostazione, cambiare strumento 
 
 ## Paternità portatile
 
-Un preset possiede le risorse che lo fanno sembrare unico. Per una preimpostazione del pennello, il pennello, le dinamiche e l'icona possono vivere all'interno della preimpostazione stessa, quindi lo strumento rimane completo anche quando cambia la libreria di risorse più ampia.
+Un preset possiede le risorse che lo fanno sembrare unico. Per una preimpostazione del pennello, il pennello, le dinamiche e l'icona risiedono all'interno della preimpostazione stessa, quindi lo strumento rimane completo anche quando cambia la libreria di risorse più ampia.
 
-Si tratta di una semplificazione voluta: uno strumento salvato non è un fragile puntatore a più parti mobili separate. I pennelli e le dinamiche possono ancora essere salvati in librerie riutilizzabili, ma quando vengono scelti per un preset vengono copiati nello strumento creato.
+Si tratta di una semplificazione voluta: uno strumento salvato non è un fragile puntatore a più parti mobili separate. I pennelli possono ancora essere salvati in una libreria riutilizzabile, ma quando vengono scelti per un preset vengono copiati nello strumento creato.
 
 Per gli artisti, la parte importante è che uno strumento possa essere salvato come decisione creativa completa. Il suo comportamento, la sua identità e le sue risorse viaggiano insieme, rendendo le preimpostazioni degli strumenti una base pratica per flussi di lavoro personali, kit di strumenti specifici per progetti e configurazioni di studio condivise.
 

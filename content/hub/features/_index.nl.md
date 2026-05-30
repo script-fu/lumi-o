@@ -17,7 +17,7 @@ In dit gedeelte worden de kernmogelijkheden van Lumi geïntroduceerd en de creat
   {{< card link="palette-mixer" title="Paletmixer" icon="adjustments" subtitle="Creëer nieuwe kleuren op basis van paletrelaties met behulp van pigmentachtige meng-, toon- en chromabeslissingen." >}}
   {{< card link="scripting" title="Schemascripting" icon="code" subtitle="Automatiseer workflows en breid Lumi uit met behulp van een ingebouwde Scheme-interpreter." >}}
   {{< card link="spectral-color" title="Spectrale kleurenmenging" icon="beaker" subtitle="Paletkleuren vermengen zich met pigmentachtig gedrag, waardoor digitale kleurselectie een schilderachtiger gevoel krijgt." >}}
-  {{< card link="tool-presets" title="Gereedschapsvoorinstellingen" icon="template" subtitle="Bouw een kleine, vertrouwde set handgemaakte tools met stabiel gedrag, middelen en aangepaste identiteiten." >}}
+  {{< card link="tool-presets" title="Voorinstellingen voor gereedschap" icon="template" subtitle="Bouw een kleine, vertrouwde set handgemaakte tools met stabiel gedrag, middelen en aangepaste identiteiten." >}}
   {{< card link="warp-tool" title="Verdraaiingsgereedschap" icon="cursor-click" subtitle="Geef geschilderde inhoud direct een nieuwe vorm, terwijl de gelaagde structuur van complexe kunstwerken behouden blijft." >}}
   {{< card link="workspaces" title="Werkruimtes" icon="view-boards" subtitle="Schakel tussen voorbereide studioomgevingen voor schetsen, schilderen, inkten, kleurenwerk en focus." >}}
 {{< /cards >}}

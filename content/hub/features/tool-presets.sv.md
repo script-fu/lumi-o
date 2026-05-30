@@ -42,9 +42,9 @@ Eftersom varje verktyg fungerar genom en förinställning, behöver byte av verk
 
 ## Bärbart författarskap
 
-En förinställning äger resurserna som gör att den känns unik. För en penselförinställning kan penseln, dynamiken och ikonen leva i själva förinställningen, så verktyget förblir komplett även när det bredare resursbiblioteket ändras.
+En förinställning äger resurserna som gör att den känns unik. För en penselförinställning finns penseln, dynamiken och ikonen i själva förinställningen, så verktyget förblir komplett även när det bredare resursbiblioteket ändras.
 
-Detta är en avsiktlig förenkling: ett sparat verktyg är inte en ömtålig pekare till flera separata rörliga delar. Penslar och dynamik kan fortfarande sparas i återanvändbara bibliotek, men när de väljs för en förinställning kopieras de till det skapade verktyget.
+Detta är en avsiktlig förenkling: ett sparat verktyg är inte en ömtålig pekare till flera separata rörliga delar. Penslar kan fortfarande sparas i ett återanvändbart bibliotek, men när de väljs för en förinställning kopieras de till det skapade verktyget.
 
 För konstnärer är den viktiga delen att ett verktyg kan sparas som ett komplett kreativt beslut. Dess beteende, identitet och resurser reser tillsammans, vilket gör verktygsförinställningar till en praktisk grund för personliga arbetsflöden, projektspecifika verktygssatser och delade studioinställningar.
 

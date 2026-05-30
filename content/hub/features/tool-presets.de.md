@@ -10,7 +10,7 @@ Die Idee ist einfach: Ein Künstler stellt einen kleinen, stabilen Satz vertraut
 
 Eine Werkzeugvoreinstellung ist mehr als eine gespeicherte Einstellung. Es handelt sich um ein vollständig erstelltes Werkzeug: die Werkzeugidentität, sein Arbeitsgefühl, seine Einrichtungsoptionen und bei Bedarf sein privater Pinsel, seine Dynamik, sein Verlauf oder sein Symbol.
 
-Dadurch verhält sich ein Preset wie ein echtes Objekt im Toolkit des Künstlers. Ein beliebter Skizzenstift kann ein Skizzenstift bleiben. Ein Blockierpinsel kann seinen breiten, einfachen Charakter behalten. Ein Finishing-Pinsel kann präzise und vertraut bleiben. Das Tool wird nicht jedes Mal aus dem Speicher neu erstellt; es wird als bekanntes Instrument ausgewählt.
+Dadurch verhält sich ein Preset wie ein echtes Objekt im Toolkit des Künstlers. Ein beliebter Skizzenstift kann ein Skizzenstift bleiben. Ein Blockierpinsel kann seinen breiten, einfachen Charakter behalten. Ein Finishing-Pinsel kann präzise und vertraut bleiben. Das Tool wird nicht jedes Mal aus dem Speicher neu erstellt. es wird als bekanntes Instrument ausgewählt.
 
 ## Ein ruhigerer Bereich mit Werkzeugoptionen
 
@@ -42,9 +42,9 @@ Da jedes Werkzeug mit einer Voreinstellung arbeitet, muss ein Werkzeugwechsel ni
 
 ## Tragbare Autorschaft
 
-Eine Voreinstellung besitzt die Ressourcen, die sie einzigartig erscheinen lassen. Bei einer Pinselvorgabe können Pinsel, Dynamik und Symbol in der Vorgabe selbst enthalten sein, sodass das Werkzeug auch dann vollständig bleibt, wenn sich die umfassendere Ressourcenbibliothek ändert.
+Eine Voreinstellung besitzt die Ressourcen, die sie einzigartig erscheinen lassen. Bei einer Pinselvorgabe sind Pinsel, Dynamik und Symbol in der Vorgabe selbst enthalten, sodass das Werkzeug auch dann vollständig bleibt, wenn sich die umfassendere Ressourcenbibliothek ändert.
 
-Dies ist eine bewusste Vereinfachung: Ein gespeichertes Werkzeug ist kein fragiler Hinweis auf mehrere separate bewegliche Teile. Pinsel und Dynamik können weiterhin in wiederverwendbaren Bibliotheken gespeichert werden, aber wenn sie für eine Voreinstellung ausgewählt werden, werden sie in das erstellte Werkzeug kopiert.
+Dies ist eine bewusste Vereinfachung: Ein gespeichertes Werkzeug ist kein fragiler Hinweis auf mehrere separate bewegliche Teile. Pinsel können weiterhin in einer wiederverwendbaren Bibliothek gespeichert werden, aber wenn sie für eine Voreinstellung ausgewählt werden, werden sie in das erstellte Werkzeug kopiert.
 
 Für Künstler ist es wichtig, dass ein Werkzeug als vollständige kreative Entscheidung gespeichert werden kann. Sein Verhalten, seine Identität und seine Ressourcen bewegen sich zusammen und machen Werkzeugvoreinstellungen zu einer praktischen Grundlage für persönliche Arbeitsabläufe, projektspezifische Toolkits und gemeinsame Studio-Setups.
 

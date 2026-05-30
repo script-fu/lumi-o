@@ -42,9 +42,9 @@ Ponieważ każde narzędzie działa poprzez ustawienie wstępne, zmiana narzędz
 
 ## Autorstwo przenośne
 
-Ustawienie wstępne zawiera zasoby, które sprawiają, że wydaje się wyjątkowe. W przypadku ustawień pędzla pędzel, dynamika i ikona mogą znajdować się wewnątrz samego ustawienia wstępnego, dzięki czemu narzędzie pozostaje kompletne nawet w przypadku zmiany szerszej biblioteki zasobów.
+Ustawienie wstępne zawiera zasoby, które sprawiają, że wydaje się wyjątkowe. W przypadku ustawień pędzla pędzel, dynamika i ikona znajdują się wewnątrz samego ustawienia wstępnego, więc narzędzie pozostaje kompletne nawet w przypadku zmiany szerszej biblioteki zasobów.
 
-Jest to celowe uproszczenie: zapisane narzędzie nie jest delikatnym wskaźnikiem kilku oddzielnych ruchomych części. Pędzle i dynamikę można nadal zapisywać w bibliotekach wielokrotnego użytku, ale gdy zostaną wybrane do ustawienia wstępnego, zostaną skopiowane do tego autorskiego narzędzia.
+Jest to celowe uproszczenie: zapisane narzędzie nie jest delikatnym wskaźnikiem kilku oddzielnych ruchomych części. Pędzle można nadal zapisywać w bibliotece wielokrotnego użytku, ale gdy zostaną wybrane do ustawienia wstępnego, zostaną skopiowane do tego autorskiego narzędzia.
 
 Dla artystów ważne jest to, że narzędzie można zapisać jako pełną decyzję twórczą. Jego zachowanie, tożsamość i zasoby współgrają ze sobą, czyniąc gotowe ustawienia narzędzi praktyczną podstawą osobistych przepływów pracy, zestawów narzędzi specyficznych dla projektu i wspólnych konfiguracji studia.
 

@@ -42,9 +42,9 @@ Debido a que cada herramienta funciona a través de un valor preestablecido, cam
 
 ## Autoría portátil
 
-Un ajuste preestablecido posee los recursos que lo hacen sentir único. Para un ajuste preestablecido de pincel, el pincel, la dinámica y el ícono pueden vivir dentro del propio ajuste preestablecido, por lo que la herramienta permanece completa incluso cuando cambia la biblioteca de recursos más amplia.
+Un ajuste preestablecido posee los recursos que lo hacen sentir único. Para un ajuste preestablecido de pincel, el pincel, la dinámica y el ícono se encuentran dentro del propio ajuste preestablecido, por lo que la herramienta permanece completa incluso cuando cambia la biblioteca de recursos más amplia.
 
-Se trata de una simplificación deliberada: una herramienta guardada no es un frágil indicador de varias piezas móviles separadas. Los pinceles y las dinámicas aún se pueden guardar en bibliotecas reutilizables, pero cuando se eligen para un ajuste preestablecido, se copian en esa herramienta creada.
+Se trata de una simplificación deliberada: una herramienta guardada no es un frágil indicador de varias piezas móviles separadas. Los pinceles aún se pueden guardar en una biblioteca reutilizable, pero cuando se eligen para un ajuste preestablecido, se copian en esa herramienta creada.
 
 Para los artistas, lo importante es que una herramienta se pueda guardar como una decisión creativa completa. Su comportamiento, identidad y recursos viajan juntos, lo que hace que los ajustes preestablecidos de herramientas sean una base práctica para flujos de trabajo personales, kits de herramientas específicos de proyectos y configuraciones de estudio compartido.
 

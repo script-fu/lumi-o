@@ -42,9 +42,9 @@ Como cada ferramenta opera através de uma predefinição, a troca de ferramenta
 
 ## Autoria portátil
 
-Uma predefinição possui os recursos que a tornam única. Para uma predefinição de pincel, o pincel, a dinâmica e o ícone podem ficar dentro da própria predefinição, de modo que a ferramenta permanece completa mesmo quando a biblioteca de recursos mais ampla é alterada.
+Uma predefinição possui os recursos que a tornam única. Para uma predefinição de pincel, o pincel, a dinâmica e o ícone ficam dentro da própria predefinição, de modo que a ferramenta permanece completa mesmo quando a biblioteca de recursos mais ampla é alterada.
 
-Esta é uma simplificação deliberada: uma ferramenta salva não é um ponteiro frágil para várias peças móveis separadas. Pincéis e dinâmicas ainda podem ser salvos em bibliotecas reutilizáveis, mas quando são escolhidos para uma predefinição, são copiados para a ferramenta criada.
+Esta é uma simplificação deliberada: uma ferramenta salva não é um ponteiro frágil para várias peças móveis separadas. Os pincéis ainda podem ser salvos em uma biblioteca reutilizável, mas quando são escolhidos para uma predefinição, são copiados para aquela ferramenta criada.
 
 Para os artistas, o importante é que uma ferramenta possa ser guardada como uma decisão criativa completa. Seu comportamento, identidade e recursos viajam juntos, tornando as predefinições de ferramentas uma base prática para fluxos de trabalho pessoais, kits de ferramentas específicos de projetos e configurações de estúdio compartilhadas.
 
