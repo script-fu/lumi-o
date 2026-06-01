@@ -34,11 +34,13 @@ A identidade visual é importante. Os artistas podem escolher ferramentas por fo
 
 As predefinições de ferramentas tornam-se especialmente poderosas quando combinadas com espaços de trabalho. Uma área de trabalho de desenho pode trazer ferramentas de desenho, uma área de trabalho de tinta pode favorecer predefinições de linhas limpas e uma área de trabalho de pintura pode mudar para pincéis criados para cor, textura e mistura.
 
-Isso significa que alterar o espaço de trabalho também pode alterar o kit de ferramentas disponível. O estúdio não apenas reorganiza seus painéis; ele pode reabastecer-se com as ferramentas que pertencem à tarefa atual.
+Na doca Predefinições de ferramentas, você pode ocultar predefinições somente para a área de trabalho ativa. As predefinições ocultas permanecem no disco e ficam disponíveis em outros lugares do Lumi. Cada espaço de trabalho lembra sua própria lista oculta junto com a ordem predefinida personalizada, para que você possa manter uma estante pessoal curta sem mover ou excluir arquivos.
 
-## Estabilidade entre trocas de ferramentas
+Alterar o espaço de trabalho pode alterar quais predefinições aparecem no dock, como elas são ordenadas e quais painéis estão abertos. O estúdio não apenas reorganiza seu layout; ele pode reabastecer-se com as ferramentas que pertencem à tarefa atual.
 
-Como cada ferramenta opera através de uma predefinição, a troca de ferramentas não significa necessariamente a perda do último estado útil. Lumi pode manter cada ferramenta conectada à sua predefinição ativa, portanto, retornar a uma ferramenta traz de volta o instrumento familiar que o artista estava usando.Isso faz com que a troca de ferramentas pareça estável. O lápis, o pincel, a ferramenta de transformação ou a ferramenta de seleção podem lembrar seu estado de autoria sem depender de arquivos de opções invisíveis por ferramenta.
+## Estabilidade entre trocas de ferramentasComo cada ferramenta opera através de uma predefinição, a troca de ferramentas não significa necessariamente a perda do último estado útil. Lumi pode manter cada ferramenta conectada à sua predefinição ativa, portanto, retornar a uma ferramenta traz de volta o instrumento familiar que o artista estava usando.
+
+Isso faz com que a troca de ferramentas pareça estável. O lápis, o pincel, a ferramenta de transformação ou a ferramenta de seleção podem lembrar seu estado de autoria sem depender de arquivos de opções invisíveis por ferramenta.
 
 ## Autoria portátil
 

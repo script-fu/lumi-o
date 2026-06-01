@@ -34,11 +34,13 @@ La identidad visual importa. Los artistas pueden elegir herramientas por forma, 
 
 Los ajustes preestablecidos de herramientas se vuelven especialmente poderosos cuando se combinan con espacios de trabajo. Un espacio de trabajo de dibujo puede ofrecer herramientas de dibujo, un espacio de trabajo de entintado puede favorecer ajustes preestablecidos de líneas limpias y un espacio de trabajo de pintura puede cambiar a pinceles creados para color, textura y combinación.
 
-Esto significa que cambiar el espacio de trabajo también puede cambiar el conjunto de herramientas disponibles. El estudio no sólo reordena sus paneles; puede reabastecerse con las herramientas que pertenecen a la tarea actual.
+En la base de ajustes preestablecidos de herramientas, puede ocultar ajustes preestablecidos solo para el espacio de trabajo activo. Los ajustes preestablecidos ocultos permanecen en el disco y están disponibles en otros lugares de Lumi. Cada espacio de trabajo recuerda su propia lista oculta junto con un orden preestablecido personalizado, por lo que puede mantener un estante personal breve sin mover ni eliminar archivos.
 
-## Estabilidad entre cambios de herramientas
+Cambiar el espacio de trabajo puede cambiar qué ajustes preestablecidos aparecen en el Dock, cómo están ordenados y qué paneles están abiertos. El estudio no sólo reorganiza su distribución; puede reabastecerse con las herramientas que pertenecen a la tarea actual.
 
-Debido a que cada herramienta funciona a través de un valor preestablecido, cambiar de herramienta no tiene por qué significar perder el último estado útil. Lumi puede mantener cada herramienta conectada a su ajuste preestablecido activo, por lo que al regresar a una herramienta se recupera el instrumento familiar que estaba usando el artista.Esto hace que el cambio de herramienta se sienta estable. El lápiz, el pincel, la herramienta de transformación o la herramienta de selección pueden recordar su estado de creación sin depender de archivos de opciones invisibles por herramienta.
+## Estabilidad entre cambios de herramientasDebido a que cada herramienta funciona a través de un valor preestablecido, cambiar de herramienta no tiene por qué significar perder el último estado útil. Lumi puede mantener cada herramienta conectada a su ajuste preestablecido activo, por lo que al regresar a una herramienta se recupera el instrumento familiar que estaba usando el artista.
+
+Esto hace que el cambio de herramienta se sienta estable. El lápiz, el pincel, la herramienta de transformación o la herramienta de selección pueden recordar su estado de creación sin depender de archivos de opciones invisibles por herramienta.
 
 ## Autoría portátil
 

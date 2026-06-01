@@ -6,7 +6,7 @@ Lumi is ontwikkeld door dagelijks gebruik, dus de hier getoonde schilderijen, st
 
 ### Calvijn op aarde
 
-Disclaimer: deze afbeeldingen zijn puur gemaakt voor de studie van techniek, het creëren van goede gratis tools en voor de lol. Alle auteursrechten blijven bij Bill Watterson. Deze werken zijn niet voor verkoop of wederverkoop.
+Onofficiële fanrecreatie gemaakt voor studie-, onderzoeks- en softwareontwikkelingsdoeleinden. Origineel kunstwerk © Bill Watterson. Er wordt geen eigendomsaanspraak gemaakt. Niet voor verkoop of commercieel gebruik.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 

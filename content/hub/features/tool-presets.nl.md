@@ -34,11 +34,13 @@ De visuele identiteit is belangrijk. Kunstenaars kunnen gereedschappen kiezen op
 
 Voorinstellingen voor gereedschappen worden bijzonder krachtig in combinatie met werkruimten. Een tekenwerkruimte kan tekengereedschappen naar voren brengen, een inktwerkruimte kan de voorkeur geven aan strakke lijnvoorinstellingen, en een schilderwerkruimte kan overschakelen naar penselen die zijn gebouwd voor kleur, textuur en overvloeiing.
 
-Dit betekent dat het veranderen van de werkruimte ook de beschikbare toolkit kan veranderen. De studio herschikt niet alleen de panelen; het kan zichzelf aanvullen met de tools die bij de huidige taak horen.
+In het Dock voor gereedschapsvoorinstellingen kunt u alleen voorinstellingen voor de actieve werkruimte verbergen. Verborgen voorinstellingen blijven op schijf staan ​​en blijven elders in Lumi beschikbaar. Elke werkruimte onthoudt zijn eigen verborgen lijst en een aangepaste, vooraf ingestelde volgorde, zodat u een korte persoonlijke plank kunt behouden zonder bestanden te verplaatsen of te verwijderen.
 
-## Stabiliteit tussen gereedschapsschakelaars
+Als u de werkruimte wijzigt, kunt u wijzigen welke voorinstellingen in het dock verschijnen, hoe ze zijn geordend en welke panelen geopend zijn. De studio herschikt niet alleen de indeling; het kan zichzelf aanvullen met de tools die bij de huidige taak horen.
 
-Omdat elk gereedschap via een preset werkt, hoeft het wisselen van gereedschap niet te betekenen dat de laatste bruikbare status verloren gaat. Lumi kan elke tool verbonden houden met de actieve preset, zodat het terugkeren naar een tool het vertrouwde instrument terugbrengt dat de artiest gebruikte.Hierdoor voelt het wisselen van gereedschap stabiel aan. Het potlood, het penseel, het transformatiegereedschap of het selectiegereedschap kunnen elk hun geschreven status onthouden zonder afhankelijk te zijn van onzichtbare optiebestanden per gereedschap.
+## Stabiliteit tussen gereedschapsschakelaarsOmdat elk gereedschap via een preset werkt, hoeft het wisselen van gereedschap niet te betekenen dat de laatste bruikbare status verloren gaat. Lumi kan elke tool verbonden houden met de actieve preset, zodat het terugkeren naar een tool het vertrouwde instrument terugbrengt dat de artiest gebruikte.
+
+Hierdoor voelt het wisselen van gereedschap stabiel aan. Het potlood, het penseel, het transformatiegereedschap of het selectiegereedschap kunnen elk hun geschreven status onthouden zonder afhankelijk te zijn van onzichtbare optiebestanden per gereedschap.
 
 ## Draagbaar auteurschap
 

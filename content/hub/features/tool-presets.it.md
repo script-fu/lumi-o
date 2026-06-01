@@ -34,11 +34,13 @@ L'identità visiva conta. Gli artisti possono scegliere gli strumenti in base a 
 
 Le preimpostazioni degli strumenti diventano particolarmente potenti se combinate con le aree di lavoro. Un'area di lavoro di disegno può portare avanti gli strumenti di disegno, un'area di lavoro di inchiostrazione può favorire preimpostazioni di linee pulite e un'area di lavoro di pittura può passare a pennelli creati per colore, trama e fusione.
 
-Ciò significa che cambiare lo spazio di lavoro può anche cambiare il toolkit disponibile. Lo studio non si limita a riorganizzare i suoi pannelli; può rifornirsi degli strumenti che appartengono al compito corrente.
+Nel pannello Strumenti predefiniti è possibile nascondere le preimpostazioni solo per l'area di lavoro attiva. Le preimpostazioni nascoste rimangono sul disco e rimangono disponibili altrove in Lumi. Ogni area di lavoro ricorda il proprio elenco nascosto insieme all'ordine preimpostato personalizzato, così puoi mantenere un breve scaffale personale senza spostare o eliminare file.
 
-## Stabilità tra i cambi di strumento
+La modifica dell'area di lavoro può modificare le preimpostazioni visualizzate nel dock, il modo in cui sono ordinate e quali pannelli sono aperti. Lo studio non si limita a riorganizzare la propria disposizione; può rifornirsi degli strumenti che appartengono al compito corrente.
 
-Poiché ogni strumento funziona secondo una preimpostazione, cambiare strumento non significa necessariamente perdere l'ultimo stato utile. Lumi può mantenere ogni strumento collegato al suo preset attivo, quindi tornare a uno strumento riporta lo strumento familiare che l'artista stava utilizzando.Ciò rende stabile il cambio degli strumenti. La matita, il pennello, lo strumento di trasformazione o lo strumento di selezione possono ricordare ciascuno il proprio stato di creazione senza fare affidamento su file di opzioni invisibili per strumento.
+## Stabilità tra i cambi di strumentoPoiché ogni strumento funziona secondo una preimpostazione, cambiare strumento non significa necessariamente perdere l'ultimo stato utile. Lumi può mantenere ogni strumento collegato al suo preset attivo, quindi tornare a uno strumento riporta lo strumento familiare che l'artista stava utilizzando.
+
+Ciò rende stabile il cambio degli strumenti. La matita, il pennello, lo strumento di trasformazione o lo strumento di selezione possono ricordare ciascuno il proprio stato di creazione senza fare affidamento su file di opzioni invisibili per strumento.
 
 ## Paternità portatile
 

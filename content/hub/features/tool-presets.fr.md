@@ -34,11 +34,13 @@ L’identité visuelle compte. Les artistes peuvent choisir leurs outils en fonc
 
 Les préréglages d'outils deviennent particulièrement puissants lorsqu'ils sont combinés avec des espaces de travail. Un espace de travail de dessin peut proposer des outils de dessin, un espace de travail d'encrage peut favoriser des préréglages de lignes épurées et un espace de travail de peinture peut passer à des pinceaux conçus pour la couleur, la texture et le mélange.
 
-Cela signifie que changer d’espace de travail peut également modifier la boîte à outils disponible. Le studio ne se contente pas de réarranger ses panneaux ; il peut se réapprovisionner en outils appartenant à la tâche en cours.
+Dans le dock Paramètres prédéfinis d'outils, vous pouvez masquer les paramètres prédéfinis pour l'espace de travail actif uniquement. Les préréglages masqués restent sur le disque et restent disponibles ailleurs dans Lumi. Chaque espace de travail mémorise sa propre liste cachée ainsi qu'un ordre prédéfini personnalisé, afin que vous puissiez conserver une courte étagère personnelle sans déplacer ni supprimer de fichiers.
 
-## Stabilité entre les changements d'outils
+Changer d'espace de travail peut modifier les préréglages qui apparaissent dans le dock, la manière dont ils sont ordonnés et les panneaux ouverts. Le studio ne se contente pas de réaménager son agencement ; il peut se réapprovisionner en outils appartenant à la tâche en cours.
 
-Étant donné que chaque outil fonctionne via un préréglage, changer d’outil ne signifie pas nécessairement perdre le dernier état utile. Lumi peut garder chaque outil connecté à son préréglage actif, donc revenir à un outil ramène l'instrument familier que l'artiste utilisait.Cela rend le changement d’outil stable. Le crayon, le pinceau, l'outil de transformation ou l'outil de sélection peuvent chacun se souvenir de leur état de création sans s'appuyer sur des fichiers d'options invisibles par outil.
+## Stabilité entre les changements d'outilsÉtant donné que chaque outil fonctionne via un préréglage, changer d’outil ne signifie pas nécessairement perdre le dernier état utile. Lumi peut garder chaque outil connecté à son préréglage actif, donc revenir à un outil ramène l'instrument familier que l'artiste utilisait.
+
+Cela rend le changement d’outil stable. Le crayon, le pinceau, l'outil de transformation ou l'outil de sélection peuvent chacun se souvenir de leur état de création sans s'appuyer sur des fichiers d'options invisibles par outil.
 
 ## Paternité portable
 

@@ -6,7 +6,7 @@ Lumi powstaje w wyniku codziennego użytku, więc pokazane tutaj obrazy, badania
 
 ### Kalwin na Ziemi
 
-Zastrzeżenie: Te obrazy są tworzone wyłącznie w celu nauki techniki, tworzenia dobrych, darmowych narzędzi i dla zabawy. Wszelkie prawa autorskie pozostają własnością Billa Wattersona. Prace te nie są przeznaczone do sprzedaży ani odsprzedaży.
+Nieoficjalna gra dla fanów stworzona do celów naukowych, badawczych i tworzenia oprogramowania. Oryginalna grafika © Bill Watterson. Nie zgłasza się żadnych roszczeń własności. Nie na sprzedaż ani do użytku komercyjnego.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 

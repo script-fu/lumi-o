@@ -6,7 +6,7 @@ Lumi entsteht durch den täglichen Gebrauch, daher handelt es sich bei den hier 
 
 ### Calvin auf Erden
 
-Haftungsausschluss: Diese Bilder werden ausschließlich zum Studium der Technik, zur Erstellung guter kostenloser Tools und zum Spaß neu erstellt. Alle Urheberrechte verbleiben bei Bill Watterson. Diese Werke sind nicht zum Verkauf oder Weiterverkauf bestimmt.
+Inoffizielle Fan-Erholung, die zu Studien-, Forschungs- und Softwareentwicklungszwecken erstellt wurde. Originalvorlage © Bill Watterson. Ein Eigentumsanspruch wird nicht erhoben. Nicht zum Verkauf oder zur kommerziellen Nutzung.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 

@@ -34,11 +34,13 @@ Identyfikacja wizualna ma znaczenie. Artyści mogą wybierać narzędzia według
 
 Ustawienia wstępne narzędzi stają się szczególnie wydajne w połączeniu z obszarami roboczymi. Obszar roboczy rysowania może udostępnić narzędzia do rysowania, obszar roboczy odręczny może preferować gotowe ustawienia czystych linii, a obszar roboczy malowania może przełączać się na pędzle zaprojektowane z myślą o kolorze, teksturze i mieszaniu.
 
-Oznacza to, że zmiana obszaru roboczego może również zmienić dostępny zestaw narzędzi. Studio nie tylko przestawia swoje panele; może uzupełnić się o narzędzia należące do bieżącego zadania.
+W panelu Ustawienia wstępne narzędzi można ukryć ustawienia wstępne tylko dla aktywnego obszaru roboczego. Ukryte ustawienia wstępne pozostają na dysku i są dostępne gdzie indziej w Lumi. Każdy obszar roboczy zapamiętuje własną ukrytą listę wraz z niestandardową, wstępnie ustawioną kolejnością, dzięki czemu możesz zachować krótką osobistą półkę bez przenoszenia lub usuwania plików.
 
-## Stabilność między przełącznikami narzędzi
+Zmiana obszaru roboczego może zmienić to, które gotowe ustawienia pojawiają się w doku, w jaki sposób są uporządkowane i które panele są otwarte. Studio nie tylko zmienia aranżację; może uzupełnić się o narzędzia należące do bieżącego zadania.
 
-Ponieważ każde narzędzie działa poprzez ustawienie wstępne, zmiana narzędzia nie musi oznaczać utraty ostatniego użytecznego stanu. Lumi może utrzymać każde narzędzie podłączone do aktywnego ustawienia wstępnego, więc powrót do narzędzia przywraca znajomy instrument, którego używał artysta.Dzięki temu przełączanie narzędzi wydaje się stabilne. Ołówek, pędzel, narzędzie do przekształcania lub narzędzie do zaznaczania mogą zapamiętać swój stan autorski bez polegania na niewidocznych plikach opcji poszczególnych narzędzi.
+## Stabilność między przełącznikami narzędziPonieważ każde narzędzie działa poprzez ustawienie wstępne, zmiana narzędzia nie musi oznaczać utraty ostatniego użytecznego stanu. Lumi może utrzymać każde narzędzie podłączone do aktywnego ustawienia wstępnego, więc powrót do narzędzia przywraca znajomy instrument, którego używał artysta.
+
+Dzięki temu przełączanie narzędzi wydaje się stabilne. Ołówek, pędzel, narzędzie do przekształcania lub narzędzie do zaznaczania mogą zapamiętać swój stan autorski bez polegania na niewidocznych plikach opcji poszczególnych narzędzi.
 
 ## Autorstwo przenośne
 

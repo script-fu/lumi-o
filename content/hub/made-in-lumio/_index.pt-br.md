@@ -6,7 +6,7 @@ O Lumi é desenvolvido através do uso diário, portanto as pinturas, estudos e 
 
 ### Calvino na Terra
 
-Isenção de responsabilidade: essas imagens são recriadas exclusivamente para o estudo da técnica, criando boas ferramentas gratuitas e para diversão. Todos os direitos autorais permanecem com Bill Watterson. Estas obras não estão à venda ou revenda.
+Recriação não oficial de fãs criada para fins de estudo, pesquisa e desenvolvimento de software. Trabalhos artísticos originais © Bill Watterson. Nenhuma reivindicação de propriedade é feita. Não está à venda ou uso comercial.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 

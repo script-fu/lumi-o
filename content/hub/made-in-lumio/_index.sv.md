@@ -6,7 +6,7 @@ Lumi är utvecklad genom daglig användning, så målningarna, studierna och pro
 
 ### Calvin på jorden
 
-Ansvarsfriskrivning: Dessa bilder är återskapade enbart för att studera teknik, skapa bra gratisverktyg och för skojs skull. All upphovsrätt förblir hos Bill Watterson. Dessa verk är inte till salu eller återförsäljning.
+Inofficiell fanrekreation skapad för studier, forskning och mjukvaruutveckling. Original- konstverk © Bill Watterson. Inget äganderättsanspråk görs. Ej till salu eller kommersiellt bruk.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 

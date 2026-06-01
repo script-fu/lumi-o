@@ -36,7 +36,9 @@ The visual identity matters. Artists can choose tools by shape, colour, icon, an
 
 Tool presets become especially powerful when combined with Workspaces. A drawing workspace can bring forward drawing tools, an inking workspace can favour clean line presets, and a painting workspace can switch to brushes built for colour, texture, and blending.
 
-This means changing workspace can also change the available toolkit. The studio does not only rearrange its panels; it can restock itself with the tools that belong to the current task.
+In the Tool Presets dock, you can hide presets for the active workspace only. Hidden presets remain on disk and stay available elsewhere in Lumi. Each workspace remembers its own hidden list alongside custom preset order, so you can keep a short personal shelf without moving or deleting files.
+
+Changing workspace can change which presets appear in the dock, how they are ordered, and which panels are open. The studio does not only rearrange its layout; it can restock itself with the tools that belong to the current task.
 
 ## Stability across tool switches
 

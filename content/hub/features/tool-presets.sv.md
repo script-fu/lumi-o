@@ -34,11 +34,13 @@ Den visuella identiteten spelar roll. Konstnärer kan välja verktyg efter form,
 
 Verktygsförinställningar blir särskilt kraftfulla när de kombineras med Workspaces. En ritarbetsyta kan föra fram ritverktyg, en färgarbetsyta kan gynna förinställningar för rena linjer och en målningsarbetsyta kan byta till penslar byggda för färg, struktur och blandning.
 
-Detta innebär att byte av arbetsyta också kan ändra den tillgängliga verktygslådan. Studion arrangerar inte bara om sina paneler; den kan fylla på med de verktyg som hör till den aktuella uppgiften.
+I Dock för verktygsförinställningar kan du dölja förinställningar endast för den aktiva arbetsytan. Dolda förinställningar finns kvar på disken och förblir tillgängliga på andra ställen i Lumi. Varje arbetsyta kommer ihåg sin egen dolda lista tillsammans med anpassad förinställd ordning, så att du kan ha en kort personlig hylla utan att flytta eller ta bort filer.
 
-## Stabilitet över verktygsomkopplare
+Att ändra arbetsyta kan ändra vilka förinställningar som visas i dockan, hur de är ordnade och vilka paneler som är öppna. Studion gör inte bara om sin layout; den kan fylla på med de verktyg som hör till den aktuella uppgiften.
 
-Eftersom varje verktyg fungerar genom en förinställning, behöver byte av verktyg inte betyda att man förlorar det senaste användbara tillståndet. Lumi kan hålla varje verktyg anslutet till dess aktiva förinställning, så att återgå till ett verktyg tar tillbaka det välbekanta instrument som artisten använde.Detta gör att verktygsbytet känns stabilt. Blyertspennan, penseln, transformeringsverktyget eller markeringsverktyget kan var och en komma ihåg sitt författade tillstånd utan att förlita sig på osynliga alternativfiler per verktyg.
+## Stabilitet över verktygsomkopplareEftersom varje verktyg fungerar genom en förinställning, behöver byte av verktyg inte betyda att man förlorar det senaste användbara tillståndet. Lumi kan hålla varje verktyg anslutet till dess aktiva förinställning, så att återgå till ett verktyg tar tillbaka det välbekanta instrument som artisten använde.
+
+Detta gör att verktygsbytet känns stabilt. Blyertspennan, penseln, transformeringsverktyget eller markeringsverktyget kan var och en komma ihåg sitt författade tillstånd utan att förlita sig på osynliga alternativfiler per verktyg.
 
 ## Bärbart författarskap
 

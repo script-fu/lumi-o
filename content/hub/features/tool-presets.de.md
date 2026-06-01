@@ -34,11 +34,13 @@ Die visuelle Identität ist wichtig. Künstler können Werkzeuge nach Form, Farb
 
 Besonders leistungsstark werden Werkzeugvoreinstellungen in Kombination mit Arbeitsbereichen. Ein Zeichenarbeitsbereich kann Zeichenwerkzeuge hervorbringen, ein Freihandarbeitsbereich kann Voreinstellungen für klare Linien bevorzugen und ein Malarbeitsbereich kann auf Pinsel umsteigen, die für Farbe, Textur und Mischung entwickelt wurden.
 
-Das bedeutet, dass sich durch eine Änderung des Arbeitsbereichs auch das verfügbare Toolkit ändern kann. Das Studio ordnet nicht nur seine Panels neu; Es kann sich mit den Werkzeugen auffüllen, die zur aktuellen Aufgabe gehören.
+Im Dock „Werkzeugvoreinstellungen“ können Sie Voreinstellungen nur für den aktiven Arbeitsbereich ausblenden. Versteckte Voreinstellungen bleiben auf der Festplatte und bleiben an anderer Stelle in Lumi verfügbar. Jeder Arbeitsbereich speichert seine eigene versteckte Liste sowie eine benutzerdefinierte voreingestellte Reihenfolge, sodass Sie eine kurze persönliche Ablage behalten können, ohne Dateien verschieben oder löschen zu müssen.
 
-## Stabilität über Werkzeugwechsel hinweg
+Durch das Ändern des Arbeitsbereichs kann geändert werden, welche Voreinstellungen im Dock angezeigt werden, wie sie angeordnet sind und welche Bedienfelder geöffnet sind. Das Studio ordnet nicht nur sein Layout neu; Es kann sich mit den Werkzeugen auffüllen, die zur aktuellen Aufgabe gehören.
 
-Da jedes Werkzeug mit einer Voreinstellung arbeitet, muss ein Werkzeugwechsel nicht den Verlust des letzten nützlichen Zustands bedeuten. Lumi kann jedes Werkzeug mit seiner aktiven Voreinstellung verbinden, sodass die Rückkehr zu einem Werkzeug das vertraute Instrument zurückbringt, das der Künstler verwendet hat.Dadurch fühlt sich der Werkzeugwechsel stabil an. Der Stift, der Pinsel, das Transformationswerkzeug oder das Auswahlwerkzeug können sich jeweils ihren Erstellungsstatus merken, ohne auf unsichtbare Optionsdateien pro Werkzeug angewiesen zu sein.
+## Stabilität über Werkzeugwechsel hinwegDa jedes Werkzeug mit einer Voreinstellung arbeitet, muss ein Werkzeugwechsel nicht den Verlust des letzten nützlichen Zustands bedeuten. Lumi kann jedes Werkzeug mit seiner aktiven Voreinstellung verbinden, sodass die Rückkehr zu einem Werkzeug das vertraute Instrument zurückbringt, das der Künstler verwendet hat.
+
+Dadurch fühlt sich der Werkzeugwechsel stabil an. Der Stift, der Pinsel, das Transformationswerkzeug oder das Auswahlwerkzeug können sich jeweils ihren Erstellungsstatus merken, ohne auf unsichtbare Optionsdateien pro Werkzeug angewiesen zu sein.
 
 ## Tragbare Autorschaft
 

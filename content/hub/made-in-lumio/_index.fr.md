@@ -6,7 +6,7 @@ Lumi est développé grâce à une utilisation quotidienne, de sorte que les pei
 
 ### Calvin sur Terre
 
-Avertissement : ces images sont recréées uniquement pour l'étude de la technique, la création de bons outils gratuits et pour le plaisir. Tous les droits d'auteur appartiennent à Bill Watterson. Ces œuvres ne sont pas destinées à la vente ou à la revente.
+Jeu de fans non officiel créé à des fins d'étude, de recherche et de développement de logiciels. Oeuvre originale © Bill Watterson. Aucune revendication de propriété n'est faite. Pas pour la vente ou un usage commercial.
 
 ![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
 
