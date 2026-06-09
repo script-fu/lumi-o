@@ -32,13 +32,19 @@ Il pennello può catturare un piccolo esempio di come un'impostazione predefinit
 
 Ciò mantiene i tratti costruiti più vicini al carattere del pennello. Una linea tracciata da un tracciato può iniziare dolcemente, aumentare la pressione, assottigliarsi o variare la risposta della velocità allo stesso modo del tratto della mano campionato, pur seguendo la forma esatta del tracciato, del bordo di selezione o del gesto in linea retta.
 
+## Elaborazione successiva
+
+Il pennello può registrare un tratto mentre lo disegni, quindi riprodurre il gesto catturato una volta sollevato, perfezionando il percorso prima che venga tracciato il segno finale. Puoi disegnare liberamente e ottenere comunque una direzione più pulita, angoli più netti o una struttura più deliberata senza dover disegnare con precisione meccanica.Questo apre tratteggi e segni di costruzione rigati che si agganciano ad angoli puliti mantenendo la lunghezza e il carattere disegnati a mano, tratti del nastro stabili all'inclinazione e riproduzione sensibile agli angoli che tratta curve e tratti rettilinei in modo diverso. I pennelli a più teste possono condividere un percorso corretto mentre ciascuna testa mantiene la propria variazione e le dinamiche possono comunque modellare il tratto lungo la sua curva finale durante la riproduzione. La post-elaborazione si applica ai tratti disegnati piuttosto che all'emissione continua dell'aerografo.
+
 ## Colore e consistenza
 
-I tratti del pennello possono utilizzare il colore di pittura attivo, rispondere alle sfumature o variare il colore attraverso la dinamica. La gestione delle texture consente al pennello di passare dalla copertura solida ai segni spezzati e radenti alla superficie, utile per effetti di pennello asciutto, grana e ombreggiature espressive.Poiché colore e texture possono far parte dello stesso sistema dinamico di forma e opacità, un singolo tratto può evolversi mentre si sposta sulla tela invece di rimanere visivamente uniforme.
+I tratti del pennello possono utilizzare il colore di pittura attivo, rispondere alle sfumature o variare il colore attraverso la dinamica. La gestione delle texture consente al pennello di passare dalla copertura solida ai segni spezzati e radenti alla superficie, utile per effetti di pennello asciutto, grana e ombreggiature espressive.
+
+Poiché colore e texture possono far parte dello stesso sistema dinamico di forma e opacità, un singolo tratto può evolversi mentre si sposta sulla tela invece di rimanere visivamente uniforme.
 
 ## Teste e formazioni di spazzole
 
-Lo strumento Pennello può dipingere con più di una testa alla volta. È possibile disporre più teste attorno al percorso del tratto per creare segni accoppiati, tratti a ventaglio, comportamento simile a setole, modelli di spruzzo o formazioni con texture ampie.
+Lo strumento Pennello può dipingere con più di una testa alla volta. È possibile disporre più testine attorno al percorso del tratto per creare segni di pennino, tratti a ventaglio, comportamento simile a quello delle setole, modelli di spruzzo, formazioni strutturate o tratteggi strutturati.
 
 Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. Ciò è particolarmente utile per i pennelli naturali, i tratti decorativi, il fogliame, la pelliccia, i tratteggi e altri segni che traggono vantaggio dall'irregolarità controllata.
 
@@ -47,6 +53,14 @@ Queste teste possono seguire la direzione del viaggio, variare l'una dall'altra 
 Il Pennello può anche simulare la quantità di vernice o materiale attualmente trasportata sul pennello. Man mano che un tratto continua, il carico può gradualmente ridursi, lasciando che i segni diventino più leggeri, più asciutti, più sottili, più ruvidi o comunque più spezzati a seconda di come sono impostate le dinamiche del pennello.
 
 Il carico può essere reintrodotto tra una passata e l'altra, mantenuto al livello prescelto o utilizzato come segnale di controllo in tempo reale per altri comportamenti della spazzola. Ciò rende possibile costruire pennelli che sembrano più dei veri e propri media: bagnati all'inizio di una pennellata, progressivamente esausti attraverso la distanza e poi immersi nuovamente per la passata successiva.
+
+## Contatto con la superficie della spazzola
+
+Il pennello può anche simulare la perdita intermittente di contatto con la superficie del dipinto: i segni rotti che compaiono quando una matita, un bastoncino di carbone, un pennello asciutto o un pennarello parzialmente esaurito si impegnano solo parzialmente con la carta.
+
+Quando la simulazione del contatto è abilitata, la spazzola è in contatto o sollevata. Durante il contatto, i segni si depositano normalmente. Durante il sollevamento non si deposita materiale e la corsa lascia uno spazio la cui lunghezza viene scelta casualmente tra una distanza minima e massima. La transizione è binaria: l'effetto non cambia opacità, dimensione, durezza, spaziatura o flusso, ma solo se la vernice è stesa.
+
+La facilità con cui si perde il contatto dipende dalla soglia di contatto, dalla pressione dello stilo e, facoltativamente, dal carico della spazzola. Valori di soglia più alti rendono le pause più frequenti. La pressione agisce come una forza stabilizzante: una pressione leggera aumenta la possibilità di perdere il contatto, mentre una pressione decisa rende più probabile che la corsa rimanga bassa. Quando il carico della spazzola è abilitato, un carico basso può rendere il segno più rotto e un carico elevato può aiutare a mantenere il contatto, in modo simile a uno strumento che trasporta ancora materiale sufficiente per far presa sulla superficie.La perdita viene valutata dalla distanza del tratto percorso piuttosto che dal conteggio dei tocchi, quindi i pennelli con spaziatura densa o sparsa si comportano in modo coerente. La funzione funziona sia con il rendering basato su timbri che con quello calligrafico, producendo spazi coerenti lungo il tratto anziché tocchi saltati isolati.
 
 ## Animazione e variazione
 

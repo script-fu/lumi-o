@@ -34,6 +34,12 @@ The Brush can capture a small sample of how a preset is normally drawn by hand, 
 
 This keeps constructed strokes closer to the character of the brush. A line drawn from a path can start softly, build pressure, taper away, or vary speed response in the same broad way as the sampled hand stroke, while still following the exact shape of the path, selection edge, or straight-line gesture.
 
+## Post processing
+
+The brush can record a stroke as you draw it, then replay that captured gesture once you lift off, refining the path before the final mark is laid down. You can sketch freely and still arrive at cleaner direction, sharper corners, or more deliberate structure without having to draw with mechanical precision.
+
+This opens up hatching and ruled construction marks that snap to clean angles while keeping hand-drawn length and character, tilt-stable ribbon strokes, and corner-aware replay that treats bends and straight runs differently. Multi-head brushes can share a corrected path while each head keeps its own variation, and dynamics can still shape the stroke along its final curve during replay. Post processing applies to drawn strokes rather than continuous airbrush emission.
+
 ## Colour and texture
 
 Brush strokes can use the active paint colour, respond to gradients, or vary colour through dynamics. Texture handling lets a brush shift between solid coverage and broken, surface-skimming marks, which is useful for dry brush effects, grain, and expressive shading.
@@ -42,7 +48,7 @@ Because colour and texture can be part of the same dynamic system as shape and o
 
 ## Brush heads and formations
 
-The Brush tool can paint with more than one head at a time. Multiple heads can be arranged around the stroke path to create paired marks, fanned strokes, bristle-like behaviour, spray patterns, or broad textured formations.
+The Brush tool can paint with more than one head at a time. Multiple heads can be arranged around the stroke path to create nib marks, fanned strokes, bristle-like behaviour, spray patterns, textured formations or structured hatching.
 
 These heads can follow the direction of travel, vary from one another, and scatter in ways that make the stroke feel organic rather than mechanically repeated. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.
 
@@ -51,6 +57,16 @@ These heads can follow the direction of travel, vary from one another, and scatt
 The Brush can also simulate how much paint or material is currently carried on the brush. As a stroke continues, that load can gradually run down, letting marks become lighter, drier, thinner, rougher, or otherwise more broken up depending on how the brush dynamics are set.
 
 Load can be reintroduced between strokes, held at a chosen level, or used as a live control signal for other brush behaviours. This makes it possible to build brushes that feel more like real media: wet at the start of a stroke, progressively exhausted through distance, and then dipped again for the next pass.
+
+## Brush surface contact
+
+The Brush can also simulate intermittent loss of contact with the painting surface — the broken marks that appear when a pencil, charcoal stick, dry brush, or partly exhausted marker only partly engages with the paper.
+
+When contact simulation is enabled, the brush is either in contact or lifted. While in contact, marks deposit normally. While lifted, no material is deposited and the stroke leaves a gap whose length is chosen randomly between a minimum and maximum distance. The transition is binary: the effect does not change opacity, size, hardness, spacing, or flow — only whether paint is laid down.
+
+How easily contact is lost is shaped by a contact threshold, stylus pressure, and optionally brush load. Higher threshold values make breaks more frequent. Pressure acts as a stabilising force: light pressure increases the chance of losing contact, while firm pressure makes the stroke more likely to stay down. When brush load is enabled, low load can make the mark more broken and high load can help maintain contact, similar to a tool that still carries enough material to grip the surface.
+
+Loss is evaluated from stroke travel distance rather than dab count, so brushes with dense or sparse spacing behave consistently. The feature works with both stamp-based and calligraphic rendering, producing coherent gaps along the stroke rather than isolated skipped dabs.
 
 ## Animation and variation
 

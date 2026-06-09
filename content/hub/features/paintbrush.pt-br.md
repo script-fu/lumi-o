@@ -32,13 +32,19 @@ O pincel pode capturar uma pequena amostra de como uma predefinição normalment
 
 Isso mantém os traços construídos mais próximos do caráter do pincel. Uma linha desenhada a partir de um caminho pode começar suavemente, criar pressão, diminuir gradualmente ou variar a resposta de velocidade da mesma maneira ampla que o traço de mão amostrado, enquanto ainda segue a forma exata do caminho, borda de seleção ou gesto de linha reta.
 
+## Pós-processamento
+
+O pincel pode registrar um traço conforme você o desenha e, em seguida, reproduzir o gesto capturado assim que você decolar, refinando o caminho antes que a marca final seja estabelecida. Você pode esboçar livremente e ainda assim chegar a uma direção mais limpa, cantos mais nítidos ou uma estrutura mais deliberada sem precisar desenhar com precisão mecânica.Isso abre marcas de construção hachuradas e pautadas que se encaixam em ângulos limpos, mantendo o comprimento e o caráter desenhados à mão, traços de fita com inclinação estável e reprodução com reconhecimento de canto que trata curvas e linhas retas de maneira diferente. Pincéis com múltiplas cabeças podem compartilhar um caminho corrigido enquanto cada cabeça mantém sua própria variação, e a dinâmica ainda pode moldar o traço ao longo de sua curva final durante a reprodução. O pós-processamento aplica-se a traços desenhados em vez de emissão contínua de aerógrafo.
+
 ## Cor e textura
 
-As pinceladas podem usar a cor de tinta ativa, responder a gradientes ou variar a cor por meio da dinâmica. O manuseio de textura permite que o pincel alterne entre cobertura sólida e marcas quebradas de superfície, o que é útil para efeitos de pincel seco, granulação e sombreamento expressivo.Como a cor e a textura podem fazer parte do mesmo sistema dinâmico que a forma e a opacidade, um único traço pode evoluir à medida que se move pela tela, em vez de permanecer visualmente uniforme.
+As pinceladas podem usar a cor de tinta ativa, responder a gradientes ou variar a cor por meio da dinâmica. O manuseio de textura permite que o pincel alterne entre cobertura sólida e marcas quebradas de superfície, o que é útil para efeitos de pincel seco, granulação e sombreamento expressivo.
+
+Como a cor e a textura podem fazer parte do mesmo sistema dinâmico que a forma e a opacidade, um único traço pode evoluir à medida que se move pela tela, em vez de permanecer visualmente uniforme.
 
 ## Cabeças e formações de escova
 
-A ferramenta Pincel pode pintar com mais de uma cabeça por vez. Várias cabeças podem ser dispostas ao redor do caminho do traço para criar marcas emparelhadas, traços em leque, comportamento semelhante a cerdas, padrões de pulverização ou formações texturizadas amplas.
+A ferramenta Pincel pode pintar com mais de uma cabeça por vez. Várias cabeças podem ser dispostas ao redor do caminho do traço para criar marcas de pontas, traços em leque, comportamento semelhante a cerdas, padrões de pulverização, formações texturizadas ou hachuras estruturadas.
 
 Essas cabeças podem seguir a direção do deslocamento, variar umas das outras e se espalhar de maneiras que fazem com que o golpe pareça orgânico, em vez de repetido mecanicamente. Isso é especialmente útil para pincéis de mídia natural, traços decorativos, folhagens, pêlos, hachuras e outras marcas que se beneficiam de irregularidades controladas.
 
@@ -47,6 +53,14 @@ Essas cabeças podem seguir a direção do deslocamento, variar umas das outras 
 O Pincel também pode simular a quantidade de tinta ou material que está atualmente carregado no pincel. À medida que um traço continua, essa carga pode diminuir gradualmente, deixando as marcas ficarem mais claras, mais secas, mais finas, mais ásperas ou mais fragmentadas, dependendo de como a dinâmica do pincel é definida.
 
 A carga pode ser reintroduzida entre as pinceladas, mantida em um nível escolhido ou usada como um sinal de controle ao vivo para outros comportamentos da escova. Isso torna possível construir pincéis que se parecem mais com mídia real: molhados no início de uma pincelada, esgotados progressivamente ao longo da distância e depois mergulhados novamente para a próxima passagem.
+
+## Contato com a superfície da escova
+
+O pincel também pode simular a perda intermitente de contato com a superfície da pintura – as marcas quebradas que aparecem quando um lápis, um bastão de carvão, um pincel seco ou um marcador parcialmente esgotado se envolvem apenas parcialmente no papel.
+
+Quando a simulação de contato está habilitada, a escova está em contato ou levantada. Durante o contato, as marcas se depositam normalmente. Durante a elevação, nenhum material é depositado e o curso deixa uma lacuna cujo comprimento é escolhido aleatoriamente entre uma distância mínima e máxima. A transição é binária: o efeito não altera a opacidade, o tamanho, a dureza, o espaçamento ou o fluxo – apenas se a tinta estiver aplicada.
+
+A facilidade com que o contato é perdido é determinada pelo limite de contato, pela pressão da ponta e, opcionalmente, pela carga da escova. Valores de limite mais altos tornam as pausas mais frequentes. A pressão atua como uma força estabilizadora: uma leve pressão aumenta a chance de perda de contato, enquanto uma pressão firme aumenta a probabilidade de o golpe permanecer para baixo. Quando a carga da escova está ativada, a carga baixa pode tornar a marca mais quebrada e a carga alta pode ajudar a manter o contato, semelhante a uma ferramenta que ainda carrega material suficiente para aderir à superfície.A perda é avaliada a partir da distância percorrida pelo traço em vez da contagem de salpicos, de modo que pincéis com espaçamento denso ou esparso se comportam de forma consistente. O recurso funciona com renderização baseada em carimbo e caligráfica, produzindo lacunas coerentes ao longo do traço, em vez de salpicos ignorados isolados.
 
 ## Animação e variação
 

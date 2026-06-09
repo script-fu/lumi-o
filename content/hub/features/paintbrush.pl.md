@@ -32,13 +32,19 @@ Pędzel może przechwycić małą próbkę sposobu, w jaki ustawienie wstępne j
 
 Dzięki temu konstruowane pociągnięcia są bliżej charakteru pędzla. Linia narysowana ze ścieżki może zaczynać się delikatnie, zwiększać nacisk, zwężać się lub zmieniać reakcję na prędkość w taki sam szeroki sposób, jak próbkowany ruch dłoni, zachowując jednocześnie dokładny kształt ścieżki, krawędzi zaznaczenia lub gestu linii prostej.
 
+## Przetwarzanie końcowe
+
+Pędzel może rejestrować pociągnięcie podczas jego rysowania, a następnie odtworzyć uchwycony gest po oderwaniu się od ziemi, dopracowując ścieżkę przed położeniem ostatecznego znaku. Możesz swobodnie szkicować i nadal uzyskać czystszy kierunek, ostrzejsze rogi lub bardziej przemyślaną strukturę bez konieczności rysowania z mechaniczną precyzją.Umożliwia to kreskowanie i linijkowe znaki konstrukcyjne, które przyciągają się do czystych kątów, zachowując jednocześnie ręcznie rysowaną długość i charakter, pociągnięcia wstęgą odporne na przechylenie oraz powtórkę uwzględniającą narożniki, która inaczej traktuje zakręty i proste przebiegi. Pędzle wielogłowicowe mogą dzielić skorygowaną ścieżkę, podczas gdy każda główka zachowuje swoją własną odmianę, a dynamika może nadal kształtować pociągnięcie wzdłuż jego końcowej krzywizny podczas odtwarzania. Przetwarzanie końcowe dotyczy pociągnięć rysunkowych, a nie ciągłej emisji aerografu.
+
 ## Kolor i tekstura
 
-Pociągnięcia pędzla mogą wykorzystywać aktywny kolor farby, reagować na gradienty lub zmieniać kolor poprzez dynamikę. Obsługa tekstur umożliwia przełączanie pędzla między pełnym pokryciem a przerywanymi, muskającymi po powierzchni śladami, co jest przydatne w przypadku efektów suchego pędzla, ziarnistości i wyrazistego cieniowania.Ponieważ kolor i tekstura mogą być częścią tego samego dynamicznego systemu, co kształt i krycie, pojedyncze pociągnięcie może ewoluować w miarę przesuwania się po płótnie, zamiast pozostać wizualnie jednolite.
+Pociągnięcia pędzla mogą wykorzystywać aktywny kolor farby, reagować na gradienty lub zmieniać kolor poprzez dynamikę. Obsługa tekstur umożliwia przełączanie pędzla między pełnym pokryciem a przerywanymi, muskającymi po powierzchni śladami, co jest przydatne w przypadku efektów suchego pędzla, ziarnistości i wyrazistego cieniowania.
+
+Ponieważ kolor i tekstura mogą być częścią tego samego dynamicznego systemu, co kształt i krycie, pojedyncze pociągnięcie może ewoluować w miarę przesuwania się po płótnie, zamiast pozostać wizualnie jednolite.
 
 ## Główki i formacje szczotek
 
-Narzędzie Pędzel może malować więcej niż jedną głowicą na raz. Wokół ścieżki pociągnięcia można ustawić wiele głowic, aby utworzyć sparowane znaki, pociągnięcia wachlarzowe, zachowanie przypominające włosie, wzory natryskiwania lub szerokie formacje teksturowane.
+Narzędzie Pędzel może malować więcej niż jedną głowicą na raz. Wokół ścieżki pociągnięcia można ustawić wiele głowic, aby tworzyć ślady po stalówce, pociągnięcia wachlarzowe, zachowanie przypominające włosie, wzory natryskiwania, formacje teksturowane lub kreskowanie strukturalne.
 
 Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.
 
@@ -47,6 +53,14 @@ Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i roz
 Pędzel może również symulować ilość farby lub materiału aktualnie znajdującą się na pędzlu. W miarę kontynuacji pociągnięcia obciążenie może stopniowo spadać, przez co ślady stają się jaśniejsze, bardziej suche, cieńsze, bardziej szorstkie lub w inny sposób bardziej rozdrobnione, w zależności od ustawienia dynamiki pędzla.
 
 Obciążenie można ponownie wprowadzić pomiędzy pociągnięciami, utrzymać na wybranym poziomie lub wykorzystać jako sygnał sterujący na żywo dla innych zachowań pędzla. Umożliwia to budowanie pędzli, które w dotyku bardziej przypominają prawdziwe media: mokre na początku pociągnięcia, stopniowo zużywające się wraz z upływem dystansu, a następnie ponownie zanurzane przy następnym przejściu.
+
+## Kontakt z powierzchnią szczotki
+
+Pędzel może również symulować chwilową utratę kontaktu z powierzchnią malowania — połamane ślady, które pojawiają się, gdy ołówek, węgiel drzewny, suchy pędzel lub częściowo wyczerpany marker tylko częściowo stykają się z papierem.
+
+Gdy włączona jest symulacja kontaktu, szczotka styka się lub jest podniesiona. Podczas kontaktu normalnie zaznacza depozyt. Podczas podnoszenia nie osadza się żaden materiał, a skok pozostawia szczelinę, której długość jest wybierana losowo pomiędzy odległością minimalną i maksymalną. Przejście jest binarne: efekt nie zmienia krycia, rozmiaru, twardości, odstępów ani płynięcia – tylko to, czy farba jest nałożona.
+
+Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że ​​prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.Straty są oceniane na podstawie odległości pociągnięć, a nie liczby muśnięć, więc pędzle z gęstymi lub rzadkimi odstępami zachowują się spójnie. Ta funkcja działa zarówno w przypadku renderowania opartego na stemplach, jak i kaligrafii, tworząc spójne przerwy wzdłuż obrysu, a nie pojedyncze, pominięte plamki.
 
 ## Animacja i wariacje
 

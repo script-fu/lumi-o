@@ -32,13 +32,19 @@ Het penseel kan een klein voorbeeld vastleggen van hoe een voorinstelling normaa
 
 Hierdoor blijven de geconstrueerde streken dichter bij het karakter van het penseel. Een lijn die vanaf een pad wordt getrokken, kan zacht beginnen, druk opbouwen, afnemen of de snelheidsreactie op dezelfde brede manier variëren als de bemonsterde handbeweging, terwijl hij nog steeds de exacte vorm van het pad, de selectierand of het rechte lijngebaar volgt.
 
+## Naverwerking
+
+Het penseel kan een streek registreren terwijl u deze tekent, en dat vastgelegde gebaar vervolgens opnieuw afspelen zodra u opstijgt, waardoor het pad wordt verfijnd voordat de definitieve markering wordt vastgelegd. U kunt vrij schetsen en toch tot een strakkere richting, scherpere hoeken of een meer bewuste structuur komen zonder dat u met mechanische precisie hoeft te tekenen.Dit opent arcerings- en gelinieerde constructiemarkeringen die in strakke hoeken klikken, terwijl de met de hand getekende lengte en karakter, kantelstabiele lintstreken en hoekbewuste herhaling behouden blijven, waarbij bochten en rechte stukken anders worden behandeld. Penselen met meerdere koppen kunnen een gecorrigeerd pad delen, terwijl elke kop zijn eigen variatie behoudt, en de dynamiek kan tijdens het afspelen nog steeds de streek langs de uiteindelijke curve vormgeven. Nabewerking is van toepassing op getekende streken in plaats van op continue airbrush-emissie.
+
 ## Kleur en textuur
 
-Penseelstreken kunnen de actieve verfkleur gebruiken, reageren op verlopen of kleur variëren door middel van dynamiek. Door het hanteren van texturen kan het penseel wisselen tussen effen dekking en gebroken, oppervlakkige vlekken, wat handig is voor droge penseeleffecten, korreligheid en expressieve schaduwen.Omdat kleur en textuur deel kunnen uitmaken van hetzelfde dynamische systeem als vorm en dekking, kan een enkele streek evolueren terwijl deze over het canvas beweegt in plaats van visueel uniform te blijven.
+Penseelstreken kunnen de actieve verfkleur gebruiken, reageren op verlopen of kleur variëren door middel van dynamiek. Door het hanteren van texturen kan het penseel wisselen tussen effen dekking en gebroken, oppervlakkige vlekken, wat handig is voor droge penseeleffecten, korreligheid en expressieve schaduwen.
+
+Omdat kleur en textuur deel kunnen uitmaken van hetzelfde dynamische systeem als vorm en dekking, kan een enkele streek evolueren terwijl deze over het canvas beweegt in plaats van visueel uniform te blijven.
 
 ## Opzetborstels en formaties
 
-Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kunnen meerdere koppen rond het streekpad worden geplaatst om gepaarde markeringen, uitwaaierende lijnen, borstelachtig gedrag, spuitpatronen of brede textuurformaties te creëren.
+Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kunnen meerdere koppen rond het streekpad worden geplaatst om puntmarkeringen, waaiervormige lijnen, borstelachtig gedrag, spuitpatronen, structuurformaties of gestructureerde arceringen te creëren.
 
 Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.
 
@@ -47,6 +53,14 @@ Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich ver
 De Brush kan ook simuleren hoeveel verf of materiaal er momenteel op de kwast zit. Naarmate een streek voortduurt, kan die belasting geleidelijk afnemen, waardoor markeringen lichter, droger, dunner, ruwer of anderszins meer gebroken worden, afhankelijk van hoe de penseeldynamiek is ingesteld.
 
 De belasting kan opnieuw worden geïntroduceerd tussen de poetsbewegingen, op een gekozen niveau worden gehouden of worden gebruikt als een live controlesignaal voor ander poetsgedrag. Dit maakt het mogelijk om penselen te bouwen die meer aanvoelen als echte media: nat aan het begin van een streek, geleidelijk uitgeput door de afstand, en dan weer ondergedompeld voor de volgende passage.
+
+## Contact met het borsteloppervlak
+
+De Brush kan ook periodiek verlies van contact met het schilderoppervlak simuleren: de gebroken vlekken die verschijnen wanneer een potlood, houtskoolstok, droog penseel of gedeeltelijk uitgeputte marker slechts gedeeltelijk in contact komt met het papier.
+
+Wanneer contactsimulatie is ingeschakeld, maakt de borstel contact of wordt hij opgetild. Tijdens contact markeert de storting normaal. Terwijl het wordt opgetild, wordt er geen materiaal afgezet en laat de slag een opening achter waarvan de lengte willekeurig wordt gekozen tussen een minimale en maximale afstand. De overgang is binair: het effect verandert niets aan de dekking, grootte, hardheid, tussenruimte of vloeiing, maar alleen aan de vraag of de verf is aangebracht.
+
+Hoe gemakkelijk contact verloren gaat, wordt bepaald door de contactdrempel, de naalddruk en eventueel de borstelbelasting. Hogere drempelwaarden zorgen ervoor dat pauzes vaker plaatsvinden. Druk werkt als een stabiliserende kracht: lichte druk vergroot de kans op contactverlies, terwijl stevige druk ervoor zorgt dat de slag eerder blijft liggen. Wanneer de borstelbelasting is ingeschakeld, kan een lage belasting ervoor zorgen dat de markering nog meer kapot gaat en kan een hoge belasting helpen het contact te behouden, vergelijkbaar met gereedschap dat nog steeds voldoende materiaal draagt ​​om grip te krijgen op het oppervlak.Verlies wordt beoordeeld op basis van de slagafstand in plaats van op het aantal schartjes, zodat borstels met een dichte of dunne tussenruimte zich consistent gedragen. De functie werkt met zowel op stempels gebaseerde als kalligrafische weergave, waardoor coherente gaten langs de streek ontstaan ​​in plaats van geïsoleerde overgeslagen schartjes.
 
 ## Animatie en variatie
 

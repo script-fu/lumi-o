@@ -32,13 +32,19 @@ El pincel puede capturar una pequeña muestra de cómo se dibuja normalmente a m
 
 Esto mantiene los trazos construidos más cerca del carácter del pincel. Una línea dibujada a partir de un camino puede comenzar suavemente, generar presión, disminuir o variar la respuesta de velocidad de la misma manera amplia que el trazo de la mano muestreado, sin dejar de seguir la forma exacta del camino, el borde de selección o el gesto de línea recta.
 
+## Postprocesamiento
+
+El pincel puede registrar un trazo a medida que lo dibujas y luego reproducir ese gesto capturado una vez que lo levantas, refinando el trazado antes de que se coloque la marca final. Puede dibujar libremente y aun así llegar a una dirección más clara, a esquinas más definidas o a una estructura más deliberada sin tener que dibujar con precisión mecánica.Esto abre marcas de construcción rayadas y rayadas que se ajustan a ángulos limpios mientras mantienen la longitud y el carácter dibujados a mano, trazos de cinta estables en inclinación y repetición consciente de las esquinas que trata las curvas y los tramos rectos de manera diferente. Los pinceles de múltiples cabezales pueden compartir una ruta corregida mientras cada cabezal mantiene su propia variación, y la dinámica aún puede dar forma al trazo a lo largo de su curva final durante la reproducción. El posprocesamiento se aplica a los trazos dibujados en lugar de a la emisión continua de aerógrafo.
+
 ## Color y textura
 
-Las pinceladas pueden utilizar el color de pintura activo, responder a degradados o variar el color mediante dinámicas. El manejo de texturas permite que el pincel cambie entre una cobertura sólida y marcas discontinuas que rozan la superficie, lo cual es útil para efectos de pincel seco, vetas y sombreados expresivos.Debido a que el color y la textura pueden ser parte del mismo sistema dinámico que la forma y la opacidad, un solo trazo puede evolucionar a medida que se mueve por el lienzo en lugar de permanecer visualmente uniforme.
+Las pinceladas pueden utilizar el color de pintura activo, responder a degradados o variar el color mediante dinámicas. El manejo de texturas permite que el pincel cambie entre una cobertura sólida y marcas discontinuas que rozan la superficie, lo cual es útil para efectos de pincel seco, vetas y sombreados expresivos.
+
+Debido a que el color y la textura pueden ser parte del mismo sistema dinámico que la forma y la opacidad, un solo trazo puede evolucionar a medida que se mueve por el lienzo en lugar de permanecer visualmente uniforme.
 
 ## Cabezales y formaciones de cepillos.
 
-La herramienta Pincel puede pintar con más de un cabezal a la vez. Se pueden disponer varios cabezales alrededor del recorrido del trazo para crear marcas emparejadas, trazos en abanico, comportamiento similar a cerdas, patrones de pulverización o formaciones de textura amplia.
+La herramienta Pincel puede pintar con más de un cabezal a la vez. Se pueden disponer varios cabezales alrededor del recorrido del trazo para crear marcas de punta, trazos en abanico, comportamiento similar a cerdas, patrones de pulverización, formaciones texturizadas o sombreados estructurados.
 
 Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y dispersarse de manera que el trazo se sienta orgánico en lugar de repetido mecánicamente. Esto es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelaje, sombreado y otras marcas que se benefician de una irregularidad controlada.
 
@@ -47,6 +53,14 @@ Estas cabezas pueden seguir la dirección del recorrido, variar entre sí y disp
 El Pincel también puede simular cuánta pintura o material se encuentra actualmente en el pincel. A medida que continúa el trazo, esa carga puede disminuir gradualmente, permitiendo que las marcas se vuelvan más claras, más secas, más delgadas, más ásperas o más fragmentadas dependiendo de cómo se establezca la dinámica del pincel.
 
 La carga se puede reintroducir entre pasadas, mantener en un nivel elegido o utilizar como señal de control en vivo para otros comportamientos del cepillo. Esto hace posible crear pinceles que se sienten más como medios reales: húmedos al comienzo de un trazo, agotados progresivamente a lo largo de la distancia y luego sumergidos nuevamente para la siguiente pasada.
+
+## Contacto con la superficie del cepillo
+
+El pincel también puede simular una pérdida intermitente de contacto con la superficie de la pintura: las marcas rotas que aparecen cuando un lápiz, un carboncillo, un pincel seco o un marcador parcialmente agotado se engancha solo parcialmente con el papel.
+
+Cuando la simulación de contacto está habilitada, el cepillo está en contacto o levantado. Mientras están en contacto, las marcas se depositan normalmente. Mientras está levantado, no se deposita material y el golpe deja un espacio cuya longitud se elige aleatoriamente entre una distancia mínima y máxima. La transición es binaria: el efecto no cambia la opacidad, el tamaño, la dureza, el espaciado o el flujo, solo si se aplica la pintura.
+
+La facilidad con la que se pierde el contacto depende del umbral de contacto, la presión del lápiz y, opcionalmente, la carga del cepillo. Los valores de umbral más altos hacen que las pausas sean más frecuentes. La presión actúa como una fuerza estabilizadora: una presión ligera aumenta la posibilidad de perder el contacto, mientras que una presión firme hace que sea más probable que el golpe se mantenga bajo. Cuando la carga del cepillo está habilitada, una carga baja puede hacer que la marca se rompa más y una carga alta puede ayudar a mantener el contacto, similar a una herramienta que todavía lleva suficiente material para agarrar la superficie.La pérdida se evalúa a partir de la distancia recorrida del trazo en lugar del número de pinceladas, por lo que los pinceles con espacios densos o escasos se comportan de manera consistente. La característica funciona tanto con renderizado caligráfico como basado en sellos, produciendo espacios coherentes a lo largo del trazo en lugar de pinceladas omitidas aisladas.
 
 ## Animación y variación.
 
