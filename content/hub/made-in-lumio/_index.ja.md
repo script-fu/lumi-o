@@ -1,19 +1,8 @@
 ---
 title: "ルミオ製"
 type: docs
+layout: made-in-lumio
 ---
 Lumi は日常的な使用を通じて開発されているため、ここに示されている絵画、研究、制作作品はマーケティング用のモックアップではありません。これらは、ソフトウェアがサポートするために形成されている画像の種類の例です。このセクションはまだまばらで進化していますが、時間の経過とともに、アプリケーションがより安定した形式に落ち着くにつれて、Lumi 自体とともに成長していきます。
 
-### 地球上のカルビン
-
 研究、研究、ソフトウェア開発を目的として作成された非公式のファンレクリエーションです。オリジナルのアートワーク © Bill Watterson。所有権の主張は行われません。販売または商用目的での使用はできません。
-
-![halftone](/images/gallery/calvin-on-earth-one_final_compressed.jpg)
-
-### 墨ブラシ
-
-![loops](/images/gallery/loops.jpg)
-
-### 4B 鉛筆
-
-![pencil-4B](/images/gallery/pencil-4B.jpg)

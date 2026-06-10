@@ -1,0 +1,43 @@
+{{ $staticPath := .staticPath }}
+{{ $images := readDir (printf "static/%s" $staticPath) }}
+{{ $filtered := slice }}
+{{ range $images }}
+  {{ if (findRE "\\.(jpg|jpeg|png|gif|webp)$" .Name) }}
+    {{ $filtered = $filtered | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Filename format: {slug}__{comment}[_{rank}].{ext}
+     Comment words are separated by underscores, e.g. loops__Sumi_brush.jpg → "Sumi brush"
+     Optional sort rank: pencil-4B__4B_Pencil_1.jpg → rank 1 */}}
+{{ $withMeta := slice }}
+{{ range $filtered }}
+  {{ $base := replaceRE "\\.(jpg|jpeg|png|gif|webp)$" "" .Name }}
+  {{ $rank := 9999 }}
+  {{ $comment := "" }}
+
+  {{ $rankMatch := findRE "_([0-9]+)$" $base }}
+  {{ if $rankMatch }}
+    {{ $rank = int (index (findRE "[0-9]+" (index $rankMatch 0)) 0) }}
+    {{ $base = replaceRE "_([0-9]+)$" "" $base }}
+  {{ end }}
+
+  {{ if in $base "__" }}
+    {{ $parts := split $base "__" }}
+    {{ $comment = replace (index $parts 1) "_" " " }}
+  {{ end }}
+
+  {{ $withMeta = $withMeta | append (dict "file" . "rank" $rank "comment" $comment) }}
+{{ end }}
+
+{{ $sorted := sort $withMeta "rank" }}
+
+<div class="gallery-grid">
+  {{ range $sorted }}
+    {{ $img := .file }}
+    {{ $url := (printf "%s/%s" $staticPath $img.Name) | relURL }}
+    <a href="{{ $url }}" class="gallery-thumb"{{ with .comment }} title="{{ . }}"{{ end }}>
+      <img src="{{ $url }}" alt="{{ .comment | default $img.Name }}" loading="lazy" />
+    </a>
+  {{ end }}
+</div>
