@@ -6,11 +6,17 @@ Im Paletten-Editor wird eine Lumi-Palette zu einer vollständigen Farbumgebung. 
 
 Eine Palette in Lumi ist mehr als eine Liste von Farbfeldern. Es handelt sich um ein funktionierendes Farbsystem: eine Reihe von Zutaten, einprägsamen Mischungen, Wertbeziehungen und Farbverläufen, die ein ganzes Gemälde oder Werk leiten können.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Paletten als künstlerische Zwänge
 
 Viele Maler arbeiten am besten mit einer begrenzten Auswahl vertrauter Farben. Ein kleiner Pigmentsatz kann Einheit schaffen, Stimmung schaffen und Farbentscheidungen schneller treffen, da jede Mischung zur gleichen visuellen Familie gehört.
 
 Der Paletteneditor unterstützt diese Art der absichtlichen Einschränkung sowie breitere Vollspektrumpaletten. Künstler können separate Paletten für verschiedene Themen, Projekte, Stile oder Lichtverhältnisse verwalten, jede mit ihrem eigenen Charakter und Mischverhalten.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmente, Mischungen und Gedächtnis
 
@@ -19,6 +25,9 @@ Als Grundierung dienen Palettenpigmente. Sie definieren die Farben, aus denen de
 Gespeicherte Mischungen stellen bewusste Entdeckungen dar: Farben, die es wert sind, behalten, benannt und zu denen man zurückkehren sollte. Verwendete Farben bilden eine ruhigere Art von Erinnerung und bewahren die Farben, die es tatsächlich auf die Leinwand geschafft haben, auch wenn sie nicht vorher gespeichert wurden.
 
 Zusammen lassen diese Bereiche eine Palette auf natürliche Weise entstehen. Es kann als Pigmentset beginnen, beim Malen nützliche Mischungen zusammentragen und nach und nach zu einem personalisierten Farbvokabular werden.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Werteorientierte Organisation
 
@@ -31,6 +40,8 @@ Paletten können auch ihr eigenes Gefühl für Tonabstände vermitteln. Eine pr�
 Eine Palette kann Farbverläufe enthalten, die von ihren eigenen Farben abgeleitet sind. Diese Farbverläufe eignen sich für weiche Übergänge, Referenzstreifen, Beleuchtungsstudien und Farbbewegungen, die innerhalb der Identität der Palette bleiben.
 
 Da die Farbverläufe zur Palette gehören, verstärken sie die gleiche Farbsprache wie die Pigmente und gespeicherten Mischungen, anstatt wie unzusammenhängende Ergänzungen zu wirken.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Lackier-Workflow
 

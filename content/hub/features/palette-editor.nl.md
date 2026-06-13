@@ -6,11 +6,17 @@ In de Palette Editor wordt een Lumi-palet een complete kleuromgeving. Het brengt
 
 Een palet in Lumi is meer dan een lijst met stalen. Het is een werkend kleurensysteem: een reeks ingrediënten, herinnerde mengsels, waarderelaties en gradiënten die een heel schilderij of oeuvre kunnen sturen.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Paletten als artistieke beperkingen
 
 Veel schilders werken het beste met een beperkt aantal bekende kleuren. Een kleine pigmentset kan eenheid creëren, sfeer creëren en kleurbeslissingen sneller nemen, omdat elk mengsel tot dezelfde visuele familie behoort.
 
 De Palette Editor ondersteunt dit soort opzettelijke beperkingen, evenals bredere paletten met een volledig spectrum. Kunstenaars kunnen aparte paletten bijhouden voor verschillende onderwerpen, projecten, stijlen of lichtomstandigheden, elk met zijn eigen karakter en menggedrag.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmenten, mengsels en geheugen
 
@@ -19,6 +25,9 @@ Paletpigmenten fungeren als basis. Ze definiëren de kleuren waaruit de rest van
 Opgeslagen mengsels vertegenwoordigen doelbewuste ontdekkingen: kleuren die de moeite waard zijn om te behouden, te benoemen en naar terug te keren. Gebruikte kleuren vormen een rustiger soort geheugen, waarbij de kleuren behouden blijven die daadwerkelijk op het canvas zijn verschenen, zelfs als ze niet van tevoren zijn opgeslagen.
 
 Samen laten deze gebieden een palet op natuurlijke wijze evolueren. Het kan beginnen als een pigmentset, tijdens het schilderen nuttige mengsels verzamelen en geleidelijk uitgroeien tot een persoonlijk kleurenvocabulaire.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Waardegeleide organisatie
 
@@ -31,6 +40,8 @@ Paletten kunnen ook hun eigen gevoel voor toonafstand hebben. Een opvallende ill
 Een palet kan gradiënten bevatten die zijn afgeleid van de eigen kleuren. Deze kleurverlopen zijn handig voor zachte overgangen, referentiestroken, lichtstudies en kleurbewegingen die binnen de identiteit van het palet blijven.
 
 Omdat de kleurverlopen bij het palet horen, versterken ze dezelfde kleurentaal als de pigmenten en opgeslagen mengsels in plaats van dat ze aanvoelen als niet-gerelateerde toevoegingen.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Werkstroom schilderen
 

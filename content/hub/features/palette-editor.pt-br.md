@@ -6,11 +6,17 @@ O Palette Editor é onde uma paleta Lumi se torna um ambiente de cores completo.
 
 Uma paleta no Lumi é mais do que uma lista de amostras. É um sistema de cores funcional: um conjunto de ingredientes, misturas lembradas, relações de valores e gradientes que podem orientar toda uma pintura ou corpo de trabalho.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Paletas como restrições artísticas
 
 Muitos pintores trabalham melhor com um conjunto limitado de cores familiares. Um pequeno conjunto de pigmentos pode criar unidade, estabelecer o clima e tomar decisões de cores mais rapidamente porque cada mistura pertence à mesma família visual.
 
 O Palette Editor suporta esse tipo de limitação intencional, bem como paletas de espectro completo mais amplas. Os artistas podem manter paletas separadas para diferentes temas, projetos, estilos ou condições de iluminação, cada um com seu próprio caráter e comportamento de mistura.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmentos, misturas e memória
 
@@ -19,6 +25,9 @@ Os pigmentos da paleta atuam como base. Eles definem as cores a partir das quais
 As mixagens salvas representam descobertas deliberadas: cores que valem a pena manter, nomear e às quais retornar. As cores usadas formam um tipo de memória mais silenciosa, preservando as cores que realmente apareceram na tela, mesmo que não tenham sido salvas com antecedência.
 
 Juntas, essas áreas permitem que uma paleta evolua naturalmente. Pode começar como um conjunto de pigmentos, reunir misturas úteis durante a pintura e gradualmente tornar-se um vocabulário de cores personalizado.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Organização liderada por valor
 
@@ -31,6 +40,8 @@ As paletas também podem ter seu próprio senso de espaçamento tonal. Uma ilust
 Uma paleta pode incluir gradientes derivados de suas próprias cores. Esses gradientes são úteis para transições suaves, faixas de referência, estudos de iluminação e movimentos de cores que permanecem dentro da identidade da paleta.
 
 Como os gradientes pertencem à paleta, eles reforçam a mesma linguagem de cores dos pigmentos e das misturas salvas, em vez de parecerem adições não relacionadas.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Fluxo de trabalho de pintura
 

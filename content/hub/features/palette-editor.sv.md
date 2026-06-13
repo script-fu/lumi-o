@@ -6,11 +6,17 @@ Palettredigeraren är där en Lumi-palett blir en komplett färgmiljö. Den samm
 
 En palett i Lumi är mer än en lista med swatches. Det är ett fungerande färgsystem: en uppsättning ingredienser, ihågkomna blandningar, värderelationer och gradienter som kan styra en hel målning eller verk.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Paletter som konstnärliga begränsningar
 
 Många målare fungerar bäst med en begränsad uppsättning välbekanta färger. En liten pigmentuppsättning kan skapa enhet, skapa stämning och fatta färgbeslut snabbare eftersom varje blandning tillhör samma visuella familj.
 
 Palette Editor stöder den typen av avsiktliga begränsningar såväl som bredare fullspektrumpaletter. Artister kan ha separata paletter för olika ämnen, projekt, stilar eller ljusförhållanden, var och en med sin egen karaktär och blandningsbeteende.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigment, blandningar och minne
 
@@ -19,6 +25,9 @@ Palettpigment fungerar som grunden. De definierar färgerna resten av systemet v
 Sparade mixar representerar avsiktliga upptäckter: färger värda att behålla, namnge och återvända till. Använda färger bildar ett tystare slags minne och bevarar de färger som faktiskt kom in på duken även om de inte sparats i förväg.
 
 Tillsammans låter dessa områden en palett utvecklas naturligt. Det kan börja som ett pigmentuppsättning, samla användbara blandningar under målning och gradvis bli ett personligt färgordförråd.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Värdeledd organisation
 
@@ -31,6 +40,8 @@ Paletter kan också bära sin egen känsla av tonavstånd. En högtydlig illustr
 En palett kan innehålla gradienter som härrör från dess egna färger. Dessa gradienter är användbara för mjuka övergångar, referensremsor, ljusstudier och färgrörelser som håller sig inom palettens identitet.
 
 Eftersom gradienterna tillhör paletten förstärker de samma färgspråk som pigmenten och sparade blandningar istället för att kännas som orelaterade tillägg.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Målningsarbetsflöde
 

@@ -6,11 +6,17 @@ L'éditeur de palette est l'endroit où une palette Lumi devient un environnemen
 
 Une palette dans Lumi est plus qu'une liste d'échantillons. Il s’agit d’un système de couleurs fonctionnel : un ensemble d’ingrédients, de mélanges mémorisés, de relations de valeurs et de dégradés qui peuvent guider l’ensemble d’une peinture ou d’une œuvre.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Les palettes comme contraintes artistiques
 
 De nombreux peintres travaillent mieux avec un ensemble limité de couleurs familières. Un petit ensemble de pigments peut créer une unité, créer une ambiance et prendre des décisions de couleur plus rapidement, car chaque mélange appartient à la même famille visuelle.
 
 L'éditeur de palette prend en charge ce type de limitation intentionnelle ainsi que des palettes à spectre complet plus larges. Les artistes peuvent conserver des palettes distinctes pour différents sujets, projets, styles ou conditions d'éclairage, chacune ayant son propre caractère et son propre comportement de mélange.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigments, mélanges et mémoire
 
@@ -19,6 +25,9 @@ Les pigments de la palette servent de fond de teint. Ils définissent les couleu
 Les mélanges enregistrés représentent des découvertes délibérées : des couleurs qui méritent d'être conservées, nommées et auxquelles il faut revenir. Les couleurs utilisées forment une sorte de mémoire plus silencieuse, préservant les couleurs qui sont réellement apparues sur la toile même si elles n'ont pas été enregistrées à l'avance.
 
 Ensemble, ces zones permettent à une palette d'évoluer naturellement. Cela peut commencer comme un ensemble de pigments, rassembler des mélanges utiles lors de la peinture et devenir progressivement un vocabulaire de couleurs personnalisé.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Organisation axée sur la valeur
 
@@ -31,6 +40,8 @@ Les palettes peuvent également avoir leur propre espacement tonal. Une illustra
 Une palette peut inclure des dégradés dérivés de ses propres couleurs. Ces dégradés sont utiles pour les transitions douces, les bandes de référence, les études d'éclairage et les mouvements de couleurs qui restent dans l'identité de la palette.
 
 Parce que les dégradés appartiennent à la palette, ils renforcent le même langage de couleurs que les pigments et les mélanges enregistrés au lieu de ressembler à des ajouts sans rapport.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Flux de travail de peinture
 

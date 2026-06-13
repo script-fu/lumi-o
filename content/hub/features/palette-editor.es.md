@@ -6,11 +6,17 @@ El Editor de paletas es donde una paleta Lumi se convierte en un entorno de colo
 
 Una paleta en Lumi es más que una lista de muestras. Es un sistema de color funcional: un conjunto de ingredientes, mezclas recordadas, relaciones de valores y degradados que pueden guiar una pintura o un conjunto de obras completo.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Paletas como limitaciones artísticas
 
 Muchos pintores trabajan mejor con un conjunto limitado de colores familiares. Un pequeño conjunto de pigmentos puede crear unidad, establecer un estado de ánimo y tomar decisiones sobre el color más rápidamente porque cada mezcla pertenece a la misma familia visual.
 
 El Editor de paletas admite ese tipo de limitación intencional, así como paletas más amplias de espectro completo. Los artistas pueden mantener paletas separadas para diferentes temas, proyectos, estilos o condiciones de iluminación, cada uno con su propio carácter y comportamiento de mezcla.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmentos, mezclas y memoria
 
@@ -19,6 +25,9 @@ Los pigmentos de la paleta actúan como base. Definen los colores a partir de lo
 Las mezclas guardadas representan descubrimientos deliberados: colores que vale la pena conservar, nombrar y regresar. Los colores usados ​​forman un tipo de memoria más tranquila, preservando los colores que realmente aparecieron en el lienzo incluso si no se guardaron con anticipación.
 
 Juntas, estas áreas permiten que la paleta evolucione de forma natural. Puede comenzar como un conjunto de pigmentos, reunir mezclas útiles durante la pintura y convertirse gradualmente en un vocabulario de colores personalizado.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Organización basada en valores
 
@@ -31,6 +40,8 @@ Las paletas también pueden tener su propio sentido de espaciado tonal. Una ilus
 Una paleta puede incluir degradados derivados de sus propios colores. Estos degradados son útiles para transiciones suaves, franjas de referencia, estudios de iluminación y movimientos de color que permanecen dentro de la identidad de la paleta.
 
 Debido a que los degradados pertenecen a la paleta, refuerzan el mismo lenguaje de color que los pigmentos y las mezclas guardadas en lugar de parecer adiciones no relacionadas.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Flujo de trabajo de pintura
 

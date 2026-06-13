@@ -6,11 +6,17 @@ Edytor palet to miejsce, w którym paleta Lumi staje się kompletnym środowiski
 
 Paleta w Lumi to coś więcej niż lista swatchów. Jest to działający system kolorów: zestaw składników, zapamiętanych mieszanin, relacji wartości i gradientów, które mogą kierować całym obrazem lub pracą.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Palety jako ograniczenia artystyczne
 
 Wielu malarzy najlepiej pracuje z ograniczonym zestawem znanych kolorów. Mały zestaw pigmentów może stworzyć jedność, wprowadzić nastrój i szybciej podjąć decyzję kolorystyczną, ponieważ każda mieszanina należy do tej samej rodziny wizualnej.
 
 Edytor palet obsługuje tego rodzaju zamierzone ograniczenia, a także szersze palety o pełnym spektrum. Artyści mogą zachować osobne palety dla różnych tematów, projektów, stylów lub warunków oświetleniowych, z których każda ma swój własny charakter i sposób mieszania.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmenty, mieszanki i pamięć
 
@@ -19,6 +25,9 @@ Pigmenty paletowe pełnią rolę podkładu. Definiują kolory, z których wywodz
 Zapisane mieszanki reprezentują celowe odkrycia: kolory, które warto zachować, nazwać i do których warto wracać. Wykorzystane kolory tworzą cichszy rodzaj pamięci, zachowując kolory, które faktycznie trafiły na płótno, nawet jeśli nie zostały wcześniej zapisane.
 
 Razem te obszary pozwalają palecie naturalnie ewoluować. Może zacząć się od zestawu pigmentów, zbierać przydatne mieszanki podczas malowania i stopniowo stać się spersonalizowanym słownikiem kolorów.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Organizacja oparta na wartościach
 
@@ -31,6 +40,8 @@ Palety mogą również zawierać własne poczucie odstępów tonalnych. Wyraźna
 Paleta może zawierać gradienty pochodzące z jej własnych kolorów. Te gradienty są przydatne w przypadku miękkich przejść, pasków odniesienia, badań oświetlenia i ruchu kolorów, które pozostają w obrębie tożsamości palety.
 
 Ponieważ gradienty należą do palety, wzmacniają ten sam język kolorów, co pigmenty i zapisane mieszanki, zamiast sprawiać wrażenie niepowiązanych ze sobą dodatków.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Przebieg malowania
 

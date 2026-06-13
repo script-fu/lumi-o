@@ -6,11 +6,17 @@ L'editor della tavolozza è il luogo in cui una tavolozza Lumi diventa un ambien
 
 Una tavolozza in Lumi è più di un elenco di campioni. È un sistema di colori funzionante: un insieme di ingredienti, miscele ricordate, relazioni di valore e sfumature che possono guidare un intero dipinto o un corpus di opere.
 
+![palette-editor](/images/screens/palette-editor.jpg)
+
 ## Tavolozze come vincoli artistici
 
 Molti pittori lavorano meglio con un set limitato di colori familiari. Un piccolo set di pigmenti può creare unità, stabilire l'atmosfera e prendere decisioni sui colori più velocemente perché ogni miscela appartiene alla stessa famiglia visiva.
 
 L'editor delle tavolozze supporta questo tipo di limitazione intenzionale nonché tavolozze più ampie a spettro completo. Gli artisti possono mantenere tavolozze separate per soggetti, progetti, stili o condizioni di illuminazione diversi, ciascuno con il proprio carattere e comportamento di miscelazione.
+
+
+![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
+
 
 ## Pigmenti, miscele e memoria
 
@@ -19,6 +25,9 @@ I pigmenti della tavolozza fungono da base. Definiscono i colori da cui cresce i
 Le miscele salvate rappresentano scoperte intenzionali: colori che vale la pena conservare, nominare e a cui tornare. I colori utilizzati formano un tipo di memoria più silenziosa, preservando i colori effettivamente presenti sulla tela anche se non sono stati salvati in anticipo.
 
 Insieme, queste aree consentono alla tavolozza di evolversi in modo naturale. Può iniziare come un set di pigmenti, raccogliere miscele utili durante la pittura e diventare gradualmente un vocabolario cromatico personalizzato.
+
+![add-pigment](/images/screens/add-pigment.jpg)
+
 
 ## Organizzazione guidata dal valore
 
@@ -31,6 +40,8 @@ Le tavolozze possono anche portare il proprio senso di spaziatura tonale. Un'ill
 Una tavolozza può includere sfumature derivate dai propri colori. Questi gradienti sono utili per transizioni morbide, strisce di riferimento, studi sull'illuminazione e movimento del colore che rimane all'interno dell'identità della tavolozza.
 
 Poiché i gradienti appartengono alla tavolozza, rafforzano lo stesso linguaggio cromatico dei pigmenti e delle miscele salvate invece di sembrare aggiunte non correlate.
+
+![gradients](/images/screens/gradient-editor.jpg)
 
 ## Flusso di lavoro di pittura
 
