@@ -6,9 +6,13 @@ Mapa palet wizualizuje, co może wytworzyć aktywna paleta. Zaczynając od pigme
 
 Jego cel jest praktyczny: zamiast przeglądać płaską listę próbek, artyści mogą zobaczyć, gdzie kolory żyją względem siebie i poruszać się przestrzennie po palecie.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Mapa osiągalnych kolorów
 
 Każda paleta ma charakter. Niektóre palety otwierają się na wyraźne zielenie i fiołki; inne szybko zapadają się w ciepłe neutralne, kolory ziemi lub stonowane cienie. Mapa palet sprawia, że ​​ten znak jest widoczny.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Wygenerowane mieszanki, pigmenty podstawowe i zapisane kolory pojawiają się jako część jednego zorganizowanego pola kolorów. Ułatwia to zrozumienie nie tylko istniejących kolorów, ale także ich związku z ogólną gamą palety.
 

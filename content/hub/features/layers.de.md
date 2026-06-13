@@ -6,6 +6,8 @@ Das Ebenensystem von Lumi ergibt eine Illustrationsstruktur. Damit können Küns
 
 Ebenen sind nicht nur ein Stapel von Pixeln. Sie ermöglichen Sichtbarkeit, Überblendung, Masken, Sperren, Effekte, Gruppierung und Kompositionsverhalten und bilden damit die Grundlage für flexible, zerstörungsfreie Mal-Workflows.
 
+![layers](/images/screens/layers.jpg)
+
 ## Strukturierte Malerei
 
 Ein geschichtetes Bild kann in Etappen erstellt werden. Grobe Markierungen können unter klaren Linien liegen, Farbe kann getrennt von der Beleuchtung blockiert werden, Textur kann isoliert werden und alternative Ideen können verfügbar bleiben, ohne die Hauptkomposition zu stören.

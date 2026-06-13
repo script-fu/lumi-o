@@ -4,11 +4,15 @@ type: docs
 ---
 O Mapa de Paletas visualiza o que uma paleta ativa pode produzir. A partir dos pigmentos da paleta e das cores salvas, ele apresenta o espaço de cores alcançável como um mapa de matiz e valor fácil de pintar.
 
-Seu objetivo é prático: em vez de navegar em uma lista simples de amostras, os artistas podem ver onde as cores vivem em relação umas às outras e se mover espacialmente pela paleta.
+Seu objetivo é prático: em vez de navegar em uma lista simples de amostras, os artistas podem ver onde as cores vivem umas em relação às outras e se mover espacialmente pela paleta.
+
+![palette-map](/images/screens/palettemap.jpg)
 
 ## Um mapa de cores alcançáveis
 
 Cada paleta tem um personagem. Algumas paletas se abrem em verdes e violetas claros; outros desmoronam rapidamente em tons neutros quentes, cores terrosas ou sombras suaves. O Mapa da Paleta torna esse caractere visível.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 As misturas geradas, os pigmentos primários e as cores salvas aparecem como parte de um campo de cores organizado. Isso torna mais fácil entender não apenas quais cores existem, mas como elas se relacionam com a gama geral da paleta.
 

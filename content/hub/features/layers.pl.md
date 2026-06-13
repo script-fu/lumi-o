@@ -6,6 +6,8 @@ System warstw Lumi zapewnia ilustracyjną strukturę. Pozwala artystom oddzieli�
 
 Warstwy to nie tylko stos pikseli. Zapewniają widoczność, mieszanie, maski, blokady, efekty, grupowanie i komponowanie, co czyni je podstawą elastycznych, nieniszczących procesów malowania.
 
+![layers](/images/screens/layers.jpg)
+
 ## Malowanie strukturalne
 
 Warstwowy obraz można budować etapami. Nierówne ślady mogą znajdować się pod czystymi liniami, kolor można blokować niezależnie od oświetlenia, teksturę można izolować, a alternatywne pomysły mogą pozostać dostępne bez zakłócania głównej kompozycji.

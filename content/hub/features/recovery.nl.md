@@ -6,6 +6,8 @@ Het herstelsysteem van Lumi is ontworpen om schilderwerk te beschermen tegen cra
 
 Herstel is opgebouwd rond twee ideeën: automatische achtergrondbescherming en opzettelijke controlepunten. Samen zorgen ze ervoor dat recent werk behouden blijft, terwijl de kunstenaar toch kan terugkeren naar eerdere momenten in een project.
 
+![recover](/images/screens/recover.jpg)
+
 ## Automatische bescherming
 
 Terwijl een afbeelding wordt bewerkt, kan Lumi de herstelgegevens gescheiden houden van het hoofdwerkbestand. Dit betekent dat het project zelf niet telkens opnieuw hoeft te worden geschreven wanneer er een veiligheidssnapshot wordt gemaakt.

@@ -8,9 +8,13 @@ The Palette Map visualises what an active palette can produce. Starting from the
 
 Its purpose is practical: instead of browsing a flat list of swatches, artists can see where colours live in relation to one another and move through the palette spatially.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## A map of reachable colour
 
 Every palette has a character. Some palettes open into clear greens and violets; others collapse quickly into warm neutrals, earth colours, or muted shadows. The Palette Map makes that character visible.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Generated mixes, primary pigments, and saved colours appear as part of one organised colour field. This makes it easier to understand not only which colours exist, but how they relate to the palette's overall range.
 

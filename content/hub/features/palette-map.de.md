@@ -6,9 +6,13 @@ Die Palettenkarte visualisiert, was eine aktive Palette bewirken kann. Ausgehend
 
 Sein Zweck ist praktisch: Anstatt eine flache Liste von Farbfeldern zu durchsuchen, können Künstler sehen, wo Farben im Verhältnis zueinander stehen, und sich räumlich durch die Palette bewegen.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Eine Karte mit erreichbarer Farbe
 
 Jede Palette hat einen Charakter. Einige Paletten öffnen sich zu klaren Grün- und Violetttönen; andere verfallen schnell in warme Neutraltöne, Erdfarben oder gedämpfte Schatten. Die Palettenzuordnung macht dieses Zeichen sichtbar.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Erzeugte Mischungen, Primärpigmente und gespeicherte Farben werden als Teil eines organisierten Farbfelds angezeigt. Dies macht es nicht nur einfacher zu verstehen, welche Farben vorhanden sind, sondern auch, wie sie sich auf die Gesamtpalette der Palette auswirken.
 
@@ -26,7 +30,7 @@ Dies hilft Lumi dabei, Farbe als kontinuierlichen Arbeitsraum zu betrachten. Das
 
 ## Canvas-zentrierte Erkundung
 
-Die Karte kann als große visuelle Oberfläche verwendet werden, wenn Farbentscheidungen mehr Raum erfordern. Dies macht es nützlich, um eine potenzielle Farbe mit dem Gemälde selbst zu vergleichen, Tonfamilien zu durchsuchen oder sich schnell durch die Palette zu bewegen, ohne auf ein kleines Bedienfeld angewiesen zu sein.
+Die Karte kann als große visuelle Oberfläche verwendet werden, wenn Farbentscheidungen mehr Raum benötigen. Dies macht es nützlich, um eine potenzielle Farbe mit dem Gemälde selbst zu vergleichen, Tonfamilien zu durchsuchen oder sich schnell durch die Palette zu bewegen, ohne auf ein kleines Bedienfeld angewiesen zu sein.
 
 Die Absicht besteht darin, die Palettennavigation unmittelbar und visuell zu gestalten: Schauen Sie sich die Farbwelt an, bewegen Sie sich durch sie und wählen Sie die Markierung aus, die als Nächstes dazugehört.
 

@@ -6,6 +6,8 @@ Das Wiederherstellungssystem von Lumi ist darauf ausgelegt, Malarbeiten vor Abst
 
 Die Wiederherstellung basiert auf zwei Ideen: automatischem Hintergrundschutz und absichtlichen Prüfpunkten. Zusammen tragen sie dazu bei, aktuelle Arbeiten zu bewahren und ermöglichen es dem Künstler gleichzeitig, zu früheren Momenten eines Projekts zurückzukehren.
 
+![recover](/images/screens/recover.jpg)
+
 ## Automatischer Schutz
 
 Während ein Bild bearbeitet wird, kann Lumi die Wiederherstellungsdaten von der Hauptarbeitsdatei getrennt halten. Dies bedeutet, dass das Projekt selbst nicht jedes Mal neu geschrieben werden muss, wenn ein Sicherheits-Snapshot erstellt wird.

@@ -8,6 +8,8 @@ Lumi's recovery system is designed to protect painting work from crashes, mistak
 
 Recovery is built around two ideas: automatic background protection and intentional checkpoints. Together they help preserve recent work while still allowing an artist to return to earlier moments in a project.
 
+![recover](/images/screens/recover.jpg)
+
 ## Automatic protection
 
 While an image is being edited, Lumi can keep recovery data separate from the main working file. This means the project itself does not need to be rewritten every time a safety snapshot is made.

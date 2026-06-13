@@ -6,6 +6,8 @@ System odzyskiwania Lumi został zaprojektowany, aby chronić prace malarskie pr
 
 Odzyskiwanie opiera się na dwóch koncepcjach: automatycznej ochronie w tle i celowych punktach kontrolnych. Razem pomagają zachować najnowsze prace, jednocześnie umożliwiając artyście powrót do wcześniejszych momentów w projekcie.
 
+![recover](/images/screens/recover.jpg)
+
 ## Automatyczna ochrona
 
 Podczas edycji obrazu Lumi może przechowywać dane odzyskiwania oddzielnie od głównego pliku roboczego. Oznacza to, że sam projekt nie musi być przepisywany za każdym razem, gdy tworzona jest migawka bezpieczeństwa.

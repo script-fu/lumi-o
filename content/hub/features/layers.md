@@ -8,6 +8,8 @@ Lumi's layer system gives an illustration structure. It lets artists separate sk
 
 Layers are not just a stack of pixels. They carry visibility, blending, masks, locks, effects, grouping, and compositing behaviour, making them the foundation for flexible, non-destructive painting workflows.
 
+![layers](/images/screens/layers.jpg)
+
 ## Structured painting
 
 A layered image can be built in stages. Rough marks can sit beneath clean lines, colour can be blocked separately from lighting, texture can be isolated, and alternate ideas can remain available without disturbing the main composition.

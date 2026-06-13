@@ -6,6 +6,8 @@ De Palette Mixer is Lumi's ruimte voor het afleiden van nieuwe kleuren uit het a
 
 De Mixer werkt met de eigen kleuridentiteit van het palet. Nieuwe mengsels zijn geen willekeurige kleuren die van buiten het systeem komen; het zijn relaties tussen kleuren die al in het palet aanwezig zijn.
 
+![palette-mixer](/images/screens/palettemixer.jpg)
+
 ## Mengen vanuit paletrelaties
 
 Een mix begint met bronkleuren uit het palet. Door zich tussen de kleuren te verplaatsen, kan een kunstenaar de overgang van de ene tintfamilie naar de andere verkennen, terwijl hij binnen het karakter van het palet blijft.

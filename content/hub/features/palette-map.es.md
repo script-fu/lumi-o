@@ -6,9 +6,13 @@ El Mapa de paleta visualiza lo que puede producir una paleta activa. A partir de
 
 Su propósito es práctico: en lugar de explorar una lista plana de muestras, los artistas pueden ver dónde viven los colores entre sí y moverse espacialmente a través de la paleta.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Un mapa de color accesible.
 
 Cada paleta tiene un carácter. Algunas paletas se abren hacia verdes y violetas claros; otros colapsan rápidamente hacia neutros cálidos, colores tierra o sombras apagadas. El Mapa de paleta hace que ese personaje sea visible.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Las mezclas generadas, los pigmentos primarios y los colores guardados aparecen como parte de un campo de color organizado. Esto hace que sea más fácil comprender no sólo qué colores existen, sino también cómo se relacionan con la gama general de la paleta.
 

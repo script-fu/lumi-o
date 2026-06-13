@@ -6,6 +6,8 @@ Le système de calques de Lumi donne une structure d'illustration. Il permet aux
 
 Les calques ne sont pas simplement une pile de pixels. Ils comportent des comportements de visibilité, de fusion, de masques, de verrouillages, d'effets, de regroupement et de composition, ce qui en fait la base de flux de travail de peinture flexibles et non destructifs.
 
+![layers](/images/screens/layers.jpg)
+
 ## Peinture structurée
 
 Une image en couches peut être construite par étapes. Les marques brutes peuvent être placées sous des lignes épurées, la couleur peut être bloquée séparément de l'éclairage, la texture peut être isolée et des idées alternatives peuvent rester disponibles sans perturber la composition principale.

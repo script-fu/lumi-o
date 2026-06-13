@@ -6,9 +6,13 @@ Palettkartan visualiserar vad en aktiv palett kan producera. Med utgångspunkt f
 
 Dess syfte är praktiskt: istället för att bläddra i en platt lista med swatches kan konstnärer se var färgerna lever i förhållande till varandra och röra sig genom paletten rumsligt.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## En karta med nåbar färg
 
 Varje palett har en karaktär. Vissa paletter öppnar sig i klara gröna och violer; andra kollapsar snabbt till varma neutrala färger, jordfärger eller dämpade skuggor. Palettkartan gör den karaktären synlig.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Genererade blandningar, primära pigment och sparade färger visas som en del av ett organiserat färgfält. Detta gör det lättare att förstå inte bara vilka färger som finns, utan hur de förhåller sig till palettens övergripande utbud.
 

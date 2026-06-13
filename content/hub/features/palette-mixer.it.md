@@ -6,6 +6,8 @@ Il Mixer Palette è lo spazio di Lumi per derivare nuovi colori dalla tavolozza 
 
 Il Mixer funziona con l'identità cromatica propria della tavolozza. Le nuove miscele non sono colori arbitrari presi dall’esterno del sistema; sono relazioni tra colori già presenti nella tavolozza.
 
+![palette-mixer](/images/screens/palettemixer.jpg)
+
 ## Miscelazione dalle relazioni delle tavolozze
 
 Un mix inizia con i colori sorgente della tavolozza. Muovendosi tra di loro, un artista può esplorare il passaggio da una famiglia di tonalità all'altra rimanendo all'interno del carattere della tavolozza.

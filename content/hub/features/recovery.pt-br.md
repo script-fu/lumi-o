@@ -6,6 +6,8 @@ O sistema de recuperação do Lumi foi projetado para proteger os trabalhos de p
 
 A recuperação é construída em torno de duas ideias: proteção automática em segundo plano e pontos de verificação intencionais. Juntos, eles ajudam a preservar trabalhos recentes, ao mesmo tempo que permitem ao artista retornar a momentos anteriores de um projeto.
 
+![recover](/images/screens/recover.jpg)
+
 ## Proteção automática
 
 Enquanto uma imagem está sendo editada, o Lumi pode manter os dados de recuperação separados do arquivo de trabalho principal. Isto significa que o projeto em si não precisa ser reescrito toda vez que um instantâneo de segurança é feito.

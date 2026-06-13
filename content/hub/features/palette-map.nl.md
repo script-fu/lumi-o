@@ -6,9 +6,13 @@ De Paletkaart visualiseert wat een actief palet kan produceren. Vertrekkend van 
 
 Het doel ervan is praktisch: in plaats van door een platte lijst met stalen te bladeren, kunnen kunstenaars zien waar kleuren zich in relatie tot elkaar bevinden en ruimtelijk door het palet bewegen.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Een kaart met bereikbare kleuren
 
 Elk palet heeft een karakter. Sommige paletten openen zich in helder groen en viooltjes; andere vallen snel weg in warme neutrale tinten, aardekleuren of gedempte schaduwen. De Paletkaart maakt dat personage zichtbaar.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Gegenereerde mengsels, primaire pigmenten en opgeslagen kleuren verschijnen als onderdeel van één georganiseerd kleurenveld. Dit maakt het niet alleen gemakkelijker om te begrijpen welke kleuren er bestaan, maar ook hoe deze zich verhouden tot het totale bereik van het palet.
 

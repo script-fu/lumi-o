@@ -6,6 +6,8 @@ Lumis återställningssystem är designat för att skydda målningsarbeten från
 
 Återställning är uppbyggd kring två idéer: automatiskt bakgrundsskydd och avsiktliga kontrollpunkter. Tillsammans hjälper de till att bevara nyare verk samtidigt som de tillåter en konstnär att återvända till tidigare ögonblick i ett projekt.
 
+![recover](/images/screens/recover.jpg)
+
 ## Automatiskt skydd
 
 Medan en bild redigeras kan Lumi hålla återställningsdata åtskilda från huvudarbetsfilen. Detta innebär att själva projektet inte behöver skrivas om varje gång en säkerhetsöversikt görs.

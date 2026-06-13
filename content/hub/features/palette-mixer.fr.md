@@ -6,6 +6,8 @@ Le Palette Mixer est l'espace de Lumi pour dériver de nouvelles couleurs de la 
 
 Le Mixer fonctionne avec la propre identité de couleur de la palette. Les nouveaux mélanges ne sont pas des couleurs arbitraires tirées de l’extérieur du système ; ce sont des relations entre des couleurs déjà présentes dans la palette.
 
+![palette-mixer](/images/screens/palettemixer.jpg)
+
 ## Mixage à partir des relations de palette
 
 Un mélange commence avec les couleurs sources de la palette. En se déplaçant entre elles, un artiste peut explorer le passage d'une famille de teintes à une autre tout en restant dans le caractère de la palette.

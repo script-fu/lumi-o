@@ -2,9 +2,11 @@
 title: "Palettenmischer"
 type: docs
 ---
-Der Palettenmischer ist Lumis Raum zum Ableiten neuer Farben aus der aktiven Palette. Es behandelt das Mischen als einen malerischen Prozess und nicht als einen einfachen digitalen Durchschnitt, sodass Farben auf eine Weise verschoben, weicher, dunkler und harmonisiert werden können, die physischen Pigmenten näher kommt.
+Der Palettenmischer ist Lumis Raum zum Ableiten neuer Farben aus der aktiven Palette. Das Mischen wird als malerischer Prozess und nicht als einfacher digitaler Durchschnitt behandelt, sodass Farben auf eine Weise verschoben, weicher, dunkler und harmonisiert werden können, die sich physischen Pigmenten nähert.
 
 Der Mixer arbeitet mit der eigenen Farbidentität der Palette. Neue Mischungen sind keine willkürlichen Farben, die von außerhalb des Systems gezogen werden; es handelt sich um Beziehungen zwischen Farben, die bereits in der Palette vorhanden sind.
+
+![palette-mixer](/images/screens/palettemixer.jpg)
 
 ## Mischen aus Palettenbeziehungen
 

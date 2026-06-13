@@ -6,9 +6,13 @@ La carte de palette visualise ce qu'une palette active peut produire. À partir 
 
 Son objectif est pratique : au lieu de parcourir une liste plate d'échantillons, les artistes peuvent voir où les couleurs vivent les unes par rapport aux autres et se déplacer spatialement dans la palette.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Une carte de couleur accessible
 
 Chaque palette a un caractère. Certaines palettes s'ouvrent sur des verts clairs et des violets ; d'autres s'effondrent rapidement dans des tons neutres chauds, des couleurs terre ou des ombres sourdes. La carte de palette rend ce personnage visible.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Les mélanges générés, les pigments primaires et les couleurs enregistrées apparaissent dans le cadre d'un champ de couleurs organisé. Cela permet de comprendre plus facilement non seulement quelles couleurs existent, mais aussi comment elles se rapportent à la gamme globale de la palette.
 

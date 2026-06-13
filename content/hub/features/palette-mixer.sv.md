@@ -6,6 +6,8 @@ Palettmixern är Lumis utrymme för att hämta nya färger från den aktiva pale
 
 Mixern arbetar med palettens egen färgidentitet. Nya blandningar är inte godtyckliga färger som hämtas utanför systemet; de är relationer mellan färger som redan finns i paletten.
 
+![palette-mixer](/images/screens/palettemixer.jpg)
+
 ## Blandning från palettrelationer
 
 En mix börjar med källfärger från paletten. Genom att röra sig mellan dem kan en konstnär utforska passagen från en nyansfamilj till en annan samtidigt som han stannar kvar i palettens karaktär.

@@ -4,7 +4,9 @@ type: docs
 ---
 El Palette Mixer es el espacio de Lumi para derivar nuevos colores de la paleta activa. Trata la mezcla como un proceso pictórico en lugar de un simple promedio digital, por lo que los colores pueden cambiar, suavizarse, oscurecerse y armonizarse de maneras que se sienten más cercanas a los pigmentos físicos.
 
-El Mezclador trabaja con la identidad de color propia de la paleta. Las nuevas mezclas no son colores arbitrarios extraídos de fuera del sistema; son relaciones entre colores ya presentes en la paleta.
+El Mixer trabaja con la identidad de color propia de la paleta. Las nuevas mezclas no son colores arbitrarios extraídos de fuera del sistema; son relaciones entre colores ya presentes en la paleta.
+
+![palette-mixer](/images/screens/palettemixer.jpg)
 
 ## Mezclar a partir de relaciones de paleta
 

@@ -6,6 +6,8 @@ Het lagensysteem van Lumi geeft een illustratiestructuur. Hiermee kunnen kunsten
 
 Lagen zijn niet alleen maar een stapel pixels. Ze dragen zichtbaarheid, overvloeiing, maskers, vergrendelingen, effecten, groepering en compositiegedrag met zich mee, waardoor ze de basis vormen voor flexibele, niet-destructieve schilderworkflows.
 
+![layers](/images/screens/layers.jpg)
+
 ## Gestructureerd schilderen
 
 Een gelaagd beeld kan in fasen worden opgebouwd. Ruwe markeringen kunnen onder strakke lijnen zitten, kleur kan los van de belichting worden geblokkeerd, textuur kan worden geïsoleerd en alternatieve ideeën kunnen beschikbaar blijven zonder de hoofdcompositie te verstoren.

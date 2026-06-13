@@ -6,6 +6,8 @@ Il sistema a strati di Lumi fornisce una struttura illustrativa. Consente agli a
 
 I livelli non sono solo una pila di pixel. Portano visibilità, fusione, maschere, blocchi, effetti, raggruppamento e comportamento di composizione, rendendoli la base per flussi di lavoro di pittura flessibili e non distruttivi.
 
+![layers](/images/screens/layers.jpg)
+
 ## Pittura strutturata
 
 Un'immagine a più livelli può essere creata in più fasi. I segni grezzi possono trovarsi sotto linee pulite, il colore può essere bloccato separatamente dall'illuminazione, la trama può essere isolata e idee alternative possono rimanere disponibili senza disturbare la composizione principale.
@@ -22,7 +24,7 @@ Le maschere aggiungono un altro livello di controllo. Consentono di dipingere, a
 
 I dipinti complessi possono contenere molti piccoli pezzi. Lumi supporta la navigazione diretta orientata ai livelli in modo che gli artisti possano spostarsi dalla tela alla pila di livelli senza perdere il flusso della pittura.
 
-L'intento è quello di far sì che il lavoro a strati sembri spaziale piuttosto che amministrativo: se un segno è visibile sulla tela, il sistema a strati dovrebbe aiutare l'artista a ritornarvi rapidamente.
+L'intento è quello di far sì che il lavoro a strati sembri spaziale piuttosto che amministrativo: se un segno è visibile sulla tela, il sistema a strati dovrebbe aiutare l'artista a ritornarci rapidamente.
 
 ## Protezione e intenti
 

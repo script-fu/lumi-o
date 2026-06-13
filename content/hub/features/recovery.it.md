@@ -6,6 +6,8 @@ Il sistema di recupero di Lumi è progettato per proteggere il lavoro di vernici
 
 Il ripristino si basa su due idee: protezione automatica in background e checkpoint intenzionali. Insieme aiutano a preservare il lavoro recente consentendo comunque all'artista di tornare ai momenti precedenti di un progetto.
 
+![recover](/images/screens/recover.jpg)
+
 ## Protezione automatica
 
 Mentre un'immagine viene modificata, Lumi può mantenere i dati di ripristino separati dal file di lavoro principale. Ciò significa che non è necessario riscrivere il progetto stesso ogni volta che viene creata un'istantanea di sicurezza.

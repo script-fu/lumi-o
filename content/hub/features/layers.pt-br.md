@@ -6,6 +6,8 @@ O sistema de camadas de Lumi fornece uma estrutura de ilustração. Ele permite 
 
 As camadas não são apenas uma pilha de pixels. Eles carregam visibilidade, mesclagem, máscaras, bloqueios, efeitos, agrupamento e comportamento de composição, tornando-os a base para fluxos de trabalho de pintura flexíveis e não destrutivos.
 
+![layers](/images/screens/layers.jpg)
+
 ## Pintura estruturada
 
 Uma imagem em camadas pode ser construída em etapas. Marcas ásperas podem ficar abaixo de linhas limpas, a cor pode ser bloqueada separadamente da iluminação, a textura pode ser isolada e ideias alternativas podem permanecer disponíveis sem perturbar a composição principal.

@@ -6,6 +6,8 @@ El sistema de capas de Lumi da una estructura a la ilustración. Permite a los a
 
 Las capas no son sólo una pila de píxeles. Incluyen visibilidad, fusión, máscaras, bloqueos, efectos, agrupación y comportamiento de composición, lo que los convierte en la base para flujos de trabajo de pintura flexibles y no destructivos.
 
+![layers](/images/screens/layers.jpg)
+
 ## Pintura estructurada
 
 Una imagen en capas se puede construir en etapas. Las marcas ásperas pueden ubicarse debajo de líneas limpias, el color puede bloquearse por separado de la iluminación, la textura puede aislarse y las ideas alternativas pueden permanecer disponibles sin alterar la composición principal.

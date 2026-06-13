@@ -6,6 +6,8 @@ Lumis lagersystem ger en illustrationsstruktur. Det låter konstnärer separera 
 
 Lager är inte bara en hög med pixlar. De har synlighet, blandning, masker, lås, effekter, gruppering och kompositbeteende, vilket gör dem till grunden för flexibla, oförstörande målningsarbetsflöden.
 
+![layers](/images/screens/layers.jpg)
+
 ## Strukturerad målning
 
 En skiktad bild kan byggas i etapper. Grova märken kan sitta under rena linjer, färg kan blockeras separat från belysning, textur kan isoleras och alternativa idéer kan förbli tillgängliga utan att störa huvudkompositionen.

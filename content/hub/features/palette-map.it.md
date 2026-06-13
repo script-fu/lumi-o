@@ -6,9 +6,13 @@ La mappa delle tavolozze visualizza ciò che una tavolozza attiva può produrre.
 
 Il suo scopo è pratico: invece di sfogliare un elenco piatto di campioni, gli artisti possono vedere dove vivono i colori in relazione tra loro e muoversi spazialmente attraverso la tavolozza.
 
+![palette-map](/images/screens/palettemap.jpg)
+
 ## Una mappa dei colori raggiungibili
 
 Ogni tavolozza ha un carattere. Alcune tavolozze si aprono su verdi e viola chiari; altri collassano rapidamente in caldi neutri, colori della terra o ombre tenui. La mappa della tavolozza rende visibile quel personaggio.
+
+![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
 Le miscele generate, i pigmenti primari e i colori salvati appaiono come parte di un unico campo colore organizzato. Ciò rende più semplice comprendere non solo quali colori esistono, ma anche come si relazionano alla gamma complessiva della tavolozza.
 
