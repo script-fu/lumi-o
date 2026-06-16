@@ -15,6 +15,7 @@ W tej sekcji przedstawiono podstawowe możliwości dostępne w Lumi i obsługiwa
   {{< card link="palette-editor" title="Edytor palet" icon="color-swatch" subtitle="Twórz palety jako kompletne systemy kolorów z pigmentami, zapisanymi mieszankami, używanymi kolorami, wartościami i gradientami." >}}
   {{< card link="palette-map" title="Mapa palet" icon="view-grid" subtitle="Zobacz dostępny świat kolorów palety jako wizualną mapę do eksploracji i selekcji." >}}
   {{< card link="palette-mixer" title="Mikser palet" icon="adjustments" subtitle="Twórz nowe kolory na podstawie relacji palet, korzystając z mieszania pigmentów, tonów i chrominancji." >}}
+  {{< card link="publishing-layout" title="Układ wydawniczy" icon="book-open" subtitle="Przewodniki po spadach, rynnach i kompozycji do druku i publikacji, zapisywane razem z obrazem w projekcie." >}}
   {{< card link="scripting" title="Skrypt schematu" icon="code" subtitle="Automatyzuj przepływy pracy i rozszerzaj Lumi za pomocą wbudowanego interpretera schematów." >}}
   {{< card link="spectral-color" title="Widmowe mieszanie kolorów" icon="beaker" subtitle="Kolory palety mieszają się z zachowaniem pigmentowym, nadając cyfrowemu wyborowi kolorów bardziej malarski charakter." >}}
   {{< card link="tool-presets" title="Ustawienia wstępne narzędzi" icon="template" subtitle="Zbuduj mały, znajomy zestaw ręcznie robionych narzędzi o stabilnym działaniu, zasobach i niestandardowych tożsamościach." >}}

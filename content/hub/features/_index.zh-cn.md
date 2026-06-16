@@ -15,6 +15,7 @@ Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在
   {{< card link="palette-editor" title="调色板编辑器" icon="color-swatch" subtitle="使用颜料、保存的混合、使用的颜色、值和渐变将调色板构建为完整的颜色系统。" >}}
   {{< card link="palette-map" title="调色板图" icon="view-grid" subtitle="将调色板可触及的色彩世界视为探索和选择的视觉地图。" >}}
   {{< card link="palette-mixer" title="调色板混合器" icon="adjustments" subtitle="使用类似颜料的混合、色调和色度决策，根据调色板关系创建新的颜色。" >}}
+  {{< card link="publishing-layout" title="出版布局" icon="book-open" subtitle="用于印刷和出版工作的出血线、装订线和构图指南，随项目保存每个图像。" >}}
   {{< card link="scripting" title="方案脚本" icon="code" subtitle="使用嵌入式方案解释器自动化工作流程并扩展 Lumi。" >}}
   {{< card link="spectral-color" title="光谱混色" icon="beaker" subtitle="调色板颜色与类似颜料的行为混合在一起，使数字颜色选择更具绘画感。" >}}
   {{< card link="tool-presets" title="工具预设" icon="template" subtitle="构建一套小型、熟悉的手工工具，具有稳定的行为、资源和自定义身份。" >}}

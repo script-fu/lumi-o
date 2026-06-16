@@ -15,6 +15,7 @@ Esta seção apresenta os principais recursos disponíveis no Lumi e os fluxos d
   {{< card link="palette-editor" title="Editor de paleta" icon="color-swatch" subtitle="Crie paletas como sistemas de cores completos com pigmentos, misturas salvas, cores usadas, valores e gradientes." >}}
   {{< card link="palette-map" title="Mapa de paleta" icon="view-grid" subtitle="Veja o mundo de cores acessível de uma paleta como um mapa visual para exploração e seleção." >}}
   {{< card link="palette-mixer" title="Misturador de paleta" icon="adjustments" subtitle="Crie novas cores a partir de relacionamentos de paleta usando decisões de mistura, tom e croma semelhantes a pigmentos." >}}
+  {{< card link="publishing-layout" title="Layout de publicação" icon="book-open" subtitle="Guias de sangria, medianiz e composição para trabalhos de impressão e publicação, salvos por imagem com o projeto." >}}
   {{< card link="scripting" title="Script de esquema" icon="code" subtitle="Automatize fluxos de trabalho e estenda o Lumi usando um interpretador de Scheme integrado." >}}
   {{< card link="spectral-color" title="Mistura espectral de cores" icon="beaker" subtitle="As cores da paleta se misturam com um comportamento semelhante ao pigmento, dando à seleção digital de cores uma sensação mais pictórica." >}}
   {{< card link="tool-presets" title="Predefinições de ferramentas" icon="template" subtitle="Crie um conjunto pequeno e familiar de ferramentas artesanais com comportamento estável, recursos e identidades personalizadas." >}}

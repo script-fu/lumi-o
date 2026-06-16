@@ -17,6 +17,7 @@ This section introduces the core capabilities available in Lumi and the creative
   {{< card link="palette-editor" title="Palette Editor" icon="color-swatch" subtitle="Build palettes as complete colour systems with pigments, saved mixes, used colours, values, and gradients." >}}
   {{< card link="palette-map" title="Palette Map" icon="view-grid" subtitle="See the reachable colour world of a palette as a visual map for exploration and selection." >}}
   {{< card link="palette-mixer" title="Palette Mixer" icon="adjustments" subtitle="Create new colours from palette relationships using pigment-like mixing, tone, and chroma decisions." >}}
+  {{< card link="publishing-layout" title="Publishing Layout" icon="book-open" subtitle="Bleed, gutter, and composition guides for print and publication work, saved per image with the project." >}}
   {{< card link="scripting" title="Scheme Scripting" icon="code" subtitle="Automate workflows and extend Lumi using an embedded Scheme interpreter." >}}
   {{< card link="spectral-color" title="Spectral Color Mixing" icon="beaker" subtitle="Palette colours mix with pigment-like behaviour, giving digital colour selection a more painterly feel." >}}
   {{< card link="tool-presets" title="Tool Presets" icon="template" subtitle="Build a small, familiar set of handmade tools with stable behaviour, resources, and custom identities." >}}
