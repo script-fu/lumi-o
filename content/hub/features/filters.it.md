@@ -92,14 +92,6 @@ Scegli sostituisce ogni pixel con un vicino scelto casualmente, quindi l'immagin
 
 ### DiffusioneDistribuisci disperde i pixel spostandoli casualmente all'interno di un raggio. È utile quando si desidera un'interruzione immobile: una superficie rotta, un bordo sbavato o una trama invecchiata che conserva ancora le relazioni cromatiche dell'immagine sorgente.
 
-### Diffusione frattale
-
-Fractal Spread è una versione più coerente e pittorica della diffusione creata per il sanguinamento fibroso dell'inchiostro. Invece di spostare ciascun pixel in una direzione casuale non correlata, segue un campo di fibre frattali in modo che i pixel vicini si spostino in direzioni correlate, creando viticci, linee d'inchiostro sfumate e diffusione della grana della carta che possono ancora essere influenzati dall'angolo e dalla forza.
-
-### Rumore del pigmento
-
-Pigment Noise aggiunge un comportamento del pigmento in stile acquerello agli strati di vernice trasparente: un bordo scurito lungo il bordo alfa, variazione della linea di contatto interrotta, granulazione interna e sparse macchie più scure. È progettato per adattarsi in modo naturale dopo il lavoro con bordo bagnato o al vivo, trasformando una forma dipinta pulita in qualcosa con una concentrazione di pigmento più fisica.
-
 ### Frattale
 
 Fractal genera rumore Perlin frattale piastrellabile, che lo rende particolarmente prezioso come fonte riutilizzabile per maschere, nuvole, texture di carta, disgregazione simile al terreno e sovrapposizioni procedurali. Poiché è piastrellabile, può alimentare flussi di lavoro più ampi senza creare giunture evidenti.
@@ -138,7 +130,9 @@ Erode fa la mossa complementare, facendo crescere le regioni più scure e ritira
 
 ## Modello
 
-### ScacchieraLa scacchiera genera uno schema regolare di tessere alternate. È semplice, ma questa semplicità lo rende utile per testare la trasparenza, costruire maschere, bloccare sfondi grafici o creare materiale sorgente geometrico pulito.
+### Scacchiera
+
+La scacchiera genera uno schema regolare di tessere alternate. È semplice, ma questa semplicità lo rende utile per testare la trasparenza, costruire maschere, bloccare sfondi grafici o creare materiale sorgente geometrico pulito.
 
 ### Griglia
 
@@ -148,9 +142,7 @@ La griglia disegna divisioni orizzontali e verticali ripetute, rendendola utile 
 
 Voronoi genera una texture cellulare piastrellabile da punti seminati, con controlli per tipo di elemento, metrica della distanza, casualità, dettaglio frattale e avvolgimento senza soluzione di continuità. In pratica può passare da strutture pulite di cellule incrinate a modelli più organici di pietra, pelle, mappa o reticoli astratti.
 
-### Onda
-
-Wave produce motivi a bande o ad anello modellati in base al profilo della forma d'onda, alla disposizione geometrica, alla distorsione, al dettaglio frattale e all'offset di fase. Ciò lo rende più di un semplice strumento per la creazione di strisce: può generare increspature controllate, bande topografiche, grafica simile all'effetto moiré o campi con motivi concentrici rumorosi.
+### OndaWave produce motivi a bande o ad anello modellati in base al profilo della forma d'onda, alla disposizione geometrica, alla distorsione, al dettaglio frattale e all'offset di fase. Ciò lo rende più di un semplice strumento per la creazione di strisce: può generare increspature controllate, bande topografiche, grafica simile all'effetto moiré o campi con motivi concentrici rumorosi.
 
 ### Mezzitoni (AM)
 

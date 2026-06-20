@@ -92,14 +92,6 @@ Pick ersätter varje pixel med en slumpmässigt vald granne, så bilden förblir
 
 ### SpridaSprid spridningspixlar genom att slumpmässigt förskjuta dem inom en radie. Det är användbart när du vill ha orörlig störning: en trasig yta, en utsmetad kant eller en distresserad textur som fortfarande bär källbildens färgförhållanden.
 
-### Fraktalspridning
-
-Fractal Spread är en mer sammanhängande, målande version av spread byggd för fibrös bläckblödning. Istället för att flytta varje pixel i en icke-relaterad slumpmässig riktning, följer den ett fraktalfiberfält så att närliggande pixlar drar i relaterade riktningar, vilket skapar rankor, fjädrande lutningar och papperskorn-diffusion som fortfarande kan påverkas av vinkel och styrka.
-
-### Pigmentbrus
-
-Pigment Noise lägger till akvarellliknande pigmentbeteende till transparenta färgskikt: en mörkare kant längs alfakanten, bruten kontaktlinjevariation, inre granulering och glesa mörkare fläckar. Den är designad för att sitta naturligt efter våtkants- eller bleed-arbete, vilket gör en ren målad form till något med mer fysisk pigmentkoncentration.
-
 ### Fraktal
 
 Fractal genererar beläggningsbart fraktalt Perlin-brus, vilket gör det särskilt värdefullt som en återanvändbar källa för masker, moln, pappersstruktur, terrängliknande uppdelning och proceduröverlägg. Eftersom den kakel kan den mata större arbetsflöden utan att skapa uppenbara sömmar.
@@ -108,7 +100,7 @@ Fractal genererar beläggningsbart fraktalt Perlin-brus, vilket gör det särski
 
 Blue Noise Grain är Lumis monokroma korngenerator för film och tryck. Dialogrutans förinställningar för kornstorlek, maskering av blått brus, mellantonsbias, skuggbias och frökontroller visar att den är utformad för att placera korn jämnt och kontrollerbart, inte bara för att spraya slumpmässiga monokroma fläckar över bilden.
 
-### Risografkorn
+### Risograf korn
 
 Risograph Grain bygger på samma kornlogik men förvandlar den till en tvåplåtstryckeffekt. Separata bläckfärger, plåtbalans, avsiktlig felregistrering och seedad variation gör att den passar bra för affischarbete, indietrycksestetik och illustrationer som ska kännas fysiskt övertryckta snarare än digitalt perfekta.
 
@@ -138,7 +130,9 @@ Erodera gör det kompletterande draget, växer mörkare områden och drar tillba
 
 ## Mönster
 
-### SchackbrädeSchackbräde genererar ett vanligt alternerande brickmönster. Det är enkelt, men den enkelheten gör det användbart för att testa transparens, bygga masker, blockera grafiska bakgrunder eller skapa rent geometriskt källmaterial.
+### Schackbräde
+
+Schackbräde genererar ett vanligt alternerande brickmönster. Det är enkelt, men den enkelheten gör det användbart för att testa transparens, bygga masker, blockera grafiska bakgrunder eller skapa rent geometriskt källmaterial.
 
 ### Rutnät
 
@@ -148,9 +142,7 @@ Grid ritar upprepade horisontella och vertikala indelningar, vilket gör det anv
 
 Voronoi genererar en beläggningsbar cellulär textur från sådda punkter, med kontroller för funktionstyp, avståndsmetrik, slumpmässighet, fraktaldetaljer och sömlös inpackning. I praktiken kan det gå från rena spruckna cellstrukturer till mer organiska sten-, hud-, kart- eller abstrakta nätverksmönster.
 
-### Våga
-
-Wave producerar bandade eller ringade mönster som formas av vågformsprofil, geometriskt arrangemang, distorsion, fraktal detalj och fasförskjutning. Det gör det till mer än ett enkelt stripe-verktyg: det kan generera kontrollerade krusningar, topografiska band, moaréliknande grafik eller bullriga koncentriska mönsterfält.
+### VågaWave producerar bandade eller ringade mönster som formas av vågformsprofil, geometriskt arrangemang, distorsion, fraktal detalj och fasförskjutning. Det gör det till mer än ett enkelt stripe-verktyg: det kan generera kontrollerade krusningar, topografiska band, moaréliknande grafik eller bullriga koncentriska mönsterfält.
 
 ### Halvton (AM)
 

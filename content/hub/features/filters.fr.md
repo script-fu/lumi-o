@@ -72,7 +72,7 @@ Bloom transforme les zones lumineuses en lueur contrôlée, avec un seuil, une d
 
 Sky est plus qu'une superposition de teintes ou de dégradés : il restitue un ciel analytique à l'aide des modèles Preetham, Hosek/Wilkie ou Nishita. Étant donné que la boîte de dialogue expose la projection, l'angle du soleil, la turbidité, la densité atmosphérique, l'altitude, les commandes du disque solaire et l'exposition, elle peut créer n'importe quoi, depuis une simple toile de fond claire jusqu'à un coucher de soleil ou un ciel crépusculaire plus physiquement ancré.
 
-### Vignettes
+### Vignette
 
 La vignette s'assombrit, colore ou même efface vers les bords de l'image, avec des commandes de forme, de rayon, de douceur, de gamma, de proportion, de compression, de rotation et de positionnement sur la toile. Il fonctionne comme un traitement de bord photographique classique, mais il est suffisamment flexible pour agir comme un masque de cadrage ou un projecteur de composition irrégulière.
 
@@ -91,14 +91,6 @@ Hurl est la version extrême du bruit : il remplace les pixels par des couleurs 
 Pick remplace chaque pixel par un voisin choisi au hasard, de sorte que l'image reste liée à sa source au lieu de devenir purement statique. Le résultat est une variation granulaire mélangée qui peut sembler plus organique qu’un bruit entièrement aléatoire.
 
 ### PropagéRépartissez les pixels en les déplaçant de manière aléatoire dans un rayon. C'est utile lorsque vous souhaitez une perturbation immobile : une surface brisée, un bord maculé ou une texture vieillie qui porte toujours les relations de couleurs de l'image source.
-
-### Propagation fractale
-
-Fractal Spread est une version picturale plus cohérente de la pâte à tartiner conçue pour les saignements d'encre fibreux. Au lieu de déplacer chaque pixel dans une direction aléatoire sans rapport, il suit un champ de fibres fractales de sorte que les pixels voisins tirent dans des directions connexes, créant des vrilles, des lignes d'encre en plumes et une diffusion du grain du papier qui peut toujours être biaisée par l'angle et la force.
-
-### Bruit pigmentaire
-
-Pigment Noise ajoute un comportement pigmentaire de type aquarelle aux couches de peinture transparentes : un bord sombre le long du bord alpha, une variation de ligne de contact brisée, une granulation intérieure et des taches plus foncées clairsemées. Il est conçu pour reposer naturellement après un travail sur bord mouillé ou fond perdu, transformant une forme peinte propre en quelque chose avec une concentration de pigments plus physique.
 
 ### Fractale
 
@@ -138,7 +130,9 @@ Erode effectue le mouvement complémentaire, en agrandissant les régions les pl
 
 ## Modèle
 
-### DamierLe damier génère un motif de tuiles alterné régulier. C'est simple, mais cette simplicité le rend utile pour tester la transparence, créer des masques, bloquer des arrière-plans graphiques ou créer un matériau source géométrique propre.
+### Damier
+
+Le damier génère un motif de tuiles alterné régulier. C'est simple, mais cette simplicité le rend utile pour tester la transparence, créer des masques, bloquer des arrière-plans graphiques ou créer un matériau source géométrique propre.
 
 ### Grille
 
@@ -148,9 +142,7 @@ Grid dessine des divisions horizontales et verticales répétées, ce qui le ren
 
 Voronoi génère une texture cellulaire carrelable à partir de points prédéfinis, avec des contrôles pour le type de caractéristique, la métrique de distance, le caractère aléatoire, les détails fractals et l'habillage transparent. En pratique, il peut passer de structures de cellules fissurées propres à des motifs de pierre, de peau, de carte ou de réseau plus organiques.
 
-### Vague
-
-Wave produit des motifs en bandes ou en anneaux façonnés par le profil de forme d'onde, la disposition géométrique, la distorsion, les détails fractals et le décalage de phase. Cela en fait plus qu'un simple outil de bande : il peut générer des ondulations contrôlées, des bandes topographiques, des graphiques de type moiré ou des champs de motifs concentriques bruyants.
+### VagueWave produit des motifs en bandes ou en anneaux façonnés par le profil de forme d'onde, la disposition géométrique, la distorsion, les détails fractals et le décalage de phase. Cela en fait plus qu'un simple outil de bande : il peut générer des ondulations contrôlées, des bandes topographiques, des graphiques de type moiré ou des champs de motifs concentriques bruyants.
 
 ### Demi-teintes (AM)
 

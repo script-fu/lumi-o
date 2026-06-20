@@ -92,14 +92,6 @@ Pick vervangt elke pixel door een willekeurig gekozen buur, zodat de afbeelding 
 
 ### SpreidingVerspreid verstrooide pixels door ze willekeurig binnen een straal te verplaatsen. Dit is handig als u bewegingsloze verstoring wilt: een gebroken oppervlak, een vlekkerige rand of een versleten textuur die nog steeds de kleurrelaties van de bronafbeelding draagt.
 
-### Fractale verspreiding
-
-Fractal Spread is een meer coherente, schilderkunstige versie van spread, gebouwd voor het uitlekken van vezelachtige inkt. In plaats van elke pixel in een niet-gerelateerde willekeurige richting te verplaatsen, volgt deze een fractaal vezelveld, zodat aangrenzende pixels in verwante richtingen trekken, waardoor ranken, gevederde lijnen en papierkorreldiffusie ontstaan ​​die nog steeds kunnen worden beïnvloed door hoek en sterkte.
-
-### Pigmentruis
-
-Pigment Noise voegt pigmentgedrag in aquarelstijl toe aan transparante verflagen: een donkere rand langs de alfarand, gebroken contactlijnvariatie, interne granulatie en spaarzame donkere vlekken. Het is ontworpen om op natuurlijke wijze te blijven zitten na werkzaamheden met natte randen of bloedingen, waardoor een zuiver geschilderde vorm verandert in iets met een meer fysieke pigmentconcentratie.
-
 ### Fractaal
 
 Fractal genereert tegelbare fractale Perlin-ruis, waardoor het bijzonder waardevol is als herbruikbare bron voor maskers, wolken, papiertextuur, terreinachtige breuken en procedurele overlays. Omdat het tegelt, kan het grotere workflows voeden zonder duidelijke naden te creëren.
@@ -114,7 +106,7 @@ Risograph Grain bouwt voort op dezelfde korrellogica, maar verandert deze in een
 
 ### Halftoon (FM)
 
-Halftoon (FM) creëert een stochastische, frequentiegemoduleerde halftoon met behulp van blauwe ruis of verwante drempelmethoden. Met kleurmodi voor monochroom, duotoon en CMYK, plus besturingselementen voor puntversterking en plaatdecorrelatie, is het gericht op een afdrukachtige textuur die onregelmatig en levendig blijft in plaats van in een strak raster te vervallen.
+Halftoon (FM) creëert een stochastische, frequentiegemoduleerde halftoon met behulp van blauwe ruis of verwante drempelmethoden. Met kleurmodi voor monochroom, duotoon en CMYK, plus besturingselementen voor puntversterking en plaatdecorrelatie, is het gericht op een printachtige textuur die onregelmatig en levendig blijft in plaats van in een strak raster te vervallen.
 
 ## Randen
 
@@ -138,7 +130,9 @@ Eroderen doet de complementaire beweging, waarbij donkere gebieden worden groter
 
 ## Patroon
 
-### SchaakbordDambord genereert een regelmatig afwisselend tegelpatroon. Het is eenvoudig, maar die eenvoud maakt het nuttig voor het testen van transparantie, het bouwen van maskers, het blokkeren van grafische achtergronden of het maken van schoon geometrisch bronmateriaal.
+### Schaakbord
+
+Dambord genereert een regelmatig afwisselend tegelpatroon. Het is eenvoudig, maar die eenvoud maakt het nuttig voor het testen van transparantie, het bouwen van maskers, het blokkeren van grafische achtergronden of het maken van schoon geometrisch bronmateriaal.
 
 ### Raster
 
@@ -148,9 +142,7 @@ Grid tekent herhaalde horizontale en verticale scheidingen, waardoor het handig 
 
 Voronoi genereert een tegelbare cellulaire textuur van geplaatste punten, met bedieningselementen voor het objecttype, de afstandsmetriek, willekeur, fractale details en naadloze omloop. In de praktijk kan het overgaan van zuivere gebarsten celstructuren naar meer organische steen-, huid-, kaart- of abstracte netwerkpatronen.
 
-### Zwaai
-
-Wave produceert gestreepte of geringde patronen gevormd door golfvormprofiel, geometrische rangschikking, vervorming, fractale details en faseverschuiving. Dat maakt het meer dan een simpele stripe-tool: het kan gecontroleerde rimpelingen, topografische banden, moiré-achtige afbeeldingen of luidruchtige concentrische patroonvelden genereren.
+### GolfWave produceert gestreepte of geringde patronen gevormd door golfvormprofiel, geometrische rangschikking, vervorming, fractale details en faseverschuiving. Dat maakt het meer dan een simpele stripe-tool: het kan gecontroleerde rimpelingen, topografische banden, moiré-achtige afbeeldingen of luidruchtige concentrische patroonvelden genereren.
 
 ### Halftoon (AM)
 

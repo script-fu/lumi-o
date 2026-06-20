@@ -92,14 +92,6 @@ Pick substitui cada pixel por um vizinho escolhido aleatoriamente, para que a im
 
 ### EspalharSpread espalha pixels deslocando-os aleatoriamente dentro de um raio. É útil quando você deseja uma interrupção imóvel: uma superfície quebrada, uma borda manchada ou uma textura desgastada que ainda mantém as relações de cores da imagem de origem.
 
-### Propagação Fractal
-
-Fractal Spread é uma versão mais coerente e pictórica da propagação criada para sangramento de tinta fibrosa. Em vez de mover cada pixel em uma direção aleatória não relacionada, ele segue um campo de fibra fractal para que os pixels vizinhos puxem em direções relacionadas, criando gavinhas, linhas de tinta difusas e difusão de grãos de papel que ainda podem ser influenciadas pelo ângulo e pela força.
-
-### Ruído de pigmento
-
-Pigment Noise adiciona comportamento de pigmento estilo aquarela a camadas de tinta transparentes: uma borda escurecida ao longo da borda alfa, variação de linha de contato quebrada, granulação interna e manchas esparsas mais escuras. Ele foi projetado para assentar naturalmente após trabalhos com bordas úmidas ou sangrados, transformando uma forma pintada limpa em algo com mais concentração física de pigmento.
-
 ### fractal
 
 Fractal gera ruído Perlin fractal em blocos, o que o torna especialmente valioso como uma fonte reutilizável para máscaras, nuvens, textura de papel, ruptura semelhante a terreno e sobreposições procedimentais. Por ser lado a lado, ele pode alimentar fluxos de trabalho maiores sem criar costuras óbvias.
@@ -138,19 +130,19 @@ Erode faz o movimento complementar, aumentando as regiões mais escuras e retira
 
 ## Padrão
 
-### Tabuleiro de damasO tabuleiro de damas gera um padrão regular de ladrilhos alternados. É simples, mas essa simplicidade o torna útil para testar transparência, construir máscaras, bloquear fundos gráficos ou criar material de origem geométrica limpa.
+### Tabuleiro de damas
+
+O tabuleiro de damas gera um padrão regular de ladrilhos alternados. É simples, mas essa simplicidade o torna útil para testar transparência, construir máscaras, bloquear fundos gráficos ou criar material de origem geométrica limpa.
 
 ### Grade
 
-A grade desenha repetidas divisões horizontais e verticais, tornando-a útil para guias de layout, cenários de design, ilustrações técnicas e máscaras procedurais. Como é gerado como um filtro, o espaçamento e a aparência podem ser ajustados sem a necessidade de construir o padrão manualmente.
+A grade desenha repetidas divisões horizontais e verticais, tornando-a útil para guias de layout, cenários de design, ilustrações técnicas e máscaras procedurais. Por ser gerado como um filtro, o espaçamento e a aparência podem ser ajustados sem a necessidade de construir o padrão manualmente.
 
 ### Voronói
 
 Voronoi gera uma textura celular lado a lado a partir de pontos propagados, com controles para tipo de recurso, métrica de distância, aleatoriedade, detalhes fractais e envolvimento contínuo. Na prática, ele pode passar de estruturas limpas de células rachadas para padrões mais orgânicos de pedra, pele, mapa ou rede abstrata.
 
-### Onda
-
-Wave produz padrões em faixas ou anéis moldados por perfil de forma de onda, arranjo geométrico, distorção, detalhe fractal e deslocamento de fase. Isso o torna mais do que uma simples ferramenta de distribuição: ela pode gerar ondulações controladas, bandas topográficas, gráficos tipo moiré ou campos de padrões concêntricos ruidosos.
+### AcenoWave produz padrões em faixas ou anéis moldados por perfil de forma de onda, arranjo geométrico, distorção, detalhe fractal e deslocamento de fase. Isso o torna mais do que uma simples ferramenta de distribuição: ela pode gerar ondulações controladas, bandas topográficas, gráficos tipo moiré ou campos de padrões concêntricos ruidosos.
 
 ### Meio-tom (AM)
 

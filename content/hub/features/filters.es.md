@@ -10,7 +10,7 @@ Los cuadros de diálogo de filtro siguen el mismo flujo de trabajo general. Los 
 
 ### Desenfoque gaussiano
 
-Gaussian Blur es el filtro suavizante estándar de Lumi: un desenfoque limpio y uniforme con controles de tamaño horizontales y verticales separados, manejo de bordes y opciones de kernel. Es la opción de uso general para enfoque suave, máscaras suavizadas, profundidad atmosférica y cualquier flujo de trabajo en el que el desenfoque en sí deba permanecer neutral.
+Gaussian Blur es el filtro suavizante estándar de Lumi: un desenfoque limpio y uniforme con controles de tamaño horizontales y verticales separados, manejo de bordes y opciones de núcleo. Es la opción de uso general para enfoque suave, máscaras suavizadas, profundidad atmosférica y cualquier flujo de trabajo en el que el desenfoque en sí deba permanecer neutral.
 
 ### Pixelizar
 
@@ -92,14 +92,6 @@ Pick reemplaza cada píxel con un vecino elegido al azar, por lo que la imagen p
 
 ### DesparramarLa dispersión dispersa los píxeles desplazándolos aleatoriamente dentro de un radio. Es útil cuando desea una interrupción inmóvil: una superficie rota, un borde manchado o una textura desgastada que aún conserva las relaciones de color de la imagen original.
 
-### Difusión fractal
-
-Fractal Spread es una versión más coherente y pictórica de spread creada para sangrado de tinta fibrosa. En lugar de mover cada píxel en una dirección aleatoria no relacionada, sigue un campo de fibra fractal de modo que los píxeles vecinos tiran en direcciones relacionadas, creando zarcillos, líneas de tinta difuminadas y difusión de granos de papel que aún pueden estar sesgados por el ángulo y la fuerza.
-
-### Ruido de pigmento
-
-Pigment Noise añade un comportamiento de pigmento estilo acuarela a las capas de pintura transparentes: un borde oscurecido a lo largo del borde alfa, variación de la línea de contacto rota, granulación interior y escasas motas más oscuras. Está diseñado para asentarse naturalmente después del trabajo con bordes húmedos o sangrado, convirtiendo una forma limpia y pintada en algo con mayor concentración de pigmento físico.
-
 ### Fractales
 
 Fractal genera ruido Perlin fractal enlosable, lo que lo hace especialmente valioso como fuente reutilizable para máscaras, nubes, texturas de papel, rupturas similares a terrenos y superposiciones de procedimientos. Debido a que forma mosaicos, puede alimentar flujos de trabajo más grandes sin crear costuras obvias.
@@ -138,7 +130,9 @@ Erode hace el movimiento complementario, haciendo crecer las regiones más oscur
 
 ## Patrón
 
-### tablero de ajedrezEl tablero de ajedrez genera un patrón de mosaico alterno regular. Es simple, pero esa simplicidad lo hace útil para probar la transparencia, crear máscaras, bloquear fondos gráficos o crear material fuente geométrico limpio.
+### tablero de ajedrez
+
+El tablero de ajedrez genera un patrón de mosaico alterno regular. Es simple, pero esa simplicidad lo hace útil para probar la transparencia, crear máscaras, bloquear fondos gráficos o crear material fuente geométrico limpio.
 
 ### Cuadrícula
 
@@ -148,9 +142,7 @@ Grid dibuja divisiones horizontales y verticales repetidas, lo que lo hace útil
 
 Voronoi genera una textura celular enlosable a partir de puntos sembrados, con controles para tipo de entidad, métrica de distancia, aleatoriedad, detalle fractal y envoltura perfecta. En la práctica, puede pasar de estructuras limpias de células agrietadas a patrones de red más orgánicos, piel, mapas o redes abstractas.
 
-### Ola
-
-Wave produce patrones de bandas o anillos formados por el perfil de la forma de onda, la disposición geométrica, la distorsión, el detalle fractal y el desplazamiento de fase. Eso lo convierte en más que una simple herramienta de franjas: puede generar ondulaciones controladas, bandas topográficas, gráficos tipo muaré o campos de patrones concéntricos ruidosos.
+### OlaWave produce patrones de bandas o anillos formados por el perfil de la forma de onda, la disposición geométrica, la distorsión, el detalle fractal y el desplazamiento de fase. Eso lo convierte en más que una simple herramienta de franjas: puede generar ondulaciones controladas, bandas topográficas, gráficos tipo muaré o campos de patrones concéntricos ruidosos.
 
 ### Semitono (AM)
 

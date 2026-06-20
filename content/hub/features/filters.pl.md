@@ -92,14 +92,6 @@ Pick zastępuje każdy piksel losowo wybranym sąsiadem, dzięki czemu obraz poz
 
 ### Rozpowszechnianie sięRozprzestrzenianie powoduje rozproszenie pikseli poprzez losowe przemieszczanie ich w promieniu. Jest to przydatne, gdy potrzebujesz nieruchomego zakłócenia: popękanej powierzchni, rozmazanej krawędzi lub zniszczonej tekstury, która nadal zachowuje relacje kolorystyczne obrazu źródłowego.
 
-### Rozprzestrzenianie fraktalne
-
-Fractal Spread to bardziej spójna, malarska wersja rozkładówki stworzona z myślą o zaciekach włóknistego atramentu. Zamiast przesuwać każdy piksel w niepowiązanym losowym kierunku, podąża on za fraktalnym polem włókien, więc sąsiednie piksele ciągną się w powiązanych kierunkach, tworząc wąsy, pierzaste linie atramentowe i dyfuzję ziaren papieru, które nadal mogą być odchylone od kąta i siły.
-
-### Szum pigmentowy
-
-Pigment Noise dodaje do przezroczystych warstw farby zachowanie pigmentu przypominające akwarelę: przyciemniona obwódka wzdłuż krawędzi alfa, przerwana linia styku, wewnętrzna granulacja i rzadkie ciemniejsze plamki. Został zaprojektowany tak, aby naturalnie układał się po mokrych krawędziach lub zaciekach, zmieniając czysty pomalowany kształt w coś o bardziej fizycznym stężeniu pigmentu.
-
 ### Fraktal
 
 Fractal generuje fraktalny szum Perlina, który można kafelkować, co czyni go szczególnie cennym źródłem wielokrotnego użytku dla masek, chmur, tekstur papieru, rozpadu przypominającego teren i nakładek proceduralnych. Ponieważ układa się w kafelki, może obsługiwać większe przepływy pracy bez tworzenia widocznych szwów.
@@ -138,7 +130,9 @@ Erode wykonuje ruch uzupełniający, powiększając ciemniejsze obszary i odcią
 
 ## Wzór
 
-### SzachownicaSzachownica generuje regularny, naprzemienny wzór płytek. Jest to proste, ale dzięki tej prostocie jest przydatne do testowania przezroczystości, budowania masek, blokowania graficznych teł lub tworzenia czystego geometrycznego materiału źródłowego.
+### Szachownica
+
+Szachownica generuje regularny, naprzemienny wzór płytek. Jest to proste, ale dzięki tej prostocie jest przydatne do testowania przezroczystości, budowania masek, blokowania graficznych teł lub tworzenia czystego geometrycznego materiału źródłowego.
 
 ### Siatka
 
@@ -148,9 +142,7 @@ Siatka rysuje powtarzające się podziały poziome i pionowe, dzięki czemu jest
 
 Voronoi generuje teksturę komórkową z możliwością kafelkowania z rozmieszczonych punktów, z kontrolą typu obiektu, metryki odległości, losowości, szczegółów fraktalnych i płynnego zawijania. W praktyce może przejść od czystych struktur pękniętych komórek do bardziej organicznych wzorów kamienia, skóry, mapy lub abstrakcyjnych wzorów sieci.
 
-### Fala
-
-Fala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że ​​jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
+### FalaFala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że ​​jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
 
 ### Półtony (AM)
 
