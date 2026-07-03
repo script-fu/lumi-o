@@ -6,7 +6,7 @@ weight: 7
 ---
 Hej där!
 
-Jag har varit på en kreativ resa med pixlar och kod sedan 1984, börjat med ZX Spectrum och utforskat allt från Deluxe Paint och Photoshop till Maya och slutligen GIMP. Att skapa verktyg och skapa konstverk är min passion.
+Jag har varit på en kreativ resa med pixlar och kod sedan 1984, börjat med ZX Spectrum och utforskat allt från Deluxe Paint och Photoshop till Maya och slutligen Lumi-o. Att skapa verktyg och skapa konstverk är min passion.
 
 Om du har tyckt om mitt arbete och funnit det användbart, överväg att visa ditt stöd med en liten donation. Det är ett enkelt sätt att säga "tack" och hålla kreativiteten flödande! Ditt stöd hjälper till att täcka kostnaderna för mjukvaruutveckling, tutorials och pågående konstnärliga projekt.
 

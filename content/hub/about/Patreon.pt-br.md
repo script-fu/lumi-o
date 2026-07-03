@@ -6,7 +6,7 @@ weight: 7
 ---
 Ei!
 
-Estou em uma jornada criativa com pixels e código desde 1984, começando com o ZX Spectrum e explorando tudo, desde Deluxe Paint e Photoshop até Maya e finalmente GIMP. Criar ferramentas e criar obras de arte é minha paixão.
+Estou em uma jornada criativa com pixels e código desde 1984, começando com o ZX Spectrum e explorando tudo, desde Deluxe Paint e Photoshop até Maya e finalmente Lumi-o. Criar ferramentas e criar obras de arte é minha paixão.
 
 Se você gostou do meu trabalho e o achou útil, considere mostrar seu apoio com uma pequena doação. É uma maneira simples de dizer “obrigado” e manter a criatividade fluindo! Seu apoio ajuda a cobrir os custos de desenvolvimento de software, tutoriais e projetos artísticos em andamento.
 

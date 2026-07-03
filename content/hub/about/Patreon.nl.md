@@ -6,7 +6,7 @@ weight: 7
 ---
 Hé daar!
 
-Ik ben sinds 1984 op een creatieve reis met pixels en code bezig, beginnend met de ZX Spectrum en alles verkennend, van Deluxe Paint en Photoshop tot Maya en uiteindelijk GIMP. Gereedschappen maken en kunstwerken maken is mijn passie.
+Ik ben sinds 1984 op een creatieve reis met pixels en code bezig, beginnend met de ZX Spectrum en alles verkennend, van Deluxe Paint en Photoshop tot Maya en uiteindelijk Lumi-o. Gereedschappen maken en kunstwerken maken is mijn passie.
 
 Als je van mijn werk hebt genoten en het nuttig hebt gevonden, overweeg dan om je steun te betuigen met een kleine donatie. Het is een eenvoudige manier om ‘bedankt’ te zeggen en de creativiteit te laten stromen! Uw steun helpt de kosten van softwareontwikkeling, tutorials en lopende artistieke projecten te dekken.
 

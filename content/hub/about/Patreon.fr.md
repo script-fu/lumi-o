@@ -6,7 +6,7 @@ weight: 7
 ---
 Salut!
 
-Je suis dans un voyage créatif avec les pixels et le code depuis 1984, en commençant par ZX Spectrum et en explorant tout, de Deluxe Paint et Photoshop à Maya et enfin GIMP. Fabriquer des outils et créer des œuvres d’art est ma passion.
+Je suis dans un voyage créatif avec les pixels et le code depuis 1984, en commençant par le ZX Spectrum et en explorant tout, de Deluxe Paint et Photoshop à Maya et enfin Lumi-o. Fabriquer des outils et créer des œuvres d’art est ma passion.
 
 Si vous avez apprécié mon travail et l'avez trouvé utile, pensez à montrer votre soutien avec un petit don. C'est une façon simple de dire « merci » et de laisser libre cours à la créativité ! Votre soutien permet de couvrir les coûts de développement de logiciels, de tutoriels et de projets artistiques en cours.
 
