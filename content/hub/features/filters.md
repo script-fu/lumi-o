@@ -56,6 +56,12 @@ Noise Reduction is the opposite move: it suppresses unwanted fine variation so l
 
 Sharpen uses an unsharp-mask model, with radius, amount, and threshold controlling how strongly local contrast is pushed. In practice that makes it suitable for restoring clarity after blur, export resizing, or subtle finishing passes where detail needs to come forward without turning every pixel into noise.
 
+## Color
+
+### Tonal grading
+
+Tonal Grading remaps colour by tonal range rather than by reshaping contrast or drawing a curve. Each pixel's luminance chooses a smooth blend of three user colours for shadow, midtone, and highlight; so the image keeps its light-to-dark structure while the palette shifts. Per-region strength, a Lightroom-style balance bias (left favors the shadow grade, right the highlight grade), and transition softness control how far each colour reaches and how gently the grades overlap. It is aimed at illustration, comics, concept art, and photographs when the goal is a coherent grade or look.
+
 ## Distort
 
 ### Chromatic aberration
