@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 ขณะนี้คุณมีปลั๊กอินขั้นตอนการทำงานและไลบรารีตัวช่วยขนาดเล็กแล้ว ซีรีส์นี้แนะนำรูปแบบหลักที่คุณจะใช้ในสคริปต์ Lumi ส่วนใหญ่:
 
@@ -65,7 +66,7 @@ translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d094287
       #t)
     #f))
 
-;; วัตถุประสงค์: ส่งข้อความไปยัง Error Console คืนค่า #t เมื่อสำเร็จ
+;; วัตถุประสงค์: ส่งข้อความไปยัง คอนโซลข้อผิดพลาด คืนค่า #t เมื่อสำเร็จ
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

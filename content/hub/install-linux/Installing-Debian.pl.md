@@ -87,10 +87,10 @@ Zalecane ustawienia:
 - Desktop Font: `14`
 - Panel → Customize → Panel Height: `60`
 - Panel Appearance → Right Zone Symbolic Icon Size: `48px`
-- Mouse and Touchpad → Pointer Size adjustment
+- Mysz i touchpad → Dostosowanie rozmiaru wskaźnika
 - Desktop (right-click) → Customize → Larger icon size
 
-Dostosowanie Firefoksa:
+Dostosowanie Firefoxa:
 
 - Address bar → `about:config`
 - Ustaw `layout.css.devPixelsPerPx` na `1`

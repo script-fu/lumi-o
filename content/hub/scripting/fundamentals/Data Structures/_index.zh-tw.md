@@ -4,7 +4,8 @@ type: "docs"
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
+translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
+url: "hub/scripting/fundamentals/Data Structures/_index"
 ---
 在Scheme中，**資料結構**是組織、儲存和操作資料的重要工具。它們使開發人員能夠建立高效、可讀且可重複使用的腳本。透過為特定問題選擇正確的資料結構，您可以優化程式碼的效能和清晰度。
 

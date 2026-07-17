@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Assim que tivermos uma função funcionando, podemos dar um passo atrás e pensar na melhor forma de estruturar nosso código. O objetivo é tornar nosso plug-in o mais claro, compreensível e fácil de manter possível. Este processo de melhorar e refinar a estrutura do código existente sem alterar seu comportamento é conhecido como refatoração.
 
@@ -16,7 +17,7 @@ Aqui está a função inicial novamente:
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Definir o manipulador de mensagens para enviar a mensagem para a Error Console
+  ;; Definir o manipulador de mensagens para enviar a mensagem para a console de erros
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Apresentando uma variável chamada "mensagem":
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Definir o manipulador de mensagens para enviar a mensagem para a Error Console
+    ;; Definir o manipulador de mensagens para enviar a mensagem para a console de erros
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ Extraindo a lógica:
 ;; Função para tratar a saída de mensagens para vários destinos
 (define (send-message message output)
   (cond
-    ;; Enviar para a Error Console
+    ;; Enviar para a console de erros
     ((eq? output 'error-console)
-       ;; Definir o manipulador para Error Console
+       ;; Definir o manipulador para console de erros
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Extraindo a lógica:
        ;; A saída do terminal é tratada com display
        (display message)))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Error Console
+  ;; Restaurar o manipulador de mensagens padrão para a console de erros
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -120,7 +121,7 @@ Extraindo a lógica:
 
 #### Símbolos
 
-No exemplo acima, é usado um tipo de dados chamado símbolo, como 'gui. Os símbolos são passados ​​como parâmetros para a função de envio de mensagem e podem ser usados ​​para tomar decisões condicionais simples. Assim como as chaves simbólicas, elas são identificadores exclusivos. Para obter mais informações sobre símbolos, visite [esta página.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
+No exemplo acima, é usado um tipo de dados chamado símbolo, como 'gui. Os símbolos são passados como parâmetros para a função de envio de mensagem e podem ser usados para tomar decisões condicionais simples. Assim como as chaves simbólicas, elas são identificadores exclusivos. Para obter mais informações sobre símbolos, visite [esta página.](/hub/scripting/fundamentals/variables-and-scope/symbols/)
 
 ### Simplificando a função principal
 

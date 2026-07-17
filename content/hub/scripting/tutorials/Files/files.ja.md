@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 ファイルとディレクトリの操作は、Scheme 開発にとって不可欠です。出力の保存、リソースの読み込み、またはプロジェクト構造の整理のいずれの場合でも、ファイル操作を理解すると、スクリプトがより堅牢で使いやすくなります。
 
@@ -37,7 +38,7 @@ Lumi は Linux 専用であるため、ユーザーのホーム ディレクト�
 
 ## ディレクトリの場所の取得
 
-プラグインの [スキーム] ダイアログでユーザーにディレクトリの場所を尋ねることができます。
+プラグインの Scheme ダイアログでユーザーにディレクトリの場所を尋ねることができます。
 
 ```scheme
 (scheme-register

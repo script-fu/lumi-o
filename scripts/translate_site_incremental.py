@@ -14,18 +14,24 @@ except Exception:
 TRANSLATION_FAILED_FOR_CURRENT_FILE = False
 
 LANGUAGE_TARGETS = {
+    "ar": "ar",
     "de": "de",
     "es": "es",
     "fr": "fr",
+    "id": "id",
     "it": "it",
     "ja": "ja",
     "ko": "ko",
     "nl": "nl",
     "pl": "pl",
+    "pt": "pt",
+    # deep_translator exposes only generic Portuguese (`pt`), not pt-BR.
     "pt-br": "pt",
     "ru": "ru",
     "sv": "sv",
     "th": "th",
+    "uk": "uk",
+    "vi": "vi",
     "zh-cn": "zh-CN",
     "zh-tw": "zh-TW",
 }

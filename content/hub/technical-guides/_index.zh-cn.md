@@ -1,10 +1,10 @@
 ---
 title: "技术指南"
 type: docs
-url: "hub/technical-guides"
+url: "hub/technical-guides/_index"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: dc797bbadec28038007ea8876a824b54cfd5d87a1b931bef01ae79609a41caf1
+translation_source_sha256: 84604872205000adea98a6770b6d7a4fbab3f4471ccf09bca2550de21cb17cb9
 ---
 
 欢迎来到 Lumi 的技术指南。

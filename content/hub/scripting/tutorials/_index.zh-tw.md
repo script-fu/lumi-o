@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
+url: "hub/scripting/tutorials"
 ---
 這些教學向您展示如何為Lumi編寫Scheme插件。您將從一個最小的「Hello World」流程開始，然後建立可使用映像、檔案和可重複使用幫助程式庫的插件。
 

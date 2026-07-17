@@ -3,29 +3,32 @@ title: "if"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+以最簡單的形式，Scheme 中的 `if` 條件評估測試，並根據結果執行兩個可能的程式碼區塊之一。最簡單的形式如下：
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- 如果 `test` 計算結果為 真（`#t`），則執行後續程式碼中的 **程式碼區塊**。該區塊可以傳回一個值或執行其他操作，例如分配變數或列印輸出。
 
-### Exemple
+### 範例
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- 在本例中，`test` 是`(< 0 1)`（檢查 0 是否小於 1）。
+- 由於測試結果為 真（`#t`），因此執行程式碼區塊`(lumi-message "True!")`，列印`"True!"`。
 
-### Branche else : `if-else`
+### 新增 Else 條件：`if-else`
+
+當將 `if` 條件與替代代碼區塊（`else` 情況）一起使用時，結構如下所示：
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- 如果 `test` 計算結果為 真（`#t`），則執行 **後續** 程式碼區塊。
+- 如果 `test` 的計算結果為 假（`#f`），則執行 **替代** 程式碼區塊。
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### 它是如何運作的
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **測試表達**：
+   - 先評估`test` 表達式。
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **基於測試的結果**：
+   - 如果 `test` 計算結果為 真（`#t`），執行 **後續程式碼區塊**。
+   - 如果 `test` 的計算結果為 假（`#f`），則執行 **替代程式碼區塊**。
 
-#### Exemple 1 : renvoyer une valeur
+`consequent` 和`alternative` 程式碼區塊都可以執行任何有效的Scheme 操作，包括傳回值、修改變數或執行過程。
+
+### 範例
+
+#### 範例 1：傳回值
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- 這裡，`test`是`(< 0 1)`（檢查0是否小於1）。
+- 由於測試評估結果為 真（`#t`），因此將執行 **後續** 區塊 (`1`) 並傳回其值。
 
-#### Exemple 2 : bloc `begin`
+結果：**1**
+
+#### 範例 2：評估開始區塊
+
+如果您需要在條件為 true 或 false 時執行多個操作，可以使用 `begin` 或 `let` 將它們組合在一起。
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- 在此範例中，`test` 是`(= 0 1)`（檢查 0 是否等於 1）。
+- 由於測試結果為 假（`#f`），因此執行 **alternative** 區塊：
+  - 首先，它印出`"False condition met, calculating..."`。
+  - 然後，它計算`(* 3 4)`並返回`12`。
 
-#### Exemple 3 : expression `let`
+結果：**列印「滿足錯誤條件，計算...」並傳回 12。 **
+
+#### 範例 3：評估 let 語句
+
+使用 `let` 允許我們在程式碼區塊中宣告局部範圍變數。
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,16 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- 在此範例中，`test` 是 `(= 1 1)`（檢查 1 是否等於 1）。
+- 由於測試結果為 真（`#t`），因此執行 **consequence** 區塊：
+  - 首先，它印出`"True condition met, calculating..."`。
+  - 然後，它計算`(* -1 10)`並返回`-10`。
 
-### Résumé
+結果：**列印“滿足真實條件，計算...”並返回 -10。 **
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### 總結
+
+- `if` 條件是Scheme 中用於評估測試和執行相應程式碼區塊的強大工具。
+
+- 它可以處理簡單的表達式和傳回值、修改變數或執行副作用的複雜程式碼區塊。
+- 請記住：如果沒有明確的 `else` 區塊，則 `if` 僅在測試為真時評估並執行 **結果**。否則，它會評估並執行**替代方案**。

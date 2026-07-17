@@ -1,12 +1,13 @@
 ---
 title: "AppImage をダウンロード"
-description: "Linux 向けの最新 development AppImage を入手します。"
+description: "Linux 向けの最新 開発 AppImage を入手します。"
 type: docs
 sidebar:
   exclude: true
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: aae39911e75e51cd1db344aee7e59192f1288c988a19a6d25ddd1e8ec552c45e
+translation_source_sha256: cfca109b962317a98292834885f6fa388053e0389a9f170cf9d83637231f9994
+url: "hub/about/download-appimage"
 ---
 
-Linux 向けの最新 development AppImage を入手します。
+Linux 向けの最新 開発 AppImage を入手します。

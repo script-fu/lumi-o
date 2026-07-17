@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 함수가 작동하면 한 걸음 물러나서 코드를 구성하는 가장 좋은 방법에 대해 생각해 볼 수 있습니다. 목표는 플러그인을 최대한 명확하고 이해하기 쉽고 유지 관리하기 쉽게 만드는 것입니다. 동작을 변경하지 않고 기존 코드의 구조를 개선하고 개선하는 프로세스를 리팩토링이라고 합니다.
 
@@ -16,7 +17,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; 메시지 핸들러를 설정하여 메시지를 Error Console로 출력
+  ;; 메시지 핸들러를 설정하여 메시지를 오류 콘솔로 출력
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -37,7 +38,9 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
 
 반복을 일찍 제거하십시오. `(lumi-message "Hello world!\n")`이 2번 반복되고, 메시지 문자열이 3번 반복됩니다. 변수는 반복되는 문자열을 해결합니다.
 
-### 변수Scheme에서 변수에는 알려진 "범위"가 있으며 해당 범위는 `let` 문을 사용하여 설정됩니다. 변수는 바인딩 부분의 값에 바인딩되고 변수는 let 본문에 범위를 갖습니다. 변수는 let 블록 내부에서만 알려지며 외부에서는 액세스할 수 없습니다.
+### 변수
+
+Scheme에서 변수에는 알려진 "범위"가 있으며 해당 범위는 `let` 문을 사용하여 설정됩니다. 변수는 바인딩 부분의 값에 바인딩되고 변수는 let 본문에 범위를 갖습니다. 변수는 let 블록 내부에서만 알려지며 외부에서는 액세스할 수 없습니다.
 
 ```scheme
 (let ((variable value))
@@ -54,7 +57,7 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; 메시지 핸들러를 설정하여 메시지를 Error Console로 출력
+    ;; 메시지 핸들러를 설정하여 메시지를 오류 콘솔로 출력
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -64,7 +67,9 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
 
 이 예에서는 "Hello world!\n" 문자열에 바인딩된 "message"라는 변수를 사용했습니다. 이를 통해 메시지 내용을 세 번이 아닌 한 번 변경할 수 있으므로 오류 가능성이 줄어들고 코드가 더욱 유연해집니다.
 
-### 추출 기능함수형 프로그래밍에서는 재사용 가능한 논리를 별도의 함수로 추출하기 위해 코드를 리팩토링하는 것이 일반적인 관행입니다. 이렇게 하면 **주 함수**는 훨씬 더 단순해지고 상위 수준 목표에 더 집중하게 되는 반면, **추출된 함수**는 세부 논리를 처리하기 때문에 더 복잡해 보입니다. 이는 의도적인 것이며 모듈성, 관심사 분리 및 가독성과 같은 함수형 프로그래밍의 핵심 원칙에 부합합니다. 리팩토링된 내용은 다음과 같습니다.
+### 추출 기능
+
+함수형 프로그래밍에서는 재사용 가능한 논리를 별도의 함수로 추출하기 위해 코드를 리팩토링하는 것이 일반적인 관행입니다. 이렇게 하면 **주 함수**는 훨씬 더 단순해지고 상위 수준 목표에 더 집중하게 되는 반면, **추출된 함수**는 세부 논리를 처리하기 때문에 더 복잡해 보입니다. 이는 의도적인 것이며 모듈성, 관심사 분리 및 가독성과 같은 함수형 프로그래밍의 핵심 원칙에 부합합니다. 리팩토링된 내용은 다음과 같습니다.
 안녕하세요 월드! 추출 후.
 
 논리 추출:
@@ -82,9 +87,9 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
 ;; 다양한 대상으로 메시지 출력을 처리하는 함수
 (define (send-message message output)
   (cond
-    ;; Error Console로 보내기
+    ;; 오류 콘솔로 보내기
     ((eq? output 'error-console)
-       ;; 핸들러를 Error Console로 설정
+       ;; 핸들러를 오류 콘솔로 설정
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -99,7 +104,7 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
        ;; terminal 출력은 display로 처리
        (display message)))
 
-  ;; 기본 메시지 핸들러를 Error Console로 복원
+  ;; 기본 메시지 핸들러를 오류 콘솔로 복원
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -114,7 +119,9 @@ function-name은 함수의 이름이고, 매개변수는 함수가 입력으로 
   "<Image>/Funky")
 ```
 
-#### 기호위의 예에서는 'gui.'와 같이 심볼이라는 데이터 유형이 사용되었습니다. 기호는 메시지 보내기 기능에 매개변수로 전달되며 간단한 조건부 결정을 내리는 데 사용할 수 있습니다. 기호 키와 마찬가지로 고유 식별자입니다. 기호에 대한 자세한 내용은 [이 페이지](/hub/scripting/fundamentals/variables-and-scope/symbols/)을 참조하세요.
+#### 기호
+
+위의 예에서는 'gui.'와 같이 심볼이라는 데이터 유형이 사용되었습니다. 기호는 메시지 보내기 기능에 매개변수로 전달되며 간단한 조건부 결정을 내리는 데 사용할 수 있습니다. 기호 키와 마찬가지로 고유 식별자입니다. 기호에 대한 자세한 내용은 [이 페이지](/hub/scripting/fundamentals/variables-and-scope/symbols/)을 참조하세요.
 
 ### 주요 기능 단순화
 

@@ -4,20 +4,21 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 W Scheme zarządzanie zmiennymi i ich zakresem jest podstawową koncepcją pisania wydajnych i łatwych w utrzymaniu skryptów. Zmienne przechowują wartości danych, którymi może manipulować skrypt, natomiast zakres określa, gdzie te zmienne są dostępne. Zrozumienie, jak skutecznie definiować i wykorzystywać zmienne, pozwala na tworzenie ustrukturyzowanego, wielokrotnego użytku i wolnego od błędów kodu.
 
 ### Dynamiczne pisanie
 
-Schemat jest wpisywany dynamicznie: nie deklarujesz typów z góry, a zmienna może z czasem przechowywać wartości różnego rodzaju.
+Scheme jest wpisywany dynamicznie: nie deklarujesz typów z góry, a zmienna może z czasem przechowywać wartości różnego rodzaju.
 
 ```scheme
 (define x 42)       ; x jest liczbą
 (set! x "hello")    ; teraz x jest łańcuchem znaków
 ```
 
-### Rola definicji i zakresu zmiennych w schemacie
+### Rola definicji i zakresu zmiennych w Scheme
 
 Definiowanie zmiennych i zarządzanie ich zakresem służy kilku celom:
 - **Organizowanie danych:** Zmienne przechowują informacje, dzięki czemu Twoje skrypty są bardziej czytelne i łatwiejsze w zarządzaniu.
@@ -72,8 +73,10 @@ Konstrukcja `define` tworzy zmienne lub funkcje o zasięgu globalnym:
 | **Enkapsulacja** | Zapobiega niezamierzonym interakcjom | Może kolidować z innymi globalnie zdefiniowanymi zmiennymi |
 | **Przypadek użycia** | Zmienne tymczasowe dla konkretnych zadań | Wspólne zmienne lub funkcje używane w całym programie |
 
-### Streszczenie- **Definicje i zakres zmiennych** są podstawą organizowania danych i zarządzania nimi w skryptach Scheme.
+### Streszczenie
 
-- Użyj **zakresu lokalnego** (`let`, `let*`, o nazwie `let`), aby hermetzować zmienne tymczasowe i uniknąć konfliktów.
+- **Definicje i zakres zmiennych** są podstawą organizowania danych i zarządzania nimi w skryptach Scheme.
+
+- Użyj **zakresu lokalnego** (`let`, `let*`, named `let`), aby hermetzować zmienne tymczasowe i uniknąć konfliktów.
 - Użyj **zakresu globalnego** (`define`) dla funkcji lub stałych wielokrotnego użytku współdzielonych w całym skrypcie.
 - Jasne zrozumienie tych konstrukcji poprawi czytelność, łatwość konserwacji i niezawodność kodu.

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Usamos un complemento _procedure_ para el tutorial [Primer paso](../../first-step/). Esos tipos de complementos funcionan sin necesidad de una imagen o un elemento de diseño como entrada. Por lo general, usamos un complemento para cambiar una imagen y sus elementos de diseño. Los complementos como estos se denominan complementos de filtro.
 

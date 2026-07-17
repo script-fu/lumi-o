@@ -4,13 +4,14 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Agora você tem um plug-in de procedimento funcional e uma pequena biblioteca auxiliar. Esta série apresentou os padrões básicos que você usará na maioria dos scripts Lumi:
 
 - Funções: Os blocos de construção dos nossos plug-ins.
 - Refatoração: Melhorando a estrutura do código mantendo a funcionalidade.
-- Bibliotecas de Código: Centralizando funções reutilizáveis ​​para manter nosso código limpo e modular.
+- Bibliotecas de Código: Centralizando funções reutilizáveis para manter nosso código limpo e modular.
 - Técnicas de validação: Garantir que as entradas sejam válidas antes de executar nossa lógica central.
 
 Você também viu os fundamentos do uso do Git para rastrear alterações e manter uma estrutura de projeto limpa. Esse fluxo de trabalho facilita a iteração sem perder versões de trabalho.
@@ -65,7 +66,7 @@ Código da biblioteca:
       #t)
     #f))
 
-;; Propósito: Envia uma mensagem para a Error Console, retorna #t se bem-sucedido
+;; Propósito: Envia uma mensagem para a console de erros, retorna #t se bem-sucedido
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

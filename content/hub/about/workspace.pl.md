@@ -5,6 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f715e8eae5ee35d9495f37a3268cdf7ecdac5db976fa8fb48a83797cb7ca22b6
+url: "hub/about/workspace"
 ---
 
 Obszary robocze to podstawowa część Lumi, dostępna bezpośrednio z menu Obszary robocze. Przełączają się szybko i płynnie, więc przejście z jednego etapu projektu do drugiego przypomina wybór trybu aplikacji.

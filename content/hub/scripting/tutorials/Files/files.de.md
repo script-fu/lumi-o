@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Die Arbeit mit Dateien und Verzeichnissen ist für die Scheme-Entwicklung unerlässlich. Ganz gleich, ob Sie Ausgaben speichern, Ressourcen laden oder Ihre Projektstruktur organisieren: Wenn Sie Dateivorgänge verstehen, werden Ihre Skripts robuster und benutzerfreundlicher.
 

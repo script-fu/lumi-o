@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 В этом руководстве рассматривается минимальная структура плагина Scheme. Некоторые строки являются «шаблонными»: они необходимы Lumi для загрузки файла, даже если вы еще не до конца их понимаете.
 
@@ -73,7 +74,7 @@ translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd2
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Установить обработчик сообщений для вывода в Error Console
+  ;; Установить обработчик сообщений для вывода в консоль ошибок
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

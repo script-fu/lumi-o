@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 Los símbolos son uno de los tipos de datos principales en Scheme y representan identificadores únicos e inmutables. Se utilizan principalmente como claves, marcadores o marcadores de posición en programas, lo que los hace esenciales para escribir código limpio y expresivo.
 

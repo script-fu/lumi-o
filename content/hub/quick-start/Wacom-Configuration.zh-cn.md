@@ -1,6 +1,10 @@
 ---
 title: "Wacom 配置"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 对于 Lumi 中的数字绘画，建议使用简单的**线性压力设置**。
 
@@ -8,7 +12,7 @@ type: docs
 - 保持 Lumi 中的压力/输入曲线基本呈线性。
 - 用画笔本身塑造感觉，因为画笔动力学已经可以是非线性的。
 
-我们建议在操作系统驱动程序级别维持默认的线性压力曲线。复合多个非线性曲线通常会导致不可预测的输入行为；通过保持驾驶员中立，您可以确保 Lumi-o 中所做的任何调整保持直观且可重复。当需要时，对 Lumi 的全局曲线进行轻微调整仍然是合理的。
+我们建议在操作系统驱动程序级别维持默认的线性压力曲线。复合多个非线性曲线通常会导致不可预测的输入行为；通过保持驱动程序为中性设置，您可以确保 Lumi-o 中所做的任何调整保持直观且可重复。当需要时，对 Lumi 的全局曲线进行轻微调整仍然是合理的。
 
 ## Lumi 中的全局手写笔曲线
 

@@ -4,13 +4,14 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
 Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme för att strukturera din kod, men de tjänar olika syften. Att förstå när de ska användas hjälper till att skapa rena, modulära och effektiva skript.
 
 ### Översikt
 
-- ** Namngiven `let`**: En konstruktion som kombinerar variabel bindning och rekursion i ett lokaliserat omfång, vanligtvis används för iterativa eller rekursiva beräkningar.
+- **Namngiven `let`**: En konstruktion som kombinerar variabel bindning och rekursion i ett lokaliserat omfång, vanligtvis används för iterativa eller rekursiva beräkningar.
 - **Local `define`**: Ett sätt att definiera hjälpfunktioner eller variabler inom ramen för en omslutande funktion, vilket gör dem återanvändbara över olika delar av den funktionen.
 
 ---

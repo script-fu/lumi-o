@@ -13,7 +13,12 @@
     "sv": ";; Validerar utdataargumentet",
     "th": ";; ตรวจสอบอาร์กิวเมนต์เอาต์พุต",
     "zh-cn": ";; 验证输出参数",
-    "zh-tw": ";; 驗證輸出引數"
+    "zh-tw": ";; 驗證輸出引數",
+    "ar": "؛؛ التحقق من صحة وسيطة الإخراج",
+    "id": ";; Validasi argumen keluaran",
+    "pt": ";; Valide o argumento de saída",
+    "uk": ";; Перевірте вихідний аргумент",
+    "vi": ";; Xác thực đối số đầu ra"
   },
   ";; Case 1: If 0 is less than -1": {
     "de": ";; Fall 1: Wenn 0 kleiner als -1 ist",
@@ -29,7 +34,12 @@
     "sv": ";; Fall 1: Om 0 är mindre än -1",
     "th": ";; กรณีที่ 1: ถ้า 0 น้อยกว่า -1",
     "zh-cn": ";; 情况 1：若 0 小于 -1",
-    "zh-tw": ";; 情況 1：若 0 小於 -1"
+    "zh-tw": ";; 情況 1：若 0 小於 -1",
+    "ar": "؛؛ الحالة 1: إذا كان 0 أقل من -1",
+    "id": ";; Kasus 1: Jika 0 kurang dari -1",
+    "pt": ";; Caso 1: Se 0 for menor que -1",
+    "uk": ";; Випадок 1: якщо 0 менше за -1",
+    "vi": ";; Trường hợp 1: Nếu 0 nhỏ hơn -1"
   },
   ";; Process the rest of the list": {
     "de": ";; Verarbeitet den Rest der Liste",
@@ -45,7 +55,12 @@
     "sv": ";; Bearbetar resten av listan",
     "th": ";; ประมวลผลส่วนที่เหลือของรายการ",
     "zh-cn": ";; 处理列表的其余部分",
-    "zh-tw": ";; 處理清單的其餘部分"
+    "zh-tw": ";; 處理清單的其餘部分",
+    "ar": "؛؛ قم بمعالجة بقية القائمة",
+    "id": ";; Proses sisa daftarnya",
+    "pt": ";; Processe o resto da lista",
+    "uk": ";; Опрацювати решту списку",
+    "vi": ";; Xử lý phần còn lại của danh sách"
   },
   ";; Register the main procedure": {
     "de": ";; Registriert die Hauptprozedur",
@@ -61,7 +76,12 @@
     "sv": ";; Registrerar huvudproceduren",
     "th": ";; ลงทะเบียนขั้นตอนหลัก",
     "zh-cn": ";; 注册主过程",
-    "zh-tw": ";; 註冊主程序"
+    "zh-tw": ";; 註冊主程序",
+    "ar": "؛؛ سجل الإجراء الرئيسي",
+    "id": ";; Daftarkan prosedur utama",
+    "pt": ";; Cadastre o procedimento principal",
+    "uk": ";; Зареєструйте основну процедуру",
+    "vi": ";; Đăng ký thủ tục chính"
   },
   "; Process the rest of the list": {
     "de": "; Verarbeitet den Rest der Liste",
@@ -77,7 +97,12 @@
     "sv": "; Bearbetar resten av listan",
     "th": "; ประมวลผลส่วนที่เหลือของรายการ",
     "zh-cn": "; 处理列表的其余部分",
-    "zh-tw": "; 處理清單的其餘部分"
+    "zh-tw": "; 處理清單的其餘部分",
+    "ar": "; قم بمعالجة بقية القائمة",
+    "id": "; Proses sisa daftarnya",
+    "pt": "; Processe o resto da lista",
+    "uk": "; Опрацювати решту списку",
+    "vi": "; Xử lý phần còn lại của danh sách"
   },
   "; Adds 1 and 2, resulting in 3": {
     "de": "; Addiert 1 und 2, Ergebnis: 3",
@@ -93,7 +118,12 @@
     "sv": "; Adderar 1 och 2, resultatet blir 3",
     "th": "; บวก 1 กับ 2 ได้ 3",
     "zh-cn": "; 将 1 与 2 相加，结果为 3",
-    "zh-tw": "; 將 1 與 2 相加，結果為 3"
+    "zh-tw": "; 將 1 與 2 相加，結果為 3",
+    "ar": "; جمع 1 و 2 فينتج 3",
+    "id": "; Tambahkan 1 dan 2, menghasilkan 3",
+    "pt": "; Adiciona 1 e 2, resultando em 3",
+    "uk": "; Додає 1 і 2, в результаті отримуємо 3",
+    "vi": "; Cộng 1 và 2 được 3"
   },
   ";; Send to the Message console": {
     "de": ";; An die Message Console senden",
@@ -109,7 +139,12 @@
     "sv": ";; Skicka till Message console",
     "th": ";; ส่งไปยัง Message console",
     "zh-cn": ";; 发送到 Message console",
-    "zh-tw": ";; 傳送到 Message console"
+    "zh-tw": ";; 傳送到 Message console",
+    "ar": "؛؛ أرسل إلى وحدة تحكم الرسائل",
+    "id": ";; Kirim ke konsol Pesan",
+    "pt": ";; Enviar para o console de mensagens",
+    "uk": ";; Надіслати на консоль повідомлень",
+    "vi": ";; Gửi tới bảng điều khiển Tin nhắn"
   },
   ";; Send to the terminal window": {
     "de": ";; An das Terminalfenster senden",
@@ -125,7 +160,12 @@
     "sv": ";; Skicka till terminalfönstret",
     "th": ";; ส่งไปยังหน้าต่างเทอร์มินัล",
     "zh-cn": ";; 发送到终端窗口",
-    "zh-tw": ";; 傳送到終端機視窗"
+    "zh-tw": ";; 傳送到終端機視窗",
+    "ar": "؛؛ أرسل إلى النافذة الطرفية",
+    "id": ";; Kirim ke jendela terminal",
+    "pt": ";; Envie para a janela do terminal",
+    "uk": ";; Надіслати у вікно терміналу",
+    "vi": ";; Gửi đến cửa sổ terminal"
   },
   "; Retrieves the first element": {
     "de": "; Ruft das erste Element ab",
@@ -141,7 +181,12 @@
     "sv": "; Hämtar det första elementet",
     "th": "; ดึงองค์ประกอบแรก",
     "zh-cn": "; 获取第一个元素",
-    "zh-tw": "; 取得第一個元素"
+    "zh-tw": "; 取得第一個元素",
+    "ar": "; يسترد العنصر الأول",
+    "id": "; Mengambil elemen pertama",
+    "pt": "; Recupera o primeiro elemento",
+    "uk": "; Отримує перший елемент",
+    "vi": "; Lấy phần tử đầu tiên"
   },
   "; Base case: stop when n is 0": {
     "de": "; Basisfall: Stopp, wenn n 0 ist",
@@ -157,7 +202,12 @@
     "sv": "; Basfall: stoppa när n är 0",
     "th": "; กรณีฐาน: หยุดเมื่อ n เป็น 0",
     "zh-cn": "; 基准情况：当 n 为 0 时停止",
-    "zh-tw": "; 基準情況：當 n 為 0 時停止"
+    "zh-tw": "; 基準情況：當 n 為 0 時停止",
+    "ar": "; الحالة الأساسية: توقف عندما تكون n تساوي 0",
+    "id": "; Kasus dasar: berhenti ketika n adalah 0",
+    "pt": "; Caso base: pare quando n for 0",
+    "uk": "; Базовий випадок: зупинка, коли n дорівнює 0",
+    "vi": "; Trường hợp cơ sở: dừng khi n bằng 0"
   },
   ";; Send to the GUI dialog box": {
     "de": ";; An das GUI-Dialogfeld senden",
@@ -173,7 +223,12 @@
     "sv": ";; Skicka till GUI-dialogrutan",
     "th": ";; ส่งไปยังกล่องโต้ตอบ GUI",
     "zh-cn": ";; 发送到 GUI 对话框",
-    "zh-tw": ";; 傳送到 GUI 對話方塊"
+    "zh-tw": ";; 傳送到 GUI 對話方塊",
+    "ar": "؛؛ إرسال إلى مربع الحوار واجهة المستخدم الرسومية",
+    "id": ";; Kirim ke kotak dialog GUI",
+    "pt": ";; Enviar para a caixa de diálogo GUI",
+    "uk": ";; Надіслати в діалогове вікно GUI",
+    "vi": ";; Gửi tới hộp thoại GUI"
   },
   ";; Give yourself some credit": {
     "de": ";; Gib dir selbst etwas Anerkennung",
@@ -189,7 +244,12 @@
     "sv": ";; Ge dig själv lite beröm",
     "th": ";; ให้เครดิตตัวเองบ้าง",
     "zh-cn": ";; 给自己一点肯定",
-    "zh-tw": ";; 給自己一點肯定"
+    "zh-tw": ";; 給自己一點肯定",
+    "ar": "؛؛ امنح نفسك بعض الفضل",
+    "id": ";; Beri diri Anda penghargaan",
+    "pt": ";; Dê a si mesmo algum crédito",
+    "uk": ";; Віддайте собі певне визнання",
+    "vi": ";; Hãy cho mình một số tín dụng"
   },
   "; A symbol named `*special*`": {
     "de": "; Ein Symbol namens `*special*`",
@@ -205,7 +265,12 @@
     "sv": "; En symbol med namnet `*special*`",
     "th": "; สัญลักษณ์ชื่อ `*special*`",
     "zh-cn": "; 名为 `*special*` 的符号",
-    "zh-tw": "; 名為 `*special*` 的符號"
+    "zh-tw": "; 名為 `*special*` 的符號",
+    "ar": "; رمز اسمه `*خاص*`",
+    "id": "; Simbol bernama `*khusus*`",
+    "pt": "; Um símbolo chamado `*especial*`",
+    "uk": "; Символ під назвою `*special*`",
+    "vi": "; Một biểu tượng có tên `*đặc biệt*`"
   },
   ";; Send to the Error Console": {
     "de": ";; An die Error Console senden",
@@ -221,7 +286,12 @@
     "sv": ";; Skicka till Error Console",
     "th": ";; ส่งไปยัง Error Console",
     "zh-cn": ";; 发送到 Error Console",
-    "zh-tw": ";; 傳送到 Error Console"
+    "zh-tw": ";; 傳送到 Error Console",
+    "ar": "؛؛ أرسل إلى وحدة تحكم الأخطاء",
+    "id": ";; Kirim ke Konsol Kesalahan",
+    "pt": ";; Enviar para o console de erros",
+    "uk": ";; Надіслати на консоль помилок",
+    "vi": ";; Gửi đến bảng điều khiển lỗi"
   },
   "; Returns #f (key not found)": {
     "de": "; Gibt #f zurück (Schlüssel nicht gefunden)",
@@ -237,7 +307,12 @@
     "sv": "; Returnerar #f (nyckeln hittades inte)",
     "th": "; คืนค่า #f (ไม่พบคีย์)",
     "zh-cn": "; 返回 #f（未找到键）",
-    "zh-tw": "; 傳回 #f（找不到鍵）"
+    "zh-tw": "; 傳回 #f（找不到鍵）",
+    "ar": "; إرجاع #f (لم يتم العثور على المفتاح)",
+    "id": "; Mengembalikan #f (kunci tidak ditemukan)",
+    "pt": "; Retorna #f (chave não encontrada)",
+    "uk": "; Повертає #f (ключ не знайдено)",
+    "vi": "; Trả về #f (không tìm thấy khóa)"
   },
   ";; Handle non-empty vectors": {
     "de": ";; Behandelt nicht-leere Vektoren",
@@ -253,7 +328,12 @@
     "sv": ";; Hanterar icke-tomma vektorer",
     "th": ";; จัดการเวกเตอร์ที่ไม่ว่าง",
     "zh-cn": ";; 处理非空向量",
-    "zh-tw": ";; 處理非空向量"
+    "zh-tw": ";; 處理非空向量",
+    "ar": "؛؛ التعامل مع المتجهات غير الفارغة",
+    "id": ";; Tangani vektor yang tidak kosong",
+    "pt": ";; Lidar com vetores não vazios",
+    "uk": ";; Обробляти непорожні вектори",
+    "vi": ";; Xử lý các vectơ không trống"
   },
   ";; Uses x and y in the body": {
     "de": ";; Verwendet x und y im Rumpf",
@@ -269,7 +349,12 @@
     "sv": ";; Använder x och y i kroppen",
     "th": ";; ใช้ x และ y ในส่วนตัว",
     "zh-cn": ";; 在主体中使用 x 和 y",
-    "zh-tw": ";; 在主體中使用 x 和 y"
+    "zh-tw": ";; 在主體中使用 x 和 y",
+    "ar": "؛؛ يستخدم x و y في الجسم",
+    "id": ";; Menggunakan x dan y di badan",
+    "pt": ";; Usa x e y no corpo",
+    "uk": ";; Використовує x і y в тілі",
+    "vi": ";; Sử dụng x và y trong cơ thể"
   },
   ";; Tool tip and description": {
     "de": ";; QuickInfo und Beschreibung",
@@ -285,7 +370,12 @@
     "sv": ";; Verktygstips och beskrivning",
     "th": ";; คำอธิบายเครื่องมือและคำบรรยาย",
     "zh-cn": ";; 工具提示和描述",
-    "zh-tw": ";; 工具提示與描述"
+    "zh-tw": ";; 工具提示與描述",
+    "ar": "؛؛ تلميح الأداة والوصف",
+    "id": ";; Tip dan deskripsi alat",
+    "pt": ";; Dica e descrição da ferramenta",
+    "uk": ";; Підказка та опис",
+    "vi": ";; Mẹo và mô tả công cụ"
   },
   ";; Manually define an alist": {
     "de": ";; Definiert manuell eine Alist",
@@ -301,7 +391,12 @@
     "sv": ";; Definierar manuellt en alist",
     "th": ";; กำหนด alist ด้วยตนเอง",
     "zh-cn": ";; 手动定义 alist",
-    "zh-tw": ";; 手動定義 alist"
+    "zh-tw": ";; 手動定義 alist",
+    "ar": "؛؛ تحديد قائمة يدويًا",
+    "id": ";; Tentukan daftar secara manual",
+    "pt": ";; Definir manualmente uma lista",
+    "uk": ";; Визначте список вручну",
+    "vi": ";; Xác định một danh sách theo cách thủ công"
   },
   "; Returns (name . \"Alice\")": {
     "de": "; Gibt (name . \"Alice\") zurück",
@@ -317,7 +412,12 @@
     "sv": "; Returnerar (name . \"Alice\")",
     "th": "; คืนค่า (name . \"Alice\")",
     "zh-cn": "; 返回 (name . \"Alice\")",
-    "zh-tw": "; 傳回 (name . \"Alice\")"
+    "zh-tw": "; 傳回 (name . \"Alice\")",
+    "ar": "; إرجاع (الاسم . \"أليس\")",
+    "id": "; Pengembalian (nama . \"Alice\")",
+    "pt": "; Retorna (nome. \"Alice\")",
+    "uk": "; Повертає (ім'я . \"Аліса\")",
+    "vi": "; Trả về (tên . \"Alice\")"
   },
   ";; Print the first element": {
     "de": ";; Gibt das erste Element aus",
@@ -333,7 +433,12 @@
     "sv": ";; Skriver ut det första elementet",
     "th": ";; พิมพ์องค์ประกอบแรก",
     "zh-cn": ";; 打印第一个元素",
-    "zh-tw": ";; 列印第一個元素"
+    "zh-tw": ";; 列印第一個元素",
+    "ar": "؛؛ طباعة العنصر الأول",
+    "id": ";; Cetak elemen pertama",
+    "pt": ";; Imprima o primeiro elemento",
+    "uk": ";; Вивести перший елемент",
+    "vi": ";; In phần tử đầu tiên"
   },
   "; #t (true: it's a symbol)": {
     "de": "; #t (wahr: es ist ein Symbol)",
@@ -349,7 +454,12 @@
     "sv": "; #t (sant: det är en symbol)",
     "th": "; #t (จริง: เป็นสัญลักษณ์)",
     "zh-cn": "; #t（真：是符号）",
-    "zh-tw": "; #t（真：是符號）"
+    "zh-tw": "; #t（真：是符號）",
+    "ar": "; #t (صحيح: إنه رمز)",
+    "id": "; #t (benar: itu simbol)",
+    "pt": "; #t (verdadeiro: é um símbolo)",
+    "uk": "; #t (вірно: це символ)",
+    "vi": "; #t (đúng: đó là một biểu tượng)"
   },
   "; Checks if 42 is a vector": {
     "de": "; Prüft, ob 42 ein Vektor ist",
@@ -365,7 +475,12 @@
     "sv": "; Kontrollerar om 42 är en vektor",
     "th": "; ตรวจสอบว่า 42 เป็นเวกเตอร์หรือไม่",
     "zh-cn": "; 检查 42 是否为向量",
-    "zh-tw": "; 檢查 42 是否為向量"
+    "zh-tw": "; 檢查 42 是否為向量",
+    "ar": "; يتحقق مما إذا كان 42 متجهًا",
+    "id": "; Memeriksa apakah 42 adalah vektor",
+    "pt": "; Verifica se 42 é um vetor",
+    "uk": "; Перевіряє, чи є 42 вектором",
+    "vi": "; Kiểm tra xem 42 có phải là vectơ không"
   },
   "; A symbol named `foo-bar`": {
     "de": "; Ein Symbol namens `foo-bar`",
@@ -381,7 +496,12 @@
     "sv": "; En symbol med namnet `foo-bar`",
     "th": "; สัญลักษณ์ชื่อ `foo-bar`",
     "zh-cn": "; 名为 `foo-bar` 的符号",
-    "zh-tw": "; 名為 `foo-bar` 的符號"
+    "zh-tw": "; 名為 `foo-bar` 的符號",
+    "ar": "; رمز اسمه `foo-bar`",
+    "id": "; Simbol bernama `foo-bar`",
+    "pt": "; Um símbolo chamado `foo-bar`",
+    "uk": "; Символ під назвою \"foo-bar\".",
+    "vi": "; Một biểu tượng có tên `foo-bar`"
   },
   ";; Invalid or empty input": {
     "de": ";; Ungültige oder leere Eingabe",
@@ -397,7 +517,12 @@
     "sv": ";; Ogiltig eller tom indata",
     "th": ";; อินพุตไม่ถูกต้องหรือว่างเปล่า",
     "zh-cn": ";; 无效或空输入",
-    "zh-tw": ";; 無效或空白輸入"
+    "zh-tw": ";; 無效或空白輸入",
+    "ar": "؛؛ إدخال غير صالح أو فارغ",
+    "id": ";; Masukan tidak valid atau kosong",
+    "pt": ";; Entrada inválida ou vazia",
+    "uk": ";; Недійсний або порожній вхід",
+    "vi": ";; Đầu vào không hợp lệ hoặc trống"
   },
   ";; Disable verbose output": {
     "de": ";; Ausführliche Ausgabe deaktivieren",
@@ -413,7 +538,12 @@
     "sv": ";; Inaktivera utförlig utdata",
     "th": ";; ปิดการแสดงผลแบบละเอียด",
     "zh-cn": ";; 禁用详细输出",
-    "zh-tw": ";; 停用詳細輸出"
+    "zh-tw": ";; 停用詳細輸出",
+    "ar": "؛؛ تعطيل الإخراج المطول",
+    "id": ";; Nonaktifkan keluaran verbose",
+    "pt": ";; Desativar saída detalhada",
+    "uk": ";; Вимкнути докладний вивід",
+    "vi": ";; Tắt đầu ra dài dòng"
   },
   "; Print the first element": {
     "de": "; Gibt das erste Element aus",
@@ -429,7 +559,12 @@
     "sv": "; Skriver ut det första elementet",
     "th": "; พิมพ์องค์ประกอบแรก",
     "zh-cn": "; 打印第一个元素",
-    "zh-tw": "; 列印第一個元素"
+    "zh-tw": "; 列印第一個元素",
+    "ar": "; طباعة العنصر الأول",
+    "id": "; Cetak elemen pertama",
+    "pt": "; Imprima o primeiro elemento",
+    "uk": "; Вивести перший елемент",
+    "vi": "; In phần tử đầu tiên"
   },
   ";; Some script logic here": {
     "de": ";; Hier etwas Skriptlogik",
@@ -445,7 +580,12 @@
     "sv": ";; Någon skriptlogik här",
     "th": ";; ตรรกะสคริปต์บางส่วนที่นี่",
     "zh-cn": ";; 此处为一些脚本逻辑",
-    "zh-tw": ";; 此處為一些指令碼邏輯"
+    "zh-tw": ";; 此處為一些指令碼邏輯",
+    "ar": "؛؛ بعض منطق البرنامج النصي هنا",
+    "id": ";; Beberapa logika skrip di sini",
+    "pt": ";; Alguma lógica de script aqui",
+    "uk": ";; Ось трохи логіки сценарію",
+    "vi": ";; Một số logic kịch bản ở đây"
   },
   ";; Handle non-empty lists": {
     "de": ";; Behandelt nicht-leere Listen",
@@ -461,7 +601,12 @@
     "sv": ";; Hanterar icke-tomma listor",
     "th": ";; จัดการรายการที่ไม่ว่าง",
     "zh-cn": ";; 处理非空列表",
-    "zh-tw": ";; 處理非空清單"
+    "zh-tw": ";; 處理非空清單",
+    "ar": "؛؛ التعامل مع القوائم غير الفارغة",
+    "id": ";; Tangani daftar yang tidak kosong",
+    "pt": ";; Lidar com listas não vazias",
+    "uk": ";; Обробляти непорожні списки",
+    "vi": ";; Xử lý danh sách không trống"
   },
   "; Creates a list: (1 2 3)": {
     "de": "; Erstellt eine Liste: (1 2 3)",
@@ -477,7 +622,12 @@
     "sv": "; Skapar en lista: (1 2 3)",
     "th": "; สร้างรายการ: (1 2 3)",
     "zh-cn": "; 创建列表: (1 2 3)",
-    "zh-tw": "; 建立清單: (1 2 3)"
+    "zh-tw": "; 建立清單: (1 2 3)",
+    "ar": "; إنشاء قائمة: (1 2 3)",
+    "id": "; Membuat daftar: (1 2 3)",
+    "pt": "; Cria uma lista: (1 2 3)",
+    "uk": "; Створює список: (1 2 3)",
+    "vi": "; Tạo danh sách: (1 2 3)"
   },
   ";; Gets the x-coordinate": {
     "de": ";; Ermittelt die x-Koordinate",
@@ -493,7 +643,12 @@
     "sv": ";; Hämtar x-koordinaten",
     "th": ";; ดึงพิกัด x",
     "zh-cn": ";; 获取 x 坐标",
-    "zh-tw": ";; 取得 x 座標"
+    "zh-tw": ";; 取得 x 座標",
+    "ar": "؛؛ يحصل على الإحداثي x",
+    "id": ";; Mendapatkan koordinat x",
+    "pt": ";; Obtém a coordenada x",
+    "uk": ";; Отримує х-координату",
+    "vi": ";; Lấy tọa độ x"
   },
   "; Checks if 42 is a list": {
     "de": "; Prüft, ob 42 eine Liste ist",
@@ -509,7 +664,12 @@
     "sv": "; Kontrollerar om 42 är en lista",
     "th": "; ตรวจสอบว่า 42 เป็นรายการหรือไม่",
     "zh-cn": "; 检查 42 是否为列表",
-    "zh-tw": "; 檢查 42 是否為清單"
+    "zh-tw": "; 檢查 42 是否為清單",
+    "ar": "; يتحقق مما إذا كان 42 قائمة",
+    "id": "; Memeriksa apakah 42 adalah daftar",
+    "pt": "; Verifica se 42 é uma lista",
+    "uk": "; Перевіряє, чи є 42 списком",
+    "vi": "; Kiểm tra xem 42 có phải là danh sách không"
   },
   "; A symbol named `hello`": {
     "de": "; Ein Symbol namens `hello`",
@@ -525,7 +685,12 @@
     "sv": "; En symbol med namnet `hello`",
     "th": "; สัญลักษณ์ชื่อ `hello`",
     "zh-cn": "; 名为 `hello` 的符号",
-    "zh-tw": "; 名為 `hello` 的符號"
+    "zh-tw": "; 名為 `hello` 的符號",
+    "ar": "; رمز اسمه \"مرحبا\".",
+    "id": "; Simbol bernama `halo`",
+    "pt": "; Um símbolo chamado `olá`",
+    "uk": "; Символ під назвою \"привіт\".",
+    "vi": "; Một biểu tượng có tên `xin chào`"
   },
   ";; Gets the y-coordinate": {
     "de": ";; Ermittelt die y-Koordinate",
@@ -541,7 +706,12 @@
     "sv": ";; Hämtar y-koordinaten",
     "th": ";; ดึงพิกัด y",
     "zh-cn": ";; 获取 y 坐标",
-    "zh-tw": ";; 取得 y 座標"
+    "zh-tw": ";; 取得 y 座標",
+    "ar": "؛؛ يحصل على إحداثي y",
+    "id": ";; Mendapatkan koordinat y",
+    "pt": ";; Obtém a coordenada y",
+    "uk": ";; Отримує y-координату",
+    "vi": ";; Lấy tọa độ y"
   },
   "; #f (different symbols)": {
     "de": "; #f (verschiedene Symbole)",
@@ -557,7 +727,12 @@
     "sv": "; #f (olika symboler)",
     "th": "; #f (สัญลักษณ์ต่างกัน)",
     "zh-cn": "; #f（不同符号）",
-    "zh-tw": "; #f（不同符號）"
+    "zh-tw": "; #f（不同符號）",
+    "ar": "; #f (رموز مختلفة)",
+    "id": "; #f (simbol berbeda)",
+    "pt": "; #f (símbolos diferentes)",
+    "uk": "; #f (різні символи)",
+    "vi": "; #f (các ký hiệu khác nhau)"
   },
   ";; Local helper function": {
     "de": ";; Lokale Hilfsfunktion",
@@ -573,7 +748,12 @@
     "sv": ";; Lokal hjälpfunktion",
     "th": ";; ฟังก์ชันช่วยในเครื่อง",
     "zh-cn": ";; 本地辅助函数",
-    "zh-tw": ";; 本機輔助函式"
+    "zh-tw": ";; 本機輔助函式",
+    "ar": "؛؛ وظيفة المساعد المحلي",
+    "id": ";; Fungsi pembantu lokal",
+    "pt": ";; Função auxiliar local",
+    "uk": ";; Локальна допоміжна функція",
+    "vi": ";; Chức năng trợ giúp cục bộ"
   },
   ";; Enable verbose output": {
     "de": ";; Ausführliche Ausgabe aktivieren",
@@ -589,7 +769,12 @@
     "sv": ";; Aktivera utförlig utdata",
     "th": ";; เปิดการแสดงผลแบบละเอียด",
     "zh-cn": ";; 启用详细输出",
-    "zh-tw": ";; 啟用詳細輸出"
+    "zh-tw": ";; 啟用詳細輸出",
+    "ar": "؛؛ تمكين الإخراج المطول",
+    "id": ";; Aktifkan keluaran verbose",
+    "pt": ";; Habilitar saída detalhada",
+    "uk": ";; Увімкнути докладний вивід",
+    "vi": ";; Bật đầu ra dài dòng"
   },
   "; Process the next index": {
     "de": "; Verarbeitet den nächsten Index",
@@ -605,7 +790,12 @@
     "sv": "; Bearbetar nästa index",
     "th": "; ประมวลผลดัชนีถัดไป",
     "zh-cn": "; 处理下一个索引",
-    "zh-tw": "; 處理下一個索引"
+    "zh-tw": "; 處理下一個索引",
+    "ar": "; معالجة الفهرس التالي",
+    "id": "; Proses indeks berikutnya",
+    "pt": "; Processar o próximo índice",
+    "uk": "; Обробити наступний індекс",
+    "vi": "; Xử lý chỉ mục tiếp theo"
   },
   "; Print sum at each step": {
     "de": "; Gibt die Summe bei jedem Schritt aus",
@@ -621,7 +811,12 @@
     "sv": "; Skriver ut summan vid varje steg",
     "th": "; พิมพ์ผลรวมในแต่ละขั้นตอน",
     "zh-cn": "; 在每一步打印总和",
-    "zh-tw": "; 在每一步列印總和"
+    "zh-tw": "; 在每一步列印總和",
+    "ar": "; طباعة المبلغ في كل خطوة",
+    "id": "; Cetak jumlah di setiap langkah",
+    "pt": "; Imprimir soma em cada etapa",
+    "uk": "; Друкувати суму на кожному кроці",
+    "vi": "; In tổng ở mỗi bước"
   },
   ";; Register the plug-in": {
     "de": ";; Registriert das Plug-in",
@@ -637,7 +832,12 @@
     "sv": ";; Registrerar insticksprogrammet",
     "th": ";; ลงทะเบียนปลั๊กอิน",
     "zh-cn": ";; 注册 plug-in",
-    "zh-tw": ";; 註冊 plug-in"
+    "zh-tw": ";; 註冊 plug-in",
+    "ar": "؛؛ قم بتسجيل المكون الإضافي",
+    "id": ";; Daftarkan pluginnya",
+    "pt": ";; Registre o plug-in",
+    "uk": ";; Зареєструйте плагін",
+    "vi": ";; Đăng ký plug-in"
   },
   ";; Tool-tip description": {
     "de": ";; QuickInfo-Beschreibung",
@@ -653,7 +853,12 @@
     "sv": ";; Verktygstipsbeskrivning",
     "th": ";; คำอธิบายเครื่องมือ",
     "zh-cn": ";; 工具提示描述",
-    "zh-tw": ";; 工具提示描述"
+    "zh-tw": ";; 工具提示描述",
+    "ar": "؛؛ وصف تلميح الأداة",
+    "id": ";; Deskripsi ujung alat",
+    "pt": ";; Descrição da dica de ferramenta",
+    "uk": ";; Опис підказки",
+    "vi": ";; Mô tả mẹo công cụ"
   },
   "; Base result: sum is 0": {
     "de": "; Basisergebnis: Summe ist 0",
@@ -669,7 +874,12 @@
     "sv": "; Basresultat: summan är 0",
     "th": "; ผลลัพธ์ฐาน: ผลรวมเป็น 0",
     "zh-cn": "; 基准结果：总和为 0",
-    "zh-tw": "; 基準結果：總和為 0"
+    "zh-tw": "; 基準結果：總和為 0",
+    "ar": "; النتيجة الأساسية: المجموع هو 0",
+    "id": "; Hasil dasar: jumlahnya adalah 0",
+    "pt": "; Resultado base: a soma é 0",
+    "uk": "; Базовий результат: сума дорівнює 0",
+    "vi": "; Kết quả cơ bản: tổng bằng 0"
   },
   ";; Main procedure name": {
     "de": ";; Name der Hauptprozedur",
@@ -685,7 +895,12 @@
     "sv": ";; Namn på huvudproceduren",
     "th": ";; ชื่อขั้นตอนหลัก",
     "zh-cn": ";; 主过程名称",
-    "zh-tw": ";; 主程序名稱"
+    "zh-tw": ";; 主程序名稱",
+    "ar": "؛؛ اسم الإجراء الرئيسي",
+    "id": ";; Nama prosedur utama",
+    "pt": ";; Nome do procedimento principal",
+    "uk": ";; Назва основної процедури",
+    "vi": ";; Tên thủ tục chính"
   },
   "; Returns (1 4 9 16)": {
     "de": "; Gibt (1 4 9 16) zurück",
@@ -701,7 +916,12 @@
     "sv": "; Returnerar (1 4 9 16)",
     "th": "; คืนค่า (1 4 9 16)",
     "zh-cn": "; 返回 (1 4 9 16)",
-    "zh-tw": "; 傳回 (1 4 9 16)"
+    "zh-tw": "; 傳回 (1 4 9 16)",
+    "ar": "; المرتجعات (1 4 9 16)",
+    "id": "; Pengembalian (1 4 9 16)",
+    "pt": "; Retornos (1 4 9 16)",
+    "uk": "; Повернення (1 4 9 16)",
+    "vi": "; Trả về (1 4 9 16)"
   },
   "; Print the element": {
     "de": "; Gibt das Element aus",
@@ -717,7 +937,12 @@
     "sv": "; Skriver ut elementet",
     "th": "; พิมพ์องค์ประกอบ",
     "zh-cn": "; 打印元素",
-    "zh-tw": "; 列印元素"
+    "zh-tw": "; 列印元素",
+    "ar": "; طباعة العنصر",
+    "id": "; Cetak elemennya",
+    "pt": "; Imprima o elemento",
+    "uk": "; Роздрукуйте елемент",
+    "vi": "; In phần tử"
   },
   "; now x is a string": {
     "de": "; x ist jetzt eine Zeichenkette",
@@ -733,7 +958,12 @@
     "sv": "; nu är x en sträng",
     "th": "; ตอนนี้ x เป็นสตริง",
     "zh-cn": "; 现在 x 是字符串",
-    "zh-tw": "; 現在 x 是字串"
+    "zh-tw": "; 現在 x 是字串",
+    "ar": "; الآن x عبارة عن سلسلة",
+    "id": "; sekarang x adalah string",
+    "pt": "; agora x é uma string",
+    "uk": "; тепер x є рядком",
+    "vi": "; bây giờ x là một chuỗi"
   },
   "; Returns (1 2 3 4)": {
     "de": "; Gibt (1 2 3 4) zurück",
@@ -749,7 +979,12 @@
     "sv": "; Returnerar (1 2 3 4)",
     "th": "; คืนค่า (1 2 3 4)",
     "zh-cn": "; 返回 (1 2 3 4)",
-    "zh-tw": "; 傳回 (1 2 3 4)"
+    "zh-tw": "; 傳回 (1 2 3 4)",
+    "ar": "; المرتجعات (1 2 3 4)",
+    "id": "; Pengembalian (1 2 3 4)",
+    "pt": "; Retornos (1 2 3 4)",
+    "uk": "; Повернення (1 2 3 4)",
+    "vi": "; Trả về (1 2 3 4)"
   },
   "; #t (same symbol)": {
     "de": "; #t (gleiches Symbol)",
@@ -765,7 +1000,12 @@
     "sv": "; #t (samma symbol)",
     "th": "; #t (สัญลักษณ์เดียวกัน)",
     "zh-cn": "; #t（相同符号）",
-    "zh-tw": "; #t（相同符號）"
+    "zh-tw": "; #t（相同符號）",
+    "ar": "; #t (نفس الرمز)",
+    "id": "; #t (simbol yang sama)",
+    "pt": "; #t (mesmo símbolo)",
+    "uk": "; #t (той же символ)",
+    "vi": "; #t (cùng ký hiệu)"
   },
   ";; Menu item name": {
     "de": ";; Name des Menüeintrags",
@@ -781,7 +1021,12 @@
     "sv": ";; Namn på menyalternativet",
     "th": ";; ชื่อรายการเมนู",
     "zh-cn": ";; 菜单项名称",
-    "zh-tw": ";; 選單項目名稱"
+    "zh-tw": ";; 選單項目名稱",
+    "ar": "؛؛ اسم عنصر القائمة",
+    "id": ";; Nama item menu",
+    "pt": ";; Nome do item de menu",
+    "uk": ";; Назва пункту меню",
+    "vi": ";; Menu item name"
   },
   ";; Procedure name": {
     "de": ";; Name der Prozedur",
@@ -797,7 +1042,12 @@
     "sv": ";; Namn på proceduren",
     "th": ";; ชื่อขั้นตอน",
     "zh-cn": ";; 过程名称",
-    "zh-tw": ";; 程序名稱"
+    "zh-tw": ";; 程序名稱",
+    "ar": "؛؛ اسم الإجراء",
+    "id": ";; Nama prosedur",
+    "pt": ";; Nome do procedimento",
+    "uk": ";; Назва процедури",
+    "vi": ";; Tên thủ tục"
   },
   ";; Copyright Date": {
     "de": ";; Copyright-Datum",
@@ -813,7 +1063,12 @@
     "sv": ";; Copyrightdatum",
     "th": ";; วันที่ลิขสิทธิ์",
     "zh-cn": ";; 版权日期",
-    "zh-tw": ";; 版權日期"
+    "zh-tw": ";; 版權日期",
+    "ar": "؛؛ تاريخ حقوق النشر",
+    "id": ";; Tanggal Hak Cipta",
+    "pt": ";; Data dos direitos autorais",
+    "uk": ";; Дата авторського права",
+    "vi": ";; Ngày bản quyền"
   },
   "; Returns (3 2 1)": {
     "de": "; Gibt (3 2 1) zurück",
@@ -829,7 +1084,12 @@
     "sv": "; Returnerar (3 2 1)",
     "th": "; คืนค่า (3 2 1)",
     "zh-cn": "; 返回 (3 2 1)",
-    "zh-tw": "; 傳回 (3 2 1)"
+    "zh-tw": "; 傳回 (3 2 1)",
+    "ar": "; المرتجعات (3 2 1)",
+    "id": "; Pengembalian (3 2 1)",
+    "pt": "; Retornos (3 2 1)",
+    "uk": "; Повернення (3 2 1)",
+    "vi": "; Trả về (3 2 1)"
   },
   "; Returns \"Alice\"": {
     "de": "; Gibt \"Alice\" zurück",
@@ -845,7 +1105,12 @@
     "sv": "; Returnerar \"Alice\"",
     "th": "; คืนค่า \"Alice\"",
     "zh-cn": "; 返回 \"Alice\"",
-    "zh-tw": "; 傳回 \"Alice\""
+    "zh-tw": "; 傳回 \"Alice\"",
+    "ar": "; تعود \"أليس\"",
+    "id": "; Mengembalikan \"Alice\"",
+    "pt": "; Retorna \"Alice\"",
+    "uk": "; Повертає \"Аліса\"",
+    "vi": "; Trả về \"Alice\""
   },
   "; Returns (2 4 6)": {
     "de": "; Gibt (2 4 6) zurück",
@@ -861,7 +1126,12 @@
     "sv": "; Returnerar (2 4 6)",
     "th": "; คืนค่า (2 4 6)",
     "zh-cn": "; 返回 (2 4 6)",
-    "zh-tw": "; 傳回 (2 4 6)"
+    "zh-tw": "; 傳回 (2 4 6)",
+    "ar": "; المرتجعات (2 4 6)",
+    "id": "; Pengembalian (2 4 6)",
+    "pt": "; Retornos (2 4 6)",
+    "uk": "; Повернення (2 4 6)",
+    "vi": "; Trả về (2 4 6)"
   },
   "; build the path": {
     "de": "; Erstellt den Pfad",
@@ -877,7 +1147,12 @@
     "sv": "; Bygger sökvägen",
     "th": "; สร้างเส้นทาง",
     "zh-cn": "; 构建路径",
-    "zh-tw": "; 建構路徑"
+    "zh-tw": "; 建構路徑",
+    "ar": "; بناء المسار",
+    "id": "; membangun jalannya",
+    "pt": "; construir o caminho",
+    "uk": "; побудувати шлях",
+    "vi": "; xây dựng con đường"
   },
   ";; Main Function": {
     "de": ";; Hauptfunktion",
@@ -893,7 +1168,12 @@
     "sv": ";; Huvudfunktion",
     "th": ";; ฟังก์ชันหลัก",
     "zh-cn": ";; 主函数",
-    "zh-tw": ";; 主函式"
+    "zh-tw": ";; 主函式",
+    "ar": "؛؛ الوظيفة الرئيسية",
+    "id": ";; Fungsi Utama",
+    "pt": ";; Função principal",
+    "uk": ";; Основна функція",
+    "vi": ";; Chức năng chính"
   },
   ";; Avoid jpg.jpg": {
     "de": ";; jpg.jpg vermeiden",
@@ -909,7 +1189,12 @@
     "sv": ";; Undvik jpg.jpg",
     "th": ";; หลีกเลี่ยง jpg.jpg",
     "zh-cn": ";; 避免 jpg.jpg",
-    "zh-tw": ";; 避免 jpg.jpg"
+    "zh-tw": ";; 避免 jpg.jpg",
+    "ar": "؛؛ تجنب jpg.jpg",
+    "id": ";; Hindari jpg.jpg",
+    "pt": ";; Evite jpg.jpg",
+    "uk": ";; Уникайте jpg.jpg",
+    "vi": ";; Tránh jpg.jpg"
   },
   ";; Author's name": {
     "de": ";; Name des Autors",
@@ -925,7 +1210,12 @@
     "sv": ";; Författarens namn",
     "th": ";; ชื่อผู้เขียน",
     "zh-cn": ";; 作者姓名",
-    "zh-tw": ";; 作者姓名"
+    "zh-tw": ";; 作者姓名",
+    "ar": "؛؛ اسم المؤلف",
+    "id": ";; Nama penulis",
+    "pt": ";; Nome do autor",
+    "uk": ";; Прізвище автора",
+    "vi": ";; Tên tác giả"
   },
   "; Handle vectors": {
     "de": "; Behandelt Vektoren",
@@ -941,7 +1231,12 @@
     "sv": "; Hanterar vektorer",
     "th": "; จัดการเวกเตอร์",
     "zh-cn": "; 处理向量",
-    "zh-tw": "; 處理向量"
+    "zh-tw": "; 處理向量",
+    "ar": "; التعامل مع المتجهات",
+    "id": "; Tangani vektor",
+    "pt": "; Lidar com vetores",
+    "uk": "; Обробляти вектори",
+    "vi": "; Xử lý vectơ"
   },
   ";; License type": {
     "de": ";; Lizenztyp",
@@ -957,7 +1252,12 @@
     "sv": ";; Licenstyp",
     "th": ";; ประเภทใบอนุญาต",
     "zh-cn": ";; 许可证类型",
-    "zh-tw": ";; 授權類型"
+    "zh-tw": ";; 授權類型",
+    "ar": "؛؛ نوع الترخيص",
+    "id": ";; Jenis lisensi",
+    "pt": ";; Tipo de licença",
+    "uk": ";; Тип ліцензії",
+    "vi": ";; Loại giấy phép"
   },
   ";; Date written": {
     "de": ";; Schreibdatum",
@@ -973,7 +1273,12 @@
     "sv": ";; Skrivdatum",
     "th": ";; วันที่เขียน",
     "zh-cn": ";; 编写日期",
-    "zh-tw": ";; 撰寫日期"
+    "zh-tw": ";; 撰寫日期",
+    "ar": "؛؛ تاريخ الكتابة",
+    "id": ";; Tanggal ditulis",
+    "pt": ";; Data escrita",
+    "uk": ";; Дата написана",
+    "vi": ";; Ngày viết"
   },
   "; x is a number": {
     "de": "; x ist eine Zahl",
@@ -989,7 +1294,12 @@
     "sv": "; x är ett tal",
     "th": "; x เป็นตัวเลข",
     "zh-cn": "; x 是数字",
-    "zh-tw": "; x 是數字"
+    "zh-tw": "; x 是數字",
+    "ar": "; x هو رقم",
+    "id": "; x adalah angka",
+    "pt": "; x é um número",
+    "uk": "; x є числом",
+    "vi": "; x là một số"
   },
   ";; Computes 2π": {
     "de": ";; Berechnet 2π",
@@ -1005,7 +1315,12 @@
     "sv": ";; Beräknar 2π",
     "th": ";; คำนวณ 2π",
     "zh-cn": ";; 计算 2π",
-    "zh-tw": ";; 計算 2π"
+    "zh-tw": ";; 計算 2π",
+    "ar": "؛؛ يحسب 2π",
+    "id": ";; Menghitung 2π",
+    "pt": ";; Calcula 2π",
+    "uk": ";; Обчислює 2π",
+    "vi": ";; Tính 2π"
   },
   "; Handle pairs": {
     "de": "; Behandelt Paare",
@@ -1021,7 +1336,12 @@
     "sv": "; Hanterar par",
     "th": "; จัดการคู่",
     "zh-cn": "; 处理对",
-    "zh-tw": "; 處理配對"
+    "zh-tw": "; 處理配對",
+    "ar": "; التعامل مع أزواج",
+    "id": "; Tangani berpasangan",
+    "pt": "; Lidar com pares",
+    "uk": "; Парні ручки",
+    "vi": "; Cặp tay cầm"
   },
   ";; Computes 4²": {
     "de": ";; Berechnet 4²",
@@ -1037,7 +1357,12 @@
     "sv": ";; Beräknar 4²",
     "th": ";; คำนวณ 4²",
     "zh-cn": ";; 计算 4²",
-    "zh-tw": ";; 計算 4²"
+    "zh-tw": ";; 計算 4²",
+    "ar": "؛؛ يحسب 4²",
+    "id": ";; Menghitung 4²",
+    "pt": ";; Calcula 4²",
+    "uk": ";; Обчислює 4²",
+    "vi": ";; Tính toán 4²"
   },
   "; Empty string": {
     "de": "; Leere Zeichenkette",
@@ -1053,7 +1378,12 @@
     "sv": "; Tom sträng",
     "th": "; สตริงว่าง",
     "zh-cn": "; 空字符串",
-    "zh-tw": "; 空字串"
+    "zh-tw": "; 空字串",
+    "ar": "; سلسلة فارغة",
+    "id": "; Tali kosong",
+    "pt": "; String vazia",
+    "uk": "; Порожній рядок",
+    "vi": "; Chuỗi trống"
   },
   "; 'new-symbol": {
     "de": "; Ergebnis: 'new-symbol",
@@ -1069,7 +1399,12 @@
     "sv": "; Resultat: 'new-symbol",
     "th": "; ผลลัพธ์: 'new-symbol",
     "zh-cn": "; 结果：'new-symbol",
-    "zh-tw": "; 結果：'new-symbol"
+    "zh-tw": "; 結果：'new-symbol",
+    "ar": "; \"رمز جديد.\"",
+    "id": "; 'simbol baru",
+    "pt": "; 'novo símbolo",
+    "uk": "; 'новий символ",
+    "vi": "; 'biểu tượng mới"
   },
   "; Nested list": {
     "de": "; Verschachtelte Liste",
@@ -1085,7 +1420,12 @@
     "sv": "; Nästad lista",
     "th": "; รายการซ้อน",
     "zh-cn": "; 嵌套列表",
-    "zh-tw": "; 巢狀清單"
+    "zh-tw": "; 巢狀清單",
+    "ar": "; قائمة متداخلة",
+    "id": "; Daftar bersarang",
+    "pt": "; Lista aninhada",
+    "uk": "; Вкладений список",
+    "vi": "; Danh sách lồng nhau"
   },
   "; Returns 40": {
     "de": "; Gibt 40 zurück",
@@ -1101,7 +1441,12 @@
     "sv": "; Returnerar 40",
     "th": "; คืนค่า 40",
     "zh-cn": "; 返回 40",
-    "zh-tw": "; 傳回 40"
+    "zh-tw": "; 傳回 40",
+    "ar": "; يعود 40",
+    "id": "; Mengembalikan 40",
+    "pt": "; Retorna 40",
+    "uk": "; Повертає 40",
+    "vi": "; Trả về 40"
   },
   "; Returns 18": {
     "de": "; Gibt 18 zurück",
@@ -1117,7 +1462,12 @@
     "sv": "; Returnerar 18",
     "th": "; คืนค่า 18",
     "zh-cn": "; 返回 18",
-    "zh-tw": "; 傳回 18"
+    "zh-tw": "; 傳回 18",
+    "ar": "; يعود 18",
+    "id": "; Pengembalian 18",
+    "pt": "; Retorna 18",
+    "uk": "; Повернення 18",
+    "vi": "; Trả về 18"
   },
   "; Empty list": {
     "de": "; Leere Liste",
@@ -1133,7 +1483,12 @@
     "sv": "; Tom lista",
     "th": "; รายการว่าง",
     "zh-cn": "; 空列表",
-    "zh-tw": "; 空清單"
+    "zh-tw": "; 空清單",
+    "ar": "; قائمة فارغة",
+    "id": "; Daftar kosong",
+    "pt": "; Lista vazia",
+    "uk": "; Порожній список",
+    "vi": "; Danh sách trống"
   },
   "; Returns 15": {
     "de": "; Gibt 15 zurück",
@@ -1149,7 +1504,12 @@
     "sv": "; Returnerar 15",
     "th": "; คืนค่า 15",
     "zh-cn": "; 返回 15",
-    "zh-tw": "; 傳回 15"
+    "zh-tw": "; 傳回 15",
+    "ar": "; يعود 15",
+    "id": "; Pengembalian 15",
+    "pt": "; Retorna 15",
+    "uk": "; Повернення 15",
+    "vi": "; Trả về 15"
   },
   "; Returns 7": {
     "de": "; Gibt 7 zurück",
@@ -1165,7 +1525,12 @@
     "sv": "; Returnerar 7",
     "th": "; คืนค่า 7",
     "zh-cn": "; 返回 7",
-    "zh-tw": "; 傳回 7"
+    "zh-tw": "; 傳回 7",
+    "ar": "; يعود 7",
+    "id": "; Pengembalian 7",
+    "pt": "; Retorna 7",
+    "uk": "; Повернення 7",
+    "vi": "; Trả về 7"
   },
   "; \"example\"": {
     "de": "; Ergebnis: \"example\"",
@@ -1181,7 +1546,12 @@
     "sv": "; Resultat: \"example\"",
     "th": "; ผลลัพธ์: \"example\"",
     "zh-cn": "; 结果：\"example\"",
-    "zh-tw": "; 結果：\"example\""
+    "zh-tw": "; 結果：\"example\"",
+    "ar": "; \"مثال\"",
+    "id": "; \"contoh\"",
+    "pt": "; \"exemplo\"",
+    "uk": "; \"приклад\"",
+    "vi": "; \"ví dụ\""
   },
   "; Returns 8": {
     "de": "; Gibt 8 zurück",
@@ -1197,7 +1567,12 @@
     "sv": "; Returnerar 8",
     "th": "; คืนค่า 8",
     "zh-cn": "; 返回 8",
-    "zh-tw": "; 傳回 8"
+    "zh-tw": "; 傳回 8",
+    "ar": "; يعود 8",
+    "id": "; Pengembalian 8",
+    "pt": "; Retorna 8",
+    "uk": "; Повернення 8",
+    "vi": "; Trả về 8"
   },
   "; Returns 3": {
     "de": "; Gibt 3 zurück",
@@ -1213,7 +1588,12 @@
     "sv": "; Returnerar 3",
     "th": "; คืนค่า 3",
     "zh-cn": "; 返回 3",
-    "zh-tw": "; 傳回 3"
+    "zh-tw": "; 傳回 3",
+    "ar": "; يعود 3",
+    "id": "; Pengembalian 3",
+    "pt": "; Retorna 3",
+    "uk": "; Повернення 3",
+    "vi": "; Trả về 3"
   },
   "; Root dir": {
     "de": "; Stammverzeichnis",
@@ -1229,7 +1609,12 @@
     "sv": "; Rotkatalog",
     "th": "; ไดเรกทอรีหลัก",
     "zh-cn": "; 根目录",
-    "zh-tw": "; 根目錄"
+    "zh-tw": "; 根目錄",
+    "ar": "; دير الجذر",
+    "id": "; direktori root",
+    "pt": "; Diretório raiz",
+    "uk": "; Корінь реж",
+    "vi": "; Thư mục gốc"
   },
   "; Booleans": {
     "de": "; Boolesche Werte",
@@ -1245,7 +1630,12 @@
     "sv": "; Booleska värden",
     "th": "; ค่าบูล",
     "zh-cn": "; 布尔值",
-    "zh-tw": "; 布林值"
+    "zh-tw": "; 布林值",
+    "ar": "; القيم المنطقية",
+    "id": "; Boolean",
+    "pt": "; Booleanos",
+    "uk": "; Логічні значення",
+    "vi": "; Boolean"
   },
   "; End loop": {
     "de": "; Schleife beenden",
@@ -1261,7 +1651,12 @@
     "sv": "; Slut på loop",
     "th": "; จบลูป",
     "zh-cn": "; 结束循环",
-    "zh-tw": "; 結束迴圈"
+    "zh-tw": "; 結束迴圈",
+    "ar": "; حلقة النهاية",
+    "id": "; Putaran akhir",
+    "pt": "; Ciclo final",
+    "uk": "; Кінцева петля",
+    "vi": "; Kết thúc vòng lặp"
   },
   ";; License": {
     "de": ";; Lizenz",
@@ -1277,7 +1672,12 @@
     "sv": ";; Licens",
     "th": ";; ใบอนุญาต",
     "zh-cn": ";; 许可证",
-    "zh-tw": ";; 授權"
+    "zh-tw": ";; 授權",
+    "ar": "؛؛ رخصة",
+    "id": ";; Lisensi",
+    "pt": ";; Licença",
+    "uk": ";; Ліцензія",
+    "vi": ";; Giấy phép"
   },
   "; Strings": {
     "de": "; Zeichenfolgen",
@@ -1293,7 +1693,12 @@
     "sv": "; Strängar",
     "th": "; สตริง",
     "zh-cn": "; 字符串",
-    "zh-tw": "; 字串"
+    "zh-tw": "; 字串",
+    "ar": "; سلاسل",
+    "id": "; string",
+    "pt": "; Cordas",
+    "uk": "; рядки",
+    "vi": "; Dây"
   },
   "; Symbols": {
     "de": "; Symbole",
@@ -1309,7 +1714,12 @@
     "sv": "; Symboler",
     "th": "; สัญลักษณ์",
     "zh-cn": "; 符号",
-    "zh-tw": "; 符號"
+    "zh-tw": "; 符號",
+    "ar": "; الرموز",
+    "id": "; Simbol",
+    "pt": "; Símbolos",
+    "uk": "; Символи",
+    "vi": "; Biểu tượng"
   },
   ";; Author": {
     "de": ";; Autor",
@@ -1325,7 +1735,12 @@
     "sv": ";; Författare",
     "th": ";; ผู้เขียน",
     "zh-cn": ";; 作者",
-    "zh-tw": ";; 作者"
+    "zh-tw": ";; 作者",
+    "ar": "؛؛ مؤلف",
+    "id": ";; Pengarang",
+    "pt": ";; Autor",
+    "uk": ";; Автор",
+    "vi": ";; Tác giả"
   },
   "; Numbers": {
     "de": "; Zahlen",
@@ -1341,7 +1756,12 @@
     "sv": "; Tal",
     "th": "; ตัวเลข",
     "zh-cn": "; 数字",
-    "zh-tw": "; 數字"
+    "zh-tw": "; 數字",
+    "ar": "; أرقام",
+    "id": "; Angka",
+    "pt": "; Números",
+    "uk": "; Числа",
+    "vi": "; số"
   },
   ";; ...": {
     "de": ";; …",
@@ -1357,7 +1777,12 @@
     "sv": ";; …",
     "th": ";; …",
     "zh-cn": ";; …",
-    "zh-tw": ";; …"
+    "zh-tw": ";; …",
+    "ar": "؛؛ ...",
+    "id": null,
+    "pt": null,
+    "uk": null,
+    "vi": null
   },
   ";; Purpose: Dispatches a message to the appropriate output, returns #t if successful": {
     "de": ";; Zweck: Leitet eine Nachricht an die passende Ausgabe weiter, gibt #t bei Erfolg zurück",
@@ -1373,7 +1798,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till rätt utdata, returnerar #t vid lyckat resultat",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังเอาต์พุตที่เหมาะสม คืนค่า #t เมื่อสำเร็จ",
     "zh-cn": ";; 用途：将消息分发到适当的输出，成功时返回 #t",
-    "zh-tw": ";; 用途：將訊息分發到適當的輸出，成功時回傳 #t"
+    "zh-tw": ";; 用途：將訊息分發到適當的輸出，成功時回傳 #t",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى الإخراج المناسب، وإرجاع #t إذا نجح الأمر",
+    "id": ";; Tujuan: Mengirimkan pesan ke output yang sesuai, mengembalikan #t jika berhasil",
+    "pt": ";; Objetivo: Envia uma mensagem para a saída apropriada, retorna #t se for bem-sucedido",
+    "uk": ";; Призначення: відправляє повідомлення на відповідний вихід, повертає #t у разі успіху",
+    "vi": ";; Mục đích: Gửi tin nhắn đến đầu ra thích hợp, trả về #t nếu thành công"
   },
   ";; Purpose: Validates that the message is a non-empty string and the output is valid": {
     "de": ";; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist und die Ausgabe gültig ist",
@@ -1389,7 +1819,12 @@
     "sv": ";; Syfte: Validerar att meddelandet är en icke-tom sträng och att utdata är giltig",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง และเอาต์พุตถูกต้อง",
     "zh-cn": ";; 用途：验证消息为非空字符串且输出有效",
-    "zh-tw": ";; 用途：驗證訊息為非空字串且輸出有效"
+    "zh-tw": ";; 用途：驗證訊息為非空字串且輸出有效",
+    "ar": "؛؛ الغرض: التحقق من أن الرسالة عبارة عن سلسلة غير فارغة وأن الإخراج صالح",
+    "id": ";; Tujuan: Memvalidasi bahwa pesan tersebut adalah string yang tidak kosong dan hasilnya valid",
+    "pt": ";; Objetivo: Valida que a mensagem é uma string não vazia e a saída é válida",
+    "uk": ";; Призначення: Перевіряє, що повідомлення є непорожнім рядком і результат є дійсним",
+    "vi": ";; Mục đích: Xác thực rằng tin nhắn là một chuỗi không trống và đầu ra hợp lệ"
   },
   ";; Purpose: Validates that the message is a non-empty string, returns #t if valid": {
     "de": ";; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist, gibt #t bei Gültigkeit zurück",
@@ -1405,7 +1840,12 @@
     "sv": ";; Syfte: Validerar att meddelandet är en icke-tom sträng, returnerar #t om giltigt",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง คืนค่า #t หากถูกต้อง",
     "zh-cn": ";; 用途：验证消息为非空字符串，有效时返回 #t",
-    "zh-tw": ";; 用途：驗證訊息為非空字串，有效時回傳 #t"
+    "zh-tw": ";; 用途：驗證訊息為非空字串，有效時回傳 #t",
+    "ar": "؛؛ الغرض: التحقق من أن الرسالة عبارة عن سلسلة غير فارغة، وإرجاع #t إذا كانت صالحة",
+    "id": ";; Tujuan: Memvalidasi bahwa pesan tersebut adalah string yang tidak kosong, mengembalikan #t jika valid",
+    "pt": ";; Objetivo: Valida que a mensagem é uma string não vazia, retorna #t se for válida",
+    "uk": ";; Призначення: Перевіряє, що повідомлення є непорожнім рядком, повертає #t, якщо воно дійсне",
+    "vi": ";; Mục đích: Xác thực rằng tin nhắn là một chuỗi không trống, trả về #t nếu hợp lệ"
   },
   ";; Purpose: Validates that the output is a valid destination, returns #t if valid": {
     "de": ";; Zweck: Prüft, dass die Ausgabe ein gültiges Ziel ist, gibt #t bei Gültigkeit zurück",
@@ -1421,7 +1861,12 @@
     "sv": ";; Syfte: Validerar att utdata är en giltig destination, returnerar #t om giltig",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่ถูกต้อง คืนค่า #t หากถูกต้อง",
     "zh-cn": ";; 用途：验证输出为有效目标，有效时返回 #t",
-    "zh-tw": ";; 用途：驗證輸出為有效目標，有效時回傳 #t"
+    "zh-tw": ";; 用途：驗證輸出為有效目標，有效時回傳 #t",
+    "ar": "؛؛ الغرض: التحقق من أن الإخراج هو وجهة صالحة، وإرجاع #t إذا كان صالحًا",
+    "id": ";; Tujuan: Memvalidasi bahwa output adalah tujuan yang valid, mengembalikan #t jika valid",
+    "pt": ";; Objetivo: Valida que a saída é um destino válido, retorna #t se for válido",
+    "uk": ";; Призначення: Перевіряє, що вихідні дані є дійсним призначенням, повертає #t, якщо дійсний",
+    "vi": ";; Mục đích: Xác thực rằng đầu ra là đích hợp lệ, trả về #t nếu hợp lệ"
   },
   ";; Purpose: A wrapper for (dir-make) that creates a given path from a platform": {
     "de": ";; Zweck: Ein Wrapper für (dir-make), der einen angegebenen Pfad plattformübergreifend erstellt",
@@ -1437,7 +1882,12 @@
     "sv": ";; Syfte: Ett wrapper för (dir-make) som skapar en given sökväg från en plattform",
     "th": ";; วัตถุประสงค์: ตัวห่อ (dir-make) ที่สร้างพาธที่กำหนดจากแพลตฟอร์ม",
     "zh-cn": ";; 用途：用于 (dir-make) 的包装器，从平台创建给定路径",
-    "zh-tw": ";; 用途：用於 (dir-make) 的包裝器，從平台建立給定路徑"
+    "zh-tw": ";; 用途：用於 (dir-make) 的包裝器，從平台建立給定路徑",
+    "ar": "؛؛ الغرض: غلاف لـ (dir-make) ينشئ مسارًا محددًا من النظام الأساسي",
+    "id": ";; Tujuan: Pembungkus untuk (dir-make) yang membuat jalur tertentu dari suatu platform",
+    "pt": ";; Objetivo: Um wrapper para (dir-make) que cria um determinado caminho a partir de uma plataforma",
+    "uk": ";; Призначення: оболонка для (dir-make), яка створює заданий шлях із платформи",
+    "vi": ";; Mục đích: Trình bao bọc cho (dir-make) tạo đường dẫn nhất định từ nền tảng"
   },
   ";; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)": {
     "de": ";; Zweck: Konvertiert verschiedene Scheme-Datentypen (Listen, Vektoren, Paare usw.)",
@@ -1453,7 +1903,12 @@
     "sv": ";; Syfte: Konverterar olika Scheme-datatyper (listor, vektorer, par, etc.)",
     "th": ";; วัตถุประสงค์: แปลงชนิดข้อมูล Scheme ต่างๆ (list, vector, pair ฯลฯ)",
     "zh-cn": ";; 用途：转换各种 Scheme 数据类型（列表、向量、对偶等）",
-    "zh-tw": ";; 用途：轉換各種 Scheme 資料型別（清單、向量、配對等）"
+    "zh-tw": ";; 用途：轉換各種 Scheme 資料型別（清單、向量、配對等）",
+    "ar": "؛؛ الغرض: تحويل أنواع بيانات المخطط المختلفة (القوائم، والمتجهات، والأزواج، وما إلى ذلك)",
+    "id": ";; Tujuan: Mengonversi berbagai tipe data Skema (daftar, vektor, pasangan, dll.)",
+    "pt": ";; Objetivo: Converte vários tipos de dados do esquema (listas, vetores, pares, etc.)",
+    "uk": ";; Призначення: перетворює різні типи даних схеми (списки, вектори, пари тощо)",
+    "vi": ";; Mục đích: Chuyển đổi các kiểu dữ liệu Lược đồ khác nhau (danh sách, vectơ, cặp, v.v.)"
   },
   ";;          supplied path. Always emits Linux style separators for dir-make.": {
     "de": ";;          bereitgestellten Pfad. Gibt für dir-make stets Linux-Trennzeichen aus.",
@@ -1469,7 +1924,12 @@
     "sv": ";;          angiven sökväg. Skickar alltid Linux-separatorer för dir-make.",
     "th": ";;          พาธที่ให้มา ส่งออกตัวคั่นแบบ Linux เสมอสำหรับ dir-make",
     "zh-cn": ";;          提供的路径。始终为 dir-make 输出 Linux 风格的分隔符。",
-    "zh-tw": ";;          提供的路徑。始終為 dir-make 輸出 Linux 風格的分隔符。"
+    "zh-tw": ";;          提供的路徑。始終為 dir-make 輸出 Linux 風格的分隔符。",
+    "ar": "؛؛          المسار الموردة. يُصدر دائمًا فواصل نمط Linux من أجل dir-make.",
+    "id": ";;          jalur yang disediakan. Selalu memancarkan pemisah gaya Linux untuk dir-make.",
+    "pt": ";;          caminho fornecido. Sempre emite separadores de estilo Linux para dir-make.",
+    "uk": ";;          наданий шлях. Завжди видає роздільники у стилі Linux для dir-make.",
+    "vi": ";;          đường dẫn được cung cấp. Luôn phát ra các dấu phân cách kiểu Linux cho dir-make."
   },
   ";; Purpose: Sends a message to the error console, returns #t if successful": {
     "de": ";; Zweck: Sendet eine Nachricht an die Error Console, gibt #t bei Erfolg zurück",
@@ -1485,7 +1945,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till Error Console, returnerar #t vid lyckat resultat",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยัง Error Console คืนค่า #t เมื่อสำเร็จ",
     "zh-cn": ";; 用途：向 Error Console 发送消息，成功时返回 #t",
-    "zh-tw": ";; 用途：向 Error Console 傳送訊息，成功時回傳 #t"
+    "zh-tw": ";; 用途：向 Error Console 傳送訊息，成功時回傳 #t",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى وحدة التحكم في الأخطاء، وإرجاع #t في حالة نجاحها",
+    "id": ";; Tujuan: Mengirim pesan ke konsol kesalahan, mengembalikan #t jika berhasil",
+    "pt": ";; Objetivo: Envia uma mensagem para o console de erros, retorna #t se for bem-sucedido",
+    "uk": ";; Призначення: надсилає повідомлення на консоль помилок, у разі успіху повертає #t",
+    "vi": ";; Mục đích: Gửi thông báo tới bảng điều khiển lỗi, trả về #t nếu thành công"
   },
   ";; Purpose: Returns the item's tree position or #f if the item is invalid": {
     "de": ";; Zweck: Gibt die Baumposition des Elements zurück oder #f, wenn das Element ungültig ist",
@@ -1501,7 +1966,12 @@
     "sv": ";; Syfte: Returnerar objektets trädposition eller #f om objektet är ogiltigt",
     "th": ";; วัตถุประสงค์: คืนตำแหน่งในโครงสร้างต้นไม้ของรายการ หรือ #f หากรายการไม่ถูกต้อง",
     "zh-cn": ";; 用途：返回项目的树位置，若项目无效则返回 #f",
-    "zh-tw": ";; 用途：回傳項目的樹狀位置，若項目無效則回傳 #f"
+    "zh-tw": ";; 用途：回傳項目的樹狀位置，若項目無效則回傳 #f",
+    "ar": "؛؛ الغرض: إرجاع موضع شجرة العنصر أو #f إذا كان العنصر غير صالح",
+    "id": ";; Tujuan: Mengembalikan posisi pohon item atau #f jika item tidak valid",
+    "pt": ";; Objetivo: Retorna a posição da árvore do item ou #f se o item for inválido",
+    "uk": ";; Призначення: повертає позицію елемента в дереві або #f, якщо елемент недійсний",
+    "vi": ";; Mục đích: Trả về vị trí cây của mục hoặc #f nếu mục đó không hợp lệ"
   },
   ";; Purpose: Apply the texturing process to the given list of group masks": {
     "de": ";; Zweck: Wendet den Texturierungsprozess auf die gegebene Liste von Gruppenmasken an",
@@ -1517,7 +1987,12 @@
     "sv": ";; Syfte: Tillämpar textureringsprocessen på den angivna listan med gruppmasker",
     "th": ";; วัตถุประสงค์: ใช้กระบวนการทำพื้นผิวกับรายการ group mask ที่กำหนด",
     "zh-cn": ";; 用途：对给定的组蒙版列表应用纹理处理",
-    "zh-tw": ";; 用途：對給定的群組遮罩清單套用紋理處理"
+    "zh-tw": ";; 用途：對給定的群組遮罩清單套用紋理處理",
+    "ar": "؛؛ الغرض: تطبيق عملية التركيب على القائمة المحددة لأقنعة المجموعة",
+    "id": ";; Tujuan: Menerapkan proses tekstur pada daftar masker grup yang diberikan",
+    "pt": ";; Objetivo: Aplicar o processo de texturização à lista fornecida de máscaras de grupo",
+    "uk": ";; Мета: застосувати процес текстурування до заданого списку групових масок",
+    "vi": ";; Mục đích: Áp dụng quy trình tạo họa tiết cho danh sách mặt nạ nhóm đã cho"
   },
   ";; Purpose: Sends a message to the dialog box, returns #t if successful": {
     "de": ";; Zweck: Sendet eine Nachricht an das Dialogfeld, gibt #t bei Erfolg zurück",
@@ -1533,7 +2008,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till dialogrutan, returnerar #t vid lyckat resultat",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังกล่องโต้ตอบ คืนค่า #t เมื่อสำเร็จ",
     "zh-cn": ";; 用途：向对话框发送消息，成功时返回 #t",
-    "zh-tw": ";; 用途：向對話方塊傳送訊息，成功時回傳 #t"
+    "zh-tw": ";; 用途：向對話方塊傳送訊息，成功時回傳 #t",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى مربع الحوار، وإرجاع #t إذا نجح الأمر",
+    "id": ";; Tujuan: Mengirim pesan ke kotak dialog, mengembalikan #t jika berhasil",
+    "pt": ";; Objetivo: Envia uma mensagem para a caixa de diálogo, retorna #t se for bem-sucedido",
+    "uk": ";; Призначення: надсилає повідомлення в діалогове вікно, повертає #t у разі успіху",
+    "vi": ";; Mục đích: Gửi tin nhắn tới hộp thoại, trả về #t nếu thành công"
   },
   ";; Purpose: Sends a message to the status bar, returns #t if successful": {
     "de": ";; Zweck: Sendet eine Nachricht an die Statusleiste, gibt #t bei Erfolg zurück",
@@ -1549,7 +2029,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till statusfältet, returnerar #t vid lyckat resultat",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังแถบสถานะ คืนค่า #t เมื่อสำเร็จ",
     "zh-cn": ";; 用途：向状态栏发送消息，成功时返回 #t",
-    "zh-tw": ";; 用途：向狀態列傳送訊息，成功時回傳 #t"
+    "zh-tw": ";; 用途：向狀態列傳送訊息，成功時回傳 #t",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى شريط الحالة، وإرجاع #t إذا نجح الأمر",
+    "id": ";; Tujuan: Mengirim pesan ke bilah status, mengembalikan #t jika berhasil",
+    "pt": ";; Objetivo: Envia uma mensagem para a barra de status, retorna #t se for bem-sucedido",
+    "uk": ";; Призначення: надсилає повідомлення в рядок стану, повертає #t у разі успіху",
+    "vi": ";; Mục đích: Gửi tin nhắn lên thanh trạng thái, trả về #t nếu thành công"
   },
   ";; Purpose: Dispatches a message to the appropriate output destination": {
     "de": ";; Zweck: Leitet eine Nachricht an das passende Ausgabeziel weiter",
@@ -1565,7 +2050,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till rätt utdatamål",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังปลายทางเอาต์พุตที่เหมาะสม",
     "zh-cn": ";; 用途：将消息分发到适当的输出目标",
-    "zh-tw": ";; 用途：將訊息分發到適當的輸出目標"
+    "zh-tw": ";; 用途：將訊息分發到適當的輸出目標",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى وجهة الإخراج المناسبة",
+    "id": ";; Tujuan: Mengirimkan pesan ke tujuan keluaran yang sesuai",
+    "pt": ";; Objetivo: Envia uma mensagem para o destino de saída apropriado",
+    "uk": ";; Призначення: відправляє повідомлення до відповідного пункту призначення",
+    "vi": ";; Mục đích: Gửi tin nhắn đến đích đầu ra thích hợp"
   },
   ";; Purpose: Sends a message to the terminal, returns #t if successful": {
     "de": ";; Zweck: Sendet eine Nachricht an das terminal, gibt #t bei Erfolg zurück",
@@ -1581,7 +2071,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till terminal, returnerar #t vid lyckat resultat",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยัง terminal คืนค่า #t เมื่อสำเร็จ",
     "zh-cn": ";; 用途：向 terminal 发送消息，成功时返回 #t",
-    "zh-tw": ";; 用途：向 terminal 傳送訊息，成功時回傳 #t"
+    "zh-tw": ";; 用途：向 terminal 傳送訊息，成功時回傳 #t",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى المحطة، وإرجاع #t إذا نجحت",
+    "id": ";; Tujuan: Mengirim pesan ke terminal, mengembalikan #t jika berhasil",
+    "pt": ";; Objetivo: Envia uma mensagem ao terminal, retorna #t se for bem-sucedido",
+    "uk": ";; Призначення: надсилає повідомлення на термінал, повертає #t у разі успіху",
+    "vi": ";; Mục đích: Gửi tin nhắn đến terminal, trả về #t nếu thành công"
   },
   ";; Set the message handler to output the message to the Error Console": {
     "de": ";; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird",
@@ -1597,7 +2092,12 @@
     "sv": ";; Ställ in meddelandehanteraren så att meddelandet skickas till Error Console",
     "th": ";; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง Error Console",
     "zh-cn": ";; 设置消息处理程序，将消息输出到 Error Console",
-    "zh-tw": ";; 設定訊息處理常式，將訊息輸出到 Error Console"
+    "zh-tw": ";; 設定訊息處理常式，將訊息輸出到 Error Console",
+    "ar": "؛؛ قم بتعيين معالج الرسالة لإخراج الرسالة إلى وحدة تحكم الأخطاء",
+    "id": ";; Atur penangan pesan untuk mengeluarkan pesan ke Konsol Kesalahan",
+    "pt": ";; Defina o manipulador de mensagens para enviar a mensagem para o console de erros",
+    "uk": ";; Налаштуйте обробник повідомлень для виведення повідомлення на консоль помилок",
+    "vi": ";; Đặt trình xử lý thông báo để xuất thông báo tới Bảng điều khiển lỗi"
   },
   ";; Send the message to the terminal, the OS window that launched Lumi": {
     "de": ";; Nachricht an das terminal senden, das OS-Fenster, das Lumi gestartet hat",
@@ -1613,7 +2113,12 @@
     "sv": ";; Skicka meddelandet till terminal, OS-fönstret som startade Lumi",
     "th": ";; ส่งข้อความไปยัง terminal หน้าต่าง OS ที่เปิด Lumi",
     "zh-cn": ";; 将消息发送到 terminal，即启动 Lumi 的操作系统窗口",
-    "zh-tw": ";; 將訊息傳送到 terminal，即啟動 Lumi 的作業系統視窗"
+    "zh-tw": ";; 將訊息傳送到 terminal，即啟動 Lumi 的作業系統視窗",
+    "ar": "؛؛ أرسل الرسالة إلى المحطة، نافذة نظام التشغيل التي أطلقت Lumi",
+    "id": ";; Kirim pesan ke terminal, jendela OS yang meluncurkan Lumi",
+    "pt": ";; Envie a mensagem para o terminal, a janela do SO que iniciou o Lumi",
+    "uk": ";; Надішліть повідомлення до терміналу, вікна ОС, яке запустило Lumi",
+    "vi": ";; Gửi tin nhắn đến terminal, cửa sổ OS khởi chạy Lumi"
   },
   ";; Set the message handler to output the message to a GUI dialog box": {
     "de": ";; Nachrichtenhandler so setzen, dass die Nachricht in ein GUI-Dialogfeld ausgegeben wird",
@@ -1629,7 +2134,12 @@
     "sv": ";; Ställ in meddelandehanteraren så att meddelandet skickas till en GUI-dialogruta",
     "th": ";; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยังกล่องโต้ตอบ GUI",
     "zh-cn": ";; 设置消息处理程序，将消息输出到 GUI 对话框",
-    "zh-tw": ";; 設定訊息處理常式，將訊息輸出到 GUI 對話方塊"
+    "zh-tw": ";; 設定訊息處理常式，將訊息輸出到 GUI 對話方塊",
+    "ar": "؛؛ قم بتعيين معالج الرسالة لإخراج الرسالة إلى مربع حوار واجهة المستخدم الرسومية",
+    "id": ";; Atur penangan pesan untuk mengeluarkan pesan ke kotak dialog GUI",
+    "pt": ";; Defina o manipulador de mensagens para enviar a mensagem para uma caixa de diálogo GUI",
+    "uk": ";; Налаштуйте обробник повідомлень для виведення повідомлення в діалогове вікно GUI",
+    "vi": ";; Đặt trình xử lý tin nhắn để xuất tin nhắn sang hộp thoại GUI"
   },
   ";; Check if the output is one of the expected display destinations": {
     "de": ";; Prüfen, ob die Ausgabe eines der erwarteten Anzeigeziele ist",
@@ -1645,7 +2155,12 @@
     "sv": ";; Kontrollera om utdata är en av de förväntade visningsdestinationerna",
     "th": ";; ตรวจสอบว่าเอาต์พุตเป็นปลายทางการแสดงผลที่คาดไว้หรือไม่",
     "zh-cn": ";; 检查输出是否为预期的显示目标之一",
-    "zh-tw": ";; 檢查輸出是否為預期的顯示目標之一"
+    "zh-tw": ";; 檢查輸出是否為預期的顯示目標之一",
+    "ar": "؛؛ تحقق مما إذا كان الإخراج أحد وجهات العرض المتوقعة",
+    "id": ";; Periksa apakah keluarannya merupakan salah satu tujuan tampilan yang diharapkan",
+    "pt": ";; Verifique se a saída é um dos destinos de exibição esperados",
+    "uk": ";; Перевірте, чи вивід є одним із очікуваних призначень відображення",
+    "vi": ";; Kiểm tra xem đầu ra có phải là một trong những đích hiển thị dự kiến ​​không"
   },
   ";; Use a let statement to define a message variable and core code": {
     "de": ";; let-Anweisung verwenden, um eine Nachrichtenvariable und den Kern-Code zu definieren",
@@ -1661,7 +2176,12 @@
     "sv": ";; Använd ett let-uttryck för att definiera en meddelandevariabel och kärnkod",
     "th": ";; ใช้คำสั่ง let เพื่อกำหนดตัวแปรข้อความและโค้ดหลัก",
     "zh-cn": ";; 使用 let 语句定义消息变量和核心代码",
-    "zh-tw": ";; 使用 let 陳述式定義訊息變數和核心程式碼"
+    "zh-tw": ";; 使用 let 陳述式定義訊息變數和核心程式碼",
+    "ar": "؛؛ استخدم عبارة Let لتحديد متغير الرسالة والرمز الأساسي",
+    "id": ";; Gunakan pernyataan let untuk mendefinisikan variabel pesan dan kode inti",
+    "pt": ";; Use uma instrução let para definir uma variável de mensagem e um código principal",
+    "uk": ";; Використовуйте оператор let, щоб визначити змінну повідомлення та основний код",
+    "vi": ";; Sử dụng câu lệnh let để xác định biến thông báo và mã lõi"
   },
   ";; Purpose: Validates that the message is sent to a valid output": {
     "de": ";; Zweck: Prüft, dass die Nachricht an eine gültige Ausgabe gesendet wird",
@@ -1677,7 +2197,12 @@
     "sv": ";; Syfte: Validerar att meddelandet skickas till en giltig utdata",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่าข้อความถูกส่งไปยังเอาต์พุตที่ถูกต้อง",
     "zh-cn": ";; 用途：验证消息是否发送到有效输出",
-    "zh-tw": ";; 用途：驗證訊息是否傳送到有效輸出"
+    "zh-tw": ";; 用途：驗證訊息是否傳送到有效輸出",
+    "ar": "؛؛ الغرض: التحقق من إرسال الرسالة إلى مخرجات صالحة",
+    "id": ";; Tujuan: Memvalidasi bahwa pesan dikirim ke output yang valid",
+    "pt": ";; Objetivo: Valida que a mensagem é enviada para uma saída válida",
+    "uk": ";; Призначення: Перевіряє, що повідомлення надіслано на дійсний вихід",
+    "vi": ";; Mục đích: Xác thực rằng tin nhắn được gửi đến đầu ra hợp lệ"
   },
   "; Recursive call: sum current n with result of smaller problem": {
     "de": "; Rekursiver Aufruf: aktuelles n mit Ergebnis des kleineren Problems addieren",
@@ -1693,7 +2218,12 @@
     "sv": "; Rekursivt anrop: summera aktuellt n med resultatet av det mindre delproblemet",
     "th": "; เรียกซ้ำ: รวม n ปัจจุบันกับผลลัพธ์ของปัญหาย่อยที่เล็กกว่า",
     "zh-cn": "; 递归调用：将当前 n 与较小子问题的结果相加",
-    "zh-tw": "; 遞迴呼叫：將目前 n 與較小子問題的結果相加"
+    "zh-tw": "; 遞迴呼叫：將目前 n 與較小子問題的結果相加",
+    "ar": "; استدعاء متكرر: مجموع n الحالي مع نتيجة مشكلة أصغر",
+    "id": "; Panggilan rekursif: jumlahkan arus n dengan hasil masalah yang lebih kecil",
+    "pt": "; Chamada recursiva: soma atual n com resultado de problema menor",
+    "uk": "; Рекурсивний виклик: сума поточного n з результатом меншої задачі",
+    "vi": "; Gọi đệ quy: tính tổng n hiện tại với kết quả của bài toán nhỏ hơn"
   },
   ";; Restore the default message handler to the Message console": {
     "de": ";; Standard-Nachrichtenhandler auf die Message console zurücksetzen",
@@ -1709,7 +2239,12 @@
     "sv": ";; Återställ standardmeddelandehanteraren till Message console",
     "th": ";; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console",
     "zh-cn": ";; 将默认消息处理程序恢复为 Message console",
-    "zh-tw": ";; 將預設訊息處理常式還原為 Message console"
+    "zh-tw": ";; 將預設訊息處理常式還原為 Message console",
+    "ar": "؛؛ استعادة معالج الرسالة الافتراضي إلى وحدة تحكم الرسائل",
+    "id": ";; Pulihkan pengendali pesan default ke konsol Pesan",
+    "pt": ";; Restaure o manipulador de mensagens padrão para o console de mensagens",
+    "uk": ";; Відновіть обробник повідомлень за замовчуванням на консолі повідомлень",
+    "vi": ";; Khôi phục trình xử lý tin nhắn mặc định vào Bảng điều khiển tin nhắn"
   },
   ";; Purpose: Saves an image as a JPEG with a specified quality": {
     "de": ";; Zweck: Speichert ein Bild als JPEG mit angegebener Qualität",
@@ -1725,7 +2260,12 @@
     "sv": ";; Syfte: Sparar en bild som JPEG med angiven kvalitet",
     "th": ";; วัตถุประสงค์: บันทึกภาพเป็น JPEG ด้วยคุณภาพที่กำหนด",
     "zh-cn": ";; 用途：以指定质量将图像保存为 JPEG",
-    "zh-tw": ";; 用途：以指定品質將影像儲存為 JPEG"
+    "zh-tw": ";; 用途：以指定品質將影像儲存為 JPEG",
+    "ar": "؛؛ الغرض: حفظ الصورة بتنسيق JPEG بجودة محددة",
+    "id": ";; Tujuan: Menyimpan gambar sebagai JPEG dengan kualitas tertentu",
+    "pt": ";; Objetivo: Salva uma imagem como JPEG com uma qualidade especificada",
+    "uk": ";; Призначення: Зберігає зображення у форматі JPEG із заданою якістю",
+    "vi": ";; Mục đích: Lưu hình ảnh dưới dạng JPEG với chất lượng được chỉ định"
   },
   ";; Function to handle message output to various destinations": {
     "de": ";; Funktion zur Ausgabe von Nachrichten an verschiedene Ziele",
@@ -1741,7 +2281,12 @@
     "sv": ";; Funktion för att hantera meddelandeutdata till olika destinationer",
     "th": ";; ฟังก์ชันจัดการการส่งข้อความไปยังปลายทางต่างๆ",
     "zh-cn": ";; 处理向各种目标输出消息的函数",
-    "zh-tw": ";; 處理向各種目標輸出訊息的函式"
+    "zh-tw": ";; 處理向各種目標輸出訊息的函式",
+    "ar": "؛؛ وظيفة للتعامل مع إخراج الرسالة إلى وجهات مختلفة",
+    "id": ";; Berfungsi untuk menangani keluaran pesan ke berbagai tujuan",
+    "pt": ";; Função para lidar com a saída de mensagens para vários destinos",
+    "uk": ";; Функція обробки виведення повідомлень до різних адресатів",
+    "vi": ";; Chức năng xử lý đầu ra tin nhắn đến các đích khác nhau"
   },
   ";; Purpose: Concatenate multiple items into a single string.": {
     "de": ";; Zweck: Mehrere Elemente zu einer einzigen Zeichenkette verketten.",
@@ -1757,7 +2302,12 @@
     "sv": ";; Syfte: Konkatenerar flera objekt till en enda sträng.",
     "th": ";; วัตถุประสงค์: ต่อรายการหลายรายการเป็นสตริงเดียว",
     "zh-cn": ";; 用途：将多个项目连接成单个字符串。",
-    "zh-tw": ";; 用途：將多個項目連接成單一字串。"
+    "zh-tw": ";; 用途：將多個項目連接成單一字串。",
+    "ar": "؛؛ الغرض: تسلسل عناصر متعددة في سلسلة واحدة.",
+    "id": ";; Tujuan: Menggabungkan beberapa item menjadi satu string.",
+    "pt": ";; Objetivo: Concatenar vários itens em uma única string.",
+    "uk": ";; Призначення: об’єднати кілька елементів в один рядок.",
+    "vi": ";; Mục đích: Nối nhiều mục thành một chuỗi."
   },
   ";; Purpose: Validates that the message is a non-empty string": {
     "de": ";; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist",
@@ -1773,7 +2323,12 @@
     "sv": ";; Syfte: Validerar att meddelandet är en icke-tom sträng",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง",
     "zh-cn": ";; 用途：验证消息为非空字符串",
-    "zh-tw": ";; 用途：驗證訊息為非空字串"
+    "zh-tw": ";; 用途：驗證訊息為非空字串",
+    "ar": "؛؛ الغرض: التحقق من أن الرسالة عبارة عن سلسلة غير فارغة",
+    "id": ";; Tujuan: Memvalidasi bahwa pesan tersebut adalah string yang tidak kosong",
+    "pt": ";; Objetivo: valida que a mensagem é uma string não vazia",
+    "uk": ";; Призначення: Перевіряє, що повідомлення є непорожнім рядком",
+    "vi": ";; Mục đích: Xác thực rằng tin nhắn là một chuỗi không trống"
   },
   ";; Purpose: Convert a list of items into a readable string.": {
     "de": ";; Zweck: Eine Liste von Elementen in eine lesbare Zeichenkette umwandeln.",
@@ -1789,7 +2344,12 @@
     "sv": ";; Syfte: Konverterar en lista med objekt till en läsbar sträng.",
     "th": ";; วัตถุประสงค์: แปลงรายการรายการเป็นสตริงที่อ่านง่าย",
     "zh-cn": ";; 用途：将项目列表转换为可读字符串。",
-    "zh-tw": ";; 用途：將項目清單轉換為可讀字串。"
+    "zh-tw": ";; 用途：將項目清單轉換為可讀字串。",
+    "ar": "؛؛ الغرض: تحويل قائمة العناصر إلى سلسلة قابلة للقراءة.",
+    "id": ";; Tujuan: Mengubah daftar item menjadi string yang dapat dibaca.",
+    "pt": ";; Objetivo: Converter uma lista de itens em uma string legível.",
+    "uk": ";; Мета: перетворити список елементів у читабельний рядок.",
+    "vi": ";; Mục đích: Chuyển đổi danh sách các mục thành chuỗi có thể đọc được."
   },
   ";; Restore the default message handler to the Error Console": {
     "de": ";; Standard-Nachrichtenhandler auf die Error Console zurücksetzen",
@@ -1805,7 +2365,12 @@
     "sv": ";; Återställ standardmeddelandehanteraren till Error Console",
     "th": ";; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Error Console",
     "zh-cn": ";; 将默认消息处理程序恢复为 Error Console",
-    "zh-tw": ";; 將預設訊息處理常式還原為 Error Console"
+    "zh-tw": ";; 將預設訊息處理常式還原為 Error Console",
+    "ar": "؛؛ قم باستعادة معالج الرسالة الافتراضي إلى وحدة تحكم الأخطاء",
+    "id": ";; Pulihkan pengendali pesan default ke Konsol Kesalahan",
+    "pt": ";; Restaure o manipulador de mensagens padrão para o console de erros",
+    "uk": ";; Відновіть обробник повідомлень за замовчуванням на консолі помилок",
+    "vi": ";; Khôi phục trình xử lý thông báo mặc định vào Bảng điều khiển Lỗi"
   },
   ";; Purpose: Check if an item is valid, returning #t or #f.": {
     "de": ";; Zweck: Prüfen, ob ein Element gültig ist, gibt #t oder #f zurück.",
@@ -1821,7 +2386,12 @@
     "sv": ";; Syfte: Kontrollerar om ett objekt är giltigt, returnerar #t eller #f.",
     "th": ";; วัตถุประสงค์: ตรวจสอบว่ารายการถูกต้องหรือไม่ คืนค่า #t หรือ #f",
     "zh-cn": ";; 用途：检查项目是否有效，返回 #t 或 #f。",
-    "zh-tw": ";; 用途：檢查項目是否有效，回傳 #t 或 #f。"
+    "zh-tw": ";; 用途：檢查項目是否有效，回傳 #t 或 #f。",
+    "ar": "؛؛ الغرض: التحقق مما إذا كان العنصر صالحًا، وإرجاع #t أو #f.",
+    "id": ";; Tujuan: Periksa apakah suatu item valid, mengembalikan #t atau #f.",
+    "pt": ";; Objetivo: Verificar se um item é válido, retornando #t ou #f.",
+    "uk": ";; Мета: перевірити, чи дійсний елемент, повертаючи #t або #f.",
+    "vi": ";; Mục đích: Kiểm tra xem một mục có hợp lệ hay không, trả về #t hoặc #f."
   },
   ";; Check if the output is one of the expected destinations": {
     "de": ";; Prüfen, ob die Ausgabe eines der erwarteten Ziele ist",
@@ -1837,7 +2407,12 @@
     "sv": ";; Kontrollera om utdata är en av de förväntade destinationerna",
     "th": ";; ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่คาดไว้หรือไม่",
     "zh-cn": ";; 检查输出是否为预期目标之一",
-    "zh-tw": ";; 檢查輸出是否為預期目標之一"
+    "zh-tw": ";; 檢查輸出是否為預期目標之一",
+    "ar": "؛؛ تحقق مما إذا كان الإخراج أحد الوجهات المتوقعة",
+    "id": ";; Periksa apakah keluarannya merupakan salah satu tujuan yang diharapkan",
+    "pt": ";; Verifique se a saída é um dos destinos esperados",
+    "uk": ";; Перевірте, чи є результат одним із очікуваних місць призначення",
+    "vi": ";; Kiểm tra xem đầu ra có phải là một trong những đích đến dự kiến ​​không"
   },
   ";;          Issues a warning if the item is not a number.": {
     "de": ";;          Gibt eine Warnung aus, wenn das Element keine Zahl ist.",
@@ -1853,7 +2428,12 @@
     "sv": ";;          Ger en varning om objektet inte är ett tal.",
     "th": ";;          แจ้งเตือนหากรายการไม่ใช่ตัวเลข",
     "zh-cn": ";;          若项目不是数字则发出警告。",
-    "zh-tw": ";;          若項目不是數字則發出警告。"
+    "zh-tw": ";;          若項目不是數字則發出警告。",
+    "ar": "؛؛          يصدر تحذيرًا إذا كان العنصر ليس رقمًا.",
+    "id": ";;          Mengeluarkan peringatan jika item tersebut bukan angka.",
+    "pt": ";;          Emite um aviso se o item não for um número.",
+    "uk": ";;          Видає попередження, якщо елемент не є числом.",
+    "vi": ";;          Đưa ra cảnh báo nếu mục không phải là số."
   },
   ";; Default case: If none of the above conditions are met": {
     "de": ";; Standardfall: Wenn keine der obigen Bedingungen erfüllt ist",
@@ -1869,7 +2449,12 @@
     "sv": ";; Standardfall: om inget av ovanstående villkor uppfylls",
     "th": ";; กรณีเริ่มต้น: หากไม่ตรงเงื่อนไขใดข้างต้น",
     "zh-cn": ";; 默认情况：若以上条件均不满足",
-    "zh-tw": ";; 預設情況：若以上條件皆不滿足"
+    "zh-tw": ";; 預設情況：若以上條件皆不滿足",
+    "ar": "؛؛ الحالة الافتراضية: إذا لم يتم استيفاء أي من الشروط المذكورة أعلاه",
+    "id": ";; Kasus default: Jika tidak ada kondisi di atas yang terpenuhi",
+    "pt": ";; Caso padrão: se nenhuma das condições acima for atendida",
+    "uk": ";; Випадок за замовчуванням: якщо не виконується жодна з наведених вище умов",
+    "vi": ";; Trường hợp mặc định: Nếu không đáp ứng được điều kiện nào ở trên"
   },
   ";; Purpose: Returns the first item of a list or vector.": {
     "de": ";; Zweck: Gibt das erste Element einer Liste oder eines Vektors zurück.",
@@ -1885,7 +2470,12 @@
     "sv": ";; Syfte: Returnerar det första objektet i en lista eller vektor.",
     "th": ";; วัตถุประสงค์: คืนรายการแรกของ list หรือ vector",
     "zh-cn": ";; 用途：返回列表或向量的第一项。",
-    "zh-tw": ";; 用途：回傳清單或向量的第一項。"
+    "zh-tw": ";; 用途：回傳清單或向量的第一項。",
+    "ar": "؛؛ الغرض: إرجاع العنصر الأول من القائمة أو المتجه.",
+    "id": ";; Tujuan: Mengembalikan item pertama dari daftar atau vektor.",
+    "pt": ";; Objetivo: Retorna o primeiro item de uma lista ou vetor.",
+    "uk": ";; Призначення: повертає перший елемент списку або вектора.",
+    "vi": ";; Mục đích: Trả về mục đầu tiên của danh sách hoặc vectơ."
   },
   ";; Purpose: Turn off debug mode for a section of code.": {
     "de": ";; Zweck: Debug-Modus für einen Codeabschnitt deaktivieren.",
@@ -1901,7 +2491,12 @@
     "sv": ";; Syfte: Stänger av felsökningsläge för ett kodavsnitt.",
     "th": ";; วัตถุประสงค์: ปิดโหมดดีบักสำหรับส่วนหนึ่งของโค้ด",
     "zh-cn": ";; 用途：关闭某段代码的调试模式。",
-    "zh-tw": ";; 用途：關閉某段程式碼的偵錯模式。"
+    "zh-tw": ";; 用途：關閉某段程式碼的偵錯模式。",
+    "ar": "؛؛ الغرض: إيقاف تشغيل وضع التصحيح لقسم من التعليمات البرمجية.",
+    "id": ";; Tujuan: Mematikan mode debug untuk suatu bagian kode.",
+    "pt": ";; Objetivo: desativar o modo de depuração para uma seção de código.",
+    "uk": ";; Призначення: вимкнути режим налагодження для частини коду.",
+    "vi": ";; Mục đích: Tắt chế độ gỡ lỗi cho một đoạn mã."
   },
   "; Retrieves the first element of the second sublist: 3": {
     "de": "; Ruft das erste Element der zweiten Unterliste ab: 3",
@@ -1917,7 +2512,12 @@
     "sv": "; Hämtar det första elementet i den andra underlistan: 3",
     "th": "; ดึงองค์ประกอบแรกของ sublist ที่สอง: 3",
     "zh-cn": "; 获取第二个子列表的第一个元素: 3",
-    "zh-tw": "; 取得第二個子清單的第一個元素: 3"
+    "zh-tw": "; 取得第二個子清單的第一個元素: 3",
+    "ar": "; استرداد العنصر الأول من القائمة الفرعية الثانية: 3",
+    "id": "; Mengambil elemen pertama dari subdaftar kedua: 3",
+    "pt": "; Recupera o primeiro elemento da segunda sublista: 3",
+    "uk": "; Отримує перший елемент другого підсписку: 3",
+    "vi": "; Lấy phần tử đầu tiên của danh sách con thứ hai: 3"
   },
   "; Retrieves the second element of the first sublist: 2": {
     "de": "; Ruft das zweite Element der ersten Unterliste ab: 2",
@@ -1933,7 +2533,12 @@
     "sv": "; Hämtar det andra elementet i den första underlistan: 2",
     "th": "; ดึงองค์ประกอบที่สองของ sublist แรก: 2",
     "zh-cn": "; 获取第一个子列表的第二个元素: 2",
-    "zh-tw": "; 取得第一個子清單的第二個元素: 2"
+    "zh-tw": "; 取得第一個子清單的第二個元素: 2",
+    "ar": "; استرداد العنصر الثاني من القائمة الفرعية الأولى: 2",
+    "id": "; Mengambil elemen kedua dari sublist pertama: 2",
+    "pt": "; Recupera o segundo elemento da primeira sublista: 2",
+    "uk": "; Отримує другий елемент першого підсписку: 2",
+    "vi": "; Truy xuất phần tử thứ hai của danh sách con thứ nhất: 2"
   },
   "; Retrieves the second element of the first vector: 2": {
     "de": "; Ruft das zweite Element des ersten Vektors ab: 2",
@@ -1949,7 +2554,12 @@
     "sv": "; Hämtar det andra elementet i den första vektorn: 2",
     "th": "; ดึงองค์ประกอบที่สองของ vector แรก: 2",
     "zh-cn": "; 获取第一个向量的第二个元素: 2",
-    "zh-tw": "; 取得第一個向量的第二個元素: 2"
+    "zh-tw": "; 取得第一個向量的第二個元素: 2",
+    "ar": "; استرداد العنصر الثاني من المتجه الأول: 2",
+    "id": "; Mengambil elemen kedua dari vektor pertama: 2",
+    "pt": "; Recupera o segundo elemento do primeiro vetor: 2",
+    "uk": "; Отримує другий елемент першого вектора: 2",
+    "vi": "; Lấy phần tử thứ hai của vectơ đầu tiên: 2"
   },
   ";; Purpose: Returns a random int for seeding a filter": {
     "de": ";; Zweck: Gibt eine Zufallszahl für die Initialisierung eines Filters zurück",
@@ -1965,7 +2575,12 @@
     "sv": ";; Syfte: Returnerar ett slumpmässigt heltal för att seeda ett filter",
     "th": ";; วัตถุประสงค์: คืนค่าจำนวนเต็มสุ่มสำหรับ seed ฟิลเตอร์",
     "zh-cn": ";; 用途：返回用于过滤器种子的随机整数",
-    "zh-tw": ";; 用途：回傳用於篩選器種子的隨機整數"
+    "zh-tw": ";; 用途：回傳用於篩選器種子的隨機整數",
+    "ar": "؛؛ الغرض: إرجاع قيمة عشوائية لبذر عامل التصفية",
+    "id": ";; Tujuan: Mengembalikan int acak untuk menyemai filter",
+    "pt": ";; Objetivo: Retorna um int aleatório para semear um filtro",
+    "uk": ";; Призначення: повертає випадковий int для заповнення фільтра",
+    "vi": ";; Mục đích: Trả về một int ngẫu nhiên để tạo bộ lọc"
   },
   "; Retrieves the first element of the first sublist: 1": {
     "de": "; Ruft das erste Element der ersten Unterliste ab: 1",
@@ -1981,7 +2596,12 @@
     "sv": "; Hämtar det första elementet i den första underlistan: 1",
     "th": "; ดึงองค์ประกอบแรกของ sublist แรก: 1",
     "zh-cn": "; 获取第一个子列表的第一个元素: 1",
-    "zh-tw": "; 取得第一個子清單的第一個元素: 1"
+    "zh-tw": "; 取得第一個子清單的第一個元素: 1",
+    "ar": "; استرداد العنصر الأول من القائمة الفرعية الأولى: 1",
+    "id": "; Mengambil elemen pertama dari sublist pertama: 1",
+    "pt": "; Recupera o primeiro elemento da primeira sublista: 1",
+    "uk": "; Отримує перший елемент першого підсписку: 1",
+    "vi": "; Lấy phần tử đầu tiên của danh sách con đầu tiên: 1"
   },
   ";; Purpose: Turn on debug mode for a section of code.": {
     "de": ";; Zweck: Debug-Modus für einen Codeabschnitt aktivieren.",
@@ -1997,7 +2617,12 @@
     "sv": ";; Syfte: Slår på felsökningsläge för ett kodavsnitt.",
     "th": ";; วัตถุประสงค์: เปิดโหมดดีบักสำหรับส่วนหนึ่งของโค้ด",
     "zh-cn": ";; 用途：开启某段代码的调试模式。",
-    "zh-tw": ";; 用途：開啟某段程式碼的偵錯模式。"
+    "zh-tw": ";; 用途：開啟某段程式碼的偵錯模式。",
+    "ar": "؛؛ الغرض: تشغيل وضع التصحيح لقسم من التعليمات البرمجية.",
+    "id": ";; Tujuan: Mengaktifkan mode debug untuk suatu bagian kode.",
+    "pt": ";; Objetivo: ativar o modo de depuração para uma seção de código.",
+    "uk": ";; Призначення: увімкнути режим налагодження для частини коду.",
+    "vi": ";; Mục đích: Bật chế độ gỡ lỗi cho một đoạn mã."
   },
   "; Returns (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")": {
     "de": "; Gibt zurück (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")",
@@ -2013,7 +2638,12 @@
     "sv": "; Returnerar (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")",
     "th": "; คืนค่า (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")",
     "zh-cn": "; 返回 (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")",
-    "zh-tw": "; 回傳 (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")"
+    "zh-tw": "; 回傳 (\"Hello Alice\" \"Hello Bob\" \"Hello Charlie\")",
+    "ar": "; الإرجاعات (\"مرحبًا أليس\" و\"مرحبًا بوب\" و\"مرحبًا تشارلي\")",
+    "id": "; Kembali (\"Halo Alice\" \"Halo Bob\" \"Halo Charlie\")",
+    "pt": "; Retorna (\"Olá Alice\" \"Olá Bob\" \"Olá Charlie\")",
+    "uk": "; Повернення («Привіт, Аліса», «Привіт, Боб», «Привіт, Чарлі»)",
+    "vi": "; Trả về (\"Xin chào Alice\" \"Xin chào Bob\" \"Xin chào Charlie\")"
   },
   ";; Purpose: Return the x-coordinate, for readability": {
     "de": ";; Zweck: x-Koordinate zurückgeben, zur besseren Lesbarkeit",
@@ -2029,7 +2659,12 @@
     "sv": ";; Syfte: Returnerar x-koordinaten, för läsbarhet",
     "th": ";; วัตถุประสงค์: คืนค่าพิกัด x เพื่อความอ่านง่าย",
     "zh-cn": ";; 用途：返回 x 坐标，便于阅读",
-    "zh-tw": ";; 用途：回傳 x 座標，便於閱讀"
+    "zh-tw": ";; 用途：回傳 x 座標，便於閱讀",
+    "ar": "؛؛ الغرض: إرجاع إحداثي x لسهولة القراءة",
+    "id": ";; Tujuan: Mengembalikan koordinat x, agar mudah dibaca",
+    "pt": ";; Objetivo: Retornar a coordenada x, para facilitar a leitura",
+    "uk": ";; Призначення: повернути координату x для зручності читання",
+    "vi": ";; Mục đích: Trả về tọa độ x để dễ đọc"
   },
   ";; Inverts the colors of the first selected drawable": {
     "de": ";; Invertiert die Farben des ersten ausgewählten Drawables",
@@ -2045,7 +2680,12 @@
     "sv": ";; Inverterar färgerna på det första valda drawable",
     "th": ";; กลับสีของ drawable ที่เลือกแรก",
     "zh-cn": ";; 反转第一个所选 drawable 的颜色",
-    "zh-tw": ";; 反轉第一個所選 drawable 的顏色"
+    "zh-tw": ";; 反轉第一個所選 drawable 的顏色",
+    "ar": "؛؛ يعكس ألوان أول رسم محدد",
+    "id": ";; Membalikkan warna sumber daya dapat digambar yang pertama dipilih",
+    "pt": ";; Inverte as cores do primeiro drawable selecionado",
+    "uk": ";; Інвертує кольори першого вибраного малюнка",
+    "vi": ";; Đảo ngược màu của đối tượng có thể vẽ được chọn đầu tiên"
   },
   ";; Purpose: Return the y-coordinate, for readability": {
     "de": ";; Zweck: y-Koordinate zurückgeben, zur besseren Lesbarkeit",
@@ -2061,7 +2701,12 @@
     "sv": ";; Syfte: Returnerar y-koordinaten, för läsbarhet",
     "th": ";; วัตถุประสงค์: คืนค่าพิกัด y เพื่อความอ่านง่าย",
     "zh-cn": ";; 用途：返回 y 坐标，便于阅读",
-    "zh-tw": ";; 用途：回傳 y 座標，便於閱讀"
+    "zh-tw": ";; 用途：回傳 y 座標，便於閱讀",
+    "ar": "؛؛ الغرض: إرجاع إحداثي y لسهولة القراءة",
+    "id": ";; Tujuan: Mengembalikan koordinat y, agar mudah dibaca",
+    "pt": ";; Objetivo: Retornar a coordenada y, para facilitar a leitura",
+    "uk": ";; Мета: повернути y-координату для читабельності",
+    "vi": ";; Mục đích: Trả về tọa độ y, để dễ đọc"
   },
   ";; Invert the colors of the first selected drawable": {
     "de": ";; Farben des ersten ausgewählten Drawables invertieren",
@@ -2077,7 +2722,12 @@
     "sv": ";; Invertera färgerna på det första valda drawable",
     "th": ";; กลับสีของ drawable ที่เลือกแรก",
     "zh-cn": ";; 反转第一个所选 drawable 的颜色",
-    "zh-tw": ";; 反轉第一個所選 drawable 的顏色"
+    "zh-tw": ";; 反轉第一個所選 drawable 的顏色",
+    "ar": "؛؛ اعكس ألوان الرسم الأول المحدد",
+    "id": ";; Membalikkan warna drawable yang pertama dipilih",
+    "pt": ";; Inverta as cores do primeiro drawable selecionado",
+    "uk": ";; Інвертуйте кольори першого вибраного малюнка",
+    "vi": ";; Đảo ngược màu của đối tượng có thể vẽ được chọn đầu tiên"
   },
   ";;          Warns if the input is invalid or empty.": {
     "de": ";;          Warnt, wenn die Eingabe ungültig oder leer ist.",
@@ -2093,7 +2743,12 @@
     "sv": ";;          Varnar om indata är ogiltig eller tom.",
     "th": ";;          แจ้งเตือนหากอินพุตไม่ถูกต้องหรือว่าง",
     "zh-cn": ";;          若输入无效或为空则发出警告。",
-    "zh-tw": ";;          若輸入無效或為空則發出警告。"
+    "zh-tw": ";;          若輸入無效或為空則發出警告。",
+    "ar": "؛؛          يحذر إذا كان الإدخال غير صالح أو فارغ.",
+    "id": ";;          Memperingatkan jika input tidak valid atau kosong.",
+    "pt": ";;          Avisa se a entrada é inválida ou vazia.",
+    "uk": ";;          Попереджає, якщо введення недійсне або порожнє.",
+    "vi": ";;          Cảnh báo nếu đầu vào không hợp lệ hoặc trống."
   },
   ";; Purpose: Sends a message to the terminal window": {
     "de": ";; Zweck: Sendet eine Nachricht an das Terminalfenster",
@@ -2109,7 +2764,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till terminalfönstret",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังหน้าต่าง terminal",
     "zh-cn": ";; 用途：向 terminal 窗口发送消息",
-    "zh-tw": ";; 用途：向 terminal 視窗傳送訊息"
+    "zh-tw": ";; 用途：向 terminal 視窗傳送訊息",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى النافذة الطرفية",
+    "id": ";; Tujuan: Mengirim pesan ke jendela terminal",
+    "pt": ";; Objetivo: Envia uma mensagem para a janela do terminal",
+    "uk": ";; Призначення: надсилає повідомлення у вікно терміналу",
+    "vi": ";; Mục đích: Gửi tin nhắn đến cửa sổ terminal"
   },
   ";; Purpose: Sends a message to the Message console": {
     "de": ";; Zweck: Sendet eine Nachricht an die Message console",
@@ -2125,7 +2785,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till Message console",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยัง Message console",
     "zh-cn": ";; 用途：向 Message console 发送消息",
-    "zh-tw": ";; 用途：向 Message console 傳送訊息"
+    "zh-tw": ";; 用途：向 Message console 傳送訊息",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى وحدة تحكم الرسائل",
+    "id": ";; Tujuan: Mengirim pesan ke konsol Pesan",
+    "pt": ";; Objetivo: Envia uma mensagem para o console de mensagens",
+    "uk": ";; Призначення: надсилає повідомлення на консоль повідомлень",
+    "vi": ";; Mục đích: Gửi tin nhắn tới Message console"
   },
   ";; Create the rest of the directories step-by-step": {
     "de": ";; Die restlichen Verzeichnisse schrittweise erstellen",
@@ -2141,7 +2806,12 @@
     "sv": ";; Skapa resten av katalogerna steg för steg",
     "th": ";; สร้างไดเรกทอรีที่เหลือทีละขั้นตอน",
     "zh-cn": ";; 逐步创建其余目录",
-    "zh-tw": ";; 逐步建立其餘目錄"
+    "zh-tw": ";; 逐步建立其餘目錄",
+    "ar": "؛؛ قم بإنشاء بقية الدلائل خطوة بخطوة",
+    "id": ";; Buat direktori lainnya selangkah demi selangkah",
+    "pt": ";; Crie o restante dos diretórios passo a passo",
+    "uk": ";; Створіть решту каталогів крок за кроком",
+    "vi": ";; Tạo các thư mục còn lại theo từng bước"
   },
   ";; Call the validation function before proceeding": {
     "de": ";; Validierungsfunktion aufrufen, bevor fortgefahren wird",
@@ -2157,7 +2827,12 @@
     "sv": ";; Anropa valideringsfunktionen innan du fortsätter",
     "th": ";; เรียกฟังก์ชันตรวจสอบก่อนดำเนินการต่อ",
     "zh-cn": ";; 继续前先调用验证函数",
-    "zh-tw": ";; 繼續前先呼叫驗證函式"
+    "zh-tw": ";; 繼續前先呼叫驗證函式",
+    "ar": "؛؛ استدعاء وظيفة التحقق من الصحة قبل المتابعة",
+    "id": ";; Panggil fungsi validasi sebelum melanjutkan",
+    "pt": ";; Chame a função de validação antes de continuar",
+    "uk": ";; Викличте функцію перевірки, перш ніж продовжити",
+    "vi": ";; Gọi hàm xác thực trước khi tiếp tục"
   },
   ";; Purpose: Sends a message to the GUI dialog box": {
     "de": ";; Zweck: Sendet eine Nachricht an das GUI-Dialogfeld",
@@ -2173,7 +2848,12 @@
     "sv": ";; Syfte: Skickar ett meddelande till GUI-dialogrutan",
     "th": ";; วัตถุประสงค์: ส่งข้อความไปยังกล่องโต้ตอบ GUI",
     "zh-cn": ";; 用途：向 GUI 对话框发送消息",
-    "zh-tw": ";; 用途：向 GUI 對話方塊傳送訊息"
+    "zh-tw": ";; 用途：向 GUI 對話方塊傳送訊息",
+    "ar": "؛؛ الغرض: إرسال رسالة إلى مربع حوار واجهة المستخدم الرسومية",
+    "id": ";; Tujuan: Mengirim pesan ke kotak dialog GUI",
+    "pt": ";; Objetivo: Envia uma mensagem para a caixa de diálogo GUI",
+    "uk": ";; Призначення: надсилає повідомлення в діалогове вікно GUI",
+    "vi": ";; Mục đích: Gửi tin nhắn đến hộp thoại GUI"
   },
   ";; Purpose: Global flag to control debug output.": {
     "de": ";; Zweck: Globales Flag zur Steuerung der Debug-Ausgabe.",
@@ -2189,7 +2869,12 @@
     "sv": ";; Syfte: Global flagga för att styra felsökningsutdata.",
     "th": ";; วัตถุประสงค์: ธงสากลสำหรับควบคุมเอาต์พุตดีบัก",
     "zh-cn": ";; 用途：控制调试输出的全局标志。",
-    "zh-tw": ";; 用途：控制偵錯輸出的全域旗標。"
+    "zh-tw": ";; 用途：控制偵錯輸出的全域旗標。",
+    "ar": "؛؛ الغرض: علامة عالمية للتحكم في إخراج التصحيح.",
+    "id": ";; Tujuan: Bendera global untuk mengontrol keluaran debug.",
+    "pt": ";; Objetivo: Sinalizador global para controlar a saída de depuração.",
+    "uk": ";; Призначення: глобальний прапор для керування виведенням налагодження.",
+    "vi": ";; Mục đích: Cờ chung để kiểm soát đầu ra gỡ lỗi."
   },
   "; Evaluates to 1 because the condition is true": {
     "de": "; Ergibt 1, weil die Bedingung wahr ist",
@@ -2205,7 +2890,12 @@
     "sv": "; Utvärderas till 1 eftersom villkoret är sant",
     "th": "; ได้ค่า 1 เพราะเงื่อนไขเป็นจริง",
     "zh-cn": "; 因条件为真，结果为 1",
-    "zh-tw": "; 因條件為真，結果為 1"
+    "zh-tw": "; 因條件為真，結果為 1",
+    "ar": "; يتم التقييم إلى 1 لأن الشرط صحيح",
+    "id": "; Evaluasi ke 1 karena kondisinya benar",
+    "pt": "; Avalia como 1 porque a condição é verdadeira",
+    "uk": "; Оцінюється як 1, оскільки умова виконується",
+    "vi": "; Đánh giá là 1 vì điều kiện đúng"
   },
   "; Retrieves the rest of the first sublist: (2)": {
     "de": "; Ruft den Rest der ersten Unterliste ab: (2)",
@@ -2221,7 +2911,12 @@
     "sv": "; Hämtar resten av den första underlistan: (2)",
     "th": "; ดึงส่วนที่เหลือของ sublist แรก: (2)",
     "zh-cn": "; 获取第一个子列表的其余部分: (2)",
-    "zh-tw": "; 取得第一個子清單的其餘部分: (2)"
+    "zh-tw": "; 取得第一個子清單的其餘部分: (2)",
+    "ar": "; يسترد بقية القائمة الفرعية الأولى: (2)",
+    "id": "; Mengambil sisa sublist pertama: (2)",
+    "pt": "; Recupera o restante da primeira sublista: (2)",
+    "uk": "; Отримує решту першого підсписку: (2)",
+    "vi": "; Truy xuất phần còn lại của danh sách con đầu tiên: (2)"
   },
   ";; Display the message in Lumi's error console": {
     "de": ";; Nachricht in Lumis Error Console anzeigen",
@@ -2237,7 +2932,12 @@
     "sv": ";; Visa meddelandet i Lumis Error Console",
     "th": ";; แสดงข้อความใน Error Console ของ Lumi",
     "zh-cn": ";; 在 Lumi 的 Error Console 中显示消息",
-    "zh-tw": ";; 在 Lumi 的 Error Console 中顯示訊息"
+    "zh-tw": ";; 在 Lumi 的 Error Console 中顯示訊息",
+    "ar": "؛؛ اعرض الرسالة في وحدة تحكم أخطاء Lumi",
+    "id": ";; Tampilkan pesan di konsol kesalahan Lumi",
+    "pt": ";; Exibir a mensagem no console de erros do Lumi",
+    "uk": ";; Відобразити повідомлення в консолі помилок Lumi",
+    "vi": ";; Hiển thị thông báo trên bảng điều khiển lỗi của Lumi"
   },
   ";; Append a newline to force a box the message": {
     "de": ";; Zeilenumbruch anhängen, um das Nachrichtenfeld zu erzwingen",
@@ -2253,7 +2953,12 @@
     "sv": ";; Lägg till radbrytning för att tvinga fram ett meddelanderuta",
     "th": ";; เพิ่มบรรทัดใหม่เพื่อบังคับให้แสดงกล่องข้อความ",
     "zh-cn": ";; 追加换行以强制显示消息框",
-    "zh-tw": ";; 附加換行以強制顯示訊息方塊"
+    "zh-tw": ";; 附加換行以強制顯示訊息方塊",
+    "ar": "؛؛ إلحاق سطر جديد لفرض مربع الرسالة",
+    "id": ";; Tambahkan baris baru untuk memaksa kotak pesan",
+    "pt": ";; Anexe uma nova linha para forçar uma caixa na mensagem",
+    "uk": ";; Додайте новий рядок, щоб примусово поставити повідомлення в рамку",
+    "vi": ";; Nối một dòng mới để buộc một hộp tin nhắn"
   },
   ";; Check if the message is a non-empty string": {
     "de": ";; Prüfen, ob die Nachricht eine nicht leere Zeichenkette ist",
@@ -2269,7 +2974,12 @@
     "sv": ";; Kontrollera om meddelandet är en icke-tom sträng",
     "th": ";; ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง",
     "zh-cn": ";; 检查消息是否为非空字符串",
-    "zh-tw": ";; 檢查訊息是否為非空字串"
+    "zh-tw": ";; 檢查訊息是否為非空字串",
+    "ar": "؛؛ تحقق مما إذا كانت الرسالة عبارة عن سلسلة غير فارغة",
+    "id": ";; Periksa apakah pesan tersebut berupa string yang tidak kosong",
+    "pt": ";; Verifique se a mensagem é uma string não vazia",
+    "uk": ";; Перевірте, чи повідомлення є непорожнім рядком",
+    "vi": ";; Kiểm tra xem tin nhắn có phải là một chuỗi không trống không"
   },
   ";; Displays a message in Lumi's error console": {
     "de": ";; Zeigt eine Nachricht in Lumis Error Console an",
@@ -2285,7 +2995,12 @@
     "sv": ";; Visar ett meddelande i Lumis Error Console",
     "th": ";; แสดงข้อความใน Error Console ของ Lumi",
     "zh-cn": ";; 在 Lumi 的 Error Console 中显示消息",
-    "zh-tw": ";; 在 Lumi 的 Error Console 中顯示訊息"
+    "zh-tw": ";; 在 Lumi 的 Error Console 中顯示訊息",
+    "ar": "؛؛ يعرض رسالة في وحدة تحكم أخطاء Lumi",
+    "id": ";; Menampilkan pesan di konsol kesalahan Lumi",
+    "pt": ";; Exibe uma mensagem no console de erros do Lumi",
+    "uk": ";; Відображає повідомлення в консолі помилок Lumi",
+    "vi": ";; Hiển thị thông báo trong bảng điều khiển lỗi của Lumi"
   },
   ";; Validate the message and output arguments": {
     "de": ";; Nachrichten- und Ausgabeargumente validieren",
@@ -2301,7 +3016,12 @@
     "sv": ";; Validera meddelande- och utdataargument",
     "th": ";; ตรวจสอบอาร์กิวเมนต์ข้อความและเอาต์พุต",
     "zh-cn": ";; 验证消息和输出参数",
-    "zh-tw": ";; 驗證訊息和輸出引數"
+    "zh-tw": ";; 驗證訊息和輸出引數",
+    "ar": "؛؛ التحقق من صحة الرسالة ووسائط الإخراج",
+    "id": ";; Validasi argumen pesan dan output",
+    "pt": ";; Valide a mensagem e os argumentos de saída",
+    "uk": ";; Перевірте повідомлення та вихідні аргументи",
+    "vi": ";; Xác thực thông báo và đối số đầu ra"
   },
   ";; Specify the menu location for the plug-in": {
     "de": ";; Menüposition für das Plug-in angeben",
@@ -2317,7 +3037,12 @@
     "sv": ";; Ange menyplatsen för plug-in",
     "th": ";; ระบุตำแหน่งเมนูสำหรับ plug-in",
     "zh-cn": ";; 指定插件的菜单位置",
-    "zh-tw": ";; 指定外掛程式的選單位置"
+    "zh-tw": ";; 指定外掛程式的選單位置",
+    "ar": "؛؛ حدد موقع القائمة للمكون الإضافي",
+    "id": ";; Tentukan lokasi menu untuk plugin",
+    "pt": ";; Especifique o local do menu para o plug-in",
+    "uk": ";; Укажіть розташування меню для плагіна",
+    "vi": ";; Chỉ định vị trí menu cho plugin"
   },
   ";; Indicates this plug-in requires an image": {
     "de": ";; Gibt an, dass dieses Plug-in ein Bild benötigt",
@@ -2333,7 +3058,12 @@
     "sv": ";; Anger att detta plug-in kräver en bild",
     "th": ";; ระบุว่า plug-in นี้ต้องการภาพ",
     "zh-cn": ";; 表示此插件需要图像",
-    "zh-tw": ";; 表示此外掛程式需要影像"
+    "zh-tw": ";; 表示此外掛程式需要影像",
+    "ar": "؛؛ يشير إلى أن هذا المكون الإضافي يتطلب صورة",
+    "id": ";; Menunjukkan plugin ini memerlukan gambar",
+    "pt": ";; Indica que este plug-in requer uma imagem",
+    "uk": ";; Вказує на те, що для цього плагіна потрібне зображення",
+    "vi": ";; Cho biết plug-in này yêu cầu một hình ảnh"
   },
   "; Updates the vector at the specified index": {
     "de": "; Aktualisiert den Vektor am angegebenen Index",
@@ -2349,7 +3079,12 @@
     "sv": "; Uppdaterar vektorn vid det angivna indexet",
     "th": "; อัปเดต vector ที่ดัชนีที่ระบุ",
     "zh-cn": "; 更新指定索引处的向量",
-    "zh-tw": "; 更新指定索引處的向量"
+    "zh-tw": "; 更新指定索引處的向量",
+    "ar": "; يقوم بتحديث المتجه في الفهرس المحدد",
+    "id": "; Memperbarui vektor pada indeks yang ditentukan",
+    "pt": "; Atualiza o vetor no índice especificado",
+    "uk": "; Оновлює вектор за вказаним індексом",
+    "vi": "; Cập nhật vectơ tại chỉ mục đã chỉ định"
   },
   ";; The name as it appears in the Lumi menu": {
     "de": ";; Der Name, wie er im Lumi-Menü erscheint",
@@ -2365,7 +3100,12 @@
     "sv": ";; Namnet som det visas i Lumi-menyn",
     "th": ";; ชื่อที่ปรากฏในเมนู Lumi",
     "zh-cn": ";; 在 Lumi 菜单中显示的名称",
-    "zh-tw": ";; 在 Lumi 選單中顯示的名稱"
+    "zh-tw": ";; 在 Lumi 選單中顯示的名稱",
+    "ar": "؛؛ الاسم كما يظهر في قائمة Lumi",
+    "id": ";; Nama seperti yang muncul di menu Lumi",
+    "pt": ";; O nome conforme aparece no menu Lumi",
+    "uk": ";; Назва, яка відображається в меню Lumi",
+    "vi": ";; Tên xuất hiện trong menu Lumi"
   },
   ";; Indicates the plug-in requires an image": {
     "de": ";; Gibt an, dass das Plug-in ein Bild benötigt",
@@ -2381,7 +3121,12 @@
     "sv": ";; Anger att plug-in kräver en bild",
     "th": ";; ระบุว่า plug-in ต้องการภาพ",
     "zh-cn": ";; 表示插件需要图像",
-    "zh-tw": ";; 表示外掛程式需要影像"
+    "zh-tw": ";; 表示外掛程式需要影像",
+    "ar": "؛؛ يشير إلى أن المكون الإضافي يتطلب صورة",
+    "id": ";; Menunjukkan plugin memerlukan gambar",
+    "pt": ";; Indica que o plug-in requer uma imagem",
+    "uk": ";; Вказує на те, що для плагіна потрібне зображення",
+    "vi": ";; Cho biết plugin yêu cầu hình ảnh"
   },
   ";; Requires one or more selected drawables": {
     "de": ";; Erfordert ein oder mehrere ausgewählte Drawables",
@@ -2397,7 +3142,12 @@
     "sv": ";; Kräver ett eller flera valda drawables",
     "th": ";; ต้องการ drawable ที่เลือกอย่างน้อยหนึ่งรายการ",
     "zh-cn": ";; 需要一个或多个所选 drawable",
-    "zh-tw": ";; 需要一個或多個所選 drawable"
+    "zh-tw": ";; 需要一個或多個所選 drawable",
+    "ar": "؛؛ يتطلب واحدًا أو أكثر من الرسوميات المحددة",
+    "id": ";; Memerlukan satu atau beberapa sumber daya dapat digambar yang dipilih",
+    "pt": ";; Requer um ou mais drawables selecionados",
+    "uk": ";; Потрібен один або кілька вибраних малюнків",
+    "vi": ";; Yêu cầu một hoặc nhiều đối tượng có thể vẽ được chọn"
   },
   ";; Terminal output is handled with display": {
     "de": ";; Terminal-Ausgabe wird mit display verarbeitet",
@@ -2413,7 +3163,12 @@
     "sv": ";; Terminal-utdata hanteras med display",
     "th": ";; เอาต์พุต terminal จัดการด้วย display",
     "zh-cn": ";; terminal 输出通过 display 处理",
-    "zh-tw": ";; terminal 輸出透過 display 處理"
+    "zh-tw": ";; terminal 輸出透過 display 處理",
+    "ar": "؛؛ يتم التعامل مع الإخراج الطرفي مع العرض",
+    "id": ";; Output terminal ditangani dengan tampilan",
+    "pt": ";; A saída do terminal é tratada com display",
+    "uk": ";; Вихід терміналу обробляється за допомогою дисплея",
+    "vi": ";; Đầu ra của thiết bị đầu cuối được xử lý bằng màn hình"
   },
   ";;          into a string representation.": {
     "de": ";;          in eine Zeichenketten-Darstellung um.",
@@ -2429,7 +3184,12 @@
     "sv": ";;          till en strängrepresentation.",
     "th": ";;          เป็นการแสดงผลแบบสตริง",
     "zh-cn": ";;          转换为字符串表示。",
-    "zh-tw": ";;          轉換為字串表示。"
+    "zh-tw": ";;          轉換為字串表示。",
+    "ar": "؛؛          في تمثيل سلسلة.",
+    "id": ";;          menjadi representasi string.",
+    "pt": ";;          em uma representação de string.",
+    "uk": ";;          у рядкове представлення.",
+    "vi": ";;          thành một biểu diễn chuỗi."
   },
   "; Returns \"Fruits: Apple, Banana, Cherry\"": {
     "de": "; Gibt zurück \"Fruits: Apple, Banana, Cherry\"",
@@ -2445,7 +3205,12 @@
     "sv": "; Returnerar \"Fruits: Apple, Banana, Cherry\"",
     "th": "; คืนค่า \"Fruits: Apple, Banana, Cherry\"",
     "zh-cn": "; 返回 \"Fruits: Apple, Banana, Cherry\"",
-    "zh-tw": "; 回傳 \"Fruits: Apple, Banana, Cherry\""
+    "zh-tw": "; 回傳 \"Fruits: Apple, Banana, Cherry\"",
+    "ar": "; إرجاع \"الفواكه: التفاح والموز والكرز\"",
+    "id": "; Mengembalikan \"Buah: Apel, Pisang, Ceri\"",
+    "pt": "; Retorna \"Frutas: Maçã, Banana, Cereja\"",
+    "uk": "; Повертає «Фрукти: яблуко, банан, вишня»",
+    "vi": "; Trả về \"Trái cây: Táo, Chuối, Anh đào\""
   },
   ";; Validate the message before proceeding": {
     "de": ";; Nachricht validieren, bevor fortgefahren wird",
@@ -2461,7 +3226,12 @@
     "sv": ";; Validera meddelandet innan du fortsätter",
     "th": ";; ตรวจสอบข้อความก่อนดำเนินการต่อ",
     "zh-cn": ";; 继续前先验证消息",
-    "zh-tw": ";; 繼續前先驗證訊息"
+    "zh-tw": ";; 繼續前先驗證訊息",
+    "ar": "؛؛ التحقق من صحة الرسالة قبل المتابعة",
+    "id": ";; Validasi pesan sebelum melanjutkan",
+    "pt": ";; Valide a mensagem antes de continuar",
+    "uk": ";; Перш ніж продовжити, перевірте повідомлення",
+    "vi": ";; Xác thực tin nhắn trước khi tiếp tục"
   },
   ";; Purpose: Display a warning message.": {
     "de": ";; Zweck: Eine Warnmeldung anzeigen.",
@@ -2477,7 +3247,12 @@
     "sv": ";; Syfte: Visa ett varningsmeddelande.",
     "th": ";; วัตถุประสงค์: แสดงข้อความเตือน",
     "zh-cn": ";; 用途：显示警告消息。",
-    "zh-tw": ";; 用途：顯示警告訊息。"
+    "zh-tw": ";; 用途：顯示警告訊息。",
+    "ar": "؛؛ الغرض: عرض رسالة تحذيرية.",
+    "id": ";; Tujuan: Menampilkan pesan peringatan.",
+    "pt": ";; Objetivo: Exibir uma mensagem de aviso.",
+    "uk": ";; Призначення: відобразити попереджувальне повідомлення.",
+    "vi": ";; Mục đích: Hiển thị thông báo cảnh báo."
   },
   "; Retrieves the first element: #(1 2)": {
     "de": "; Ruft das erste Element ab: #(1 2)",
@@ -2493,7 +3268,12 @@
     "sv": "; Hämtar det första elementet: #(1 2)",
     "th": "; ดึงองค์ประกอบแรก: #(1 2)",
     "zh-cn": "; 获取第一个元素: #(1 2)",
-    "zh-tw": "; 取得第一個元素: #(1 2)"
+    "zh-tw": "; 取得第一個元素: #(1 2)",
+    "ar": "; استرداد العنصر الأول: #(1 2)",
+    "id": "; Mengambil elemen pertama: #(1 2)",
+    "pt": "; Recupera o primeiro elemento: #(1 2)",
+    "uk": "; Отримує перший елемент: #(1 2)",
+    "vi": "; Truy xuất phần tử đầu tiên: #(1 2)"
   },
   ";; Set the handler to Message console": {
     "de": ";; Handler auf Message console setzen",
@@ -2509,7 +3289,12 @@
     "sv": ";; Ställ in hanteraren till Message console",
     "th": ";; ตั้งตัวจัดการเป็น Message console",
     "zh-cn": ";; 将处理程序设置为 Message console",
-    "zh-tw": ";; 將處理常式設定為 Message console"
+    "zh-tw": ";; 將處理常式設定為 Message console",
+    "ar": "؛؛ اضبط المعالج على وحدة تحكم الرسائل",
+    "id": ";; Setel pengendali ke Konsol pesan",
+    "pt": ";; Defina o manipulador para o console de mensagens",
+    "uk": ";; Встановіть обробник на консоль повідомлень",
+    "vi": ";; Đặt trình xử lý thành Bảng điều khiển tin nhắn"
   },
   "; Retrieves the second sublist: (3 4)": {
     "de": "; Ruft die zweite Unterliste ab: (3 4)",
@@ -2525,7 +3310,12 @@
     "sv": "; Hämtar den andra underlistan: (3 4)",
     "th": "; ดึง sublist ที่สอง: (3 4)",
     "zh-cn": "; 获取第二个子列表: (3 4)",
-    "zh-tw": "; 取得第二個子清單: (3 4)"
+    "zh-tw": "; 取得第二個子清單: (3 4)",
+    "ar": "; استرجاع القائمة الفرعية الثانية: (3 4)",
+    "id": "; Mengambil subdaftar kedua: (3 4)",
+    "pt": "; Recupera a segunda sublista: (3 4)",
+    "uk": "; Отримує другий підсписок: (3 4)",
+    "vi": "; Truy xuất danh sách con thứ hai: (3 4)"
   },
   ";; Purpose: Display a debug message.": {
     "de": ";; Zweck: Eine Debug-Meldung anzeigen.",
@@ -2541,7 +3331,12 @@
     "sv": ";; Syfte: Visa ett felsökningsmeddelande.",
     "th": ";; วัตถุประสงค์: แสดงข้อความดีบัก",
     "zh-cn": ";; 用途：显示调试消息。",
-    "zh-tw": ";; 用途：顯示偵錯訊息。"
+    "zh-tw": ";; 用途：顯示偵錯訊息。",
+    "ar": "؛؛ الغرض: عرض رسالة تصحيح.",
+    "id": ";; Tujuan: Menampilkan pesan debug.",
+    "pt": ";; Objetivo: Exibir uma mensagem de depuração.",
+    "uk": ";; Призначення: відобразити повідомлення про налагодження.",
+    "vi": ";; Mục đích: Hiển thị thông báo gỡ lỗi."
   },
   "; Retrieves the first element: (1 2)": {
     "de": "; Ruft das erste Element ab: (1 2)",
@@ -2557,7 +3352,12 @@
     "sv": "; Hämtar det första elementet: (1 2)",
     "th": "; ดึงองค์ประกอบแรก: (1 2)",
     "zh-cn": "; 获取第一个元素: (1 2)",
-    "zh-tw": "; 取得第一個元素: (1 2)"
+    "zh-tw": "; 取得第一個元素: (1 2)",
+    "ar": "; استرداد العنصر الأول: (1 2)",
+    "id": "; Mengambil elemen pertama: (1 2)",
+    "pt": "; Recupera o primeiro elemento: (1 2)",
+    "uk": "; Отримує перший елемент: (1 2)",
+    "vi": "; Lấy phần tử đầu tiên: (1 2)"
   },
   "; The original vector is now updated": {
     "de": "; Der ursprüngliche Vektor ist jetzt aktualisiert",
@@ -2573,7 +3373,12 @@
     "sv": "; Den ursprungliga vektorn är nu uppdaterad",
     "th": "; vector เดิมได้รับการอัปเดตแล้ว",
     "zh-cn": "; 原始向量现已更新",
-    "zh-tw": "; 原始向量現已更新"
+    "zh-tw": "; 原始向量現已更新",
+    "ar": "; تم الآن تحديث المتجه الأصلي",
+    "id": "; Vektor asli sekarang diperbarui",
+    "pt": "; O vetor original agora está atualizado",
+    "uk": "; Оригінальний вектор оновлено",
+    "vi": "; Vector gốc hiện đã được cập nhật"
   },
   ";; Set the handler to Error Console": {
     "de": ";; Handler auf Error Console setzen",
@@ -2589,7 +3394,12 @@
     "sv": ";; Ställ in hanteraren till Error Console",
     "th": ";; ตั้งตัวจัดการเป็น Error Console",
     "zh-cn": ";; 将处理程序设置为 Error Console",
-    "zh-tw": ";; 將處理常式設定為 Error Console"
+    "zh-tw": ";; 將處理常式設定為 Error Console",
+    "ar": "؛؛ اضبط المعالج على Error Console",
+    "id": ";; Setel pengendali ke Konsol Kesalahan",
+    "pt": ";; Defina o manipulador para Console de erros",
+    "uk": ";; Встановіть обробник на Консоль помилок",
+    "vi": ";; Đặt trình xử lý thành Bảng điều khiển lỗi"
   },
   "; Converts list to vector: #(1 2 3)": {
     "de": "; Konvertiert Liste in Vektor: #(1 2 3)",
@@ -2605,7 +3415,12 @@
     "sv": "; Konverterar lista till vektor: #(1 2 3)",
     "th": "; แปลง list เป็น vector: #(1 2 3)",
     "zh-cn": "; 将列表转换为向量: #(1 2 3)",
-    "zh-tw": "; 將清單轉換為向量: #(1 2 3)"
+    "zh-tw": "; 將清單轉換為向量: #(1 2 3)",
+    "ar": "; تحويل القائمة إلى متجه: #(1 2 3)",
+    "id": "; Mengonversi daftar menjadi vektor: #(1 2 3)",
+    "pt": "; Converte lista em vetor: #(1 2 3)",
+    "uk": "; Перетворює список у вектор: #(1 2 3)",
+    "vi": "; Chuyển đổi danh sách thành vector: #(1 2 3)"
   },
   "; Initialize sum to 0, add i to sum": {
     "de": "; Summe auf 0 initialisieren, i zur Summe addieren",
@@ -2621,7 +3436,12 @@
     "sv": "; Initiera sum till 0, lägg till i i sum",
     "th": "; กำหนด sum เป็น 0 แล้วบวก i เข้า sum",
     "zh-cn": "; 将 sum 初始化为 0，将 i 加到 sum",
-    "zh-tw": "; 將 sum 初始化為 0，將 i 加到 sum"
+    "zh-tw": "; 將 sum 初始化為 0，將 i 加到 sum",
+    "ar": "; تهيئة المبلغ إلى 0، إضافة إلى مجموع",
+    "id": "; Inisialisasi jumlah menjadi 0, tambahkan i ke jumlah",
+    "pt": "; Inicialize a soma como 0, adicione i à soma",
+    "uk": "; Ініціалізуйте sum на 0, додайте i до sum",
+    "vi": "; Khởi tạo tổng bằng 0, thêm i vào tổng"
   },
   "; Initialize i to 1, increment by 1": {
     "de": "; i auf 1 initialisieren, um 1 erhöhen",
@@ -2637,7 +3457,12 @@
     "sv": "; Initiera i till 1, öka med 1",
     "th": "; กำหนด i เป็น 1 เพิ่มทีละ 1",
     "zh-cn": "; 将 i 初始化为 1，每次递增 1",
-    "zh-tw": "; 將 i 初始化為 1，每次遞增 1"
+    "zh-tw": "; 將 i 初始化為 1，每次遞增 1",
+    "ar": "; تهيئة i إلى 1، وزيادة بمقدار 1",
+    "id": "; Inisialisasi i ke 1, tambah 1",
+    "pt": "; Inicialize i para 1, aumente em 1",
+    "uk": "; Ініціалізувати i до 1, збільшити на 1",
+    "vi": "; Khởi tạo i thành 1, tăng thêm 1"
   },
   "; Modifies the second element to 99": {
     "de": "; Ändert das zweite Element auf 99",
@@ -2653,7 +3478,12 @@
     "sv": "; Ändrar det andra elementet till 99",
     "th": "; แก้ไของค์ประกอบที่สองเป็น 99",
     "zh-cn": "; 将第二个元素修改为 99",
-    "zh-tw": "; 將第二個元素修改為 99"
+    "zh-tw": "; 將第二個元素修改為 99",
+    "ar": "; يعدل العنصر الثاني إلى 99",
+    "id": "; Memodifikasi elemen kedua menjadi 99",
+    "pt": "; Modifica o segundo elemento para 99",
+    "uk": "; Змінює другий елемент на 99",
+    "vi": "; Sửa đổi phần tử thứ hai thành 99"
   },
   ";; Declares x with initial value 1": {
     "de": ";; Deklariert x mit Anfangswert 1",
@@ -2669,7 +3499,12 @@
     "sv": ";; Deklarerar x med startvärde 1",
     "th": ";; ประกาศ x ด้วยค่าเริ่มต้น 1",
     "zh-cn": ";; 声明 x，初始值为 1",
-    "zh-tw": ";; 宣告 x，初始值為 1"
+    "zh-tw": ";; 宣告 x，初始值為 1",
+    "ar": "؛؛ يعلن x بالقيمة الأولية 1",
+    "id": ";; Mendeklarasikan x dengan nilai awal 1",
+    "pt": ";; Declara x com valor inicial 1",
+    "uk": ";; Оголошує x із початковим значенням 1",
+    "vi": ";; Khai báo x với giá trị ban đầu là 1"
   },
   "; Converts vector to list: (1 2 3)": {
     "de": "; Konvertiert Vektor in Liste: (1 2 3)",
@@ -2685,7 +3520,12 @@
     "sv": "; Konverterar vektor till lista: (1 2 3)",
     "th": "; แปลง vector เป็น list: (1 2 3)",
     "zh-cn": "; 将向量转换为列表: (1 2 3)",
-    "zh-tw": "; 將向量轉換為清單: (1 2 3)"
+    "zh-tw": "; 將向量轉換為清單: (1 2 3)",
+    "ar": "; تحويل المتجه إلى القائمة: (1 2 3)",
+    "id": "; Mengonversi vektor ke daftar: (1 2 3)",
+    "pt": "; Converte vetor em lista: (1 2 3)",
+    "uk": "; Перетворює вектор на список: (1 2 3)",
+    "vi": "; Chuyển đổi vectơ thành danh sách: (1 2 3)"
   },
   ";; Programmatically add a new pair": {
     "de": ";; Programmatisch ein neues Paar hinzufügen",
@@ -2701,7 +3541,12 @@
     "sv": ";; Lägg till ett nytt par programmatiskt",
     "th": ";; เพิ่ม pair ใหม่แบบโปรแกรม",
     "zh-cn": ";; 以编程方式添加新对偶",
-    "zh-tw": ";; 以程式方式新增配對"
+    "zh-tw": ";; 以程式方式新增配對",
+    "ar": "؛؛ إضافة زوج جديد برمجياً",
+    "id": ";; Tambahkan pasangan baru secara terprogram",
+    "pt": ";; Adicione programaticamente um novo par",
+    "uk": ";; Програмно додати нову пару",
+    "vi": ";; Lập trình thêm một cặp mới"
   },
   ";; Declares y with initial value 2": {
     "de": ";; Deklariert y mit Anfangswert 2",
@@ -2717,7 +3562,12 @@
     "sv": ";; Deklarerar y med startvärde 2",
     "th": ";; ประกาศ y ด้วยค่าเริ่มต้น 2",
     "zh-cn": ";; 声明 y，初始值为 2",
-    "zh-tw": ";; 宣告 y，初始值為 2"
+    "zh-tw": ";; 宣告 y，初始值為 2",
+    "ar": "؛؛ يعلن y بالقيمة الأولية 2",
+    "id": ";; Deklarasikan y dengan nilai awal 2",
+    "pt": ";; Declara y com valor inicial 2",
+    "uk": ";; Оголошує y з початковим значенням 2",
+    "vi": ";; Khai báo y với giá trị ban đầu là 2"
   },
   "; Retrieves the element at index 1": {
     "de": "; Ruft das Element am Index 1 ab",
@@ -2733,7 +3583,12 @@
     "sv": "; Hämtar elementet vid index 1",
     "th": "; ดึงองค์ประกอบที่ดัชนี 1",
     "zh-cn": "; 获取索引 1 处的元素",
-    "zh-tw": "; 取得索引 1 處的元素"
+    "zh-tw": "; 取得索引 1 處的元素",
+    "ar": "; يسترد العنصر الموجود في الفهرس 1",
+    "id": "; Mengambil elemen di indeks 1",
+    "pt": "; Recupera o elemento no índice 1",
+    "uk": "; Отримує елемент з індексом 1",
+    "vi": "; Lấy phần tử ở chỉ mục 1"
   },
   "; Retrieves the element at index 0": {
     "de": "; Ruft das Element am Index 0 ab",
@@ -2749,7 +3604,12 @@
     "sv": "; Hämtar elementet vid index 0",
     "th": "; ดึงองค์ประกอบที่ดัชนี 0",
     "zh-cn": "; 获取索引 0 处的元素",
-    "zh-tw": "; 取得索引 0 處的元素"
+    "zh-tw": "; 取得索引 0 處的元素",
+    "ar": "; استرداد العنصر في الفهرس 0",
+    "id": "; Mengambil elemen pada indeks 0",
+    "pt": "; Recupera o elemento no índice 0",
+    "uk": "; Отримує елемент з індексом 0",
+    "vi": "; Lấy phần tử ở chỉ số 0"
   },
   "; Terminate when i > 5, return sum": {
     "de": "; Beenden, wenn i > 5, sum zurückgeben",
@@ -2765,7 +3625,12 @@
     "sv": "; Avsluta när i > 5, returnera sum",
     "th": "; หยุดเมื่อ i > 5 คืนค่า sum",
     "zh-cn": "; 当 i > 5 时终止，返回 sum",
-    "zh-tw": "; 當 i > 5 時終止，回傳 sum"
+    "zh-tw": "; 當 i > 5 時終止，回傳 sum",
+    "ar": "; قم بالإنهاء عندما يكون i > 5، قم بإرجاع المبلغ",
+    "id": "; Hentikan ketika i > 5, kembalikan jumlah",
+    "pt": "; Termina quando i > 5, retorna a soma",
+    "uk": "; Завершити, коли i > 5, повернути суму",
+    "vi": "; Chấm dứt khi i > 5, trả về tổng"
   },
   ";; Recursive call with new x and y": {
     "de": ";; Rekursiver Aufruf mit neuen x und y",
@@ -2781,7 +3646,12 @@
     "sv": ";; Rekursivt anrop med nya x och y",
     "th": ";; เรียกซ้ำด้วย x และ y ใหม่",
     "zh-cn": ";; 使用新的 x 和 y 进行递归调用",
-    "zh-tw": ";; 使用新的 x 和 y 進行遞迴呼叫"
+    "zh-tw": ";; 使用新的 x 和 y 進行遞迴呼叫",
+    "ar": "؛؛ مكالمة متكررة باستخدام x وy جديدين",
+    "id": ";; Panggilan rekursif dengan x dan y baru",
+    "pt": ";; Chamada recursiva com novos x e y",
+    "uk": ";; Рекурсивний виклик із новими x і y",
+    "vi": ";; Cuộc gọi đệ quy với x và y mới"
   },
   "; Checks if (list 1 2 3) is a list": {
     "de": "; Prüft, ob (list 1 2 3) eine Liste ist",
@@ -2797,7 +3667,12 @@
     "sv": "; Kontrollerar om (list 1 2 3) är en lista",
     "th": "; ตรวจสอบว่า (list 1 2 3) เป็น list หรือไม่",
     "zh-cn": "; 检查 (list 1 2 3) 是否为列表",
-    "zh-tw": "; 檢查 (list 1 2 3) 是否為清單"
+    "zh-tw": "; 檢查 (list 1 2 3) 是否為清單",
+    "ar": "; يتم التحقق مما إذا كانت (القائمة 1 2 3) قائمة",
+    "id": "; Memeriksa apakah (daftar 1 2 3) adalah sebuah daftar",
+    "pt": "; Verifica se (lista 1 2 3) é uma lista",
+    "uk": "; Перевіряє, чи є (список 1 2 3) списком",
+    "vi": "; Kiểm tra xem (danh sách 1 2 3) có phải là danh sách không"
   },
   "; Retrieves the element at index 2": {
     "de": "; Ruft das Element am Index 2 ab",
@@ -2813,7 +3688,12 @@
     "sv": "; Hämtar elementet vid index 2",
     "th": "; ดึงองค์ประกอบที่ดัชนี 2",
     "zh-cn": "; 获取索引 2 处的元素",
-    "zh-tw": "; 取得索引 2 處的元素"
+    "zh-tw": "; 取得索引 2 處的元素",
+    "ar": "; يسترد العنصر الموجود في الفهرس 2",
+    "id": "; Mengambil elemen di indeks 2",
+    "pt": "; Recupera o elemento no índice 2",
+    "uk": "; Отримує елемент з індексом 2",
+    "vi": "; Lấy phần tử ở chỉ mục 2"
   },
   ";; Case 2: If 0 is greater than -1": {
     "de": ";; Fall 2: Wenn 0 größer als -1 ist",
@@ -2829,7 +3709,12 @@
     "sv": ";; Fall 2: om 0 är större än -1",
     "th": ";; กรณี 2: หาก 0 มากกว่า -1",
     "zh-cn": ";; 情况 2：若 0 大于 -1",
-    "zh-tw": ";; 情況 2：若 0 大於 -1"
+    "zh-tw": ";; 情況 2：若 0 大於 -1",
+    "ar": "؛؛ الحالة 2: إذا كان 0 أكبر من -1",
+    "id": ";; Kasus 2: Jika 0 lebih besar dari -1",
+    "pt": ";; Caso 2: Se 0 for maior que -1",
+    "uk": ";; Випадок 2: якщо 0 більше за -1",
+    "vi": ";; Trường hợp 2: Nếu 0 lớn hơn -1"
   },
   ";; Initial call with x = 1, y = 2": {
     "de": ";; Erster Aufruf mit x = 1, y = 2",
@@ -2845,7 +3730,12 @@
     "sv": ";; Initialt anrop med x = 1, y = 2",
     "th": ";; การเรียกเริ่มต้นด้วย x = 1, y = 2",
     "zh-cn": ";; 初始调用：x = 1, y = 2",
-    "zh-tw": ";; 初始呼叫：x = 1, y = 2"
+    "zh-tw": ";; 初始呼叫：x = 1, y = 2",
+    "ar": "؛؛ المكالمة الأولية مع x = 1، y = 2",
+    "id": ";; Panggilan awal dengan x = 1, y = 2",
+    "pt": ";; Chamada inicial com x = 1, y = 2",
+    "uk": ";; Початковий виклик з x = 1, y = 2",
+    "vi": ";; Cuộc gọi ban đầu với x = 1, y = 2"
   },
   ";; Send to the appropriate output": {
     "de": ";; An die passende Ausgabe senden",
@@ -2861,7 +3751,12 @@
     "sv": ";; Skicka till rätt utdata",
     "th": ";; ส่งไปยังเอาต์พุตที่เหมาะสม",
     "zh-cn": ";; 发送到适当的输出",
-    "zh-tw": ";; 傳送到適當的輸出"
+    "zh-tw": ";; 傳送到適當的輸出",
+    "ar": "؛؛ إرسال إلى الإخراج المناسب",
+    "id": ";; Kirim ke output yang sesuai",
+    "pt": ";; Envie para a saída apropriada",
+    "uk": ";; Надіслати на відповідний вихід",
+    "vi": ";; Gửi đến đầu ra thích hợp"
   },
   "; Retrieves the rest of the list": {
     "de": "; Ruft den Rest der Liste ab",
@@ -2877,7 +3772,12 @@
     "sv": "; Hämtar resten av listan",
     "th": "; ดึงส่วนที่เหลือของ list",
     "zh-cn": "; 获取列表的其余部分",
-    "zh-tw": "; 取得清單的其餘部分"
+    "zh-tw": "; 取得清單的其餘部分",
+    "ar": "; يسترد بقية القائمة",
+    "id": "; Mengambil sisa daftar",
+    "pt": "; Recupera o resto da lista",
+    "uk": "; Отримує решту списку",
+    "vi": "; Truy xuất phần còn lại của danh sách"
   },
   ";; Check if the message is empty": {
     "de": ";; Prüfen, ob die Nachricht leer ist",
@@ -2893,7 +3793,12 @@
     "sv": ";; Kontrollera om meddelandet är tomt",
     "th": ";; ตรวจสอบว่าข้อความว่างหรือไม่",
     "zh-cn": ";; 检查消息是否为空",
-    "zh-tw": ";; 檢查訊息是否為空"
+    "zh-tw": ";; 檢查訊息是否為空",
+    "ar": "؛؛ تحقق مما إذا كانت الرسالة فارغة",
+    "id": ";; Periksa apakah pesannya kosong",
+    "pt": ";; Verifique se a mensagem está vazia",
+    "uk": ";; Перевірте, чи повідомлення порожнє",
+    "vi": ";; Kiểm tra xem tin nhắn có trống không"
   },
   ";; Set the handler to GUI dialog": {
     "de": ";; Handler auf GUI-Dialog setzen",
@@ -2909,7 +3814,12 @@
     "sv": ";; Ställ in hanteraren till GUI-dialog",
     "th": ";; ตั้งตัวจัดการเป็น GUI dialog",
     "zh-cn": ";; 将处理程序设置为 GUI 对话框",
-    "zh-tw": ";; 將處理常式設定為 GUI 對話方塊"
+    "zh-tw": ";; 將處理常式設定為 GUI 對話方塊",
+    "ar": "؛؛ اضبط المعالج على مربع حوار واجهة المستخدم الرسومية",
+    "id": ";; Atur pengendali ke dialog GUI",
+    "pt": ";; Defina o manipulador para a caixa de diálogo GUI",
+    "uk": ";; Встановіть обробник діалогового вікна GUI",
+    "vi": ";; Đặt trình xử lý thành hộp thoại GUI"
   },
   "; Creates the symbol `my-symbol`": {
     "de": "; Erstellt das Symbol `my-symbol`",
@@ -2925,7 +3835,12 @@
     "sv": "; Skapar symbolen `my-symbol`",
     "th": "; สร้าง symbol `my-symbol`",
     "zh-cn": "; 创建符号 `my-symbol`",
-    "zh-tw": "; 建立符號 `my-symbol`"
+    "zh-tw": "; 建立符號 `my-symbol`",
+    "ar": "; يقوم بإنشاء الرمز `my-symbol`",
+    "id": "; Membuat simbol `simbol saya`",
+    "pt": "; Cria o símbolo `my-symbol`",
+    "uk": "; Створює символ `my-symbol`",
+    "vi": "; Tạo biểu tượng `my-symbol`"
   },
   "; Checks if #(1 2 3) is a vector": {
     "de": "; Prüft, ob #(1 2 3) ein Vektor ist",
@@ -2941,7 +3856,12 @@
     "sv": "; Kontrollerar om #(1 2 3) är en vektor",
     "th": "; ตรวจสอบว่า #(1 2 3) เป็น vector หรือไม่",
     "zh-cn": "; 检查 #(1 2 3) 是否为向量",
-    "zh-tw": "; 檢查 #(1 2 3) 是否為向量"
+    "zh-tw": "; 檢查 #(1 2 3) 是否為向量",
+    "ar": "; يتحقق مما إذا كان #(1 2 3) متجهًا",
+    "id": "; Memeriksa apakah #(1 2 3) adalah vektor",
+    "pt": "; Verifica se #(1 2 3) é um vetor",
+    "uk": "; Перевіряє, чи #(1 2 3) є вектором",
+    "vi": "; Kiểm tra xem #(1 2 3) có phải là vectơ không"
   },
   "; Sets the second element to 42": {
     "de": "; Setzt das zweite Element auf 42",
@@ -2957,6 +3877,11 @@
     "sv": "; Sätter det andra elementet till 42",
     "th": "; ตั้งองค์ประกอบที่สองเป็น 42",
     "zh-cn": "; 将第二个元素设置为 42",
-    "zh-tw": "; 將第二個元素設定為 42"
+    "zh-tw": "; 將第二個元素設定為 42",
+    "ar": "; يضبط العنصر الثاني على 42",
+    "id": "; Setel elemen kedua ke 42",
+    "pt": "; Define o segundo elemento como 42",
+    "uk": "; Встановлює для другого елемента значення 42",
+    "vi": "; Đặt phần tử thứ hai thành 42"
   }
 }

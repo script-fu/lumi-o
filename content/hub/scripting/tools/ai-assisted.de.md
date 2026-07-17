@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 Moderne KI-Tools können die Entwicklung von Lumi-Plug-Ins erheblich beschleunigen, indem sie als kollaborativer Codierungspartner fungieren.
 
@@ -32,7 +33,7 @@ Sie können den Agenten direkt bitten, ein vollständiges Plug-In zu erzeugen, i
 
 Der Agent sucht nach der Vorgehensweise zum Erstellen von Hilfslinien, findet die passende Utility-Funktion (z. B. `lumi-image-add-hguide-percent` aus `common.scm`) und erzeugt die vollständige `.scm`-Datei mit dem korrekten Registrierungs-Boilerplate.
 
-## Best Practices
+## Bewährte Praktiken
 
 - **Seien Sie präzise**: Beschreiben Sie genau, was das Plug-In tun soll.
 - **Utilities referenzieren**: Weisen Sie den Agenten auf das Verzeichnis `share/lumi/scripts/` hin, um High-Level-Helfer zu finden.

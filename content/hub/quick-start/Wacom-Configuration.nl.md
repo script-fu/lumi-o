@@ -1,6 +1,10 @@
 ---
 title: "Wacom-configuratie"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 Voor digitaal schilderen in Lumi wordt een eenvoudige **lineaire drukopstelling** aanbevolen.
 
@@ -8,7 +12,7 @@ Voor digitaal schilderen in Lumi wordt een eenvoudige **lineaire drukopstelling*
 - Houd de druk-/ingangscurven in Lumi grotendeels lineair.
 - Vorm het gevoel met de borstel zelf, omdat de borsteldynamiek al niet-lineair kan zijn.
 
-We raden u aan de standaard lineaire drukcurve op het driverniveau van het besturingssysteem te behouden. Het samenstellen van meerdere niet-lineaire curven leidt vaak tot onvoorspelbaar invoergedrag; door de bestuurder neutraal te houden, zorg je ervoor dat eventuele aanpassingen binnen Lumi-o intuïtief en reproduceerbaar blijven. Een kleine aanpassing aan de mondiale curve van Lumi kan indien nodig nog steeds redelijk zijn.
+We raden u aan de standaard lineaire drukcurve op het driverniveau van het besturingssysteem te behouden. Het samenstellen van meerdere niet-lineaire curven leidt vaak tot onvoorspelbaar invoergedrag; door de driver neutraal te houden, zorg je ervoor dat eventuele aanpassingen binnen Lumi-o intuïtief en reproduceerbaar blijven. Een kleine aanpassing aan de globale curve van Lumi kan indien nodig nog steeds redelijk zijn.
 
 ## Globale styluscurve in Lumi
 
@@ -30,4 +34,4 @@ In hetzelfde apparaatconfiguratiedialoogvenster kunt u belacties per ingang toew
 - Kijkhoek
 - Bekijk zoom
 
-Opmerking: Er moet een afbeelding actief zijn voordat de Touch Ring de kenmerken kan beïnvloeden. De ring is standaard ingesteld op een relatieve wijziging van de penseelgrootte. Om onbedoelde aanpassingen te voorkomen is een halve cirkelveegbeweging vereist om een ​​opdracht te activeren (een halve veegbeweging met de klok mee verdubbelt bijvoorbeeld de penseelgrootte).
+Opmerking: Er moet een afbeelding actief zijn voordat de Touch Ring de kenmerken kan beïnvloeden. De ring is standaard ingesteld op een relatieve wijziging van de penseelgrootte. Om onbedoelde aanpassingen te voorkomen is een halve cirkelveegbeweging vereist om een opdracht te activeren (een halve veegbeweging met de klok mee verdubbelt bijvoorbeeld de penseelgrootte).

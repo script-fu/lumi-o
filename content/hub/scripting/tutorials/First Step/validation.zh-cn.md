@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 在构建强大的插件时，重要的是要确保我们的函数能够优雅地处理错误并按预期工作，即使在误用或意外输入的情况下也是如此。验证有助于保护功能的完整性并防止崩溃或意外行为。
 
@@ -22,7 +23,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; 发送到 Message console
+      ;; 发送到 消息控制台
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
       ((eq? output 'terminal)
          (display message))))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; 发送到 Message console
+        ;; 发送到 消息控制台
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 ```
 

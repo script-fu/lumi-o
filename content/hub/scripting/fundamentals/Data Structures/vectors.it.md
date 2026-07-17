@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 In Scheme, un vettore è un'altra struttura dati fondamentale utilizzata per raggruppare valori. A differenza degli elenchi, i vettori sono raccolte di elementi indicizzati e di dimensione fissa, che forniscono accesso casuale e aggiornamenti più rapidi. Ogni elemento in un vettore può essere di qualsiasi tipo, incluso un altro vettore. I vettori sono rappresentati utilizzando # seguito da parentesi. `#(1 2 3)`
 
@@ -122,7 +123,9 @@ Risultato:
 - `(vector? (vector 1 2 3))` restituisce `#t` (vero)
 - `(vector? 42)` restituisce `#f` (falso)
 
-### Vettori e comportamento di passaggio per riferimentoIn Scheme, i vettori sono mutabili e passati per riferimento. Ciò significa che quando passi un vettore a una funzione, la funzione può modificare direttamente il vettore originale. Qualsiasi modifica apportata al vettore all'interno della funzione si rifletterà anche all'esterno della funzione. Questo comportamento è utile per condividere e aggiornare in modo efficiente i dati tra più funzioni, ma richiede anche cautela per evitare effetti collaterali indesiderati.
+### Vettori e comportamento di passaggio per riferimento
+
+In Scheme, i vettori sono mutabili e passati per riferimento. Ciò significa che quando passi un vettore a una funzione, la funzione può modificare direttamente il vettore originale. Qualsiasi modifica apportata al vettore all'interno della funzione si rifletterà anche all'esterno della funzione. Questo comportamento è utile per condividere e aggiornare in modo efficiente i dati tra più funzioni, ma richiede anche cautela per evitare effetti collaterali indesiderati.
 
 #### Esempio: modifica di un vettore in una funzione
 
@@ -196,7 +199,7 @@ Per accedere agli elementi all'interno di un vettore nidificato, utilizzare `vec
 
 ### Riepilogo
 
-- I **Vettori** nello Schema sono strutture dati indicizzate a dimensione fissa.
+- I **Vettori** in Scheme sono strutture dati indicizzate a dimensione fissa.
 - Utilizzare `vector` per creare un vettore, `vector-ref` per accedere agli elementi e `vector-set!` per aggiornare gli elementi.
 - Le procedure integrate come `vector-length`, `vector->list` e `list->vector` consentono operazioni flessibili.
 - I vettori nidificati consentono strutture di dati complesse e gerarchiche.

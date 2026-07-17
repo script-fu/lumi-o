@@ -3,29 +3,32 @@ title: "if"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+В своей простейшей форме условный оператор `if` в Scheme оценивает тест и на основе результата выполняет один из двух возможных блоков кода. Самая простая форма выглядит так:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- Если `test` имеет значение true (`#t`), **блок кода в последовательности** выполняется. Блок может возвращать значение или выполнять другие действия, например присваивать переменную или распечатывать выходные данные.
 
-### Exemple
+### Пример
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- В данном случае `test` — это `(< 0 1)` (проверяется, меньше ли 0 1).
+- Поскольку результат теста равен true (`#t`), выполняется блок кода `(lumi-message "True!")`, который печатает `"True!"`.
 
-### Branche else : `if-else`
+### Добавление еще одного условия: `if-else`
+
+При использовании условного оператора `if` с альтернативным блоком кода (случай `else`) структура выглядит следующим образом:
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- Если `test` имеет значение true (`#t`), выполняется **последующий** блок кода.
+- Если значение `test` равно false (`#f`), выполняется **альтернативный** блок кода.
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### Как это работает
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **Тестовое выражение**:
+   - Сначала вычисляется выражение `test`.
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **Результат на основе теста**:
+   - Если `test` имеет значение true (`#t`), **последующий блок кода** выполняется.
+   - Если значение `test` равно false (`#f`), выполняется **альтернативный блок кода**.
 
-#### Exemple 1 : renvoyer une valeur
+Оба блока кода `consequent` и `alternative` могут выполнять любую допустимую операцию Scheme, включая возврат значений, изменение переменных или запуск процедур.
+
+### Примеры
+
+#### Пример 1: Возврат значения
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- Здесь `test` — это `(< 0 1)` (проверяется, меньше ли 0 1).
+- Поскольку результат теста равен true (`#t`), выполняется **последующий** блок (`1`) и возвращается его значение.
 
-#### Exemple 2 : bloc `begin`
+Результат: **1**
+
+#### Пример 2: Вычисление начального блока
+
+В случаях, когда вам необходимо выполнить несколько действий, когда условие истинно или ложно, вы можете использовать `begin` или `let`, чтобы сгруппировать их вместе.
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- В этом примере `test` — это `(= 0 1)` (проверка, равно ли 0 1).
+- Поскольку результат теста оказывается ложным (`#f`), выполняется блок **альтернативный**:
+  - Сначала он печатает `"False condition met, calculating..."`.
+  - Затем он вычисляет `(* 3 4)` и возвращает `12`.
 
-#### Exemple 3 : expression `let`
+Результат: **Печатает «Выполнено ложное условие, вычисление...» и возвращает 12.**
+
+#### Пример 3: Вычисление оператора let
+
+Использование `let` позволяет нам объявлять переменные локальной области внутри блока кода.
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,16 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- В этом примере `test` — это `(= 1 1)` (проверка, равно ли 1 1).
+- Поскольку результат теста равен true (`#t`), выполняется **последующий** блок:
+  - Сначала он печатает `"True condition met, calculating..."`.
+  - Затем он вычисляет `(* -1 10)` и возвращает `-10`.
 
-### Résumé
+Результат: **Печатает «Истинное условие выполнено, расчет...» и возвращает -10.**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### Резюме
+
+- Условие `if` — это мощный инструмент в Scheme для оценки тестов и выполнения соответствующих блоков кода.
+
+- Он может обрабатывать как простые выражения, так и сложные блоки кода, которые возвращают значения, изменяют переменные или выполняют побочные эффекты.
+- Помните: если нет явного блока `else`, `if` оценивает и выполняет **последовательность** только в том случае, если тест верен. В противном случае он оценивает и выполняет **альтернативу**.

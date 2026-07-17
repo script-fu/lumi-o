@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些函数用途广泛，允许您创建灵活且可重用的代码。在函数式编程中，可变参数函数简化了需要处理任意数量输入的操作，例如对数字列表求和或连接字符串。
 
@@ -139,4 +140,6 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 - 固定参数足以满足所需的逻辑。
 - 由于操作过于复杂，可读性受到影响。
 
-＃＃＃ 结论Scheme 中的可变参数函数提供了处理动态输入的强大机制。通过了解它们的语法和用法，您可以创建灵活且强大的脚本，以适应各种场景。与高阶函数相结合，可变参数函数使您的代码更加简洁和富有表现力。
+### 结论
+
+Scheme 中的可变参数函数提供了处理动态输入的强大机制。通过了解它们的语法和用法，您可以创建灵活且强大的脚本，以适应各种场景。与高阶函数相结合，可变参数函数使您的代码更加简洁和富有表现力。

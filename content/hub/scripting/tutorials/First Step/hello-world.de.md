@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 Dieses Tutorial führt Sie durch die minimale Struktur eines Scheme-Plug-Ins. Einige Zeilen sind „Boilerplate“: Sie sind erforderlich, damit Lumi die Datei laden kann, auch wenn Sie sie noch nicht vollständig verstehen.
 
@@ -73,7 +74,7 @@ Hier ist das vollständige Beispiel. Den meisten Lumi-Prozeduren wird `lumi-` vo
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
+  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Fehlerkonsole ausgegeben wird
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

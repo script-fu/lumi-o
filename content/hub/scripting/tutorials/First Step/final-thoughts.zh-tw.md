@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 您現在擁有一個工作程序外掛程式和一個小型幫助程式庫。本系列介紹了您將在大多數 Lumi 腳本中使用的核心模式：
 
@@ -65,7 +66,7 @@ translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d094287
       #t)
     #f))
 
-;; 用途：向 Error Console 傳送訊息，成功時回傳 #t
+;; 用途：向 錯誤主控台 傳送訊息，成功時回傳 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

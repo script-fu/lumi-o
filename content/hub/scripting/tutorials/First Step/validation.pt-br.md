@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 Ao construir plug-ins robustos, é importante garantir que nossas funções tratem erros normalmente e funcionem conforme o esperado, mesmo em casos de uso indevido ou entradas inesperadas. A validação ajuda a proteger a integridade da função e evitar falhas ou comportamento não intencional.
 
@@ -22,7 +23,7 @@ Exemplo:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Enviar para a Message console
+      ;; Enviar para a console de mensagens
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Exemplo:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Essa abordagem garante que a função sempre receba entradas válidas, melhorand
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Enviar para a Message console
+        ;; Enviar para a console de mensagens
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Essa abordagem garante que a função sempre receba entradas válidas, melhorand
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 ```
 

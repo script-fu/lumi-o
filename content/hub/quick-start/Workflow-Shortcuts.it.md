@@ -1,6 +1,10 @@
 ---
 title: "Scorciatoie del flusso di lavoro"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o è progettato per un flusso di lavoro basato sulle scorciatoie. Una volta stabilita la memoria muscolare per questi comandi, puoi navigare nella tela e negli strumenti molto più velocemente.
 

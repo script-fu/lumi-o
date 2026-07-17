@@ -7,19 +7,19 @@ translation_lock: true
 translation_source_sha256: dc0367028ed8f6b4e1508c309384967daa43a4148f8d70f00880173a0a1fca7d
 ---
 
-Le illustrazioni per stampa e pubblicazione spesso richiedono più di una dimensione della tela. Le pagine hanno bordi di rifilo, i doppi fogli hanno cuciture centrali e i contenuti importanti possono dover restare lontani da aree che verranno tagliate o rilegate nel margine interno. Gli strumenti di impaginazione editoriale di Lumi-o mantengono visibili queste esigenze mentre si dipinge, senza appiattirle nell'opera.
+Le illustrazioni per stampa e pubblicazione spesso richiedono più di una dimensione della tela. Le pagine hanno bordi di rifilo, i doppi fogli hanno cuciture centrali e i contenuti importanti possono dover restare lontani da aree che verranno tagliate o rilegate nel margine interno. Gli strumenti di impaginazione editoriale di Lumi mantengono visibili queste esigenze mentre si dipinge, senza appiattirle nell'opera.
 
 I limiti di layout sono archiviati per immagine, salvati con il progetto e possono essere disattivati quando non servono. L'obiettivo è dare a libri, fumetti e flussi di stampa un senso chiaro della struttura della pagina, mentre l'immagine a livelli resta completamente modificabile al di sotto.
 
 ## Abbondanza e rifilo
 
-L'abbondanza definisce quanto l'opera si estende oltre il bordo finale della pagina. Lumi-o mostra l'area di rifilo come confine della pagina finita all'interno della tela, con il margine di abbondanza come sovrapposizione ombreggiata attorno ad essa. È più semplice dipingere sfondi e dettagli ai bordi che devono sopravvivere al taglio senza dover indovinare dove finirà la pagina stampata.
+L'abbondanza definisce quanto l'opera si estende oltre il bordo finale della pagina. Lumi mostra l'area di rifilo come confine della pagina finita all'interno della tela, con il margine di abbondanza come sovrapposizione ombreggiata attorno ad essa. È più semplice dipingere sfondi e dettagli ai bordi che devono sopravvivere al taglio senza dover indovinare dove finirà la pagina stampata.
 
 Le misure possono essere impostate nelle unità adatte al lavoro, così l'abbondanza può essere pensata in pollici, millimetri o un'altra unità di stampa familiare, non solo in pixel.
 
 ## Margine di rilegatura e doppi fogli
 
-Per i doppi fogli, il margine di rilegatura delimita la zona protetta attorno alla cucitura centrale dove i contenuti importanti dovrebbero essere evitati. Quando è attivo, Lumi-o mostra bande di rilegatura lungo lo spread, così volti, testo e punti focali possono restare fuori dall'area di rilegatura mentre l'intero doppio foglio rimane una tela continua.
+Per i doppi fogli, il margine di rilegatura delimita la zona protetta attorno alla cucitura centrale dove i contenuti importanti dovrebbero essere evitati. Quando è attivo, Lumi mostra bande di rilegatura lungo lo spread, così volti, testo e punti focali possono restare fuori dall'area di rilegatura mentre l'intero doppio foglio rimane una tela continua.
 
 È particolarmente utile per fumetti, libri illustrati e qualsiasi opera stampata come pagine affiancate piuttosto che come fogli isolati.
 

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 Git を使用して、プラグインへの変更を追跡し、間違いをロールバックし、マシン間でコードを共有します。
 

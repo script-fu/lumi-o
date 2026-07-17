@@ -1,6 +1,7 @@
 ---
 title: Variadic Functions
 type: docs
+url: "hub/scripting/fundamentals/Functions/variadic"
 weight: 2
 ---
 

@@ -4,9 +4,10 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
-**Funções variáveis** em Scheme são funções que aceitam um número variável de argumentos. Essas funções são altamente versáteis e permitem criar código flexível e reutilizável. Na programação funcional, as funções variáveis ​​simplificam as operações que precisam processar um número arbitrário de entradas, como somar uma lista de números ou concatenar strings.
+**Funções variáveis** em Scheme são funções que aceitam um número variável de argumentos. Essas funções são altamente versáteis e permitem criar código flexível e reutilizável. Na programação funcional, as funções variáveis simplificam as operações que precisam processar um número arbitrário de entradas, como somar uma lista de números ou concatenar strings.
 
 Funções variáveis são especialmente úteis quando:
 
@@ -139,4 +140,6 @@ Evite funções variadas quando:
 - Argumentos fixos são suficientes para a lógica necessária.
 - A legibilidade fica comprometida devido a operações excessivamente complexas.
 
-### ConclusãoFunções variáveis ​​no Scheme fornecem um mecanismo robusto para lidar com entradas dinâmicas. Ao compreender sua sintaxe e uso, você pode criar scripts flexíveis e poderosos que se adaptam a vários cenários. Combinadas com funções de ordem superior, as funções variadas tornam seu código mais conciso e expressivo.
+### Conclusão
+
+Funções variáveis no Scheme fornecem um mecanismo robusto para lidar com entradas dinâmicas. Ao compreender sua sintaxe e uso, você pode criar scripts flexíveis e poderosos que se adaptam a vários cenários. Combinadas com funções de ordem superior, as funções variadas tornam seu código mais conciso e expressivo.

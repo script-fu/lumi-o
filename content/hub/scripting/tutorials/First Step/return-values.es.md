@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 Los valores de retorno son importantes porque le permiten controlar el flujo sin un estado adicional. En Scheme, la última expresión evaluada se convierte en el valor de retorno.
 
@@ -61,7 +62,7 @@ A continuación se muestra un ejemplo sencillo del uso de un valor de retorno pa
 En este caso, (enviar-mensaje) se basa en el valor de retorno de (¿is-valid-output-display?) para decidir si continuar.
 La declaración condicional `cond` se omitirá si falla la primera prueba. Además, observe cómo se lee de una manera bastante natural, si la visualización de salida es válida.
 
-## Si la lógica de la declaración en el esquema
+## Lógica de la sentencia `if` en Scheme
 
 Antes del ejemplo de la biblioteca refactorizada, aquí hay una revisión rápida de la lógica condicional. Scheme utiliza `if` para elegir entre dos caminos.
 

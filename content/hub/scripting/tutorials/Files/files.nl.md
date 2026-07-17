@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Het werken met bestanden en mappen is essentieel voor de ontwikkeling van schema's. Of u nu uitvoer opslaat, bronnen laadt of uw projectstructuur organiseert, als u bestandsbewerkingen begrijpt, worden uw scripts robuuster en gebruiksvriendelijker.
 
@@ -37,7 +38,7 @@ Er is ook de globale variabele `DIR-SEPARATOR`, die het platformspecifieke padsc
 
 ## Een directorylocatie verkrijgen
 
-We kunnen de gebruiker om een maplocatie vragen in het Schema-dialoogvenster voor een plug-in.
+We kunnen de gebruiker om een maplocatie vragen in het Scheme-dialoogvenster voor een plug-in.
 
 ```scheme
 (scheme-register
@@ -73,7 +74,7 @@ Als u geïnteresseerd bent in de implementatiedetails, zoekt u in de plug-inbron
 
 ## Een directory maken
 
-Schema biedt de opdracht ```dir-make``` om een map te maken. Deze opdracht gebruikt een "/" gescheiden pad en maakt een enkele map aan met een optionele parameter voor de bevoegdheden. We geven het geen platformspecifieke paden.
+Scheme biedt de opdracht ```dir-make``` om een map te maken. Deze opdracht gebruikt een "/" gescheiden pad en maakt een enkele map aan met een optionele parameter voor de bevoegdheden. We geven het geen platformspecifieke paden.
 
 Meestal moeten we meerdere mappen maken voor een praktisch pad. We kunnen een verpakking voor ```dir-make``` gebruiken om ons hierbij te helpen.
 

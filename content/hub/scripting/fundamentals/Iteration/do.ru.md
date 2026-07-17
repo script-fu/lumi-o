@@ -3,12 +3,13 @@ title: "do"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
-La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
+Функция `do` в Scheme — это механизм цикла, который позволяет выполнять итерацию с условиями инициализации, обновления и завершения. Это особенно полезно, когда вам нужно выполнить последовательность операций определенное количество раз или до тех пор, пока не будет выполнено условие.
 
-La forme générale de `do` :
+Общая форма `do`:
 
 ```scheme
 (do ((var1 init1 update1)
@@ -18,16 +19,16 @@ La forme générale de `do` :
   body)
 ```
 
-- **Variable :** variable(s) de boucle.
-- **Initial-value :** valeur initiale.
-- **Update-expression :** mise à jour par itération.
-- **Termination-condition :** condition d'arrêt.
-- **Result-expression :** valeur renvoyée à l'arrêt.
-- **Body :** code exécuté à chaque tour.
+- **Переменная**: переменная(и) цикла.
+- **Начальное значение**: начальное значение каждой переменной цикла.
+- **Обновить-выражение**: выражение для обновления переменных цикла в конце каждой итерации.
+- **Условие завершения**: условие остановки цикла.
+- **Выражение-результата**: значение, возвращаемое при завершении цикла.
+- **Тело**: код, который будет выполняться на каждой итерации.
 
 ---
 
-### Exemple : somme de 1 à 5
+### Пример: просуммируйте числа от 1 до 5
 
 ```scheme
 (do ((i 1 (+ i 1))      ; Инициализировать i как 1, увеличивать на 1
@@ -36,26 +37,31 @@ La forme générale de `do` :
   (lumi-message (number->string sum))) ; Выводит сумму на каждом шаге
 ```
 
-- `i` commence à 1 et s'incrémente.
-- `sum` accumule la somme.
-- Arrêt quand `i > 5`, retour de `sum`.
+- Переменная цикла `i` начинается с 1 и увеличивается на 1 на каждой итерации.
+- Переменная `sum` накапливает сумму `i`.
+- Цикл завершается, когда `i > 5`, возвращая окончательное значение `sum`.
 
-**Sortie** : `15`
-
----
-
-### Comment ça marche
-
-1. **Initialisation :** valeurs de départ.
-2. **Test d'arrêt :** au début de chaque tour.
-3. **Itération :** exécuter le corps, mettre à jour les variables.
+**Вывод**: `15`
 
 ---
 
-### Résumé
+### Как это работает
 
-- `do` offre des boucles flexibles à plusieurs variables.
-- Utile quand l'état évolue à chaque tour.
-- La condition d'arrêt fixe la fin et le résultat.
+1. **Инициализация**:
+   - Каждой переменной цикла присваивается исходное значение.
 
-`do` combine **liaisons** (comme `let`) et **contrôle itératif**.
+2. **Проверка прекращения**:
+   - В начале каждой итерации проверяется условие завершения. Если это правда, цикл останавливается и вычисляется результирующее выражение.
+
+3. **Итерация**:
+   - Если условие завершения ложно, выполняется тело и переменные цикла обновляются с использованием соответствующих выражений обновления.
+
+---
+
+### Резюме
+
+- Конструкция `do` обеспечивает гибкий способ реализации циклов с несколькими переменными и сложными условиями завершения.
+— Это полезно для задач, требующих обновления состояния на протяжении итераций.
+— Условие завершения определяет, когда цикл заканчивается, и может вернуть окончательный результат.
+
+Используя `do`, вы можете реализовать итеративные алгоритмы в Scheme с точным контролем над инициализацией, обновлениями и завершением. Это делает `do` комбинацией **механизма привязки с ограниченной областью действия** (например, `let`) и **итеративной структуры управления**, что позволяет ему обрабатывать циклы и временное состояние простым и лаконичным способом.

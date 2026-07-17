@@ -35,7 +35,7 @@ Linux-distributionen paketerar kärnan tillsammans med användarutrymmesverktyg,
 
 Ett verktyg för att installera, uppdatera och ta bort program från repositoryer. Exempel: APT för Debian-baserade distributioner, DNF för Fedora och Pacman för Arch Linux.
 
-#### Display Manager
+#### Skärmhanterare
 
 Hanterar den grafiska inloggningsskärmen och sessionsstart. Exempel: GDM (GNOME Display Manager), LightDM och SDDM (Simple Desktop Display Manager).
 
@@ -43,6 +43,6 @@ Hanterar den grafiska inloggningsskärmen och sessionsstart. Exempel: GDM (GNOME
 
 Tillhandahåller det grafiska användargränssnittet (GUI) och hanterar utseende och användarupplevelse. Exempel: GNOME, Cinnamon och KDE Plasma.
 
-#### Display Server
+#### Skärmserver
 
 Hanterar skärmutdata och inmatningshändelser. Exempel: X11 (X Window System) och Wayland. X11 är en traditionell display server; Wayland är ett nyare, säkrare alternativ.

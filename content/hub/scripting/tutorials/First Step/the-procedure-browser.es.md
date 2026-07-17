@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 El **Explorador de procedimientos Lumi** le permite buscar los procedimientos disponibles (integrados y complementos incluidos) e inspeccionar sus parámetros y valores de retorno.
 

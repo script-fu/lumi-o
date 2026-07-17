@@ -4,19 +4,20 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
-Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
+Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. Queste funzioni costituiscono ora la base di una **Libreria di messaggistica**, progettata per gestire l'output verso destinazioni diverse, come la GUI, la console Message e il terminale del sistema operativo.
 
 ### Perché una libreria di messaggistica?
 
 Man mano che le nostre esigenze crescono, la gestione dei messaggi su più output richiede un approccio più modulare ed estensibile. Invece di una singola funzione che fa tutto, abbiamo suddiviso il processo in componenti riutilizzabili, consentendo una maggiore flessibilità. Questa libreria può ora essere utilizzata come strumento di messaggistica generico da cui possono prendere in prestito altri plug-in o funzioni.
 
-### What Does the Messaging Library Do?
+### Cosa fa la libreria di messaggistica?
 
 La Libreria Messaggistica attualmente include le seguenti funzioni:
 
-- **send-to-gui**: Sends messages to the Lumi GUI dialog box.
+- **send-to-gui**: invia messaggi alla finestra di dialogo GUI di Lumi.
 - **send-to-error-console**: invia messaggi alla console Lumi Message.
 - **send-to-terminal**: invia messaggi alla finestra del terminale.
 - **send-message**: una funzione dispatcher che indirizza i messaggi all'output appropriato.
@@ -26,21 +27,21 @@ La Libreria Messaggistica attualmente include le seguenti funzioni:
 
 La **Libreria di messaggistica** può essere facilmente estesa per supportare output aggiuntivi. Ad esempio:
 
-- **send-to-file**: Save messages to a log file.
+- **send-to-file**: salva i messaggi in un file di log.
 - **send-to-logger**: integrazione con un sistema di registrazione esterno.
 - **invio a notifica**: visualizza i messaggi come notifiche di sistema.
 
-By following the same pattern of modular design and reusable functions, this library can grow into a comprehensive tool for handling all kinds of messaging tasks.
+Seguendo lo stesso modello di progettazione modulare e funzioni riutilizzabili, questa libreria può crescere fino a diventare uno strumento completo per gestire ogni tipo di attività di messaggistica.
 
 ## Vantaggi di una libreria di messaggistica
 
-- **Reusability**: The functions can be reused across different plug-ins or projects.
-- **Modularity**: Each function handles one specific task, making the code easier to maintain and extend.
-- **Consistency**: Using the same validation and message-handling functions ensures consistent behavior across the application.
+- **Riutilizzabilità**: le funzioni possono essere riutilizzate in plug-in o progetti diversi.
+- **Modularità**: ogni funzione gestisce un compito specifico, rendendo il codice più facile da mantenere ed estendere.
+- **Coerenza**: usare le stesse funzioni di validazione e gestione dei messaggi garantisce un comportamento coerente nell'applicazione.
 
 La **Libreria dei messaggi** è l'inizio di un quadro più ampio che potrebbe semplificare il modo in cui i messaggi vengono gestiti nel tuo progetto. Man mano che la libreria cresce, nuovi plug-in possono facilmente attingere ad essa per inviare messaggi ovunque debbano andare.
 
-We can adjust the file structure:
+Possiamo adattare la struttura dei file:
 
 ```plaintext
 /home/your-username/code/

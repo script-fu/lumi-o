@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 一旦我們的函數可以工作，我們就可以退一步思考如何最好地建立我們的程式碼。目標是使我們的插件盡可能清晰、易於理解和可維護。這種在不改變現有程式碼行為的情況下改進和細化現有程式碼結構的過程稱為重構。
 
@@ -16,7 +17,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; 設定訊息處理常式，將訊息輸出到 Error Console
+  ;; 設定訊息處理常式，將訊息輸出到 錯誤主控台
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; 設定訊息處理常式，將訊息輸出到 Error Console
+    ;; 設定訊息處理常式，將訊息輸出到 錯誤主控台
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
 ;; 處理向各種目標輸出訊息的函式
 (define (send-message message output)
   (cond
-    ;; 傳送到 Error Console
+    ;; 傳送到 錯誤主控台
     ((eq? output 'error-console)
-       ;; 將處理常式設定為 Error Console
+       ;; 將處理常式設定為 錯誤主控台
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
        ;; terminal 輸出透過 display 處理
        (display message)))
 
-  ;; 將預設訊息處理常式還原為 Error Console
+  ;; 將預設訊息處理常式還原為 錯誤主控台
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

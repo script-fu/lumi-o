@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
+translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
+url: "hub/scripting/fundamentals/Conditionals/_index"
 ---
 条件分岐はプログラミングの基本要素です。スクリプトが判断を下し、特定の基準に基づいて処理の流れを制御できるようにします。Scheme 言語に基づく Scheme では、条件分岐により、入力、環境、ユーザー操作の変化に適応する動的で知的なスクリプトを作成できます。
 

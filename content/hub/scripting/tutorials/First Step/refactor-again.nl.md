@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 Naarmate de helperbibliotheek groeit, wordt het moeilijker om in één oogopslag te volgen. Refactoreer opnieuw om elke functie klein en voor één doel te houden.
 
@@ -37,7 +38,7 @@ Nu de validatie naar een aparte functie is verplaatst, kan de functie `send-mess
   (validate-message message output)
 
   (cond
-    ;; Verzenden naar de Message console
+    ;; Verzenden naar de berichtenconsole
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ Nu de validatie naar een aparte functie is verplaatst, kan de functie `send-mess
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ Elk type berichtuitvoer (GUI, berichtenconsole, terminal) kan naar een eigen fun
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ Een opnieuw opgebouwde bibliotheekversie:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Doel: Stuurt een bericht naar de Message console
+;; Doel: Stuurt een bericht naar de berichtenconsole
 (define (send-to-error-console message)
   ;; Valideer het bericht voordat u doorgaat
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ Een opnieuw opgebouwde bibliotheekversie:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 
 ;; Doel: Controleert dat het bericht een niet-lege tekenreeks is en dat de uitvoer geldig is

@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 Quando creiamo plug-in robusti, è importante garantire che le nostre funzioni gestiscano gli errori in modo corretto e funzionino come previsto, anche in caso di uso improprio o input imprevisti. La convalida aiuta a proteggere l'integrità della funzione e a prevenire arresti anomali o comportamenti non intenzionali.
 
@@ -22,7 +23,7 @@ Esempio:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Invia alla Message console
+      ;; Invia alla console dei messaggi
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Esempio:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console dei messaggi
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Questo approccio garantisce che la funzione riceva sempre input validi, migliora
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Invia alla Message console
+        ;; Invia alla console dei messaggi
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Questo approccio garantisce che la funzione riceva sempre input validi, migliora
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console dei messaggi
   (lumi-message-set-handler 2))
 ```
 

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 [첫 번째 단계](../../first-step/) 튜토리얼에서는 _procedure_ 플러그인을 사용했습니다. 이러한 유형의 플러그인은 입력으로 이미지나 드로어블이 필요 없이 작동합니다. 일반적으로 우리는 플러그인을 사용하여 이미지와 해당 드로어블을 변경합니다. 이와 같은 플러그인을 _filter_ 플러그인이라고 합니다.
 
@@ -20,7 +21,7 @@ Lumi의 **드로어블**은 레이어나 채널과 같이 그릴 수 있는 이�
 (define (scheme-simple-filter-plug-in image drawables)
   ;; let 문을 사용하여 메시지 변수와 핵심 코드 정의
   (let ((message "hello, world"))
-    ;; Lumi의 Error Console에 메시지 표시
+    ;; Lumi의 오류 콘솔에 메시지 표시
     (lumi-message message)
     ;; 첫 번째로 선택한 drawable의 색상 반전
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ Lumi 버전 3에서는 저장된 변경 사항을 적용하기 위해 플러그�
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Lumi의 Error Console에 메시지 표시
+  (lumi-message message) ;; Lumi의 오류 콘솔에 메시지 표시
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 첫 번째로 선택한 drawable의 색상 반전
 ```
 

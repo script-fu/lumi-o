@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 隨著幫助程式庫的成長，一目了然地追蹤變得越來越困難。再次重構以保持每個功能較小且單一用途。
 
@@ -37,7 +38,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (validate-message message output)
 
   (cond
-    ;; 傳送到 Message console
+    ;; 傳送到 訊息主控台
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'terminal)
        (display message)))
 
-  ;; 將預設訊息處理常式還原為 Message console
+  ;; 將預設訊息處理常式還原為 訊息主控台
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 將預設訊息處理常式還原為 Message console
+  ;; 將預設訊息處理常式還原為 訊息主控台
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; 用途：向 Message console 傳送訊息
+;; 用途：向 訊息主控台 傳送訊息
 (define (send-to-error-console message)
   ;; 繼續前先驗證訊息
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 將預設訊息處理常式還原為 Message console
+  ;; 將預設訊息處理常式還原為 訊息主控台
   (lumi-message-set-handler 2))
 
 ;; 用途：驗證訊息為非空字串且輸出有效

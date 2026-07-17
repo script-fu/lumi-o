@@ -4,11 +4,12 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
-W schemacie wektor jest kolejną podstawową strukturą danych używaną do grupowania wartości. W przeciwieństwie do list, wektory to indeksowane zbiory elementów o stałym rozmiarze, zapewniające szybszy losowy dostęp i aktualizacje. Każdy element wektora może być dowolnego typu, łącznie z innym wektorem. Wektory są reprezentowane za pomocą #, po którym następują nawiasy. `#(1 2 3)`
+W Scheme wektor to kolejna podstawowa struktura danych używana do grupowania wartości. W przeciwieństwie do list, wektory to indeksowane zbiory elementów o stałym rozmiarze, zapewniające szybszy losowy dostęp i aktualizacje. Każdy element wektora może być dowolnego typu, łącznie z innym wektorem. Wektory są reprezentowane za pomocą `#`, po którym następują nawiasy. `#(1 2 3)`
 
-Chociaż wektory i listy mogą wyglądać podobnie, w programowaniu schematów służą różnym celom:
+Chociaż wektory i listy mogą wyglądać podobnie, w Scheme służą różnym celom:
 
 - Listy są częściej używane w operacjach rekurencyjnych i strukturach dynamicznych, ponieważ ich implementacja w postaci połączonych węzłów umożliwia efektywną manipulację ich początkiem i przejściem poprzez dekompozycję rekurencyjną.
 
@@ -38,7 +39,7 @@ Dostęp do elementów wektora uzyskuje się za pomocą procedury `vector-ref`, k
 
 #### Iteracja: przetwarzanie każdego elementu w wektorze
 
-Możesz iterować po wektorze za pomocą pętli lub rekurencji. Schemat zapewnia `vector-length` w celu określenia rozmiaru wektora. Oto prosta pętla do wydrukowania każdego elementu wektora:
+Możesz iterować po wektorze za pomocą pętli lub rekurencji. Scheme zapewnia `vector-length` w celu określenia rozmiaru wektora. Oto prosta pętla do wydrukowania każdego elementu wektora:
 
 ```scheme
 (define (print-elements vec)
@@ -65,7 +66,7 @@ Wynik:
 - `"2"`
 - `"3"`
 
-Wynik: „gotowe”
+Wynik: `"done"`
 
 ### Mieszane wektory
 
@@ -122,7 +123,9 @@ Wynik:
 - `(vector? (vector 1 2 3))` zwraca `#t` (true)
 - `(vector? 42)` zwraca `#f` (fałsz)
 
-### Wektory i zachowanie podczas przekazywania przez referencjeNa schemacie wektory można modyfikować i przekazywać przez odniesienie. Oznacza to, że gdy przekazujesz wektor do funkcji, funkcja może bezpośrednio modyfikować oryginalny wektor. Wszelkie zmiany dokonane w wektorze wewnątrz funkcji zostaną odzwierciedlone również poza funkcją. To zachowanie jest przydatne do wydajnego udostępniania i aktualizowania danych w wielu funkcjach, ale wymaga również ostrożności, aby uniknąć niezamierzonych skutków ubocznych.
+### Wektory a przekazywanie przez referencję
+
+W Scheme wektory można modyfikować i przekazywać przez referencję. Oznacza to, że gdy przekazujesz wektor do funkcji, funkcja może bezpośrednio modyfikować oryginalny wektor. Wszelkie zmiany dokonane w wektorze wewnątrz funkcji zostaną odzwierciedlone również poza funkcją. To zachowanie jest przydatne do wydajnego udostępniania i aktualizowania danych w wielu funkcjach, ale wymaga też ostrożności, aby uniknąć niezamierzonych skutków ubocznych.
 
 #### Przykład: modyfikowanie wektora w funkcji
 
@@ -142,13 +145,13 @@ Wynik: `#(10 99 30)`
 #### Wyjaśnienie krok po kroku
 
 1. **Utwórz wektor:** `my-vector` jest inicjowany wartościami `10`, `20` i `30`.
-2. **Przejście do funkcji:** `my-vector` jest przekazywane do `modify-vector` wraz z indeksem i nową wartością do aktualizacji.
+2. **Przekazanie do funkcji:** `my-vector` jest przekazywany do `modify-vector` wraz z indeksem i nową wartością do aktualizacji.
 3. **Modyfikuj w funkcji:** Procedura `vector-set!` aktualizuje wartość pod określonym indeksem bezpośrednio w oryginalnym wektorze.
-4. **Odzwierciedlaj zmiany:** Ponieważ wektory są przekazywane przez odniesienie, zmiany dokonane w funkcji są odzwierciedlane w oryginalnym wektorze.
+4. **Odzwierciedlaj zmiany:** Ponieważ wektory są przekazywane przez referencję, zmiany dokonane w funkcji są odzwierciedlane w oryginalnym wektorze.
 
-#### Konsekwencje przekazywania przez odwołanie
+#### Konsekwencje przekazywania przez referencję
 
-- **Wydajność:** Przekazywanie wektorów przez referencje jest wydajne, ponieważ pozwala uniknąć kopiowania dużych struktur.
+- **Wydajność:** Przekazywanie wektorów przez referencję jest wydajne, ponieważ pozwala uniknąć kopiowania dużych struktur.
 - **Skutki uboczne:** Zachowaj ostrożność podczas udostępniania wektorów między funkcjami, aby uniknąć niezamierzonych modyfikacji udostępnianych danych.
 
 ### Operacje na wektorach
@@ -173,7 +176,7 @@ Wynik:
 
 ### Zagnieżdżone wektory
 
-Wektory na schemacie mogą zawierać inne wektory jako elementy, tworząc strukturę zagnieżdżoną.
+W Scheme wektory mogą zawierać inne wektory jako elementy, tworząc strukturę zagnieżdżoną.
 
 ```scheme
 (define nested-vector (vector (vector 1 2) (vector 3 4) (vector 5)))
@@ -196,7 +199,7 @@ Aby uzyskać dostęp do elementów w zagnieżdżonym wektorze, użyj `vector-ref
 
 ### Podsumowanie
 
-- **Wektory** na schemacie to indeksowane struktury danych o stałym rozmiarze.
+- **Wektory** w Scheme to indeksowane struktury danych o stałym rozmiarze.
 - Użyj `vector`, aby utworzyć wektor, `vector-ref`, aby uzyskać dostęp do elementów i `vector-set!`, aby zaktualizować elementy.
 - Wbudowane procedury, takie jak `vector-length`, `vector->list` i `list->vector` umożliwiają elastyczne operacje.
 - Zagnieżdżone wektory pozwalają na tworzenie złożonych, hierarchicznych struktur danych.

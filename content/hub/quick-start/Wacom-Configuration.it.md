@@ -1,6 +1,10 @@
 ---
 title: "Configurazione Wacom"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 Per la pittura digitale in Lumi, si consiglia una semplice **impostazione della pressione lineare**.
 
@@ -8,7 +12,7 @@ Per la pittura digitale in Lumi, si consiglia una semplice **impostazione della 
 - Mantenere le curve di pressione/input in Lumi per lo più lineari.
 - Dai forma alla sensazione con il pennello stesso, poiché la dinamica del pennello può già essere non lineare.
 
-Si consiglia di mantenere la curva di pressione lineare predefinita a livello del driver del sistema operativo. La combinazione di più curve non lineari spesso porta a un comportamento di input imprevedibile; Mantenendo il conducente neutrale, ti assicuri che qualsiasi regolazione effettuata all'interno di Lumi-o rimanga intuitiva e riproducibile. Un leggero aggiustamento alla curva globale di Lumi può ancora essere ragionevole quando necessario.
+Si consiglia di mantenere la curva di pressione lineare predefinita a livello del driver del sistema operativo. La combinazione di più curve non lineari spesso porta a un comportamento di input imprevedibile; mantenendo neutro il driver, ti assicuri che qualsiasi regolazione effettuata all'interno di Lumi-o rimanga intuitiva e riproducibile. Un leggero aggiustamento alla curva globale di Lumi può ancora essere ragionevole quando necessario.
 
 ## Curva globale dello stilo in Lumi
 

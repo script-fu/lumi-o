@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 **Variadische Funktionen** in Scheme sind Funktionen, die eine variable Anzahl von Argumenten akzeptieren. Diese Funktionen sind äußerst vielseitig und ermöglichen die Erstellung flexiblen und wiederverwendbaren Codes. In der funktionalen Programmierung vereinfachen variadische Funktionen Vorgänge, die eine beliebige Anzahl von Eingaben verarbeiten müssen, z. B. das Summieren einer Liste von Zahlen oder das Verketten von Zeichenfolgen.
 
@@ -139,4 +140,6 @@ Vermeiden Sie variadische Funktionen, wenn:
 - Für die erforderliche Logik genügen feste Argumente.
 - Die Lesbarkeit wird durch zu komplexe Vorgänge beeinträchtigt.
 
-### AbschlussVariadische Funktionen in Scheme bieten einen robusten Mechanismus zur Verarbeitung dynamischer Eingaben. Wenn Sie deren Syntax und Verwendung verstehen, können Sie flexible und leistungsstarke Skripte erstellen, die sich an verschiedene Szenarien anpassen. In Kombination mit Funktionen höherer Ordnung machen variadische Funktionen Ihren Code prägnanter und ausdrucksvoller.
+### Abschluss
+
+Variadische Funktionen in Scheme bieten einen robusten Mechanismus zur Verarbeitung dynamischer Eingaben. Wenn Sie deren Syntax und Verwendung verstehen, können Sie flexible und leistungsstarke Skripte erstellen, die sich an verschiedene Szenarien anpassen. In Kombination mit Funktionen höherer Ordnung machen variadische Funktionen Ihren Code prägnanter und ausdrucksvoller.

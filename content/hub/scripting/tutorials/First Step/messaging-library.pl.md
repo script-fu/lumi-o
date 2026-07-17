@@ -4,47 +4,48 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
-Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
+Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. Te funkcje stanowią teraz fundament **biblioteki wiadomości**, zaprojektowanej do obsługi wyjścia na różne cele, takie jak GUI, konsola komunikatów i terminal systemu operacyjnego.
 
 ### Dlaczego biblioteka wiadomości?
 
-W miarę wzrostu naszych potrzeb obsługa komunikatów przesyłanych na wiele wyjść wymaga bardziej modułowego i rozszerzalnego podejścia. Zamiast jednej funkcji, która robi wszystko, podzieliliśmy proces na komponenty, które można ponownie wykorzystać, co zapewnia większą elastyczność. This library can now be used as a general-purpose messaging tool that other plug-ins or functions can borrow from.
+W miarę wzrostu naszych potrzeb obsługa komunikatów przesyłanych na wiele wyjść wymaga bardziej modułowego i rozszerzalnego podejścia. Zamiast jednej funkcji, która robi wszystko, podzieliliśmy proces na komponenty, które można ponownie wykorzystać, co zapewnia większą elastyczność. Bibliotekę tę można teraz wykorzystywać jako uniwersalne narzędzie do wiadomości, z którego mogą korzystać inne wtyczki lub funkcje.
 
 ### Do czego służy biblioteka wiadomości?
 
 Biblioteka wiadomości zawiera obecnie następujące funkcje:
 
 - **send-to-gui**: Wysyła wiadomości do okna dialogowego GUI Lumi.
-- **send-to-error-console**: Wysyła wiadomości do konsoli Lumi Message.
-- **wyślij do terminala**: Wysyła wiadomości do okna terminala.
+- **send-to-error-console**: Wysyła wiadomości do konsoli komunikatów Lumi.
+- **send-to-terminal**: Wysyła wiadomości do okna terminala.
 - **send-message**: Funkcja dyspozytora, która kieruje wiadomości do odpowiedniego wyjścia.
-- **validate-message**: Zapewnia, że ​​wiadomość i dane wyjściowe są prawidłowe przed wysłaniem.
+- **validate-message**: Zapewnia, że wiadomość i dane wyjściowe są prawidłowe przed wysłaniem.
 
 ### Rozszerzanie biblioteki
 
 **Bibliotekę wiadomości** można łatwo rozszerzyć, aby obsługiwała dodatkowe wyjścia. Na przykład:
 
-- **wyślij do pliku**: zapisywanie wiadomości w pliku dziennika.
-- **send-to-logger**: Integrate with an external logging system.
-- **wyślij do powiadomienia**: wyświetlaj wiadomości jako powiadomienia systemowe.
+- **send-to-file**: zapisywanie wiadomości w pliku dziennika.
+- **send-to-logger**: integracja z zewnętrznym systemem rejestrowania.
+- **send-to-notification**: wyświetlanie wiadomości jako powiadomień systemowych.
 
-By following the same pattern of modular design and reusable functions, this library can grow into a comprehensive tool for handling all kinds of messaging tasks.
+Stosując ten sam wzorzec modułowego projektu i funkcji wielokrotnego użytku, biblioteka ta może rozrosnąć się w kompletne narzędzie do obsługi wszelkich zadań związanych z wiadomościami.
 
 ## Korzyści z biblioteki wiadomości
 
 - **Ponowne użycie**: Funkcje można ponownie wykorzystać w różnych wtyczkach lub projektach.
-- **Modułowość**: Każda funkcja obsługuje jedno konkretne zadanie, dzięki czemu kod jest łatwiejszy w utrzymaniu i rozszerzaniu.
+- **Modularyzacja kodu**: Każda funkcja obsługuje jedno konkretne zadanie, dzięki czemu kod jest łatwiejszy w utrzymaniu i rozszerzaniu.
 - **Spójność**: Korzystanie z tych samych funkcji sprawdzania poprawności i obsługi komunikatów zapewnia spójne zachowanie w całej aplikacji.
 
-The **Messaging Library** is the beginning of a broader framework that could simplify how messages are managed in your project. W miarę powiększania się biblioteki nowe wtyczki mogą z łatwością korzystać z niej, aby wysyłać wiadomości, gdziekolwiek chcą.
+**Biblioteka wiadomości** to początek szerszego frameworku, który może uprościć zarządzanie wiadomościami w projekcie. W miarę rozwoju biblioteki nowe wtyczki mogą z łatwością z niej korzystać, wysyłając wiadomości tam, gdzie tego potrzebują.
 
 Możemy dostosować strukturę pliku:
 
 ```plaintext
 /home/your-username/code/
-  ├── script-fu/
+  ├── scheme/
       ├── library/
       │     └── send-message.scm -> messaging.scm
       └── plug-ins/

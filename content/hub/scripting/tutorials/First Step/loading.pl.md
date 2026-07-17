@@ -4,11 +4,12 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
-Gdy tylko funkcja pomocnicza powiększy się, przenieś ją do małego pliku biblioteki. Dzięki temu wtyczka jest skoncentrowana i sprawia, że ​​pomocnika można używać wielokrotnie w wielu wtyczkach.
+Gdy tylko funkcja pomocnicza powiększy się, przenieś ją do małego pliku biblioteki. Dzięki temu wtyczka jest skoncentrowana i sprawia, że pomocnika można używać wielokrotnie w wielu wtyczkach.
 
-### Make a Library Function
+### Utwórz funkcję biblioteki
 
 Możemy skorzystać z funkcji send-message i utworzyć nowy plik z tą zawartością. Zapisz plik w folderze repo, a nie w części z wtyczkami, być może w pobliżu najwyższego poziomu;
 
@@ -22,11 +23,11 @@ Możemy skorzystać z funkcji send-message i utworzyć nowy plik z tą zawartoś
                   └── hello-world.scm
 ```
 
-- **scheme/**: To jest główny katalog do przechowywania kodu schematu.
+- **scheme/**: To jest główny katalog do przechowywania kodu Scheme.
   - **biblioteka/**: Tutaj działają wspólne funkcje, takie jak `send-message.scm`.
   - **wtyczki/**: Tutaj przechowywane są Twoje indywidualne wtyczki.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Folder dla konkretnej wtyczki „Hello World!”.
+      - **hello-world.scm**: Plik skryptu wtyczki.
 
 Przykład funkcji bibliotecznej send-message.scm
 
@@ -34,9 +35,9 @@ Przykład funkcji bibliotecznej send-message.scm
 ;; Funkcja obsługująca wysyłanie wiadomości do różnych miejsc docelowych
 (define (send-message message output)
   (cond
-    ;; Wyślij do Message console
+    ;; Wyślij do konsoli komunikatów
     ((eq? output 'error-console)
-       ;; Ustaw obsługę na Message console
+       ;; Ustaw obsługę na konsoli komunikatów
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -48,18 +49,18 @@ Przykład funkcji bibliotecznej send-message.scm
 
     ;; Wyślij do okna terminala
     ((eq? output 'terminal)
-       ;; Wyjście terminal obsługiwane jest przez display
+       ;; Wyjście terminala obsługiwane jest przez display
        (display message)))
 
-  ;; Przywróć domyślną obsługę wiadomości do Message console
+  ;; Przywróć domyślną obsługę wiadomości do konsoli komunikatów
   (lumi-message-set-handler 2))
 ```
 
 ### Załaduj funkcję biblioteki
 
-We can load that library function with the Scheme `load` command;
+Funkcję biblioteczną możemy załadować poleceniem Scheme `load`:
 
-Loading a library file:
+Ładowanie pliku biblioteki:
 
 ```scheme
 #!/usr/bin/env lumi-scheme-interpreter-0.1
@@ -84,4 +85,4 @@ Loading a library file:
   "<Image>/Funky")
 ```
 
-Hej! We've now got something simpler and shorter to read, that kind of describes itself without comments. To jest satysfakcjonujący wniosek z refaktoryzacji.
+Hej! Mamy teraz coś prostszego i krótszego do czytania, co opisuje się samo bez komentarzy. To satysfakcjonujący wniosek refaktoryzacji.

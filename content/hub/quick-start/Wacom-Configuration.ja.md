@@ -1,6 +1,10 @@
 ---
 title: "ワコムの構成"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 Lumi でのデジタル ペイントの場合は、シンプルな **線圧設定** をお勧めします。
 

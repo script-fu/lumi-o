@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 As ferramentas modernas de IA podem acelerar significativamente o desenvolvimento do plug-in Lumi, agindo como um parceiro de codificação colaborativa.
 
@@ -28,7 +29,7 @@ A assistência de IA é mais eficaz quando o Agente tem acesso ao **lumi-dev** o
 
 Você pode pedir diretamente ao Agente para gerar um plug-in completo descrevendo o resultado funcional desejado:
 
-> "Usando os utilitários de esquema disponíveis e exemplos na área de trabalho, escreva um novo plug-in que crie uma guia horizontal de 50% na imagem ativa e o nomeie 'Guia Central'."
+> "Usando os utilitários de Scheme disponíveis e exemplos na área de trabalho, escreva um novo plug-in que crie uma guia horizontal de 50% na imagem ativa e o nomeie 'Guia Central'."
 
 O Agente procurará como criar guias, identificar a função de utilidade correta (como `lumi-image-add-hguide-percent` de `common.scm`) e gerar o arquivo `.scm` completo com o padrão de registro correto.
 

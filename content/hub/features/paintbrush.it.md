@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
 
-Lo strumento Pennello è lo strumento di pittura principale di Lumi-o: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
+Lo strumento Pennello è lo strumento di pittura principale di Lumi: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
 
 Non è un unico pennello fisso, ma un sistema di pittura. Forma, texture, movimento, pressione, tempismo e colore del pennello possono tutti contribuire al segno finale, rendendolo adatto a linee pulite, pittura morbida, effetti di media asciutta, tratti calligrafici, texture sparse e formazioni a più teste.
 

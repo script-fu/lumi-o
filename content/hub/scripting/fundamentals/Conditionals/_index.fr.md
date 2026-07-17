@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
+translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
+url: "hub/scripting/fundamentals/Conditionals/_index"
 ---
 Les conditions sont un élément fondamental de la programmation : elles permettent aux scripts de prendre des décisions et de contrôler leur flux en fonction de critères précis. En Scheme, basé sur le langage de programmation Scheme, les conditions vous aident à créer des scripts dynamiques et intelligents qui s'adaptent aux entrées, environnements ou actions utilisateur changeants.
 

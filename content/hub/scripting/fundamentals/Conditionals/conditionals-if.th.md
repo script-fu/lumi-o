@@ -3,29 +3,32 @@ title: "if"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+ในรูปแบบที่ง่ายที่สุด `if` แบบมีเงื่อนไขใน Scheme จะประเมินการทดสอบและดำเนินการหนึ่งในสองบล็อกโค้ดที่เป็นไปได้ โดยขึ้นอยู่กับผลลัพธ์ แบบฟอร์มที่ง่ายที่สุดมีลักษณะดังนี้:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- หาก `test` ประเมินเป็นจริง (`#t`) **โค้ดบล็อกในส่วนที่ตามมา** จะถูกดำเนินการ บล็อกอาจส่งคืนค่าหรือดำเนินการอื่นๆ เช่น การกำหนดตัวแปรหรือเอาต์พุตการพิมพ์
 
-### Exemple
+### ตัวอย่าง
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- ในกรณีนี้ `test` คือ `(< 0 1)` (ตรวจสอบว่า 0 น้อยกว่า 1)
+- เนื่องจากการทดสอบประเมินเป็นจริง (`#t`) บล็อกโค้ด `(lumi-message "True!")` จะถูกดำเนินการ ซึ่งจะพิมพ์ `"True!"`
 
-### Branche else : `if-else`
+### การเพิ่มเงื่อนไขอื่น: `if-else`
+
+เมื่อใช้เงื่อนไข `if` กับบล็อกโค้ดสำรอง (ตัวพิมพ์ `else`) โครงสร้างจะมีลักษณะดังนี้:
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- หาก `test` ประเมินเป็นจริง (`#t`) บล็อกโค้ด **ผลที่ตามมา** จะถูกดำเนินการ
+- หาก `test` ประเมินเป็นเท็จ (`#f`) บล็อกโค้ด **ทางเลือก** จะถูกดำเนินการ
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### มันทำงานอย่างไร
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **ทดสอบนิพจน์**:
+   - นิพจน์ `test` จะได้รับการประเมินก่อน
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **ผลลัพธ์จากการทดสอบ**:
+   - หาก `test` ประเมินเป็นจริง (`#t`) **บล็อกโค้ดที่ตามมา** จะถูกดำเนินการ
+   - หาก `test` ประเมินเป็นเท็จ (`#f`) **บล็อกโค้ดทางเลือก** จะถูกดำเนินการ
 
-#### Exemple 1 : renvoyer une valeur
+ทั้งบล็อกโค้ด `consequent` และ `alternative` สามารถดำเนินการ Scheme ที่ถูกต้องได้ รวมถึงการส่งคืนค่า การแก้ไขตัวแปร หรือการรันโพรซีเดอร์
+
+### ตัวอย่าง
+
+#### ตัวอย่างที่ 1: การส่งคืนค่า
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- ที่นี่ `test` คือ `(< 0 1)` (ตรวจสอบว่า 0 น้อยกว่า 1)
+- เนื่องจากการทดสอบประเมินเป็นจริง (`#t`) บล็อก **ผลที่ตามมา** (`1`) จะถูกดำเนินการและส่งกลับค่าของบล็อกนั้น
 
-#### Exemple 2 : bloc `begin`
+ผลลัพธ์: **1**
+
+#### ตัวอย่างที่ 2: การประเมินบล็อกเริ่มต้น
+
+ในกรณีที่คุณจำเป็นต้องดำเนินการหลายอย่างเมื่อเงื่อนไขเป็นจริงหรือเท็จ คุณสามารถใช้ `begin` หรือ `let` เพื่อจัดกลุ่มเข้าด้วยกันได้
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- ในตัวอย่างนี้ `test` คือ `(= 0 1)` (ตรวจสอบว่า 0 เท่ากับ 1)
+- เนื่องจากการทดสอบประเมินว่าเป็นเท็จ (`#f`) บล็อก **ทางเลือก** จึงถูกดำเนินการ:
+  - ขั้นแรก พิมพ์ `"False condition met, calculating..."`
+  - จากนั้นจะคำนวณ `(* 3 4)` และส่งคืน `12`
 
-#### Exemple 3 : expression `let`
+ผลลัพธ์: **พิมพ์ "ตรงตามเงื่อนไขเท็จ กำลังคำนวณ..." และส่งคืน 12.**
+
+#### ตัวอย่างที่ 3: การประเมินคำสั่งให้
+
+การใช้ `let` ช่วยให้เราสามารถประกาศตัวแปรขอบเขตภายในภายในบล็อกโค้ดได้
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,16 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- ในตัวอย่างนี้ `test` คือ `(= 1 1)` (ตรวจสอบว่า 1 เท่ากับ 1 หรือไม่)
+- เนื่องจากการทดสอบประเมินเป็นจริง (`#t`) บล็อก **ผลที่ตามมา** จะถูกดำเนินการ:
+  - ก่อนอื่น ให้พิมพ์ `"True condition met, calculating..."`
+  - จากนั้นจะคำนวณ `(* -1 10)` และส่งคืน `-10`
 
-### Résumé
+ผลลัพธ์: **พิมพ์ "ตรงตามเงื่อนไขจริง กำลังคำนวณ..." และส่งคืน -10.**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### สรุป
+
+- เงื่อนไข `if` เป็นเครื่องมือที่ทรงพลังใน Scheme สำหรับการประเมินการทดสอบและดำเนินการบล็อคโค้ดที่เกี่ยวข้อง
+
+- สามารถจัดการทั้งนิพจน์ทั่วไปและบล็อกโค้ดที่ซับซ้อนที่ส่งคืนค่า แก้ไขตัวแปร หรือแสดงผลข้างเคียง
+- ข้อควรจำ: หากไม่มีบล็อก `else` ที่ชัดเจน `if` จะประเมินและดำเนินการ **ผลที่ตามมา** หากการทดสอบเป็นจริงเท่านั้น มิฉะนั้นจะประเมินและดำเนินการ **ทางเลือก**

@@ -1,6 +1,10 @@
 ---
 title: "워크플로 바로가기"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o는 바로가기 기반 워크플로우를 위해 제작되었습니다. 이러한 명령에 대한 머슬 메모리를 구축하면 캔버스와 도구를 훨씬 더 빠르게 탐색할 수 있습니다.
 

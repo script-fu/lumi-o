@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+url: "hub/scripting/reference/utility-browser"
 ---
 实用工具浏览器可让您探索 Lumi 附带的内置 Scheme 实用程序标准库，而无需离开应用程序或查找源文件。
 
@@ -38,7 +39,7 @@ translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa80773
 
 ## Stdlib 作为包装器
 
-实用程序库是包装模式的实际应用：每个帮助程序都为低级操作提供清晰的名称，隐藏样板文件，并在底层命令发生更改时提供一个更新位置。如果您想了解它们背​​后的设计方法，请参阅 **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** 教程。
+实用程序库是包装模式的实际应用：每个帮助程序都为低级操作提供清晰的名称，隐藏样板文件，并在底层命令发生更改时提供一个更新位置。如果您想了解它们背后的设计方法，请参阅 **[Wrapping]({{< ref "/hub/scripting/tutorials/Wrapping/wrapping" >}})** 教程。
 
 ## 与过程浏览器的关系
 

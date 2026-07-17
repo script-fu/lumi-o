@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
+url: "hub/about/color"
 ---
 
 O espaço de trabalho Coloração foi feito para decisões deliberadas de cor, não para ajuste geral de imagem. É moldado pela prática de mídia tradicional, com ênfase em pigmentos, estrutura de paleta e comportamento de mistura que permanece compreensível enquanto a pintura ganha complexidade.

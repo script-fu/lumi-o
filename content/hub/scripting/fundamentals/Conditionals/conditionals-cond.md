@@ -1,6 +1,7 @@
 ---
 title: cond
 type: docs
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 weight: 5
 ---
 

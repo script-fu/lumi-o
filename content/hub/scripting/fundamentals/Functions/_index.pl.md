@@ -4,15 +4,16 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
 Funkcje są podstawową koncepcją w Scheme, zapewniającą środki do enkapsulacji logiki, umożliwienia ponownego wykorzystania kodu i efektywnej struktury skryptów. Dzięki funkcjom możesz tworzyć modułowe, łatwe w utrzymaniu skrypty, które obsługują szeroki zakres zadań, od podstawowych operacji po zaawansowane przepływy pracy w Lumi.
 
-Ta sekcja służy jako wprowadzenie do funkcji w schemacie i stanowi podstawę do zrozumienia ich typów, definicji i zastosowań. W kolejnych sekcjach zagłębimy się w konkretne typy funkcji i ich unikalne możliwości.
+Ta sekcja służy jako wprowadzenie do funkcji w Scheme i stanowi podstawę do zrozumienia ich typów, definicji i zastosowań. W kolejnych sekcjach zagłębimy się w konkretne typy funkcji i ich unikalne możliwości.
 
 ## Minimalna składnia i wyrażenia
 
-Kod schematu składa się z **wyrażeń**. Wyrażenie zwraca wartość. Składnia jest jednolita: nawiasy tworzą wywołanie, a nazwa operatora lub funkcji znajduje się na początku.
+Kod Scheme składa się z **wyrażeń**. Wyrażenie zwraca wartość. Składnia jest jednolita: nawiasy tworzą wywołanie, a nazwa operatora lub funkcji znajduje się na początku.
 
 ```scheme
 (+ 1 2)         ; Dodaje 1 i 2, wynik 3
@@ -24,7 +25,7 @@ Ponieważ wszystko jest wyrażeniem, przepływ sterowania w naturalny sposób wp
 
 ## Dlaczego funkcje mają znaczenie
 
-Funkcje odgrywają kluczową rolę w schemacie z kilku powodów:
+Funkcje odgrywają kluczową rolę w Scheme z kilku powodów:
 
 - **Ponowne wykorzystanie kodu:** Unikaj powtórzeń, hermetyzując logikę w komponentach wielokrotnego użytku.
 - **Modułowość:** Podziel złożone zadania na mniejsze, łatwiejsze do wykonania części.
@@ -44,7 +45,7 @@ Scheme oferuje różnorodne konstrukcje funkcji, każda dostosowana do konkretny
    ```
 
 2. **Funkcje anonimowe**
-   Są to nienazwane funkcje zdefiniowane inline, zwane także **funkcjami lambda**, przeznaczone do jednorazowego użytku.
+   Są to nienazwane funkcje definiowane bezpośrednio w kodzie, zwane także **funkcjami lambda**, przeznaczone do jednorazowego użytku.
 
    ```scheme
    (lambda (x) (* x x))
@@ -59,7 +60,7 @@ Scheme oferuje różnorodne konstrukcje funkcji, każda dostosowana do konkretny
 
 ## Ogólna składnia funkcji
 
-Funkcje w schemacie mają prostą i spójną składnię:
+Funkcje w Scheme mają prostą i spójną składnię:
 
 ```scheme
 (define (function-name parameter1 parameter2 ...)

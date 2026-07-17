@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Een **associatielijst** (of **alist**) is een fundamentele gegevensstructuur in Scheme die wordt gebruikt om verzamelingen sleutel-waardeparen weer te geven. Het wordt geïmplementeerd als een lijst met paren, waarbij elk paar een sleutel (meestal een symbool) associeert met een waarde. Alists zijn eenvoudig, flexibel en zeer geschikt voor kleine tot middelgrote datasets.
 
@@ -33,19 +34,19 @@ U kunt een alist maken door handmatig paren te construeren of deze programmatisc
 Het enkele aanhalingsteken (`'`) is een afkorting voor **quoting**, waardoor Scheme de expressie niet kan evalueren. Dit maakt het ideaal voor het maken van statische alisten waarbij alle sleutels en waarden hardgecodeerd zijn.
 
 ```scheme
-;; Alist manuell definieren
+;; Handmatig een alist definiëren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Programmatisch een nieuw paar toevoegen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Resultaat**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Het aanhalingsteken gebruiken ("` ` ``) and Comma (`,`)
+#### Het aanhalingsteken gebruiken ("` ` ``) en komma (`,`)
 
-De backquote-operator ("` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Dit is handig voor het maken van alists waarbij sleutels of waarden tijdens runtime worden berekend.
+De backquote-operator ("` ` ``) lijkt op het enkele aanhalingsteken, maar maakt dynamisch invoegen van geëvalueerde expressies met de komma (`,`) mogelijk. Dit is handig voor het maken van alists waarbij sleutels of waarden tijdens runtime worden berekend.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Statische lijst met `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Dynamische lijst met `` ` `` and `,`:
+Dynamische lijst met `` ` `` en `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Zodra u een paar heeft opgehaald met `assoc`, gebruikt u `cdr` om de waarde te e
 ### Samenvatting van de belangrijkste kenmerken
 
 - **Enkel citaat (`'`)**: Creëert een statische lijst waarin alle elementen letterlijke gegevens zijn.
-- **Backquote ("` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Backquote (`` ` ``)**: Maakt dynamische alists mogelijk door statische elementen te combineren met geëvalueerde expressies (met `,`).
 - **Puntnotatie (`.`)**: wordt gebruikt om paren te construeren, waarbij een sleutel wordt gekoppeld aan een waarde in een lijst.

@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 I comandi dello schema operano a un livello basso, il che significa che anche le attività semplici possono richiedere più passaggi. Tuttavia, questa granularità offre flessibilità, possiamo raggruppare i comandi in piccole funzioni riutilizzabili che fanno esattamente ciò di cui abbiamo bisogno. Il confezionamento non è un concetto in bianco e nero; può variare da semplici alias per comandi utilizzati di frequente a funzioni più complesse che gestiscono interi flussi di lavoro. A volte, un wrapper è solo una funzione di comodità per migliorare la leggibilità, mentre in altri casi si evolve in un'utilità completa che incapsula più operazioni.
 
@@ -86,7 +87,7 @@ Per esportare un JPEG nei nostri plug-in, includiamo semplicemente la libreria e
 
 Ciò mantiene il nostro codice pulito, leggibile e adattabile consentendoci al tempo stesso di esportare JPEG in modo efficiente con il minimo sforzo.
 
-### Sostituzione auto
+### Sostituire `car`
 
 La funzione ***car*** può essere criptica e soggetta a errori di scripting. È facile applicare erroneamente ***car*** a un vettore o a un elemento non presente nell'elenco, provocando un comportamento inaspettato. Per rendere il nostro codice più robusto e leggibile, possiamo racchiudere questa funzionalità in una funzione più sicura.
 
@@ -145,14 +146,14 @@ per recuperare la coordinata ***x***. Tuttavia, sebbene funzionale, non è molto
 - **Migliora la manutenibilità** – Se la nostra rappresentazione delle coordinate cambia (ad esempio, utilizzando vettori invece di elenchi), dobbiamo solo aggiornare queste piccole funzioni.
 - **Incoraggia la coerenza** – L'uso di ***x-coord*** e ***y-coord*** rende lo script più facile da leggere e comprendere a colpo d'occhio.
 
-Ora, invece di scrivere in Schema generico:
+Ora, invece di scrivere in Scheme generico:
 
 ```scheme
 (car pixel-coords) ;; Ottiene la coordinata x
 (cadr pixel-coords) ;; Ottiene la coordinata y
 ```
 
-Possiamo scrivere nel _nostro_ Schema:
+Possiamo scrivere nel _nostro_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)
@@ -179,6 +180,6 @@ Punti chiave di questo approccio:
 - **Migliora la manutenibilità** – Se la funzionalità principale cambia, dobbiamo aggiornare solo il wrapper, non tutti gli script che si basano su di esso.
 - **Incoraggia il riutilizzo e la coerenza**: la nostra libreria personale di funzioni cresce nel tempo, rendendo lo sviluppo più rapido ed efficiente.
 
-Utilizzando in modo coerente il function wraping, possiamo trasformare il modo in cui scriviamo i plug-in Scheme, creando un ambiente di scripting più modulare ed espressivo. Tenendo presenti questi principi, possiamo continuare a perfezionare il nostro approccio, sviluppando una versione dello Schema più efficiente e su misura che soddisfi le nostre esigenze specifiche.
+Utilizzando in modo coerente il function wraping, possiamo trasformare il modo in cui scriviamo i plug-in Scheme, creando un ambiente di scripting più modulare ed espressivo. Tenendo presenti questi principi, possiamo continuare a perfezionare il nostro approccio, sviluppando una versione di Scheme più efficiente e su misura che soddisfi le nostre esigenze specifiche.
 
 Passaggi successivi: identifica i blocchi ripetuti nei tuoi script ed estrai piccoli aiutanti con nomi chiari.

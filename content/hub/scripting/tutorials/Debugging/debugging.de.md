@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 Beim Scripting gibt es keine Funktion, die unfehlbar ist. Selbst die zuverlässigsten Befehle können fehlschlagen, wenn unerwartete Eingaben oder Bedingungen auftreten. Um uns dagegen zu schützen, können wir ein benutzerdefiniertes Debugging-System implementieren und defensive Programmiertechniken übernehmen. Indem wir Standardfunktionen mit Fehlerbehandlungsmechanismen umschließen und informatives Feedback bereitstellen, können wir unsere Skripte robuster und einfacher zu beheben machen.
 
@@ -176,7 +177,9 @@ Die Funktion `list->string` konvertiert eine Liste in eine formatierte Zeichenfo
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### WarnmeldungenDie Funktion `warning-message` funktioniert ähnlich wie `debug-message`, zeigt jedoch Warnungen an, auch wenn das Debuggen deaktiviert ist.
+### Warnmeldungen
+
+Die Funktion `warning-message` funktioniert ähnlich wie `debug-message`, zeigt jedoch Warnungen an, auch wenn das Debuggen deaktiviert ist.
 
 ```scheme
 ;; Zweck: Eine Warnmeldung anzeigen.

@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 **Przeglądarka procedur Lumi** umożliwia przeszukiwanie dostępnych procedur (wbudowanych i dostarczonych w formie wtyczek) oraz sprawdzanie ich parametrów i zwracanych wartości.
 
@@ -31,7 +32,7 @@ Wyszukaj `lumi-message`, aby zobaczyć jego parametry i wartości zwracane.
 
 ### Znajdowanie wtyczki
 
-Po zainstalowaniu programu „Hello World!” wtyczkę, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „schemat-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
+Po zainstalowaniu wtyczki „Hello World!”, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „scheme-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
 
 ```scheme
 (scheme-register-procedure "scheme-hello-world"   ;; Nazwa procedury

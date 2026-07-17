@@ -4,25 +4,26 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
-En Scheme, la gestión de variables y su alcance es un concepto central para escribir scripts eficientes y fáciles de mantener. Las variables almacenan valores de datos que su secuencia de comandos puede manipular, mientras que el alcance define dónde se puede acceder a esas variables. Comprender cómo definir y utilizar variables de forma eficaz le permite crear código estructurado, reutilizable y sin errores.
+En Scheme, la gestión de variables y su alcance es un concepto central para escribir scripts eficientes y fáciles de mantener. Las variables almacenan valores de datos que su script puede manipular, mientras que el alcance define dónde se puede acceder a esas variables. Comprender cómo definir y utilizar variables de forma eficaz le permite crear código estructurado, reutilizable y sin errores.
 
-### Escritura dinámica
+### Tipado dinámico
 
-El esquema se escribe dinámicamente: no se declaran tipos por adelantado y una variable puede contener valores de diferentes tipos a lo largo del tiempo.
+Scheme tiene tipado dinámico: no se declaran tipos por adelantado y una variable puede contener valores de diferentes tipos a lo largo del tiempo.
 
 ```scheme
 (define x 42)       ; x es un número
 (set! x "hello")    ; ahora x es una cadena
 ```
 
-### El papel de las definiciones de variables y el alcance en el esquema
+### El papel de las definiciones de variables y el ámbito en Scheme
 
 Definir variables y gestionar su alcance tiene varios propósitos:
 - **Organización de datos:** Las variables almacenan información, lo que hace que sus scripts sean más legibles y manejables.
 - **Mejora de la reutilización:** Al utilizar variables de ámbito, puede reutilizar secciones de código sin conflictos.
-- **Encapsulación:** El alcance localizado evita interacciones no deseadas entre variables en diferentes partes de su secuencia de comandos.
+- **Encapsulación:** El alcance localizado evita interacciones no deseadas entre variables en diferentes partes de su script.
 - **Lógica simplificada:** Las variables temporales en un alcance limitado reducen la complejidad en cálculos o flujos de trabajo más grandes.
 
 ### Tipos de definiciones de variables y alcance
@@ -72,8 +73,10 @@ La construcción `define` crea variables o funciones con alcance global:
 | **Encapsulación** | Previene interacciones no deseadas | Puede entrar en conflicto con otras variables definidas globalmente |
 | **Caso de uso** | Variables temporales para tareas específicas | Variables o funciones compartidas utilizadas en todo |
 
-### Resumen- **Las definiciones y el alcance de las variables** son fundamentales para organizar y administrar datos en sus scripts de Scheme.
+### Resumen
+
+- **Las definiciones y el alcance de las variables** son fundamentales para organizar y administrar datos en sus scripts de Scheme.
 
 - Utilice **alcance local** (`let`, `let*`, llamado `let`) para encapsular variables temporales y evitar conflictos.
-- Utilice **alcance global** (`define`) para funciones reutilizables o constantes compartidas en su secuencia de comandos.
+- Utilice **alcance global** (`define`) para funciones reutilizables o constantes compartidas en su script.
 - Una comprensión clara de estas construcciones mejorará la legibilidad, mantenibilidad y confiabilidad de su código.

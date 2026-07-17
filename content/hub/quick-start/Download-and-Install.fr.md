@@ -1,6 +1,10 @@
 ---
 title: "Télécharger et installer"
 type: docs
+url: "hub/quick-start/Download-and-Install"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5f17d7e9009aeeacf256152bef94386ccc5a8eea87cf0feebef073488fb59283
 ---
 Si vous êtes déjà sous Linux et souhaitez exécuter Lumi rapidement, utilisez la dernière **AppImage de développement** des artefacts GitLab :
 

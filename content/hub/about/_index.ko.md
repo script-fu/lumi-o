@@ -1,9 +1,10 @@
 ---
+title: "소개"
 type: docs
 url: "hub/about"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
+translation_source_sha256: d689f4a924a5df63fc375ce4ab59472cc02dddd4b99030d63ef9fb78a8a3dd1c
 ---
 
 소프트웨어, 지원하는 워크플로, 그리고 그리기 과정 전반을 어떻게 돕는지에 대한 간략한 개요입니다.

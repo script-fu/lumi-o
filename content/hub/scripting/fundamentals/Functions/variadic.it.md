@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 Le **Funzioni variadiche** in Scheme sono funzioni che accettano un numero variabile di argomenti. Queste funzioni sono altamente versatili e consentono di creare codice flessibile e riutilizzabile. Nella programmazione funzionale, le funzioni variadiche semplificano le operazioni che richiedono l'elaborazione di un numero arbitrario di input, come la somma di un elenco di numeri o la concatenazione di stringhe.
 
@@ -139,4 +140,6 @@ Evitare le funzioni variadici quando:
 - Gli argomenti fissi sono sufficienti per la logica richiesta.
 - La leggibilità è compromessa a causa di operazioni eccessivamente complesse.
 
-### ConclusioneLe funzioni variadiche in Scheme forniscono un meccanismo robusto per la gestione degli input dinamici. Comprendendone la sintassi e l'utilizzo, puoi creare script flessibili e potenti che si adattano a vari scenari. Combinate con funzioni di ordine superiore, le funzioni variadiche rendono il codice più conciso ed espressivo.
+### Conclusione
+
+Le funzioni variadiche in Scheme forniscono un meccanismo robusto per la gestione degli input dinamici. Comprendendone la sintassi e l'utilizzo, puoi creare script flessibili e potenti che si adattano a vari scenari. Combinate con funzioni di ordine superiore, le funzioni variadiche rendono il codice più conciso ed espressivo.

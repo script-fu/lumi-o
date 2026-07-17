@@ -1,5 +1,5 @@
 ---
-title: "Publishing Layout"
+title: "Veröffentlichungslayout"
 type: docs
 url: "hub/features/publishing-layout"
 translation_provenance: ai-reviewed

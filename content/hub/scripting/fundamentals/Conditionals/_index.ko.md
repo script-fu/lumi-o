@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
+translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
+url: "hub/scripting/fundamentals/Conditionals/_index"
 ---
 조건문은 프로그래밍의 기본 요소입니다. 스크립트가 결정을 내리고 특정 기준에 따라 흐름을 제어할 수 있게 합니다. Scheme 프로그래밍 언어에 기반한 Scheme에서는 조건문을 통해 변화하는 입력, 환경, 사용자 동작에 적응하는 동적이고 지능적인 스크립트를 작성할 수 있습니다.
 

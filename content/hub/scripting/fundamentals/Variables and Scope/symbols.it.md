@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 I simboli sono uno dei tipi di dati fondamentali in Scheme e rappresentano identificatori univoci e immutabili. Vengono utilizzati principalmente come chiavi, marcatori o segnaposto nei programmi, rendendoli essenziali per scrivere codice pulito ed espressivo.
 
@@ -59,7 +60,7 @@ Ciò rende i simboli ideali per l'uso come chiavi nelle strutture dati o marcato
 
 ## Utilizzo dei simboli
 
-I simboli sono spesso usati in Schema per:
+I simboli sono spesso usati in Scheme per:
 
 1. **Chiavi negli elenchi di associazioni:**
 

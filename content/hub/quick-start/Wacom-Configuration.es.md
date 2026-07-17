@@ -1,6 +1,10 @@
 ---
 title: "Configuración de Wacom"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 Para la pintura digital en Lumi, se recomienda una **configuración de presión lineal** simple.
 
@@ -8,7 +12,7 @@ Para la pintura digital en Lumi, se recomienda una **configuración de presión 
 - Mantener las curvas de presión/entrada en Lumi en su mayoría lineales.
 - Dale forma a la sensación con el propio pincel, ya que la dinámica del pincel ya puede ser no lineal.
 
-Recomendamos mantener la curva de presión lineal predeterminada en el nivel del controlador del sistema operativo. La combinación de múltiples curvas no lineales a menudo conduce a un comportamiento de entrada impredecible; Al mantener al conductor neutral, se asegura de que cualquier ajuste realizado dentro de Lumi-o siga siendo intuitivo y reproducible. Un ligero ajuste en la curva global de Lumi puede ser razonable cuando sea necesario.
+Recomendamos mantener la curva de presión lineal predeterminada en el nivel del controlador del sistema operativo. La combinación de múltiples curvas no lineales a menudo conduce a un comportamiento de entrada impredecible; al mantener el controlador neutro, se asegura de que cualquier ajuste realizado dentro de Lumi-o siga siendo intuitivo y reproducible. Un ligero ajuste en la curva global de Lumi puede ser razonable cuando sea necesario.
 
 ## Curva global del lápiz óptico en Lumi
 

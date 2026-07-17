@@ -1,6 +1,7 @@
 ---
 title: Iteration
 type: docs
+url: "hub/scripting/fundamentals/Iteration/_index"
 weight: 4
 ---
 

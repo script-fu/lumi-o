@@ -1,6 +1,7 @@
 ---
 title: let
 type: docs
+url: "hub/scripting/fundamentals/Variables and Scope/let"
 weight: 4
 ---
 

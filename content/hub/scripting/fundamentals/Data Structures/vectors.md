@@ -1,6 +1,7 @@
 ---
 title: Vectors
 type: docs
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 weight: 5
 ---
 

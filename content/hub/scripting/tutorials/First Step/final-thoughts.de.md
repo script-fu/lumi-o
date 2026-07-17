@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Sie verfügen nun über ein Arbeitsprozedur-Plug-in und eine kleine Hilfsbibliothek. In dieser Serie wurden die Kernmuster vorgestellt, die Sie in den meisten Lumi-Skripten verwenden werden:
 
@@ -65,7 +66,7 @@ Bibliothekscode:
       #t)
     #f))
 
-;; Zweck: Sendet eine Nachricht an die Error Console, gibt #t bei Erfolg zurück
+;; Zweck: Sendet eine Nachricht an die Fehlerkonsole, gibt #t bei Erfolg zurück
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

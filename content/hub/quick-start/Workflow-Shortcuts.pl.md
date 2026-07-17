@@ -1,6 +1,10 @@
 ---
 title: "Skróty przepływu pracy"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o został stworzony z myślą o przepływie pracy opartym na skrótach. Gdy już ustalisz pamięć mięśniową dla tych poleceń, będziesz mógł znacznie szybciej poruszać się po obszarze roboczym i narzędziach.
 

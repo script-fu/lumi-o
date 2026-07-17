@@ -4,13 +4,14 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 W samouczku [Pierwszy krok](../../first-step/) użyliśmy wtyczki _procedure_. Tego typu wtyczki działają bez potrzeby wprowadzania obrazu lub możliwości rysowania jako danych wejściowych. Zwykle używamy wtyczki do zmiany obrazu i jego rysunków. Wtyczki takie jak te nazywane są wtyczkami _filter_.
 
-### Co to jest rysunkowy?
+### Co to jest drawable?
 
-**Możliwość rysowania** w Lumi odnosi się do elementu obrazu, na którym można rysować, takiego jak warstwa lub kanał. Wtyczki filtrujące zazwyczaj działają na tych elementach.
+**Drawable** w Lumi oznacza element obrazu, na którym można rysować, taki jak warstwa lub kanał. Wtyczki filtrujące zazwyczaj działają na tych elementach.
 
 ### Przykład prostej wtyczki filtrującej
 
@@ -20,7 +21,7 @@ W samouczku [Pierwszy krok](../../first-step/) użyliśmy wtyczki _procedure_. T
 (define (scheme-simple-filter-plug-in image drawables)
   ;; Użyj instrukcji let, aby zdefiniować zmienną wiadomości i kod główny
   (let ((message "hello, world"))
-    ;; Wyświetl wiadomość w Error Console Lumi
+    ;; Wyświetl wiadomość w konsoli komunikatów Lumi
     (lumi-message message)
     ;; Odwróć kolory pierwszego wybranego drawable
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -50,9 +51,9 @@ W systemie Linux kliknij prawym przyciskiem myszy plik `simple-filter-plug-in.sc
 ### Uruchamianie wtyczki
 
 1. Otwórz obraz (ta wtyczka filtrująca wymaga do działania obrazu).
-2. Otwórz **Narzędzia > Debugowanie > Konsola wiadomości**, aby zobaczyć komunikat.
-3. Z menu **Wtyczka** wybierz opcję **Prosta wersja demonstracyjna wtyczki filtrującej**.
-4. Kolory jednej z wybranych warstw zostaną odwrócone, a w konsoli błędów zostanie wyświetlony komunikat.
+2. Otwórz **Narzędzia → Debugowanie → Konsola wiadomości**, aby zobaczyć komunikat.
+3. Z menu **Wtyczka** wybierz opcję **Simple Filter Plug-in Demo**.
+4. Kolory jednej z wybranych warstw zostaną odwrócone, a w konsoli komunikatów zostanie wyświetlony komunikat.
 
 ### Edytowanie wtyczki
 
@@ -89,7 +90,7 @@ Instrukcja `let` definiuje zmienną i wykonuje operacje na rysunku.
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Wyświetla wiadomość w Error Console Lumi
+  (lumi-message message) ;; Wyświetla wiadomość w konsoli komunikatów Lumi
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Odwraca kolory pierwszego wybranego drawable
 ```
 

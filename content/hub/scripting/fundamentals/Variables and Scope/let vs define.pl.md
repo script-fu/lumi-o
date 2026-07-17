@@ -4,9 +4,10 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
-Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzędziami w Scheme do konstruowania kodu, ale służą różnym celom. Zrozumienie, kiedy używać każdego z nich, pomaga w tworzeniu przejrzystych, modułowych i wydajnych skryptów.
+Zarówno **nazwany `let`**, jak i **lokalne `define`** są potężnymi narzędziami w Scheme do konstruowania kodu, ale służą różnym celom.
 
 ### Przegląd
 
@@ -94,7 +95,7 @@ Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzęd
 
 ---
 
-### Kiedy używać nazwy `let`
+### Kiedy używać nazwanego `let`
 
 1. **Logika jednorazowego użytku**: Gdy rekurencja lub iteracja są specyficzne dla pojedynczego obliczenia.
 2. **Enkapsulacja**: Aby uniknąć dodawania dodatkowych nazw funkcji do przestrzeni nazw funkcji otaczającej.
@@ -119,7 +120,9 @@ Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzęd
 
 1. **Pomocnicy wielokrotnego użytku**: Gdy logika wymaga ponownego użycia w wielu częściach funkcji.
 2. **Projekt modułowy**: Aby podzielić złożone obliczenia na mniejsze, nazwane podzadania.
-3. **Wiele kroków**: Gdy w różnych częściach obliczeń potrzebnych jest wiele funkcji pomocniczych.**Przykład: przetwarzanie danych wejściowych**
+3. **Wiele kroków**: Gdy w różnych częściach obliczeń potrzebnych jest wiele funkcji pomocniczych.
+
+**Przykład: przetwarzanie danych wejściowych**
 ```scheme
 (define (calculate-values a b)
   (define (add-squares x y)
@@ -136,7 +139,7 @@ Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzęd
 
 ### Łączenie deklaracji i danych wejściowych w nazwie `let`
 
-Jedną z najpotężniejszych cech nazwanego `let` jest jego zdolność do łączenia **deklaracji zmiennych lokalnych** i **parametrów wejściowych** dla rekurencji w jedną konstrukcję. To sprawia, że ​​nazwa `let` jest zarówno zwięzła, jak i wyrazista w przypadku zadań iteracyjnych lub rekurencyjnych.
+Jedną z najpotężniejszych cech nazwanego `let` jest jego zdolność do łączenia **deklaracji zmiennych lokalnych** i **parametrów wejściowych** dla rekurencji w jedną konstrukcję. To sprawia, że nazwa `let` jest zarówno zwięzła, jak i wyrazista w przypadku zadań iteracyjnych lub rekurencyjnych.
 
 #### Deklaracja zmiennej lokalnej
 
@@ -195,21 +198,21 @@ Nazwany `let` zawiera inicjalizację zmiennej jako część swojej składni. Eli
   (loop 1 2))  ;; Początkowe wywołanie z x = 1, y = 2
 ```
 
-Obydwa wykonują te same obliczenia, ale o nazwie `let` łączy deklarację zmiennej i konfigurację rekurencji w jedną zwięzłą konstrukcję.
+Obydwa wykonują te same obliczenia, ale nazwany `let` łączy deklarację zmiennej i konfigurację rekurencji w jedną zwięzłą konstrukcję.
 
 ---
 
 #### Zalety łączenia deklaracji i danych wejściowych
 
 1. **Zwięzłość**: Nazwany `let` redukuje szablon poprzez połączenie inicjalizacji zmiennych i rekurencji w jedną konstrukcję.
-2. **Przejrzystość**: Wyjaśnia, że ​​rekurencja jest lokalna dla `let` i powiązana z konkretnym zadaniem.
+2. **Przejrzystość**: Wyjaśnia, że rekurencja jest lokalna dla `let` i powiązana z konkretnym zadaniem.
 3. **Enkapsulacja**: Logika rekurencyjna pozostaje samodzielna i nie zanieczyszcza przestrzeni nazw funkcji otaczającej.
 
-Ta dwufunkcyjna natura nazwanego `let` — zarówno jako deklaracji zmiennej, jak i rekurencyjnego mechanizmu wejściowego — sprawia, że ​​jest to potężna i unikalna funkcja w programowaniu schematów.
+Ta dwufunkcyjna natura nazwanego `let` — zarówno jako deklaracji zmiennej, jak i rekurencyjnego mechanizmu wejściowego — sprawia, że jest to potężna i unikalna funkcja w Scheme.
 
 ### Podsumowanie
 
-- Użyj **o nazwie `let`** dla **lokalnej rekurencji** lub **iteracji**, zwłaszcza gdy logika jest ściśle powiązana z pojedynczym zadaniem.
+- Użyj **nazwanego `let`** dla **lokalnej rekurencji** lub **iteracji**, zwłaszcza gdy logika jest ściśle powiązana z pojedynczym zadaniem.
 - Użyj **lokalnego `define`** do **modularyzacji kodu** z funkcjami pomocniczymi lub zmiennymi wielokrotnego użytku.
 
-Rozumiejąc różnice między nimi, można pisać bardziej zwięzłe, zorganizowane i łatwiejsze w utrzymaniu programy w ramach schematu.
+Rozumiejąc różnice między nimi, można pisać bardziej zwięzłe, zorganizowane i łatwiejsze w utrzymaniu programy w Scheme.

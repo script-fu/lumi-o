@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
 
-Il sistema a livelli di Lumi-o dà struttura a un'illustrazione. Consente agli artisti di separare schizzi, colore, ombreggiatura, texture, maschere, regolazioni, esperimenti e dettagli finali senza consolidare ogni decisione in un'unica immagine piatta.
+Il sistema a livelli di Lumi dà struttura a un'illustrazione. Consente agli artisti di separare schizzi, colore, ombreggiatura, texture, maschere, regolazioni, esperimenti e dettagli finali senza consolidare ogni decisione in un'unica immagine piatta.
 
 I livelli non sono solo una pila di pixel. Portano visibilità, fusione, maschere, blocchi, effetti, raggruppamento e comportamento di composizione, e costituiscono la base dei flussi di lavoro di pittura flessibili e non distruttivi.
 
@@ -27,7 +27,7 @@ Le maschere aggiungono un ulteriore livello di controllo. Consentono di dipinger
 
 ## Selezione e navigazione
 
-I dipinti complessi possono contenere molti elementi piccoli. Lumi-o supporta la navigazione diretta orientata ai livelli, così gli artisti possono passare dalla tela alla pila di livelli senza perdere il ritmo della pittura.
+I dipinti complessi possono contenere molti elementi piccoli. Lumi supporta la navigazione diretta orientata ai livelli, così gli artisti possono passare dalla tela alla pila di livelli senza perdere il ritmo della pittura.
 
 L'obiettivo è far sentire il lavoro a livelli come qualcosa di spaziale, non amministrativo: se un segno è visibile sulla tela, il sistema dei livelli dovrebbe aiutare l'artista a tornarci rapidamente.
 
@@ -45,6 +45,6 @@ Per gli artisti significa che la sperimentazione può restare reversibile. Una r
 
 ## Prestazioni per file complessi
 
-Le illustrazioni a livelli possono diventare complesse, soprattutto quando gruppi, maschere ed effetti interagiscono. Il sistema a livelli di Lumi-o è progettato per mantenere reattive le azioni di pittura più comuni, evitando ricomposizioni non necessarie quando possibile.
+Le illustrazioni a livelli possono diventare complesse, soprattutto quando gruppi, maschere ed effetti interagiscono. Il sistema a livelli di Lumi è progettato per mantenere reattive le azioni di pittura più comuni, evitando ricomposizioni non necessarie quando possibile.
 
 Il risultato è un flusso di lavoro a livelli orientato sia al controllo sia alla velocità: abbastanza dettagliato per un lavoro attento e non distruttivo, ma comunque pratico per la pittura quotidiana.

@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 L'instruction `define` dans Scheme est une construction polyvalente utilisée pour créer des liaisons globales ou locales. Il est le plus souvent utilisé pour définir des variables et des fonctions, les rendant réutilisables et accessibles tout au long d'un script ou dans une portée spécifique. Comprendre `define` est crucial pour écrire des programmes Scheme modulaires, réutilisables et lisibles.
 

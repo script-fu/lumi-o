@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 In Scheme ist eine **Liste** eine grundlegende Datenstruktur, die zum Gruppieren von Werten verwendet wird. Listen sind geordnete Sammlungen von Elementen, wobei jedes Element einen beliebigen Typ haben kann, einschließlich einer anderen Liste. Listen werden in Scheme häufig sowohl zur Datenspeicherung als auch zur Programmstruktur verwendet.
 
@@ -167,7 +168,9 @@ Ergebnis:
 
 - `(length (list 1 2 3))` gibt `3` zurück
 - `(append (list 1 2) (list 3 4))` gibt `(1 2 3 4)` zurück
-- `(reverse (list 1 2 3))` gibt `(3 2 1)` zurück#### Verwendung von `list-ref`
+- `(reverse (list 1 2 3))` gibt `(3 2 1)` zurück
+
+#### Verwendung von `list-ref`
 
 Die Prozedur `list-ref` ruft das Element an einem angegebenen Index einer Liste ab (nullbasierter Index).
 

@@ -1,8 +1,12 @@
 ---
 title: "ดาวน์โหลดและติดตั้ง"
 type: docs
+url: "hub/quick-start/Download-and-Install"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5f17d7e9009aeeacf256152bef94386ccc5a8eea87cf0feebef073488fb59283
 ---
-หากคุณใช้ Linux อยู่แล้วและต้องการเรียกใช้ Lumi อย่างรวดเร็ว ให้ใช้ **development AppImage** ล่าสุดจากอาร์ติแฟกต์ GitLab:
+หากคุณใช้ Linux อยู่แล้วและต้องการเรียกใช้ Lumi อย่างรวดเร็ว ให้ใช้ **AppImage สำหรับพัฒนา** ล่าสุดจากอาร์ติแฟกต์ GitLab:
 
 https://gitlab.gnome.org/pixelmixer/lumi-dev/-/artifacts
 

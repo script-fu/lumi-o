@@ -1,6 +1,7 @@
 ---
 title: Association Lists (Alists)
 type: docs
+url: "hub/scripting/fundamentals/Data Structures/alists"
 weight: 6
 ---
 

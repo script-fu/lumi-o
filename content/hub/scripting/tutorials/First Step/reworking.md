@@ -1,6 +1,7 @@
 ---
 title: Reworking
 type: docs
+url: "hub/scripting/tutorials/First Step/reworking"
 weight: 7
 ---
 

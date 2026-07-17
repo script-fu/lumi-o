@@ -3,12 +3,13 @@ title: "読み込み中"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 ヘルパー関数が大きくなったらすぐに、それを小さなライブラリ ファイルに移動します。これにより、プラグインに焦点が当てられ、ヘルパーを複数のプラグイン間で再利用できるようになります。
 
-### Make a Library Function
+### ライブラリ関数を作成する
 
 send-message 関数を使用して、それをコンテンツとして含む新しいファイルを作成できます。ファイルをプラグイン部分ではなく、リポジトリ フォルダー (おそらく最上位近く) に保存します。
 
@@ -25,18 +26,18 @@ send-message 関数を使用して、それをコンテンツとして含む新�
 - **scheme/**: これは、Scheme コードを保存するためのメイン ディレクトリです。
   - **ライブラリ/**: `send-message.scm` のような共有関数が存在する場所です。
   - **plug-ins/**: これは、個々のプラグインが保存される場所です。
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: 特定の「Hello World!」プラグイン用のフォルダー。
+      - **hello-world.scm**: プラグインのスクリプトファイル。
 
-Example of a library function send-message.scm
+ライブラリ関数send-message.scmの例
 
 ```scheme
 ;; さまざまな出力先へのメッセージ出力を処理する関数
 (define (send-message message output)
   (cond
-    ;; Message console に送信
+    ;; メッセージコンソール に送信
     ((eq? output 'error-console)
-       ;; ハンドラを Message console に設定する
+       ;; ハンドラを メッセージコンソール に設定する
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,11 +52,11 @@ Example of a library function send-message.scm
        ;; terminal 出力は display で処理される
        (display message)))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 ```
 
-### Load the Library Function
+### ライブラリ関数をロードする
 
 Scheme `load` コマンドを使用してそのライブラリ関数をロードできます。
 

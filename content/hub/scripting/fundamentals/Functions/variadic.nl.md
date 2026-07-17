@@ -4,9 +4,10 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
-**Variadische functies** in Schema zijn functies die een variabel aantal argumenten accepteren. Deze functies zijn zeer veelzijdig en stellen u in staat flexibele en herbruikbare code te creëren. Bij functioneel programmeren vereenvoudigen variadische functies bewerkingen waarbij een willekeurig aantal invoergegevens moet worden verwerkt, zoals het optellen van een lijst met getallen of het aaneenschakelen van tekenreeksen.
+**Variadische functies** in Scheme zijn functies die een variabel aantal argumenten accepteren. Deze functies zijn zeer veelzijdig en stellen u in staat flexibele en herbruikbare code te creëren. Bij functioneel programmeren vereenvoudigen variadische functies bewerkingen waarbij een willekeurig aantal invoergegevens moet worden verwerkt, zoals het optellen van een lijst met getallen of het aaneenschakelen van tekenreeksen.
 
 Variadische functies zijn vooral handig wanneer:
 
@@ -139,4 +140,6 @@ Vermijd variadische functies wanneer:
 - Vaste argumenten zijn voldoende voor de vereiste logica.
 - De leesbaarheid wordt aangetast door te complexe handelingen.
 
-### ConclusieVariadische functies in Scheme bieden een robuust mechanisme voor het verwerken van dynamische invoer. Door de syntaxis en het gebruik ervan te begrijpen, kunt u flexibele en krachtige scripts maken die zich aan verschillende scenario's aanpassen. In combinatie met functies van hogere orde maken variadische functies uw code beknopter en expressiever.
+### Conclusie
+
+Variadische functies in Scheme bieden een robuust mechanisme voor het verwerken van dynamische invoer. Door de syntaxis en het gebruik ervan te begrijpen, kunt u flexibele en krachtige scripts maken die zich aan verschillende scenario's aanpassen. In combinatie met functies van hogere orde maken variadische functies uw code beknopter en expressiever.

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
+url: "hub/scripting/reference"
 ---
 ข้อมูลอ้างอิงด่วนสำหรับยูทิลิตี้ Scheme ในตัวและเครื่องมือการเรียกดูในแอปพร้อมใช้งานเมื่อเขียนปลั๊กอิน Lumi สำหรับการเรียนรู้และการอ้างอิง Scheme ทั่วไป โปรดดูที่ [Scheme Cookbook](https://cookbook.scheme.org/) และ [Scheme.org](https://www.scheme.org/)
 

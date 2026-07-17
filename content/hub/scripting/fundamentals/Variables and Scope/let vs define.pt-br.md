@@ -4,14 +4,15 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
 Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme para estruturar seu código, mas servem a propósitos diferentes. Compreender quando usar cada um ajuda na criação de scripts limpos, modulares e eficientes.
 
 ### Visão geral
 
 - **Nomeado `let`**: Uma construção que combina ligação de variáveis e recursão em um escopo localizado, normalmente usado para cálculos iterativos ou recursivos.
-- **Local `define`**: Uma maneira de definir funções auxiliares ou variáveis ​​dentro do escopo de uma função envolvente, tornando-as reutilizáveis ​​em diferentes partes dessa função.
+- **Local `define`**: Uma maneira de definir funções auxiliares ou variáveis dentro do escopo de uma função envolvente, tornando-as reutilizáveis em diferentes partes dessa função.
 
 ---
 
@@ -86,7 +87,7 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 
 | **Aspecto** | **Nomeado `let`** | **Local `define`** |
 |--------------------------|----------------------------------------------------------------|------------------------------------------------|
-| **Objetivo** | Combina recursão e iteração de forma localizada. | Define funções ou variáveis ​​auxiliares reutilizáveis. |
+| **Objetivo** | Combina recursão e iteração de forma localizada. | Define funções ou variáveis auxiliares reutilizáveis. |
 | **Escopo** | Limitado ao corpo do bloco `let`.           | Visível em toda a função envolvente.      |
 | **Reutilização** | Não reutilizável fora do bloco `let`.             | Reutilizável várias vezes dentro da função.    |
 | **Melhor caso de uso** | Recursão ou iteração localizada vinculada a uma única tarefa. | Modularização de código com múltiplas etapas reutilizáveis. |
@@ -98,7 +99,7 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 
 1. **Lógica de uso único**: Quando a recursão ou iteração é específica para um único cálculo.
 2. **Encapsulamento**: Para evitar a adição de nomes de funções extras ao namespace da função envolvente.
-3. **Iteração**: Ao gerenciar variáveis ​​intermediárias em uma construção de loop.
+3. **Iteração**: Ao gerenciar variáveis intermediárias em uma construção de loop.
 
 **Exemplo: cálculo fatorial**
 ```scheme
@@ -140,7 +141,7 @@ Um dos recursos mais poderosos de um `let` nomeado é sua capacidade de combinar
 
 #### Declaração de variável local
 
-Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis locais** que são inicializadas com valores específicos. Essas variáveis ​​têm como escopo o corpo do `let`.
+Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis locais** que são inicializadas com valores específicos. Essas variáveis têm como escopo o corpo do `let`.
 
 ```scheme
 (let loop ((x 1)   ;; Declara x com valor inicial 1
@@ -154,7 +155,7 @@ Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis loc
 
 #### Parâmetros de entrada para recursão
 
-As mesmas variáveis também atuam como **parâmetros de entrada** para as chamadas recursivas para o `let` nomeado. Quando o `let` nomeado chama a si mesmo, ele atualiza essas variáveis ​​​​com novos valores.
+As mesmas variáveis também atuam como **parâmetros de entrada** para as chamadas recursivas para o `let` nomeado. Quando o `let` nomeado chama a si mesmo, ele atualiza essas variáveis com novos valores.
 
 ```scheme
 (let loop ((x 1)
@@ -210,6 +211,6 @@ Essa natureza de dupla finalidade de um `let` nomeado - tanto como uma declaraç
 ### Resumo
 
 - Use **nomeado `let`** para **recursão localizada** ou **iteração**, especialmente quando a lógica está fortemente acoplada a uma única tarefa.
-- Use **local `define`** para **modularizar código** com funções ou variáveis ​​auxiliares reutilizáveis.
+- Use **local `define`** para **modularizar código** com funções ou variáveis auxiliares reutilizáveis.
 
 Ao compreender suas diferenças, você pode escrever programas de Scheme mais concisos, organizados e fáceis de manter.

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Мы использовали плагин _procedure_ для руководства [Первый шаг](../../first-step/). Эти типы плагинов работают без необходимости использования изображений или изображений в качестве входных данных. Обычно мы используем плагин для изменения изображения и его элементов рисования. Подобные плагины называются плагинами _filter_.
 
@@ -20,7 +21,7 @@ translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6
 (define (scheme-simple-filter-plug-in image drawables)
   ;; Использовать let для определения переменной сообщения и основного кода
   (let ((message "hello, world"))
-    ;; Показать сообщение в Error Console Lumi
+    ;; Показать сообщение в консоль ошибок Lumi
     (lumi-message message)
     ;; Инвертировать цвета первого выбранного drawable
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Отображает сообщение в Error Console Lumi
+  (lumi-message message) ;; Отображает сообщение в консоль ошибок Lumi
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Инвертирует цвета первого выбранного drawable
 ```
 

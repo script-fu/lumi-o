@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
 La función `do` en Scheme es un bucle con inicialización, actualización y condición de terminación. Útil para ejecutar una secuencia un número de veces o hasta cumplir una condición.
 
@@ -19,10 +20,10 @@ La forma general de `do`:
 ```
 
 - **Variable:** variable(s) del bucle.
-- **Initial-value:** valor inicial.
-- **Update-expression:** actualización por iteración.
-- **Termination-condition:** condición de parada.
-- **Result-expression:** valor al terminar.
+- **Valor inicial:** valor inicial.
+- **Expresión de actualización:** actualización por iteración.
+- **Condición de terminación:** condición de parada.
+- **Expresión de resultado:** valor al terminar.
 - **Body:** código por iteración.
 
 ---

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Abbiamo utilizzato un plug-in _procedure_ per il tutorial [Primo passaggio](../../first-step/). Questi tipi di plug-in funzionano senza bisogno di un'immagine o di un elemento disegnabile come input. Di solito, utilizziamo un plug-in per modificare un'immagine e i suoi disegni. Plug-in come questi sono chiamati plug-in _filter_.
 
@@ -20,7 +21,7 @@ Un **disegnabile** in Lumi si riferisce a un elemento dell'immagine su cui è po
 (define (scheme-simple-filter-plug-in image drawables)
   ;; Usare un'istruzione let per definire una variabile messaggio e il codice principale
   (let ((message "hello, world"))
-    ;; Visualizzare il messaggio nella Error Console di Lumi
+    ;; Visualizzare il messaggio nella console degli errori di Lumi
     (lumi-message message)
     ;; Invertire i colori del primo drawable selezionato
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ Un'istruzione `let` definisce una variabile ed esegue operazioni sul drawable.
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Mostra un messaggio nella Error Console di Lumi
+  (lumi-message message) ;; Mostra un messaggio nella console degli errori di Lumi
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverte i colori del primo drawable selezionato
 ```
 

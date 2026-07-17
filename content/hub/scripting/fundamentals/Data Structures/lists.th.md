@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 ใน Scheme **รายการ** คือโครงสร้างข้อมูลพื้นฐานที่ใช้ในการจัดกลุ่มค่า รายการคือการเรียงลำดับคอลเลกชันขององค์ประกอบ โดยแต่ละองค์ประกอบสามารถเป็นประเภทใดก็ได้ รวมถึงรายการอื่นด้วย รายการมีการใช้กันอย่างแพร่หลายใน Scheme สำหรับทั้งการจัดเก็บข้อมูลและโครงสร้างของโปรแกรม
 

@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 반환 값은 추가 상태 없이 흐름을 제어할 수 있게 해주기 때문에 중요합니다. Scheme에서는 마지막으로 평가된 표현식이 반환 값이 됩니다.
 
@@ -87,7 +88,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
 
 이를 통해 조건부 테스트 결과에 따라 여러 표현식이나 문을 실행해야 하는 더 복잡한 상황을 처리할 수 있습니다.
 
-좋아, 여기에 반환 값이 포함되어 실행 프로세스를 제어하는 ​​데 사용되는 라이브러리 코드가 있습니다.
+좋아, 여기에 반환 값이 포함되어 실행 프로세스를 제어하는 데 사용되는 라이브러리 코드가 있습니다.
 
 ### 반환 값으로 리팩토링됨
 
@@ -112,7 +113,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #t)
     #f))
 
-;; 목적: 메시지를 Error Console로 보내고, 성공하면 #t를 반환
+;; 목적: 메시지를 오류 콘솔로 보내고, 성공하면 #t를 반환
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

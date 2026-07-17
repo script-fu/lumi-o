@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Ahora tiene un complemento de procedimiento de trabajo y una pequeña biblioteca auxiliar. Esta serie presentó los patrones principales que usarás en la mayoría de los scripts de Lumi:
 

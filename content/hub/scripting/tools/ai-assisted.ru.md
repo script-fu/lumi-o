@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 Современные инструменты искусственного интеллекта могут значительно ускорить разработку плагинов Lumi, выступая в качестве партнера по совместному кодированию.
 

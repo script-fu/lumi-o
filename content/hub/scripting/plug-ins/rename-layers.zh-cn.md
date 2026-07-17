@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 669bb9a76d7c849dba73b936e36d319fd2ecafb8f9dbd1500ba3b9205e8efb67
+url: "hub/scripting/plug-ins/rename-layers"
 ---
 重命名堆栈中的所有图层（或选定的图层）。对于动画画笔图层堆栈很有用。
 

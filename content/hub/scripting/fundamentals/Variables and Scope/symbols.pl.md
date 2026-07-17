@@ -4,11 +4,12 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 Symbole to jeden z podstawowych typów danych w Scheme, reprezentujący unikalne, niezmienne identyfikatory. Używa się ich głównie jako kluczy, znaczników lub obiektów zastępczych w programach, co czyni je niezbędnymi do pisania czystego i wyrazistego kodu.
 
-Symbol na schemacie jest podobny do ciągu znaków, ale różni się tym, że symbole są **unikalne** i **atomowe**. Oznacza to, że dwa symbole o tej samej nazwie są tym samym obiektem, co pozwala na szybkie sprawdzanie równości i efektywne wykorzystanie w strukturach danych.
+Symbol w Scheme jest podobny do ciągu znaków, ale różni się tym, że symbole są **unikalne** i **atomowe**. Oznacza to, że dwa symbole o tej samej nazwie są tym samym obiektem, co pozwala na szybkie sprawdzanie równości i efektywne wykorzystanie w strukturach danych.
 
 ### Składnia
 
@@ -59,7 +60,7 @@ Dzięki temu symbole idealnie nadają się do wykorzystania jako klucze w strukt
 
 ## Używanie symboli
 
-Symbole są często używane w schemacie dla:
+Symbole są często używane w Scheme do:
 
 1. **Klucze na listach stowarzyszeń:**
 
@@ -98,4 +99,4 @@ Scheme udostępnia wbudowane procedury do pracy z symbolami:
 
 ## Podsumowanie
 
-Symbole to lekki i wydajny sposób przedstawiania identyfikatorów, kluczy i znaczników w schemacie. Ich niezmienność i szybkie sprawdzanie tożsamości czynią je idealnymi do wielu zadań programistycznych. Zrozumienie, jak efektywnie używać symboli, zwiększy Twoją zdolność pisania czystego i wyrazistego kodu Scheme.
+Symbole to lekki i wydajny sposób przedstawiania identyfikatorów, kluczy i znaczników w Scheme. Ich niezmienność i szybkie sprawdzanie tożsamości czynią je idealnymi do wielu zadań programistycznych. Zrozumienie, jak efektywnie używać symboli, zwiększy Twoją zdolność pisania czystego i wyrazistego kodu Scheme.

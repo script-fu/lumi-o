@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
 **`let`**이라는 이름과 **로컬 `define`**은 모두 코드를 구성하는 Scheme의 강력한 도구이지만 서로 다른 용도로 사용됩니다. 각각을 언제 사용해야 하는지 이해하면 깔끔하고 모듈식이며 효율적인 스크립트를 만드는 데 도움이 됩니다.
 

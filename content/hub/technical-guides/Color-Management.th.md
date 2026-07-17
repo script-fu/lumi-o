@@ -5,7 +5,7 @@ weight: 15
 url: "hub/technical-guides/Color-Management"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
+translation_source_sha256: 60e00f1b5e0b4a7bb3034ca99dd3f8f51f6bc52b1629a9ab717d2ac2166393ee
 ---
 
 Lumi-o ได้รับการกำหนดค่าให้ใช้งานได้ทันที ตราบใดที่คุณทำงานกับภาพที่มี **ความละเอียด 16 บิตขึ้นไป** ซอฟต์แวร์จะตั้งค่าให้ใช้ soft proof (CMYK) ที่มาพร้อมเป็นค่าเริ่มต้นและโปรไฟล์ sRGB ในตัวแล้ว ทุกอย่างควรทำงานได้โดยไม่ต้องตั้งค่าเพิ่มเติม
@@ -111,7 +111,7 @@ Lumi ยังเปิดใช้งาน soft proofing ได้โดยต
 
 ### ค่าเริ่มต้นปัจจุบันของ Lumi
 
-#### Working Spaces
+#### พื้นที่ทำงาน
 
 โปรไฟล์ ICC ของ working space ที่มาพร้อมและมีให้จากโฟลเดอร์ข้อมูลที่ใช้ร่วมกัน:
 - `AdobeRGB1998.icc`

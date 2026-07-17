@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 **關聯清單**（或**alist**）是Scheme中的基本資料結構，用於表示鍵值對的集合。它被實現為一個對的列表，其中每對將一個鍵（通常是一個符號）與一個值相關聯。清單簡單、靈活，非常適合中小型資料集。
 
@@ -33,19 +34,19 @@ alist 是一個列表，其中每個元素都是一個**對**（使用 `cons` �
 單引號 (`'`) 是 **quoting** 的簡寫，它會阻止Scheme 計算表達式。這使得它非常適合創建所有鍵和值都被硬編碼的靜態列表。
 
 ```scheme
-;; Alist manuell definieren
+;; 手動定義 alist
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; 以程式方式新增配對
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **結果**：
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### 使用反引號 (`` ` ``) and Comma (`,`)
+#### 使用反引號 (`` ` ``) 和逗號 (`,`)
 
-反引號 (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`) 運算子。這對於建立在運行時計算鍵或值的清單很有用。
+反引號 (`` ` ``) 類似於單引號，但允許使用逗號 (`,`) 動態插入已求值的運算式，運算子。這對於建立在運行時計算鍵或值的清單很有用。
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ alist 是一個列表，其中每個元素都是一個**對**（使用 `cons` �
 ### 主要功能總結
 
 - **單引號 (`'`)**：建立一個靜態列表，其中所有元素都是文字資料。
-- **反引號 (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`)。
+- **反引號 (`` ` ``)**: 透過混合靜態元素與求值運算式（使用 `,`）動態建立 alist。
 - **點符號 (`.`)**：用於建構對，將鍵與列表中的值關聯起來。

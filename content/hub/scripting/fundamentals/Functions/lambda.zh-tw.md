@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 Scheme 中的 **Lambda 函數** 是匿名函數，這表示它們是沒有名稱的函數。這些函數是內聯定義的，通常用於簡短的一次性操作。 `lambda` 建構是函數式程式設計中的強大工具，可讓您動態建立簡潔且靈活的邏輯。
 

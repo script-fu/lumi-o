@@ -19,10 +19,10 @@ Für den Entwicklungsprozess von Lumi fungiert das AppImage als portabler Testbu
 
 Hinweis: CI erstellt das AppImage mithilfe der im Repo integrierten Abhängigkeitsquellen von Lumi (BABL/GEGL/GTK3), sodass der Abhängigkeitsstack mit dem lokalen `lumi-build-script.sh`-Workflow konsistent ist.
 
-## Release AppImage vs. Development AppImage
+## Release-AppImage vs. Development-AppImage
 
 - **Release AppImage**: noch nicht verfügbar (Lumi wurde noch nicht veröffentlicht).
-- **Development AppImage (CI-Artefakt)**: wird automatisch aus laufenden Entwicklungs-Commits zum Testen generiert.
+- **Development-AppImage (CI-Artefakt)**: wird automatisch aus laufenden Entwicklungs-Commits zum Testen generiert.
 
 Dieser Leitfaden behandelt hauptsächlich den **Development-AppImage**-Workflow.
 

@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 このチュートリアルでは、Scheme プラグインの最小限の構造について説明します。一部の行は「定型文」です。まだ完全に理解していなくても、Lumi がファイルをロードするために必要です。
 
@@ -73,7 +74,7 @@ Scheme の基本言語である Scheme では、コメントは通常、役に�
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
+  ;; メッセージハンドラを設定し、メッセージを エラーコンソール に出力する
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

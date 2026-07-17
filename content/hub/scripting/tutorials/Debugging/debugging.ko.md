@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 스크립팅에서는 오류가 없는 기능이 없습니다. 가장 신뢰할 수 있는 명령이라도 예상치 못한 입력이나 조건이 발생하면 실패할 수 있습니다. 이를 방지하기 위해 맞춤형 디버깅 시스템을 구현하고 방어 프로그래밍 기술을 채택할 수 있습니다. 오류 처리 메커니즘으로 표준 기능을 래핑하고 유익한 피드백을 제공함으로써 스크립트를 더욱 강력하고 문제 해결하기 쉽게 만들 수 있습니다.
 
@@ -176,7 +177,9 @@ list:
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### 경고 메시지`warning-message` 함수는 `debug-message`과 유사하게 작동하지만 디버깅이 비활성화된 경우에도 경고를 표시합니다.
+### 경고 메시지
+
+`warning-message` 함수는 `debug-message`과 유사하게 작동하지만 디버깅이 비활성화된 경우에도 경고를 표시합니다.
 
 ```scheme
 ;; 목적: 경고 메시지 표시.

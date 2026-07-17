@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Travailler avec des fichiers et des répertoires est essentiel pour le développement de Scheme. Que vous enregistriez la sortie, chargeiez des ressources ou organisiez la structure de votre projet, comprendre les opérations sur les fichiers rendra vos scripts plus robustes et plus conviviaux.
 

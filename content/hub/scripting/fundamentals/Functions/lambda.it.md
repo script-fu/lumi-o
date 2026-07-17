@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 Le **funzioni lambda** in Scheme sono funzioni anonime, ovvero sono funzioni senza nome. Queste funzioni sono definite in linea e vengono generalmente utilizzate per operazioni brevi e una tantum. Il costrutto `lambda` è un potente strumento di programmazione funzionale, che consente di creare al volo una logica concisa e flessibile.
 

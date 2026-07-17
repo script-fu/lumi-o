@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
+url: "hub/about/color"
 ---
 
 Färgläggningsarbetsytan är byggd för avsiktliga färgbeslut, inte för allmän bildjustering. Den formas av traditionell mediapraxis, med betoning på pigment, palettstruktur och blandningsbeteende som förblir begripligt när en målning blir mer komplex.

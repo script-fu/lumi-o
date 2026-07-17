@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
 Med tiden har det som började som en enda funktion för att skicka meddelanden utvecklats till en samling relaterade funktioner. Dessa funktioner utgör nu grunden för ett **Meddelandebibliotek**, designat för att hantera utdata till olika destinationer, såsom GUI, meddelandekonsol och OS-terminal.
 
@@ -12,12 +13,12 @@ Med tiden har det som började som en enda funktion för att skicka meddelanden 
 
 När våra behov växer kräver hantering av meddelanden över flera utgångar ett mer modulärt och utbyggbart tillvägagångssätt. Istället för att en enda funktion gör allt, har vi delat upp processen i återanvändbara komponenter, vilket möjliggör större flexibilitet. Detta bibliotek kan nu användas som ett allmänt meddelandeverktyg som andra plugin-program eller funktioner kan låna från.
 
-### What Does the Messaging Library Do?
+### Vad gör meddelandebiblioteket?
 
 Meddelandebiblioteket innehåller för närvarande följande funktioner:
 
-- **send-to-gui**: Sends messages to the Lumi GUI dialog box.
-- **send-to-error-console**: Sends messages to the Lumi Message console.
+- **send-to-gui**: Skickar meddelanden till Lumi:s GUI-dialogruta.
+- **send-to-error-console**: Skickar meddelanden till Lumi Message-konsolen.
 - **sänd-till-terminal**: Skickar meddelanden till terminalfönstret.
 - **sänd-meddelande**: En avsändarfunktion som dirigerar meddelanden till lämplig utgång.
 - **validera-meddelande**: Säkerställer att meddelandet och utdata är giltiga innan det skickas.
@@ -40,7 +41,7 @@ Genom att följa samma mönster av modulär design och återanvändbara funktion
 
 **Meddelandebiblioteket** är början på ett bredare ramverk som kan förenkla hur meddelanden hanteras i ditt projekt. När biblioteket växer kan nya plugin-program enkelt utnyttja det för att skicka meddelanden vart de än behöver gå.
 
-We can adjust the file structure:
+Vi kan justera filstrukturen:
 
 ```plaintext
 /home/your-username/code/

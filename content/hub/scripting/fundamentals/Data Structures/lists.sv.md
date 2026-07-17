@@ -4,9 +4,10 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
-I Schema är en **lista** en grundläggande datastruktur som används för att gruppera värden. Listor är ordnade samlingar av element där varje element kan vara av vilken typ som helst, inklusive en annan lista. Listor används ofta i Scheme för både datalagring och programstruktur.
+I Scheme är en **lista** en grundläggande datastruktur som används för att gruppera värden. Listor är ordnade samlingar av element där varje element kan vara av vilken typ som helst, inklusive en annan lista. Listor används ofta i Scheme för både datalagring och programstruktur.
 
 ### Exempel 1: Enkel lista
 
@@ -151,7 +152,7 @@ Resultat:
 
 ### Operationer på listor
 
-Schema tillhandahåller flera inbyggda procedurer för att arbeta med listor, inklusive:
+Scheme tillhandahåller flera inbyggda procedurer för att arbeta med listor, inklusive:
 
 - `length`: Returnerar antalet element i en lista.
 - `append`: Kombinerar två eller flera listor till en.
@@ -192,7 +193,7 @@ Resultat: `30`
 
 ### Kapslade listor
 
-Listor i Schema kan innehålla andra listor som element, vilket skapar en kapslad struktur.
+Listor i Scheme kan innehålla andra listor som element, vilket skapar en kapslad struktur.
 
 #### Exempel: Skapa en kapslad lista
 

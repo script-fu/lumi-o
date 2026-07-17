@@ -4,11 +4,12 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
-No Scheme, um vetor é outra estrutura de dados fundamental usada para agrupar valores. Ao contrário das listas, os vetores são coleções de elementos indexados de tamanho fixo, fornecendo acesso aleatório e atualizações mais rápidas. Cada elemento de um vetor pode ser de qualquer tipo, incluindo outro vetor. Os vetores são representados usando # seguido de parênteses. `#(1 2 3)`
+Em Scheme, um vetor é outra estrutura de dados fundamental usada para agrupar valores. Ao contrário das listas, os vetores são coleções de elementos indexados de tamanho fixo, fornecendo acesso aleatório e atualizações mais rápidas. Cada elemento de um vetor pode ser de qualquer tipo, incluindo outro vetor. Os vetores são representados usando # seguido de parênteses. `#(1 2 3)`
 
-Embora vetores e listas possam parecer semelhantes, eles servem a propósitos diferentes na programação de esquemas:
+Embora vetores e listas possam parecer semelhantes, eles servem a propósitos diferentes na programação de Scheme:
 
 - As listas são mais comumente usadas para operações recursivas e estruturas dinâmicas, pois sua implementação de nós vinculados permite a manipulação eficiente de seu início e travessia por meio de decomposição recursiva.
 
@@ -38,7 +39,7 @@ Os elementos em um vetor são acessados usando o procedimento `vector-ref`, que 
 
 #### Iteração: Processando cada elemento em um vetor
 
-Você pode iterar através de um vetor usando um loop ou recursão. O esquema fornece `vector-length` para determinar o tamanho de um vetor. Aqui está um loop simples para imprimir todos os elementos de um vetor:
+Você pode iterar através de um vetor usando um loop ou recursão. Scheme fornece `vector-length` para determinar o tamanho de um vetor. Aqui está um loop simples para imprimir todos os elementos de um vetor:
 
 ```scheme
 (define (print-elements vec)
@@ -122,7 +123,9 @@ Resultado:
 - `(vector? (vector 1 2 3))` retorna `#t` (verdadeiro)
 - `(vector? 42)` retorna `#f` (falso)
 
-### Vetores e comportamento de passagem por referênciaNo Scheme, os vetores são mutáveis ​​e passados ​​por referência. Isso significa que quando você passa um vetor para uma função, a função pode modificar diretamente o vetor original. Quaisquer alterações feitas no vetor dentro da função também serão refletidas fora da função. Esse comportamento é útil para compartilhar e atualizar dados com eficiência em diversas funções, mas também requer cautela para evitar efeitos colaterais indesejados.
+### Vetores e comportamento de passagem por referência
+
+Em Scheme, os vetores são mutáveis e passados por referência. Isso significa que quando você passa um vetor para uma função, a função pode modificar diretamente o vetor original. Quaisquer alterações feitas no vetor dentro da função também serão refletidas fora da função. Esse comportamento é útil para compartilhar e atualizar dados com eficiência em diversas funções, mas também requer cautela para evitar efeitos colaterais indesejados.
 
 #### Exemplo: Modificando um vetor em uma função
 
@@ -144,7 +147,7 @@ Resultado: `#(10 99 30)`
 1. **Crie um vetor:** `my-vector` é inicializado com os valores `10`, `20` e `30`.
 2. **Passar para uma função:** `my-vector` é passado para `modify-vector` junto com o índice e o novo valor a ser atualizado.
 3. **Modificar na função:** O procedimento `vector-set!` atualiza o valor no índice especificado diretamente no vetor original.
-4. **Refletir alterações:** Como os vetores são passados ​​por referência, as alterações feitas na função são refletidas no vetor original.
+4. **Refletir alterações:** Como os vetores são passados por referência, as alterações feitas na função são refletidas no vetor original.
 
 #### Implicações da passagem por referência
 
@@ -153,7 +156,7 @@ Resultado: `#(10 99 30)`
 
 ### Operações em vetores
 
-O Scheme fornece vários procedimentos integrados para trabalhar com vetores, incluindo:
+Scheme fornece vários procedimentos integrados para trabalhar com vetores, incluindo:
 
 - `vector-length`: Retorna o número de elementos em um vetor.
 - `vector->list`: Converte um vetor em uma lista.
@@ -173,7 +176,7 @@ Resultado:
 
 ### Vetores aninhados
 
-Os vetores no esquema podem conter outros vetores como elementos, criando uma estrutura aninhada.
+Os vetores em Scheme podem conter outros vetores como elementos, criando uma estrutura aninhada.
 
 ```scheme
 (define nested-vector (vector (vector 1 2) (vector 3 4) (vector 5)))

@@ -4,11 +4,12 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
+translation_source_sha256: af1b2f3233ef50936b24aa195d3a7da50529a4fff3109b087be2f861e15496d1
+url: "hub/scripting/tutorials/First Step/reworking"
 ---
 Det här steget fixar ett subtilt beteende i meddelandeexemplet.
 
-Vi skickade strängen "Hello world!\n" som meddelande. "\n" är en speciell typ av tecken, ett "flykt"-tecken. Den säger åt utskriften att starta en ny rad. I Schema kommer det också att tvinga ett meddelande som skickas till statusfältet att dyka upp som en GUI-ruta.
+Vi skickade strängen "Hello world!\n" som meddelande. "\n" är en speciell typ av tecken, ett "flykt"-tecken. Den säger åt utskriften att starta en ny rad. I Scheme kommer det också att tvinga ett meddelande som skickas till statusfältet att dyka upp som en GUI-ruta.
 
 Hjälparen `send-to-gui` skickar meddelanden till en Lumi-dialogruta.
 

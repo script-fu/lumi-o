@@ -3,29 +3,32 @@ title: "if"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+最も単純な形式では、Scheme の `if` 条件はテストを評価し、その結果に基づいて 2 つの可能なコード ブロックの 1 つを実行します。最も単純な形式は次のようになります。
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- `test` が 真 (`#t`) と評価された場合、結果の **コード ブロック**が実行されます。ブロックは値を返したり、変数の割り当てや出力の印刷などの他のアクションを実行したりできます。
 
-### Exemple
+### 例
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- この場合、`test` は `(< 0 1)` です (0 が 1 より小さいかどうかを確認します)。
+- テストは 真 (`#t`) と評価されるため、コード ブロック `(lumi-message "True!")` が実行され、`"True!"` が出力されます。
 
-### Branche else : `if-else`
+### Else 条件の追加: `if-else`
+
+`if` 条件を代替コード ブロックとともに使用する場合 (`else` の場合)、構造は次のようになります。
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- `test` が 真 (`#t`) と評価された場合、**結果** コード ブロックが実行されます。
+- `test` が 偽 (`#f`) と評価された場合、**代替** コード ブロックが実行されます。
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### 仕組み
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **テスト式**:
+   - `test` 式が最初に評価されます。
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **テストに基づく結果**:
+   - `test` が 真 (`#t`) と評価された場合、**結果のコード ブロック**が実行されます。
+   - `test` が 偽 (`#f`) と評価された場合、**代替コード ブロック** が実行されます。
 
-#### Exemple 1 : renvoyer une valeur
+`consequent` と `alternative` の両方のコード ブロックは、値の戻り、変数の変更、プロシージャの実行など、有効な Scheme 操作を実行できます。
+
+### 例
+
+#### 例 1: 値を返す
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- ここで、`test` は `(< 0 1)` です (0 が 1 未満かどうかを確認します)。
+- テストは 真 (`#t`) と評価されるため、**consequent** ブロック (`1`) が実行され、その値が返されます。
 
-#### Exemple 2 : bloc `begin`
+結果: **1**
+
+#### 例 2: begin ブロックの評価
+
+条件が 真 または 偽 のときに複数のアクションを実行する必要がある場合は、`begin` または `let` を使用してそれらをグループ化できます。
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- この例では、`test` は `(= 0 1)` です (0 が 1 に等しいかどうかを確認します)。
+- テストは 偽 (`#f`) と評価されるため、**代替** ブロックが実行されます。
+  - まず、`"False condition met, calculating..."` を出力します。
+  - 次に、`(* 3 4)` を計算し、`12` を返します。
 
-#### Exemple 3 : expression `let`
+結果: **「偽の条件が満たされました。計算中...」を出力し、12 を返します。**
+
+#### 例 3: let ステートメントの評価
+
+`let` を使用すると、コード ブロック内でローカル スコープ変数を宣言できます。
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,16 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- この例では、`test` は `(= 1 1)` です (1 が 1 に等しいかどうかを確認します)。
+- テストは 真 (`#t`) と評価されるため、**consequent** ブロックが実行されます。
+  - まず、`"True condition met, calculating..."` を出力します。
+  - 次に、`(* -1 10)` を計算し、`-10` を返します。
 
-### Résumé
+結果: **「真の条件が満たされました。計算中...」を出力し、-10 を返します。**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### 概要
+
+`if` 条件は、テストを評価し、対応するコード ブロックを実行するための Scheme の強力なツールです。
+
+- 単純な式と、値を返したり、変数を変更したり、副作用を実行したりする複雑なコード ブロックの両方を処理できます。
+- 覚えておいてください: 明示的な `else` ブロックがない場合、`if` はテストが 真 の場合にのみ **結果** を評価して実行します。それ以外の場合は、**代替**を評価して実行します。

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
+url: "hub/scripting/reference/procedure-browser"
 ---
 过程浏览器是用于发现 Lumi 过程数据库 (PDB) 中数百个可用函数的主要参考工具。由于 Lumi 中的每个工具、过滤器和脚本都必须在 PDB 中注册才能调用，因此该浏览器实际上是一个完整的 PDB 浏览器。
 

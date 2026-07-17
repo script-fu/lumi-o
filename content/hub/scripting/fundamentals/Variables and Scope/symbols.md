@@ -1,6 +1,7 @@
 ---
 title: Symbols
 type: docs
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 weight: 6
 ---
 

@@ -46,7 +46,7 @@ Inspiré de la plume Waverly, ce preset tolère les mouvements rapides et les ch
 
 ## Preset Tip
 
-La ligne morte d'un stylo technique. Largeur constante, bords nets, peu ou pas de variation de trait. Utile pour les lignes de construction, schémas, lettrage et travail graphique contrôlé, là où l'uniformité prime sur l'expression. Certaines de nos animations favorites utilisent ce trait.
+La ligne morte d'un stylo technique. Largeur constante, bords nets, peu ou pas de variation de trait. Utile pour les lignes de construction, diagrammes et lettrage et travail graphique contrôlé, là où l'uniformité prime sur l'expression. Certaines de nos animations favorites utilisent ce trait.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 

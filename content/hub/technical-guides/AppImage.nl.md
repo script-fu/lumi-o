@@ -19,12 +19,12 @@ In het ontwikkelproces van Lumi fungeert de AppImage als een draagbare testbuild
 
 Opmerking: CI bouwt de AppImage met Lumi's geïntegreerde dependency-bronnen in de repo (BABL/GEGL/GTK3), zodat de dependency-stack consistent is met de lokale `lumi-build-script.sh`-workflow.
 
-## Release versus development AppImage
+## Release versus ontwikkel-AppImage
 
 - **Release AppImage**: nog niet beschikbaar (Lumi is nog niet uitgebracht).
-- **Development AppImage (CI-artefact)**: automatisch gegenereerd vanuit lopende development commits voor testen.
+- **Ontwikkel-AppImage (CI-artefact)**: automatisch gegenereerd vanuit lopende development commits voor testen.
 
-Deze gids behandelt vooral de workflow voor de **development AppImage**.
+Deze gids behandelt vooral de workflow voor de **ontwikkel-AppImage**.
 
 Huidige artefactpagina:
 

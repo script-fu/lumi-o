@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 I skript är ingen funktion ofelbar. Även de mest tillförlitliga kommandona kan misslyckas när de ställs inför oväntade inmatningar eller förhållanden. För att skydda oss mot detta kan vi implementera ett anpassat felsökningssystem och använda defensiva programmeringstekniker. Genom att slå in standardfunktioner med felhanteringsmekanismer och ge informativ feedback kan vi göra våra skript mer robusta och lättare att felsöka.
 
@@ -176,7 +177,9 @@ Funktionen `list->string` konverterar en lista till en formaterad sträng.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### Varningsmeddelanden`warning-message`-funktionen fungerar på samma sätt som `debug-message`, men den visar varningar även när felsökning är inaktiverad.
+### Varningsmeddelanden
+
+`warning-message`-funktionen fungerar på samma sätt som `debug-message`, men den visar varningar även när felsökning är inaktiverad.
 
 ```scheme
 ;; Syfte: Visa ett varningsmeddelande.

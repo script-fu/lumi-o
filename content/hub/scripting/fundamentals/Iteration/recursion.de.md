@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
 Rekursion in Scheme bedeutet, dass eine Funktion sich selbst aufruft, um kleinere Teilprobleme zu lösen. **Einfache Rekursion** hat einen Basisfall zum Stoppen und einen rekursiven Fall zur Problemverkleinerung.
 
@@ -17,9 +18,9 @@ Allgemeine Struktur:
     (recursive-call)))
 ```
 
-- **Base Condition:** stoppt die Rekursion.
-- **Base Result:** Wert im Basisfall.
-- **Recursive Call:** Aufruf mit angepassten Argumenten.
+- **Basisbedingung:** stoppt die Rekursion.
+- **Basisergebnis:** Wert im Basisfall.
+- **Rekursiver Aufruf:** Aufruf mit angepassten Argumenten.
 
 ---
 
@@ -73,6 +74,16 @@ Rekursion zerlegt das Problem; jeder Aufruf bearbeitet ein Stück. Am Basisfall 
 ```
 
 Ausgabe: *"1"*, *"2"*, *"3"* — Ergebnis: *"done"*
+
+---
+
+#### Wie es funktioniert
+
+1. Die Funktion holt das erste Listenelement mit *car* und verarbeitet es.
+2. Dann ruft sie sich mit dem Rest der Liste (*cdr*) auf.
+3. Das wiederholt sich, bis die Liste leer ist (*null? lst*).
+
+---
 
 ### Zusammenfassung
 

@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 **Лямбда-функции** в Scheme являются анонимными функциями, то есть функциями без имени. Эти функции определяются в строке и обычно используются для коротких одноразовых операций. Конструкция `lambda` — мощный инструмент функционального программирования, позволяющий на лету создавать краткую и гибкую логику.
 

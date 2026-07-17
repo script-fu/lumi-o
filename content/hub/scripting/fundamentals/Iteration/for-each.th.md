@@ -3,23 +3,24 @@ title: "for-each"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
-La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
+ฟังก์ชัน `for-each` ใน Scheme ใช้เพื่อใช้ขั้นตอนกับแต่ละองค์ประกอบของรายการ (หรือหลายรายการ) ต่างจาก `map` ที่ส่งคืนรายการใหม่พร้อมผลลัพธ์ `for-each` ใช้สำหรับ **ผลข้างเคียง** เช่น การพิมพ์หรือการอัปเดตตัวแปร
 
-La forme la plus simple de `for-each` :
+รูปแบบที่ง่ายที่สุดของ `for-each` มีลักษณะดังนี้:
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procédure :** Fonction par élément.
-- **Liste :** Liste à parcourir.
+- **ขั้นตอน**: ฟังก์ชันที่ใช้กับแต่ละองค์ประกอบของรายการ
+- **รายการ**: รายการองค์ประกอบที่จะประมวลผล
 
 ---
 
-### Exemple : afficher une liste
+### ตัวอย่าง: พิมพ์รายการ
 
 ```scheme
 (define (print-item x)
@@ -28,23 +29,26 @@ La forme la plus simple de `for-each` :
 (for-each print-item (list 1 2 3 4))
 ```
 
-- `print-item` est appliqué à `(1 2 3 4)`.
-- Chaque nombre est affiché successivement.
+- ในที่นี้ ฟังก์ชัน `print-item` ถูกนำไปใช้กับแต่ละองค์ประกอบของรายการ `(1 2 3 4)`
+- ทำให้แต่ละหมายเลขถูกพิมพ์ตามลำดับ
 
-**Sortie** : `1 2 3 4`
-
----
-
-### Comment ça marche
-
-1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
-2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+**เอาต์พุต**: `1 2 3 4`
 
 ---
 
-#### Plusieurs listes
+### มันทำงานอย่างไร
 
-Avec plusieurs listes, `for-each` traite les éléments correspondants.
+1. **วนซ้ำแต่ละองค์ประกอบ**:
+   - กระบวนการที่ให้มาจะถูกดำเนินการกับทุกองค์ประกอบในรายการตามลำดับ
+
+2. **ดำเนินการผลข้างเคียง**:
+   - ผลข้างเคียงที่พบบ่อย ได้แก่ การพิมพ์ การบันทึก หรือการแก้ไขตัวแปรภายนอก ต่างจาก `map` `for-each` จะไม่ส่งคืนรายการใหม่
+
+---
+
+#### ตัวอย่าง: การใช้งานกับหลายรายการ
+
+หากมีการระบุหลายรายการ `for-each` จะประมวลผลองค์ประกอบที่เกี่ยวข้องจากแต่ละรายการ
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `for-each` traite les éléments correspondants.
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `5 7 9`
+- ฟังก์ชัน `sum-and-print` จะรวมองค์ประกอบที่เกี่ยวข้องจากทั้งสองรายการแล้วพิมพ์ผลลัพธ์
+
+**เอาต์พุต**: `5 7 9`
 
 ---
 
-### Résumé
+### สรุป
 
-- `for-each` convient aux effets de bord sur chaque élément.
-- Contrairement à `map`, **pas de nouvelle liste**.
-- Plusieurs listes simultanément.
+- ฟังก์ชัน `for-each` มีประโยชน์สำหรับการแสดงผลข้างเคียงในแต่ละองค์ประกอบของรายการ
+- ต่างจาก `map` ตรงที่ `for-each` ไม่ได้สร้างรายการใหม่ โดยเน้นที่ผลข้างเคียงของขั้นตอนเพียงอย่างเดียว
+- สามารถจัดการหลายรายการพร้อมกัน โดยใช้ขั้นตอนกับองค์ประกอบที่เกี่ยวข้อง
 
-Utilisez `for-each` lorsque l'action prime sur la transformation.
+เมื่อใช้ `for-each` คุณจะสามารถประมวลผลรายการได้อย่างมีประสิทธิภาพเมื่อเป้าหมายคือการดำเนินการแทนที่จะแปลงข้อมูล

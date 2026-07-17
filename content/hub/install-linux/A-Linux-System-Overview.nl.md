@@ -35,7 +35,7 @@ De Linux-distributie bundelt de kernel met gebruikersruimte-tools, bibliotheken 
 
 Een tool om software uit repository's te installeren, bij te werken en te verwijderen. Voorbeelden zijn APT voor Debian-gebaseerde distributies, DNF voor Fedora en Pacman voor Arch Linux.
 
-#### Display Manager
+#### Displaymanager
 
 Beheert het grafische inlogscherm en het starten van sessies. Voorbeelden zijn GDM (GNOME Display Manager), LightDM en SDDM (Simple Desktop Display Manager).
 
@@ -43,6 +43,6 @@ Beheert het grafische inlogscherm en het starten van sessies. Voorbeelden zijn G
 
 Biedt de grafische gebruikersinterface (GUI) en beheert het uiterlijk en de gebruikerservaring. Voorbeelden zijn GNOME, Cinnamon en KDE Plasma.
 
-#### Display Server
+#### Displayserver
 
 Beheert schermuitvoer en invoergebeurtenissen. Voorbeelden zijn X11 (X Window System) en Wayland. X11 is een traditionele display server; Wayland is een nieuwer, veiliger alternatief.

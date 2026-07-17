@@ -1,6 +1,7 @@
 ---
 title: Wrapping
 type: docs
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 weight: 4
 ---
 

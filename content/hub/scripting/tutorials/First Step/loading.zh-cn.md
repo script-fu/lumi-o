@@ -3,14 +3,15 @@ title: "加载中"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 一旦辅助函数增长，就将其移动到一个小的库文件中。这可以使插件保持专注，并使帮助程序可以在多个插件之间重复使用。
 
 ### 创建一个库函数
 
-我们可以使用发送消息函数并以其内容创建一个新文件。 Save the file into your repo folder, not the plugins part, perhaps near the top level;
+我们可以使用发送消息函数并以其内容创建一个新文件。将文件保存到您的存储库文件夹中，而不是插件部分，可能靠近顶层；
 
 ```plaintext
 /home/your-username/code/
@@ -25,8 +26,8 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 - **scheme/**：这是存储Scheme代码的主目录。
   - **library/**：这是 `send-message.scm` 等共享函数的所在。
   - **plug-ins/**：这是存储您的个人插件的位置。
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: 特定「Hello World!」plug-in 的文件夹。
+      - **hello-world.scm**: plug-in 的脚本文件。
 
 库函数 send-message.scm 的示例
 
@@ -34,9 +35,9 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 ;; 处理向各种目标输出消息的函数
 (define (send-message message output)
   (cond
-    ;; 发送到 Message console
+    ;; 发送到 消息控制台
     ((eq? output 'error-console)
-       ;; 将处理程序设置为 Message console
+       ;; 将处理程序设置为 消息控制台
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,13 +52,13 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
        ;; terminal 输出通过 display 处理
        (display message)))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 ```
 
 ### 加载库函数
 
-We can load that library function with the Scheme `load` command;
+我们可以使用Scheme `load`命令加载该库函数；
 
 加载库文件：
 
@@ -84,4 +85,4 @@ We can load that library function with the Scheme `load` command;
   "<Image>/Funky")
 ```
 
-嘿！我们现在有了更简单、更短的内容，可以阅读，无需评论即可进行自我描述。 This is the satisfying conclusion of refactoring.
+嘿！我们现在有了更简单、更短的内容，可以阅读，无需评论即可进行自我描述。这就是重构的令人满意的结论。

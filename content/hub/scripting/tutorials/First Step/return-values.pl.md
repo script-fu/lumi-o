@@ -4,15 +4,16 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
-Zwracane wartości mają znaczenie, ponieważ pozwalają kontrolować przepływ bez dodatkowego stanu. W schemacie ostatnio ocenione wyrażenie staje się wartością zwracaną.
+Zwracane wartości mają znaczenie, ponieważ pozwalają kontrolować przepływ bez dodatkowego stanu. W Scheme ostatnio ocenione wyrażenie staje się wartością zwracaną.
 
 Na tej stronie zastosowano pomocniki sprawdzania poprawności z przykładu przesyłania komunikatów, aby pokazać, jak jawne zwracane wartości ułatwiają tworzenie kodu.
 
 ### Co to jest wartość zwracana?
 
-W schemacie wartość zwracana przez funkcję jest określana na podstawie ostatniego wyrażenia ocenianego przez funkcję. Oznacza to, że ostatnia linia kodu funkcji zostanie zwrócona jako wynik funkcji. Jeśli żadna wartość nie zostanie jawnie zwrócona, funkcja zwróci `#f` (false) lub `undefined`.
+W Scheme wartość zwracana przez funkcję jest określana na podstawie ostatniego wyrażenia ocenianego przez funkcję. Oznacza to, że ostatnia linia kodu funkcji zostanie zwrócona jako wynik funkcji. Jeśli żadna wartość nie zostanie jawnie zwrócona, funkcja zwróci `#f` (fałsz) lub wartość niezdefiniowaną.
 
 Powróćmy do funkcji sprawdzania poprawności (is-valid-string?)
 
@@ -28,7 +29,7 @@ W tej funkcji, jeśli wiadomość jest nieprawidłowa, zgłaszany jest błąd. J
 
 ### Jawne określanie zwracanych wartości
 
-Możemy to poprawić, czyniąc zwracaną wartość bardziej wyraźną. Na przykład możemy zwrócić `#t` (true), jeśli wiadomość jest prawidłowa:
+Możemy to poprawić, czyniąc zwracaną wartość bardziej wyraźną. Na przykład możemy zwrócić `#t` (prawda), jeśli wiadomość jest prawidłowa:
 
 ```scheme
 ;; Cel: Sprawdza, czy wiadomość jest wysyłana do prawidłowego wyjścia
@@ -61,16 +62,16 @@ Oto prosty przykład użycia wartości zwracanej do kontrolowania przepływu log
 W tym przypadku (wyślij wiadomość) opiera się na wartości zwracanej przez (is-valid-output-display?), aby zdecydować, czy kontynuować.
 Instrukcja warunkowa `cond` zostanie pominięta, jeśli pierwszy test zakończy się niepowodzeniem. Zwróć także uwagę, jak odczytuje się to w dość naturalny sposób, czy wyświetlanie danych wyjściowych jest prawidłowe?
 
-## Logika instrukcji if w schemacie
+## Logika instrukcji if w Scheme
 
-Zanim przedstawimy przykład refaktoryzacji biblioteki, oto krótki przegląd logiki warunkowej. Schemat wykorzystuje `if` do wyboru pomiędzy dwiema ścieżkami.
+Zanim przedstawimy przykład refaktoryzacji biblioteki, oto krótki przegląd logiki warunkowej. Scheme wykorzystuje `if` do wyboru pomiędzy dwiema ścieżkami.
 
 Oto prosta forma instrukcji `if`:
 
 ```scheme
-(if (conditional test)
-  do if true
-  do if false)
+(if (warunek-testowy)
+  wykonaj-gdy-prawda
+  wykonaj-gdy-fałsz)
 ```
 
 Struktura ta sprawdza warunek i jeśli warunek jest prawdziwy, wykonuje pierwszą akcję. Jeśli warunek jest fałszywy, wykonuje drugą akcję.
@@ -78,11 +79,11 @@ Struktura ta sprawdza warunek i jeśli warunek jest prawdziwy, wykonuje pierwsz�
 W przypadkach, gdy musisz wykonać wiele akcji, gdy warunek jest prawdziwy lub fałszywy, możesz użyć `begin`, aby zgrupować je razem:
 
 ```scheme
-(if (conditional test)
+(if (warunek-testowy)
   (begin
-    do if true)
+    wykonaj-gdy-prawda)
   (begin
-    do if false))
+    wykonaj-gdy-fałsz))
 ```
 
 Umożliwia to obsługę bardziej złożonych sytuacji, w których należy wykonać wiele wyrażeń lub instrukcji w zależności od wyniku testu warunkowego.
@@ -112,7 +113,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Cel: Wysyła wiadomość do Error Console, zwraca #t w przypadku powodzenia
+;; Cel: Wysyła wiadomość do konsoli komunikatów, zwraca #t w przypadku powodzenia
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -121,7 +122,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Cel: Wysyła wiadomość do terminal, zwraca #t w przypadku powodzenia
+;; Cel: Wysyła wiadomość do terminala, zwraca #t w przypadku powodzenia
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin

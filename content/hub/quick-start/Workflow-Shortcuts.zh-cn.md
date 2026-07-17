@@ -1,6 +1,10 @@
 ---
 title: "工作流程快捷方式"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o 专为快捷方式驱动的工作流程而设计。一旦您建立了这些命令的肌肉记忆，您就可以更快地导航画布和工具。
 
@@ -8,7 +12,7 @@ Lumi-o 专为快捷方式驱动的工作流程而设计。一旦您建立了这�
 
 |行动|快捷方式 |
 | :--- | :--- |
-| **调整画笔大小** | `Alt` + 右键单击​​并拖动 |
+| **调整画笔大小** | `Alt` + 右键单击并拖动 |
 | **循环选择图层** | `Alt` + 将鼠标悬停在画布上 |
 
 

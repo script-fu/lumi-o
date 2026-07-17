@@ -3,8 +3,9 @@ title: "載入中"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 一旦輔助函數增長，就將其移動到一個小的庫檔案中。這可以使插件保持專注，並使幫助程序可以在多個插件之間重複使用。
 
@@ -25,8 +26,8 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 - **scheme/**：這是儲存Scheme程式碼的主目錄。
   - **library/**：這是 `send-message.scm` 等共享函數的所在。
   - **plug-ins/**：這是儲存您的個人插件的位置。
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: 特定「Hello World!」plug-in 的資料夾。
+      - **hello-world.scm**: plug-in 的指令碼檔案。
 
 庫函數 send-message.scm 的範例
 
@@ -34,9 +35,9 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 ;; 處理向各種目標輸出訊息的函式
 (define (send-message message output)
   (cond
-    ;; 傳送到 Message console
+    ;; 傳送到 訊息主控台
     ((eq? output 'error-console)
-       ;; 將處理常式設定為 Message console
+       ;; 將處理常式設定為 訊息主控台
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,13 +52,13 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
        ;; terminal 輸出透過 display 處理
        (display message)))
 
-  ;; 將預設訊息處理常式還原為 Message console
+  ;; 將預設訊息處理常式還原為 訊息主控台
   (lumi-message-set-handler 2))
 ```
 
 ### 載入函式庫函數
 
-We can load that library function with the Scheme `load` command;
+我們可以使用Scheme `load`命令來載入該函式庫函數；
 
 載入庫檔案：
 
@@ -84,4 +85,4 @@ We can load that library function with the Scheme `load` command;
   "<Image>/Funky")
 ```
 
-嘿！我們現在有了更簡單、更短的內容，可以閱讀，無需評論即可進行自我描述。 This is the satisfying conclusion of refactoring.
+嘿！我們現在有了更簡單、更短的內容，可以閱讀，無需評論即可進行自我描述。這就是重構的令人滿意的結論。

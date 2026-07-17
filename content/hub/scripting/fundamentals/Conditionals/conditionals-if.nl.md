@@ -4,28 +4,31 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+In zijn eenvoudigste vorm evalueert het `if`-conditionele in Scheme een test en voert het, op basis van het resultaat, een van twee mogelijke codeblokken uit. De eenvoudigste vorm ziet er zo uit:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- Als de `test` waar (`#t`) evalueert, wordt het **consequent-blok** uitgevoerd. Het blok kan een waarde retourneren of andere acties uitvoeren, zoals een variabele toewijzen of output afdrukken.
 
-### Exemple
+### Voorbeeld
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- In dit geval is de `test` `(< 0 1)` (controle of 0 kleiner is dan 1).
+- Omdat de test waar (`#t`) evalueert, wordt het codeblok `(lumi-message "True!")` uitgevoerd, dat `"True!"` afdrukt.
 
-### Branche else : `if-else`
+### Een else-voorwaarde toevoegen: `if-else`
+
+Wanneer een `if`-conditionele een alternatief codeblok heeft (het `else`-geval), ziet de structuur er zo uit:
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- Als de `test` waar (`#t`) evalueert, wordt het **consequent**-codeblok uitgevoerd.
+- Als de `test` onwaar (`#f`) evalueert, wordt het **alternative**-codeblok uitgevoerd.
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### Hoe het werkt
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **Testexpressie:**
+   - De `test`-expressie wordt eerst geëvalueerd.
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **Resultaat op basis van de test:**
+   - Als de `test` waar (`#t`) evalueert, wordt het **consequent-codeblok** uitgevoerd.
+   - Als de `test` onwaar (`#f`) evalueert, wordt het **alternative-codeblok** uitgevoerd.
 
-#### Exemple 1 : renvoyer une valeur
+Zowel het `consequent`- als het `alternative`-codeblok kunnen elke geldige Scheme-bewerking uitvoeren, inclusief het retourneren van waarden, het wijzigen van variabelen of het uitvoeren van procedures.
+
+### Voorbeelden
+
+#### Voorbeeld 1: een waarde retourneren
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- Hier is de `test` `(< 0 1)` (controle of 0 kleiner is dan 1).
+- Omdat de test waar (`#t`) evalueert, wordt het **consequent**-blok (`1`) uitgevoerd en wordt de waarde ervan geretourneerd.
 
-#### Exemple 2 : bloc `begin`
+Resultaat: **1**
+
+#### Voorbeeld 2: een begin-blok evalueren
+
+Als je meerdere acties moet uitvoeren wanneer de conditie waar of onwaar is, kun je `begin` of `let` gebruiken om ze te groeperen.
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- In dit voorbeeld is de `test` `(= 0 1)` (controle of 0 gelijk is aan 1).
+- Omdat de test onwaar (`#f`) evalueert, wordt het **alternative**-blok uitgevoerd:
+  - Eerst drukt het `"False condition met, calculating..."` af.
+  - Vervolgens berekent het `(* 3 4)` en retourneert `12`.
 
-#### Exemple 3 : expression `let`
+Resultaat: **Drukt "False condition met, calculating..." af en retourneert 12.**
+
+#### Voorbeeld 3: een let-expressie evalueren
+
+Met `let` kun je lokale variabelen binnen het codeblok declareren.
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,15 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- In dit voorbeeld is de `test` `(= 1 1)` (controle of 1 gelijk is aan 1).
+- Omdat de test waar (`#t`) evalueert, wordt het **consequent**-blok uitgevoerd:
+  - Eerst drukt het `"True condition met, calculating..."` af.
+  - Vervolgens berekent het `(* -1 10)` en retourneert `-10`.
 
-### Résumé
+Resultaat: **Drukt "True condition met, calculating..." af en retourneert -10.**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### Samenvatting
+
+- Het `if`-conditionele is een krachtig hulpmiddel in Scheme voor het evalueren van tests en het uitvoeren van bijbehorende codeblokken.
+- Het kan zowel eenvoudige expressies als complexe codeblokken aan die waarden retourneren, variabelen wijzigen of neveneffecten uitvoeren.
+- Onthoud: als er geen expliciet `else`-blok is, evalueert en voert `if` alleen het **consequent** uit als de test waar is; anders het **alternative**.

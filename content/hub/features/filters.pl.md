@@ -7,9 +7,9 @@ translation_lock: true
 translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
 
-Menu Filtry Lumi skupia w jednym miejscu korekty korekcyjne, stylizowane efekty soczewek, generatory tekstur proceduralnych, zabiegi inspirowane drukiem i narzędzia analityczne. Kolejność menu jest raczej praktyczna niż akademicka: narzędzia do rozmycia i ulepszania znajdują się obok siebie, efekty zniekształcania i oświetlenia są pogrupowane według wyglądu, a generatory tekstur i wzorów są trzymane razem, gdy celem jest zbudowanie materiału źródłowego, a nie modyfikowanie istniejącego obrazu.
+Menu Filtry Lumi skupia w jednym miejscu korekty obrazu, stylizowane efekty soczewek, generatory tekstur proceduralnych, zabiegi inspirowane drukiem i narzędzia analityczne. Kolejność menu jest raczej praktyczna niż akademicka: narzędzia do rozmycia i ulepszania znajdują się obok siebie, efekty zniekształcania i oświetlenia są pogrupowane według wyglądu, a generatory tekstur i wzorów są trzymane razem, gdy celem jest zbudowanie materiału źródłowego, a nie modyfikowanie istniejącego obrazu.
 
-Okna dialogowe filtrów działają według tego samego ogólnego schematu działania. Ustawienia wstępne, podgląd, widok podzielony oraz elementy sterujące kryciem lub mieszaniem umożliwiają szybkie dostrojenie efektu, a na warstwach wynik może pozostać jako edytowalny, nieniszczący filtr, zamiast być natychmiast łączony. Lumi przechowuje również najnowszą historię użycia filtrów, więc powtarzanie ostatniego efektu lub ponowne otwieranie ostatniego okna dialogowego jest częścią normalnego rytmu malowania, a nie osobnym zadaniem.
+Okna dialogowe filtrów działają według tego samego ogólnego schematu. Ustawienia wstępne, podgląd, widok podzielony oraz elementy sterujące kryciem lub mieszaniem umożliwiają szybkie dostrojenie efektu, a na warstwach wynik może pozostać jako edytowalny, nieniszczący filtr, zamiast być natychmiast łączony. Lumi przechowuje również najnowszą historię użycia filtrów, więc powtarzanie ostatniego efektu lub ponowne otwieranie ostatniego okna dialogowego jest częścią normalnego rytmu malowania, a nie osobnym zadaniem.
 
 ## Rozmycie
 
@@ -79,7 +79,7 @@ Zniekształcenie obiektywu zmienia kształt obrazu poprzez krzywiznę beczkowat�
 
 ### Rozkwit
 
-Bloom zamienia jasne obszary w kontrolowaną poświatę, a próg, miękkość, promień i siła określają, jak daleko rozprzestrzenia się światło i jak mocno podnosi obraz. Dodatkowa kontrola ograniczająca ekspozycję sprawia, że ​​można go używać jako efektu podświetlenia, a nie automatycznego rozmycia.
+Bloom zamienia jasne obszary w kontrolowaną poświatę, a próg, miękkość, promień i siła określają, jak daleko rozprzestrzenia się światło i jak mocno podnosi obraz. Dodatkowa kontrola ograniczająca ekspozycję sprawia, że można go używać jako efektu podświetlenia, a nie automatycznego rozmycia.
 
 ### Niebo
 
@@ -87,7 +87,7 @@ Niebo to coś więcej niż nakładka z odcieniem lub gradientem: renderuje niebo
 
 ### Winieta
 
-Winieta przyciemnia, koloruje, a nawet wymazuje w kierunku krawędzi obrazu, korzystając z elementów sterujących kształtem, promieniem, miękkością, gamma, proporcjami, ściśnięciem, obrotem i pozycjonowaniem na płótnie. Działa jak klasyczna obróbka krawędzi fotograficznych, ale jest na tyle elastyczna, że ​​może działać jako maska ​​​​kadrująca lub nieregularny reflektor kompozycyjny.
+Winieta przyciemnia, koloruje, a nawet wymazuje w kierunku krawędzi obrazu, korzystając z elementów sterujących kształtem, promieniem, miękkością, gamma, proporcjami, ściśnięciem, obrotem i pozycjonowaniem na płótnie. Działa jak klasyczna obróbka krawędzi fotograficznych, ale jest na tyle elastyczna, że może działać jako maska kadrująca lub nieregularny reflektor kompozycyjny.
 
 ## Hałas
 
@@ -159,7 +159,7 @@ Voronoi generuje teksturę komórkową z możliwością kafelkowania z rozmieszc
 
 ### Fala
 
-Fala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że ​​jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
+Fala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
 
 ### Półtony (AM)
 

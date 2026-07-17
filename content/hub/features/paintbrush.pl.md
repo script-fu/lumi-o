@@ -26,7 +26,7 @@ Kiedy pędzel staje się skomplikowany wizualnie, podgląd może pozostać upros
 
 Narzędzie Pędzel reaguje na bieżące dane wejściowe, takie jak nacisk rysika, prędkość, kierunek, nachylenie i inne wartości kontrolera. Sygnały te mogą wpływać na widoczny obrys na wiele sposobów: grubość, nieprzezroczystość, kąt, reakcja tekstury, zachowanie kolorów, odstępy i inne cechy mogą zmieniać się w miarę ruchu ręki.
 
-Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny instrument do rysowania. Lekki dotyk może pozostawić delikatne ślady, szybszy ruch może ujawnić teksturę lub kształt, a zachowanie uwzględniające kierunek może pomóc, aby pociągnięcia pociągnęły podążać za gestem dłoni.
+Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny instrument do rysowania. Lekki dotyk może pozostawić delikatne ślady, szybszy ruch może ujawnić teksturę lub kształt, a zachowanie uwzględniające kierunek może sprawić, że pociągnięcia będą podążać za gestem dłoni.
 
 ![dynamics](/images/screens/dynamics.jpg)
 
@@ -34,7 +34,7 @@ Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny in
 
 Pociągnięcia mogą być bezpośrednie i natychmiastowe lub mogą być wspomagane przez wygładzenie i stabilizację. Funkcje te pomagają zredukować niepożądane drgania, złagodzić nagłe zmiany i sprawić, że dłuższe ruchy będą bardziej kontrolowane, bez usuwania charakteru wkładu artysty.
 
-Pędzel obsługuje również różne podejścia do gromadzenia się farby. Może zachowywać się jak ciągłe pociągnięcie, gromadzić powtarzające się muśnięcia lub z czasem emitować ślady, gdy wskaźnik jest trzymany w miejscu. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
+Pędzel obsługuje również różne podejścia do gromadzenia się farby. Może zachowywać się jak ciągłe pociągnięcie, gromadzić powtarzające się muśnięcia lub z czasem emitować ślady, gdy wskaźnik jest trzymany w miejscu. Ta elastyczność sprawia, że jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
 
 W przypadku znaków kaligraficznych lub przypominających atrament pędzel może generować bardziej ciągły kształt, zamiast polegać tylko na powtarzających się stemplach. W ten sposób powstają płynne, przypominające wstążki formy, które naturalnie reagują na gesty i prędkość.
 
@@ -80,7 +80,7 @@ Pędzel może również symulować chwilową utratę kontaktu z powierzchnią ma
 
 Gdy włączona jest symulacja kontaktu, szczotka styka się lub jest podniesiona. Podczas kontaktu normalnie zaznacza depozyt. Podczas podnoszenia nie osadza się żaden materiał, a skok pozostawia szczelinę, której długość jest wybierana losowo pomiędzy odległością minimalną i maksymalną. Przejście jest binarne: efekt nie zmienia krycia, rozmiaru, twardości, odstępów ani płynięcia – tylko to, czy farba jest nałożona.
 
-Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że ​​prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.
+Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.
 
 Straty są oceniane na podstawie odległości pociągnięć, a nie liczby muśnięć, więc pędzle z gęstymi lub rzadkimi odstępami zachowują się spójnie. Ta funkcja działa zarówno w przypadku renderowania opartego na stemplach, jak i kaligrafii, tworząc spójne przerwy wzdłuż obrysu, a nie pojedyncze, pominięte plamki.
 

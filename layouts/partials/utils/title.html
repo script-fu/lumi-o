@@ -13,6 +13,12 @@
   {{- $title = ((T "menuTechnicalGuides") | default "Technical Guides") -}}
 {{- else if and .IsSection $rel (strings.Contains $rel "/hub/about/") -}}
   {{- $title = ((T "menuAbout") | default "About") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/features/") -}}
+  {{- $title = ((T "menuFeatures") | default "Features") -}}
+{{- else if and .IsSection $rel (strings.Contains $rel "/hub/made-in-lumio/") -}}
+  {{- $title = ((T "menuMadeInLumio") | default "Made in Lumi-o") -}}
+{{- else if and .IsSection $rel (strings.HasSuffix $rel "/hub/scripting/") -}}
+  {{- $title = ((T "menuScripting") | default "Scripting") -}}
 {{- end -}}
 
 {{- if eq $title "" -}}

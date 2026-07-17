@@ -9,7 +9,7 @@ translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a53
 
 Linux 是功能强大、用途广泛的操作系统，拥有庞大的开发者社区。Linux 系统的核心由若干关键组件协同工作，以提供流畅的用户体验。本概述介绍 Linux 系统的基本组成部分，包括内核、发行版、包管理器、显示管理器、桌面环境和显示服务器（X11 或 Wayland）。
 
-Lumi-o 在 Debian 与 Cinnamon（X11）上表现最佳，并在该环境中开发与测试。
+Lumi 在 Debian 与 Cinnamon（X11）上表现最佳，并在该环境中开发与测试。
 
 **常见 Linux 发行版的默认配置**
 

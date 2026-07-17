@@ -8,7 +8,10 @@ import re
 import sys
 from pathlib import Path
 
-LANGS = ["de", "es", "fr", "it", "ja", "ko", "nl", "pl", "pt-br", "ru", "sv", "th", "zh-cn", "zh-tw"]
+LANGS = [
+    "ar", "de", "es", "fr", "id", "it", "ja", "ko", "nl", "pl",
+    "pt", "pt-br", "ru", "sv", "th", "uk", "vi", "zh-cn", "zh-tw",
+]
 LANG_RE = re.compile(r"\.(" + "|".join(re.escape(x) for x in LANGS) + r")\.md$")
 
 

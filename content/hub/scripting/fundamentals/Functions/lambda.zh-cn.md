@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 Scheme 中的 **Lambda 函数** 是匿名函数，这意味着它们是没有名称的函数。这些函数是内联定义的，通常用于简短的一次性操作。 `lambda` 构造是函数式编程中的强大工具，允许您动态创建简洁且灵活的逻辑。
 

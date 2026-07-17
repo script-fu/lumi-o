@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
+translation_source_sha256: c51771681b005905702792ac549ca2707360f265b7d518cc00a6861161158126
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 ---
-En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
+In Scheme wordt het `cond`-conditionele gebruikt om een van meerdere mogelijke codeblokken te selecteren op basis van meerdere tests. Het is als een meerweg-`if`, waarbij elke tak in volgorde wordt gecontroleerd totdat er een match is.
 
-### Syntaxe
+### Syntaxis
 
 ```scheme
 (cond
@@ -18,18 +19,22 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else fallback-consequent))
 ```
 
-- Tests dans l'ordre d'écriture.
-- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
-- `else` optionnel en repli.
+- Elke test wordt geëvalueerd in de volgorde waarin ze zijn geschreven.
+- Wanneer een test waar (`#t`) evalueert, wordt het bijbehorende **consequent** uitgevoerd en stopt de `cond`-expressie met het evalueren van verdere tests.
+- De `else`-clausule is optioneel en dient als fallback als geen enkele test waar evalueert.
 
-### Comment ça marche
+### Hoe het werkt
 
-1. **Tester chaque condition** dans l'ordre.
-2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
+1. **Elke conditie testen:**
+   - `cond` evalueert de tests in de opgegeven volgorde.
 
-### Exemples
+2. **Het bijbehorende consequent uitvoeren:**
+   - Wanneer de eerste test die waar (`#t`) evalueert is gevonden, wordt het **consequent** uitgevoerd.
+   - Als geen enkele test waar evalueert en er een `else`-clausule is, wordt het **fallback-consequent** uitgevoerd.
 
-#### Exemple 1 : conséquents sur une expression
+### Voorbeelden
+
+#### Voorbeeld 1: consequenten met enkele expressie
 
 ```scheme
 (cond
@@ -38,9 +43,15 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else "Fallback"))
 ```
 
-Résultat : **"This will run"**
+- De eerste test `(< 3 2)` evalueert onwaar (`#f`).
+- De tweede test `(= 3 3)` evalueert waar (`#t`), dus `"This will run"` wordt geretourneerd.
+- De `else`-clausule wordt niet uitgevoerd omdat er al een match is gevonden.
 
-#### Exemple 2 : actions multiples avec `begin`
+Resultaat: **"This will run"**
+
+#### Voorbeeld 2: meerdere acties met `begin`
+
+Wanneer een consequent meerdere acties omvat, gebruik `begin` om ze te groeperen:
 
 ```scheme
 (cond
@@ -58,13 +69,20 @@ Résultat : **"This will run"**
       0)))
 ```
 
-Résultat : **Affiche « Condition met » et renvoie 25.**
+- De eerste test `(< 5 3)` evalueert onwaar (`#f`).
+- De tweede test `(> 5 3)` evalueert waar (`#t`):
+  - Het drukt `"Condition met"` af.
+  - Vervolgens berekent het `(* 5 5)` en retourneert `25`.
 
-#### Exemple 3 : bloc `let` dans un conséquent
+Resultaat: **Drukt "Condition met" af en retourneert 25.**
+
+#### Voorbeeld 3: een `let`-blok in een consequent
+
+Wanneer je lokale variabelen nodig hebt, gebruik een `let`-blok:
 
 ```scheme
 (cond
-  ;; Geval 1: als 0 kleiner is dan -1
+  ;; Geval 1: Als 0 kleiner is dan -1
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
@@ -75,15 +93,21 @@ Résultat : **Affiche « Condition met » et renvoie 25.**
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Standaard: als geen van bovenstaande voorwaarden geldt
+  ;; Standaardgeval: als geen van bovenstaande voorwaarden is voldaan
   (else
     (let ((z 0))
       z)))
 ```
 
-Résultat : **Affiche « Positive condition met » et renvoie 40.**
+- De eerste test `(< 0 -1)` is onwaar.
+- De tweede test `(> 0 -1)` is waar, dus:
+  - Een `let`-blok wordt uitgevoerd dat `y` bindt aan `20`.
+  - Het drukt `"Positive condition met"` af.
+  - Vervolgens berekent het `(+ y y)` en retourneert `40`.
 
-#### Exemple 4 : repli avec `else`
+Resultaat: **Drukt "Positive condition met" af en retourneert 40.**
+
+#### Voorbeeld 4: fallback met `else`
 
 ```scheme
 (cond
@@ -92,10 +116,16 @@ Résultat : **Affiche « Positive condition met » et renvoie 40.**
   (else "Fallback value"))
 ```
 
-Résultat : **"Fallback value"**
+- Geen van de eerste twee tests evalueert waar.
+- De `else`-clausule wordt uitgevoerd en retourneert `"Fallback value"`.
 
-### Résumé
+Resultaat: **"Fallback value"**
 
-- `cond` pour plusieurs conditions clairement.
-- Conséquents simples ou groupés avec `begin`.
-- `let` pour variables locales ; `else` recommandé en repli.
+### Samenvatting
+
+- Gebruik `cond` om meerdere condities op een heldere en beknopte manier af te handelen.
+- Consequenten kunnen enkele expressies zijn of gegroepeerde acties met `begin`.
+- Gebruik `let` in consequenten om lokale variabelen voor berekeningen te declareren.
+- Neem altijd een `else`-clausule op als fallback voor onverwachte gevallen.
+
+Deze flexibiliteit maakt `cond` tot een krachtig en leesbaar hulpmiddel voor complexe vertakkingslogica.

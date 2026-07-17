@@ -4,11 +4,12 @@ type: "docs"
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
+translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
+url: "hub/scripting/fundamentals/Data Structures/_index"
 ---
-W schemacie **struktury danych** są niezbędnymi narzędziami do organizowania, przechowywania i manipulowania danymi. Umożliwiają programistom tworzenie wydajnych, czytelnych i nadających się do ponownego użycia skryptów. Wybierając odpowiednią strukturę danych dla konkretnego problemu, możesz zoptymalizować zarówno wydajność, jak i przejrzystość swojego kodu.
+W Scheme **struktury danych** są niezbędnymi narzędziami do organizowania, przechowywania i manipulowania danymi. Umożliwiają programistom tworzenie wydajnych, czytelnych i nadających się do ponownego użycia skryptów. Wybierając odpowiednią strukturę danych dla konkretnego problemu, możesz zoptymalizować zarówno wydajność, jak i przejrzystość swojego kodu.
 
-## Kluczowe struktury danych w schemacie
+## Kluczowe struktury danych w Scheme
 
 Scheme udostępnia kilka potężnych i wszechstronnych struktur danych, z których każda jest dostosowana do określonych zadań. Podstawowe struktury danych obejmują:
 
@@ -32,7 +33,7 @@ Przykłady użycia:
 Wektory to zbiory elementów o stałym rozmiarze, indeksowane w celu szybkiego dostępu. Najlepiej nadają się do scenariuszy, w których wydajność i dostęp pozycyjny mają kluczowe znaczenie.
 
 Kluczowe cechy:
-- Naprawiono rozmiar przy tworzeniu.
+- Stały rozmiar przy tworzeniu.
 - Dostęp do elementów uzyskuje się poprzez ich indeks.
 - Szybciej niż listy w przypadku niektórych operacji, takich jak dostęp losowy.
 
@@ -48,7 +49,7 @@ Decyzja o użyciu **listy** lub **wektora** zależy od konkretnych potrzeb Twoje
 
 | Funkcja | Listy | Wektory |
 |-------------------------|--------------------------------------------|--------------------------------|
-| **Elastyczność rozmiaru** | Dynamiczny | Naprawiono |
+| **Elastyczność rozmiaru** | Dynamiczny | Stały |
 | **Szybkość dostępu** | Wolniejsze (dostęp sekwencyjny) | Szybciej (dostęp indeksowany) |
 | **Łatwość modyfikacji**| Łatwiej | Trudniejsze (wymaga realokacji)|
 | **Przypadki użycia** | Dane dynamiczne, rekurencja | Dane statyczne, szybkie wyszukiwania |

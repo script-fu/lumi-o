@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部綁定。它最常用於定義變數和函數，使它們可以在整個腳本或特定範圍內重複使用和存取。理解`define`對於編寫模組化、可重複使用且可讀的Scheme程式至關重要。
 

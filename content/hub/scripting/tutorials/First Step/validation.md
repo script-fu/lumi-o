@@ -1,6 +1,7 @@
 ---
 title: Validation
 type: docs
+url: "hub/scripting/tutorials/First Step/validation"
 weight: 4
 ---
 

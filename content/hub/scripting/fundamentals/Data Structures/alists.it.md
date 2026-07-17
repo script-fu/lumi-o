@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Una **lista di associazioni** (o **alist**) è una struttura dati fondamentale in Scheme utilizzata per rappresentare raccolte di coppie chiave-valore. È implementato come un elenco di coppie, in cui ciascuna coppia associa una chiave (tipicamente un simbolo) a un valore. Gli elenchi sono semplici, flessibili e adatti a set di dati di piccole e medie dimensioni.
 
@@ -33,19 +34,19 @@ Una alist è una lista in cui ogni elemento è una **coppia** (costruita con `co
 La virgoletta singola (`'`) è una scorciatoia per **quoting**, che impedisce a Scheme di valutare l'espressione. Ciò lo rende ideale per creare elenchi statici in cui tutte le chiavi e i valori sono codificati.
 
 ```scheme
-;; Alist manuell definieren
+;; Definire manualmente un alist
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Aggiungere programmaticamente una nuova coppia
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Risultato**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Utilizzo delle virgolette inverse (`` ` ``) and Comma (`,`)
+#### Utilizzo delle virgolette inverse (`` ` ``) e virgola (`,`)
 
-L'operatore virgolette inverse (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Ciò è utile per creare elenchi in cui chiavi o valori vengono calcolati in fase di esecuzione.
+L'operatore virgolette inverse (`` ` ``) è simile al singolo apice, ma consente di inserire dinamicamente espressioni valutate con la virgola (`,`). Ciò è utile per creare elenchi in cui chiavi o valori vengono calcolati in fase di esecuzione.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Elenco statico utilizzando `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Elenco dinamico utilizzando `` ` `` and `,`:
+Elenco dinamico utilizzando `` ` `` e `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Una volta recuperata una coppia utilizzando `assoc`, utilizzare `cdr` per estrar
 ### Riepilogo delle caratteristiche principali
 
 - **Citazione singola (`'`)**: crea un elenco statico in cui tutti gli elementi sono dati letterali.
-- **Citazione inversa (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Virgolette inverse (`` ` ``)**: Consente di creare alist dinamiche mescolando elementi statici ed espressioni valutate (con `,`).
 - **Notazione punto (`.`)**: Utilizzato per costruire coppie, associando una chiave a un valore in un elenco.

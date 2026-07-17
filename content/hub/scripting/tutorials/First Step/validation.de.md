@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 Beim Erstellen robuster Plug-Ins ist es wichtig sicherzustellen, dass unsere Funktionen Fehler ordnungsgemäß verarbeiten und wie erwartet funktionieren, selbst bei Missbrauch oder unerwarteten Eingaben. Die Validierung trägt dazu bei, die Integrität der Funktion zu schützen und Abstürze oder unbeabsichtigtes Verhalten zu verhindern.
 
@@ -36,7 +37,7 @@ Beispiel:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 ```
 
@@ -94,7 +95,7 @@ Dieser Ansatz stellt sicher, dass die Funktion immer gültige Eingaben erhält, 
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 ```
 

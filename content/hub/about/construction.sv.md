@@ -5,6 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
+url: "hub/about/construction"
 ---
 
 Konstruktionsarbetsytan är byggd för lay-in-arbete. Den börjar med en enda Lay-in-verktygsförinställning och en fyrafärgspalett av vitt, svart, rött och blått — tillräcklig struktur för att blocka in form. Tryck styr opaciteten, så att du kan bygga lätta markeringar och hålla fokus på formen.

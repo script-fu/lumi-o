@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 **รายการการเชื่อมโยง** (หรือ **รายการ**) เป็นโครงสร้างข้อมูลพื้นฐานในโครงการที่ใช้เพื่อแสดงคอลเลกชันของคู่คีย์-ค่า มันถูกนำไปใช้เป็นรายการคู่ โดยที่แต่ละคู่เชื่อมโยงคีย์ (โดยทั่วไปคือสัญลักษณ์) กับค่า รายการมีความเรียบง่าย ยืดหยุ่น และเหมาะสำหรับชุดข้อมูลขนาดเล็กถึงขนาดกลาง
 
@@ -33,19 +34,19 @@ translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0f
 เครื่องหมายคำพูดเดี่ยว (`'`) เป็นการย่อสำหรับ **quoting** ซึ่งทำให้ Scheme ไม่สามารถประเมินนิพจน์ได้ ทำให้เหมาะอย่างยิ่งสำหรับการสร้างรายการคงที่โดยที่คีย์และค่าทั้งหมดเป็นแบบฮาร์ดโค้ด
 
 ```scheme
-;; Alist manuell definieren
+;; กำหนด alist ด้วยตนเอง
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; เพิ่มคู่ใหม่แบบโปรแกรม
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **ผลลัพธ์**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### การใช้ Backquote (`` ` ``) and Comma (`,`)
+#### การใช้ backquote (`` ` ``) และเครื่องหมายจุลภค (`,`)
 
-ตัวดำเนินการ backquote (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`) สิ่งนี้มีประโยชน์สำหรับการสร้างรายการที่มีการคำนวณคีย์หรือค่าขณะรันไทม์
+ตัวดำเนินการ backquote (`` ` ``) คล้าย single quote แต่ช่วยให้แทรกนิพจน์ที่ประเมินแล้วได้แบบไดนามิกด้วย comma (`,`) สิ่งนี้มีประโยชน์สำหรับการสร้างรายการที่มีการคำนวณคีย์หรือค่าขณะรันไทม์
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0f
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-รายการแบบไดนามิกโดยใช้ `` ` `` and `,`:
+รายการแบบไดนามิกโดยใช้ `` ` `` และ `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0f
 ### สรุปคุณสมบัติที่สำคัญ
 
 - **Single Quote (`'`)**: สร้างรายการคงที่โดยที่องค์ประกอบทั้งหมดเป็นข้อมูลตามตัวอักษร
-- **ราคาย้อนกลับ (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`)
+- **Backquote (`` ` ``)**: ช่วยให้สร้าง alist แบบไดนามิกได้โดยผสมองค์ประกอบคงที่กับนิพจน์ที่ประเมินแล้ว (ใช้ `,`)
 - **Dot Notation (`.`)**: ใช้เพื่อสร้างคู่ เชื่อมโยงคีย์กับค่าในรายการ

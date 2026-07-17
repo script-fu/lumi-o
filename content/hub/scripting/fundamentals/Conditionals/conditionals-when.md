@@ -1,6 +1,7 @@
 ---
 title: when
 type: docs
+url: "hub/scripting/fundamentals/Conditionals/conditionals-when"
 weight: 5
 ---
 

@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
 En Scheme, la récursion signifie qu'une fonction s'appelle elle-même pour résoudre des sous-problèmes. Une **récursion simple** a un cas de base pour s'arrêter et un cas récursif qui réduit le problème.
 
@@ -73,6 +74,16 @@ La récursion décompose le problème ; chaque appel traite une partie. Au cas d
 ```
 
 Sortie : *"1"*, *"2"*, *"3"* — résultat : *"done"*
+
+---
+
+#### Comment ça marche
+
+1. La fonction récupère le premier élément de la liste avec *car* et le traite.
+2. Elle s'appelle ensuite avec le reste de la liste (*cdr*).
+3. Le processus se répète jusqu'à ce que la liste soit vide (*null? lst*).
+
+---
 
 ### Résumé
 

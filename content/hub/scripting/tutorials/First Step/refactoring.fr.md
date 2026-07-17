@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Une fois qu’une fonction fonctionne, nous pouvons prendre du recul et réfléchir à la meilleure façon de structurer notre code. L'objectif est de rendre notre plug-in aussi clair, compréhensible et maintenable que possible. Ce processus d'amélioration et d'affinement de la structure du code existant sans modifier son comportement est appelé refactoring.
 
@@ -16,7 +17,7 @@ Voici à nouveau la fonction initiale :
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Définir le gestionnaire de messages pour envoyer le message vers l'Error Console
+  ;; Définir le gestionnaire de messages pour envoyer le message vers l'console d'erreurs
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Introduction d'une variable appelée "message":
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Définir le gestionnaire de messages pour envoyer le message vers l'Error Console
+    ;; Définir le gestionnaire de messages pour envoyer le message vers l'console d'erreurs
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ Extraire la logique :
 ;; Fonction pour gérer la sortie de messages vers diverses destinations
 (define (send-message message output)
   (cond
-    ;; Envoyer vers l'Error Console
+    ;; Envoyer vers l'console d'erreurs
     ((eq? output 'error-console)
-       ;; Définir le gestionnaire sur Error Console
+       ;; Définir le gestionnaire sur console d'erreurs
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Extraire la logique :
        ;; La sortie du terminal est gérée avec display
        (display message)))
 
-  ;; Restaurer le gestionnaire de messages par défaut vers l'Error Console
+  ;; Restaurer le gestionnaire de messages par défaut vers l'console d'erreurs
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -124,7 +125,7 @@ Dans l'exemple ci-dessus, un type de données appelé symbole est utilisé, tel 
 
 ### Simplifier la fonction principale
 
-Dans la fonction originale (scheme-hello-world), toute la logique d'envoi de messages à différentes sorties (GUI, Error Console, Terminal) était mélangée dans la fonction principale. Après la refactorisation, la fonction principale se concentre simplement sur **ce qui doit être fait**, en envoyant le message à différentes destinations.
+Dans la fonction originale (scheme-hello-world), toute la logique d'envoi de messages à différentes sorties (GUI, console d'erreurs, Terminal) était mélangée dans la fonction principale. Après la refactorisation, la fonction principale se concentre simplement sur **ce qui doit être fait**, en envoyant le message à différentes destinations.
 
 La fonction principale refactorisée est plus simple :
 
@@ -134,7 +135,7 @@ La fonction principale refactorisée est plus simple :
 
 ### La complexité de la fonction extraite
 
-En revanche, la fonction **(send-message)** est l'endroit où réside la logique détaillée. Il gère désormais les variations de comportement pour chaque sortie (GUI, Error Console, Terminal). La fonction est un peu plus complexe qu'avant, mais elle est désormais **centralisée** et **isolée**.
+En revanche, la fonction **(send-message)** est l'endroit où réside la logique détaillée. Il gère désormais les variations de comportement pour chaque sortie (GUI, console d'erreurs, Terminal). La fonction est un peu plus complexe qu'avant, mais elle est désormais **centralisée** et **isolée**.
 
 ## Relier cela à la programmation fonctionnelle
 

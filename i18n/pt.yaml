@@ -1,0 +1,20 @@
+- id: menuQuickStart
+  translation: "Início rápido"
+- id: menuAbout
+  translation: "Sobre"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuFeatures
+  translation: "Funcionalidades"
+- id: menuMadeInLumio
+  translation: "Feito em Lumi-o"
+- id: menuInstallLinux
+  translation: "Como instalar o Linux"
+- id: menuTechnicalGuides
+  translation: "Guias técnicos"
+- id: menuHome
+  translation: "Início"
+- id: menuScripting
+  translation: "Scripts"
+- id: menuContact
+  translation: "Contacto"

@@ -1,6 +1,10 @@
 ---
 title: "Wacom-Konfiguration"
 type: docs
+url: "hub/quick-start/Wacom-Configuration"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3af66b116d9f361052280ac9636ae4b23bf5fc30f10f7227fb42d2d9e654ea95
 ---
 Für digitales Malen in Lumi wird ein einfaches **Lineardruck-Setup** empfohlen.
 
@@ -18,7 +22,7 @@ Bearbeiten → Einstellungen → Eingabegeräte → Tablet, Stylus und weitere G
 
 Hier können Sie die globale Druckkurve für Ihren Stift einstellen.
 
-## Wacom Touch Ring
+## Wacom-Touch-Ring
 
 Lumi unterstützt jetzt die Wacom Touch Ring-Eingabe direkt, einschließlich modifiziererbasierter Ring-Eingaben.
 

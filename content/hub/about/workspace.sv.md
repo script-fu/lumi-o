@@ -5,6 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f715e8eae5ee35d9495f37a3268cdf7ecdac5db976fa8fb48a83797cb7ca22b6
+url: "hub/about/workspace"
 ---
 
 Arbetsytor är en grundläggande del av Lumi, tillgängliga direkt från menyn Arbetsytor. De växlar snabbt och smidigt, så att gå från ett projektsteg till ett annat känns som att välja ett applikationsläge.

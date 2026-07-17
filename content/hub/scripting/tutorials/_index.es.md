@@ -4,11 +4,12 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
+url: "hub/scripting/tutorials"
 ---
 Estos tutoriales le muestran cómo escribir complementos de Scheme para Lumi. Comenzará con un procedimiento mínimo de "Hola mundo" y luego desarrollará complementos que funcionan con imágenes, archivos y bibliotecas auxiliares reutilizables.
 
 {{< cards >}}
-  {{< card link="first-step" title="Primer paso" icon="sparkles" subtitle="¡Hola Mundo! y configuración básica del esquema" >}}
+  {{< card link="first-step" title="Primer paso" icon="sparkles" subtitle="¡Hola Mundo! y configuración básica de Scheme" >}}
   {{< card link="filter-plug-in/filter-plug-ins" title="Complemento de filtro" icon="photograph" subtitle="Creando su primer complemento de filtro" >}}
   {{< card link="files" title="Archivos" icon="folder" subtitle="Trabajar con archivos en Scheme" >}}
   {{< card link="debugging" title="Depuración" icon="search" subtitle="Técnicas de depuración para Scheme" >}}

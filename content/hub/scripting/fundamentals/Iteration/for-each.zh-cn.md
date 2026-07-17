@@ -3,23 +3,24 @@ title: "for-each"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
-La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
+Scheme 中的 `for-each` 函数用于将过程应用于列表（或多个列表）的每个元素。与 `map` 返回包含结果的新列表不同，`for-each` 用于其**副作用**，例如打印或更新变量。
 
-La forme la plus simple de `for-each` :
+`for-each` 最简单的形式如下所示：
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procédure :** Fonction par élément.
-- **Liste :** Liste à parcourir.
+- **过程**：应用于列表中每个元素的函数。
+- **列表**：将处理其元素的列表。
 
 ---
 
-### Exemple : afficher une liste
+### 示例：打印列表
 
 ```scheme
 (define (print-item x)
@@ -28,23 +29,26 @@ La forme la plus simple de `for-each` :
 (for-each print-item (list 1 2 3 4))
 ```
 
-- `print-item` est appliqué à `(1 2 3 4)`.
-- Chaque nombre est affiché successivement.
+- 此处，函数`print-item` 应用于列表`(1 2 3 4)` 的每个元素。
+- 这会导致按顺序打印每个数字。
 
-**Sortie** : `1 2 3 4`
-
----
-
-### Comment ça marche
-
-1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
-2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+**输出**：`1 2 3 4`
 
 ---
 
-#### Plusieurs listes
+### 它是如何运作的
 
-Avec plusieurs listes, `for-each` traite les éléments correspondants.
+1. **迭代每个元素**：
+   - 所提供的过程按顺序对列表中的每个元素执行。
+
+2. **产生副作用**：
+   - 常见的副作用包括打印、记录或修改外部变量。与`map` 不同，`for-each` 不返回新列表。
+
+---
+
+#### 示例：与多个列表一起使用
+
+如果提供了多个列表，`for-each` 会处理每个列表中的相应元素。
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `for-each` traite les éléments correspondants.
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `5 7 9`
+- 函数`sum-and-print` 对两个列表中的相应元素求和并打印结果。
+
+**输出**：`5 7 9`
 
 ---
 
-### Résumé
+### 总结
 
-- `for-each` convient aux effets de bord sur chaque élément.
-- Contrairement à `map`, **pas de nouvelle liste**.
-- Plusieurs listes simultanément.
+- `for-each` 函数对于对列表的每个元素执行副作用非常有用。
+- 与`map` 不同，`for-each` 不会生成新列表——它仅关注过程的副作用。
+- 它可以同时处理多个列表，将过程应用于相应的元素。
 
-Utilisez `for-each` lorsque l'action prime sur la transformation.
+通过使用`for-each`，当目标是执行操作而不是转换数据时，您可以有效地处理列表。

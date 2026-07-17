@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
 In seiner einfachsten Form wertet `if` in Scheme einen Test aus und führt je nach Ergebnis einen von zwei Codeblöcken aus:
 
@@ -45,6 +46,8 @@ In seiner einfachsten Form wertet `if` in Scheme einen Test aus und führt je na
 2. Bei `#t` **consequent**, bei `#f` **alternative**.
 
 Beide Blöcke können jeden gültigen Scheme-Ausdruck enthalten.
+
+### Beispiele
 
 #### Beispiel 1: Wert zurückgeben
 

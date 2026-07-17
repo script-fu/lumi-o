@@ -1,0 +1,20 @@
+- id: menuQuickStart
+  translation: "Mulai Cepat"
+- id: menuAbout
+  translation: "Tentang"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuFeatures
+  translation: "Fitur"
+- id: menuMadeInLumio
+  translation: "Dibuat di Lumi-o"
+- id: menuInstallLinux
+  translation: "Cara Menginstal Linux"
+- id: menuTechnicalGuides
+  translation: "Panduan Teknis"
+- id: menuHome
+  translation: "Beranda"
+- id: menuScripting
+  translation: "Skrip"
+- id: menuContact
+  translation: "Kontak"

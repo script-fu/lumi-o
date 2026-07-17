@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 関数が動作するようになったら、一歩下がって、コードをどのように構成するのが最適かを考えることができます。目標は、プラグインをできるだけ明確で、理解しやすく、保守しやすいものにすることです。既存のコードの動作を変更せずにその構造を改善および改良するこのプロセスは、リファクタリングとして知られています。
 
@@ -16,7 +17,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
+  ;; メッセージハンドラを設定し、メッセージを エラーコンソール に出力する
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Scheme では、変数には変数が認識されている「スコープ」が�
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
+    ;; メッセージハンドラを設定し、メッセージを エラーコンソール に出力する
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ Scheme では、変数には変数が認識されている「スコープ」が�
 ;; さまざまな出力先へのメッセージ出力を処理する関数
 (define (send-message message output)
   (cond
-    ;; Error Console に送信
+    ;; エラーコンソール に送信
     ((eq? output 'error-console)
-       ;; ハンドラを Error Console に設定する
+       ;; ハンドラを エラーコンソール に設定する
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Scheme では、変数には変数が認識されている「スコープ」が�
        ;; terminal 出力は display で処理される
        (display message)))
 
-  ;; 既定のメッセージハンドラを Error Console に戻す
+  ;; 既定のメッセージハンドラを エラーコンソール に戻す
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -120,7 +121,7 @@ Scheme では、変数には変数が認識されている「スコープ」が�
 
 #### 記号
 
-上の例では、「gui」などのシンボルと呼ばれるデータ型が使用されています。シンボルはパラ​​メーターとして send-message 関数に渡され、単純な条件決定を行うために使用できます。シンボリック キーと同様に、これらは一意の識別子です。シンボルの詳細については、[このページ](/hub/scripting/fundamentals/variables-and-scope/symbols/) をご覧ください。
+上の例では、「gui」などのシンボルと呼ばれるデータ型が使用されています。シンボルはパラメーターとして send-message 関数に渡され、単純な条件決定を行うために使用できます。シンボリック キーと同様に、これらは一意の識別子です。シンボルの詳細については、[このページ](/hub/scripting/fundamentals/variables-and-scope/symbols/) をご覧ください。
 
 ### main 関数の簡略化
 

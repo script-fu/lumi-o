@@ -4,15 +4,16 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
-Returvärden är viktiga eftersom de låter dig styra flödet utan extra tillstånd. I Schema blir det senast utvärderade uttrycket returvärdet.
+Returvärden är viktiga eftersom de låter dig styra flödet utan extra tillstånd. I Scheme blir det senast utvärderade uttrycket returvärdet.
 
 Den här sidan använder valideringshjälparna från meddelandeexemplet för att visa hur explicita returvärden gör kod lättare att komponera.
 
 ### Vad är ett returvärde?
 
-I Schema bestäms returvärdet för en funktion av det sista uttrycket som funktionen utvärderar. Detta betyder att vad den sista koden i funktionen utvärderar till kommer att returneras som resultatet av funktionen. Om inget värde uttryckligen returneras returnerar funktionen `#f` (falskt) eller `undefined`.
+I Scheme bestäms returvärdet för en funktion av det sista uttrycket som funktionen utvärderar. Detta betyder att vad den sista koden i funktionen utvärderar till kommer att returneras som resultatet av funktionen. Om inget värde uttryckligen returneras returnerar funktionen `#f` (falskt) eller `undefined`.
 
 Låt oss återvända till valideringsfunktionen, (är-giltig-sträng?)
 
@@ -63,7 +64,7 @@ Det villkorliga uttalandet `cond` hoppas över om det första testet misslyckas.
 
 ## Om Statement Logic in Scheme
 
-Före exemplet med refactored bibliotek, här är en snabb genomgång av villkorlig logik. Schema använder `if` för att välja mellan två vägar.
+Före exemplet med refactored bibliotek, här är en snabb genomgång av villkorlig logik. Scheme använder `if` för att välja mellan två vägar.
 
 Här är en enkel form av ett `if` uttalande:
 
@@ -112,7 +113,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #t)
     #f))
 
-;; Syfte: Skickar ett meddelande till Error Console, returnerar #t vid lyckat resultat
+;; Syfte: Skickar ett meddelande till felkonsol, returnerar #t vid lyckat resultat
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

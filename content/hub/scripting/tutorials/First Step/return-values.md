@@ -1,6 +1,7 @@
 ---
 title: Return Values
 type: docs
+url: "hub/scripting/tutorials/First Step/return-values"
 weight: 8
 ---
 

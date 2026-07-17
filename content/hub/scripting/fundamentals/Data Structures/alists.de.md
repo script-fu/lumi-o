@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Eine **Assoziationsliste** (oder **Alist**) ist eine grundlegende Datenstruktur in Scheme, die zur Darstellung von Sammlungen von Schlüssel-Wert-Paaren verwendet wird. Es wird als Liste von Paaren implementiert, wobei jedes Paar einen Schlüssel (normalerweise ein Symbol) einem Wert zuordnet. Alisten sind einfach, flexibel und eignen sich gut für kleine bis mittelgroße Datensätze.
 
@@ -43,9 +44,9 @@ Das einfache Anführungszeichen (`'`) ist eine Abkürzung für **quoting**, was 
 **Ergebnis**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Verwendung des Backquotes („` ` ``) and Comma (`,`)
+#### Verwendung des Backquotes („` ` ``) und Komma (`,`)
 
-Der Backquote-Operator („` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,“). Dies ist nützlich zum Erstellen von Listen, bei denen Schlüssel oder Werte zur Laufzeit berechnet werden.
+Der Backquote-Operator („` ` ``) ähnelt dem einfachen Anführungszeichen, erlaubt aber das dynamische Einfügen ausgewerteter Ausdrücke mit dem Komma (`,`). Dies ist nützlich zum Erstellen von Listen, bei denen Schlüssel oder Werte zur Laufzeit berechnet werden.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Statische Liste mit `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Dynamische Liste mit `` ` `` and `,`:
+Dynamische Liste mit `` ` `` und `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Sobald Sie ein Paar mit `assoc` abgerufen haben, verwenden Sie `cdr`, um den Wer
 ### Zusammenfassung der wichtigsten Funktionen
 
 - **Einfaches Anführungszeichen (`'`)**: Erstellt eine statische Liste, in der alle Elemente Literaldaten sind.
-- **Backquote (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Backquote (`` ` ``)**: Ermöglicht die dynamische Erstellung von Alists durch Mischen statischer Elemente mit ausgewerteten Ausdrücken (mit `,`).
 - **Punktnotation (`.`)**: Wird zum Erstellen von Paaren verwendet, um einen Schlüssel einem Wert in einer Liste zuzuordnen.

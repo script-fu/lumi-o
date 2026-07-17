@@ -22,9 +22,9 @@ Uwaga: CI buduje AppImage przy użyciu zintegrowanych źródeł zależności Lum
 ## Wersja release a AppImage deweloperski
 
 - **Release AppImage**: jeszcze niedostępny (Lumi nie zostało jeszcze wydane).
-- **Development AppImage (artefakt CI)**: generowany automatycznie z bieżących commitów deweloperskich do testów.
+- **AppImage deweloperski (artefakt CI)**: generowany automatycznie z bieżących commitów deweloperskich do testów.
 
-Ten przewodnik opisuje głównie przepływ pracy **development AppImage**.
+Ten przewodnik opisuje głównie przepływ pracy **AppImage deweloperski**.
 
 Bieżąca strona artefaktów:
 

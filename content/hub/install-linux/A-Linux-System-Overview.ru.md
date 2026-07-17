@@ -35,7 +35,7 @@ Lumi лучше всего работает на Debian с Cinnamon (X11) и р�
 
 Инструмент для установки, обновления и удаления приложений из репозиториев. Примеры: APT для дистрибутивов на базе Debian, DNF для Fedora и Pacman для Arch Linux.
 
-#### Display Manager
+#### Менеджер отображения
 
 Управляет графическим экраном входа и запуском сеанса. Примеры: GDM (GNOME Display Manager), LightDM и SDDM (Simple Desktop Display Manager).
 

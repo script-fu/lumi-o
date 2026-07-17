@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 Scheme の `define` ステートメントは、グローバルまたはローカル バインディングの作成に使用される多用途の構造です。これは変数と関数を定義するために最も一般的に使用され、スクリプト全体または特定のスコープ内でそれらを再利用およびアクセスできるようにします。 `define` を理解することは、モジュール式で再利用可能で読み取り可能な Scheme プログラムを作成するために重要です。
 

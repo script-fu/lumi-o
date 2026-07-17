@@ -4,8 +4,9 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
+url: "hub/scripting/reference"
 ---
-Skrócona instrukcja obsługi wbudowanych narzędzi Scheme i narzędzi przeglądania w aplikacji dostępnych podczas pisania wtyczek Lumi. Ogólne informacje o schemacie i odniesienia do niego można znaleźć w [Książce kucharskiej schematu](https://cookbook.scheme.org/) i [Scheme.org](https://www.scheme.org/).
+Skrócona instrukcja obsługi wbudowanych narzędzi Scheme i narzędzi przeglądania w aplikacji dostępnych podczas pisania wtyczek Lumi. Ogólne informacje o Scheme i odniesienia można znaleźć w [Scheme Cookbook](https://cookbook.scheme.org/) i [Scheme.org](https://www.scheme.org/).
 
 {{< cards >}}
   {{< card link="utility-browser" title="Przeglądarka narzędziowa" icon="search" subtitle="Przeglądaj i przeszukuj wbudowane narzędzie Scheme stdlib" >}}

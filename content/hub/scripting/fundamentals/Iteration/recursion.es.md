@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
 En Scheme, la recursión significa que una función se llama a sí misma para resolver subproblemas. Una **recursión simple** tiene caso base para detenerse y caso recursivo que reduce el problema.
 
@@ -17,9 +18,9 @@ Estructura general:
     (recursive-call)))
 ```
 
-- **Base Condition:** detiene la recursión.
-- **Base Result:** valor en caso base.
-- **Recursive Call:** llamada con argumentos reducidos.
+- **Condición base:** detiene la recursión.
+- **Resultado base:** valor en caso base.
+- **Llamada recursiva:** llamada con argumentos reducidos.
 
 ---
 
@@ -73,6 +74,16 @@ La recursión descompone el problema; cada llamada trata una parte. En el caso b
 ```
 
 Salida: *"1"*, *"2"*, *"3"* — resultado: *"done"*
+
+---
+
+#### Cómo funciona
+
+1. La función obtiene el primer elemento de la lista con *car* y lo procesa.
+2. Luego se llama a sí misma con el resto de la lista (*cdr*).
+3. El proceso se repite hasta que la lista esté vacía (*null? lst*).
+
+---
 
 ### Resumen
 

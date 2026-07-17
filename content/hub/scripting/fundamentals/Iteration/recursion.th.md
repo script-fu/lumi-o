@@ -1,14 +1,15 @@
 ---
-title: "การเรียกซ้ำแบบง่าย"
+title: "การเรียกซ้ำอย่างง่าย"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
-En Scheme, la récursion signifie qu'une fonction s'appelle elle-même pour résoudre des sous-problèmes. Une **récursion simple** a un cas de base pour s'arrêter et un cas récursif qui réduit le problème.
+การเรียกซ้ำเป็นแนวคิดที่ทรงพลังใน Scheme โดยที่ฟังก์ชันเรียกตัวเองเพื่อแก้ไขปัญหาย่อยเล็กๆ น้อยๆ ของปัญหาเดิม รูปแบบ **การเรียกซ้ำอย่างง่าย** เกี่ยวข้องกับกรณีพื้นฐานเพื่อหยุดการเรียกซ้ำและกรณีการเรียกซ้ำเพื่อลดปัญหา
 
-Structure générale :
+โครงสร้างทั่วไปของฟังก์ชันแบบเรียกซ้ำมีลักษณะดังนี้:
 
 ```scheme
 (define (function-name args)
@@ -17,13 +18,15 @@ Structure générale :
     (recursive-call)))
 ```
 
-- **Base Condition :** arrête la récursion.
-- **Base Result :** valeur au cas de base.
-- **Recursive Call :** appel avec arguments réduits.
+- **เงื่อนไขพื้นฐาน**: หยุดการเรียกซ้ำ
+- **ผลลัพธ์พื้นฐาน**: ค่าที่ส่งคืนเมื่อตรงตามเงื่อนไขฐาน
+- **การเรียกซ้ำ**: การเรียกใช้ฟังก์ชันด้วยอาร์กิวเมนต์ที่แก้ไข ซึ่งย้ายการคำนวณให้ใกล้กับกรณีพื้นฐานมากขึ้น
 
 ---
 
-### Exemple : somme de 1 à n
+### ตัวอย่าง: ผลรวมของตัวเลข (1 ถึง n)
+
+ฟังก์ชันเรียกซ้ำอย่างง่ายในการคำนวณผลรวมของตัวเลขตั้งแต่ 1 ถึง n:
 
 ```scheme
 (define (sum-to-n n)
@@ -32,27 +35,42 @@ Structure générale :
     (+ n (sum-to-n (- n 1))))) ; เรียกซ้ำ: รวม n ปัจจุบันกับผลลัพธ์ของปัญหาย่อยที่เล็กกว่า
 ```
 
-#### Décomposer et recomposer
+---
 
-La récursion décompose le problème ; chaque appel traite une partie. Au cas de base, le résultat se recompose.
+#### วิธีการทำงาน: การพังทลายและการประกอบกลับคืน
 
-#### Pas à pas : sum-to-n 3
+ผlรวมต่อ: *"done"*
 
-1. *sum-to-n 3* → *(+ 3 (sum-to-n 2))*
-2. *sum-to-n 2* → *(+ 2 (sum-to-n 1))*
-3. *sum-to-n 1* → *(+ 1 (sum-to-n 0))*
-4. *sum-to-n 0* → *0*
+#### ติดตามทีละขั้นตอนของ sum-to-n 3
 
-#### Recomposer le résultat
+1. **การเรียกครั้งแรก**: *sum-to-n 0* 2* 1* 0* 3*
+   → *(+ 3 (sum-to-n 2))*
 
-1. *sum-to-n 0* → *0*
-2. *sum-to-n 1* → *1*
-3. *sum-to-n 2* → *3*
-4. *sum-to-n 3* → *6*
+2. **การเรียกครั้งที่สอง**: *sum-to-n 0* 2* 1* 0* 2*
+   → *(+ 2 (sum-to-n 1))*
+
+3. **การเรียกครั้งที่สาม**: *sum-to-n 0* 2* 1* 0* 1*
+   → *(+ 1 (sum-to-n 0))*
+
+4. **กรณีฐาน**: *sum-to-n 0* 2* 1* 0* 0*
+   → *0*
 
 ---
 
-### Exemple : afficher chaque élément
+#### การประกอบผลลัพธ์สุดท้ายอีกครั้ง
+
+เมื่อแก้ไขกรณีที่ง่ายที่สุดแล้ว การคำนวณแต่ละชั้นจะเสร็จสมบูรณ์:
+
+1. *sum-to-n 0* ให้ *0*
+2. *sum-to-n 1* กลายเป็น *(+ 1 0) = 1*
+3. *sum-to-n 2* กลายเป็น *(+ 2 1) = 3*
+4. *sum-to-n 3* กลายเป็น *(+ 3 3) = 6*
+
+---
+
+### ตัวอย่าง: การพิมพ์แต่ละองค์ประกอบของรายการ
+
+ต่อไปนี้เป็นฟังก์ชันแบบเรียกซ้ำอย่างง่ายในการพิมพ์ทุกองค์ประกอบในรายการ:
 
 ```scheme
 (define (print-elements lst)
@@ -63,19 +81,39 @@ La récursion décompose le problème ; chaque appel traite une partie. Au cas d
       (print-elements (cdr lst)))))             ; ประมวลผลส่วนที่เหลือของรายการ
 ```
 
-- **Cas de base :** liste vide → `"done"`.
-- **Récursif :** afficher `car`, traiter le reste avec `cdr`.
+- **กรณีฐาน:** หากรายการว่างเปล่า (*null? lst*) ให้หยุดการเรียกซ้ำ
+- **กรณีเรียกซ้ำ:** พิมพ์องค์ประกอบแรก (*car lst*) จากนั้นเรียกใช้ฟังก์ชันในส่วนที่เหลือของรายการ (*cdr lst*)
 
-#### Utilisation
+#### ตัวอย่างการใช้งาน
 
 ```scheme
 (print-elements (list 1 2 3))
 ```
 
-Sortie : *"1"*, *"2"*, *"3"* — résultat : *"done"*
+เอาท์พุท:
 
-### Résumé
+- *"1"*
+- *"2"*
+- *"3"*
 
-- Cas de base pour arrêter ; cas récursif pour réduire.
-- Chaque appel progresse vers le cas de base.
-- Toujours un cas de base — sinon récursion infinie.
+ผลลัพธ์: *"done"*
+
+---
+
+#### มันทำงานอย่างไร
+
+1. ฟังก์ชันดึงข้อมูลองค์ประกอบแรกของรายการโดยใช้ *car* และประมวลผล
+2. จากนั้นจะเรียกตัวเองพร้อมกับรายการที่เหลือ (*cdr*)
+3. กระบวนการนี้จะทำซ้ำจนกว่ารายการจะว่างเปล่า (*null? lst*)
+
+---
+
+### สรุป
+
+- การเรียกซ้ำแบบง่ายประกอบด้วย:
+  1. **กรณีพื้นฐาน**: หยุดการเรียกซ้ำ
+  2. **กรณีแบบเรียกซ้ำ**: ลดปัญหาไปยังกรณีพื้นฐาน
+- การเรียกซ้ำแต่ละครั้งจะทำให้การคำนวณดำเนินไปจนเสร็จสิ้น
+- เมื่อถึงกรณีฐานแล้ว ผลลัพธ์จะถูกรวมเข้าด้วยกันเมื่อการเรียกซ้ำเสร็จสมบูรณ์
+
+การเรียกซ้ำสะท้อนโครงสร้างของปัญหาและให้การไหลที่ชัดเจนและเป็นตรรกะ ตรวจสอบให้แน่ใจกรณีฐานเสมอเพื่อหลีกเลี่ยงการเรียกซ้ำไม่สิ้นสุด

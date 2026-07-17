@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 `define`-satsen i Scheme är en mångsidig konstruktion som används för att skapa globala eller lokala bindningar. Det används oftast för att definiera variabler och funktioner, vilket gör dem återanvändbara och tillgängliga i ett skript eller inom ett specifikt omfång. Att förstå `define` är avgörande för att skriva modulära, återanvändbara och läsbara Scheme-program.
 

@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 **Lumi 过程浏览器** 允许您搜索可用的过程（内置和提供的插件）并检查它们的参数和返回值。
 
@@ -25,7 +26,7 @@ translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0
 
 当您需要验证调用签名或确认确切的过程名称时，可以按关键字或过程名称进行搜索。
 
-程序浏览器中的 #### (lumi-message)
+#### 程序浏览器中的 `(lumi-message)`
 
 搜索`lumi-message` 以查看其参数和返回值。
 

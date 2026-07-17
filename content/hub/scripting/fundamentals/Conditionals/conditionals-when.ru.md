@@ -3,12 +3,13 @@ title: "when"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: 8b6c15ef2763fe95100759e0e2e21f2bf43bf8424317be6d414f2b5260587714
 translation_lock: true
-translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
+url: "hub/scripting/fundamentals/Conditionals/conditionals-when"
 ---
-En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
+Хотя в Scheme `if` элегантен и универсален, он может сбить с толку, если использовать его без явного `else`. Это особенно верно, когда намерение состоит в том, чтобы выполнить одну ветку кода только тогда, когда условие истинно, без каких-либо альтернативных действий для случая `false`. В таких сценариях конструкция `when` предоставляет более четкую и краткую альтернативу.
 
-La forme de base de `when` :
+Базовая форма `when` выглядит следующим образом:
 
 ```scheme
 (when test-is-true
@@ -16,10 +17,10 @@ La forme de base de `when` :
   do-that)
 ```
 
-- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
-- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
+- Если `test` имеет значение true (`#t`), все выражения в теле конструкции `when` выполняются последовательно.
+- Если `test` имеет значение false (`#f`), ничего не происходит и никакие значения не возвращаются.
 
-### Exemple
+### Пример
 
 ```scheme
 (when (< 0 1)
@@ -27,9 +28,9 @@ La forme de base de `when` :
   (lumi-message "Executing additional actions."))
 ```
 
-### Comparer `if` et `when`
+### Контраст `if` и `when`
 
-Les deux ensemble dans le même exemple :
+Чтобы лучше понять разницу между `if` и `when`, рассмотрим следующий пример, в котором оба используются вместе:
 
 ```scheme
 (if (= 0 1)
@@ -39,18 +40,25 @@ Les deux ensemble dans le même exemple :
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### Explication
+#### Объяснение:
 
-1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
-2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
+1. **Условие `if`**:
+   - Тест `(= 0 1)` проверяет, равен ли 0 1.
+   - Поскольку это неверно (`#f`), выполняется ветка `else` `if`.
 
-#### Pourquoi `when` ?
+2. **Конструкция `when` в ветке `else`**:
+   - Тест `when` `(< 0 1)` проверяет, меньше ли 0 1.
+   - Поскольку это правда (`#t`), все выражения в теле `when` выполняются последовательно:
+     - Сначала выводится `"The 'when' condition is true!"`.
+     - Затем выводится `"Executing multiple actions within 'when'."`.
 
-- Pas de `else` vide ou factice.
-- Montre que seule la branche vraie compte.
+#### Зачем использовать здесь `when`?
 
-### Résumé
+- Использование `when` вместо другого `if` упрощает логику, когда нет необходимости в явной ветви `else` для условия.
+- `when` дает понять, что актуальна только истинная ветвь, что снижает потенциальную путаницу.
 
-- **`if` :** quand les deux branches comptent.
-- **`when` :** branche vraie seule, plusieurs actions possibles.
-- Les combiner structure clairement des conditions complexes.
+### Резюме
+
+- Используйте `if`, когда вам нужна как истинная, так и ложная ветвь.
+- Используйте `when`, когда для истинного случая существует только одна ветвь, особенно когда необходимо выполнить несколько действий.
+- Сочетание `if` и `when` может помочь четко и кратко структурировать более сложные условные выражения.

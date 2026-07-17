@@ -4,9 +4,10 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
-No Scheme, uma **lista** é uma estrutura de dados fundamental usada para agrupar valores. Listas são coleções ordenadas de elementos onde cada elemento pode ser de qualquer tipo, incluindo outra lista. As listas são amplamente utilizadas no Scheme tanto para armazenamento de dados quanto para estrutura de programa.
+Em Scheme, uma **lista** é uma estrutura de dados fundamental usada para agrupar valores. Listas são coleções ordenadas de elementos onde cada elemento pode ser de qualquer tipo, incluindo outra lista. As listas são amplamente utilizadas em Scheme tanto para armazenamento de dados quanto para estrutura de programa.
 
 ### Exemplo 1: Lista Simples
 
@@ -44,7 +45,7 @@ Resultado:
 
 #### Recursão simples: iterando por meio de uma lista
 
-Chamando recursivamente `car` no `cdr` de uma lista, você pode processar cada elemento um por um até que a lista seja percorrida. This forms the basis of many list-processing algorithms.
+Chamando recursivamente `car` no `cdr` de uma lista, você pode processar cada elemento um por um até que a lista seja percorrida. Isso forma a base de muitos algoritmos de processamento de listas.
 
 #### Exemplo: Imprimindo cada elemento de uma lista
 
@@ -105,7 +106,7 @@ Resultado: **`(42 "hello" #t (1 2) 7)`**
 
 ---
 
-Esses exemplos demonstram a versatilidade das listas no Scheme, tornando-as uma ferramenta poderosa para organizar e manipular dados.
+Esses exemplos demonstram a versatilidade das listas em Scheme, tornando-as uma ferramenta poderosa para organizar e manipular dados.
 
 ### Construindo Listas
 
@@ -151,7 +152,7 @@ Resultado:
 
 ### Operações em listas
 
-O Scheme fornece vários procedimentos integrados para trabalhar com listas, incluindo:
+Scheme fornece vários procedimentos integrados para trabalhar com listas, incluindo:
 
 - `length`: Retorna o número de elementos de uma lista.
 - `append`: Combina duas ou mais listas em uma.
@@ -192,7 +193,7 @@ Resultado: `30`
 
 ### Listas aninhadas
 
-As listas no esquema podem conter outras listas como elementos, criando uma estrutura aninhada.
+As listas em Scheme podem conter outras listas como elementos, criando uma estrutura aninhada.
 
 #### Exemplo: Criando uma lista aninhada
 

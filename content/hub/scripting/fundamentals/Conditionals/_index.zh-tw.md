@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
+translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
+url: "hub/scripting/fundamentals/Conditionals/_index"
 ---
 條件陳述是程式設計的基礎：它們讓腳本能夠根據特定準則做出決策並控制執行流程。在基於 Scheme 程式語言的 Scheme 中，條件陳述幫助您撰寫動態、智慧的腳本，適應不斷變化的輸入、環境或使用者操作。
 

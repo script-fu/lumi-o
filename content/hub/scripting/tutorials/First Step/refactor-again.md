@@ -1,6 +1,7 @@
 ---
 title: Refactor Again
 type: docs
+url: "hub/scripting/tutorials/First Step/refactor-again"
 weight: 5
 ---
 

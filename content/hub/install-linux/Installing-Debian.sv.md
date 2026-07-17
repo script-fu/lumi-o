@@ -87,7 +87,7 @@ Rekommenderade justeringar:
 - Desktop Font: `14`
 - Panel → Customize → Panel Height: `60`
 - Panel Appearance → Right Zone Symbolic Icon Size: `48px`
-- Mouse and Touchpad → Pointer Size adjustment
+- Mus och pekplatta → Storlek på pekare
 - Desktop (right-click) → Customize → Larger icon size
 
 Firefox-justering:

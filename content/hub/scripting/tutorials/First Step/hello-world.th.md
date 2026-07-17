@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 บทช่วยสอนนี้จะอธิบายโครงสร้างขั้นต่ำของปลั๊กอิน Scheme บางบรรทัดถือเป็น "แผ่นสำเร็จรูป": Lumi จำเป็นต้องโหลดไฟล์ แม้ว่าคุณจะยังไม่เข้าใจบรรทัดเหล่านั้นอย่างถ่องแท้ก็ตาม
 
@@ -73,7 +74,7 @@ Code อาจจัดเรียงสิ่งต่าง ๆ ในลั�
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง Error Console
+  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง คอนโซลข้อผิดพลาด
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

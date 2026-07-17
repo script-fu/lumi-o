@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 In Scheme ist ein Vektor eine weitere grundlegende Datenstruktur, die zum Gruppieren von Werten verwendet wird. Im Gegensatz zu Listen sind Vektoren indizierte Elementsammlungen fester Größe, die einen schnelleren Direktzugriff und schnellere Aktualisierungen ermöglichen. Jedes Element in einem Vektor kann von beliebigem Typ sein, einschließlich eines anderen Vektors. Vektoren werden durch # gefolgt von Klammern dargestellt. `#(1 2 3)`
 
@@ -38,7 +39,7 @@ Auf Elemente in einem Vektor wird mit der Prozedur `vector-ref` zugegriffen. Sie
 
 #### Iteration: Verarbeiten jedes Elements in einem Vektor
 
-Sie können einen Vektor mithilfe einer Schleife oder Rekursion durchlaufen. Das Schema stellt `vector-length` zur Verfügung, um die Größe eines Vektors zu bestimmen. Hier ist eine einfache Schleife, um jedes Element in einem Vektor zu drucken:
+Sie können einen Vektor mithilfe einer Schleife oder Rekursion durchlaufen. Scheme stellt `vector-length` zur Verfügung, um die Größe eines Vektors zu bestimmen. Hier ist eine einfache Schleife, um jedes Element in einem Vektor zu drucken:
 
 ```scheme
 (define (print-elements vec)
@@ -122,7 +123,9 @@ Ergebnis:
 - `(vector? (vector 1 2 3))` gibt `#t` zurück (wahr)
 - `(vector? 42)` gibt `#f` zurück (falsch)
 
-### Vektoren und Pass-by-Reference-VerhaltenIn Scheme sind Vektoren veränderbar und werden als Referenz übergeben. Das heißt, wenn Sie einen Vektor an eine Funktion übergeben, kann die Funktion den ursprünglichen Vektor direkt ändern. Alle am Vektor innerhalb der Funktion vorgenommenen Änderungen werden auch außerhalb der Funktion widergespiegelt. Dieses Verhalten ist nützlich für die effiziente gemeinsame Nutzung und Aktualisierung von Daten über mehrere Funktionen hinweg, erfordert aber auch Vorsicht, um unbeabsichtigte Nebenwirkungen zu vermeiden.
+### Vektoren und Pass-by-Reference-Verhalten
+
+In Scheme sind Vektoren veränderbar und werden als Referenz übergeben. Das heißt, wenn Sie einen Vektor an eine Funktion übergeben, kann die Funktion den ursprünglichen Vektor direkt ändern. Alle am Vektor innerhalb der Funktion vorgenommenen Änderungen werden auch außerhalb der Funktion widergespiegelt. Dieses Verhalten ist nützlich für die effiziente gemeinsame Nutzung und Aktualisierung von Daten über mehrere Funktionen hinweg, erfordert aber auch Vorsicht, um unbeabsichtigte Nebenwirkungen zu vermeiden.
 
 #### Beispiel: Ändern eines Vektors in einer Funktion
 

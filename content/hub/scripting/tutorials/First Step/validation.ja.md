@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 堅牢なプラグインを構築する場合、誤用や予期しない入力があった場合でも、関数がエラーを適切に処理し、期待どおりに動作することを確認することが重要です。検証は、関数の整合性を保護し、クラッシュや意図しない動作を防ぐのに役立ちます。
 
@@ -22,7 +23,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Message console に送信
+      ;; メッセージコンソール に送信
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
       ((eq? output 'terminal)
          (display message))))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Message console に送信
+        ;; メッセージコンソール に送信
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 ```
 

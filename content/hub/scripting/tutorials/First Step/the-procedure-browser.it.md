@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 Il **Lumi Procedure Browser** consente di cercare le procedure disponibili (integrate e plug-in fornite) e di controllarne i parametri e i valori restituiti.
 

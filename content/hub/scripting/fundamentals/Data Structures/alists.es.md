@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Una **lista de asociaciones** (o **alista**) es una estructura de datos fundamental en Scheme que se utiliza para representar colecciones de pares clave-valor. Se implementa como una lista de pares, donde cada par asocia una clave (normalmente un símbolo) con un valor. Las listas Al son simples, flexibles y adecuadas para conjuntos de datos pequeños y medianos.
 
@@ -33,19 +34,19 @@ Puede crear una lista al construir pares manualmente o mediante programación us
 La comilla simple (`'`) es una abreviatura de **comillas**, lo que impide que Scheme evalúe la expresión. Esto lo hace ideal para crear listas estáticas donde todas las claves y valores están codificados.
 
 ```scheme
-;; Alist manuell definieren
+;; Definir manualmente una alista
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Añadir programáticamente un nuevo par
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Resultado**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Usando las comillas inversas (`` ` ``) and Comma (`,`)
+#### Usando las comillas inversas (`` ` ``) y coma (`,`)
 
-El operador de comillas invertidas (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Esto es útil para crear listas donde las claves o valores se calculan en tiempo de ejecución.
+El operador de comillas invertidas (`` ` ``) es similar a la comilla simple, pero permite insertar dinámicamente expresiones evaluadas con la coma (`,`). Esto es útil para crear listas donde las claves o valores se calculan en tiempo de ejecución.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Lista estática usando `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Lista dinámica usando `` ` `` and `,`:
+Lista dinámica usando `` ` `` y `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Una vez que recupere un par usando `assoc`, use `cdr` para extraer el valor:
 ### Resumen de características clave
 
 - **Comilla única (`'`)**: crea una lista estática donde todos los elementos son datos literales.
-- **Cotización inversa (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Cotización inversa (`` ` ``)**: permite crear alists dinámicamente mezclando elementos estáticos con expresiones evaluadas (mediante `,`).
 - **Notación de puntos (`.`)**: Se utiliza para construir pares, asociando una clave con un valor en una lista alista.

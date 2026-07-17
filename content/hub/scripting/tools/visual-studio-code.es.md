@@ -3,7 +3,8 @@ title: "Código de estudio visual"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
+translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+url: "hub/scripting/tools/visual-studio-code"
 ---
 ## ¿Qué es el código de Visual Studio?
 
@@ -35,7 +36,7 @@ Un espacio de trabajo es solo una vista de carpeta guardada más la configuraci�
 
 - **Instalar extensiones**: haga clic en el ícono **Extensiones** en la barra de actividades para buscar e instalar herramientas útiles para Scheme. El principal a instalar es **"vscode-scheme"** de Allen Huang. Esta extensión proporciona resaltado de sintaxis y soporte básico para Scheme, que es el lenguaje base de Scheme.
 
-También puede personalizar la extensión editando el archivo de idioma para incluir más palabras clave específicas de Scheme o cualquier cosa relacionada con las secuencias de comandos Lumi.
+También puede personalizar la extensión editando el archivo de idioma para incluir más palabras clave específicas de Scheme o cualquier cosa relacionada con las scripts de Lumi.
 
 Si mantiene su propia biblioteca auxiliar, agregar los nombres de las funciones de su proyecto al resaltador de sintaxis agiliza la navegación y la refactorización.
 

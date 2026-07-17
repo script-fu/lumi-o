@@ -5,8 +5,9 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
-Trabalhar com arquivos e diretórios é essencial para o desenvolvimento do Scheme. Esteja você salvando resultados, carregando recursos ou organizando a estrutura do seu projeto, compreender as operações dos arquivos tornará seus scripts mais robustos e fáceis de usar.
+Trabalhar com arquivos e diretórios é essencial para o desenvolvimento de Scheme. Esteja você salvando resultados, carregando recursos ou organizando a estrutura do seu projeto, compreender as operações dos arquivos tornará seus scripts mais robustos e fáceis de usar.
 
 Esta página aborda tarefas comuns de arquivos e diretórios: leitura de caminhos, criação de diretórios e coleta de entradas de pastas por meio de parâmetros GUI.
 
@@ -37,7 +38,7 @@ Há também a variável global `DIR-SEPARATOR`, que é o separador de caminho es
 
 ## Obtendo um local de diretório
 
-Podemos pedir ao usuário um local de diretório na caixa de diálogo Esquema para um plug-in.
+Podemos pedir ao usuário um local de diretório na caixa de diálogScheme para um plug-in.
 
 ```scheme
 (scheme-register
@@ -73,7 +74,7 @@ Se você estiver interessado nos detalhes da implementação, pesquise `validate
 
 ## Criando um diretório
 
-O esquema fornece o comando ```dir-make``` para criar um diretório. Este comando usa um caminho separado por "/" e cria um único diretório com um parâmetro opcional para os privilégios. Não fornecemos caminhos específicos de plataforma.
+Scheme fornece o comando ```dir-make``` para criar um diretório. Este comando usa um caminho separado por "/" e cria um único diretório com um parâmetro opcional para os privilégios. Não fornecemos caminhos específicos de plataforma.
 
 Normalmente precisamos criar vários diretórios para um caminho prático. Podemos usar um wrapper para ```dir-make``` para nos ajudar aqui.
 
@@ -99,7 +100,7 @@ Nota: Esta função também usa ```file-exists?``` integrado para pular chamadas
 
 ## Construindo um Caminho
 
-Também precisamos quebrar e reconstruir caminhos no Scheme.
+Também precisamos quebrar e reconstruir caminhos em Scheme.
 
 Para dividir um caminho em partes, use ```strbreakup```:
 

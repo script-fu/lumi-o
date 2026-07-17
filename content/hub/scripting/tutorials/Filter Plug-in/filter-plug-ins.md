@@ -1,6 +1,7 @@
 ---
 title: The Filter Plugin
 type: docs
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 weight: 2
 ---
 

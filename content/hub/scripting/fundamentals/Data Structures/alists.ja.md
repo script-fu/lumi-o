@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 **アソシエーション リスト** (または **アリスト**) は、キーと値のペアのコレクションを表すために使用される Scheme の基本的なデータ構造です。これはペアのリストとして実装され、各ペアがキー (通常はシンボル) と値を関連付けます。リストはシンプルかつ柔軟で、小規模から中規模のデータセットに適しています。
 
@@ -33,19 +34,19 @@ alist は、各要素が **ペア** (`cons` で構築される) であるリス�
 一重引用符 (`'`) は **引用** の短縮形であり、Scheme による式の評価を防ぎます。これは、すべてのキーと値がハードコーディングされた静的リストの作成に最適です。
 
 ```scheme
-;; Alist manuell definieren
+;; alist を手動で定義
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; プログラムで新しいペアを追加
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **結果**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### 逆引用符の使用 (`` ` ``) and Comma (`,`)
+#### 逆引用符 (`` ` ``) とカンマ (`,`) の使用
 
-逆引用符 (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`) 演算子。これは、キーまたは値が実行時に計算されるリストを作成する場合に便利です。
+逆引用符 (`` ` ``) はシングルクォートに似ていますが、コンマ (`,`) を使って評価済み式を動的に挿入できる演算子。これは、キーまたは値が実行時に計算されるリストを作成する場合に便利です。
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ alist は、各要素が **ペア** (`cons` で構築される) であるリス�
 ### 主な機能の概要
 
 - **一重引用符 (`'`)**: すべての要素がリテラル データである静的 alist を作成します。
-- **バッククォート (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`)。
+- **バッククォート (`` ` ``)**: 静的要素と評価済み式を組み合わせて alist を動的に作成できます（`,` を使用）。
 - **ドット表記 (`.`)**: ペアを構築し、キーを alist 内の値に関連付けるために使用されます。

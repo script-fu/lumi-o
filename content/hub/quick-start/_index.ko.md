@@ -1,6 +1,10 @@
 ---
 title: "빠른 시작"
 type: docs
+url: "hub/quick-start"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7a259afa543d6120c8909ab4ab929a969238770467d6b416948c363719a89a1a
 ---
 Lumi-o는 현재 개발 단계에 있으며 **고속 자동 저장이 가능하며 기본적으로 활성화되어 있습니다.**
 

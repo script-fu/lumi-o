@@ -31,7 +31,7 @@ Questa struttura spaziale è particolarmente utile quando si sceglie il colore s
 
 Palette Map è anche un ponte verso la miscelazione. I colori sulla mappa possono fungere da punto di partenza per nuove miscele, e le miscele salvate possono mantenere il legame con la mappa invece di diventare campioni scollegati.
 
-Così Lumi-o tratta il colore come uno spazio di lavoro continuo. Selezione, miscelazione, salvataggio e ritorno ai colori avvengono tutti nella stessa geografia della tavolozza.
+Così Lumi tratta il colore come uno spazio di lavoro continuo. Selezione, miscelazione, salvataggio e ritorno ai colori avvengono tutti nella stessa geografia della tavolozza.
 
 ## Esplorazione centrata sulla tela
 

@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 Bij het bouwen van robuuste plug-ins is het belangrijk ervoor te zorgen dat onze functies fouten netjes afhandelen en werken zoals verwacht, zelfs in geval van misbruik of onverwachte invoer. Validatie helpt de integriteit van de functie te beschermen en crashes of onbedoeld gedrag te voorkomen.
 
@@ -22,7 +23,7 @@ Voorbeeld:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Verzenden naar de Message console
+      ;; Verzenden naar de berichtenconsole
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Voorbeeld:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Deze aanpak zorgt ervoor dat de functie altijd geldige invoer ontvangt, waardoor
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Verzenden naar de Message console
+        ;; Verzenden naar de berichtenconsole
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Deze aanpak zorgt ervoor dat de functie altijd geldige invoer ontvangt, waardoor
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 ```
 

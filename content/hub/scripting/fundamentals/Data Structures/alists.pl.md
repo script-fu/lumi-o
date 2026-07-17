@@ -4,9 +4,10 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
-**Lista powiązań** (lub **alista**) to podstawowa struktura danych w schemacie używana do reprezentowania kolekcji par klucz-wartość. Jest zaimplementowany jako lista par, gdzie każda para kojarzy klucz (zwykle symbol) z wartością. Alisty są proste, elastyczne i dobrze nadają się do małych i średnich zbiorów danych.
+**Lista powiązań** (lub **alista**) to podstawowa struktura danych w Scheme używana do reprezentowania kolekcji par klucz-wartość. Jest zaimplementowana jako lista par, gdzie każda para kojarzy klucz (zwykle symbol) z wartością. Alisty są proste, elastyczne i dobrze nadają się do małych i średnich zbiorów danych.
 
 ### Struktura listy stowarzyszeń
 
@@ -33,19 +34,19 @@ Możesz utworzyć listę, ręcznie konstruując pary lub budując ją programowo
 Pojedynczy cudzysłów (`'`) jest skrótem od **cytowania**, co uniemożliwia Scheme ocenę wyrażenia. Dzięki temu idealnie nadaje się do tworzenia statycznych list, w których wszystkie klucze i wartości są zakodowane na stałe.
 
 ```scheme
-;; Alist manuell definieren
+;; Ręczne zdefiniowanie alisty
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Programowe dodanie nowej pary
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Wynik**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Korzystanie z cudzysłowu (`` ` ``) and Comma (`,`)
+#### Korzystanie z cudzysłowu (`` ` ``) i przecinek (`,`)
 
-Operator cudzysłowu (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Jest to przydatne do tworzenia list, w których klucze lub wartości są obliczane w czasie wykonywania.
+Operator cudzysłowu (`` ` ``) jest podobny do pojedynczego cudzysłowu, ale pozwala dynamicznie wstawiać obliczone wyrażenia za pomocą przecinka (`,`). Jest to przydatne do tworzenia list, w których klucze lub wartości są obliczane w czasie wykonywania.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Statyczna lista używająca `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Dynamiczny alist używający `` ` `` and `,`:
+Dynamiczny alist używający `` ` `` i `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Po odzyskaniu pary za pomocą `assoc` użyj `cdr`, aby wyodrębnić wartość:
 ### Podsumowanie kluczowych funkcji
 
 - **Pojedynczy cudzysłów (`'`)**: Tworzy statyczną listę, w której wszystkie elementy są danymi dosłownymi.
-- **Cytat wsteczny (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Cytat wsteczny (`` ` ``)**: Umożliwia dynamiczne tworzenie alist poprzez łączenie elementów statycznych z ewaluowanymi wyrażeniami (przy użyciu `,`).
 - **Zapis kropkowy (`.`)**: Używany do konstruowania par, wiążących klucz z wartością na liście.

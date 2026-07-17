@@ -4,9 +4,10 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
-Os comandos do esquema operam em um nível baixo, o que significa que mesmo tarefas simples podem exigir várias etapas. No entanto, esta granularidade oferece flexibilidade, podemos agrupar comandos em funções pequenas e reutilizáveis ​​que fazem exatamente o que precisamos. Embrulhar não é um conceito preto e branco; ele pode variar de simples aliases para comandos usados ​​com frequência até funções mais complexas que gerenciam fluxos de trabalho inteiros. Às vezes, um wrapper é apenas uma função conveniente para melhorar a legibilidade, enquanto em outros casos evolui para um utilitário completo que encapsula várias operações.
+Os comandos de Scheme operam em um nível baixo, o que significa que mesmo tarefas simples podem exigir várias etapas. No entanto, esta granularidade oferece flexibilidade, podemos agrupar comandos em funções pequenas e reutilizáveis que fazem exatamente o que precisamos. Embrulhar não é um conceito preto e branco; ele pode variar de simples aliases para comandos usados com frequência até funções mais complexas que gerenciam fluxos de trabalho inteiros. Às vezes, um wrapper é apenas uma função conveniente para melhorar a legibilidade, enquanto em outros casos evolui para um utilitário completo que encapsula várias operações.
 
 ### Por que agrupar funções?
 
@@ -50,7 +51,7 @@ O nome da função permanece o mesmo, garantindo que nossos scripts continuem fu
 
 ### Exportação JPEG
 
-A função de exportação de JPEG no Scheme vem com muitos parâmetros, oferecendo um controle preciso sobre como as imagens são salvas. No entanto, na maioria dos casos, nos preocupamos apenas com algumas configurações importantes, como nome e qualidade do arquivo. Para simplificar o processo, podemos agrupar a função.
+A função de exportação de JPEG em Scheme vem com muitos parâmetros, oferecendo um controle preciso sobre como as imagens são salvas. No entanto, na maioria dos casos, nos preocupamos apenas com algumas configurações importantes, como nome e qualidade do arquivo. Para simplificar o processo, podemos agrupar a função.
 
 ```scheme
 ;; Propósito: Salva uma imagem como JPEG com uma qualidade especificada
@@ -86,7 +87,7 @@ Para exportar um JPEG em nossos plug-ins, simplesmente incluímos a biblioteca e
 
 Isso mantém nosso código limpo, legível e adaptável, ao mesmo tempo que nos permite exportar JPEGs de forma eficiente e com mínimo esforço.
 
-### Substituição de carro
+### Substituir `car`
 
 A função ***car*** pode ser enigmática e propensa a erros de script. É fácil aplicar erroneamente ***car*** a um vetor ou item que não esteja na lista, levando a um comportamento inesperado. Para tornar nosso código mais robusto e legível, podemos agrupar essa funcionalidade em uma função mais segura.
 
@@ -112,12 +113,12 @@ Esta função recupera com segurança o primeiro item de uma lista ou vetor enqu
 
 #### Por que usar este wrapper?
 
-- **Evita falhas de script** – Evita erros causados ​​pela aplicação de ***car*** a não listas.
+- **Evita falhas de script** – Evita erros causados pela aplicação de ***car*** a não listas.
 - **Suporta listas e vetores** – Expande a usabilidade além de apenas listas.
 - **Fornece avisos significativos** – Ajuda a depurar problemas de entrada inesperados.
 - **Melhora a legibilidade** – O nome da função transmite claramente sua finalidade.
 
-Ao encapsular essa lógica no primeiro item, tornamos nossos plug-ins mais robustos e fáceis de manter. Claro, isso se resume à preferência pessoal, você pode se sentir completamente confortável usando car, caar, cadr e funções de esquema semelhantes diretamente.
+Ao encapsular essa lógica no primeiro item, tornamos nossos plug-ins mais robustos e fáceis de manter. Claro, isso se resume à preferência pessoal, você pode se sentir completamente confortável usando car, caar, cadr e funções de Scheme semelhantes diretamente.
 
 ### Quebrando uma função empacotada
 
@@ -145,14 +146,14 @@ para recuperar a coordenada ***x***. Porém, embora funcional, isso não é muit
 - **Melhora a capacidade de manutenção** – Se nossa representação de coordenadas mudar (por exemplo, usando vetores em vez de listas), só precisaremos atualizar essas pequenas funções.
 - **Incentiva a consistência** – Usar ***x-coord*** e ***y-coord*** torna o script mais fácil de ler e entender rapidamente.
 
-Agora, em vez de escrever em esquema genérico:
+Agora, em vez de escrever em Scheme genérico:
 
 ```scheme
 (car pixel-coords) ;; Obtém a coordenada x
 (cadr pixel-coords) ;; Obtém a coordenada y
 ```
 
-Podemos escrever em _nosso_ esquema:
+Podemos escrever em _nosso_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)
@@ -163,13 +164,13 @@ Ao agrupar funções de baixo nível em nomes significativos, criamos uma maneir
 
 ### Wrappers enviados: o utilitário Stdlib
 
-O Lumi envia um conjunto de wrappers prontos carregados automaticamente na inicialização, para que estejam disponíveis em qualquer plug-in ou no Scheme Console sem qualquer chamada `(load ...)`. Essas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` e `paths.scm`) são construídas exatamente no mesmo princípio dos exemplos acima: elas fornecem informações claras nomes para operações de baixo nível, ocultar clichês repetitivos e fornecer um único local para atualização se o comando subjacente for alterado.Por exemplo, `images.scm` fornece `image-get-open-list` como um wrapper legível em torno da chamada PDB bruta e `files.scm` expõe auxiliares de construção de caminho que, de outra forma, exigiriam cadeias `string-append` repetidas.
+O Lumi envia um conjunto de wrappers prontos carregados automaticamente na inicialização, para que estejam disponíveis em qualquer plug-in ou em Scheme Console sem qualquer chamada `(load ...)`. Essas bibliotecas (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm` e `paths.scm`) são construídas exatamente no mesmo princípio dos exemplos acima: elas fornecem informações claras nomes para operações de baixo nível, ocultar clichês repetitivos e fornecer um único local para atualização se o comando subjacente for alterado.Por exemplo, `images.scm` fornece `image-get-open-list` como um wrapper legível em torno da chamada PDB bruta e `files.scm` expõe auxiliares de construção de caminho que, de outra forma, exigiriam cadeias `string-append` repetidas.
 
 Você pode navegar por cada nome exportado, ler sua documentação e ver de qual biblioteca ele vem em **[Navegador de Utilitários]({{< ref "/hub/scripting/reference/utility-browser" >}})** (Ajuda → Programação → Navegador de Utilitários). É uma demonstração prática de empacotamento em escala e uma fonte útil de padrões para emprestar ao construir sua própria biblioteca auxiliar.
 
 ### Conclusão
 
-As funções de agrupamento são uma maneira poderosa de simplificar o desenvolvimento do esquema, tornando os scripts mais legíveis, fáceis de manter e robustos. Ao encapsular a complexidade e expor apenas os detalhes necessários, criamos uma abordagem mais estruturada para escrever plug-ins.
+As funções de agrupamento são uma maneira poderosa de simplificar o desenvolvimento de Scheme, tornando os scripts mais legíveis, fáceis de manter e robustos. Ao encapsular a complexidade e expor apenas os detalhes necessários, criamos uma abordagem mais estruturada para escrever plug-ins.
 
 Principais conclusões desta abordagem:
 
@@ -179,6 +180,6 @@ Principais conclusões desta abordagem:
 - **Melhora a capacidade de manutenção** – Se a funcionalidade principal for alterada, só precisaremos atualizar o wrapper, não todos os scripts que dependem dele.
 - **Incentiva a reutilização e a consistência** – Nossa biblioteca pessoal de funções cresce com o tempo, tornando o desenvolvimento mais rápido e eficiente.
 
-Ao usar consistentemente o empacotamento de funções, podemos transformar a forma como escrevemos plug-ins do Scheme, criando um ambiente de script mais modular e expressivo. Com estes princípios em mente, podemos continuar a refinar a nossa abordagem, desenvolvendo uma versão mais eficiente e personalizada do Scheme que atenda às nossas necessidades específicas.
+Ao usar consistentemente o empacotamento de funções, podemos transformar a forma como escrevemos plug-ins de Scheme, criando um ambiente de script mais modular e expressivo. Com estes princípios em mente, podemos continuar a refinar a nossa abordagem, desenvolvendo uma versão mais eficiente e personalizada de Scheme que atenda às nossas necessidades específicas.
 
 Próximas etapas: identifique blocos repetidos em seus scripts e extraia pequenos auxiliares com nomes claros.

@@ -1,0 +1,20 @@
+- id: menuQuickStart
+  translation: "بداية سريعة"
+- id: menuAbout
+  translation: "حول"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuFeatures
+  translation: "الميزات"
+- id: menuMadeInLumio
+  translation: "صُنع في Lumi-o"
+- id: menuInstallLinux
+  translation: "كيفية تثبيت Linux"
+- id: menuTechnicalGuides
+  translation: "الأدلة الفنية"
+- id: menuHome
+  translation: "الرئيسية"
+- id: menuScripting
+  translation: "البرمجة النصية"
+- id: menuContact
+  translation: "اتصل بنا"

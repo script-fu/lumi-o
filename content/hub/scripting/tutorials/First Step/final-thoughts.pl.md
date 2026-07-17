@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Masz teraz działającą wtyczkę procedury i małą bibliotekę pomocniczą. W tej serii przedstawiono podstawowe wzorce, których będziesz używać w większości skryptów Lumi:
 
@@ -65,7 +66,7 @@ Kod biblioteki:
       #t)
     #f))
 
-;; Cel: Wysyła wiadomość do Error Console, zwraca #t w przypadku powodzenia
+;; Cel: Wysyła wiadomość do konsoli komunikatów, zwraca #t w przypadku powodzenia
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -74,7 +75,7 @@ Kod biblioteki:
       #t)
     #f))
 
-;; Cel: Wysyła wiadomość do terminal, zwraca #t w przypadku powodzenia
+;; Cel: Wysyła wiadomość do terminala, zwraca #t w przypadku powodzenia
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin

@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
+translation_source_sha256: 8b6c15ef2763fe95100759e0e2e21f2bf43bf8424317be6d414f2b5260587714
+url: "hub/scripting/fundamentals/Conditionals/conditionals-when"
 ---
-En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
+No Scheme, `if` é versátil, mas sem um ramo `else` explícito pode confundir — especialmente quando só o ramo verdadeiro deve ser executado, sem ação alternativa para o caso falso. Nesses cenários, `when` é mais claro e conciso.
 
-La forme de base de `when` :
+A forma básica de `when`:
 
 ```scheme
 (when test-is-true
@@ -16,10 +17,10 @@ La forme de base de `when` :
   do-that)
 ```
 
-- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
-- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
+- Se `test` for verdadeiro (`#t`), todas as expressões no corpo de `when` são executadas em sequência.
+- Se `test` for falso (`#f`), nada acontece e nenhum valor é retornado.
 
-### Exemple
+### Exemplo
 
 ```scheme
 (when (< 0 1)
@@ -27,30 +28,35 @@ La forme de base de `when` :
   (lumi-message "Executing additional actions."))
 ```
 
-### Comparer `if` et `when`
+### Comparando `if` e `when`
 
-Les deux ensemble dans le même exemple :
+Os dois juntos no mesmo exemplo:
 
 ```scheme
 (if (= 0 1)
   (lumi-message "This will not run")
   (when (< 0 1)
     (lumi-message "The 'when' condition is true!")
-    (lumi-message "Executing multiple actions within 'when'.")))
+    (lumi-message "Executing additional actions within 'when'.")))
 ```
 
-#### Explication
+#### Explicação
 
-1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
-2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
+1. **Condição do `if`:**
+   - O teste `(= 0 1)` verifica se 0 é igual a 1.
+   - Como é falso (`#f`), o ramo `else` é executado.
 
-#### Pourquoi `when` ?
+2. **`when` no ramo `else`:**
+   - O teste `(< 0 1)` verifica se 0 é menor que 1.
+   - Como é verdadeiro (`#t`), todas as expressões no corpo de `when` são executadas em sequência.
 
-- Pas de `else` vide ou factice.
-- Montre que seule la branche vraie compte.
+#### Por que `when`?
 
-### Résumé
+- Evita um `else` vazio ou fictício.
+- Deixa claro que só o ramo verdadeiro importa.
 
-- **`if` :** quand les deux branches comptent.
-- **`when` :** branche vraie seule, plusieurs actions possibles.
-- Les combiner structure clairement des conditions complexes.
+### Resumo
+
+- Use `if` quando ambos os ramos importam.
+- Use `when` quando há apenas o ramo verdadeiro, especialmente com várias ações.
+- Combinar `if` e `when` ajuda a estruturar condições complexas de forma clara.

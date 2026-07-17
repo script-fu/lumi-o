@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 ヘルパー ライブラリが大きくなるにつれて、一目で理解するのが難しくなります。各関数を小さく、単一目的に保つために再度リファクタリングします。
 
@@ -37,7 +38,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (validate-message message output)
 
   (cond
-    ;; Message console に送信
+    ;; メッセージコンソール に送信
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'terminal)
        (display message)))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; 目的: メッセージを Message console に送る
+;; 目的: メッセージを メッセージコンソール に送る
 (define (send-to-error-console message)
   ;; 続行する前にメッセージを検証する
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 既定のメッセージハンドラを Message console に戻す
+  ;; 既定のメッセージハンドラを メッセージコンソール に戻す
   (lumi-message-set-handler 2))
 
 ;; 目的: メッセージが空でない文字列であり、出力が有効であることを検証する

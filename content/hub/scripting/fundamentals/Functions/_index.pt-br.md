@@ -4,15 +4,16 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
-Funções são um conceito central no Scheme, fornecendo os meios para encapsular a lógica, permitir a reutilização de código e estruturar seus scripts de maneira eficaz. Com funções, você pode criar scripts modulares e de fácil manutenção que lidam com uma ampla variedade de tarefas, desde operações básicas até fluxos de trabalho avançados no Lumi.
+Funções são um conceito central em Scheme, fornecendo os meios para encapsular a lógica, permitir a reutilização de código e estruturar seus scripts de maneira eficaz. Com funções, você pode criar scripts modulares e de fácil manutenção que lidam com uma ampla variedade de tarefas, desde operações básicas até fluxos de trabalho avançados no Lumi.
 
-Esta seção serve como uma introdução às funções no Scheme e estabelece as bases para a compreensão de seus tipos, definições e usos. As seções subsequentes se aprofundarão em tipos de funções específicas e em seus recursos exclusivos.
+Esta seção serve como uma introdução às funções em Scheme e estabelece as bases para a compreensão de seus tipos, definições e usos. As seções subsequentes se aprofundarão em tipos de funções específicas e em seus recursos exclusivos.
 
 ## Sintaxe e expressões mínimas
 
-O código do esquema é composto de **expressões**. Uma expressão é avaliada como um valor. A sintaxe é uniforme: os parênteses formam uma chamada, com o nome do operador ou da função primeiro.
+O código de Scheme é composto de **expressões**. Uma expressão é avaliada como um valor. A sintaxe é uniforme: os parênteses formam uma chamada, com o nome do operador ou da função primeiro.
 
 ```scheme
 (+ 1 2)         ; Soma 1 e 2, resultado 3
@@ -24,7 +25,7 @@ Como tudo é uma expressão, o fluxo de controle se ajusta naturalmente ao mesmo
 
 ## Por que as funções são importantes
 
-As funções desempenham um papel fundamental no Scheme por vários motivos:
+As funções desempenham um papel fundamental em Scheme por vários motivos:
 
 - **Reutilização de código:** Evite a repetição encapsulando a lógica em componentes reutilizáveis.
 - **Modularidade:** Divida tarefas complexas em partes menores e gerenciáveis.
@@ -59,7 +60,7 @@ Scheme oferece uma variedade de construções de funções, cada uma adequada pa
 
 ## Sintaxe Geral para Funções
 
-As funções no Scheme possuem uma sintaxe simples e consistente:
+As funções em Scheme possuem uma sintaxe simples e consistente:
 
 ```scheme
 (define (function-name parameter1 parameter2 ...)

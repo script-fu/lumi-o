@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些函數用途廣泛，可讓您建立靈活且可重複使用的程式碼。在函數式程式設計中，可變參數函數簡化了需要處理任意數量輸入的操作，例如對數字列表求和或連接字串。
 
@@ -139,4 +140,6 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 - 固定參數足以滿足所需的邏輯。
 - 由於操作過於複雜，可讀性受到影響。
 
-＃＃＃ 結論Scheme 中的可變參數函數提供了處理動態輸入的強大機制。透過了解它們的語法和用法，您可以建立靈活且強大的腳本，以適應各種場景。與高階函數結合，可變參數函數使您的程式碼更加簡潔和富有表現力。
+### 結論
+
+Scheme 中的可變參數函數提供了處理動態輸入的強大機制。透過了解它們的語法和用法，您可以建立靈活且強大的腳本，以適應各種場景。與高階函數結合，可變參數函數使您的程式碼更加簡潔和富有表現力。

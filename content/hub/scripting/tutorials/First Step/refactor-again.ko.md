@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 도우미 라이브러리가 커질수록 한눈에 따라가기가 어려워집니다. 각 기능을 작고 단일 목적으로 유지하도록 다시 리팩터링합니다.
 
@@ -37,7 +38,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (validate-message message output)
 
   (cond
-    ;; Message console로 보내기
+    ;; 메시지 콘솔로 보내기
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'terminal)
        (display message)))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; 목적: 메시지를 Message console로 보냄
+;; 목적: 메시지를 메시지 콘솔로 보냄
 (define (send-to-error-console message)
   ;; 진행하기 전에 메시지 검증
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 
 ;; 목적: 메시지가 비어 있지 않은 문자열이고 출력이 유효한지 검증

@@ -4,7 +4,8 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
 関数は Scheme の中核概念であり、ロジックをカプセル化し、コードの再利用を可能にし、スクリプトを効果的に構造化する手段を提供します。関数を使用すると、Lumi の基本操作から高度なワークフローまで、幅広いタスクを処理するモジュール式の保守可能なスクリプトを作成できます。
 
@@ -12,7 +13,7 @@ translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d
 
 ## 最小限の構文と式
 
-スキーム コードは **式** で構成されています。式は値として評価されます。構文は統一されています。括弧は演算子名または関数名を先頭にして呼び出しを形成します。
+Scheme コードは **式** で構成されています。式は値として評価されます。構文は統一されています。括弧は演算子名または関数名を先頭にして呼び出しを形成します。
 
 ```scheme
 (+ 1 2)         ; 1 と 2 を加算し、結果は 3

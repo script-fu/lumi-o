@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 I valori restituiti sono importanti perché consentono di controllare il flusso senza uno stato aggiuntivo. In Scheme, l'ultima espressione valutata diventa il valore restituito.
 
@@ -112,7 +113,7 @@ Ok, ecco il codice della libreria con i valori restituiti incorporati e utilizza
       #t)
     #f))
 
-;; Scopo: Invia un messaggio alla Error Console, restituisce #t in caso di successo
+;; Scopo: Invia un messaggio alla console degli errori, restituisce #t in caso di successo
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

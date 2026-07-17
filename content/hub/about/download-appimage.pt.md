@@ -1,0 +1,12 @@
+---
+title: "Descarregar AppImage"
+description: "Obtenha os artefactos AppImage de desenvolvimento mais recentes para Linux."
+type: docs
+sidebar:
+  exclude: true
+translation_provenance: ai-reviewed
+translation_source_sha256: cfca109b962317a98292834885f6fa388053e0389a9f170cf9d83637231f9994
+translation_lock: true
+url: "hub/about/download-appimage"
+---
+Obtenha os artefactos AppImage de desenvolvimento mais recentes para Linux.

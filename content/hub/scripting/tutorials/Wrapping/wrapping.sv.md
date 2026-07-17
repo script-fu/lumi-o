@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 Schemakommandon fungerar på en låg nivå, vilket innebär att även enkla uppgifter kan kräva flera steg. Men denna granularitet erbjuder flexibilitet, vi kan bunta ihop kommandon i små, återanvändbara funktioner som gör precis vad vi behöver. Omslag är inte ett svartvitt koncept; det kan sträcka sig från enkla alias för ofta använda kommandon till mer komplexa funktioner som hanterar hela arbetsflöden. Ibland är ett omslag bara en bekvämlighetsfunktion för att förbättra läsbarheten, medan det i andra fall utvecklas till ett fullfjädrat verktyg som kapslar in flera operationer.
 
@@ -26,7 +27,7 @@ Om du har ditt eget hjälpbibliotek, överväg att lägga till ditt projekts fun
 
 Exempel:
 
-### Random Seed
+### Slumpfrö
 
 ```scheme
 ;; Syfte: Returnerar ett slumpmässigt heltal för att seeda ett filter
@@ -36,7 +37,7 @@ Exempel:
 
 Även om vi skulle kunna använda ***msrg-rand*** direkt i vår kod, förbättrar vi läsbarheten genom att linda in den i en funktion som kallas ***random-seed***. Genom att ge funktionen ett tydligt och beskrivande namn blir det lättare att förstå dess syfte med ett ögonkast.
 
-Dessutom, genom att definiera ***random-seed*** som en fristående funktion kan vi använda den var som helst i våra plugin-program samtidigt som vi centraliserar implementeringen på en enda plats. Om vi ​​någonsin behöver ändra hur fröet genereras behöver vi bara uppdatera den här funktionen och lämna resten av vår kod orörd.
+Dessutom, genom att definiera ***random-seed*** som en fristående funktion kan vi använda den var som helst i våra plugin-program samtidigt som vi centraliserar implementeringen på en enda plats. Om vi någonsin behöver ändra hur fröet genereras behöver vi bara uppdatera den här funktionen och lämna resten av vår kod orörd.
 
 Om vi till exempel bestämmer oss för att byta till ***random*** istället:
 
@@ -78,17 +79,17 @@ I denna omslagsfunktion är de flesta exportalternativen hårdkodade, vilket end
 
 ### Använda omslaget
 
-To export a JPEG in our plug-ins, we simply include the library and call our custom function:
+För att exportera JPEG i våra tillägg inkluderar vi helt enkelt biblioteket och anropar vår anpassade funktion:
 
 ```scheme
 (file-jpg-save image "/home/mark/pictures/my-picture" 85)
 ```
 
-This keeps our code clean, readable, and adaptable while allowing us to export JPEGs efficiently with minimal effort.
+Det håller koden ren, läsbar och anpassningsbar samtidigt som vi kan exportera JPEG-filer effektivt med minimal ansträngning.
 
-### Bilbyte
+### Ersätta `car`
 
-The ***car*** function can be cryptic and prone to scripting errors. It’s easy to mistakenly apply ***car*** to a vector or a non-list item, leading to unexpected behaviour. To make our code more robust and readable, we can wrap this functionality in a safer function.
+Funktionen ***car*** kan vara kryptisk och benägen att ge skriptfel. Det är lätt att av misstag använda ***car*** på en vektor eller ett icke-listobjekt, vilket leder till oväntat beteende. För att göra koden mer robust och läsbar kan vi omsluta funktionen i en säkrare funktion.
 
 ```scheme
 ;; Syfte: Returnerar det första objektet i en lista eller vektor.
@@ -108,26 +109,26 @@ The ***car*** function can be cryptic and prone to scripting errors. It’s easy
        #f))))
 ```
 
-This function safely retrieves the first item of a list or vector while providing helpful warnings when invalid or empty inputs are encountered. By using ***first-item*** instead of ***car***, we reduce the risk of accidental errors and improve the clarity of our scripts.
+Funktionen hämtar säkert det första elementet i en lista eller vektor och ger tydliga varningar vid ogiltiga eller tomma indata. Genom att använda ***first-item*** i stället för ***car*** minskar vi risken för misstag och gör skripten tydligare.
 
 #### Varför använda detta omslag?
 
-- **Prevents script crashes** – Avoids errors caused by applying ***car*** to non-lists.
+- **Förhindrar skriptkrascher** – Undviker fel orsakade av ***car*** på icke-listor.
 - **Stöder både listor och vektorer** - Utökar användbarheten utöver bara listor.
-- **Provides meaningful warnings** – Helps debug unexpected input issues.
-- **Improves readability** – The function name clearly conveys its purpose.
+- **Ger tydliga varningar** – Hjälper till att felsöka oväntade indata.
+- **Förbättrar läsbarheten** – Funktionsnamnet förklarar tydligt syftet.
 
-By encapsulating this logic in first-item, we make our plug-ins more robust and easier to maintain. Naturligtvis beror detta på personliga preferenser, du kan vara helt bekväm med att använda bil-, caar-, cadr- och liknande Scheme-funktioner direkt.
+Genom att kapsla in logiken i first-item gör vi våra tillägg mer robusta och enklare att underhålla. Naturligtvis beror detta på personliga preferenser, du kan vara helt bekväm med att använda bil-, caar-, cadr- och liknande Scheme-funktioner direkt.
 
 ### Slå in en inslagen funktion
 
-Att radbryta en funktion som redan är packad kan ytterligare förbättra läsbarheten och underhållbarheten. For example, when working with coordinate pairs like ***pixel-coords (list 100 200)***, we could use:
+Att omsluta en funktion som redan är omsluten kan ytterligare förbättra läsbarheten och underhållbarheten. När vi till exempel arbetar med koordinatpar som ***pixel-coords (list 100 200)*** kan vi använda:
 
 ```scheme
 (first-item pixel-coords)
 ```
 
-för att hämta ***x***-koordinaten. However, while functional, this is not very expressive. Instead, we can wrap ***first-item*** in a more appropriate definition to make our intent clearer.
+för att hämta ***x***-koordinaten. Det fungerar, men är inte särskilt uttrycksfullt. I stället kan vi omsluta ***first-item*** i en mer passande definition som gör vår avsikt tydligare.
 
 ```scheme
 ;; Syfte: Returnerar x-koordinaten, för läsbarhet
@@ -139,9 +140,9 @@ för att hämta ***x***-koordinaten. However, while functional, this is not very
   (second-item pixel-coords))
 ```
 
-### Why Use This Approach?
+### Varför använda detta tillvägagångssätt?
 
-- **Enhances code clarity** – Instead of using generic list access functions, we explicitly define functions that describe their purpose.
+- **Förbättrar kodtydligheten** – I stället för generiska liståtkomstfunktioner definierar vi funktioner som beskriver sitt syfte.
 - **Förbättrar underhållsbarheten** - Om vår koordinatrepresentation ändras (t.ex. genom att använda vektorer istället för listor), behöver vi bara uppdatera dessa små funktioner.
 - **Uppmuntrar konsistens** – Genom att använda ***x-coord*** och ***y-coord*** blir skriptet lättare att läsa och förstå med ett ögonkast.
 
@@ -152,16 +153,16 @@ Nu, istället för att skriva i generiskt schema:
 (cadr pixel-coords) ;; Hämtar y-koordinaten
 ```
 
-We can write in _our_ Scheme:
+Vi kan skriva i _vårt_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)
 (y-coord pixel-coords)
 ```
 
-By wrapping low-level functions in meaningful names, we create a more intuitive way to work with data, reducing confusion and potential errors.
+Genom att omsluta funktioner på låg nivå med meningsfulla namn får vi ett mer intuitivt sätt att arbeta med data och minskar risken för missförstånd och fel.
 
-### Shipped Wrappers: the Utility Stdlib
+### Medföljande wrappers: Utility Stdlib
 
 Lumi skickar en uppsättning färdiga omslag som laddas automatiskt vid start, så de är tillgängliga i alla plugin-program eller i Scheme Console utan något `(load ...)`-samtal. Dessa bibliotek (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, och `gegl.scm`, de är byggda på exakt samma namn som ovanstående exempel på: principen ovan: de är uppbyggda på exakt samma namn som ovan: operationer på låg nivå, dölj repetitiva plattor och tillhandahålla en enda plats att uppdatera om det underliggande kommandot ändras.Till exempel ger `images.scm` `image-get-open-list` som ett läsbart omslag runt det råa PDB-anropet, och `files.scm` avslöjar vägbyggande hjälpare som annars skulle kräva upprepade `string-append`-kedjor.
 

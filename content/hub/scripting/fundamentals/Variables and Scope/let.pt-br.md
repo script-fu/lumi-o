@@ -4,19 +4,20 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
+translation_source_sha256: 6e768f3feb8a1873423841338e92494ebd2b4ac0af5b6e27253f3cf2c2ba455f
+url: "hub/scripting/fundamentals/Variables and Scope/let"
 ---
 O nome `let` é usado porque reflete suas origens matemáticas de introdução de ligações temporárias, como em _"Seja \( x = 2 \) e \( y = 3 \)"_.
 
-Uma instrução `let` no Scheme é uma **construção de ligação** usada para definir variáveis ​​dentro de um escopo localizado. Ele permite criar ligações temporárias para variáveis ​​e, em seguida, executar um bloco de código usando essas ligações. Isto é particularmente útil para manter o código modular e evitar a poluição variável global.
+Uma instrução `let` em Scheme é uma **construção de ligação** usada para definir variáveis dentro de um escopo localizado. Ele permite criar ligações temporárias para variáveis e, em seguida, executar um bloco de código usando essas ligações. Isto é particularmente útil para manter o código modular e evitar a poluição variável global.
 
-Existem três formas principais de `let` no esquema:
+Existem três formas principais de `let` em Scheme:
 
 - **`let`**: Padrão para criar ligações locais simples.
 - **`let*`**: Let sequencial, onde as ligações podem depender dos resultados de ligações anteriores.
 - **Nomeado `let`**: Uma forma especial de `let` que cria loops recursivos ou procedimentos nomeados.
 
-Em sua forma mais simples, `let` cria ligações de variáveis ​​locais e avalia uma expressão com essas ligações.
+Em sua forma mais simples, `let` cria ligações de variáveis locais e avalia uma expressão com essas ligações.
 
 ```scheme
 (let ((variable1 value1)
@@ -25,7 +26,7 @@ Em sua forma mais simples, `let` cria ligações de variáveis ​​locais e av
 ```
 
 - **Bindings**: uma lista de pares onde cada par atribui um `value` a um `variable`.
-- **Expressão**: O corpo do `let`, que pode usar as variáveis ​​definidas localmente.
+- **Expressão**: O corpo do `let`, que pode usar as variáveis definidas localmente.
 
 ### Exemplo
 

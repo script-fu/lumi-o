@@ -4,11 +4,12 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
-Os símbolos são um dos principais tipos de dados no Scheme, representando identificadores únicos e imutáveis. Eles são usados ​​principalmente como chaves, marcadores ou espaços reservados em programas, tornando-os essenciais para escrever código limpo e expressivo.
+Os símbolos são um dos principais tipos de dados em Scheme, representando identificadores únicos e imutáveis. Eles são usados principalmente como chaves, marcadores ou espaços reservados em programas, tornando-os essenciais para escrever código limpo e expressivo.
 
-Um símbolo no Scheme é semelhante a uma string, mas difere porque os símbolos são **únicos** e **atômicos**. Isso significa que dois símbolos com o mesmo nome têm a garantia de ser o mesmo objeto, permitindo verificações rápidas de igualdade e uso eficiente em estruturas de dados.
+Um símbolo em Scheme é semelhante a uma string, mas difere porque os símbolos são **únicos** e **atômicos**. Isso significa que dois símbolos com o mesmo nome têm a garantia de ser o mesmo objeto, permitindo verificações rápidas de igualdade e uso eficiente em estruturas de dados.
 
 ### Sintaxe
 
@@ -27,7 +28,7 @@ Exemplos:
 
 ## Criando Símbolos
 
-Os símbolos são normalmente criados usando o operador **quote** (`'`), que diz ao Scheme para tratar o nome como um símbolo em vez de avaliá-lo como uma variável ou função.
+Os símbolos são normalmente criados usando o operador **quote** (`'`), que diz aScheme para tratar o nome como um símbolo em vez de avaliá-lo como uma variável ou função.
 
 ### Exemplo
 
@@ -59,7 +60,7 @@ Isso torna os símbolos ideais para uso como chaves em estruturas de dados ou ma
 
 ## Usando símbolos
 
-Os símbolos são frequentemente usados no Esquema para:
+Os símbolos são frequentemente usados em Scheme para:
 
 1. **Chaves nas listas de associações:**
 
@@ -79,7 +80,7 @@ Os símbolos são frequentemente usados no Esquema para:
 
 ## Procedimentos para trabalhar com símbolos
 
-O esquema fornece procedimentos integrados para trabalhar com símbolos:
+Scheme fornece procedimentos integrados para trabalhar com símbolos:
 
 | Procedimento | Descrição |
 |--------------------|-----------------------------------------------------------------------------|
@@ -98,4 +99,4 @@ O esquema fornece procedimentos integrados para trabalhar com símbolos:
 
 ## Resumo
 
-Os símbolos são uma forma leve e eficiente de representar identificadores, chaves e marcadores no Scheme. Sua imutabilidade e rápidas verificações de identidade os tornam ideais para muitas tarefas de programação. Compreender como usar símbolos de maneira eficaz aumentará sua capacidade de escrever código Scheme limpo e expressivo.
+Os símbolos são uma forma leve e eficiente de representar identificadores, chaves e marcadores em Scheme. Sua imutabilidade e rápidas verificações de identidade os tornam ideais para muitas tarefas de programação. Compreender como usar símbolos de maneira eficaz aumentará sua capacidade de escrever código Scheme limpo e expressivo.

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Sobald eine Funktion funktioniert, können wir einen Schritt zurücktreten und darüber nachdenken, wie wir unseren Code am besten strukturieren. Ziel ist es, unser Plug-in so klar, verständlich und wartbar wie möglich zu gestalten. Dieser Prozess der Verbesserung und Verfeinerung der Struktur des vorhandenen Codes ohne Änderung seines Verhaltens wird als Refactoring bezeichnet.
 
@@ -16,7 +17,7 @@ Hier noch einmal die Ausgangsfunktion:
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
+  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Fehlerkonsole ausgegeben wird
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Einführung einer Variablen namens „message“:
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
+    ;; Nachrichtenhandler so setzen, dass die Nachricht an die Fehlerkonsole ausgegeben wird
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ Extrahieren der Logik:
 ;; Funktion zur Ausgabe von Nachrichten an verschiedene Ziele
 (define (send-message message output)
   (cond
-    ;; An die Error Console senden
+    ;; An die Fehlerkonsole senden
     ((eq? output 'error-console)
-       ;; Handler auf Error Console setzen
+       ;; Handler auf Fehlerkonsole setzen
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Extrahieren der Logik:
        ;; Terminal-Ausgabe wird mit display verarbeitet
        (display message)))
 
-  ;; Standard-Nachrichtenhandler auf die Error Console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Fehlerkonsole zurücksetzen
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

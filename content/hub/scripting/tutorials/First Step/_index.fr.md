@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+url: "hub/scripting/tutorials/first-step"
 ---
 First Steps présente des modèles fonctionnels qui fonctionnent bien dans Scheme, avec de courts exemples et des refactoristes incrémentiels.
 À la fin, vous aurez créé votre propre bibliothèque de messagerie personnalisée et disposerez d’une base solide pour continuer à développer des plug-ins plus avancés.

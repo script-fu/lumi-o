@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 Bij scripting is geen enkele functie onfeilbaar. Zelfs de meest betrouwbare opdrachten kunnen mislukken als ze worden geconfronteerd met onverwachte invoer of omstandigheden. Om ons hiertegen te beschermen, kunnen we een aangepast foutopsporingssysteem implementeren en defensieve programmeertechnieken toepassen. Door standaardfuncties te voorzien van mechanismen voor foutafhandeling en informatieve feedback te geven, kunnen we onze scripts robuuster maken en gemakkelijker problemen op te lossen.
 
@@ -176,7 +177,9 @@ De functie `list->string` converteert een lijst naar een opgemaakte tekenreeks.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### WaarschuwingsberichtenDe functie `warning-message` werkt op dezelfde manier als `debug-message`, maar geeft waarschuwingen weer, zelfs als foutopsporing is uitgeschakeld.
+### Waarschuwingsberichten
+
+De functie `warning-message` werkt op dezelfde manier als `debug-message`, maar geeft waarschuwingen weer, zelfs als foutopsporing is uitgeschakeld.
 
 ```scheme
 ;; Doel: Een waarschuwingsbericht weergeven.

@@ -5,6 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
+url: "hub/about/construction"
 ---
 
 O espaço de trabalho Construção foi feito para lay-in. Começa com uma única predefinição de ferramenta Lay-in e uma paleta de quatro cores — branco, preto, vermelho e azul —, o suficiente para bloquear forma e volume. A pressão controla a opacidade, para que você construa marcas leves e mantenha o foco na forma.

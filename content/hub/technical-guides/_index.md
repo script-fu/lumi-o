@@ -1,6 +1,7 @@
 ---
 title: Technical Guides
 type: docs
+url: "hub/technical-guides/_index"
 ---
 
 Welcome to the technical guides for Lumi.

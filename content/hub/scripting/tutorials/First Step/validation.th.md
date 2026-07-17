@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 เมื่อสร้างปลั๊กอินที่มีประสิทธิภาพ สิ่งสำคัญคือต้องแน่ใจว่าฟังก์ชันของเราจัดการกับข้อผิดพลาดได้อย่างงดงามและทำงานตามที่คาดไว้ แม้ว่าในกรณีของการใช้ในทางที่ผิดหรืออินพุตที่ไม่คาดคิดก็ตาม การตรวจสอบความถูกต้องจะช่วยปกป้องความสมบูรณ์ของฟังก์ชันและป้องกันการหยุดทำงานหรือพฤติกรรมที่ไม่ได้ตั้งใจ
 
@@ -22,7 +23,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; ส่งไปยัง Message console
+      ;; ส่งไปยัง คอนโซลข้อความ
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
       ((eq? output 'terminal)
          (display message))))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; ส่งไปยัง Message console
+        ;; ส่งไปยัง คอนโซลข้อความ
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c5646
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 ```
 

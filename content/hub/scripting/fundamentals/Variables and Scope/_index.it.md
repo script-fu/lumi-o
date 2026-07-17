@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 In Scheme, la gestione delle variabili e il loro ambito è un concetto fondamentale per scrivere script efficienti e gestibili. Le variabili memorizzano i valori dei dati che lo script può manipolare, mentre l'ambito definisce dove tali variabili sono accessibili. Comprendere come definire e utilizzare le variabili in modo efficace consente di creare codice strutturato, riutilizzabile e privo di errori.
 
@@ -72,7 +73,9 @@ Il costrutto `define` crea variabili o funzioni con ambito globale:
 | **Incapsulamento** | Previene le interazioni involontarie | Potrebbe entrare in conflitto con altre variabili definite a livello globale |
 | **Caso d'uso** | Variabili temporanee per compiti specifici | Variabili o funzioni condivise utilizzate in |
 
-### Riepilogo- **Le definizioni e l'ambito delle variabili** sono fondamentali per organizzare e gestire i dati negli script di Scheme.
+### Riepilogo
+
+- **Le definizioni e l'ambito delle variabili** sono fondamentali per organizzare e gestire i dati negli script di Scheme.
 
 - Utilizzare l'**ambito locale** (`let`, `let*`, denominato `let`) per incapsulare variabili temporanee ed evitare conflitti.
 - Utilizza **ambito globale** (`define`) per funzioni riutilizzabili o costanti condivise nel tuo script.

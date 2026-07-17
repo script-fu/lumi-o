@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 Scheme의 **Lambda 함수**는 익명 함수입니다. 즉, 이름이 없는 함수입니다. 이러한 함수는 인라인으로 정의되며 일반적으로 짧은 일회성 작업에 사용됩니다. `lambda` 구성은 함수형 프로그래밍의 강력한 도구로, 즉석에서 간결하고 유연한 논리를 생성할 수 있도록 해줍니다.
 

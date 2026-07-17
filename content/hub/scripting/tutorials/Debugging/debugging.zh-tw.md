@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 在腳本編寫中，沒有任何函數是絕對正確的。當遇到意外的輸入或條件時，即使是最可靠的命令也可能會失敗。為了防止這種情況，我們可以實現自訂偵錯系統並採用防禦性程式設計技術。透過用錯誤處理機制包裝標準函數並提供資訊回饋，我們可以使我們的腳本更加健壯並且更容易排除故障。
 

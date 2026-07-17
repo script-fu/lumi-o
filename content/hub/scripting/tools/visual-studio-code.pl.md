@@ -1,44 +1,45 @@
 ---
-title: "Kod Visual Studio"
+title: "Visual Studio Code"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
+translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+url: "hub/scripting/tools/visual-studio-code"
 ---
-## Co to jest kod programu Visual Studio?
+## Czym jest Visual Studio Code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (często skracany do „VS Code” lub „VSC”) to darmowy edytor tekstu typu open source opracowany przez firmę Microsoft i zaprojektowany specjalnie do kodowania. Jest lekki, szybki i ma duże możliwości dostosowywania, co czyni go jednym z najpopularniejszych edytorów kodu wśród programistów. Oto dlaczego VSC to doskonały wybór:
+[Visual Studio Code](https://code.visualstudio.com/) (często skracany do „VS Code” lub „VSC”) to darmowy, open-source’owy edytor tekstu od Microsoftu, zaprojektowany do programowania. Jest lekki, szybki i bardzo konfigurowalny, dlatego należy do najpopularniejszych edytorów wśród programistów. Oto kilka powodów, dla których VSC sprawdza się dobrze:
 
-- **Podświetlanie składni**: Podświetlanie składni koduje kod kolorami, ułatwiając wykrywanie błędów, zrozumienie struktury i czytanie złożonego kodu.
-- **Rozszerzenia**: Możesz ulepszyć VSC za pomocą tysięcy rozszerzeń. Niezależnie od tego, czy potrzebujesz wsparcia dla konkretnego języka, motywu czy narzędzia, możesz znaleźć odpowiednie rozszerzenie.
-- **Integracja kontroli wersji**: VSC ma wbudowaną obsługę Git, co ułatwia śledzenie zmian w kodzie, zarządzanie oddziałami i korzystanie z usług takich jak [GitHub](https://github.com/) lub [GitLab](https://gitlab.com/).
+- **Podświetlanie składni**: Koloruje kod, co ułatwia wychwytywanie błędów, rozumienie struktury i czytanie dłuższych fragmentów.
+- **Rozszerzenia**: VSC można rozbudować tysiącami rozszerzeń — od wsparcia dla języka, przez motywy, po narzędzia pomocnicze.
+- **Integracja z kontrolą wersji**: Wbudowane wsparcie dla Gita ułatwia śledzenie zmian, zarządzanie gałęziami i pracę z [GitHub](https://github.com/) lub [GitLab](https://gitlab.com/).
 
 ### Kluczowe funkcje dla początkujących
 
-- **Obszary robocze**: VSC umożliwia organizowanie wielu projektów w „obszary robocze”, które umożliwiają przechowywanie powiązanych plików i folderów razem, co ułatwia nawigację i zarządzanie projektami.
+- **Obszary robocze**: VSC pozwala organizować wiele projektów w „obszarach roboczych”, które trzymają powiązane pliki i foldery razem, ułatwiając nawigację i zarządzanie.
 
-- **Profile**: Dzięki profilom możesz tworzyć różne konfiguracje dla różnych projektów lub zadań. Możesz użyć jednego profilu do tworzenia stron internetowych, a drugiego do programowania w schemacie, każdy z własnymi specyficznymi rozszerzeniami, motywami i ustawieniami.
+- **Profile**: Profile pozwalają tworzyć osobne konfiguracje dla różnych projektów lub zadań — na przykład jeden profil do stron WWW, a drugi do skryptów Scheme, każdy z własnymi rozszerzeniami, motywami i ustawieniami.
 
-### Pierwsze kroki z kodem Visual Studio
+### Pierwsze kroki z Visual Studio Code
 
-Aby rozpocząć korzystanie z VSC:
+Aby zacząć korzystać z VSC:
 
-- **Pobierz i zainstaluj**: Przejdź do [witryny Visual Studio Code](https://code.visualstudio.com/) i pobierz wersję dla systemu Linux.
+- **Pobierz i zainstaluj**: Wejdź na [stronę Visual Studio Code](https://code.visualstudio.com/) i pobierz wersję dla Linuksa.
 
-- **Odkryj interfejs**: Kiedy otworzysz VSC, zauważysz kilka paneli. Po lewej stronie znajduje się **pasek aktywności**, na którym możesz poruszać się pomiędzy plikami, wyszukiwać, używać Git i instalować rozszerzenia.
+- **Poznaj interfejs**: Po uruchomieniu VSC zobaczysz kilka paneli. Po lewej jest **pasek aktywności**, z którego przechodzisz między plikami, wyszukiwaniem, Gitem i rozszerzeniami.
 
-- **Otwórz plik lub folder**: Skonfiguruj swój obszar roboczy, dodając folder, w którym przechowywany jest projekt, i zapisz aktywną konfigurację w pliku obszaru roboczego.
+- **Otwórz plik lub folder**: Skonfiguruj obszar roboczy, dodając folder projektu, i zapisz aktywną konfigurację do pliku obszaru roboczego.
 
-Obszar roboczy to po prostu zapisany widok folderu i ustawienia edytora dla Twojego projektu.
+Obszar roboczy to po prostu zapisany widok folderu plus ustawienia edytora dla projektu.
 
 ### Rozszerzenia
 
-- **Zainstaluj rozszerzenia**: Kliknij ikonę **Rozszerzenia** na pasku aktywności, aby przeglądać i instalować przydatne narzędzia dla programu Scheme. Najważniejszym do zainstalowania jest **„vscode-scheme”** autorstwa Allena Huanga. To rozszerzenie zapewnia podświetlanie składni i podstawową obsługę Scheme, który jest językiem podstawowym Scheme.
+- **Zainstaluj rozszerzenia**: Kliknij ikonę **Rozszerzenia** na pasku aktywności, aby przeglądać i instalować narzędzia przydatne w Scheme. Najważniejsze to **„vscode-scheme”** autorstwa Allena Huanga — zapewnia podświetlanie składni i podstawową obsługę Scheme, języka skryptowego Lumi.
 
-Możesz także dostosować rozszerzenie, edytując plik językowy, aby uwzględnić więcej słów kluczowych specyficznych dla schematu lub cokolwiek związanego ze skryptami Lumi.
+Możesz też dostosować rozszerzenie, edytując plik językowy i dodając słowa kluczowe specyficzne dla Scheme albo powiązane ze skryptami Lumi.
 
 Jeśli utrzymujesz własną bibliotekę pomocniczą, dodanie nazw funkcji projektu do podświetlania składni przyspiesza nawigację i refaktoryzację.
 
 ### Wniosek
 
-Użyj edytora, który ułatwia wyszukiwanie, refaktoryzację i szybką edycję. VS Code + rozszerzenie schematu to solidna linia bazowa.
+Wybierz edytor, który ułatwia wyszukiwanie, refaktoryzację i szybkie poprawki. VS Code z rozszerzeniem Scheme to solidna baza.

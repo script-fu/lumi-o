@@ -4,11 +4,12 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 Symbolen zijn een van de belangrijkste gegevenstypen in Scheme en vertegenwoordigen unieke, onveranderlijke identificatiegegevens. Ze worden voornamelijk gebruikt als sleutels, markeringen of tijdelijke aanduidingen in programma's, waardoor ze essentieel zijn voor het schrijven van schone en expressieve code.
 
-Een symbool in Schema lijkt op een tekenreeks, maar verschilt daarin dat symbolen **uniek** en **atomair** zijn. Dit betekent dat twee symbolen met dezelfde naam gegarandeerd hetzelfde object zijn, waardoor snelle gelijkheidscontroles en efficiënt gebruik in datastructuren mogelijk zijn.
+Een symbool in Scheme lijkt op een tekenreeks, maar verschilt daarin dat symbolen **uniek** en **atomair** zijn. Dit betekent dat twee symbolen met dezelfde naam gegarandeerd hetzelfde object zijn, waardoor snelle gelijkheidscontroles en efficiënt gebruik in datastructuren mogelijk zijn.
 
 ### Syntaxis
 
@@ -79,7 +80,7 @@ In Scheme worden vaak symbolen gebruikt voor:
 
 ## Procedures voor het werken met symbolen
 
-Schema biedt ingebouwde procedures voor het werken met symbolen:
+Scheme biedt ingebouwde procedures voor het werken met symbolen:
 
 | Werkwijze | Beschrijving |
 |------------------|--------------------------------------------------------------------|

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
+url: "hub/scripting/reference/plugin-browser"
 ---
 Il browser dei plug-in consente di esplorare il sistema dei menu e vedere dove sono installati plug-in specifici.
 
@@ -13,7 +14,7 @@ Vai a **Aiuto → Programmazione → Browser plug-in**.
 
 ## Cosa mostra
 
-Mentre il Browser delle procedure si concentra sulle *funzioni* grezze del PDB, il Browser dei plug-in è una vista sottoinsieme focalizzata sull'individuazione dell'interfaccia utente. Filtra specificamente il PDB per mostrare "cose ​​che assomigliano a plug-in installati da menu".
+Mentre il Browser delle procedure si concentra sulle *funzioni* grezze del PDB, il Browser dei plug-in è una vista sottoinsieme focalizzata sull'individuazione dell'interfaccia utente. Filtra specificamente il PDB per mostrare "cose che assomigliano a plug-in installati da menu".
 
 Internamente, utilizza una query che restituisce solo procedure che hanno sia un file associato su disco che un percorso di menu registrato.
 

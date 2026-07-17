@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 Les valeurs de retour sont importantes car elles vous permettent de contrôler le flux sans état supplémentaire. Dans Scheme, la dernière expression évaluée devient la valeur de retour.
 
@@ -61,7 +62,7 @@ Voici un exemple simple d’utilisation d’une valeur de retour pour contrôler
 Dans ce cas, (send-message) s'appuie sur la valeur de retour de (is-valid-output-display ?) pour décider s'il faut continuer.
 L'instruction conditionnelle `cond` sera ignorée si le premier test échoue. Remarquez également comment il se lit de manière assez naturelle, si l'affichage de sortie est valide ?
 
-## Si la logique de l'instruction dans le schéma
+## Logique de l'instruction if en Scheme
 
 Avant l'exemple de bibliothèque refactorisée, voici un rapide aperçu de la logique conditionnelle. Scheme utilise `if` pour choisir entre deux chemins.
 

@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 Instrukcja `define` w Scheme jest wszechstronną konstrukcją używaną do tworzenia globalnych lub lokalnych powiązań. Najczęściej używany jest do definiowania zmiennych i funkcji, dzięki czemu można je ponownie wykorzystać i udostępnić w całym skrypcie lub w określonym zakresie. Zrozumienie `define` jest kluczowe dla pisania modułowych, wielokrotnego użytku i czytelnych programów Scheme.
 
@@ -98,6 +99,6 @@ Używane wewnątrz funkcji `define` tworzy lokalne powiązania, które są dost�
 | **Aspekt** | **`define`** | **`let`** |
 |----------------------------------|----------------------------------------------------------------|-------------------------------------------------|
 | **Cel** | Tworzy globalne lub lokalne powiązania dla zmiennych lub funkcji. | Tworzy tymczasowe powiązania w zlokalizowanym zakresie. |
-| **Zakres** | Globalny na najwyższym poziomie; local, gdy znajduje się w innej funkcji. | Zawsze lokalnie w bloku `let`.       |
+| **Zakres** | Globalny na najwyższym poziomie; lokalny, gdy znajduje się w innej funkcji. | Zawsze lokalnie w bloku `let`.       |
 | **Ponowne użycie** | Funkcje i zmienne mogą być ponownie wykorzystywane w wielu miejscach. | Zmienne są tymczasowo powiązane z pojedynczym blokiem. |
 | **Składnia** | Jawnie definiuje zmienne lub funkcje.       | Łączy wiązanie zmiennych z oceną wyrażenia. |

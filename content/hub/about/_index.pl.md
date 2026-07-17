@@ -1,11 +1,13 @@
 ---
+title: "O projekcie"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
+translation_source_sha256: d689f4a924a5df63fc375ce4ab59472cc02dddd4b99030d63ef9fb78a8a3dd1c
+url: "hub/about"
 ---
 
-Ta sekcja daje krótki przegląd oprogramowania, obsługiwanego przez nie przepływu pracy oraz procesu rysowania, do którego jest dopasowywane.
+Ta sekcja daje krótki przegląd oprogramowania, obsługiwanego przepływu pracy oraz procesu rysowania, do którego jest dopasowywane.
 
 {{< cards >}}
 	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Czym jest Lumi, dlaczego powstało i jakie idee kształtują jego rozwój." >}}

@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
 
-Palette Mixer è lo spazio di Lumi-o per derivare nuovi colori dalla tavolozza attiva. Tratta la miscelazione come un processo pittorico piuttosto che come una semplice media digitale, così i colori possono spostarsi, ammorbidirsi, scurirsi e armonizzarsi in modi più vicini ai pigmenti fisici.
+Palette Mixer è lo spazio di Lumi per derivare nuovi colori dalla tavolozza attiva. Tratta la miscelazione come un processo pittorico piuttosto che come una semplice media digitale, così i colori possono spostarsi, ammorbidirsi, scurirsi e armonizzarsi in modi più vicini ai pigmenti fisici.
 
 Il Mixer lavora con l'identità cromatica della tavolozza. Le nuove miscele non sono colori arbitrari presi dall'esterno del sistema: sono relazioni tra colori già presenti nella tavolozza.
 

@@ -1,6 +1,7 @@
 ---
 title: for-each
 type: docs
+url: "hub/scripting/fundamentals/Iteration/for-each"
 weight: 5
 ---
 

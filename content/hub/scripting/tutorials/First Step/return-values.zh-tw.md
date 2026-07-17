@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 傳回值很重要，因為它們可以讓您控制流程而無需額外的狀態。在Scheme中，最後計算的表達式成為回傳值。
 
@@ -112,7 +113,7 @@ translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406c
       #t)
     #f))
 
-;; 用途：向 Error Console 傳送訊息，成功時回傳 #t
+;; 用途：向 錯誤主控台 傳送訊息，成功時回傳 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

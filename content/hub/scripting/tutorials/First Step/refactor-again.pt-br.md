@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 À medida que a biblioteca auxiliar cresce, fica mais difícil acompanhar rapidamente. Refatore novamente para manter cada função pequena e de propósito único.
 
@@ -37,7 +38,7 @@ Agora que a validação foi movida para uma função separada, a função `send-
   (validate-message message output)
 
   (cond
-    ;; Enviar para a Message console
+    ;; Enviar para a console de mensagens
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ Agora que a validação foi movida para uma função separada, a função `send-
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ Cada tipo de saída de mensagem (GUI, console de mensagens, Terminal) pode ser m
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 ```
 
@@ -109,7 +110,7 @@ Veja que removemos a validação da função de envio de mensagem e transferimos
 
 Essa abordagem pode simplificar a função de envio de mensagem, tornando-a um _dispatcher_, ao mesmo tempo em que garante que cada função enviar para * valide a mensagem corretamente antes do processamento.
 
-Ao mover a validação para cada função send-to-*, nós as tornamos reutilizáveis ​​como funções independentes. Isso significa que podemos chamar qualquer uma das funções send-to-gui, send-to-error-console ou send-to-terminal diretamente, sem depender da função send-message dispatcher. Cada uma dessas funções agora lida totalmente com sua própria lógica e pode ser usada de forma independente em outras partes do código ou em outros plug-ins, tornando seu código mais modular e flexível.
+Ao mover a validação para cada função send-to-*, nós as tornamos reutilizáveis como funções independentes. Isso significa que podemos chamar qualquer uma das funções send-to-gui, send-to-error-console ou send-to-terminal diretamente, sem depender da função send-message dispatcher. Cada uma dessas funções agora lida totalmente com sua própria lógica e pode ser usada de forma independente em outras partes do código ou em outros plug-ins, tornando seu código mais modular e flexível.
 
 ## Benefícios da Refatoração
 
@@ -128,7 +129,7 @@ Uma versão refatorada da biblioteca:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Propósito: Envia uma mensagem para a Message console
+;; Propósito: Envia uma mensagem para a console de mensagens
 (define (send-to-error-console message)
   ;; Validar a mensagem antes de prosseguir
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ Uma versão refatorada da biblioteca:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 
 ;; Propósito: Valida que a mensagem é uma string não vazia e que a saída é válida

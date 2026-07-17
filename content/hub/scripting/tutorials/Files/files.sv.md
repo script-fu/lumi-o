@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Att arbeta med filer och kataloger är viktigt för utvecklingen av schemat. Oavsett om du sparar utdata, laddar resurser eller organiserar din projektstruktur, kommer förståelse av filoperationer att göra dina skript mer robusta och användarvänliga.
 
@@ -37,7 +38,7 @@ Det finns också den globala variabeln `DIR-SEPARATOR`, som är den plattformssp
 
 ## Få en katalogplats
 
-Vi kan be användaren om en katalogplats i dialogrutan Schema för ett plugin-program.
+Vi kan be användaren om en katalogplats i dialogrutan Scheme för ett plugin-program.
 
 ```scheme
 (scheme-register
@@ -73,7 +74,7 @@ Om du är intresserad av implementeringsdetaljerna, sök i plugin-källan efter 
 
 ## Skapa en katalog
 
-Schema tillhandahåller kommandot ```dir-make``` för att skapa en katalog. Detta kommando tar en "/"-separerad sökväg och skapar en enda katalog med en valfri parameter för privilegierna. Vi ger det inte plattformsspecifika vägar.
+Scheme tillhandahåller kommandot ```dir-make``` för att skapa en katalog. Detta kommando tar en "/"-separerad sökväg och skapar en enda katalog med en valfri parameter för privilegierna. Vi ger det inte plattformsspecifika vägar.
 
 Vanligtvis behöver vi skapa flera kataloger för en praktisk väg. Vi kan använda ett omslag för ```dir-make``` för att hjälpa oss här.
 
@@ -117,7 +118,7 @@ För att dela upp en sökväg i delar, använd ```strbreakup```:
 
 För att bygga om en sökväg, använd ```string-append```:
 
-### Linux Path Building
+### Linux-sökvägskonstruktion
 
 ```scheme
 > (string-append (getenv "HOME") DIR-SEPARATOR "myfolder" DIR-SEPARATOR "myfile.xcf")

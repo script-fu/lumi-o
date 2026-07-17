@@ -1,6 +1,7 @@
 ---
 title: Hello World!
 type: docs
+url: "hub/scripting/tutorials/First Step/hello-world"
 weight: 1
 ---
 

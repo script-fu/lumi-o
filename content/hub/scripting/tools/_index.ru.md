@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c4c14f8ed284abd28bdb6e567187a850ba5eb7815fdb376bab03cc8c62091640
+url: "hub/scripting/tools"
 ---
 Эти руководства описывают минимальный набор инструментов для написания Scheme-плагинов для Lumi в Linux. Используйте систему контроля версий с самого начала. Git даёт надёжную историю, а размещение на GitLab или GitHub упрощает синхронизацию и ревью изменений.
 

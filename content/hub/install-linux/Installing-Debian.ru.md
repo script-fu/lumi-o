@@ -87,7 +87,7 @@ Debian Stable сейчас непоследовательно обрабатыв
 - Desktop Font: `14`
 - Panel → Customize → Panel Height: `60`
 - Panel Appearance → Right Zone Symbolic Icon Size: `48px`
-- Mouse and Touchpad → Pointer Size adjustment
+- Мышь и сенсорная панель → Размер указателя
 - Desktop (right-click) → Customize → Larger icon size
 
 Настройка Firefox:

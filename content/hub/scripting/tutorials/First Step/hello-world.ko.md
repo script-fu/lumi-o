@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 이 튜토리얼에서는 Scheme 플러그인의 최소 구조를 안내합니다. 일부 줄은 "상용구"입니다. 아직 완전히 이해하지 못하더라도 Lumi가 파일을 로드하는 데 필요합니다.
 
@@ -73,7 +74,7 @@ Scheme의 기본 언어인 Scheme에서 주석은 일반적으로 유용한 텍�
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; 메시지 핸들러를 설정하여 메시지를 Error Console로 출력
+  ;; 메시지 핸들러를 설정하여 메시지를 오류 콘솔로 출력
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

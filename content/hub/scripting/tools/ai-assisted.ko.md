@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 최신 AI 도구는 협업 코딩 파트너 역할을 하여 Lumi 플러그인 개발을 크게 가속화할 수 있습니다.
 

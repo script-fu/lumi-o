@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 返回值很重要，因为它们可以让您控制流程而无需额外的状态。在Scheme中，最后计算的表达式成为返回值。
 
@@ -112,7 +113,7 @@ translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406c
       #t)
     #f))
 
-;; 用途：向 Error Console 发送消息，成功时返回 #t
+;; 用途：向 错误控制台 发送消息，成功时返回 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

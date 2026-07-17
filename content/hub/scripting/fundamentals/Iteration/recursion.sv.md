@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
-En Scheme, la récursion signifie qu'une fonction s'appelle elle-même pour résoudre des sous-problèmes. Une **récursion simple** a un cas de base pour s'arrêter et un cas récursif qui réduit le problème.
+Rekursion är ett kraftfullt begrepp i Scheme där en funktion anropar sig själv för att lösa mindre delproblem av det ursprungliga problemet. Ett mönster för **enkel rekursion** har ett basfall som stoppar rekursionen och ett rekursivt fall som minskar problemet.
 
-Structure générale :
+Den allmänna strukturen för en rekursiv funktion ser ut så här:
 
 ```scheme
 (define (function-name args)
@@ -17,65 +18,102 @@ Structure générale :
     (recursive-call)))
 ```
 
-- **Base Condition :** arrête la récursion.
-- **Base Result :** valeur au cas de base.
-- **Recursive Call :** appel avec arguments réduits.
+- **Basvillkor:** stoppar rekursionen.
+- **Basresultat:** värdet som returneras när basvillkoret uppfylls.
+- **Rekursivt anrop:** ett anrop till funktionen själv med modifierade argument som för beräkningen närmare basfallet.
 
 ---
 
-### Exemple : somme de 1 à n
+### Exempel: summa av tal (1 till n)
+
+En enkel rekursiv funktion för att beräkna summan av talen från 1 till n:
 
 ```scheme
 (define (sum-to-n n)
   (if (= n 0)                  ; Basfall: stoppa när n är 0
     0                          ; Basresultat: summan är 0
-    (+ n (sum-to-n (- n 1))))) ; Rekursivt anrop: summera aktuellt n med resultatet av det mindre delproblemet
+    (+ n (sum-to-n (- n 1))))) ; Rekursivt anrop: addera n till resultatet av det mindre delproblemet
 ```
-
-#### Décomposer et recomposer
-
-La récursion décompose le problème ; chaque appel traite une partie. Au cas de base, le résultat se recompose.
-
-#### Pas à pas : sum-to-n 3
-
-1. *sum-to-n 3* → *(+ 3 (sum-to-n 2))*
-2. *sum-to-n 2* → *(+ 2 (sum-to-n 1))*
-3. *sum-to-n 1* → *(+ 1 (sum-to-n 0))*
-4. *sum-to-n 0* → *0*
-
-#### Recomposer le résultat
-
-1. *sum-to-n 0* → *0*
-2. *sum-to-n 1* → *1*
-3. *sum-to-n 2* → *3*
-4. *sum-to-n 3* → *6*
 
 ---
 
-### Exemple : afficher chaque élément
+#### Så fungerar det: dela upp och sätta ihop
+
+Rekursion fungerar genom att dela upp det ursprungliga problemet i mindre delar. Varje anrop hanterar en del och lämnar resten vidare. När det enklaste fallet nås sätts resultaten ihop igen när beräkningen slutförs.
+
+#### Steg för steg: sum-to-n 3
+
+1. **Initialt anrop:** *sum-to-n 3*
+   → *(+ 3 (sum-to-n 2))*
+
+2. **Andra anropet:** *sum-to-n 2*
+   → *(+ 2 (sum-to-n 1))*
+
+3. **Tredje anropet:** *sum-to-n 1*
+   → *(+ 1 (sum-to-n 0))*
+
+4. **Basfall:** *sum-to-n 0*
+   → *0*
+
+---
+
+#### Sätta ihop slutresultatet
+
+När det enklaste fallet är löst slutförs varje lager av beräkningen:
+
+1. *sum-to-n 0* ger *0*
+2. *sum-to-n 1* blir *(+ 1 0) = 1*
+3. *sum-to-n 2* blir *(+ 2 1) = 3*
+4. *sum-to-n 3* blir *(+ 3 3) = 6*
+
+---
+
+### Exempel: skriv ut varje element i en lista
+
+Här är en enkel rekursiv funktion som skriver ut varje element i en lista:
 
 ```scheme
 (define (print-elements lst)
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ; Skriver ut det första elementet
-      (print-elements (cdr lst)))))             ; Bearbetar resten av listan
+      (lumi-message (number->string (car lst))) ; Skriv ut första elementet
+      (print-elements (cdr lst)))))             ; Bearbeta resten av listan
 ```
 
-- **Cas de base :** liste vide → `"done"`.
-- **Récursif :** afficher `car`, traiter le reste avec `cdr`.
+- **Basfall:** om listan är tom (*null? lst*), stoppa rekursionen.
+- **Rekursivt fall:** skriv ut första elementet (*car lst*), anropa sedan funktionen på resten av listan (*cdr lst*).
 
-#### Utilisation
+#### Exempelanvändning
 
 ```scheme
 (print-elements (list 1 2 3))
 ```
 
-Sortie : *"1"*, *"2"*, *"3"* — résultat : *"done"*
+Utdata:
 
-### Résumé
+- *"1"*
+- *"2"*
+- *"3"*
 
-- Cas de base pour arrêter ; cas récursif pour réduire.
-- Chaque appel progresse vers le cas de base.
-- Toujours un cas de base — sinon récursion infinie.
+Resultat: *"done"*
+
+---
+
+#### Så fungerar det
+
+1. Funktionen hämtar det första elementet i listan med *car* och bearbetar det.
+2. Den anropar sedan sig själv med resten av listan (*cdr*).
+3. Processen upprepas tills listan är tom (*null? lst*).
+
+---
+
+### Sammanfattning
+
+- Enkel rekursion består av:
+  1. **Basfall:** stoppar rekursionen.
+  2. **Rekursivt fall:** minskar problemet mot basfallet.
+- Varje rekursivt anrop för beräkningen närmare slutet.
+- När basfallet nås kombineras resultaten när rekursionen slutförs.
+
+Rekursion speglar problemets struktur och ger ett tydligt, logiskt flöde. Se alltid till att ha ett basfall för att undvika oändlig rekursion.

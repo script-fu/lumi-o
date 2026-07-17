@@ -5,6 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+url: "hub/about/inking"
 ---
 
 Bläckningsarbetsytan är byggd för avsiktligt linjearbete eller bläckkaos. Det är steget där ritningen slutar vara utforskande och börjar bli engagerad: kontrollerade drag, tydlig kantdefinition och markeringar som måste hålla formen med självförtroende. Eller släpp loss med uttrycksfulla stänk, slingrande linjer, torra Nib-repor och vilda Sumi-streck.

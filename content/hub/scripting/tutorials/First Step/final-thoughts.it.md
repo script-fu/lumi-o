@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Ora hai un plug-in per la procedura funzionante e una piccola libreria di supporto. Questa serie ha introdotto i modelli principali che utilizzerai nella maggior parte degli script Lumi:
 
@@ -65,7 +66,7 @@ Codice biblioteca:
       #t)
     #f))
 
-;; Scopo: Invia un messaggio alla Error Console, restituisce #t in caso di successo
+;; Scopo: Invia un messaggio alla console degli errori, restituisce #t in caso di successo
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

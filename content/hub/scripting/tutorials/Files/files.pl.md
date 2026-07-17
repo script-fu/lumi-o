@@ -1,12 +1,13 @@
 ---
-title: "Akta"
+title: "Pliki"
 type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
-Praca z plikami i katalogami jest niezbędna do opracowania schematu. Niezależnie od tego, czy zapisujesz dane wyjściowe, ładujesz zasoby, czy organizujesz strukturę projektu, zrozumienie operacji na plikach sprawi, że Twoje skrypty będą bardziej niezawodne i przyjazne dla użytkownika.
+Praca z plikami i katalogami jest niezbędna do Scheme. Niezależnie od tego, czy zapisujesz dane wyjściowe, ładujesz zasoby, czy organizujesz strukturę projektu, zrozumienie operacji na plikach sprawi, że Twoje skrypty będą bardziej niezawodne i przyjazne dla użytkownika.
 
 Na tej stronie opisano typowe zadania związane z plikami i katalogami: odczytywanie ścieżek, tworzenie katalogów i zbieranie danych wejściowych z folderów za pomocą parametrów GUI.
 
@@ -26,7 +27,7 @@ Przykładowe wyjście:
 "/home/username"
 ```
 
-## SEPARATOR DIR
+## Separator katalogów
 
 Istnieje również zmienna globalna `DIR-SEPARATOR`, która jest separatorem ścieżki specyficznym dla platformy. W Lumi (Linux) jest to zawsze `/`.
 
@@ -37,7 +38,7 @@ Istnieje również zmienna globalna `DIR-SEPARATOR`, która jest separatorem śc
 
 ## Uzyskiwanie lokalizacji z katalogu
 
-Możemy zapytać użytkownika o lokalizację katalogu w oknie dialogowym Schemat dla wtyczki.
+Możemy zapytać użytkownika o lokalizację katalogu w oknie dialogowym Scheme dla wtyczki.
 
 ```scheme
 (scheme-register
@@ -73,9 +74,9 @@ Jeśli interesują Cię szczegóły implementacji, poszukaj w źródle wtyczki `
 
 ## Tworzenie katalogu
 
-Schemat udostępnia polecenie ```dir-make``` umożliwiające utworzenie katalogu. To polecenie przyjmuje ścieżkę oddzieloną znakiem „/” i tworzy pojedynczy katalog z opcjonalnym parametrem dla uprawnień. Nie nadajemy mu ścieżek specyficznych dla platformy.
+Scheme udostępnia polecenie `dir-make` umożliwiające utworzenie katalogu. To polecenie przyjmuje ścieżkę oddzieloną znakiem „/” i tworzy pojedynczy katalog z opcjonalnym parametrem dla uprawnień. Nie nadajemy mu ścieżek specyficznych dla platformy.
 
-Zwykle musimy utworzyć wiele katalogów dla praktycznej ścieżki. Możemy użyć opakowania dla ```dir-make```, aby nam w tym pomóc.
+Zwykle musimy utworzyć wiele katalogów dla praktycznej ścieżki. Możemy użyć opakowania dla `dir-make`, aby nam w tym pomóc.
 
 ```scheme
 ;; Cel: Opakowanie dla (dir-make), które tworzy podaną ścieżkę z poziomu platformy
@@ -95,13 +96,13 @@ Zwykle musimy utworzyć wiele katalogów dla praktycznej ścieżki. Możemy uży
      (cdr path-parts))))
 ```
 
-Uwaga: Ta funkcja wykorzystuje również wbudowany ```file-exists?``` do pomijania niepotrzebnych połączeń. Zwraca #t, jeśli wskazany plik lub katalog istnieje, i #f, jeśli nie istnieje lub nie jest dostępny dla żądającego użytkownika.
+Uwaga: Ta funkcja wykorzystuje również wbudowane `file-exists?` do pomijania niepotrzebnych połączeń. Zwraca `#t`, jeśli wskazany plik lub katalog istnieje, i `#f`, jeśli nie istnieje lub nie jest dostępny dla żądającego użytkownika.
 
 ## Konstruowanie ścieżki
 
-Musimy także rozbić i odbudować ścieżki w schemacie.
+Musimy także rozbić i odbudować ścieżki w Scheme.
 
-Aby podzielić ścieżkę na części, użyj ```strbreakup```:
+Aby podzielić ścieżkę na części, użyj `strbreakup`:
 
 ### Przykłady ścieżek do Linuksa
 
@@ -115,7 +116,7 @@ Aby podzielić ścieżkę na części, użyj ```strbreakup```:
 
 > Uwaga: Ukośniki początkowe i końcowe stają się pustymi elementami ciągu na wynikowej liście.
 
-Aby odbudować ścieżkę, użyj ```string-append```:
+Aby odbudować ścieżkę, użyj `string-append`:
 
 ### Tworzenie ścieżki do Linuksa
 

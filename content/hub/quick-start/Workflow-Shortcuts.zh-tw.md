@@ -1,6 +1,10 @@
 ---
 title: "工作流程快捷方式"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o 專為快捷方式驅動的工作流程而設計。一旦您建立了這些命令的肌肉記憶，您就可以更快地導航畫布和工具。
 

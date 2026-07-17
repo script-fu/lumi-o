@@ -22,7 +22,7 @@ Nota: CI compila l'AppImage usando le sorgenti delle dipendenze integrate nel re
 ## AppImage release e AppImage di sviluppo
 
 - **Release AppImage**: non ancora disponibile (Lumi non è stato rilasciato).
-- **Development AppImage (artefatto CI)**: generato automaticamente dai commit di sviluppo in corso per i test.
+- **AppImage di sviluppo (artefatto CI)**: generato automaticamente dai commit di sviluppo in corso per i test.
 
 Questa guida copre principalmente il flusso di lavoro dell'**AppImage di sviluppo**.
 

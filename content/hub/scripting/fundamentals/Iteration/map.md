@@ -1,6 +1,7 @@
 ---
 title: map
 type: docs
+url: "hub/scripting/fundamentals/Iteration/map"
 weight: 3
 ---
 

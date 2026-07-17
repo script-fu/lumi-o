@@ -4,27 +4,31 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
+translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
+url: "hub/scripting/fundamentals/Iteration/_index"
 ---
-L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
+Iteration är en grundsten i programmering: den låter skript upprepa handlingar och bearbeta datasamlingar effektivt. I Scheme ger iteration verktyg för att automatisera repetitiva uppgifter, manipulera datastrukturer och skapa sofistikerade körningsmönster.
 
-### Le rôle de l'itération en Scheme
+### Iterationens roll i Scheme
 
-- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
-- **Gagner en efficacité :** Traiter des opérations à grande échelle.
-- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
+Iteration fyller flera viktiga syften:
+- **Automatisera upprepning:** utför samma handling flera gånger utan att duplicera kod.
+- **Öka effektiviteten:** bearbeta datastrukturer iterativt för systematiska storskaliga operationer.
+- **Effektivisera koden:** iteration tar bort redundans och gör koden mer koncis, läsbar och underhållbar.
 
-### Types d'itération disponibles
+### Typer av iteration
 
-- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
-- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
-- **do :** Boucle générale.
-- **recursion :** Les fonctions s'appellent elles-mêmes.
+Scheme erbjuder flera konstruktioner:
+- **map:** tillämpar en funktion på varje element i en lista och returnerar en ny lista med resultat.
+- **for-each:** liknar `map`, men används för att köra en funktion på varje element utan att returnera ett resultat.
+- **do:** en allmän loopkonstruktion för många typer av iterativa processer.
+- **rekursion:** en kraftfull teknik där funktioner anropar sig själva.
 
-### Comment fonctionne l'itération
+### Hur iteration fungerar
 
-1. **Définir une répétition**
-2. **Exécuter en séquence**
-3. **Renvoyer un résultat (facultatif)**
+Typiskt involverar det:
+1. **Definiera upprepning:** ange handlingen som ska upprepas och data eller intervall att bearbeta.
+2. **Köra i sekvens:** upprepa handlingen för varje element, steg eller villkor tills det är klart.
+3. **Returnera resultat (valfritt):** beroende på konstruktion kan iteration ge ett resultat eller ändra tillstånd.
 
-Ces constructions aident à écrire des scripts adaptables et efficaces.
+Dessa konstruktioner hjälper dig att skriva anpassningsbara, effektiva och eleganta skript för komplexa uppgifter.

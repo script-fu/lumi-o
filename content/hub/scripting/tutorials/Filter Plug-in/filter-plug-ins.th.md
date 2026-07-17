@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 เราใช้ปลั๊กอิน _procedure_ สำหรับบทแนะนำ [ขั้นตอนแรก](../../first-step/) ปลั๊กอินประเภทเหล่านั้นทำงานได้โดยไม่ต้องใช้รูปภาพหรือวาดเป็นอินพุตได้ โดยปกติแล้ว เราใช้ปลั๊กอินเพื่อเปลี่ยนรูปภาพและสิ่งที่วาดได้ ปลั๊กอินลักษณะนี้เรียกว่าปลั๊กอิน _filter_
 
@@ -20,7 +21,7 @@ translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6
 (define (scheme-simple-filter-plug-in image drawables)
   ;; ใช้คำสั่ง let เพื่อกำหนดตัวแปรข้อความและโค้ดหลัก
   (let ((message "hello, world"))
-    ;; แสดงข้อความใน Error Console ของ Lumi
+    ;; แสดงข้อความใน คอนโซลข้อผิดพลาด ของ Lumi
     (lumi-message message)
     ;; กลับสีของ drawable ที่เลือกแรก
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -45,7 +46,7 @@ translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6
 คัดลอกข้อความและบันทึกเป็น `simple-filter-plug-in.scm` ในโฟลเดอร์ชื่อ `simple-filter-plug-in` ภายในโฟลเดอร์ปลั๊กอินของ Lumi โฟลเดอร์ปลั๊กอิน Lumi คือโฟลเดอร์ _any_ ที่อยู่ในรายการ:
  **Lumi > แก้ไข > การตั้งค่า > โฟลเดอร์ > ปลั๊กอิน**
 
-ใน Linux คลิกขวาที่ไฟล์ `simple-filter-plug-in.scm` ไปที่ **Properties > Permissions** และทำเครื่องหมาย **Allow executing file as program** เมื่อไฟล์อยู่ในตำแหน่งที่ถูกต้อง สามารถเรียกใช้งานได้และปราศจากข้อผิดพลาดทางไวยากรณ์ เมื่อรีสตาร์ท Lumi ไฟล์นั้นจะปรากฏในแถบส่วนหัวของเมนูด้านบน ภายในเมนูที่เรียกว่า **ปลั๊กอิน**
+ใน Linux คลิกขวาที่ไฟล์ `simple-filter-plug-in.scm` ไปที่ **คุณสมบัติ > สิทธิ์** และทำเครื่องหมาย **อนุญาตให้เรียกใช้ไฟล์ในรูปแบบโปรแกรม** เมื่อไฟล์อยู่ในตำแหน่งที่ถูกต้อง สามารถเรียกใช้งานได้และปราศจากข้อผิดพลาดทางไวยากรณ์ เมื่อรีสตาร์ท Lumi ไฟล์นั้นจะปรากฏในแถบส่วนหัวของเมนูด้านบน ภายในเมนูที่เรียกว่า **ปลั๊กอิน**
 
 ### การเรียกใช้ปลั๊กอิน
 
@@ -89,7 +90,7 @@ translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; แสดงข้อความใน Error Console ของ Lumi
+  (lumi-message message) ;; แสดงข้อความใน คอนโซลข้อผิดพลาด ของ Lumi
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; กลับสีของ drawable ที่เลือกแรก
 ```
 

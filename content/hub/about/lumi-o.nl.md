@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+url: "hub/about/lumi-o"
 ---
 
 Lumi is een snelle, efficiënte applicatie uitsluitend voor Linux voor het maken van rasterafbeeldingen, ontwikkeld in open ontwikkeling. Ontwerpbeslissingen, architectuurdocumenten en ontwikkelingsgeschiedenis zijn openbaar, zodat gebruikers kunnen volgen hoe het programma evolueert.

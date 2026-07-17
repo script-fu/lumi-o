@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+url: "hub/scripting/tutorials/first-step"
 ---
 First Steps presenta patrones funcionales que funcionan bien en Scheme, con ejemplos breves y refactores incrementales.
 Al final, habrá creado su propia biblioteca de mensajería personalizada y tendrá una base sólida para continuar desarrollando complementos más avanzados.

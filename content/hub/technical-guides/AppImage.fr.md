@@ -22,7 +22,7 @@ Remarque : le CI construit l'AppImage à l'aide des sources de dépendances int�
 ## AppImage Release vs AppImage de développement
 
 - **Release AppImage** : pas encore disponible (Lumi n'a pas encore été publié).
-- **Development AppImage (artefact CI)** : généré automatiquement à partir des commits de développement en cours, pour les tests.
+- **AppImage de développement (artefact CI)** : généré automatiquement à partir des commits de développement en cours, pour les tests.
 
 Ce guide couvre principalement le workflow de **l'AppImage de développement**.
 

@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 W tym samouczku omówiono minimalną strukturę wtyczki Scheme. Niektóre linie mają charakter szablonowy: są wymagane, aby Lumi załadował plik, nawet jeśli jeszcze ich w pełni nie rozumiesz.
 
@@ -42,11 +43,11 @@ Dzięki temu Lumi znajdzie swoją funkcję w systemie menu.
 (scheme-menu-register "scheme-hello-world" "<Image>/Funky")
 ```
 
-Spowoduje to wyświetlenie menu „Funky” na pasku menu głównego. Zmień ścieżkę, aby umieścić wtyczkę w innym miejscu. Ścieżka `<Image>/Funky` oznacza, że ​​wtyczka pojawi się w kategorii menu **Obraz**. Możesz zmienić `<Image>` na `<Tools>`, `<Filters>` itd., w zależności od tego, gdzie chcesz, aby wtyczka się pojawiała.
+Spowoduje to wyświetlenie menu „Funky” na pasku menu głównego. Zmień ścieżkę, aby umieścić wtyczkę w innym miejscu. Ścieżka `<Image>/Funky` oznacza, że wtyczka pojawi się w kategorii menu **Obraz**. Możesz zmienić `<Image>` na `<Tools>`, `<Filters>` itd., w zależności od tego, gdzie chcesz, aby wtyczka się pojawiała.
 
 ### Komentarze
 
-W Scheme, podstawowym języku Scheme, komentarze zazwyczaj umieszcza się poprzedzając pomocny wiersz tekstu znakiem `;;`. To, jak będziesz używać komentarzy, będzie zależeć od Twojej biegłości jako programisty — jeśli kodujesz okazjonalnie, więcej komentarzy będzie pomocne. Jeśli kodujesz przez cały czas, kod jest równie łatwy do odczytania, jak komentarz. Ponadto podczas programowania funkcjonalnego kod staje się wystarczająco opisowy, aby można go było czytać jak skrypt.
+W Scheme komentarze zazwyczaj umieszcza się poprzedzając pomocny wiersz tekstu znakiem `;;`. Im więcej komentarzy, tym łatwiej wrócić do kodu po czasie — szczególnie gdy dopiero uczysz się Scheme.
 
 ### Składnia
 
@@ -73,11 +74,11 @@ Oto pełny przykład. Większość procedur Lumi ma przedrostek `lumi-`. Na przy
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do Error Console
+  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do konsoli komunikatów
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Wyślij wiadomość do terminal, okna systemu operacyjnego, które uruchomiło Lumi
+  ;; Wyślij wiadomość do terminala, okna systemu operacyjnego, które uruchomiło Lumi
   (display "Hello world!\n"))
 
 
@@ -105,6 +106,6 @@ Oto pełny przykład. Większość procedur Lumi ma przedrostek `lumi-`. Na przy
 
 ### Wypróbuj wtyczkę
 
-Wtyczka powinna teraz pojawić się w menu „Funky” w głównym oknie Lumi. Kliknij go, a powinien wyświetlić się komunikat „Hello world!” wiadomość. Spróbuj zmodyfikować kod, na przykład zmienić tekst wiadomości, i zapisz plik. Po ponownym uruchomieniu wtyczki wprowadzone zmiany zostaną odzwierciedlone bez ponownego uruchamiania Lumi.
+Wtyczka powinna teraz pojawić się w menu „Funky” w głównym oknie Lumi. Kliknij ją — powinien wyświetlić się komunikat „Hello world!”. Spróbuj zmodyfikować kod, na przykład zmienić tekst wiadomości, i zapisz plik. Po ponownym uruchomieniu wtyczki wprowadzone zmiany zostaną odzwierciedlone bez ponownego uruchamiania Lumi.
 
 Spróbuj poeksperymentować, zmieniając ścieżkę menu. Na przykład `"<Image>/File"` umieści go w menu Plik, a `"<Image>/File/Funky"` utworzy nową sekcję w menu Plik. Jest to świetny sposób na dostosowanie miejsca wyświetlania wtyczki i uporządkowanie narzędzi.

@@ -7,15 +7,15 @@ translation_lock: true
 translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
 
-Il menu Filtri di Lumi-o riunisce in un unico posto regolazioni correttive, effetti di lente stilizzati, generatori di texture procedurali, trattamenti ispirati alla stampa e strumenti di analisi. L'ordine del menu è pratico piuttosto che accademico: gli strumenti di sfocatura e di miglioramento stanno uno accanto all'altro, gli effetti di distorsione e di illuminazione sono raggruppati per resa visiva e i generatori di texture o pattern restano insieme quando l'obiettivo è creare materiale sorgente piuttosto che modificare un'immagine esistente.
+Il menu Filtri di Lumi riunisce in un unico posto regolazioni correttive, effetti di lente stilizzati, generatori di texture procedurali, trattamenti ispirati alla stampa e strumenti di analisi. L'ordine del menu è pratico piuttosto che accademico: gli strumenti di sfocatura e di miglioramento stanno uno accanto all'altro, gli effetti di distorsione e di illuminazione sono raggruppati per resa visiva e i generatori di texture o pattern restano insieme quando l'obiettivo è creare materiale sorgente piuttosto che modificare un'immagine esistente.
 
-Le finestre di dialogo dei filtri seguono lo stesso flusso di lavoro generale. Preimpostazioni, anteprima, visualizzazione divisa e controlli di opacità o fusione consentono di regolare rapidamente un effetto; sui livelli il risultato può restare come filtro non distruttivo modificabile invece di essere fuso subito. Lumi-o conserva anche una cronologia recente dell'uso dei filtri, così ripetere l'ultimo effetto o riaprire l'ultima finestra fa parte del normale ritmo di pittura, non di un compito separato.
+Le finestre di dialogo dei filtri seguono lo stesso flusso di lavoro generale. Preimpostazioni, anteprima, visualizzazione divisa e controlli di opacità o fusione consentono di regolare rapidamente un effetto; sui livelli il risultato può restare come filtro non distruttivo modificabile invece di essere fuso subito. Lumi conserva anche una cronologia recente dell'uso dei filtri, così ripetere l'ultimo effetto o riaprire l'ultima finestra fa parte del normale ritmo di pittura, non di un compito separato.
 
 ## Sfocatura
 
 ### Sfocatura gaussiana
 
-La Sfocatura gaussiana è il filtro di ammorbidimento standard di Lumi-o: una sfocatura pulita e uniforme con controlli separati per dimensione orizzontale e verticale, gestione dei bordi e opzioni del kernel. È la scelta generale per messa a fuoco morbida, maschere attenuate, profondità atmosferica e qualsiasi flusso di lavoro in cui la sfocatura stessa deve restare neutra.
+La Sfocatura gaussiana è il filtro di ammorbidimento standard di Lumi: una sfocatura pulita e uniforme con controlli separati per dimensione orizzontale e verticale, gestione dei bordi e opzioni del kernel. È la scelta generale per messa a fuoco morbida, maschere attenuate, profondità atmosferica e qualsiasi flusso di lavoro in cui la sfocatura stessa deve restare neutra.
 
 ### Pixelizza
 
@@ -27,7 +27,7 @@ La Sfocatura gaussiana selettiva ammorbidisce all'interno delle regioni cercando
 
 ### Sfocatura dell'obiettivo
 
-Lens Blur è uno dei filtri di sfocatura di Lumi-o più orientati all'illustrazione. I suoi controlli ruotano attorno alla forma dell'iride poligonale, alla curvatura delle lame, all'allungamento anamorfico, all'incremento delle luci e a una regione di messa a fuoco configurabile, quindi si comporta meno come un ammorbidente generico e più come uno strumento di profondità di campo stilizzato con bokeh sagomato.
+Lens Blur è uno dei filtri di sfocatura di Lumi più orientati all'illustrazione. I suoi controlli ruotano attorno alla forma dell'iride poligonale, alla curvatura delle lame, all'allungamento anamorfico, all'incremento delle luci e a una regione di messa a fuoco configurabile, quindi si comporta meno come un ammorbidente generico e più come uno strumento di profondità di campo stilizzato con bokeh sagomato.
 
 ### Tilt-shift
 
@@ -113,7 +113,7 @@ Fractal genera rumore Perlin frattale piastrellabile, particolarmente prezioso c
 
 ### Grana rumore blu
 
-Blue Noise Grain è il generatore di grana monocromatica in stile pellicola e stampa di Lumi-o. Le preimpostazioni di dimensione della grana, il mascheramento del rumore blu, lo sbilanciamento dei mezzitoni, lo sbilanciamento delle ombre e i controlli del seed mostrano che è progettato per posizionare la grana in modo uniforme e controllabile, non solo per spruzzare macchie monocromatiche casuali sull'immagine.
+Blue Noise Grain è il generatore di grana monocromatica in stile pellicola e stampa di Lumi. Le preimpostazioni di dimensione della grana, il mascheramento del rumore blu, lo sbilanciamento dei mezzitoni, lo sbilanciamento delle ombre e i controlli del seed mostrano che è progettato per posizionare la grana in modo uniforme e controllabile, non solo per spruzzare macchie monocromatiche casuali sull'immagine.
 
 ### Grana risografica
 

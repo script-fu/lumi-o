@@ -27,7 +27,7 @@ Tożsamość pigmentu ma znaczenie. Ten sam widoczny kolor może mieszać się i
 
 Kolor widmowy w Lumi służy przy budowie palet, generowaniu powiązanych barw i mieszaniu nowych wpisów palety. Po nałożeniu koloru na płótno staje się zwykłymi danymi obrazu do malowania i komponowania.
 
-Proces malowania pozostaje praktyczny, a doświadczenie wyboru i budowy koloru się poprawia. Model widmowy kształtuje paletę; płótno pozostaje wydajne i zgodne ze standardowymi workflow obrazu.
+Proces malowania pozostaje praktyczny, a doświadczenie wyboru i budowy koloru się poprawia. Model widmowy kształtuje paletę; płótno pozostaje wydajne i zgodne ze standardowymi przepływami pracy z obrazem.
 
 ## Most między kolorem cyfrowym a fizycznym
 
@@ -39,4 +39,4 @@ Dla artystów oznacza to większe zaufanie podczas eksploracji palety. Kolory z 
 
 Mieszanie widmowe łączy Palette Editor, Palette Map i Palette Mixer w jeden system kolorów. Pigmenty wyznaczają punkt startu, mapa pokazuje, co paleta może osiągnąć, a mixer pozwala szukać użytecznych barw w tej przestrzeni.
 
-Lumi otrzymuje workflow koloru skupiony na decyzjach malarskich: wybierz pigmenty, poznaj mieszanki, zachowaj to, co ważne, i maluj paletą zachowującą się jak spójna całość.
+Lumi otrzymuje przepływ pracy z kolorem skupiony na decyzjach malarskich: wybierz pigmenty, poznaj mieszanki, zachowaj to, co ważne, i maluj paletą zachowującą się jak spójna całość.

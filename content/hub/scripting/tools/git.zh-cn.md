@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 使用 Git 跟踪插件的更改、回滚错误以及跨机器共享代码。
 
@@ -130,7 +131,7 @@ git push -u origin main
 
 通过将代码组织到专用文件夹中并使用 GitHub 管理和备份存储库，您将保持项目结构良好且易于访问。获得代码的工作版本后，将其推送到 GitHub。然后，您可以使用 GitHub Web 界面或 Visual Studio Code 轻松跟踪任何更改，它会突出显示修改的行。这种方法允许您继续完善和扩展代码，而不会丢失进度或更改的跟踪。
 
-Git 以及 GitHub 和 GitLab 等平台都是功能强大的工具，虽然它们可能很复杂，但网上有大量资源可以帮助您更好地理解它们。我发现的最有价值的资源之一是像 ChatGPT 这样的人工智能助手。 You can describe what you need to accomplish, and these tools will patiently guide you through the process step by step.
+Git 以及 GitHub 和 GitLab 等平台都是功能强大的工具，虽然它们可能很复杂，但网上有大量资源可以帮助您更好地理解它们。我发现的最有价值的资源之一是像 ChatGPT 这样的人工智能助手。 您可以描述需要完成的任务，这些工具会耐心地逐步引导您完成整个过程。
 
 ## 术语表
 

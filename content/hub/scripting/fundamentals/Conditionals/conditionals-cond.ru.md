@@ -3,12 +3,13 @@ title: "cond"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: c51771681b005905702792ac549ca2707360f265b7d518cc00a6861161158126
 translation_lock: true
-translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 ---
-En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
+В Scheme условное выражение `cond` используется для выбора одного из нескольких возможных блоков кода для выполнения на основе нескольких тестов. Это похоже на мульти-ветвь `if`, где каждая ветвь проверяется по порядку, пока не будет найдено совпадение.
 
-### Syntaxe
+### Синтаксис
 
 ```scheme
 (cond
@@ -18,18 +19,22 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else fallback-consequent))
 ```
 
-- Tests dans l'ordre d'écriture.
-- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
-- `else` optionnel en repli.
+- Каждый тест оценивается в том порядке, в котором они написаны.
+- Когда результат теста оказывается истинным (`#t`), выполняется соответствующее **последовательность**, и выражение `cond` перестает оценивать дальнейшие тесты.
+- Предложение `else` является необязательным и служит запасным вариантом, если ни один из тестов не дает истинного результата.
 
-### Comment ça marche
+### Как это работает
 
-1. **Tester chaque condition** dans l'ordre.
-2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
+1. **Проверьте каждое условие**:
+   - `cond` оценивает тесты в том порядке, в котором они перечислены.
 
-### Exemples
+2. **Выполнить следствие сопоставления**:
+   - Когда найден первый тест, который имеет истинное значение (`#t`), выполняется его **последующий**.
+   - Если ни один из тестов не дал истинного результата и имеется предложение `else`, выполняется **fallback-consequent**.
 
-#### Exemple 1 : conséquents sur une expression
+### Примеры
+
+#### Пример 1: последствия одного выражения
 
 ```scheme
 (cond
@@ -38,9 +43,15 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else "Fallback"))
 ```
 
-Résultat : **"This will run"**
+- Первый тест `(< 3 2)` оценивается как ложный (`#f`).
+- Второй тест `(= 3 3)` оценивается как истина (`#t`), поэтому возвращается `"This will run"`.
+- Предложение `else` не выполняется, поскольку совпадение уже найдено.
 
-#### Exemple 2 : actions multiples avec `begin`
+Результат: **"Это будет выполнено"**
+
+#### Пример 2: Несколько действий с использованием `begin`
+
+Если следствие включает в себя несколько действий, используйте `begin`, чтобы сгруппировать их:
 
 ```scheme
 (cond
@@ -58,9 +69,16 @@ Résultat : **"This will run"**
       0)))
 ```
 
-Résultat : **Affiche « Condition met » et renvoie 25.**
+- Первый тест `(< 5 3)` оценивается как ложный (`#f`).
+- Второй тест `(> 5 3)` оценивается как истинный (`#t`):
+  - Он печатает `"Condition met"`.
+  - Затем он вычисляет `(* 5 5)` и возвращает `25`.
 
-#### Exemple 3 : bloc `let` dans un conséquent
+Результат: **Печатает «Условие выполнено» и возвращает 25.**
+
+#### Пример 3: Использование блока `let` в последовательном
+
+Если вам нужно ввести локальные переменные, используйте блок `let`:
 
 ```scheme
 (cond
@@ -75,15 +93,21 @@ Résultat : **Affiche « Condition met » et renvoie 25.**
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; По умолчанию: если ни одно из условий выше не выполнено
+  ;; Случай по умолчанию: если ни одно из вышеуказанных условий не выполнено
   (else
     (let ((z 0))
       z)))
 ```
 
-Résultat : **Affiche « Positive condition met » et renvoie 40.**
+- Первый тест `(< 0 -1)` является ложным.
+- Второй тест `(> 0 -1)` верен, поэтому:
+  - Выполняется блок `let`, связывающий `y` с `20`.
+  - Он печатает `"Positive condition met"`.
+  - Затем он вычисляет `(+ y y)` и возвращает `40`.
 
-#### Exemple 4 : repli avec `else`
+Результат: **Печатает «Положительное условие выполнено» и возвращает 40.**
+
+#### Пример 4: Резервный вариант с `else`
 
 ```scheme
 (cond
@@ -92,10 +116,16 @@ Résultat : **Affiche « Positive condition met » et renvoie 40.**
   (else "Fallback value"))
 ```
 
-Résultat : **"Fallback value"**
+- Ни один из первых двух тестов не дает верных результатов.
+- Предложение `else` выполняется и возвращает `"Fallback value"`.
 
-### Résumé
+Результат: **"Резервное значение"**
 
-- `cond` pour plusieurs conditions clairement.
-- Conséquents simples ou groupés avec `begin`.
-- `let` pour variables locales ; `else` recommandé en repli.
+### Резюме
+
+- Используйте `cond` для четкой и краткой обработки множества условий.
+- Последствиями могут быть отдельные выражения или сгруппированные действия с использованием `begin`.
+- Используйте `let` в консеквентах, чтобы объявить локальные переменные для вычислений.
+- Всегда включайте предложение `else` в качестве запасного варианта на случай непредвиденных случаев.
+
+Такая гибкость делает `cond` мощным и понятным инструментом для обработки сложной логики ветвления.

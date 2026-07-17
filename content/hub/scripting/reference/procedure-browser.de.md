@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
+url: "hub/scripting/reference/procedure-browser"
 ---
 Der Prozedurbrowser ist das wichtigste Referenzwerkzeug zum Entdecken der Hunderten von Funktionen, die in der prozeduralen Datenbank (PDB) von Lumi verfügbar sind. Da jedes Tool, jeder Filter und jedes Skript in Lumi im PDB registriert sein muss, damit es aufgerufen werden kann, ist dieser Browser praktisch ein vollständiger PDB-Explorer.
 

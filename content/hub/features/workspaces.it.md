@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
 
-Gli spazi di lavoro consentono a Lumi-o di adattarsi a diversi modi di lavorare. Uno spazio di lavoro cattura l'atmosfera dell'ambiente di studio: layout dei pannelli, stato degli strumenti, presentazione della tela, percorsi delle risorse, scelta della tavolozza, tema e altre preferenze dell'interfaccia che modellano la sessione di pittura.
+Gli spazi di lavoro consentono a Lumi di adattarsi a diversi modi di lavorare. Uno spazio di lavoro cattura l'atmosfera dell'ambiente di studio: layout dei pannelli, stato degli strumenti, presentazione della tela, percorsi delle risorse, scelta della tavolozza, tema e altre preferenze dell'interfaccia che modellano la sessione di pittura.
 
 Invece di mantenere una disposizione fissa per ogni attività, gli artisti possono conservare ambienti separati per schizzi, pittura, inchiostrazione, lavoro sul colore, presentazione, scripting o sessioni a schermo intero in modalità concentrazione. Ogni ambiente può portare in primo piano le risorse adatte a quel tipo di lavoro: uno spazio di lavoro per il disegno può risultare fornito di preset per lo schizzo, mentre uno spazio di lavoro per la pittura può passare a strumenti più pittorici.
 
@@ -37,6 +37,6 @@ Poiché gli spazi di lavoro hanno un nome e sono riutilizzabili, possono diventa
 
 ## Ridurre l'attrito
 
-Lo scopo degli spazi di lavoro è eliminare le configurazioni ripetute dal processo creativo. Quando una disposizione risulta giusta, Lumi-o può ricordarla. Quando l'attività cambia, l'interfaccia può seguirla.
+Lo scopo degli spazi di lavoro è eliminare le configurazioni ripetute dal processo creativo. Quando una disposizione risulta giusta, Lumi può ricordarla. Quando l'attività cambia, l'interfaccia può seguirla.
 
-Così l'attenzione resta sull'opera piuttosto che sulla gestione delle finestre, facendo sentire Lumi-o meno come un'applicazione statica e più come uno studio digitale flessibile.
+Così l'attenzione resta sull'opera piuttosto che sulla gestione delle finestre, facendo sentire Lumi meno come un'applicazione statica e più come uno studio digitale flessibile.

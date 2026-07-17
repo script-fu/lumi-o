@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Zodra een functie werkt, kunnen we een stapje terug doen en nadenken over hoe we onze code het beste kunnen structureren. Het doel is om onze plug-in zo duidelijk, begrijpelijk en onderhoudbaar mogelijk te maken. Dit proces van het verbeteren en verfijnen van de structuur van bestaande code zonder het gedrag ervan te veranderen, staat bekend als refactoring.
 
@@ -16,7 +17,7 @@ Hier is nogmaals de initiële functie:
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Stel de berichtenhandler in om het bericht naar de Error Console te sturen
+  ;; Stel de berichtenhandler in om het bericht naar de foutenconsole te sturen
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Introductie van een variabele genaamd "bericht":
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Stel de berichtenhandler in om het bericht naar de Error Console te sturen
+    ;; Stel de berichtenhandler in om het bericht naar de foutenconsole te sturen
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ De logica extraheren:
 ;; Functie voor berichtuitvoer naar verschillende bestemmingen
 (define (send-message message output)
   (cond
-    ;; Verzenden naar de Error Console
+    ;; Verzenden naar de foutenconsole
     ((eq? output 'error-console)
-       ;; Stel de handler in op Error Console
+       ;; Stel de handler in op foutenconsole
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ De logica extraheren:
        ;; Terminal-uitvoer wordt afgehandeld met display
        (display message)))
 
-  ;; Herstel de standaard berichtenhandler naar de Error Console
+  ;; Herstel de standaard berichtenhandler naar de foutenconsole
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -124,7 +125,7 @@ In het bovenstaande voorbeeld wordt een gegevenstype gebruikt dat een symbool wo
 
 ### Vereenvoudiging van de hoofdfunctie
 
-In de originele functie (scheme-hello-world) was alle logica voor het verzenden van berichten naar verschillende uitgangen (GUI, Error Console, Terminal) gemengd in de hoofdfunctie. Na refactoring concentreert de hoofdfunctie zich eenvoudigweg op **wat er moet gebeuren**, waarbij het bericht naar verschillende bestemmingen wordt verzonden.
+In de originele functie (scheme-hello-world) was alle logica voor het verzenden van berichten naar verschillende uitgangen (GUI, foutenconsole, Terminal) gemengd in de hoofdfunctie. Na refactoring concentreert de hoofdfunctie zich eenvoudigweg op **wat er moet gebeuren**, waarbij het bericht naar verschillende bestemmingen wordt verzonden.
 
 De gerefactoreerde hoofdfunctie is eenvoudiger:
 
@@ -134,7 +135,7 @@ De gerefactoreerde hoofdfunctie is eenvoudiger:
 
 ### De complexiteit van de geëxtraheerde functie
 
-In de functie **(verzendbericht)** bevindt zich daarentegen de gedetailleerde logica. Het verwerkt nu de variaties in gedrag voor elke uitvoer (GUI, Error Console, Terminal). De functie is iets complexer dan voorheen, maar is nu **gecentraliseerd** en **geïsoleerd**.
+In de functie **(verzendbericht)** bevindt zich daarentegen de gedetailleerde logica. Het verwerkt nu de variaties in gedrag voor elke uitvoer (GUI, foutenconsole, Terminal). De functie is iets complexer dan voorheen, maar is nu **gecentraliseerd** en **geïsoleerd**.
 
 ## Dit in verband brengen met functioneel programmeren
 

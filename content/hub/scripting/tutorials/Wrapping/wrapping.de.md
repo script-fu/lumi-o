@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 Schemabefehle arbeiten auf einer niedrigen Ebene, was bedeutet, dass selbst einfache Aufgaben mehrere Schritte erfordern können. Diese Granularität bietet jedoch Flexibilität, wir können Befehle in kleine, wiederverwendbare Funktionen bündeln, die genau das tun, was wir brauchen. Verpackung ist kein Schwarz-Weiß-Konzept; Es kann von einfachen Aliasen für häufig verwendete Befehle bis hin zu komplexeren Funktionen reichen, die ganze Arbeitsabläufe verwalten. Manchmal ist ein Wrapper nur eine praktische Funktion zur Verbesserung der Lesbarkeit, während er sich in anderen Fällen zu einem voll ausgestatteten Dienstprogramm entwickelt, das mehrere Vorgänge kapselt.
 
@@ -26,7 +27,7 @@ Wenn Sie Ihre eigene Hilfsbibliothek verwalten, sollten Sie erwägen, die Funkti
 
 Beispiele:
 
-### Zufälliger Samen
+### Zufälliger Seed
 
 ```scheme
 ;; Zweck: Gibt eine Zufallszahl für die Initialisierung eines Filters zurück
@@ -86,7 +87,7 @@ Um ein JPEG in unsere Plug-Ins zu exportieren, binden wir einfach die Bibliothek
 
 Dadurch bleibt unser Code sauber, lesbar und anpassungsfähig und ermöglicht uns gleichzeitig den effizienten Export von JPEGs mit minimalem Aufwand.
 
-### Autoersatz
+### `car` ersetzen
 
 Die ***car***-Funktion kann kryptisch und anfällig für Skriptfehler sein. Es ist leicht, ***car*** versehentlich auf einen Vektor oder ein Nicht-Listenelement anzuwenden, was zu unerwartetem Verhalten führt. Um unseren Code robuster und lesbarer zu machen, können wir diese Funktionalität in eine sicherere Funktion einbinden.
 
@@ -117,7 +118,7 @@ Diese Funktion ruft sicher das erste Element einer Liste oder eines Vektors ab u
 - **Bietet aussagekräftige Warnungen** – Hilft bei der Fehlerbehebung unerwarteter Eingabeprobleme.
 - **Verbessert die Lesbarkeit** – Der Funktionsname vermittelt klar seinen Zweck.
 
-Indem wir diese Logik im ersten Element kapseln, machen wir unsere Plug-Ins robuster und einfacher zu warten. Dies hängt natürlich von Ihren persönlichen Vorlieben ab. Möglicherweise können Sie die Funktionen car, caar, cadr und ähnliche Scheme-Funktionen direkt verwenden.
+Indem wir diese Logik in `first-item` kapseln, machen wir unsere Plug-Ins robuster und einfacher zu warten. Dies hängt natürlich von Ihren persönlichen Vorlieben ab. Möglicherweise können Sie die Funktionen car, caar, cadr und ähnliche Scheme-Funktionen direkt verwenden.
 
 ### Eine umschlossene Funktion umschließen
 
@@ -145,14 +146,14 @@ um die ***x***-Koordinate abzurufen. Dies ist zwar funktional, aber nicht sehr a
 - **Verbessert die Wartbarkeit** – Wenn sich unsere Koordinatendarstellung ändert (z. B. Verwendung von Vektoren anstelle von Listen), müssen wir nur diese kleinen Funktionen aktualisieren.
 - **Fördert die Konsistenz** – Durch die Verwendung von ***x-Koordinaten*** und ***y-Koordinaten*** ist das Skript auf einen Blick einfacher zu lesen und zu verstehen.
 
-Anstatt nun im generischen Schema zu schreiben:
+Anstatt nun in generischem Scheme zu schreiben:
 
 ```scheme
 (car pixel-coords) ;; Ermittelt die x-Koordinate
 (cadr pixel-coords) ;; Ermittelt die y-Koordinate
 ```
 
-Wir können in _unser_ Schema schreiben:
+Wir können in _unserem_ Scheme schreiben:
 
 ```scheme
 (x-coord pixel-coords)

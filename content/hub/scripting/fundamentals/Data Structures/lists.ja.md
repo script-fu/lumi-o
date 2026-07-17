@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 Scheme では、**リスト** は値をグループ化するために使用される基本的なデータ構造です。リストは要素の順序付けられたコレクションであり、各要素は別のリストを含む任意の型にすることができます。リストは、Scheme でデータ ストレージとプログラム構造の両方に広く使用されています。
 
@@ -167,7 +168,9 @@ Scheme には、リストを操作するための次のような組み込みプ�
 
 - `(length (list 1 2 3))` は `3` を返します
 - `(append (list 1 2) (list 3 4))` は `(1 2 3 4)` を返します
-- `(reverse (list 1 2 3))` は `(3 2 1)` を返します#### `list-ref` を使用する
+- `(reverse (list 1 2 3))` は `(3 2 1)` を返します
+
+#### `list-ref` を使用する
 
 `list-ref` プロシージャは、リストの指定されたインデックス (0 から始まるインデックス) にある要素を取得します。
 

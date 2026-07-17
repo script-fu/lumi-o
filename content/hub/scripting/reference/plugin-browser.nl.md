@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
+url: "hub/scripting/reference/plugin-browser"
 ---
 Met de plug-inbrowser kunt u het menusysteem verkennen en zien waar specifieke plug-ins zijn geïnstalleerd.
 

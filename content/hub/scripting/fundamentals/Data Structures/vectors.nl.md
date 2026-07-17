@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 In Scheme is een vector een andere fundamentele gegevensstructuur die wordt gebruikt om waarden te groeperen. In tegenstelling tot lijsten zijn vectoren geïndexeerde verzamelingen van elementen met een vaste grootte, waardoor snellere willekeurige toegang en updates mogelijk zijn. Elk element in een vector kan van elk type zijn, inclusief een andere vector. Vectoren worden weergegeven met # gevolgd door haakjes. `#(1 2 3)`
 
@@ -38,7 +39,7 @@ Elementen in een vector worden benaderd met behulp van de `vector-ref` procedure
 
 #### Iteratie: elk element in een vector verwerken
 
-U kunt een vector herhalen met behulp van een lus of recursie. Schema biedt `vector-length` om de grootte van een vector te bepalen. Hier is een eenvoudige lus om elk element in een vector af te drukken:
+U kunt een vector herhalen met behulp van een lus of recursie. Scheme biedt `vector-length` om de grootte van een vector te bepalen. Hier is een eenvoudige lus om elk element in een vector af te drukken:
 
 ```scheme
 (define (print-elements vec)
@@ -122,7 +123,9 @@ Resultaat:
 - `(vector? (vector 1 2 3))` retourneert `#t` (waar)
 - `(vector? 42)` retourneert `#f` (onwaar)
 
-### Vectoren en pass-by-referentiegedragIn Schema zijn vectoren veranderlijk en worden ze door verwijzing doorgegeven. Dit betekent dat wanneer u een vector aan een functie doorgeeft, de functie de originele vector rechtstreeks kan wijzigen. Alle wijzigingen die binnen de functie aan de vector worden aangebracht, worden ook buiten de functie weerspiegeld. Dit gedrag is handig voor het efficiënt delen en bijwerken van gegevens over meerdere functies, maar vereist ook voorzichtigheid om onbedoelde bijwerkingen te voorkomen.
+### Vectoren en pass-by-referentiegedrag
+
+In Scheme zijn vectoren veranderlijk en worden ze door verwijzing doorgegeven. Dit betekent dat wanneer u een vector aan een functie doorgeeft, de functie de originele vector rechtstreeks kan wijzigen. Alle wijzigingen die binnen de functie aan de vector worden aangebracht, worden ook buiten de functie weerspiegeld. Dit gedrag is handig voor het efficiënt delen en bijwerken van gegevens over meerdere functies, maar vereist ook voorzichtigheid om onbedoelde bijwerkingen te voorkomen.
 
 #### Voorbeeld: een vector in een functie wijzigen
 
@@ -173,7 +176,7 @@ Resultaat:
 
 ### Geneste vectoren
 
-Vectoren in Schema kunnen andere vectoren als elementen bevatten, waardoor een geneste structuur ontstaat.
+Vectoren in Scheme kunnen andere vectoren als elementen bevatten, waardoor een geneste structuur ontstaat.
 
 ```scheme
 (define nested-vector (vector (vector 1 2) (vector 3 4) (vector 5)))
@@ -197,6 +200,6 @@ Om toegang te krijgen tot elementen binnen een geneste vector, gebruikt u `vecto
 ### Samenvatting
 
 - **Vectoren** in Scheme zijn geïndexeerde datastructuren met een vaste grootte.
-- Gebruik `vector` om een ​​vector te maken, `vector-ref` om toegang te krijgen tot elementen, en `vector-set!` om elementen bij te werken.
+- Gebruik `vector` om een vector te maken, `vector-ref` om toegang te krijgen tot elementen, en `vector-set!` om elementen bij te werken.
 - Ingebouwde procedures zoals `vector-length`, `vector->list` en `list->vector` maken flexibele bewerkingen mogelijk.
 - Geneste vectoren maken complexe, hiërarchische datastructuren mogelijk.

@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 ค่าที่ส่งกลับมีความสำคัญเนื่องจากช่วยให้คุณควบคุมโฟลว์ได้โดยไม่ต้องมีสถานะเพิ่มเติม ใน Scheme นิพจน์ที่ได้รับการประเมินล่าสุดจะกลายเป็นค่าที่ส่งคืน
 
@@ -112,7 +113,7 @@ translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406c
       #t)
     #f))
 
-;; วัตถุประสงค์: ส่งข้อความไปยัง Error Console คืนค่า #t เมื่อสำเร็จ
+;; วัตถุประสงค์: ส่งข้อความไปยัง คอนโซลข้อผิดพลาด คืนค่า #t เมื่อสำเร็จ
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

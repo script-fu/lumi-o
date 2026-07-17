@@ -1,6 +1,10 @@
 ---
 title: "Workflow-Verknüpfungen"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o ist für einen Shortcut-gesteuerten Workflow konzipiert. Sobald Sie Ihr Muskelgedächtnis für diese Befehle aufgebaut haben, können Sie deutlich schneller auf Ihrer Leinwand und Ihren Werkzeugen navigieren.
 

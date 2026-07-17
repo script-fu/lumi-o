@@ -4,22 +4,23 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
-La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
+Funktionen `for-each` i Scheme tillämpar en procedur på varje element i en lista (eller flera listor). Till skillnad från `map`, som returnerar en ny lista med resultat, används `for-each` för **bieffekter** — till exempel utskrift eller uppdatering av variabler.
 
-La forme la plus simple de `for-each` :
+Den enklaste formen av `for-each` ser ut så här:
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procédure :** Fonction par élément.
-- **Liste :** Liste à parcourir.
+- **Procedur:** funktionen som tillämpas på varje element i listan.
+- **Lista:** listan vars element ska bearbetas.
 
 ---
 
-### Exemple : afficher une liste
+### Exempel: skriv ut en lista
 
 ```scheme
 (define (print-item x)
@@ -28,23 +29,26 @@ La forme la plus simple de `for-each` :
 (for-each print-item (list 1 2 3 4))
 ```
 
-- `print-item` est appliqué à `(1 2 3 4)`.
-- Chaque nombre est affiché successivement.
+- Här tillämpas funktionen `print-item` på varje element i listan `(1 2 3 4)`.
+- Det gör att varje tal skrivs ut i ordning.
 
-**Sortie** : `1 2 3 4`
-
----
-
-### Comment ça marche
-
-1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
-2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+**Utdata**: `1 2 3 4`
 
 ---
 
-#### Plusieurs listes
+### Så fungerar det
 
-Avec plusieurs listes, `for-each` traite les éléments correspondants.
+1. **Itererar över varje element:**
+   - Den angivna proceduren körs för varje element i listan, i ordning.
+
+2. **Utför bieffekter:**
+   - Vanliga bieffekter är utskrift, loggning eller ändring av externa variabler. Till skillnad från `map` returnerar `for-each` ingen ny lista.
+
+---
+
+#### Exempel: flera listor
+
+Om flera listor anges bearbetar `for-each` motsvarande element från varje lista.
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `for-each` traite les éléments correspondants.
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `5 7 9`
+- Funktionen `sum-and-print` adderar motsvarande element från de två listorna och skriver ut resultaten.
+
+**Utdata**: `5 7 9`
 
 ---
 
-### Résumé
+### Sammanfattning
 
-- `for-each` convient aux effets de bord sur chaque élément.
-- Contrairement à `map`, **pas de nouvelle liste**.
-- Plusieurs listes simultanément.
+- Funktionen `for-each` är användbar när målet är bieffekter på varje element i en lista.
+- Till skillnad från `map` producerar `for-each` ingen ny lista — den fokuserar enbart på procedurens bieffekter.
+- Den kan hantera flera listor samtidigt och tillämpa proceduren på motsvarande element.
 
-Utilisez `for-each` lorsque l'action prime sur la transformation.
+Med `for-each` kan du bearbeta listor effektivt när målet är att utföra handlingar snarare än att transformera data.

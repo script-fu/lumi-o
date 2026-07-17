@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 Dans Scheme, un vecteur est une autre structure de données fondamentale utilisée pour regrouper des valeurs. Contrairement aux listes, les vecteurs sont des collections d’éléments indexés de taille fixe, offrant un accès aléatoire et des mises à jour plus rapides. Chaque élément d'un vecteur peut être de n'importe quel type, y compris un autre vecteur. Les vecteurs sont représentés par # suivi de parenthèses. `#(1 2 3)`
 

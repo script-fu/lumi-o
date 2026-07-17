@@ -5,6 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
+url: "hub/about/construction"
 ---
 
 Obszar roboczy Konstrukcja służy pracom lay-in. Zaczyna się od jednego ustawienia wstępnego narzędzia Lay-in i czterokolorowej palety bieli, czerni, czerwieni i błękitu — wystarczającej struktury, by blokować formę. Nacisk kontroluje krycie, więc możesz budować lekkie znaki i skupiać się na kształcie.

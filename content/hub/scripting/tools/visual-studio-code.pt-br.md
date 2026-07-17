@@ -3,7 +3,8 @@ title: "Código do Visual Studio"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
+translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+url: "hub/scripting/tools/visual-studio-code"
 ---
 ## O que é código do Visual Studio?
 
@@ -17,7 +18,7 @@ translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e286
 
 - **Espaços de trabalho**: o VSC permite organizar vários projetos em "espaços de trabalho", que permitem manter arquivos e pastas relacionados juntos para facilitar a navegação e o gerenciamento de projetos.
 
-- **Perfis**: com perfis, você pode criar diferentes configurações para vários projetos ou tarefas. Você pode usar um perfil para desenvolvimento web e outro para programação Scheme, cada um com suas próprias extensões, temas e configurações específicas.
+- **Perfis**: com perfis, você pode criar diferentes configurações para vários projetos ou tarefas. Você pode usar um perfil para desenvolvimento web e outro para programaçãScheme, cada um com suas próprias extensões, temas e configurações específicas.
 
 ### Introdução ao código do Visual Studio
 
@@ -33,12 +34,12 @@ Um espaço de trabalho é apenas uma visualização de pasta salva e mais config
 
 ### Extensões
 
-- **Instalar extensões**: clique no ícone **Extensões** na barra de atividades para navegar e instalar ferramentas úteis para o Scheme. O principal a ser instalado é **"vscode-scheme"** de Allen Huang. Esta extensão fornece destaque de sintaxe e suporte básico para Scheme, que é a linguagem base do Scheme.
+- **Instalar extensões**: clique no ícone **Extensões** na barra de atividades para navegar e instalar ferramentas úteis para Scheme. O principal a ser instalado é **"vscode-scheme"** de Allen Huang. Esta extensão fornece destaque de sintaxe e suporte básico para Scheme, que é a linguagem base de Scheme.
 
-Você também pode personalizar a extensão editando o arquivo de idioma para incluir mais palavras-chave específicas do esquema ou qualquer coisa relacionada ao script Lumi.
+Você também pode personalizar a extensão editando o arquivo de idioma para incluir mais palavras-chave específicas de Scheme ou qualquer coisa relacionada ao script Lumi.
 
 Se você mantém sua própria biblioteca auxiliar, adicionar os nomes das funções do seu projeto ao realçador de sintaxe torna a navegação e a refatoração mais rápidas.
 
 ### Conclusão
 
-Use um editor que facilite a pesquisa, a refatoração e a execução de edições rápidas. Código VS + uma extensão de esquema é uma linha de base sólida.
+Use um editor que facilite a pesquisa, a refatoração e a execução de edições rápidas. Código VS + uma extensão de Scheme é uma linha de base sólida.

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
+url: "hub/scripting/tutorials"
 ---
 บทช่วยสอนเหล่านี้จะแสดงวิธีเขียนปลั๊กอิน Scheme สำหรับ Lumi คุณจะเริ่มต้นด้วยขั้นตอน “Hello World” เพียงเล็กน้อย จากนั้นสร้างปลั๊กอินที่ทำงานกับรูปภาพ ไฟล์ และไลบรารีตัวช่วยที่นำมาใช้ซ้ำได้
 

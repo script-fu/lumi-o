@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
 Die Funktion `do` in Scheme ist eine Schleife mit Initialisierung, Aktualisierung und Abbruchbedingung. Nützlich, wenn eine Sequenz eine bestimmte Anzahl von Malen oder bis zu einer Bedingung laufen soll.
 
@@ -19,10 +20,10 @@ Die allgemeine Form von `do`:
 ```
 
 - **Variable:** Schleifenvariable(n).
-- **Initial-value:** Startwert.
-- **Update-expression:** Aktualisierung pro Iteration.
-- **Termination-condition:** Abbruchbedingung.
-- **Result-expression:** Rückgabewert beim Abbruch.
+- **Startwert:** Startwert.
+- **Aktualisierungsausdruck:** Aktualisierung pro Iteration.
+- **Abbruchbedingung:** Abbruchbedingung.
+- **Ergebnisausdruck:** Rückgabewert beim Abbruch.
 - **Body:** Code pro Iteration.
 
 ---

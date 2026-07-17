@@ -1,22 +1,23 @@
 ---
-title: "Funciones variadas"
+title: "Funciones variádicas"
 type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
-**Funciones variables** en Scheme son funciones que aceptan un número variable de argumentos. Estas funciones son muy versátiles y le permiten crear código flexible y reutilizable. En la programación funcional, las funciones variadas simplifican las operaciones que necesitan procesar un número arbitrario de entradas, como sumar una lista de números o concatenar cadenas.
+**Funciones variádicas** en Scheme son funciones que aceptan un número variable de argumentos. Estas funciones son muy versátiles y le permiten crear código flexible y reutilizable. En la programación funcional, las funciones variádicas simplifican las operaciones que necesitan procesar un número arbitrario de entradas, como sumar una lista de números o concatenar cadenas.
 
-Las funciones variadas son especialmente útiles cuando:
+Las funciones variádicas son especialmente útiles cuando:
 
 - El número de argumentos no se puede determinar de antemano.
 - Debes aplicar la misma operación a una lista dinámica de entradas.
 - Redacción de utilidades para agregación o transformación de datos.
 
-### Sintaxis de funciones variables
+### Sintaxis de funciones variádicas
 
-Las funciones variables se definen utilizando el símbolo `.` antes del último nombre del parámetro. Este último parámetro recopila todos los argumentos restantes en una lista.
+Las funciones variádicas se definen utilizando el símbolo `.` antes del último nombre del parámetro. Este último parámetro recopila todos los argumentos restantes en una lista.
 
 ```scheme
 (define (function-name fixed-parameters . variadic-parameter)
@@ -27,9 +28,9 @@ Las funciones variables se definen utilizando el símbolo `.` antes del último 
 - **`variadic-parameter`:** Un parámetro especial precedido por `.` que recopila argumentos adicionales como una lista.
 - **`body-expression`:** La lógica ejecutada cuando se llama a la función.
 
-### Ejemplos de funciones variables
+### Ejemplos de funciones variádicas
 
-#### Función variable básica
+#### Función variádica básica
 
 ```scheme
 (define (sum . numbers)
@@ -45,7 +46,7 @@ Las funciones variables se definen utilizando el símbolo `.` antes del último 
 (sum 1 2 3 4 5)  ; Devuelve 15
 ```
 
-#### Función variable con parámetros fijos
+#### Función variádica con parámetros fijos
 
 Puede combinar parámetros fijos con un parámetro variado para crear funciones más flexibles.
 
@@ -64,7 +65,7 @@ Puede combinar parámetros fijos con un parámetro variado para crear funciones 
 (greet "Hello" "Alice" "Bob" "Charlie")  ; Devuelve ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
-#### Combinando lógica fija y variable
+#### Combinando lógica fija y variádica
 
 ```scheme
 (define (describe-collection collection-name . items)
@@ -86,7 +87,7 @@ Puede combinar parámetros fijos con un parámetro variado para crear funciones 
 
 #### Procesamiento de entradas arbitrarias
 
-Las funciones variadas destacan en el manejo de datos arbitrarios. Aquí hay un ejemplo para sumar solo números positivos:
+Las funciones variádicas destacan en el manejo de datos arbitrarios. Aquí hay un ejemplo para sumar solo números positivos:
 
 ```scheme
 (define (sum-positive . numbers)
@@ -100,7 +101,7 @@ Las funciones variadas destacan en el manejo de datos arbitrarios. Aquí hay un 
 (sum-positive -5 3 7 -2 8)  ; Devuelve 18
 ```
 
-#### Funciones variadas con lógica recursiva
+#### Funciones variádicas con lógica recursiva
 
 ```scheme
 (define (max-value first . rest)
@@ -119,24 +120,26 @@ Las funciones variadas destacan en el manejo de datos arbitrarios. Aquí hay un 
 (max-value 10 20 5 40 15)  ; Devuelve 40
 ```
 
-### Beneficios de las funciones variables
+### Beneficios de las funciones variádicas
 
 - **Flexibilidad:** Manejan una amplia gama de casos de entrada.
 - **Concisión:** Reduce la necesidad de múltiples funciones sobrecargadas.
 - **Operaciones dinámicas:** Habilite el procesamiento de datos en tiempo de ejecución sin conocer el recuento de argumentos de antemano.
 
-### Cuándo utilizar funciones variables
+### Cuándo usar funciones variádicas
 
-Utilice funciones variadas cuando:
+Utilice funciones variádicas cuando:
 
 - La función necesita procesar un número desconocido de argumentos.
 - Una sola operación se aplica a todas las entradas (por ejemplo, suma, concatenación o mapeo).
 - Simplificar la lógica de orden superior con argumentos dinámicos.
 
-Evite funciones variadas cuando:
+Evite funciones variádicas cuando:
 
 - La validación de entradas o la verificación de tipos es compleja.
 - Los argumentos fijos son suficientes para la lógica requerida.
 - La legibilidad se ve comprometida debido a operaciones demasiado complejas.
 
-### ConclusiónLas funciones variadas en Scheme proporcionan un mecanismo sólido para manejar entradas dinámicas. Al comprender su sintaxis y su uso, puede crear scripts flexibles y potentes que se adapten a diversos escenarios. Combinadas con funciones de orden superior, las funciones variadas hacen que su código sea más conciso y expresivo.
+### Conclusión
+
+Las funciones variádicas en Scheme proporcionan un mecanismo sólido para manejar entradas dinámicas. Al comprender su sintaxis y su uso, puede crear scripts flexibles y potentes que se adapten a diversos escenarios. Combinadas con funciones de orden superior, las funciones variádicas hacen que su código sea más conciso y expresivo.

@@ -3,7 +3,8 @@ title: "Visual Studio Code"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
+translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+url: "hub/scripting/tools/visual-studio-code"
 ---
 ## Qu'est-ce que Visual Studio Code ?
 
@@ -25,7 +26,7 @@ Pour commencer à utiliser VSC :
 
 - **Télécharger et installer** : accédez au [site Web de Visual Studio Code](https://code.visualstudio.com/) et téléchargez la version Linux.
 
-- **Explorez l'interface** : Lorsque vous ouvrez VSC, vous remarquerez plusieurs panneaux. On the left, you have the **Activity Bar**, where you can navigate between files, search, use Git, and install extensions.
+- **Explorez l'interface** : Lorsque vous ouvrez VSC, vous remarquerez plusieurs panneaux. À gauche se trouve la **barre d'activités**, où vous pouvez naviguer entre les fichiers, rechercher, utiliser Git et installer des extensions.
 
 - **Ouvrir un fichier ou un dossier** : configurez votre espace de travail en ajoutant le dossier dans lequel votre projet est stocké et enregistrez la configuration active dans un fichier d'espace de travail.
 
@@ -35,7 +36,7 @@ Un espace de travail est simplement une vue de dossier enregistrée ainsi que le
 
 - **Installer les extensions** : cliquez sur l'icône **Extensions** dans la barre d'activité pour parcourir et installer des outils utiles pour Scheme. Le principal à installer est **"vscode-scheme"** d'Allen Huang. Cette extension fournit une coloration syntaxique et une prise en charge de base de Scheme, qui est le langage de base de Scheme.
 
-Vous pouvez également personnaliser l'extension en modifiant le fichier de langue pour inclure davantage de mots-clés spécifiques au schéma ou tout ce qui concerne les scripts Lumi.
+Vous pouvez également personnaliser l'extension en modifiant le fichier de langue pour inclure davantage de mots-clés spécifiques à Scheme ou tout ce qui concerne les scripts Lumi.
 
 Si vous gérez votre propre bibliothèque d'assistance, l'ajout des noms de fonctions de votre projet au surligneur de syntaxe accélère la navigation et la refactorisation.
 

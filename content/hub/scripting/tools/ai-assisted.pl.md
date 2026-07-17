@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 Nowoczesne narzędzia AI mogą znacznie przyspieszyć rozwój wtyczek Lumi, pełniąc rolę współpracującego partnera w zakresie kodowania.
 
@@ -30,7 +31,7 @@ Możesz bezpośrednio poprosić Agenta o wygenerowanie pełnej wtyczki, opisują
 
 > „Korzystając z dostępnych narzędzi Scheme i przykładów w obszarze roboczym, napisz nową wtyczkę, która utworzy poziomą prowadnicę o kącie 50% na aktywnym obrazie i nazwie ją „Przewodnik środkowy”.”
 
-Agent wyszuka sposób tworzenia przewodników, zidentyfikuje właściwą funkcję narzędzia (np. `lumi-image-add-hguide-percent` z `common.scm`) i wygeneruje kompletny plik `.scm` z prawidłowym schematem rejestracyjnym.
+Agent wyszuka sposób tworzenia przewodników, zidentyfikuje właściwą funkcję narzędzia (np. `lumi-image-add-hguide-percent` z `common.scm`) i wygeneruje kompletny plik `.scm` z prawidłowym szablonem rejestracji.
 
 ## Najlepsze praktyki
 

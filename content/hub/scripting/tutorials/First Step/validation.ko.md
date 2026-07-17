@@ -4,13 +4,14 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
-When building robust plug-ins, it’s important to ensure that our functions handle errors gracefully and work as expected, even in cases of misuse or unexpected inputs. 유효성 검사는 기능의 무결성을 보호하고 충돌이나 의도하지 않은 동작을 방지하는 데 도움이 됩니다.
+견고한 플러그인을 만들 때는 함수가 오용이나 예상치 못한 입력이 있어도 오류를 우아하게 처리하고 기대대로 동작하는지 확인하는 것이 중요합니다. 유효성 검사는 기능의 무결성을 보호하고 충돌이나 의도하지 않은 동작을 방지하는 데 도움이 됩니다.
 
 입력을 올바르게 처리하는지 확인하기 위해 유효성 검사를 추가하여 `send-message` 함수를 개선할 수 있는 방법을 살펴보겠습니다.
 
-### Validate Inputs
+### 입력 유효성 검사
 
 메시지를 보내기 전에 `send-message` 함수에 전달된 `output` 인수가 유효한지 확인해야 합니다. 출력 대상이 예상 값(gui, 오류 콘솔 또는 터미널) 중 하나인지 확인하는 검사를 추가할 수 있습니다.
 
@@ -22,7 +23,7 @@ Example:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Message console로 보내기
+      ;; 메시지 콘솔로 보내기
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Example:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Example:
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Message console로 보내기
+        ;; 메시지 콘솔로 보내기
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Example:
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 ```
 

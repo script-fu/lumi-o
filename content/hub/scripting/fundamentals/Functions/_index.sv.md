@@ -4,7 +4,8 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
 Funktioner är ett kärnkoncept i Scheme, som ger möjlighet att kapsla in logik, möjliggöra kodåteranvändning och strukturera dina skript effektivt. Med funktioner kan du skapa modulära, underhållsbara skript som hanterar ett brett utbud av uppgifter, från grundläggande operationer till avancerade arbetsflöden i Lumi.
 
@@ -12,7 +13,7 @@ Detta avsnitt fungerar som en introduktion till funktioner i Scheme och lägger 
 
 ## Minimal syntax och uttryck
 
-Scheme code is made of **expressions**. Ett uttryck utvärderas till ett värde. Syntaxen är enhetlig: parenteser bildar ett anrop, med operatörens eller funktionsnamnet först.
+Scheme-kod består av **uttryck**. Ett uttryck utvärderas till ett värde. Syntaxen är enhetlig: parenteser bildar ett anrop, med operatörens eller funktionsnamnet först.
 
 ```scheme
 (+ 1 2)         ; Adderar 1 och 2, resultat 3
@@ -33,7 +34,7 @@ Funktioner spelar en central roll i Scheme av flera anledningar:
 
 ## Översikt över funktionstyper
 
-Schema erbjuder en mängd olika funktionskonstruktioner, var och en lämpad för specifika användningsfall:
+Scheme erbjuder en mängd olika funktionskonstruktioner, var och en lämpad för specifika användningsfall:
 
 1. **Namnställda funktioner**
    Dessa är standardfunktioner definierade med `define`. De utgör ryggraden i de flesta manus.

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
+url: "hub/scripting/reference/procedure-browser"
 ---
 プロシージャブラウザは、Lumi のプロシージャデータベース (PDB) で利用可能な何百もの関数を発見するための主要なリファレンスツールです。 Lumi のすべてのツール、フィルター、スクリプトを呼び出し可能にするためには PDB に登録する必要があるため、このブラウザは実質的に完全な PDB エクスプローラーとなります。
 

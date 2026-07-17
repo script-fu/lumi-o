@@ -6,6 +6,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 9e1cb1f39fa1e62f32b73f3284249ba249dff4eef3a4195682f0dae88ad17234
+url: "hub/about/Patreon"
 ---
 
 Hej!

@@ -3,23 +3,24 @@ title: "for-each"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
-La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
+Функция `for-each` в Scheme используется для применения процедуры к каждому элементу списка (или нескольких списков). В отличие от `map`, который возвращает новый список с результатами, `for-each` используется для своих **побочных эффектов**, таких как печать или обновление переменных.
 
-La forme la plus simple de `for-each` :
+Самая простая форма `for-each` выглядит так:
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procédure :** Fonction par élément.
-- **Liste :** Liste à parcourir.
+- **Процедура**: функция, применяемая к каждому элементу списка.
+- **Список**: список, элементы которого будут обработаны.
 
 ---
 
-### Exemple : afficher une liste
+### Пример: печать списка
 
 ```scheme
 (define (print-item x)
@@ -28,23 +29,26 @@ La forme la plus simple de `for-each` :
 (for-each print-item (list 1 2 3 4))
 ```
 
-- `print-item` est appliqué à `(1 2 3 4)`.
-- Chaque nombre est affiché successivement.
+- Здесь функция `print-item` применяется к каждому элементу списка `(1 2 3 4)`.
+- Это приводит к последовательной печати каждого числа.
 
-**Sortie** : `1 2 3 4`
-
----
-
-### Comment ça marche
-
-1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
-2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+**Вывод**: `1 2 3 4`
 
 ---
 
-#### Plusieurs listes
+### Как это работает
 
-Avec plusieurs listes, `for-each` traite les éléments correspondants.
+1. **Обходит каждый элемент**:
+   - Предоставленная процедура выполняется для каждого элемента списка по порядку.
+
+2. **Вызывает побочные эффекты**:
+   - Общие побочные эффекты включают печать, регистрацию или изменение внешних переменных. В отличие от `map`, `for-each` не возвращает новый список.
+
+---
+
+#### Пример: использование нескольких списков
+
+Если предоставлено несколько списков, `for-each` обрабатывает соответствующие элементы из каждого списка.
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `for-each` traite les éléments correspondants.
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `5 7 9`
+- Функция `sum-and-print` суммирует соответствующие элементы из двух списков и печатает результаты.
+
+**Вывод**: `5 7 9`
 
 ---
 
-### Résumé
+### Резюме
 
-- `for-each` convient aux effets de bord sur chaque élément.
-- Contrairement à `map`, **pas de nouvelle liste**.
-- Plusieurs listes simultanément.
+- Функция `for-each` полезна для выполнения побочных эффектов для каждого элемента списка.
+- В отличие от `map`, `for-each` не создает новый список — он фокусируется исключительно на побочных эффектах процедуры.
+- Он может обрабатывать несколько списков одновременно, применяя процедуру к соответствующим элементам.
 
-Utilisez `for-each` lorsque l'action prime sur la transformation.
+Используя `for-each`, вы можете эффективно обрабатывать списки, когда целью является выполнение действий, а не преобразование данных.

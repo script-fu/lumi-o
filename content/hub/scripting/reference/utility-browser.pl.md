@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+url: "hub/scripting/reference/utility-browser"
 ---
 Przeglądarka narzędzi umożliwia korzystanie z wbudowanego narzędzia Scheme stdlib dostarczanego z Lumi, bez konieczności opuszczania aplikacji i przeglądania plików źródłowych.
 
@@ -42,4 +43,4 @@ Biblioteki narzędziowe stanowią praktyczne zastosowanie wzorca zawijania: każ
 
 ## Związek z przeglądarką procedur
 
-Przeglądarka narzędziowa jest odrębna od **Filtry → Script-Fu → Konsola → Przeglądaj** (przeglądarka procedur). Przeglądarka procedur zawiera listę procedur zarejestrowanych w PDB. Przeglądarka narzędzi wyświetla definicje pomocnicze, które celowo znajdują się *poza* PDB: są one przeznaczone wyłącznie dla schematu i nie mają powiązania z językiem C.
+Przeglądarka narzędziowa jest odrębna od **Filtry → Script-Fu → Konsola → Przeglądaj** (przeglądarka procedur). Przeglądarka procedur zawiera listę procedur zarejestrowanych w PDB. Przeglądarka narzędzi wyświetla definicje pomocnicze, które celowo znajdują się *poza* PDB: są one przeznaczone wyłącznie dla Scheme i nie mają powiązania z językiem C.

@@ -13,7 +13,7 @@ Lumi działa najlepiej na Debianie z Cinnamon (X11) i jest rozwijany oraz testow
 
 **Typowe domyślne ustawienia dystrybucji Linux**
 
-| **Dystrybucja** | **Menedżer pakietów** | **Display Manager** | **Środowisko pulpitu** | **Serwer wyświetlania** |
+| **Dystrybucja** | **Menedżer pakietów** | **Menedżer wyświetlania** | **Środowisko pulpitu** | **Serwer wyświetlania** |
 |--------------------|----------------------|----------------------|-------------------------|--------------------|
 | Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
 | Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
@@ -35,7 +35,7 @@ Dystrybucja Linuksa pakuje jądro wraz z narzędziami, bibliotekami i oprogramow
 
 Narzędzie do instalowania, aktualizowania i usuwania aplikacji z repozytoriów. Przykłady: APT w dystrybucjach opartych na Debianie, DNF w Fedorze i Pacman w Arch Linux.
 
-#### Display Manager
+#### Menedżer wyświetlania
 
 Zarządza graficznym ekranem logowania i uruchamianiem sesji. Przykłady: GDM (GNOME Display Manager), LightDM i SDDM (Simple Desktop Display Manager).
 

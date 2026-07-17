@@ -3,12 +3,13 @@ title: "単純な再帰"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: 5aba405f536ffdb990315f13682e0e98b60a6110e3336e628bcfad7cab68161b
 translation_lock: true
-translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
+url: "hub/scripting/fundamentals/Iteration/recursion"
 ---
-En Scheme, la récursion signifie qu'une fonction s'appelle elle-même pour résoudre des sous-problèmes. Une **récursion simple** a un cas de base pour s'arrêter et un cas récursif qui réduit le problème.
+再帰は Scheme の強力な概念であり、関数がそれ自体を呼び出して元の問題の小さなサブ問題を解決します。 **単純な再帰** パターンには、再帰を停止する基本ケースと問題を軽減する再帰ケースが含まれます。
 
-Structure générale :
+再帰関数の一般的な構造は次のようになります。
 
 ```scheme
 (define (function-name args)
@@ -17,13 +18,15 @@ Structure générale :
     (recursive-call)))
 ```
 
-- **Base Condition :** arrête la récursion.
-- **Base Result :** valeur au cas de base.
-- **Recursive Call :** appel avec arguments réduits.
+- **基本条件**: 再帰を停止します。
+- **基本結果**: 基本条件が満たされた場合に返される値。
+- **再帰呼び出し**: 計算を基本ケースに近づける、変更された引数を使用した関数自体の呼び出し。
 
 ---
 
-### Exemple : somme de 1 à n
+### 例: 数値の合計 (1 から n)
+
+1 から n までの数値の合計を計算する単純な再帰関数:
 
 ```scheme
 (define (sum-to-n n)
@@ -32,27 +35,42 @@ Structure générale :
     (+ n (sum-to-n (- n 1))))) ; 再帰呼び出し: 現在の n をより小さな部分問題の結果と合計する
 ```
 
-#### Décomposer et recomposer
+---
 
-La récursion décompose le problème ; chaque appel traite une partie. Au cas de base, le résultat se recompose.
+#### 仕組み: 分解と再組み立て
 
-#### Pas à pas : sum-to-n 3
+再帰は、元の問題をより小さな部分に分解することで機能します。関数の各呼び出しは 1 つの部分を処理し、残りを渡します。最も単純なケースに到達すると、計算が完了するにつれて結果が再組み立てされます。
 
-1. *sum-to-n 3* → *(+ 3 (sum-to-n 2))*
-2. *sum-to-n 2* → *(+ 2 (sum-to-n 1))*
-3. *sum-to-n 1* → *(+ 1 (sum-to-n 0))*
-4. *sum-to-n 0* → *0*
+#### sum-to-n 3 のステップバイステップ トレース
 
-#### Recomposer le résultat
+1. **最初の呼び出し**: *sum-to-n 3*
+   → *(+ 3 (合計を n 2))*
 
-1. *sum-to-n 0* → *0*
-2. *sum-to-n 1* → *1*
-3. *sum-to-n 2* → *3*
-4. *sum-to-n 3* → *6*
+2. **2 回目の呼び出し**: *sum-to-n 2*
+   → *(+ 2 (n の合計 1))*
+
+3. **3 回目の呼び出し**: *sum-to-n 1*
+   → *(+ 1 (合計を n 0))*
+
+4. **基本ケース**: *sum-to-n 0*
+   → *0*
 
 ---
 
-### Exemple : afficher chaque élément
+#### 最終結果を再組み立てする
+
+最も単純なケースが解決されると、計算の各層が完了します。
+
+1. *sum-to-n 0* は *0* を与えます
+2. *sum-to-n 1* は *(+ 1 0) = 1* になります
+3. *sum-to-n 2* は *(+ 2 1) = 3* になります
+4. *n の合計 3* は *(+ 3 3) = 6* になります
+
+---
+
+### 例: リストの各要素の出力
+
+以下は、リスト内のすべての要素を出力する単純な再帰関数です。
 
 ```scheme
 (define (print-elements lst)
@@ -63,19 +81,39 @@ La récursion décompose le problème ; chaque appel traite une partie. Au cas d
       (print-elements (cdr lst)))))             ; リストの残りを処理
 ```
 
-- **Cas de base :** liste vide → `"done"`.
-- **Récursif :** afficher `car`, traiter le reste avec `cdr`.
+- **基本ケース:** リストが空の場合 (*null? lst*)、再帰を停止します。
+- **再帰的な場合:** 最初の要素 (*car lst*) を出力し、リストの残りの関数 (*cdr lst*) を呼び出します。
 
-#### Utilisation
+#### 使用例
 
 ```scheme
 (print-elements (list 1 2 3))
 ```
 
-Sortie : *"1"*, *"2"*, *"3"* — résultat : *"done"*
+出力:
 
-### Résumé
+- *「1」*
+- *「2」*
+- *「3」*
 
-- Cas de base pour arrêter ; cas récursif pour réduire.
-- Chaque appel progresse vers le cas de base.
-- Toujours un cas de base — sinon récursion infinie.
+結果: *「完了」*
+
+---
+
+#### 仕組み
+
+1. この関数は *car* を使用してリストの最初の要素を取得し、それを処理します。
+2. 次に、リストの残りの部分を使用して自分自身を呼び出します (*cdr*)。
+3. このプロセスは、リストが空になるまで (*null? lst*) 繰り返されます。
+
+---
+
+### 概要
+
+- 単純な再帰は次のもので構成されます。
+  1. **基本ケース**: 再帰を停止します。
+  2. **再帰的なケース**: 基本ケースに向けて問題を軽減します。
+- 各再帰呼び出しにより、完了に向けて計算が進行します。
+- 基本ケースに到達すると、再帰が完了するにつれて結果が結合されます。
+
+再帰は問題の構造を反映し、明確で論理的なフローを提供します。無限再帰を避けるために、常に基本ケースを確認してください。

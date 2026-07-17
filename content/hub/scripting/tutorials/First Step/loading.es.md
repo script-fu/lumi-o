@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Tan pronto como una función auxiliar crezca, muévala a un pequeño archivo de biblioteca. Esto mantiene el complemento enfocado y hace que el asistente sea reutilizable en múltiples complementos.
 
@@ -25,8 +26,8 @@ Podemos tomar la función de enviar mensaje y crear un nuevo archivo con eso com
 - **scheme/**: Este es su directorio principal para almacenar su código Scheme.
   - **biblioteca/**: Aquí es donde viven funciones compartidas como `send-message.scm`.
   - **plug-ins/**: aquí es donde se almacenan sus complementos individuales.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Carpeta para el plug-in específico «Hello World!».
+      - **hello-world.scm**: Archivo de script del plug-in.
 
 Ejemplo de una función de biblioteca send-message.scm
 
@@ -34,9 +35,9 @@ Ejemplo de una función de biblioteca send-message.scm
 ;; Función para gestionar la salida de mensajes a varios destinos
 (define (send-message message output)
   (cond
-    ;; Enviar a la Message console
+    ;; Enviar a la consola de mensajes
     ((eq? output 'error-console)
-       ;; Establecer el controlador en Message console
+       ;; Establecer el controlador en consola de mensajes
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ Ejemplo de una función de biblioteca send-message.scm
        ;; La salida del terminal se gestiona con display
        (display message)))
 
-  ;; Restaurar el controlador de mensajes predeterminado a la Message console
+  ;; Restaurar el controlador de mensajes predeterminado a la consola de mensajes
   (lumi-message-set-handler 2))
 ```
 

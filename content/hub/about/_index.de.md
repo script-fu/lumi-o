@@ -1,9 +1,10 @@
 ---
+title: "Über"
 type: docs
 url: "hub/about"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
+translation_source_sha256: d689f4a924a5df63fc375ce4ab59472cc02dddd4b99030d63ef9fb78a8a3dd1c
 ---
 Dieser Abschnitt gibt einen kurzen Überblick über die Software, den von ihr unterstützten Workflow und den Zeichenprozess, für den sie konzipiert ist.
 

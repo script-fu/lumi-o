@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Für das Tutorial [Erster Schritt](../../first-step/) haben wir ein _procedure_-Plug-in verwendet. Diese Arten von Plug-Ins funktionieren, ohne dass ein Bild oder eine Zeichendatei als Eingabe erforderlich ist. Normalerweise verwenden wir ein Plug-In, um ein Bild und seine Zeichenelemente zu ändern. Plug-ins wie diese werden als _Filter_-Plug-ins bezeichnet.
 
@@ -20,7 +21,7 @@ Ein **Zeichenbares** in Lumi bezieht sich auf ein Bildelement, auf das gezeichne
 (define (scheme-simple-filter-plug-in image drawables)
   ;; let-Anweisung verwenden, um eine Nachrichtenvariable und den Kern-Code zu definieren
   (let ((message "hello, world"))
-    ;; Nachricht in Lumis Error Console anzeigen
+    ;; Nachricht in Lumis Fehlerkonsole anzeigen
     (lumi-message message)
     ;; Farben des ersten ausgewählten Drawables invertieren
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ Eine `let`-Anweisung definiert eine Variable und führt Operationen für das Zei
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Zeigt eine Nachricht in Lumis Error Console an
+  (lumi-message message) ;; Zeigt eine Nachricht in Lumis Fehlerkonsole an
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Invertiert die Farben des ersten ausgewählten Drawables
 ```
 

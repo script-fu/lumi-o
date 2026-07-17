@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 Scheme の **Lambda 関数**は匿名関数です。つまり、名前のない関数です。これらの関数はインラインで定義され、通常は短い 1 回限りの操作に使用されます。 `lambda` コンストラクトは関数型プログラミングの強力なツールであり、その場で簡潔で柔軟なロジックを作成できます。
 

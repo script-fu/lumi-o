@@ -5,6 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+url: "hub/about/inking"
 ---
 
 O espaço de trabalho Tinta foi feito para trabalho de linha deliberado ou caos de tinta. É a fase em que o desenho deixa de ser exploratório e passa a ser comprometido: traços controlados, bordas definidas e marcas que precisam manter a forma com confiança. Ou simplesmente solte-se com respingos expressivos, linhas em laço, arranhões secos de Nib e traços selvagens de Sumi.

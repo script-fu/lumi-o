@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 Символы — это один из основных типов данных в Scheme, представляющий уникальные неизменяемые идентификаторы. В основном они используются в программах в качестве ключей, маркеров или заполнителей, что делает их незаменимыми для написания чистого и выразительного кода.
 
@@ -59,7 +60,7 @@ translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba011477
 
 ## Использование символов
 
-Символы часто используются в схеме для:
+Символы часто используются в Scheme для:
 
 1. **Ключи в списках ассоциаций:**
 

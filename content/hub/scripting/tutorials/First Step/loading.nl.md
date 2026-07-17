@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Zodra een helperfunctie groeit, verplaatst u deze naar een klein bibliotheekbestand. Dat houdt de plug-in gefocust en maakt de helper herbruikbaar voor meerdere plug-ins.
 
@@ -25,8 +26,8 @@ We kunnen de functie voor het verzenden van berichten nemen en een nieuw bestand
 - **scheme/**: Dit is uw hoofdmap voor het opslaan van uw Scheme-code.
   - **bibliotheek/**: Dit is waar gedeelde functies zoals `send-message.scm` live zijn.
   - **plug-ins/**: hier worden uw individuele plug-ins opgeslagen.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Map voor de specifieke "Hello World!"-plug-in.
+      - **hello-world.scm**: Scriptbestand van de plug-in.
 
 Voorbeeld van een bibliotheekfunctie send-message.scm
 
@@ -34,9 +35,9 @@ Voorbeeld van een bibliotheekfunctie send-message.scm
 ;; Functie voor berichtuitvoer naar verschillende bestemmingen
 (define (send-message message output)
   (cond
-    ;; Verzenden naar de Message console
+    ;; Verzenden naar de berichtenconsole
     ((eq? output 'error-console)
-       ;; Stel de handler in op Message console
+       ;; Stel de handler in op berichtenconsole
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ Voorbeeld van een bibliotheekfunctie send-message.scm
        ;; Terminal-uitvoer wordt afgehandeld met display
        (display message)))
 
-  ;; Herstel de standaard berichtenhandler naar de Message console
+  ;; Herstel de standaard berichtenhandler naar de berichtenconsole
   (lumi-message-set-handler 2))
 ```
 

@@ -21,7 +21,8 @@ the site now runs an incremental translation pass first:
 
 - scans `content/**/*.md` English source pages
 - translates only files that changed since the previous run
-- writes language variants like `page.fr.md`, `page.de.md`, etc.
+- writes language variants like `page.fr.md`, `page.de.md`, `page.ar.md`, etc.
+  for all 19 non-English locales aligned with Lumi's supported languages
 - skips unchanged files for fast subsequent preview starts
 
 For native-quality, agent-reviewed translations and protection from automatic

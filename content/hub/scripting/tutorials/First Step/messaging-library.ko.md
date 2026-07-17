@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
 시간이 지나면서 메시지를 보내는 단일 기능으로 시작된 것이 관련 기능의 모음으로 발전했습니다. 이러한 기능은 이제 GUI, 메시지 콘솔, OS 터미널 등 다양한 대상으로의 출력을 처리하도록 설계된 **메시징 라이브러리**의 기반을 형성합니다.
 
@@ -36,7 +37,7 @@ translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c
 - **모듈화**: 각 함수는 하나의 특정 작업을 처리하므로 코드를 더 쉽게 유지 관리하고 확장할 수 있습니다.
 - **일관성**: 동일한 유효성 검사 및 메시지 처리 기능을 사용하면 애플리케이션 전체에서 일관된 동작이 보장됩니다.
 
-**메시징 라이브러리**는 프로젝트에서 메시지를 관리하는 방법을 단순화할 수 있는 더 광범위한 프레임워크의 시작입니다. 라이브러리가 성장함에 따라 새로운 플러그인은 이를 쉽게 활용하여 필요한 곳 ​​어디든 메시지를 보낼 수 있습니다.
+**메시징 라이브러리**는 프로젝트에서 메시지를 관리하는 방법을 단순화할 수 있는 더 광범위한 프레임워크의 시작입니다. 라이브러리가 성장함에 따라 새로운 플러그인은 이를 쉽게 활용하여 필요한 곳 어디든 메시지를 보낼 수 있습니다.
 
 파일 구조를 조정할 수 있습니다.```plaintext
 /home/your-username/code/

@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 方案命令在較低層級上運行，這意味著即使是簡單的任務也可能需要多個步驟。然而，這種粒度提供了靈活性，我們可以將指令捆綁到小的、可重複使用的函數中，從而完全滿足我們的需求。環繞不是一個非黑即白的概念，而是一個非黑即白的概念。它的範圍可以從常用命令的簡單別名到管理整個工作流程的更複雜的功能。有時，包裝器只是一個提高可讀性的便利函數，而在其他情況下，它會演變成封裝多個操作的全功能實用程式。
 
@@ -86,7 +87,7 @@ Scheme 中的 JPEG 導出功能帶有許多參數，可以對影像的保存方�
 
 這使我們的程式碼保持乾淨、可讀和適應性強，同時允許我們以最小的努力有效地導出 JPEG。
 
-### 汽車更換
+### 替換 `car`
 
 ***car*** 函數可能很神秘且容易出現腳本錯誤。很容易錯誤地將 ***car*** 應用於向量或非列表項，從而導致意外行為。為了讓我們的程式碼更加健壯和可讀，我們可以將此功能包裝在一個更安全的函數中。
 

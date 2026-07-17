@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 In Scheme is het beheren van variabelen en hun reikwijdte een kernconcept voor het schrijven van efficiënte en onderhoudbare scripts. Variabelen slaan gegevenswaarden op die uw script kan manipuleren, terwijl het bereik bepaalt waar die variabelen toegankelijk zijn. Als u begrijpt hoe u variabelen effectief kunt definiëren en gebruiken, kunt u gestructureerde, herbruikbare en foutloze code maken.
 
@@ -27,7 +28,7 @@ Het definiëren van variabelen en het beheren van hun reikwijdte dient verschill
 
 ### Soorten variabeledefinities en reikwijdte
 
-Schema biedt verschillende constructies voor het definiëren en afbakenen van variabelen:
+Scheme biedt verschillende constructies voor het definiëren en afbakenen van variabelen:
 - **`let`:** Creëert lokale bindingen voor variabelen binnen een specifiek codeblok.
 - **`let*`:** Een sequentiële versie van `let` waarbij elke binding kan afhangen van de voorgaande.
 - **Genaamd `let`:** Een krachtige constructie voor het definiëren van recursieve lokale procedures of lussen.
@@ -72,7 +73,9 @@ Het `define` construct creëert variabelen of functies met een globale reikwijdt
 | **Inkapseling** | Voorkomt onbedoelde interacties | Kan conflicteren met andere globaal gedefinieerde variabelen |
 | **Gebruiksscenario** | Tijdelijke variabelen voor specifieke taken | Gedeelde variabelen of functies die overal in |
 
-### Samenvatting- **Definities en reikwijdte van variabelen** zijn van fundamenteel belang voor het organiseren en beheren van gegevens in uw schemascripts.
+### Samenvatting
+
+- **Definities en reikwijdte van variabelen** zijn van fundamenteel belang voor het organiseren en beheren van gegevens in uw schemascripts.
 
 - Gebruik **lokaal bereik** (`let`, `let*`, genaamd `let`) om tijdelijke variabelen in te kapselen en conflicten te vermijden.
 - Gebruik **global scope** (`define`) voor herbruikbare functies of constanten die in uw script worden gedeeld.

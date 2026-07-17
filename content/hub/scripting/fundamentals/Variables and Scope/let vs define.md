@@ -1,6 +1,7 @@
 ---
 title: Named let or Local define
 type: docs
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 weight: 5
 ---
 

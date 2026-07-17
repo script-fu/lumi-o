@@ -4,28 +4,31 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+Nella sua forma più semplice, il condizionale `if` in Scheme valuta un test e, in base al risultato, esegue uno di due possibili blocchi di codice:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- Se il `test` è vero (`#t`), viene eseguito il **blocco consequent**. Il blocco può restituire un valore o eseguire altre azioni, come assegnare una variabile o stampare output.
 
-### Exemple
+### Esempio
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- In questo caso il `test` è `(< 0 1)` (verifica se 0 è minore di 1).
+- Poiché il test è vero (`#t`), viene eseguito `(lumi-message "True!")`, che stampa `"True!"`.
 
-### Branche else : `if-else`
+### Aggiungere else: `if-else`
+
+Quando `if` ha un blocco alternativo (caso `else`), la struttura è:
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- Se il `test` è vero (`#t`), viene eseguito il **consequent**.
+- Se il `test` è falso (`#f`), viene eseguito l'**alternative**.
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### Come funziona
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **Espressione di test:**
+   - Prima viene valutato il `test`.
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **Risultato in base al test:**
+   - Se il `test` è vero (`#t`), viene eseguito il **consequent**.
+   - Se il `test` è falso (`#f`), viene eseguito l'**alternative**.
 
-#### Exemple 1 : renvoyer une valeur
+Entrambi i blocchi possono eseguire qualsiasi operazione Scheme valida, incluso restituire valori, modificare variabili o eseguire procedure.
+
+### Esempi
+
+#### Esempio 1: restituire un valore
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- Il `test` è `(< 0 1)`.
+- Poiché il test è vero (`#t`), viene eseguito il **consequent** (`1`) e ne viene restituito il valore.
 
-#### Exemple 2 : bloc `begin`
+Risultato: **1**
+
+#### Esempio 2: valutare un blocco `begin`
+
+Quando servono più azioni, raggrupparle con `begin` o `let`.
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- Il `test` è `(= 0 1)`.
+- Poiché il test è falso (`#f`), viene eseguito l'**alternative**:
+  - Prima stampa `"False condition met, calculating..."`.
+  - Poi calcola `(* 3 4)` e restituisce `12`.
 
-#### Exemple 3 : expression `let`
+Risultato: **Stampa "False condition met, calculating..." e restituisce 12.**
+
+#### Esempio 3: valutare un'espressione `let`
+
+Con `let` è possibile dichiarare variabili locali nel blocco.
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,15 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- Il `test` è `(= 1 1)`.
+- Poiché il test è vero (`#t`), viene eseguito il **consequent**:
+  - Prima stampa `"True condition met, calculating..."`.
+  - Poi calcola `(* -1 10)` e restituisce `-10`.
 
-### Résumé
+Risultato: **Stampa "True condition met, calculating..." e restituisce -10.**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### Riepilogo
+
+- Il condizionale `if` è uno strumento potente in Scheme per valutare test ed eseguire blocchi corrispondenti.
+- Gestisce sia espressioni semplici sia blocchi complessi che restituiscono valori, modificano variabili o producono effetti collaterali.
+- Senza un `else` esplicito, `if` esegue il **consequent** solo se il test è vero; altrimenti l'**alternative**.

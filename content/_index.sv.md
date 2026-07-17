@@ -14,7 +14,7 @@ Lumis palettstyrda färgsystem blandar verkliga pigmentprofiler spektralt. Bygg 
 
 Lumi-o bygger på GIMP:s kärnarkitektur och har utformats och förfinats av en konstnär. Verktygen förblir lättanvända och erbjuder samtidigt de anpassningsmöjligheter som avancerade arbetsflöden kräver. Snabb inläsning och sparande, plus ett helt integrerat autosparningssystem, skyddar ditt arbete utan att avbryta ditt flöde.
 
-Lazy loading gör att Lumi kan öppna stora, komplexa projekt med betydligt mindre RAM. När en grupp är ihopfälld laddar Lumi dess sparade sammansatta bild, medan lager, masker och kapslade grupper förblir lätta platshållare tills gruppen fälls ut.
+Lat inläsning gör att Lumi kan öppna stora, komplexa projekt med betydligt mindre RAM. När en grupp är ihopfälld laddar Lumi dess sparade sammansatta bild, medan lager, masker och kapslade grupper förblir lätta platshållare tills gruppen fälls ut.
 
 Lumi-o utvecklas på Debian 13 med skrivbordet Cinnamon. Om du kommer från Windows är installation av Debian det första steget. Se [Hur man installerar Linux](/hub/install-linux/).
 

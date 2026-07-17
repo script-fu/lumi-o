@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 随着帮助程序库的增长，一目了然地跟踪变得越来越困难。再次重构以保持每个功能较小且单一用途。
 
@@ -37,7 +38,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (validate-message message output)
 
   (cond
-    ;; 发送到 Message console
+    ;; 发送到 消息控制台
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'terminal)
        (display message)))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; 用途：向 Message console 发送消息
+;; 用途：向 消息控制台 发送消息
 (define (send-to-error-console message)
   ;; 继续前先验证消息
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; 将默认消息处理程序恢复为 Message console
+  ;; 将默认消息处理程序恢复为 消息控制台
   (lumi-message-set-handler 2))
 
 ;; 用途：验证消息为非空字符串且输出有效

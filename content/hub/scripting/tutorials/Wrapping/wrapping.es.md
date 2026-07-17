@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 Los comandos de Scheme funcionan a un nivel bajo, lo que significa que incluso las tareas simples pueden requerir varios pasos. Sin embargo, esta granularidad ofrece flexibilidad: podemos agrupar comandos en funciones pequeñas y reutilizables que hacen exactamente lo que necesitamos. Envolver no es un concepto en blanco y negro; puede variar desde alias simples para comandos utilizados con frecuencia hasta funciones más complejas que administran flujos de trabajo completos. A veces, un contenedor es solo una función conveniente para mejorar la legibilidad, mientras que en otros casos evoluciona hasta convertirse en una utilidad con todas las funciones que encapsula múltiples operaciones.
 
@@ -86,9 +87,9 @@ Para exportar un JPEG en nuestros complementos, simplemente incluimos la bibliot
 
 Esto mantiene nuestro código limpio, legible y adaptable al mismo tiempo que nos permite exportar archivos JPEG de manera eficiente con un mínimo esfuerzo.
 
-### Reemplazo de automóvil
+### Sustitución de `car`
 
-La función ***car*** puede ser críptica y propensa a errores de secuencia de comandos. Es fácil aplicar por error ***car*** a un vector o a un elemento que no está en la lista, lo que genera un comportamiento inesperado. Para hacer que nuestro código sea más robusto y legible, podemos incluir esta funcionalidad en una función más segura.
+La función ***car*** puede ser críptica y propensa a errores de script. Es fácil aplicar por error ***car*** a un vector o a un elemento que no está en la lista, lo que genera un comportamiento inesperado. Para hacer que nuestro código sea más robusto y legible, podemos incluir esta funcionalidad en una función más segura.
 
 ```scheme
 ;; Propósito: Devuelve el primer elemento de una lista o vector.
@@ -112,7 +113,7 @@ Esta función recupera de forma segura el primer elemento de una lista o vector 
 
 #### ¿Por qué utilizar este contenedor?
 
-- **Evita fallos del script**: evita errores causados ​​por la aplicación de ***car*** a personas que no son listas.
+- **Evita fallos del script**: evita errores causados por la aplicación de ***car*** a personas que no son listas.
 - **Admite listas y vectores**: amplía la usabilidad más allá de las listas.
 - **Proporciona advertencias significativas**: ayuda a depurar problemas de entrada inesperados.
 - **Mejora la legibilidad**: el nombre de la función transmite claramente su propósito.
@@ -145,14 +146,14 @@ para recuperar la coordenada ***x***. Sin embargo, aunque funcional, no es muy e
 - **Mejora la mantenibilidad**: si nuestra representación de coordenadas cambia (por ejemplo, usando vectores en lugar de listas), solo necesitamos actualizar estas pequeñas funciones.
 - **Fomenta la coherencia**: el uso de ***x-coord*** y ***y-coord*** hace que el guión sea más fácil de leer y comprender de un vistazo.
 
-Ahora, en lugar de escribir en un esquema genérico:
+Ahora, en lugar de escribir en un Scheme genérico:
 
 ```scheme
 (car pixel-coords) ;; Obtiene la coordenada x
 (cadr pixel-coords) ;; Obtiene la coordenada y
 ```
 
-Podemos escribir en _nuestro_ esquema:
+Podemos escribir en _nuestro_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)

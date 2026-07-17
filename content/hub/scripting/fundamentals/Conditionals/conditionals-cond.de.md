@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
+translation_source_sha256: c51771681b005905702792ac549ca2707360f265b7d518cc00a6861161158126
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 ---
 In Scheme wählt das bedingte `cond` anhand mehrerer Tests einen von mehreren Codeblöcken — wie ein mehrgliedriges `if`, geprüft in Reihenfolge bis zum ersten Treffer.
 

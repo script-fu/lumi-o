@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 Rückgabewerte sind wichtig, weil Sie damit den Fluss ohne zusätzlichen Status steuern können. In Scheme wird der zuletzt ausgewertete Ausdruck zum Rückgabewert.
 
@@ -61,9 +62,9 @@ Hier ist ein einfaches Beispiel für die Verwendung eines Rückgabewerts zur Ste
 In diesem Fall verlässt sich (send-message) auf den Rückgabewert von (is-valid-output-display?), um zu entscheiden, ob fortgefahren werden soll.
 Die bedingte Anweisung `cond` wird übersprungen, wenn der erste Test fehlschlägt. Beachten Sie auch, dass die Ausgabe auf recht natürliche Weise angezeigt wird. Ist die Ausgabe gültig?
 
-## If-Anweisungslogik im Schema
+## If-Anweisungslogik in Scheme
 
-Vor dem Beispiel der umgestalteten Bibliothek finden Sie hier einen kurzen Überblick über die bedingte Logik. Das Schema verwendet `if`, um zwischen zwei Pfaden zu wählen.
+Vor dem Beispiel der umgestalteten Bibliothek finden Sie hier einen kurzen Überblick über die bedingte Logik. Scheme verwendet `if`, um zwischen zwei Pfaden zu wählen.
 
 Hier ist eine einfache Form einer `if`-Anweisung:
 
@@ -112,7 +113,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #t)
     #f))
 
-;; Zweck: Sendet eine Nachricht an die Error Console, gibt #t bei Erfolg zurück
+;; Zweck: Sendet eine Nachricht an die Fehlerkonsole, gibt #t bei Erfolg zurück
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

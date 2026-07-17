@@ -1,6 +1,7 @@
 ---
 title: Functions
 type: docs
+url: "hub/scripting/fundamentals/Functions/_index"
 weight: 7
 ---
 

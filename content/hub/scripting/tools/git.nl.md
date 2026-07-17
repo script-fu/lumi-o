@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 Gebruik Git om wijzigingen in uw plug-ins bij te houden, fouten ongedaan te maken en code tussen machines te delen.
 
@@ -135,7 +136,7 @@ Git en platforms zoals GitHub en GitLab zijn krachtige tools, en hoewel ze ingew
 ## Woordenlijst
 
 Hier zijn enkele veelvoorkomende termen die je tegenkomt als je met Git en GitHub werkt:- **Commit**: een momentopname van uw wijzigingen in de repository. Elke commit bevat een bericht waarin wordt beschreven wat er is gewijzigd en creëert een historisch record waar u naar kunt verwijzen of waar u later naar kunt terugkeren.
-- **Repository (Repo)**: een verzameling bestanden en hun geschiedenis bijgehouden door Git. Opslagplaatsen kunnen lokaal op uw computer staan ​​of op afstand op platforms zoals GitHub. Elk project wordt doorgaans opgeslagen in een eigen repository.
+- **Repository (Repo)**: een verzameling bestanden en hun geschiedenis bijgehouden door Git. Opslagplaatsen kunnen lokaal op uw computer staan of op afstand op platforms zoals GitHub. Elk project wordt doorgaans opgeslagen in een eigen repository.
 - **Op afstand**: een externe repository is een versie van uw project die wordt gehost op een platform zoals GitHub. Aan deze remote wordt de lokale versie van uw project op uw computer gekoppeld, zodat u wijzigingen kunt uploaden (push) en downloaden (pull).
 - **Staging**: het proces van het voorbereiden van bestanden voor een commit. Wanneer je een bestand staget, vertel je Git dat je het in de volgende commit wilt opnemen. Met staging kun je kiezen welke wijzigingen je in een commit wilt opnemen.
 - **Push**: het verzenden van uw vastgelegde wijzigingen van uw lokale opslagplaats naar een externe opslagplaats (bijvoorbeeld GitHub), zodat anderen toegang kunnen krijgen tot de bijgewerkte versie van uw code.

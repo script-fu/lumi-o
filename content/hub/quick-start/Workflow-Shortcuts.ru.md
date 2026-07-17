@@ -1,6 +1,10 @@
 ---
 title: "Ярлыки рабочего процесса"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o создан для рабочего процесса с использованием ярлыков. Как только вы наладите мышечную память на эти команды, вы сможете перемещаться по холсту и инструментам значительно быстрее.
 

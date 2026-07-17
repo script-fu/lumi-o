@@ -4,9 +4,10 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
-**Funkcje Lambda** w Scheme są funkcjami anonimowymi, co oznacza, że ​​są to funkcje bez nazwy. Funkcje te są definiowane inline i są zwykle używane do krótkich, jednorazowych operacji. Konstrukt `lambda` to potężne narzędzie w programowaniu funkcjonalnym, pozwalające na tworzenie zwięzłej i elastycznej logiki na bieżąco.
+**Funkcje lambda** w Scheme są funkcjami anonimowymi, co oznacza, że nie mają nazwy. Definiuje się je bezpośrednio w kodzie i zwykle używa do krótkich, jednorazowych operacji. Konstrukt `lambda` to potężne narzędzie w programowaniu funkcjonalnym, pozwalające tworzyć zwięzłą i elastyczną logikę tam, gdzie jest potrzebna.
 
 Funkcje lambda są szczególnie przydatne, gdy:
 
@@ -143,7 +144,7 @@ Lambdy wyróżniają się w połączeniu z funkcjami wyższego rzędu w celu wyk
 
 - **Zwięzłość:** Lambdy redukują standardowy kod, eliminując potrzebę definiowania oddzielnych nazwanych funkcji.
 - **Elastyczność:** możesz je definiować i używać tam, gdzie są potrzebne, dzięki czemu kod jest bardziej modułowy.
-- ** Poprawiona czytelność:** W przypadku krótkich, konkretnych zadań wyrażenia lambda wyjaśniają intencję bez zaśmiecania kodu dodatkowymi nazwanymi funkcjami.
+- **Poprawiona czytelność:** W przypadku krótkich, konkretnych zadań wyrażenia lambda wyjaśniają intencję bez zaśmiecania kodu dodatkowymi nazwanymi funkcjami.
 
 ### Kiedy używać funkcji lambda
 

@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
 隨著時間的推移，最初作為發送訊息的單一函數已經發展成為相關函數的集合。这些函数现在构成了**消息传递库**的基础，旨在处理到不同目的地的输出，例如 GUI、消息控制台和操作系统终端。
 

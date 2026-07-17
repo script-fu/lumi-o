@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
 ---
 
-Le preimpostazioni degli strumenti sono al centro del flusso di lavoro degli strumenti di Lumi-o. Ogni strumento viene usato tramite una preimpostazione, sia che si tratti di un default discreto sia di uno strumento personalizzato salvato dall'artista. Il comportamento degli strumenti diventa così visibile, intenzionale e ripetibile.
+Le preimpostazioni degli strumenti sono al centro del flusso di lavoro degli strumenti di Lumi. Ogni strumento viene usato tramite una preimpostazione, sia che si tratti di un default discreto sia di uno strumento personalizzato salvato dall'artista. Il comportamento degli strumenti diventa così visibile, intenzionale e ripetibile.
 
 L'idea è semplice: l'artista costruisce un insieme piccolo e stabile di strumenti familiari, dà loro identità chiare e passa da uno all'altro con la stessa naturalezza con cui si prendono pennelli, penne, coltelli o sfumini diversi in uno studio.
 
@@ -19,7 +19,7 @@ Una preimpostazione può comportarsi come un oggetto reale nel kit dell'artista.
 
 ## Un'area Opzioni strumento più leggera
 
-Lumi-o separa i controlli che si modificano durante il lavoro da quelli che definiscono come uno strumento è costruito. Le regolazioni frequenti e immediate restano vicine alla tela. Le scelte di configurazione meno frequenti si spostano in spazi dedicati alla modifica delle preimpostazioni.
+Lumi separa i controlli che si modificano durante il lavoro da quelli che definiscono come uno strumento è costruito. Le regolazioni frequenti e immediate restano vicine alla tela. Le scelte di configurazione meno frequenti si spostano in spazi dedicati alla modifica delle preimpostazioni.
 
 L'area Opzioni strumento resta più leggera e più facile da leggere durante la pittura. L'artista vede i controlli che contano nel flusso di un tratto o di una modifica, mentre la personalizzazione approfondita resta disponibile senza affollare l'interfaccia quotidiana.
 
@@ -27,7 +27,7 @@ L'area Opzioni strumento resta più leggera e più facile da leggere durante la 
 
 L'Editor delle preimpostazioni strumento è il luogo in cui uno strumento diventa deliberato. Assegna alla preimpostazione un nome, un'identità visiva e il comportamento più profondo che la rende degna di essere conservata.
 
-Per gli strumenti di pittura questo può includere le risorse del pennello e il comportamento dinamico che definiscono il carattere del segno. Per altri strumenti può preservare impostazioni e stile operativo che rendono coerente una particolare azione di modifica. La stessa idea di preimpostazione si applica a tutto il set di strumenti, così Lumi-o tratta lo stato degli strumenti personalizzati come un sistema condiviso, non come una comodità solo per la pittura.
+Per gli strumenti di pittura questo può includere le risorse del pennello e il comportamento dinamico che definiscono il carattere del segno. Per altri strumenti può preservare impostazioni e stile operativo che rendono coerente una particolare azione di modifica. La stessa idea di preimpostazione si applica a tutto il set di strumenti, così Lumi tratta lo stato degli strumenti personalizzati come un sistema condiviso, non come una comodità solo per la pittura.
 
 ## Uno scaffale visivo degli strumenti
 
@@ -39,13 +39,13 @@ L'identità visiva conta. Gli artisti possono scegliere gli strumenti per forma,
 
 Le preimpostazioni strumento diventano particolarmente potenti combinate con gli spazi di lavoro. Uno spazio di lavoro per il disegno può portare in primo piano strumenti da schizzo, uno spazio di lavoro per l'inchiostrazione può favorire preset di linea pulita e uno spazio di lavoro per la pittura può passare a pennelli costruiti per colore, texture e fusione.
 
-Nel pannello Preimpostazioni strumento è possibile nascondere le preimpostazioni solo per lo spazio di lavoro attivo. Le preimpostazioni nascoste restano su disco e restano disponibili altrove in Lumi-o. Ogni spazio di lavoro ricorda il proprio elenco nascosto insieme all'ordine personalizzato delle preimpostazioni, così puoi mantenere un breve scaffale personale senza spostare o eliminare file.
+Nel pannello Preimpostazioni strumento è possibile nascondere le preimpostazioni solo per lo spazio di lavoro attivo. Le preimpostazioni nascoste restano su disco e restano disponibili altrove in Lumi. Ogni spazio di lavoro ricorda il proprio elenco nascosto insieme all'ordine personalizzato delle preimpostazioni, così puoi mantenere un breve scaffale personale senza spostare o eliminare file.
 
 Cambiare spazio di lavoro può modificare quali preimpostazioni compaiono nel dock, come sono ordinate e quali pannelli sono aperti. Lo studio non si limita a riorganizzare il layout: può rifornirsi degli strumenti adatti al compito corrente.
 
 ## Stabilità tra i cambi di strumento
 
-Poiché ogni strumento opera tramite una preimpostazione, cambiare strumento non significa necessariamente perdere l'ultimo stato utile. Lumi-o può mantenere ogni strumento collegato alla sua preimpostazione attiva, così tornare a uno strumento riporta l'istrumento familiare che l'artista stava usando.
+Poiché ogni strumento opera tramite una preimpostazione, cambiare strumento non significa necessariamente perdere l'ultimo stato utile. Lumi può mantenere ogni strumento collegato alla sua preimpostazione attiva, così tornare a uno strumento riporta l'istrumento familiare che l'artista stava usando.
 
 Il cambio di strumento risulta stabile. Matita, pennello, strumento di trasformazione o strumento di selezione possono ricordare ciascuno il proprio stato personalizzato senza affidarsi a file di opzioni invisibili per strumento.
 
@@ -61,4 +61,4 @@ Per gli artisti la parte importante è che uno strumento possa essere salvato co
 
 L'obiettivo generale non è far gestire centinaia di preimpostazioni agli artisti. È far sì che un piccolo insieme di strumenti ben fatti risulti stabile, riconoscibile e a portata di mano.
 
-Il sistema di preimpostazioni di Lumi-o supporta questo ritmo di lavoro: crea gli strumenti una volta, perfezionali nel tempo, dagli identità visive e lascia che ogni spazio di lavoro metta a portata di mano gli strumenti giusti.
+Il sistema di preimpostazioni di Lumi supporta questo ritmo di lavoro: crea gli strumenti una volta, perfezionali nel tempo, dagli identità visive e lascia che ogni spazio di lavoro metta a portata di mano gli strumenti giusti.

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Una vez que tenemos una función funcionando, podemos dar un paso atrás y pensar en la mejor manera de estructurar nuestro código. El objetivo es hacer que nuestro complemento sea lo más claro, comprensible y fácil de mantener posible. Este proceso de mejorar y refinar la estructura del código existente sin cambiar su comportamiento se conoce como refactorización.
 
@@ -16,7 +17,7 @@ Aquí está la función inicial nuevamente:
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Establecer el controlador de mensajes para enviar el mensaje a la Error Console
+  ;; Establecer el controlador de mensajes para enviar el mensaje a la consola de errores
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Introduciendo una variable llamada "mensaje":
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Establecer el controlador de mensajes para enviar el mensaje a la Error Console
+    ;; Establecer el controlador de mensajes para enviar el mensaje a la consola de errores
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -68,7 +69,7 @@ En nuestro ejemplo hemos utilizado una variable llamada "mensaje" vinculada a un
 
 ### Extrayendo funciones
 
-En programación funcional, refactorizar código para extraer lógica reutilizable en funciones separadas es una práctica común. By doing this, the **main function** becomes much simpler and more focused on its high-level goal, while the **extracted function** appears more complex because it handles the detailed logic. Esto es intencional y se alinea con los principios básicos de la programación funcional, como la modularidad, la separación de preocupaciones y la legibilidad. Aquí está el refactorizado.
+En programación funcional, refactorizar código para extraer lógica reutilizable en funciones separadas es una práctica común. Al hacerlo, la **función principal** queda mucho más simple y centrada en su objetivo de alto nivel, mientras que la **función extraída** parece más compleja porque maneja la lógica detallada. Esto es intencional y se alinea con los principios básicos de la programación funcional, como la modularidad, la separación de preocupaciones y la legibilidad. Aquí está el refactorizado.
 ¡Hola mundo! después de la extracción.
 
 Extrayendo la lógica:
@@ -86,9 +87,9 @@ Extrayendo la lógica:
 ;; Función para gestionar la salida de mensajes a varios destinos
 (define (send-message message output)
   (cond
-    ;; Enviar a la Error Console
+    ;; Enviar a la consola de errores
     ((eq? output 'error-console)
-       ;; Establecer el controlador en Error Console
+       ;; Establecer el controlador en consola de errores
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Extrayendo la lógica:
        ;; La salida del terminal se gestiona con display
        (display message)))
 
-  ;; Restaurar el controlador de mensajes predeterminado a la Error Console
+  ;; Restaurar el controlador de mensajes predeterminado a la consola de errores
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -124,7 +125,7 @@ En el ejemplo anterior, se utiliza un tipo de datos llamado símbolo, como 'gui.
 
 ### Simplificando la función principal
 
-In the original (scheme-hello-world) function, all the logic for sending messages to different outputs (GUI, Error Console, Terminal) was mixed into the main function. Después de la refactorización, la función principal simplemente se centra en **lo que hay que hacer**, enviando el mensaje a diferentes destinos.
+En la función original (scheme-hello-world), toda la lógica para enviar mensajes a distintas salidas (GUI, consola de errores, terminal) estaba mezclada en la función principal. Después de la refactorización, la función principal simplemente se centra en **lo que hay que hacer**, enviando el mensaje a diferentes destinos.
 
 La función principal refactorizada es más simple:
 

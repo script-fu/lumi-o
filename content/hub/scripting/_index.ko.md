@@ -3,7 +3,8 @@ title: "스크립팅"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 2116be7665eb5fa29e6a526814a2158919062b9bde91cd12390d1dc4d13e19e0
+translation_source_sha256: 5faeaef488b8a330727b633f7808b8e1982e8633d9894b959c2a4080fff7aeca
+url: "hub/scripting/_index"
 ---
 Scheme 스크립팅으로 반복 작업을 자동화하고, 맞춤 도구를 만들고, 자신만의 플러그인으로 Lumi를 확장할 수 있습니다.
 

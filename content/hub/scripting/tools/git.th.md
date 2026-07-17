@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 ใช้ Git เพื่อติดตามการเปลี่ยนแปลงปลั๊กอินของคุณ ย้อนกลับข้อผิดพลาด และแชร์โค้ดระหว่างเครื่องต่างๆ
 

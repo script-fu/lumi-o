@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Uma **lista de associações** (ou **alist**) é uma estrutura de dados fundamental no Scheme usada para representar coleções de pares chave-valor. É implementado como uma lista de pares, onde cada par associa uma chave (normalmente um símbolo) a um valor. As listas são simples, flexíveis e adequadas para conjuntos de dados de pequeno e médio porte.
 
@@ -33,19 +34,19 @@ Você pode criar uma lista construindo pares manualmente ou programaticamente us
 A aspa simples (`'`) é uma abreviação para **quoting**, o que impede que Scheme avalie a expressão. Isso o torna ideal para criar listas estáticas onde todas as chaves e valores são codificados.
 
 ```scheme
-;; Alist manuell definieren
+;; Definir manualmente uma alista
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Adicionar programaticamente um novo par
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Resultado**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Usando as crases (`` ` ``) and Comma (`,`)
+#### Usando as crases (`` ` ``) e vírgula (`,`)
 
-O operador de crase (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Isso é útil para criar listas onde chaves ou valores são calculados em tempo de execução.
+O operador de crase (`` ` ``) é semelhante à aspas simples, mas permite inserir dinamicamente expressões avaliadas usando a vírgula (`,`). Isso é útil para criar listas onde chaves ou valores são calculados em tempo de execução.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Lista estática usando `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Lista dinâmica usando `` ` `` and `,`:
+Lista dinâmica usando `` ` `` e `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ Depois de recuperar um par usando `assoc`, use `cdr` para extrair o valor:
 ### Resumo dos principais recursos
 
 - **Aspas simples (`'`)**: Cria uma lista estática onde todos os elementos são dados literais.
-- **Backquote (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Backquote (`` ` ``)**: Permite a criação dinâmica de alists misturando elementos estáticos com expressões avaliadas (usando `,`).
 - **Notação de ponto (`.`)**: Usada para construir pares, associando uma chave a um valor em uma lista.

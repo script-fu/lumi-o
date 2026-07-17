@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 **Variadfunktioner** i Scheme är funktioner som accepterar ett variabelt antal argument. Dessa funktioner är mycket mångsidiga och låter dig skapa flexibel och återanvändbar kod. I funktionell programmering förenklar variadiska funktioner operationer som behöver bearbeta ett godtyckligt antal ingångar, som att summera en lista med tal eller sammanfoga strängar.
 
@@ -139,4 +140,6 @@ Undvik variadiska funktioner när:
 - Fasta argument räcker för den nödvändiga logiken.
 - Läsbarheten äventyras på grund av alltför komplexa operationer.
 
-### SlutsatsVariadiska funktioner i Scheme ger en robust mekanism för att hantera dynamiska ingångar. Genom att förstå deras syntax och användning kan du skapa flexibla och kraftfulla skript som anpassar sig till olika scenarier. Kombinerat med funktioner av högre ordning gör variadiska funktioner din kod mer kortfattad och uttrycksfull.
+### Slutsats
+
+Variadiska funktioner i Scheme ger en robust mekanism för att hantera dynamiska ingångar. Genom att förstå deras syntax och användning kan du skapa flexibla och kraftfulla skript som anpassar sig till olika scenarier. Kombinerat med funktioner av högre ordning gör variadiska funktioner din kod mer kortfattad och uttrycksfull.

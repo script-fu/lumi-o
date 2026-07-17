@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 使用文件和目录对于Scheme 开发至关重要。无论您是保存输出、加载资源还是组织项目结构，了解文件操作都将使您的脚本更加健壮和用户友好。
 

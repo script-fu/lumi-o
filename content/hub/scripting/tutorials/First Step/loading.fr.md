@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Dès qu'une fonction d'assistance se développe, déplacez-la dans un petit fichier de bibliothèque. Cela permet de garder le plug-in concentré et de rendre l'assistant réutilisable sur plusieurs plug-ins.
 
@@ -25,8 +26,8 @@ Nous pouvons prendre la fonction d'envoi de message et créer un nouveau fichier
 - **scheme/** : Il s'agit de votre répertoire principal pour stocker votre code Scheme.
   - **library/** : C'est ici que vivent les fonctions partagées comme `send-message.scm`.
   - **plug-ins/** : C'est ici que vos plug-ins individuels sont stockés.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Dossier pour le plug-in spécifique « Hello World! ».
+      - **hello-world.scm**: Fichier de script du plug-in.
 
 Exemple de fonction de bibliothèque send-message.scm
 
@@ -34,9 +35,9 @@ Exemple de fonction de bibliothèque send-message.scm
 ;; Fonction pour gérer la sortie de messages vers diverses destinations
 (define (send-message message output)
   (cond
-    ;; Envoyer vers la Message console
+    ;; Envoyer vers la console de messages
     ((eq? output 'error-console)
-       ;; Définir le gestionnaire sur Message console
+       ;; Définir le gestionnaire sur console de messages
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ Exemple de fonction de bibliothèque send-message.scm
        ;; La sortie du terminal est gérée avec display
        (display message)))
 
-  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la console de messages
   (lumi-message-set-handler 2))
 ```
 

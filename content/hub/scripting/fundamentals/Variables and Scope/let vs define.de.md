@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
 Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke Tools in Scheme zum Strukturieren Ihres Codes, dienen jedoch unterschiedlichen Zwecken. Wenn Sie wissen, wann die einzelnen Elemente verwendet werden sollten, können Sie saubere, modulare und effiziente Skripte erstellen.
 

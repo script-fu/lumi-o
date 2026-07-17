@@ -4,11 +4,12 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
+translation_source_sha256: af1b2f3233ef50936b24aa195d3a7da50529a4fff3109b087be2f861e15496d1
+url: "hub/scripting/tutorials/First Step/reworking"
 ---
 Met deze stap wordt een subtiel gedrag in het berichtenvoorbeeld opgelost.
 
-We gaven de tekenreeks "Hallo wereld!\n" door als bericht. De "\n" is een speciaal soort teken, een "escape"-teken. Het vertelt de uitvoerafdruk om een ​​nieuwe regel te beginnen. In Scheme zal het ook een bericht dat naar de statusbalk wordt verzonden, dwingen om als een GUI-box te verschijnen.
+We gaven de tekenreeks "Hallo wereld!\n" door als bericht. De "\n" is een speciaal soort teken, een "escape"-teken. Het vertelt de uitvoerafdruk om een nieuwe regel te beginnen. In Scheme zal het ook een bericht dat naar de statusbalk wordt verzonden, dwingen om als een GUI-box te verschijnen.
 
 De helper `send-to-gui` verzendt berichten naar een Lumi-dialoogvenster.
 

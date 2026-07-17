@@ -1,6 +1,7 @@
 ---
 title: Loading
 type: docs
+url: "hub/scripting/tutorials/First Step/loading"
 weight: 3
 ---
 

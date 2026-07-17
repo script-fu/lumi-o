@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 在脚本编写中，没有任何函数是绝对正确的。当遇到意外的输入或条件时，即使是最可靠的命令也可能会失败。为了防止这种情况，我们可以实现自定义调试系统并采用防御性编程技术。通过用错误处理机制包装标准函数并提供信息反馈，我们可以使我们的脚本更加健壮并且更容易排除故障。
 
@@ -176,7 +177,9 @@ list:
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### 警告消息`warning-message` 函数的工作方式与 `debug-message` 类似，但即使禁用调试，它也会显示警告。
+### 警告消息
+
+`warning-message` 函数的工作方式与 `debug-message` 类似，但即使禁用调试，它也会显示警告。
 
 ```scheme
 ;; 用途：显示警告消息。

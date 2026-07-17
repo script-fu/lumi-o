@@ -5,7 +5,7 @@ weight: 15
 url: "hub/technical-guides/Color-Management"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
+translation_source_sha256: 60e00f1b5e0b4a7bb3034ca99dd3f8f51f6bc52b1629a9ab717d2ac2166393ee
 ---
 
 Lumi-o è configurato per funzionare immediatamente. Finché lavori su un'immagine con **precisione a 16 bit o superiore**, il software è già impostato per usare il soft-proofing (CMYK) predefinito incluso e i profili sRGB integrati; tutto dovrebbe funzionare senza alcuna configurazione.

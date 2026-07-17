@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Trabajar con archivos y directorios es esencial para el desarrollo de Scheme. Ya sea que esté guardando resultados, cargando recursos u organizando la estructura de su proyecto, comprender las operaciones de archivos hará que sus scripts sean más sólidos y fáciles de usar.
 
@@ -37,7 +38,7 @@ También existe la variable global `DIR-SEPARATOR`, que es el separador de ruta 
 
 ## Obtener una ubicación de directorio
 
-Podemos pedirle al usuario una ubicación de directorio en el cuadro de diálogo Esquema para un complemento.
+Podemos pedirle al usuario una ubicación de directorio en el cuadro de diálogo de Scheme para un complemento.
 
 ```scheme
 (scheme-register

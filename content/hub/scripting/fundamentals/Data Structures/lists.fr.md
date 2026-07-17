@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 Dans Scheme, une **list** est une structure de données fondamentale utilisée pour regrouper des valeurs. Les listes sont des collections ordonnées d'éléments où chaque élément peut être de n'importe quel type, y compris une autre liste. Les listes sont largement utilisées dans Scheme à la fois pour le stockage de données et la structure du programme.
 

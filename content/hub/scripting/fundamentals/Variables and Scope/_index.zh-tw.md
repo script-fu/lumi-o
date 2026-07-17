@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 在Scheme中，管理變數及其範圍是編寫高效且可維護的腳本的核心概念。變數儲存腳本可以操作的資料值，而範圍定義可以存取這些變數的位置。了解如何有效定義和使用變數可以讓您建立結構化、可重複使用且無錯誤的程式碼。
 
@@ -72,7 +73,9 @@ Scheme 提供了幾種用於定義變數和確定變數範圍的構造：
 | **封裝** |防止意外互動 |可能與其他全域定義的變數衝突 |
 | **用例** |特定任務的臨時變數 |整個過程中使用的共享變數或函數 |
 
-＃＃＃ 概括- **變數定義和範圍**是在Scheme腳本中組織和管理資料的基礎。
+### 總結
+
+- **變數定義和範圍**是在Scheme腳本中組織和管理資料的基礎。
 - 使用**局部作用域**（`let`、`let*`、命名`let`）來封裝臨時變數並避免衝突。
 - 使用**全域範圍** (`define`) 來實現跨腳本共享的可重複使用函數或常數。
 - 清楚地理解這些構造將提高程式碼的可讀性、可維護性和可靠性。

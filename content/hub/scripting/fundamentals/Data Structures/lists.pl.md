@@ -4,9 +4,10 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
-W schemacie **lista** jest podstawową strukturą danych używaną do grupowania wartości. Listy to uporządkowane zbiory elementów, z których każdy może być dowolnego typu, łącznie z inną listą. Listy są szeroko stosowane w schemacie zarówno do przechowywania danych, jak i struktury programu.
+W Scheme **lista** jest podstawową strukturą danych używaną do grupowania wartości. Listy to uporządkowane zbiory elementów, z których każdy może być dowolnego typu, łącznie z inną listą. Listy są szeroko stosowane w Scheme zarówno do przechowywania danych, jak i struktury programu.
 
 ### Przykład 1: Prosta lista
 
@@ -53,7 +54,7 @@ Oto prosta funkcja rekurencyjna umożliwiająca wydrukowanie każdego elementu l
 ```scheme
 (define (print-elements lst)
   (if (null? lst)
-    (lumi-message "done")
+    (lumi-message "gotowe")
     (begin
       (lumi-message (number->string (car lst))) ;; Wypisuje pierwszy element
       (print-elements (cdr lst)))))             ;; Przetwarza resztę listy
@@ -144,7 +145,7 @@ Procedura `list?` sprawdza, czy dana wartość jest listą.
 
 Wynik:
 
-- `(list? (list 1 2 3))` zwraca `#t` (true)
+- `(list? (list 1 2 3))` zwraca `#t` (prawda)
 - `(list? 42)` zwraca `#f` (fałsz)
 
 ---
@@ -192,7 +193,7 @@ Wynik: `30`
 
 ### Listy zagnieżdżone
 
-Listy w schemacie mogą zawierać inne listy jako elementy, tworząc zagnieżdżoną strukturę.
+Listy w Scheme mogą zawierać inne listy jako elementy, tworząc zagnieżdżoną strukturę.
 
 #### Przykład: tworzenie listy zagnieżdżonej
 
@@ -250,7 +251,7 @@ Takie podejście umożliwia systematyczne nawigowanie i uzyskiwanie dostępu do 
 
 ### Podsumowanie
 
-- **Listy** w schemacie to wszechstronne i niezbędne struktury danych.
+- **Listy** w Scheme to wszechstronne i niezbędne struktury danych.
 - Użyj `list`, aby utworzyć listę, `car` i `cdr`, aby uzyskać dostęp do elementów, oraz `cons`, aby skonstruować listy.
 - Wbudowane procedury, takie jak `length`, `append`, `reverse` i `list-ref` sprawiają, że operacje na listach są łatwe i wydajne.
 - Listy można zagnieżdżać, co umożliwia tworzenie złożonych struktur danych w zaawansowanych przypadkach.

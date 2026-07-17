@@ -3,12 +3,13 @@ title: "do"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
-La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
+ฟังก์ชัน `do` ใน Scheme เป็นกลไกการวนซ้ำที่ช่วยให้สามารถวนซ้ำด้วยเงื่อนไขการเริ่มต้น การอัปเดต และการยกเลิก มีประโยชน์อย่างยิ่งเมื่อคุณจำเป็นต้องดำเนินการตามลำดับของการดำเนินการตามจำนวนครั้งที่กำหนดหรือจนกว่าจะตรงตามเงื่อนไข
 
-La forme générale de `do` :
+รูปแบบทั่วไปของ `do` คือ:
 
 ```scheme
 (do ((var1 init1 update1)
@@ -18,16 +19,16 @@ La forme générale de `do` :
   body)
 ```
 
-- **Variable :** variable(s) de boucle.
-- **Initial-value :** valeur initiale.
-- **Update-expression :** mise à jour par itération.
-- **Termination-condition :** condition d'arrêt.
-- **Result-expression :** valeur renvoyée à l'arrêt.
-- **Body :** code exécuté à chaque tour.
+- **ตัวแปร**: ตัวแปรลูป
+- **ค่าเริ่มต้น**: ค่าเริ่มต้นของตัวแปรลูปแต่ละตัว
+- **นิพจน์อัปเดต**: นิพจน์เพื่ออัปเดตตัวแปรลูปเมื่อสิ้นสุดการวนซ้ำแต่ละครั้ง
+- **เงื่อนไขการสิ้นสุด**: เงื่อนไขในการหยุดการวนซ้ำ
+- **นิพจน์ผลลัพธ์**: ค่าที่จะส่งคืนเมื่อการวนซ้ำสิ้นสุดลง
+- **เนื้อหา**: โค้ดที่จะดำเนินการในการวนซ้ำแต่ละครั้ง
 
 ---
 
-### Exemple : somme de 1 à 5
+### ตัวอย่าง: รวมตัวเลขตั้งแต่ 1 ถึง 5
 
 ```scheme
 (do ((i 1 (+ i 1))      ; กำหนด i เป็น 1 เพิ่มทีละ 1
@@ -36,26 +37,31 @@ La forme générale de `do` :
   (lumi-message (number->string sum))) ; พิมพ์ผลรวมในแต่ละขั้นตอน
 ```
 
-- `i` commence à 1 et s'incrémente.
-- `sum` accumule la somme.
-- Arrêt quand `i > 5`, retour de `sum`.
+- ตัวแปรลูป `i` เริ่มต้นที่ 1 และเพิ่มขึ้นทีละ 1 ในแต่ละการวนซ้ำ
+- ตัวแปร `sum` จะสะสมผลรวมของ `i`
+- การวนซ้ำจะสิ้นสุดลงเมื่อ `i > 5` ส่งคืนค่าสุดท้ายของ `sum`
 
-**Sortie** : `15`
-
----
-
-### Comment ça marche
-
-1. **Initialisation :** valeurs de départ.
-2. **Test d'arrêt :** au début de chaque tour.
-3. **Itération :** exécuter le corps, mettre à jour les variables.
+**เอาต์พุต**: `15`
 
 ---
 
-### Résumé
+### มันทำงานอย่างไร
 
-- `do` offre des boucles flexibles à plusieurs variables.
-- Utile quand l'état évolue à chaque tour.
-- La condition d'arrêt fixe la fin et le résultat.
+1. **การเริ่มต้น**:
+   - ตัวแปรลูปแต่ละตัวถูกกำหนดค่าเริ่มต้น
 
-`do` combine **liaisons** (comme `let`) et **contrôle itératif**.
+2. **การตรวจสอบการสิ้นสุด**:
+   - เมื่อเริ่มต้นการวนซ้ำแต่ละครั้ง จะมีการตรวจสอบเงื่อนไขการสิ้นสุด หากเป็นจริง การวนซ้ำจะหยุดและนิพจน์ผลลัพธ์จะถูกประเมิน
+
+3. **การทำซ้ำ**:
+   - หากเงื่อนไขการสิ้นสุดเป็นเท็จ เนื้อความจะถูกดำเนินการ และตัวแปรลูปจะถูกอัพเดตโดยใช้นิพจน์การอัพเดตตามลำดับ
+
+---
+
+### สรุป
+
+- โครงสร้าง `do` มอบวิธีที่ยืดหยุ่นในการใช้งานลูปที่มีตัวแปรหลายตัวและเงื่อนไขการยกเลิกที่ซับซ้อน
+- มีประโยชน์สำหรับงานที่ต้องการการอัปเดตสถานะในการวนซ้ำ
+- เงื่อนไขการสิ้นสุดจะกำหนดเมื่อลูปสิ้นสุดและสามารถส่งคืนผลลัพธ์สุดท้ายได้
+
+เมื่อใช้ `do` คุณจะสามารถนำอัลกอริธึมแบบวนซ้ำใน Scheme ไปใช้ได้ด้วยการควบคุมการเริ่มต้น การอัปเดต และการยุติที่แม่นยำ ซึ่งทำให้ `do` เป็นการผสมผสานระหว่าง **กลไกการเชื่อมโยงที่กำหนดขอบเขต** (เช่น `let`) และ **โครงสร้างการควบคุมแบบวนซ้ำ** ทำให้สามารถจัดการกับการวนซ้ำและสถานะชั่วคราวในลักษณะที่กระชับและชัดเจน

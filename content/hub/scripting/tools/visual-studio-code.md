@@ -1,6 +1,7 @@
 ---
 title: Visual Studio Code
 type: docs
+url: "hub/scripting/tools/visual-studio-code"
 ---
 ## What is Visual Studio Code?
 

@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
 La función `for-each` en Scheme aplica un procedimiento a cada elemento de una lista (o varias listas). A diferencia de `map`, que devuelve una nueva lista, `for-each` se usa por sus **efectos secundarios**: imprimir, registrar o modificar variables.
 

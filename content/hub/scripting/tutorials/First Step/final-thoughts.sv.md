@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 Du har nu ett plug-in för fungerande procedur och ett litet hjälpbibliotek. Den här serien introducerade kärnmönstren du kommer att använda i de flesta Lumi-skript:
 
@@ -65,7 +66,7 @@ Bibliotekskod:
       #t)
     #f))
 
-;; Syfte: Skickar ett meddelande till Error Console, returnerar #t vid lyckat resultat
+;; Syfte: Skickar ett meddelande till felkonsol, returnerar #t vid lyckat resultat
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

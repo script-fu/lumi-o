@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
+translation_source_sha256: c51771681b005905702792ac549ca2707360f265b7d518cc00a6861161158126
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 ---
-En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
+I Scheme används villkoret `cond` för att välja ett av flera möjliga kodblock att köra, baserat på flera test. Det liknar ett flergrenigt `if`, där varje gren kontrolleras i ordning tills en match hittas.
 
-### Syntaxe
+### Syntax
 
 ```scheme
 (cond
@@ -18,18 +19,22 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else fallback-consequent))
 ```
 
-- Tests dans l'ordre d'écriture.
-- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
-- `else` optionnel en repli.
+- Varje test utvärderas i den ordning de skrivs.
+- När ett test utvärderas till sant (`#t`) körs motsvarande **consequent** och `cond` slutar utvärdera fler test.
+- Klausulen `else` är valfri och fungerar som reserv om inget test är sant.
 
-### Comment ça marche
+### Så fungerar det
 
-1. **Tester chaque condition** dans l'ordre.
-2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
+1. **Testa varje villkor:**
+   - `cond` utvärderar testen i listordning.
 
-### Exemples
+2. **Kör matchande consequent:**
+   - När det första testet som utvärderas till sant (`#t`) hittas körs dess **consequent**.
+   - Om inget test är sant och det finns `else` körs **fallback-consequent**.
 
-#### Exemple 1 : conséquents sur une expression
+### Exempel
+
+#### Exempel 1: consequent med enstaka uttryck
 
 ```scheme
 (cond
@@ -38,9 +43,15 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else "Fallback"))
 ```
 
-Résultat : **"This will run"**
+- Första testet `(< 3 2)` utvärderas till falskt (`#f`).
+- Andra testet `(= 3 3)` utvärderas till sant (`#t`), så `"This will run"` returneras.
+- `else` körs inte eftersom en match redan hittades.
 
-#### Exemple 2 : actions multiples avec `begin`
+Resultat: **"This will run"**
+
+#### Exempel 2: flera åtgärder med `begin`
+
+När consequent innehåller flera åtgärder, gruppera dem med `begin`:
 
 ```scheme
 (cond
@@ -58,9 +69,16 @@ Résultat : **"This will run"**
       0)))
 ```
 
-Résultat : **Affiche « Condition met » et renvoie 25.**
+- Första testet `(< 5 3)` utvärderas till falskt (`#f`).
+- Andra testet `(> 5 3)` utvärderas till sant (`#t`):
+  - Det skriver ut `"Condition met"`.
+  - Sedan beräknas `(* 5 5)` och `25` returneras.
 
-#### Exemple 3 : bloc `let` dans un conséquent
+Resultat: **Skriver ut "Condition met" och returnerar 25.**
+
+#### Exempel 3: `let`-block i consequent
+
+När du behöver lokala variabler, använd `let`:
 
 ```scheme
 (cond
@@ -75,15 +93,21 @@ Résultat : **Affiche « Condition met » et renvoie 25.**
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Standard: om inget av villkoren ovan uppfylls
+  ;; Standardfall
   (else
     (let ((z 0))
       z)))
 ```
 
-Résultat : **Affiche « Positive condition met » et renvoie 40.**
+- Första testet `(< 0 -1)` är falskt.
+- Andra testet `(> 0 -1)` är sant, så:
+  - Ett `let`-block körs och binder `y` till `20`.
+  - Det skriver ut `"Positive condition met"`.
+  - Sedan beräknas `(+ y y)` och `40` returneras.
 
-#### Exemple 4 : repli avec `else`
+Resultat: **Skriver ut "Positive condition met" och returnerar 40.**
+
+#### Exempel 4: reserv med `else`
 
 ```scheme
 (cond
@@ -92,10 +116,16 @@ Résultat : **Affiche « Positive condition met » et renvoie 40.**
   (else "Fallback value"))
 ```
 
-Résultat : **"Fallback value"**
+- Varken av de två första testen utvärderas till sant.
+- `else` körs och returnerar `"Fallback value"`.
 
-### Résumé
+Resultat: **"Fallback value"**
 
-- `cond` pour plusieurs conditions clairement.
-- Conséquents simples ou groupés avec `begin`.
-- `let` pour variables locales ; `else` recommandé en repli.
+### Sammanfattning
+
+- Använd `cond` för att hantera flera villkor på ett tydligt och koncist sätt.
+- Consequent kan vara enstaka uttryck eller grupperade åtgärder med `begin`.
+- Använd `let` i consequent för lokala variabler vid beräkningar.
+- Inkludera alltid `else` som reserv för oväntade fall.
+
+Denna flexibilitet gör `cond` till ett kraftfullt och läsbart verktyg för komplex förgreningslogik.

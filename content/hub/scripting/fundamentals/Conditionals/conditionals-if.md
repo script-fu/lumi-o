@@ -1,6 +1,7 @@
 ---
 title: if
 type: docs
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 weight: 4
 ---
 

@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 Symboler är en av kärndatatyperna i Scheme, som representerar unika, oföränderliga identifierare. De används främst som nycklar, markörer eller platshållare i program, vilket gör dem viktiga för att skriva ren och uttrycksfull kod.
 
@@ -59,7 +60,7 @@ Detta gör symboler idealiska att använda som nycklar i datastrukturer eller ma
 
 ## Använda symboler
 
-Symboler används ofta i Schema för:
+Symboler används ofta i Scheme för:
 
 1. **Nycklar i associationslistor:**
 
@@ -79,7 +80,7 @@ Symboler används ofta i Schema för:
 
 ## Procedurer för att arbeta med symboler
 
-Schema tillhandahåller inbyggda procedurer för att arbeta med symboler:
+Scheme tillhandahåller inbyggda procedurer för att arbeta med symboler:
 
 | Tillvägagångssätt | Beskrivning |
 |--------------------|--------------------------------------------------------------------------------|

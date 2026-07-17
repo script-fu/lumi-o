@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Vi använde ett plugin-program _procedure_ för handledningen [Första steget](../../first-step/). Dessa typer av plugin-program fungerar utan att behöva en bild eller ritbar som indata. Vanligtvis använder vi en plug-in för att ändra en bild och dess dragbara bilder. Plug-ins som dessa kallas _filter_ plug-ins.
 
@@ -20,7 +21,7 @@ En **ritbar** i Lumi hänvisar till ett bildelement som kan ritas på, till exem
 (define (scheme-simple-filter-plug-in image drawables)
   ;; Använd ett let-uttryck för att definiera en meddelandevariabel och kärnkod
   (let ((message "hello, world"))
-    ;; Visa meddelandet i Lumis Error Console
+    ;; Visa meddelandet i Lumis felkonsol
     (lumi-message message)
     ;; Invertera färgerna på det första valda drawable
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -66,7 +67,7 @@ I Lumi version 3 behöver plugin-program inte uppdateras för att sparade ändri
 
 ### Plug-in undersökning
 
-#### Shebang Line
+#### Shebang-rad
 
 Den första raden säkerställer att skriptet fungerar som en plug-in i Lumi 3:
 
@@ -89,7 +90,7 @@ En `let`-sats definierar en variabel och utför operationer på den ritbara.
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Visar ett meddelande i Lumis Error Console
+  (lumi-message message) ;; Visar ett meddelande i Lumis felkonsol
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverterar färgerna på det första valda drawable
 ```
 

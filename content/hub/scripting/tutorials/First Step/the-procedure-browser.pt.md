@@ -1,0 +1,46 @@
+---
+title: "O navegador de procedimentos"
+type: docs
+weight: 1
+translation_provenance: ai-reviewed
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
+translation_lock: true
+---
+O **Lumi Procedure Browser** permite pesquisar os procedimentos disponíveis (integrados e plug-in fornecidos) e inspecionar seus parâmetros e valores de retorno.
+
+### Onde encontrar o navegador de procedimento Lumi
+
+Pode acessar o Navegador de Procedimentos no Lumi através do menu **Ajuda**:
+
+- **Ajuda** -> **Navegador de procedimentos**
+
+### O que o navegador de procedimento faz
+
+O Navegador de Procedimentos lista todos os procedimentos internos do Lumi, juntamente com aqueles adicionados por plug-ins, incluindo aquele que acabou de instalar. Cada entrada de procedimento fornece informações úteis, incluindo:
+
+- O nome do procedimento.
+- Uma descrição do que faz.
+- Os parâmetros que aceita (valores de entrada).
+- Os valores de retorno (saída).
+
+Pesquise por palavra-chave ou nome de procedimento quando precisar de verificar uma assinatura de chamada ou confirmar o nome exacto do procedimento.
+
+#### (mensagem lumi) no navegador de procedimento
+
+Pesquise `lumi-message` para ver seus parâmetros e valores de retorno.
+
+### Encontrando o plug-in
+
+Depois de instalar o "Hello World!" plug-in, pode encontrá-lo listado no Navegador de procedimentos. Basta procurar pelo nome da função que registou no Lumi, neste caso, “scheme-hello-world”. A entrada mostrará os parâmetros e quaisquer valores de retorno associados ao plug-in, juntamente com uma breve descrição. Também verá onde algumas das linhas de texto inseridas como parâmetros de entrada durante o processo de registo são exibidas na secção **Informações adicionais**.
+
+```scheme
+(scheme-register-procedure "scheme-hello-world" ;; Nome do procedimento
+ "Hello world!" ;; Nome do item de menu
+ "A Scheme procedure plug-in" ;; Dica de ferramenta e descrição
+ "Your Name" ;; Autor
+ "Under GNU GENERAL PUBLIC LICENSE Version 3" ;; Licença
+ "2024") ;; Data de copyright
+```
+
+Isso facilita a verificação de que o plug-in está devidamente registado e oferece uma forma rápida de revisar como ele interage com outros procedimentos no Lumi. O Procedure Browser é uma ferramenta poderosa para depurar e expandir os plug-ins, explorando todos os procedimentos disponíveis no Lumi.

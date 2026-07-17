@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 Este tutorial recorre la estructura mínima de un complemento de Scheme. Algunas líneas son “repetitivas”: son necesarias para que Lumi cargue el archivo, incluso si aún no las entiendes del todo.
 
@@ -73,7 +74,7 @@ Aquí está el ejemplo completo. La mayoría de los procedimientos de Lumi tiene
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Establecer el controlador de mensajes para enviar el mensaje a la Error Console
+  ;; Establecer el controlador de mensajes para enviar el mensaje a la consola de errores
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

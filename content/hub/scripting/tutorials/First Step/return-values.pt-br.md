@@ -4,15 +4,16 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
-Os valores de retorno são importantes porque permitem controlar o fluxo sem estado extra. No Scheme, a última expressão avaliada torna-se o valor de retorno.
+Os valores de retorno são importantes porque permitem controlar o fluxo sem estado extra. Em Scheme, a última expressão avaliada torna-se o valor de retorno.
 
 Esta página usa os auxiliares de validação do exemplo de mensagens para mostrar como os valores de retorno explícitos facilitam a composição do código.
 
 ### O que é um valor de retorno?
 
-No Scheme, o valor de retorno de uma função é determinado pela última expressão avaliada pela função. Isso significa que qualquer valor avaliado pela última linha de código da função será retornado como resultado da função. Se nenhum valor for retornado explicitamente, a função retornará `#f` (falso) ou `undefined`.
+Em Scheme, o valor de retorno de uma função é determinado pela última expressão avaliada pela função. Isso significa que qualquer valor avaliado pela última linha de código da função será retornado como resultado da função. Se nenhum valor for retornado explicitamente, a função retornará `#f` (falso) ou `undefined`.
 
 Vamos revisitar a função de validação, (is-valid-string?)
 
@@ -61,9 +62,9 @@ Aqui está um exemplo simples de uso de um valor de retorno para controlar o flu
 Neste caso, (send-message) depende do valor de retorno de (is-valid-output-display?) para decidir se deve continuar.
 A instrução condicional `cond` será ignorada se o primeiro teste falhar. Além disso, observe como ele é lido de maneira bastante natural, se a exibição da saída for válida?
 
-## If Lógica de Instrução no Esquema
+## Lógica da instrução `if` em Scheme
 
-Antes do exemplo da biblioteca refatorada, aqui está uma rápida revisão da lógica condicional. O esquema usa `if` para escolher entre dois caminhos.
+Antes do exemplo da biblioteca refatorada, aqui está uma rápida revisão da lógica condicional. Scheme usa `if` para escolher entre dois caminhos.
 
 Aqui está uma forma simples de uma instrução `if`:
 
@@ -87,7 +88,7 @@ Nos casos em que você precisa realizar múltiplas ações quando a condição �
 
 Isso permite lidar com situações mais complexas, onde múltiplas expressões ou instruções precisam ser executadas dependendo do resultado do teste condicional.
 
-Ok, aqui está o código da biblioteca com valores de retorno incorporados e usados ​​para controlar o processo de execução.
+Ok, aqui está o código da biblioteca com valores de retorno incorporados e usados para controlar o processo de execução.
 
 ### Refatorado com valores de retorno
 
@@ -112,7 +113,7 @@ Ok, aqui está o código da biblioteca com valores de retorno incorporados e usa
       #t)
     #f))
 
-;; Propósito: Envia uma mensagem para a Error Console, retorna #t se bem-sucedido
+;; Propósito: Envia uma mensagem para a console de erros, retorna #t se bem-sucedido
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

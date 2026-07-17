@@ -5,6 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f715e8eae5ee35d9495f37a3268cdf7ecdac5db976fa8fb48a83797cb7ca22b6
+url: "hub/about/workspace"
 ---
 
 Espaços de trabalho são parte fundamental do Lumi, disponíveis diretamente no menu Espaços de trabalho. Eles alternam de forma rápida e suave, de modo que passar de uma etapa do projeto para outra é como selecionar um modo de aplicativo.

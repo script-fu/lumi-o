@@ -1,0 +1,20 @@
+- id: menuQuickStart
+  translation: "Bắt đầu nhanh"
+- id: menuAbout
+  translation: "Giới thiệu"
+- id: menuPatreon
+  translation: "Patreon"
+- id: menuFeatures
+  translation: "Tính năng"
+- id: menuMadeInLumio
+  translation: "Được tạo bằng Lumi-o"
+- id: menuInstallLinux
+  translation: "Cách cài đặt Linux"
+- id: menuTechnicalGuides
+  translation: "Hướng dẫn kỹ thuật"
+- id: menuHome
+  translation: "Trang chủ"
+- id: menuScripting
+  translation: "Viết kịch bản"
+- id: menuContact
+  translation: "Liên hệ"

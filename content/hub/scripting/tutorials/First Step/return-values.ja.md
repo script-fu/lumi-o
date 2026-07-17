@@ -4,7 +4,8 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
 戻り値は、余分な状態を持たずにフローを制御できるため、重要です。 Scheme では、最後に評価された式が戻り値になります。
 
@@ -63,7 +64,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
 
 ## Scheme 内の If ステートメントのロジック
 
-リファクタリングされたライブラリの例の前に、条件付きロジックを簡単に確認します。スキームは `if` を使用して 2 つのパスから選択します。
+リファクタリングされたライブラリの例の前に、条件付きロジックを簡単に確認します。Scheme は `if` を使用して 2 つのパスから選択します。
 
 `if` ステートメントの単純な形式を次に示します。
 
@@ -112,7 +113,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #t)
     #f))
 
-;; 目的: メッセージを Error Console に送り、成功時は #t を返す
+;; 目的: メッセージを エラーコンソール に送り、成功時は #t を返す
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

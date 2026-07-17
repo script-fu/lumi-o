@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Una volta che abbiamo una funzione funzionante, possiamo fare un passo indietro e pensare a come strutturare al meglio il nostro codice. L'obiettivo è rendere il nostro plug-in il più chiaro, comprensibile e gestibile possibile. Questo processo di miglioramento e perfezionamento della struttura del codice esistente senza modificarne il comportamento è noto come refactoring.
 
@@ -16,7 +17,7 @@ Ecco di nuovo la funzione iniziale:
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Impostare il gestore dei messaggi per inviare il messaggio alla Error Console
+  ;; Impostare il gestore dei messaggi per inviare il messaggio alla console degli errori
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ Introducendo una variabile chiamata "messaggio":
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Impostare il gestore dei messaggi per inviare il messaggio alla Error Console
+    ;; Impostare il gestore dei messaggi per inviare il messaggio alla console degli errori
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ Estrarre la logica:
 ;; Funzione per gestire l'output dei messaggi verso varie destinazioni
 (define (send-message message output)
   (cond
-    ;; Invia alla Error Console
+    ;; Invia alla console degli errori
     ((eq? output 'error-console)
-       ;; Impostare il gestore su Error Console
+       ;; Impostare il gestore su console degli errori
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ Estrarre la logica:
        ;; L'output del terminal è gestito con display
        (display message)))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Error Console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console degli errori
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

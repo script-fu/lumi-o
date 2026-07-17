@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 การทำงานกับไฟล์และไดเร็กทอรีถือเป็นสิ่งสำคัญสำหรับการพัฒนา Scheme ไม่ว่าคุณจะบันทึกเอาต์พุต โหลดทรัพยากร หรือจัดโครงสร้างโปรเจ็กต์ การทำความเข้าใจการทำงานของไฟล์จะทำให้สคริปต์ของคุณมีประสิทธิภาพและใช้งานง่ายยิ่งขึ้น
 

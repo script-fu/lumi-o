@@ -1,0 +1,27 @@
+---
+title: "Navegador de plug-ins"
+type: docs
+translation_provenance: ai-reviewed
+translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
+url: "hub/scripting/reference/plugin-browser"
+translation_lock: true
+---
+O Plug-In Browser permite explorar o sistema de menus e ver onde plug-ins específicos estão instalados.
+
+## Abrindo o navegador de plug-ins
+
+Vá para **Ajuda → Programação → Navegador de plug-ins**.
+
+## O que mostra
+
+Enquanto o Navegador de Procedimento se concentra nas *funções* brutas do PDB, o Navegador de Plug-In é uma visualização de subconjunto focada na descoberta da interface do utilizador. Ele filtra especificamente o PDB para mostrar "coisas que parecem plug-ins instalados em menus".
+
+Internamente, utiliza uma consulta que retorna apenas procedimentos que possuem um ficheiro associado em disco e um caminho de menu registado.
+
+- **Árvore de menus**: Mostra uma representação em árvore da estrutura de menus do Lumi.
+- **Locais de plug-ins**: ajuda a descobrir onde um plug-in recém-instalado se aninhou nos menus.
+- **Metadados**: Mostra informações sobre autor, versão e data do plug-in.
+
+## Uso
+
+Use o Navegador de plug-ins quando souber que existe um recurso, mas não conseguir encontrá-lo nos menus, ou quando estiver projetando um plug-in próprio e quiser ver onde ferramentas semelhantes estão localizadas.

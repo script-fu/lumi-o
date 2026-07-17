@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 429937950043523736b0a2e40ace60284cd543755a671550cd8bb5ddb36ff246
+url: "hub/scripting/plug-ins/layer-group-to-new-image"
 ---
 将活动图层组复制到新图像中（当整个堆栈太重而无法使用时很有用）。
 

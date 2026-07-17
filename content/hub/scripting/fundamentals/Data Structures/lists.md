@@ -1,6 +1,7 @@
 ---
 title: Lists
 type: docs
+url: "hub/scripting/fundamentals/Data Structures/lists"
 weight: 4
 ---
 

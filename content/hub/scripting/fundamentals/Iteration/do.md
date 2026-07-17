@@ -1,6 +1,7 @@
 ---
 title: do
 type: docs
+url: "hub/scripting/fundamentals/Iteration/do"
 weight: 5
 ---
 

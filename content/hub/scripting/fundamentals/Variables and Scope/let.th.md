@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
+translation_source_sha256: 6e768f3feb8a1873423841338e92494ebd2b4ac0af5b6e27253f3cf2c2ba455f
+url: "hub/scripting/fundamentals/Variables and Scope/let"
 ---
 ชื่อ `let` ถูกใช้เนื่องจากสะท้อนถึงต้นกำเนิดทางคณิตศาสตร์ของการแนะนำการเชื่อมโยงชั่วคราว ดังเช่นใน _"Let \( x = 2 \) และ \( y = 3 \)"_
 

@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+url: "hub/about/lumi-o"
 ---
 
 Lumi é um aplicativo rápido e eficiente, exclusivo para Linux, para criação de imagens raster, desenvolvido em código aberto. Decisões de design, documentos de arquitetura e histórico de desenvolvimento são públicos, para que os usuários possam acompanhar como o software evolui.

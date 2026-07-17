@@ -4,11 +4,12 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 В Scheme **список** — это фундаментальная структура данных, используемая для группировки значений. Списки — это упорядоченные коллекции элементов, где каждый элемент может быть любого типа, включая другой список. Списки широко используются в Scheme как для хранения данных, так и для структуры программы.
 
-### Example 1: Simple List
+### Пример 1: простой список
 
 ```scheme
 (list 1 2 3)

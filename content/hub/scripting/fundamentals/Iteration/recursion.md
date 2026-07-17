@@ -1,6 +1,7 @@
 ---
 title: Simple Recursion
 type: docs
+url: "hub/scripting/fundamentals/Iteration/recursion"
 weight: 5
 ---
 

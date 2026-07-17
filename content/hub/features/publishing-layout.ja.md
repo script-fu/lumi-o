@@ -1,5 +1,5 @@
 ---
-title: "Publishing Layout"
+title: "出版レイアウト"
 type: docs
 url: "hub/features/publishing-layout"
 translation_provenance: ai-reviewed

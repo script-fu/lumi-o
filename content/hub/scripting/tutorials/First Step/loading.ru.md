@@ -3,14 +3,15 @@ title: "Загрузка"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
-As soon as a helper function grows, move it into a small library file. That keeps the plug-in focused and makes the helper reusable across multiple plug-ins.
+Как только вспомогательная функция вырастет, переместите ее в небольшой библиотечный файл. Это сохраняет фокус плагина и позволяет повторно использовать помощник в нескольких плагинах.
 
 ### Создаем библиотечную функцию
 
-Мы можем взять функцию отправки сообщения и создать новый файл с ее содержимым. Save the file into your repo folder, not the plugins part, perhaps near the top level;
+Мы можем взять функцию отправки сообщения и создать новый файл с ее содержимым. Сохраните файл в папке репозитория, а не в части плагинов, возможно, на верхнем уровне;
 
 ```plaintext
 /home/your-username/code/
@@ -22,11 +23,11 @@ As soon as a helper function grows, move it into a small library file. That keep
                   └── hello-world.scm
 ```
 
-- **scheme/**: это ваш основной каталог для хранения кода схемы.
+- **scheme/**: это ваш основной каталог для хранения кода Scheme.
   - **library/**: здесь живут общие функции, такие как `send-message.scm`.
-  - **plug-ins/**: This is where your individual plug-ins are stored.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+  - **плагины/**: здесь хранятся ваши отдельные плагины.
+    - **hello-world/**: Папка для plug-in «Hello World!».
+      - **hello-world.scm**: Файл скрипта plug-in.
 
 Пример библиотечной функции send-message.scm
 
@@ -34,9 +35,9 @@ As soon as a helper function grows, move it into a small library file. That keep
 ;; Функция для вывода сообщений в различные места назначения
 (define (send-message message output)
   (cond
-    ;; Отправить в Message console
+    ;; Отправить в консоль сообщений
     ((eq? output 'error-console)
-       ;; Установить обработчик на Message console
+       ;; Установить обработчик на консоль сообщений
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ As soon as a helper function grows, move it into a small library file. That keep
        ;; Вывод terminal обрабатывается с помощью display
        (display message)))
 
-  ;; Восстановить обработчик сообщений по умолчанию для Message console
+  ;; Восстановить обработчик сообщений по умолчанию для консоль сообщений
   (lumi-message-set-handler 2))
 ```
 

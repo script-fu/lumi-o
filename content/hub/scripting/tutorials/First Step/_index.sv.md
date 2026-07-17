@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+url: "hub/scripting/tutorials/first-step"
 ---
 First Steps introducerar funktionella mönster som fungerar bra i Scheme, med korta exempel och inkrementella refaktorer.
 I slutet kommer du att ha byggt ditt eget anpassade meddelandebibliotek och ha en solid grund för att fortsätta utveckla mer avancerade plugin-program.

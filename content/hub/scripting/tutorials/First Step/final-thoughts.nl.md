@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 U beschikt nu over een werkprocedure-plug-in en een kleine helperbibliotheek. In deze serie zijn de kernpatronen geïntroduceerd die u in de meeste Lumi-scripts zult gebruiken:
 
@@ -65,7 +66,7 @@ Bibliotheekcode:
       #t)
     #f))
 
-;; Doel: Stuurt een bericht naar de Error Console, retourneert #t bij succes
+;; Doel: Stuurt een bericht naar de foutenconsole, retourneert #t bij succes
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

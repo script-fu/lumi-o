@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 Nous avons utilisé un plug-in _procedure_ pour le didacticiel [Première étape](../../first-step/). Ces types de plug-ins fonctionnent sans avoir besoin d’une image ou d’un dessin en entrée. Habituellement, nous utilisons un plug-in pour modifier une image et ses dessins. Les plug-ins comme ceux-ci sont appelés plug-ins _filter_.
 

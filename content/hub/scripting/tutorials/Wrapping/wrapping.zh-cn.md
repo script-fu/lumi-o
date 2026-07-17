@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 方案命令在较低级别上运行，这意味着即使是简单的任务也可能需要多个步骤。然而，这种粒度提供了灵活性，我们可以将命令捆绑到小的、可重用的函数中，从而完全满足我们的需要。环绕并不是一个非黑即白的概念，而是一个非黑即白的概念。它的范围可以从常用命令的简单别名到管理整个工作流程的更复杂的功能。有时，包装器只是一个提高可读性的便利函数，而在其他情况下，它会演变成封装多个操作的全功能实用程序。
 
@@ -86,7 +87,7 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
 
 这使我们的代码保持干净、可读和适应性强，同时允许我们以最小的努力高效地导出 JPEG。
 
-### 汽车更换
+### 替换 `car`
 
 ***car*** 函数可能很神秘并且容易出现脚本错误。很容易错误地将 ***car*** 应用于向量或非列表项，从而导致意外行为。为了使我们的代码更加健壮和可读，我们可以将此功能包装在一个更安全的函数中。
 

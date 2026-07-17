@@ -4,8 +4,9 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
+url: "hub/scripting/reference"
 ---
-Riferimento rapido per le utilità Scheme integrate e gli strumenti di navigazione in-app disponibili durante la scrittura dei plug-in Lumi. Per informazioni generali e riferimenti allo Schema, consulta [Scheme Cookbook](https://cookbook.scheme.org/) e [Scheme.org](https://www.scheme.org/).
+Riferimento rapido per le utilità Scheme integrate e gli strumenti di navigazione in-app disponibili durante la scrittura dei plug-in Lumi. Per informazioni generali e riferimenti a Scheme, consulta [Scheme Cookbook](https://cookbook.scheme.org/) e [Scheme.org](https://www.scheme.org/).
 
 {{< cards >}}
   {{< card link="utility-browser" title="Navigatore di utilità" icon="search" subtitle="Sfoglia e cerca l'utilità Scheme integrata stdlib" >}}

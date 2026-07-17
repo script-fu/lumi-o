@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 En Scheme, un vector es otra estructura de datos fundamental que se utiliza para agrupar valores. A diferencia de las listas, los vectores son colecciones de elementos indexados y de tamaño fijo, que proporcionan actualizaciones y acceso aleatorio más rápido. Cada elemento de un vector puede ser de cualquier tipo, incluido otro vector. Los vectores se representan usando # seguido de paréntesis. `#(1 2 3)`
 
@@ -122,7 +123,9 @@ Resultado:
 - `(vector? (vector 1 2 3))` devuelve `#t` (verdadero)
 - `(vector? 42)` devuelve `#f` (falso)
 
-### Vectores y comportamiento de paso por referenciaEn Scheme, los vectores son mutables y se pasan por referencia. Esto significa que cuando pasas un vector a una función, la función puede modificar el vector original directamente. Cualquier cambio realizado en el vector dentro de la función también se reflejará fuera de la función. Este comportamiento es útil para compartir y actualizar datos de manera eficiente entre múltiples funciones, pero también requiere precaución para evitar efectos secundarios no deseados.
+### Vectores y comportamiento de paso por referencia
+
+En Scheme, los vectores son mutables y se pasan por referencia. Esto significa que cuando pasas un vector a una función, la función puede modificar el vector original directamente. Cualquier cambio realizado en el vector dentro de la función también se reflejará fuera de la función. Este comportamiento es útil para compartir y actualizar datos de manera eficiente entre múltiples funciones, pero también requiere precaución para evitar efectos secundarios no deseados.
 
 #### Ejemplo: Modificar un vector en una función
 

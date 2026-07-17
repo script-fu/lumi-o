@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 In Scheme is een **lijst** een fundamentele gegevensstructuur die wordt gebruikt om waarden te groeperen. Lijsten zijn geordende verzamelingen elementen waarbij elk element van elk type kan zijn, inclusief een andere lijst. Lijsten worden in Scheme veel gebruikt voor zowel gegevensopslag als programmastructuur.
 
@@ -192,7 +193,7 @@ Resultaat: `30`
 
 ### Geneste lijsten
 
-Lijsten in Schema kunnen andere lijsten als elementen bevatten, waardoor een geneste structuur ontstaat.
+Lijsten in Scheme kunnen andere lijsten als elementen bevatten, waardoor een geneste structuur ontstaat.
 
 #### Voorbeeld: een geneste lijst maken
 
@@ -251,6 +252,6 @@ Met deze aanpak kunt u systematisch navigeren en toegang krijgen tot specifieke 
 ### Samenvatting
 
 - **Lijsten** in Scheme zijn veelzijdige en essentiële datastructuren.
-- Gebruik `list` om een ​​lijst te maken, `car` en `cdr` om toegang te krijgen tot elementen, en `cons` om lijsten samen te stellen.
+- Gebruik `list` om een lijst te maken, `car` en `cdr` om toegang te krijgen tot elementen, en `cons` om lijsten samen te stellen.
 - Ingebouwde procedures zoals `length`, `append`, `reverse` en `list-ref` maken lijstbewerkingen eenvoudig en efficiënt.
 - Lijsten kunnen worden genest, waardoor complexe datastructuren voor geavanceerde gebruiksscenario's mogelijk worden.

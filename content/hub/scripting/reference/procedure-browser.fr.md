@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
+url: "hub/scripting/reference/procedure-browser"
 ---
 Le navigateur de procédures est le principal outil de référence pour découvrir les centaines de fonctions disponibles dans la base de données procédurale (PDB) de Lumi. Étant donné que chaque outil, filtre et script de Lumi doit être enregistré dans le PDB pour pouvoir être appelé, ce navigateur est en fait un explorateur PDB complet.
 

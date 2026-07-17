@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 [最初のステップ](../../first-step/) チュートリアルには _procedure_ プラグインを使用しました。これらのタイプのプラグインは、入力として画像やドローアブルを必要とせずに動作します。通常、画像とそのドローアブルを変更するにはプラグインを使用します。このようなプラグインは、_filter_ プラグインと呼ばれます。
 
@@ -20,7 +21,7 @@ Lumi の **描画可能** は、レイヤーやチャンネルなど、描画で
 (define (scheme-simple-filter-plug-in image drawables)
   ;; let 文を使ってメッセージ変数とコアコードを定義する
   (let ((message "hello, world"))
-    ;; メッセージを Lumi の Error Console に表示する
+    ;; メッセージを Lumi の エラーコンソール に表示する
     (lumi-message message)
     ;; 最初に選択した drawable の色を反転する
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ Lumi バージョン 3 では、保存された変更を有効にするために
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Lumi の Error Console にメッセージを表示する
+  (lumi-message message) ;; Lumi の エラーコンソール にメッセージを表示する
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 最初に選択した drawable の色を反転する
 ```
 

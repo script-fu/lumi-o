@@ -9,7 +9,7 @@ translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed7
 
 Lo strumento Deformazione consente agli artisti di spingere, tirare, piegare, ammorbidire e rimodellare il contenuto dipinto direttamente sulla tela. È pensato per regolazioni espressive: correggere le proporzioni, aggiungere fluidità, spostare le sagome o dare più movimento a una forma finita senza ridipingerla da zero.
 
-In Lumi-o la deformazione è particolarmente orientata a preservare le opere a livelli. Un soggetto complesso può essere rimodellato come insieme visivo, mentre i livelli e le maschere sottostanti restano disponibili per ulteriori modifiche.
+In Lumi la deformazione è particolarmente orientata a preservare le opere a livelli. Un soggetto complesso può essere rimodellato come insieme visivo, mentre i livelli e le maschere sottostanti restano disponibili per ulteriori modifiche.
 
 ## Modellazione diretta sulla tela
 
@@ -21,13 +21,13 @@ Lo strumento è utile sia per correzioni sottili sia per distorsioni marcate. Un
 
 Le illustrazioni a livelli separano spesso tratto, colore, ombreggiatura, texture, maschere ed effetti. Rimodellare una parte di quella struttura appiattendola distruggerebbe l'organizzazione che rende l'immagine modificabile.
 
-Lo strumento Deformazione di Lumi-o tratta un gruppo di livelli come un unico soggetto visibile, preservando comunque gli elementi al suo interno. L'artista può modellare l'aspetto combinato e mantenere intatti i livelli interni dopo l'applicazione della modifica.
+Lo strumento Deformazione di Lumi tratta un gruppo di livelli come un unico soggetto visibile, preservando comunque gli elementi al suo interno. L'artista può modellare l'aspetto combinato e mantenere intatti i livelli interni dopo l'applicazione della modifica.
 
 ## Maschere e struttura
 
 Le maschere fanno parte della struttura dell'opera, non sono un ripensamento successivo. Quando un soggetto deformato dipende da maschere per bordi, ritagli, ombreggiatura o confini di gruppo, quelle relazioni devono spostarsi con l'immagine.
 
-L'approccio di Lumi-o mantiene contenuti e maschere allineati, così il risultato modificato resta coerente. L'obiettivo è che l'anteprima della deformazione e il risultato a livelli consolidato corrispondano visivamente, senza richiedere all'artista di correggere manualmente ogni livello figlio.
+L'approccio di Lumi mantiene contenuti e maschere allineati, così il risultato modificato resta coerente. L'obiettivo è che l'anteprima della deformazione e il risultato a livelli consolidato corrispondano visivamente, senza richiedere all'artista di correggere manualmente ogni livello figlio.
 
 ## Regolazione iterativa
 

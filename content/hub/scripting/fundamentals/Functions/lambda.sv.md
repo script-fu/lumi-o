@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
+translation_source_sha256: bbc5db329f2db333e2133fe248611e30afe266325f05b4209ae197517d068186
+url: "hub/scripting/fundamentals/Functions/lambda"
 ---
 **Lambda-funktioner** i Scheme är anonyma funktioner, vilket betyder att de är funktioner utan namn. Dessa funktioner är definierade inline och används vanligtvis för korta, engångsoperationer. `lambda`-konstruktionen är ett kraftfullt verktyg för funktionell programmering, som låter dig skapa kortfattad och flexibel logik i farten.
 

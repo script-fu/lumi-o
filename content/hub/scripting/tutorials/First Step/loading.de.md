@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Sobald eine Hilfsfunktion wächst, verschieben Sie sie in eine kleine Bibliotheksdatei. Dadurch bleibt das Plug-In fokussiert und der Helfer kann über mehrere Plug-Ins hinweg wiederverwendet werden.
 
@@ -25,8 +26,8 @@ Wir können die Funktion „Nachricht senden“ verwenden und eine neue Datei mi
 - **scheme/**: Dies ist Ihr Hauptverzeichnis zum Speichern Ihres Scheme-Codes.
   - **Bibliothek/**: Hier leben gemeinsame Funktionen wie `send-message.scm`.
   - **Plug-Ins/**: Hier werden Ihre individuellen Plug-Ins gespeichert.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Ordner für das spezifische „Hello World!“-Plug-in.
+      - **hello-world.scm**: Skriptdatei des Plug-ins.
 
 Beispiel einer Bibliotheksfunktion send-message.scm
 
@@ -36,7 +37,7 @@ Beispiel einer Bibliotheksfunktion send-message.scm
   (cond
     ;; An die Message Console senden
     ((eq? output 'error-console)
-       ;; Handler auf Message console setzen
+       ;; Handler auf Nachrichtenkonsole setzen
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ Beispiel einer Bibliotheksfunktion send-message.scm
        ;; Terminal-Ausgabe wird mit display verarbeitet
        (display message)))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 ```
 

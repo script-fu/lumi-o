@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 En scripting, aucune fonction n’est infaillible. Même les commandes les plus fiables peuvent échouer lorsqu’elles sont confrontées à des entrées ou à des conditions inattendues. Pour nous prémunir contre cela, nous pouvons implémenter un système de débogage personnalisé et adopter des techniques de programmation défensive. En enveloppant les fonctions standard avec des mécanismes de gestion des erreurs et en fournissant des commentaires informatifs, nous pouvons rendre nos scripts plus robustes et plus faciles à dépanner.
 
@@ -176,7 +177,9 @@ La fonction `list->string` convertit une liste en chaîne formatée.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### Messages d'avertissementLa fonction `warning-message` fonctionne de manière similaire à `debug-message`, mais elle affiche des avertissements même lorsque le débogage est désactivé.
+### Messages d'avertissementLa fonction 
+
+`warning-message` fonctionne de manière similaire à `debug-message`, mais elle affiche des avertissements même lorsque le débogage est désactivé.
 
 ```scheme
 ;; Objectif : Afficher un message d'avertissement.

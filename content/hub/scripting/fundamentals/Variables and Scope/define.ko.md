@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용되는 다목적 구성입니다. 변수와 함수를 정의하는 데 가장 일반적으로 사용되며, 이를 통해 스크립트 전체 또는 특정 범위 내에서 재사용 및 액세스할 수 있습니다. `define`을 이해하는 것은 재사용 가능하고 읽기 쉬운 모듈식 Scheme 프로그램을 작성하는 데 중요합니다.
 

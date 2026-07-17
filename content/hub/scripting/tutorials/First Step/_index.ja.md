@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+url: "hub/scripting/tutorials/first-step"
 ---
 First Steps では、Scheme でうまく機能する機能パターンを、短い例と段階的なリファクタリングとともに紹介します。
 最終的には、独自のカスタム メッセージング ライブラリを構築し、より高度なプラグインの開発を続けるための強固な基盤が得られるでしょう。

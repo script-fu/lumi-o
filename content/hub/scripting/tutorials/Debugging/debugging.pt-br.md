@@ -5,14 +5,15 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
-Em scripts, nenhuma função é infalível. Mesmo os comandos mais confiáveis ​​podem falhar quando confrontados com entradas ou condições inesperadas. Para nos proteger contra isso, podemos implementar um sistema de depuração personalizado e adotar técnicas de programação defensivas. Ao agrupar funções padrão com mecanismos de tratamento de erros e fornecer feedback informativo, podemos tornar nossos scripts mais robustos e fáceis de solucionar.
+Em scripts, nenhuma função é infalível. Mesmo os comandos mais confiáveis podem falhar quando confrontados com entradas ou condições inesperadas. Para nos proteger contra isso, podemos implementar um sistema de depuração personalizado e adotar técnicas de programação defensivas. Ao agrupar funções padrão com mecanismos de tratamento de erros e fornecer feedback informativo, podemos tornar nossos scripts mais robustos e fáceis de solucionar.
 
 Uma parte importante desta estratégia é usar um sinalizador de depuração global para controlar a saída detalhada, permitindo-nos ativar informações detalhadas de depuração quando necessário, mantendo a saída limpa durante a execução normal.
 
 ## Sinalizador de depuração global
 
-Um sinalizador de depuração global é uma maneira simples, mas eficaz, de controlar o nível de saída de informações durante a execução do script. Quando ativado, ele fornece mensagens de depuração detalhadas que podem ser inestimáveis ​​para rastrear problemas. Quando desabilitado, mantém a saída concisa para uso em produção.
+Um sinalizador de depuração global é uma maneira simples, mas eficaz, de controlar o nível de saída de informações durante a execução do script. Quando ativado, ele fornece mensagens de depuração detalhadas que podem ser inestimáveis para rastrear problemas. Quando desabilitado, mantém a saída concisa para uso em produção.
 
 ```scheme
 ;; Propósito: Flag global para controlar a saída de depuração.
@@ -54,14 +55,14 @@ Isso nos permite controlar a depuração dinamicamente:
 
 ## Depurar sistema de mensagens
 
-Para lidar com eficiência com a saída de depuração no Scheme, usamos uma abordagem estruturada envolvendo várias funções auxiliares. Essas funções garantem que as mensagens de depuração e aviso sejam claras, legíveis e fáceis de manter.
+Para lidar com eficiência com a saída de depuração em Scheme, usamos uma abordagem estruturada envolvendo várias funções auxiliares. Essas funções garantem que as mensagens de depuração e aviso sejam claras, legíveis e fáceis de manter.
 
 ### Visão geral do sistema de mensagens de depuração
 
 Nosso sistema de mensagens de depuração consiste nos seguintes componentes:
 
 1. `debug-message` – Exibe mensagens de depuração quando a depuração está habilitada.
-2. `serialize-item` – Converte vários tipos de dados do esquema em uma representação de string.
+2. `serialize-item` – Converte vários tipos de dados de Scheme em uma representação de string.
 3. `concat` – Concatena vários itens em uma única string.
 4. `list->string` – Formata uma lista em uma string legível.
 5. `message` – Exibe a saída no console de mensagens do Lumi.
@@ -176,7 +177,9 @@ A função `list->string` converte uma lista em uma string formatada.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### Mensagens de avisoA função `warning-message` funciona de forma semelhante a `debug-message`, mas exibe avisos mesmo quando a depuração está desabilitada.
+### Mensagens de aviso
+
+A função `warning-message` funciona de forma semelhante a `debug-message`, mas exibe avisos mesmo quando a depuração está desabilitada.
 
 ```scheme
 ;; Propósito: Exibir uma mensagem de aviso.
@@ -192,7 +195,7 @@ A função `list->string` converte uma lista em uma string formatada.
 
 ## Aprimorando funções padrão
 
-Uma vez implementado um sistema de depuração, podemos aprimorar nossa biblioteca de funções incorporando mensagens detalhadas. Isso fornece informações sobre estados de itens, valores de variáveis ​​e chamadas de função.
+Uma vez implementado um sistema de depuração, podemos aprimorar nossa biblioteca de funções incorporando mensagens detalhadas. Isso fornece informações sobre estados de itens, valores de variáveis e chamadas de função.
 
 Um exemplo comum é `item-is-valid?`, que envolve `lumi-item-id-is-valid` para retornar `#t` ou `#f`. Se `#f` for retornado, podemos acionar um `warning-message` no código de chamada, se a entrada não for um número podemos dar um aviso na função.
 
@@ -209,7 +212,7 @@ Um exemplo comum é `item-is-valid?`, que envolve `lumi-item-id-is-valid` para r
 
 ## Uso prático
 
-Ao desenvolver plug-ins do Scheme, agrupar funções dessa maneira reduz significativamente o tempo de depuração e garante um código robusto e de fácil manutenção. Com nosso sistema de depuração instalado, podemos gerar um fluxo de depuração estruturado no console de erros com o toque de um botão.
+Ao desenvolver plug-ins de Scheme, agrupar funções dessa maneira reduz significativamente o tempo de depuração e garante um código robusto e de fácil manutenção. Com nosso sistema de depuração instalado, podemos gerar um fluxo de depuração estruturado no console de erros com o toque de um botão.
 
 Neste fluxo de depuração, as chamadas de função são marcadas com um asterisco (*), facilitando o rastreamento da execução de scripts e a identificação de falhas, especialmente em plug-ins complexos. Essa visibilidade nos ajuda a entender o fluxo das operações e a diagnosticar comportamentos inesperados com eficiência.
 

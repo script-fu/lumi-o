@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
 La declaración `define` en Scheme es una construcción versátil que se utiliza para crear enlaces globales o locales. Se usa más comúnmente para definir variables y funciones, haciéndolas reutilizables y accesibles a través de un script o dentro de un alcance específico. Comprender `define` es crucial para escribir programas Scheme modulares, reutilizables y legibles.
 

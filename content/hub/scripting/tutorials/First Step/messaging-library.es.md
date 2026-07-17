@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
 Con el tiempo, lo que comenzó como una única función para enviar mensajes ha evolucionado hasta convertirse en una colección de funciones relacionadas. Estas funciones ahora forman la base de una **Biblioteca de mensajería**, diseñada para manejar la salida a diferentes destinos, como la GUI, la consola de mensajes y el terminal del sistema operativo.
 
@@ -12,15 +13,15 @@ Con el tiempo, lo que comenzó como una única función para enviar mensajes ha 
 
 A medida que nuestras necesidades crecen, el manejo de mensajes en múltiples salidas requiere un enfoque más modular y extensible. En lugar de que una sola función lo haga todo, hemos dividido el proceso en componentes reutilizables, lo que permite una mayor flexibilidad. Esta biblioteca ahora se puede utilizar como una herramienta de mensajería de uso general de la que se pueden tomar prestados otros complementos o funciones.
 
-### What Does the Messaging Library Do?
+### ¿Qué hace la biblioteca de mensajería?
 
 La Biblioteca de mensajería incluye actualmente las siguientes funciones:
 
 - **send-to-gui**: envía mensajes al cuadro de diálogo de Lumi GUI.
 - **send-to-error-console**: Envía mensajes a la consola Lumi Message.
 - **send-to-terminal**: Envía mensajes a la ventana del terminal.
-- **enviar mensaje**: una función de despachador que dirige los mensajes a la salida adecuada.
-- **validate-message**: Ensures that the message and output are valid before sending.
+- **send-message**: una función de despachador que dirige los mensajes a la salida adecuada.
+- **validate-message**: garantiza que el mensaje y la salida sean válidos antes del envío.
 
 ### Ampliando la biblioteca
 

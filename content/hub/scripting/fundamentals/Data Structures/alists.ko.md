@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 **연관 목록**(또는 **alist**)은 키-값 쌍 모음을 나타내는 데 사용되는 Scheme의 기본 데이터 구조입니다. 이는 쌍 목록으로 구현되며, 각 쌍은 키(일반적으로 기호)를 값과 연결합니다. Alist는 간단하고 유연하며 중소 규모 데이터세트에 적합합니다.
 
@@ -33,19 +34,19 @@ alist는 각 요소가 **쌍**(`cons`으로 구성됨)인 목록입니다. 각 �
 작은따옴표(`'`)는 **인용**을 줄여서 Scheme이 표현식을 평가하지 못하도록 합니다. 이는 모든 키와 값이 하드코딩된 정적 목록을 생성하는 데 이상적입니다.
 
 ```scheme
-;; Alist manuell definieren
+;; alist 수동 정의
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; 프로그램 방식으로 새 쌍 추가
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **결과**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### 역따옴표 사용(`` ```) and Comma (`,`)
+#### 역따옴표(`` ` ``)와 쉼표(`,`) 사용
 
-역따옴표(`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`) 연산자입니다. 이는 런타임에 키나 값이 계산되는 목록을 만드는 데 유용합니다.
+역따옴표(`` ` ``)는 작은따옴표와 비슷하지만 쉼표(`,`)로 평가된 표현식을 동적으로 삽입할 수 있는 연산자입니다. 이는 런타임에 키나 값이 계산되는 목록을 만드는 데 유용합니다.
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ alist에서 값을 검색하려면 해당 키로 쌍을 찾는 `assoc` 함수를
 ### 주요 기능 요약
 
 - **작은 따옴표(`'`)**: 모든 요소가 리터럴 데이터인 정적 alist를 생성합니다.
-- **역따옴표(`` ```)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **역따옴표(`` ` ``)**: 정적 요소와 평가된 표현식을 혼합하여 alist를 동적으로 만들 수 있습니다(`,` 사용).
 - **점 표기법(`.`)**: 목록의 값과 키를 연결하여 쌍을 구성하는 데 사용됩니다.

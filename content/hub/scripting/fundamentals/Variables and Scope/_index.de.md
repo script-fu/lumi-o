@@ -4,20 +4,21 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 In Scheme ist die Verwaltung von Variablen und ihrem Umfang ein Kernkonzept zum Schreiben effizienter und wartbarer Skripte. Variablen speichern Datenwerte, die Ihr Skript bearbeiten kann, während der Bereich definiert, wo auf diese Variablen zugegriffen werden kann. Wenn Sie verstehen, wie Variablen effektiv definiert und verwendet werden, können Sie strukturierten, wiederverwendbaren und fehlerfreien Code erstellen.
 
 ### Dynamisches Tippen
 
-Das Schema ist dynamisch typisiert: Sie deklarieren keine Typen im Voraus und eine Variable kann im Laufe der Zeit Werte unterschiedlicher Art enthalten.
+Scheme ist dynamisch typisiert: Sie deklarieren keine Typen im Voraus und eine Variable kann im Laufe der Zeit Werte unterschiedlicher Art enthalten.
 
 ```scheme
 (define x 42)       ; x ist eine Zahl
 (set! x "hello")    ; jetzt ist x eine Zeichenkette
 ```
 
-### Die Rolle von Variablendefinitionen und Umfang im Schema
+### Die Rolle von Variablendefinitionen und Umfang in Scheme
 
 Das Definieren von Variablen und das Verwalten ihres Gültigkeitsbereichs dient mehreren Zwecken:
 - **Daten organisieren:** Variablen speichern Informationen und machen Ihre Skripte dadurch besser lesbar und verwaltbar.
@@ -72,7 +73,9 @@ Das `define`-Konstrukt erstellt Variablen oder Funktionen mit globalem Gültigke
 | **Kapselung** | Verhindert unbeabsichtigte Interaktionen | Kann mit anderen global definierten Variablen in Konflikt geraten |
 | **Anwendungsfall** | Temporäre Variablen für bestimmte Aufgaben | Gemeinsam genutzte Variablen oder Funktionen, die überall verwendet werden |
 
-### Zusammenfassung- **Variablendefinitionen und -bereich** sind die Grundlage für die Organisation und Verwaltung von Daten in Ihren Scheme-Skripten.
+### Zusammenfassung
+
+- **Variablendefinitionen und -bereich** sind die Grundlage für die Organisation und Verwaltung von Daten in Ihren Scheme-Skripten.
 
 - Verwenden Sie den **lokalen Bereich** (`let`, `let*`, mit dem Namen `let`), um temporäre Variablen zu kapseln und Konflikte zu vermeiden.
 - Verwenden Sie den **globalen Bereich** (`define`) für wiederverwendbare Funktionen oder Konstanten, die in Ihrem Skript gemeinsam genutzt werden.

@@ -3,23 +3,24 @@ title: "for-each"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: f4fd3b930e681f50286edbc888c747fe8785077655c3c4f326ac505df038e084
 translation_lock: true
-translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
+url: "hub/scripting/fundamentals/Iteration/for-each"
 ---
-La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
+Scheme의 `for-each` 함수는 목록(또는 여러 목록)의 각 요소에 프로시저를 적용하는 데 사용됩니다. 결과와 함께 새 목록을 반환하는 `map`과 달리 `for-each`은 변수 인쇄 또는 업데이트와 같은 **부작용**에 사용됩니다.
 
-La forme la plus simple de `for-each` :
+`for-each`의 가장 간단한 형태는 다음과 같습니다.
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procédure :** Fonction par élément.
-- **Liste :** Liste à parcourir.
+- **프로시저**: 목록의 각 요소에 적용하는 함수입니다.
+- **목록**: 처리할 요소가 포함된 목록입니다.
 
 ---
 
-### Exemple : afficher une liste
+### 예: 목록 인쇄
 
 ```scheme
 (define (print-item x)
@@ -28,23 +29,26 @@ La forme la plus simple de `for-each` :
 (for-each print-item (list 1 2 3 4))
 ```
 
-- `print-item` est appliqué à `(1 2 3 4)`.
-- Chaque nombre est affiché successivement.
+- 여기서 `print-item` 함수는 `(1 2 3 4)` 목록의 각 요소에 적용됩니다.
+- 이렇게 하면 각 번호가 순차적으로 인쇄됩니다.
 
-**Sortie** : `1 2 3 4`
-
----
-
-### Comment ça marche
-
-1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
-2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+**출력**: `1 2 3 4`
 
 ---
 
-#### Plusieurs listes
+### 작동 방식
 
-Avec plusieurs listes, `for-each` traite les éléments correspondants.
+1. **각 요소에 대해 반복**:
+   - 제공된 절차는 목록의 모든 요소에 대해 순서대로 실행됩니다.
+
+2. **부작용을 수행**:
+   - 일반적인 부작용에는 인쇄, 로깅 또는 외부 변수 수정이 포함됩니다. `map`과 달리 `for-each`은 새 목록을 반환하지 않습니다.
+
+---
+
+#### 예: 여러 목록과 함께 사용
+
+여러 목록이 제공되는 경우 `for-each`은 각 목록의 해당 요소를 처리합니다.
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `for-each` traite les éléments correspondants.
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `5 7 9`
+- `sum-and-print` 함수는 두 목록의 해당 요소를 합산하고 결과를 인쇄합니다.
+
+**출력**: `5 7 9`
 
 ---
 
-### Résumé
+### 요약
 
-- `for-each` convient aux effets de bord sur chaque élément.
-- Contrairement à `map`, **pas de nouvelle liste**.
-- Plusieurs listes simultanément.
+- `for-each` 함수는 목록의 각 요소에 부작용을 수행하는 데 유용합니다.
+- `map`과 달리 `for-each`은 새 목록을 생성하지 않으며 시술의 부작용에만 초점을 맞춥니다.
+- 여러 목록을 동시에 처리할 수 있으며 해당 요소에 절차를 적용할 수 있습니다.
 
-Utilisez `for-each` lorsque l'action prime sur la transformation.
+`for-each`을 사용하면 데이터 변환이 아닌 작업 수행이 목표인 경우 목록을 효과적으로 처리할 수 있습니다.

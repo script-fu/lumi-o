@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
 Les **fonctions variadiques** dans Scheme sont des fonctions qui acceptent un nombre variable d'arguments. Ces fonctions sont très polyvalentes et vous permettent de créer du code flexible et réutilisable. En programmation fonctionnelle, les fonctions variadiques simplifient les opérations qui nécessitent de traiter un nombre arbitraire d'entrées, comme la somme d'une liste de nombres ou la concaténation de chaînes.
 

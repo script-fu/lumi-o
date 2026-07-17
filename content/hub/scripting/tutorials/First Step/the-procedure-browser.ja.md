@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 **Lumi プロシージャブラウザ** を使用すると、利用可能なプロシージャ (組み込みおよび提供されたプラグイン) を検索し、それらのパラメータと戻り値を検査できます。
 
@@ -25,7 +26,7 @@ Lumi のプロシージャブラウザには、**ヘルプ** メニューから�
 
 コール署名を検証する必要がある場合、または正確なプロシージャ名を確認する必要がある場合は、キーワードまたはプロシージャ名で検索します。
 
-プロシージャブラウザの #### (lumi-message)
+#### プロシージャブラウザの `(lumi-message)`
 
 `lumi-message` を検索して、そのパラメーターと戻り値を確認します。
 

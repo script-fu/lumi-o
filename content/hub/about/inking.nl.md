@@ -5,6 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+url: "hub/about/inking"
 ---
 
 De Inkten-werkruimte is gebouwd voor doelbewust lijnwerk of inktachtige chaos. Dit is het stadium waar tekenen niet langer verkennend is, maar vastberaden wordt: gecontroleerde streken, duidelijke randen en markeringen die hun vorm met zekerheid moeten behouden. Of laat los met expressieve spetters, lusvormige lijnen, droge Nib-krassen en wilde Sumi-streken.

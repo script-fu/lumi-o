@@ -7,7 +7,7 @@ translation_lock: true
 translation_source_sha256: df541f07648f18234031778b916116d8f6fd0dbbf018e30b0a17a49ca37a8825
 ---
 
-本节介绍 Lumi-o 的核心功能，以及它们所支持的创作工作流程。
+本节介绍 Lumi 的核心功能，以及它们所支持的创作工作流程。
 
 {{< cards >}}
   {{< card link="file-format" title="文件格式 (.lum)" icon="document-text" subtitle="面向分层图稿、恢复、色彩数据与长期编辑的结构化项目格式。" >}}
@@ -19,7 +19,7 @@ translation_source_sha256: df541f07648f18234031778b916116d8f6fd0dbbf018e30b0a17a
   {{< card link="palette-map" title="Palette Map" icon="view-grid" subtitle="将调色板可及的色彩世界呈现为便于探索与选色的视觉地图。" >}}
   {{< card link="palette-mixer" title="Palette Mixer" icon="adjustments" subtitle="基于调色板关系，通过类颜料混色、色调与色度调整，创造新颜色。" >}}
   {{< card link="publishing-layout" title="出版版面" icon="book-open" subtitle="出血、装订线与构图参考线，面向印刷与出版，随项目按图像保存。" >}}
-  {{< card link="scripting" title="Scheme 脚本" icon="code" subtitle="通过内嵌 Scheme 解释器，自动化工作流程并扩展 Lumi-o。" >}}
+  {{< card link="scripting" title="Scheme 脚本" icon="code" subtitle="通过内嵌 Scheme 解释器，自动化工作流程并扩展 Lumi。" >}}
   {{< card link="spectral-color" title="光谱混色" icon="beaker" subtitle="调色板颜色以类颜料方式混合，让数字选色更接近绘画体验。" >}}
   {{< card link="tool-presets" title="工具预设" icon="template" subtitle="构建少量熟悉的手工工具，行为稳定，资源与自定义标识齐备。" >}}
   {{< card link="warp-tool" title="Warp Tool" icon="cursor-click" subtitle="直接重塑已绘制内容，同时保留复杂图稿的分层结构。" >}}

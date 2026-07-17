@@ -1,6 +1,7 @@
 ---
 title: Conditionals
 type: docs
+url: "hub/scripting/fundamentals/Conditionals/_index"
 weight: 2
 ---
 

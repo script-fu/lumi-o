@@ -3,23 +3,24 @@ title: "map"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f8a1536159fb582effce405aaa35ff9404de46b545c7db7eea088a72f551a9ee
 translation_lock: true
-translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
+url: "hub/scripting/fundamentals/Iteration/map"
 ---
-Scheme 中的 `map` 函数对列表（或多个列表）的每个元素应用一个过程，并**返回包含结果的新列表**。非常适合数据转换。
+Scheme 中的 `map` 函数用于将过程应用于列表（或多个列表）的每个元素，并**返回包含结果的新列表**。这使其成为转换数据的理想选择。
 
-La forme la plus simple de `map` ressemble à ceci :
+`map` 最简单的形式如下所示：
 
 ```scheme
 (map procedure list)
 ```
 
-- **Procédure :** Fonction appliquée à chaque élément.
-- **Liste :** Liste à transformer.
+- **过程**：应用于列表中每个元素的函数。
+- **列表**：其元素将被转换的列表。
 
 ---
 
-### Exemple : doubler chaque élément
+### 示例：将每个元素加倍
 
 ```scheme
 (define (double x)
@@ -28,23 +29,26 @@ La forme la plus simple de `map` ressemble à ceci :
 (map double (list 1 2 3 4))
 ```
 
-- `double` est appliqué à `(1 2 3 4)`.
-- Résultat : nouvelle liste avec valeurs doublées.
+- 此处，函数`double` 应用于列表`(1 2 3 4)` 的每个元素。
+- 结果是一个新列表，其中每个元素都加倍。
 
-**Sortie** : `(2 4 6 8)`
-
----
-
-### Comment ça marche
-
-1. **Nouvelle liste :** `map` collecte les résultats.
-2. **Transformation :** Plutôt que des effets de bord.
+**输出**：`(2 4 6 8)`
 
 ---
 
-#### Plusieurs listes
+### 它是如何运作的
 
-Avec plusieurs listes, `map` traite les éléments correspondants.
+1. **创建新列表**：
+   - `map` 将提供的过程应用于列表的每个元素并将结果收集到新列表中。
+
+2. **转换数据**：
+   - 它主要用于数据转换而不是执行副作用。
+
+---
+
+#### 示例：与多个列表一起使用
+
+如果提供了多个列表，`map` 会处理每个列表中的相应元素。
 
 ```scheme
 (define (sum x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `map` traite les éléments correspondants.
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `(5 7 9)`
+- 函数`sum` 添加两个列表中的相应元素，并将结果作为新列表返回。
+
+**输出**：`(5 7 9)`
 
 ---
 
-### Résumé
+### 总结
 
-- `map` transforme des listes élément par élément.
-- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
-- Plusieurs listes sont traitées par paires.
+- `map` 函数是一个强大的工具，用于通过对每个元素应用过程来转换列表。
+- 与 `for-each` 不同，`map` **生成一个新列表**，其中包含应用该过程的结果。
+- 它支持多个列表，允许对它们进行元素级操作。
 
-Avec `map`, créez des versions transformées tout en conservant les listes d'origine.
+通过使用 `map`，您可以高效地创建数据的转换版本，同时保持原始列表不变。

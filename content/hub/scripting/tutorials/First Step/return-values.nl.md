@@ -4,15 +4,16 @@ type: docs
 weight: 8
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
+translation_source_sha256: 586ad49d823eb3fa85ff606b73c3f95e3fd3efb8bd9a0c9482e2c3e21f953de9
+url: "hub/scripting/tutorials/First Step/return-values"
 ---
-Retourwaarden zijn belangrijk omdat u hiermee de stroom kunt controleren zonder extra status. In Schema wordt de laatst geëvalueerde expressie de retourwaarde.
+Retourwaarden zijn belangrijk omdat u hiermee de stroom kunt controleren zonder extra status. In Scheme wordt de laatst geëvalueerde expressie de retourwaarde.
 
 Deze pagina gebruikt de validatiehulpmiddelen uit het berichtenvoorbeeld om te laten zien hoe expliciete retourwaarden het samenstellen van code eenvoudiger maken.
 
 ### Wat is een retourwaarde?
 
-In Schema wordt de retourwaarde van een functie bepaald door de laatste expressie die de functie evalueert. Dit betekent dat wat de laatste regel code in de functie ook evalueert, zal worden geretourneerd als resultaat van de functie. Als er expliciet geen waarde wordt geretourneerd, retourneert de functie `#f` (false) of `undefined`.
+In Scheme wordt de retourwaarde van een functie bepaald door de laatste expressie die de functie evalueert. Dit betekent dat wat de laatste regel code in de functie ook evalueert, zal worden geretourneerd als resultaat van de functie. Als er expliciet geen waarde wordt geretourneerd, retourneert de functie `#f` (false) of `undefined`.
 
 Laten we de validatiefunctie opnieuw bekijken (is-valid-string?)
 
@@ -63,7 +64,7 @@ De voorwaardelijke instructie `cond` wordt overgeslagen als de eerste test mislu
 
 ## If-instructielogica in schema
 
-Vóór het gerefactoreerde bibliotheekvoorbeeld volgt hier een kort overzicht van de voorwaardelijke logica. Schema gebruikt `if` om tussen twee paden te kiezen.
+Vóór het gerefactoreerde bibliotheekvoorbeeld volgt hier een kort overzicht van de voorwaardelijke logica. Scheme gebruikt `if` om tussen twee paden te kiezen.
 
 Hier is een eenvoudige vorm van een `if`-verklaring:
 
@@ -112,7 +113,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #t)
     #f))
 
-;; Doel: Stuurt een bericht naar de Error Console, retourneert #t bij succes
+;; Doel: Stuurt een bericht naar de foutenconsole, retourneert #t bij succes
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

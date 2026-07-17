@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 Schemaopdrachten werken op een laag niveau, wat betekent dat zelfs eenvoudige taken meerdere stappen kunnen vereisen. Deze granulariteit biedt echter flexibiliteit: we kunnen opdrachten bundelen in kleine, herbruikbare functies die precies doen wat we nodig hebben. Inpakken is geen zwart-witconcept; het kan variëren van eenvoudige aliassen voor veelgebruikte opdrachten tot complexere functies die volledige workflows beheren. Soms is een wrapper slechts een gemaksfunctie om de leesbaarheid te verbeteren, terwijl deze in andere gevallen evolueert naar een volledig uitgerust hulpprogramma dat meerdere bewerkingen omvat.
 
@@ -86,9 +87,9 @@ Om een JPEG in onze plug-ins te exporteren, voegen we eenvoudigweg de bibliothee
 
 Hierdoor blijft onze code schoon, leesbaar en aanpasbaar, terwijl we JPEG's efficiënt en met minimale inspanning kunnen exporteren.
 
-### Autovervanging
+### `car` vervangen
 
-De ***car***-functie kan cryptisch zijn en gevoelig voor scriptfouten. Het is gemakkelijk om per ongeluk ***auto*** toe te passen op een vector of een item dat niet in de lijst voorkomt, wat tot onverwacht gedrag leidt. Om onze code robuuster en leesbaarder te maken, kunnen we deze functionaliteit in een veiligere functie verpakken.
+De ***car***-functie kan cryptisch zijn en gevoelig voor scriptfouten. Het is gemakkelijk om per ongeluk ***car*** toe te passen op een vector of een item dat niet in de lijst voorkomt, wat tot onverwacht gedrag leidt. Om onze code robuuster en leesbaarder te maken, kunnen we deze functionaliteit in een veiligere functie verpakken.
 
 ```scheme
 ;; Doel: Retourneert het eerste item van een lijst of vector.

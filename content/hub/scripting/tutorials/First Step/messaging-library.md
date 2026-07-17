@@ -1,6 +1,7 @@
 ---
 title: Messaging Library
 type: docs
+url: "hub/scripting/tutorials/First Step/messaging-library"
 weight: 6
 ---
 

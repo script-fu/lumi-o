@@ -4,9 +4,10 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
+translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
+url: "hub/scripting/fundamentals/Iteration/_index"
 ---
-L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des modèles d'exécution sophistiqués.
 
 ### Le rôle de l'itération en Scheme
 

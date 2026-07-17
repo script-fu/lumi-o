@@ -4,11 +4,12 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Assim que uma função auxiliar crescer, mova-a para um pequeno arquivo de biblioteca. Isso mantém o plug-in focado e torna o auxiliar reutilizável em vários plug-ins.
 
-### Make a Library Function
+### Criar uma função de biblioteca
 
 Podemos pegar a função enviar mensagem e criar um novo arquivo com ela como conteúdo. Salve o arquivo em sua pasta repo, não na parte de plugins, talvez próximo ao nível superior;
 
@@ -22,11 +23,11 @@ Podemos pegar a função enviar mensagem e criar um novo arquivo com ela como co
                   └── hello-world.scm
 ```
 
-- **scheme/**: Este é o diretório principal para armazenar o código do esquema.
+- **scheme/**: Este é o diretório principal para armazenar o código de Scheme.
   - **library/**: É aqui que funcionam funções compartilhadas como `send-message.scm`.
   - **plug-ins/**: É aqui que seus plug-ins individuais são armazenados.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Pasta para o plug-in específico "Hello World!".
+      - **hello-world.scm**: Arquivo de script do plug-in.
 
 Exemplo de função de biblioteca send-message.scm
 
@@ -34,9 +35,9 @@ Exemplo de função de biblioteca send-message.scm
 ;; Função para tratar a saída de mensagens para vários destinos
 (define (send-message message output)
   (cond
-    ;; Enviar para a Message console
+    ;; Enviar para a console de mensagens
     ((eq? output 'error-console)
-       ;; Definir o manipulador para Message console
+       ;; Definir o manipulador para console de mensagens
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,13 +52,13 @@ Exemplo de função de biblioteca send-message.scm
        ;; A saída do terminal é tratada com display
        (display message)))
 
-  ;; Restaurar o manipulador de mensagens padrão para a Message console
+  ;; Restaurar o manipulador de mensagens padrão para a console de mensagens
   (lumi-message-set-handler 2))
 ```
 
 ### Carregar a função da biblioteca
 
-Podemos carregar essa função de biblioteca com o comando Scheme `load`;
+Podemos carregar essa função de biblioteca com o comande Scheme `load`;
 
 Carregando um arquivo de biblioteca:
 
@@ -84,4 +85,4 @@ Carregando um arquivo de biblioteca:
   "<Image>/Funky")
 ```
 
-Ei! We've now got something simpler and shorter to read, that kind of describes itself without comments. Esta é a conclusão satisfatória da refatoração.
+Ei! Agora temos algo mais simples e curto para ler, que se descreve sozinho sem comentários. Esta é a conclusão satisfatória da refatoração.

@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
 W skryptach żadna funkcja nie jest nieomylna. Nawet najbardziej niezawodne polecenia mogą zawieść w obliczu nieoczekiwanych danych wejściowych lub warunków. Aby się przed tym zabezpieczyć, możemy wdrożyć niestandardowy system debugowania i zastosować techniki programowania defensywnego. Opakowując standardowe funkcje w mechanizmy obsługi błędów i dostarczając informacji zwrotnych, możemy sprawić, że nasze skrypty będą solidniejsze i łatwiejsze do rozwiązywania problemów.
 
@@ -54,14 +55,14 @@ Dzięki temu możemy dynamicznie kontrolować debugowanie:
 
 ## Debuguj system przesyłania wiadomości
 
-Aby efektywnie obsługiwać wyniki debugowania w schemacie, stosujemy podejście strukturalne obejmujące wiele funkcji pomocniczych. Funkcje te zapewniają, że komunikaty debugowania i ostrzeżenia są jasne, czytelne i łatwe w utrzymaniu.
+Aby efektywnie obsługiwać wyniki debugowania w Scheme, stosujemy podejście strukturalne obejmujące wiele funkcji pomocniczych. Funkcje te zapewniają, że komunikaty debugowania i ostrzeżenia są jasne, czytelne i łatwe w utrzymaniu.
 
 ### Omówienie systemu przesyłania komunikatów debugowania
 
 Nasz system przesyłania komunikatów debugowania składa się z następujących elementów:
 
 1. `debug-message` – Wyświetla komunikaty debugowania, gdy debugowanie jest włączone.
-2. `serialize-item` – Konwertuje różne typy danych schematu na reprezentację łańcuchową.
+2. `serialize-item` – Konwertuje różne typy danych Scheme na reprezentację łańcuchową.
 3. `concat` – Łączy wiele elementów w jeden ciąg.
 4. `list->string` – Formatuje listę do postaci czytelnego ciągu znaków.
 5. `message` – Wyświetla dane wyjściowe w konsoli wiadomości Lumi.
@@ -176,7 +177,9 @@ Funkcja `list->string` konwertuje listę na sformatowany ciąg znaków.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### Komunikaty ostrzegawczeFunkcja `warning-message` działa podobnie do `debug-message`, ale wyświetla ostrzeżenia nawet wtedy, gdy debugowanie jest wyłączone.
+### Komunikaty ostrzegawcze
+
+Funkcja `warning-message` działa podobnie do `debug-message`, ale wyświetla ostrzeżenia nawet wtedy, gdy debugowanie jest wyłączone.
 
 ```scheme
 ;; Cel: Wyświetla komunikat ostrzegawczy.
@@ -213,7 +216,7 @@ Podczas opracowywania wtyczek Scheme zawijanie funkcji w ten sposób znacznie sk
 
 W tym strumieniu debugowania wywołania funkcji są oznaczone gwiazdką (*), co ułatwia śledzenie wykonywania skryptów i wykrywanie błędów, szczególnie w przypadku złożonych wtyczek. Ta widoczność pomaga nam zrozumieć przebieg operacji i skutecznie diagnozować nieoczekiwane zachowania.
 
-Opakowanie naszej funkcji wiadomości umożliwiające użycie `*`
+Funkcja `call` opakowuje wywołania z prefiksem `*`:
 
 ```scheme
 (define (call . items)

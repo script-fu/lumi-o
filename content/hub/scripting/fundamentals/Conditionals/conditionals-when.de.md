@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
+translation_source_sha256: 8b6c15ef2763fe95100759e0e2e21f2bf43bf8424317be6d414f2b5260587714
+url: "hub/scripting/fundamentals/Conditionals/conditionals-when"
 ---
 In Scheme ist `if` vielseitig, wird aber ohne explizites `else` schnell unübersichtlich — besonders wenn nur der wahre Zweig ausgeführt werden soll. Dann ist `when` klarer und kompakter.
 

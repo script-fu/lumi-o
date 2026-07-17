@@ -4,11 +4,12 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
+translation_source_sha256: af1b2f3233ef50936b24aa195d3a7da50529a4fff3109b087be2f861e15496d1
+url: "hub/scripting/tutorials/First Step/reworking"
 ---
 Ten krok rozwiązuje subtelne zachowanie w przykładzie wiadomości.
 
-Jako wiadomość przekazywaliśmy ciąg „Hello world!\n”. „\n” to specjalny rodzaj znaku, znak „ucieczki”. Mówi wydrukowi wyjściowemu, aby rozpoczął nową linię. W schemacie wymusi to również wyświetlenie komunikatu wysłanego na pasek stanu jako okna GUI.
+Jako wiadomość przekazywaliśmy ciąg „Hello world!\n”. „\n” to specjalny rodzaj znaku, znak „ucieczki”. Mówi wydrukowi wyjściowemu, aby rozpoczął nową linię. W Scheme wymusi to również wyświetlenie komunikatu wysłanego na pasek stanu jako okna GUI.
 
 Pomocnik `send-to-gui` wysyła wiadomości do okna dialogowego Lumi.
 
@@ -41,10 +42,10 @@ Usunięcie znaku ucieczki i rozszerzenie funkcji:
 
 Zastąp liczby magiczne stałymi dostarczonymi przez Lumi (na przykład `MESSAGE-BOX` i `ERROR-CONSOLE`).
 
-Następnie podziel walidację na dwie funkcje, aby można było ją ponownie wykorzystać w wielu witrynach połączeń.
+Następnie podziel walidację na dwie funkcje, aby można było ją ponownie wykorzystać w wielu miejscach wywołania.
 
-- (is-valid-string?) Aby sprawdzić, czy ciąg znaków jest ciągiem, a nie pustym ciągiem, w ramach funkcji wysyłania do*.
-- (is-valid-output-display?) Aby sprawdzić, czy dane miejsce docelowe wyjścia jest prawidłowe, w funkcji send-message.
+- (is-valid-string?) — aby sprawdzić, czy ciąg znaków jest ciągiem, a nie pustym ciągiem, w ramach funkcji wysyłania do*.
+- (is-valid-output-display?) — aby sprawdzić, czy miejsce docelowe wyjścia jest prawidłowe, w funkcji send-message.
 
 Przerób bibliotekę:
 
@@ -97,6 +98,6 @@ Przerób bibliotekę:
 
 ## Wniosek
 
-Przeprojektowując naszą bibliotekę wiadomości, uczyniliśmy ją bardziej solidną i niezawodną. Naprawiliśmy ukryty problem ze znakiem nowej linii, wprowadziliśmy stałe dla lepszej przejrzystości i rozszerzyliśmy funkcjonalność, dodając obsługę wyników paska stanu i okien dialogowych. Dodatkowo rozdzielenie logiki walidacji na mniejsze, skupione funkcje sprawia, że ​​nasz kod będzie łatwiejszy w utrzymaniu i rozbudowie w przyszłości.
+Przeprojektowując naszą bibliotekę wiadomości, uczyniliśmy ją bardziej solidną i niezawodną. Naprawiliśmy ukryty problem ze znakiem nowej linii, wprowadziliśmy stałe dla lepszej przejrzystości i rozszerzyliśmy funkcjonalność, dodając obsługę wyników paska stanu i okien dialogowych. Dodatkowo rozdzielenie logiki walidacji na mniejsze, skupione funkcje sprawia, że nasz kod będzie łatwiejszy w utrzymaniu i rozbudowie w przyszłości.
 
 Ta przeróbka pokazuje, jak małe zmiany mogą ulepszyć ogólną strukturę i funkcjonalność naszej biblioteki, torując drogę do większej elastyczności i możliwości ponownego użycia w miarę rozwoju naszego projektu.

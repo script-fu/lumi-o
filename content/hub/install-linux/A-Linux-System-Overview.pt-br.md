@@ -35,7 +35,7 @@ A distribuição Linux empacota o kernel junto com ferramentas, bibliotecas e so
 
 Ferramenta usada para instalar, atualizar e remover aplicativos a partir de repositórios. Exemplos: APT para distribuições baseadas em Debian, DNF para Fedora e Pacman para Arch Linux.
 
-#### Display Manager
+#### Gerenciador de exibição
 
 Gerencia a tela gráfica de login e o início da sessão. Exemplos: GDM (GNOME Display Manager), LightDM e SDDM (Simple Desktop Display Manager).
 

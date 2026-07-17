@@ -4,7 +4,8 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
 Functies zijn een kernconcept in Scheme en bieden de middelen om logica in te kapselen, hergebruik van code mogelijk te maken en uw scripts effectief te structureren. Met functies kunt u modulaire, onderhoudbare scripts maken die een breed scala aan taken afhandelen, van basisbewerkingen tot geavanceerde workflows in Lumi.
 
@@ -59,7 +60,7 @@ Scheme biedt een verscheidenheid aan functieconstructies, elk geschikt voor spec
 
 ## Algemene syntaxis voor functies
 
-Functies in Schema hebben een eenvoudige en consistente syntaxis:
+Functies in Scheme hebben een eenvoudige en consistente syntaxis:
 
 ```scheme
 (define (function-name parameter1 parameter2 ...)

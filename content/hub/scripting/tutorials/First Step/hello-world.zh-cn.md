@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 本教程将介绍Scheme 插件的最小结构。有些行是“样板文件”：Lumi 加载文件需要它们，即使您还没有完全理解它们。
 
@@ -73,7 +74,7 @@ translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd2
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; 设置消息处理程序，将消息输出到 Error Console
+  ;; 设置消息处理程序，将消息输出到 错误控制台
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

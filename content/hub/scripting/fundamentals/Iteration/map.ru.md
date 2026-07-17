@@ -3,23 +3,24 @@ title: "map"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f8a1536159fb582effce405aaa35ff9404de46b545c7db7eea088a72f551a9ee
 translation_lock: true
-translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
+url: "hub/scripting/fundamentals/Iteration/map"
 ---
-Функция `map` в Scheme применяет процедуру к каждому элементу списка (или нескольких списков) и **возвращает новый список** с результатами. Идеальна для преобразования данных.
+Функция `map` в Scheme используется для применения процедуры к каждому элементу списка (или нескольких списков) и **возврата нового списка**, содержащего результаты. Это делает его идеальным для преобразования данных.
 
-La forme la plus simple de `map` ressemble à ceci :
+Самая простая форма `map` выглядит так:
 
 ```scheme
 (map procedure list)
 ```
 
-- **Procédure :** Fonction appliquée à chaque élément.
-- **Liste :** Liste à transformer.
+- **Процедура**: функция, применяемая к каждому элементу списка.
+- **Список**: список, элементы которого будут преобразованы.
 
 ---
 
-### Exemple : doubler chaque élément
+### Пример: удвоение каждого элемента
 
 ```scheme
 (define (double x)
@@ -28,23 +29,26 @@ La forme la plus simple de `map` ressemble à ceci :
 (map double (list 1 2 3 4))
 ```
 
-- `double` est appliqué à `(1 2 3 4)`.
-- Résultat : nouvelle liste avec valeurs doublées.
+- Здесь функция `double` применяется к каждому элементу списка `(1 2 3 4)`.
+- Результатом является новый список, в котором каждый элемент удвоен.
 
-**Sortie** : `(2 4 6 8)`
-
----
-
-### Comment ça marche
-
-1. **Nouvelle liste :** `map` collecte les résultats.
-2. **Transformation :** Plutôt que des effets de bord.
+**Вывод**: `(2 4 6 8)`
 
 ---
 
-#### Plusieurs listes
+### Как это работает
 
-Avec plusieurs listes, `map` traite les éléments correspondants.
+1. **Создает новый список**:
+   - `map` применяет предоставленную процедуру к каждому элементу списка и собирает результаты в новый список.
+
+2. **Преобразует данные**:
+   - Он в основном используется для преобразования данных, а не для выполнения побочных эффектов.
+
+---
+
+#### Пример: использование нескольких списков
+
+Если предоставлено несколько списков, `map` обрабатывает соответствующие элементы из каждого списка.
 
 ```scheme
 (define (sum x y)
@@ -53,14 +57,16 @@ Avec plusieurs listes, `map` traite les éléments correspondants.
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-**Sortie** : `(5 7 9)`
+- Функция `sum` добавляет соответствующие элементы из двух списков и возвращает результаты в виде нового списка.
+
+**Вывод**: `(5 7 9)`
 
 ---
 
-### Résumé
+### Резюме
 
-- `map` transforme des listes élément par élément.
-- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
-- Plusieurs listes sont traitées par paires.
+— Функция `map` — мощный инструмент для преобразования списков путем применения процедуры к каждому элементу.
+- В отличие от `for-each`, `map` **создает новый список**, содержащий результаты применения процедуры.
+- Он поддерживает несколько списков, позволяя выполнять поэлементные операции над ними.
 
-Avec `map`, créez des versions transformées tout en conservant les listes d'origine.
+Используя `map`, вы можете эффективно создавать преобразованные версии ваших данных, сохраняя при этом исходные списки неизменными.

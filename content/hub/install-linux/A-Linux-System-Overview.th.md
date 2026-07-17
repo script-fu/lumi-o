@@ -35,7 +35,7 @@ Lumi ทำงานได้ดีที่สุดบน Debian กับ Cin
 
 เครื่องมือสำหรับติดตั้ง อัปเดต และลบแอปพลิเคชันจาก repository ตัวอย่างเช่น APT สำหรับดิสทริบิวชันแบบ Debian, DNF สำหรับ Fedora และ Pacman สำหรับ Arch Linux
 
-#### Display Manager
+#### ตัวจัดการการแสดงผล
 
 จัดการหน้าจอเข้าสู่ระบบแบบกราฟิกและการเริ่มเซสชัน ตัวอย่างเช่น GDM (GNOME Display Manager), LightDM และ SDDM (Simple Desktop Display Manager)
 
@@ -43,6 +43,6 @@ Lumi ทำงานได้ดีที่สุดบน Debian กับ Cin
 
 ให้ graphical user interface (GUI) และจัดการรูปลักษณ์โดยรวมกับประสบการณ์ผู้ใช้ ตัวอย่างเช่น GNOME, Cinnamon และ KDE Plasma
 
-#### Display Server
+#### เซิร์ฟเวอร์การแสดงผล
 
 จัดการเอาต์พุตภาพและเหตุการณ์อินพุต ตัวอย่างเช่น X11 (X Window System) และ Wayland. X11 เป็น display server แบบดั้งเดิม ส่วน Wayland เป็นทางเลือกที่ใหม่กว่าและปลอดภัยกว่า

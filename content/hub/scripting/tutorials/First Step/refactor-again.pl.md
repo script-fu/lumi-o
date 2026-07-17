@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 W miarę rozrastania się biblioteki pomocniczej, śledzenie jej na pierwszy rzut oka staje się trudniejsze. Ponownie dokonaj refaktoryzacji, aby każda funkcja była mała i przeznaczona do jednego celu.
 
@@ -37,7 +38,7 @@ Teraz, gdy sprawdzanie poprawności zostało przeniesione do osobnej funkcji, fu
   (validate-message message output)
 
   (cond
-    ;; Wyślij do Message console
+    ;; Wyślij do konsoli komunikatów
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ Teraz, gdy sprawdzanie poprawności zostało przeniesione do osobnej funkcji, fu
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Przywróć domyślną obsługę wiadomości do Message console
+  ;; Przywróć domyślną obsługę wiadomości do konsoli komunikatów
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ Każdy typ komunikatu wyjściowego (GUI, konsola komunikatów, terminal) można 
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Przywróć domyślną obsługę wiadomości do Message console
+  ;; Przywróć domyślną obsługę wiadomości do konsoli komunikatów
   (lumi-message-set-handler 2))
 ```
 
@@ -105,18 +106,18 @@ Ponieważ walidacja jest ważną częścią zapewnienia, że zarówno komunikat,
   (display message))
 ```
 
-Zobacz, że usunęliśmy sprawdzanie poprawności z funkcji wysyłania wiadomości i przenieśliśmy odpowiedzialność na każdą indywidualną funkcję wyjściową. Ta zmiana zapewnia, że ​​każde miejsce docelowe (GUI, konsola komunikatów, terminal) obsługuje własną weryfikację, usprawniając funkcję wysyłania wiadomości i utrzymując logikę sprawdzania bliżej miejsca, w którym jest to potrzebne.
+Zobacz, że usunęliśmy walidację z funkcji `send-message` i przenieśliśmy odpowiedzialność na każdą osobną funkcję wyjściową. Ta zmiana zapewnia, że każde miejsce docelowe (GUI, konsola komunikatów, terminal) obsługuje własną walidację, upraszczając `send-message` i trzymając logikę sprawdzania bliżej miejsca, w którym jest potrzebna.
 
-Takie podejście może uprościć funkcję wysyłania wiadomości, czyniąc ją _dyspozytorem_, zapewniając jednocześnie, że każda funkcja wysyłania do* poprawnie sprawdza poprawność wiadomości przed przetworzeniem.
+Takie podejście może uprościć `send-message`, czyniąc ją _dyspozytorem_, przy jednoczesnym zapewnieniu, że każda funkcja `send-to-*` poprawnie waliduje wiadomość przed przetworzeniem.
 
-Przenosząc weryfikację do każdej funkcji wysyłania do*, umożliwiliśmy ich ponowne użycie jako samodzielnych funkcji. Oznacza to, że możemy wywołać dowolną funkcję send-to-gui, send-to-error-console lub send-to-terminal bezpośrednio, bez polegania na funkcji wysyłającej wiadomość. Każda z tych funkcji obsługuje teraz w pełni swoją własną logikę i może być używana niezależnie w innych częściach kodu lub w innych wtyczkach, dzięki czemu Twój kod jest bardziej modułowy i elastyczny.
+Przenosząc walidację do każdej funkcji `send-to-*`, umożliwiliśmy ich ponowne użycie jako samodzielnych funkcji. Oznacza to, że możemy wywołać `send-to-gui`, `send-to-error-console` lub `send-to-terminal` bezpośrednio, bez polegania na dyspozytorze `send-message`. Każda z tych funkcji obsługuje teraz w pełni własną logikę i może być używana niezależnie w innych częściach kodu lub w innych wtyczkach, dzięki czemu kod jest bardziej modułowy i elastyczny.
 
 ## Korzyści z refaktoryzacji
 
 - **Wyraźne oddzielenie obaw**: Każda funkcja obsługuje teraz tylko jedną odpowiedzialność, dzięki czemu kod jest łatwiejszy do zrozumienia.
-- **Rozszerzalność**: Dodawanie nowych typów wyników jest proste. Po prostu definiujesz nową funkcję, taką jak `send-to-file` lub `send-to-logger`, a następnie dodajesz wielkość liter w instrukcji `cond`.
-- **Ponowne użycie**: Każdą z tych funkcji obsługi wyników można ponownie wykorzystać w innym miejscu projektu lub udostępnić wielu wtyczkom.
-- **Spójność**: Ponowne użycie funkcji sprawdzania poprawności w każdej funkcji `send-to-*` zapewnia, że ​​wszystkie dane wyjściowe są prawidłowo sprawdzane, co czyni kod bardziej niezawodnym.
+- **Rozszerzalność**: Dodawanie nowych typów wyjść jest proste. Wystarczy zdefiniować nową funkcję, taką jak `send-to-file` lub `send-to-logger`, a następnie dodać gałąź w instrukcji `cond`.
+- **Zapewniać ponowne użycie**: Każdą z tych funkcji obsługi wyników można ponownie wykorzystać w innym miejscu projektu lub udostępnić wielu wtyczkom.
+- **Spójność**: Ponowne użycie funkcji sprawdzania poprawności w każdej funkcji `send-to-*` zapewnia, że wszystkie dane wyjściowe są prawidłowo sprawdzane, co czyni kod bardziej niezawodnym.
 
 Zrefaktoryzowana wersja biblioteki:
 
@@ -128,14 +129,14 @@ Zrefaktoryzowana wersja biblioteki:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Cel: Wysyła wiadomość do Message console
+;; Cel: Wysyła wiadomość do konsoli komunikatów
 (define (send-to-error-console message)
   ;; Zweryfikuj wiadomość przed kontynuowaniem
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Cel: Wysyła wiadomość do okna terminal
+;; Cel: Wysyła wiadomość do okna terminala
 (define (send-to-terminal message)
   ;; Zweryfikuj wiadomość przed kontynuowaniem
   (validate-message message 'terminal)
@@ -148,7 +149,7 @@ Zrefaktoryzowana wersja biblioteki:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Przywróć domyślną obsługę wiadomości do Message console
+  ;; Przywróć domyślną obsługę wiadomości do konsoli komunikatów
   (lumi-message-set-handler 2))
 
 ;; Cel: Sprawdza, czy wiadomość jest niepustym ciągiem znaków i czy wyjście jest poprawne
@@ -162,4 +163,4 @@ Zrefaktoryzowana wersja biblioteki:
       (error "Invalid output destination: " output)))
 ```
 
-Czy to wszystko co możemy zrobić? NIE! jest jeszcze wiele do zrobienia, czytaj dalej.
+Czy to już wszystko? Nie — jest jeszcze sporo do zrobienia, czytaj dalej.

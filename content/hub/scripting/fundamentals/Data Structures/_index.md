@@ -1,6 +1,7 @@
 ---
 title: Data Structures
 type: docs
+url: "hub/scripting/fundamentals/Data Structures/_index"
 weight: 3
 ---
 

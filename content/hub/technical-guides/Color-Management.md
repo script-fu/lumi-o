@@ -1,6 +1,7 @@
 ---
 title: "Color Management"
 type: docs
+url: "hub/technical-guides/Color-Management"
 weight: 15
 ---
 

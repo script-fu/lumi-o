@@ -12,75 +12,100 @@ theme = 'hextra'
   languageCode = "en-GB"
   weight = 1
 
+  [languages.ar]
+  languageName = "العربية"
+  languageCode = "ar"
+  weight = 2
+
   [languages.de]
   languageName = "Deutsch"
   languageCode = "de"
-  weight = 2
+  weight = 3
 
   [languages.es]
   languageName = "Español"
   languageCode = "es"
-  weight = 3
+  weight = 4
 
   [languages.fr]
   languageName = "Français"
   languageCode = "fr"
-  weight = 4
+  weight = 5
+
+  [languages.id]
+  languageName = "Bahasa Indonesia"
+  languageCode = "id"
+  weight = 6
 
   [languages.it]
   languageName = "Italiano"
   languageCode = "it"
-  weight = 5
+  weight = 7
 
   [languages.ja]
   languageName = "日本語"
   languageCode = "ja"
-  weight = 6
+  weight = 8
 
   [languages.ko]
   languageName = "한국어"
   languageCode = "ko"
-  weight = 7
+  weight = 9
 
   [languages.nl]
   languageName = "Nederlands"
   languageCode = "nl"
-  weight = 8
+  weight = 10
 
   [languages.pl]
   languageName = "Polski"
   languageCode = "pl"
-  weight = 9
+  weight = 11
+
+  [languages.pt]
+  languageName = "Português (Portugal)"
+  languageCode = "pt"
+  weight = 12
 
   [languages."pt-br"]
   languageName = "Português (Brasil)"
   languageCode = "pt-BR"
-  weight = 10
+  weight = 13
 
   [languages.ru]
   languageName = "Русский"
   languageCode = "ru"
-  weight = 11
+  weight = 14
 
   [languages.sv]
   languageName = "Svenska"
   languageCode = "sv"
-  weight = 12
+  weight = 15
 
   [languages.th]
   languageName = "ไทย"
   languageCode = "th"
-  weight = 13
+  weight = 16
+
+  [languages.uk]
+  languageName = "Українська"
+  languageCode = "uk"
+  weight = 17
+
+  [languages.vi]
+  languageName = "Tiếng Việt"
+  languageCode = "vi"
+  weight = 18
 
   [languages."zh-cn"]
   languageName = "中文 (简体)"
   languageCode = "zh-CN"
-  weight = 14
+  weight = 19
 
   [languages."zh-tw"]
   languageName = "中文 (繁體)"
   languageCode = "zh-TW"
-  weight = 15
+  weight = 20
 
 [params]
 description = "Lumi-o is a free, open-source digital painting and illustration app for Linux. Lightweight, focused, and easy to build from source."

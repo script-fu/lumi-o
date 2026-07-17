@@ -1,6 +1,7 @@
 ---
 title: define
 type: docs
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 weight: 3
 ---
 

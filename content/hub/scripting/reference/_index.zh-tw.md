@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
+url: "hub/scripting/reference"
 ---
 編寫 Lumi 外掛時可用的內建 Scheme 實用程式和應用程式內瀏覽工具的快速參考。如需一般的 Scheme 學習資料，請參閱 [Scheme Cookbook](https://cookbook.scheme.org/) 和 [Scheme.org](https://www.scheme.org/)。
 

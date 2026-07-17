@@ -5,7 +5,7 @@ weight: 15
 url: "hub/technical-guides/Color-Management"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
+translation_source_sha256: 60e00f1b5e0b4a7bb3034ca99dd3f8f51f6bc52b1629a9ab717d2ac2166393ee
 ---
 
 Lumi-o는 바로 사용할 수 있도록 구성되어 있습니다. **16비트 이상의 정밀도**로 이미지를 작업하는 한, 소프트웨어는 기본 번들 소프트 프루프(CMYK)와 내장 sRGB 프로필을 사용하도록 이미 설정되어 있어 추가 구성 없이 동작합니다.

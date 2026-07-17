@@ -22,9 +22,9 @@ AppImage มี Lumi เวอร์ชันพกพาที่ทำงา�
 ## AppImage แบบ release กับ development
 
 - **Release AppImage**: ยังไม่พร้อมใช้งาน (Lumi ยังไม่เปิดตัว)
-- **Development AppImage (CI artifact)**: สร้างโดยอัตโนมัติจาก commit การพัฒนาปัจจุบันเพื่อการทดสอบ
+- **AppImage สำหรับพัฒนา (CI artifact)**: สร้างโดยอัตโนมัติจาก commit การพัฒนาปัจจุบันเพื่อการทดสอบ
 
-คู่มือนี้ครอบคลุมเวิร์กโฟลว์ **development AppImage** เป็นหลัก
+คู่มือนี้ครอบคลุมเวิร์กโฟลว์ **AppImage สำหรับพัฒนา** เป็นหลัก
 
 หน้า artifact ปัจจุบัน:
 

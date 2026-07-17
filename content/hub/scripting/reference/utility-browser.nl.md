@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+url: "hub/scripting/reference/utility-browser"
 ---
 Met de Utility Browser kunt u het ingebouwde Scheme-hulpprogramma stdlib verkennen dat bij Lumi wordt geleverd, zonder dat u de app hoeft te verlaten of door bronbestanden hoeft te bladeren.
 

@@ -4,7 +4,8 @@ type: docs
 weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
+translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
+url: "hub/scripting/fundamentals/Functions/_index"
 ---
 Funktionen sind ein Kernkonzept in Scheme und bieten die Möglichkeit, Logik zu kapseln, die Wiederverwendung von Code zu ermöglichen und Ihre Skripte effektiv zu strukturieren. Mit Funktionen können Sie modulare, wartbare Skripte erstellen, die ein breites Aufgabenspektrum abdecken, von grundlegenden Vorgängen bis hin zu erweiterten Arbeitsabläufen in Lumi.
 

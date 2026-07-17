@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
+translation_source_sha256: c51771681b005905702792ac549ca2707360f265b7d518cc00a6861161158126
+url: "hub/scripting/fundamentals/Conditionals/conditionals-cond"
 ---
-En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
+In Scheme, il condizionale `cond` seleziona uno di diversi blocchi di codice da eseguire in base a più test. È come un `if` multiramo, in cui ogni ramo viene verificato in ordine fino a trovare una corrispondenza.
 
-### Syntaxe
+### Sintassi
 
 ```scheme
 (cond
@@ -18,18 +19,22 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else fallback-consequent))
 ```
 
-- Tests dans l'ordre d'écriture.
-- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
-- `else` optionnel en repli.
+- Ogni test viene valutato nell'ordine in cui è scritto.
+- Quando un test è vero (`#t`), viene eseguito il **consequent** corrispondente e `cond` smette di valutare altri test.
+- La clausola `else` è opzionale e funge da ripiego se nessun test è vero.
 
-### Comment ça marche
+### Come funziona
 
-1. **Tester chaque condition** dans l'ordre.
-2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
+1. **Verificare ogni condizione:**
+   - `cond` valuta i test nell'ordine elencato.
 
-### Exemples
+2. **Eseguire il consequent corrispondente:**
+   - Quando il primo test vero (`#t`) viene trovato, viene eseguito il suo **consequent**.
+   - Se nessun test è vero e c'è `else`, viene eseguito il **fallback-consequent**.
 
-#### Exemple 1 : conséquents sur une expression
+### Esempi
+
+#### Esempio 1: consequent con singola espressione
 
 ```scheme
 (cond
@@ -38,9 +43,15 @@ En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécu
   (else "Fallback"))
 ```
 
-Résultat : **"This will run"**
+- Il primo test `(< 3 2)` è falso (`#f`).
+- Il secondo test `(= 3 3)` è vero (`#t`), quindi viene restituito `"This will run"`.
+- La clausola `else` non viene eseguita perché è già stata trovata una corrispondenza.
 
-#### Exemple 2 : actions multiples avec `begin`
+Risultato: **"This will run"**
+
+#### Esempio 2: più azioni con `begin`
+
+Quando il consequent richiede più azioni, raggrupparle con `begin`:
 
 ```scheme
 (cond
@@ -58,9 +69,16 @@ Résultat : **"This will run"**
       0)))
 ```
 
-Résultat : **Affiche « Condition met » et renvoie 25.**
+- Il primo test `(< 5 3)` è falso (`#f`).
+- Il secondo test `(> 5 3)` è vero (`#t`):
+  - Stampa `"Condition met"`.
+  - Poi calcola `(* 5 5)` e restituisce `25`.
 
-#### Exemple 3 : bloc `let` dans un conséquent
+Risultato: **Stampa "Condition met" e restituisce 25.**
+
+#### Esempio 3: blocco `let` nel consequent
+
+Per variabili locali, usare `let`:
 
 ```scheme
 (cond
@@ -75,15 +93,21 @@ Résultat : **Affiche « Condition met » et renvoie 25.**
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Caso predefinito: se nessuna condizione sopra è soddisfatta
+  ;; Caso predefinito
   (else
     (let ((z 0))
       z)))
 ```
 
-Résultat : **Affiche « Positive condition met » et renvoie 40.**
+- Il primo test `(< 0 -1)` è falso.
+- Il secondo test `(> 0 -1)` è vero:
+  - Viene eseguito un blocco `let` che lega `y` a `20`.
+  - Stampa `"Positive condition met"`.
+  - Poi calcola `(+ y y)` e restituisce `40`.
 
-#### Exemple 4 : repli avec `else`
+Risultato: **Stampa "Positive condition met" e restituisce 40.**
+
+#### Esempio 4: ripiego con `else`
 
 ```scheme
 (cond
@@ -92,10 +116,16 @@ Résultat : **Affiche « Positive condition met » et renvoie 40.**
   (else "Fallback value"))
 ```
 
-Résultat : **"Fallback value"**
+- Nessuno dei primi due test è vero.
+- Viene eseguita la clausola `else`, che restituisce `"Fallback value"`.
 
-### Résumé
+Risultato: **"Fallback value"**
 
-- `cond` pour plusieurs conditions clairement.
-- Conséquents simples ou groupés avec `begin`.
-- `let` pour variables locales ; `else` recommandé en repli.
+### Riepilogo
+
+- Usare `cond` per gestire più condizioni in modo chiaro e conciso.
+- I consequent possono essere singole espressioni o azioni raggruppate con `begin`.
+- Usare `let` nei consequent per variabili locali nei calcoli.
+- Includere sempre `else` come ripiego per casi imprevisti.
+
+Questa flessibilità rende `cond` uno strumento potente e leggibile per logiche di branching complesse.

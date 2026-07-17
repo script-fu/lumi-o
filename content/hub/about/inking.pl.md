@@ -1,6 +1,7 @@
 ---
 title: "Tuszowanie"
 type: docs
+url: "hub/about/inking"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
@@ -28,7 +29,7 @@ Tryb kaligraficzny zamienia narzędzie Pędzel w ciągłe pociągnięcie pióra 
 
 ## Zig-zag Preset
 
-Ustawienie wstępne Zig-zag wyostrza narożniki, gdy pociągnięcie szybko zmienia kierunek, dając ostre, kątowe zakręty ze „snapem”, którego nie dają gładkie krzywe. Przydatne do energicznej, graficznej linii i kreskowania.
+Ustawienie wstępne Zig-zag wyostrza narożniki, gdy pociągnięcie szybko zmienia kierunek, dając ostre, kątowe zakręty z wyraźnym przyciągnięciem, którego nie dają gładkie krzywe. Przydatne do energicznej, graficznej linii i kreskowania.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 

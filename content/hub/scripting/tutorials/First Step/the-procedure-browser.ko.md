@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 **Lumi 프로시저 브라우저**를 사용하면 사용 가능한 프로시저(내장 및 플러그인 제공)를 검색하고 해당 매개변수와 반환 값을 검사할 수 있습니다.
 
@@ -25,7 +26,7 @@ Procedure Browser에는 방금 설치한 프로시저를 포함하여 플러그�
 
 호출 서명을 확인하거나 정확한 시술명을 확인해야 할 경우 키워드나 시술명으로 검색하세요.
 
-프로시저 브라우저의 ####(lumi-message)
+#### 프로시저 브라우저의 `(lumi-message)`
 
 매개변수와 반환 값을 보려면 `lumi-message`을 검색하세요.
 

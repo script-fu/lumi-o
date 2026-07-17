@@ -29,7 +29,7 @@ Musisz zainstalować Git w swoim systemie. W systemach opartych na Debianie moż
 
 Zanim będziesz mógł korzystać z [GitLab](https://gitlab.com/users/sign_up), musisz utworzyć konto, odwiedzając witrynę GitLab i kończąc proces rejestracji.
 
-GitLab wymaga _SSH_ do bezpiecznej, uwierzytelnionej komunikacji między klientem (np. Tobą) a serwerem GitLab podczas operacji Git, takich jak _clone_, _push_ i _fetch_ repozytoriów. Clone to utworzenie lokalnej kopii repozytorium, fetch pobiera zmiany z repozytorium do kopii lokalnej, a push wysyła zmiany i zawartość do repozytorium na serwerze. SSH (Secure Shell) to protokół sieciowy umożliwiający bezpieczny dostęp zdalny; wykorzystuje _pary kluczy_ do uwierzytelniania i nawiązywania bezpiecznych połączeń. Aby wygenerować parę kluczy SSH, użyj polecenia ssh-keygen w terminalu.
+GitLab wymaga _SSH_ do bezpiecznej, uwierzytelnionej komunikacji między klientem (np. Tobą) a serwerem GitLab podczas operacji Git, takich jak _clone_, _push_ i _fetch_ repozytoriów. _Clone_ tworzy lokalną kopię repozytorium, _fetch_ pobiera zmiany z serwera do kopii lokalnej, a _push_ wysyła zmiany do repozytorium zdalnego. SSH (Secure Shell) to protokół sieciowy umożliwiający bezpieczny dostęp zdalny; wykorzystuje _pary kluczy_ do uwierzytelniania i nawiązywania bezpiecznych połączeń. Aby wygenerować parę kluczy SSH, użyj polecenia `ssh-keygen` w terminalu.
 
 ```bash
  ssh-keygen

@@ -5,12 +5,13 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
+url: "hub/scripting/tutorials/debugging"
 ---
-En las secuencias de comandos, ninguna función es infalible. Incluso los comandos más confiables pueden fallar cuando se enfrentan a entradas o condiciones inesperadas. Para protegernos contra esto, podemos implementar un sistema de depuración personalizado y adoptar técnicas de programación defensiva. Al incluir funciones estándar con mecanismos de manejo de errores y proporcionar comentarios informativos, podemos hacer que nuestros scripts sean más sólidos y más fáciles de solucionar.
+En los scripts, ninguna función es infalible. Incluso los comandos más confiables pueden fallar cuando se enfrentan a entradas o condiciones inesperadas. Para protegernos contra esto, podemos implementar un sistema de depuración personalizado y adoptar técnicas de programación defensiva. Al incluir funciones estándar con mecanismos de manejo de errores y proporcionar comentarios informativos, podemos hacer que nuestros scripts sean más sólidos y más fáciles de solucionar.
 
 Una parte clave de esta estrategia es utilizar un indicador de depuración global para controlar la salida detallada, lo que nos permite habilitar información de depuración detallada cuando sea necesario y al mismo tiempo mantener la salida limpia durante la ejecución normal.
 
-## Bandera de depuración global
+## Indicador global de depuración
 
 Un indicador de depuración global es una forma sencilla pero eficaz de controlar el nivel de salida de información durante la ejecución del script. Cuando está habilitado, proporciona mensajes de depuración detallados que pueden ser invaluables para rastrear problemas. Cuando está deshabilitado, mantiene la salida concisa para uso en producción.
 
@@ -176,7 +177,9 @@ La función `list->string` convierte una lista en una cadena formateada.
       (warning-message "list->string: Input is not a list!")))
 ```
 
-### Mensajes de advertenciaLa función `warning-message` funciona de manera similar a `debug-message`, pero muestra advertencias incluso cuando la depuración está deshabilitada.
+### Mensajes de advertencia
+
+La función `warning-message` funciona de manera similar a `debug-message`, pero muestra advertencias incluso cuando la depuración está deshabilitada.
 
 ```scheme
 ;; Propósito: Mostrar un mensaje de advertencia.

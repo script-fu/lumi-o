@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 在Scheme中，**列表**是用于对值进行分组的基本数据结构。列表是元素的有序集合，其中每个元素可以是任何类型，包括另一个列表。列表在Scheme中广泛用于数据存储和程序结构。
 

@@ -4,16 +4,17 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
+translation_source_sha256: 6e768f3feb8a1873423841338e92494ebd2b4ac0af5b6e27253f3cf2c2ba455f
+url: "hub/scripting/fundamentals/Variables and Scope/let"
 ---
 Nazwa `let` jest używana, ponieważ odzwierciedla matematyczne pochodzenie wprowadzenia tymczasowych powiązań, jak w _"Niech \( x = 2 \) i \( y = 3 \)"_.
 
-Instrukcja `let` w schemacie jest **konstrukcją wiążącą** używaną do definiowania zmiennych w zlokalizowanym zakresie. Umożliwia utworzenie tymczasowych powiązań dla zmiennych, a następnie wykonanie bloku kodu przy użyciu tych powiązań. Jest to szczególnie przydatne do utrzymywania modułowości kodu i unikania zanieczyszczenia zmiennymi globalnymi.
+Instrukcja `let` w Scheme jest **konstrukcją wiążącą** używaną do definiowania zmiennych w zlokalizowanym zakresie. Umożliwia utworzenie tymczasowych powiązań dla zmiennych, a następnie wykonanie bloku kodu przy użyciu tych powiązań. Jest to szczególnie przydatne do utrzymywania modułowości kodu i unikania zanieczyszczenia zmiennymi globalnymi.
 
-Istnieją trzy główne formy `let` w schemacie:
+Istnieją trzy główne formy `let` w Scheme:
 
 - **`let`**: Standardowa możliwość tworzenia prostych powiązań lokalnych.
-- **`let*`**: Let sekwencyjny, w którym powiązania mogą zależeć od wyników poprzednich powiązań.
+- **`let*`**: Sekwencyjny `let`, w którym powiązania mogą zależeć od wyników poprzednich powiązań.
 - **Nazwany `let`**: Specjalna forma `let`, która tworzy pętle rekurencyjne lub nazwane procedury.
 
 W najprostszej formie `let` tworzy powiązania zmiennych lokalnych i ocenia wyrażenie z tymi powiązaniami.
@@ -102,7 +103,7 @@ Nazwany `let` jest specjalną formą `let`, która dostarcza nazwę samego bloku
 
 ## Tabela podsumowująca
 
-| Konstruuj | Opis | Przypadek użycia |
+| Konstrukcja | Opis | Przypadek użycia |
 |------------|------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **`let`** | Definiuje lokalne powiązania dla zmiennych.    | Użyj, gdy wszystkie powiązania są niezależne i nie zależą od siebie.     |
 | **`let*`** | Definiuje sekwencyjne powiązania lokalne.       | Użyj, gdy późniejsze wiązania zależą od wyników wcześniejszych.           |

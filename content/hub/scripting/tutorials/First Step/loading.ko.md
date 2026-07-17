@@ -3,14 +3,15 @@ title: "로드 중"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
-As soon as a helper function grows, move it into a small library file. That keeps the plug-in focused and makes the helper reusable across multiple plug-ins.
+도우미 함수가 커지면 이를 작은 라이브러리 파일로 옮깁니다. 이를 통해 플러그인에 집중하고 도우미를 여러 플러그인에서 재사용할 수 있습니다.
 
-### Make a Library Function
+### 라이브러리 함수 만들기
 
-We can take the send-message function and make a new file with that as its content. Save the file into your repo folder, not the plugins part, perhaps near the top level;
+메시지 보내기 기능을 사용하여 해당 내용을 포함하는 새 파일을 만들 수 있습니다. 파일을 플러그인 부분이 아닌 repo 폴더(아마도 최상위 수준 근처)에 저장하세요.
 
 ```plaintext
 /home/your-username/code/
@@ -22,21 +23,21 @@ We can take the send-message function and make a new file with that as its conte
                   └── hello-world.scm
 ```
 
-- **scheme/**: This is your main directory for storing your Scheme code.
-  - **library/**: This is where shared functions like `send-message.scm` live.
-  - **plug-ins/**: This is where your individual plug-ins are stored.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+- **scheme/**: 이것은 Scheme 코드를 저장하기 위한 기본 디렉터리입니다.
+  - **라이브러리/**: `send-message.scm`과 같은 공유 기능이 있는 곳입니다.
+  - **플러그인/**: 개별 플러그인이 저장되는 곳입니다.
+    - **hello-world/**: 특정 "Hello World!" 플러그인용 폴더.
+      - **hello-world.scm**: 플러그인의 스크립트 파일.
 
-Example of a library function send-message.scm
+라이브러리 함수 send-message.scm의 예
 
 ```scheme
 ;; 다양한 대상으로 메시지 출력을 처리하는 함수
 (define (send-message message output)
   (cond
-    ;; Message console로 보내기
+    ;; 메시지 콘솔로 보내기
     ((eq? output 'error-console)
-       ;; 핸들러를 Message console로 설정
+       ;; 핸들러를 메시지 콘솔로 설정
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,15 +52,15 @@ Example of a library function send-message.scm
        ;; terminal 출력은 display로 처리
        (display message)))
 
-  ;; 기본 메시지 핸들러를 Message console로 복원
+  ;; 기본 메시지 핸들러를 메시지 콘솔로 복원
   (lumi-message-set-handler 2))
 ```
 
-### Load the Library Function
+### 라이브러리 기능 로드
 
-We can load that library function with the Scheme `load` command;
+Scheme `load` 명령을 사용하여 해당 라이브러리 함수를 로드할 수 있습니다.
 
-Loading a library file:
+라이브러리 파일 로드:
 
 ```scheme
 #!/usr/bin/env lumi-scheme-interpreter-0.1
@@ -84,4 +85,4 @@ Loading a library file:
   "<Image>/Funky")
 ```
 
-이봐! We've now got something simpler and shorter to read, that kind of describes itself without comments. This is the satisfying conclusion of refactoring.
+이봐! 이제 우리는 읽기에 더 간단하고 짧은 내용을 갖게 되었습니다. 그런 종류의 설명은 주석 없이 설명됩니다. 이것이 리팩토링의 만족스러운 결론입니다.

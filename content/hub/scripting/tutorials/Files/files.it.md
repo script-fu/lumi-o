@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 Lavorare con file e directory è essenziale per lo sviluppo di Scheme. Che tu stia salvando l'output, caricando risorse o organizzando la struttura del progetto, comprendere le operazioni sui file renderà i tuoi script più robusti e facili da usare.
 
@@ -37,7 +38,7 @@ Esiste anche la variabile globale `DIR-SEPARATOR`, che è il separatore del perc
 
 ## Ottenere una posizione nella directory
 
-Possiamo chiedere all'utente la posizione della directory nella finestra di dialogo Schema per un plug-in.
+Possiamo chiedere all'utente la posizione della directory nella finestra di dialogo Scheme per un plug-in.
 
 ```scheme
 (scheme-register

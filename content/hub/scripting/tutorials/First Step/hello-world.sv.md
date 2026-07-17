@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 Denna handledning går igenom den minimala strukturen för ett Scheme-pluginprogram. Vissa rader är "boilerplate": de krävs för att Lumi ska ladda filen, även om du inte helt förstår dem ännu.
 
@@ -73,7 +74,7 @@ Här är det fullständiga exemplet. De flesta Lumi-procedurer har prefixet `lum
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Ställ in meddelandehanteraren så att meddelandet skickas till Error Console
+  ;; Ställ in meddelandehanteraren så att meddelandet skickas till felkonsol
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

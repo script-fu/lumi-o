@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 Man mano che la libreria helper cresce, diventa più difficile seguirla a colpo d'occhio. Effettuare nuovamente il refactoring per mantenere ciascuna funzione piccola e monouso.
 
@@ -37,7 +38,7 @@ Ora che la convalida è stata spostata in una funzione separata, la funzione `se
   (validate-message message output)
 
   (cond
-    ;; Invia alla Message console
+    ;; Invia alla console dei messaggi
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ Ora che la convalida è stata spostata in una funzione separata, la funzione `se
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console dei messaggi
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ Ogni tipo di output del messaggio (GUI, console messaggi, terminale) può essere
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console dei messaggi
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ Una versione della libreria rifattorizzata:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Scopo: Invia un messaggio alla Message console
+;; Scopo: Invia un messaggio alla console dei messaggi
 (define (send-to-error-console message)
   ;; Validare il messaggio prima di procedere
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ Una versione della libreria rifattorizzata:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla console dei messaggi
   (lumi-message-set-handler 2))
 
 ;; Scopo: Verifica che il messaggio sia una stringa non vuota e che l'output sia valido

@@ -7,9 +7,9 @@ translation_lock: true
 translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
 ---
 
-L'Editor della tavolozza è il luogo in cui una tavolozza Lumi-o diventa un ambiente cromatico completo. Riunisce i pigmenti da cui è costruita, le miscele che l'artista sceglie di conservare, i colori usati durante la pittura e la struttura tonale che modella il modo in cui la tavolozza viene esplorata.
+L'Editor della tavolozza è il luogo in cui una tavolozza Lumi diventa un ambiente cromatico completo. Riunisce i pigmenti da cui è costruita, le miscele che l'artista sceglie di conservare, i colori usati durante la pittura e la struttura tonale che modella il modo in cui la tavolozza viene esplorata.
 
-Una tavolozza in Lumi-o è più di un elenco di campioni. È un sistema di colore operativo: un insieme di ingredienti, miscele ricordate, relazioni di valore e sfumature che possono guidare un intero dipinto o un corpo di opere.
+Una tavolozza in Lumi è più di un elenco di campioni. È un sistema di colore operativo: un insieme di ingredienti, miscele ricordate, relazioni di valore e sfumature che possono guidare un intero dipinto o un corpo di opere.
 
 ![palette-editor](/images/screens/palette-editor.jpg)
 
@@ -23,7 +23,7 @@ L'Editor della tavolozza supporta questo tipo di limitazione intenzionale, ma an
 
 ## Pigmenti, miscele e memoria
 
-I pigmenti della tavolozza fungono da base. Definiscono i colori da cui cresce il resto del sistema e influenzano le miscele generate disponibili altrove negli strumenti colore di Lumi-o.
+I pigmenti della tavolozza fungono da base. Definiscono i colori da cui cresce il resto del sistema e influenzano le miscele generate disponibili altrove negli strumenti colore di Lumi.
 
 Le miscele salvate rappresentano scoperte deliberate: colori che vale la pena conservare, nominare e a cui tornare. I colori usati formano una memoria più discreta, preservando i colori effettivamente arrivati sulla tela anche se non erano stati salvati in anticipo.
 
@@ -33,7 +33,7 @@ Insieme queste aree permettono alla tavolozza di evolversi in modo naturale. Pu�
 
 ## Organizzazione guidata dal valore
 
-Lumi-o organizza i colori della tavolozza tenendo conto del valore, perché i pittori spesso pensano prima alla luce e all'ombra che alla tonalità. Raggruppare le miscele per ruolo tonale rende più facile trovare un colore che appartenga alla parte giusta dell'immagine, non solo uno con il nome giusto.
+Lumi organizza i colori della tavolozza tenendo conto del valore, perché i pittori spesso pensano prima alla luce e all'ombra che alla tonalità. Raggruppare le miscele per ruolo tonale rende più facile trovare un colore che appartenga alla parte giusta dell'immagine, non solo uno con il nome giusto.
 
 Le tavolozze possono anche avere una propria spaziatura tonale. Un'illustrazione ad alto tono, un ritratto a basso tono e un paesaggio attenuato possono beneficiare di enfasi di valore diverse, e la tavolozza può riflettere quella struttura.
 

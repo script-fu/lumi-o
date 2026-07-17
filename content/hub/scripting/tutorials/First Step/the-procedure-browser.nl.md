@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 Met de **Lumi Procedure Browser** kunt u de beschikbare procedures doorzoeken (ingebouwd en plug-in meegeleverd) en hun parameters inspecteren en waarden retourneren.
 

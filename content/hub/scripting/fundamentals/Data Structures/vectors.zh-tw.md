@@ -4,7 +4,8 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
 在Scheme中，向量是另一個用於將值分組的基本資料結構。與列表不同，向量是固定大小的索引元素集合，提供更快的隨機存取和更新。向量中的每個元素可以是任何類型，包括另一個向量。向量使用 # 後面跟著括號來表示。 `#(1 2 3)`
 
@@ -122,7 +123,9 @@ my-vector
 - `(vector? (vector 1 2 3))` 返回`#t`（真）
 - `(vector? 42)` 返回`#f` (假)
 
-### 向量與引用傳遞行為在Scheme中，向量是可變的並且透過引用傳遞。這意味著當您將向量傳遞給函數時，該函數可以直接修改原始向量。對函數內部向量所做的任何更改也將反映在函數外部。此行為對於跨多個函數有效共享和更新資料很有用，但也需要謹慎以避免意外的副作用。
+### 向量與引用傳遞行為
+
+在Scheme中，向量是可變的並且透過引用傳遞。這意味著當您將向量傳遞給函數時，該函數可以直接修改原始向量。對函數內部向量所做的任何更改也將反映在函數外部。此行為對於跨多個函數有效共享和更新資料很有用，但也需要謹慎以避免意外的副作用。
 
 #### 範例：修改函數中的向量
 

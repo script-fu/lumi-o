@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 一旦我们的函数可以工作，我们就可以退一步思考如何最好地构建我们的代码。目标是使我们的插件尽可能清晰、易于理解和可维护。这种在不改变现有代码行为的情况下改进和细化现有代码结构的过程称为重构。
 
@@ -16,7 +17,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; 设置消息处理程序，将消息输出到 Error Console
+  ;; 设置消息处理程序，将消息输出到 错误控制台
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; 设置消息处理程序，将消息输出到 Error Console
+    ;; 设置消息处理程序，将消息输出到 错误控制台
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
 ;; 处理向各种目标输出消息的函数
 (define (send-message message output)
   (cond
-    ;; 发送到 Error Console
+    ;; 发送到 错误控制台
     ((eq? output 'error-console)
-       ;; 将处理程序设置为 Error Console
+       ;; 将处理程序设置为 错误控制台
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
        ;; terminal 输出通过 display 处理
        (display message)))
 
-  ;; 将默认消息处理程序恢复为 Error Console
+  ;; 将默认消息处理程序恢复为 错误控制台
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -142,7 +143,7 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
 - **将复杂性**隔离为处理特定任务的较小函数，例如`send-message`。
 - **保持较高级别的功能简单**，以便他们可以专注于编排数据流和操作，而无需了解每个任务如何完成的详细信息。
 - **关注点分离**：该函数根据输出类型负责如何发送消息，从而将此逻辑与主函数隔离。
-- **模块化**：通过在一个地方处理所有消息发送逻辑，我们可以轻松地进行更改（例如添加新的输出选项），​​而无需更改主功能。
+- **模块化**：通过在一个地方处理所有消息发送逻辑，我们可以轻松地进行更改（例如添加新的输出选项），而无需更改主功能。
 - **可重用性**：`send-message` 函数是可重用的，这意味着如果我们需要将消息发送到代码中其他位置的多个输出，我们可以简单地调用此函数，而不用重写类似的逻辑。
 
 通过重构，此示例中的主函数变成了正在发生的事情的**声明性**语句（“向三个地方发送消息”），而如何发送这些消息的复杂性则被抽象到 `send-message` 函数中。

@@ -5,6 +5,7 @@ weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
+url: "hub/about/color"
 ---
 
 De Kleuren-werkruimte is gebouwd voor doelbewuste kleurbeslissingen, niet voor algemene beeldaanpassing. Zij is gevormd door traditionele mediapraktijk, met nadruk op pigmenten, paletstructuur en menggedrag dat begrijpelijk blijft terwijl een schilderij complexer wordt.

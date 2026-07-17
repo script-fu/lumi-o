@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
+url: "hub/scripting/tools/ai-assisted"
 ---
 Moderne AI-tools kunnen de ontwikkeling van Lumi-plug-ins aanzienlijk versnellen door op te treden als samenwerkende codeerpartner.
 
@@ -28,9 +29,9 @@ AI-hulp is het meest effectief wanneer de agent toegang heeft tot **lumi-dev** o
 
 U kunt de Agent direct vragen een volledige plug-in te genereren door het gewenste functionele resultaat te beschrijven:
 
-> "Schrijf met behulp van de beschikbare Schema-hulpprogramma's en voorbeelden in de werkruimte een nieuwe plug-in die een 50% horizontale hulplijn op de actieve afbeelding creëert en deze 'Middengids' noemt."
+> "Schrijf met behulp van de beschikbare Scheme-hulpprogramma's en voorbeelden in de werkruimte een nieuwe plug-in die een 50% horizontale hulplijn op de actieve afbeelding creëert en deze 'Middengids' noemt."
 
-De agent zoekt for how to create guides, identify the correct utility function (like `lumi-image-add-hguide-percent` from `common.scm`), and generate the complete `.scm` file with the correct registration boilerplate.
+De agent zoekt uit hoe hulplijnen worden aangemaakt, identificeert de juiste utility-functie (zoals `lumi-image-add-hguide-percent` uit `common.scm`) en genereert het volledige `.scm`-bestand met de juiste registratie-boilerplate.
 
 ## Beste praktijken
 

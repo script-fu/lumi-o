@@ -47,4 +47,4 @@ Dla artystów oznacza to, że eksperymentowanie może pozostać odwracalne. Wygl
 
 Warstwowe ilustracje stają się złożone, zwłaszcza gdy grupy, maski i efekty współdziałają. System warstw Lumi utrzymuje responsywność typowych działań malarskich, unikając niepotrzebnej rekompozycji, gdy tylko to możliwe.
 
-Efekt to workflow łączący kontrolę ze szybkością: wystarczająco szczegółowy do starannej, nieniszczącej pracy, a jednocześnie praktyczny w codziennym malowaniu.
+Efekt to przepływ pracy łączący kontrolę ze szybkością: wystarczająco szczegółowy do starannej, nieniszczącej pracy, a jednocześnie praktyczny w codziennym malowaniu.

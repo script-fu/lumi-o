@@ -4,28 +4,31 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
+translation_source_sha256: 0d4755f22d97955ef430ff8fa948440aecb8db81766bff57ae05ef15ddbf09d2
+url: "hub/scripting/fundamentals/Conditionals/conditionals-if"
 ---
-Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
+W najprostszej postaci warunek `if` w Scheme ewaluuje test i na podstawie wyniku wykonuje jeden z dwóch możliwych bloków kodu. Najprostsza postać wygląda tak:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
+- Jeśli `test` ewaluuje się do prawdy (`#t`), wykonywany jest **blok consequent**. Blok może zwracać wartość lub wykonywać inne działania, takie jak przypisanie zmiennej lub wypisanie wyniku.
 
-### Exemple
+### Przykład
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Test : `(< 0 1)` est vrai.
-- `(lumi-message "True!")` s'exécute.
+- W tym przypadku `test` to `(< 0 1)` (sprawdzenie, czy 0 jest mniejsze od 1).
+- Ponieważ test ewaluuje się do prawdy (`#t`), wykonywany jest blok kodu `(lumi-message "True!")`, który wypisuje `"True!"`.
 
-### Branche else : `if-else`
+### Dodawanie warunku else: `if-else`
+
+Gdy warunek `if` ma alternatywny blok kodu (przypadek `else`), struktura wygląda tak:
 
 ```scheme
 (if test
@@ -33,20 +36,29 @@ Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résul
   else-do-this)
 ```
 
+- Jeśli `test` ewaluuje się do prawdy (`#t`), wykonywany jest blok **consequent**.
+- Jeśli `test` ewaluuje się do fałszu (`#f`), wykonywany jest blok **alternative**.
+
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Comment ça marche
+### Jak to działa
 
-1. **Tester** d'abord.
-2. Si `#t` **consequent**, si `#f` **alternative**.
+1. **Wyrażenie testowe:**
+   - Najpierw ewaluowany jest `test`.
 
-Les deux blocs peuvent contenir toute expression Scheme valide.
+2. **Wynik w zależności od testu:**
+   - Jeśli `test` ewaluuje się do prawdy (`#t`), wykonywany jest **blok consequent**.
+   - Jeśli `test` ewaluuje się do fałszu (`#f`), wykonywany jest **blok alternative**.
 
-#### Exemple 1 : renvoyer une valeur
+Zarówno bloki `consequent`, jak i `alternative` mogą wykonywać dowolne poprawne operacje Scheme, w tym zwracać wartości, modyfikować zmienne lub uruchamiać procedury.
+
+### Przykłady
+
+#### Przykład 1: zwracanie wartości
 
 ```scheme
 (if (< 0 1)
@@ -54,9 +66,14 @@ Les deux blocs peuvent contenir toute expression Scheme valide.
   0)
 ```
 
-Résultat : **1**
+- Tutaj `test` to `(< 0 1)` (sprawdzenie, czy 0 jest mniejsze od 1).
+- Ponieważ test ewaluuje się do prawdy (`#t`), wykonywany jest blok **consequent** (`1`) i zwracana jest jego wartość.
 
-#### Exemple 2 : bloc `begin`
+Wynik: **1**
+
+#### Przykład 2: ewaluacja bloku `begin`
+
+Gdy trzeba wykonać wiele działań, gdy warunek jest prawdziwy lub fałszywy, można użyć `begin` lub `let`, aby je pogrupować.
 
 ```scheme
 (if (= 0 1)
@@ -68,9 +85,16 @@ Résultat : **1**
     (* 3 4)))
 ```
 
-Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
+- W tym przykładzie `test` to `(= 0 1)` (sprawdzenie, czy 0 równa się 1).
+- Ponieważ test ewaluuje się do fałszu (`#f`), wykonywany jest blok **alternative**:
+  - Najpierw wypisuje `"False condition met, calculating..."`.
+  - Następnie oblicza `(* 3 4)` i zwraca `12`.
 
-#### Exemple 3 : expression `let`
+Wynik: **Wypisuje "False condition met, calculating..." i zwraca 12.**
+
+#### Przykład 3: ewaluacja wyrażenia `let`
+
+Użycie `let` pozwala zadeklarować zmienne lokalne w bloku kodu.
 
 ```scheme
 (if (= 1 1)
@@ -82,10 +106,15 @@ Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
     (* 3 y)))
 ```
 
-Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
+- W tym przykładzie `test` to `(= 1 1)` (sprawdzenie, czy 1 równa się 1).
+- Ponieważ test ewaluuje się do prawdy (`#t`), wykonywany jest blok **consequent**:
+  - Najpierw wypisuje `"True condition met, calculating..."`.
+  - Następnie oblicza `(* -1 10)` i zwraca `-10`.
 
-### Résumé
+Wynik: **Wypisuje "True condition met, calculating..." i zwraca -10.**
 
-- `if` évalue un test et exécute le bloc adapté.
-- Expressions simples ou groupes `begin`/`let`.
-- Sans `else` explicite, seul le **consequent** si vrai.
+### Podsumowanie
+
+- Warunek `if` to potężne narzędzie w Scheme do ewaluacji testów i wykonywania odpowiednich bloków kodu.
+- Obsługuje zarówno proste wyrażenia, jak i złożone bloki kodu zwracające wartości, modyfikujące zmienne lub wykonujące efekty uboczne.
+- Pamiętaj: jeśli nie ma jawnego bloku `else`, `if` ewaluuje i wykonuje **consequent** tylko wtedy, gdy test jest prawdziwy; w przeciwnym razie **alternative**.

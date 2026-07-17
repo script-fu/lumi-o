@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
+translation_source_sha256: c250d07dff926c7b51434efc644786f35b5189e03449dcdf4ec5916c1c151886
+url: "hub/scripting/tutorials/First Step/hello-world"
 ---
 In deze tutorial wordt de minimale structuur van een Scheme-plug-in besproken. Sommige regels zijn “standaard”: ze zijn nodig voor Lumi om het bestand te laden, zelfs als je ze nog niet helemaal begrijpt.
 
@@ -73,7 +74,7 @@ Hier is het volledige voorbeeld. De meeste Lumi-procedures worden voorafgegaan d
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Stel de berichtenhandler in om het bericht naar de Error Console te sturen
+  ;; Stel de berichtenhandler in om het bericht naar de foutenconsole te sturen
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 

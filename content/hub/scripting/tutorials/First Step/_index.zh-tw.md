@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+url: "hub/scripting/tutorials/first-step"
 ---
 First Steps 介紹了在Scheme 中運作良好的功能模式，並提供簡短的範例和增量重構。
 最後，您將建立自己的自訂訊息傳遞庫，並為繼續開發更高級的插件奠定堅實的基礎。

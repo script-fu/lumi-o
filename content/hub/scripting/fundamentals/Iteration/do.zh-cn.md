@@ -3,12 +3,13 @@ title: "do"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
-La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
+Scheme 中的 `do` 函数是一种循环机制，允许在初始化、更新和终止条件下进行迭代。当您需要执行一系列操作特定次数或直到满足条件时，它特别有用。
 
-La forme générale de `do` :
+`do`的一般形式是：
 
 ```scheme
 (do ((var1 init1 update1)
@@ -18,16 +19,16 @@ La forme générale de `do` :
   body)
 ```
 
-- **Variable :** variable(s) de boucle.
-- **Initial-value :** valeur initiale.
-- **Update-expression :** mise à jour par itération.
-- **Termination-condition :** condition d'arrêt.
-- **Result-expression :** valeur renvoyée à l'arrêt.
-- **Body :** code exécuté à chaque tour.
+- **变量**：循环变量。
+- **初始值**：每个循环变量的起始值。
+- **更新表达式**：在每次迭代结束时更新循环变量的表达式。
+- **终止条件**：停止循环的条件。
+- **结果表达式**：循环终止时返回的值。
+- **主体**：每次迭代中执行的代码。
 
 ---
 
-### Exemple : somme de 1 à 5
+### 示例：将 1 到 5 的数字相加
 
 ```scheme
 (do ((i 1 (+ i 1))      ; 将 i 初始化为 1，每次递增 1
@@ -36,26 +37,31 @@ La forme générale de `do` :
   (lumi-message (number->string sum))) ; 在每一步打印总和
 ```
 
-- `i` commence à 1 et s'incrémente.
-- `sum` accumule la somme.
-- Arrêt quand `i > 5`, retour de `sum`.
+- 循环变量`i` 从 1 开始，并在每次迭代中递增 1。
+- 变量`sum` 累加`i` 的总和。
+- 当`i > 5`时循环终止，返回`sum`的最终值。
 
-**Sortie** : `15`
-
----
-
-### Comment ça marche
-
-1. **Initialisation :** valeurs de départ.
-2. **Test d'arrêt :** au début de chaque tour.
-3. **Itération :** exécuter le corps, mettre à jour les variables.
+**输出**：`15`
 
 ---
 
-### Résumé
+### 它是如何运作的
 
-- `do` offre des boucles flexibles à plusieurs variables.
-- Utile quand l'état évolue à chaque tour.
-- La condition d'arrêt fixe la fin et le résultat.
+1. **初始化**：
+   - 每个循环变量都被赋予其初始值。
 
-`do` combine **liaisons** (comme `let`) et **contrôle itératif**.
+2. **终止检查**：
+   - 在每次迭代开始时，检查终止条件。如果为 true，则循环停止并计算结果表达式。
+
+3. **迭代**：
+   - 如果终止条件为假，则执行主体，并使用各自的更新表达式更新循环变量。
+
+---
+
+### 总结
+
+- `do` 构造提供了一种灵活的方法来实现具有多个变量和复杂终止条件的循环。
+- 对于需要跨迭代更新状态的任务非常有用。
+- 终止条件决定循环何时结束并可以返回最终结果。
+
+通过使用`do`，您可以在Scheme中实现迭代算法，并精确控制初始化、更新和终止。这使得`do`成为**范围绑定机制**（如`let`）和**迭代控制结构**的组合，使其能够以干净、简洁的方式处理循环和临时状态。

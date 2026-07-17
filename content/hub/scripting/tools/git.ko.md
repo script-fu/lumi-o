@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 Git을 사용하여 플러그인 변경 사항을 추적하고, 실수를 롤백하고, 컴퓨터 전체에서 코드를 공유하세요.
 

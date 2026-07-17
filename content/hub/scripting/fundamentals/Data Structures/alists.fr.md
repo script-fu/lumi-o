@@ -4,7 +4,8 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
 Une **liste d'associations** (ou **alist**) est une structure de données fondamentale en Scheme pour représenter des collections de paires clé-valeur. Elle est implémentée sous la forme d'une liste de paires, où chaque paire associe une clé (généralement un symbole) à une valeur. Les alists sont simples, flexibles et bien adaptées aux ensembles de données de petite et moyenne taille.
 

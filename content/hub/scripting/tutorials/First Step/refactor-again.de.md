@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 Je größer die Hilfsbibliothek wird, desto schwieriger wird es, sie auf einen Blick zu verfolgen. Erneut umgestalten, um jede Funktion klein und zweckgebunden zu halten.
 
@@ -51,7 +52,7 @@ Nachdem die Validierung nun in eine separate Funktion verschoben wurde, kann sic
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ Jede Art der Nachrichtenausgabe (GUI, Nachrichtenkonsole, Terminal) kann in eine
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ Eine überarbeitete Bibliotheksversion:
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Zweck: Sendet eine Nachricht an die Message console
+;; Zweck: Sendet eine Nachricht an die Nachrichtenkonsole
 (define (send-to-error-console message)
   ;; Nachricht validieren, bevor fortgefahren wird
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ Eine überarbeitete Bibliotheksversion:
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
+  ;; Standard-Nachrichtenhandler auf die Nachrichtenkonsole zurücksetzen
   (lumi-message-set-handler 2))
 
 ;; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist und die Ausgabe gültig ist

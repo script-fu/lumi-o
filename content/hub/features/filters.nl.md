@@ -27,7 +27,7 @@ Selectieve Gaussiaanse vervaging verzacht binnen de regio's terwijl de sterkere 
 
 ### Lensonscherpte
 
-Lens Blur is een van Lumi's meer illustratiegerichte vervagingsfilters. De bedieningselementen zijn opgebouwd rond de polygoon-irisvorm, bladkromming, anamorfe rek, accentversterking en een configureerbaar focusgebied, zodat het zich minder gedraagt ​​als een generieke verzachter en meer als een gestileerd scherptediepte-instrument met gevormde bokeh.
+Lens Blur is een van Lumi's meer illustratiegerichte vervagingsfilters. De bedieningselementen zijn opgebouwd rond de polygoon-irisvorm, bladkromming, anamorfe rek, accentversterking en een configureerbaar focusgebied, zodat het zich minder gedraagt als een generieke verzachter en meer als een gestileerd scherptediepte-instrument met gevormde bokeh.
 
 ### Tilt-shift
 

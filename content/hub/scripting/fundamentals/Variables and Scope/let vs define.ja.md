@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
+translation_source_sha256: bee02ac4fd1ab5ba61ffb50b49dbbba7fc473b141bd88a9cdf6d02aef3ca3a18
+url: "hub/scripting/fundamentals/Variables and Scope/let vs define"
 ---
 **`let`** という名前と **ローカル `define`** はどちらもコードを構造化するための Scheme の強力なツールですが、目的は異なります。それぞれをいつ使用するかを理解すると、クリーンでモジュール化された効率的なスクリプトを作成するのに役立ちます。
 
@@ -54,7 +55,7 @@ translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d83
 #### 特徴:
 
 1. 囲んでいる関数内で再利用できるヘルパー関数または変数の作成を許可します。
-2. 範囲は​​囲んでいる関数に限定されますが、その本体全体に表示されます。
+2. 範囲は囲んでいる関数に限定されますが、その本体全体に表示されます。
 3. 複数のステップまたは再利用可能なロジックを含むコードのモジュール化に最適です。
 
 #### 構文

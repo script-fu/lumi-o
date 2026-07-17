@@ -5,6 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
+url: "hub/scripting/tutorials/files"
 ---
 파일 및 디렉터리 작업은 구성표 개발에 필수적입니다. 출력을 저장하든, 리소스를 로드하든, 프로젝트 구조를 구성하든 파일 작업을 이해하면 스크립트가 더욱 강력하고 사용자 친화적이게 됩니다.
 

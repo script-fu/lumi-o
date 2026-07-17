@@ -4,15 +4,16 @@ type: "docs"
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
+translation_source_sha256: d57c000eccd152bbe703156a7d54d2baa9e51cd7b22f3fd1f53c8c820fa5aae5
+url: "hub/scripting/fundamentals/Data Structures/alists"
 ---
-En **associationslista** (eller **alist**) är en grundläggande datastruktur i Schema som används för att representera samlingar av nyckel-värdepar. Det implementeras som en lista med par, där varje par associerar en nyckel (vanligtvis en symbol) med ett värde. Alister är enkla, flexibla och väl lämpade för små till medelstora datamängder.
+En **associationslista** (eller **alist**) är en grundläggande datastruktur i Scheme som används för att representera samlingar av nyckel-värdepar. Det implementeras som en lista med par, där varje par associerar en nyckel (vanligtvis en symbol) med ett värde. Alister är enkla, flexibla och väl lämpade för små till medelstora datamängder.
 
 ### Struktur för en föreningslista
 
 En alist är en lista där varje element är ett **par** (konstruerad med `cons`). Varje par består av:
 
-- **Key**: Det första elementet (vanligtvis en symbol).
+- **Nyckel**: Det första elementet (vanligtvis en symbol).
 - **Värde**: Det andra elementet, som kan vara av vilken datatyp som helst.
 
 ```scheme
@@ -33,19 +34,19 @@ Du kan skapa en lista genom att manuellt konstruera par eller genom att programm
 Det enkla citatet (`'`) är en förkortning för **citat**, vilket hindrar Scheme från att utvärdera uttrycket. Detta gör den idealisk för att skapa statiska listor där alla nycklar och värden är hårdkodade.
 
 ```scheme
-;; Alist manuell definieren
+;; Definiera en alist manuellt
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatisch ein neues Paar hinzufügen
+;; Lägg till ett nytt par programmatiskt
 (define updated-alist (cons '(country . "France") alist))
 ```
 
 **Resultat**:
 `((country . "France") (name . "Alice") (age . 30) (city . "Paris"))`
 
-#### Använda bakre citat (`` ` ``) and Comma (`,`)
+#### Använda bakre citat (`` ` ``) och komma (`,`)
 
-Operatorn för bakåtcitat (`` ` ``) is similar to the single quote but allows you to dynamically insert evaluated expressions using the comma (`,`). Detta är användbart för att skapa listor där nycklar eller värden beräknas under körning.
+Operatorn för bakåtcitat (`` ` ``) liknar enkla citattecken, men tillåter dynamisk infogning av utvärderade uttryck med kommatecken (`,`). Detta är användbart för att skapa listor där nycklar eller värden beräknas under körning.
 
 ```scheme
 (define key 'name)
@@ -65,7 +66,7 @@ Statisk lista med `'`:
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 ```
 
-Dynamisk lista med `` ` `` and `,`:
+Dynamisk lista med `` ` `` och `,`:
 
 ```scheme
 (define key 'name)
@@ -93,5 +94,5 @@ När du har hämtat ett par med `assoc`, använd `cdr` för att extrahera värde
 ### Sammanfattning av nyckelfunktioner
 
 - **Enstaka citat (`'`)**: Skapar en statisk lista där alla element är bokstavliga data.
-- **Tillbakscitat (`` ` ``)**: Allows dynamic creation of alists by mixing static elements with evaluated expressions (using `,`).
+- **Backcitat (`` ` ``)**: Möjliggör dynamisk skapande av alists genom att blanda statiska element med utvärderade uttryck (med `,`).
 - **Punktnotation (`.`)**: Används för att konstruera par, associera en nyckel med ett värde i en alist.

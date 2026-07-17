@@ -4,7 +4,8 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
+translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 ---
 Scheme에서 변수와 그 범위를 관리하는 것은 효율적이고 유지 관리 가능한 스크립트를 작성하기 위한 핵심 개념입니다. 변수는 스크립트가 조작할 수 있는 데이터 값을 저장하는 반면 범위는 해당 변수에 액세스할 수 있는 위치를 정의합니다. 변수를 효과적으로 정의하고 사용하는 방법을 이해하면 구조화되고 재사용 가능하며 오류 없는 코드를 만들 수 있습니다.
 
@@ -72,7 +73,9 @@ Scheme은 변수를 정의하고 범위 지정하기 위한 여러 구성을 제
 | **캡슐화** | 의도하지 않은 상호작용 방지 | 전역적으로 정의된 다른 변수와 충돌할 수 있음 |
 | **사용 사례** | 특정 작업을 위한 임시 변수 | 전체에서 사용되는 공유 변수 또는 함수 |
 
-### 요약- **변수 정의 및 범위**는 Scheme 스크립트에서 데이터를 구성하고 관리하는 데 기초가 됩니다.
+### 요약
+
+- **변수 정의 및 범위**는 Scheme 스크립트에서 데이터를 구성하고 관리하는 데 기초가 됩니다.
 
 - **로컬 범위**(`let`, `let*`, `let`)를 사용하여 임시 변수를 캡슐화하고 충돌을 방지합니다.
 - 스크립트 전체에서 공유되는 재사용 가능한 함수 또는 상수에 **전역 범위**(`define`)를 사용하세요.

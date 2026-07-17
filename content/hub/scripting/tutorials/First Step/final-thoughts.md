@@ -1,6 +1,7 @@
 ---
 title: Final Thoughts
 type: docs
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 weight: 10
 ---
 

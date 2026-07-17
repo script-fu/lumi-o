@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
+translation_source_sha256: 730a20920b8e93d463bfb01f5d729e5ea84a548cc4b846e6e888ee751d095cf1
+url: "hub/scripting/tutorials/First Step/refactoring"
 ---
 Как только у нас будет работающая функция, мы можем сделать шаг назад и подумать о том, как лучше структурировать наш код. Цель — сделать наш плагин максимально ясным, понятным и удобным в обслуживании. Этот процесс улучшения и уточнения структуры существующего кода без изменения его поведения известен как рефакторинг.
 
@@ -16,7 +17,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Установить обработчик сообщений для вывода в Error Console
+  ;; Установить обработчик сообщений для вывода в консоль ошибок
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
@@ -56,7 +57,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Установить обработчик сообщений для вывода в Error Console
+    ;; Установить обработчик сообщений для вывода в консоль ошибок
     (lumi-message-set-handler 2)
     (lumi-message message)
 
@@ -86,9 +87,9 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
 ;; Функция для вывода сообщений в различные места назначения
 (define (send-message message output)
   (cond
-    ;; Отправить в Error Console
+    ;; Отправить в консоль ошибок
     ((eq? output 'error-console)
-       ;; Установить обработчик на Error Console
+       ;; Установить обработчик на консоль ошибок
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -103,7 +104,7 @@ translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae7
        ;; Вывод terminal обрабатывается с помощью display
        (display message)))
 
-  ;; Восстановить обработчик сообщений по умолчанию для Error Console
+  ;; Восстановить обработчик сообщений по умолчанию для консоль ошибок
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

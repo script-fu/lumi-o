@@ -4,9 +4,10 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
+translation_source_sha256: 514c81d0058b436609f97d1177e349ad6d7685ad6ccef15afaaa8ef9f137d852
+url: "hub/scripting/fundamentals/Functions/variadic"
 ---
-**Funkcje wariadyczne** w schemacie to funkcje, które akceptują zmienną liczbę argumentów. Funkcje te są bardzo wszechstronne i pozwalają na tworzenie elastycznego kodu wielokrotnego użytku. W programowaniu funkcjonalnym funkcje wariadyczne upraszczają operacje wymagające przetworzenia dowolnej liczby danych wejściowych, takie jak sumowanie listy liczb lub łączenie ciągów.
+**Funkcje wariadyczne** w Scheme to funkcje, które akceptują zmienną liczbę argumentów. Funkcje te są bardzo wszechstronne i pozwalają na tworzenie elastycznego kodu wielokrotnego użytku. W programowaniu funkcjonalnym funkcje wariadyczne upraszczają operacje wymagające przetworzenia dowolnej liczby danych wejściowych, takie jak sumowanie listy liczb lub łączenie ciągów.
 
 Funkcje wariadyczne są szczególnie przydatne, gdy:
 
@@ -45,9 +46,9 @@ Funkcje wariadyczne definiuje się za pomocą symbolu `.` przed nazwą ostatnieg
 (sum 1 2 3 4 5)  ; Zwraca 15
 ```
 
-#### Funkcja variadyczna ze stałymi parametrami
+#### Funkcja wariadyczna ze stałymi parametrami
 
-Możesz łączyć stałe parametry z parametrem variadic, aby utworzyć bardziej elastyczne funkcje.
+Możesz łączyć stałe parametry z parametrem wariadycznym, aby utworzyć bardziej elastyczne funkcje.
 
 ```scheme
 (define (greet prefix . names)
@@ -127,16 +128,18 @@ Funkcje wariadyczne doskonale radzą sobie z obsługą dowolnych danych. Oto prz
 
 ### Kiedy używać funkcji wariadycznych
 
-Używaj funkcji variadic, gdy:
+Używaj funkcji wariadycznych, gdy:
 
 - Funkcja musi przetworzyć nieznaną liczbę argumentów.
 - Pojedyncza operacja dotyczy wszystkich danych wejściowych (np. sumowanie, łączenie lub mapowanie).
 - Uproszczenie logiki wyższego rzędu za pomocą dynamicznych argumentów.
 
-Unikaj funkcji variadic, gdy:
+Unikaj funkcji wariadycznych, gdy:
 
 - Walidacja danych wejściowych lub sprawdzanie typu jest złożone.
 - Stałe argumenty wystarczą dla wymaganej logiki.
 - Czytelność jest ograniczona z powodu zbyt skomplikowanych operacji.
 
-### WniosekFunkcje wariadyczne w schemacie zapewniają solidny mechanizm obsługi dynamicznych danych wejściowych. Rozumiejąc ich składnię i zastosowanie, możesz tworzyć elastyczne i wydajne skrypty, które dostosowują się do różnych scenariuszy. W połączeniu z funkcjami wyższego rzędu funkcje variadic sprawiają, że Twój kod jest bardziej zwięzły i wyrazisty.
+### Wniosek
+
+Funkcje wariadyczne w Scheme zapewniają solidny mechanizm obsługi dynamicznych danych wejściowych. Rozumiejąc ich składnię i zastosowanie, możesz tworzyć elastyczne i wydajne skrypty, które dostosowują się do różnych scenariuszy. W połączeniu z funkcjami wyższego rzędu funkcje wariadyczne sprawiają, że Twój kod jest bardziej zwięzły i wyrazisty.

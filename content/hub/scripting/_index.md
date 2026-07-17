@@ -1,6 +1,7 @@
 ---
 title: Scripting
 type: docs
+url: "hub/scripting/_index"
 ---
 
 Scheme scripting lets you automate repetitive work, build custom tools, and extend Lumi with your own plug-ins.

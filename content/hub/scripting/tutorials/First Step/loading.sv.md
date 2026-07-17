@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 Så snart en hjälpfunktion växer, flytta den till en liten biblioteksfil. Det håller plugin-programmet fokuserat och gör hjälparen återanvändbar över flera plug-ins.
 
@@ -22,11 +23,11 @@ Vi kan ta funktionen skicka meddelande och skapa en ny fil med det som innehåll
                   └── hello-world.scm
 ```
 
-- **scheme/**: This is your main directory for storing your Scheme code.
+- **scheme/**: Huvudkatalogen för din Scheme-kod.
   - **bibliotek/**: Det är här delade funktioner som `send-message.scm` lever.
   - **plugins/**: Det är här dina individuella plugins lagras.
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: Mapp för det specifika "Hello World!"-tillägget.
+      - **hello-world.scm**: Skriptfilen för tillägget.
 
 Exempel på en biblioteksfunktion send-message.scm
 
@@ -34,9 +35,9 @@ Exempel på en biblioteksfunktion send-message.scm
 ;; Funktion för att hantera meddelandeutdata till olika destinationer
 (define (send-message message output)
   (cond
-    ;; Skicka till Message console
+    ;; Skicka till meddelandekonsol
     ((eq? output 'error-console)
-       ;; Ställ in hanteraren till Message console
+       ;; Ställ in hanteraren till meddelandekonsol
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ Exempel på en biblioteksfunktion send-message.scm
        ;; Terminal-utdata hanteras med display
        (display message)))
 
-  ;; Återställ standardmeddelandehanteraren till Message console
+  ;; Återställ standardmeddelandehanteraren till meddelandekonsol
   (lumi-message-set-handler 2))
 ```
 

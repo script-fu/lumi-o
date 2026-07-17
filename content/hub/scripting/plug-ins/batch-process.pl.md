@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
+url: "hub/scripting/plug-ins/batch-process"
 ---
 Praktyczny, kompleksowy przykład przetwarzania wielu plików za jednym razem.
 

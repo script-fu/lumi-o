@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 Lors de la création de plug-ins robustes, il est important de s’assurer que nos fonctions gèrent les erreurs correctement et fonctionnent comme prévu, même en cas d’utilisation abusive ou d’entrées inattendues. La validation permet de protéger l'intégrité de la fonction et d'éviter les plantages ou les comportements involontaires.
 
@@ -22,7 +23,7 @@ Exemple :
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Envoyer vers la Message console
+      ;; Envoyer vers la console de messages
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Exemple :
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la console de messages
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Cette approche garantit que la fonction reçoit toujours des entrées valides, a
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Envoyer vers la Message console
+        ;; Envoyer vers la console de messages
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Cette approche garantit que la fonction reçoit toujours des entrées valides, a
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la console de messages
   (lumi-message-set-handler 2))
 ```
 

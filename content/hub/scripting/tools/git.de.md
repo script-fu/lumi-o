@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 Verwenden Sie Git, um Änderungen an Ihren Plug-Ins zu verfolgen, Fehler rückgängig zu machen und Code maschinenübergreifend zu teilen.
 

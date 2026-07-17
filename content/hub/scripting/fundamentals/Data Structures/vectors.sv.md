@@ -4,9 +4,10 @@ type: "docs"
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
+translation_source_sha256: 23911f048f43dea4e07f47834a477d10f6eaebd9c9bd1b975db79ed1442deaaf
+url: "hub/scripting/fundamentals/Data Structures/vectors"
 ---
-I Schema är en vektor en annan grundläggande datastruktur som används för att gruppera värden. Till skillnad från listor är vektorer indexerade samlingar av element med fast storlek, vilket ger snabbare slumpmässig åtkomst och uppdateringar. Varje element i en vektor kan vara av vilken typ som helst, inklusive en annan vektor. Vektorer representeras med # följt av parentes. `#(1 2 3)`
+I Scheme är en vektor en annan grundläggande datastruktur som används för att gruppera värden. Till skillnad från listor är vektorer indexerade samlingar av element med fast storlek, vilket ger snabbare slumpmässig åtkomst och uppdateringar. Varje element i en vektor kan vara av vilken typ som helst, inklusive en annan vektor. Vektorer representeras med # följt av parentes. `#(1 2 3)`
 
 Även om vektorer och listor kan se likadana ut, tjänar de olika syften i schemaprogrammering:
 
@@ -38,7 +39,7 @@ Element i en vektor nås med hjälp av proceduren `vector-ref`, den hämtar elem
 
 #### Iteration: Bearbetning av varje element i en vektor
 
-Du kan iterera genom en vektor med en loop eller rekursion. Schema tillhandahåller `vector-length` för att bestämma storleken på en vektor. Här är en enkel slinga för att skriva ut varje element i en vektor:
+Du kan iterera genom en vektor med en loop eller rekursion. Scheme tillhandahåller `vector-length` för att bestämma storleken på en vektor. Här är en enkel slinga för att skriva ut varje element i en vektor:
 
 ```scheme
 (define (print-elements vec)
@@ -122,7 +123,9 @@ Resultat:
 - `(vector? (vector 1 2 3))` returnerar `#t` (sant)
 - `(vector? 42)` returnerar `#f` (falskt)
 
-### Vektorer och passerande referensbeteendeI Schema är vektorer föränderliga och skickas med referens. Detta innebär att när du skickar en vektor till en funktion kan funktionen modifiera den ursprungliga vektorn direkt. Alla ändringar som görs i vektorn inuti funktionen kommer att reflekteras utanför funktionen. Detta beteende är användbart för att effektivt dela och uppdatera data över flera funktioner, men det kräver också försiktighet för att undvika oavsiktliga biverkningar.
+### Vektorer och passerande referensbeteende
+
+I Scheme är vektorer föränderliga och skickas med referens. Detta innebär att när du skickar en vektor till en funktion kan funktionen modifiera den ursprungliga vektorn direkt. Alla ändringar som görs i vektorn inuti funktionen kommer att reflekteras utanför funktionen. Detta beteende är användbart för att effektivt dela och uppdatera data över flera funktioner, men det kräver också försiktighet för att undvika oavsiktliga biverkningar.
 
 #### Exempel: Modifiera en vektor i en funktion
 
@@ -153,7 +156,7 @@ Resultat: `#(10 99 30)`
 
 ### Operationer på vektorer
 
-Schema tillhandahåller flera inbyggda procedurer för att arbeta med vektorer, inklusive:
+Scheme tillhandahåller flera inbyggda procedurer för att arbeta med vektorer, inklusive:
 
 - `vector-length`: Returnerar antalet element i en vektor.
 - `vector->list`: Konverterar en vektor till en lista.

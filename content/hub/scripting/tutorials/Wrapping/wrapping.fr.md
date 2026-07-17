@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
+translation_source_sha256: 7b176d9b546b2566812e825fb2e10da5dd4e86f0e79be2c362a4775546110ac6
+url: "hub/scripting/tutorials/Wrapping/wrapping"
 ---
 Les commandes Scheme fonctionnent à un niveau bas, ce qui signifie que même des tâches simples peuvent nécessiter plusieurs étapes. Cependant, cette granularité offre de la flexibilité : nous pouvons regrouper les commandes en petites fonctions réutilisables qui font exactement ce dont nous avons besoin. L’emballage n’est pas un concept en noir et blanc ; cela peut aller de simples alias pour les commandes fréquemment utilisées à des fonctions plus complexes qui gèrent des flux de travail entiers. Parfois, un wrapper n’est qu’une fonction pratique destinée à améliorer la lisibilité, tandis que dans d’autres cas, il évolue vers un utilitaire complet qui encapsule plusieurs opérations.
 
@@ -26,7 +27,7 @@ Si vous gérez votre propre bibliothèque d'assistance, envisagez d'ajouter les 
 
 Exemples :
 
-### Graine aléatoire
+### Seed aléatoire
 
 ```scheme
 ;; Objectif : Renvoie un entier aléatoire pour initialiser un filtre
@@ -86,7 +87,7 @@ Pour exporter un JPEG dans nos plug-ins, nous incluons simplement la bibliothèq
 
 Cela maintient notre code propre, lisible et adaptable tout en nous permettant d'exporter des fichiers JPEG efficacement avec un minimum d'effort.
 
-### Remplacement de voiture
+### Remplacer `car`
 
 La fonction ***car*** peut être énigmatique et sujette à des erreurs de script. Il est facile d'appliquer par erreur ***car*** à un vecteur ou à un élément hors liste, ce qui entraîne un comportement inattendu. Pour rendre notre code plus robuste et lisible, nous pouvons envelopper cette fonctionnalité dans une fonction plus sûre.
 
@@ -145,7 +146,7 @@ pour récupérer la coordonnée ***x***. Cependant, bien que fonctionnel, celui-
 - **Améliore la maintenabilité** – Si notre représentation de coordonnées change (par exemple, en utilisant des vecteurs au lieu de listes), il nous suffit de mettre à jour ces petites fonctions.
 - **Encourage la cohérence** – L'utilisation de ***x-coord*** et ***y-coord*** rend le script plus facile à lire et à comprendre en un coup d'œil.
 
-Maintenant, au lieu d'écrire dans un schéma générique :
+Maintenant, au lieu d'écrire dans un Scheme générique :
 
 ```scheme
 (car pixel-coords) ;; Obtient la coordonnée x
@@ -169,7 +170,7 @@ Vous pouvez parcourir chaque nom exporté, lire sa docstring et voir de quelle b
 
 ### Conclusion
 
-Les fonctions d'encapsulation sont un moyen puissant de simplifier le développement de schémas, en rendant les scripts plus lisibles, plus faciles à maintenir et plus robustes. En encapsulant la complexité et en exposant uniquement les détails nécessaires, nous créons une approche plus structurée de l'écriture de plug-ins.
+Les fonctions d'encapsulation sont un moyen puissant de simplifier le développement Scheme, en rendant les scripts plus lisibles, plus faciles à maintenir et plus robustes. En encapsulant la complexité et en exposant uniquement les détails nécessaires, nous créons une approche plus structurée de l'écriture de plug-ins.
 
 Points clés à retenir de cette approche :
 

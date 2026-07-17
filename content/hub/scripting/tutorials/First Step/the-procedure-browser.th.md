@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
+url: "hub/scripting/tutorials/first-step/the-procedure-browser"
 ---
 **เบราว์เซอร์ขั้นตอน Lumi** ช่วยให้คุณค้นหาขั้นตอนที่มีอยู่ (ในตัวและปลั๊กอินที่ให้มา) และตรวจสอบพารามิเตอร์และค่าที่ส่งคืน
 

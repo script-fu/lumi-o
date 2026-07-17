@@ -4,7 +4,8 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
+translation_source_sha256: 47e586244c9abbe8fac800157a1a855336389bfaf8ed5396c9413f7e364e2fad
+url: "hub/scripting/tutorials/First Step/validation"
 ---
 När du bygger robusta plugin-program är det viktigt att se till att våra funktioner hanterar fel elegant och fungerar som förväntat, även i fall av missbruk eller oväntade indata. Validering hjälper till att skydda funktionens integritet och förhindra krascher eller oavsiktligt beteende.
 
@@ -22,7 +23,7 @@ Exempel:
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Skicka till Message console
+      ;; Skicka till meddelandekonsol
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
@@ -36,7 +37,7 @@ Exempel:
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Återställ standardmeddelandehanteraren till Message console
+  ;; Återställ standardmeddelandehanteraren till meddelandekonsol
   (lumi-message-set-handler 2))
 ```
 
@@ -80,7 +81,7 @@ Detta tillvägagångssätt säkerställer att funktionen alltid får giltig inpu
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Skicka till Message console
+        ;; Skicka till meddelandekonsol
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
@@ -94,7 +95,7 @@ Detta tillvägagångssätt säkerställer att funktionen alltid får giltig inpu
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Återställ standardmeddelandehanteraren till Message console
+  ;; Återställ standardmeddelandehanteraren till meddelandekonsol
   (lumi-message-set-handler 2))
 ```
 

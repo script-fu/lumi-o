@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 Użyj Git, aby śledzić zmiany we wtyczkach, wycofywać błędy i udostępniać kod pomiędzy maszynami.
 
@@ -44,7 +45,7 @@ Po utworzeniu struktury folderów możesz zainicjować Git i połączyć swoje l
 3. **Utwórz puste repozytorium w GitHubie**
 4. **Zainicjuj Git w swoim lokalnym projekcie**
 5. **Połącz swoje lokalne repozytorium z GitHub**
-6. **Przestaw swoje pliki**
+6. **Przygotuj swoje pliki**
 7. **Zatwierdź zmiany**
 8. **Prześlij zmiany do GitHub**
 9. **Wyświetl swoje repozytorium online**
@@ -100,7 +101,9 @@ Zanim będziesz mógł zapisać zmiany w Git, musisz powiedzieć Gitowi, które 
 
 ```sh
 git add .
-```To mówi Gitowi, aby śledził zmiany wprowadzone we wszystkich plikach w projekcie. Możesz także przygotować określone pliki, zastępując `.` nazwą pliku.
+```
+
+To mówi Gitowi, aby śledził zmiany wprowadzone we wszystkich plikach w projekcie. Możesz także przygotować określone pliki, zastępując `.` nazwą pliku.
 
 ### 7. Zatwierdź zmiany
 
@@ -134,10 +137,12 @@ Git i platformy takie jak GitHub i GitLab to potężne narzędzia i chociaż mog
 
 ## Słowniczek
 
-Oto kilka typowych terminów, które możesz spotkać podczas pracy z Git i GitHub:- **Zatwierdź**: Migawka zmian w repozytorium. Każde zatwierdzenie zawiera komunikat opisujący, co zostało zmienione i tworzy zapis historyczny, do którego można się później odwołać lub do którego można wrócić.
+Oto kilka typowych terminów, które możesz spotkać podczas pracy z Git i GitHub:
+
+- **Zatwierdzenie (commit)**: Migawka zmian w repozytorium. Każde zatwierdzenie zawiera komunikat opisujący, co zostało zmienione i tworzy zapis historyczny, do którego można się później odwołać lub do którego można wrócić.
 - **Repozytorium (Repo)**: Zbiór plików i ich historia śledzona przez Git. Repozytoria mogą istnieć lokalnie na Twoim komputerze lub zdalnie na platformach takich jak GitHub. Każdy projekt jest zazwyczaj przechowywany we własnym repozytorium.
 - **Zdalne**: Zdalne repozytorium to wersja Twojego projektu hostowana na platformie takiej jak GitHub. Lokalna wersja Twojego projektu na Twoim komputerze jest połączona z tym zdalnym repozytorium, dzięki czemu możesz przesyłać (wypychać) i pobierać (ściągać) zmiany.
 - **Staging**: Proces przygotowania plików do zatwierdzenia. Kiedy przygotowujesz plik, mówisz Gitowi, że chcesz dołączyć go do następnego zatwierdzenia. Staging pozwala wybrać, które zmiany mają zostać uwzględnione w zatwierdzeniu.
 - **Push**: czynność polegająca na wysłaniu zatwierdzonych zmian z lokalnego repozytorium do zdalnego repozytorium (np. GitHub), aby inne osoby mogły uzyskać dostęp do zaktualizowanej wersji Twojego kodu.
-- **Wyciąganie**: Akt pobierania zmian ze zdalnego repozytorium w celu aktualizacji kopii lokalnej. Pobierasz zmiany, gdy chcesz zsynchronizować swoje lokalne repozytorium z najnowszą wersją z pilota.
+- **Pobieranie (pull)**: Akt pobierania zmian ze zdalnego repozytorium w celu aktualizacji kopii lokalnej. Pobierasz zmiany, gdy chcesz zsynchronizować swoje lokalne repozytorium z najnowszą wersją ze zdalnego repozytorium.
 - **Origin**: Domyślna nazwa zdalnego repozytorium przy pierwszym połączeniu lokalnego repozytorium ze zdalnym. Zwykle odnosi się do głównego adresu URL Twojego projektu w GitHub.

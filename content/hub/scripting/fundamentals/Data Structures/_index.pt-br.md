@@ -4,13 +4,14 @@ type: "docs"
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
+translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
+url: "hub/scripting/fundamentals/Data Structures/_index"
 ---
-No Scheme, **estruturas de dados** são ferramentas essenciais para organizar, armazenar e manipular dados. Eles permitem que os desenvolvedores criem scripts eficientes, legíveis e reutilizáveis. Ao escolher a estrutura de dados certa para um problema específico, você pode otimizar o desempenho e a clareza do seu código.
+Em Scheme, **estruturas de dados** são ferramentas essenciais para organizar, armazenar e manipular dados. Eles permitem que os desenvolvedores criem scripts eficientes, legíveis e reutilizáveis. Ao escolher a estrutura de dados certa para um problema específico, você pode otimizar o desempenho e a clareza do seu código.
 
-## Principais estruturas de dados no esquema
+## Principais estruturas de dados em Scheme
 
-O Scheme fornece diversas estruturas de dados poderosas e versáteis, cada uma adequada para tarefas específicas. As estruturas de dados primárias incluem:
+Scheme fornece diversas estruturas de dados poderosas e versáteis, cada uma adequada para tarefas específicas. As estruturas de dados primárias incluem:
 
 ### Listas
 
@@ -33,7 +34,7 @@ Vetores são coleções de elementos de tamanho fixo, indexados para acesso ráp
 
 Principais recursos:
 - Tamanho fixo na criação.
-- Os elementos são acessados ​​pelo seu índice.
+- Os elementos são acessados pelo seu índice.
 - Mais rápido que listas para determinadas operações, como acesso aleatório.
 
 Exemplos de uso:

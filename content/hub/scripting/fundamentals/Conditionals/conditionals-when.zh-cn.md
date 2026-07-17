@@ -3,12 +3,13 @@ title: "when"
 type: docs
 weight: 5
 translation_provenance: ai-reviewed
+translation_source_sha256: 8b6c15ef2763fe95100759e0e2e21f2bf43bf8424317be6d414f2b5260587714
 translation_lock: true
-translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
+url: "hub/scripting/fundamentals/Conditionals/conditionals-when"
 ---
-En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
+在Scheme中，虽然`if`是优雅且通用的，但在没有显式`else`的情况下使用时可能会变得混乱。当目的是仅在条件为真时执行单个代码分支，而对于 `false` 情况没有替代操作时，尤其如此。在这种情况下，`when` 构造提供了更清晰、更简洁的替代方案。
 
-La forme de base de `when` :
+`when` 的基本形式如下所示：
 
 ```scheme
 (when test-is-true
@@ -16,10 +17,10 @@ La forme de base de `when` :
   do-that)
 ```
 
-- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
-- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
+- 如果 `test` 的计算结果为 真（`#t`），则 `when` 构造体中的所有表达式将按顺序执行。
+- 如果 `test` 的计算结果为 假（`#f`），则不会发生任何情况，并且不会返回任何值。
 
-### Exemple
+### 示例
 
 ```scheme
 (when (< 0 1)
@@ -27,9 +28,9 @@ La forme de base de `when` :
   (lumi-message "Executing additional actions."))
 ```
 
-### Comparer `if` et `when`
+### 对比`if` 和`when`
 
-Les deux ensemble dans le même exemple :
+为了更好地理解 `if` 和 `when` 之间的区别，请考虑以下两者一起使用的示例：
 
 ```scheme
 (if (= 0 1)
@@ -39,18 +40,25 @@ Les deux ensemble dans le même exemple :
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### Explication
+#### 说明：
 
-1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
-2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
+1. **`if` 条件**：
+   - 测试`(= 0 1)` 检查 0 是否等于 1。
+   - 由于这是 假（`#f`），因此执行`if` 的`else` 分支。
 
-#### Pourquoi `when` ?
+2. **`else` 分支中的 `when` 构造**：
+   - `when` 测试 `(< 0 1)` 检查 0 是否小于 1。
+   - 由于这是 真（`#t`），`when` 主体内的所有表达式都会按顺序执行：
+     - 首先输出 `"The 'when' condition is true!"`。
+     - 然后输出 `"Executing multiple actions within 'when'."`。
 
-- Pas de `else` vide ou factice.
-- Montre que seule la branche vraie compte.
+#### 为什么在这里使用`when`？
 
-### Résumé
+- 当条件不需要显式`else` 分支时，使用`when` 代替另一个`if` 可以简化逻辑。
+- `when` 明确表示只有真正的分支才是相关的，从而减少了潜在的混乱。
 
-- **`if` :** quand les deux branches comptent.
-- **`when` :** branche vraie seule, plusieurs actions possibles.
-- Les combiner structure clairement des conditions complexes.
+### 总结
+
+- 当您需要 true 和 false 分支时，请使用 `if`。
+- 当真实情况只有一个分支时，尤其是需要执行多个操作时，请使用`when`。
+- 组合 `if` 和 `when` 可以帮助清晰简洁地构造更复杂的条件。

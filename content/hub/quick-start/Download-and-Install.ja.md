@@ -1,6 +1,10 @@
 ---
 title: "ダウンロードとインストール"
 type: docs
+url: "hub/quick-start/Download-and-Install"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5f17d7e9009aeeacf256152bef94386ccc5a8eea87cf0feebef073488fb59283
 ---
 すでに Linux を使用していて、Lumi をすぐに実行したい場合は、GitLab アーティファクトの最新の **開発 AppImage** を使用してください。
 

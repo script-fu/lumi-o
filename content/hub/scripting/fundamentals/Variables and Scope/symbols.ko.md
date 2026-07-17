@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
+translation_source_sha256: 4153c94fca6fa6c5e1e98ac9449a9e7bd9cdc5b9e5dc4b96da5d8d1e8de3df43
+url: "hub/scripting/fundamentals/Variables and Scope/symbols"
 ---
 기호는 고유하고 변경할 수 없는 식별자를 나타내는 Scheme의 핵심 데이터 유형 중 하나입니다. 이는 주로 프로그램에서 키, 마커 또는 자리 표시자로 사용되므로 깔끔하고 표현력이 풍부한 코드를 작성하는 데 필수적입니다.
 

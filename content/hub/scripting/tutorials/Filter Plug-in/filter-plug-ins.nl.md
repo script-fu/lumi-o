@@ -4,9 +4,10 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
-We hebben een _procedure_ plug-in gebruikt voor de [Eerste stap](../../first-step/) tutorial. Dit soort plug-ins werken zonder dat er een afbeelding of tekenbaar bestand als invoer nodig is. Meestal gebruiken we een plug-in om een ​​afbeelding en de tekenbare bestanden te wijzigen. Dergelijke plug-ins worden _filter_plug-ins genoemd.
+We hebben een _procedure_ plug-in gebruikt voor de [Eerste stap](../../first-step/) tutorial. Dit soort plug-ins werken zonder dat er een afbeelding of tekenbaar bestand als invoer nodig is. Meestal gebruiken we een plug-in om een afbeelding en de tekenbare bestanden te wijzigen. Dergelijke plug-ins worden _filter_plug-ins genoemd.
 
 ### Wat is een tekenbaar bestand?
 
@@ -20,7 +21,7 @@ Een **tekenbaar** in Lumi verwijst naar een afbeeldingselement waarop kan worden
 (define (scheme-simple-filter-plug-in image drawables)
   ;; Gebruik een let-instructie om een berichtvariabele en kern code te definiëren
   (let ((message "hello, world"))
-    ;; Toon het bericht in Lumis Error Console
+    ;; Toon het bericht in Lumis foutenconsole
     (lumi-message message)
     ;; Keer de kleuren van het eerste geselecteerde drawable om
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -50,7 +51,7 @@ Klik in Linux met de rechtermuisknop op het bestand `simple-filter-plug-in.scm`,
 ### De plug-in uitvoeren
 
 1. Open een afbeelding (deze filterplug-in vereist een afbeelding om te werken).
-2. Open **Extra > Foutopsporing > Berichtenconsole** om een ​​bericht te bekijken.
+2. Open **Extra > Foutopsporing > Berichtenconsole** om een bericht te bekijken.
 3. Selecteer **Demo van eenvoudige filterplug-in** in het menu **Plug-in**.
 4. De kleuren van een van de geselecteerde lagen zijn omgekeerd en er wordt een bericht afgedrukt op de foutconsole.
 
@@ -89,7 +90,7 @@ Een `let` instructie definieert een variabele en voert bewerkingen uit op het te
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Toont een bericht in Lumis Error Console
+  (lumi-message message) ;; Toont een bericht in Lumis foutenconsole
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Keert de kleuren van het eerste geselecteerde drawable om
 ```
 
@@ -128,4 +129,4 @@ De bestandsnaam moet overeenkomen met de naam van de map die deze bevat.
 Het bestand moet zijn ingesteld als uitvoerbaar bestand.
 
 
-De **Berichtconsole** is een waardevol hulpmiddel voor het oplossen van problemen met aangepaste plug-ins. Als uw plug-in zich niet gedraagt ​​zoals verwacht, kijk dan hier voor foutmeldingen of logbestanden. Het **Terminal**-venster kan ook foutopsporingsinformatie bieden en laadproblemen melden.
+De **Berichtconsole** is een waardevol hulpmiddel voor het oplossen van problemen met aangepaste plug-ins. Als uw plug-in zich niet gedraagt zoals verwacht, kijk dan hier voor foutmeldingen of logbestanden. Het **Terminal**-venster kan ook foutopsporingsinformatie bieden en laadproblemen melden.

@@ -4,7 +4,8 @@ type: "docs"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
+translation_source_sha256: caf60dbd4ddbab418dd6779d9efba0217982d37086ed8d485680b96142d5ef6f
+url: "hub/scripting/fundamentals/Data Structures/lists"
 ---
 Scheme에서 **목록**은 값을 그룹화하는 데 사용되는 기본 데이터 구조입니다. 목록은 각 요소가 다른 목록을 포함하여 모든 유형일 수 있는 순서가 지정된 요소 모음입니다. 목록은 데이터 저장 및 프로그램 구조 모두를 위해 Scheme에서 널리 사용됩니다.
 
@@ -167,7 +168,9 @@ Scheme은 다음을 포함하여 목록 작업을 위한 몇 가지 내장 프�
 
 - `(length (list 1 2 3))`은 `3`을 반환합니다.
 - `(append (list 1 2) (list 3 4))`은 `(1 2 3 4)`을 반환합니다.
-- `(reverse (list 1 2 3))`은 `(3 2 1)`을 반환합니다.#### `list-ref` 사용
+- `(reverse (list 1 2 3))`은 `(3 2 1)`을 반환합니다.
+
+#### `list-ref` 사용
 
 `list-ref` 프로시저는 목록의 지정된 인덱스(0부터 시작하는 인덱스)에 있는 요소를 검색합니다.
 

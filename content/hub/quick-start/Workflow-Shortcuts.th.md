@@ -1,6 +1,10 @@
 ---
 title: "ทางลัดเวิร์กโฟลว์"
 type: docs
+url: "hub/quick-start/Workflow-Shortcuts"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
 ---
 Lumi-o สร้างขึ้นสำหรับเวิร์กโฟลว์ที่ขับเคลื่อนด้วยทางลัด เมื่อคุณสร้างหน่วยความจำของกล้ามเนื้อสำหรับคำสั่งเหล่านี้ คุณสามารถนำทางผืนผ้าใบและเครื่องมือของคุณได้เร็วขึ้นอย่างมาก
 

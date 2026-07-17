@@ -4,11 +4,12 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
+translation_source_sha256: e5e73b5202354e742509c1e3667fc131bcd6fff9f89b029b05e1798e67953219
+url: "hub/scripting/fundamentals/Iteration/do"
 ---
-La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
+De functie `do` in Scheme is een lusmechanisme dat iteratie mogelijk maakt met initialisatie, bijwerking en beëindigingsvoorwaarden. Het is vooral nuttig wanneer je een reeks bewerkingen een bepaald aantal keren moet uitvoeren of totdat aan een voorwaarde is voldaan.
 
-La forme générale de `do` :
+De algemene vorm van `do` is:
 
 ```scheme
 (do ((var1 init1 update1)
@@ -18,16 +19,16 @@ La forme générale de `do` :
   body)
 ```
 
-- **Variable :** variable(s) de boucle.
-- **Initial-value :** valeur initiale.
-- **Update-expression :** mise à jour par itération.
-- **Termination-condition :** condition d'arrêt.
-- **Result-expression :** valeur renvoyée à l'arrêt.
-- **Body :** code exécuté à chaque tour.
+- **Variabele:** De lusvariabele(n).
+- **Startwaarde:** De startwaarde van elke lusvariabele.
+- **Update-expressie:** De expressie die de lusvariabele(n) aan het einde van elke iteratie bijwerkt.
+- **Stopvoorwaarde:** De voorwaarde om de lus te stoppen.
+- **Resultaatexpressie:** De waarde die wordt geretourneerd wanneer de lus eindigt.
+- **Body:** De code die bij elke iteratie wordt uitgevoerd.
 
 ---
 
-### Exemple : somme de 1 à 5
+### Voorbeeld: som van de getallen 1 tot 5
 
 ```scheme
 (do ((i 1 (+ i 1))      ; Initialiseer i op 1, verhoog met 1
@@ -36,26 +37,31 @@ La forme générale de `do` :
   (lumi-message (number->string sum))) ; Print de som bij elke stap
 ```
 
-- `i` commence à 1 et s'incrémente.
-- `sum` accumule la somme.
-- Arrêt quand `i > 5`, retour de `sum`.
+- De lusvariabele `i` start op 1 en neemt bij elke iteratie met 1 toe.
+- De variabele `sum` accumuleert de som van `i`.
+- De lus eindigt wanneer `i > 5`, met als retourwaarde de uiteindelijke waarde van `sum`.
 
-**Sortie** : `15`
-
----
-
-### Comment ça marche
-
-1. **Initialisation :** valeurs de départ.
-2. **Test d'arrêt :** au début de chaque tour.
-3. **Itération :** exécuter le corps, mettre à jour les variables.
+**Output**: `15`
 
 ---
 
-### Résumé
+### Hoe het werkt
 
-- `do` offre des boucles flexibles à plusieurs variables.
-- Utile quand l'état évolue à chaque tour.
-- La condition d'arrêt fixe la fin et le résultat.
+1. **Initialisatie:**
+   - Elke lusvariabele krijgt zijn startwaarde toegewezen.
 
-`do` combine **liaisons** (comme `let`) et **contrôle itératif**.
+2. **Beëindigingscontrole:**
+   - Aan het begin van elke iteratie wordt de beëindigingsvoorwaarde gecontroleerd. Als die waar is, stopt de lus en wordt de resultatexpressie geëvalueerd.
+
+3. **Iteratie:**
+   - Als de beëindigingsvoorwaarde onwaar is, wordt de body uitgevoerd en worden de lusvariabelen bijgewerkt met hun respectievelijke update-expressies.
+
+---
+
+### Samenvatting
+
+- Het `do`-construct biedt een flexibele manier om lussen te implementeren met meerdere variabelen en complexe beëindigingsvoorwaarden.
+- Het is nuttig voor taken die statusupdates over iteraties heen vereisen.
+- De beëindigingsvoorwaarde bepaalt wanneer de lus eindigt en kan een eindresultaat retourneren.
+
+Met `do` kun je iteratieve algoritmen in Scheme implementeren met precieze controle over initialisatie, bijwerkingen en beëindiging. `do` combineert een **scope-gebonden bindingsmechanisme** (zoals `let`) met een **iteratieve controlestructuur**, waardoor lussen en tijdelijke status op een nette, beknopte manier afgehandeld kunnen worden.

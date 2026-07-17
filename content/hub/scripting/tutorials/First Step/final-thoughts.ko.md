@@ -4,7 +4,8 @@ type: docs
 weight: 10
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
+translation_source_sha256: 1e11221cb3561517da42909b8f115febb9d7430d2715ac9f1b5f4c42d8b80746
+url: "hub/scripting/tutorials/First Step/final-thoughts"
 ---
 이제 작업 절차 플러그인과 작은 도우미 라이브러리가 생겼습니다. 이 시리즈에서는 대부분의 Lumi 스크립트에서 사용할 핵심 패턴을 소개했습니다.
 
@@ -65,7 +66,7 @@ translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d094287
       #t)
     #f))
 
-;; 목적: 메시지를 Error Console로 보내고, 성공하면 #t를 반환
+;; 목적: 메시지를 오류 콘솔로 보내고, 성공하면 #t를 반환
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin

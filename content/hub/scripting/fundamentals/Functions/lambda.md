@@ -1,6 +1,7 @@
 ---
 title: Lambda Functions
 type: docs
+url: "hub/scripting/fundamentals/Functions/lambda"
 weight: 1
 ---
 

@@ -3,8 +3,9 @@ title: "กำลังโหลด"
 type: docs
 weight: 3
 translation_provenance: ai-reviewed
+translation_source_sha256: f278c01f86610dfeccac49fa73803a405bad82f7ef3b60226ff4350fb4ec257b
 translation_lock: true
-translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
+url: "hub/scripting/tutorials/First Step/loading"
 ---
 ทันทีที่ฟังก์ชันตัวช่วยเติบโตขึ้น ให้ย้ายมันไปไว้ในไฟล์ไลบรารีขนาดเล็ก นั่นทำให้ปลั๊กอินโฟกัสอยู่และทำให้ตัวช่วยสามารถนำมาใช้ซ้ำกับปลั๊กอินหลายตัวได้
 
@@ -25,8 +26,8 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 - **scheme/**: นี่คือไดเร็กทอรีหลักสำหรับจัดเก็บโค้ด Scheme ของคุณ
   - **library/**: นี่คือที่ที่ฟังก์ชันที่ใช้ร่วมกัน เช่น `send-message.scm` ถ่ายทอดสด
   - **ปลั๊กอิน/**: นี่คือที่จัดเก็บปลั๊กอินส่วนบุคคลของคุณ
-    - **hello-world/**: A folder for the specific "Hello World!" plug-in.
-      - **hello-world.scm**: The script file for the plug-in.
+    - **hello-world/**: โฟลเดอร์สำหรับ plug-in "Hello World!"
+      - **hello-world.scm**: ไฟล์สคริปต์ของ plug-in
 
 ตัวอย่างของฟังก์ชันไลบรารี send-message.scm
 
@@ -34,9 +35,9 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
 ;; ฟังก์ชันจัดการการส่งข้อความไปยังปลายทางต่างๆ
 (define (send-message message output)
   (cond
-    ;; ส่งไปยัง Message console
+    ;; ส่งไปยัง คอนโซลข้อความ
     ((eq? output 'error-console)
-       ;; ตั้งตัวจัดการเป็น Message console
+       ;; ตั้งตัวจัดการเป็น คอนโซลข้อความ
        (lumi-message-set-handler 2)
        (lumi-message message))
 
@@ -51,7 +52,7 @@ translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42
        ;; เอาต์พุต terminal จัดการด้วย display
        (display message)))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 ```
 

@@ -4,6 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
+url: "hub/scripting/tools/git"
 ---
 使用 Git 追蹤插件的變更、回滾錯誤以及跨機器共享程式碼。
 
@@ -31,7 +32,7 @@ translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1
 ### 本機和遠端儲存庫
 
 - **本機儲存庫**：這是儲存在您的電腦上的專案資料夾之一中的儲存庫。
-- **遠端儲存庫**：線上儲存的儲存庫版本（例​​如，在 GitLab 或 GitHub 上）。
+- **遠端儲存庫**：線上儲存的儲存庫版本（例如，在 GitLab 或 GitHub 上）。
 
 ## 使用 Git 和 GitHub
 

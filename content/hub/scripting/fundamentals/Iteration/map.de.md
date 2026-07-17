@@ -4,7 +4,8 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
+translation_source_sha256: f8a1536159fb582effce405aaa35ff9404de46b545c7db7eea088a72f551a9ee
+url: "hub/scripting/fundamentals/Iteration/map"
 ---
 Die Funktion `map` in Scheme wendet eine Prozedur auf jedes Element einer Liste (oder mehrerer Listen) an und **gibt eine neue Liste** mit den Ergebnissen zurück. Ideal für Datentransformationen.
 

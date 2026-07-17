@@ -4,15 +4,16 @@ type: docs
 weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
+translation_source_sha256: 1a62a7c4204b91c6988f897e400b577ef45a01ca57b06789e5f72591c5196144
+url: "hub/scripting/fundamentals/Variables and Scope/define"
 ---
-A instrução `define` em Scheme é uma construção versátil usada para criar ligações globais ou locais. É mais comumente usado para definir variáveis ​​e funções, tornando-as reutilizáveis ​​e acessíveis através de um script ou dentro de um escopo específico. Compreender `define` é crucial para escrever programas Scheme modulares, reutilizáveis ​​e legíveis.
+A instrução `define` em Scheme é uma construção versátil usada para criar ligações globais ou locais. É mais comumente usado para definir variáveis e funções, tornando-as reutilizáveis e acessíveis através de um script ou dentro de um escopo específico. Compreender `define` é crucial para escrever programas Scheme modulares, reutilizáveis e legíveis.
 
 ### Objetivo de `define`
 
 A construção `define` serve a vários propósitos:
 - **Definindo Variáveis**: Atribui valores aos nomes de variáveis, disponibilizando-os para uso posterior.
-- **Definindo Funções**: Cria procedimentos reutilizáveis ​​que encapsulam lógica específica.
+- **Definindo Funções**: Cria procedimentos reutilizáveis que encapsulam lógica específica.
 - **Definições locais**: Quando usado em uma função, `define` cria ligações locais que não afetam o namespace global.
 
 ---
@@ -97,7 +98,7 @@ Quando usado dentro de uma função, `define` cria ligações locais que são ac
 
 | **Aspecto** | **`define`** | **`let`** |
 |------------------------------------|--------------------------------------------------|--------------------------------------------------|
-| **Objetivo** | Cria ligações globais ou locais para variáveis ​​ou funções. | Cria vinculações temporárias em um escopo localizado. |
+| **Objetivo** | Cria ligações globais ou locais para variáveis ou funções. | Cria vinculações temporárias em um escopo localizado. |
 | **Escopo** | Global quando no nível superior; local quando dentro de outra função. | Sempre local para o bloco `let`.       |
-| **Reutilização** | Funções e variáveis ​​podem ser reutilizadas em vários lugares. | As variáveis ​​são vinculadas temporariamente a um único bloco. |
-| **Sintaxe** | Define explicitamente variáveis ​​ou funções.       | Combina ligação de variável com avaliação de expressão. |
+| **Reutilização** | Funções e variáveis podem ser reutilizadas em vários lugares. | As variáveis são vinculadas temporariamente a um único bloco. |
+| **Sintaxe** | Define explicitamente variáveis ou funções.       | Combina ligação de variável com avaliação de expressão. |

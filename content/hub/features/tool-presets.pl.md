@@ -55,7 +55,7 @@ Preset zawiera zasoby, które czynią go wyjątkowym. W presecie pędzla pędzel
 
 To świadome uproszczenie: zapisane narzędzie nie jest kruchym wskaźnikiem kilku oddzielnych elementów. Pędzle nadal można trzymać w bibliotece wielokrotnego użytku, lecz wybrane do presetu są kopiowane do tego autorskiego narzędzia.
 
-Dla artystów ważne jest, że narzędzie można zapisać jako pełną decyzję twórczą. Zachowanie, tożsamość i zasoby idą razem — presety są praktyczną podstawą osobistych workflow, zestawów projektowych i wspólnych konfiguracji studia.
+Dla artystów ważne jest, że narzędzie można zapisać jako pełną decyzję twórczą. Zachowanie, tożsamość i zasoby idą razem — presety są praktyczną podstawą osobistych przepływów pracy, zestawów projektowych i wspólnych konfiguracji studia.
 
 ## Znany zestaw instrumentów
 

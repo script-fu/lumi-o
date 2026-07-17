@@ -1,6 +1,7 @@
 ---
 title: Variables and Scope
 type: docs
+url: "hub/scripting/fundamentals/Variables and Scope/_index"
 weight: 1
 ---
 

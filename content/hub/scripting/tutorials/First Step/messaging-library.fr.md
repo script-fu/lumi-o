@@ -4,7 +4,8 @@ type: docs
 weight: 6
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
+translation_source_sha256: 0833643efbceb6ebd9977656657b3ba57f290758c0d400aaf7d02ab054869278
+url: "hub/scripting/tutorials/First Step/messaging-library"
 ---
 Au fil du temps, ce qui a commencé comme une fonction unique pour envoyer des messages a évolué vers un ensemble de fonctions liées. Ces fonctions constituent désormais la base d'une **bibliothèque de messagerie**, conçue pour gérer les sorties vers différentes destinations, telles que l'interface graphique, la console de messages et le terminal du système d'exploitation.
 

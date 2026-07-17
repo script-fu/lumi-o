@@ -4,7 +4,8 @@ type: docs
 weight: 5
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
+translation_source_sha256: 6fd2dd04a60013a83905022f3a5fd57ae427d5c84df7ac2223dac7fcb1b77587
+url: "hub/scripting/tutorials/First Step/refactor-again"
 ---
 เมื่อไลบรารีตัวช่วยเติบโตขึ้น การดูอย่างรวดเร็วจะติดตามได้ยากขึ้น ปรับโครงสร้างใหม่อีกครั้งเพื่อให้แต่ละฟังก์ชันมีขนาดเล็กและมีวัตถุประสงค์เดียว
 
@@ -37,7 +38,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (validate-message message output)
 
   (cond
-    ;; ส่งไปยัง Message console
+    ;; ส่งไปยัง คอนโซลข้อความ
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
@@ -51,7 +52,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'terminal)
        (display message)))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 ```
 
@@ -78,7 +79,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 ```
 
@@ -128,7 +129,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; วัตถุประสงค์: ส่งข้อความไปยัง Message console
+;; วัตถุประสงค์: ส่งข้อความไปยัง คอนโซลข้อความ
 (define (send-to-error-console message)
   ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'error-console)
@@ -148,7 +149,7 @@ translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b72
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง คอนโซลข้อความ
   (lumi-message-set-handler 2))
 
 ;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง และเอาต์พุตถูกต้อง

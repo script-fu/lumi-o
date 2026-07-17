@@ -19,12 +19,12 @@ I Lumis utvecklingsprocess fungerar AppImage som en bärbar testbyggnad som när
 
 Obs: CI bygger AppImage med Lumis integrerade beroendekällor i repot (BABL/GEGL/GTK3), så beroendestacken överensstämmer med det lokala arbetsflödet `lumi-build-script.sh`.
 
-## Release vs. development AppImage
+## Release vs. utvecklings-AppImage
 
 - **Release AppImage**: inte tillgänglig ännu (Lumi har inte släppts).
-- **Development AppImage (CI-artefakt)**: genereras automatiskt från pågående utvecklingscommits för testning.
+- **Utvecklings-AppImage (CI-artefakt)**: genereras automatiskt från pågående utvecklingscommits för testning.
 
-Den här guiden täcker främst arbetsflödet för **development AppImage**.
+Den här guiden täcker främst arbetsflödet för **utvecklings-AppImage**.
 
 Aktuell artefaktsida:
 

@@ -5,6 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+url: "hub/about/lumi-o"
 ---
 
 Lumi to szybka, wydajna aplikacja wyłącznie na Linuksa do tworzenia obrazów rastrowych, rozwijana otwarcie. Decyzje projektowe, dokumenty architektury i historia rozwoju są publiczne, dzięki czemu użytkownicy mogą śledzić, jak program się zmienia.
@@ -21,7 +22,7 @@ Niezawodność i długoterminowy dostęp to podstawowe cechy. Otwarty format pli
 
 ## Podstawy artystyczne
 
-Lumi rozwija niezależny artysta z doświadczeniem w pixel arcie, tradycyjnym rysunku i malarstwie, tworzeniu gier, sztuce technicznej, ilustracji i animacji 3D. To tło kształtuje podejście do koloru, linii, warstw, wydajności, odzyskiwania danych, skryptów i doświadczenia użytkownika.
+Lumi rozwija niezależny artysta z doświadczeniem w sztuce pikselowej, tradycyjnym rysunku i malarstwie, tworzeniu gier, sztuce technicznej, ilustracji i animacji 3D. To tło kształtuje podejście do koloru, linii, warstw, wydajności, odzyskiwania danych, skryptów i doświadczenia użytkownika.
 
 ## Filozofia
 
@@ -32,7 +33,7 @@ Lumi łączy system kolorów oparty na pigmentach z responsywnym, nieniszczącym
 - **Dotykowe, skupione narzędzia**: pędzle integrują nacisk, nachylenie i prędkość rysika dla bezpośredniej, dopracowanej kontroli; elementy sterujące wspierają przemyślane decyzje bez zbędnej złożoności.
 - **Nieniszcząca niezawodność**: warstwy i edytowalne filtry skalują się do złożonych projektów, pozostając przewidywalne. Automatyczny zapis, szybkie zapisywanie, zapisy przyrostowe i odzyskiwanie chronią długie sesje malarskie i duże projekty.
 - **Aktywne obszary robocze**: nazwane profile zachowują dokowania, narzędzia, ustawienia wstępne, palety i powiązania urządzeń, a następnie przełączają je atomowo w czasie działania.
-- **Scheme scripting**: Lumi rozszerza tradycję Script-Fu o język wtyczek oparty na Scheme oraz dodatkowe funkcje pomocnicze do tworzenia wtyczek i automatyzacji przepływów pracy.
+- **Skrypty Scheme**: Lumi rozszerza tradycję Script-Fu o język wtyczek oparty na Scheme oraz dodatkowe funkcje pomocnicze do tworzenia wtyczek i automatyzacji przepływów pracy.
 
 [Filtry](/hub/features/filters/) — w tym rozmycie bokeh o kształcie obiektywu, tilt-shift, gradacja tonalna, wyostrzanie i redukcja szumów — mogą pozostać edytowalne obok pracy pędzlem.
 

@@ -4,7 +4,8 @@ type: docs
 weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
+translation_source_sha256: db9cfb794dad80ce918a3eca7b47d02b23dbbba960a26765c04d95d459d8ec6b
+url: "hub/scripting/tutorials/Filter Plug-in/filter-plug-ins"
 ---
 我们在[第一步](../../first-step/) 教程中使用了_procedure_插件。这些类型的插件无需图像或可绘制对象作为输入即可工作。通常，我们使用插件来更改图像及其可绘制对象。像这样的插件称为_filter_插件。
 
@@ -20,7 +21,7 @@ Lumi 中的 **drawable** 是指可以在其上绘制的图像元素，例如图�
 (define (scheme-simple-filter-plug-in image drawables)
   ;; 使用 let 语句定义消息变量和核心代码
   (let ((message "hello, world"))
-    ;; 在 Lumi 的 Error Console 中显示消息
+    ;; 在 Lumi 的 错误控制台 中显示消息
     (lumi-message message)
     ;; 反转第一个所选 drawable 的颜色
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
@@ -89,7 +90,7 @@ Lumi 中的 **drawable** 是指可以在其上绘制的图像元素，例如图�
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; 在 Lumi 的 Error Console 中显示消息
+  (lumi-message message) ;; 在 Lumi 的 错误控制台 中显示消息
   (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 反转第一个所选 drawable 的颜色
 ```
 

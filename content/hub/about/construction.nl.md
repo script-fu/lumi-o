@@ -5,6 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
+url: "hub/about/construction"
 ---
 
 De Constructie-werkruimte is gebouwd voor lay-in-werk. U start met één Lay-in-gereedschapsvoorinstelling en een vierkleurenpalet van wit, zwart, rood en blauw — genoeg structuur om vorm en volume in te blokken. Druk regelt de dekking, zodat u lichte markeringen kunt opbouwen en gefocust op vorm kunt blijven.
