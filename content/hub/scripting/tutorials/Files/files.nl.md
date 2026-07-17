@@ -2,6 +2,9 @@
 title: "Bestanden"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Het werken met bestanden en mappen is essentieel voor de ontwikkeling van schema's. Of u nu uitvoer opslaat, bronnen laadt of uw projectstructuur organiseert, als u bestandsbewerkingen begrijpt, worden uw scripts robuuster en gebruiksvriendelijker.
 
@@ -58,7 +61,7 @@ De `SF-DIRNAME` biedt een browser voor een directory.
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Schema biedt de opdracht ```dir-make``` om een map te maken. Deze opdracht gebru
 Meestal moeten we meerdere mappen maken voor een praktisch pad. We kunnen een verpakking voor ```dir-make``` gebruiken om ons hierbij te helpen.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Doel: Een wrapper voor (dir-make) die een opgegeven pad vanaf een platform aanmaakt
+;;          opgegeven pad. Geeft altijd Linux-scheidingstekens uit voor dir-make.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Hoofdmap
+    ;; Maak de overige mappen stap voor stap aan
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Bouwt het pad
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

@@ -1,11 +1,14 @@
 ---
-title: "做"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-Scheme 中的 `do` 函數是一種循環機制，允許在初始化、更新和終止條件下進行迭代。當您需要執行一系列操作特定次數或直到滿足條件時，它特別有用。
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-`do`的一般形式是：
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Scheme 中的 `do` 函數是一種循環機制，允許在初始化、更新和�
   body)
 ```
 
-- **變數**：循環變數。
-- **初始值**：每個循環變數的起始值。
-- **更新表達式**：在每次迭代結束時更新循環變數的表達式。
-- **終止條件**：停止循環的條件。
-- **結果表達式**：循環終止時傳回的值。
-- **主體**：每次迭代中執行的程式碼。
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### 範例：將 1 到 5 的數字相加
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; 將 i 初始化為 1，每次遞增 1
+     (sum 0 (+ sum i))) ; 將 sum 初始化為 0，將 i 加到 sum
+    ((> i 5) sum)       ; 當 i > 5 時終止，回傳 sum
+  (lumi-message (number->string sum))) ; 在每一步列印總和
 ```
 
-- 循環變數`i` 從 1 開始，並在每次迭代中遞增 1。
-- 變數`sum` 累加`i` 的總和。
-- 當`i > 5`時循環終止，返回`sum`的最終值。
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**輸出**：`15`
-
----
-
-### 它是如何運作的
-
-1. **初始化**：
-   - 每個循環變數都被賦予其初始值。
-
-2. **終止檢查**：
-   - 在每次迭代開始時，檢查終止條件。如果為 true，則循環停止並計算結果表達式。
-
-3. **迭代**：
-   - 如果終止條件為假，則執行主體，並使用各自的更新表達式更新循環變數。
+**Sortie** : `15`
 
 ---
 
-### 總結
+### Comment ça marche
 
-- `do` 構造提供了一種靈活的方法來實現具有多個變數和複雜終止條件的循環。
-- 對於需要跨迭代更新狀態的任務非常有用。
-- 終止條件決定循環何時結束並可以返回最終結果。
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-透過使用`do`，您可以在Scheme中實現迭代演算法，並精確控制初始化、更新和終止。這使得`do`成為**範圍綁定機制**（如`let`）和**迭代控制結構**的組合，使其能夠以乾淨、簡潔的方式處理循環和臨時狀態。
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

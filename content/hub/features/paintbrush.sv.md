@@ -1,6 +1,10 @@
 ---
 title: "Borstverktyg"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/paintbrush"
+translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
 Penselverktyget är Lumis kärnmålningsinstrument: ett lyhört, uttrycksfullt sätt att rita, måla, skugga, strukturera och bygga märken direkt på duken. Den är designad för att kännas omedelbar samtidigt som den ger konstnärer utrymme att forma hur en stroke beter sig.
 
@@ -41,7 +45,9 @@ Penseln kan fånga ett litet urval av hur en förinställning normalt ritas för
 
 Detta håller konstruerade drag närmare borstens karaktär. En linje som dras från en bana kan börja mjukt, bygga upp tryck, avta eller variera hastighetssvaret på samma breda sätt som det samplade handslaget, samtidigt som det fortfarande följer banans exakta form, markeringskant eller raklinjegest.
 
-## EfterbearbetningPenseln kan spela in ett drag när du ritar det och sedan spela upp den fångade gesten när du lyfter upp, förfina banan innan det sista märket läggs ner. Du kan skissa fritt och ändå komma fram till renare riktning, skarpare hörn eller mer medveten struktur utan att behöva rita med mekanisk precision.
+## Efterbearbetning
+
+Penseln kan spela in ett drag när du ritar det och sedan spela upp den fångade gesten när du lyfter upp, förfina banan innan det sista märket läggs ner. Du kan skissa fritt och ändå komma fram till renare riktning, skarpare hörn eller mer medveten struktur utan att behöva rita med mekanisk precision.
 
 Detta öppnar för kläckning och konstruktionsmärken som snäpper till rena vinklar samtidigt som den behåller handritad längd och karaktär, lutningsstabila bandslag och hörnmedveten repris som behandlar böjningar och raka löpningar på olika sätt. Borstar med flera huvuden kan dela en korrigerad bana medan varje huvud behåller sin egen variation, och dynamik kan fortfarande forma slaget längs dess slutliga kurva under repris. Efterbehandling gäller dragna drag snarare än kontinuerlig airbrush-utsläpp.
 

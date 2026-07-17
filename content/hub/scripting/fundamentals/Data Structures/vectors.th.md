@@ -1,7 +1,10 @@
 ---
 title: "เวกเตอร์"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 ใน Scheme เวกเตอร์เป็นอีกหนึ่งโครงสร้างข้อมูลพื้นฐานที่ใช้ในการจัดกลุ่มค่า ต่างจากรายการตรงที่เวกเตอร์จะมีขนาดคงที่ คอลเลกชันขององค์ประกอบที่จัดทำดัชนีแล้ว ช่วยให้เข้าถึงและอัปเดตแบบสุ่มได้รวดเร็วยิ่งขึ้น แต่ละองค์ประกอบในเวกเตอร์สามารถเป็นประเภทใดก็ได้ รวมถึงเวกเตอร์อื่นด้วย เวกเตอร์แสดงโดยใช้ # ตามด้วยวงเล็บ `#(1 2 3)`
 
@@ -29,8 +32,8 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; ดึงองค์ประกอบที่ดัชนี 0
+(vector-ref my-vector 1)  ; ดึงองค์ประกอบที่ดัชนี 1
 ```
 
 #### การวนซ้ำ: การประมวลผลแต่ละองค์ประกอบในเวกเตอร์
@@ -42,9 +45,9 @@ weight: 5
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; พิมพ์องค์ประกอบ
+        (loop (+ i 1)))                                    ; ประมวลผลดัชนีถัดไป
+      (lumi-message "done"))))                             ; สิ้นสุดลูป
 ```
 
 - **กรณีฐาน:** หากดัชนี `i` ถึงความยาวของเวกเตอร์ ให้หยุดการวนซ้ำ
@@ -99,7 +102,7 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; ตั้งค่าองค์ประกอบที่สองเป็น 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ my-vector
 กระบวนการ `vector?` จะตรวจสอบว่าค่าที่กำหนดเป็นเวกเตอร์หรือไม่
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; ตรวจสอบว่า #(1 2 3) เป็นเวกเตอร์หรือไม่
+(vector? 42)              ; ตรวจสอบว่า 42 เป็นเวกเตอร์หรือไม่
 ```
 
 ผลลัพธ์:
@@ -127,11 +130,11 @@ my-vector
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; อัปเดตเวกเตอร์ที่ดัชนีที่ระบุ
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; เปลี่ยนองค์ประกอบที่สองเป็น 99
+my-vector                              ; เวกเตอร์ต้นฉบับได้รับการอัปเดตแล้ว
 ```
 
 ผลลัพธ์: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 - `list->vector`: แปลงรายการให้เป็นเวกเตอร์
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; คืนค่า 3
+(vector->list (vector 1 2 3))          ; แปลงเวกเตอร์เป็นรายการ: (1 2 3)
+(list->vector (list 1 2 3))            ; แปลงรายการเป็นเวกเตอร์: #(1 2 3)
 ```
 
 ผลลัพธ์:
@@ -187,8 +190,8 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 #### ตัวอย่าง: การเข้าถึงองค์ประกอบ
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; ดึงองค์ประกอบแรก: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; ดึงองค์ประกอบที่สองของเวกเตอร์แรก: 2
 ```
 
 ### สรุป

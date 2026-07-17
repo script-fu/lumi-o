@@ -1,7 +1,10 @@
 ---
-title: "정의하다"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용되는 다목적 구성입니다. 변수와 함수를 정의하는 데 가장 일반적으로 사용되며, 이를 통해 스크립트 전체 또는 특정 범위 내에서 재사용 및 액세스할 수 있습니다. `define`을 이해하는 것은 재사용 가능하고 읽기 쉬운 모듈식 Scheme 프로그램을 작성하는 데 중요합니다.
 
@@ -28,7 +31,7 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; 2π 계산
 ```
 
 **결과**: `6.28318`
@@ -51,7 +54,7 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; 4² 계산
 ```
 
 **결과**: `16`
@@ -66,8 +69,8 @@ Scheme의 `define` 문은 전역 또는 로컬 바인딩을 만드는 데 사용
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; 로컬 헬퍼 함수
+  (define (cube x) (* x x x))  ;; 로컬 헬퍼 함수
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

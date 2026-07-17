@@ -2,6 +2,9 @@
 title: "Символы"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 Символы — это один из основных типов данных в Scheme, представляющий уникальные неизменяемые идентификаторы. В основном они используются в программах в качестве ключей, маркеров или заполнителей, что делает их незаменимыми для написания чистого и выразительного кода.
 
@@ -17,9 +20,9 @@ weight: 6
 Примеры:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; Символ с именем `hello`
+'foo-bar     ; Символ с именем `foo-bar`
+'*special*   ; Символ с именем `*special*`
 ```
 
 ## Создание символов
@@ -29,7 +32,7 @@ weight: 6
 ### Пример
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; Создаёт символ `my-symbol`
 ```
 
 Вы также можете создавать символы программным путем с помощью процедуры `string->symbol`, которая преобразует строку в символ.
@@ -48,8 +51,8 @@ weight: 6
 ### Пример
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (тот же символ)
+(eq? 'apple 'orange)  ; #f (разные символы)
 ```
 
 Это делает символы идеальными для использования в качестве ключей в структурах данных или маркеров в вашем коде.
@@ -62,7 +65,7 @@ weight: 6
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; Возвращает (name . "Alice")
 ```
 
 2. **Идентификаторы в коде:**
@@ -88,9 +91,9 @@ weight: 6
 ### Примеры
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (истина: это символ)
+(symbol->string 'example)     ; Результат: "example"
+(string->symbol "new-symbol") ; Результат: 'new-symbol
 ```
 
 ## Резюме

@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Använd Git för att spåra ändringar av dina plugin-program, återställa misstag och dela kod mellan maskiner.
 
@@ -62,7 +65,7 @@ Om du inte redan har ett konto besöker du [GitHub](https://github.com/) för at
 
 1. **Logga in på GitHub**: Gå till [GitHub](https://github.com/) och logga in på ditt konto.
 2. **Skapa ett nytt arkiv**:
-   - Klicka på ikonen **+** i det övre högra hörnet och välj **Nytt arkiv**.
+   - Klicka på ikonen ***+** i det övre högra hörnet och välj **Nytt arkiv**.
    - Ange ett arkivnamn (t.ex. `your-repository`).
    - Lägg till en beskrivning om så önskas.
    - Välj **Offentlig** eller **Privat** synlighet.
@@ -82,7 +85,7 @@ Detta kommando initierar ett tomt Git-förråd i din projektmapp.
 
 ### 5. Anslut ditt lokala repo till GitHub
 
-Därefter vill du ansluta ditt lokala arkiv till GitHub. Efter att ha skapat ett tomt arkiv på GitHub, lägg till det som en fjärrkontroll till ditt lokala projekt:
+Därefter vill du ansluta ditt lokala arkiv till GitHub. Efter att ha skapat ett tomt arkiv på GitHub, lägg till det som en remote till ditt lokala projekt:
 
 ```sh
 cd code/your/project/folder
@@ -133,8 +136,8 @@ Git och plattformar som GitHub och GitLab är kraftfulla verktyg, och även om d
 
 Här är några vanliga termer du kommer att stöta på när du arbetar med Git och GitHub:- **Commit**: En ögonblicksbild av dina ändringar i arkivet. Varje commit innehåller ett meddelande som beskriver vad som ändrades och skapar en historisk post som du kan referera till eller återgå till senare.
 - **Repository (Repo)**: En samling filer och deras historik spåras av Git. Lagrar kan finnas lokalt på din dator eller på distans på plattformar som GitHub. Varje projekt lagras vanligtvis i sitt eget arkiv.
-- **Fjärr**: Ett fjärrlager är en version av ditt projekt som är värd på en plattform som GitHub. Den lokala versionen av ditt projekt på din dator är länkad till denna fjärrkontroll så att du kan ladda upp (push) och ladda ner (pull) ändringar.
+- **Fjärr**: Ett fjärrlager är en version av ditt projekt som är värd på en plattform som GitHub. Den lokala versionen av ditt projekt på din dator är länkad till denna remote så att du kan ladda upp (push) och ladda ner (pull) ändringar.
 - **Staging**: Processen att förbereda filer för en commit. När du iscensätter en fil, säger du till Git att du vill inkludera den i nästa commit. Staging låter dig välja vilka ändringar som ska inkluderas i en commit.
 - **Push**: Handlingen att skicka dina engagerade ändringar från ditt lokala arkiv till ett fjärrarkiv (t.ex. GitHub), så att andra kan komma åt den uppdaterade versionen av din kod.
-- **Pull**: Hämta ändringar från ett fjärrlager för att uppdatera din lokala kopia. Du drar ändringar när du vill synkronisera ditt lokala arkiv med den senaste versionen från fjärrkontrollen.
+- **Pull**: Hämta ändringar från ett fjärrlager för att uppdatera din lokala kopia. Du drar ändringar när du vill synkronisera ditt lokala arkiv med den senaste versionen från remoteen.
 - **Ursprung**: Standardnamnet för ett fjärrlager när du först ansluter ditt lokala arkiv till en fjärrenhet. Refererar vanligtvis till huvudadressen till ditt projekt på GitHub.

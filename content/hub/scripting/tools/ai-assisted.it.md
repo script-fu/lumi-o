@@ -1,36 +1,39 @@
 ---
-title: "Sviluppo assistito dall'intelligenza artificiale"
+title: "Sviluppo assistito dall'IA"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
 ---
-I moderni strumenti di intelligenza artificiale possono accelerare in modo significativo lo sviluppo dei plug-in Lumi agendo come partner di codifica collaborativo.
+Gli strumenti IA moderni possono accelerare notevolmente lo sviluppo di plug-in Lumi fungendo da partner di codifica collaborativo.
 
-## Codice VS in modalità agente
+## VS Code in modalità Agent
 
-L'utilizzo di Visual Studio Code con un assistente AI in **modalità agente** (come la modalità agente di GitHub Copilot o altri assistenti abilitati per gli strumenti) consente di eseguire attività complesse in più passaggi utilizzando il linguaggio naturale.
+Usare Visual Studio Code con un assistente IA in **modalità Agent** (come la modalità Agent di GitHub Copilot o altri assistenti con strumenti) consente di eseguire compiti complessi in più passaggi usando il linguaggio naturale.
 
-Invece di completare semplicemente una singola riga di codice, un agente può:
-- Leggi l'intero spazio di lavoro per comprendere il contesto.
-- Creare nuovi file e directory.
-- Esegui comandi del terminale per testare o convalidare gli script.
-- Cerca modelli esistenti nella tua codebase.
+Invece di completare una sola riga di codice, un agent può:
+- leggere l'intero workspace per capire il contesto
+- creare nuovi file e directory
+- eseguire comandi da terminale per testare o convalidare gli script
+- cercare pattern esistenti nella codebase
 
 ## Accesso al repository
 
-L'assistenza AI è più efficace quando l'agente ha accesso a **lumi-dev** o al repository del tuo progetto specifico. Grazie alla visibilità sulla codebase esistente, l'agente può:
-- Utilizzare **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** come riferimento per le funzioni di supporto.
-- Segui i modelli esistenti per le operazioni GEGL e la gestione dei livelli.
-- Riutilizzare il codice boilerplate dei plug-in esistenti.
+L'assistenza IA è più efficace quando l'agent ha accesso a **lumi-dev** o al repository del progetto. Con visibilità sul codice esistente, l'agent può:
+- usare le **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** come riferimento per le funzioni di supporto
+- seguire i pattern esistenti per operazioni GEGL e gestione dei livelli
+- riutilizzare il codice boilerplate dei plug-in consolidati
 
-## Esempio di flusso di lavoro
+## Flusso di lavoro di esempio
 
-Puoi chiedere direttamente all'Agent di generare un plug-in completo descrivendo il risultato funzionale desiderato:
+Potete chiedere direttamente all'agent di generare un plug-in completo descrivendo il risultato funzionale desiderato:
 
-> "Utilizzando le utilità e gli esempi di Scheme disponibili nell'area di lavoro, scrivi un nuovo plug-in che crei una guida orizzontale al 50% sull'immagine attiva e la chiami 'Guida centrale'."
+> "Usando le utility Scheme e gli esempi disponibili nel workspace, scrivi un nuovo plug-in che crea una guida orizzontale al 50% sull'immagine attiva e la chiama 'Center Guide'."
 
-L'agente cercherà come creare guide, identificherà la funzione di utilità corretta (come `lumi-image-add-hguide-percent` da `common.scm`) e genererà il file `.scm` completo con il boilerplate di registrazione corretto.
+L'agent cercherà come creare guide, identificherà la funzione utility corretta (come `lumi-image-add-hguide-percent` da `common.scm`) e genererà il file `.scm` completo con il boilerplate di registrazione corretto.
 
-## Migliori pratiche
+## Buone pratiche
 
-- **Sii specifico**: descrivi esattamente cosa vuoi che faccia il plug-in.
-- **Utilità di riferimento**: incoraggia l'agente a consultare la directory `share/lumi/scripts/` per gli aiutanti di alto livello.
-- **Revisione e test**: testa sempre il plug-in generato dall'intelligenza artificiale, spesso è un processo iterativo e creativo.
+- **Siate specifici**: descrivete esattamente cosa deve fare il plug-in.
+- **Referenziate le utility**: incoraggiate l'agent a consultare la directory `share/lumi/scripts/` per trovare helper di alto livello.
+- **Revisione e test**: testate sempre il plug-in generato dall'IA — spesso è un processo iterativo e creativo.

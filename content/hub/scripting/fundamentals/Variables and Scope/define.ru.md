@@ -1,7 +1,10 @@
 ---
-title: "определять"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Оператор `define` в Scheme — это универсальная конструкция, используемая для создания глобальных или локальных привязок. Чаще всего он используется для определения переменных и функций, что делает их многоразовыми и доступными в сценарии или в определенной области. Понимание `define` имеет решающее значение для написания модульных, многократно используемых и читаемых программ Scheme.
 
@@ -28,7 +31,7 @@ weight: 3
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; Вычисляет 2π
 ```
 
 **Результат**: `6.28318`
@@ -51,7 +54,7 @@ weight: 3
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; Вычисляет 4²
 ```
 
 **Результат**: `16`
@@ -66,8 +69,8 @@ weight: 3
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Локальная вспомогательная функция
+  (define (cube x) (* x x x))  ;; Локальная вспомогательная функция
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

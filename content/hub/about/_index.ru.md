@@ -1,14 +1,19 @@
 ---
 type: docs
+url: "hub/about"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
 ---
-В этом разделе дается краткий обзор программного обеспечения, поддерживаемого им рабочего процесса и процесса рисования, для которого оно предназначено.
+
+Краткий обзор программы, поддерживаемых ею рабочих процессов и этапов рисования, для которых она создаётся.
 
 {{< cards >}}
-	{{< card link="lumi-o" title="Люми-о" icon="information-circle" subtitle="Что такое Lumi, почему он существует и идеи, определяющие его развитие." >}}
-	{{< card link="workspace" title="Рабочая область" icon="view-boards" subtitle="Целенаправленный интерфейс, предназначенный для структурированных, неразрушающих рабочих процессов рисования." >}}
-	{{< card link="construction" title="Строительство" icon="pencil" subtitle="Скудное рабочее пространство для форм, форм и ранних решений по рисованию." >}}
-	{{< card link="inking" title="Чернила" icon="pencil-alt" subtitle="Контролируемая работа с линиями и чистая отделка для продуманных рабочих процессов с иллюстрациями." >}}
-	{{< card link="color" title="Цвет" icon="color-swatch" subtitle="Палитры на основе пигментов и обработка цвета, сформированная традиционной медиа-практикой." >}}
-	{{< card link="download" title="Скачать" icon="download" subtitle="Получите последнюю сборку AppImage или посетите репозиторий исходного кода." >}}
-	{{< card link="Patreon" title="Патреон" icon="heart" subtitle="Поддержите постоянное развитие и художественные работы, которые определяют направление Lumi." >}}
+	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Что такое Lumi, зачем он нужен и какие идеи определяют его развитие." >}}
+	{{< card link="workspace" title="Рабочие пространства" icon="view-boards" subtitle="Сфокусированный интерфейс для структурированных неразрушающих рабочих процессов живописи." >}}
+	{{< card link="construction" title="Построение" icon="pencil" subtitle="Минималистичное рабочее пространство для формы, объёма и ранних решений при рисовании." >}}
+	{{< card link="inking" title="Обводка" icon="pencil-alt" subtitle="Контролируемая линия и чистая финальная обработка для продуманных иллюстративных рабочих процессов." >}}
+	{{< card link="color" title="Цвет" icon="color-swatch" subtitle="Палитры на основе пигментов и работа с цветом, основанные на практике традиционных материалов." >}}
+	{{< card link="download" title="Скачать" icon="download" subtitle="Скачайте последнюю сборку AppImage или посетите репозиторий исходного кода." >}}
+	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="Поддержите разработку и художественные работы, которые определяют направление Lumi." >}}
 {{< /cards >}}

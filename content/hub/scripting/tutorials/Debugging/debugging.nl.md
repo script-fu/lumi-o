@@ -2,6 +2,9 @@
 title: "Foutopsporing"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 Bij scripting is geen enkele functie onfeilbaar. Zelfs de meest betrouwbare opdrachten kunnen mislukken als ze worden geconfronteerd met onverwachte invoer of omstandigheden. Om ons hiertegen te beschermen, kunnen we een aangepast foutopsporingssysteem implementeren en defensieve programmeertechnieken toepassen. Door standaardfuncties te voorzien van mechanismen voor foutafhandeling en informatieve feedback te geven, kunnen we onze scripts robuuster maken en gemakkelijker problemen op te lossen.
 
@@ -12,14 +15,14 @@ Een belangrijk onderdeel van deze strategie is het gebruik van een globale debug
 Een globale foutopsporingsvlag is een eenvoudige maar effectieve manier om het niveau van de informatie-uitvoer tijdens de uitvoering van scripts te controleren. Indien ingeschakeld, biedt het gedetailleerde foutopsporingsberichten die van onschatbare waarde kunnen zijn bij het opsporen van problemen. Indien uitgeschakeld, blijft de uitvoer beknopt voor productiegebruik.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Doel: Globale vlag om debug-uitvoer te beheren.
 (define debug #f)
 ```
 
 Standaard is foutopsporing uitgeschakeld. Om uitgebreide uitvoer tijdens de ontwikkeling mogelijk te maken, stelt u eenvoudigweg de vlag in op `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Doel: Globale vlag om debug-uitvoer te beheren.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ We kunnen foutopsporing voor specifieke delen van de code ook tijdelijk in- of u
 Voor een nauwkeurigere controle kunnen we foutopsporing binnen specifieke delen van het script in- of uitschakelen met behulp van helperfuncties.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Doel: Debugmodus uitschakelen voor een codegedeelte.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Doel: Debugmodus inschakelen voor een codegedeelte.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ Voor een nauwkeurigere controle kunnen we foutopsporing binnen specifieke delen 
 Hierdoor kunnen we de foutopsporing dynamisch beheren:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Uitgebreide uitvoer inschakelen
 
-;; Some script logic here
+;; Hier wat scriptlogica
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Uitgebreide uitvoer uitschakelen
 ```
 
 ## Foutopsporing in berichtensysteem
@@ -73,7 +76,7 @@ Elke functie speelt een rol bij het opmaken en weergeven van gestructureerde ber
 De functie `debug-message` is de kernmethode voor het weergeven van debug-uitvoer. Het zorgt ervoor dat berichten alleen worden weergegeven als foutopsporing is ingeschakeld.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Doel: Een debugbericht weergeven.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ De functie `debug-message` is de kernmethode voor het weergeven van debug-uitvoe
 Voorbeeldgebruik:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Doel: Retourneert de boompositie van het item of #f als het item ongeldig is
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Als foutopsporing is ingeschakeld, kan de uitvoer het volgende zijn:
 Berichten kunnen verschillende gegevenstypen bevatten, zoals lijsten, vectoren en getallen. Om ervoor te zorgen dat ze correct zijn opgemaakt, gebruiken we `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Doel: Converteert diverse Scheme-gegevenstypen (lijsten, vectoren, paren, enz.)
+;;          in een tekenreeksweergave.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Lege lijst
+    ((and (string? item) (string=? item "")) "\"\"")  ; Lege string
+    ((list? item) (list->string item))                ; Geneste lijst
+    ((vector? item)                                   ; Verwerkt vectoren
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Verwerkt paren
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Getallen
+    ((symbol? item) (symbol->string item))            ; Symbolen
+    ((boolean? item) (if item "#t" "#f"))             ; Booleaanse waarden
+    ((string? item) item)                             ; Tekenreeksen
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 Om meerdere berichtcomponenten samen te voegen tot één enkele string, gebruiken we `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Doel: Meerdere items samenvoegen tot één tekenreeks.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ Voorbeeldgebruik:
 De functie `list->string` converteert een lijst naar een opgemaakte tekenreeks.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Doel: Een lijst met items omzetten in een leesbare tekenreeks.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ De functie `list->string` converteert een lijst naar een opgemaakte tekenreeks.
 ### WaarschuwingsberichtenDe functie `warning-message` werkt op dezelfde manier als `debug-message`, maar geeft waarschuwingen weer, zelfs als foutopsporing is uitgeschakeld.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Doel: Een waarschuwingsbericht weergeven.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -191,11 +194,11 @@ De functie `list->string` converteert een lijst naar een opgemaakte tekenreeks.
 
 Zodra er een foutopsporingssysteem aanwezig is, kunnen we onze bibliotheek met functies uitbreiden door gedetailleerde berichten op te nemen. Dit geeft inzicht in itemstatussen, variabelewaarden en functieaanroepen.
 
-Een veelvoorkomend voorbeeld is `item-is-valid?`, waarbij `lumi-item-id-is-valid` wordt verpakt om `#t` of `#f` te retourneren. If `#f` is returned, we can trigger a `warning-message` in the calling code, if the input is not a number we a can give a warning in the function.
+Een veelvoorkomend voorbeeld is `item-is-valid?`, waarbij `lumi-item-id-is-valid` wordt verpakt om `#t` of `#f` te retourneren. Als `#f` wordt geretourneerd, kunnen we een `warning-message` activeren in de aanroepcode. Als de invoer geen getal is, kunnen we een waarschuwing geven in de functie.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Doel: Controleren of een item geldig is, retourneert #t of #f.
+;;          Geeft een waarschuwing als het item geen getal is.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Een wrapper voor onze berichtfunctie om een `*` te gebruiken
 Voorbeeld van `call` in de praktijk:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Doel: Past het textureringsproces toe op de gegeven lijst met groepsmaskers
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

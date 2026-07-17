@@ -1,7 +1,10 @@
 ---
-title: "lassen"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 Der Name `let` wird verwendet, weil er seinen mathematischen Ursprung der Einführung temporärer Bindungen widerspiegelt, wie in _"Seien \( x = 2 \) und \( y = 3 \)"_.
 

@@ -1,43 +1,48 @@
 ---
 title: "Linux 系統概述"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux 是一個功能強大且多功能的作業系統，擁有龐大的開發人員社群。 Linux 系統的核心由幾個關鍵組件組成，這些組件協同工作以提供無縫的使用者體驗。本概述將概述 Linux 系統的基本部分，包括核心、發行版、套件管理器、顯示器管理器、桌面環境和顯示伺服器（X11 或 Wayland）。
 
-Lumi 在 Debian with Cinnamon (X11) 上表現最佳，並且是在該環境中開發和測試的。
+Linux 是功能強大且用途廣泛的作業系統，擁有龐大的開發者社群。Linux 系統的核心由若干關鍵元件協同運作，以提供流暢的使用者體驗。本概述介紹 Linux 系統的基本組成部分，包括核心、發行版、套件管理器、顯示管理器、桌面環境與顯示伺服器（X11 或 Wayland）。
 
-**目前常見的 Linux 發行版預設值**
+Lumi-o 在 Debian 與 Cinnamon（X11）上表現最佳，並在該環境中開發與測試。
 
-| **分佈** | **套件管理器** | **顯示管理器** | **桌面環境** | **顯示伺服器** |
-|--------------------------------|--------------------------------|--------------------|------------------------------------|--------------------|
-| Debian |亞太 | GDM |侏儒 |韋蘭 |
-|烏班圖 |亞太 | GDM |侏儒 |韋蘭 |
-| Debian |亞太 | GDM |肉桂| X11 |
-|軟呢帽|地下城與勇士 (DNF) GDM |侏儒 |韋蘭 |
-| Arch Linux |吃豆人 |使用者選擇|使用者選擇|使用者選擇|
+**常見 Linux 發行版的預設配置**
+
+| **發行版** | **套件管理器** | **顯示管理器** | **桌面環境** | **顯示伺服器** |
+|--------------------|----------------------|----------------------|-------------------------|--------------------|
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
+| Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
+| Arch Linux         | Pacman               | 使用者自選            | 使用者自選               | 使用者自選          |
 
 ### 關鍵術語
 
-#### 內核
+#### 核心
 
-直接與硬體互動的作業系統核心，通常是Linux。
+直接與硬體互動的作業系統核心，通常為 Linux。
 
-#### 分佈
+#### 發行版
 
-Linux 發行版，將核心與使用者空間工具、函式庫和軟體打包在一起。例如 Debian、Arch Linux 和 Fedora。
+將核心與使用者空間工具、函式庫和軟體打包在一起的 Linux 發行版。例如 Debian、Arch Linux、Fedora。
 
 #### 套件管理器
 
-用於從儲存庫安裝、更新和刪除軟體應用程式的工具。例如基於 Debian 的發行版的 APT、Fedora 的 DNF 和 Arch Linux 的 Pacman。
+用於從儲存庫安裝、更新和移除軟體的工具。例如 Debian 系的 APT、Fedora 的 DNF、Arch Linux 的 Pacman。
 
 #### 顯示管理器
 
-管理圖形登入畫面和會話啟動。範例包括 GDM（GNOME 顯示管理器）、LightDM 和 SDDM（簡單桌面顯示管理器）。
+管理圖形登入畫面與工作階段啟動。例如 GDM（GNOME Display Manager）、LightDM、SDDM（Simple Desktop Display Manager）。
 
 #### 桌面環境
 
-提供圖形使用者介面 (GUI) 並管理整體外觀和使用者體驗。例如 GNOME、Cinnamon 和 KDE Plasma。
+提供圖形使用者介面（GUI），並管理整體外觀與使用者體驗。例如 GNOME、Cinnamon、KDE Plasma。
 
 #### 顯示伺服器
 
-管理顯示輸出和輸入事件。例如 X11（X Window 系統）和 Wayland。 X11 是傳統的顯示伺服器，而 Wayland 是更新、更安全的替代方案。
+管理顯示輸出與輸入事件。例如 X11（X Window System）與 Wayland。X11 是傳統的顯示伺服器，Wayland 是較新、更安全的替代方案。

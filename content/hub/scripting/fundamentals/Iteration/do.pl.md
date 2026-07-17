@@ -1,11 +1,14 @@
 ---
-title: "Do"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-Funkcja `do` w schemacie jest mechanizmem zapętlającym, który umożliwia iterację z warunkami inicjalizacji, aktualizacji i zakończenia. Jest to szczególnie przydatne, gdy trzeba wykonać sekwencję operacji określoną liczbę razy lub do momentu spełnienia warunku.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-Ogólna forma `do` to:
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Ogólna forma `do` to:
   body)
 ```
 
-- **Zmienna**: Zmienne pętli.
-- **Wartość-początkowa**: Wartość początkowa każdej zmiennej pętli.
-- **Wyrażenie-aktualizacyjne**: Wyrażenie aktualizujące zmienne pętli na końcu każdej iteracji.
-- **Warunek zakończenia**: Warunek zatrzymania pętli.
-- **Wyrażenie-wyniku**: Wartość zwracana po zakończeniu pętli.
-- **Treść**: Kod do wykonania w każdej iteracji.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### Przykład: zsumuj liczby od 1 do 5
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; Inicjalizuj i do 1, zwiększaj o 1
+     (sum 0 (+ sum i))) ; Inicjalizuj sum do 0, dodaj i do sum
+    ((> i 5) sum)       ; Zakończ, gdy i > 5, zwróć sum
+  (lumi-message (number->string sum))) ; Wypisuje sumę na każdym kroku
 ```
 
-- Zmienna pętli `i` zaczyna się od 1 i zwiększa się o 1 w każdej iteracji.
-- Zmienna `sum` gromadzi sumę `i`.
-- Pętla kończy się, gdy `i > 5`, zwracając końcową wartość `sum`.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**Wyjście**: `15`
-
----
-
-### Jak to działa
-
-1. **Inicjalizacja**:
-   - Każdej zmiennej pętli przypisana jest jej wartość początkowa.
-
-2. **Kontrola zakończenia**:
-   - Na początku każdej iteracji sprawdzany jest warunek zakończenia. Jeśli ma wartość true, pętla zatrzymuje się i oceniane jest wyrażenie wynikowe.
-
-3. **Iteracja**:
-   - Jeśli warunek zakończenia jest fałszywy, treść jest wykonywana, a zmienne pętli są aktualizowane przy użyciu odpowiednich wyrażeń aktualizacji.
+**Sortie** : `15`
 
 ---
 
-### Podsumowanie
+### Comment ça marche
 
-- Konstrukcja `do` zapewnia elastyczny sposób implementacji pętli z wieloma zmiennymi i złożonymi warunkami zakończenia.
-- Jest to przydatne w przypadku zadań wymagających aktualizacji stanu w iteracjach.
-- Warunek zakończenia określa, kiedy pętla się kończy i może zwrócić ostateczny wynik.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-Używając `do`, możesz zaimplementować algorytmy iteracyjne w schemacie z precyzyjną kontrolą inicjalizacji, aktualizacji i zakończenia. To sprawia, że ​​`do` jest kombinacją **mechanizmu wiązania o określonym zakresie** (takiego jak `let`) i **iteracyjnej struktury kontrolnej**, umożliwiającej obsługę pętli i stanu tymczasowego w czysty i zwięzły sposób.
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

@@ -1,15 +1,18 @@
 ---
-title: "腳本編寫"
+title: "腳本"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 2116be7665eb5fa29e6a526814a2158919062b9bde91cd12390d1dc4d13e19e0
 ---
-方案腳本可讓您自動執行重複性工作、建立自訂工具以及使用您自己的外掛程式擴充 Lumi。
+Scheme 腳本可自動化重複性工作、建立自訂工具，並以您自己的外掛程式擴充 Lumi。
 
-使用這些指南來學習核心語言基礎知識，遵循逐步教程，設定良好的工作流程，並探索您可以閱讀和修改的範例外掛程式。
+透過這些指南學習語言基礎、依步驟完成教學、建立良好的工作流程，並探索可閱讀與修改的範例外掛程式。
 
 {{< cards >}}
-  {{< card link="fundamentals/" title="基礎知識" icon="variable" >}}
+  {{< card link="fundamentals/" title="基礎" icon="variable" >}}
   {{< card link="tutorials/" title="教學" icon="sparkles" >}}
   {{< card link="tools/" title="工具" icon="cog" >}}
-  {{< card link="plug-ins/" title="外掛" icon="collection" >}}
-  {{< card link="reference/" title="參考" icon="book-open" subtitle="內建實用程式和應用程式內瀏覽工具" >}}
+  {{< card link="plug-ins/" title="外掛程式" icon="collection" >}}
+  {{< card link="reference/" title="參考" icon="book-open" subtitle="內建公用程式與應用程式內瀏覽工具" >}}
 {{< /cards >}}

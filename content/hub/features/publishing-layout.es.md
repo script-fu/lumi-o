@@ -1,37 +1,42 @@
 ---
 title: "Diseño de publicación"
 type: docs
+url: "hub/features/publishing-layout"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: dc0367028ed8f6b4e1508c309384967daa43a4148f8d70f00880173a0a1fca7d
 ---
-Las ilustraciones para impresión y publicación a menudo necesitan más que el tamaño de un lienzo. Las páginas tienen bordes recortados, los pliegos tienen costuras centrales y es posible que el contenido importante deba mantenerse alejado de las áreas que se cortarán o unirán en un canal. Las herramientas de diseño de publicación de Lumi mantienen esas preocupaciones visibles mientras pintas, sin aplanarlas en la obra de arte.
 
-Los límites del diseño se almacenan por imagen, se guardan con el proyecto y se pueden desactivar cuando no sean necesarios. El objetivo es brindar a los flujos de trabajo de libros, cómics e impresión una sensación clara de estructura de página mientras la imagen en capas permanece completamente editable debajo.
+La ilustración para impresión y publicación a menudo necesita más que un tamaño de lienzo. Las páginas tienen bordes de corte, los pliegos tienen costura central y el contenido importante puede tener que mantenerse alejado de zonas que se recortarán o quedarán en el margen de encuadernación. Las herramientas de diseño de publicación de Lumi mantienen esas preocupaciones visibles mientras pinta, sin aplanarlas en la obra.
 
-## Sangrar y recortar
+Los límites de diseño se almacenan por imagen, se guardan con el proyecto y pueden desactivarse cuando no hagan falta. El objetivo es dar a los flujos de trabajo de libros, cómics e impresión una noción clara de la estructura de página mientras la imagen en capas sigue siendo totalmente editable debajo.
 
-El sangrado define hasta qué punto se extiende la obra de arte más allá del borde final de la página. Lumi muestra el área de recorte como el límite de la página activa dentro del lienzo, con el margen de sangrado como una superposición sombreada a su alrededor. Esto hace que sea más fácil pintar fondos y detalles de los bordes que deben sobrevivir al recorte sin tener que adivinar dónde terminará la página terminada.
+## Sangrado y corte
 
-Las medidas se pueden configurar en las unidades que se adapten al trabajo, por lo que el sangrado se puede considerar en pulgadas, milímetros u otra unidad de impresión familiar en lugar de solo en píxeles.
+El sangrado define hasta dónde se extiende la obra más allá del borde final de la página. Lumi muestra el área de corte como el límite activo de la página dentro del lienzo, con el margen de sangrado como superposición sombreada a su alrededor. Así resulta más fácil pintar fondos y detalles de borde que deben sobrevivir al recorte sin adivinar dónde terminará la página acabada.
 
-## Canalones y extensiones
+Las medidas pueden configurarse en las unidades que convengan al trabajo, de modo que el sangrado pueda pensarse en pulgadas, milímetros u otra unidad de impresión habitual, no solo en píxeles.
 
-Para pliegos de doble página, un canal marca la zona protegida alrededor de la costura central donde se debe evitar el contenido importante. Cuando está habilitado, Lumi muestra bandas de medianil a lo largo del pliego para que las caras, el texto y los puntos focales se puedan mantener fuera del área de encuadernación mientras el pliego completo sigue siendo un lienzo continuo.
+## Margen interior y pliegos
 
-Esto es especialmente útil para cómics, libros ilustrados y cualquier obra de arte que se imprima como páginas enfrentadas en lugar de hojas aisladas.
+En pliegos de doble página, el margen interior marca la zona protegida alrededor de la costura central donde conviene evitar contenido importante. Cuando está activado, Lumi muestra bandas de margen interior a lo largo del pliego para que rostros, texto y puntos focales queden fuera del área de encuadernación mientras el pliego completo sigue siendo un lienzo continuo.
+
+Esto es especialmente útil para cómics, álbumes ilustrados y cualquier obra que se imprima como páginas enfrentadas y no como hojas sueltas.
 
 ## Guías de composición
 
-Las guías laterales opcionales marcan el área de la página recortada con sutiles marcas de composición. Las guías pueden seguir divisiones por página o una lectura completa, y pueden usar tercios, secciones áureas o quintos dependiendo de cómo se deba juzgar el diseño.
+Las guías de borde opcionales marcan el área de página recortada con marcas de composición discretas. Pueden seguir divisiones por página o la lectura del pliego completo, y usar tercios, secciones áureas o quintos según cómo deba evaluarse el diseño.
 
-Las guías sirven como referencia silenciosa durante los trabajos de diseño y acabado. Ayudan a leer la ubicación en la página que realmente se imprimirá, no solo en el lienzo digital completo.
+Las guías sirven como referencia silenciosa durante el diseño y el acabado. Ayudan a situar el contenido respecto a la página que realmente se imprimirá, no solo respecto al lienzo digital completo.
 
-## Ver diseño en el lienzo
+## Ver el diseño en el lienzo
 
-Las superposiciones de diseño se controlan desde el menú Ver. Las áreas de sangrado, margen interior y guía se pueden mostrar individualmente o juntas, para que un artista pueda centrarse en la parte de la estructura de publicación que importa en ese momento.
+Las superposiciones de diseño se controlan desde el menú Ver. Las zonas de sangrado, margen interior y guías pueden mostrarse por separado o juntas, para que el artista pueda centrarse en la parte de la estructura de publicación que importa en cada momento.
 
-Imagen > Activar diseño activa o desactiva los límites del diseño para la imagen actual. Cuando el diseño está deshabilitado, las superposiciones se ocultan y la vista se alterna, pero la configuración de los límites permanece guardada con el archivo para su uso posterior.
+Imagen > Activar diseño enciende o apaga los límites de diseño de la imagen actual. Cuando el diseño está desactivado, las superposiciones se ocultan y los conmutadores de vista quedan a un lado, pero la configuración de límites sigue guardada en el archivo para más adelante.
 
 ## Guardado con el proyecto
 
-La configuración de diseño viaja con el proyecto `.lum`. Al abrir la imagen más tarde se restaura el sangrado, el margen interior, la apariencia de superposición, las opciones de guía y si el diseño está habilitado para ese archivo. Esto mantiene la configuración consciente de la publicación como parte del estado de trabajo de la obra de arte en lugar de una preferencia de visualización temporal.
+La configuración de diseño viaja con el proyecto `.lum`. Al abrir la imagen más tarde se restauran sangrado, margen interior, apariencia de superposición, opciones de guía y si el diseño está activado para ese archivo. Así la configuración orientada a publicación forma parte del estado de trabajo de la obra y no de una preferencia de visualización temporal.
 
-Para los artistas que pasan del boceto, la pintura y la preparación de la impresión, el flujo de trabajo permanece en un solo lugar: la misma imagen en capas, con una estructura de publicación disponible siempre que la página lo necesite.
+Para quienes alternan entre boceto, pintura y preparación de impresión, el flujo de trabajo permanece en un solo lugar: la misma imagen en capas, con la estructura de publicación disponible siempre que la página la necesite.

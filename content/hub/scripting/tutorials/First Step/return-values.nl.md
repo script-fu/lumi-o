@@ -2,6 +2,9 @@
 title: "Waarden retourneren"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Retourwaarden zijn belangrijk omdat u hiermee de stroom kunt controleren zonder extra status. In Schema wordt de laatst geëvalueerde expressie de retourwaarde.
 
@@ -14,9 +17,9 @@ In Schema wordt de retourwaarde van een functie bepaald door de laatste expressi
 Laten we de validatiefunctie opnieuw bekijken (is-valid-string?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Doel: Controleert dat het bericht een niet-lege tekenreeks is
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Controleren of het bericht een niet-lege tekenreeks is
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ Als het bericht ongeldig is, wordt er in deze functie een fout gegenereerd. Als 
 Dit kunnen we verbeteren door de retourwaarde explicieter te maken. We kunnen bijvoorbeeld `#t` (waar) retourneren als het bericht geldig is:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Doel: Controleert dat het bericht naar een geldige uitvoer wordt gestuurd
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Controleren of de uitvoer een van de verwachte weergavebestemmingen is
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Door te beslissen wat onze functies retourneren, kunnen we ze voorspelbaarder en
 Hier is een eenvoudig voorbeeld van het gebruik van een retourwaarde om de logicastroom te controleren:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Doel: Stuurt een bericht naar de juiste uitvoerbestemming
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
 ### Geherstructureerd met retourwaarden
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Doel: Stuurt een bericht naar de statusbalk, retourneert #t bij succes
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Doel: Stuurt een bericht naar het dialoogvenster, retourneert #t bij succes
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Doel: Stuurt een bericht naar de Error Console, retourneert #t bij succes
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Doel: Stuurt een bericht naar de terminal, retourneert #t bij succes
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Doel: Stuurt een bericht naar de juiste uitvoer, retourneert #t bij succes
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Doel: Controleert dat het bericht een niet-lege tekenreeks is, retourneert #t indien geldig
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Oké, hier is de bibliotheekcode met ingebedde retourwaarden die worden gebruikt
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Doel: Controleert dat de uitvoer een geldige bestemming is, retourneert #t indien geldig
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

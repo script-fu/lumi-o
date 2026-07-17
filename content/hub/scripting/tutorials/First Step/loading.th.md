@@ -2,6 +2,9 @@
 title: "กำลังโหลด"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 ทันทีที่ฟังก์ชันตัวช่วยเติบโตขึ้น ให้ย้ายมันไปไว้ในไฟล์ไลบรารีขนาดเล็ก นั่นทำให้ปลั๊กอินโฟกัสอยู่และทำให้ตัวช่วยสามารถนำมาใช้ซ้ำกับปลั๊กอินหลายตัวได้
 
@@ -28,27 +31,27 @@ weight: 3
 ตัวอย่างของฟังก์ชันไลบรารี send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; ฟังก์ชันจัดการการส่งข้อความไปยังปลายทางต่างๆ
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; ส่งไปยัง Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; ตั้งตัวจัดการเป็น Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; ส่งไปยังกล่องโต้ตอบ GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; ตั้งตัวจัดการเป็น GUI dialog
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ส่งไปยังหน้าต่างเทอร์มินัล
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; เอาต์พุต terminal จัดการด้วย display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -59,7 +62,7 @@ weight: 3
 กำลังโหลดไฟล์ไลบรารี:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 

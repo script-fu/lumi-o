@@ -1,7 +1,10 @@
 ---
-title: "permettere"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 Il nome `let` viene utilizzato perché riflette le sue origini matematiche relative all'introduzione di collegamenti temporanei, come in _"Let \( x = 2 \) e \( y = 3 \)"_.
 

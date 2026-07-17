@@ -2,6 +2,9 @@
 title: "Zmienne i zakres"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 W Scheme zarządzanie zmiennymi i ich zakresem jest podstawową koncepcją pisania wydajnych i łatwych w utrzymaniu skryptów. Zmienne przechowują wartości danych, którymi może manipulować skrypt, natomiast zakres określa, gdzie te zmienne są dostępne. Zrozumienie, jak skutecznie definiować i wykorzystywać zmienne, pozwala na tworzenie ustrukturyzowanego, wielokrotnego użytku i wolnego od błędów kodu.
 
@@ -10,8 +13,8 @@ W Scheme zarządzanie zmiennymi i ich zakresem jest podstawową koncepcją pisan
 Schemat jest wpisywany dynamicznie: nie deklarujesz typów z góry, a zmienna może z czasem przechowywać wartości różnego rodzaju.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x jest liczbą
+(set! x "hello")    ; teraz x jest łańcuchem znaków
 ```
 
 ### Rola definicji i zakresu zmiennych w schemacie

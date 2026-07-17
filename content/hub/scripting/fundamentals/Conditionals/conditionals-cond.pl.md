@@ -1,11 +1,14 @@
 ---
-title: "kon"
+title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-W schemacie warunek `cond` służy do wybrania jednego z kilku możliwych bloków kodu do wykonania na podstawie wielu testów. To jest jak wielogałęziowy `if`, w którym każda gałąź jest sprawdzana w kolejności, aż do znalezienia pasującej.
+En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
 
-### Składnia
+### Syntaxe
 
 ```scheme
 (cond
@@ -15,22 +18,18 @@ W schemacie warunek `cond` służy do wybrania jednego z kilku możliwych blokó
   (else fallback-consequent))
 ```
 
-- Każdy test jest oceniany w kolejności, w jakiej został napisany.
-- Kiedy wynik testu ma wartość true (`#t`), wykonywany jest odpowiadający mu **następnik**, a wyrażenie `cond` przestaje oceniać dalsze testy.
-- Klauzula `else` jest opcjonalna i służy jako rezerwa, jeśli żaden z testów nie uzyska wyniku true.
+- Tests dans l'ordre d'écriture.
+- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
+- `else` optionnel en repli.
 
-### Jak to działa
+### Comment ça marche
 
-1. **Przetestuj każdy warunek**:
-   - `cond` ocenia testy w kolejności, w jakiej są wymienione.
+1. **Tester chaque condition** dans l'ordre.
+2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
 
-2. **Wykonaj pasujący następnik**:
-   - Po znalezieniu pierwszego testu, który ma wartość true (`#t`), wykonywany jest jego **następnik**.
-   - Jeśli żaden test nie zwróci wartości true i występuje klauzula `else`, wykonywana jest **konsekwencja zastępcza**.
+### Exemples
 
-### Przykłady
-
-#### Przykład 1: Następniki pojedynczego wyrażenia
+#### Exemple 1 : conséquents sur une expression
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ W schemacie warunek `cond` służy do wybrania jednego z kilku możliwych blokó
   (else "Fallback"))
 ```
 
-- Pierwszy test `(< 3 2)` daje wynik fałszywy (`#f`).
-- Drugi test `(= 3 3)` ma wartość true (`#t`), więc zwracany jest `"This will run"`.
-- Klauzula `else` nie jest wykonywana, ponieważ znaleziono już dopasowanie.
+Résultat : **"This will run"**
 
-Wynik: **„To zadziała”**
-
-#### Przykład 2: Wiele akcji przy użyciu `begin`
-
-Gdy konsekwencja obejmuje wiele działań, użyj `begin`, aby je pogrupować:
+#### Exemple 2 : actions multiples avec `begin`
 
 ```scheme
 (cond
@@ -65,45 +58,32 @@ Gdy konsekwencja obejmuje wiele działań, użyj `begin`, aby je pogrupować:
       0)))
 ```
 
-- Pierwszy test `(< 5 3)` daje wynik fałszywy (`#f`).
-- Drugi test `(> 5 3)` daje wynik prawdziwy (`#t`):
-  - Drukuje `"Condition met"`.
-  - Następnie oblicza `(* 5 5)` i zwraca `25`.
+Résultat : **Affiche « Condition met » et renvoie 25.**
 
-Wynik: **Wypisuje „Warunek spełniony” i zwraca 25,**
-
-#### Przykład 3: Użycie bloku `let` w następniku
-
-Jeśli chcesz wprowadzić zmienne lokalne, użyj bloku `let`:
+#### Exemple 3 : bloc `let` dans un conséquent
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; Przypadek 1: gdy 0 jest mniejsze niż -1
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; Przypadek 2: gdy 0 jest większe niż -1
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; Domyślnie: gdy żaden z powyższych warunków nie jest spełniony
   (else
     (let ((z 0))
       z)))
 ```
 
-- Pierwszy test `(< 0 -1)` jest fałszywy.
-- Drugi test `(> 0 -1)` jest prawdziwy, więc:
-  - Wykonywany jest blok `let`, wiążący `y` z `20`.
-  - Drukuje `"Positive condition met"`.
-  - Następnie oblicza `(+ y y)` i zwraca `40`.
+Résultat : **Affiche « Positive condition met » et renvoie 40.**
 
-Wynik: **Wypisuje komunikat „Spełniono warunek pozytywny” i zwraca 40,**
-
-#### Przykład 4: Powrót z `else`
+#### Exemple 4 : repli avec `else`
 
 ```scheme
 (cond
@@ -112,16 +92,10 @@ Wynik: **Wypisuje komunikat „Spełniono warunek pozytywny” i zwraca 40,**
   (else "Fallback value"))
 ```
 
-- Żaden z dwóch pierwszych testów nie daje wartości true.
-- Klauzula `else` jest wykonywana i zwraca `"Fallback value"`.
+Résultat : **"Fallback value"**
 
-Wynik: **„Wartość zastępcza”**
+### Résumé
 
-### Podsumowanie
-
-- Użyj `cond` do obsługi wielu warunków w jasny i zwięzły sposób.
-- Następnikami mogą być pojedyncze wyrażenia lub akcje zgrupowane przy użyciu `begin`.
-- Użyj `let` w następnikach, aby zadeklarować zmienne lokalne do obliczeń.
-- Zawsze dołączaj klauzulę `else` jako rozwiązanie awaryjne w przypadku nieoczekiwanych przypadków.
-
-Ta elastyczność sprawia, że ​​`cond` jest potężnym i czytelnym narzędziem do obsługi złożonej logiki rozgałęzień.
+- `cond` pour plusieurs conditions clairement.
+- Conséquents simples ou groupés avec `begin`.
+- `let` pour variables locales ; `else` recommandé en repli.

@@ -1,18 +1,21 @@
 ---
 title: "Пакетный процесс"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
 ---
 Практичный комплексный пример обработки множества файлов за один раз.
 
-## Где он живет
+## Исходный код
 
-- [Просмотреть источник](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Посмотреть исходный код](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
-## Где он появляется в Lumi
+## Меню в Lumi
 
 - **Файл → Пакетная обработка**
 
-## Что это демонстрирует
+## Что демонстрирует
 
 - параметры `SF-DIRNAME` для каталогов источника/назначения.
 - Проверка путей графического интерфейса с резервными вариантами (`validate-path-and-dir`)

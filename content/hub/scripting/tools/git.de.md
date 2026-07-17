@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Verwenden Sie Git, um Änderungen an Ihren Plug-Ins zu verfolgen, Fehler rückgängig zu machen und Code maschinenübergreifend zu teilen.
 
@@ -62,7 +65,7 @@ Wenn Sie noch kein Konto haben, besuchen Sie [GitHub](https://github.com/), um s
 
 1. **Bei GitHub anmelden**: Gehen Sie zu [GitHub](https://github.com/) und melden Sie sich bei Ihrem Konto an.
 2. **Neues Repository erstellen**:
-   - Klicken Sie auf das ***-Symbol in der oberen rechten Ecke und wählen Sie **Neues Repository**.
+   - Klicken Sie auf das ***+**-Symbol in der oberen rechten Ecke und wählen Sie **Neues Repository**.
    - Geben Sie einen Repository-Namen ein (z. B. `your-repository`).
    - Fügen Sie bei Bedarf eine Beschreibung hinzu.
    - Wählen Sie die Sichtbarkeit **Öffentlich** oder **Privat**.
@@ -97,7 +100,9 @@ Bevor Sie Ihre Änderungen in Git speichern können, müssen Sie Git mitteilen, 
 
 ```sh
 git add .
-```Dadurch wird Git angewiesen, die Änderungen zu verfolgen, die Sie an allen Dateien in Ihrem Projekt vorgenommen haben. Sie können auch bestimmte Dateien bereitstellen, indem Sie `.` durch den Namen der Datei ersetzen.
+```
+
+Dadurch wird Git angewiesen, die Änderungen zu verfolgen, die Sie an allen Dateien in Ihrem Projekt vorgenommen haben. Sie können auch bestimmte Dateien bereitstellen, indem Sie `.` durch den Namen der Datei ersetzen.
 
 ### 7. Übernehmen Sie Ihre Änderungen
 
@@ -136,5 +141,5 @@ Hier sind einige gebräuchliche Begriffe, die Ihnen bei der Arbeit mit Git und G
 - **Remote**: Ein Remote-Repository ist eine Version Ihres Projekts, die auf einer Plattform wie GitHub gehostet wird. Die lokale Version Ihres Projekts auf Ihrem Computer ist mit dieser Remote-Version verknüpft, sodass Sie Änderungen hochladen (Push) und herunterladen (Pull) können.
 - **Staging**: Der Prozess der Vorbereitung von Dateien für einen Commit. Wenn Sie eine Datei bereitstellen, teilen Sie Git mit, dass Sie sie in den nächsten Commit einschließen möchten. Beim Staging können Sie auswählen, welche Änderungen in einen Commit einbezogen werden sollen.
 - **Push**: Der Vorgang des Sendens Ihrer festgeschriebenen Änderungen von Ihrem lokalen Repository an ein Remote-Repository (z. B. GitHub), damit andere auf die aktualisierte Version Ihres Codes zugreifen können.
-- **Pull**: Der Vorgang des Abrufens von Änderungen aus einem Remote-Repository, um Ihre lokale Kopie zu aktualisieren. Sie ziehen Änderungen, wenn Sie Ihr lokales Repository mit der neuesten Version von der Fernbedienung synchronisieren möchten.
+- **Pull**: Der Vorgang des Abrufens von Änderungen aus einem Remote-Repository, um Ihre lokale Kopie zu aktualisieren. Sie ziehen Änderungen, wenn Sie Ihr lokales Repository mit der neuesten Version von der Remote-Repository synchronisieren möchten.
 - **Ursprung**: Der Standardname für ein Remote-Repository, wenn Sie Ihr lokales Repository zum ersten Mal mit einem Remote-Repository verbinden. Bezieht sich normalerweise auf die Haupt-URL Ihres Projekts auf GitHub.

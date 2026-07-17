@@ -2,6 +2,9 @@
 title: "Inpakken"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Schemaopdrachten werken op een laag niveau, wat betekent dat zelfs eenvoudige taken meerdere stappen kunnen vereisen. Deze granulariteit biedt echter flexibiliteit: we kunnen opdrachten bundelen in kleine, herbruikbare functies die precies doen wat we nodig hebben. Inpakken is geen zwart-witconcept; het kan variëren van eenvoudige aliassen voor veelgebruikte opdrachten tot complexere functies die volledige workflows beheren. Soms is een wrapper slechts een gemaksfunctie om de leesbaarheid te verbeteren, terwijl deze in andere gevallen evolueert naar een volledig uitgerust hulpprogramma dat meerdere bewerkingen omvat.
 
@@ -26,7 +29,7 @@ Voorbeelden:
 ### Willekeurig zaad
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Doel: Retourneert een willekeurig geheel getal voor het seeden van een filter
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Bovendien stelt het definiëren van ***random-seed*** als een zelfstandige funct
 Als we bijvoorbeeld besluiten om in plaats daarvan over te schakelen naar ***willekeurig***:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Doel: Retourneert een willekeurig geheel getal voor het seeden van een filter
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ De functienaam blijft hetzelfde, waardoor onze scripts zonder aanpassingen blijv
 De JPEG-exportfunctie in Scheme wordt geleverd met veel parameters, die nauwkeurige controle bieden over hoe afbeeldingen worden opgeslagen. In de meeste gevallen zijn we echter slechts geïnteresseerd in een paar belangrijke instellingen, zoals bestandsnaam en kwaliteit. Om het proces te vereenvoudigen, kunnen we de functie inpakken.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Doel: Slaat een afbeelding op als JPEG met een opgegeven kwaliteit
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; jpg.jpg vermijden
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Hierdoor blijft onze code schoon, leesbaar en aanpasbaar, terwijl we JPEG's effi
 De ***car***-functie kan cryptisch zijn en gevoelig voor scriptfouten. Het is gemakkelijk om per ongeluk ***auto*** toe te passen op een vector of een item dat niet in de lijst voorkomt, wat tot onverwacht gedrag leidt. Om onze code robuuster en leesbaarder te maken, kunnen we deze functionaliteit in een veiligere functie verpakken.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Doel: Retourneert het eerste item van een lijst of vector.
+;;          Waarschuwt als de invoer ongeldig of leeg is.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Verwerkt niet-lege lijsten
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Verwerkt niet-lege vectoren
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Ongeldige of lege invoer
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Het inpakken van een functie die al is ingepakt, kan de leesbaarheid en onderhou
 om de ***x***-coördinaat op te halen. Hoewel functioneel, is dit echter niet erg expressief. In plaats daarvan kunnen we ***eerste item*** in een geschiktere definitie verpakken om onze bedoeling duidelijker te maken.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Doel: Retourneert de x-coördinaat, voor leesbaarheid
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Doel: Retourneert de y-coördinaat, voor leesbaarheid
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ om de ***x***-coördinaat op te halen. Hoewel functioneel, is dit echter niet er
 Nu, in plaats van in het algemene schema te schrijven:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Haalt de x-coördinaat op
+(cadr pixel-coords) ;; Haalt de y-coördinaat op
 ```
 
 We kunnen in _ons_schema schrijven:

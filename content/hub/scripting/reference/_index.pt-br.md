@@ -1,6 +1,9 @@
 ---
 title: "Referência"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
 ---
 Referência rápida para os utilitários integrados do Scheme e ferramentas de navegação no aplicativo disponíveis ao escrever plug-ins Lumi. Para aprendizagem e referência geral do Scheme, confira o [Scheme Cookbook](https://cookbook.scheme.org/) e [Scheme.org](https://www.scheme.org/).
 

@@ -1,7 +1,10 @@
 ---
-title: "Assoziationslisten (Alisten)"
-type: docs
+title: "Assoziationslisten (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 Eine **Assoziationsliste** (oder **Alist**) ist eine grundlegende Datenstruktur in Scheme, die zur Darstellung von Sammlungen von Schlüssel-Wert-Paaren verwendet wird. Es wird als Liste von Paaren implementiert, wobei jedes Paar einen Schlüssel (normalerweise ein Symbol) einem Wert zuordnet. Alisten sind einfach, flexibel und eignen sich gut für kleine bis mittelgroße Datensätze.
 
@@ -30,10 +33,10 @@ Sie können eine Liste erstellen, indem Sie manuell Paare erstellen oder sie pro
 Das einfache Anführungszeichen (`'`) ist eine Abkürzung für **quoting**, was Scheme daran hindert, den Ausdruck auszuwerten. Dies macht es ideal für die Erstellung statischer Listen, bei denen alle Schlüssel und Werte fest codiert sind.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Dynamische Liste mit `` ` `` and `,`:
 Um einen Wert aus einer Liste abzurufen, können Sie die Funktion `assoc` verwenden, die ein Paar anhand seines Schlüssels sucht.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Gibt (name . "Alice") zurück
+(assoc 'country alist) ; Gibt #f zurück (Schlüssel nicht gefunden)
 ```
 
 ### Den Wert extrahieren
@@ -84,7 +87,7 @@ Um einen Wert aus einer Liste abzurufen, können Sie die Funktion `assoc` verwen
 Sobald Sie ein Paar mit `assoc` abgerufen haben, verwenden Sie `cdr`, um den Wert zu extrahieren:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Gibt "Alice" zurück
 ```
 
 ### Zusammenfassung der wichtigsten Funktionen

@@ -2,6 +2,9 @@
 title: "Biblioteca de mensagens"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
 Com o tempo, o que começou como uma função única para enviar mensagens evoluiu para uma coleção de funções relacionadas. Essas funções agora formam a base de uma **Biblioteca de mensagens**, projetada para lidar com saídas para diferentes destinos, como GUI, console de mensagens e terminal de sistema operacional.
 
@@ -11,9 +14,7 @@ Com o tempo, o que começou como uma função única para enviar mensagens evolu
 
 ### O que a biblioteca de mensagens faz?
 
-A Biblioteca de Mensagens inclui atualmente as seguintes funções:
-
-- **send-to-gui**: Envia mensagens para a caixa de diálogo Lumi GUI.
+A Biblioteca de Mensagens inclui atualmente as seguintes funções:- **send-to-gui**: Envia mensagens para a caixa de diálogo Lumi GUI.
 - **send-to-error-console**: Envia mensagens para o console Lumi Message.
 - **send-to-terminal**: Envia mensagens para a janela do terminal.
 - **send-message**: Uma função de despachante que direciona mensagens para a saída apropriada.
@@ -25,9 +26,7 @@ A **Biblioteca de Mensagens** pode ser facilmente estendida para suportar saída
 
 - **enviar para arquivo**: Salva mensagens em um arquivo de log.
 - **send-to-logger**: Integração com um sistema de registro externo.
-- **enviar para notificação**: exibe mensagens como notificações do sistema.
-
-Seguindo o mesmo padrão de design modular e funções reutilizáveis, esta biblioteca pode se transformar em uma ferramenta abrangente para lidar com todos os tipos de tarefas de mensagens.
+- **enviar para notificação**: exibe mensagens como notificações do sistema.Seguindo o mesmo padrão de design modular e funções reutilizáveis, esta biblioteca pode se transformar em uma ferramenta abrangente para lidar com todos os tipos de tarefas de mensagens.
 
 ## Benefícios de uma biblioteca de mensagens
 
@@ -37,9 +36,7 @@ Seguindo o mesmo padrão de design modular e funções reutilizáveis, esta bibl
 
 A **Biblioteca de Mensagens** é o início de uma estrutura mais ampla que pode simplificar a forma como as mensagens são gerenciadas no seu projeto. À medida que a biblioteca cresce, novos plug-ins podem acessá-la facilmente para enviar mensagens para onde quer que precisem.
 
-Podemos ajustar a estrutura do arquivo:
-
-```plaintext
+Podemos ajustar a estrutura do arquivo:```plaintext
 /home/your-username/code/
   ├── script-fu/
       ├── library/
@@ -52,7 +49,7 @@ Podemos ajustar a estrutura do arquivo:
 E lembre-se de ajustar o `load` no plug-in principal:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

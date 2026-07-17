@@ -2,6 +2,9 @@
 title: "다시 리팩터링"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 도우미 라이브러리가 커질수록 한눈에 따라가기가 어려워집니다. 각 기능을 작고 단일 목적으로 유지하도록 다시 리팩터링합니다.
 
@@ -15,11 +18,11 @@ weight: 5
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; 메시지가 비어 있지 않은 문자열인지 확인
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 출력이 예상된 대상 중 하나인지 확인
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ weight: 5
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; 진행하기 전에 검증 함수 호출
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; Message console로 보내기
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; GUI 대화 상자로 보내기
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; 터미널 창으로 보내기
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 기본 메시지 핸들러를 Message console로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ weight: 5
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; 적절한 출력으로 보냄
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 기본 메시지 핸들러를 Message console로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ weight: 5
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ weight: 5
 리팩터링된 라이브러리 버전:
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; 목적: 메시지를 GUI 대화 상자로 보냄
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; 목적: 메시지를 Message console로 보냄
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; 목적: 메시지를 terminal 창으로 보냄
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 진행하기 전에 메시지 검증
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 목적: 메시지를 적절한 출력 대상으로 보냄
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 기본 메시지 핸들러를 Message console로 복원
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; 목적: 메시지가 비어 있지 않은 문자열이고 출력이 유효한지 검증
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; 메시지가 비어 있지 않은 문자열인지 확인
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 출력이 예상된 대상 중 하나인지 확인
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

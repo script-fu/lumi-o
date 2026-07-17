@@ -2,6 +2,9 @@
 title: "Fichiers"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Travailler avec des fichiers et des répertoires est essentiel pour le développement de Scheme. Que vous enregistriez la sortie, chargeiez des ressources ou organisiez la structure de votre projet, comprendre les opérations sur les fichiers rendra vos scripts plus robustes et plus conviviaux.
 
@@ -58,7 +61,7 @@ Le `SF-DIRNAME` fournit un navigateur vers un répertoire.
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme fournit la commande ```dir-make``` pour créer un répertoire. Cette comm
 Habituellement, nous devons créer plusieurs répertoires pour un chemin pratique. Nous pouvons utiliser un wrapper pour ```dir-make``` pour nous aider ici.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Objectif : Un wrapper pour (dir-make) qui crée un chemin donné à partir d'une plateforme
+;;          chemin fourni. Émet toujours des séparateurs de style Linux pour dir-make.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Répertoire racine
+    ;; Créer le reste des répertoires étape par étape
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Construit le chemin
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

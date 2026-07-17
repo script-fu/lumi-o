@@ -1,37 +1,42 @@
 ---
-title: "Narzędzie wypaczania"
+title: "Warp Tool"
 type: docs
+url: "hub/features/warp-tool"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed71825993da9e
 ---
-Narzędzie Wypaczanie pozwala artystom przesuwać, ciągnąć, zginać, zmiękczać i zmieniać kształt namalowanej treści bezpośrednio na płótnie. Przeznaczony jest do ekspresyjnej regulacji: korygowania proporcji, dodawania płynności, szturchania sylwetek lub nadawania gotowej formie większego ruchu bez ponownego malowania jej od zera.
 
-W Lumi wypaczanie skupia się szczególnie na zachowaniu warstwowej grafiki. Złożony obiekt można przekształcić w wizualną całość, podczas gdy leżące pod nim warstwy i maski pozostają dostępne do dalszej edycji.
+Warp Tool pozwala artystom przesuwać, ciągnąć, zginać, zmiękczać i zmieniać kształt malowanej treści bezpośrednio na płótnie. Służy do ekspresyjnych korekt: poprawy proporcji, dodania płynności, korekty sylwetek lub nadania gotowej formie większego ruchu bez malowania od zera.
 
-## Bezpośrednie kształtowanie płótna
+W Lumi wypaczanie koncentruje się szczególnie na zachowaniu warstwowej grafiki. Złożony obiekt można przekształcić jako całość wizualną, a leżące pod spodem warstwy i maski pozostają dostępne do dalszej edycji.
 
-Wypaczanie przypomina wcieranie ruchu w obraz. Zamiast wybierać sztywne pole transformacji, artysta może pracować lokalnie, budując przemieszczenia za pomocą pociągnięć, aż forma będzie prawidłowo osadzona.
+## Bezpośrednie kształtowanie na płótnie
 
-Dzięki temu narzędzie to jest przydatne zarówno do subtelnych korekt, jak i do dramatycznych zniekształceń. Można złagodzić policzek, rękaw podciągnąć w rytm, nadać liściom płynność, a szkic przybliżyć do zamierzonego gestu.
+Wypaczanie przypomina wcieranie ruchu w obraz. Zamiast sztywnego pola transformacji artysta pracuje lokalnie, budując przesunięcie pociągnięciami, aż forma usiądzie we właściwym miejscu.
 
-## Wypaczenie świadome grupy
+Narzędzie to przydaje się do subtelnych korekt i dramatycznych zniekształceń. Można złagodzić policzek, wciągnąć rękaw w rytm, nadać liściom płynność albo zbliżyć szkic do zamierzonego gestu.
 
-Warstwowe ilustracje często oddzielają grafikę liniową, kolor, cieniowanie, teksturę, maski i efekty. Zmiana kształtu jednej części tej struktury poprzez jej spłaszczenie zniszczyłaby samą organizację, która umożliwia edycję obrazu.
+## Wypaczanie świadome grup
 
-Narzędzie Warp Tool Lumi zostało zaprojektowane tak, aby traktować grupę warstw jako pojedynczy widoczny obiekt, zachowując jednocześnie znajdujące się w nim elementy. Artysta może kształtować połączony wygląd i zachować nienaruszone warstwy wewnętrzne po zastosowaniu zmiany.
+Warstwowe ilustracje często oddzielają kreskę, kolor, cieniowanie, teksturę, maski i efekty. Zmiana kształtu części tej struktury przez spłaszczenie zniszczyłaby organizację, która czyni obraz edytowalnym.
+
+Warp Tool Lumi traktuje grupę warstw jako jeden widoczny obiekt, zachowując elementy wewnątrz niej. Artysta kształtuje połączony wygląd i utrzymuje wewnętrzne warstwy nienaruszone po zmianie.
 
 ## Maski i struktura
 
-Maski są częścią struktury dzieła sztuki, a nie refleksją. Kiedy wypaczony obiekt zależy od masek krawędzi, wycięć, cieniowania lub granic grup, relacje te muszą zmieniać się wraz z obrazem.
+Maski są częścią struktury dzieła, a nie dodatkiem na końcu. Gdy wypaczony obiekt polega na maskach dla krawędzi, wycięć, cieniowania lub granic grup, te relacje muszą poruszać się razem z obrazem.
 
-Podejście Lumi zapewnia wyrównanie treści i masek, dzięki czemu edytowany wynik pozostaje spójny. Celem jest to, aby podglądane wypaczenie i zatwierdzony wynik warstw pasowały wizualnie, bez konieczności ręcznej naprawy przez artystę każdej warstwy podrzędnej.
+Podejście Lumi utrzymuje zgodność treści i masek, więc wynik edycji pozostaje spójny. Podgląd wypaczenia i zatwierdzony wynik warstwowy powinny wyglądać tak samo, bez ręcznej naprawy każdej warstwy podrzędnej.
 
 ## Korekta iteracyjna
 
-Wypaczanie ma charakter eksploracyjny. Artyści często muszą wypróbować pociągnięcie, porównać wynik, złagodzić go, cofnąć lub stopniowo budować silniejszą zmianę.
+Wypaczanie jest z natury eksploracyjne. Artyści często próbują pociągnięcia, porównują wynik, łagodzą je, cofają albo stopniowo budują mocniejszą zmianę.
 
-Narzędzie Warp obsługuje tego rodzaju iteracje, umożliwiając regulację roboczego wypaczenia podczas sesji. Artysta może doprecyzować przemieszczenie przed zatwierdzeniem zmiany w zwykłej historii cofania obrazu.
+Warp Tool wspiera taką iterację, pozostawiając robocze wypaczenie regulowalnym podczas sesji. Artysta może dopracować przesunięcie przed zatwierdzeniem zmiany w zwykłej historii cofania obrazu.
 
-## Twórcze zastosowania
+## Zastosowania twórcze
 
-Oprócz korekty, wypaczenie może być narzędziem do tworzenia znaków i projektowania. Może dodawać ruchu włosom i tkaninom, wyolbrzymiać ekspresję, zaginać kształty graficzne, marszczyć tekstury lub tworzyć malarskie zniekształcenia, które trudno byłoby narysować ręcznie.
+Poza korektą wypaczanie może służyć tworzeniu znaków i projektowaniu. Dodaje ruch włosom i tkaninom, wyolbrzymia ekspresję, zgina kształty graficzne, marszczy tekstury lub tworzy malarskie zniekształcenia trudne do narysowania ręcznie.
 
-Ponieważ działa z obiektami warstwowymi, narzędzie nadaje się zarówno do wstępnego kształtowania obrazu, jak i do polerowania na późniejszym etapie, pomagając artystom zmienić kształt obrazu, zachowując przy tym elastyczność procesu malowania.
+Ponieważ działa z obiektami warstwowymi, nadaje się zarówno do wczesnego szkicowego kształtowania, jak i późnej dopracowania — zmiana formy przy zachowaniu elastycznego procesu malowania.

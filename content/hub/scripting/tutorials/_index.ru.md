@@ -1,6 +1,9 @@
 ---
 title: "Учебники"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 В этих руководствах показано, как писать плагины Scheme для Lumi. Вы начнете с минимальной процедуры «Hello World», а затем доработаете плагины, которые работают с изображениями, файлами и повторно используемыми вспомогательными библиотеками.
 

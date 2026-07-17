@@ -1,11 +1,14 @@
 ---
-title: "เงื่อนไข"
+title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-ใน Scheme เงื่อนไข `cond` ใช้สำหรับเลือกหนึ่งในหลายบล็อกของโค้ดที่เป็นไปได้เพื่อดำเนินการ โดยอิงจากการทดสอบหลายครั้ง มันเหมือนกับ `if` หลายสาขา โดยแต่ละสาขาจะถูกตรวจสอบตามลำดับจนกว่าจะพบรายการที่ตรงกัน
+En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
 
-### ไวยากรณ์
+### Syntaxe
 
 ```scheme
 (cond
@@ -15,22 +18,18 @@ weight: 5
   (else fallback-consequent))
 ```
 
-- การทดสอบแต่ละครั้งจะได้รับการประเมินตามลำดับที่เขียน
-- เมื่อการทดสอบประเมินเป็นจริง (`#t`) **ผลที่ตามมา** ที่เกี่ยวข้องจะถูกดำเนินการ และนิพจน์ `cond` จะหยุดประเมินการทดสอบเพิ่มเติม
-- ส่วนคำสั่ง `else` เป็นทางเลือกและทำหน้าที่เป็นทางเลือกสำรอง หากไม่มีการทดสอบใดประเมินว่าเป็นจริง
+- Tests dans l'ordre d'écriture.
+- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
+- `else` optionnel en repli.
 
-### มันทำงานอย่างไร
+### Comment ça marche
 
-1. **ทดสอบแต่ละเงื่อนไข**:
-   - `cond` ประเมินการทดสอบตามลำดับที่แสดง
+1. **Tester chaque condition** dans l'ordre.
+2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
 
-2. **ดำเนินการผลการจับคู่**:
-   - เมื่อพบการทดสอบแรกที่ประเมินว่าเป็นจริง (`#t`) **ผลที่ตามมา** จะถูกดำเนินการ
-   - หากไม่มีการทดสอบใดประเมินว่าเป็นจริงและมี `else` ส่วนคำสั่ง **ผลที่ตามมาสำรอง** จะถูกดำเนินการ
+### Exemples
 
-### ตัวอย่าง
-
-#### ตัวอย่างที่ 1: ผลที่ตามมาของนิพจน์เดี่ยว
+#### Exemple 1 : conséquents sur une expression
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ weight: 5
   (else "Fallback"))
 ```
 
-- การทดสอบครั้งแรก `(< 3 2)` ประเมินว่าเป็นเท็จ (`#f`)
-- การทดสอบครั้งที่สอง `(= 3 3)` ประเมินเป็นจริง (`#t`) ดังนั้น `"This will run"` จึงถูกส่งกลับ
-- ส่วนคำสั่ง `else` ไม่ได้ถูกดำเนินการเนื่องจากพบรายการที่ตรงกันแล้ว
+Résultat : **"This will run"**
 
-ผลลัพธ์: **"สิ่งนี้จะทำงาน"**
-
-#### ตัวอย่างที่ 2: การดำเนินการหลายอย่างโดยใช้ `begin`
-
-เมื่อผลที่ตามมาเกี่ยวข้องกับการกระทำหลายอย่าง ให้ใช้ `begin` เพื่อจัดกลุ่ม:
+#### Exemple 2 : actions multiples avec `begin`
 
 ```scheme
 (cond
@@ -65,45 +58,32 @@ weight: 5
       0)))
 ```
 
-- การทดสอบครั้งแรก `(< 5 3)` ประเมินว่าเป็นเท็จ (`#f`)
-- การทดสอบครั้งที่สอง `(> 5 3)` ประเมินเป็นจริง (`#t`):
-  - พิมพ์ `"Condition met"`
-  - จากนั้นจะคำนวณ `(* 5 5)` และส่งคืน `25`
+Résultat : **Affiche « Condition met » et renvoie 25.**
 
-ผลลัพธ์: **พิมพ์ "ตรงตามเงื่อนไข" และส่งคืน 25.**
-
-#### ตัวอย่างที่ 3: การใช้ `let` บล็อกในผลที่ตามมา
-
-เมื่อคุณต้องการแนะนำตัวแปรในเครื่อง ให้ใช้บล็อก `let`:
+#### Exemple 3 : bloc `let` dans un conséquent
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; กรณี 1: ถ้า 0 น้อยกว่า -1
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; กรณี 2: ถ้า 0 มากกว่า -1
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; ค่าเริ่มต้น: ถ้าไม่มีเงื่อนไขข้างต้นเป็นจริง
   (else
     (let ((z 0))
       z)))
 ```
 
-- การทดสอบครั้งแรก `(< 0 -1)` เป็นเท็จ
-- การทดสอบครั้งที่สอง `(> 0 -1)` เป็นจริง ดังนั้น:
-  - บล็อก `let` ได้ถูกดำเนินการ โดยเชื่อมโยง `y` กับ `20`
-  - พิมพ์ `"Positive condition met"`
-  - จากนั้นจะคำนวณ `(+ y y)` และส่งคืน `40`
+Résultat : **Affiche « Positive condition met » et renvoie 40.**
 
-ผลลัพธ์: **พิมพ์ "ตรงตามเงื่อนไขที่เป็นบวก" และส่งกลับ 40.**
-
-#### ตัวอย่างที่ 4: ทางเลือกสำรองด้วย `else`
+#### Exemple 4 : repli avec `else`
 
 ```scheme
 (cond
@@ -112,16 +92,10 @@ weight: 5
   (else "Fallback value"))
 ```
 
-- การทดสอบสองรายการแรกไม่ประเมินว่าเป็นจริง
-- ส่วนคำสั่ง `else` จะถูกดำเนินการและส่งกลับ `"Fallback value"`
+Résultat : **"Fallback value"**
 
-ผลลัพธ์: **"ค่าทางเลือก"**
+### Résumé
 
-### สรุป
-
-- ใช้ `cond` เพื่อจัดการกับเงื่อนไขต่างๆ ในลักษณะที่ชัดเจนและรัดกุม
-- ผลลัพธ์ที่ตามมาอาจเป็นการแสดงออกเดี่ยวหรือการดำเนินการแบบกลุ่มโดยใช้ `begin`
-- ใช้ `let` ในผลที่ตามมาเพื่อประกาศตัวแปรท้องถิ่นสำหรับการคำนวณ
-- ใส่ `else` clause เป็นทางเลือกเพื่อจัดการกับกรณีที่ไม่คาดคิดเสมอ
-
-ความยืดหยุ่นนี้ทำให้ `cond` เป็นเครื่องมือที่ทรงพลังและอ่านง่ายสำหรับการจัดการตรรกะการแยกย่อยที่ซับซ้อน
+- `cond` pour plusieurs conditions clairement.
+- Conséquents simples ou groupés avec `begin`.
+- `let` pour variables locales ; `else` recommandé en repli.

@@ -2,12 +2,15 @@
 title: "Messaging-Bibliothek"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
-Was als einzelne Funktion zum Senden von Nachrichten begann, hat sich im Laufe der Zeit zu einer Sammlung verwandter Funktionen entwickelt. Diese Funktionen bilden nun die Grundlage einer **Messaging-Bibliothek**, die für die Ausgabe an verschiedene Ziele wie die GUI, die Nachrichtenkonsole und das Betriebssystem-Terminal konzipiert ist.
+Was als einzelne Funktion zum Senden von Nachrichten begann, hat sich im Laufe der Zeit zu einer Sammlung verwandter Funktionen entwickelt. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
 
-### Warum eine Messaging-Bibliothek?
+### Why a Messaging Library?
 
-Da unsere Anforderungen wachsen, erfordert die Verarbeitung von Nachrichten über mehrere Ausgänge hinweg einen modulareren und erweiterbareren Ansatz. Anstatt dass eine einzelne Funktion alles erledigt, haben wir den Prozess in wiederverwendbare Komponenten unterteilt, um eine größere Flexibilität zu ermöglichen. Diese Bibliothek kann nun als allgemeines Messaging-Tool verwendet werden, von dem andere Plug-Ins oder Funktionen ausleihen können.
+As our needs grow, handling messages across multiple outputs requires a more modular and extensible approach. Anstatt dass eine einzelne Funktion alles erledigt, haben wir den Prozess in wiederverwendbare Komponenten unterteilt, um eine größere Flexibilität zu ermöglichen. Diese Bibliothek kann nun als allgemeines Messaging-Tool verwendet werden, von dem andere Plug-Ins oder Funktionen ausleihen können.
 
 ### Was macht die Messaging-Bibliothek?
 
@@ -27,15 +30,15 @@ Die **Messaging-Bibliothek** kann problemlos erweitert werden, um zusätzliche A
 - **Send-to-Logger**: Integration mit einem externen Protokollierungssystem.
 - **send-to-notification**: Nachrichten als Systembenachrichtigungen anzeigen.
 
-Durch die Befolgung des gleichen Musters aus modularem Aufbau und wiederverwendbaren Funktionen kann diese Bibliothek zu einem umfassenden Tool für die Bewältigung aller Arten von Messaging-Aufgaben werden.
+By following the same pattern of modular design and reusable functions, this library can grow into a comprehensive tool for handling all kinds of messaging tasks.
 
-## Vorteile einer Messaging-Bibliothek
+## Benefits of a Messaging Library
 
 - **Wiederverwendbarkeit**: Die Funktionen können über verschiedene Plug-Ins oder Projekte hinweg wiederverwendet werden.
 - **Modularität**: Jede Funktion übernimmt eine bestimmte Aufgabe, wodurch der Code einfacher zu warten und zu erweitern ist.
 - **Konsistenz**: Die Verwendung derselben Validierungs- und Nachrichtenverarbeitungsfunktionen stellt ein konsistentes Verhalten in der gesamten Anwendung sicher.
 
-Die **Messaging-Bibliothek** ist der Beginn eines umfassenderen Frameworks, das die Verwaltung von Nachrichten in Ihrem Projekt vereinfachen könnte. Wenn die Bibliothek wächst, können neue Plug-Ins problemlos darauf zugreifen, um Nachrichten dorthin zu senden, wo sie benötigt werden.
+Die **Messaging-Bibliothek** ist der Beginn eines umfassenderen Frameworks, das die Verwaltung von Nachrichten in Ihrem Projekt vereinfachen könnte. As the library grows, new plug-ins can easily tap into it to send messages wherever they need to go.
 
 Wir können die Dateistruktur anpassen:
 
@@ -52,7 +55,7 @@ Wir können die Dateistruktur anpassen:
 Und denken Sie daran, das `load` im Haupt-Plug-in anzupassen:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

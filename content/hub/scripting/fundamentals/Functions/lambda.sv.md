@@ -2,6 +2,9 @@
 title: "Lambda funktioner"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 **Lambda-funktioner** i Scheme är anonyma funktioner, vilket betyder att de är funktioner utan namn. Dessa funktioner är definierade inline och används vanligtvis för korta, engångsoperationer. `lambda`-konstruktionen är ett kraftfullt verktyg för funktionell programmering, som låter dig skapa kortfattad och flexibel logik i farten.
 
@@ -37,7 +40,7 @@ Lambdafunktioner kan definieras på egen hand...
 #### Använda Lambda för enkla beräkningar
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Returnerar 8
 ```
 
 Här:
@@ -86,7 +89,7 @@ Lambdafunktioner skickas ofta direkt till högre ordningsfunktioner som `map` el
 #### Kvadratering av en lista med tal
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returnerar (1 4 9 16)
 ```
 
 - Funktionen `lambda` kvadrerar varje element i listan.
@@ -103,7 +106,7 @@ Du kan returnera en lambdafunktion från en annan funktion för att skapa dynami
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Returnerar 15
 ```
 
 - `make-adder` genererar en ny lambdafunktion som lägger till ett specifikt nummer (`n`).
@@ -117,7 +120,7 @@ Lambdas används ofta med `let` för att skapa lokalt omfångade, tillfälliga f
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Returnerar 7
 ```
 
 - `let` binder en lambdafunktion till namnet `add`.
@@ -130,8 +133,10 @@ Lambdas lyser när de kombineras med funktioner av högre ordning för att utfö
 #### Filtrera jämna tal
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` kontrollerar om ett tal är jämnt.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returnerar (2 4 6)
+```
+
+- `lambda` kontrollerar om ett tal är jämnt.
 - Funktionen `filter` använder lambda för att bara behålla jämna nummer från listan.
 
 ### Fördelar med Lambda-funktioner

@@ -1,37 +1,42 @@
 ---
 title: "Recuperación de archivos"
 type: docs
+url: "hub/features/recovery"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 59495d24302cb3493b90bc61a6dd1ffb9bb9c30b179f7be388882fe4f45a5075
 ---
-El sistema de recuperación de Lumi está diseñado para proteger el trabajo de pintura de fallas, errores y sesiones interrumpidas. Proporciona a los proyectos una red de seguridad sin obligar a los artistas a duplicar archivos a mano constantemente.
 
-La recuperación se basa en dos ideas: protección automática en segundo plano y puntos de control intencionales. Juntos ayudan a preservar el trabajo reciente y al mismo tiempo permiten al artista regresar a momentos anteriores de un proyecto.
+El sistema de recuperación de Lumi está diseñado para proteger el trabajo de pintura ante cierres inesperados, errores y sesiones interrumpidas. Ofrece a los proyectos una red de seguridad sin obligar al artista a duplicar archivos a mano de forma constante.
+
+La recuperación se apoya en dos ideas: protección automática en segundo plano y puntos de control intencionales. Juntas ayudan a conservar el trabajo reciente y, al mismo tiempo, permiten volver a momentos anteriores del proyecto.
 
 ![recover](/images/screens/recover.jpg)
 
 ## Protección automática
 
-Mientras se edita una imagen, Lumi puede mantener los datos de recuperación separados del archivo de trabajo principal. Esto significa que no es necesario reescribir el proyecto en sí cada vez que se realiza una instantánea de seguridad.
+Mientras se edita una imagen, Lumi puede mantener los datos de recuperación separados del archivo de trabajo principal. Así no hace falta reescribir el proyecto cada vez que se crea una instantánea de seguridad.
 
-Si algo sale mal, el estado de recuperación automática puede proporcionar una versión reciente de la obra de arte que puede ser más reciente que la última vez que se guardó deliberadamente. El objetivo es simple: reducir la cantidad de trabajo perdido cuando una sesión finaliza inesperadamente.
+Si algo falla, el estado de recuperación automática puede ofrecer una versión reciente de la obra que quizá sea más nueva que el último guardado deliberado. El objetivo es sencillo: reducir el trabajo perdido cuando una sesión termina de forma inesperada.
 
 ## Puntos de control intencionales
 
-Vale la pena preservar deliberadamente algunos momentos de una pintura: antes de un cambio de color importante, después de un boceto exitoso, antes de decisiones de aplanamiento o cuando se intenta una dirección arriesgada.
+Algunos momentos de una pintura merecen conservarse a propósito: antes de un cambio de color importante, tras un boceto acertado, antes de decisiones de aplanado o al probar una dirección arriesgada.
 
-Lumi admite puntos de control a nivel de proyecto para estos momentos. Son más livianos que guardar una copia completa separada para cada experimento, pero aún así le brindan al artista una manera de retroceder a puntos significativos en la historia de la obra.
+Lumi admite puntos de control a nivel de proyecto para esos momentos. Son más ligeros que guardar una copia completa separada por cada experimento, pero siguen dando al artista una forma de retroceder a puntos significativos del historial de la obra.
 
-## Recuperarse con contexto
+## Recuperación con contexto
 
-Los estados de recuperación se presentan como versiones de la obra de arte en lugar de archivos sin formato para buscar manualmente. Esto permite al artista comparar los guardados automáticos recientes y los puntos de control deliberados, y luego abrir el estado que mejor coincida con el trabajo desde el que desea continuar.
+Los estados de recuperación se presentan como versiones de la obra y no como archivos en bruto que haya que buscar a mano. El artista puede comparar guardados automáticos recientes y puntos de control deliberados, y abrir el estado que mejor coincida con el trabajo desde el que quiere continuar.
 
-Las imágenes recuperadas se abren como documentos de trabajo, lo que permite al artista inspeccionarlas antes de decidir cómo guardarlas o continuar.
+Las imágenes recuperadas se abren como documentos de trabajo, de modo que el artista puede revisarlas antes de decidir cómo guardarlas o seguir.
 
-## Mantener la recuperación práctica
+## Mantener la recuperación manejable
 
-Un sistema de recuperación útil también debe seguir siendo manejable. Lumi está diseñado para mantener organizados los datos de recuperación y hacer que los estados antiguos se puedan eliminar cuando ya no sean necesarios.
+Un sistema de recuperación útil también debe seguir siendo manejable. Lumi está diseñado para mantener organizados los datos de recuperación y permitir eliminar estados antiguos cuando ya no hagan falta.
 
-Esto evita que la seguridad se convierta en un desorden. La recuperación puede permanecer activa en segundo plano, mientras que los artistas aún tienen una forma de controlar cuánta historia se retiene a lo largo del tiempo.
+Así la seguridad no se convierte en desorden. La recuperación puede permanecer activa en segundo plano mientras el artista controla cuánto historial se conserva con el tiempo.
 
-## Confianza mientras trabajas
+## Confianza al trabajar
 
-El propósito de la recuperación de archivos no es reemplazar el guardado, sino hacer que el trabajo creativo sea menos frágil. Los artistas pueden pintar, experimentar y correr riesgos sabiendo que Lumi mantiene caminos adicionales cuando una sesión, un archivo o una decisión sale mal.
+El propósito de la recuperación de archivos no es sustituir el guardado, sino hacer el trabajo creativo menos frágil. El artista puede pintar, experimentar y arriesgar sabiendo que Lumi mantiene caminos adicionales de vuelta cuando una sesión, un archivo o una decisión sale mal.

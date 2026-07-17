@@ -1,7 +1,10 @@
 ---
-title: "명명된 let 또는 Local Define"
+title: "Named let과 로컬 define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 **`let`**이라는 이름과 **로컬 `define`**은 모두 코드를 구성하는 Scheme의 강력한 도구이지만 서로 다른 용도로 사용됩니다. 각각을 언제 사용해야 하는지 이해하면 깔끔하고 모듈식이며 효율적인 스크립트를 만드는 데 도움이 됩니다.
 
@@ -67,8 +70,8 @@ weight: 5
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; 로컬 헬퍼 함수
+  (define (cube x) (* x x x))  ;; 로컬 헬퍼 함수
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ weight: 5
 명명된 `let`에서 괄호 안의 바인딩은 특정 값으로 초기화되는 **로컬 변수** 역할을 합니다. 이러한 변수의 범위는 `let`의 본문으로 지정됩니다.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; x를 초기값 1로 선언
+           (y 2))  ;; y를 초기값 2로 선언
+  (+ x y))         ;; 본문에서 x와 y 사용
 ```
 
 - **`x` 및 `y`**은 `let`의 일부로 정의되고 초기화되는 지역 변수입니다.
@@ -158,7 +161,7 @@ weight: 5
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; 새 x와 y로 재귀 호출
 ```
 
 - **첫 번째 반복**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ weight: 5
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; x = 1, y = 2로 초기 호출
 ```
 
 둘 다 동일한 계산을 수행하지만 `let`라는 이름은 변수 선언과 재귀 설정을 하나의 간결한 구성으로 결합합니다.

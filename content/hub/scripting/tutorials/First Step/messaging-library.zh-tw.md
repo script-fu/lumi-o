@@ -2,8 +2,11 @@
 title: "訊息傳遞庫"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
-隨著時間的推移，最初作為發送訊息的單一函數已經發展成為相關函數的集合。這些函數現在構成了**訊息傳遞庫**的基礎，旨在處理到不同目的地的輸出，例如 GUI、訊息控制台和作業系統終端。
+隨著時間的推移，最初作為發送訊息的單一函數已經發展成為相關函數的集合。这些函数现在构成了**消息传递库**的基础，旨在处理到不同目的地的输出，例如 GUI、消息控制台和操作系统终端。
 
 ### 為什麼要使用訊息傳遞庫？
 
@@ -52,7 +55,7 @@ weight: 6
 並且記得調整主插件中的`load`：
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

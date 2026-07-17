@@ -1,11 +1,14 @@
 ---
-title: "條件"
+title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-在Scheme中，`cond`條件用於根據多個測試選擇要執行的幾個可能的程式碼區塊之一。它就像一個多分支`if`，按順序檢查每個分支，直到找到匹配項。
+En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
 
-### 語法
+### Syntaxe
 
 ```scheme
 (cond
@@ -15,22 +18,18 @@ weight: 5
   (else fallback-consequent))
 ```
 
-- 每個測試均按其編寫順序進行評估。
-- 當測試計算結果為 true (`#t`) 時，執行其對應的 **結果**，並且 `cond` 表達式停止評估進一步的測試。
-- `else` 子句是可選的，如果沒有一個測試評估為 true，則用作後備。
+- Tests dans l'ordre d'écriture.
+- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
+- `else` optionnel en repli.
 
-### 它是如何運作的
+### Comment ça marche
 
-1. **測試每個條件**：
-   - `cond` 依測試列出的順序評估測試。
+1. **Tester chaque condition** dans l'ordre.
+2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
 
-2. **執行匹配結果**：
-   - 當找到第一個評估為 true 的測試 (`#t`) 時，將執行其**結果**。
-   - 如果沒有測試評估為 true 並且存在 `else` 子句，則執行 **後備結果**。
+### Exemples
 
-### 範例
-
-#### 範例 1：單一表達式結果
+#### Exemple 1 : conséquents sur une expression
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ weight: 5
   (else "Fallback"))
 ```
 
-- 第一個測試 `(< 3 2)` 的計算結果為 false (`#f`)。
-- 第二個測試 `(= 3 3)` 的計算結果為 true (`#t`)，因此傳回 `"This will run"`。
-- `else` 子句未執行，因為已找到符合項目。
+Résultat : **"This will run"**
 
-結果：**“這將運行”**
-
-#### 範例 2：使用 `begin` 的多個操作
-
-當後續涉及多個動作時，使用`begin`將它們分組：
+#### Exemple 2 : actions multiples avec `begin`
 
 ```scheme
 (cond
@@ -65,45 +58,32 @@ weight: 5
       0)))
 ```
 
-- 第一個測試 `(< 5 3)` 的計算結果為 false (`#f`)。
-- 第二個測試 `(> 5 3)` 計算結果為 true (`#t`)：
-  - 它印出`"Condition met"`。
-  - 然後計算`(* 5 5)`並返回`25`。
+Résultat : **Affiche « Condition met » et renvoie 25.**
 
-結果：**列印“滿足條件”並返回 25。 **
-
-#### 範例 3：在後續結果中使用 `let` 區塊
-
-當您需要引入局部變數時，請使用 `let` 區塊：
+#### Exemple 3 : bloc `let` dans un conséquent
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; 情況 1：若 0 小於 -1
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; 情況 2：若 0 大於 -1
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; 預設：若以上條件均不滿足
   (else
     (let ((z 0))
       z)))
 ```
 
-- 第一個測試`(< 0 -1)` 是錯誤的。
-- 第二個測試 `(> 0 -1)` 為真，因此：
-  - 執行`let` 區塊，將`y` 綁定到`20`。
-  - 它列印`"Positive condition met"`。
-  - 然後計算`(+ y y)`並返回`40`。
+Résultat : **Affiche « Positive condition met » et renvoie 40.**
 
-結果：**列印“滿足肯定條件”並返回 40。 **
-
-#### 範例 4：使用 `else` 回退
+#### Exemple 4 : repli avec `else`
 
 ```scheme
 (cond
@@ -112,16 +92,10 @@ weight: 5
   (else "Fallback value"))
 ```
 
-- 前兩個測試的評估結果都不為 true。
--執行 `else` 子句並回傳`"Fallback value"`。
+Résultat : **"Fallback value"**
 
-結果：**「後備值」**
+### Résumé
 
-### 總結
-
-- 使用`cond` 以清晰簡潔的方式處理多個條件。
-- 結果可以是單一表達式或使用 `begin` 的分組操作。
-- 在結果中使用`let`來宣告用於計算的局部變數。
-- 始終包含 `else` 子句作為處理意外情況的後備措施。
-
-這種靈活性使 `cond` 成為處理複雜分支邏輯的強大且可讀的工具。
+- `cond` pour plusieurs conditions clairement.
+- Conséquents simples ou groupés avec `begin`.
+- `let` pour variables locales ; `else` recommandé en repli.

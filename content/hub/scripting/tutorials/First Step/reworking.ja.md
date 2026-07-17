@@ -2,10 +2,13 @@
 title: "手直し"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 この手順では、メッセージングの例の微妙な動作を修正します。
 
-文字列「Hello world!\n」をメッセージとして渡していました。 「\n」は特別な種類の文字、「エスケープ」文字です。これは、出力印刷に改行を開始するように指示します。 Scheme では、ステータス バーに送信されたメッセージが GUI ボックスとして強制的にポップアップされます。
+文字列「Hello world!\n」をメッセージとして渡していました。 「\n」は特別な種類の文字、「エスケープ」文字です。これは出力印刷に改行を開始するように指示します。 Scheme では、ステータス バーに送信されたメッセージが GUI ボックスとして強制的にポップアップされます。
 
 ヘルパー `send-to-gui` は、Lumi ダイアログ ボックスにメッセージを送信します。
 
@@ -13,7 +16,7 @@ weight: 7
 
 エスケープ文字を削除して関数を拡張します。
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ weight: 7
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; メッセージボックスを表示するため改行を追加する
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ weight: 7
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 目的: メッセージを適切な出力先に送る
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ weight: 7
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; 目的: メッセージが空でない文字列であることを検証する
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; メッセージが空でない文字列かどうかを確認する
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; 目的: メッセージが有効な出力先に送られることを検証する
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 出力が想定される表示先のいずれかかどうかを確認する
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -96,4 +99,4 @@ weight: 7
 
 メッセージング ライブラリを作り直すことで、より堅牢で信頼性の高いものになりました。改行文字に関する隠れた問題を修正し、わかりやすくするために定数を導入し、ステータス バーとダイアログ ボックスの出力のサポートを追加することで機能を拡張しました。さらに、検証ロジックをより小さな焦点を絞った関数に分割することで、将来のコードの保守と拡張が容易になります。
 
-この再作業は、小さな変更がライブラリの全体的な構造と機能を強化し、プロジェクトの成長に応じて柔軟性と再利用性を高める道を開く方法を示しています。
+この再作業は、小さな変更がライブラリの全体的な構造と機能を強化し、プロジェクトの成長に合わせて柔軟性と再利用性を高める道を開く方法を示しています。

@@ -1,14 +1,19 @@
 ---
 type: docs
+url: "hub/about"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
 ---
-本節簡要概述了該軟體、它支援的工作流程以及它所服務的繪圖過程。
+
+本節簡要介紹軟體本身、它所支援的工作流程，以及 Lumi 正在圍繞哪類繪畫流程進行打磨。
 
 {{< cards >}}
-	{{< card link="lumi-o" title="盧米奧" icon="information-circle" subtitle="Lumi 是什麼、為何它存在、塑造其發展的理念。" >}}
-	{{< card link="workspace" title="工作空間" icon="view-boards" subtitle="專為結構化、非破壞性繪畫工作流程而設計的集中介面。" >}}
-	{{< card link="construction" title="建造" icon="pencil" subtitle="用於形狀、形式和早期繪圖決策的稀疏嵌入式工作區。" >}}
-	{{< card link="inking" title="著墨" icon="pencil-alt" subtitle="受控的線條工作和乾淨的整理，用於精心設計的插圖工作流程。" >}}
-	{{< card link="color" title="顏色" icon="color-swatch" subtitle="由傳統媒體實踐塑造的基於顏料的調色板和色彩處理。" >}}
-	{{< card link="download" title="下載" icon="download" subtitle="取得最新的 AppImage 版本或存取來源儲存庫。" >}}
-	{{< card link="Patreon" title="派特隆" icon="heart" subtitle="支持持續的開發和指導 Lumi 方向的藝術作品。" >}}
+	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Lumi 是什麼、為何存在，以及塑造其發展方向的理念。" >}}
+	{{< card link="workspace" title="工作空間" icon="view-boards" subtitle="為結構化、非破壞性繪畫工作流程而設計的專注介面。" >}}
+	{{< card link="construction" title="起稿" icon="pencil" subtitle="精簡的起稿工作區，用於形體、結構與早期繪畫決策。" >}}
+	{{< card link="inking" title="勾線" icon="pencil-alt" subtitle="可控的線條與乾淨的收尾，服務於有意識的插畫工作流程。" >}}
+	{{< card link="color" title="上色" icon="color-swatch" subtitle="以顏料為基礎的調色盤與色彩處理，源於傳統媒材實踐。" >}}
+	{{< card link="download" title="下載" icon="download" subtitle="取得最新 AppImage 建置，或造訪原始碼儲存庫。" >}}
+	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="支持持續開發，以及指引 Lumi 方向的藝術創作。" >}}
 {{< /cards >}}

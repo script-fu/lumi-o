@@ -1,22 +1,25 @@
 ---
-title: "per-ciascuno"
+title: "for-each"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
 ---
-La funzione `for-each` in Scheme viene utilizzata per applicare una procedura a ciascun elemento di un elenco (o più elenchi). A differenza di `map`, che restituisce un nuovo elenco con i risultati, `for-each` viene utilizzato per i suoi **effetti collaterali**, come la stampa o l'aggiornamento delle variabili.
+La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
 
-La forma più semplice di `for-each` è simile alla seguente:
+La forme la plus simple de `for-each` :
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **Procedura**: Una funzione da applicare a ciascun elemento della lista.
-- **Lista**: la lista i cui elementi verranno elaborati.
+- **Procédure :** Fonction par élément.
+- **Liste :** Liste à parcourir.
 
 ---
 
-### Esempio: stampare un elenco
+### Exemple : afficher une liste
 
 ```scheme
 (define (print-item x)
@@ -25,26 +28,23 @@ La forma più semplice di `for-each` è simile alla seguente:
 (for-each print-item (list 1 2 3 4))
 ```
 
-- In questo caso, la funzione `print-item` viene applicata a ciascun elemento dell'elenco `(1 2 3 4)`.
-- Ciò fa sì che ciascun numero venga stampato in sequenza.
+- `print-item` est appliqué à `(1 2 3 4)`.
+- Chaque nombre est affiché successivement.
 
-**Uscita**: `1 2 3 4`
-
----
-
-### Come funziona
-
-1. **Itera su ogni elemento**:
-   - La procedura fornita viene eseguita per ogni elemento dell'elenco, in ordine.
-
-2. **Produce effetti collaterali**:
-   - Gli effetti collaterali più comuni includono la stampa, la registrazione o la modifica di variabili esterne. A differenza di `map`, `for-each` non restituisce un nuovo elenco.
+**Sortie** : `1 2 3 4`
 
 ---
 
-#### Esempio: utilizzo con più elenchi
+### Comment ça marche
 
-Se vengono forniti più elenchi, `for-each` elabora gli elementi corrispondenti da ciascun elenco.
+1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
+2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `for-each` traite les éléments correspondants.
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,16 +53,14 @@ Se vengono forniti più elenchi, `for-each` elabora gli elementi corrispondenti 
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-- La funzione `sum-and-print` somma gli elementi corrispondenti dai due elenchi e stampa i risultati.
-
-**Uscita**: `5 7 9`
+**Sortie** : `5 7 9`
 
 ---
 
-### Riepilogo
+### Résumé
 
-- La funzione `for-each` è utile per eseguire effetti collaterali su ciascun elemento di un elenco.
-- A differenza di `map`, `for-each` non produce un nuovo elenco: si concentra esclusivamente sugli effetti collaterali della procedura.
-- Può gestire più liste contemporaneamente, applicando la procedura agli elementi corrispondenti.
+- `for-each` convient aux effets de bord sur chaque élément.
+- Contrairement à `map`, **pas de nouvelle liste**.
+- Plusieurs listes simultanément.
 
-Utilizzando `for-each`, puoi elaborare efficacemente gli elenchi quando l'obiettivo è eseguire azioni anziché trasformare i dati.
+Utilisez `for-each` lorsque l'action prime sur la transformation.

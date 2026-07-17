@@ -1,7 +1,10 @@
 ---
 title: "列表"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 在Scheme中，**列表**是用于对值进行分组的基本数据结构。列表是元素的有序集合，其中每个元素可以是任何类型，包括另一个列表。列表在Scheme中广泛用于数据存储和程序结构。
 
@@ -28,8 +31,8 @@ weight: 4
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; 获取第一个元素
+(cdr my-list)  ; 获取列表的其余部分
 ```
 
 结果：
@@ -52,8 +55,8 @@ weight: 4
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; 打印第一个元素
+      (print-elements (cdr lst)))))             ;; 处理列表的其余部分
 ```
 
 - **基本情况：** 如果列表为空 (`null? lst`)，则停止递归。
@@ -135,8 +138,8 @@ weight: 4
 #### 示例：列表？
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; 检查 (list 1 2 3) 是否为列表
+(list? 42)            ; 检查 42 是否为列表
 ```
 
 结果：
@@ -155,16 +158,18 @@ Scheme 提供了几个用于处理列表的内置过程，包括：
 - `reverse`：返回一个新列表，其中元素按相反顺序排列。
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; 返回 3
+(append (list 1 2) (list 3 4)) ; 返回 (1 2 3 4)
+(reverse (list 1 2 3))         ; 返回 (3 2 1)
 ```
 
 结果：
 
 - `(length (list 1 2 3))` 返回`3`
 - `(append (list 1 2) (list 3 4))` 返回`(1 2 3 4)`
-- `(reverse (list 1 2 3))` 返回`(3 2 1)`#### 使用`list-ref`
+- `(reverse (list 1 2 3))` 返回`(3 2 1)`
+
+#### 使用`list-ref`
 
 `list-ref` 过程检索列表指定索引处的元素（从零开始的索引）。
 
@@ -178,7 +183,7 @@ Scheme 提供了几个用于处理列表的内置过程，包括：
 ##### 示例：列表引用
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; 获取索引 2 处的元素
 ```
 
 结果：`30`
@@ -208,10 +213,10 @@ Scheme 中的列表可以包含其他列表作为元素，从而创建嵌套结�
 #### 示例：访问元素
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; 获取第一个元素：(1 2)
+(car (car nested-list))        ; 获取第一个子列表的第一个元素：1
+(cdr (car nested-list))        ; 获取第一个子列表的其余部分：(2)
+(car (cdr (car nested-list)))  ; 获取第一个子列表的第二个元素：2
 ```
 
 ---
@@ -235,8 +240,8 @@ Scheme 中的列表可以包含其他列表作为元素，从而创建嵌套结�
 #### 示例：访问其他子列表中的元素
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; 获取第二个子列表：(3 4)
+(car (car (cdr nested-list)))  ; 获取第二个子列表的第一个元素：3
 ```
 
 ---

@@ -1,18 +1,22 @@
 ---
 title: "Paletteneditor"
 type: docs
+url: "hub/features/palette-editor"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
 ---
-Im Paletten-Editor wird eine Lumi-Palette zu einer vollständigen Farbumgebung. Es vereint die Pigmente, aus denen eine Palette besteht, die Mischungen, die ein Künstler beibehält, die beim Malen verwendeten Farben und die Tonstruktur, die die Art und Weise prägt, wie die Palette erkundet wird.
+Im Paletteneditor wird eine Lumi-Palette zu einer vollständigen Farbumgebung. Er vereint die Pigmente, aus denen eine Palette besteht, die Mischungen, die der Künstler behält, die beim Malen verwendeten Farben und die Tonstruktur, die prägt, wie die Palette erkundet wird.
 
-Eine Palette in Lumi ist mehr als eine Liste von Farbfeldern. Es handelt sich um ein funktionierendes Farbsystem: eine Reihe von Zutaten, einprägsamen Mischungen, Wertbeziehungen und Farbverläufen, die ein ganzes Gemälde oder Werk leiten können.
+Eine Palette in Lumi ist mehr als eine Farbfeldliste — ein arbeitsfähiges Farbsystem: Zutaten, gemerkte Mischungen, Wertbeziehungen und Verläufe, die ein ganzes Bild oder Werk leiten können.
 
 ![palette-editor](/images/screens/palette-editor.jpg)
 
-## Paletten als künstlerische Zwänge
+## Paletten als künstlerische Grenzen
 
-Viele Maler arbeiten am besten mit einer begrenzten Auswahl vertrauter Farben. Ein kleiner Pigmentsatz kann Einheit schaffen, Stimmung schaffen und Farbentscheidungen schneller treffen, da jede Mischung zur gleichen visuellen Familie gehört.
+Viele Maler arbeiten am besten mit einem begrenzten Satz vertrauter Farben. Ein kleiner Pigmentsatz schafft Einheit, Stimmung und schnellere Farbentscheidungen, weil jede Mischung derselben visuellen Familie angehört.
 
-Der Paletteneditor unterstützt diese Art der absichtlichen Einschränkung sowie breitere Vollspektrumpaletten. Künstler können separate Paletten für verschiedene Themen, Projekte, Stile oder Lichtverhältnisse verwalten, jede mit ihrem eigenen Charakter und Mischverhalten.
+Der Paletteneditor unterstützt diese bewusste Begrenzung ebenso wie breitere Vollspektrumpaletten. Separate Paletten für Motive, Projekte, Stile oder Lichtverhältnisse — jede mit eigenem Charakter und Mischverhalten.
 
 
 ![palette-editor-zorn](/images/screens/palette-editor-zorn.jpg)
@@ -20,31 +24,31 @@ Der Paletteneditor unterstützt diese Art der absichtlichen Einschränkung sowie
 
 ## Pigmente, Mischungen und Gedächtnis
 
-Als Grundierung dienen Palettenpigmente. Sie definieren die Farben, aus denen der Rest des Systems entsteht, und beeinflussen die erzeugten Mischungen, die an anderer Stelle in den Farbwerkzeugen von Lumi verfügbar sind.
+Palettenpigmente sind das Fundament. Sie definieren die Farben, aus denen der Rest des Systems wächst, und beeinflussen erzeugte Mischungen in Lumis Farbwerkzeugen.
 
-Gespeicherte Mischungen stellen bewusste Entdeckungen dar: Farben, die es wert sind, behalten, benannt und zu denen man zurückkehren sollte. Verwendete Farben bilden eine ruhigere Art von Erinnerung und bewahren die Farben, die es tatsächlich auf die Leinwand geschafft haben, auch wenn sie nicht vorher gespeichert wurden.
+Gespeicherte Mischungen sind bewusste Entdeckungen — Farben, die es wert sind, behalten, benannt und wieder aufgerufen zu werden. Verwendete Farben sind ein leiseres Gedächtnis: Farben, die tatsächlich auf die Leinwand kamen, auch wenn sie nicht vorher gespeichert wurden.
 
-Zusammen lassen diese Bereiche eine Palette auf natürliche Weise entstehen. Es kann als Pigmentset beginnen, beim Malen nützliche Mischungen zusammentragen und nach und nach zu einem personalisierten Farbvokabular werden.
+Zusammen lässt eine Palette natürlich wachsen — vom Pigmentsatz über nützliche Mischungen beim Malen bis zu einem persönlichen Farbvokabular.
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
 
-## Werteorientierte Organisation
+## Wertorientierte Organisation
 
-Lumi organisiert Palettenfarben unter Berücksichtigung des Werts, da Maler oft in Hell und Dunkel denken, bevor sie an Farbtöne denken. Durch das Gruppieren von Mischungen nach Tonrolle ist es einfacher, eine Farbe zu finden, die in den richtigen Teil des Bildes gehört, und nicht nur eine Farbe, die den richtigen Namen hat.
+Lumi ordnet Palettenfarben wertorientiert, weil Maler oft in Hell und Dunkel denken, bevor sie an Farbton denken. Mischungen nach tonaler Rolle zu gruppieren erleichtert die Farbe für den richtigen Bildteil — nicht nur die mit dem passenden Namen.
 
-Paletten können auch ihr eigenes Gefühl für Tonabstände vermitteln. Eine prägnante Illustration, ein zurückhaltendes Porträt und eine gedämpfte Landschaft können alle von einer unterschiedlichen Wertbetonung profitieren, und die Palette kann diese Struktur widerspiegeln.
+Paletten können auch eigene tonale Abstufung tragen. Helle Illustration, dunkles Porträt, gedämpfte Landschaft — unterschiedliche Wertbetonung, die die Palette widerspiegeln kann.
 
-## Farbverläufe und Übergänge
+## Verläufe und Übergänge
 
-Eine Palette kann Farbverläufe enthalten, die von ihren eigenen Farben abgeleitet sind. Diese Farbverläufe eignen sich für weiche Übergänge, Referenzstreifen, Beleuchtungsstudien und Farbbewegungen, die innerhalb der Identität der Palette bleiben.
+Eine Palette kann Verläufe aus eigenen Farben enthalten — nützlich für weiche Übergänge, Referenzstreifen, Lichtstudien und Farbbewegung innerhalb der Palettenidentität.
 
-Da die Farbverläufe zur Palette gehören, verstärken sie die gleiche Farbsprache wie die Pigmente und gespeicherten Mischungen, anstatt wie unzusammenhängende Ergänzungen zu wirken.
+Weil die Verläufe zur Palette gehören, verstärken sie dieselbe Farbsprache wie Pigmente und gespeicherte Mischungen — keine losgelösten Ergänzungen.
 
 ![gradients](/images/screens/gradient-editor.jpg)
 
-## Lackier-Workflow
+## Mal-Workflow
 
-Der Paletteneditor ist der Ort zum Erstellen und Verfeinern des Farbsystems, während hellere Palettenansichten einen schnellen Zugriff während des Malens unterstützen. Dadurch bleibt ein tiefes Palettendesign verfügbar, ohne dass es bei jeder Farbauswahl in den Vordergrund gedrängt wird.
+Der Paletteneditor ist der Ort zum Aufbau und Verfeinern des Farbsystems; leichtere Palettenansichten ermöglichen schnellen Zugriff beim Malen. Tiefes Palettendesign bleibt verfügbar, ohne bei jeder Farbwahl in den Vordergrund zu drängen.
 
-Insgesamt hilft der Paletten-Editor dabei, die Farbauswahl in eine kohärente Praxis zu verwandeln: Wählen Sie die Pigmente aus, erkunden Sie ihre Mischungen, bewahren Sie die nützlichen Ergebnisse auf und lassen Sie die Palette Teil der Stimme des Kunstwerks werden.
+Insgesamt macht der Paletteneditor Farbauswahl zu einer stimmigen Praxis: Pigmente wählen, Mischungen erkunden, nützliche Ergebnisse bewahren — und die Palette Teil der Stimme des Kunstwerks werden lassen.

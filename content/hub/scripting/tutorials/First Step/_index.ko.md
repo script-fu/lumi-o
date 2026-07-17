@@ -2,6 +2,9 @@
 title: "첫 번째 단계"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 첫 번째 단계에서는 짧은 예제와 증분 리팩터링을 통해 Scheme에서 잘 작동하는 기능적 패턴을 소개합니다.
 결국에는 자신만의 사용자 정의 메시징 라이브러리를 구축하고 더 고급 플러그인을 계속 개발할 수 있는 견고한 기반을 갖추게 됩니다.

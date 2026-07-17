@@ -1,6 +1,9 @@
 ---
 title: "程式瀏覽器"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
 ---
 過程瀏覽器是用於發現 Lumi 過程資料庫 (PDB) 中數百個可用函數的主要參考工具。由於 Lumi 中的每個工具、過濾器和腳本都必須在 PDB 中註冊才能調用，因此該瀏覽器實際上是一個完整的 PDB 瀏覽器。
 
@@ -8,7 +11,7 @@ type: docs
 
 轉至 **幫助 → 程式設計 → 過程瀏覽器**。
 
-您也可以透過**瀏覽**從方案控制台存取它。
+您也可以從 Scheme 控制台透過 **Browse** 存取它。
 
 ## 它顯示了什麼
 

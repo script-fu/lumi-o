@@ -1,6 +1,10 @@
 ---
-title: "พาเลทมิกเซอร์"
+title: "Palette Mixer"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/palette-mixer"
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
 Palette Mixer คือพื้นที่ของ Lumi ในการสร้างสรรค์สีใหม่ๆ จากพาเล็ตที่ใช้งานอยู่ โดยถือว่าการผสมเป็นเหมือนกระบวนการลงสีแทนที่จะเป็นค่าเฉลี่ยดิจิทัลทั่วไป ดังนั้นสีจึงสามารถเลื่อน อ่อนลง เข้มขึ้น และกลมกลืนในลักษณะที่ให้ความรู้สึกใกล้เคียงกับเม็ดสีทางกายภาพมากขึ้น
 

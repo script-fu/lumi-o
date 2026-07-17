@@ -2,6 +2,9 @@
 title: "Zwracane wartości"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Zwracane wartości mają znaczenie, ponieważ pozwalają kontrolować przepływ bez dodatkowego stanu. W schemacie ostatnio ocenione wyrażenie staje się wartością zwracaną.
 
@@ -14,9 +17,9 @@ W schemacie wartość zwracana przez funkcję jest określana na podstawie ostat
 Powróćmy do funkcji sprawdzania poprawności (is-valid-string?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Cel: Sprawdza, czy wiadomość jest niepustym ciągiem znaków
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Sprawdź, czy wiadomość jest niepustym ciągiem znaków
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ W tej funkcji, jeśli wiadomość jest nieprawidłowa, zgłaszany jest błąd. J
 Możemy to poprawić, czyniąc zwracaną wartość bardziej wyraźną. Na przykład możemy zwrócić `#t` (true), jeśli wiadomość jest prawidłowa:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Cel: Sprawdza, czy wiadomość jest wysyłana do prawidłowego wyjścia
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Sprawdź, czy wyjście jest jednym z oczekiwanych miejsc docelowych wyświetlania
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Decydując, co zwracają nasze funkcje, możemy uczynić je bardziej przewidywal
 Oto prosty przykład użycia wartości zwracanej do kontrolowania przepływu logiki:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Cel: Wysyła wiadomość do właściwego miejsca docelowego wyjścia
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
 ### Refaktoryzacja z wartościami zwracanymi
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Cel: Wysyła wiadomość do paska stanu, zwraca #t w przypadku powodzenia
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Cel: Wysyła wiadomość do okna dialogowego, zwraca #t w przypadku powodzenia
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Cel: Wysyła wiadomość do Error Console, zwraca #t w przypadku powodzenia
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Cel: Wysyła wiadomość do terminal, zwraca #t w przypadku powodzenia
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Cel: Wysyła wiadomość do właściwego wyjścia, zwraca #t w przypadku powodzenia
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Cel: Sprawdza, czy wiadomość jest niepustym ciągiem znaków, zwraca #t jeśli poprawna
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ OK, oto kod biblioteki z osadzonymi wartościami zwracanymi i używanymi do kont
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Cel: Sprawdza, czy wyjście jest prawidłowym celem, zwraca #t jeśli poprawne
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

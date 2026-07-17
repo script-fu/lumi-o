@@ -1,37 +1,41 @@
 ---
 title: "Dateiwiederherstellung"
 type: docs
+url: "hub/features/recovery"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 59495d24302cb3493b90bc61a6dd1ffb9bb9c30b179f7be388882fe4f45a5075
 ---
-Das Wiederherstellungssystem von Lumi ist darauf ausgelegt, Malarbeiten vor Abstürzen, Fehlern und unterbrochenen Sitzungen zu schützen. Es bietet Projekten ein Sicherheitsnetz, ohne dass Künstler ständig Dateien von Hand duplizieren müssen.
+Das Wiederherstellungssystem von Lumi schützt Malarbeit vor Abstürzen, Fehlern und unterbrochenen Sitzungen. Projekte erhalten ein Sicherheitsnetz, ohne dass Künstler ständig Dateien von Hand duplizieren müssen.
 
-Die Wiederherstellung basiert auf zwei Ideen: automatischem Hintergrundschutz und absichtlichen Prüfpunkten. Zusammen tragen sie dazu bei, aktuelle Arbeiten zu bewahren und ermöglichen es dem Künstler gleichzeitig, zu früheren Momenten eines Projekts zurückzukehren.
+Die Wiederherstellung basiert auf zwei Ideen: automatischem Hintergrundschutz und gezielten Kontrollpunkten. Zusammen bewahren sie aktuelle Arbeit und ermöglichen es, zu früheren Momenten eines Projekts zurückzukehren.
 
 ![recover](/images/screens/recover.jpg)
 
 ## Automatischer Schutz
 
-Während ein Bild bearbeitet wird, kann Lumi die Wiederherstellungsdaten von der Hauptarbeitsdatei getrennt halten. Dies bedeutet, dass das Projekt selbst nicht jedes Mal neu geschrieben werden muss, wenn ein Sicherheits-Snapshot erstellt wird.
+Während ein Bild bearbeitet wird, kann Lumi Wiederherstellungsdaten von der Hauptarbeitsdatei getrennt halten. Das Projekt muss nicht bei jedem Sicherheits-Snapshot neu geschrieben werden.
 
-Wenn etwas schief geht, kann der automatische Wiederherstellungsstatus eine aktuelle Version des Bildmaterials bereitstellen, die möglicherweise neuer ist als die letzte absichtliche Speicherung. Das Ziel ist einfach: Reduzieren Sie den Arbeitsverlust, wenn eine Sitzung unerwartet endet.
+Geht etwas schief, liefert der automatische Wiederherstellungszustand eine aktuelle Version des Kunstwerks — möglicherweise neuer als der letzte bewusste Speicherstand. Ziel ist es, den Verlust bei unerwartet abgebrochenen Sitzungen zu reduzieren.
 
-## Absichtliche Kontrollpunkte
+## Gezielte Kontrollpunkte
 
-Manche Momente in einem Gemälde sind es wert, bewusst festgehalten zu werden: vor einem großen Farbwechsel, nach einer gelungenen Skizze, vor vernachlässigenden Entscheidungen oder beim Versuch, eine riskante Richtung einzuschlagen.
+Manche Momente im Malprozess lohnt es sich bewusst festzuhalten: vor einem großen Farbwechsel, nach einer gelungenen Skizze, vor dem Zusammenführen von Ebenen oder beim Ausprobieren einer riskanten Richtung.
 
-Lumi unterstützt für diese Momente Prüfpunkte auf Projektebene. Sie sind einfacher, als für jedes Experiment eine separate vollständige Kopie anzufertigen, geben dem Künstler aber dennoch die Möglichkeit, zu bedeutungsvollen Punkten in der Geschichte des Werks zurückzukehren.
+Lumi unterstützt Kontrollpunkte auf Projektebene für solche Momente. Sie sind leichter als für jedes Experiment eine vollständige Kopie anzulegen, geben dem Künstler aber trotzdem die Möglichkeit, zu bedeutsamen Punkten in der Werkgeschichte zurückzukehren.
 
 ## Wiederherstellung mit Kontext
 
-Wiederherstellungsstatus werden als Versionen des Bildmaterials dargestellt und nicht als Rohdateien, die manuell durchsucht werden müssen. Auf diese Weise kann ein Künstler aktuelle automatische Speicherungen und absichtliche Prüfpunkte vergleichen und dann den Status öffnen, der am besten zu der Arbeit passt, von der aus er fortfahren möchte.
+Wiederherstellungszustände werden als Versionen des Kunstwerks angezeigt — nicht als Rohdateien, die manuell durchsucht werden müssen. So lassen sich aktuelle automatische Speicherungen und gezielte Kontrollpunkte vergleichen und der passende Zustand zum Weiterarbeiten öffnen.
 
-Wiederhergestellte Bilder werden als Arbeitsdokumente geöffnet, sodass der Künstler sie prüfen kann, bevor er entscheidet, wie er speichert oder fortfährt.
+Wiederhergestellte Bilder öffnen sich als Arbeitsdokumente, sodass der Künstler sie prüfen kann, bevor er entscheidet, wie er speichert oder fortfährt.
 
-## Genesung praktikabel halten
+## Wiederherstellung handhabbar halten
 
-Ein nützliches Wiederherstellungssystem muss auch beherrschbar bleiben. Lumi wurde entwickelt, um Wiederherstellungsdaten organisiert zu halten und alte Zustände zu entfernen, wenn sie nicht mehr benötigt werden.
+Ein nützliches Wiederherstellungssystem muss überschaubar bleiben. Lumi hält Wiederherstellungsdaten geordnet und ermöglicht, alte Zustände zu entfernen, wenn sie nicht mehr gebraucht werden.
 
-So wird verhindert, dass Sicherheit zu Unordnung wird. Die Wiederherstellung kann im Hintergrund aktiv bleiben, während Künstler weiterhin steuern können, wie viel Geschichte im Laufe der Zeit erhalten bleibt.
+So wird aus Sicherheit kein Datenballast. Die Wiederherstellung kann im Hintergrund aktiv bleiben, während Künstler steuern, wie viel Verlauf über die Zeit erhalten bleibt.
 
-## Vertrauen beim Arbeiten
+## Sicherheit beim Arbeiten
 
-Der Zweck der Dateiwiederherstellung besteht nicht darin, das Speichern zu ersetzen, sondern die kreative Arbeit weniger anfällig zu machen. Künstler können malen, experimentieren und Risiken eingehen, da sie wissen, dass Lumi zusätzliche Möglichkeiten bietet, wenn eine Sitzung, Datei oder Entscheidung schief geht.
+Dateiwiederherstellung ersetzt nicht das Speichern — sie macht kreative Arbeit weniger fragil. Künstler können malen, experimentieren und Risiken eingehen, weil Lumi zusätzliche Wege zurück bereithält, wenn eine Sitzung, Datei oder Entscheidung schiefgeht.

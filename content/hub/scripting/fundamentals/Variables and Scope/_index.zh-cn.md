@@ -1,7 +1,10 @@
 ---
-title: "变量和范围"
+title: "变量与作用域"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 在Scheme中，管理变量及其范围是编写高效且可维护的脚本的核心概念。变量存储脚本可以操作的数据值，而范围定义可以访问这些变量的位置。了解如何有效地定义和使用变量可以让您创建结构化、可重用且无错误的代码。
 
@@ -10,8 +13,8 @@ weight: 1
 Scheme 是动态类型的：您不需要预先声明类型，并且变量可以随着时间的推移保存不同类型的值。
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x 是数字
+(set! x "hello")    ; 现在 x 是字符串
 ```
 
 ### 变量定义和作用域在Scheme中的作用

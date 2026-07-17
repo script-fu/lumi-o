@@ -1,7 +1,10 @@
 ---
-title: "기호"
+title: "심볼"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 기호는 고유하고 변경할 수 없는 식별자를 나타내는 Scheme의 핵심 데이터 유형 중 하나입니다. 이는 주로 프로그램에서 키, 마커 또는 자리 표시자로 사용되므로 깔끔하고 표현력이 풍부한 코드를 작성하는 데 필수적입니다.
 
@@ -17,9 +20,9 @@ Scheme의 기호는 문자열과 유사하지만 기호가 **고유**하고 **�
 예:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; `hello`라는 이름의 심볼
+'foo-bar     ; `foo-bar`라는 이름의 심볼
+'*special*   ; `*special*`라는 이름의 심볼
 ```
 
 ## 기호 만들기
@@ -29,7 +32,7 @@ Scheme의 기호는 문자열과 유사하지만 기호가 **고유**하고 **�
 ### 예
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; 심볼 `my-symbol` 생성
 ```
 
 문자열을 기호로 변환하는 `string->symbol` 프로시저를 사용하여 프로그래밍 방식으로 기호를 생성할 수도 있습니다.
@@ -48,8 +51,8 @@ Scheme의 기호는 문자열과 유사하지만 기호가 **고유**하고 **�
 ### 예
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (같은 심볼)
+(eq? 'apple 'orange)  ; #f (다른 심볼)
 ```
 
 따라서 기호는 데이터 구조의 키 또는 코드의 마커로 사용하기에 이상적입니다.
@@ -62,7 +65,7 @@ Scheme의 기호는 문자열과 유사하지만 기호가 **고유**하고 **�
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; (name . "Alice") 반환
 ```
 
 2. **코드의 식별자:**
@@ -88,9 +91,9 @@ Scheme은 기호 작업을 위한 기본 제공 절차를 제공합니다.
 ### 예
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (참: 심볼임)
+(symbol->string 'example)     ; 결과: "example"
+(string->symbol "new-symbol") ; 결과: 'new-symbol
 ```
 
 ## 요약

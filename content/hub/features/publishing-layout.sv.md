@@ -1,20 +1,24 @@
 ---
 title: "Publiceringslayout"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/publishing-layout"
+translation_source_sha256: dc0367028ed8f6b4e1508c309384967daa43a4148f8d70f00880173a0a1fca7d
 ---
 Illustration för tryck och publicering behöver ofta mer än en canvasstorlek. Sidorna har trimningskanter, uppslag har mittsömmar och viktigt innehåll kan behöva hållas borta från områden som kommer att skäras bort eller bindas in i en ränna. Lumis verktyg för publiceringslayout håller dessa problem synliga medan du målar, utan att platta till dem i konstverket.
 
 Layoutgränser lagras per bild, sparas med projektet och kan stängas av när de inte behövs. Målet är att ge bok-, serie- och tryckarbetsflöden en tydlig känsla av sidstruktur medan den skiktade bilden förblir fullt redigerbar undertill.
 
-## Blöda och trimma
+## Utfall och beskärning
 
-Bleed definierar hur långt teckningen sträcker sig bortom den sista sidkanten. Lumi visar beskärningsområdet som den aktiva sidgränsen inuti duken, med utfallsmarginalen som en skuggad överlagring runt den. Detta gör det lättare att måla bakgrunder och kantdetaljer som måste klara trimning utan att gissa var den färdiga sidan kommer att sluta.
+Utfall (bleed) anger hur långt motivet sträcker sig bortom sidans slutliga kant. Lumi visar beskärningsytan som sidans gräns inuti duken, med utfallsmarginalen som en skuggad överlagring runt den. Det gör det enklare att måla bakgrunder och kantdetaljer som måste överleva beskärning utan att gissa var den färdiga sidan slutar.
 
 Måtten kan ställas in i de enheter som passar jobbet, så utfall kan tänkas i tum, millimeter eller en annan bekant utskriftsenhet snarare än bara i pixlar.
 
-## Ränna och uppslag
+## Fals och uppslag
 
-För dubbelsidiga uppslag markerar en ränna den skyddade zonen runt mittsömmen där viktigt innehåll bör undvikas. När det är aktiverat visar Lumi rännband över uppslaget så att ansikten, text och fokuspunkter kan hållas borta från bindningsområdet medan hela uppslaget förblir en kontinuerlig duk.
+För dubbelsidiga uppslag markerar falsen (gutter) det skyddade området runt mittsömmen där viktigt innehåll bör undvikas. När den är aktiverad visar Lumi falsband över uppslaget så att ansikten, text och fokuspunkter hålls borta från bindningsområdet medan hela uppslaget fortfarande är en sammanhängande duk.
 
 Detta är särskilt användbart för serier, bilderböcker och alla konstverk som kommer att skrivas ut som motstående sidor snarare än isolerade ark.
 

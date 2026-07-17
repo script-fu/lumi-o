@@ -1,7 +1,10 @@
 ---
-title: "記号"
+title: "シンボル"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 シンボルは Scheme の中核となるデータ型の 1 つであり、一意で不変の識別子を表します。これらは主にプログラム内のキー、マーカー、またはプレースホルダーとして使用され、クリーンで表現力豊かなコードを記述するために不可欠です。
 
@@ -17,9 +20,9 @@ Scheme のシンボルは文字列に似ていますが、シンボルが**一�
 例:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; `hello` という名前のシンボル
+'foo-bar     ; `foo-bar` という名前のシンボル
+'*special*   ; `*special*` という名前のシンボル
 ```
 
 ## シンボルの作成
@@ -29,7 +32,7 @@ Scheme のシンボルは文字列に似ていますが、シンボルが**一�
 ### 例
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; シンボル `my-symbol` を作成
 ```
 
 文字列をシンボルに変換する `string->symbol` プロシージャを使用して、プログラムでシンボルを作成することもできます。
@@ -48,8 +51,8 @@ Scheme のシンボルは文字列に似ていますが、シンボルが**一�
 ### 例
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t（同じシンボル）
+(eq? 'apple 'orange)  ; #f（異なるシンボル）
 ```
 
 これにより、シンボルはデータ構造内のキーやコード内のマーカーとして使用するのに最適になります。
@@ -62,7 +65,7 @@ Scheme のシンボルは文字列に似ていますが、シンボルが**一�
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; (name . "Alice") を返す
 ```
 
 2. **コード内の識別子:**
@@ -88,9 +91,9 @@ Scheme には、シンボルを操作するための組み込みプロシージ�
 ### 例
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t（真：シンボルである）
+(symbol->string 'example)     ; 結果: "example"
+(string->symbol "new-symbol") ; 結果: 'new-symbol
 ```
 
 ## 概要

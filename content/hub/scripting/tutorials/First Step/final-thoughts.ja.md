@@ -2,6 +2,9 @@
 title: "最終的な考え"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 これで、作業プロシージャ プラグインと小さなヘルパー ライブラリが完成しました。このシリーズでは、ほとんどの Lumi スクリプトで使用するコア パターンを紹介しました。
 
@@ -15,7 +18,7 @@ weight: 10
 メインのプラグイン コードの最終バージョンは次のとおりです。
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ weight: 10
 ライブラリコード:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 目的: メッセージをステータスバーに送り、成功時は #t を返す
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 目的: メッセージをダイアログボックスに送り、成功時は #t を返す
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 目的: メッセージを Error Console に送り、成功時は #t を返す
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 目的: メッセージを terminal に送り、成功時は #t を返す
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 目的: メッセージを適切な出力先に送り、成功時は #t を返す
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ weight: 10
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 目的: メッセージが空でない文字列であることを検証し、有効なら #t を返す
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ weight: 10
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 目的: 出力が有効な宛先であることを検証し、有効なら #t を返す
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

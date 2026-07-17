@@ -2,6 +2,9 @@
 title: "Funkcje"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 Funkcje są podstawową koncepcją w Scheme, zapewniającą środki do enkapsulacji logiki, umożliwienia ponownego wykorzystania kodu i efektywnej struktury skryptów. Dzięki funkcjom możesz tworzyć modułowe, łatwe w utrzymaniu skrypty, które obsługują szeroki zakres zadań, od podstawowych operacji po zaawansowane przepływy pracy w Lumi.
 
@@ -12,9 +15,9 @@ Ta sekcja służy jako wprowadzenie do funkcji w schemacie i stanowi podstawę d
 Kod schematu składa się z **wyrażeń**. Wyrażenie zwraca wartość. Składnia jest jednolita: nawiasy tworzą wywołanie, a nazwa operatora lub funkcji znajduje się na początku.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; Dodaje 1 i 2, wynik 3
+(if #t 1 0)     ; Zwraca 1, ponieważ warunek jest prawdziwy
+(list 1 2 3)    ; Tworzy listę: (1 2 3)
 ```
 
 Ponieważ wszystko jest wyrażeniem, przepływ sterowania w naturalny sposób wpasowuje się w ten sam styl, co wywołania funkcji.
@@ -51,7 +54,7 @@ Scheme oferuje różnorodne konstrukcje funkcji, każda dostosowana do konkretny
    Funkcje, które przyjmują inne funkcje jako argumenty lub zwracają funkcje jako wyniki, umożliwiając zaawansowane abstrakcje, takie jak mapowanie, filtrowanie i redukcja.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Zwraca (1 4 9 16)
    ```
 
 ## Ogólna składnia funkcji
@@ -73,7 +76,7 @@ Przykład:
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; Zwraca 8
 ```
 
 ## Skutki uboczne i stan globalny

@@ -1,10 +1,14 @@
 ---
 title: "Filter"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/filters"
+translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
-Lumis filtermeny samlar korrigerande justeringar, stiliserade linseffekter, procedurbildande texturgeneratorer, utskriftsinspirerade behandlingar och analysverktyg på ett och samma ställe. Menyordningen är praktisk snarare än akademisk: oskärpa och förbättringsverktyg sitter bredvid varandra, förvrängnings- och ljuseffekter grupperas efter utseende, och textur- eller mönstergeneratorer hålls samman när målet är att bygga källmaterial snarare än att modifiera en befintlig bild.
+Lumis filtermeny samlar korrigerande justeringar, stiliserade linseffekter, procedurtexturgeneratorer, tryckinspirerade behandlingar och analysverktyg på ett ställe. Menyordningen är praktisk snarare än akademisk: oskärpa och förbättring ligger bredvid varandra, distorsion och ljus grupperas efter utseende, och textur- eller mönstergeneratorer hålls ihop när målet är att skapa källmaterial i stället för att ändra en befintlig bild.
 
-Filterdialoger följer samma allmänna arbetsflöde. Förinställningar, förhandsgranskning, delad vy och opacitets- eller blandningskontroller låter en effekt ställas in snabbt, och på lager kan resultatet stanna som ett redigerbart icke-förstörande filter istället för att slås samman direkt. Lumi har också en ny historik av filteranvändning, så att upprepa den senaste effekten eller öppna den sista dialogrutan är en del av den normala målningsrytmen snarare än en separat uppgift.
+Filterdialoger följer samma allmänna arbetsflöde. Förinställningar, förhandsgranskning, delad vy samt opacitets- och blandningskontroller låter effekten ställas in snabbt, och på lager kan resultatet stanna som ett redigerbart icke-förstörande filter i stället för att slås samman direkt. Lumi sparar också nyligen använda filter, så att upprepa senaste effekten eller öppna senaste dialogen hör till den normala målrytmen — inte till en separat uppgift.
 
 ## Oskärpa
 
@@ -42,7 +46,9 @@ Zoom Motion Blur utstrålar detaljer utåt från ett centrum, vilket ger en kän
 
 ## Förbättra
 
-### HögpassHigh Pass isolerar fin lokal kontrast snarare än bred tonal förändring. Med endast skala och kontrast att hantera är det ett enkelt verktyg för att extrahera kantdetaljer, bygga skarpa överlägg eller förbereda skärpningspass som bör betona struktur mer än färg.
+### High Pass
+
+High Pass isolerar fin lokal kontrast snarare än bred tonal förändring. Med endast skala och kontrast att hantera är det ett enkelt verktyg för att extrahera kantdetaljer, bygga skarpa överlägg eller förbereda skärpningspass som bör betona struktur mer än färg.
 
 ### Brusreducering
 
@@ -51,6 +57,12 @@ Brusreducering är det motsatta draget: det undertrycker oönskade fina variatio
 ### Skärpa
 
 Sharpen använder en oskarp maskmodell, med radie, mängd och tröskel som styr hur starkt lokal kontrast trycks in. I praktiken gör det den lämplig för att återställa klarhet efter oskärpa, exportstorleksändring eller subtila efterbehandlingspass där detaljer behöver komma fram utan att förvandla varje pixel till brus.
+
+## Färg
+
+### Tonal gradering
+
+Tonal Grading mappar om färg efter tonområde snarare än genom att omforma kontrasten eller rita en kurva. Varje pixels luminans väljer en jämn blandning av tre användarfärger för skugga, mellanton och högdager; så bilden behåller sin ljusa till mörka struktur medan paletten skiftar. Styrka per region, en balansförändring i Lightroom-stil (vänster gynnar skugggraden, höger högdagergraden) och övergångsmjukhet styr hur långt varje färg når och hur försiktigt graderna överlappar. Den syftar till illustration, serier, konceptkonst och fotografier när målet är ett sammanhängande betyg eller utseende.
 
 ## Förvräng
 
@@ -82,7 +94,7 @@ Vinjetten mörknar, färgas eller till och med raderas mot bildkanterna, med kon
 
 HSV Noise randomiserar nyans, mättnad och värde oberoende. Det gör det användbart när en bild behöver färglivlighet eller analog instabilitet utan att helt bryta isär den lokala strukturen.
 
-### Släng
+### Hurl
 
 Hurl är den extrema versionen av brus: den ersätter pixlar med helt slumpmässiga färger. Det är bäst att tänka på som en destruktiv kaoskälla för glitcharbete, bekymrade texturer eller masker som behöver aggressiv upplösning.
 
@@ -90,7 +102,9 @@ Hurl är den extrema versionen av brus: den ersätter pixlar med helt slumpmäss
 
 Pick ersätter varje pixel med en slumpmässigt vald granne, så bilden förblir relaterad till sin källa istället för att bli ren statisk. Resultatet är en blandad, granulär variation som kan kännas mer organisk än helt slumpmässigt brus.
 
-### SpridaSprid spridningspixlar genom att slumpmässigt förskjuta dem inom en radie. Det är användbart när du vill ha orörlig störning: en trasig yta, en utsmetad kant eller en distresserad textur som fortfarande bär källbildens färgförhållanden.
+### Spridning
+
+Sprid spridningspixlar genom att slumpmässigt förskjuta dem inom en radie. Det är användbart när du vill ha orörlig störning: en trasig yta, en utsmetad kant eller en distresserad textur som fortfarande bär källbildens färgförhållanden.
 
 ### Fraktal
 
@@ -100,7 +114,7 @@ Fractal genererar beläggningsbart fraktalt Perlin-brus, vilket gör det särski
 
 Blue Noise Grain är Lumis monokroma korngenerator för film och tryck. Dialogrutans förinställningar för kornstorlek, maskering av blått brus, mellantonsbias, skuggbias och frökontroller visar att den är utformad för att placera korn jämnt och kontrollerbart, inte bara för att spraya slumpmässiga monokroma fläckar över bilden.
 
-### Risograf korn
+### Risografkorn
 
 Risograph Grain bygger på samma kornlogik men förvandlar den till en tvåplåtstryckeffekt. Separata bläckfärger, plåtbalans, avsiktlig felregistrering och seedad variation gör att den passar bra för affischarbete, indietrycksestetik och illustrationer som ska kännas fysiskt övertryckta snarare än digitalt perfekta.
 
@@ -134,7 +148,7 @@ Erodera gör det kompletterande draget, växer mörkare områden och drar tillba
 
 Schackbräde genererar ett vanligt alternerande brickmönster. Det är enkelt, men den enkelheten gör det användbart för att testa transparens, bygga masker, blockera grafiska bakgrunder eller skapa rent geometriskt källmaterial.
 
-### Rutnät
+### Grid
 
 Grid ritar upprepade horisontella och vertikala indelningar, vilket gör det användbart för layoutguider, designbakgrunder, teknisk illustration och procedurmaskering. Eftersom det genereras som ett filter kan avståndet och utseendet justeras utan att mönstret måste byggas för hand.
 
@@ -142,7 +156,9 @@ Grid ritar upprepade horisontella och vertikala indelningar, vilket gör det anv
 
 Voronoi genererar en beläggningsbar cellulär textur från sådda punkter, med kontroller för funktionstyp, avståndsmetrik, slumpmässighet, fraktaldetaljer och sömlös inpackning. I praktiken kan det gå från rena spruckna cellstrukturer till mer organiska sten-, hud-, kart- eller abstrakta nätverksmönster.
 
-### VågaWave producerar bandade eller ringade mönster som formas av vågformsprofil, geometriskt arrangemang, distorsion, fraktal detalj och fasförskjutning. Det gör det till mer än ett enkelt stripe-verktyg: det kan generera kontrollerade krusningar, topografiska band, moaréliknande grafik eller bullriga koncentriska mönsterfält.
+### Våga
+
+Wave producerar bandade eller ringade mönster som formas av vågformsprofil, geometriskt arrangemang, distorsion, fraktal detalj och fasförskjutning. Det gör det till mer än ett enkelt stripe-verktyg: det kan generera kontrollerade krusningar, topografiska band, moaréliknande grafik eller bullriga koncentriska mönsterfält.
 
 ### Halvton (AM)
 

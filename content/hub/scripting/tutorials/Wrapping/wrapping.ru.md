@@ -2,6 +2,9 @@
 title: "упаковка"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Команды схемы работают на низком уровне, а это означает, что даже простые задачи могут потребовать нескольких шагов. Однако такая детализация обеспечивает гибкость: мы можем объединять команды в небольшие многократно используемые функции, которые делают именно то, что нам нужно. Упаковка — это не черно-белая концепция; он может варьироваться от простых псевдонимов для часто используемых команд до более сложных функций, управляющих целыми рабочими процессами. Иногда оболочка — это просто удобная функция для улучшения читаемости, а в других случаях она превращается в полнофункциональную утилиту, инкапсулирующую несколько операций.
 
@@ -26,7 +29,7 @@ weight: 4
 ### Случайное начальное число
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Назначение: Возвращает случайное целое для инициализации фильтра
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ weight: 4
 Например, если мы решим вместо этого переключиться на ***random***:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Назначение: Возвращает случайное целое для инициализации фильтра
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ weight: 4
 Функция экспорта JPEG в Scheme имеет множество параметров, обеспечивающих точный контроль над сохранением изображений. Однако в большинстве случаев нас интересуют только несколько ключевых настроек, таких как имя файла и качество. Чтобы упростить процесс, мы можем обернуть функцию.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Назначение: Сохраняет изображение как JPEG с заданным качеством
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Избегать jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ weight: 4
 Функция ***car*** может быть загадочной и подвержена ошибкам сценария. Легко ошибочно применить ***car*** к вектору или элементу, не входящему в список, что приведет к неожиданному поведению. Чтобы сделать наш код более надежным и читаемым, мы можем обернуть эту функциональность в более безопасную функцию.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Назначение: Возвращает первый элемент списка или вектора.
+;;          Предупреждает, если ввод недействителен или пуст.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Обрабатывает непустые списки
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Обрабатывает непустые векторы
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Неверный или пустой ввод
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ weight: 4
 чтобы получить координату ***x***. Однако, несмотря на свою функциональность, это не очень выразительно. Вместо этого мы можем обернуть ***first-item*** в более подходящее определение, чтобы прояснить наши намерения.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Назначение: Возвращает координату x для наглядности
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Назначение: Возвращает координату y для наглядности
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -140,13 +143,13 @@ weight: 4
 
 - **Повышает ясность кода**. Вместо использования общих функций доступа к спискам мы явно определяем функции, описывающие их назначение.
 - **Улучшает удобство обслуживания**. Если наше представление координат изменится (например, используя векторы вместо списков), нам нужно будет обновить только эти небольшие функции.
-- **Способствует единообразию**. Использование координат ***x*** и ***y-coord*** упрощает чтение и понимание сценария.
+- **Способствует единообразию**. Использование ***координаты x*** и ***y-координаты*** упрощает чтение и понимание сценария.
 
 Теперь вместо написания общей схемы:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Получает координату x
+(cadr pixel-coords) ;; Получает координату y
 ```
 
 Мы можем написать в _нашей_ схеме:

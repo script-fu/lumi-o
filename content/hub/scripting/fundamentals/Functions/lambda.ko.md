@@ -2,6 +2,9 @@
 title: "람다 함수"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Scheme의 **Lambda 함수**는 익명 함수입니다. 즉, 이름이 없는 함수입니다. 이러한 함수는 인라인으로 정의되며 일반적으로 짧은 일회성 작업에 사용됩니다. `lambda` 구성은 함수형 프로그래밍의 강력한 도구로, 즉석에서 간결하고 유연한 논리를 생성할 수 있도록 해줍니다.
 
@@ -37,7 +40,7 @@ Lambda 함수는 자체적으로 정의할 수 있습니다.
 #### 간단한 계산을 위해 Lambda 사용
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; 8 반환
 ```
 
 여기:
@@ -86,7 +89,7 @@ Lambda 함수는 `map` 또는 `filter`과 같은 고차 함수에 직접 전달�
 #### 숫자 목록 제곱하기
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; (1 4 9 16) 반환
 ```
 
 - `lambda` 함수는 목록의 각 요소를 제곱합니다.
@@ -103,7 +106,7 @@ Lambda 함수는 `map` 또는 `filter`과 같은 고차 함수에 직접 전달�
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; 15 반환
 ```
 
 - `make-adder`은 특정 숫자(`n`)를 추가하는 새로운 람다 함수를 생성합니다.
@@ -117,7 +120,7 @@ Lambda 함수는 `map` 또는 `filter`과 같은 고차 함수에 직접 전달�
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; 7 반환
 ```
 
 - `let`은 람다 함수를 `add` 이름에 바인딩합니다.
@@ -130,8 +133,10 @@ Lambda 함수는 `map` 또는 `filter`과 같은 고차 함수에 직접 전달�
 #### 짝수 필터링
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda`은 숫자가 짝수인지 확인합니다.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; (2 4 6) 반환
+```
+
+- `lambda`은 숫자가 짝수인지 확인합니다.
 - `filter` 함수는 람다를 사용하여 목록에서 짝수만 유지합니다.
 
 ### Lambda 함수의 이점

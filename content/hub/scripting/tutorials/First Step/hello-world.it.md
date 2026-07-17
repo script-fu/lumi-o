@@ -2,11 +2,14 @@
 title: "Ciao mondo!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 Questo tutorial illustra la struttura minima di un plug-in Scheme. Alcune righe sono “boilerplate”: sono necessarie a Lumi per caricare il file, anche se non le capisci ancora del tutto.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Il codice può organizzare le cose in modo simile, il che a prima vista può sem
 Ecco l'esempio completo. La maggior parte delle procedure Lumi hanno il prefisso `lumi-`. Ad esempio, `lumi-message` stampa una stringa nel gestore messaggi configurato.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Impostare il gestore dei messaggi per inviare il messaggio a una finestra di dialogo GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Impostare il gestore dei messaggi per inviare il messaggio alla Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Inviare il messaggio al terminal, la finestra del SO che ha avviato Lumi
   (display "Hello world!\n"))
 
 

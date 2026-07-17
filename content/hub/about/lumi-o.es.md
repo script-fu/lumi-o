@@ -1,59 +1,48 @@
 ---
-title: "lumi-o"
+title: "Lumi-o"
 type: docs
+url: "hub/about/lumi-o"
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
 ---
-Lumi se desarrolla de forma abierta, con decisiones de diseño, documentos de arquitectura e historial de desarrollo disponibles públicamente para que los usuarios puedan comprender cómo evoluciona el software con el tiempo.
+Lumi es una aplicación rápida y eficiente, exclusiva de Linux, para crear imágenes raster, desarrollada en abierto. Sus decisiones de diseño, documentación de arquitectura e historial de desarrollo son públicos, para que los usuarios puedan entender cómo evoluciona.
 
-Prioriza la accesibilidad a largo plazo de las obras de arte. El formato de archivo es abierto, está basado en directorios y se puede leer sin software propietario, lo que garantiza que los proyectos sigan siendo accesibles a medida que el software continúa cambiando. La compatibilidad se admite mediante la importación y exportación de XCF y PSD.
+Lumi está orientada a la pintura e ilustración digital, sin dejar de ser capaz de edición estructurada de imágenes y corrección fotográfica. Ajustes correctivos, efectos de estilo de objetivo, gradación de color por rangos tonales y capas de filtro no destructivas admiten una amplia gama de flujos de edición.
 
-Lumi está diseñado para ser comprensible y potente. La interfaz reduce la complejidad innecesaria y mantiene el espacio de trabajo centrado en pintar y dibujar.
+Lumi parte de la idea de que un software de pintura digital debe comportarse como una herramienta de estudio fiable: predecible, transparente y centrada en crear imágenes.
 
 ## Propósito
 
-Lumi existe para respaldar un método estructurado de ilustración desarrollado a través de años de práctica, proporcionando una herramienta confiable para flujos de trabajo complejos y no destructivos donde el color, las capas y los datos se comportan de manera predecible.
+Lumi admite un método estructurado y no destructivo de creación de imágenes, ya sean pintadas, dibujadas o fotográficas. Es una alternativa enfocada y decidida tanto a editores de imágenes generales como a software de pintura dedicado: libre y de código abierto, sin suscripciones, bloqueo, dependencia de la nube ni generación de imágenes con IA.
 
-Se comparte libremente para que otros lo utilicen y exploren. Lumi no es una solución general, sino una herramienta enfocada y obstinada formada por experiencia real con medios tradicionales y sistemas de software complejos. Lumi trata la fabricación de herramientas como un oficio: algo que se puede entender, dar forma y compartir abiertamente sin suscripciones, bloqueos ni funciones dependientes de la nube.
+La fiabilidad y el acceso a largo plazo son características centrales. El formato de archivo abierto basado en directorios sigue siendo legible sin software propietario, con importación y exportación XCF y PSD.
 
-Lumi aborda la brecha entre los editores de imágenes generales y el software de pintura dedicado. Sigue siendo gratuito y de código abierto, evita las funciones de generación impulsadas por IA dentro de la propia aplicación y elimina las limitaciones de diseño orientadas a la fotografía al tiempo que conserva la potencia y la confiabilidad de la arquitectura GIMP.
+## Base artística
 
-El resultado es un entorno centrado en la pintura creado para la creación manual y deliberada de imágenes en lugar de la producción automatizada. La confiabilidad es una característica fundamental: el guardado automático, el guardado rápido y el guardado incremental están integrados en el flujo de trabajo desde el principio. El formato de archivo Lumi es abierto y muy eficiente, y utiliza carga diferida para que los proyectos muy grandes se abran rápidamente y sigan respondiendo durante largas sesiones de ilustración.
+Lumi la desarrolla un artista independiente con experiencia en pixel art, dibujo y pintura tradicionales, desarrollo de juegos, arte técnico, ilustración y animación 3D. Ese recorrido moldea su enfoque del color, el trazo, las capas, el rendimiento, la recuperación de datos, los scripts y la experiencia de usuario.
 
-Lumi está diseñado para artistas que esperan que sus herramientas permanezcan estables, transparentes y bajo control durante años de trabajo.
+## Filosofía
 
-## Fundación Artística
+Lumi combina un sistema de color basado en pigmentos con un flujo de trabajo reactivo, no destructivo y basado en capas. Su sistema cromático se aparta deliberadamente de los deslizadores HSV convencionales y de selectores RGB arbitrarios.
 
-Lumi es desarrollado por un artista independiente con décadas de experiencia en pixel art, dibujo y pintura tradicionales y trabajo profesional en desarrollo de juegos, arte técnico, ilustración y animación 3D.
+- **Color centrado en pigmentos**: los perfiles de pigmentos del mundo real (códigos Colour Index) se mezclan espectralmente, de modo que las paletas se comportan más como pintura real.
+- **Flujo de trabajo guiado por paletas**: paletas guardadas e intercambiables organizan pigmentos, mezclas, bandas de valor y degradados, manteniendo coherentes las decisiones de color en una ilustración o un proyecto.
+- **Herramientas táctiles y enfocadas**: los pinceles integran presión, inclinación y velocidad del lápiz para un control directo y matizado; los controles respaldan decisiones deliberadas sin complejidad innecesaria.
+- **Fiabilidad no destructiva**: capas y filtros editables escalan a proyectos complejos sin dejar de ser predecibles. El guardado automático, el guardado rápido, los guardados incrementales y la recuperación protegen largas sesiones de pintura y proyectos grandes.
+- **Espacios de trabajo dinámicos**: perfiles con nombre conservan docks, herramientas, presets, paletas y enlaces de dispositivos, y los cambian de forma atómica en tiempo de ejecución.
+- **Scripts Scheme**: Lumi amplía la tradición Script-Fu con un lenguaje de complementos basado en Scheme y funciones de utilidad adicionales para crear complementos y automatizar flujos de trabajo.
 
-Esta combinación de práctica artística e implementación técnica da forma directamente al diseño de Lumi, influyendo en su enfoque del color, las líneas, las capas, el rendimiento, la recuperación de datos, las secuencias de comandos y la experiencia del usuario.
+Los [filtros](/hub/features/filters/), incluidos desenfoque bokeh con forma de objetivo, tilt shift, gradación tonal, nitidez y reducción de ruido, pueden seguir siendo editables junto al trabajo con pincel.
 
-## La Filosofía
+## Límites
 
-Lumi combina un sistema de color basado en pigmentos creado en torno a la mezcla física con un flujo de trabajo de ilustración basado en capas, no destructivo y altamente receptivo.
-
-- **Centrado en pigmentos**: los colores se derivan de perfiles de pigmentos del mundo real (códigos de índice de color) en lugar de valores RGB arbitrarios, lo que respalda la construcción intuitiva de paletas basada en una experiencia de pintura real.
-- **Herramientas táctiles**: los pinceles, la presión del lápiz, la inclinación y la velocidad están completamente integrados para comportarse como herramientas físicas de pintura, brindando un control matizado con una fricción mínima.
-- **Gestión de escenas**: los flujos de trabajo en capas y no destructivos aumentan en complejidad sin dejar de ser predecibles y receptivos.
-- **Controles centrados en la intención**: las herramientas ofrecen opciones significativas sin abrumar al artista, lo que respalda decisiones deliberadas basadas en habilidades.
-
-## Qué prioriza el software- **Intención artística**: las herramientas se comportan de manera predecible y apoyan la intuición del artista.
-
-- **Confiabilidad**: la integridad y recuperación de los datos son primordiales; un artista nunca debería perder su trabajo.
-- **Claridad estructural**: la interfaz mantiene las capas, herramientas y formatos de archivos sencillos y legibles, por lo que incluso las pinturas grandes con cientos de capas siguen siendo manejables.
-
-## No lo es
-
-- **Un editor de imágenes de uso general**: Lumi no está diseñado para retoque fotográfico, diseño web ni autoedición.
-- **Una herramienta multiplataforma**: Lumi está optimizado específicamente para Linux y no es compatible con Windows ni macOS.
-
-## Lanzamientos futuros
-
-Las funciones evolucionan rápidamente durante el desarrollo, pero los lanzamientos se realizan solo después de un uso sostenido en flujos de trabajo de ilustración del mundo real. Lumi se utiliza a diario en los proyectos de producción y arte del propio creador, y el desarrollo está guiado por las necesidades descubiertas a través de esa práctica. La fabricación de herramientas y la creación artística se tratan como una única disciplina continua.
-
-Lumi se desarrolla con herramientas de desarrollo asistidas por IA como parte del proceso de ingeniería. Después de muchos años de desarrollo manual, los sistemas de IA ahora se utilizan para ayudar a refactorizar el código, explorar cambios arquitectónicos y acelerar la implementación mientras se mantiene la dirección humana y la responsabilidad final de las decisiones de diseño. A medida que las herramientas de desarrollo de IA sigan madurando, se espera que mejoren la sostenibilidad y la evolución del proyecto en lugar de reemplazar la autoría artística. Lumi aplica la automatización a las herramientas de construcción, no a reemplazar el acto de pintar.
+- **Enfocado, no exhaustivo**: Lumi no apunta al diseño web, la autoedición ni a todos los nichos que un editor amplio como GIMP intenta cubrir.
+- **Solo Linux**: Lumi está optimizado específicamente para Linux y no admite Windows ni macOS.
 
 ## Agradecimientos
 
-Lumi se basa en el Programa de manipulación de imágenes GNU (GIMP). Lumi reconoce y está profundamente agradecido por los muchos años de trabajo de los desarrolladores, artistas y contribuyentes.
+Lumi se apoya en el GNU Image Manipulation Program (GIMP). Lumi reconoce y agradece profundamente los muchos años de trabajo de desarrolladores, artistas y colaboradores.
 
 ![Lumi logo placeholder](/images/lumi.png)

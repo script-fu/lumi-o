@@ -1,33 +1,38 @@
 ---
-title: "Mikser palet"
+title: "Palette Mixer"
 type: docs
+url: "hub/features/palette-mixer"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
-Palette Mixer to przestrzeń Lumi, w której można wydobywać nowe kolory z aktywnej palety. Traktuje mieszanie raczej jako proces malarski niż zwykłą cyfrową średnią, dzięki czemu kolory mogą się zmieniać, zmiękczać, przyciemniać i harmonizować w sposób bliższy pigmentom fizycznym.
 
-Mikser współpracuje z własną tożsamością kolorystyczną palety. Nowe mieszanki nie są dowolnymi kolorami wciągniętymi spoza systemu; są to relacje pomiędzy kolorami już obecnymi w palecie.
+Palette Mixer to przestrzeń Lumi do wydobywania nowych kolorów z aktywnej palety. Traktuje mieszanie jako proces malarski, a nie proste cyfrowe uśrednianie, dzięki czemu kolory mogą się przesuwać, zmiękczać, ciemnieć i harmonizować w sposób bliższy fizycznym pigmentom.
+
+Mixer współpracuje z własną tożsamością kolorystyczną palety. Nowe mieszanki nie są arbitralnymi kolorami spoza systemu — to relacje między kolorami już obecnymi w palecie.
 
 ![palette-mixer](/images/screens/palettemixer.jpg)
 
-## Miksowanie na podstawie relacji palet
+## Mieszanie w oparciu o relacje palety
 
-Mieszanie rozpoczyna się od kolorów źródłowych z palety. Poruszając się pomiędzy nimi, artysta może eksplorować przejście z jednej rodziny odcieni do drugiej, pozostając wewnątrz charakteru palety.
+Mieszanka zaczyna się od kolorów źródłowych z palety. Poruszając się między nimi, artysta eksploruje przejście z jednej rodziny odcieni do drugiej, pozostając w charakterze palety.
 
-Ponieważ paleta zbudowana jest ze składników pigmentopodobnych, ścieżka pomiędzy dwoma kolorami może wytworzyć przydatne nuty pośrednie: zielenie od żółci i błękitów, hartowane fiołki, ciepłe szarości, stonowane ziemie lub subtelne zmiany temperatury.
+Ponieważ paleta zbudowana jest ze składników pigmentopodobnych, ścieżka między dwoma kolorami może dać użyteczne nuty pośrednie: zielenie z żółci i błękitu, stonowane fiolety, ciepłe szarości, wyciszone ziemie lub subtelne zmiany temperatury.
 
 ## Chroma i ton
 
-Mikser oddziela poczucie koloru od praktycznych decyzji malarskich. Kolor można przesunąć w stronę czystszej lub bardziej neutralnej wersji, rozjaśnić, przyciemnić lub utrzymać w pobliżu określonej wartości podczas badania jego odcienia i nasycenia.
+Mixer rozdziela odczucie koloru od praktycznych decyzji malarskich. Kolor można przesunąć w stronę czystszej lub bardziej neutralnej wersji, rozjaśnić, przyciemnić albo utrzymać blisko określonej wartości podczas badania odcienia i nasycenia.
 
-Ułatwia to wyszukiwanie koloru, jakiego potrzebuje obraz: nie tylko „bardziej czerwonego” lub „bardziej niebieskiego”, ale także cichszego, głębszego, jaśniejszego, cieplejszego, chłodniejszego lub bardziej powściągliwego, a jednocześnie należącego do tej samej rodziny palet.
+Ułatwia to znalezienie koloru, którego wymaga obraz: nie tylko „bardziej czerwonego” czy „bardziej niebieskiego”, lecz cichszego, głębszego, jaśniejszego, cieplejszego, chłodniejszego lub bardziej powściągliwego — wciąż w tej samej rodzinie palety.
 
-## Zapisywanie przydatnych odkryć
+## Zapisywanie użytecznych odkryć
 
-Kiedy mieszanka staje się ważna, może stać się częścią palety. Zapisane mieszanki zachowują związek z kolorami, które je wytworzyły, dzięki czemu można je ponownie przeglądać, dostosowywać i ponownie wykorzystywać, zamiast stać się izolowanymi próbkami.
+Gdy mieszanka staje się ważna, może wejść do palety. Zapisane mieszanki zachowują związek z kolorami, które je stworzyły, więc można do nich wracać, je dostosowywać i ponownie używać zamiast traktować jako odosobnione próbki.
 
-Z biegiem czasu paleta ta przekształciła się ze zbioru składników w zapis decyzji artystycznych. Przydatne mieszanki z jednej sesji mogą stać się kolorami wyjściowymi dla następnej.
+Z czasem paleta rośnie ze zbioru składników w zapis decyzji artystycznych. Przydatne mieszanki z jednej sesji mogą stać się kolorami startowymi następnej.
 
-## Towarzysz mapy palet
+## Partner Palette Map
 
-Mikser palet i Mapa palet zostały zaprojektowane tak, aby ze sobą współdziałać. Mapa przedstawia paletę jako przestrzeń kolorów, w której można nawigować, a mikser pozwala artyście na świadome poruszanie się pomiędzy wybranymi punktami w tej przestrzeni.
+Palette Mixer i Palette Map zostały zaprojektowane do współpracy. Mapa pokazuje paletę jako nawigowalną przestrzeń kolorów, a mixer pozwala świadomie poruszać się między wybranymi punktami w tej przestrzeni.
 
-Razem wspierają przepływ pracy podobny do mieszania farb na palecie: wybieraj sąsiadujące lub kontrastujące kolory, szukaj właściwej równowagi, zachowaj istotne kolory i kontynuuj malowanie w spójnym świecie kolorów.
+Razem wspierają przepływ pracy bliższy mieszaniu farby na palecie: wybierz sąsiednie lub kontrastujące kolory, szukaj właściwej równowagi, zachowaj to, co ważne, i maluj dalej w spójnym świecie kolorów.

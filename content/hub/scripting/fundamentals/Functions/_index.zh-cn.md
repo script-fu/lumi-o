@@ -2,6 +2,9 @@
 title: "功能"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 函数是Scheme 中的核心概念，提供封装逻辑、实现代码重用和有效构建脚本的方法。通过函数，您可以创建模块化、可维护的脚本来处理各种任务，从基本操作到 Lumi 中的高级工作流程。
 
@@ -12,9 +15,9 @@ weight: 7
 方案代码由**表达式**组成。表达式计算出一个值。语法是统一的：括号形成调用，运算符或函数名称在前。
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; 将 1 和 2 相加，结果为 3
+(if #t 1 0)     ; 条件为真，结果为 1
+(list 1 2 3)    ; 创建列表：(1 2 3)
 ```
 
 因为一切都是表达式，所以控制流自然地适合与函数调用相同的风格。
@@ -51,7 +54,7 @@ Scheme 提供了多种函数构造，每种构造都适合特定的用例：
    将其他函数作为参数或返回函数作为结果的函数，支持强大的抽象，例如映射、过滤和归约。
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; 返回 (1 4 9 16)
    ```
 
 ## 函数的通用语法
@@ -73,7 +76,7 @@ Scheme 中的函数具有简单且一致的语法：
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; 返回 8
 ```
 
 ## 副作用和全局状态

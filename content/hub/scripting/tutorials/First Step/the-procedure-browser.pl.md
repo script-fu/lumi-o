@@ -2,6 +2,9 @@
 title: "Przeglądarka procedur"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Przeglądarka procedur Lumi** umożliwia przeszukiwanie dostępnych procedur (wbudowanych i dostarczonych w formie wtyczek) oraz sprawdzanie ich parametrów i zwracanych wartości.
 
@@ -28,15 +31,15 @@ Wyszukaj `lumi-message`, aby zobaczyć jego parametry i wartości zwracane.
 
 ### Znajdowanie wtyczki
 
-Once you've installed the "Hello World!" wtyczkę, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „schemat-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
+Po zainstalowaniu programu „Hello World!” wtyczkę, można ją znaleźć na liście w przeglądarce procedur. Po prostu wyszukaj nazwę funkcji zarejestrowaną w Lumi, w tym przypadku „schemat-hello-world”. Wpis wyświetli parametry i wszelkie zwracane wartości powiązane z wtyczką, wraz z krótkim opisem. Zobaczysz także, gdzie w sekcji **Informacje dodatkowe** wyświetlane są niektóre wiersze tekstu wprowadzone jako parametry wejściowe podczas procesu rejestracji.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; Nazwa procedury
+  "Hello world!"                                        ;; Nazwa pozycji menu
+  "A Scheme procedure plug-in"                       ;; Podpowiedź i opis
+  "Your Name"                                           ;; Autor
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; Licencja
+  "2024")                                               ;; Data copyright
 ```
 
 Ułatwia to sprawdzenie, czy wtyczka jest prawidłowo zarejestrowana i pozwala szybko sprawdzić, jak współpracuje ona z innymi procedurami w Lumi. Przeglądarka procedur to potężne narzędzie do debugowania i rozszerzania wtyczek poprzez eksplorację wszystkich dostępnych procedur w Lumi.

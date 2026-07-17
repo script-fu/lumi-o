@@ -1,7 +1,10 @@
 ---
-title: "허락하다"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 `let` 이름은 _"Let \( x = 2 \) and \( y = 3 \)"_에서와 같이 임시 바인딩을 도입하는 수학적 기원을 반영하기 때문에 사용됩니다.
 

@@ -1,7 +1,10 @@
 ---
-title: "関連リスト (アリスト)"
-type: docs
+title: "連想リスト（Alists）"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **アソシエーション リスト** (または **アリスト**) は、キーと値のペアのコレクションを表すために使用される Scheme の基本的なデータ構造です。これはペアのリストとして実装され、各ペアがキー (通常はシンボル) と値を関連付けます。リストはシンプルかつ柔軟で、小規模から中規模のデータセットに適しています。
 
@@ -30,10 +33,10 @@ alist は、各要素が **ペア** (`cons` で構築される) であるリス�
 一重引用符 (`'`) は **引用** の短縮形であり、Scheme による式の評価を防ぎます。これは、すべてのキーと値がハードコーディングされた静的リストの作成に最適です。
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ alist は、各要素が **ペア** (`cons` で構築される) であるリス�
 アリリストから値を取得するには、キーでペアを検索する `assoc` 関数を使用できます。
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; (name . "Alice") を返す
+(assoc 'country alist) ; #f を返す（キーが見つからない）
 ```
 
 ### 値の抽出
@@ -84,7 +87,7 @@ alist は、各要素が **ペア** (`cons` で構築される) であるリス�
 `assoc` を使用してペアを取得したら、`cdr` を使用して値を抽出します。
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; "Alice" を返す
 ```
 
 ### 主な機能の概要

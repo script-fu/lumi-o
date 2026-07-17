@@ -2,6 +2,9 @@
 title: "Erste Schritte"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 First Steps stellt funktionale Muster vor, die in Scheme gut funktionieren, mit kurzen Beispielen und inkrementellen Refaktoren.
 Am Ende haben Sie Ihre eigene benutzerdefinierte Messaging-Bibliothek erstellt und verfügen über eine solide Grundlage für die weitere Entwicklung fortschrittlicherer Plug-Ins.

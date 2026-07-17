@@ -1,7 +1,10 @@
 ---
-title: "Variables y alcance"
+title: "Variables y ámbito"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 En Scheme, la gestión de variables y su alcance es un concepto central para escribir scripts eficientes y fáciles de mantener. Las variables almacenan valores de datos que su secuencia de comandos puede manipular, mientras que el alcance define dónde se puede acceder a esas variables. Comprender cómo definir y utilizar variables de forma eficaz le permite crear código estructurado, reutilizable y sin errores.
 
@@ -10,8 +13,8 @@ En Scheme, la gestión de variables y su alcance es un concepto central para esc
 El esquema se escribe dinámicamente: no se declaran tipos por adelantado y una variable puede contener valores de diferentes tipos a lo largo del tiempo.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x es un número
+(set! x "hello")    ; ahora x es una cadena
 ```
 
 ### El papel de las definiciones de variables y el alcance en el esquema

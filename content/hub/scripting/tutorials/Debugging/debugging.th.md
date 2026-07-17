@@ -2,24 +2,27 @@
 title: "การดีบัก"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 ในการเขียนสคริปต์ ไม่มีฟังก์ชันใดที่ผิดพลาดได้ แม้แต่คำสั่งที่น่าเชื่อถือที่สุดก็อาจล้มเหลวได้เมื่อต้องเผชิญกับอินพุตหรือเงื่อนไขที่ไม่คาดคิด เพื่อป้องกันสิ่งนี้ เราสามารถใช้ระบบการดีบักแบบกำหนดเอง และใช้เทคนิคการเขียนโปรแกรมป้องกัน ด้วยการรวมฟังก์ชันมาตรฐานเข้ากับกลไกการจัดการข้อผิดพลาดและการให้ข้อเสนอแนะที่ให้ข้อมูล เราสามารถทำให้สคริปต์ของเรามีประสิทธิภาพมากขึ้นและง่ายต่อการแก้ไขปัญหา
 
 ส่วนสำคัญของกลยุทธ์นี้คือการใช้แฟล็กการดีบักส่วนกลางเพื่อควบคุมเอาต์พุตแบบละเอียด ซึ่งช่วยให้เราสามารถเปิดใช้งานข้อมูลการดีบักโดยละเอียดเมื่อจำเป็น ในขณะเดียวกันก็รักษาเอาต์พุตให้สะอาดในระหว่างการดำเนินการตามปกติ
 
-## ธงการแก้ปัญหาทั่วโลก
+## ธงการแก้ปัญหาระดับโลก
 
 แฟล็กดีบักโกลบอลเป็นวิธีที่เรียบง่ายแต่มีประสิทธิภาพในการควบคุมระดับเอาต์พุตข้อมูลระหว่างการเรียกใช้สคริปต์ เมื่อเปิดใช้งาน จะมีข้อความแก้ไขจุดบกพร่องโดยละเอียดซึ่งมีคุณค่าสำหรับการติดตามปัญหา เมื่อปิดใช้งาน จะทำให้เอาต์พุตมีความกระชับสำหรับการใช้งานจริง
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; วัตถุประสงค์: ธงสากลสำหรับควบคุมเอาต์พุตดีบัก
 (define debug #f)
 ```
 
 ตามค่าเริ่มต้น การดีบักจะถูกปิด หากต้องการเปิดใช้งานเอาต์พุตแบบละเอียดในระหว่างการพัฒนา เพียงตั้งค่าแฟล็กเป็น `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; วัตถุประสงค์: ธงสากลสำหรับควบคุมเอาต์พุตดีบัก
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ weight: 5
 เพื่อการควบคุมที่ละเอียดยิ่งขึ้น เราสามารถเปิดหรือปิดการดีบักภายในส่วนเฉพาะของสคริปต์ได้โดยใช้ฟังก์ชันตัวช่วย
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; วัตถุประสงค์: ปิดโหมดดีบักสำหรับส่วนหนึ่งของโค้ด
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; วัตถุประสงค์: เปิดโหมดดีบักสำหรับส่วนหนึ่งของโค้ด
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ weight: 5
 สิ่งนี้ทำให้เราสามารถควบคุมการดีบักแบบไดนามิก:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; เปิดการแสดงผลแบบละเอียด
 
-;; Some script logic here
+;; ตรรกะสคริปต์บางส่วนที่นี่
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; ปิดการแสดงผลแบบละเอียด
 ```
 
 ## แก้ปัญหาระบบส่งข้อความ
@@ -73,7 +76,7 @@ weight: 5
 ฟังก์ชัน `debug-message` เป็นวิธีการหลักในการแสดงเอาต์พุตการดีบัก ช่วยให้มั่นใจได้ว่าข้อความจะแสดงเฉพาะเมื่อเปิดใช้งานการดีบักเท่านั้น
 
 ```scheme
-;; Purpose: Display a debug message.
+;; วัตถุประสงค์: แสดงข้อความดีบัก
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ weight: 5
 ตัวอย่างการใช้งาน:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; วัตถุประสงค์: คืนตำแหน่งในโครงสร้างต้นไม้ของรายการ หรือ #f หากรายการไม่ถูกต้อง
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ weight: 5
 ข้อความอาจมีประเภทข้อมูลที่แตกต่างกัน เช่น รายการ เวกเตอร์ และตัวเลข เพื่อให้แน่ใจว่ามีการจัดรูปแบบอย่างถูกต้อง เราใช้ `serialize-item`
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; วัตถุประสงค์: แปลงชนิดข้อมูล Scheme ต่างๆ (list, vector, pair ฯลฯ)
+;;          เป็นการแสดงผลแบบสตริง
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; รายการว่าง
+    ((and (string? item) (string=? item "")) "\"\"")  ; สตริงว่าง
+    ((list? item) (list->string item))                ; รายการซ้อน
+    ((vector? item)                                   ; จัดการเวกเตอร์
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; จัดการคู่
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; ตัวเลข
+    ((symbol? item) (symbol->string item))            ; สัญลักษณ์
+    ((boolean? item) (if item "#t" "#f"))             ; ค่าบูลีน
+    ((string? item) item)                             ; สตริง
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 หากต้องการรวมองค์ประกอบข้อความหลายรายการให้เป็นสตริงเดียว เราใช้ `concat`
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; วัตถุประสงค์: ต่อรายการหลายรายการเป็นสตริงเดียว
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ list:
 ฟังก์ชัน `list->string` จะแปลงรายการเป็นสตริงที่จัดรูปแบบ
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; วัตถุประสงค์: แปลงรายการรายการเป็นสตริงที่อ่านง่าย
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ list:
 ### ข้อความเตือนฟังก์ชัน `warning-message` ทำงานคล้ายกับ `debug-message` แต่จะแสดงคำเตือนแม้ว่าจะปิดใช้งานการแก้ไขจุดบกพร่องก็ตาม
 
 ```scheme
-;; Purpose: Display a warning message.
+;; วัตถุประสงค์: แสดงข้อความเตือน
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ list:
 ตัวอย่างทั่วไปคือ `item-is-valid?` ซึ่งล้อม `lumi-item-id-is-valid` เพื่อส่งคืน `#t` หรือ `#f` หาก `#f` ถูกส่งคืน เราสามารถทริกเกอร์ `warning-message` ในรหัสการโทรได้ หากอินพุตไม่ใช่ตัวเลข เราก็สามารถส่งคำเตือนในฟังก์ชันได้
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; วัตถุประสงค์: ตรวจสอบว่ารายการถูกต้องหรือไม่ คืนค่า #t หรือ #f
+;;          แจ้งเตือนหากรายการไม่ใช่ตัวเลข
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ wrapper สำหรับฟังก์ชันข้อความของ
 ตัวอย่างของ `call` ที่ถูกนำไปใช้ในทางปฏิบัติ:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; วัตถุประสงค์: ใช้กระบวนการทำพื้นผิวกับรายการ group mask ที่กำหนด
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

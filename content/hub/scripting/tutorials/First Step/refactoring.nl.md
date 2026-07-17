@@ -2,6 +2,9 @@
 title: "Refactoring"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Zodra een functie werkt, kunnen we een stapje terug doen en nadenken over hoe we onze code het beste kunnen structureren. Het doel is om onze plug-in zo duidelijk, begrijpelijk en onderhoudbaar mogelijk te maken. Dit proces van het verbeteren en verfijnen van de structuur van bestaande code zonder het gedrag ervan te veranderen, staat bekend als refactoring.
 
@@ -9,15 +12,15 @@ Hier is nogmaals de initiële functie:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Stel de berichtenhandler in om het bericht naar een GUI-dialoogvenster te sturen
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Stel de berichtenhandler in om het bericht naar de Error Console te sturen
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Stuur het bericht naar de terminal, het OS-venster dat Lumi startte
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Introductie van een variabele genaamd "bericht":
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Stel de berichtenhandler in om het bericht naar een GUI-dialoogvenster te sturen
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Stel de berichtenhandler in om het bericht naar de Error Console te sturen
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Stuur het bericht naar de terminal, het OS-venster dat Lumi startte
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ Hallo wereld! na extractie.
 
 De logica extraheren:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Hoofdfunctie
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ De logica extraheren:
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Functie voor berichtuitvoer naar verschillende bestemmingen
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Verzenden naar de Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Stel de handler in op Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Verzenden naar het GUI-dialoogvenster
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Stel de handler in op GUI-dialoog
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Verzenden naar het terminalvenster
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Terminal-uitvoer wordt afgehandeld met display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Herstel de standaard berichtenhandler naar de Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

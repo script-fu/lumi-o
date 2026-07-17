@@ -2,6 +2,9 @@
 title: "Funções Lambda"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 **Funções lambda** em Scheme são funções anônimas, o que significa que são funções sem nome. Essas funções são definidas em linha e normalmente são usadas para operações curtas e únicas. A construção `lambda` é uma ferramenta poderosa em programação funcional, permitindo criar lógica concisa e flexível dinamicamente.
 
@@ -37,7 +40,7 @@ As funções Lambda podem ser definidas por conta própria...
 #### Usando Lambda para cálculos simples
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Retorna 8
 ```
 
 Aqui:
@@ -86,7 +89,7 @@ As funções Lambda geralmente são passadas diretamente para funções de ordem
 #### Quadratura de uma lista de números
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Retorna (1 4 9 16)
 ```
 
 - A função `lambda` quadra cada elemento da lista.
@@ -103,7 +106,7 @@ Você pode retornar uma função lambda de outra função para criar um comporta
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Retorna 15
 ```
 
 - `make-adder` gera uma nova função lambda que adiciona um número específico (`n`).
@@ -117,7 +120,7 @@ Lambdas são frequentemente usados com `let` para criar funções temporárias c
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Retorna 7
 ```
 
 - O `let` vincula uma função lambda ao nome `add`.
@@ -130,8 +133,10 @@ Lambdas brilham quando combinados com funções de ordem superior para realizar 
 #### Filtrando números pares
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- O `lambda` verifica se um número é par.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Retorna (2 4 6)
+```
+
+- O `lambda` verifica se um número é par.
 - A função `filter` usa o lambda para manter apenas os números pares da lista.
 
 ### Benefícios das funções Lambda

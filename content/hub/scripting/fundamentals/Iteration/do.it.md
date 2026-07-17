@@ -1,11 +1,14 @@
 ---
-title: "Fare"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-La funzione `do` in Scheme è un meccanismo di loop che consente l'iterazione con condizioni di inizializzazione, aggiornamento e terminazione. È particolarmente utile quando è necessario eseguire una sequenza di operazioni un numero specifico di volte o finché non viene soddisfatta una condizione.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-La forma generale di `do` è:
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ La forma generale di `do` è:
   body)
 ```
 
-- **Variabile**: le variabili del ciclo.
-- **Valore iniziale**: il valore iniziale di ciascuna variabile del ciclo.
-- **Update-expression**: l'espressione per aggiornare le variabili del ciclo alla fine di ogni iterazione.
-- **Condizione di terminazione**: la condizione per interrompere il ciclo.
-- **Espressione-risultato**: il valore da restituire al termine del ciclo.
-- **Body**: il codice da eseguire in ogni iterazione.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### Esempio: Somma i numeri da 1 a 5
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; Inizializzare i a 1, incrementare di 1
+     (sum 0 (+ sum i))) ; Inizializzare la somma a 0, aggiungere i alla somma
+    ((> i 5) sum)       ; Terminare quando i > 5, restituire sum
+  (lumi-message (number->string sum))) ; Stampa la somma a ogni passo
 ```
 
-- La variabile del loop `i` inizia da 1 e aumenta di 1 in ogni iterazione.
-- La variabile `sum` accumula la somma di `i`.
-- Il ciclo termina quando `i > 5`, restituendo il valore finale di `sum`.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**Uscita**: `15`
-
----
-
-### Come funziona
-
-1. **Inizializzazione**:
-   - A ciascuna variabile del ciclo viene assegnato il suo valore iniziale.
-
-2. **Controllo della risoluzione**:
-   - All'inizio di ogni iterazione viene verificata la condizione di terminazione. Se vero, il ciclo si interrompe e viene valutata l'espressione del risultato.
-
-3. **Iterazione**:
-   - Se la condizione di terminazione è falsa, il corpo viene eseguito e le variabili del ciclo vengono aggiornate utilizzando le rispettive espressioni di aggiornamento.
+**Sortie** : `15`
 
 ---
 
-### Riepilogo
+### Comment ça marche
 
-- Il costrutto `do` fornisce un modo flessibile per implementare cicli con più variabili e condizioni di terminazione complesse.
-- È utile per le attività che richiedono aggiornamenti dello stato tra le iterazioni.
-- La condizione di terminazione determina quando termina il ciclo e può restituire un risultato finale.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-Utilizzando `do`, è possibile implementare algoritmi iterativi in ​​Scheme con un controllo preciso su inizializzazione, aggiornamenti e terminazione. Ciò rende `do` una combinazione di un **meccanismo di associazione con ambito** (come `let`) e una **struttura di controllo iterativa**, che gli consente di gestire il looping e lo stato temporaneo in modo pulito e conciso.
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

@@ -1,7 +1,10 @@
 ---
-title: "變數和範圍"
+title: "變數與作用域"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 在Scheme中，管理變數及其範圍是編寫高效且可維護的腳本的核心概念。變數儲存腳本可以操作的資料值，而範圍定義可以存取這些變數的位置。了解如何有效定義和使用變數可以讓您建立結構化、可重複使用且無錯誤的程式碼。
 
@@ -10,8 +13,8 @@ weight: 1
 Scheme 是動態類型的：您不需要預先宣告類型，並且變數可以隨著時間的推移保存不同類型的值。
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x 是數字
+(set! x "hello")    ; 現在 x 是字串
 ```
 
 ### 變數定義和作用域在Scheme中的作用

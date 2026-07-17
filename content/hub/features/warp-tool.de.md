@@ -1,37 +1,41 @@
 ---
-title: "Warp-Werkzeug"
+title: "Warp Tool"
 type: docs
+url: "hub/features/warp-tool"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed71825993da9e
 ---
-Mit dem Warp-Tool können Künstler gemalte Inhalte direkt auf der Leinwand verschieben, ziehen, biegen, weicher machen und umformen. Es ist für ausdrucksstarke Anpassungen konzipiert: Proportionen korrigieren, Fließen hinzufügen, Silhouetten anstoßen oder einer fertigen Form mehr Bewegung verleihen, ohne sie von Grund auf neu zu streichen.
+Mit dem Warp Tool verschieben, ziehen, biegen, weichzeichnen und formen Künstler gemalte Inhalte direkt auf der Leinwand. Es ist für ausdrucksstarke Anpassung gedacht: Proportionen korrigieren, Fluss hinzufügen, Silhouetten nachjustieren oder einer fertigen Form mehr Bewegung geben — ohne neu zu malen.
 
-In Lumi konzentriert sich das Warping besonders auf die Erhaltung geschichteter Kunstwerke. Ein komplexes Motiv kann als visuelles Ganzes umgestaltet werden, während die darunter liegenden Ebenen und Masken für die weitere Bearbeitung verfügbar bleiben.
+In Lumi liegt der Schwerpunkt darauf, Ebenenkunstwerke zu erhalten. Ein komplexes Motiv lässt sich als visuelles Ganzes umformen, während darunterliegende Ebenen und Masken weiter bearbeitbar bleiben.
 
-## Direkte Leinwandformung
+## Direkte Formung auf der Leinwand
 
-Das Verzerren fühlt sich an, als würde man Bewegung in das Bild streichen. Anstatt eine starre Transformationsbox auszuwählen, kann der Künstler lokal arbeiten und die Verschiebung durch Striche aufbauen, bis die Form richtig sitzt.
+Warping fühlt sich an, als würde man Bewegung ins Bild streichen. Statt einer starren Transformationsbox arbeitet der Künstler lokal und baut Verschiebung Strich für Strich auf, bis die Form stimmt.
 
-Dadurch eignet sich das Tool sowohl für subtile Korrekturen als auch für dramatische Verzerrungen. Eine Wange kann weicher gemacht werden, ein Ärmel kann in den Rhythmus gezogen werden, Blattwerk kann fließend werden oder eine Skizze kann näher an die beabsichtigte Geste herangeführt werden.
+Das Werkzeug eignet sich für subtile Korrekturen und dramatische Verzerrung: eine Wange weicher machen, einen Ärmel in den Rhythmus ziehen, Laubwerk fließen lassen oder eine Skizze näher an die beabsichtigte Geste führen.
 
 ## Gruppenbewusstes Warping
 
-Bei geschichteten Illustrationen werden häufig Strichzeichnungen, Farben, Schattierungen, Texturen, Masken und Effekte getrennt. Die Umformung eines Teils dieser Struktur durch Abflachung würde genau die Organisation zerstören, die das Bild bearbeitbar macht.
+Bei Ebenenillustrationen liegen Strich, Farbe, Schattierung, Textur, Masken und Effekte getrennt. Einen Teil dieser Struktur durch Zusammenführen umzuformen würde genau die Organisation zerstören, die das Bild bearbeitbar macht.
 
-Das Warp-Werkzeug von Lumi ist darauf ausgelegt, eine Ebenengruppe als ein einzelnes sichtbares Motiv zu behandeln und gleichzeitig die darin enthaltenen Teile beizubehalten. Der Künstler kann das kombinierte Erscheinungsbild gestalten und die inneren Schichten nach der Änderung intakt halten.
+Das Warp Tool behandelt eine Ebenengruppe als ein sichtbares Motiv und bewahrt die Teile darin. Der Künstler formt das kombinierte Erscheinungsbild — die inneren Ebenen bleiben intakt.
 
 ## Masken und Struktur
 
-Masken sind Teil der Struktur des Kunstwerks und kein nachträglicher Einfall. Wenn ein verzerrtes Motiv auf Masken für Kanten, Ausschnitte, Schattierungen oder Gruppengrenzen angewiesen ist, müssen sich diese Beziehungen mit dem Bild ändern.
+Masken gehören zur Struktur des Kunstwerks, nicht zum Nachgedanken. Hängt ein verzerrtes Motiv von Masken für Kanten, Ausschnitte, Schattierung oder Gruppengrenzen ab, müssen diese Beziehungen mit dem Bild mitwandern.
 
-Lumis Ansatz sorgt dafür, dass Inhalte und Masken aufeinander abgestimmt sind, sodass das bearbeitete Ergebnis kohärent bleibt. Das Ziel besteht darin, dass die in der Vorschau angezeigte Verzerrung und das festgelegte Ebenenergebnis optisch übereinstimmen, ohne dass der Künstler jede untergeordnete Ebene von Hand reparieren muss.
+Lumis Ansatz hält Inhalt und Masken ausgerichtet, sodass das Ergebnis stimmig bleibt. Vorschau-Warp und festgeschriebene Ebenenversion sollen visuell übereinstimmen — ohne jede untergeordnete Ebene von Hand reparieren zu müssen.
 
-## Iterative Anpassung
+## Iteratives Feintuning
 
-Warping ist von Natur aus explorativ. Künstler müssen oft einen Strich ausprobieren, das Ergebnis vergleichen, ihn mildern, rückgängig machen oder nach und nach eine stärkere Veränderung aufbauen.
+Warping ist von Natur aus explorativ. Oft probiert man einen Strich, vergleicht, mildert ab, macht rückgängig oder baut die Veränderung schrittweise auf.
 
-Das Warp-Tool unterstützt diese Art der Iteration, indem es dafür sorgt, dass der Arbeits-Warp während der Sitzung anpassbar bleibt. Der Künstler kann die Verschiebung verfeinern, bevor er die Änderung in den regulären Rückgängig-Verlauf des Bildes übernimmt.
+Das Warp Tool lässt den Arbeits-Warp während der Sitzung anpassbar — der Künstler verfeinert die Verschiebung, bevor die Änderung in den regulären Rückgängig-Verlauf des Bildes übernommen wird.
 
-## Kreative Verwendung
+## Kreative Einsatzmöglichkeiten
 
-Über die Korrektur hinaus kann das Verziehen ein Markierungs- und Designwerkzeug sein. Es kann Haaren und Stoffen Bewegung verleihen, den Ausdruck übertreiben, grafische Formen biegen, Texturen kräuseln oder malerische Verzerrungen erzeugen, die manuell nur schwer zu zeichnen wären.
+Über Korrektur hinaus ist Warping ein Werkzeug für Markenbildung und Gestaltung: Bewegung in Haar und Stoff, übertriebener Ausdruck, gebogene grafische Formen, gekräuselte Texturen, malerische Verzerrungen, die manuell schwer zu zeichnen wären.
 
-Da es mit geschichteten Motiven funktioniert, eignet sich das Werkzeug sowohl für die frühe grobe Formgebung als auch für die spätere Politur und hilft Künstlern dabei, ein Bild umzugestalten und gleichzeitig den Malprozess flexibel zu halten.
+Weil es mit Ebenenmotiven arbeitet, eignet es sich für frühe Grobformung und späte Politur — Bilder umgestalten und den Malprozess flexibel halten.

@@ -2,11 +2,14 @@
 title: "Witaj świecie!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 W tym samouczku omówiono minimalną strukturę wtyczki Scheme. Niektóre linie mają charakter szablonowy: są wymagane, aby Lumi załadował plik, nawet jeśli jeszcze ich w pełni nie rozumiesz.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Kod może organizować rzeczy w podobny sposób, co na pierwszy rzut oka może w
 Oto pełny przykład. Większość procedur Lumi ma przedrostek `lumi-`. Na przykład `lumi-message` drukuje ciąg znaków do skonfigurowanej procedury obsługi wiadomości.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do okna dialogowego GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Wyślij wiadomość do terminal, okna systemu operacyjnego, które uruchomiło Lumi
   (display "Hello world!\n"))
 
 

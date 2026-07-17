@@ -1,43 +1,48 @@
 ---
 title: "Przegląd systemu Linux"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux to potężny i wszechstronny system operacyjny z ogromną społecznością programistów. W swej istocie system Linux składa się z kilku kluczowych komponentów, które współpracują ze sobą, zapewniając płynną obsługę użytkownika. W tym przeglądzie zostaną przedstawione podstawowe części systemu Linux, w tym jądro, dystrybucja, menedżer pakietów, menedżer wyświetlania, środowisko graficzne i serwer wyświetlania (X11 lub Wayland).
 
-Lumi działa najlepiej na Debianie z Cinnamon (X11) i jest rozwijany i testowany w tym środowisku.
+Linux to potężny i wszechstronny system operacyjny z ogromną społecznością programistów. W swej istocie składa się z kilku kluczowych komponentów, które współpracują, zapewniając płynną obsługę. Ten przegląd opisuje podstawowe elementy systemu Linux: jądro, dystrybucję, menedżer pakietów, menedżer wyświetlania, środowisko graficzne i serwer wyświetlania (X11 lub Wayland).
 
-**Wspólne aktualne ustawienia domyślne dystrybucji Linuksa**
+Lumi działa najlepiej na Debianie z Cinnamon (X11) i jest rozwijany oraz testowany w tym środowisku.
 
-| **Dystrybucja** | **Menedżer pakietów** | **Menedżer wyświetlania** | **Środowisko pulpitu** | **Serwer wyświetlacza** |
-|-----------------------|----------------------|----------------------|----------------------------------|----------------------------------|
-| Debiana | APT | GDM | GNOME | Waylanda |
-| Ubuntu | APT | GDM | GNOME | Waylanda |
-| Debiana | APT | GDM | Cynamon | X11 |
-| Fedora | DNF | GDM | GNOME | Waylanda |
-| Arch Linux | Pacmana | Wybór użytkownika | Wybór użytkownika | Wybór użytkownika |
+**Typowe domyślne ustawienia dystrybucji Linux**
+
+| **Dystrybucja** | **Menedżer pakietów** | **Display Manager** | **Środowisko pulpitu** | **Serwer wyświetlania** |
+|--------------------|----------------------|----------------------|-------------------------|--------------------|
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
+| Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
+| Arch Linux         | Pacman               | Wybór użytkownika    | Wybór użytkownika       | Wybór użytkownika  |
 
 ### Kluczowe terminy
 
 #### Jądro
 
-Rdzeń systemu operacyjnego, który łączy się bezpośrednio ze sprzętem, zwykle Linux.
+Rdzeń systemu operacyjnego, który łączy się bezpośrednio ze sprzętem — zwykle Linux.
 
 #### Dystrybucja
 
-Dystrybucja Linuksa, która pakuje jądro wraz z narzędziami, bibliotekami i oprogramowaniem przestrzeni użytkownika. Przykładami są Debian, Arch Linux i Fedora.
+Dystrybucja Linuksa pakuje jądro wraz z narzędziami, bibliotekami i oprogramowaniem przestrzeni użytkownika. Przykłady: Debian, Arch Linux i Fedora.
 
 #### Menedżer pakietów
 
-Narzędzie używane do instalowania, aktualizowania i usuwania aplikacji z repozytoriów. Przykłady obejmują APT dla dystrybucji opartych na Debianie, DNF dla Fedory i Pacman dla Arch Linux.
+Narzędzie do instalowania, aktualizowania i usuwania aplikacji z repozytoriów. Przykłady: APT w dystrybucjach opartych na Debianie, DNF w Fedorze i Pacman w Arch Linux.
 
-#### Menedżer wyświetlania
+#### Display Manager
 
-Zarządza graficznym ekranem logowania i inicjowaniem sesji. Przykłady obejmują GDM (menedżer wyświetlania GNOME), LightDM i SDDM (prosty menedżer wyświetlania pulpitu).
+Zarządza graficznym ekranem logowania i uruchamianiem sesji. Przykłady: GDM (GNOME Display Manager), LightDM i SDDM (Simple Desktop Display Manager).
 
 #### Środowisko pulpitu
 
-Zapewnia graficzny interfejs użytkownika (GUI) i zarządza ogólnym wyglądem i doświadczeniem użytkownika. Przykładami są GNOME, Cinnamon i KDE Plasma.
+Zapewnia graficzny interfejs użytkownika (GUI) i zarządza wyglądem oraz doświadczeniem użytkownika. Przykłady: GNOME, Cinnamon i KDE Plasma.
 
 #### Serwer wyświetlania
 
-Zarządza zdarzeniami wyjściowymi i wejściowymi wyświetlacza. Przykładami są X11 (system X Window) i Wayland. X11 to tradycyjny serwer wyświetlania, natomiast Wayland to nowsza, bezpieczniejsza alternatywa.
+Zarządza wyjściem obrazu i zdarzeniami wejściowymi. Przykłady: X11 (X Window System) i Wayland. X11 to tradycyjny serwer wyświetlania; Wayland to nowsza, bezpieczniejsza alternatywa.

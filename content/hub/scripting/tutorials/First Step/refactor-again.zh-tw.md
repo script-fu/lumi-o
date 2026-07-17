@@ -2,6 +2,9 @@
 title: "再次重構"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 隨著幫助程式庫的成長，一目了然地追蹤變得越來越困難。再次重構以保持每個功能較小且單一用途。
 
@@ -15,11 +18,11 @@ weight: 5
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; 檢查訊息是否為非空字串
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 檢查輸出是否為預期目標之一
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ weight: 5
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; 繼續前先呼叫驗證函式
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; 傳送到 Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; 傳送到 GUI 對話方塊
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; 傳送到終端機視窗
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 將預設訊息處理常式還原為 Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ weight: 5
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; 傳送到適當的輸出
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 將預設訊息處理常式還原為 Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ weight: 5
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ weight: 5
 重構的庫版本：
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; 用途：向 GUI 對話方塊傳送訊息
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; 用途：向 Message console 傳送訊息
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; 用途：向 terminal 視窗傳送訊息
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 繼續前先驗證訊息
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 用途：將訊息分發到適當的輸出目標
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 將預設訊息處理常式還原為 Message console
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; 用途：驗證訊息為非空字串且輸出有效
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; 檢查訊息是否為非空字串
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 檢查輸出是否為預期目標之一
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

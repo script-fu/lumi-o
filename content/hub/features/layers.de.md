@@ -1,45 +1,49 @@
 ---
-title: "Schichten"
+title: "Ebenen"
 type: docs
+url: "hub/features/layers"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
-Das Ebenensystem von Lumi ergibt eine Illustrationsstruktur. Damit können Künstler Skizzen, Farben, Schattierungen, Texturen, Masken, Anpassungen, Experimente und letzte Details trennen, ohne jede Entscheidung direkt in einem flachen Bild festzuschreiben.
+Das Ebenensystem von Lumi gibt Illustrationen Struktur. Künstler können Skizze, Farbe, Schattierung, Textur, Masken, Korrekturen, Experimente und Feindetails trennen, ohne jede Entscheidung direkt in ein flaches Bild zu brennen.
 
-Ebenen sind nicht nur ein Stapel von Pixeln. Sie ermöglichen Sichtbarkeit, Überblendung, Masken, Sperren, Effekte, Gruppierung und Kompositionsverhalten und bilden damit die Grundlage für flexible, zerstörungsfreie Mal-Workflows.
+Ebenen sind mehr als ein Pixelstapel. Sie tragen Sichtbarkeit, Überblendung, Masken, Sperren, Effekte, Gruppierung und Kompositionsverhalten — die Grundlage flexibler, zerstörungsfreier Mal-Workflows.
 
 ![layers](/images/screens/layers.jpg)
 
-## Strukturierte Malerei
+## Strukturiertes Malen
 
-Ein geschichtetes Bild kann in Etappen erstellt werden. Grobe Markierungen können unter klaren Linien liegen, Farbe kann getrennt von der Beleuchtung blockiert werden, Textur kann isoliert werden und alternative Ideen können verfügbar bleiben, ohne die Hauptkomposition zu stören.
+Ein Ebenenbild entsteht in Etappen. Grobe Striche liegen unter sauberen Linien, Farbe getrennt von Licht, Textur isoliert — alternative Ideen bleiben verfügbar, ohne die Hauptkomposition zu stören.
 
-Gruppen machen diese Struktur lesbar. Zusammengehörige Teile einer Illustration können zusammen verschoben werden, miteinander verschmelzen oder als gemeinsamer Teil des Kunstwerks behandelt werden, während ihre einzelnen Ebenen weiterhin bearbeitet werden können.
+Gruppen machen diese Struktur lesbar. Zusammengehörige Teile einer Illustration lassen sich gemeinsam verschieben, gemeinsam überblenden oder als gemeinsamer Teil des Kunstwerks behandeln, während die einzelnen Ebenen bearbeitbar bleiben.
 
-## Blending und Masken
+## Überblendung und Masken
 
-Durch die Ebenenüberblendung wird gesteuert, wie ein Teil des Bildmaterials mit dem darunter liegenden Teil interagiert. Dies ermöglicht das Schattieren, Aufhellen, Tönen, Strukturieren oder Farbkorrigieren, ohne die darunter liegenden Formen neu zu streichen.
+Ebenenüberblendung steuert, wie ein Teil des Kunstwerks mit dem darunterliegenden interagiert. So lassen sich Formen schattieren, aufhellen, tönen, texturieren oder farbkorrigieren, ohne sie neu zu malen.
 
-Masken bieten eine weitere Ebene der Kontrolle. Sie ermöglichen das Malen, Abmildern, Ausblenden, Wiederherstellen oder Formen der Sichtbarkeit unabhängig vom Farbinhalt der Ebene. Dadurch bleiben Kantenentscheidungen und Tonübergänge während der gesamten Lebensdauer eines Stücks flexibel.
+Masken geben eine weitere Kontrollebene. Sichtbarkeit lässt sich unabhängig vom Farbinhalt der Ebene malen, weichzeichnen, ausblenden, wiederherstellen oder formen. Kantenentscheidungen und Tonübergänge bleiben über die gesamte Bearbeitungszeit flexibel.
 
-## Kommissionierung und Navigation
+## Auswahl und Navigation
 
-Komplexe Gemälde können viele kleine Teile enthalten. Lumi unterstützt die direkte, ebenenorientierte Navigation, sodass Künstler von der Leinwand zurück zum Ebenenstapel wechseln können, ohne den Malfluss zu verlieren.
+Komplexe Bilder enthalten viele kleine Teile. Lumi unterstützt direkte, ebenenorientierte Navigation — vom Bild zurück zum Ebenenstapel, ohne den Malfluss zu verlieren.
 
-Die Absicht besteht darin, die Arbeit mit Schichten eher räumlich als administrativ wirken zu lassen: Wenn eine Markierung auf der Leinwand sichtbar ist, sollte das Ebenensystem dem Künstler helfen, schnell darauf zurückzukommen.
+Ziel ist, dass Ebenenarbeit räumlich statt administrativ wirkt: Ist ein Strich auf der Leinwand sichtbar, soll das Ebenensystem schnell dorthin führen.
 
 ## Schutz und Absicht
 
-Ebenen können auf unterschiedliche Weise geschützt werden, sodass fertige Arbeiten, Masken, Positionen, Transparenz oder Farbentscheidungen nicht versehentlich geändert werden. Diese Schutzmaßnahmen sind nützlich, sobald ein Bild dichter wird und einige Teile stabil bleiben müssen, während andere sich weiterentwickeln.
+Ebenen lassen sich auf verschiedene Weise schützen, damit fertige Bereiche, Masken, Positionen, Transparenz oder Farbentscheidungen nicht versehentlich geändert werden. Das ist nützlich, sobald ein Bild dichter wird und manche Teile stabil bleiben sollen, während andere weiter wachsen.
 
-Dieser Schutz unterstützt bewusste Arbeitsabläufe: Skizzieren Sie frei, wo Änderungen willkommen sind, sperren Sie gelöste Bereiche und entwickeln Sie das Bild weiter, ohne Angst vor versehentlichen Schäden haben zu müssen.
+So entstehen bewusste Workflows: frei skizzieren, wo Änderung willkommen ist; gelöste Bereiche sperren; weiterentwickeln ohne Angst vor versehentlichem Schaden.
 
 ## Zerstörungsfreie Effekte
 
-Filter und Effekte können Teil des bearbeitbaren Zustands einer Ebene sein, anstatt sofort zu permanenten Pixeln zu werden. Dadurch bleiben visuelle Änderungen anpassbar und ein Effektstapel bleibt Teil der Arbeitskomposition.
+Filter und Effekte können Teil des bearbeitbaren Zustands einer Ebene bleiben, statt sofort zu permanenten Pixeln zu werden. Visuelle Änderungen bleiben anpassbar, ein Effektstapel Teil der Arbeitskomposition.
 
-Für Künstler bedeutet dies, dass das Experimentieren reversibel bleiben kann. Ein Look kann getestet, ausgeblendet, neu angeordnet, verfeinert oder schließlich festgelegt werden, wenn er Teil des endgültigen Bildes wird.
+Für Künstler heißt das: Experimentieren bleibt reversibel. Ein Look lässt sich testen, ausblenden, neu anordnen, verfeinern oder festlegen, wenn er Teil des endgültigen Bildes wird.
 
-## Leistung für tiefe Dateien
+## Leistung bei umfangreichen Dateien
 
-Ebenenillustrationen können komplex werden, insbesondere wenn Gruppen, Masken und Effekte interagieren. Das Ebenensystem von Lumi ist darauf ausgelegt, gängige Malvorgänge reaktionsfähig zu halten, indem unnötige Neuzusammenstellungen nach Möglichkeit vermieden werden.
+Ebenenillustrationen werden komplex, besonders wenn Gruppen, Masken und Effekte zusammenwirken. Lumis Ebenensystem hält gängige Malaktionen reaktionsschnell, indem unnötige Neukomposition nach Möglichkeit vermieden wird.
 
-Das Ergebnis ist ein Ebenen-Workflow, der sowohl auf Kontrolle als auch auf Geschwindigkeit abzielt: detailliert genug für sorgfältiges, zerstörungsfreies Arbeiten, aber dennoch praktisch für das alltägliche Malen.
+Ergebnis: ein Ebenen-Workflow mit Kontrolle und Tempo — detailliert genug für sorgfältige zerstörungsfreie Arbeit, praktisch genug für den Alltag.

@@ -2,27 +2,30 @@
 title: "Villkor"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
 ---
-Villkor är en grundläggande del av programmering, vilket gör att manus kan fatta beslut och styra sitt flöde baserat på specifika kriterier. I Scheme, som är baserat på Scheme-programmeringsspråket, gör villkoren att du kan skapa dynamiska och intelligenta skript som anpassar sig till ändrade indata, miljöer eller användaråtgärder.
+Villkor är en grundläggande del av programmering: de låter skript fatta beslut och styra flödet utifrån specifika kriterier. I Scheme, baserat på programmespråket Scheme, hjälper villkor dig att skriva dynamiska, intelligenta skript som anpassar sig till förändrade indata, miljöer eller användaråtgärder.
 
-### Villkorens roll i schemat
+### Villkorens roll i Scheme
 
-Villkor tjänar flera viktiga syften i dina skript:
-- **Directing Logic:** De låter dig köra olika delar av kod beroende på om vissa villkor är sanna eller falska.
-- **Förbättrad flexibilitet:** Genom att svara dynamiskt på indata eller tillstånd hjälper villkor ditt skript att hantera en mängd olika scenarier.
-- **Förenklar komplexiteten:** De delar upp beslutsfattande i hanterbara strukturer, vilket gör koden lättare att läsa, felsöka och underhålla.
+Villkor fyller flera viktiga funktioner i dina skript:
+- **Styra logiken:** De kör olika kodstycken beroende på om vissa villkor är sanna eller falska.
+- **Ökad flexibilitet:** Genom att reagera dynamiskt på indata eller tillstånd hjälper de skriptet att hantera många scenarier.
+- **Förenkla komplexitet:** De delar upp beslut i hanterbara strukturer och gör koden lättare att läsa, felsöka och underhålla.
 
-### Typer av villkor tillgängliga
+### Tillgängliga villkorskonstruktioner
 
-Schema tillhandahåller flera villkorade konstruktioner, var och en lämpad för olika logiska behov:
-- **`if`:** För att göra enkla binära beslut, exekvera ett kodblock om ett villkor är sant och ett annat om det är falskt.
-- **`cond`:** En kraftfull konstruktion med flera grenar för att hantera flera förhållanden på ett tydligt, strukturerat sätt.
-- **`and` / `or`:** Logiska operatorer som utvärderar kombinationer av villkor, vilket möjliggör mer komplext beslutsfattande.
-- **`else`:** En catch-all som definierar reservbeteende när inget av de angivna villkoren är uppfyllda.
+Scheme erbjuder flera villkorskonstruktioner, var och en anpassad till olika logiska behov:
+- **`if`:** För enkla binära beslut — ett kodblock om villkoret är sant, ett annat om det är falskt.
+- **`cond`:** En kraftfull konstruktion med flera grenar för att hantera flera villkor på ett tydligt, strukturerat sätt.
+- **`and` / `or`:** Logiska operatorer som utvärderar kombinationer av villkor för mer komplex beslutsgivning.
+- **`else`:** Ett reservfall som definierar beteendet när inget av de angivna villkoren uppfylls.
 
-### Hur villkor fungerar
+### Så fungerar villkor
 
-Villkoren innefattar vanligtvis:
+Villkor omfattar vanligtvis:
 1. **Utvärdera ett villkor:** Ett testuttryck avgör om ett villkor är sant eller falskt.
-2. **Branching Execution:** Baserat på utvärderingen väljer skriptet vilket kodblock som ska köras.
-3. **Returnera ett värde (valfritt):** I vissa fall kan villkor även producera ett värde som andra delar av skriptet kan använda.
+2. **Förgrenad körning:** Utifrån utvärderingen väljer skriptet vilket kodblock som ska köras.
+3. **Returnera ett värde (valfritt):** I vissa fall ger villkor också ett värde som andra delar av skriptet kan använda.

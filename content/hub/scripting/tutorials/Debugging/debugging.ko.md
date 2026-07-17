@@ -2,6 +2,9 @@
 title: "디버깅"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 스크립팅에서는 오류가 없는 기능이 없습니다. 가장 신뢰할 수 있는 명령이라도 예상치 못한 입력이나 조건이 발생하면 실패할 수 있습니다. 이를 방지하기 위해 맞춤형 디버깅 시스템을 구현하고 방어 프로그래밍 기술을 채택할 수 있습니다. 오류 처리 메커니즘으로 표준 기능을 래핑하고 유익한 피드백을 제공함으로써 스크립트를 더욱 강력하고 문제 해결하기 쉽게 만들 수 있습니다.
 
@@ -12,14 +15,14 @@ weight: 5
 전역 디버그 플래그는 스크립트 실행 중 정보 출력 수준을 제어하는 간단하면서도 효과적인 방법입니다. 활성화되면 문제를 추적하는 데 매우 유용한 자세한 디버깅 메시지를 제공합니다. 비활성화되면 프로덕션 용도로 출력을 간결하게 유지합니다.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 목적: 디버그 출력을 제어하는 전역 플래그.
 (define debug #f)
 ```
 
 기본적으로 디버깅은 꺼져 있습니다. 개발 중에 자세한 출력을 활성화하려면 플래그를 `#t`으로 설정하기만 하면 됩니다.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 목적: 디버그 출력을 제어하는 전역 플래그.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ weight: 5
 보다 세부적인 제어를 위해 도우미 함수를 사용하여 스크립트의 특정 부분 내에서 디버깅을 켜거나 끌 수 있습니다.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; 목적: 코드 구간의 디버그 모드 끄기.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; 목적: 코드 구간의 디버그 모드 켜기.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ weight: 5
 이를 통해 디버깅을 동적으로 제어할 수 있습니다.
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; 상세 출력 활성화
 
-;; Some script logic here
+;; 여기에 스크립트 로직
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; 상세 출력 비활성화
 ```
 
 ## 디버그 메시징 시스템
@@ -73,7 +76,7 @@ Scheme에서 디버그 출력을 효율적으로 처리하기 위해 여러 도�
 `debug-message` 함수는 디버그 출력을 표시하는 핵심 방법입니다. 디버깅이 활성화된 경우에만 메시지가 표시되도록 합니다.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; 목적: 디버그 메시지 표시.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ Scheme에서 디버그 출력을 효율적으로 처리하기 위해 여러 도�
 사용 예:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; 목적: 항목의 트리 위치를 반환하거나, 항목이 유효하지 않으면 #f 반환
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Scheme에서 디버그 출력을 효율적으로 처리하기 위해 여러 도�
 메시지에는 목록, 벡터, 숫자 등 다양한 데이터 유형이 포함될 수 있습니다. 형식이 올바른지 확인하기 위해 `serialize-item`을 사용합니다.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; 목적: 다양한 Scheme 데이터 유형(리스트, 벡터, 페어 등)을 변환
+;;          문자열 표현으로 변환.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; 빈 목록
+    ((and (string? item) (string=? item "")) "\"\"")  ; 빈 문자열
+    ((list? item) (list->string item))                ; 중첩된 목록
+    ((vector? item)                                   ; 벡터 처리
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; 쌍 처리
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; 숫자
+    ((symbol? item) (symbol->string item))            ; 심볼
+    ((boolean? item) (if item "#t" "#f"))             ; 부울값
+    ((string? item) item)                             ; 문자열
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 여러 메시지 구성 요소를 단일 문자열로 병합하려면 `concat`을 사용합니다.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; 목적: 여러 항목을 하나의 문자열로 연결.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ list:
 `list->string` 함수는 목록을 형식이 지정된 문자열로 변환합니다.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; 목적: 항목 목록을 읽기 쉬운 문자열로 변환.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ list:
 ### 경고 메시지`warning-message` 함수는 `debug-message`과 유사하게 작동하지만 디버깅이 비활성화된 경우에도 경고를 표시합니다.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; 목적: 경고 메시지 표시.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ list:
 일반적인 예는 `item-is-valid?`입니다. 이는 `lumi-item-id-is-valid`을 래핑하여 `#t` 또는 `#f`을 반환합니다. `#f`이 반환되면 호출 코드에서 `warning-message`을 트리거할 수 있습니다. 입력이 숫자가 아닌 경우 함수에서 경고를 표시할 수 있습니다.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; 목적: 항목이 유효한지 확인하고 #t 또는 #f 반환.
+;;          항목이 숫자가 아니면 경고를 표시.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Scheme 플러그인을 개발할 때 이러한 방식으로 함수를 래핑하�
 실제로 사용되는 `call`의 예:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; 목적: 주어진 그룹 마스크 목록에 텍스처링 프로세스 적용
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

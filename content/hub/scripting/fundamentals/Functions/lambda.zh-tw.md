@@ -2,6 +2,9 @@
 title: "拉姆達函數"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Scheme 中的 **Lambda 函數** 是匿名函數，這表示它們是沒有名稱的函數。這些函數是內聯定義的，通常用於簡短的一次性操作。 `lambda` 建構是函數式程式設計中的強大工具，可讓您動態建立簡潔且靈活的邏輯。
 
@@ -37,7 +40,7 @@ Lambda 函數可以自己定義...
 #### 使用 Lambda 進行簡單計算
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; 傳回 8
 ```
 
 這裡：
@@ -86,7 +89,7 @@ Lambda 函數通常直接傳遞給高階函數，例如 `map` 或 `filter`。
 #### 將數字列表平方
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; 傳回 (1 4 9 16)
 ```
 
 - `lambda` 函數將清單中的每個元素平方。
@@ -103,7 +106,7 @@ Lambda 函數通常直接傳遞給高階函數，例如 `map` 或 `filter`。
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; 傳回 15
 ```
 
 - `make-adder` 產生一個新的 lambda 函數，該函數會新增特定數字 (`n`)。
@@ -117,7 +120,7 @@ Lambda 通常與 `let` 一起使用來建立本地範圍的暫存函數。
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; 傳回 7
 ```
 
 - `let` 將 lambda 函數綁定到名稱 `add`。
@@ -130,8 +133,10 @@ Lambda 與高階函數結合執行複雜的資料轉換時會表現優異。
 #### 過濾偶數
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` 檢查數字是否為偶數。
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; 傳回 (2 4 6)
+```
+
+- `lambda` 檢查數字是否為偶數。
 - `filter` 函數使用 lambda 只保留清單中的偶數。
 
 ### Lambda 函數的優點

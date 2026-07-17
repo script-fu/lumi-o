@@ -1,30 +1,31 @@
 ---
-title: "om"
+title: "if"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
 ---
-I sin enklaste form utvärderar `if` villkoret i Schema ett test och, baserat på resultatet, exekverar ett av två möjliga kodblock. Den enklaste formen ser ut så här:
+Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Om `test` evalueras till sant (`#t`), exekveras **kodblocket i efterföljande**. Blocket kan returnera ett värde eller utföra andra åtgärder, såsom att tilldela en variabel eller skriva ut.
+- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
 
-### Exempel
+### Exemple
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- I det här fallet är `test` `(< 0 1)` (kontrollerar om 0 är mindre än 1).
-- Eftersom testet utvärderas till sant (`#t`), exekveras kodblocket `(lumi-message "True!")`, vilket skriver ut `"True!"`.
+- Test : `(< 0 1)` est vrai.
+- `(lumi-message "True!")` s'exécute.
 
-### Lägga till ett annat villkor: `if-else`
-
-När du använder en `if` villkorlig med ett alternativt kodblock (`else`-fallet), ser strukturen ut så här:
+### Branche else : `if-else`
 
 ```scheme
 (if test
@@ -32,29 +33,20 @@ När du använder en `if` villkorlig med ett alternativt kodblock (`else`-fallet
   else-do-this)
 ```
 
-- Om `test` evalueras till sant (`#t`), exekveras kodblocket **följande**.
-- Om `test` evalueras till falskt (`#f`), exekveras det **alternativa** kodblocket.
-
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Hur det fungerar
+### Comment ça marche
 
-1. **Testuttryck**:
-   - `test`-uttrycket utvärderas först.
+1. **Tester** d'abord.
+2. Si `#t` **consequent**, si `#f` **alternative**.
 
-2. **Resultat baserat på test**:
-   - Om `test` evalueras till sant (`#t`), exekveras **följande kodblock**.
-   - Om `test` evalueras till falskt (`#f`), exekveras det **alternativa kodblocket**.
+Les deux blocs peuvent contenir toute expression Scheme valide.
 
-Både `consequent` och `alternative` kan utföra vilken giltig Scheme-operation som helst, inklusive att returnera värden, ändra variabler eller köra procedurer.
-
-### Exempel
-
-#### Exempel 1: Returnera ett värde
+#### Exemple 1 : renvoyer une valeur
 
 ```scheme
 (if (< 0 1)
@@ -62,14 +54,9 @@ Både `consequent` och `alternative` kan utföra vilken giltig Scheme-operation 
   0)
 ```
 
-- Här är `test` `(< 0 1)` (kontrollerar om 0 är mindre än 1).
-- Eftersom testet utvärderas till sant (`#t`), exekveras blocket **följande** (`1`) och dess värde returneras.
+Résultat : **1**
 
-Resultat: **1**
-
-#### Exempel 2: Utvärdera ett startblock
-
-I fall där du behöver utföra flera åtgärder när villkoret är sant eller falskt, kan du använda `begin` eller en `let` för att gruppera dem.
+#### Exemple 2 : bloc `begin`
 
 ```scheme
 (if (= 0 1)
@@ -81,16 +68,9 @@ I fall där du behöver utföra flera åtgärder när villkoret är sant eller f
     (* 3 4)))
 ```
 
-- I det här exemplet är `test` `(= 0 1)` (kontrollerar om 0 är lika med 1).
-- Eftersom testet utvärderas till falskt (`#f`), exekveras det **alternativa** blocket:
-  - Först skriver den ut `"False condition met, calculating..."`.
-  - Sedan beräknar den `(* 3 4)` och returnerar `12`.
+Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
 
-Resultat: **Skriver ut "Falskt villkor uppfyllt, beräknar..." och returnerar 12.**
-
-#### Exempel 3: Utvärdera ett utlåtande
-
-Genom att använda en `let` kan vi deklarera lokala scope-variabler inom kodblocket.
+#### Exemple 3 : expression `let`
 
 ```scheme
 (if (= 1 1)
@@ -102,14 +82,10 @@ Genom att använda en `let` kan vi deklarera lokala scope-variabler inom kodbloc
     (* 3 y)))
 ```
 
-- I det här exemplet är `test` `(= 1 1)` (kontrollerar om 1 är lika med 1).
-- Eftersom testet utvärderas till sant (`#t`), exekveras **följande**-blocket:
-  - Först skriver den ut `"True condition met, calculating..."`.
-  - Sedan beräknar den `(* -1 10)` och returnerar `-10`.
+Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
 
-Resultat: **Skriver ut "True condition uppfyllt, beräknar..." och returnerar -10.**
+### Résumé
 
-### Sammanfattning- `if` är ett kraftfullt verktyg i Scheme för att utvärdera tester och exekvera motsvarande kodblock.
-
-– Den kan hantera både enkla uttryck och komplexa kodblock som returnerar värden, modifierar variabler eller utför biverkningar.
-- Kom ihåg: Om det inte finns något explicit `else`-block, utvärderar och utför `if` endast **följande** om testet är sant. Annars utvärderar och exekverar den **alternativet**.
+- `if` évalue un test et exécute le bloc adapté.
+- Expressions simples ou groupes `begin`/`let`.
+- Sans `else` explicite, seul le **consequent** si vrai.

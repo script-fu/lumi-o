@@ -2,29 +2,29 @@
 title: "การวนซ้ำ"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-การวนซ้ำเป็นรากฐานสำคัญของการเขียนโปรแกรม ช่วยให้สคริปต์สามารถทำซ้ำและประมวลผลการรวบรวมข้อมูลได้อย่างมีประสิทธิภาพ ใน Scheme ซึ่งอิงตามภาษาการเขียนโปรแกรม Scheme การวนซ้ำจะมีเครื่องมือในการทำให้งานซ้ำๆ โดยอัตโนมัติ จัดการโครงสร้างข้อมูล และสร้างรูปแบบการดำเนินการที่ซับซ้อน
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### บทบาทของการวนซ้ำในโครงการ
+### Le rôle de l'itération en Scheme
 
-การวนซ้ำตอบสนองวัตถุประสงค์ที่สำคัญหลายประการในสคริปต์ของคุณ:
-- **การทำซ้ำอัตโนมัติ:** ช่วยให้คุณดำเนินการเดียวกันหรือชุดของการกระทำได้หลายครั้งโดยไม่ต้องทำซ้ำโค้ด
-- **การเพิ่มประสิทธิภาพ:** ด้วยการประมวลผลโครงสร้างข้อมูลซ้ำๆ สคริปต์จึงสามารถจัดการการดำเนินการขนาดใหญ่อย่างเป็นระบบได้
-- **การปรับปรุงโค้ด:** การวนซ้ำช่วยลดความซ้ำซ้อน ทำให้โค้ดมีความกระชับ อ่านง่าย และบำรุงรักษาได้มากขึ้น
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### ประเภทของการวนซ้ำที่มีอยู่
+### Types d'itération disponibles
 
-Scheme มีโครงสร้างหลายอย่างสำหรับการวนซ้ำ ซึ่งแต่ละโครงสร้างปรับให้เหมาะกับความต้องการเฉพาะ:
-- **map:** ใช้ฟังก์ชันกับแต่ละองค์ประกอบของรายการ โดยส่งคืนรายการใหม่พร้อมผลลัพธ์
-- **for-each:** คล้ายกับ `map` แต่ใช้สำหรับเรียกใช้ฟังก์ชันกับแต่ละองค์ประกอบโดยไม่ส่งคืนผลลัพธ์
-- **do:** โครงสร้างลูปสำหรับใช้งานทั่วไปที่จัดการกระบวนการวนซ้ำที่หลากหลาย
-- **การเรียกซ้ำ:** เทคนิคอันทรงพลังที่ฟังก์ชันต่างๆ เรียกตัวเองเพื่อแก้ไขปัญหาทีละน้อย
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### การวนซ้ำทำงานอย่างไร
+### Comment fonctionne l'itération
 
-การวนซ้ำมักเกี่ยวข้องกับ:
-1. **การกำหนดการทำซ้ำ:** การระบุการดำเนินการที่จะทำซ้ำและข้อมูลหรือช่วงที่จะประมวลผล
-2. **การดำเนินการตามลำดับ:** ทำซ้ำการกระทำสำหรับแต่ละองค์ประกอบ ขั้นตอน หรือเงื่อนไขจนกว่าจะเสร็จสิ้น
-3. **การส่งคืนผลลัพธ์ (ไม่บังคับ):** การวนซ้ำอาจให้ผลลัพธ์หรือสถานะแก้ไข ทั้งนี้ขึ้นอยู่กับโครงสร้าง
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-โครงสร้างเหล่านี้ช่วยให้คุณสามารถเขียนสคริปต์ที่ปรับเปลี่ยนได้ มีประสิทธิภาพ และสวยงาม ซึ่งสามารถจัดการงานที่ซับซ้อนได้อย่างง่ายดาย
+Ces constructions aident à écrire des scripts adaptables et efficaces.

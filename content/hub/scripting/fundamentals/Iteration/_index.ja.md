@@ -2,29 +2,29 @@
 title: "反復"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-反復はプログラミングの基礎であり、スクリプトがアクションを繰り返し、データの収集を効率的に処理できるようにします。 Scheme では、Scheme プログラミング言語に基づいて、繰り返しタスクを自動化し、データ構造を操作し、洗練された実行パターンを作成するためのツールを反復によって提供します。
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### スキームにおける反復の役割
+### Le rôle de l'itération en Scheme
 
-反復は、スクリプトにおけるいくつかの重要な目的を果たします。
-- **繰り返しの自動化:** コードを複製することなく、同じアクションまたは一連のアクションを複数回実行できます。
-- **効率の向上:** データ構造を反復的に処理することにより、スクリプトは大規模な操作を体系的に処理できます。
-- **コードの合理化:** 反復により冗長性が排除され、コードがより簡潔になり、読みやすく、保守しやすくなります。
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### 利用可能な反復の種類
+### Types d'itération disponibles
 
-Scheme は、特定のニーズに合わせて調整された反復用のいくつかの構造を提供します。
-- **map:** リストの各要素に関数を適用し、結果を含む新しいリストを返します。
-- **for-each:** `map` に似ていますが、結果を返さずに各要素に対して関数を実行するために使用されます。
-- **do:** さまざまな反復プロセスを処理する汎用ループ構造。
-- **再帰:** 関数が自分自身を呼び出して段階的に問題を解決する強力な手法。
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### 反復の仕組み
+### Comment fonctionne l'itération
 
-反復には通常、以下が含まれます。
-1. **繰り返しの定義:** 繰り返すアクションと処理するデータまたは範囲を指定します。
-2. **順番に実行:** 完了するまで各要素、ステップ、または条件のアクションを繰り返します。
-3. **結果を返す (オプション):** 構成によっては、反復により結果が得られるか、状態が変更される場合があります。
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-これらの構造を使用すると、複雑なタスクを簡単に処理できる、適応性があり、効率的で洗練されたスクリプトを作成できます。
+Ces constructions aident à écrire des scripts adaptables et efficaces.

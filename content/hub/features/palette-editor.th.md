@@ -1,6 +1,10 @@
 ---
-title: "เครื่องมือแก้ไขจานสี"
+title: "Palette Editor"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/palette-editor"
+translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
 ---
 Palette Editor คือจุดที่จานสี Lumi กลายเป็นสภาพแวดล้อมที่มีสีสมบูรณ์ โดยเป็นการนำเม็ดสีที่ใช้สร้างพาเล็ตต์ ส่วนผสมที่ศิลปินเลือกที่จะเก็บไว้ สีที่ใช้ระหว่างการวาดภาพ และโครงสร้างโทนสีที่กำหนดวิธีสำรวจพาเล็ต
 

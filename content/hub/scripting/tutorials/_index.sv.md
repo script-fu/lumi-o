@@ -1,6 +1,9 @@
 ---
 title: "Handledningar"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 Dessa handledningar visar hur du skriver Scheme-plugin-program för Lumi. Du börjar med en minimal "Hello World"-procedur och bygger sedan upp till plugin-program som fungerar med bilder, filer och återanvändbara hjälpbibliotek.
 

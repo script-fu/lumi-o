@@ -1,14 +1,19 @@
 ---
 type: docs
+url: "hub/about"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
 ---
-このセクションでは、ソフトウェア、ソフトウェアがサポートするワークフロー、およびソフトウェアが提供するために形成されている描画プロセスの概要を説明します。
+
+このセクションでは、ソフトウェアの概要、それがサポートするワークフロー、そして描画プロセス全体をどのように支えるかを簡潔に紹介します。
 
 {{< cards >}}
-	{{< card link="lumi-o" title="ルミオ" icon="information-circle" subtitle="Lumi とは何か、なぜ存在するのか、その開発を形作るアイデア。" >}}
-	{{< card link="workspace" title="ワークスペース" icon="view-boards" subtitle="構造化された非破壊的なペイント ワークフロー向けに設計された、焦点を絞ったインターフェイス。" >}}
-	{{< card link="construction" title="工事" icon="pencil" subtitle="形状、形式、および初期の図面決定のためのまばらなレイイン ワークスペース。" >}}
-	{{< card link="inking" title="ペン入れ" icon="pencil-alt" subtitle="意図的なイラストワークフローのための、制御されたラインワークときれいな仕上げ。" >}}
-	{{< card link="color" title="色" icon="color-swatch" subtitle="顔料ベースのパレットと、伝統的なメディア手法によって形成されたカラー処理。" >}}
-	{{< card link="download" title="ダウンロード" icon="download" subtitle="最新の AppImage ビルドを入手するか、ソース リポジトリにアクセスしてください。" >}}
-	{{< card link="Patreon" title="パトレオン" icon="heart" subtitle="進行中の開発と、Lumi の方向性を導くアートワークをサポートします。" >}}
+	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Lumi とは何か、なぜ存在するのか、開発を形作る考え方。" >}}
+	{{< card link="workspace" title="ワークスペース" icon="view-boards" subtitle="構造化された非破壊的なペイントワークフロー向けに設計された、焦点を絞ったインターフェイス。" >}}
+	{{< card link="construction" title="下描き" icon="pencil" subtitle="形状、フォルム、初期の描画判断のための、すっきりとしたレイインワークスペース。" >}}
+	{{< card link="inking" title="ペン入れ" icon="pencil-alt" subtitle="意図的なイラストワークフローのための、制御された線描とクリーンな仕上げ。" >}}
+	{{< card link="color" title="彩色" icon="color-swatch" subtitle="伝統的な画材の実践に基づく、顔料パレットと色の扱い。" >}}
+	{{< card link="download" title="ダウンロード" icon="download" subtitle="最新の AppImage ビルドを入手するか、ソースリポジトリをご覧ください。" >}}
+	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="継続的な開発と、Lumi の方向性を導くアートワークを支援する。" >}}
 {{< /cards >}}

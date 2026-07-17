@@ -2,11 +2,14 @@
 title: "Привет, мир!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 В этом руководстве рассматривается минимальная структура плагина Scheme. Некоторые строки являются «шаблонными»: они необходимы Lumi для загрузки файла, даже если вы еще не до конца их понимаете.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -19,7 +22,7 @@ weight: 1
 
 ### Определить функцию
 
-Функция, также известная как _процедура_, представляет собой фрагмент кода с именем и назначением. Она принимает входные данные и выдает выходные данные.
+Функция, также известная как _procedure_, представляет собой фрагмент кода с именем и назначением. Она принимает входные данные и выдает выходные данные.
 
 **Вход** > **_Функция_** > **Выход**
 
@@ -62,19 +65,19 @@ weight: 1
 Вот полный пример. Большинство процедур Lumi имеют префикс `lumi-`. Например, `lumi-message` печатает строку в настроенный обработчик сообщений.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Установить обработчик сообщений для вывода в диалоговое окно GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Установить обработчик сообщений для вывода в Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Отправить сообщение в terminal — окно ОС, из которого запущен Lumi
   (display "Hello world!\n"))
 
 

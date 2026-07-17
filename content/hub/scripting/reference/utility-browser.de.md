@@ -1,6 +1,9 @@
 ---
 title: "Utility-Browser"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 Mit dem Utility-Browser können Sie das integrierte Scheme-Dienstprogramm stdlib erkunden, das im Lieferumfang von Lumi enthalten ist, ohne die App verlassen oder Quelldateien durchsuchen zu müssen.
 
@@ -14,7 +17,7 @@ Das Fenster öffnet sich sofort; Es muss kein Plug-In vorab geladen werden.
 
 Der Browser listet alle Prozeduren, Variablen und Syntaxformen auf, die von den sieben Dienstprogrammbibliotheken exportiert werden, die Lumi beim Start automatisch lädt:
 
-| Bibliothek | Was es abdeckt |
+| Bibliothek | Inhalt |
 |---|---|
 | `common.scm` | Allzweck-Helfer (Dienstprogramme für Zeichenfolgen, Zahlen, Listen) |
 | `files.scm` | Datei- und Pfad-Helfer |

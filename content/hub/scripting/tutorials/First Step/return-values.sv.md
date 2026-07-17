@@ -2,6 +2,9 @@
 title: "Returvärden"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Returvärden är viktiga eftersom de låter dig styra flödet utan extra tillstånd. I Schema blir det senast utvärderade uttrycket returvärdet.
 
@@ -14,9 +17,9 @@ I Schema bestäms returvärdet för en funktion av det sista uttrycket som funkt
 Låt oss återvända till valideringsfunktionen, (är-giltig-sträng?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Syfte: Validerar att meddelandet är en icke-tom sträng
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Kontrollera om meddelandet är en icke-tom sträng
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ I den här funktionen, om meddelandet är ogiltigt, skapas ett fel. Men om medde
 Vi kan förbättra detta genom att göra returvärdet mer explicit. Till exempel kan vi returnera `#t` (true) om meddelandet är giltigt:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Syfte: Validerar att meddelandet skickas till en giltig utdata
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Kontrollera om utdata är en av de förväntade visningsdestinationerna
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Genom att bestämma vad våra funktioner returnerar kan vi göra dem mer föruts
 Här är ett enkelt exempel på hur man använder ett returvärde för att styra flödet av logik:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Syfte: Skickar ett meddelande till rätt utdatamål
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
 ### Refaktorerad med returvärden
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Syfte: Skickar ett meddelande till statusfältet, returnerar #t vid lyckat resultat
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Syfte: Skickar ett meddelande till dialogrutan, returnerar #t vid lyckat resultat
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Syfte: Skickar ett meddelande till Error Console, returnerar #t vid lyckat resultat
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Syfte: Skickar ett meddelande till terminal, returnerar #t vid lyckat resultat
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Syfte: Skickar ett meddelande till rätt utdata, returnerar #t vid lyckat resultat
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Syfte: Validerar att meddelandet är en icke-tom sträng, returnerar #t om giltigt
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Okej, här är bibliotekskoden med returvärden inbäddade och används för att
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Syfte: Validerar att utdata är en giltig destination, returnerar #t om giltig
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

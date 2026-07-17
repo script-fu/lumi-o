@@ -1,17 +1,22 @@
 ---
-title: "Hoe Linux te installeren"
+title: "Linux installeren"
 type: docs
+url: "hub/install-linux"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7a9dfa8926aaef596fc4b39ff97572e36ec6ddba3156fa5e655ac4f126fc3236
 ---
+
 Welkom bij de Linux-installatiehandleidingen voor Lumi.
 
-Deze handleidingen documenteren de instellingen van het besturingssysteem die worden gebruikt voor het ontwikkelen en testen van Lumi. Ze zijn bedoeld voor artiesten en ontwikkelaars die een stabiele, reproduceerbare Linux-omgeving willen in plaats van een aangepaste of experimentele configuratie.
+Deze handleidingen beschrijven de systeemsetup die wordt gebruikt voor de ontwikkeling en het testen van Lumi. Ze zijn bedoeld voor artiesten en ontwikkelaars die een stabiele, reproduceerbare Linux-omgeving willen, in plaats van een aangepaste of experimentele configuratie.
 
-De nadruk ligt op op Debian gebaseerde systemen die zijn gekozen vanwege betrouwbaarheid en consistentie op lange termijn. Elke gids volgt een praktische, stapsgewijze aanpak die erop gericht is gebruikers te helpen met minimale onzekerheid over te stappen van een bestaand systeem naar een bekende werkopstelling.
+De nadruk ligt op Debian-gebaseerde systemen, gekozen vanwege betrouwbaarheid en consistentie op lange termijn. Elke gids volgt een praktische, stapsgewijze aanpak om u met minimale onzekerheid van een bestaand systeem naar een bekende werkopstelling te helpen.
 
-Onderwerpen zijn onder meer de installatie van Debian, systeemconfiguratie en back-ups.
+Onderwerpen zijn onder meer Debian-installatie, systeemconfiguratie en back-ups.
 
 {{< cards >}}
-  {{< card link="A-Linux-System-Overview" title="Een Linux-systeemoverzicht">}}
+  {{< card link="A-Linux-System-Overview" title="Overzicht van een Linux-systeem">}}
   {{< card link="Installing-Debian" title="Debian installeren">}}
   {{< card link="System-Backup-Clonezilla" title="Systeemback-up met Clonezilla">}}
 {{< /cards >}}

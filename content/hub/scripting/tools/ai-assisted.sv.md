@@ -1,25 +1,28 @@
 ---
 title: "AI-assisterad utveckling"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
 ---
 Moderna AI-verktyg kan avsevärt påskynda utvecklingen av Lumi plug-in genom att fungera som en kodningspartner.
 
-## VS-kod i agentläge
+## VS Code i Agent-läge
 
 Genom att använda Visual Studio Code med en AI-assistent i **Agentläge** (som GitHub Copilots Agentläge eller andra verktygsaktiverade assistenter) kan du utföra komplexa, flerstegsuppgifter med naturligt språk.
 
 Istället för att bara fylla i en enda kodrad kan en agent:
-- Läs hela din arbetsyta för att förstå sammanhanget.
-- Skapa nya filer och kataloger.
-- Kör terminalkommandon för att testa eller validera skript.
-- Sök efter befintliga mönster i din kodbas.
+- läsa hela arbetsytan för att förstå sammanhanget
+- skapa nya filer och kataloger
+- köra terminalkommandon för att testa eller validera skript
+- söka efter befintliga mönster i kodbasen
 
-## Repository Access
+## Åtkomst till repository
 
 AI-assistans är mest effektiv när agenten har tillgång till **lumi-dev** eller ditt specifika projektarkiv. Med insyn i den befintliga kodbasen kan agenten:
-- Använd **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** som referens för hjälpfunktioner.
-- Följ befintliga mönster för GEGL-drift och lagerhantering.
-- Återanvänd boilerplate-kod från etablerade plug-ins.
+- använda **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** som referens för hjälpfunktioner
+- följa befintliga mönster för GEGL-operationer och lagerhantering
+- återanvända boilerplate från etablerade plug-ins
 
 ## Exempel på arbetsflöde
 

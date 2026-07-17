@@ -1,8 +1,11 @@
 ---
-title: "Lumi-o制造"
+title: "Made in Lumi-o"
 type: docs
 layout: made-in-lumio
+url: "hub/made-in-lumio"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e16db685765b758a8f81796376db712aee9dad32c24d9f65e5c7fa88336eb7a7
 ---
-Lumi 是通过日常使用开发的，因此此处展示的绘画、研究和制作作品并非营销模型。它们是软件正在支持的图像类型的示例。该部分仍然稀疏且不断发展，但随着时间的推移，随着应用程序进入更稳定的形式，它将与 Lumi 本身一起成长。
 
-出于学习、研究和软件开发目的而创建的非官方粉丝娱乐活动。原创艺术作品© Bill Watterson。没有提出所有权主张。不得用于销售或商业用途。
+本画廊收录原创作品与非官方同人作品。工具提示标明了哪些图像是原创作品、哪些是习作。同人作品不出售，也不供商业使用。

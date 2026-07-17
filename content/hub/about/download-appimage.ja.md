@@ -1,8 +1,12 @@
 ---
-title: "AppImageをダウンロード"
-description: "Get the latest development AppImage artifacts for Linux."
+title: "AppImage をダウンロード"
+description: "Linux 向けの最新 development AppImage を入手します。"
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: aae39911e75e51cd1db344aee7e59192f1288c988a19a6d25ddd1e8ec552c45e
 ---
-Linux 用の最新の開発 AppImage アーティファクトを入手します。
+
+Linux 向けの最新 development AppImage を入手します。

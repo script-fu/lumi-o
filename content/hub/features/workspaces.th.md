@@ -1,6 +1,10 @@
 ---
 title: "พื้นที่ทำงาน"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/workspaces"
+translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
 พื้นที่ทำงานช่วยให้ Lumi ปรับตัวเข้ากับวิธีการทำงานแบบต่างๆ พื้นที่ทำงานจับความรู้สึกของสภาพแวดล้อมในสตูดิโอ: เค้าโครงแผง สถานะของเครื่องมือ การนำเสนอแคนวาส เส้นทางทรัพยากร ตัวเลือกจานสี ธีม และการตั้งค่าอินเทอร์เฟซอื่น ๆ ที่เป็นตัวกำหนดเซสชันการวาดภาพ
 

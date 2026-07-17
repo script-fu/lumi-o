@@ -1,30 +1,31 @@
 ---
-title: "se"
+title: "if"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
 ---
-Em sua forma mais simples, a condicional `if` em Scheme avalia um teste e, com base no resultado, executa um dos dois blocos de código possíveis. A forma mais simples é assim:
+Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Se `test` for avaliado como verdadeiro (`#t`), o **bloco de código no consequente** será executado. O bloco pode retornar um valor ou realizar outras ações, como atribuir uma variável ou imprimir a saída.
+- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
 
-### Exemplo
+### Exemple
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- Neste caso, o `test` é `(< 0 1)` (verificando se 0 é menor que 1).
-- Como o teste é avaliado como verdadeiro (`#t`), o bloco de código `(lumi-message "True!")` é executado, que imprime `"True!"`.
+- Test : `(< 0 1)` est vrai.
+- `(lumi-message "True!")` s'exécute.
 
-### Adicionando uma condição Else: `if-else`
-
-Ao usar uma condicional `if` com um bloco de código alternativo (o caso `else`), a estrutura fica assim:
+### Branche else : `if-else`
 
 ```scheme
 (if test
@@ -32,29 +33,20 @@ Ao usar uma condicional `if` com um bloco de código alternativo (o caso `else`)
   else-do-this)
 ```
 
-- Se `test` for avaliado como verdadeiro (`#t`), o bloco de código **consequente** será executado.
-- Se `test` for avaliado como falso (`#f`), o bloco de código **alternativo** será executado.
-
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Como funciona
+### Comment ça marche
 
-1. **Expressão de teste**:
-   - A expressão `test` é avaliada primeiro.
+1. **Tester** d'abord.
+2. Si `#t` **consequent**, si `#f` **alternative**.
 
-2. **Resultado Baseado no Teste**:
-   - Se `test` for avaliado como verdadeiro (`#t`), o **bloco de código subsequente** será executado.
-   - Se `test` for avaliado como falso (`#f`), o **bloco de código alternativo** será executado.
+Les deux blocs peuvent contenir toute expression Scheme valide.
 
-Ambos os blocos de código `consequent` e `alternative` podem executar qualquer operação de esquema válida, incluindo retornar valores, modificar variáveis ​​ou executar procedimentos.
-
-### Exemplos
-
-#### Exemplo 1: Retornando um valor
+#### Exemple 1 : renvoyer une valeur
 
 ```scheme
 (if (< 0 1)
@@ -62,14 +54,9 @@ Ambos os blocos de código `consequent` e `alternative` podem executar qualquer 
   0)
 ```
 
-- Aqui, o `test` é `(< 0 1)` (verificando se 0 é menor que 1).
-- Como o teste é avaliado como verdadeiro (`#t`), o bloco **consequente** (`1`) é executado e seu valor é retornado.
+Résultat : **1**
 
-Resultado: **1**
-
-#### Exemplo 2: Avaliando um bloco inicial
-
-Nos casos em que você precisa realizar várias ações quando a condição é verdadeira ou falsa, você pode usar `begin` ou `let` para agrupá-las.
+#### Exemple 2 : bloc `begin`
 
 ```scheme
 (if (= 0 1)
@@ -81,16 +68,9 @@ Nos casos em que você precisa realizar várias ações quando a condição é v
     (* 3 4)))
 ```
 
-- Neste exemplo, o `test` é `(= 0 1)` (verificando se 0 é igual a 1).
-- Como o teste é avaliado como falso (`#f`), o bloco **alternativo** é executado:
-  - Primeiro, imprime `"False condition met, calculating..."`.
-  - Depois calcula `(* 3 4)` e retorna `12`.
+Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
 
-Resultado: **Imprime "Condição falsa atendida, calculando..." e retorna 12.**
-
-#### Exemplo 3: Avaliando uma instrução let
-
-Usar um `let` nos permite declarar variáveis de escopo local dentro do bloco de código.
+#### Exemple 3 : expression `let`
 
 ```scheme
 (if (= 1 1)
@@ -102,14 +82,10 @@ Usar um `let` nos permite declarar variáveis de escopo local dentro do bloco de
     (* 3 y)))
 ```
 
-- Neste exemplo, o `test` é `(= 1 1)` (verificando se 1 é igual a 1).
-- Como o teste é avaliado como verdadeiro (`#t`), o bloco **consequente** é executado:
-  - Primeiro, imprime `"True condition met, calculating..."`.
-  - Depois calcula `(* -1 10)` e retorna `-10`.
+Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
 
-Resultado: **Imprime "Condição verdadeira atendida, calculando..." e retorna -10.**
+### Résumé
 
-### Resumo- A condicional `if` é uma ferramenta poderosa no Scheme para avaliar testes e executar blocos de código correspondentes.
-
-- Ele pode lidar com expressões simples e blocos de código complexos que retornam valores, modificam variáveis ​​ou executam efeitos colaterais.
-- Lembre-se: Se não houver nenhum bloco `else` explícito, o `if` apenas avalia e executa o **consequente** se o teste for verdadeiro. Caso contrário, ele avalia e executa a **alternativa**.
+- `if` évalue un test et exécute le bloc adapté.
+- Expressions simples ou groupes `begin`/`let`.
+- Sans `else` explicite, seul le **consequent** si vrai.

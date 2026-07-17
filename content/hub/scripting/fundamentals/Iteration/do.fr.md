@@ -1,11 +1,14 @@
 ---
-title: "faire"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-La fonction `do` dans Scheme est un mécanisme de boucle qui permet une itération avec des conditions d'initialisation, de mise à jour et de terminaison. Ceci est particulièrement utile lorsque vous devez effectuer une séquence d’opérations un nombre spécifique de fois ou jusqu’à ce qu’une condition soit remplie.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-La forme générale de `do` est :
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ La forme générale de `do` est :
   body)
 ```
 
-- **Variable** : La ou les variables de la boucle.
-- **Valeur initiale** : La valeur de départ de chaque variable de boucle.
-- **Update-expression** : L'expression pour mettre à jour la ou les variables de boucle à la fin de chaque itération.
-- **Termination-condition** : La condition pour arrêter la boucle.
-- **Result-expression** : La valeur à renvoyer lorsque la boucle se termine.
-- **Body** : Le code à exécuter à chaque itération.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### Exemple : Additionnez les nombres de 1 à 5
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; Initialiser i à 1, incrémenter de 1
+     (sum 0 (+ sum i))) ; Initialiser la somme à 0, ajouter i à la somme
+    ((> i 5) sum)       ; Terminer quand i > 5, renvoyer sum
+  (lumi-message (number->string sum))) ; Affiche la somme à chaque étape
 ```
 
-- La variable de boucle `i` commence à 1 et s'incrémente de 1 à chaque itération.
-- La variable `sum` cumule la somme de `i`.
-- La boucle se termine lorsque `i > 5`, renvoyant la valeur finale de `sum`.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**Sortie** : `15`
+**Sortie** : `15`
 
 ---
 
 ### Comment ça marche
 
-1. **Initialisation** :
-   - Chaque variable de boucle se voit attribuer sa valeur initiale.
-
-2. **Contrôle de résiliation** :
-   - Au début de chaque itération, la condition de terminaison est vérifiée. Si c'est vrai, la boucle s'arrête et l'expression du résultat est évaluée.
-
-3. **Itération** :
-   - Si la condition de terminaison est fausse, le corps est exécuté et les variables de boucle sont mises à jour à l'aide de leurs expressions de mise à jour respectives.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
 ---
 
 ### Résumé
 
-- La construction `do` fournit un moyen flexible d'implémenter des boucles avec plusieurs variables et des conditions de terminaison complexes.
-- Il est utile pour les tâches qui nécessitent des mises à jour d'état au fil des itérations.
-- La condition de terminaison détermine quand la boucle se termine et peut renvoyer un résultat final.
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
 
-En utilisant `do`, vous pouvez implémenter des algorithmes itératifs dans Scheme avec un contrôle précis sur l'initialisation, les mises à jour et la terminaison. Cela fait de `do` une combinaison d'un **mécanisme de liaison étendu** (comme `let`) et d'une **structure de contrôle itérative**, lui permettant de gérer les boucles et les états temporaires de manière propre et concise.
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

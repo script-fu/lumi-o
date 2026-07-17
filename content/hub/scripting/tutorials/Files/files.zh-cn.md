@@ -2,6 +2,9 @@
 title: "文件"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 使用文件和目录对于Scheme 开发至关重要。无论您是保存输出、加载资源还是组织项目结构，了解文件操作都将使您的脚本更加健壮和用户友好。
 
@@ -58,7 +61,7 @@ Lumi 仅适用于 Linux，因此用户的主目录来自 `HOME` 环境变量。
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme 提供```dir-make``` 命令来创建目录。该命令采用“/”分隔
 通常我们需要为实际路径创建多个目录。我们可以使用 ```dir-make``` 的包装器来帮助我们。
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; 用途：用于 (dir-make) 的包装器，从平台创建给定路径
+;;          提供的路径。始终为 dir-make 输出 Linux 风格的分隔符。
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; 根目录
+    ;; 逐步创建其余目录
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; 构建路径
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

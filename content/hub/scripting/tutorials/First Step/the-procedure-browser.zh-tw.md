@@ -2,12 +2,15 @@
 title: "程式瀏覽器"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Lumi 過程瀏覽器** 可讓您搜尋可用的流程（內建和提供的插件）並檢查它們的參數和傳回值。
 
 ### 在哪裡可以找到 Lumi 程式瀏覽器
 
-您可以透過 **幫助** 選單存取 Lumi 中的程式瀏覽器：
+您可以透過 **幫助** 選單存取 Lumi 中的過程瀏覽器：
 
 - **幫助** -> **程式瀏覽器**
 
@@ -31,12 +34,12 @@ weight: 1
 安裝“Hello World!”後插件，您可以在過程瀏覽器中找到它。只需搜尋您在 Lumi 中註冊的函數名稱，在本例中為「scheme-hello-world」。該條目將顯示與插件關聯的參數和任何返回值，以及簡要說明。您還將看到您在註冊過程中作為輸入參數輸入的一些文字行顯示在“**附加資訊**”部分下。
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; 程序名稱
+  "Hello world!"                                        ;; 選單項目名稱
+  "A Scheme procedure plug-in"                       ;; 工具提示與描述
+  "Your Name"                                           ;; 作者
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; 授權
+  "2024")                                               ;; 版權日期
 ```
 
 這樣可以輕鬆驗證您的插件是否已正確註冊，並為您提供了一種快速方法來查看它如何與 Lumi 中的其他程式互動。過程瀏覽器是一個強大的工具，用於透過探索 Lumi 中的所有可用流程來調試和擴展您的插件。

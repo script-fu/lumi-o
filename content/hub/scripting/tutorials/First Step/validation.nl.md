@@ -2,10 +2,13 @@
 title: "Geldigmaking"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 Bij het bouwen van robuuste plug-ins is het belangrijk ervoor te zorgen dat onze functies fouten netjes afhandelen en werken zoals verwacht, zelfs in geval van misbruik of onverwachte invoer. Validatie helpt de integriteit van de functie te beschermen en crashes of onbedoeld gedrag te voorkomen.
 
-Laten we eens kijken hoe we de functie `send-message` kunnen verbeteren door validatiecontroles toe te voegen om ervoor te zorgen dat de invoer correct wordt afgehandeld.
+Laten we eens kijken hoe we de functie `send-message` kunnen verbeteren door validatiecontroles toe te voegen om ervoor te zorgen dat de invoer correct wordt verwerkt.
 
 ### Valideer invoer
 
@@ -15,25 +18,25 @@ Voorbeeld:
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; Valideert het uitvoerargument
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Verzenden naar de Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; Verzenden naar het GUI-dialoogvenster
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; Verzenden naar het terminalvenster
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Herstel de standaard berichtenhandler naar de Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ Voorbeeld van het afhandelen van een leeg bericht:
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; Controleren of het bericht leeg is
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,30 +71,30 @@ Deze aanpak zorgt ervoor dat de functie altijd geldige invoer ontvangt, waardoor
 ### Gecombineerd validatievoorbeeld
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Functie voor berichtuitvoer naar verschillende bestemmingen
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; Valideer de bericht- en uitvoerargumenten
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Verzenden naar de Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; Verzenden naar het GUI-dialoogvenster
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; Verzenden naar het terminalvenster
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Herstel de standaard berichtenhandler naar de Message console
   (lumi-message-set-handler 2))
 ```
 

@@ -1,7 +1,10 @@
 ---
 title: "Listor"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 I Schema är en **lista** en grundläggande datastruktur som används för att gruppera värden. Listor är ordnade samlingar av element där varje element kan vara av vilken typ som helst, inklusive en annan lista. Listor används ofta i Scheme för både datalagring och programstruktur.
 
@@ -28,8 +31,8 @@ Element i en lista nås med hjälp av procedurerna `car` och `cdr`:
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; Hämtar det första elementet
+(cdr my-list)  ; Hämtar resten av listan
 ```
 
 Resultat:
@@ -52,8 +55,8 @@ Här är en enkel rekursiv funktion för att skriva ut varje element i en lista:
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; Skriver ut det första elementet
+      (print-elements (cdr lst)))))             ;; Bearbetar resten av listan
 ```
 
 - **Grundfall:** Om listan är tom (`null? lst`), stoppa rekursion.
@@ -135,8 +138,8 @@ Resultat: **`(0 1 2 3)`**
 #### Exempel: lista?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; Kontrollerar om (list 1 2 3) är en lista
+(list? 42)            ; Kontrollerar om 42 är en lista
 ```
 
 Resultat:
@@ -155,16 +158,18 @@ Schema tillhandahåller flera inbyggda procedurer för att arbeta med listor, in
 - `reverse`: Returnerar en ny lista med element i omvänd ordning.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; Returnerar 3
+(append (list 1 2) (list 3 4)) ; Returnerar (1 2 3 4)
+(reverse (list 1 2 3))         ; Returnerar (3 2 1)
 ```
 
 Resultat:
 
 - `(length (list 1 2 3))` returnerar `3`
 - `(append (list 1 2) (list 3 4))` returnerar `(1 2 3 4)`
-- `(reverse (list 1 2 3))` returnerar `(3 2 1)`#### Använda `list-ref`
+- `(reverse (list 1 2 3))` returnerar `(3 2 1)`
+
+#### Använda `list-ref`
 
 `list-ref`-proceduren hämtar elementet vid ett specificerat index i en lista (nollbaserat index).
 
@@ -178,7 +183,7 @@ Resultat:
 ##### Exempel: list-ref
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; Hämtar elementet vid index 2
 ```
 
 Resultat: `30`
@@ -208,10 +213,10 @@ För att komma åt element i en kapslad lista kan du använda kombinationer av `
 #### Exempel: Åtkomst till element
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; Hämtar det första elementet: (1 2)
+(car (car nested-list))        ; Hämtar det första elementet i den första underlistan: 1
+(cdr (car nested-list))        ; Hämtar resten av den första underlistan: (2)
+(car (cdr (car nested-list)))  ; Hämtar det andra elementet i den första underlistan: 2
 ```
 
 ---
@@ -235,8 +240,8 @@ För att komma åt element i en kapslad lista kan du använda kombinationer av `
 #### Exempel: Åtkomst till element från andra underlistor
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; Hämtar den andra underlistan: (3 4)
+(car (car (cdr nested-list)))  ; Hämtar det första elementet i den andra underlistan: 3
 ```
 
 ---

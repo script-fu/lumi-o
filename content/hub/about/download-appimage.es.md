@@ -1,8 +1,11 @@
 ---
 title: "Descargar AppImage"
-description: "Get the latest development AppImage artifacts for Linux."
+description: "Obtenga los últimos artefactos AppImage de desarrollo para Linux."
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: aae39911e75e51cd1db344aee7e59192f1288c988a19a6d25ddd1e8ec552c45e
 ---
-Obtenga los últimos artefactos de desarrollo de AppImage para Linux.
+Obtenga los últimos artefactos AppImage de desarrollo para Linux.

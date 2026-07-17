@@ -1,6 +1,9 @@
 ---
 title: "Navegador de procedimientos"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
 ---
 El Explorador de Procedimientos es la principal herramienta de referencia para descubrir los cientos de funciones disponibles en la Base de Datos de Procedimientos (PDB) de Lumi. Debido a que cada herramienta, filtro y script en Lumi debe estar registrado en PDB para poder ser invocado, este navegador es efectivamente un explorador de PDB completo.
 

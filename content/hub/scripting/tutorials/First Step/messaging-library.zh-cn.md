@@ -2,6 +2,9 @@
 title: "消息传递库"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
 随着时间的推移，最初作为发送消息的单个函数已经发展成为相关函数的集合。这些函数现在构成了**消息传递库**的基础，旨在处理到不同目的地的输出，例如 GUI、消息控制台和操作系统终端。
 
@@ -11,9 +14,7 @@ weight: 6
 
 ### 消息传递库有什么作用？
 
-消息传递库目前包括以下功能：
-
-- **send-to-gui**：将消息发送到 Lumi GUI 对话框。
+消息传递库目前包括以下功能：- **send-to-gui**：将消息发送到 Lumi GUI 对话框。
 - **发送到错误控制台**：将消息发送到 Lumi 消息控制台。
 - **发送到终端**：将消息发送到终端窗口。
 - **发送消息**：将消息定向到适当输出的调度程序功能。
@@ -25,9 +26,7 @@ weight: 6
 
 - **发送到文件**：将消息保存到日志文件。
 - **发送到记录器**：与外部日志记录系统集成。
-- **发送到通知**：将消息显示为系统通知。
-
-通过遵循相同的模块化设计和可重用功能模式，该库可以发展成为处理各种消息传递任务的综合工具。
+- **发送到通知**：将消息显示为系统通知。通过遵循相同的模块化设计和可重用功能的模式，该库可以发展成为处理各种消息传递任务的综合工具。
 
 ## 消息传递库的好处
 
@@ -37,9 +36,7 @@ weight: 6
 
 **消息传递库**是更广泛框架的开始，可以简化项目中消息的管理方式。随着库的增长，新的插件可以轻松地利用它来将消息发送到任何需要的地方。
 
-我们可以调整文件结构：
-
-```plaintext
+我们可以调整文件结构：```plaintext
 /home/your-username/code/
   ├── script-fu/
       ├── library/
@@ -52,7 +49,7 @@ weight: 6
 并且记得调整主插件中的`load`：
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

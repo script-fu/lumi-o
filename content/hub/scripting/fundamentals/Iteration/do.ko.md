@@ -1,11 +1,14 @@
 ---
-title: "하다"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-Scheme의 `do` 함수는 초기화, 업데이트 및 종료 조건을 반복할 수 있는 루프 메커니즘입니다. 이는 특정 횟수만큼 또는 조건이 충족될 때까지 일련의 작업을 수행해야 할 때 특히 유용합니다.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-`do`의 일반적인 형식은 다음과 같습니다.
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Scheme의 `do` 함수는 초기화, 업데이트 및 종료 조건을 반복할 
   body)
 ```
 
-- **변수**: 루프 변수입니다.
-- **초기값**: 각 루프 변수의 시작 값입니다.
-- **업데이트 표현식**: 각 반복이 끝날 때 루프 변수를 업데이트하는 표현식입니다.
-- **종료 조건**: 루프를 중지하는 조건입니다.
-- **결과 표현식**: 루프가 종료될 때 반환할 값입니다.
-- **본문**: 각 반복에서 실행할 코드입니다.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### 예: 1부터 5까지의 숫자 합계
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; i를 1로 초기화하고 1씩 증가
+     (sum 0 (+ sum i))) ; sum을 0으로 초기화하고 i를 sum에 더함
+    ((> i 5) sum)       ; i > 5일 때 종료하고 sum 반환
+  (lumi-message (number->string sum))) ; 각 단계에서 합계 출력
 ```
 
-- 루프 변수 `i`은 1에서 시작하여 반복할 때마다 1씩 증가합니다.
-- `sum` 변수는 `i`의 합계를 누적합니다.
-- `i > 5`일 때 루프가 종료되어 `sum`의 최종 값이 반환됩니다.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**출력**: `15`
-
----
-
-### 작동 방식
-
-1. **초기화**:
-   - 각 루프 변수에는 초기값이 할당됩니다.
-
-2. **해지 확인**:
-   - 각 반복이 시작될 때 종료 조건을 확인합니다. true인 경우 루프가 중지되고 결과 표현식이 평가됩니다.
-
-3. **반복**:
-   - 종료 조건이 false이면 본문이 실행되고 루프 변수는 해당 업데이트 표현식을 사용하여 업데이트됩니다.
+**Sortie** : `15`
 
 ---
 
-### 요약
+### Comment ça marche
 
-- `do` 구성은 여러 변수와 복잡한 종료 조건이 있는 루프를 구현하는 유연한 방법을 제공합니다.
-- 반복 전반에 걸쳐 상태 업데이트가 필요한 작업에 유용합니다.
-- 종료 조건은 루프가 끝나는 시기를 결정하고 최종 결과를 반환할 수 있습니다.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-`do`을 사용하면 초기화, 업데이트 및 종료를 정밀하게 제어하여 Scheme에서 반복 알고리즘을 구현할 수 있습니다. 이로 인해 `do`은 **범위 바인딩 메커니즘**(예: `let`)과 **반복 제어 구조**의 조합이 되어 루프 및 임시 상태를 깨끗하고 간결하게 처리할 수 있습니다.
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

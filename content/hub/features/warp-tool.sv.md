@@ -1,6 +1,10 @@
 ---
-title: "Varpverktyg"
+title: "Warp Tool"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/warp-tool"
+translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed71825993da9e
 ---
 Warp Tool låter konstnärer trycka, dra, böja, mjuka upp och omforma målat innehåll direkt på duken. Den är designad för uttrycksfull justering: korrigera proportioner, lägga till flöde, knuffa silhuetter eller ge en färdig form mer rörelse utan att måla om den från grunden.
 
@@ -16,7 +20,7 @@ Detta gör verktyget användbart för subtila korrigeringar såväl som dramatis
 
 Skiktade illustrationer separerar ofta linjeteckning, färg, skuggning, textur, masker och effekter. Att omforma en del av den strukturen genom att platta till den skulle förstöra själva organisationen som gör bilden redigerbar.
 
-Lumis Warp Tool är designat för att behandla en lagergrupp som ett enda synligt motiv samtidigt som de bevarar bitarna inuti den. Konstnären kan forma det kombinerade utseendet och behålla de interna lagren intakta efter att ändringen applicerats.
+Warp Tool i Lumi är designat för att behandla en lagergrupp som ett enda synligt motiv samtidigt som de bevarar bitarna inuti den. Konstnären kan forma det kombinerade utseendet och behålla de interna lagren intakta efter att ändringen applicerats.
 
 ## Masker och struktur
 

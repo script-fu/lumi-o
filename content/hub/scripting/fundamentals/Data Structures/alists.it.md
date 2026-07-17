@@ -1,7 +1,10 @@
 ---
-title: "Elenchi di associazioni (Alisti)"
-type: docs
+title: "Liste di associazione (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 Una **lista di associazioni** (o **alist**) è una struttura dati fondamentale in Scheme utilizzata per rappresentare raccolte di coppie chiave-valore. È implementato come un elenco di coppie, in cui ciascuna coppia associa una chiave (tipicamente un simbolo) a un valore. Gli elenchi sono semplici, flessibili e adatti a set di dati di piccole e medie dimensioni.
 
@@ -30,10 +33,10 @@ Una alist è una lista in cui ogni elemento è una **coppia** (costruita con `co
 La virgoletta singola (`'`) è una scorciatoia per **quoting**, che impedisce a Scheme di valutare l'espressione. Ciò lo rende ideale per creare elenchi statici in cui tutte le chiavi e i valori sono codificati.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Elenco dinamico utilizzando `` ` `` and `,`:
 Per recuperare un valore da un elenco, è possibile utilizzare la funzione `assoc`, che cerca una coppia in base alla sua chiave.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Restituisce (name . "Alice")
+(assoc 'country alist) ; Restituisce #f (chiave non trovata)
 ```
 
 ### Estrazione del valore
@@ -84,7 +87,7 @@ Per recuperare un valore da un elenco, è possibile utilizzare la funzione `asso
 Una volta recuperata una coppia utilizzando `assoc`, utilizzare `cdr` per estrarre il valore:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Restituisce "Alice"
 ```
 
 ### Riepilogo delle caratteristiche principali

@@ -2,10 +2,13 @@
 title: "Récursion simple"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
 ---
-La récursion est un concept puissant dans Scheme, où une fonction s'appelle pour résoudre des sous-problèmes plus petits du problème d'origine. Un modèle **simple de récursion** implique un cas de base pour arrêter la récursion et un cas récursif pour réduire le problème.
+En Scheme, la récursion signifie qu'une fonction s'appelle elle-même pour résoudre des sous-problèmes. Une **récursion simple** a un cas de base pour s'arrêter et un cas récursif qui réduit le problème.
 
-La structure générale d'une fonction récursive ressemble à ceci :
+Structure générale :
 
 ```scheme
 (define (function-name args)
@@ -14,102 +17,65 @@ La structure générale d'une fonction récursive ressemble à ceci :
     (recursive-call)))
 ```
 
-- **Condition de base** : arrête la récursivité.
-- **Résultat de base** : valeur renvoyée lorsque la condition de base est remplie.
-- **Appel récursif** : un appel à la fonction elle-même avec des arguments modifiés qui rapprochent le calcul du cas de base.
+- **Base Condition :** arrête la récursion.
+- **Base Result :** valeur au cas de base.
+- **Recursive Call :** appel avec arguments réduits.
 
 ---
 
-### Exemple : Somme de nombres (1 à n)
-
-Une fonction récursive simple pour calculer la somme des nombres de 1 à n :
+### Exemple : somme de 1 à n
 
 ```scheme
 (define (sum-to-n n)
-  (if (= n 0)                  ; Base case: stop when n is 0
-    0                          ; Base result: sum is 0
-    (+ n (sum-to-n (- n 1))))) ; Recursive call: sum current n with result of smaller problem
+  (if (= n 0)                  ; Cas de base : arrêter lorsque n vaut 0
+    0                          ; Résultat de base : la somme est 0
+    (+ n (sum-to-n (- n 1))))) ; Appel récursif : additionner le n actuel au résultat du sous-problème plus petit
 ```
 
----
+#### Décomposer et recomposer
 
-#### Comment ça marche : démontage et remontage
+La récursion décompose le problème ; chaque appel traite une partie. Au cas de base, le résultat se recompose.
 
-La récursivité fonctionne en décomposant le problème d'origine en morceaux plus petits. Chaque appel à la fonction gère une pièce et transmet le reste. Une fois le cas le plus simple atteint, les résultats sont réassemblés au fur et à mesure de la fin du calcul.
+#### Pas à pas : sum-to-n 3
 
-#### Trace étape par étape de la somme à n 3
+1. *sum-to-n 3* → *(+ 3 (sum-to-n 2))*
+2. *sum-to-n 2* → *(+ 2 (sum-to-n 1))*
+3. *sum-to-n 1* → *(+ 1 (sum-to-n 0))*
+4. *sum-to-n 0* → *0*
 
-1. **Appel initial** : *somme à n 3*
-   → *(+ 3 (somme à n 2))*
+#### Recomposer le résultat
 
-2. **Deuxième appel** : *somme à n 2*
-   → *(+ 2 (somme à n 1))*
-
-3. **Troisième appel** : *somme à n 1*
-   → *(+ 1 (somme à n 0))*
-
-4. **Cas de base** : *somme à n 0*
-   → *0*
+1. *sum-to-n 0* → *0*
+2. *sum-to-n 1* → *1*
+3. *sum-to-n 2* → *3*
+4. *sum-to-n 3* → *6*
 
 ---
 
-#### Réassembler le résultat final
-
-Une fois le cas le plus simple résolu, chaque couche du calcul complète :
-
-1. *somme à n 0* donne *0*
-2. *somme à n 1* devient *(+ 1 0) = 1*
-3. *somme-à-n 2* devient *(+ 2 1) = 3*
-4. *somme-à-n 3* devient *(+ 3 3) = 6*
-
----
-
-### Exemple : Impression de chaque élément d'une liste
-
-Voici une fonction récursive simple pour imprimer chaque élément d'une liste :
+### Exemple : afficher chaque élément
 
 ```scheme
 (define (print-elements lst)
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ; Print the first element
-      (print-elements (cdr lst)))))             ; Process the rest of the list
+      (lumi-message (number->string (car lst))) ; Affiche le premier élément
+      (print-elements (cdr lst)))))             ; Traite le reste de la liste
 ```
 
-- **Cas de base :** Si la liste est vide (*null ? lst*), arrêtez la récursivité.
-- **Cas récursif :** Imprime le premier élément (*car lst*), puis appelle la fonction sur le reste de la liste (*cdr lst*).
+- **Cas de base :** liste vide → `"done"`.
+- **Récursif :** afficher `car`, traiter le reste avec `cdr`.
 
-#### Exemple d'utilisation
+#### Utilisation
 
 ```scheme
 (print-elements (list 1 2 3))
 ```
 
-Sortie :
-
-- *"1"*
-- *"2"*
-- *"3"*
-
-Résultat : *"fait"*
-
----
-
-#### Comment ça marche
-
-1. La fonction récupère le premier élément de la liste en utilisant *car* et le traite.
-2. Il s'appelle ensuite avec le reste de la liste (*cdr*).
-3. Ce processus se répète jusqu'à ce que la liste soit vide (*null ? lst*).
-
----
+Sortie : *"1"*, *"2"*, *"3"* — résultat : *"done"*
 
 ### Résumé
 
-- La récursivité simple consiste à :
-  1. **Cas de base** : arrête la récursion.
-  2. **Cas récursif** : réduit le problème par rapport au cas de base.
-- Chaque appel récursif fait progresser le calcul vers son achèvement.
-- Une fois le cas de base atteint, les résultats sont combinés au fur et à mesure que la récursion se termine.
-
-La récursion reflète la structure du problème et fournit un flux clair et logique. Assurez-vous toujours d’avoir un cas de base pour éviter une récursion infinie.
+- Cas de base pour arrêter ; cas récursif pour réduire.
+- Chaque appel progresse vers le cas de base.
+- Toujours un cas de base — sinon récursion infinie.

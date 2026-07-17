@@ -1,6 +1,10 @@
 ---
 title: "การกู้คืนไฟล์"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/recovery"
+translation_source_sha256: 59495d24302cb3493b90bc61a6dd1ffb9bb9c30b179f7be388882fe4f45a5075
 ---
 ระบบการกู้คืนของ Lumi ได้รับการออกแบบมาเพื่อปกป้องงานทาสีจากการขัดข้อง ข้อผิดพลาด และการหยุดชะงัก ช่วยให้โปรเจ็กต์มีความปลอดภัยโดยไม่ต้องบังคับให้ศิลปินทำซ้ำไฟล์ด้วยมืออย่างต่อเนื่อง
 

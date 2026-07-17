@@ -2,6 +2,9 @@
 title: "重構"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 一旦我們的函數可以工作，我們就可以退一步思考如何最好地建立我們的程式碼。目標是使我們的插件盡可能清晰、易於理解和可維護。這種在不改變現有程式碼行為的情況下改進和細化現有程式碼結構的過程稱為重構。
 
@@ -9,15 +12,15 @@ weight: 2
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; 設定訊息處理常式，將訊息輸出到 GUI 對話方塊
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; 設定訊息處理常式，將訊息輸出到 Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; 將訊息傳送到 terminal，即啟動 Lumi 的作業系統視窗
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; 設定訊息處理常式，將訊息輸出到 GUI 對話方塊
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; 設定訊息處理常式，將訊息輸出到 Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; 將訊息傳送到 terminal，即啟動 Lumi 的作業系統視窗
     (display message)))
 ```
 
@@ -65,14 +68,14 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
 
 ### 提取函數
 
-在函數式程式設計中，重構程式碼以將可重複使用邏輯提取到單獨的函數中是一種常見的做法。透過這樣做，**主函數**變得更加簡單，並且更加專注於其高級目標，而**提取函數**顯得更加複雜，因為它處理詳細的邏輯。這是有意為之的，並且符合函數式程式設計的核心原則，例如模組化、關注點分離和可讀性。這是重構的
+在函數式程式設計中，重構程式碼以將可重複使用邏輯提取到單獨的函數中是一種常見的做法。透過這樣做，**主函數**變得更加簡單，更加專注於其高級目標，而**提取函數**顯得更加複雜，因為它處理詳細的邏輯。這是有意為之的，並且符合函數式程式設計的核心原則，例如模組化、關注點分離和可讀性。這是重構的
 世界你好！提取後。
 
 提取邏輯：
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; 主函式
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ function-name 是函數的名稱，parameter 是函數接受的輸入內容。�
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; 處理向各種目標輸出訊息的函式
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; 傳送到 Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; 將處理常式設定為 Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; 傳送到 GUI 對話方塊
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; 將處理常式設定為 GUI 對話方塊
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; 傳送到終端機視窗
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; terminal 輸出透過 display 處理
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; 將預設訊息處理常式還原為 Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

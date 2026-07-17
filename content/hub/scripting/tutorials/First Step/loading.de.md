@@ -2,6 +2,9 @@
 title: "Laden"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 Sobald eine Hilfsfunktion wächst, verschieben Sie sie in eine kleine Bibliotheksdatei. Dadurch bleibt das Plug-In fokussiert und der Helfer kann über mehrere Plug-Ins hinweg wiederverwendet werden.
 
@@ -28,27 +31,27 @@ Wir können die Funktion „Nachricht senden“ verwenden und eine neue Datei mi
 Beispiel einer Bibliotheksfunktion send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Funktion zur Ausgabe von Nachrichten an verschiedene Ziele
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; An die Message Console senden
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Handler auf Message console setzen
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; An das GUI-Dialogfeld senden
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Handler auf GUI-Dialog setzen
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; An das Terminalfenster senden
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Terminal-Ausgabe wird mit display verarbeitet
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
   (lumi-message-set-handler 2))
 ```
 
@@ -59,7 +62,7 @@ Wir können diese Bibliotheksfunktion mit dem Befehl Scheme `load` laden;
 Laden einer Bibliotheksdatei:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 

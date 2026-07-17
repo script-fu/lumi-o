@@ -2,6 +2,9 @@
 title: "Omslag"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Schemakommandon fungerar på en låg nivå, vilket innebär att även enkla uppgifter kan kräva flera steg. Men denna granularitet erbjuder flexibilitet, vi kan bunta ihop kommandon i små, återanvändbara funktioner som gör precis vad vi behöver. Omslag är inte ett svartvitt koncept; det kan sträcka sig från enkla alias för ofta använda kommandon till mer komplexa funktioner som hanterar hela arbetsflöden. Ibland är ett omslag bara en bekvämlighetsfunktion för att förbättra läsbarheten, medan det i andra fall utvecklas till ett fullfjädrat verktyg som kapslar in flera operationer.
 
@@ -26,7 +29,7 @@ Exempel:
 ### Random Seed
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Syfte: Returnerar ett slumpmässigt heltal för att seeda ett filter
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Dessutom, genom att definiera ***random-seed*** som en fristående funktion kan 
 Om vi till exempel bestämmer oss för att byta till ***random*** istället:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Syfte: Returnerar ett slumpmässigt heltal för att seeda ett filter
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Funktionsnamnet förblir detsamma, vilket säkerställer att våra skript forts�
 JPEG-exportfunktionen i Scheme kommer med många parametrar, vilket ger fin kontroll över hur bilder sparas. Men i de flesta fall bryr vi oss bara om ett fåtal nyckelinställningar, som filnamn och kvalitet. För att förenkla processen kan vi slå in funktionen.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Syfte: Sparar en bild som JPEG med angiven kvalitet
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Undvik jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -75,90 +78,90 @@ I denna omslagsfunktion är de flesta exportalternativen hårdkodade, vilket end
 
 ### Använda omslaget
 
-För att exportera en JPEG i våra plugin-program inkluderar vi helt enkelt biblioteket och anropar vår anpassade funktion:
+To export a JPEG in our plug-ins, we simply include the library and call our custom function:
 
 ```scheme
 (file-jpg-save image "/home/mark/pictures/my-picture" 85)
 ```
 
-Detta håller vår kod ren, läsbar och anpassningsbar samtidigt som vi kan exportera JPEG-filer effektivt med minimal ansträngning.
+This keeps our code clean, readable, and adaptable while allowing us to export JPEGs efficiently with minimal effort.
 
 ### Bilbyte
 
-***bil***-funktionen kan vara kryptisk och benägen för skriptfel. Det är lätt att av misstag applicera ***bil*** på en vektor eller ett objekt som inte finns på listan, vilket leder till oväntat beteende. För att göra vår kod mer robust och läsbar kan vi slå in den här funktionen i en säkrare funktion.
+The ***car*** function can be cryptic and prone to scripting errors. It’s easy to mistakenly apply ***car*** to a vector or a non-list item, leading to unexpected behaviour. To make our code more robust and readable, we can wrap this functionality in a safer function.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Syfte: Returnerar det första objektet i en lista eller vektor.
+;;          Varnar om indata är ogiltig eller tom.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Hanterar icke-tomma listor
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Hanterar icke-tomma vektorer
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Ogiltig eller tom indata
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
        #f))))
 ```
 
-Den här funktionen hämtar säkert det första objektet i en lista eller vektor samtidigt som den ger användbara varningar när ogiltiga eller tomma ingångar påträffas. Genom att använda ***första objekt*** istället för ***bil*** minskar vi risken för oavsiktliga fel och förbättrar klarheten i våra skript.
+This function safely retrieves the first item of a list or vector while providing helpful warnings when invalid or empty inputs are encountered. By using ***first-item*** instead of ***car***, we reduce the risk of accidental errors and improve the clarity of our scripts.
 
 #### Varför använda detta omslag?
 
-- **Förhindrar skriptkrascher** - Undviker fel som orsakas av att ***bil*** tillämpas på icke-listor.
+- **Prevents script crashes** – Avoids errors caused by applying ***car*** to non-lists.
 - **Stöder både listor och vektorer** - Utökar användbarheten utöver bara listor.
-- **Ger meningsfulla varningar** - Hjälper till att felsöka oväntade inmatningsproblem.
-- **Förbättrar läsbarheten** – Funktionsnamnet förmedlar tydligt dess syfte.
+- **Provides meaningful warnings** – Helps debug unexpected input issues.
+- **Improves readability** – The function name clearly conveys its purpose.
 
-Genom att kapsla in denna logik i första objektet gör vi våra plug-ins mer robusta och lättare att underhålla. Naturligtvis beror detta på personliga preferenser, du kan vara helt bekväm med att använda bil-, caar-, cadr- och liknande Scheme-funktioner direkt.
+By encapsulating this logic in first-item, we make our plug-ins more robust and easier to maintain. Naturligtvis beror detta på personliga preferenser, du kan vara helt bekväm med att använda bil-, caar-, cadr- och liknande Scheme-funktioner direkt.
 
 ### Slå in en inslagen funktion
 
-Att radbryta en funktion som redan är packad kan ytterligare förbättra läsbarheten och underhållbarheten. Till exempel, när vi arbetar med koordinatpar som ***pixel-koordinater (lista 100 200)*** kan vi använda:
+Att radbryta en funktion som redan är packad kan ytterligare förbättra läsbarheten och underhållbarheten. For example, when working with coordinate pairs like ***pixel-coords (list 100 200)***, we could use:
 
 ```scheme
 (first-item pixel-coords)
 ```
 
-för att hämta ***x***-koordinaten. Men även om det är funktionellt är det inte särskilt uttrycksfullt. Istället kan vi slå in ***första objekt*** i en mer lämplig definition för att göra vår avsikt tydligare.
+för att hämta ***x***-koordinaten. However, while functional, this is not very expressive. Instead, we can wrap ***first-item*** in a more appropriate definition to make our intent clearer.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Syfte: Returnerar x-koordinaten, för läsbarhet
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Syfte: Returnerar y-koordinaten, för läsbarhet
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
 
-### Varför använda denna metod?
+### Why Use This Approach?
 
-- **Förbättrar kodtydligheten** – Istället för att använda generiska liståtkomstfunktioner definierar vi uttryckligen funktioner som beskriver deras syfte.
+- **Enhances code clarity** – Instead of using generic list access functions, we explicitly define functions that describe their purpose.
 - **Förbättrar underhållsbarheten** - Om vår koordinatrepresentation ändras (t.ex. genom att använda vektorer istället för listor), behöver vi bara uppdatera dessa små funktioner.
 - **Uppmuntrar konsistens** – Genom att använda ***x-coord*** och ***y-coord*** blir skriptet lättare att läsa och förstå med ett ögonkast.
 
 Nu, istället för att skriva i generiskt schema:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Hämtar x-koordinaten
+(cadr pixel-coords) ;; Hämtar y-koordinaten
 ```
 
-Vi kan skriva i _vårt_ Schema:
+We can write in _our_ Scheme:
 
 ```scheme
 (x-coord pixel-coords)
 (y-coord pixel-coords)
 ```
 
-Genom att slå in lågnivåfunktioner i meningsfulla namn skapar vi ett mer intuitivt sätt att arbeta med data, vilket minskar förvirring och potentiella fel.
+By wrapping low-level functions in meaningful names, we create a more intuitive way to work with data, reducing confusion and potential errors.
 
-### Levererade omslag: verktyget Stdlib
+### Shipped Wrappers: the Utility Stdlib
 
 Lumi skickar en uppsättning färdiga omslag som laddas automatiskt vid start, så de är tillgängliga i alla plugin-program eller i Scheme Console utan något `(load ...)`-samtal. Dessa bibliotek (`common.scm`, `files.scm`, `gegl.scm`, `images.scm`, `layers.scm`, `parasites.scm`, och `gegl.scm`, de är byggda på exakt samma namn som ovanstående exempel på: principen ovan: de är uppbyggda på exakt samma namn som ovan: operationer på låg nivå, dölj repetitiva plattor och tillhandahålla en enda plats att uppdatera om det underliggande kommandot ändras.Till exempel ger `images.scm` `image-get-open-list` som ett läsbart omslag runt det råa PDB-anropet, och `files.scm` avslöjar vägbyggande hjälpare som annars skulle kräva upprepade `string-append`-kedjor.
 

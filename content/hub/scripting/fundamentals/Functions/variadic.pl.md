@@ -2,6 +2,9 @@
 title: "Funkcje wariadyczne"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Funkcje wariadyczne** w schemacie to funkcje, które akceptują zmienną liczbę argumentów. Funkcje te są bardzo wszechstronne i pozwalają na tworzenie elastycznego kodu wielokrotnego użytku. W programowaniu funkcjonalnym funkcje wariadyczne upraszczają operacje wymagające przetworzenia dowolnej liczby danych wejściowych, takie jak sumowanie listy liczb lub łączenie ciągów.
 
@@ -39,7 +42,7 @@ Funkcje wariadyczne definiuje się za pomocą symbolu `.` przed nazwą ostatnieg
 
 **Wykorzystanie**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Zwraca 15
 ```
 
 #### Funkcja variadyczna ze stałymi parametrami
@@ -58,7 +61,7 @@ Możesz łączyć stałe parametry z parametrem variadic, aby utworzyć bardziej
 
 **Wykorzystanie**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Zwraca ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Łączenie logiki stałej i wariadycznej
@@ -76,7 +79,7 @@ Możesz łączyć stałe parametry z parametrem variadic, aby utworzyć bardziej
 **Wykorzystanie**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Zwraca "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Zaawansowane przypadki użycia
@@ -94,7 +97,7 @@ Funkcje wariadyczne doskonale radzą sobie z obsługą dowolnych danych. Oto prz
 
 **Wykorzystanie**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Zwraca 18
 ```
 
 #### Funkcje wariadyczne z logiką rekurencyjną
@@ -113,7 +116,7 @@ Funkcje wariadyczne doskonale radzą sobie z obsługą dowolnych danych. Oto prz
 
 **Wykorzystanie**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Zwraca 40
 ```
 
 ### Korzyści z funkcji wariadycznych

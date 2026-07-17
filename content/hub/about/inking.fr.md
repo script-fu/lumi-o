@@ -1,53 +1,57 @@
 ---
 title: "Encrage"
 type: docs
+url: "hub/about/inking"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
 ---
-L’espace de travail Inking est conçu pour le travail en ligne délibéré ou le chaos d’encre. C'est l'étape où le dessin cesse d'être exploratoire et commence à devenir engagé : des traits contrôlés, une définition claire des bords et des marques qui doivent conserver leur forme en toute confiance. Ou tout simplement lâchez-vous avec des éclaboussures expressives, des lignes en boucle, des rayures à la plume sèche et des traits de sumi sauvages.
+L'espace de travail Encrage est conçu pour un trait délibéré ou un chaos d'encre maîtrisé. C'est l'étape où le dessin cesse d'être exploratoire et devient engagé : traits contrôlés, contours nets et marques qui tiennent leur forme avec assurance. Ou lâchez-vous avec des éclaboussures expressives, des boucles, des griffures de plume sèche et des traits sumi sauvages.
 
-Vous trouverez ci-dessous quelques-uns des outils et modes qui rendent cela possible.
+Voici quelques outils et modes qui rendent cela possible.
 
-## Préréglage Sumi
+## Preset Sumi
 
-Le pinceau sumi n’est pas entièrement apprivoisé. Au lieu de se comporter comme une seule pointe de brosse, elle est construite à partir de plusieurs têtes de brosse ou faisceaux de poils indépendants travaillant ensemble comme une formation dynamique. Le résultat peut passer de traînées humides à des stries sèches brisées, des fibres emmêlées ou des bords texturés explosifs en fonction de la pression, de la vitesse, de l'espacement et du geste.
+Le pinceau sumi n'est pas entièrement apprivoisé. Plutôt qu'une seule pointe, il est composé de nombreuses têtes de pinceau ou touffes de poils indépendantes qui travaillent ensemble en formation dynamique. Le résultat peut passer de traînées humides à stries sèches brisées, fibres emmêlées ou bords texturés explosifs, selon la pression, la vitesse, l'espacement et le geste.
 
-Il existe un large éventail de contrôles sur le comportement de la formation, et sa combinaison avec la dynamique, les textures et les variations de tampons peut produire une énorme gamme de marques.
+La formation offre un large éventail de réglages ; combinée à la dynamique, aux textures et à la variation de tampon, elle produit une énorme gamme de marques.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
-## Préréglage calligraphique
+## Preset Calligraphic
 
-Le mode calligraphique transforme l’outil Pinceau en un trait continu de stylo burin plutôt qu’en une rangée de touches estampées. Le préréglage calligraphique fourni utilise également l'angle d'inclinaison du stylet comme axe de contrôle supplémentaire, de sorte que le trait peut répondre non seulement à la pression, mais aussi à la façon dont le stylo est tenu. Il est utile pour les marques fermes et profilées qui doivent être lues comme un seul ruban d'encre, même lorsque l'angle et la pression changent.
+Le mode Calligraphic transforme l'outil Pinceau en un trait continu de stylo à chancellerie plutôt qu'en une rangée de tampons. Le preset Calligraphic fourni utilise aussi l'angle d'inclinaison du stylet comme axe de contrôle supplémentaire : le trait répond à la pression et à la façon dont le stylo est tenu. Utile pour des marques fermes et profilées qui se lisent comme un seul ruban d'encre, même quand angle et pression varient.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Préréglage zigzag
+## Preset Zig-zag
 
-Le préréglage Zigzag accentue les coins lorsque le trait change rapidement de direction, produisant des virages angulaires nets avec un claquement que les courbes douces ne peuvent pas réaliser. Utile pour les dessins au trait et les hachures énergiques et graphiques.
+Le preset Zig-zag accentue les angles lorsque le trait change brusquement de direction, produisant des virages anguleux nets qu'une courbe lisse ne peut pas obtenir. Utile pour un trait graphique énergique et le hachurage.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Préréglage de sable
+## Preset Sable
 
-La ligne de pinceau classique de la bande dessinée. Des mouvements fluides et à poids variable avec un rythme épais à fin confiant ; le genre de ligne que Watterson ou Uderzo reconnaîtraient.
+La ligne classique du pinceau de bande dessinée. Traits fluides à épaisseur variable, avec un rythme épais-fin assuré ; le genre de trait que Watterson ou Uderzo reconnaîtraient.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
 
-## Préréglage de la plume
+## Preset Nib
 
-Inspiré de la plume Waverly, le préréglage tolère des mouvements rapides et des changements de direction tout en produisant des lignes d'encre nettes et expressives. Étant donné que la charge d'encre s'épuise à mesure que vous travaillez, les traits peuvent commencer sombres et saturés, puis se transformer en marques plus grattées et affamées à mesure que la plume se vide.
+Inspiré de la plume Waverly, ce preset tolère les mouvements rapides et les changements de direction tout en produisant des traits d'encre nets et expressifs. Comme la charge d'encre s'épuise au fil du trait, les lignes peuvent commencer sombres et saturées, puis se fragmenter en marques plus sèches et griffées à mesure que la plume se vide.
 
 ![ink-02](/images/strokes/ink-nib_share.jpg)
 
-## Astuce prédéfinie
+## Preset Tip
 
-La ligne morte d'un stylo à dessin technique. Largeur constante, bords nets et peu ou pas de variation de trait. Utile pour les lignes de construction, les diagrammes, le lettrage et les travaux graphiques contrôlés où l'uniformité compte plus que l'expression. Certaines de nos animations préférées utilisent cette ligne.
+La ligne morte d'un stylo technique. Largeur constante, bords nets, peu ou pas de variation de trait. Utile pour les lignes de construction, schémas, lettrage et travail graphique contrôlé, là où l'uniformité prime sur l'expression. Certaines de nos animations favorites utilisent ce trait.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
-## Préréglage de film
+## Preset Flick
 
-Conçu pour les gestes effleurants et les pulvérisations directionnelles dispersées. En fonction de la vitesse, de la pression et de l'espacement, les coups peuvent aller d'une diffusion subtile et légère à des gouttelettes plus lourdes. Utile pour le travail de texture et les touches finales expressives.
+Conçu pour les gestes de flick et les pulvérisations directionnelles. Selon vitesse, pression et espacement, les traits vont d'une dispersion légère à des gouttelettes plus lourdes. Utile pour le travail de texture et les touches finales expressives.
 
 ![flick-01](/images/strokes/flick_share.jpg)

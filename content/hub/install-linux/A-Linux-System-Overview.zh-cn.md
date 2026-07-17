@@ -1,43 +1,48 @@
 ---
 title: "Linux 系统概述"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux 是一个功能强大且多功能的操作系统，拥有庞大的开发人员社区。 Linux 系统的核心由几个关键组件组成，这些组件协同工作以提供无缝的用户体验。本概述将概述 Linux 系统的基本部分，包括内核、发行版、包管理器、显示管理器、桌面环境和显示服务器（X11 或 Wayland）。
 
-Lumi 在 Debian with Cinnamon (X11) 上表现最佳，并且是在该环境中开发和测试的。
+Linux 是功能强大、用途广泛的操作系统，拥有庞大的开发者社区。Linux 系统的核心由若干关键组件协同工作，以提供流畅的用户体验。本概述介绍 Linux 系统的基本组成部分，包括内核、发行版、包管理器、显示管理器、桌面环境和显示服务器（X11 或 Wayland）。
 
-**当前常见的 Linux 发行版默认值**
+Lumi-o 在 Debian 与 Cinnamon（X11）上表现最佳，并在该环境中开发与测试。
 
-| **分布** | **包管理器** | **显示管理器** | **桌面环境** | **显示服务器** |
-|--------------------------------|----------------------|----------------------|------------------------------------|--------------------|
-| Debian |亚太 | GDM |侏儒 |韦兰 |
-|乌班图 |亚太 | GDM |侏儒 |韦兰 |
-| Debian |亚太 | GDM |肉桂| X11 |
-|软呢帽|地下城与勇士 (DNF) GDM |侏儒 |韦兰 |
-| Arch Linux |吃豆人 |用户选择|用户选择|用户选择|
+**常见 Linux 发行版的默认配置**
+
+| **发行版** | **包管理器** | **显示管理器** | **桌面环境** | **显示服务器** |
+|--------------------|----------------------|----------------------|-------------------------|--------------------|
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
+| Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
+| Arch Linux         | Pacman               | 用户自选              | 用户自选                 | 用户自选            |
 
 ### 关键术语
 
 #### 内核
 
-直接与硬件交互的操作系统核心，通常是Linux。
+直接与硬件交互的操作系统核心，通常为 Linux。
 
-#### 分布
+#### 发行版
 
-Linux 发行版，将内核与用户空间工具、库和软件打包在一起。示例包括 Debian、Arch Linux 和 Fedora。
+将内核与用户空间工具、库和软件打包在一起的 Linux 发行版。例如 Debian、Arch Linux、Fedora。
 
 #### 包管理器
 
-用于从存储库安装、更新和删除软件应用程序的工具。示例包括基于 Debian 的发行版的 APT、Fedora 的 DNF 和 Arch Linux 的 Pacman。
+用于从仓库安装、更新和卸载软件的工具。例如 Debian 系的 APT、Fedora 的 DNF、Arch Linux 的 Pacman。
 
 #### 显示管理器
 
-管理图形登录屏幕和会话启动。示例包括 GDM（GNOME 显示管理器）、LightDM 和 SDDM（简单桌面显示管理器）。
+管理图形登录界面和会话启动。例如 GDM（GNOME Display Manager）、LightDM、SDDM（Simple Desktop Display Manager）。
 
 #### 桌面环境
 
-提供图形用户界面 (GUI) 并管理整体外观和用户体验。示例包括 GNOME、Cinnamon 和 KDE Plasma。
+提供图形用户界面（GUI），并管理整体外观与用户体验。例如 GNOME、Cinnamon、KDE Plasma。
 
 #### 显示服务器
 
-管理显示输出和输入事件。示例包括 X11（X Window 系统）和 Wayland。 X11 是传统的显示服务器，而 Wayland 是更新、更安全的替代方案。
+管理显示输出和输入事件。例如 X11（X Window System）和 Wayland。X11 是传统的显示服务器，Wayland 是较新、更安全的替代方案。

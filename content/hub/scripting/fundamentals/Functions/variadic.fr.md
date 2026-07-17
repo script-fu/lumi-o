@@ -2,6 +2,9 @@
 title: "Fonctions variadiques"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 Les **fonctions variadiques** dans Scheme sont des fonctions qui acceptent un nombre variable d'arguments. Ces fonctions sont très polyvalentes et vous permettent de créer du code flexible et réutilisable. En programmation fonctionnelle, les fonctions variadiques simplifient les opérations qui nécessitent de traiter un nombre arbitraire d'entrées, comme la somme d'une liste de nombres ou la concaténation de chaînes.
 
@@ -9,7 +12,7 @@ Les fonctions variadiques sont particulièrement utiles lorsque :
 
 - Le nombre d'arguments ne peut être déterminé à l'avance.
 - Vous devez appliquer la même opération à une liste dynamique d'entrées.
-- Ecriture d'utilitaires d'agrégation ou de transformation de données.
+- Écriture d'utilitaires d'agrégation ou de transformation de données.
 
 ### Syntaxe des fonctions variadiques
 
@@ -39,7 +42,7 @@ Les fonctions variadiques sont définies à l'aide du symbole `.` avant le nom d
 
 **Utilisation** :
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Renvoie 15
 ```
 
 #### Fonction variadique à paramètres fixes
@@ -58,7 +61,7 @@ Vous pouvez combiner des paramètres fixes avec un paramètre variadique pour cr
 
 **Utilisation** :
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Renvoie ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Combiner la logique fixe et la logique variadique
@@ -76,7 +79,7 @@ Vous pouvez combiner des paramètres fixes avec un paramètre variadique pour cr
 **Utilisation** :
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Renvoie "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Cas d'utilisation avancés
@@ -94,7 +97,7 @@ Les fonctions variadiques excellent dans la gestion de données arbitraires. Voi
 
 **Utilisation** :
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Renvoie 18
 ```
 
 #### Fonctions variadiques avec logique récursive
@@ -113,12 +116,12 @@ Les fonctions variadiques excellent dans la gestion de données arbitraires. Voi
 
 **Utilisation** :
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Renvoie 40
 ```
 
 ### Avantages des fonctions variadiques
 
-- **Flexibilité :** Ils gèrent un large éventail de cas de saisie.
+- **Flexibilité :** Elles gèrent un large éventail de cas de saisie.
 - **Concision :** Réduisez le besoin de plusieurs fonctions surchargées.
 - **Opérations dynamiques :** Activez le traitement des données d'exécution sans connaître au préalable le nombre d'arguments.
 
@@ -136,4 +139,6 @@ Utilisez des fonctions variadiques lorsque :
 - Des arguments fixes suffisent pour la logique requise.
 - La lisibilité est compromise en raison d'opérations trop complexes.
 
-### ConclusionLes fonctions variadiques de Scheme fournissent un mécanisme robuste pour gérer les entrées dynamiques. En comprenant leur syntaxe et leur utilisation, vous pouvez créer des scripts flexibles et puissants qui s'adaptent à divers scénarios. Combinées à des fonctions d'ordre supérieur, les fonctions variadiques rendent votre code plus concis et expressif.
+### Conclusion
+
+Les fonctions variadiques de Scheme fournissent un mécanisme robuste pour gérer les entrées dynamiques. En comprenant leur syntaxe et leur utilisation, vous pouvez créer des scripts flexibles et puissants qui s'adaptent à divers scénarios. Combinées à des fonctions d'ordre supérieur, les fonctions variadiques rendent votre code plus concis et expressif.

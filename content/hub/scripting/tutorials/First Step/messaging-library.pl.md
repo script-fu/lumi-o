@@ -2,12 +2,15 @@
 title: "Biblioteka wiadomości"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
-Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. Funkcje te stanowią obecnie podstawę **Biblioteki wiadomości**, zaprojektowanej do obsługi danych wyjściowych do różnych miejsc docelowych, takich jak GUI, konsola wiadomości i terminal systemu operacyjnego.
+Z biegiem czasu to, co początkowo było pojedynczą funkcją wysyłania wiadomości, przekształciło się w zbiór powiązanych funkcji. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
 
 ### Dlaczego biblioteka wiadomości?
 
-W miarę wzrostu naszych potrzeb obsługa komunikatów przesyłanych na wiele wyjść wymaga bardziej modułowego i rozszerzalnego podejścia. Zamiast jednej funkcji, która robi wszystko, podzieliliśmy proces na komponenty, które można ponownie wykorzystać, co zapewnia większą elastyczność. Biblioteki tej można teraz używać jako narzędzia do przesyłania wiadomości ogólnego przeznaczenia, z którego mogą korzystać inne wtyczki lub funkcje.
+W miarę wzrostu naszych potrzeb obsługa komunikatów przesyłanych na wiele wyjść wymaga bardziej modułowego i rozszerzalnego podejścia. Zamiast jednej funkcji, która robi wszystko, podzieliliśmy proces na komponenty, które można ponownie wykorzystać, co zapewnia większą elastyczność. This library can now be used as a general-purpose messaging tool that other plug-ins or functions can borrow from.
 
 ### Do czego służy biblioteka wiadomości?
 
@@ -24,10 +27,10 @@ Biblioteka wiadomości zawiera obecnie następujące funkcje:
 **Bibliotekę wiadomości** można łatwo rozszerzyć, aby obsługiwała dodatkowe wyjścia. Na przykład:
 
 - **wyślij do pliku**: zapisywanie wiadomości w pliku dziennika.
-- **wyślij do rejestratora**: Integracja z zewnętrznym systemem rejestrowania.
+- **send-to-logger**: Integrate with an external logging system.
 - **wyślij do powiadomienia**: wyświetlaj wiadomości jako powiadomienia systemowe.
 
-Kierując się tym samym wzorcem modułowej konstrukcji i funkcjami wielokrotnego użytku, biblioteka ta może stać się wszechstronnym narzędziem do obsługi wszelkiego rodzaju zadań związanych z przesyłaniem wiadomości.
+By following the same pattern of modular design and reusable functions, this library can grow into a comprehensive tool for handling all kinds of messaging tasks.
 
 ## Korzyści z biblioteki wiadomości
 
@@ -35,7 +38,7 @@ Kierując się tym samym wzorcem modułowej konstrukcji i funkcjami wielokrotneg
 - **Modułowość**: Każda funkcja obsługuje jedno konkretne zadanie, dzięki czemu kod jest łatwiejszy w utrzymaniu i rozszerzaniu.
 - **Spójność**: Korzystanie z tych samych funkcji sprawdzania poprawności i obsługi komunikatów zapewnia spójne zachowanie w całej aplikacji.
 
-**Biblioteka wiadomości** to początek szerszej struktury, która może uprościć sposób zarządzania wiadomościami w Twoim projekcie. W miarę powiększania się biblioteki nowe wtyczki mogą z łatwością korzystać z niej, aby wysyłać wiadomości, gdziekolwiek chcą.
+The **Messaging Library** is the beginning of a broader framework that could simplify how messages are managed in your project. W miarę powiększania się biblioteki nowe wtyczki mogą z łatwością korzystać z niej, aby wysyłać wiadomości, gdziekolwiek chcą.
 
 Możemy dostosować strukturę pliku:
 
@@ -52,7 +55,7 @@ Możemy dostosować strukturę pliku:
 I pamiętaj o dostosowaniu `load` w głównej wtyczce:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

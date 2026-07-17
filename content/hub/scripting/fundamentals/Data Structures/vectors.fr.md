@@ -1,7 +1,10 @@
 ---
 title: "Vecteurs"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 Dans Scheme, un vecteur est une autre structure de données fondamentale utilisée pour regrouper des valeurs. Contrairement aux listes, les vecteurs sont des collections d’éléments indexés de taille fixe, offrant un accès aléatoire et des mises à jour plus rapides. Chaque élément d'un vecteur peut être de n'importe quel type, y compris un autre vecteur. Les vecteurs sont représentés par # suivi de parenthèses. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Les éléments d'un vecteur sont accessibles à l'aide de la procédure `vector-
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Récupère l'élément à l'index 0
+(vector-ref my-vector 1)  ; Récupère l'élément à l'index 1
 ```
 
 #### Itération : traitement de chaque élément dans un vecteur
@@ -42,9 +45,9 @@ Vous pouvez parcourir un vecteur à l’aide d’une boucle ou d’une récursio
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Affiche l'élément
+        (loop (+ i 1)))                                    ; Traite l'index suivant
+      (lumi-message "done"))))                             ; Fin de la boucle
 ```
 
 - **Cas de base :** Si l'index `i` atteint la longueur du vecteur, arrêtez la boucle.
@@ -62,7 +65,7 @@ Résultat :
 - `"2"`
 - `"3"`
 
-Résultat : "fait"
+Result: "done"
 
 ### Vecteurs mixtes
 
@@ -99,7 +102,7 @@ La procédure `vector-set!` met à jour un élément dans un vecteur à un index
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Définit le second élément à 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ Résultat : `#(1 42 3)`
 La procédure `vector?` vérifie si une valeur donnée est un vecteur.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Vérifie si #(1 2 3) est un vecteur
+(vector? 42)              ; Vérifie si 42 est un vecteur
 ```
 
 Résultat :
@@ -119,7 +122,9 @@ Résultat :
 - `(vector? (vector 1 2 3))` renvoie `#t` (vrai)
 - `(vector? 42)` renvoie `#f` (faux)
 
-### Vecteurs et comportement de passage par référenceDans Scheme, les vecteurs sont mutables et transmis par référence. Cela signifie que lorsque vous transmettez un vecteur à une fonction, la fonction peut modifier directement le vecteur d'origine. Toute modification apportée au vecteur à l’intérieur de la fonction sera également reflétée à l’extérieur de la fonction. Ce comportement est utile pour partager et mettre à jour efficacement les données entre plusieurs fonctions, mais il nécessite également de la prudence pour éviter les effets secondaires involontaires.
+### Vecteurs et comportement de passage par référence
+
+Dans Scheme, les vecteurs sont mutables et transmis par référence. Cela signifie que lorsque vous transmettez un vecteur à une fonction, la fonction peut modifier directement le vecteur d'origine. Toute modification apportée au vecteur à l’intérieur de la fonction sera également reflétée à l’extérieur de la fonction. Ce comportement est utile pour partager et mettre à jour efficacement les données entre plusieurs fonctions, mais il nécessite également de la prudence pour éviter les effets secondaires involontaires.
 
 #### Exemple : Modification d'un vecteur dans une fonction
 
@@ -127,11 +132,11 @@ Voici un exemple illustrant comment les vecteurs sont passés par référence et
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Met à jour le vecteur à l'index indiqué
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Modifie le second élément en 99
+my-vector                              ; Le vecteur d'origine est maintenant mis à jour
 ```
 
 Résultat : `#(10 99 30)`
@@ -157,9 +162,9 @@ Scheme fournit plusieurs procédures intégrées pour travailler avec des vecteu
 - `list->vector` : Convertit une liste en vecteur.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Renvoie 3
+(vector->list (vector 1 2 3))          ; Convertit le vecteur en liste : (1 2 3)
+(list->vector (list 1 2 3))            ; Convertit la liste en vecteur : #(1 2 3)
 ```
 
 Résultat :
@@ -187,8 +192,8 @@ Pour accéder aux éléments d'un vecteur imbriqué, utilisez `vector-ref` plusi
 #### Exemple : accès aux éléments
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Récupère le premier élément : #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Récupère le second élément du premier vecteur : 2
 ```
 
 ### Résumé

@@ -1,25 +1,30 @@
 ---
-title: "亚搏体育appGitLab持续集成"
+title: "GitLab CI"
 type: docs
+url: "hub/technical-guides/GitLab-CI"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9917cebc417adeeae24d91b05b919b679a397d5db652cf4442d4330c0f8eeea5
 ---
-持续集成 (CI) 是一种在代码发生更改时自动测试、构建和验证代码的方法。
 
-**GitLab** 通过其 `.gitlab-ci.yml` 文件提供内置 CI/CD 功能。该文件位于存储库的根目录中，告诉 GitLab 如何构建和测试您的项目。它定义了每次推送更改时在干净的环境中运行的阶段和脚本。
+持续集成（CI）是一种在代码发生更改时自动测试、构建和验证代码的方法。
 
-本文档概述了 Lumi 的 GitLab CI/CD 管道的工作原理，包括 `.gitlab-ci.yml` 文件、shell 脚本以及 Meson 和 Ninja 等外部工具的作用。
+**GitLab** 通过 `.gitlab-ci.yml` 文件提供内置 CI/CD 功能。该文件位于仓库根目录，用于告诉 GitLab 如何构建和测试项目。它定义了每次推送更改时在干净环境中运行的阶段和脚本。
 
-有关 Lumi CI 构建过程的详细技术文档，请参阅存储库中的 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
+本文档概述 Lumi 的 GitLab CI/CD 流水线如何工作，包括 `.gitlab-ci.yml` 文件、Shell 脚本以及 Meson 和 Ninja 等外部工具的作用。
+
+有关 Lumi CI 构建过程的详细技术文档，请参阅仓库中的 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
 
 ## GitLab CI/CD 基础知识
 
 CI 由名为 `.gitlab-ci.yml` 的文件控制。该文件定义：
 
-- **阶段**：有序的作业组（例如，`build-this`、`build-that`、`package-up`）
+- **阶段**：有序的作业组（例如 `build-this`、`build-that`、`package-up`）
 - **作业**：每个阶段内运行的单独任务
 - **脚本**：为每个作业执行的 Shell 命令
-- **运行器**：GitLab 用于运行管道中定义的作业的计算机。
+- **运行器**：GitLab 用来运行流水线中定义作业的计算机
 
-在 Lumi 中，管道阶段是：
+在 Lumi 中，流水线阶段为：
 
 - `dependencies`
 - `build lumi`
@@ -27,29 +32,29 @@ CI 由名为 `.gitlab-ci.yml` 的文件控制。该文件定义：
 
 ## 基于容器的构建
 
-Lumi 管道使用容器化来实现一致的构建：
+Lumi 流水线使用容器化来实现一致的构建：
 
-1. **创建构建容器**：第一阶段使用Buildah创建具有所有依赖项的Docker镜像
+1. **创建构建容器**：第一阶段使用 Buildah 创建包含所有依赖项的 Docker 镜像
 2. **使用容器**：后续阶段在该容器内运行，确保环境一致
-3. **可重复的构建**：容器隔离保证不同运行者获得相同的结果
+3. **可重复构建**：容器隔离保证不同运行器得到相同结果
 
-这种方法确保构建在任何 GitLab 运行器上都以相同的方式工作，并为复杂的构建过程提供受控环境。
+这种方式确保构建在任何 GitLab 运行器上都以相同方式工作，并为复杂构建过程提供受控环境。
 
 ### 集成依赖源
 
-Lumi 的 CI 依赖镜像从 **in-repo 集成源**（不是外部克隆）构建分叉堆栈：
+Lumi 的 CI 依赖镜像从 **仓库内集成源**（而非外部克隆）构建分叉栈：
 
 - `lumi-babl/` (BABL)
 - `lumi-gegl/` (GEGL)
 - `lumi-gtk3/` (GTK3)
 
-这些目录被复制到容器构建上下文中并编译到依赖项前缀（通常为`/opt/lumi-deps`）中。这保持了 CI 的可重复性，并确保 AppImage 构建使用与本地开发相同的真实来源。
+这些目录被复制到容器构建上下文中，并编译到依赖前缀（通常为 `/opt/lumi-deps`）。这保持了 CI 的可重复性，并确保 AppImage 构建与本地开发使用相同的真实来源。
 
 ## Shell 脚本的作用
 
-`.gitlab-ci.yml` 中的作业通常直接调用 shell 命令。复杂的操作通常被移至存储在存储库中的单独脚本中。
+`.gitlab-ci.yml` 中的作业通常直接调用 Shell 命令。复杂操作通常会移到仓库中的独立脚本。
 
-Lumi CI 使用模块化 shell 脚本来组织构建逻辑：
+Lumi CI 使用模块化 Shell 脚本来组织构建逻辑：
 
 **脚本调用示例：**
 ```yaml
@@ -57,13 +62,13 @@ script:
   - bash build/linux/appimage/lumi-goappimage.sh 2>&1 | tee appimage_creation.log
 ```
 
-**这种方法的好处：**
-- **干净的 YAML**：使 `.gitlab-ci.yml` 文件专注于作业结构
-- **可维护性**：复杂的逻辑在shell脚本中更容易调试和修改
-- **可重用性**：脚本可以在不同的上下文或环境中使用
-- **模块化**：构建的不同方面可以分为有针对性的脚本
+**这种方式的好处：**
+- **简洁的 YAML**：让 `.gitlab-ci.yml` 专注于作业结构
+- **可维护性**：复杂逻辑在 Shell 脚本中更容易调试和修改
+- **可重用性**：脚本可在不同上下文或环境中使用
+- **模块化**：可将构建的不同方面拆分为独立脚本
 
-这可以保持 CI 配置干净，同时允许复杂的构建过程。
+这能在保持 CI 配置简洁的同时，支持复杂的构建流程。
 
 ## 与构建系统集成
 
@@ -78,20 +83,22 @@ script:
   - ninja -C _build-${CI_RUNNER_TAG} install
 ```
 
-这里：
+其中：
 
-- `meson setup` 准备构建目录并生成`build.ninja`
-- `ninja` 按照定义运行构建命令
+- `meson setup` 准备构建目录并生成 `build.ninja`
+- `ninja` 按定义执行构建命令
 
-## 介子构建系统结构
+## Meson 构建系统结构
 
-**Meson** 构建系统使用位于项目根目录的根 `meson.build` 文件。该文件定义了构建过程的顶级构建配置和入口点。- 根`meson.build` 通常位于与`.gitlab-ci.yml` 相同的目录中
-- 从那里，它**递归地**到子目录中，每个子目录可能有自己的`meson.build` 文件
-- 这些子目录文件定义与该目录相关的目标、源、依赖项和构建指令
+**Meson** 构建系统使用位于项目根目录的根 `meson.build` 文件。该文件定义构建过程的顶层配置和入口点。
+
+- 根 `meson.build` 通常与 `.gitlab-ci.yml` 位于同一目录
+- 从那里 **递归地** 延伸到子目录，每个子目录可能有自己的 `meson.build` 文件
+- 这些子目录文件定义与该目录相关的目标、源文件、依赖项和构建指令
 
 ## 环境变量
 
-Lumi 管道中的关键变量包括：
+Lumi 流水线中的关键变量包括：
 
 ```yaml
 variables:
@@ -100,7 +107,7 @@ variables:
   CI_RUNNER_TAG: "x86_64"            # Architecture specification
 ```
 
-**特定于工作的变量：**
+**作业特定变量：**
 ```yaml
 build-lumi:
   variables:
@@ -111,7 +118,7 @@ build-lumi:
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
 ```
 
-这些变量控制构建行为并确保不同阶段和运行者之间的一致性。
+这些变量控制构建行为，并确保不同阶段和运行器之间的一致性。
 
 ## 结构示例
 
@@ -127,15 +134,15 @@ project-root/
 │   └── icons/
 ```
 
-在这个结构中：
+在此结构中：
 
--根`meson.build`文件配置整体构建环境
-- 子目录`meson.build`文件处理特定组件或模块的编译详细信息
-- 这种分层布局保持构建逻辑的模块化和可维护性
+- 根 `meson.build` 文件配置整体构建环境
+- 子目录 `meson.build` 文件处理特定组件或模块的编译细节
+- 这种分层布局使构建逻辑保持模块化和可维护
 
 ## 阶段之间的工件
 
-工件是后续阶段所需的作业生成的文件：
+工件是后续阶段所需的、由作业生成的文件：
 
 ```yaml
 build-lumi:
@@ -146,15 +153,15 @@ build-lumi:
       - _build-${CI_RUNNER_TAG}/meson-logs/meson-log.txt  # Build logs
 ```
 
-## 管道阶段和依赖关系
+## 流水线阶段和依赖关系
 
-Lumi 管道由三个主要阶段组成：
+Lumi 流水线由三个主要阶段组成：
 
-1. **依赖项**：使用所有必需的工具和库创建容器化构建环境
-2. **Build Lumi**：在准备好的环境中使用Meson和Ninja编译Lumi
-3. **AppImage**：将构建的应用程序打包成可分发的AppImage格式
+1. **Dependencies**：创建包含所有必需工具和库的容器化构建环境
+2. **Build Lumi**：在准备好的环境中使用 Meson 和 Ninja 编译 Lumi
+3. **AppImage**：将构建的应用程序打包为可分发的 AppImage 格式
 
-**阶段依赖性：**
+**阶段依赖关系：**
 ```yaml
 build-lumi:
   needs: [deps-debian]  # Waits for dependency container
@@ -165,26 +172,26 @@ lumi-appimage:
 
 每个阶段仅在其依赖项成功完成后运行，以确保正确的构建顺序和工件可用性。
 
-## 当前职位名称
+## 当前作业名称
 
-Lumi `.gitlab-ci.yml` 当前定义了这些作业名称：
+Lumi 的 `.gitlab-ci.yml` 当前定义了这些作业名称：
 
--`deps-debian`
+- `deps-debian`
 - `build-lumi`
 - `lumi-appimage`
 
 ## 总结
 
-- `.gitlab-ci.yml`定义了管道的结构和逻辑
-- 作业包含 shell 命令或外部脚本
+- `.gitlab-ci.yml` 定义流水线的结构和逻辑
+- 作业包含 Shell 命令或外部脚本
 - Meson 和 Ninja 等工具作为构建过程的一部分在作业中使用
 
-Lumi 使用 GitLab CI 自动为基于 Debian 的平台构建 AppImage。该管道构建依赖项，编译 Lumi，然后打包 AppImage。
+Lumi 使用 GitLab CI 自动为基于 Debian 的平台构建 AppImage。流水线会构建依赖项、编译 Lumi，然后打包 AppImage。
 
-有关源级别的详细信息，请使用：
+有关源级别详细信息，请参阅：
 
-- `.gitlab-ci.yml` 在 Lumi 存储库根目录中
+- Lumi 仓库根目录中的 `.gitlab-ci.yml`
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-有关 Lumi CI 构建过程的全面技术详细信息，包括环境设置、脚本架构和故障排除，请参阅 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
+有关环境设置、脚本架构和故障排除等 Lumi CI 构建过程的全面技术细节，请参阅 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。

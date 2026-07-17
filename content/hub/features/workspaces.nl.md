@@ -1,37 +1,42 @@
 ---
-title: "Werkruimte"
+title: "Werkruimtes"
 type: docs
+url: "hub/features/workspaces"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
-Dankzij werkruimten kan Lumi zich aanpassen aan verschillende manieren van werken. Een werkruimte geeft het gevoel van de studioomgeving weer: paneelindeling, gereedschapsstatus, canvaspresentatie, bronpaden, paletkeuze, thema en andere interfacevoorkeuren die de schildersessie vormgeven.
 
-In plaats van één vast arrangement voor elke taak aan te houden, kunnen kunstenaars aparte omgevingen onderhouden voor schetsen, schilderen, inkten, kleurenwerk, presentatie, scripting of gerichte sessies op volledig scherm. Elke omgeving kan de middelen naar voren brengen die bij dat soort werk horen, zodat een tekenwerkruimte het gevoel kan hebben gevuld te zijn met tekenvoorinstellingen, terwijl een schilderwerkruimte kan overschakelen naar schildergereedschappen.
+Met werkruimtes past Lumi zich aan verschillende manieren van werken aan. Een werkruimte vangt de sfeer van de studio: paneelindeling, gereedschapsstatus, canvaspresentatie, bronpaden, paletkeuze, thema en andere interfacevoorkeuren die de schildersessie vormgeven.
 
-## Een studio die verandert met de taak
+In plaats van één vaste indeling voor elke taak, kunnen kunstenaars aparte omgevingen onderhouden voor schetsen, schilderen, inkten, kleurwerk, presentatie, scripting of gefocuste sessies op volledig scherm. Elke omgeving kan de bronnen naar voren brengen die bij dat werk horen — een tekenwerkruimte voelt gevuld met tekenvoorinstellingen, een schilderwerkruimte schakelt naar schildergereedschappen.
 
-Verschillende stadia van een kunstwerk profiteren van verschillende omgevingen. Voor ruwe schetsen zijn mogelijk een helder canvas en minimale panelen nodig. Voor het schilderen zijn mogelijk penseelinstellingen en toegang tot het palet binnen handbereik nodig. Voor het inkten zijn mogelijk hulplijnen, stabiele gereedschapsopties en een neutrale weergave nodig. Voor een recensie of presentatie is mogelijk een schonere configuratie op volledig scherm nodig.
+## Een studio die meebeweegt met de taak
 
-Werkruimtes maken deze verschuivingen bewust. De interface kan worden aangepast aan de taak, zonder dat de kunstenaar de studio elke keer met de hand opnieuw hoeft op te bouwen.
+Verschillende fases van een kunstwerk vragen om verschillende omgevingen. Ruwe schetsen vragen om een helder canvas en minimale panelen. Schilderen vraagt om penseelinstellingen en palettoegang binnen handbereik. Inkten vraagt om hulplijnen, stabiele gereedschapsopties en een neutrale weergave. Review of presentatie vraagt om een schonere fullscreen-opstelling.
+
+Werkruimtes maken die verschuivingen bewust. De interface kan meeschakelen met de taak zonder dat de kunstenaar de studio elke keer opnieuw moet opbouwen.
 
 ## Meer dan paneelplaatsing
 
-Een werkruimte is niet alleen een dock-indeling. Het kan de bredere werkcontext behouden: de manier waarop het canvas is ingekaderd, hoe de gereedschapskist zich gedraagt, welke kleuren en gereedschapsbronnen gereed zijn, hoe gereedschappen zijn geconfigureerd en hoe invoerapparaten naar verwachting zullen reageren.
+Een werkruimte is niet alleen een dock-indeling. Ze kan de bredere werkcontext bewaren: hoe het canvas is ingekaderd, hoe de gereedschapskist zich gedraagt, welke kleur- en gereedschapsbronnen klaarstaan, hoe gereedschappen zijn geconfigureerd en hoe invoerapparaten worden verwacht te reageren.
 
-Dit maakt het wisselen van werkruimte nuttig, zelfs als de panelen er hetzelfde uitzien. Twee omgevingen kunnen een algemene lay-out delen, maar verschillen qua gereedschapsgevoel, visueel comfort, paletidentiteit, beschikbare voorinstellingen of apparaatgedrag.
+Zo blijft wisselen nuttig, zelfs wanneer panelen er hetzelfde uitzien. Twee omgevingen kunnen een algemene indeling delen, maar verschillen in gereedschapsgevoel, visueel comfort, paletidentiteit, beschikbare voorinstellingen of apparaatgedrag.
 
-## Direct overstappen
+## Vloeiend wisselen
 
-Werkruimtes zijn bedoeld om vloeiend te zijn. Schakelen zou moeten aanvoelen alsof u tussen voorbereide bureaus in dezelfde studio beweegt, in plaats van de applicatie opnieuw te starten of een afzonderlijke configuratie te openen.
+Werkruimtes zijn bedoeld om vloeiend te zijn. Wisselen moet aanvoelen als verplaatsen tussen voorbereide bureaus in dezelfde studio, niet als de applicatie opnieuw starten of een aparte configuratie openen.
 
-Open beelden kunnen op hun plaats blijven terwijl de omringende omgeving verandert, waardoor de kunstenaar van de ene fase van het werk naar de andere kan gaan zonder de concentratie te onderbreken.
+Open beelden kunnen op hun plaats blijven terwijl de omgeving verandert, zodat de kunstenaar van de ene werkfase naar de andere gaat zonder de concentratie te breken.
 
-## Persoonlijke en projectmatige opstellingen
+## Persoonlijke en projectgebonden opstellingen
 
-Sommige werkruimtes kunnen persoonlijke standaardinstellingen zijn: een comfortabele schilderopstelling, een compacte laptopopstelling of een focusmodus op volledig scherm. Anderen kunnen tot een project behoren: een bepaald palet, thema, paneelopstelling, bronnenverzameling of apparaatconfiguratie die bij een specifieke reeks afbeeldingen past.
+Sommige werkruimtes zijn persoonlijke defaults: een comfortabele schilderopstelling, een compacte laptopopstelling of een fullscreen-focusmodus. Andere horen bij een project: een bepaald palet, thema, paneelindeling, bronnenverzameling of apparaatconfiguratie voor een reeks beelden.
 
-Omdat werkruimtes een naam hebben en herbruikbaar zijn, kunnen ze onderdeel worden van het ritme van een kunstenaar. De juiste omgeving kan worden hersteld wanneer het werk daarom vraagt.
+Omdat werkruimtes een naam hebben en herbruikbaar zijn, kunnen ze onderdeel worden van het ritme van een kunstenaar. De juiste omgeving kan terugkomen wanneer het werk daarom vraagt.
 
-## Wrijving verminderen
+## Minder wrijving
 
-Het doel van werkruimten is om herhaalde instellingen uit het creatieve proces te verwijderen. Zodra een arrangement goed voelt, kan Lumi het zich herinneren. Wanneer de taak verandert, kan de interface volgen.
+Het doel van werkruimtes is herhaalde setup uit het creatieve proces te halen. Zodra een indeling goed voelt, onthoudt Lumi die. Wanneer de taak verandert, kan de interface meebewegen.
 
-Hierdoor blijft de aandacht gevestigd op het artwork in plaats van op het raambeheer, waardoor Lumi minder aanvoelt als een enkele statische applicatie en meer als een flexibele digitale studio.
+Zo blijft de aandacht op het kunstwerk in plaats van op vensterbeheer — Lumi voelt minder als één statische applicatie en meer als een flexibele digitale studio.

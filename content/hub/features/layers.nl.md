@@ -1,45 +1,50 @@
 ---
 title: "Lagen"
 type: docs
+url: "hub/features/layers"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
-Het lagensysteem van Lumi geeft een illustratiestructuur. Hiermee kunnen kunstenaars schetsen, kleuren, schaduwen, textuur, maskers, aanpassingen, experimenten en uiteindelijke details scheiden zonder elke beslissing rechtstreeks in één vlak beeld vast te leggen.
 
-Lagen zijn niet alleen maar een stapel pixels. Ze dragen zichtbaarheid, overvloeiing, maskers, vergrendelingen, effecten, groepering en compositiegedrag met zich mee, waardoor ze de basis vormen voor flexibele, niet-destructieve schilderworkflows.
+Het lagensysteem van Lumi geeft een illustratie structuur. Kunstenaars kunnen schets, kleur, schaduw, textuur, maskers, aanpassingen, experimenten en finale details scheiden zonder elke beslissing direct in één vlak beeld vast te leggen.
+
+Lagen zijn niet alleen een stapel pixels. Ze dragen zichtbaarheid, overvloeiing, maskers, vergrendelingen, effecten, groepering en compositiegedrag — de basis voor flexibele, niet-destructieve schilderworkflows.
 
 ![layers](/images/screens/layers.jpg)
 
 ## Gestructureerd schilderen
 
-Een gelaagd beeld kan in fasen worden opgebouwd. Ruwe markeringen kunnen onder strakke lijnen zitten, kleur kan los van de belichting worden geblokkeerd, textuur kan worden geïsoleerd en alternatieve ideeën kunnen beschikbaar blijven zonder de hoofdcompositie te verstoren.
+Een gelaagd beeld kan in fasen worden opgebouwd. Ruwe streken kunnen onder strakke lijnen liggen, kleur los van belichting worden geblokkeerd, textuur geïsoleerd worden, en alternatieve ideeën beschikbaar blijven zonder de hoofdcompositie te verstoren.
 
-Groepen maken die structuur leesbaar. Gerelateerde delen van een illustratie kunnen samen bewegen, in elkaar overvloeien of worden behandeld als een gedeeld onderdeel van de illustratie, terwijl hun afzonderlijke lagen bewerkbaar blijven.
+Groepen maken die structuur leesbaar. Gerelateerde delen van een illustratie kunnen samen bewegen, samen overvloeien of als gedeeld onderdeel van het kunstwerk worden behandeld, terwijl hun afzonderlijke lagen bewerkbaar blijven.
 
-## Mengen en maskers
+## Overvloeiing en maskers
 
-Met het overvloeien van lagen bepaalt u hoe een deel van de illustratie samenwerkt met wat zich eronder bevindt. Dit maakt het mogelijk om schaduw, lichter, tint, textuur of kleurcorrectie uit te voeren zonder de onderliggende vormen opnieuw te schilderen.
+Laagovervloeiing bepaalt hoe een deel van het kunstwerk samenwerkt met wat eronder ligt. Zo kun je schaduwen, verlichten, tinten, textureren of kleur corrigeren zonder de onderliggende vormen opnieuw te schilderen.
 
-Maskers voegen een extra niveau van controle toe. Ze laten de zichtbaarheid schilderen, verzachten, verbergen, herstellen of vormgeven, onafhankelijk van de kleurinhoud van de laag. Hierdoor blijven randbeslissingen en tonale overgangen flexibel gedurende de hele levensduur van een stuk.
+Maskers voegen een extra niveau van controle toe. Zichtbaarheid kan onafhankelijk van de kleurinhoud van de laag worden geschilderd, verzacht, verborgen, hersteld of gevormd. Randbeslissingen en tonale overgangen blijven zo flexibel gedurende het hele proces.
 
-## Picken en navigeren
+## Selectie en navigatie
 
-Complexe schilderijen kunnen veel kleine stukjes bevatten. Lumi ondersteunt directe laaggeoriënteerde navigatie, zodat kunstenaars van het canvas terug naar de lagenstapel kunnen gaan zonder de stroom van het schilderen te verliezen.
+Complexe schilderijen kunnen veel kleine onderdelen bevatten. Lumi ondersteunt directe laaggeoriënteerde navigatie, zodat kunstenaars van het canvas terug naar de lagenstapel kunnen zonder de schilderflow te verliezen.
 
-De bedoeling is om gelaagd werk ruimtelijk te laten aanvoelen in plaats van administratief: als er een merkteken zichtbaar is op het doek, moet het lagensysteem de kunstenaar helpen er snel weer op terug te komen.
+Gelaagd werk moet ruimtelijk aanvoelen, niet administratief: als een streek op het canvas zichtbaar is, helpt het lagensysteem de kunstenaar er snel weer naartoe te gaan.
 
 ## Bescherming en intentie
 
-Lagen kunnen op verschillende manieren worden beschermd, zodat voltooid werk, maskers, posities, transparantie of kleurbeslissingen niet per ongeluk worden gewijzigd. Deze waarborgen zijn nuttig zodra een beeld compacter wordt en sommige delen stabiel moeten blijven terwijl andere blijven evolueren.
+Lagen kunnen op verschillende manieren worden beschermd, zodat afgewerkt werk, maskers, posities, transparantie of kleurbeslissingen niet per ongeluk veranderen. Dat is nuttig zodra een beeld dicht wordt en sommige delen stabiel moeten blijven terwijl andere evolueren.
 
-Deze bescherming ondersteunt doelbewuste workflows: schets vrijelijk waar verandering welkom is, sluit gebieden die zijn opgelost af en ga door met het ontwikkelen van het beeld zonder angst voor onbedoelde schade.
+Deze bescherming ondersteunt bewuste workflows: vrij schetsen waar verandering welkom is, afgeronde gebieden vergrendelen en het beeld verder ontwikkelen zonder angst voor onbedoelde schade.
 
 ## Niet-destructieve effecten
 
-Filters en effecten kunnen deel uitmaken van de bewerkbare status van een laag in plaats van onmiddellijk permanente pixels te worden. Hierdoor blijven de visuele veranderingen aanpasbaar en kan een effectenstapel deel blijven uitmaken van de werkcompositie.
+Filters en effecten kunnen deel uitmaken van de bewerkbare status van een laag in plaats van meteen permanente pixels te worden. Visuele wijzigingen blijven aanpasbaar en een effectenstapel kan onderdeel blijven van de werkcompositie.
 
-Voor kunstenaars betekent dit dat experimenten omkeerbaar kunnen blijven. Een look kan worden getest, verborgen, opnieuw geordend, verfijnd of uiteindelijk vastgelegd wanneer deze onderdeel wordt van het uiteindelijke beeld.
+Voor kunstenaars betekent dit dat experimenten omkeerbaar kunnen blijven. Een look kan worden getest, verborgen, herschikt, verfijnd of uiteindelijk vastgelegd wanneer hij onderdeel wordt van het eindbeeld.
 
 ## Prestaties voor diepe bestanden
 
-Gelaagde illustraties kunnen complex worden, vooral wanneer groepen, maskers en effecten op elkaar inwerken. Het lagensysteem van Lumi is ontworpen om algemene schilderacties responsief te houden door waar mogelijk onnodige hercompositie te vermijden.
+Gelaagde illustraties kunnen complex worden, vooral wanneer groepen, maskers en effecten samenwerken. Het lagensysteem van Lumi houdt algemene schilderacties responsief door waar mogelijk onnodige hercompositie te vermijden.
 
-Het resultaat is een gelaagde workflow gericht op zowel controle als snelheid: gedetailleerd genoeg voor zorgvuldig, niet-destructief werk, maar nog steeds praktisch voor het dagelijkse schilderwerk.
+Het resultaat is een workflow die controle én snelheid combineert: gedetailleerd genoeg voor zorgvuldig niet-destructief werk, maar nog steeds praktisch voor dagelijks schilderen.

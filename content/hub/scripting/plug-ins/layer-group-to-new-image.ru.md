@@ -1,14 +1,17 @@
 ---
 title: "Группа слоев в новое изображение"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 429937950043523736b0a2e40ace60284cd543755a671550cd8bb5ddb36ff246
 ---
 Копирует группу активных слоев в новое изображение (полезно, когда полный набор слоев слишком тяжел для работы).
 
-## Где он живет
+## Исходный код
 
-- [Просмотреть источник](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Посмотреть исходный код](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
-## Где он появляется в Lumi
+## Меню в Lumi
 
 - **Слой → Группа слоев в новое изображение**
 

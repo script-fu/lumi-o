@@ -1,6 +1,9 @@
 ---
 title: "เบราว์เซอร์ขั้นตอน"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
 ---
 Procedure Browser เป็นเครื่องมืออ้างอิงหลักสำหรับการค้นหาฟังก์ชันนับร้อยที่มีอยู่ใน Procedural Database (PDB) ของ Lumi เนื่องจากทุกเครื่องมือ ตัวกรอง และสคริปต์ใน Lumi จะต้องลงทะเบียนใน PDB เพื่อให้สามารถเรียกใช้ได้ เบราว์เซอร์นี้จึงเป็น PDB explorer ที่สมบูรณ์แบบได้อย่างมีประสิทธิภาพ
 

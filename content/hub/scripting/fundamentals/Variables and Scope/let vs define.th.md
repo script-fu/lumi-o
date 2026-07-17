@@ -1,7 +1,10 @@
 ---
-title: "ชื่อให้หรือกำหนดท้องถิ่น"
+title: "Named let หรือ define ภายใน"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 ทั้ง **ชื่อ `let`** และ **local `define`** เป็นเครื่องมือที่มีประสิทธิภาพใน Scheme สำหรับการจัดโครงสร้างโค้ดของคุณ แต่มีวัตถุประสงค์ที่แตกต่างกัน การทำความเข้าใจว่าเมื่อใดควรใช้แต่ละอย่างในการสร้างสคริปต์ที่ดูสะอาดตา แบบโมดูลาร์ และมีประสิทธิภาพ
 
@@ -67,8 +70,8 @@ weight: 5
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; ฟังก์ชันช่วยภายใน
+  (define (cube x) (* x x x))  ;; ฟังก์ชันช่วยภายใน
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ weight: 5
 ใน `let` ที่มีชื่อ การผูกในวงเล็บจะทำหน้าที่เป็น **ตัวแปรภายในเครื่อง** ที่ถูกเตรียมใช้งานด้วยค่าเฉพาะ ตัวแปรเหล่านี้กำหนดขอบเขตไว้ที่ส่วนเนื้อหาของ `let`
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; ประกาศ x ด้วยค่าเริ่มต้น 1
+           (y 2))  ;; ประกาศ y ด้วยค่าเริ่มต้น 2
+  (+ x y))         ;; ใช้ x และ y ในส่วน body
 ```
 
 - **`x` และ `y`** เป็นตัวแปรท้องถิ่นที่กำหนดและเริ่มต้นโดยเป็นส่วนหนึ่งของ `let`
@@ -158,7 +161,7 @@ weight: 5
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; เรียกซ้ำด้วย x และ y ใหม่
 ```
 
 - **การทำซ้ำครั้งแรก**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ weight: 5
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; เรียกครั้งแรกด้วย x = 1, y = 2
 ```
 
 ทั้งสองทำการคำนวณแบบเดียวกัน แต่ชื่อ `let` รวมการประกาศตัวแปรและการตั้งค่าการเรียกซ้ำไว้ในโครงสร้างเดียวที่กระชับ

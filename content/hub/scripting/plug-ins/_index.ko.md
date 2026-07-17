@@ -1,6 +1,9 @@
 ---
 title: "플러그인"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f273072593fbc0114525e7736ebde1b24861c1a146ef77e254ff85273604a67e
 ---
 이 섹션에서는 Lumi에서 사용되는 작은 **예제 Scheme 플러그인** 세트를 문서화합니다.
 

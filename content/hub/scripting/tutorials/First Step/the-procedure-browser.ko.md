@@ -2,6 +2,9 @@
 title: "프로시저 브라우저"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Lumi 프로시저 브라우저**를 사용하면 사용 가능한 프로시저(내장 및 플러그인 제공)를 검색하고 해당 매개변수와 반환 값을 검사할 수 있습니다.
 
@@ -31,12 +34,12 @@ Procedure Browser에는 방금 설치한 프로시저를 포함하여 플러그�
 일단 "Hello World!"를 설치했다면 플러그인의 경우 Procedure Browser에 나열된 것을 찾을 수 있습니다. Lumi에 등록한 함수 이름(이 경우 "scheme-hello-world")을 검색하기만 하면 됩니다. 항목에는 간단한 설명과 함께 플러그인과 관련된 매개변수 및 반환 값이 표시됩니다. 또한 등록 프로세스 중에 입력 매개변수로 입력한 텍스트 줄 중 일부가 **추가 정보** 섹션 아래에 표시되는 위치도 확인할 수 있습니다.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; 프로시저 이름
+  "Hello world!"                                        ;; 메뉴 항목 이름
+  "A Scheme procedure plug-in"                       ;; 도구 설명 및 설명
+  "Your Name"                                           ;; 작성자
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; 라이선스
+  "2024")                                               ;; 저작권 날짜
 ```
 
 이를 통해 플러그인이 올바르게 등록되었는지 쉽게 확인할 수 있으며 Lumi의 다른 절차와 상호 작용하는 방식을 빠르게 검토할 수 있습니다. Procedure Browser는 Lumi 내에서 사용 가능한 모든 프로시저를 탐색하여 플러그인을 디버깅하고 확장하기 위한 강력한 도구입니다.

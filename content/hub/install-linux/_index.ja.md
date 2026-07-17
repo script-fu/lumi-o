@@ -1,17 +1,22 @@
 ---
-title: "Linuxのインストール方法"
+title: "Linux のインストール方法"
 type: docs
+url: "hub/install-linux"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7a9dfa8926aaef596fc4b39ff97572e36ec6ddba3156fa5e655ac4f126fc3236
 ---
-Lumi の Linux インストール ガイドへようこそ。
 
-これらのガイドには、Lumi の開発とテストに使用されるオペレーティング システムのセットアップが文書化されています。これらは、カスタマイズされた構成や実験的な構成ではなく、安定した再現可能な Linux 環境を必要とするアーティストや開発者を対象としています。
+Lumi の Linux インストールガイドへようこそ。
 
-信頼性と長期的な一貫性を考慮して選択された Debian ベースのシステムに重点が置かれています。各ガイドは、ユーザーが不確実性を最小限に抑えながら既存のシステムから既知の作業セットアップに移行できるようにすることを目的とした、実践的で段階的なアプローチに従っています。
+これらのガイドでは、Lumi の開発とテストに使っているオペレーティングシステムのセットアップを説明します。カスタム構成や実験的な構成ではなく、安定して再現できる Linux 環境が必要なアーティストや開発者向けです。
 
-トピックには、Debian のインストール、システム構成、バックアップなどが含まれます。
+信頼性と長期的な一貫性から、Debian ベースのシステムを中心に扱います。各ガイドは実践的な手順で、既存の環境から確実に動作する構成へ、できるだけ迷いなく移行できるように書いています。
+
+Debian のインストール、システム構成、バックアップなどを扱います。
 
 {{< cards >}}
   {{< card link="A-Linux-System-Overview" title="Linux システムの概要">}}
   {{< card link="Installing-Debian" title="Debian のインストール">}}
-  {{< card link="System-Backup-Clonezilla" title="Clonezilla を使用したシステム バックアップ">}}
+  {{< card link="System-Backup-Clonezilla" title="Clonezilla を使ったシステムバックアップ">}}
 {{< /cards >}}

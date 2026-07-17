@@ -2,6 +2,9 @@
 title: "符号"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 符号是Scheme中的核心数据类型之一，代表唯一的、不可变的标识符。它们主要用作程序中的键、标记或占位符，这使得它们对于编写干净且富有表现力的代码至关重要。
 
@@ -17,9 +20,9 @@ Scheme 中的符号类似于字符串，但不同之处在于符号是**唯一**
 示例：
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; 名为 `hello` 的符号
+'foo-bar     ; 名为 `foo-bar` 的符号
+'*special*   ; 名为 `*special*` 的符号
 ```
 
 ## 创建符号
@@ -29,7 +32,7 @@ Scheme 中的符号类似于字符串，但不同之处在于符号是**唯一**
 ### 示例
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; 创建符号 `my-symbol`
 ```
 
 您还可以使用 `string->symbol` 过程以编程方式创建符号，该过程将字符串转换为符号。
@@ -48,8 +51,8 @@ Scheme 中的符号类似于字符串，但不同之处在于符号是**唯一**
 ### 示例
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t（同一符号）
+(eq? 'apple 'orange)  ; #f（不同符号）
 ```
 
 这使得符号非常适合用作数据结构中的键或代码中的标记。
@@ -62,7 +65,7 @@ Scheme 中的符号类似于字符串，但不同之处在于符号是**唯一**
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; 返回 (name . "Alice")
 ```
 
 2. **代码中的标识符：**
@@ -88,9 +91,9 @@ Scheme 提供了使用符号的内置过程：
 ### 示例
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t（真：是符号）
+(symbol->string 'example)     ; 结果："example"
+(string->symbol "new-symbol") ; 结果：'new-symbol
 ```
 
 ## 总结

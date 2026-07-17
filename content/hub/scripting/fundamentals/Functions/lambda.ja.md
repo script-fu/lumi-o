@@ -2,6 +2,9 @@
 title: "ラムダ関数"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Scheme の **Lambda 関数**は匿名関数です。つまり、名前のない関数です。これらの関数はインラインで定義され、通常は短い 1 回限りの操作に使用されます。 `lambda` コンストラクトは関数型プログラミングの強力なツールであり、その場で簡潔で柔軟なロジックを作成できます。
 
@@ -37,7 +40,7 @@ Lambda 関数は独自に定義できます...
 #### Lambda を使用した単純な計算
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; 8 を返す
 ```
 
 ここで:
@@ -86,7 +89,7 @@ Lambda 関数は、多くの場合、`map` や `filter` などの高階関数に
 #### 数値のリストを二乗する
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; (1 4 9 16) を返す
 ```
 
 - `lambda` 関数は、リストの各要素を 2 乗します。
@@ -103,7 +106,7 @@ Lambda 関数は、多くの場合、`map` や `filter` などの高階関数に
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; 15 を返す
 ```
 
 - `make-adder` は、特定の数値を追加する新しいラムダ関数を生成します (`n`)。
@@ -117,7 +120,7 @@ Lambda 関数は、多くの場合、`map` や `filter` などの高階関数に
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; 7 を返す
 ```
 
 - `let` は、ラムダ関数を `add` という名前にバインドします。
@@ -130,8 +133,10 @@ Lambda 関数は、多くの場合、`map` や `filter` などの高階関数に
 #### 偶数のフィルタリング
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` は、数値が偶数かどうかをチェックします。
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; (2 4 6) を返す
+```
+
+- `lambda` は、数値が偶数かどうかをチェックします。
 - `filter` 関数は、ラムダを使用してリストから偶数のみを保持します。
 
 ### Lambda 関数の利点

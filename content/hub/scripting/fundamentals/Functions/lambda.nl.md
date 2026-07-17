@@ -2,6 +2,9 @@
 title: "Lambda-functies"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 **Lambda-functies** in Scheme zijn anonieme functies, wat betekent dat het functies zonder naam zijn. Deze functies worden inline gedefinieerd en worden doorgaans gebruikt voor korte, eenmalige handelingen. De `lambda` constructie is een krachtig hulpmiddel bij functioneel programmeren, waarmee u in een handomdraai beknopte en flexibele logica kunt creëren.
 
@@ -37,7 +40,7 @@ Lambda-functies kunnen afzonderlijk worden gedefinieerd...
 #### Lambda gebruiken voor eenvoudige berekeningen
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Geeft 8 terug
 ```
 
 Hier:
@@ -86,7 +89,7 @@ Lambda-functies worden vaak rechtstreeks doorgegeven aan functies van hogere ord
 #### Een lijst met getallen kwadrateren
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Geeft (1 4 9 16) terug
 ```
 
 - De functie `lambda` maakt elk element van de lijst vierkant.
@@ -103,7 +106,7 @@ U kunt een lambda-functie van een andere functie retourneren om dynamisch gedrag
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Geeft 15 terug
 ```
 
 - `make-adder` genereert een nieuwe lambda-functie die een specifiek nummer toevoegt (`n`).
@@ -117,7 +120,7 @@ Lambda's worden vaak gebruikt met `let` om lokaal bereikbare, tijdelijke functie
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Geeft 7 terug
 ```
 
 - De `let` bindt een lambda-functie aan de naam `add`.
@@ -130,8 +133,10 @@ Lambda's schitteren in combinatie met functies van hogere orde om complexe datat
 #### Even getallen filteren
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- De `lambda` controleert of een getal even is.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Geeft (2 4 6) terug
+```
+
+- De `lambda` controleert of een getal even is.
 - De functie `filter` gebruikt de lambda om alleen de even nummers uit de lijst te behouden.
 
 ### Voordelen van Lambda-functies

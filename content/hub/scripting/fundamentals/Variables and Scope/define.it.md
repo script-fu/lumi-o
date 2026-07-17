@@ -1,7 +1,10 @@
 ---
-title: "definire"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 L'istruzione `define` in Scheme è un costrutto versatile utilizzato per creare associazioni globali o locali. Viene comunemente utilizzato per definire variabili e funzioni, rendendole riutilizzabili e accessibili in uno script o in un ambito specifico. Comprendere `define` è fondamentale per scrivere programmi Scheme modulari, riutilizzabili e leggibili.
 
@@ -28,7 +31,7 @@ Un utilizzo di base di `define` è creare variabili che contengano valori costan
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; Calcola 2π
 ```
 
 **Risultato**: `6.28318`
@@ -51,7 +54,7 @@ Un utilizzo di base di `define` è creare variabili che contengano valori costan
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; Calcola 4²
 ```
 
 **Risultato**: `16`
@@ -66,8 +69,8 @@ Se utilizzato all'interno di una funzione, `define` crea associazioni locali acc
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Funzione di supporto locale
+  (define (cube x) (* x x x))  ;; Funzione di supporto locale
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

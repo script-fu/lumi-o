@@ -1,41 +1,46 @@
 ---
-title: "Carte des palettes"
+title: "Palette Map"
 type: docs
+url: "hub/features/palette-map"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: cab0e21243e33c96395eda5a819807c031b4874433d6f50720e405ba58acc2c6
 ---
-La carte de palette visualise ce qu'une palette active peut produire. À partir des pigments de la palette et des couleurs enregistrées, il présente l'espace colorimétrique accessible sous la forme d'une carte de teintes et de valeurs conviviale pour le peintre.
 
-Son objectif est pratique : au lieu de parcourir une liste plate d'échantillons, les artistes peuvent voir où les couleurs vivent les unes par rapport aux autres et se déplacer spatialement dans la palette.
+La Palette Map visualise ce qu'une palette active peut produire. À partir des pigments de la palette et des couleurs enregistrées, elle présente l'espace couleur accessible sous forme de carte de teinte et de valeur pensée pour le peintre.
+
+Son objectif est pratique : au lieu de parcourir une liste plate d'échantillons, les artistes voient où se situent les couleurs les unes par rapport aux autres et se déplacent dans la palette de façon spatiale.
 
 ![palette-map](/images/screens/palettemap.jpg)
 
-## Une carte de couleur accessible
+## Une carte des couleurs accessibles
 
-Chaque palette a un caractère. Certaines palettes s'ouvrent sur des verts clairs et des violets ; d'autres s'effondrent rapidement dans des tons neutres chauds, des couleurs terre ou des ombres sourdes. La carte de palette rend ce personnage visible.
+Chaque palette a un caractère propre. Certaines ouvrent sur des verts et des violets nets ; d'autres basculent vite vers des neutres chauds, des terres ou des ombres sourdes. La Palette Map rend ce caractère visible.
 
 ![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
-Les mélanges générés, les pigments primaires et les couleurs enregistrées apparaissent dans le cadre d'un champ de couleurs organisé. Cela permet de comprendre plus facilement non seulement quelles couleurs existent, mais aussi comment elles se rapportent à la gamme globale de la palette.
+Les mélanges générés, les pigments primaires et les couleurs enregistrées apparaissent dans un même champ couleur organisé. Il devient plus facile de comprendre non seulement quelles couleurs existent, mais aussi comment elles se situent dans la gamme globale de la palette.
 
 ## Teinte, valeur et orientation
 
-La carte est organisée autour de la teinte et de la luminosité afin que les choix de couleurs aient une adresse visuelle stable. Les couleurs vives, les couleurs sombres, les décalages chauds, les décalages froids, les zones saturées et les passages sourds deviennent plus faciles à comparer d'un seul coup d'œil.
+La carte s'organise autour de la teinte et de la luminosité, de sorte que les choix de couleur ont une adresse visuelle stable. Couleurs vives, couleurs sombres, décalages chauds ou froids, zones saturées et passages sourds deviennent plus faciles à comparer d'un coup d'œil.
 
-Cette structure spatiale est particulièrement utile lors du choix de la prochaine couleur d’un tableau. Un artiste peut s’orienter vers une teinte proche, rester dans la même famille de valeurs, rechercher une saturation plus forte ou passer délibérément à un neutre plus discret.
+Cette structure spatiale est particulièrement utile pour choisir la prochaine couleur d'une illustration. L'artiste peut se rapprocher d'une teinte voisine, rester dans la même famille de valeurs, chercher une chrominance plus forte ou basculer délibérément vers un neutre plus discret.
 
 ## Plus qu'un sélecteur
 
-La Palette Map est également un pont vers le mixage. Les couleurs sur la carte peuvent servir de points de départ à de nouveaux mélanges, et les mélanges enregistrés peuvent conserver leur relation avec la carte plutôt que de devenir des échantillons déconnectés.
+La Palette Map sert aussi de passerelle vers le mélange. Les couleurs sur la carte peuvent devenir des points de départ pour de nouveaux mélanges, et les mélanges enregistrés peuvent conserver leur relation avec la carte plutôt que de devenir des échantillons isolés.
 
-Cela aide Lumi à traiter la couleur comme un espace de travail continu. La sélection, le mélange, la sauvegarde et le retour aux couleurs se déroulent tous dans la même géographie de la palette.
+Lumi traite ainsi la couleur comme un espace de travail continu. Sélection, mélange, enregistrement et retour aux couleurs se déroulent dans la même géographie de palette.
 
 ## Exploration centrée sur le canevas
 
-La carte peut être utilisée comme une grande surface visuelle lorsque les décisions relatives aux couleurs nécessitent plus d’espace. Cela le rend utile pour comparer une couleur potentielle avec la peinture elle-même, parcourir les familles de tons ou se déplacer rapidement dans la palette sans s'appuyer sur un petit panneau.
+La carte peut servir de grande surface visuelle lorsque les décisions couleur demandent plus d'espace. Elle permet de comparer une couleur potentielle à la peinture elle-même, de parcourir des familles tonales ou de se déplacer rapidement dans la palette sans dépendre d'un petit panneau.
 
-L'intention est de rendre la navigation dans la palette immédiate et visuelle : regardez le monde des couleurs, parcourez-le et choisissez la marque qui appartient ensuite.
+L'objectif est une navigation palette immédiate et visuelle : regarder l'univers de couleurs, s'y déplacer et choisir la marque qui vient ensuite.
 
-## Identité de la palette
+## Identité de palette
 
-La texture de palette étant générée à partir de la palette active, le changement de palette modifie la forme et l'accentuation de la texture. Une palette de portraits limitée, une palette de studio à spectre complet et une palette de paysages en sourdine produisent chacune une géographie de couleurs différente.
+Comme la Palette Map est générée à partir de la palette active, changer de palette modifie la forme et l'accentuation de la carte. Une palette portrait limitée, une palette studio à spectre complet et une palette paysage sourde produisent chacune une géographie couleur différente.
 
-De cette manière, la Palette Map devient un portrait de la palette elle-même : une image lisible de ce que ce système de couleurs peut faire.
+La Palette Map devient ainsi un portrait de la palette elle-même : une image lisible de ce que ce système couleur peut produire.

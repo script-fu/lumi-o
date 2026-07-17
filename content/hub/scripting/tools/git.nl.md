@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Gebruik Git om wijzigingen in uw plug-ins bij te houden, fouten ongedaan te maken en code tussen machines te delen.
 
@@ -62,7 +65,7 @@ Als je nog geen account hebt, ga dan naar [GitHub](https://github.com/) om je aa
 
 1. **Log in op GitHub**: Ga naar [GitHub](https://github.com/) en log in op uw account.
 2. **Maak een nieuwe opslagplaats**:
-   - Klik op het pictogram **+** in de rechterbovenhoek en selecteer **Nieuwe repository**.
+   - Klik op het pictogram ***+** in de rechterbovenhoek en selecteer **Nieuwe repository**.
    - Voer een naam voor de opslagplaats in (bijvoorbeeld `your-repository`).
    - Voeg indien gewenst een beschrijving toe.
    - Kies **Openbare** of **Privé** zichtbaarheid.
@@ -82,7 +85,7 @@ Deze opdracht initialiseert een lege Git-repository in uw projectmap.
 
 ### 5. Verbind uw lokale opslagplaats met GitHub
 
-Vervolgens wil je je lokale repository verbinden met GitHub. Nadat je een lege repository op GitHub hebt gemaakt, voeg je deze als afstandsbediening toe aan je lokale project:
+Vervolgens wil je je lokale repository verbinden met GitHub. Nadat je een lege repository op GitHub hebt gemaakt, voeg je deze als remote toe aan je lokale project:
 
 ```sh
 cd code/your/project/folder
@@ -133,8 +136,8 @@ Git en platforms zoals GitHub en GitLab zijn krachtige tools, en hoewel ze ingew
 
 Hier zijn enkele veelvoorkomende termen die je tegenkomt als je met Git en GitHub werkt:- **Commit**: een momentopname van uw wijzigingen in de repository. Elke commit bevat een bericht waarin wordt beschreven wat er is gewijzigd en creëert een historisch record waar u naar kunt verwijzen of waar u later naar kunt terugkeren.
 - **Repository (Repo)**: een verzameling bestanden en hun geschiedenis bijgehouden door Git. Opslagplaatsen kunnen lokaal op uw computer staan ​​of op afstand op platforms zoals GitHub. Elk project wordt doorgaans opgeslagen in een eigen repository.
-- **Op afstand**: een externe repository is een versie van uw project die wordt gehost op een platform zoals GitHub. Aan deze afstandsbediening wordt de lokale versie van uw project op uw computer gekoppeld, zodat u wijzigingen kunt uploaden (push) en downloaden (pull).
+- **Op afstand**: een externe repository is een versie van uw project die wordt gehost op een platform zoals GitHub. Aan deze remote wordt de lokale versie van uw project op uw computer gekoppeld, zodat u wijzigingen kunt uploaden (push) en downloaden (pull).
 - **Staging**: het proces van het voorbereiden van bestanden voor een commit. Wanneer je een bestand staget, vertel je Git dat je het in de volgende commit wilt opnemen. Met staging kun je kiezen welke wijzigingen je in een commit wilt opnemen.
 - **Push**: het verzenden van uw vastgelegde wijzigingen van uw lokale opslagplaats naar een externe opslagplaats (bijvoorbeeld GitHub), zodat anderen toegang kunnen krijgen tot de bijgewerkte versie van uw code.
-- **Pull**: het ophalen van wijzigingen uit een externe opslagplaats om uw lokale kopie bij te werken. U haalt wijzigingen op wanneer u uw lokale repository wilt synchroniseren met de nieuwste versie vanaf de afstandsbediening.
+- **Pull**: het ophalen van wijzigingen uit een externe opslagplaats om uw lokale kopie bij te werken. U haalt wijzigingen op wanneer u uw lokale repository wilt synchroniseren met de nieuwste versie vanaf de remote.
 - **Oorsprong**: de standaardnaam voor een externe opslagplaats wanneer u uw lokale opslagplaats voor het eerst verbindt met een externe opslagplaats. Verwijst doorgaans naar de hoofd-URL van uw project op GitHub.

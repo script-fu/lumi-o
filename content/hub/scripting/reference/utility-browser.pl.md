@@ -1,6 +1,9 @@
 ---
 title: "Przeglądarka narzędziowa"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 Przeglądarka narzędzi umożliwia korzystanie z wbudowanego narzędzia Scheme stdlib dostarczanego z Lumi, bez konieczności opuszczania aplikacji i przeglądania plików źródłowych.
 
@@ -14,7 +17,7 @@ Okno otwiera się natychmiast; nie trzeba wcześniej ładować wtyczki.
 
 Przeglądarka wyświetla listę wszystkich procedur, zmiennych i formularzy składni wyeksportowanych przez siedem bibliotek narzędzi, które Lumi ładuje automatycznie przy uruchomieniu:
 
-| Biblioteka | Co obejmuje |
+| Biblioteka | Zakres |
 |---|---|
 | `common.scm` | Pomocnicy ogólnego przeznaczenia (narzędzia łańcuchowe, liczbowe, listowe) |
 | `files.scm` | Pomocnicy plików i ścieżek |

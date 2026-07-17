@@ -2,6 +2,9 @@
 title: "Primeiros passos"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 First Steps apresenta padrões funcionais que funcionam bem no Scheme, com exemplos curtos e refatoradores incrementais.
 No final, você terá criado sua própria biblioteca de mensagens personalizadas e terá uma base sólida para continuar desenvolvendo plug-ins mais avançados.
@@ -29,5 +32,5 @@ Antes de começar, certifique-se de ter o seguinte:
   {{< card link="reworking" title="Retrabalho" icon="adjustments" subtitle="Técnicas avançadas de reestruturação de código" >}}
   {{< card link="refactor-again" title="Refatorar novamente" icon="arrow-sm-right" subtitle="Melhoria iterativa e otimização" >}}
   {{< card link="the-procedure-browser" title="Navegador de procedimentos" icon="book-open" subtitle="Explorando o banco de dados de procedimentos do Lumi" >}}
-  {{< card link="final-thoughts" title="Considerações Finais" icon="academic-cap" subtitle="Resumo e próximas etapas do desenvolvimento" >}}
+  {{< card link="final-thoughts" title="Considerações Finais" icon="academic-cap" subtitle="Resumo e próximas etapas no desenvolvimento" >}}
 {{< /cards >}}

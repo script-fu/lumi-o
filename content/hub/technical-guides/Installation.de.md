@@ -1,7 +1,12 @@
 ---
 title: "Installation"
 type: docs
+url: "hub/technical-guides/Installation"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ff429321515ea8c3b77a6f1f0cfd2486c8042e168032b9b0bec97b497930e25e
 ---
+
 Sie benötigen Git für den ersten Klonschritt unten. Wenn Git noch nicht installiert ist, installieren Sie es zuerst (Debian/Ubuntu: `sudo apt install git`) oder folgen Sie: [Git unter Linux verwenden](/hub/technical-guides/Using-Git-on-Linux/)
 
 ## 1) Lumi klonen (Ersteinrichtung)
@@ -14,14 +19,11 @@ sudo apt install git
 mkdir -p ~/code
 cd ~/code
 
-# Clone via SSH (matches the Git guide above)
-
+# Per SSH klonen (entspricht dem Git-Leitfaden oben)
 git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
 
-# Or clone via HTTPS (no SSH key setup)
-
+# Oder per HTTPS klonen (ohne SSH-Schlüssel-Einrichtung)
 # git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
-
 ```
 
 ## 2) Abhängigkeiten installieren (Ersteinrichtung)
@@ -33,21 +35,21 @@ sudo bash lumi-install-packages.sh
 
 ## 3) Lumi erstellen (Ersteinrichtung)
 
-Erster vollständiger Setup-Build (zum ersten Mal oder nach größeren Änderungen):
+Erster vollständiger Setup-Build (beim ersten Mal oder nach größeren Änderungen):
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 ```
 
-## 4) Starten Sie Lumi
+## 4) Lumi starten
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-launch-active.sh lumi-dev
 ```
 
-## Optional: Neu erstellen/kompilieren
+## Optional: Neu erstellen / kompilieren
 
 Normaler Neuaufbau nach Codeänderungen:
 
@@ -56,14 +58,14 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev
 ```
 
-Schneller Pfad nur zum Kompilieren:
+Schneller Kompilierungsweg:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 ```
 
-Erstellen Sie eine einzelne integrierte Komponente (ersetzen Sie `babl` durch `gegl` oder `gtk3`):
+Einzelne integrierte Komponente erstellen (ersetzen Sie `babl` durch `gegl` oder `gtk3`):
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts

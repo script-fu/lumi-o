@@ -1,33 +1,38 @@
 ---
-title: "Paletmixer"
+title: "Palette Mixer"
 type: docs
+url: "hub/features/palette-mixer"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
-De Palette Mixer is Lumi's ruimte voor het afleiden van nieuwe kleuren uit het actieve palet. Het behandelt het mengen als een schilderkunstig proces in plaats van als een eenvoudig digitaal gemiddelde, zodat kleuren kunnen verschuiven, verzachten, donkerder en harmoniseren op manieren die dichter bij fysieke pigmenten lijken.
 
-De Mixer werkt met de eigen kleuridentiteit van het palet. Nieuwe mengsels zijn geen willekeurige kleuren die van buiten het systeem komen; het zijn relaties tussen kleuren die al in het palet aanwezig zijn.
+De Palette Mixer is Lumi's ruimte om nieuwe kleuren uit het actieve palet af te leiden. Mengen wordt behandeld als een schilderproces, niet als een eenvoudig digitaal gemiddelde, zodat kleuren kunnen verschuiven, verzachten, verdonkeren en harmoniseren op manieren die dichter bij fysieke pigmenten liggen.
+
+De Mixer werkt met de eigen kleuridentiteit van het palet. Nieuwe mengsels zijn geen willekeurige kleuren van buiten het systeem; het zijn relaties tussen kleuren die al in het palet aanwezig zijn.
 
 ![palette-mixer](/images/screens/palettemixer.jpg)
 
 ## Mengen vanuit paletrelaties
 
-Een mix begint met bronkleuren uit het palet. Door zich tussen de kleuren te verplaatsen, kan een kunstenaar de overgang van de ene tintfamilie naar de andere verkennen, terwijl hij binnen het karakter van het palet blijft.
+Een mengsel begint met bronkleuren uit het palet. Door ertussen te bewegen, verkent een kunstenaar de overgang van de ene tintfamilie naar de andere binnen het karakter van het palet.
 
-Omdat het palet is opgebouwd uit pigmentachtige ingrediënten, kan het pad tussen twee kleuren nuttige tussentonen opleveren: groen van geel en blauw, getemperde viooltjes, warme grijstinten, gedempte aardetinten of subtiele temperatuurschommelingen.
+Omdat het palet uit pigmentachtige ingrediënten is opgebouwd, kan het pad tussen twee kleuren nuttige tussentonen opleveren: groen uit geel en blauw, getemperde violetten, warme grijstinten, gedempte aardetinten of subtiele temperatuurschommelingen.
 
 ## Chroma en toon
 
-De Mixer verdeelt het gevoel van een kleur in praktische schilderbeslissingen. Een kleur kan naar een schonere of meer neutrale versie worden geduwd, lichter of donkerder worden gemaakt of in de buurt van een bepaalde waarde worden gehouden terwijl de tint en verzadiging ervan worden onderzocht.
+De Mixer splitst het gevoel van een kleur op in praktische schilderbeslissingen. Een kleur kan naar een schonere of neutralere variant worden geduwd, lichter of donkerder gemaakt, of nabij een bepaalde waarde worden gehouden terwijl tint en verzadiging worden verkend.
 
-Dit maakt het gemakkelijker om te zoeken naar de kleur die een schilderij nodig heeft: niet alleen "meer rood" of "meer blauw", maar stiller, dieper, bleker, warmer, koeler of ingetogener terwijl het nog steeds tot dezelfde paletfamilie behoort.
+Zo wordt het makkelijker de kleur te vinden die een schilderij nodig heeft: niet alleen «meer rood» of «meer blauw», maar stiller, dieper, bleker, warmer, koeler of ingetogener — terwijl de kleur bij dezelfde paletfamilie hoort.
 
 ## Nuttige ontdekkingen opslaan
 
-Wanneer een mengsel belangrijk wordt, kan het onderdeel worden van het palet. Opgeslagen mengsels behouden hun relatie met de kleuren waaruit ze zijn voortgekomen, zodat ze opnieuw kunnen worden bekeken, aangepast en hergebruikt in plaats van dat ze geïsoleerde stalen worden.
+Wordt een mengsel belangrijk, dan kan het onderdeel van het palet worden. Opgeslagen mengsels behouden hun relatie met de kleuren die ze voortbrachten, zodat ze opnieuw bekeken, aangepast en hergebruikt kunnen worden in plaats van geïsoleerde stalen te worden.
 
-Hierdoor kan een palet in de loop van de tijd uitgroeien van een reeks ingrediënten tot een verslag van artistieke beslissingen. De nuttige mengsels van de ene sessie kunnen de startkleuren voor de volgende sessie worden.
+Zo groeit een palet in de loop der tijd van een reeks ingrediënten naar een verslag van artistieke beslissingen. Nuttige mengsels uit één sessie kunnen de startkleuren van de volgende worden.
 
-## Een aanvulling op de paletkaart
+## Een partner van de Palette Map
 
-De Palette Mixer en Palette Map zijn ontworpen om samen te werken. De kaart toont het palet als een navigeerbare kleurruimte, terwijl de mixer een kunstenaar opzettelijk tussen gekozen punten binnen die ruimte laat bewegen.
+De Palette Mixer en Palette Map zijn ontworpen om samen te werken. De kaart toont het palet als navigeerbare kleurruimte; de mixer laat een kunstenaar bewust bewegen tussen gekozen punten in die ruimte.
 
-Samen ondersteunen ze een workflow die dichter bij het mengen van verf op een palet lijkt: kies aangrenzende of contrasterende kleuren, zoek naar de juiste balans, behoud de kleuren die er toe doen en ga door met schilderen binnen een samenhangende kleurenwereld.
+Samen ondersteunen ze een workflow die dichter bij verf mengen op een palet ligt: kies aangrenzende of contrasterende kleuren, zoek de juiste balans, bewaar wat telt en blijf schilderen binnen één samenhangende kleurenwereld.

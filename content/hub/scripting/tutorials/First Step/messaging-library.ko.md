@@ -2,6 +2,9 @@
 title: "메시징 라이브러리"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
 시간이 지나면서 메시지를 보내는 단일 기능으로 시작된 것이 관련 기능의 모음으로 발전했습니다. 이러한 기능은 이제 GUI, 메시지 콘솔, OS 터미널 등 다양한 대상으로의 출력을 처리하도록 설계된 **메시징 라이브러리**의 기반을 형성합니다.
 
@@ -25,9 +28,7 @@ weight: 6
 
 - **파일로 보내기**: 메시지를 로그 파일에 저장합니다.
 - **로거로 전송**: 외부 로깅 시스템과 통합됩니다.
-- **알림으로 보내기**: 메시지를 시스템 알림으로 표시합니다.
-
-모듈식 디자인과 재사용 가능한 기능의 동일한 패턴을 따르면 이 라이브러리는 모든 종류의 메시징 작업을 처리하기 위한 포괄적인 도구로 성장할 수 있습니다.
+- **알림으로 보내기**: 메시지를 시스템 알림으로 표시합니다.모듈식 디자인과 재사용 가능한 기능의 동일한 패턴을 따르면 이 라이브러리는 모든 종류의 메시징 작업을 처리하기 위한 포괄적인 도구로 성장할 수 있습니다.
 
 ## 메시징 라이브러리의 이점
 
@@ -37,9 +38,7 @@ weight: 6
 
 **메시징 라이브러리**는 프로젝트에서 메시지를 관리하는 방법을 단순화할 수 있는 더 광범위한 프레임워크의 시작입니다. 라이브러리가 성장함에 따라 새로운 플러그인은 이를 쉽게 활용하여 필요한 곳 ​​어디든 메시지를 보낼 수 있습니다.
 
-파일 구조를 조정할 수 있습니다.
-
-```plaintext
+파일 구조를 조정할 수 있습니다.```plaintext
 /home/your-username/code/
   ├── script-fu/
       ├── library/
@@ -52,7 +51,7 @@ weight: 6
 그리고 메인 플러그인에서 `load`을 조정하는 것을 잊지 마세요:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

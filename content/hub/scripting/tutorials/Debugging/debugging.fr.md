@@ -2,6 +2,9 @@
 title: "Débogage"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 En scripting, aucune fonction n’est infaillible. Même les commandes les plus fiables peuvent échouer lorsqu’elles sont confrontées à des entrées ou à des conditions inattendues. Pour nous prémunir contre cela, nous pouvons implémenter un système de débogage personnalisé et adopter des techniques de programmation défensive. En enveloppant les fonctions standard avec des mécanismes de gestion des erreurs et en fournissant des commentaires informatifs, nous pouvons rendre nos scripts plus robustes et plus faciles à dépanner.
 
@@ -12,14 +15,14 @@ Un élément clé de cette stratégie consiste à utiliser un indicateur de déb
 Un indicateur de débogage global est un moyen simple mais efficace de contrôler le niveau d'informations générées lors de l'exécution du script. Lorsqu'il est activé, il fournit des messages de débogage détaillés qui peuvent s'avérer inestimables pour détecter les problèmes. Lorsqu'il est désactivé, il maintient la sortie concise pour une utilisation en production.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Objectif : Indicateur global pour contrôler la sortie de débogage.
 (define debug #f)
 ```
 
 Par défaut, le débogage est désactivé. Pour activer la sortie détaillée pendant le développement, définissez simplement l'indicateur sur `#t` :
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Objectif : Indicateur global pour contrôler la sortie de débogage.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ Nous pouvons également activer ou désactiver temporairement le débogage pour 
 Pour un contrôle plus précis, nous pouvons activer ou désactiver le débogage dans des parties spécifiques du script à l'aide de fonctions d'assistance.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Objectif : Désactiver le mode débogage pour une section de code.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Objectif : Activer le mode débogage pour une section de code.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ Pour un contrôle plus précis, nous pouvons activer ou désactiver le débogage
 Cela nous permet de contrôler le débogage de manière dynamique :
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Activer la sortie détaillée
 
-;; Some script logic here
+;; Un peu de logique de script ici
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Désactiver la sortie détaillée
 ```
 
 ## Système de messagerie de débogage
@@ -73,7 +76,7 @@ Chaque fonction joue un rôle dans le formatage et l'affichage des messages stru
 La fonction `debug-message` est la méthode principale pour afficher la sortie de débogage. Cela garantit que les messages ne sont affichés que lorsque le débogage est activé.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Objectif : Afficher un message de débogage.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ La fonction `debug-message` est la méthode principale pour afficher la sortie d
 Exemple d'utilisation :
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Objectif : Renvoie la position dans l'arborescence de l'élément ou #f s'il est invalide
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Avec le débogage activé, le résultat pourrait être :
 Les messages peuvent contenir différents types de données tels que des listes, des vecteurs et des nombres. Pour nous assurer qu'ils sont correctement formatés, nous utilisons `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Objectif : Convertit divers types de données Scheme (listes, vecteurs, paires, etc.)
+;;          en une représentation sous forme de chaîne.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Liste vide
+    ((and (string? item) (string=? item "")) "\"\"")  ; Chaîne vide
+    ((list? item) (list->string item))                ; Liste imbriquée
+    ((vector? item)                                   ; Gère les vecteurs
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Gère les paires
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Nombres
+    ((symbol? item) (symbol->string item))            ; Symboles
+    ((boolean? item) (if item "#t" "#f"))             ; Booléens
+    ((string? item) item)                             ; Chaînes
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 Pour fusionner plusieurs composants de message en une seule chaîne, nous utilisons `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Objectif : Concaténer plusieurs éléments en une seule chaîne.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ Exemple d'utilisation :
 La fonction `list->string` convertit une liste en chaîne formatée.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Objectif : Convertir une liste d'éléments en une chaîne lisible.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ La fonction `list->string` convertit une liste en chaîne formatée.
 ### Messages d'avertissementLa fonction `warning-message` fonctionne de manière similaire à `debug-message`, mais elle affiche des avertissements même lorsque le débogage est désactivé.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Objectif : Afficher un message d'avertissement.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ Une fois un système de débogage en place, nous pouvons améliorer notre biblio
 Un exemple courant est `item-is-valid?`, qui encapsule `lumi-item-id-is-valid` pour renvoyer `#t` ou `#f`. Si `#f` est renvoyé, nous pouvons déclencher un `warning-message` dans le code appelant, si l'entrée n'est pas un nombre, nous pouvons donner un avertissement dans la fonction.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Objectif : Vérifier si un élément est valide, renvoie #t ou #f.
+;;          Émet un avertissement si l'élément n'est pas un nombre.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Un wrapper pour notre fonction de message pour utiliser un `*`
 Exemple de `call` utilisé en pratique :
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Objectif : Applique le processus de texturisation à la liste donnée de masques de groupe
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

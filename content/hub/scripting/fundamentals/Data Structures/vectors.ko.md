@@ -1,7 +1,10 @@
 ---
 title: "벡터"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 Scheme에서 벡터는 값을 그룹화하는 데 사용되는 또 다른 기본 데이터 구조입니다. 목록과 달리 벡터는 고정 크기의 인덱스 요소 컬렉션으로, 더 빠른 임의 액세스 및 업데이트를 제공합니다. 벡터의 각 요소는 다른 벡터를 포함하여 모든 유형이 될 수 있습니다. 벡터는 # 다음에 괄호를 사용하여 표시됩니다. `#(1 2 3)`
 
@@ -25,12 +28,12 @@ Scheme에서 벡터는 값을 그룹화하는 데 사용되는 또 다른 기본
 
 #### 벡터 요소에 액세스하기
 
-벡터의 요소는 `vector-ref` 프로시저를 사용하여 액세스되며 지정된 인덱스(`0`에서 시작)에서 요소를 검색합니다.
+벡터의 요소는 `vector-ref` 프로시저로 액세스합니다. 지정한 인덱스(`0`부터 시작)의 요소를 반환합니다.
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; 인덱스 0의 요소를 가져옴
+(vector-ref my-vector 1)  ; 인덱스 1의 요소를 가져옴
 ```
 
 #### 반복: 벡터의 각 요소 처리
@@ -42,9 +45,9 @@ Scheme에서 벡터는 값을 그룹화하는 데 사용되는 또 다른 기본
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; 요소 출력
+        (loop (+ i 1)))                                    ; 다음 인덱스 처리
+      (lumi-message "done"))))                             ; 루프 종료
 ```
 
 - **기본 사례:** `i` 인덱스가 벡터 길이에 도달하면 루프를 중지합니다.
@@ -99,7 +102,7 @@ Scheme에서 벡터는 값을 그룹화하는 데 사용되는 또 다른 기본
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; 두 번째 요소를 42로 설정
 my-vector
 ```
 
@@ -110,8 +113,8 @@ my-vector
 `vector?` 프로시저는 주어진 값이 벡터인지 확인합니다.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; #(1 2 3)이 벡터인지 확인
+(vector? 42)              ; 42가 벡터인지 확인
 ```
 
 결과:
@@ -127,11 +130,11 @@ my-vector
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; 지정한 인덱스의 벡터 업데이트
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; 두 번째 요소를 99로 변경
+my-vector                              ; 원본 벡터가 업데이트됨
 ```
 
 결과: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme은 다음을 포함하여 벡터 작업을 위한 여러 내장 프로시
 - `list->vector`: 목록을 벡터로 변환합니다.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; 3 반환
+(vector->list (vector 1 2 3))          ; 벡터를 리스트로 변환: (1 2 3)
+(list->vector (list 1 2 3))            ; 리스트를 벡터로 변환: #(1 2 3)
 ```
 
 결과:
@@ -187,8 +190,8 @@ Scheme의 벡터는 다른 벡터를 요소로 포함하여 중첩 구조를 만
 #### 예: 요소에 액세스하기
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; 첫 번째 요소를 가져옴: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; 첫 번째 벡터의 두 번째 요소를 가져옴: 2
 ```
 
 ### 요약

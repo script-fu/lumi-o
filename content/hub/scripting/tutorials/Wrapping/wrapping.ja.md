@@ -2,6 +2,9 @@
 title: "ラッピング"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Scheme コマンドは低レベルで動作するため、単純なタスクでも複数の手順が必要になる場合があります。ただし、この粒度により柔軟性が得られ、必要なことを正確に実行する小さな再利用可能な関数にコマンドをバンドルできます。ラッピングは白黒つける概念ではありません。頻繁に使用されるコマンドの単純なエイリアスから、ワークフロー全体を管理するより複雑な関数まで多岐にわたります。ラッパーは、読みやすさを向上させるための単なる便利な関数である場合もありますが、複数の操作をカプセル化するフル機能のユーティリティに進化する場合もあります。
 
@@ -26,7 +29,7 @@ Scheme コマンドは低レベルで動作するため、単純なタスクで�
 ### ランダムシード
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 目的: フィルターのシード用にランダムな整数を返す
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Scheme コマンドは低レベルで動作するため、単純なタスクで�
 たとえば、代わりに ***random*** に切り替えることにした場合:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 目的: フィルターのシード用にランダムな整数を返す
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Scheme コマンドは低レベルで動作するため、単純なタスクで�
 Scheme の JPEG エクスポート機能には多くのパラメーターが付属しており、画像の保存方法を細かく制御できます。ただし、ほとんどの場合、ファイル名や品質など、いくつかの重要な設定のみを気にします。プロセスを簡素化するために、関数をラップできます。
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; 目的: 画像を指定品質の JPEG として保存する
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; jpg.jpg を避ける
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Scheme の JPEG エクスポート機能には多くのパラメーターが付�
 ***car*** 関数は難解で、スクリプト エラーが発生しやすい場合があります。誤って ***car*** をベクトルまたはリスト以外の項目に適用すると、予期しない動作が発生する可能性があります。コードをより堅牢で読みやすくするために、この機能をより安全な関数でラップすることができます。
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; 目的: リストまたはベクターの最初の項目を返す。
+;;          入力が無効または空の場合に警告する。
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; 空でないリストを処理
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; 空でないベクトルを処理
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; 無効または空の入力
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Scheme の JPEG エクスポート機能には多くのパラメーターが付�
 ***x*** 座標を取得します。ただし、機能的ではありますが、表現力はあまり高くありません。代わりに、***first-item*** をより適切な定義でラップして、意図をより明確にすることができます。
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; 目的: 読みやすさのため x 座標を返す
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; 目的: 読みやすさのため y 座標を返す
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ Scheme の JPEG エクスポート機能には多くのパラメーターが付�
 ここでは、一般的な Scheme を記述する代わりに、次のようにします。
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; x 座標を取得
+(cadr pixel-coords) ;; y 座標を取得
 ```
 
 _our_ スキームには次のように記述できます。

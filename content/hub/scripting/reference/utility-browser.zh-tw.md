@@ -1,8 +1,11 @@
 ---
-title: "實用瀏覽器"
+title: "實用工具瀏覽器"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
-實用程式瀏覽器可讓您探索 Lumi 隨附的內建方案實用程式 stdlib，而無需離開應用程式或挖掘原始檔案。
+實用程式瀏覽器可讓您探索 Lumi 隨附的內建 Scheme 實用程式標準庫，而無需離開應用程式或查找原始碼。
 
 ## 開啟實用程式瀏覽器
 
@@ -14,17 +17,17 @@ type: docs
 
 瀏覽器列出了 Lumi 在啟動時自動載入的七個實用程式庫導出的每個流程、變數和語法形式：
 
-|圖書館 |它涵蓋什麼 |
+| 程式庫 | 涵蓋內容 |
 |---|---|
 | `common.scm` |通用幫助程式（字串、數字、列表實用程式）|
 | `files.scm` |檔案與路徑助手 |
 | `gegl.scm` | GEGL 缓冲区和颜色助手 |
 | `images.scm` |影像級助手（`image-get-open-list` 等）|
 | `layers.scm` |圖層與可繪製助手|
-| `parasites.scm` |寄生蟲讀/寫助手 |
+| `parasites.scm` | Parasite 讀寫助手 |
 | `paths.scm` |路徑與向量小幫手|
 
-所有這些都可以在任何方案插件或方案控制台中使用。
+這些程式庫可在任何 Scheme 外掛或 Scheme 控制台中使用。
 
 ## 搜尋和過濾
 
@@ -39,4 +42,4 @@ type: docs
 
 ## 與過程瀏覽器的關係
 
-實用程式瀏覽器與**過濾器→ Script-Fu → 控制台→ 瀏覽**（流程瀏覽器）是分開的。過程瀏覽器列出了 PDB 註冊的過程。實用程式瀏覽器列出了有意位於 PDB 之外的幫助器定義：它們僅是方案並且沒有 C 綁定。
+實用程式瀏覽器與**過濾器→ Script-Fu → 控制台→ 瀏覽**（流程瀏覽器）是分開的。過程瀏覽器列出了 PDB 註冊的過程。實用程式瀏覽器列出了有意位於 PDB 之外的 helper 定義：它們僅存在於 Scheme 中，沒有 C 繫結。

@@ -2,6 +2,9 @@
 title: "Variabili e ambito"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 In Scheme, la gestione delle variabili e il loro ambito è un concetto fondamentale per scrivere script efficienti e gestibili. Le variabili memorizzano i valori dei dati che lo script può manipolare, mentre l'ambito definisce dove tali variabili sono accessibili. Comprendere come definire e utilizzare le variabili in modo efficace consente di creare codice strutturato, riutilizzabile e privo di errori.
 
@@ -10,8 +13,8 @@ In Scheme, la gestione delle variabili e il loro ambito è un concetto fondament
 Lo schema è tipizzato dinamicamente: non dichiari i tipi in anticipo e una variabile può contenere valori di tipo diverso nel tempo.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x è un numero
+(set! x "hello")    ; ora x è una stringa
 ```
 
 ### Il ruolo delle definizioni e dell'ambito delle variabili nello schema

@@ -1,7 +1,10 @@
 ---
-title: "Benanntes Let oder lokales Definieren"
+title: "Named let oder lokales define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke Tools in Scheme zum Strukturieren Ihres Codes, dienen jedoch unterschiedlichen Zwecken. Wenn Sie wissen, wann die einzelnen Elemente verwendet werden sollten, können Sie saubere, modulare und effiziente Skripte erstellen.
 
@@ -67,8 +70,8 @@ Sowohl **mit dem Namen `let`** als auch **lokal `define`** sind leistungsstarke 
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Lokale Hilfsfunktion
+  (define (cube x) (* x x x))  ;; Lokale Hilfsfunktion
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ Eine der leistungsstärksten Funktionen eines benannten `let` ist seine Fähigke
 In einem benannten `let` fungieren die Bindungen in den Klammern als **lokale Variablen**, die mit bestimmten Werten initialisiert werden. Diese Variablen beziehen sich auf den Hauptteil von `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Deklariert x mit Anfangswert 1
+           (y 2))  ;; Deklariert y mit Anfangswert 2
+  (+ x y))         ;; Verwendet x und y im Rumpf
 ```
 
 - **`x` und `y`** sind lokale Variablen, die als Teil von `let` definiert und initialisiert werden.
@@ -158,7 +161,7 @@ Dieselben Variablen fungieren auch als **Eingabeparameter** für die rekursiven 
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Rekursiver Aufruf mit neuen x und y
 ```
 
 - **Erste Iteration**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Ein benanntes `let` beinhaltet die Variableninitialisierung als Teil seiner Synt
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Erster Aufruf mit x = 1, y = 2
 ```
 
 Beide führen die gleiche Berechnung durch, aber das benannte `let` kombiniert die Variablendeklaration und die Rekursionseinrichtung in einem prägnanten Konstrukt.

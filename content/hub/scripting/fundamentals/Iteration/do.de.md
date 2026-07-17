@@ -1,11 +1,14 @@
 ---
-title: "Tun"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-Die Funktion `do` in Scheme ist ein Schleifenmechanismus, der eine Iteration mit Initialisierungs-, Aktualisierungs- und Beendigungsbedingungen ermöglicht. Dies ist besonders nützlich, wenn Sie eine Abfolge von Vorgängen eine bestimmte Anzahl von Malen oder bis eine Bedingung erfüllt ist, ausführen müssen.
+Die Funktion `do` in Scheme ist eine Schleife mit Initialisierung, Aktualisierung und Abbruchbedingung. Nützlich, wenn eine Sequenz eine bestimmte Anzahl von Malen oder bis zu einer Bedingung laufen soll.
 
-Die allgemeine Form von `do` ist:
+Die allgemeine Form von `do`:
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Die allgemeine Form von `do` ist:
   body)
 ```
 
-- **Variable**: Die Schleifenvariable(n).
-- **Anfangswert**: Der Startwert jeder Schleifenvariablen.
-- **Update-Ausdruck**: Der Ausdruck zum Aktualisieren der Schleifenvariablen am Ende jeder Iteration.
-- **Beendigungsbedingung**: Die Bedingung zum Stoppen der Schleife.
-- **Ergebnisausdruck**: Der Wert, der zurückgegeben werden soll, wenn die Schleife endet.
-- **Body**: Der Code, der in jeder Iteration ausgeführt werden soll.
+- **Variable:** Schleifenvariable(n).
+- **Initial-value:** Startwert.
+- **Update-expression:** Aktualisierung pro Iteration.
+- **Termination-condition:** Abbruchbedingung.
+- **Result-expression:** Rückgabewert beim Abbruch.
+- **Body:** Code pro Iteration.
 
 ---
 
-### Beispiel: Summiere die Zahlen von 1 bis 5
+### Beispiel: Summe von 1 bis 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; i auf 1 initialisieren, um 1 erhöhen
+     (sum 0 (+ sum i))) ; Summe auf 0 initialisieren, i zur Summe addieren
+    ((> i 5) sum)       ; Beenden, wenn i > 5, sum zurückgeben
+  (lumi-message (number->string sum))) ; Gibt die Summe bei jedem Schritt aus
 ```
 
-– Die Schleifenvariable `i` beginnt bei 1 und erhöht sich bei jeder Iteration um 1.
-- Die Variable `sum` akkumuliert die Summe von `i`.
-– Die Schleife endet, wenn `i > 5` und gibt den Endwert von `sum` zurück.
+- `i` startet bei 1 und wird inkrementiert.
+- `sum` akkumuliert die Summe.
+- Abbruch bei `i > 5`, Rückgabe von `sum`.
 
 **Ausgabe**: `15`
 
 ---
 
-### Wie es funktioniert
+### So funktioniert es
 
-1. **Initialisierung**:
-   - Jeder Schleifenvariablen wird ihr Anfangswert zugewiesen.
-
-2. **Beendigungsprüfung**:
-   - Zu Beginn jeder Iteration wird die Abbruchbedingung überprüft. Bei „true“ stoppt die Schleife und der Ergebnisausdruck wird ausgewertet.
-
-3. **Iteration**:
-   – Wenn die Beendigungsbedingung falsch ist, wird der Hauptteil ausgeführt und die Schleifenvariablen werden mithilfe ihrer jeweiligen Aktualisierungsausdrücke aktualisiert.
+1. **Initialisierung:** Startwerte zuweisen.
+2. **Abbruchprüfung:** Zu Beginn jeder Iteration.
+3. **Iteration:** Body ausführen, Variablen aktualisieren.
 
 ---
 
 ### Zusammenfassung
 
-– Das `do`-Konstrukt bietet eine flexible Möglichkeit, Schleifen mit mehreren Variablen und komplexen Beendigungsbedingungen zu implementieren.
-– Dies ist nützlich für Aufgaben, die Statusaktualisierungen über Iterationen hinweg erfordern.
-– Die Beendigungsbedingung bestimmt, wann die Schleife endet und kann ein Endergebnis zurückgeben.
+- `do` bietet flexible Schleifen mit mehreren Variablen.
+- Nützlich bei Zustandsänderungen über Iterationen.
+- Die Abbruchbedingung bestimmt Ende und Ergebnis.
 
-Durch die Verwendung von `do` können Sie iterative Algorithmen in Scheme mit präziser Kontrolle über Initialisierung, Aktualisierungen und Beendigung implementieren. Dies macht `do` zu einer Kombination aus einem **bereichsbezogenen Bindungsmechanismus** (wie `let`) und einer **iterativen Kontrollstruktur**, die es ihm ermöglicht, Schleifen und temporäre Zustände sauber und präzise zu handhaben.
+`do` verbindet **gebundene Variablen** (wie `let`) mit **iterativer Steuerung**.

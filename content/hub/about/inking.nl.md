@@ -2,52 +2,56 @@
 title: "Inkten"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
 ---
-De Inking-werkruimte is gebouwd voor doelbewust lijnwerk of inktzwarte chaos. Het is de fase waarin tekenen niet langer verkennend is, maar toegewijd begint te worden: gecontroleerde streken, duidelijke randdefinitie en markeringen die met vertrouwen hun vorm moeten behouden. Of ga gewoon los met expressieve spetters, loopinglijnen, droge puntkrassen en wilde sumi-streken.
 
-Hieronder staan ​​enkele tools en modi die dat mogelijk maken.
+De Inkten-werkruimte is gebouwd voor doelbewust lijnwerk of inktachtige chaos. Dit is het stadium waar tekenen niet langer verkennend is, maar vastberaden wordt: gecontroleerde streken, duidelijke randen en markeringen die hun vorm met zekerheid moeten behouden. Of laat los met expressieve spetters, lusvormige lijnen, droge Nib-krassen en wilde Sumi-streken.
 
-## Sumi-voorinstelling
+Hieronder staan enkele gereedschappen en modi die dat mogelijk maken.
 
-De sumiborstel is nog niet helemaal getemd. In plaats van zich te gedragen als een enkele penseelpunt, is de borstel opgebouwd uit vele onafhankelijke opzetborstels of bundels borstelharen die samenwerken als een dynamische formatie. Het resultaat kan veranderen van natte slepen naar gebroken droge strepen, verwarde vezels of explosieve getextureerde randen, afhankelijk van druk, snelheid, afstand en gebaar.
+## Sumi Preset
 
-Er is een breed scala aan controle over hoe de formatie zich gedraagt, en de combinatie ervan met dynamiek, texturen en stempelvariatie kan een enorm scala aan markeringen opleveren.
+De Sumi-pen is niet helemaal getemd. In plaats van als één penseelpunt te werken, bestaat hij uit vele onafhankelijke penseelkoppen of bundels die samen een dynamische formatie vormen. Het resultaat kan verschuiven van natte slepen naar gebroken droge strepen, verwarde vezels of explosieve getextureerde randen — afhankelijk van druk, snelheid, spacing en gebaar.
+
+Er is veel controle over het gedrag van die formatie; gecombineerd met dynamiek, texturen en stempelvariatie levert dat een enorm bereik aan markeringen op.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
-## Kalligrafische voorinstelling
+## Calligraphic Preset
 
-De kalligrafische modus verandert het penseel in een doorlopende beitelpenstreek in plaats van een rij gestempelde klodders. De meegeleverde kalligrafische preset gebruikt ook de kantelhoek van de stylus als een extra controle-as, zodat de streek niet alleen kan reageren op druk, maar ook op de manier waarop de pen wordt vastgehouden. Het is handig voor stevige, gevormde markeringen die als één inktlint moeten worden gelezen, zelfs als de hoek en druk veranderen.
+De calligrafische modus maakt van het penseelgereedschap één doorlopende kalligrafische streek in plaats van een rij gestempelde stippen. De meegeleverde Calligraphic-voorinstelling gebruikt ook de kantelhoek van de stylus als extra controle-as, zodat de streek niet alleen op druk reageert, maar ook op hoe u de pen vasthoudt. Handig voor stevige, gevormde markeringen die als één inktlint moeten lezen, ook wanneer hoek en druk veranderen.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Zigzag-voorinstelling
+## Zig-zag Preset
 
-De voorinstelling Zigzag scherpt de hoeken wanneer de slag snel van richting verandert, waardoor scherpe, hoekige bochten ontstaan met een klik die met vloeiende rondingen niet mogelijk is. Handig voor energiek, grafisch lijnwerk en arcering.
+De Zig-zag-voorinstelling scherpt hoeken wanneer de streek snel van richting verandert, met scherpe, hoekige bochten en een snap die vloeiende curves niet bereiken. Handig voor energiek, grafisch lijnwerk en arcering.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Sable-voorinstelling
+## Sable Preset
 
-De klassieke komische penseellijn. Vloeiende slagen met variabel gewicht en een zelfverzekerd dik-naar-dun ritme; het soort lijn dat Watterson of Uderzo zouden herkennen.
+De klassieke strip-penseellijn. Vloeiende streken met variabel gewicht en een zelfverzekerd dik-dun-ritme — het soort lijn dat Watterson of Uderzo zou herkennen.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
 
-## Penpunt-voorinstelling
+## Nib Preset
 
-Geïnspireerd door de Waverly-punt, tolereert de preset snelle bewegingen en richtingsveranderingen terwijl hij nog steeds scherpe, expressieve inktlijnen produceert. Omdat de inktvoorraad afneemt terwijl u werkt, kunnen de streken donker en verzadigd beginnen en vervolgens uitmonden in krassende, uitgehongerde vlekken naarmate de punt leeg raakt.
+Geïnspireerd op de Waverly-nib: de voorinstelling verdraagt snelle bewegingen en richtingswissels en levert toch scherpe, expressieve inktlijnen. Omdat de inktvoorraad afneemt tijdens het tekenen, kunnen streken donker en verzadigd beginnen en overgaan in krassiger, uitgehongerde markeringen wanneer de nib leeg raakt.
 
 ![ink-02](/images/strokes/ink-nib_share.jpg)
 
-## Tipvoorinstelling
+## Tip Preset
 
-De dode lijn van een technische tekenpen. Consistente breedte, strakke randen en weinig tot geen lijnvariatie. Handig voor constructielijnen, diagrammen, letters en gecontroleerd grafisch werk waarbij uniformiteit belangrijker is dan expressie. Sommige van onze favoriete animaties gebruiken deze lijn.
+De strakke lijn van een technische tekenpen. Constante breedte, schone randen en weinig tot geen lijnvariatie. Handig voor constructielijnen, diagrammen, lettering en gecontroleerd grafisch werk waarbij uniformiteit belangrijker is dan expressie. Sommige van onze favoriete animaties gebruiken precies deze lijn.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
-## Veeg-voorinstelling
+## Flick Preset
 
-Ontworpen voor bewegende gebaren en verspreide gerichte sprays. Afhankelijk van de snelheid, druk en afstand kunnen de slagen variëren van subtiele en lichte verstrooiing tot zwaarder weggeworpen druppels. Handig voor textuurwerk en expressieve afwerkingen.
+Ontworpen voor flicks en verspreide directionele spetters. Afhankelijk van snelheid, druk en spacing lopen streken uiteen van subtiele, lichte spreiding tot zwaardere gegooide druppels. Handig voor texturen en expressieve finishing touches.
 
 ![flick-01](/images/strokes/flick_share.jpg)

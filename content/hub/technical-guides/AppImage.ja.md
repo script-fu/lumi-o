@@ -1,73 +1,76 @@
 ---
-title: "アプリイメージ"
+title: "AppImage"
 type: docs
+url: "hub/technical-guides/AppImage"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 939beb6f4f1657ab77f785d1753385360cca7920b6291dbcd09f4687bfdfc502
 ---
-AppImage は、単一ファイルの Linux アプリケーション パッケージです。 1 つのファイルをダウンロードして実行可能としてマークし、システム全体にソフトウェアをインストールせずに実行します。
 
-公式アプリ画像サイト：https://appimage.org/
+AppImage は、単一ファイルの Linux アプリケーションパッケージです。1 つのファイルをダウンロードして実行可能に設定すれば、システム全体へのインストールなしで実行できます。
 
-AppImage は、インストールやシステムの変更を行わずに実行できる Lumi のポータブル バージョンを提供します。依存関係の管理、ソース コードのコンパイル、開発環境の構成を行わずに、すぐにソフトウェアを使用したいアーティストに最適です。
+公式 AppImage サイト: https://appimage.org/
 
-AppImage は自己完結型の実行可能ファイルとして、システム上のどこにでも保存できます。これにより、新しいリリースのテスト、複数のバージョンの保持、マシン間でのソフトウェアの移動が簡単になります。
+AppImage は、インストールやシステム変更なしで動作する Lumi のポータブル版を提供します。依存関係の管理、ソースコードのコンパイル、開発環境の構成をせずに、すぐにソフトウェアを使いたいアーティストに最適です。
 
-Lumi の開発プロセスでは、AppImage は継続的インテグレーションの出力と厳密に一致するポータブル テスト ビルドとして機能します。これにより、ローカル ソース ビルドを開発作業に集中させながら、一貫した環境で信頼性の高いテストが可能になります。
+自己完結型の実行ファイルとして、AppImage はシステム上の任意の場所に保存できます。新しいリリースのテスト、複数バージョンの保持、マシン間での移動が容易になります。
 
-注: CI は、Lumi のリポジトリ内統合依存関係ソース (BABL/GEGL/GTK3) を使用して AppImage を構築するため、依存関係スタックはローカルの `lumi-build-script.sh` ワークフローと一致します。
+Lumi の開発プロセスでは、AppImage は継続的インテグレーションの出力と密接に一致するポータブルテストビルドとして機能します。ローカルソースビルドを開発作業に集中させながら、一貫した環境で信頼性の高いテストが可能です。
 
-## リリースと開発 AppImage
+注: CI は Lumi のリポジトリ内統合依存関係ソース（BABL/GEGL/GTK3）を使って AppImage をビルドするため、依存関係スタックはローカルの `lumi-build-script.sh` ワークフローと一致します。
 
-- **AppImage のリリース**: まだ利用できません (Lumi はリリースされていません)。
-- **開発 AppImage (CI アーティファクト)**: テストのために進行中の開発コミットから自動的に生成されます。
+## リリース版と開発版 AppImage
 
-このガイドでは主に **AppImage 開発**のワークフローについて説明します。
+- **リリース AppImage**: まだ提供されていません（Lumi はまだリリースされていません）。
+- **開発 AppImage（CI アーティファクト）**: テスト用に、進行中の開発コミットから自動生成されます。
 
-現在の成果物ページ:
+このガイドでは主に **開発 AppImage** のワークフローを扱います。
+
+現在のアーティファクトページ:
 
 https://gitlab.gnome.org/pixelmixer/lumi-dev/-/artifacts
 
 ## CI AppImage ダウンロードの基本
 
-CI はアーティファクト zip ファイル (`lumi-appimage*.zip` など) を生成します。
+CI はアーティファクト zip ファイル（例: `lumi-appimage*.zip`）を生成します。
 
-基本的な手動フロー:
+基本的な手動手順:
 
-1. 最新の CI アーティファクト zip をダウンロードします。
-2. 抽出します。
-3. 付属の `Lumi*.AppImage` ファイルを実行します。
+1. 最新の CI アーティファクト zip をダウンロードする
+2. 展開する
+3. 同梱の `Lumi*.AppImage` ファイルを実行する
 
-以下のスクリプトは、これらの手順を自動化するオプションのヘルパーです。
+以下のスクリプトは、これらの手順を自動化する任意のヘルパーです。
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
-
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
-
 bash lumi-appimage-launch.sh
 ```
 
-## オプションのヘルパー スクリプト
+## 任意のヘルパースクリプト
 
 - `lumi-appimage-unpack-zip.sh`
-  - `~/Downloads` で最新の `lumi-appimage*.zip` を検索します
-  - AppImage を `~/AppImage/Lumi/Lumi_CI.AppImage` にインストールします
-  - デスクトップ リソースを `~/.local/share/applications/lumi.desktop` にインストールします
+  - `~/Downloads` 内の最新 `lumi-appimage*.zip` を検索
+  - AppImage を `~/AppImage/Lumi/Lumi_CI.AppImage` に配置
+  - デスクトップリソースを `~/.local/share/applications/lumi.desktop` に配置
 
 - `lumi-appimage-launch.sh`
-  - 端末で AppImage を起動します
-  - ランタイム出力を有効にする (`APPIMAGE_DEBUG=1`)
+  - ターミナルで AppImage を起動
+  - ランタイム出力を有効化（`APPIMAGE_DEBUG=1`）
 
-## 共通の注意事項
+## 一般的な注意事項
 
-- AppImage を手動で (ヘルパー スクリプトを使用せずに) 実行する場合は、最初に実行可能にします。
+- AppImage を手動で（ヘルパースクリプトなしで）実行する場合は、先に実行可能にしてください:
 
 ```bash
 chmod +x ~/AppImage/Lumi/Lumi_CI.AppImage
 ```
 
-`lumi-appimage-unpack-zip.sh` はすでに実行可能権限を自動的に適用しています。
+`lumi-appimage-unpack-zip.sh` は実行権限を自動的に付与します。
 
-- Lumi がすでに別のビルドから実行されている場合は、AppImage を起動する前に Lumi を閉じてください。
+- Lumi が別のビルドからすでに実行中の場合は、AppImage を起動する前に終了してください。

@@ -1,11 +1,14 @@
 ---
 title: "Datenstrukturen"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 In Scheme sind **Datenstrukturen** wesentliche Werkzeuge zum Organisieren, Speichern und Bearbeiten von Daten. Sie ermöglichen Entwicklern die Erstellung effizienter, lesbarer und wiederverwendbarer Skripte. Durch die Auswahl der richtigen Datenstruktur für ein bestimmtes Problem können Sie sowohl die Leistung als auch die Klarheit Ihres Codes optimieren.
 
-## Wichtige Datenstrukturen im Schema
+## Wichtige Datenstrukturen in Scheme
 
 Scheme bietet mehrere leistungsstarke und vielseitige Datenstrukturen, die jeweils für bestimmte Aufgaben geeignet sind. Zu den primären Datenstrukturen gehören:
 
@@ -19,7 +22,7 @@ Hauptmerkmale:
 – Wird häufig für rekursive Algorithmen und zur Darstellung baumartiger Strukturen verwendet.
 
 Anwendungsbeispiele:
-- Verwalten von Artikelsammlungen.
+- Verwalten von Element-Sammlungen.
 - Darstellung von Abfolgen oder Hierarchien.
 
 ---

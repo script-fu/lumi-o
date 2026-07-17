@@ -1,7 +1,10 @@
 ---
 title: "Vectores"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 En Scheme, un vector es otra estructura de datos fundamental que se utiliza para agrupar valores. A diferencia de las listas, los vectores son colecciones de elementos indexados y de tamaño fijo, que proporcionan actualizaciones y acceso aleatorio más rápido. Cada elemento de un vector puede ser de cualquier tipo, incluido otro vector. Los vectores se representan usando # seguido de paréntesis. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Se accede a los elementos de un vector mediante el procedimiento `vector-ref`, q
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Obtiene el elemento en el índice 0
+(vector-ref my-vector 1)  ; Obtiene el elemento en el índice 1
 ```
 
 #### Iteración: procesamiento de cada elemento en un vector
@@ -42,9 +45,9 @@ Puedes iterar a través de un vector usando un bucle o recursividad. Scheme prop
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Imprime el elemento
+        (loop (+ i 1)))                                    ; Procesa el siguiente índice
+      (lumi-message "done"))))                             ; Fin del bucle
 ```
 
 - **Caso base:** Si el índice `i` alcanza la longitud del vector, detenga el ciclo.
@@ -62,7 +65,7 @@ Resultado:
 - `"2"`
 - `"3"`
 
-Resultado: "hecho"
+Result: "done"
 
 ### Vectores mixtos
 
@@ -99,7 +102,7 @@ El procedimiento `vector-set!` actualiza un elemento en un vector en un índice 
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Establece el segundo elemento en 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ Resultado: `#(1 42 3)`
 El procedimiento `vector?` comprueba si un valor dado es un vector.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Comprueba si #(1 2 3) es un vector
+(vector? 42)              ; Comprueba si 42 es un vector
 ```
 
 Resultado:
@@ -127,11 +130,11 @@ Aquí hay un ejemplo que demuestra cómo los vectores se pasan por referencia y 
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Actualiza el vector en el índice indicado
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Modifica el segundo elemento a 99
+my-vector                              ; El vector original ya está actualizado
 ```
 
 Resultado: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme proporciona varios procedimientos integrados para trabajar con vectores, 
 - `list->vector`: Convierte una lista en un vector.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Devuelve 3
+(vector->list (vector 1 2 3))          ; Convierte el vector en lista: (1 2 3)
+(list->vector (list 1 2 3))            ; Convierte la lista en vector: #(1 2 3)
 ```
 
 Resultado:
@@ -187,8 +190,8 @@ Para acceder a elementos dentro de un vector anidado, use `vector-ref` varias ve
 #### Ejemplo: acceso a elementos
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Obtiene el primer elemento: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Obtiene el segundo elemento del primer vector: 2
 ```
 
 ### Resumen

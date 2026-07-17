@@ -1,7 +1,12 @@
 ---
-title: "Script de schéma"
+title: "Script Scheme"
 type: docs
+url: "hub/features/scripting"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 6e00994fccb9f4e52a0b3b1d508911388c0237c8fe56e3918f8f8ca88f12c94b
 ---
-Lumi comprend un interpréteur Scheme intégré pour automatiser le travail répétitif, créer des outils personnalisés et écrire des plug-ins.
 
-Pour les principes fondamentaux du langage, les didacticiels, les outils, les exemples de plug-ins et la référence intégrée, consultez la section [Scripting]({{< relref "/hub/scripting" >}}).
+Lumi inclut un interpréteur Scheme intégré pour automatiser les tâches répétitives, créer des outils personnalisés et écrire des plug-ins.
+
+Pour les bases du langage, les tutoriels, les outils, les exemples de plug-ins et la référence intégrée, consultez la section [Scripting]({{< relref "/hub/scripting" >}}).

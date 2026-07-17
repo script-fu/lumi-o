@@ -1,7 +1,10 @@
 ---
-title: "Variabelen en reikwijdte"
+title: "Variabelen en scope"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 In Scheme is het beheren van variabelen en hun reikwijdte een kernconcept voor het schrijven van efficiënte en onderhoudbare scripts. Variabelen slaan gegevenswaarden op die uw script kan manipuleren, terwijl het bereik bepaalt waar die variabelen toegankelijk zijn. Als u begrijpt hoe u variabelen effectief kunt definiëren en gebruiken, kunt u gestructureerde, herbruikbare en foutloze code maken.
 
@@ -10,8 +13,8 @@ In Scheme is het beheren van variabelen en hun reikwijdte een kernconcept voor h
 Het schema wordt dynamisch getypeerd: u declareert typen niet vooraf, en een variabele kan in de loop van de tijd verschillende soorten waarden bevatten.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x is een getal
+(set! x "hello")    ; x is nu een tekenreeks
 ```
 
 ### De rol van variabeledefinities en reikwijdte in het schema

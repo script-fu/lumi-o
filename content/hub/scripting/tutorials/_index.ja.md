@@ -1,6 +1,9 @@
 ---
 title: "チュートリアル"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 これらのチュートリアルでは、Lumi 用の Scheme プラグインを作成する方法を示します。最小限の「Hello World」手順から始めて、画像、ファイル、再利用可能なヘルパー ライブラリを操作するプラグインを構築していきます。
 

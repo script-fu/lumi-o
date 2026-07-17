@@ -1,35 +1,40 @@
 ---
 title: "Format de fichier (.lum)"
 type: docs
+url: "hub/features/file-format"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
 ---
-Le format de fichier natif de Lumi est conçu pour les projets de peinture en couches qui doivent rester fiables, inspectables et récupérables au fil du temps. Il est conçu autour des réalités du travail d’illustration : de nombreux calques, de grandes toiles, des informations de couleur intégrées, des masques, des effets et des données de récupération.
 
-Plutôt que de traiter un projet comme une seule goutte opaque, le format maintient la structure de l'œuvre d'art visible pour l'application. Cela permet à Lumi d'enregistrer, de charger et de récupérer des images volumineuses de manière plus intelligente tout en préservant l'organisation dont dépendent les artistes.
+Le format de fichier natif de Lumi est conçu pour les projets de peinture en calques qui doivent rester fiables, inspectables et récupérables dans la durée. Il tient compte des réalités du travail d'illustration : de nombreux calques, de grandes toiles, des informations couleur intégrées, des masques, des effets et des données de récupération.
 
-## Ouvrir la structure du projet
+Plutôt que de traiter un projet comme une masse opaque, le format laisse la structure de l'illustration visible pour l'application. Lumi peut ainsi enregistrer, charger et récupérer de grandes images de façon plus intelligente tout en préservant l'organisation dont les artistes dépendent.
 
-Un projet Lumi sépare les parties de l'œuvre d'art : la structure de l'image, le contenu des calques, les masques, les données de couleur, les métadonnées et les informations de récupération ont chacun un rôle clair. Cela rend le format plus facile à raisonner et mieux adapté à un accès à long terme qu’un conteneur fermé et monolithique.
+## Structure de projet ouverte
 
-Le but n’est pas seulement de stocker des pixels, mais aussi de stocker l’état de fonctionnement d’une illustration. Les calques restent des calques, les masques restent des masques et le fichier continue de refléter la façon dont l'illustration a été construite.
+Un projet Lumi sépare les composants de l'illustration : structure d'image, contenu des calques, masques, données couleur, métadonnées et informations de récupération ont chacun un rôle clair. Le format est ainsi plus facile à comprendre et mieux adapté à un accès à long terme qu'un conteneur fermé et monolithique.
 
-## Conçu pour les grands tableaux
+L'objectif n'est pas seulement de stocker des pixels, mais l'état de travail d'une illustration. Les calques restent des calques, les masques restent des masques, et le fichier continue de refléter la façon dont l'illustration a été construite.
 
-Les grandes images superposées peuvent rapidement devenir lourdes. Le format de Lumi prend en charge les flux de travail dans lesquels il n'est pas nécessaire d'extraire toutes les données d'image en même temps. Les projets peuvent rester réactifs en chargeant les parties de l'image qui sont réellement nécessaires à l'affichage, à l'édition, à la composition ou à l'exportation.
+## Conçu pour les grandes illustrations
 
-Cette approche permet de gérer les fichiers complexes, en particulier lorsqu'une illustration contient de nombreux calques cachés, archivés, expérimentaux ou regroupés.
+Les grandes images en calques deviennent vite lourdes. Le format de Lumi prend en charge des flux de travail où toutes les données d'image n'ont pas besoin d'être chargées en mémoire d'un coup. Les projets restent réactifs en chargeant uniquement les parties nécessaires à l'affichage, à l'édition, à la composition ou à l'export.
 
-## Économiser sans interrompre le flux
+Cette approche rend les fichiers complexes plus gérables, surtout lorsqu'une illustration contient de nombreux calques cachés, archivés, expérimentaux ou groupés.
 
-Le format de fichier prend en charge à la fois l'enregistrement normal du projet et les instantanés légers de style récupération. Cela donne aux artistes un moyen de protéger fréquemment leurs œuvres sans transformer chaque point de contrôle en une copie complète de l’image entière.
+## Enregistrer sans interrompre le flux
 
-Étant donné que les informations de récupération appartiennent à la structure du projet, Lumi peut conserver un historique utile proche de l'illustration tout en permettant aux sauvegardes de sécurité automatiques de vivre séparément du fichier de travail.
+Le format prend en charge l'enregistrement normal du projet ainsi que des instantanés légers de type récupération. Les artistes peuvent ainsi protéger fréquemment leur travail sans transformer chaque point de contrôle en copie complète de l'image entière.
 
-## Échange et exportation
+Comme les informations de récupération font partie de la structure du projet, Lumi peut conserver un historique utile à proximité de l'illustration tout en laissant les sauvegardes automatiques vivre séparément du fichier de travail.
 
-Le format natif est destiné au travail Lumi en cours, tandis que les formats d'exportation sont utilisés pour partager des résultats aplatis ou axés sur la compatibilité. La prise en charge de l'importation permet d'intégrer les illustrations existantes dans l'environnement en couches de Lumi, et la prise en charge de l'exportation permet aux pièces finies de quitter le format du projet lorsqu'elles sont prêtes à être publiées, livrées ou traitées ultérieurement.
+## Échange et export
 
-Cette distinction permet de conserver le fichier de travail riche et modifiable tout en permettant aux images finales d'être produites dans des formats externes courants.
+Le format natif sert au travail courant dans Lumi, tandis que les formats d'export servent à partager des résultats aplatis ou orientés compatibilité. L'import permet d'intégrer des illustrations existantes dans l'environnement en calques de Lumi, et l'export permet aux pièces finies de quitter le format projet lorsqu'elles sont prêtes pour la publication, la livraison ou un traitement ultérieur.
+
+Le fichier de travail reste riche et modifiable, tandis que les images finales peuvent être produites dans des formats externes courants.
 
 ## Fiabilité à long terme
 
-En bref, le format `.lum` est un conteneur pratique pour les travaux de peinture sérieux : suffisamment ouvert pour inspecter, suffisamment structuré pour récupérer et suffisamment flexible pour gérer des images complexes en couches de manière économique.
+En bref, le format `.lum` est un conteneur pratique pour un travail de peinture sérieux : assez ouvert pour être inspecté, assez structuré pour être récupéré, et assez souple pour gérer efficacement des images complexes en calques.

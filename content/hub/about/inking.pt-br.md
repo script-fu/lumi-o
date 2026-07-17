@@ -2,52 +2,56 @@
 title: "Tinta"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
 ---
-O espaço de trabalho Inking foi criado para trabalhos de linha deliberados ou para caos de tinta. É a fase em que o desenho deixa de ser exploratório e passa a ser comprometido: traços controlados, definição clara de bordas e marcas que precisam manter sua forma com confiança. Ou simplesmente solte-se com respingos expressivos, linhas em loop, arranhões de ponta seca e traços selvagens de sumi.
 
-Abaixo estão algumas das ferramentas e modos que tornam isso possível.
+O espaço de trabalho Tinta foi feito para trabalho de linha deliberado ou caos de tinta. É a fase em que o desenho deixa de ser exploratório e passa a ser comprometido: traços controlados, bordas definidas e marcas que precisam manter a forma com confiança. Ou simplesmente solte-se com respingos expressivos, linhas em laço, arranhões secos de Nib e traços selvagens de Sumi.
 
-## Predefinição Sumi
+Abaixo estão algumas ferramentas e modos que tornam isso possível.
 
-O pincel sumi não está totalmente domesticado. Em vez de se comportar como uma única ponta de pincel, ele é construído a partir de muitas cabeças de pincel independentes ou feixes de cerdas trabalhando juntos como uma formação dinâmica. O resultado pode mudar de arranhões molhados para listras secas quebradas, fibras emaranhadas ou bordas com textura explosiva, dependendo da pressão, velocidade, espaçamento e gesto.
+## Sumi Preset
 
-Há uma ampla gama de controle sobre como a formação se comporta, e combiná-la com dinâmicas, texturas e variações de carimbo pode produzir uma enorme variedade de marcas.
+O pincel Sumi não está totalmente domado. Em vez de se comportar como uma única ponta, é formado por muitas cabeças de pincel independentes ou feixes de cerdas trabalhando juntos como uma formação dinâmica. O resultado pode ir de arrastos úmidos a listras secas quebradas, fibras emaranhadas ou bordas texturizadas explosivas — conforme pressão, velocidade, espaçamento e gesto.
+
+Há amplo controle sobre o comportamento da formação; combiná-la com dinâmicas, texturas e variação de carimbo produz uma enorme variedade de marcas.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
-## Predefinição caligráfica
+## Calligraphic Preset
 
-O modo caligráfico transforma a ferramenta Pincel em um traço contínuo de caneta cinzel, em vez de uma fileira de salpicos estampados. A predefinição caligráfica incluída também usa o ângulo de inclinação da caneta como um eixo extra de controle, para que o traço possa responder não apenas à pressão, mas também à forma como a caneta está sendo segurada. É útil para marcas firmes e moldadas que precisam ser lidas como uma única fita de tinta, mesmo quando o ângulo e a pressão estão mudando.
+O modo caligráfico transforma a ferramenta Pincel em um traço contínuo de caneta de cálice, em vez de uma fileira de pontos carimbados. A predefinição Calligraphic incluída também usa o ângulo de inclinação da caneta como eixo extra de controle, para que o traço responda não só à pressão, mas à forma como a caneta é segurada. Útil para marcas firmes e moldadas que precisam ler como uma única fita de tinta, mesmo quando ângulo e pressão mudam.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Predefinição em zigue-zague
+## Zig-zag Preset
 
-A predefinição Zig-zag torna os cantos mais nítidos quando o traço muda de direção rapidamente, produzindo curvas angulares nítidas com um encaixe que curvas suaves não conseguem. Útil para linhas e hachuras energéticas e gráficas.
+A predefinição Zig-zag afia cantos quando o traço muda de direção rapidamente, produzindo curvas angulares nítidas com um snap que curvas suaves não alcançam. Útil para linhas gráficas enérgicas e hachuras.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Predefinição de zibelina
+## Sable Preset
 
-A clássica linha de pincéis em quadrinhos. Golpes fluidos e de peso variável com um ritmo confiante de grosso a fino; o tipo de frase que Watterson ou Uderzo reconheceriam.
+A clássica linha de pincel de quadrinhos. Traços fluidos de peso variável, com ritmo confiante de grosso a fino — o tipo de linha que Watterson ou Uderzo reconheceriam.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
 
-## Predefinição de ponta
+## Nib Preset
 
-Inspirada na ponta da Waverly, a predefinição tolera movimentos rápidos e mudanças de direção, ao mesmo tempo que produz linhas de tinta nítidas e expressivas. Como a carga de tinta se esgota à medida que você trabalha, os traços podem começar escuros e saturados e depois se transformar em marcas mais ásperas e esfomeadas à medida que a ponta se esvazia.
+Inspirada na ponta Waverly, a predefinição tolera movimentos rápidos e mudanças de direção, ainda produzindo linhas de tinta nítidas e expressivas. Como a carga de tinta diminui durante o trabalho, os traços podem começar escuros e saturados e depois se tornar marcas mais arranhadas e «famintas» conforme a ponta esvazia.
 
 ![ink-02](/images/strokes/ink-nib_share.jpg)
 
-## Dica predefinida
+## Tip Preset
 
-O prazo de uma caneta de desenho técnico. Largura consistente, bordas limpas e pouca ou nenhuma variação de traçado. Útil para linhas de construção, diagramas, letras e trabalhos gráficos controlados onde a uniformidade é mais importante do que a expressão. Algumas de nossas animações favoritas usam essa linha.
+A linha morta de uma caneta técnica. Largura consistente, bordas limpas e pouca ou nenhuma variação de traço. Útil para linhas de construção, diagramas, lettering e trabalho gráfico controlado, onde uniformidade importa mais que expressão. Algumas das nossas animações favoritas usam exatamente essa linha.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
-## Predefinição de movimento
+## Flick Preset
 
-Projetado para gestos rápidos e sprays direcionais dispersos. Dependendo da velocidade, pressão e espaçamento, os traços podem variar de dispersão sutil e leve a gotículas mais pesadas. Útil para trabalhos texturais e acabamentos expressivos.
+Projetada para gestos de flick e sprays direcionais dispersos. Conforme velocidade, pressão e espaçamento, os traços podem ir de dispersão sutil e leve a gotículas mais pesadas. Útil para trabalho textural e retoques expressivos.
 
 ![flick-01](/images/strokes/flick_share.jpg)

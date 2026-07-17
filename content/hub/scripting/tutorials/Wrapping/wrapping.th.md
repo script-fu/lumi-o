@@ -2,6 +2,9 @@
 title: "การห่อ"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 คำสั่ง Scheme ทำงานในระดับต่ำ ซึ่งหมายความว่าแม้แต่งานง่ายๆ ก็อาจต้องใช้หลายขั้นตอน อย่างไรก็ตาม รายละเอียดนี้ให้ความยืดหยุ่น เราสามารถรวมคำสั่งออกเป็นฟังก์ชันเล็กๆ ที่สามารถนำกลับมาใช้ใหม่ได้ ซึ่งทำหน้าที่ตรงตามที่เราต้องการ การห่อไม่ใช่แนวคิดขาวดำ อาจมีตั้งแต่นามแฝงธรรมดาสำหรับคำสั่งที่ใช้บ่อยไปจนถึงฟังก์ชันที่ซับซ้อนมากขึ้นที่จัดการเวิร์กโฟลว์ทั้งหมด บางครั้ง wrapper เป็นเพียงฟังก์ชันอำนวยความสะดวกในการปรับปรุงความสามารถในการอ่าน ในขณะที่ในกรณีอื่นๆ มันพัฒนาเป็นยูทิลิตี้ที่มีคุณสมบัติครบถ้วนที่สรุปการดำเนินการหลายอย่าง
 
@@ -26,7 +29,7 @@ weight: 4
 ### เมล็ดสุ่ม
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; วัตถุประสงค์: คืนค่าจำนวนเต็มสุ่มสำหรับ seed ฟิลเตอร์
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ weight: 4
 ตัวอย่างเช่น หากเราตัดสินใจเปลี่ยนเป็น ***สุ่ม*** แทน:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; วัตถุประสงค์: คืนค่าจำนวนเต็มสุ่มสำหรับ seed ฟิลเตอร์
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ weight: 4
 ฟังก์ชันการส่งออก JPEG ใน Scheme มาพร้อมกับพารามิเตอร์มากมาย ช่วยให้สามารถควบคุมวิธีการบันทึกรูปภาพได้อย่างละเอียด อย่างไรก็ตาม ในกรณีส่วนใหญ่ เราสนใจเฉพาะการตั้งค่าหลักบางประการเท่านั้น เช่น ชื่อไฟล์และคุณภาพ เพื่อให้กระบวนการง่ายขึ้น เราสามารถสรุปฟังก์ชันได้
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; วัตถุประสงค์: บันทึกภาพเป็น JPEG ด้วยคุณภาพที่กำหนด
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; หลีกเลี่ยง jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ weight: 4
 ฟังก์ชัน ***car*** อาจเป็นความลับและมีแนวโน้มที่จะเกิดข้อผิดพลาดในการเขียนสคริปต์ เป็นเรื่องง่ายที่จะใส่ ***รถยนต์*** กับเวกเตอร์หรือรายการที่ไม่ใช่รายการโดยไม่ตั้งใจ ซึ่งนำไปสู่พฤติกรรมที่ไม่คาดคิด เพื่อให้โค้ดของเราแข็งแกร่งและอ่านง่ายขึ้น เราสามารถรวมฟังก์ชันนี้ไว้ในฟังก์ชันที่ปลอดภัยยิ่งขึ้นได้
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; วัตถุประสงค์: คืนรายการแรกของ list หรือ vector
+;;          แจ้งเตือนหากอินพุตไม่ถูกต้องหรือว่าง
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; จัดการรายการที่ไม่ว่าง
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; จัดการเวกเตอร์ที่ไม่ว่าง
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; อินพุตไม่ถูกต้องหรือว่างเปล่า
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ weight: 4
 เพื่อดึงพิกัด ***x*** อย่างไรก็ตาม แม้ว่าการทำงานจะดูไม่ชัดเจนมากนัก แต่เราสามารถล้อม ***รายการแรก*** ไว้ในคำจำกัดความที่เหมาะสมกว่าเพื่อทำให้เจตนาของเราชัดเจนยิ่งขึ้น
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; วัตถุประสงค์: คืนค่าพิกัด x เพื่อความอ่านง่าย
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; วัตถุประสงค์: คืนค่าพิกัด y เพื่อความอ่านง่าย
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ weight: 4
 ตอนนี้ แทนที่จะเขียนในรูปแบบทั่วไป:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; ดึงพิกัด x
+(cadr pixel-coords) ;; ดึงพิกัด y
 ```
 
 เราสามารถเขียนใน _our_ Scheme:

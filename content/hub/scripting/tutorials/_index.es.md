@@ -1,6 +1,9 @@
 ---
 title: "Tutoriales"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 Estos tutoriales le muestran cómo escribir complementos de Scheme para Lumi. Comenzará con un procedimiento mínimo de "Hola mundo" y luego desarrollará complementos que funcionan con imágenes, archivos y bibliotecas auxiliares reutilizables.
 

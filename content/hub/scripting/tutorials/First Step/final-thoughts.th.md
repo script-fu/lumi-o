@@ -2,6 +2,9 @@
 title: "ความคิดสุดท้าย"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 ขณะนี้คุณมีปลั๊กอินขั้นตอนการทำงานและไลบรารีตัวช่วยขนาดเล็กแล้ว ซีรีส์นี้แนะนำรูปแบบหลักที่คุณจะใช้ในสคริปต์ Lumi ส่วนใหญ่:
 
@@ -15,7 +18,7 @@ weight: 10
 นี่คือเวอร์ชันสุดท้ายของโค้ดปลั๊กอินหลักของเรา:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ weight: 10
 รหัสห้องสมุด:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังแถบสถานะ คืนค่า #t เมื่อสำเร็จ
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังกล่องโต้ตอบ คืนค่า #t เมื่อสำเร็จ
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยัง Error Console คืนค่า #t เมื่อสำเร็จ
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยัง terminal คืนค่า #t เมื่อสำเร็จ
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังเอาต์พุตที่เหมาะสม คืนค่า #t เมื่อสำเร็จ
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ weight: 10
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง คืนค่า #t หากถูกต้อง
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ weight: 10
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; วัตถุประสงค์: ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่ถูกต้อง คืนค่า #t หากถูกต้อง
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

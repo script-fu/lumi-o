@@ -1,6 +1,9 @@
 ---
 title: "참조"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
 ---
 Lumi 플러그인을 작성할 때 사용할 수 있는 내장 Scheme 유틸리티 및 인앱 검색 도구에 대한 빠른 참조입니다. 일반적인 Scheme 학습 및 참고 사항은 [Scheme Cookbook](https://cookbook.scheme.org/) 및 [Scheme.org](https://www.scheme.org/)을 확인하세요.
 

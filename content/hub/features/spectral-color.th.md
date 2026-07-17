@@ -1,6 +1,10 @@
 ---
 title: "การผสมสีสเปกตรัม"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/spectral-color"
+translation_source_sha256: eb96e55a075312549727618ea851ee4ed38372c4e144cb2f24ef029b989c0f86
 ---
 ระบบจานสีของ Lumi ใช้การผสมสีสเปกตรัมเพื่อให้การเลือกสีดิจิทัลมีพฤติกรรมเหมือนกับการผสมสีจริง แทนที่จะถือว่าสีเป็นค่าบนหน้าจออย่างง่าย Lumi จำลองวิธีที่เม็ดสีดูดซับและสะท้อนแสงในขณะที่สีจานสีกำลังถูกสร้างขึ้นและผสมกัน
 

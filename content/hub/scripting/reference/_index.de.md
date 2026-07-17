@@ -1,6 +1,9 @@
 ---
 title: "Referenz"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
 ---
 Kurzreferenz für die integrierten Scheme-Dienstprogramme und In-App-Browsing-Tools, die beim Schreiben von Lumi-Plug-Ins verfügbar sind. Für allgemeines Scheme-Lernen und Nachschlagen schauen Sie sich das [Scheme Cookbook](https://cookbook.scheme.org/) und [Scheme.org](https://www.scheme.org/) an.
 

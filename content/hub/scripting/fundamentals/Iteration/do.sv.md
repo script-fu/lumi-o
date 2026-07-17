@@ -2,10 +2,13 @@
 title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-`do`-funktionen i Scheme är en loop-mekanism som tillåter iteration med initialiserings-, uppdaterings- och avslutningsvillkor. Det är särskilt användbart när du behöver utföra en sekvens av operationer ett visst antal gånger eller tills ett villkor är uppfyllt.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-Den allmänna formen av `do` är:
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Den allmänna formen av `do` är:
   body)
 ```
 
-- **Variabel**: Slingvariabeln(erna).
-- **Initial-value**: Startvärdet för varje loopvariabel.
-- **Update-expression**: Uttrycket för att uppdatera loopvariablerna i slutet av varje iteration.
-- **Termination-condition**: Villkoret för att stoppa slingan.
-- **Resultatuttryck**: Värdet som ska returneras när slingan avslutas.
-- **Body**: Koden som ska köras i varje iteration.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### Exempel: Summa talen från 1 till 5
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; Initiera i till 1, öka med 1
+     (sum 0 (+ sum i))) ; Initiera sum till 0, lägg till i i sum
+    ((> i 5) sum)       ; Avsluta när i > 5, returnera sum
+  (lumi-message (number->string sum))) ; Skriver ut summan vid varje steg
 ```
 
-- Slingvariabeln `i` börjar med 1 och ökar med 1 i varje iteration.
-- Variabeln `sum` ackumulerar summan av `i`.
-- Slingan avslutas när `i > 5`, returnerar det slutliga värdet av `sum`.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**Utdata**: `15`
-
----
-
-### Hur det fungerar
-
-1. **Initiering**:
-   - Varje loopvariabel tilldelas sitt initiala värde.
-
-2. **Uppsägningskontroll**:
-   - I början av varje iteration kontrolleras avslutningsvillkoret. Om sant, slutar loopen och resultatuttrycket utvärderas.
-
-3. **Iteration**:
-   - Om avslutningsvillkoret är falskt exekveras texten och loopvariablerna uppdateras med sina respektive uppdateringsuttryck.
+**Sortie** : `15`
 
 ---
 
-### Sammanfattning
+### Comment ça marche
 
-- `do`-konstruktionen ger ett flexibelt sätt att implementera loopar med flera variabler och komplexa avslutningsvillkor.
-- Det är användbart för uppgifter som kräver tillståndsuppdateringar över iterationer.
-– Avslutningsvillkoret avgör när slingan slutar och kan returnera ett slutresultat.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-Genom att använda `do` kan du implementera iterativa algoritmer i Scheme med exakt kontroll över initiering, uppdateringar och avslutning. Detta gör `do` till en kombination av en **omfattad bindningsmekanism** (som `let`) och en **iterativ kontrollstruktur**, vilket gör att den kan hantera looping och temporärt tillstånd på ett rent, kortfattat sätt.
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

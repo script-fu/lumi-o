@@ -1,37 +1,42 @@
 ---
 title: "Widmowe mieszanie kolorów"
 type: docs
+url: "hub/features/spectral-color"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: eb96e55a075312549727618ea851ee4ed38372c4e144cb2f24ef029b989c0f86
 ---
-System palet Lumi wykorzystuje spektralne mieszanie kolorów, aby cyfrowy wybór kolorów zachowywał się bardziej jak mieszanie fizycznej farby. Zamiast traktować kolory jako proste wartości ekranowe, Lumi modeluje sposób, w jaki pigmenty absorbują i odbijają światło podczas generowania i mieszania palety kolorów.
 
-Rezultatem jest przepływ kolorów, w którym malarze wydają się bardziej znajomymi mieszaninami: żółcie i błękity mogą przechodzić w kierunku zieleni, nasycone kolory mogą przejść w wiarygodne neutralne, a ograniczone palety tworzą rozpoznawalną harmonię.
+System palet Lumi wykorzystuje widmowe mieszanie kolorów, aby cyfrowy wybór barw zachowywał się bardziej jak mieszanie fizycznej farby. Zamiast traktować kolory jako proste wartości ekranu, Lumi modeluje sposób, w jaki pigmenty absorbują i odbijają światło podczas generowania i mieszania kolorów palety.
+
+Efektem jest przepływ pracy, w którym mieszanki wydają się malarzom bardziej znajome: żółcie i błękity mogą iść w stronę zieleni, nasycone kolory osiadają w wiarygodnych neutralach, a ograniczone palety rozwijają rozpoznawalną harmonię.
 
 ## Zachowanie podobne do pigmentu
 
-Tradycyjne cyfrowe mieszanie kolorów często przechodzi przez matematyczne punkty środkowe, które nie przypominają farby. Mieszanie spektralne daje Lumi bogatszą podstawę do konstrukcji palety, umożliwiając interakcję kolorów zgodnie z tendencjami podobnymi do pigmentu.
+Tradycyjne cyfrowe mieszanie często przechodzi przez matematyczne środki, które nie przypominają farby. Mieszanie widmowe daje Lumi bogatszą podstawę budowy palety, pozwalając kolorom oddziaływać zgodnie z tendencjami pigmentowymi.
 
-Dzięki temu eksploracja palety jest bardziej intuicyjna dla artystów, którzy myślą w kategoriach farby, a nie tylko wartości kolorów ekranu. Mieszanka może przyciemniać, wyciszać, ocieplać, chłodzić lub zmieniać odcień w sposób, który wydaje się powiązany z kolorami źródłowymi.
+Eksploracja palety staje się bardziej intuicyjna dla artystów myślących kategoriami farby, nie tylko wartości ekranu. Mieszanka może ciemnieć, wyciszać się, ocieplać, chłodzić lub zmieniać odcień w sposób powiązany z kolorami źródłowymi.
 
 ## Palety z charakterem
 
-Ponieważ zachowanie widmowe jest częścią systemu palet, każda paleta rozwija swoją własną osobowość. Mała, ograniczona paleta może zapewnić silną jedność i stonowane przejścia, podczas gdy szersza paleta może otworzyć szerszą gamę czystych odcieni i kontrolowanych neutralnych odcieni.
+Ponieważ zachowanie widmowe jest częścią systemu palet, każda paleta rozwija własną osobowość. Mała, ograniczona paleta może dawać silną jedność i stonowane przejścia; szersza otwiera więcej czystych odcieni i kontrolowanych neutrali.
 
-Tożsamość pigmentu ma znaczenie. Ten sam widoczny kolor może się różnić w zależności od rodzaju pigmentu, który reprezentuje, co pomaga Lumi uchwycić niektóre praktyczne różnice, jakich malarze oczekują od prawdziwych materiałów.
+Tożsamość pigmentu ma znaczenie. Ten sam widoczny kolor może mieszać się inaczej w zależności od rodzaju pigmentu, który reprezentuje — Lumi oddaje część praktycznych różnic, jakich malarze oczekują od prawdziwych materiałów.
 
 ## Mieszanie przed malowaniem
 
-Kolor widmowy w Lumi jest używany podczas budowania palet, generowania powiązanych kolorów i miksowania nowych wpisów palety. Po nałożeniu koloru na płótno staje się on normalnym kolorem obrazu do celów malowania i komponowania.
+Kolor widmowy w Lumi służy przy budowie palet, generowaniu powiązanych barw i mieszaniu nowych wpisów palety. Po nałożeniu koloru na płótno staje się zwykłymi danymi obrazu do malowania i komponowania.
 
-Dzięki temu proces malowania jest praktyczny, a jednocześnie poprawia doświadczenie artysty w zakresie wyboru i konstruowania koloru. Model widmowy kształtuje paletę; płótno pozostaje wydajne i kompatybilne ze standardowymi procesami przetwarzania obrazu.
+Proces malowania pozostaje praktyczny, a doświadczenie wyboru i budowy koloru się poprawia. Model widmowy kształtuje paletę; płótno pozostaje wydajne i zgodne ze standardowymi workflow obrazu.
 
-## Pomost między kolorem cyfrowym i fizycznym
+## Most między kolorem cyfrowym a fizycznym
 
-Celem mieszania spektralnego nie jest imitowanie wszystkich fizycznych właściwości farby, ale wprowadzenie do malarstwa cyfrowego najbardziej przydatnej części zachowania pigmentu: wiarygodnych relacji między mieszaninami.
+Celem mieszania widmowego nie jest naśladowanie każdej fizycznej właściwości farby, lecz wprowadzenie najużyteczniejszej części zachowania pigmentu do malarstwa cyfrowego: wiarygodnych relacji mieszania.
 
-Dla artystów oznacza to, że paletę można eksplorować z większym zaufaniem. Kolory powstałe z tego samego zestawu pigmentów zwykle do siebie pasują, a zapisane mieszanki zachowują poczucie pochodzenia w palecie, zamiast sprawiać wrażenie niepowiązanych, próbkowanych wartości.
+Dla artystów oznacza to większe zaufanie podczas eksploracji palety. Kolory z tego samego zestawu pigmentów zwykle do siebie pasują, a zapisane mieszanki zachowują poczucie pochodzenia w palecie zamiast sprawiać wrażenie niepowiązanych próbek.
 
 ## Kolor jako system
 
-Mieszanie spektralne łączy Edytor palet, Mapę palet i Mikser palet w jeden system kolorów. Pigmenty definiują punkt wyjścia, mapa pokazuje, co może osiągnąć paleta, a mikser pozwala artystom wyszukiwać przydatne kolory w tej przestrzeni.
+Mieszanie widmowe łączy Palette Editor, Palette Map i Palette Mixer w jeden system kolorów. Pigmenty wyznaczają punkt startu, mapa pokazuje, co paleta może osiągnąć, a mixer pozwala szukać użytecznych barw w tej przestrzeni.
 
-Dzięki temu Lumi może pracować nad kolorami skupiając się na decyzjach dotyczących malowania: wybierz pigmenty, poznaj ich mieszaniny, zachowaj istotne kolory i maluj za pomocą palety, która zachowuje się jak spójna całość.
+Lumi otrzymuje workflow koloru skupiony na decyzjach malarskich: wybierz pigmenty, poznaj mieszanki, zachowaj to, co ważne, i maluj paletą zachowującą się jak spójna całość.

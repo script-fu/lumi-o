@@ -1,105 +1,112 @@
 ---
 title: "Instalando o Debian"
 type: docs
+url: "hub/install-linux/Installing-Debian"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
 ---
-Este documento descreve o processo usado para instalar o Debian Stable como sistema operacional de desenvolvimento do Lumi-o. Pode ser útil para outras pessoas que criem um ambiente semelhante.
 
-O Debian Stable foi selecionado porque a Lumi pretende construir de forma confiável em uma plataforma previsível de longo prazo. O desenvolvimento do GIMP tem como alvo o Debian Testing, tornando o Debian Stable um sistema base estreitamente alinhado.
+Este documento descreve o processo usado para instalar o Debian Stable como sistema operacional de desenvolvimento do Lumi-o. Pode ser útil para quem estiver configurando um ambiente semelhante.
 
-Lumi está no seu melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente. O Cinnamon fornece um fluxo de trabalho de desktop semelhante ao do Windows, enquanto o X11 fornece o ambiente mais estável para o desenvolvimento do Lumi.
+O Debian Stable foi escolhido porque o Lumi precisa compilar de forma confiável em uma plataforma previsível de longo prazo. O desenvolvimento do GIMP tem como alvo o Debian Testing, o que torna o Debian Stable um sistema base muito alinhado.
 
-Se você vem do Windows, a principal mudança conceitual é que a maior parte da instalação e configuração do software ocorre por meio de gerenciadores de pacotes e comandos de terminal simples, em vez de instaladores para download.
+O Lumi funciona melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente. O Cinnamon oferece um fluxo de trabalho de desktop familiar, semelhante ao do Windows, enquanto o X11 proporciona o ambiente mais estável para o desenvolvimento do Lumi.
+
+Se você vem do Windows, a principal mudança conceitual é que a maior parte da instalação e configuração de software acontece por meio de gerenciadores de pacotes e comandos simples de terminal, em vez de instaladores para download.
 
 ## Para quem é este guia
 
-Este guia documenta uma configuração estável do Debian usada para desenvolvimento do Lumi. Não é um tutorial geral de instalação do Linux.
+Este guia documenta uma configuração funcional do Debian Stable usada para o desenvolvimento do Lumi. Não é um tutorial geral de instalação do Linux.
 
 É mais útil para:
 
 - artistas migrando do Windows que desejam uma configuração previsível do Linux
-- desenvolvedores construindo Lumi a partir da fonte
+- desenvolvedores que compilam o Lumi a partir do código-fonte
 - usuários que preferem reproduzir um ambiente de trabalho conhecido em vez de projetar a própria configuração do sistema
 
-Presume-se familiaridade básica com particionamento de disco e uso simples de linha de comando.
+Pressupõe-se familiaridade básica com particionamento de disco e uso simples da linha de comando.
 
 ## Faça backup dos seus dados
 
-Antes de instalar o Debian, crie um backup completo do seu diretório Home em uma unidade externa. Inclua quaisquer pastas de dados adicionais que você deseja preservar.
+Antes de instalar o Debian, crie um backup completo do seu diretório Home em uma unidade externa. Inclua quaisquer pastas de dados adicionais que você queira preservar.
 
-Nota: No Linux, `~` representa seu diretório inicial.
+Nota: no Linux, `~` representa seu diretório Home.
 
-Se você usa repositórios Git, envie quaisquer alterações importantes para suas origens para que possam ser restauradas facilmente após a instalação. Esta etapa só é relevante se você já usa Git.
+Se você usa repositórios Git, envie alterações importantes para os remotes para que possam ser restauradas facilmente após a instalação. Esta etapa só é relevante se você já usa Git.
 
 ## Crie uma partição
 
-Crie espaço em sua unidade principal para o Debian. Existem muitos guias e ferramentas para esta etapa, incluindo o GParted. Dependendo da sua configuração, você pode:
+Prepare espaço no disco principal para o Debian. Existem muitos guias e ferramentas para esta etapa, incluindo o GParted. Dependendo da sua configuração, você pode:
 
-- reduzir uma partição existente do Windows para inicialização dupla
+- reduzir uma partição existente do Windows para dual boot
 - reutilizar uma partição Linux existente
-- preparar novo Linux e trocar partições
+- preparar novas partições Linux e swap
 
-Se não tiver certeza, consulte os guias específicos de hardware antes de fazer alterações, pois as etapas de particionamento variam significativamente entre os sistemas.
+Se não tiver certeza, consulte guias específicos de hardware antes de fazer alterações, pois as etapas de particionamento variam significativamente entre os sistemas.
 
 
 ## Crie um USB de instalação do Debian
 
-Supondo que já exista uma partição de destino e um espaço de troca:
+Supondo que já existam uma partição de destino e espaço de swap:
 
-1. Baixe o ISO do Debian do site oficial: https://www.debian.org/
-2. No Windows, use BalenaEtcher para gravar o ISO em uma unidade USB.
+1. Baixe a ISO do Debian no site oficial: https://www.debian.org/
+2. No Windows, use o BalenaEtcher para gravar a ISO em uma unidade USB.
 3. No Linux, use uma ferramenta de linha de comando como `dd` para criar um USB inicializável.
 
 ## Instale o Debian
 
 1. Insira a unidade USB.
-2. Reinicie e pressione a tecla do menu de inicialização (normalmente `F2`, `F12`, `Esc` ou `Del`) durante a inicialização.
+2. Reinicie e pressione a tecla do menu de inicialização (geralmente `F2`, `F12`, `Esc` ou `Del`) durante a inicialização.
 3. Selecione o dispositivo USB.
 4. Escolha um instalador não gráfico.
-5. Deixe a senha root em branco quando solicitado para que o instalador conceda acesso sudo à sua conta de usuário.
+5. Deixe a senha root em branco quando solicitado, para que o instalador conceda acesso sudo à sua conta de usuário.
 6. Particione manualmente:
 
-   - Sistema de arquivos: ext4 (diário)
+   - Sistema de arquivos: ext4 (journaling)
    - Swap: partição swap existente
    - Ponto de montagem: `/`
-   - Etiqueta: `linux`
-   - Hostname: nome do sistema mostrado como `user@hostname`
+   - Rótulo: `linux`
+   - Hostname: nome do sistema exibido como `user@hostname`
    - Conta de usuário: seu nome completo
-   - Nome de usuário: nome de login do terminal
+   - Nome de usuário: nome de login no terminal
 
-7. O instalador Debian fornece uma opção de ambiente de desktop neste estágio; selecione **Canela** para a configuração recomendada pela Lumi.
+7. O instalador do Debian oferece uma escolha de ambiente de desktop nesta etapa; selecione **Cinnamon** para a configuração recomendada pelo Lumi.
 8. Conclua a instalação e reinicie no Debian Stable.
 
 ## Configuração do sistema
 
 ### Escala de exibição
 
-O Debian Stable atualmente lida com escalamento fracionário de forma inconsistente, especialmente em monitores 4K. Em vez de reduzir a resolução da tela, ajuste os elementos da interface diretamente.Ajustes recomendados:
+Atualmente, o Debian Stable lida com escalonamento fracionário de forma inconsistente, especialmente em monitores 4K. Em vez de reduzir a resolução da tela, ajuste os elementos da interface diretamente.
 
-- Evite escala de exibição fracionária.
-- Menu → Seleção de fonte → Configurações de fonte → Fator de escala de texto: `2.5`
-- Fonte da área de trabalho: `14`
-- Painel → Personalizar → Altura do painel: `60`
-- Aparência do painel → Tamanho do ícone simbólico da zona direita: `48px`
-- Mouse e Touchpad → Ajuste do tamanho do ponteiro
-- Área de trabalho (clique com o botão direito) → Personalizar → Tamanho maior do ícone
+Ajustes recomendados:
+
+- Evite escalonamento fracionário da tela.
+- Menu → Font Selection → Font Settings → Text Scaling Factor: `2.5`
+- Desktop Font: `14`
+- Panel → Customize → Panel Height: `60`
+- Panel Appearance → Right Zone Symbolic Icon Size: `48px`
+- Mouse and Touchpad → Pointer Size adjustment
+- Desktop (right-click) → Customize → Larger icon size
 
 Ajuste do Firefox:
 
-- Barra de endereço → `about:config`
-- Defina `layout.css.devPixelsPerPx` para `1`
+- Address bar → `about:config`
+- Defina `layout.css.devPixelsPerPx` como `1`
 
 ### Terminal
 
 Configure as preferências do terminal:
 
-1. Menu → Terminal → Editar → Preferências
-2. Texto → Tamanho inicial: `140 columns`, `40 rows`
-3. Texto → Fonte personalizada: `Monospace 10`
-4. Cores → Esquemas integrados → Escuro Solarizado
+1. Menu → Terminal → Edit → Preferences
+2. Text → Initial size: `140 columns`, `40 rows`
+3. Text → Custom font: `Monospace 10`
+4. Colours → Built-in schemes → Solarized Dark
 
-## Restaurar dados
+## Restaure os dados
 
-Restaure os arquivos de backup no diretório inicial conforme necessário, por exemplo:
+Restaure os arquivos de backup no diretório Home conforme necessário, por exemplo:
 
 - `Backup/Home/Artwork` → `~/Artwork`
 - `Backup/Home/code` → `~/code`
@@ -107,11 +114,11 @@ Restaure os arquivos de backup no diretório inicial conforme necessário, por e
 - `Backup/Home/.ssh` → `~/.ssh`
 - `Backup/Home/.config/lumi` → `~/.config/lumi`
 
-Nota: Pastas que começam com `.` são diretórios de configuração ocultos no Linux.
+Nota: pastas que começam com `.` são diretórios de configuração ocultos no Linux.
 
 ## Opcional: configuração do Git
 
-Obrigatório apenas se você planeja construir o Lumi ou restaurar repositórios.
+Necessário apenas se você planeja compilar o Lumi ou restaurar repositórios.
 
 ### Instale o Git
 
@@ -125,15 +132,15 @@ Configure sua identidade:
 git config --global --edit
 ```
 
-#### Acesso GitLab
+#### Acesso ao GitLab
 
-Restaure o acesso ao repositório no GitLab ou GitHub:
+Restaure o acesso aos repositórios no GitLab ou GitHub:
 
-1. Altere as permissões no arquivo de chave SSH: `chmod 600 ~/.ssh/id_rsa`
-2. Adicione o usuário à nova instalação do Git: `ssh-add ~/.ssh/id_rsa`
+1. Altere as permissões do arquivo de chave SSH: `chmod 600 ~/.ssh/id_rsa`
+2. Adicione a chave ao agente SSH: `ssh-add ~/.ssh/id_rsa`
 3. Teste a conexão: `ssh -T git@ssh.gitlab.gnome.org` ou `ssh -T git@github.com`
 
-Para cada repositório, busque as origens e redefina a ramificação local para corresponder:
+Para cada repositório, busque os remotes e redefina o branch local para corresponder:
 
 ```bash
 git reset --hard remote-name/branch-name
@@ -142,11 +149,11 @@ git clean -df
 
 Execute `git status` para confirmar que os repositórios estão limpos.
 
-Agora temos um novo sistema operacional com todos os dados e repositórios restaurados. Esta configuração reflete um ambiente de trabalho conhecido usado para o desenvolvimento do Lumi e pode ser adaptado a fluxos de trabalho individuais conforme necessário.
+Agora você tem um novo sistema operacional com dados e repositórios restaurados. Esta configuração reflete um ambiente de trabalho conhecido usado para o desenvolvimento do Lumi e pode ser adaptada a fluxos de trabalho individuais conforme necessário.
 
-## Construa o Lumi após a configuração do sistema operacional
+## Compile o Lumi após a configuração do sistema
 
-Os scripts de construção do Lumi estão localizados em:
+Os scripts de compilação do Lumi estão em:
 
 `~/code/lumi-dev/build/lumi/scripts`.
 
@@ -154,22 +161,18 @@ Os scripts de construção do Lumi estão localizados em:
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
-
 sudo bash lumi-install-packages.sh
 
 # First full setup build
-
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
-
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
-
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
-
 bash lumi-launch-active.sh lumi-dev
 ```
+

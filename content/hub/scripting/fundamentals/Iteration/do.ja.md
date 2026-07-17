@@ -1,11 +1,14 @@
 ---
-title: "する"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-Scheme の `do` 関数は、初期化、更新、終了条件による反復を可能にするループ メカニズムです。これは、一連の操作を特定の回数、または条件が満たされるまで実行する必要がある場合に特に便利です。
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-`do` の一般的な形式は次のとおりです。
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ Scheme の `do` 関数は、初期化、更新、終了条件による反復を�
   body)
 ```
 
-- **変数**: ループ変数。
-- **初期値**: 各ループ変数の開始値。
-- **Update-expression**: 各反復の終了時にループ変数を更新する式。
-- **終了条件**: ループを停止する条件。
-- **Result-expression**: ループ終了時に返される値。
-- **本文**: 各反復で実行するコード。
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### 例: 1 から 5 までの数値を合計する
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; i を 1 に初期化し、1 ずつ増加
+     (sum 0 (+ sum i))) ; sum を 0 に初期化し、i を sum に加算
+    ((> i 5) sum)       ; i > 5 のとき終了し、sum を返す
+  (lumi-message (number->string sum))) ; 各ステップで合計を表示
 ```
 
-- ループ変数 `i` は 1 から始まり、反復ごとに 1 ずつ増加します。
-- 変数 `sum` は、`i` の合計を蓄積します。
-- ループは `i > 5` で終了し、`sum` の最終値を返します。
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**出力**: `15`
-
----
-
-### 仕組み
-
-1. **初期化**:
-   - 各ループ変数には初期値が割り当てられます。
-
-2. **終了チェック**:
-   - 各反復の開始時に、終了条件がチェックされます。 true の場合、ループが停止し、結果式が評価されます。
-
-3. **反復**:
-   - 終了条件が false の場合、本体が実行され、それぞれの更新式を使用してループ変数が更新されます。
+**Sortie** : `15`
 
 ---
 
-### 概要
+### Comment ça marche
 
-- `do` 構造は、複数の変数と複雑な終了条件を含むループを実装する柔軟な方法を提供します。
-- 繰り返しにわたって状態を更新する必要があるタスクに役立ちます。
-- 終了条件はループがいつ終了するかを決定し、最終結果を返すことができます。
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-`do` を使用すると、初期化、更新、終了を正確に制御しながら反復アルゴリズムを Scheme に実装できます。これにより、`do` は **スコープ指定されたバインディング メカニズム** (`let` など) と **反復制御構造** の組み合わせとなり、クリーンで簡潔な方法でループと一時状態を処理できるようになります。
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

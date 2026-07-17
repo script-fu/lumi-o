@@ -1,14 +1,17 @@
 ---
 title: "Переименовать слои"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 669bb9a76d7c849dba73b936e36d319fd2ecafb8f9dbd1500ba3b9205e8efb67
 ---
 Переименовывает все слои в стопке (или выбранные слои). Полезно для анимированных слоев кистей.
 
-## Где он живет
+## Исходный код
 
-- [Просмотреть источник](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Посмотреть исходный код](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
-## Где он появляется в Lumi
+## Меню в Lumi
 
 - **Слой → Стек → Переименовать слои**
 

@@ -1,55 +1,60 @@
 ---
-title: "亞搏體育appGitLab持續集成"
+title: "GitLab CI"
 type: docs
+url: "hub/technical-guides/GitLab-CI"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9917cebc417adeeae24d91b05b919b679a397d5db652cf4442d4330c0f8eeea5
 ---
-持續整合 (CI) 是一種在程式碼發生變更時自動測試、建置和驗證程式碼的方法。
 
-**GitLab** 透過其 `.gitlab-ci.yml` 檔案提供內建 CI/CD 功能。該文件位於儲存庫的根目錄中，告訴 GitLab 如何建置和測試您的專案。它定義了每次推送更改時在乾淨的環境中運行的階段和腳本。
+持續整合（CI）是一種在程式碼變更時自動測試、建置和驗證程式碼的方法。
 
-本文檔概述了 Lumi 的 GitLab CI/CD 管道的工作原理，包括 `.gitlab-ci.yml` 文件、shell 腳本以及 Meson 和 Ninja 等外部工具的作用。
+**GitLab** 透過 `.gitlab-ci.yml` 檔案提供內建 CI/CD 功能。該檔案位於儲存庫根目錄，用來告訴 GitLab 如何建置和測試專案。它定義了每次推送變更時在乾淨環境中執行的階段和腳本。
 
-有關 Lumi CI 建置過程的詳細技術文檔，請參閱儲存庫中的 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
+本文件概述 Lumi 的 GitLab CI/CD 流水線如何運作，包括 `.gitlab-ci.yml` 檔案、Shell 腳本以及 Meson 和 Ninja 等外部工具的作用。
+
+有關 Lumi CI 建置過程的詳細技術文件，請參閱儲存庫中的 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
 
 ## GitLab CI/CD 基礎知識
 
-CI 由名為 `.gitlab-ci.yml` 的檔案控制。該文件定義：
+CI 由名為 `.gitlab-ci.yml` 的檔案控制。該檔案定義：
 
-- **階段**：有序的作業組（例如，`build-this`、`build-that`、`package-up`）
-- **作業**：每個階段內執行的單獨任務
+- **階段**：有序的作業群組（例如 `build-this`、`build-that`、`package-up`）
+- **作業**：每個階段內執行的個別任務
 - **腳本**：為每個作業執行的 Shell 指令
-- **運行器**：GitLab 用於運行管道中定義的作業的電腦。
+- **執行器**：GitLab 用來執行流水線中定義作業的電腦
 
-在 Lumi 中，管道階段是：
+在 Lumi 中，流水線階段為：
 
 - `dependencies`
 - `build lumi`
 - `appimage`
 
-## 基於容器的構建
+## 基於容器的建置
 
-Lumi 管道使用容器化來實現一致的建置：
+Lumi 流水線使用容器化來實現一致的建置：
 
-1. **建立建置容器**：第一階段使用Buildah建立具有所有相依性的Docker映像
-2. **使用容器**：後續階段在該容器內運行，確保環境一致
-3. **可重複的建置**：容器隔離保證不同運行者獲得相同的結果
+1. **建立建置容器**：第一階段使用 Buildah 建立包含所有相依性的 Docker 映像
+2. **使用容器**：後續階段在該容器內執行，確保環境一致
+3. **可重複建置**：容器隔離保證不同執行器得到相同結果
 
-這種方法確保建置在任何 GitLab 運行器上都以相同的方式運作，並為複雜的建置流程提供受控環境。
+這種方式確保建置在任何 GitLab 執行器上都以相同方式運作，並為複雜建置流程提供受控環境。
 
-### 整合依賴來源
+### 整合相依性來源
 
-Lumi 的 CI 依賴鏡像從 **in-repo 整合來源**（不是外部克隆）建立分叉堆疊：
+Lumi 的 CI 相依性映像從 **儲存庫內整合來源**（而非外部複製）建置分叉堆疊：
 
 - `lumi-babl/` (BABL)
 - `lumi-gegl/` (GEGL)
 - `lumi-gtk3/` (GTK3)
 
-這些目錄被複製到容器建置上下文中並編譯到依賴項前綴（通常為`/opt/lumi-deps`）。這保持了 CI 的可重複性，並確保 AppImage 建置使用與本地開發相同的真實來源。
+這些目錄會複製到容器建置內容中，並編譯到相依性前綴（通常為 `/opt/lumi-deps`）。這維持 CI 的可重複性，並確保 AppImage 建置與本機開發使用相同的真實來源。
 
 ## Shell 腳本的作用
 
-`.gitlab-ci.yml` 中的作業通常直接呼叫 shell 命令。複雜的操作通常會移至儲存在儲存庫中的單獨腳本中。
+`.gitlab-ci.yml` 中的作業通常直接呼叫 Shell 命令。複雜操作通常會移到儲存庫中的獨立腳本。
 
-Lumi CI 使用模組化 shell 腳本來組織建構邏輯：
+Lumi CI 使用模組化 Shell 腳本來組織建置邏輯：
 
 **腳本呼叫範例：**
 ```yaml
@@ -57,17 +62,17 @@ script:
   - bash build/linux/appimage/lumi-goappimage.sh 2>&1 | tee appimage_creation.log
 ```
 
-**這種方法的好處：**
-- **乾淨的 YAML**：使 `.gitlab-ci.yml` 文件專注於作業結構
-- **可維護性**：複雜的邏輯在shell腳本中更容易調試和修改
-- **可重複使用性**：腳本可以在不同的情境或環境中使用
-- **模組化**：建構的不同面向可以分為有針對性的腳本
+**這種方式的好處：**
+- **簡潔的 YAML**：讓 `.gitlab-ci.yml` 專注於作業結構
+- **可維護性**：複雜邏輯在 Shell 腳本中更容易除錯和修改
+- **可重複使用**：腳本可在不同情境或環境中使用
+- **模組化**：可將建置的不同面向拆分為獨立腳本
 
-這可以保持 CI 配置乾淨，同時允許複雜的建置過程。
+這能在保持 CI 設定簡潔的同時，支援複雜的建置流程。
 
-## 與建置系統集成
+## 與建置系統整合
 
-Lumi 使用 **Meson** 和 **Ninja** 來準備並建立程式碼。
+Lumi 使用 **Meson** 和 **Ninja** 來準備並建置程式碼。
 
 例如：
 
@@ -78,20 +83,22 @@ script:
   - ninja -C _build-${CI_RUNNER_TAG} install
 ```
 
-這裡：
+其中：
 
-- `meson setup` 準備建置目錄並產生`build.ninja`
-- `ninja` 依照定義執行建置命令
+- `meson setup` 準備建置目錄並產生 `build.ninja`
+- `ninja` 依定義執行建置命令
 
-## 介子建構系統結構
+## Meson 建置系統結構
 
-**Meson** 建置系統使用位於專案根目錄的根 `meson.build` 檔案。該文件定義了建置過程的頂級建置配置和入口點。- 根`meson.build` 通常位於與`.gitlab-ci.yml` 相同的目錄中
-- 從那裡，它**遞歸地**到子目錄中，每個子目錄可能都有自己的`meson.build` 文件
-- 這些子目錄檔案定義與該目錄相關的目標、來源、依賴項和建置指令
+**Meson** 建置系統使用位於專案根目錄的根 `meson.build` 檔案。該檔案定義建置流程的頂層設定和進入點。
+
+- 根 `meson.build` 通常與 `.gitlab-ci.yml` 位於同一目錄
+- 從那裡 **遞迴地** 延伸到子目錄，每個子目錄可能有自己的 `meson.build` 檔案
+- 這些子目錄檔案定義與該目錄相關的目標、來源、相依性和建置指令
 
 ## 環境變數
 
-Lumi 管道中的關鍵變數包括：
+Lumi 流水線中的關鍵變數包括：
 
 ```yaml
 variables:
@@ -100,7 +107,7 @@ variables:
   CI_RUNNER_TAG: "x86_64"            # Architecture specification
 ```
 
-**特定於工作的變數：**
+**作業特定變數：**
 ```yaml
 build-lumi:
   variables:
@@ -111,7 +118,7 @@ build-lumi:
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
 ```
 
-這些變數控制建置行為並確保不同階段和運行者之間的一致性。
+這些變數控制建置行為，並確保不同階段和執行器之間的一致性。
 
 ## 結構範例
 
@@ -127,15 +134,15 @@ project-root/
 │   └── icons/
 ```
 
-在這個結構中：
+在此結構中：
 
--根`meson.build`檔案配置整體建置環境
-- 子目錄`meson.build`檔案處理特定組件或模組的編譯詳細信息
-- 這種分層佈局保持建構邏輯的模組化和可維護性
+- 根 `meson.build` 檔案設定整體建置環境
+- 子目錄 `meson.build` 檔案處理特定元件或模組的編譯細節
+- 這種分層配置使建置邏輯保持模組化且易於維護
 
-## 階段之間的工件
+## 階段之間的成品
 
-工件是後續階段所需的作業產生的文件：
+成品是後續階段所需、由作業產生的檔案：
 
 ```yaml
 build-lumi:
@@ -146,15 +153,15 @@ build-lumi:
       - _build-${CI_RUNNER_TAG}/meson-logs/meson-log.txt  # Build logs
 ```
 
-## 管道階段和依賴關係
+## 流水線階段和相依性
 
-Lumi 管道由三個主要階段組成：
+Lumi 流水線由三個主要階段組成：
 
-1. **依賴項**：使用所有必要的工具和庫來建立容器化建置環境
-2. **Build Lumi**：在準備好的環境中使用Meson和Ninja編譯Lumi
-3. **AppImage**：將建置的應用程式打包成可分發的AppImage格式
+1. **Dependencies**：建立包含所有必要工具和函式庫的容器化建置環境
+2. **Build Lumi**：在準備好的環境中使用 Meson 和 Ninja 編譯 Lumi
+3. **AppImage**：將建置的應用程式打包為可分發的 AppImage 格式
 
-**階段依賴性：**
+**階段相依性：**
 ```yaml
 build-lumi:
   needs: [deps-debian]  # Waits for dependency container
@@ -163,28 +170,28 @@ lumi-appimage:
   needs: [build-lumi] # Waits for application build
 ```
 
-每個階段僅在其相依性成功完成後運行，以確保正確的建置順序和工件可用性。
+每個階段僅在其相依性成功完成後執行，以確保正確的建置順序和成品可用性。
 
-## 目前職位名稱
+## 目前作業名稱
 
-Lumi `.gitlab-ci.yml` 目前定義了這些作業名稱：
+Lumi 的 `.gitlab-ci.yml` 目前定義了這些作業名稱：
 
--`deps-debian`
+- `deps-debian`
 - `build-lumi`
 - `lumi-appimage`
 
 ## 總結
 
-- `.gitlab-ci.yml`定義了管道的結構和邏輯
-- 作業包含 shell 指令或外部腳本
-- Meson 和 Ninja 等工具作為建置過程的一部分在作業中使用
+- `.gitlab-ci.yml` 定義流水線的結構和邏輯
+- 作業包含 Shell 指令或外部腳本
+- Meson 和 Ninja 等工具作為建置流程的一部分在作業中使用
 
-Lumi 使用 GitLab CI 自動為基於 Debian 的平台建立 AppImage。該管道建置依賴項，編譯 Lumi，然後打包 AppImage。
+Lumi 使用 GitLab CI 自動為基於 Debian 的平台建置 AppImage。流水線會建置相依性、編譯 Lumi，然後打包 AppImage。
 
-有關來源層級的詳細信息，請使用：
+有關來源層級詳細資訊，請參閱：
 
-- `.gitlab-ci.yml` 在 Lumi 儲存庫根目錄中
+- Lumi 儲存庫根目錄中的 `.gitlab-ci.yml`
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-有關 Lumi CI 建置過程的全面技術詳細信息，包括環境設定、腳本架構和故障排除，請參閱 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。
+有關環境設定、腳本架構和故障排除等 Lumi CI 建置過程的全面技術細節，請參閱 [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md)。

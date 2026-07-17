@@ -1,7 +1,10 @@
 ---
 title: "รายการ"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 ใน Scheme **รายการ** คือโครงสร้างข้อมูลพื้นฐานที่ใช้ในการจัดกลุ่มค่า รายการคือการเรียงลำดับคอลเลกชันขององค์ประกอบ โดยแต่ละองค์ประกอบสามารถเป็นประเภทใดก็ได้ รวมถึงรายการอื่นด้วย รายการมีการใช้กันอย่างแพร่หลายใน Scheme สำหรับทั้งการจัดเก็บข้อมูลและโครงสร้างของโปรแกรม
 
@@ -28,8 +31,8 @@ weight: 4
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; ดึงองค์ประกอบแรก
+(cdr my-list)  ; ดึงส่วนที่เหลือของรายการ
 ```
 
 ผลลัพธ์:
@@ -52,8 +55,8 @@ weight: 4
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; พิมพ์องค์ประกอบแรก
+      (print-elements (cdr lst)))))             ;; ประมวลผลส่วนที่เหลือของรายการ
 ```
 
 - **กรณีพื้นฐาน:** หากรายการว่างเปล่า (`null? lst`) ให้หยุดการเรียกซ้ำ
@@ -135,8 +138,8 @@ weight: 4
 #### ตัวอย่าง: รายการ?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; ตรวจสอบว่า (list 1 2 3) เป็นรายการหรือไม่
+(list? 42)            ; ตรวจสอบว่า 42 เป็นรายการหรือไม่
 ```
 
 ผลลัพธ์:
@@ -155,16 +158,18 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 - `reverse`: ส่งคืนรายการใหม่ที่มีองค์ประกอบในลำดับย้อนกลับ
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; คืนค่า 3
+(append (list 1 2) (list 3 4)) ; คืนค่า (1 2 3 4)
+(reverse (list 1 2 3))         ; คืนค่า (3 2 1)
 ```
 
 ผลลัพธ์:
 
 - `(length (list 1 2 3))` กลับมา `3`
 - `(append (list 1 2) (list 3 4))` กลับมา `(1 2 3 4)`
-- `(reverse (list 1 2 3))` กลับมา `(3 2 1)`#### การใช้ `list-ref`
+- `(reverse (list 1 2 3))` กลับมา `(3 2 1)`
+
+#### การใช้ `list-ref`
 
 กระบวนการ `list-ref` จะดึงข้อมูลองค์ประกอบที่ดัชนีที่ระบุของรายการ (ดัชนีแบบศูนย์)
 
@@ -178,7 +183,7 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 ##### ตัวอย่าง: list-ref
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; ดึงองค์ประกอบที่ดัชนี 2
 ```
 
 ผลลัพธ์: `30`
@@ -208,10 +213,10 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 #### ตัวอย่าง: การเข้าถึงองค์ประกอบ
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; ดึงองค์ประกอบแรก: (1 2)
+(car (car nested-list))        ; ดึงองค์ประกอบแรกของ sublist แรก: 1
+(cdr (car nested-list))        ; ดึงส่วนที่เหลือของ sublist แรก: (2)
+(car (cdr (car nested-list)))  ; ดึงองค์ประกอบที่สองของ sublist แรก: 2
 ```
 
 ---
@@ -235,8 +240,8 @@ Scheme มีขั้นตอนในตัวหลายอย่างส�
 #### ตัวอย่าง: การเข้าถึงองค์ประกอบจากรายการย่อยอื่น
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; ดึง sublist ที่สอง: (3 4)
+(car (car (cdr nested-list)))  ; ดึงองค์ประกอบแรกของ sublist ที่สอง: 3
 ```
 
 ---

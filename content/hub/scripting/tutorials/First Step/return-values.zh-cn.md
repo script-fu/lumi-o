@@ -2,6 +2,9 @@
 title: "返回值"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 返回值很重要，因为它们可以让您控制流程而无需额外的状态。在Scheme中，最后计算的表达式成为返回值。
 
@@ -14,9 +17,9 @@ weight: 8
 让我们回顾一下验证函数，（is-valid-string？）
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; 用途：验证消息为非空字符串
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; 检查消息是否为非空字符串
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ weight: 8
 我们可以通过使返回值更加明确来改进这一点。例如，如果消息有效，我们可以返回 `#t` (true)：
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; 用途：验证消息是否发送到有效输出
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 检查输出是否为预期的显示目标之一
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ weight: 8
 这是一个使用返回值来控制逻辑流程的简单示例：
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 用途：将消息分发到适当的输出目标
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -84,12 +87,12 @@ weight: 8
 
 这使您可以处理更复杂的情况，其中需要根据条件测试的结果执行多个表达式或语句。
 
-Okay, here is the library code with return values embedded and used to control the executing process.
+好的，这是嵌入返回值的库代码，用于控制执行过程。
 
 ### 用返回值重构
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 用途：向状态栏发送消息，成功时返回 #t
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Okay, here is the library code with return values embedded and used to control t
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 用途：向对话框发送消息，成功时返回 #t
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Okay, here is the library code with return values embedded and used to control t
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 用途：向 Error Console 发送消息，成功时返回 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Okay, here is the library code with return values embedded and used to control t
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 用途：向 terminal 发送消息，成功时返回 #t
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Okay, here is the library code with return values embedded and used to control t
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 用途：将消息分发到适当的输出，成功时返回 #t
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Okay, here is the library code with return values embedded and used to control t
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 用途：验证消息为非空字符串，有效时返回 #t
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Okay, here is the library code with return values embedded and used to control t
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 用途：验证输出为有效目标，有效时返回 #t
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

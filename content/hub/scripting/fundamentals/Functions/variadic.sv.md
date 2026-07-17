@@ -2,6 +2,9 @@
 title: "Variadiska funktioner"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Variadfunktioner** i Scheme är funktioner som accepterar ett variabelt antal argument. Dessa funktioner är mycket mångsidiga och låter dig skapa flexibel och återanvändbar kod. I funktionell programmering förenklar variadiska funktioner operationer som behöver bearbeta ett godtyckligt antal ingångar, som att summera en lista med tal eller sammanfoga strängar.
 
@@ -39,7 +42,7 @@ Variadiska funktioner definieras med symbolen `.` före det sista parameternamne
 
 **Användning**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Returnerar 15
 ```
 
 #### Variadisk funktion med fasta parametrar
@@ -58,7 +61,7 @@ Du kan kombinera fasta parametrar med en variadisk parameter för att skapa mer 
 
 **Användning**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Returnerar ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Kombinera fast och variadisk logik
@@ -76,7 +79,7 @@ Du kan kombinera fasta parametrar med en variadisk parameter för att skapa mer 
 **Användning**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Returnerar "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Avancerade användningsfall
@@ -94,7 +97,7 @@ Variadiska funktioner utmärker sig vid hantering av godtyckliga data. Här är 
 
 **Användning**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Returnerar 18
 ```
 
 #### Variadiska funktioner med rekursiv logik
@@ -113,7 +116,7 @@ Variadiska funktioner utmärker sig vid hantering av godtyckliga data. Här är 
 
 **Användning**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Returnerar 40
 ```
 
 ### Fördelar med Variadic-funktioner

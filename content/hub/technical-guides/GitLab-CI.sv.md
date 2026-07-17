@@ -1,55 +1,60 @@
 ---
 title: "GitLab CI"
 type: docs
+url: "hub/technical-guides/GitLab-CI"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9917cebc417adeeae24d91b05b919b679a397d5db652cf4442d4330c0f8eeea5
 ---
-Continuous Integration (CI) är ett sätt att automatiskt testa, bygga och validera din kod närhelst ändringar görs.
 
-**GitLab** tillhandahåller inbyggda CI/CD-funktioner genom sin `.gitlab-ci.yml`-fil. Den här filen, placerad i roten av ditt arkiv, berättar för GitLab hur man bygger och testar ditt projekt. Den definierar stadier och skript som körs i en ren miljö varje gång ändringar skjuts fram.
+Continuous Integration (CI) är ett sätt att automatiskt testa, bygga och validera din kod när ändringar görs.
 
-Det här dokumentet beskriver hur Lumis GitLab CI/CD-pipeline fungerar, inklusive rollen för `.gitlab-ci.yml`-filen, skalskript och externa verktyg som Meson och Ninja.
+**GitLab** tillhandahåller inbyggda CI/CD-funktioner via filen `.gitlab-ci.yml`. Den här filen, placerad i roten av ditt repository, talar om för GitLab hur projektet ska byggas och testas. Den definierar stages och scripts som körs i en ren miljö varje gång ändringar pushas.
 
-För detaljerad teknisk dokumentation av Lumi CI-byggprocessen, se [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) i arkivet.
+Det här dokumentet beskriver hur Lumis GitLab CI/CD-pipeline fungerar, inklusive rollen för filen `.gitlab-ci.yml`, shellskript och externa verktyg som Meson och Ninja.
+
+För detaljerad teknisk dokumentation av Lumis CI-byggprocess, se [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) i repositoryt.
 
 ## Grunderna i GitLab CI/CD
 
-CI:n styrs av en fil som heter `.gitlab-ci.yml`. Denna fil definierar:
+CI styrs av en fil som heter `.gitlab-ci.yml`. Den här filen definierar:
 
-- **Stapper**: Beställda grupper av jobb (t.ex. `build-this`, `build-that`, `package-up`)
-- **Jobb**: Individuella uppgifter att köra inom varje steg
-- **Skript**: Skalkommandon körs för varje jobb
-- **Löpare**: Datorer som GitLab använder för att köra jobb definierade i pipeline.
+- **Stages**: ordnade grupper av jobs (t.ex. `build-this`, `build-that`, `package-up`)
+- **Jobs**: enskilda uppgifter som körs inom varje stage
+- **Scripts**: shellkommandon som körs för varje job
+- **Runners**: datorer som GitLab använder för att köra jobs som definieras i pipelinen
 
-I Lumi är pipelinestegen:
+I Lumi är pipeline-stages:
 
 - `dependencies`
 - `build lumi`
 - `appimage`
 
-## Behållarbaserade byggnader
+## Containerbaserade builds
 
-Lumi pipeline använder containerisering för konsekventa konstruktioner:
+Lumi-pipelinen använder containerisering för konsekventa builds:
 
-1. **Skapa byggbehållaren**: Det första steget använder Buildah för att skapa en Docker-bild med alla beroenden
-2. **Använda behållaren**: Efterföljande steg körs inuti denna behållare, vilket säkerställer en konsekvent miljö
-3. **Reproducerbara byggnader**: Behållarisolering garanterar samma resultat för olika löpare
+1. **Skapa build-containern**: det första staget använder Buildah för att skapa en Docker-image med alla beroenden
+2. **Använda containern**: efterföljande stages körs i den här containern, vilket säkerställer en konsekvent miljö
+3. **Reproducerbara builds**: containerisolering garanterar samma resultat på olika runners
 
-Detta tillvägagångssätt säkerställer att byggen fungerar på samma sätt över alla GitLab-löpare och ger en kontrollerad miljö för komplexa byggprocesser.
+Det här tillvägagångssättet säkerställer att builds fungerar på samma sätt på alla GitLab-runners och ger en kontrollerad miljö för komplexa byggprocesser.
 
 ### Integrerade beroendekällor
 
-Lumis CI-beroendebild bygger upp den kluvna stacken från **in-repo integrerade källor** (inte externa kloner):
+Lumis CI-beroendeimage bygger den forkade stacken från **integrerade källor i repositoryt** (inga externa kloner):
 
 - `lumi-babl/` (BABL)
 - `lumi-gegl/` (GEGL)
 - `lumi-gtk3/` (GTK3)
 
-Dessa kataloger kopieras till containerbyggkontexten och kompileras till beroendeprefixet (vanligtvis `/opt/lumi-deps`). Detta håller CI reproducerbar och säkerställer att AppImage-bygget använder samma källa till sanning som lokal utveckling.
+De här katalogerna kopieras till containerbuild-kontexten och kompileras till beroendeprefixet (vanligtvis `/opt/lumi-deps`). Det här håller CI reproducerbart och säkerställer att AppImage-builden använder samma source of truth som lokal utveckling.
 
-## Rollen för Shell-skript
+## Rollen för shellskript
 
-Jobb i `.gitlab-ci.yml` anropar vanligtvis skalkommandon direkt. Komplexa operationer flyttas ofta till separata skript som lagras i förvaret.
+Jobs i `.gitlab-ci.yml` anropar vanligtvis shellkommandon direkt. Komplexa operationer flyttas ofta till separata skript som lagras i repositoryt.
 
-Lumi CI använder modulära skalskript för att organisera bygglogik:
+Lumi CI använder modulära shellskript för att organisera bygglogiken:
 
 **Exempel på skriptanrop:**
 ```yaml
@@ -57,13 +62,13 @@ script:
   - bash build/linux/appimage/lumi-goappimage.sh 2>&1 | tee appimage_creation.log
 ```
 
-**Fördelar med detta tillvägagångssätt:**
-- **Clean YAML**: Håller `.gitlab-ci.yml`-filen fokuserad på jobbstruktur
-- **Underhållbarhet**: Komplex logik är lättare att felsöka och ändra i skalskript
-- **Återanvändbarhet**: Skript kan användas i olika sammanhang eller miljöer
-- **Modularitet**: Olika aspekter av bygget kan delas upp i fokuserade skript
+**Fördelar med det här tillvägagångssättet:**
+- **Rent YAML**: håller filen `.gitlab-ci.yml` fokuserad på jobstrukturen
+- **Underhållbarhet**: komplex logik är lättare att felsöka och ändra i shellskript
+- **Återanvändbarhet**: skript kan användas i olika sammanhang eller miljöer
+- **Modularitet**: olika aspekter av builden kan separeras i fokuserade skript
 
-Detta håller CI-konfigurationen ren samtidigt som den tillåter sofistikerade byggprocesser.
+Det här håller CI-konfigurationen ren samtidigt som sofistikerade byggprocesser är möjliga.
 
 ## Integration med byggsystem
 
@@ -80,18 +85,20 @@ script:
 
 Här:
 
-- `meson setup` förbereder byggkatalogen och genererar `build.ninja`
-- `ninja` kör byggkommandona enligt definitionen
+- `meson setup` förbereder build-katalogen och genererar `build.ninja`
+- `ninja` kör build-kommandona enligt definitionen
 
-## Meson Build System Struktur
+## Struktur för Meson-byggsystemet
 
-Byggsystemet **Meson** använder en rot `meson.build`-fil placerad i projektets rotkatalog. Den här filen definierar byggkonfigurationen på toppnivån och startpunkten för byggprocessen.- Roten `meson.build` finns vanligtvis i samma katalog som `.gitlab-ci.yml`
+**Meson**-byggsystemet använder en rotfil `meson.build` placerad i projektets rotkatalog. Den här filen definierar build-konfigurationen på högsta nivå och ingångspunkten för byggprocessen.
+
+- Rotfilen `meson.build` finns vanligtvis i samma katalog som `.gitlab-ci.yml`
 - Därifrån **kaskaderar den rekursivt** till underkataloger, som var och en kan ha sin egen `meson.build`-fil
-- Dessa underkatalogfiler definierar mål, källor, beroenden och bygginstruktioner som är relevanta för den katalogen
+- Dessa underkatalogsfiler definierar targets, källor, beroenden och bygginstruktioner som är relevanta för den katalogen
 
 ## Miljövariabler
 
-Nyckelvariabler i Lumi pipeline inkluderar:
+Viktiga variabler i Lumi-pipelinen inkluderar:
 
 ```yaml
 variables:
@@ -100,7 +107,7 @@ variables:
   CI_RUNNER_TAG: "x86_64"            # Architecture specification
 ```
 
-**Jobbspecifika variabler:**
+**Jobspecifika variabler:**
 ```yaml
 build-lumi:
   variables:
@@ -111,7 +118,7 @@ build-lumi:
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
 ```
 
-Dessa variabler styr byggbeteendet och säkerställer konsistens över olika etapper och löpare.
+De här variablerna styr byggbeteendet och säkerställer konsekvens mellan olika stages och runners.
 
 ## Exempelstruktur
 
@@ -127,15 +134,15 @@ project-root/
 │   └── icons/
 ```
 
-I denna struktur:
+I den här strukturen:
 
-- Rotfilen `meson.build` konfigurerar den övergripande byggmiljön
-- Underkatalog `meson.build`-filer hanterar kompileringsdetaljer för specifika komponenter eller moduler
-- Den här hierarkiska layouten håller logiken modulär och underhållsbar
+- Rotfilen `meson.build` konfigurerar den övergripande build-miljön
+- `meson.build`-filer i underkataloger hanterar kompileringsdetaljer för specifika komponenter eller moduler
+- Den här hierarkiska layouten håller bygglogiken modulär och underhållbar
 
-## Artefakter mellan stadier
+## Artifacts mellan stages
 
-Artefakter är filer som genereras av jobb som behövs i efterföljande steg:
+Artifacts är filer som genereras av jobs och behövs i efterföljande stages:
 
 ```yaml
 build-lumi:
@@ -146,15 +153,15 @@ build-lumi:
       - _build-${CI_RUNNER_TAG}/meson-logs/meson-log.txt  # Build logs
 ```
 
-## Pipelinestadier och beroenden
+## Pipeline-stages och beroenden
 
-Lumi pipeline består av tre huvudsteg:
+Lumi-pipelinen består av tre huvudsakliga stages:
 
-1. **Beroenden**: Skapar en containeriserad byggmiljö med alla nödvändiga verktyg och bibliotek
-2. **Bygg Lumi**: Kompilerar Lumi med Meson och Ninja i den förberedda miljön
-3. **AppImage**: Paketerar den inbyggda applikationen till ett distribuerbart AppImage-format
+1. **Dependencies**: skapar en containeriserad build-miljö med alla nödvändiga verktyg och bibliotek
+2. **Build Lumi**: kompilerar Lumi med Meson och Ninja i den förberedda miljön
+3. **AppImage**: paketerar den byggda applikationen i ett distribuerbart AppImage-format
 
-**Scenberoende:**
+**Stage-beroenden:**
 ```yaml
 build-lumi:
   needs: [deps-debian]  # Waits for dependency container
@@ -163,7 +170,7 @@ lumi-appimage:
   needs: [build-lumi] # Waits for application build
 ```
 
-Varje steg körs först efter att dess beroenden har slutförts framgångsrikt, vilket säkerställer korrekt byggordning och artefakttillgänglighet.
+Varje stage körs först efter att dess beroenden har slutförts, vilket säkerställer rätt byggordning och tillgänglighet av artifacts.
 
 ## Aktuella jobbnamn
 
@@ -175,16 +182,16 @@ Lumi `.gitlab-ci.yml` definierar för närvarande dessa jobbnamn:
 
 ## Sammanfattning
 
-- `.gitlab-ci.yml` definierar strukturen och logiken för pipelinen
-- Jobb innehåller skalkommandon eller externa skript
-– Verktyg som Meson och Ninja används inuti jobb som en del av byggprocessen
+- `.gitlab-ci.yml` definierar pipelinens struktur och logik
+- Jobs innehåller shellkommandon eller externa skript
+- Verktyg som Meson och Ninja används inom jobs som en del av byggprocessen
 
-Lumi använder GitLab CI för att automatiskt bygga sin AppImage för Debian-baserade plattformar. Pipelinen bygger beroenden, kompilerar Lumi och paketerar sedan en AppImage.
+Lumi använder GitLab CI för att automatiskt bygga sitt AppImage för Debian-baserade plattformar. Pipelinen bygger beroenden, kompilerar Lumi och paketerar sedan ett AppImage.
 
 För detaljer på källnivå, använd:
 
-- `.gitlab-ci.yml` i Lumi-förvarets rot
+- `.gitlab-ci.yml` i roten av Lumi-repositoryt
 - `build/linux/appimage/lumi-goappimage.sh`
 - `build/linux/appimage/README-CI.md`
 
-För omfattande teknisk information om Lumi CI-byggprocessen, inklusive miljöinstallation, skriptarkitektur och felsökning, se [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).
+För omfattande tekniska detaljer om Lumis CI-byggprocess, inklusive miljökonfiguration, skriptarkitektur och felsökning, se [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).

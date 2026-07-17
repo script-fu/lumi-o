@@ -2,6 +2,9 @@
 title: "Validierung"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 Beim Erstellen robuster Plug-Ins ist es wichtig sicherzustellen, dass unsere Funktionen Fehler ordnungsgemäß verarbeiten und wie erwartet funktionieren, selbst bei Missbrauch oder unerwarteten Eingaben. Die Validierung trägt dazu bei, die Integrität der Funktion zu schützen und Abstürze oder unbeabsichtigtes Verhalten zu verhindern.
 
@@ -15,25 +18,25 @@ Beispiel:
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; Validiert das Ausgabeargument
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; An die Message Console senden
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; An das GUI-Dialogfeld senden
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; An das Terminalfenster senden
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ Beispiel für den Umgang mit einer leeren Nachricht:
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; Prüfen, ob die Nachricht leer ist
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,30 +71,30 @@ Dieser Ansatz stellt sicher, dass die Funktion immer gültige Eingaben erhält, 
 ### Beispiel für eine kombinierte Validierung
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Funktion zur Ausgabe von Nachrichten an verschiedene Ziele
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; Nachrichten- und Ausgabeargumente validieren
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; An die Message Console senden
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; An das GUI-Dialogfeld senden
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; An das Terminalfenster senden
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Standard-Nachrichtenhandler auf die Message console zurücksetzen
   (lumi-message-set-handler 2))
 ```
 

@@ -2,12 +2,15 @@
 title: "程序浏览器"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Lumi 过程浏览器** 允许您搜索可用的过程（内置和提供的插件）并检查它们的参数和返回值。
 
 ### 在哪里可以找到 Lumi 程序浏览器
 
-您可以通过 **帮助** 菜单访问 Lumi 中的程序浏览器：
+您可以通过 **帮助** 菜单访问 Lumi 中的过程浏览器：
 
 - **帮助** -> **程序浏览器**
 
@@ -31,12 +34,12 @@ weight: 1
 安装“Hello World!”后插件，您可以在过程浏览器中找到它。只需搜索您在 Lumi 中注册的函数名称，在本例中为“scheme-hello-world”。该条目将显示与插件关联的参数和任何返回值，以及简要说明。您还将看到您在注册过程中作为输入参数输入的一些文本行显示在“**附加信息**”部分下。
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; 过程名称
+  "Hello world!"                                        ;; 菜单项名称
+  "A Scheme procedure plug-in"                       ;; 工具提示和描述
+  "Your Name"                                           ;; 作者
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; 许可证
+  "2024")                                               ;; 版权日期
 ```
 
 这样可以轻松验证您的插件是否已正确注册，并为您提供了一种快速方法来查看它如何与 Lumi 中的其他程序交互。过程浏览器是一个强大的工具，用于通过探索 Lumi 中的所有可用过程来调试和扩展您的插件。

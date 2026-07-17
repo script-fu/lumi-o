@@ -1,7 +1,10 @@
 ---
 title: "データ構造"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 Scheme では、**データ構造** はデータを整理、保存、操作するための重要なツールです。これらにより、開発者は効率的で読みやすく、再利用可能なスクリプトを構築できます。特定の問題に対して適切なデータ構造を選択することで、コードのパフォーマンスと明瞭さの両方を最適化できます。
 

@@ -1,18 +1,21 @@
 ---
 title: "Proceso por lotes"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
 ---
 Un ejemplo práctico de extremo a extremo para procesar muchos archivos de una sola vez.
 
-## Donde vive
+## Código fuente
 
-- [Ver la fuente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Ver el código fuente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
-## Dónde aparece en Lumi
+## Menú en Lumi
 
 - **Archivo → Proceso por lotes**
 
-## Lo que demuestra
+## Qué demuestra
 
 - `SF-DIRNAME` parámetros para directorios de origen/destino
 - Validación de rutas GUI con respaldos (`validate-path-and-dir`)

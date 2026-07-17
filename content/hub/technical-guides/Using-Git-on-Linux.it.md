@@ -1,49 +1,56 @@
 ---
-title: "Utilizzo di Git su Linux"
+title: "Usare Git su Linux"
 type: docs
+url: "hub/technical-guides/Using-Git-on-Linux"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7054a9ff9efeb93b4f494197e09ed1fe34d5d6bde7bc305480693c3982d375ae
 ---
-Benvenuto in questa guida per principianti sull'utilizzo di Git su Linux! Questa guida è progettata per aiutarti a iniziare con Git e GitLab e per fornire una conoscenza di base su come utilizzare questi strumenti.
+
+Benvenuto in questa guida per principianti sull'uso di Git su Linux! È pensata per aiutarti a iniziare con Git e GitLab e per offrirti una conoscenza di base su come usare questi strumenti.
 
 ## Panoramica di Git
 
-Il codice utilizzato per creare applicazioni viene conservato in una raccolta di cartelle e file sul tuo sistema. Git è un'applicazione che ci consente di eseguire il backup, condividere e copiare quella raccolta. Git è noto come sistema di controllo della versione che ti consente di tenere traccia delle modifiche al tuo codice e collaborare con altri. È uno strumento potente ampiamente utilizzato nella comunità open source. GitLab è una piattaforma basata sul Web che ti consente di ospitare e gestire i tuoi repository Git online, semplificando la collaborazione con altri e tenendo traccia delle modifiche al tuo codice.
+Il codice usato per creare le applicazioni è conservato in una raccolta di cartelle e file sul tuo sistema. Git è un'applicazione che ci consente di eseguire backup, condividere e copiare quella raccolta. Git è un sistema di controllo versione che ti permette di tracciare le modifiche al codice e collaborare con altri. È uno strumento molto diffuso nella comunità open source. GitLab è una piattaforma web che ti consente di ospitare e gestire i repository Git online, facilitando la collaborazione e il tracciamento delle modifiche al codice.
 
 ## Cos'è un repository?
 
-Un _repo_, abbreviazione di repository, è una cartella locale gestita da Git con una copia online. Un repository Git Lab è una raccolta di file e cartelle che compongono un progetto. Può avere _rami_ che sono copie indipendenti dello stesso progetto. Un ramo è una versione separata del tuo progetto che ti consente di apportare modifiche senza influenzare la versione principale. Ciò è utile per testare nuove funzionalità o correggere bug senza interrompere il progetto principale. C'è il tuo repository locale, archiviato sul tuo disco rigido, e il repository remoto, archiviato online utilizzando Git e GitLab.
+Un _repo_, abbreviazione di repository, è una cartella locale gestita da Git con una copia online. Un repository GitLab è una raccolta di file e cartelle che compongono un progetto. Può avere _branch_ che sono copie indipendenti dello stesso progetto. Un branch è una versione separata del tuo progetto che ti consente di apportare modifiche senza influenzare la versione principale. Ciò è utile per testare nuove funzionalità o correggere bug senza interrompere il progetto principale. C'è il tuo repository locale, archiviato sul disco rigido, e il repository remoto, archiviato online tramite Git e GitLab.
 
-## Utilizzo di Git
+## Usare Git
 
-Dovrai installare Git sul tuo sistema. Sui sistemi basati su Debian, è possibile utilizzare il comando apt per installare pacchetti software. In questo caso, lo utilizzeremo per installare Git, che è un pacchetto che fornisce il sistema di controllo della versione Git. Il comando sudo fornisce al programma di installazione l'autorizzazione per l'installazione sul tuo sistema.
+Dovrai installare Git sul tuo sistema. Sui sistemi basati su Debian, puoi usare il comando apt per installare pacchetti software. In questo caso, lo usiamo per installare Git, il pacchetto che fornisce il sistema di controllo versione Git. Il comando sudo concede all'installer il permesso di installare sul tuo sistema.
 
 ```bash
  sudo apt install git
 ```
 
-## Accedi a GitLab
+## Accedere a GitLab
 
-Prima di poter utilizzare [GitLab](https://gitlab.com/users/sign_up), dovrai creare un account visitando il sito Web GitLab e completando il processo di registrazione.
+Prima di poter usare [GitLab](https://gitlab.com/users/sign_up), dovrai creare un account visitando il sito web di GitLab e completando la registrazione.
 
-GitLab richiede _SSH_ per una comunicazione sicura e autenticata tra un client (tu, ad esempio) e il server GitLab quando si eseguono operazioni Git come _cloning_, _pushing_ e _fetching_ repository. La clonazione sta creando una copia locale del repository, il recupero sta portando tutte le modifiche apportate nel repository alla copia locale e il push sta inviando modifiche e contenuti al repository del server. SSH (Secure Shell) è un protocollo di rete che consente l'accesso remoto sicuro e utilizza _coppie di chiavi_ per autenticare e stabilire connessioni sicure. Per generare una coppia di chiavi SSH, puoi utilizzare il comando ssh-keygen nel tuo terminale.
+GitLab richiede _SSH_ per una comunicazione sicura e autenticata tra un client (tu, ad esempio) e il server GitLab quando esegui operazioni Git come _clonare_, _push_ e _fetch_ dei repository. Clonare significa creare una copia locale del repository; il fetch porta nella copia locale le modifiche effettuate nel remoto; il push invia modifiche e contenuti al repository sul server. SSH (Secure Shell) è un protocollo di rete che consente l'accesso remoto sicuro e usa _coppie di chiavi_ per autenticarsi e stabilire connessioni sicure. Per generare una coppia di chiavi SSH, puoi usare il comando ssh-keygen nel terminale.
 
 ```bash
  ssh-keygen
 ```
 
-Specificare un nome file o utilizzare quello predefinito premendo Invio e, facoltativamente, una password. Nella tua directory home, in una cartella nascosta chiamata .ssh, ora ci sono due file id_rsa, se hai scelto i nomi predefiniti. Il file .pub è la chiave pubblica e puoi vederne il contenuto con un editor di testo.
+Specifica un nome file o usa quello predefinito premendo Invio e, facoltativamente, una password. Nella directory home, in una cartella nascosta chiamata .ssh, compariranno ora due file id_rsa se hai scelto i nomi predefiniti. Il file .pub è la chiave pubblica e puoi vederne il contenuto con un editor di testo.
 
-Accedi al tuo account GitLab e vai alle impostazioni utente. Fai clic su "Chiavi SSH" nel menu di navigazione a sinistra. Copia e incolla la tua chiave pubblica nel campo Chiave e assegna alla chiave un titolo pertinente, come PC@Home. Fare clic sul pulsante "Aggiungi chiave" per salvare la chiave. La tua chiave pubblica SSH è ora aggiunta al tuo account GitLab e puoi usarla per autenticarti con i repository GitLab. Verifica se le chiavi e la connessione funzionano con il comando ssh -T per visualizzare un messaggio di benvenuto da GitLab.
+Accedi al tuo account GitLab e vai alle impostazioni utente. Fai clic su «Chiavi SSH» nel menu di navigazione a sinistra. Copia e incolla la chiave pubblica nel campo Chiave e assegna alla chiave un titolo descrittivo, come PC@Home. Fai clic sul pulsante «Aggiungi chiave» per salvarla. La chiave pubblica SSH è ora aggiunta al tuo account GitLab e puoi usarla per autenticarti con i repository GitLab. Verifica che chiavi e connessione funzionino con il comando ssh -T per vedere un messaggio di benvenuto da GitLab.
 
 ```bash
  $ ssh -T git@ssh.gitlab.gnome.org
  Welcome to GitLab, @username!
 ```
 
-## Comandi Git di baseOra che hai installato Git e hai configurato la tua chiave SSH con GitLab, esaminiamo alcuni comandi Git essenziali per la gestione dei repository. Questi comandi ti aiuteranno a lavorare con progetti esistenti, mantenendoli aggiornati e apportando modifiche in modo sicuro.
+## Comandi Git di base
 
-### 1. **Clonazione di un repository**
+Ora che hai installato Git e configurato la chiave SSH con GitLab, vediamo alcuni comandi Git essenziali per gestire i repository. Questi comandi ti aiuteranno a lavorare con progetti esistenti, mantenerli aggiornati e apportare modifiche in modo sicuro.
 
-La clonazione è il processo di creazione di una copia locale di un repository remoto. Ciò è utile quando vuoi lavorare su un progetto già esistente su GitLab. Per clonare un repository, utilizzare il comando `git clone` seguito dall'URL del repository:
+### 1. **Clonare un repository**
+
+La clonazione è il processo di creazione di una copia locale di un repository remoto. È utile quando vuoi lavorare su un progetto già presente su GitLab. Per clonare un repository, usa il comando `git clone` seguito dall'URL del repository:
 
 ```sh
 git clone https://gitlab.com/username/repository.git
@@ -51,31 +58,31 @@ git clone https://gitlab.com/username/repository.git
 
 Sostituisci `https://gitlab.com/username/repository.git` con l'URL del repository che desideri clonare. Questo comando creerà una copia locale del repository in una nuova directory.
 
-### 2. **Verifica dello stato del repository**
+### 2. **Verificare lo stato del repository**
 
-Per vedere se il tuo repository locale presenta modifiche o per visualizzare il suo stato corrente, utilizza:
+Per vedere se il repository locale ha modifiche o consultarne lo stato attuale, usa:
 
 ```sh
 git status
 ```
 
-Questo comando ti mostrerà quali file sono stati modificati, aggiunti o eliminati nella tua copia locale del repository.
+Questo comando mostra quali file sono stati modificati, aggiunti o eliminati nella copia locale del repository.
 
-### 3. **Archivi remoti**
+### 3. **Repository remoti**
 
-I repository remoti sono versioni del tuo progetto ospitate online, ad esempio su GitLab. Fungono da posizione centrale in cui è archiviato il tuo codice e a cui possono accedere altri. Il repository remoto predefinito che Git crea quando cloni un progetto si chiama `origin`. Puoi aggiungere, rimuovere o elencare repository remoti utilizzando i seguenti comandi:
+I repository remoti sono versioni del tuo progetto ospitate online, ad esempio su GitLab. Funzionano come posizione centrale in cui è archiviato il codice e a cui possono accedere altri. Il repository remoto predefinito che Git crea quando cloni un progetto si chiama `origin`. Puoi aggiungere, rimuovere o elencare repository remoti con i seguenti comandi:
 
-- **Elenco telecomandi:**
+- **Elencare i remote:**
 
-  Per vedere quali repository remoti sono collegati al tuo progetto locale, utilizza:
+  Per vedere quali repository remoti sono collegati al progetto locale, usa:
 
   ```sh
   git remote -v
   ```
 
-  Questo comando elenca tutti i telecomandi e i relativi URL. In genere, vedrai `origin` elencato qui.
+  Questo comando elenca tutti i remote e i relativi URL. Di solito vedrai `origin` nell'elenco.
 
-- **Adding a Remote:**
+- **Aggiungere un remote:**
 
   Se devi aggiungere un nuovo repository remoto, puoi farlo con:
 
@@ -83,48 +90,48 @@ I repository remoti sono versioni del tuo progetto ospitate online, ad esempio s
   git remote add <name> <url>
   ```
 
-  Sostituisci `<name>` con un nome per il telecomando e `<url>` con l'URL del repository.
+  Sostituisci `<name>` con un nome per il remote e `<url>` con l'URL del repository.
 
-- **Rimozione di un telecomando:**
+- **Rimuovere un remote:**
 
-  Per rimuovere un repository remoto, utilizzare:
+  Per rimuovere un repository remoto, usa:
 
   ```sh
   git remote remove <name>
   ```
 
-  Sostituisci `<name>` con il nome del telecomando che desideri rimuovere.
+  Sostituisci `<name>` con il nome del remote che desideri rimuovere.
 
-### 4. **Recupero delle modifiche dal repository remoto**
+### 4. **Recuperare le modifiche dal repository remoto**
 
-Se vuoi vedere quali modifiche sono state apportate al repository remoto senza applicarle alla tua copia locale, usa:
+Se vuoi vedere quali modifiche sono state apportate al repository remoto senza applicarle alla copia locale, usa:
 
 ```sh
 git fetch origin
 ```
 
-Questo comando recupera le ultime modifiche dal repository remoto ma non le unisce al tuo ramo locale. È un modo per verificare la presenza di aggiornamenti prima di decidere di incorporarli.
+Questo comando recupera le ultime modifiche dal repository remoto ma non le unisce al branch locale. È un modo per verificare gli aggiornamenti prima di decidere di incorporarli.
 
 ### 5. **Reimpostare il repository locale**
 
-Se desideri reimpostare il tuo repository locale in modo che corrisponda esattamente al repository remoto, puoi utilizzare un ripristino "hard". **Attenzione:** questa operazione sovrascriverà tutte le modifiche locali apportate.
+Se vuoi reimpostare il repository locale in modo che corrisponda esattamente al repository remoto, puoi usare un reset «hard». **Attenzione:** questa operazione sovrascriverà tutte le modifiche locali apportate.
 
 ```sh
 git reset --hard origin/branch-name
 ```
 
-Sostituisci `branch-name` con il nome del ramo che desideri ripristinare. Questo comando scarterà qualsiasi modifica locale e renderà il tuo repository locale identico al repository remoto.
+Sostituisci `branch-name` con il nome del branch che desideri reimpostare. Questo comando scarterà qualsiasi modifica locale e renderà il repository locale identico a quello remoto.
 
-### 6. **Visualizzazione della cronologia dei commit**
+### 6. **Visualizzare la cronologia dei commit**
 
-Per visualizzare un elenco delle modifiche apportate al repository nel tempo, utilizzare:
+Per vedere un elenco delle modifiche apportate al repository nel tempo, usa:
 
 ```sh
 git log
 ```
 
-Questo comando visualizza una cronologia dei commit, incluso l'autore, la data e il messaggio per ogni modifica. È utile per capire quali modifiche sono state apportate e quando.
+Questo comando visualizza una cronologia dei commit, inclusi autore, data e messaggio per ogni modifica. È utile per capire quali modifiche sono state apportate e quando.
 
 ### Riepilogo
 
-Questi comandi Git di base ti aiuteranno a lavorare con i repository, mantenendo aggiornate le tue copie locali e assicurandoti di poter gestire in sicurezza i repository remoti. La clonazione dei repository, il controllo dello stato della copia locale e la gestione dei repository remoti sono competenze chiave per la gestione dei progetti utilizzando Git.
+Questi comandi Git di base ti aiuteranno a lavorare con i repository, mantenere aggiornate le copie locali e gestire i repository remoti in modo sicuro. Clonare repository, verificare lo stato della copia locale e gestire i repository remoti sono competenze chiave per amministrare progetti con Git.

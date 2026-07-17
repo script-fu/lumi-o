@@ -2,6 +2,9 @@
 title: "Avvolgimento"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 I comandi dello schema operano a un livello basso, il che significa che anche le attività semplici possono richiedere più passaggi. Tuttavia, questa granularità offre flessibilità, possiamo raggruppare i comandi in piccole funzioni riutilizzabili che fanno esattamente ciò di cui abbiamo bisogno. Il confezionamento non è un concetto in bianco e nero; può variare da semplici alias per comandi utilizzati di frequente a funzioni più complesse che gestiscono interi flussi di lavoro. A volte, un wrapper è solo una funzione di comodità per migliorare la leggibilità, mentre in altri casi si evolve in un'utilità completa che incapsula più operazioni.
 
@@ -26,7 +29,7 @@ Esempi:
 ### Seme casuale
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Scopo: Restituisce un intero casuale per inizializzare un filtro
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Inoltre, definire ***random-seed*** come funzione autonoma ci consente di utiliz
 Ad esempio, se invece decidiamo di passare a ***casuale***:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Scopo: Restituisce un intero casuale per inizializzare un filtro
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Il nome della funzione rimane lo stesso, garantendo che i nostri script continui
 La funzione di esportazione JPEG in Scheme è dotata di molti parametri, offrendo un controllo accurato sul modo in cui le immagini vengono salvate. Tuttavia, nella maggior parte dei casi, ci preoccupiamo solo di alcune impostazioni chiave, come il nome e la qualità del file. Per semplificare il processo, possiamo eseguire il wrapper della funzione.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Scopo: Salva un'immagine come JPEG con una qualità specificata
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Evitare jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Ciò mantiene il nostro codice pulito, leggibile e adattabile consentendoci al t
 La funzione ***car*** può essere criptica e soggetta a errori di scripting. È facile applicare erroneamente ***car*** a un vettore o a un elemento non presente nell'elenco, provocando un comportamento inaspettato. Per rendere il nostro codice più robusto e leggibile, possiamo racchiudere questa funzionalità in una funzione più sicura.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Scopo: Restituisce il primo elemento di una lista o vettore.
+;;          Avvisa se l'input non è valido o vuoto.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Gestisce gli elenchi non vuoti
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Gestisce i vettori non vuoti
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Input non valido o vuoto
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Il wrapper di una funzione già incapsulata può migliorare ulteriormente la leg
 per recuperare la coordinata ***x***. Tuttavia, sebbene funzionale, non è molto espressivo. Possiamo invece racchiudere ***primo elemento*** in una definizione più appropriata per rendere più chiaro il nostro intento.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Scopo: Restituire la coordinata x, per leggibilità
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Scopo: Restituire la coordinata y, per leggibilità
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ per recuperare la coordinata ***x***. Tuttavia, sebbene funzionale, non è molto
 Ora, invece di scrivere in Schema generico:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Ottiene la coordinata x
+(cadr pixel-coords) ;; Ottiene la coordinata y
 ```
 
 Possiamo scrivere nel _nostro_ Schema:

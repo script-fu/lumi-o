@@ -1,6 +1,9 @@
 ---
-title: "git"
+title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Utilice Git para realizar un seguimiento de los cambios en sus complementos, revertir errores y compartir código entre máquinas.
 
@@ -62,7 +65,7 @@ Si aún no tiene una cuenta, visite [GitHub](https://github.com/) para registrar
 
 1. **Inicie sesión en GitHub**: vaya a [GitHub](https://github.com/) e inicie sesión en su cuenta.
 2. **Crear un nuevo repositorio**:
-   - Haga clic en el ícono **+** en la esquina superior derecha y seleccione **Nuevo repositorio**.
+   - Haga clic en el ícono ***+** en la esquina superior derecha y seleccione **Nuevo repositorio**.
    - Ingrese un nombre de repositorio (por ejemplo, `your-repository`).
    - Agregue una descripción si lo desea.
    - Elija visibilidad **Pública** o **Privada**.

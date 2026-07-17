@@ -1,7 +1,10 @@
 ---
-title: "定義する"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Scheme の `define` ステートメントは、グローバルまたはローカル バインディングの作成に使用される多用途の構造です。これは変数と関数を定義するために最も一般的に使用され、スクリプト全体または特定のスコープ内でそれらを再利用およびアクセスできるようにします。 `define` を理解することは、モジュール式で再利用可能で読み取り可能な Scheme プログラムを作成するために重要です。
 
@@ -28,7 +31,7 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; 2π を計算
 ```
 
 **結果**: `6.28318`
@@ -51,7 +54,7 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; 4² を計算
 ```
 
 **結果**: `16`
@@ -66,8 +69,8 @@ Scheme の `define` ステートメントは、グローバルまたはローカ
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; ローカルなヘルパー関数
+  (define (cube x) (* x x x))  ;; ローカルなヘルパー関数
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

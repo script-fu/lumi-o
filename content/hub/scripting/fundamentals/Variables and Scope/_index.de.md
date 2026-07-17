@@ -1,7 +1,10 @@
 ---
-title: "Variablen und Umfang"
+title: "Variablen und Gültigkeitsbereich"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 In Scheme ist die Verwaltung von Variablen und ihrem Umfang ein Kernkonzept zum Schreiben effizienter und wartbarer Skripte. Variablen speichern Datenwerte, die Ihr Skript bearbeiten kann, während der Bereich definiert, wo auf diese Variablen zugegriffen werden kann. Wenn Sie verstehen, wie Variablen effektiv definiert und verwendet werden, können Sie strukturierten, wiederverwendbaren und fehlerfreien Code erstellen.
 
@@ -10,8 +13,8 @@ In Scheme ist die Verwaltung von Variablen und ihrem Umfang ein Kernkonzept zum 
 Das Schema ist dynamisch typisiert: Sie deklarieren keine Typen im Voraus und eine Variable kann im Laufe der Zeit Werte unterschiedlicher Art enthalten.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x ist eine Zahl
+(set! x "hello")    ; jetzt ist x eine Zeichenkette
 ```
 
 ### Die Rolle von Variablendefinitionen und Umfang im Schema

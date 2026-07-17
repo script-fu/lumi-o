@@ -1,7 +1,10 @@
 ---
-title: "Genoemd let of Lokaal definiëren"
+title: "Named let of lokaal define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in Scheme voor het structureren van uw code, maar ze dienen verschillende doeleinden. Als u begrijpt wanneer u ze allemaal moet gebruiken, kunt u schone, modulaire en efficiënte scripts maken.
 
@@ -67,8 +70,8 @@ Zowel **genaamd `let`** als **lokaal `define`** zijn krachtige hulpmiddelen in S
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Lokale hulpfunctie
+  (define (cube x) (* x x x))  ;; Lokale hulpfunctie
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ Een van de krachtigste kenmerken van een benoemde `let` is de mogelijkheid om **
 In een benoemde `let` fungeren de bindingen tussen haakjes als **lokale variabelen** die worden geïnitialiseerd met specifieke waarden. Deze variabelen zijn beperkt tot de hoofdtekst van `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Declareert x met beginwaarde 1
+           (y 2))  ;; Declareert y met beginwaarde 2
+  (+ x y))         ;; Gebruikt x en y in de body
 ```
 
 - **`x` en `y`** zijn lokale variabelen die zijn gedefinieerd en geïnitialiseerd als onderdeel van `let`.
@@ -158,7 +161,7 @@ Dezelfde variabelen fungeren ook als **invoerparameters** voor de recursieve aan
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Recursieve aanroep met nieuwe x en y
 ```
 
 - **Eerste iteratie**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Een naam `let` bevat initialisatie van variabelen als onderdeel van de syntaxis.
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Eerste aanroep met x = 1, y = 2
 ```
 
 Beide voeren dezelfde berekening uit, maar de genoemde `let` combineert de variabeledeclaratie en recursie-instellingen in één beknopte constructie.

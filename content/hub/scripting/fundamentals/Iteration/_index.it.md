@@ -2,29 +2,29 @@
 title: "Iterazione"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-L'iterazione è una pietra angolare della programmazione, poiché consente agli script di ripetere azioni ed elaborare raccolte di dati in modo efficiente. In Scheme, basato sul linguaggio di programmazione Scheme, l'iterazione fornisce gli strumenti per automatizzare attività ripetitive, manipolare strutture dati e creare sofisticati modelli di esecuzione.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### Il ruolo dell'iterazione nello schema
+### Le rôle de l'itération en Scheme
 
-L'iterazione soddisfa diversi scopi essenziali nei tuoi script:
-- **Automazione della ripetizione:** ti consente di eseguire la stessa azione o insieme di azioni più volte senza duplicare il codice.
-- **Miglioramento dell'efficienza:** elaborando le strutture dati in modo iterativo, gli script possono gestire sistematicamente operazioni su larga scala.
-- **Semplificazione del codice:** l'iterazione elimina la ridondanza, rendendo il codice più conciso, leggibile e gestibile.
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### Tipi di iterazione disponibili
+### Types d'itération disponibles
 
-Scheme offre diversi costrutti per l'iterazione, ciascuno su misura per esigenze specifiche:
-- **map:** applica una funzione a ciascun elemento di una lista, restituendo una nuova lista con i risultati.
-- **for-each:** Simile a `map`, ma utilizzato per eseguire una funzione su ciascun elemento senza restituire un risultato.
-- **do:** Un costrutto di ciclo di uso generale che gestisce un'ampia varietà di processi iterativi.
-- **ricorsione:** una tecnica potente in cui le funzioni richiamano se stesse per risolvere i problemi in modo incrementale.
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### Come funziona l'iterazione
+### Comment fonctionne l'itération
 
-L'iterazione in genere comporta:
-1. **Definizione di una ripetizione:** Specificare l'azione da ripetere e i dati o l'intervallo da elaborare.
-2. **Esecuzione in sequenza:** ripetizione dell'azione per ciascun elemento, passaggio o condizione fino al completamento.
-3. **Restituzione di un risultato (facoltativo):** A seconda del costrutto, l'iterazione può produrre un risultato o modificare lo stato.
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-Questi costrutti consentono di scrivere script adattabili, efficienti ed eleganti in grado di gestire facilmente attività complesse.
+Ces constructions aident à écrire des scripts adaptables et efficaces.

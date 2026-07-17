@@ -2,6 +2,9 @@
 title: "プロシージャブラウザ"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Lumi プロシージャブラウザ** を使用すると、利用可能なプロシージャ (組み込みおよび提供されたプラグイン) を検索し、それらのパラメータと戻り値を検査できます。
 
@@ -31,12 +34,12 @@ Lumi のプロシージャブラウザには、**ヘルプ** メニューから�
 「Hello World!」をインストールしたら、プラグインを選択すると、プロシージャ ブラウザにリストされます。 Lumi に登録した関数名 (この場合は「scheme-hello-world」) を検索するだけです。このエントリには、プラグインに関連付けられたパラメータと戻り値が、簡単な説明とともに表示されます。また、登録プロセス中に入力パラメーターとして入力したテキスト行の一部が [**追加情報**] セクションの下に表示される場所も確認できます。
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; プロシージャ名
+  "Hello world!"                                        ;; メニュー項目名
+  "A Scheme procedure plug-in"                       ;; ツールチップと説明
+  "Your Name"                                           ;; 作者
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; ライセンス
+  "2024")                                               ;; 著作権日付
 ```
 
 これにより、プラグインが適切に登録されていることを簡単に確認でき、プラグインが Lumi の他のプロシージャとどのように相互作用するかを簡単に確認できるようになります。プロシージャブラウザは、Lumi 内で利用可能なすべてのプロシージャを探索することにより、プラグインのデバッグと拡張を行うための強力なツールです。

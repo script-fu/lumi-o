@@ -2,44 +2,47 @@
 title: "Variables et portée"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
-Dans Scheme, la gestion des variables et de leur portée est un concept central pour écrire des scripts efficaces et maintenables. Les variables stockent les valeurs de données que votre script peut manipuler, tandis que la portée définit l'endroit où ces variables sont accessibles. Comprendre comment définir et utiliser efficacement les variables vous permet de créer un code structuré, réutilisable et sans erreur.
+En Scheme, la gestion des variables et de leur portée est un concept central pour écrire des scripts efficaces et maintenables. Les variables stockent les valeurs que votre script peut manipuler, tandis que la portée définit où elles sont accessibles. Savoir définir et utiliser les variables efficacement vous permet d'écrire un code structuré, réutilisable et fiable.
 
-### Saisie dynamique
+### Typage dynamique
 
-Scheme est typé dynamiquement : vous ne déclarez pas de types à l'avance, et une variable peut contenir des valeurs de différents types au fil du temps.
+Scheme est typé dynamiquement : vous ne déclarez pas les types à l'avance, et une variable peut contenir des valeurs de types différents au fil du temps.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x est un nombre
+(set! x "hello")    ; maintenant x est une chaîne
 ```
 
-### Le rôle des définitions et de la portée des variables dans le schéma
+### Le rôle des définitions de variables et de la portée dans Scheme
 
-Définir des variables et gérer leur portée répond à plusieurs objectifs :
-- **Organisation des données :** Les variables stockent des informations, ce qui rend vos scripts plus lisibles et gérables.
-- **Amélioration de la réutilisabilité :** En utilisant des variables étendues, vous pouvez réutiliser des sections de code sans conflits.
-- **Encapsulation :** La portée localisée empêche les interactions involontaires entre les variables dans différentes parties de votre script.
-- **Simplification de la logique :** Les variables temporaires dans une portée limitée réduisent la complexité des calculs ou des flux de travail plus importants.
+Définir des variables et gérer leur portée sert plusieurs objectifs :
+- **Organiser les données :** les variables stockent des informations, ce qui rend vos scripts plus lisibles et plus faciles à gérer.
+- **Améliorer la réutilisabilité :** en limitant la portée, vous pouvez réutiliser des sections de code sans conflits.
+- **Encapsulation :** une portée localisée évite les interactions involontaires entre variables dans différentes parties du script.
+- **Simplifier la logique :** des variables temporaires dans une portée limitée réduisent la complexité des calculs ou des flux de travail plus importants.
 
-### Types de définitions de variables et portée
+### Types de définitions de variables et de portée
 
-Scheme fournit plusieurs constructions pour définir et définir la portée des variables :
-- **`let`:** Crée des liaisons locales pour les variables dans un bloc de code spécifique.
-- **`let*`:** Une version séquentielle de `let` où chaque liaison peut dépendre des précédentes.
-- **Nommé `let` :** Une construction puissante pour définir des procédures ou des boucles locales récursives.
-- **`define`:** Crée des variables globales ou des fonctions accessibles dans tout votre script.
+Scheme propose plusieurs constructions pour définir et limiter la portée des variables :
+- **`let` :** crée des liaisons locales pour des variables dans un bloc de code précis.
+- **`let*` :** variante séquentielle de `let`, où chaque liaison peut dépendre des précédentes.
+- **Named `let` :** construction puissante pour définir des procédures locales récursives ou des boucles.
+- **`define` :** crée des variables globales ou des fonctions accessibles dans tout le script.
 
-### Fonctionnement des définitions et de la portée des variables
+### Comment fonctionnent les définitions de variables et la portée
 
-Les définitions et la portée des variables impliquent généralement :
-1. **Déclaration de variables :** attribution d'une valeur à une variable dans un contexte spécifique.
-2. **Portée limitée :** Contrôler où la variable est accessible (par exemple, dans un bloc `let` ou globalement).
-3. **Utilisation de variables :** Accès et modification des valeurs de variables pour effectuer des calculs, des opérations logiques ou procédurales.
+Les définitions de variables et la portée impliquent généralement :
+1. **Déclarer des variables :** assigner une valeur à une variable dans un contexte donné.
+2. **Limiter la portée :** contrôler où la variable est accessible (par exemple dans un bloc `let` ou globalement).
+3. **Utiliser des variables :** accéder aux valeurs et les modifier pour effectuer des calculs, de la logique ou des opérations procédurales.
 
-### Exemple : utilisation de `let` pour les variables locales
+### Exemple : utiliser `let` pour des variables locales
 
-La construction `let` vous permet de définir des variables temporaires disponibles uniquement dans un bloc spécifique :
+La construction `let` permet de définir des variables temporaires disponibles uniquement dans un bloc précis :
 
 ```scheme
 (let ((x 10)
@@ -49,9 +52,9 @@ La construction `let` vous permet de définir des variables temporaires disponib
 
 - Cet exemple déclare `x` et `y` avec des valeurs locales et calcule leur somme.
 
-### Exemple : utilisation de `define` pour les variables globales
+### Exemple : utiliser `define` pour des variables globales
 
-La construction `define` crée des variables ou des fonctions avec une portée globale :
+La construction `define` crée des variables ou des fonctions à portée globale :
 
 ```scheme
 (define pi 3.14159)
@@ -61,16 +64,17 @@ La construction `define` crée des variables ou des fonctions avec une portée g
 
 - Ce script définit une constante globale `pi` et une fonction `circle-area` qui l'utilise.
 
-### Comparaison de la portée : Local vs Global
+### Comparaison de portée : local vs global
 
-| Fonctionnalité | Portée locale (`let`, `let*`) | Portée mondiale (`define`) |
-|------------------|--------------------------------|-------------------------------------------------------------|
-| **Accessibilité** | Limité au bloc dans lequel il est défini | Accessible tout au long du script |
-| **Encapsulation** | Empêche les interactions involontaires | Peut entrer en conflit avec d'autres variables définies globalement |
-| **Cas d'utilisation** | Variables temporaires pour des tâches spécifiques | Variables ou fonctions partagées utilisées partout |
+| Caractéristique | Portée locale (`let`, `let*`) | Portée globale (`define`) |
+|------------------|------------------------------------------|-----------------------------------------------|
+| **Accessibilité** | Limitée au bloc où elle est définie | Accessible dans tout le script |
+| **Encapsulation** | Évite les interactions involontaires | Peut entrer en conflit avec d'autres variables globales |
+| **Cas d'utilisation** | Variables temporaires pour des tâches précises | Variables ou fonctions partagées dans tout le script |
 
-### Résumé- **Les définitions et la portée des variables** sont fondamentales pour organiser et gérer les données dans vos scripts Scheme.
+### Résumé
 
-- Utilisez **portée locale** (`let`, `let*`, nommé `let`) pour encapsuler les variables temporaires et éviter les conflits.
-- Utilisez la **portée globale** (`define`) pour les fonctions réutilisables ou les constantes partagées dans votre script.
-- Une compréhension claire de ces constructions améliorera la lisibilité, la maintenabilité et la fiabilité de votre code.
+- Les **définitions de variables et la portée** sont fondamentales pour organiser et gérer les données dans vos scripts Scheme.
+- Utilisez la **portée locale** (`let`, `let*`, named `let`) pour encapsuler des variables temporaires et éviter les conflits.
+- Utilisez la **portée globale** (`define`) pour des fonctions réutilisables ou des constantes partagées dans tout le script.
+- Une bonne compréhension de ces constructions améliore la lisibilité, la maintenabilité et la fiabilité de votre code.

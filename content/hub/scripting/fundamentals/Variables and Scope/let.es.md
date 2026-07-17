@@ -1,7 +1,10 @@
 ---
-title: "dejar"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 El nombre `let` se utiliza porque refleja sus orígenes matemáticos de introducir enlaces temporales, como en _"Let \( x = 2 \) and \( y = 3 \)"_.
 

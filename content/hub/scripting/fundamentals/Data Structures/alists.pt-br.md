@@ -1,7 +1,10 @@
 ---
-title: "Listas de Associação (Alistas)"
-type: docs
+title: "Listas de associação (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 Uma **lista de associações** (ou **alist**) é uma estrutura de dados fundamental no Scheme usada para representar coleções de pares chave-valor. É implementado como uma lista de pares, onde cada par associa uma chave (normalmente um símbolo) a um valor. As listas são simples, flexíveis e adequadas para conjuntos de dados de pequeno e médio porte.
 
@@ -30,10 +33,10 @@ Você pode criar uma lista construindo pares manualmente ou programaticamente us
 A aspa simples (`'`) é uma abreviação para **quoting**, o que impede que Scheme avalie a expressão. Isso o torna ideal para criar listas estáticas onde todas as chaves e valores são codificados.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Lista dinâmica usando `` ` `` and `,`:
 Para recuperar um valor de uma lista, você pode usar a função `assoc`, que procura um par por sua chave.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Retorna (name . "Alice")
+(assoc 'country alist) ; Retorna #f (chave não encontrada)
 ```
 
 ### Extraindo o valor
@@ -84,7 +87,7 @@ Para recuperar um valor de uma lista, você pode usar a função `assoc`, que pr
 Depois de recuperar um par usando `assoc`, use `cdr` para extrair o valor:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Retorna "Alice"
 ```
 
 ### Resumo dos principais recursos

@@ -1,21 +1,26 @@
 ---
-title: "Bygga en felsökningsversion"
+title: "Bygga felsökningsversion"
 type: docs
+url: "hub/technical-guides/Building-a-Debug-Version"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: fecc781e73b4f30881c5150c958ae9b2df4164acd4cf86926186acb8e2021d5f
 ---
-Den här guiden beskriver **lokalt felsökningsarbetsflöde** för Lumi med skript i `build/lumi/scripts`.
+
+Den här guiden beskriver **det lokala felsökningsarbetsflödet** för Lumi med skript i `build/lumi/scripts`.
 
 Arbetsflödet är utformat för att:
 
-- använd lokala byggartefakter (inga symbolnedladdningar krävs),
+- använda lokala byggartefakter (inga symbolnedladdningar krävs),
 - verifiera att felsökningssymboler faktiskt finns,
-- Starta GDB med offline-symbolläge som standard.
+- starta GDB med offline-symboläge som standard.
 
 ## Förutsättningar
 
 - Debian-baserat Linux (projektets baslinje: Debian 13)
-- Lumi-källträdet redan klonat
+- Lumi-källträd redan klonat
 
-## Engångsinställningar för GDB (valfritt men rekommenderas)
+## Engångsinställning av GDB (valfritt men rekommenderas)
 
 Installera GDB-verktyg:
 
@@ -24,7 +29,7 @@ sudo apt update
 sudo apt install gdb gdbserver
 ```
 
-Valfri lokal loggningsinställning:
+Valfri lokal loggningskonfiguration:
 
 ```bash
 mkdir -p ~/code/gdb_logs
@@ -45,7 +50,7 @@ Från skriptkatalogen:
 cd ~/code/lumi-dev/build/lumi/scripts
 ```
 
-### Debug Build + Launch (standard)
+### Felsökningsbygge + start (standard)
 
 Använd detta för normala felsökningssessioner.
 
@@ -57,9 +62,9 @@ Detta kommando:
 
 1. bygger Lumi i felsökningsläge,
 2. verifierar felsökningssymboler,
-3. lanserar Lumi under GDB.
+3. startar Lumi under GDB.
 
-### Debug Build Only (för senare TTY/fjärrsession)
+### Endast felsökningsbygge (för senare TTY/fjärrsession)
 
 Använd detta när du vill bygga nu och starta/felsöka senare.
 
@@ -75,18 +80,18 @@ TTY:er (textkonsoler) är ofta det mest pålitliga sättet att felsöka hårda f
 - Logga in från textprompten
 - Återgå till den grafiska sessionen med `Ctrl + Alt + F7` (eller `F2` på vissa system)
 
-Varför detta är viktigt: om skrivbordssessionen har avstannat svarar en TTY ofta fortfarande, så att du kan bifoga GDB, fånga en bakåtspårning och återställa användbar kraschdata.
+Varför detta är viktigt: om skrivbordssessionen har låst sig svarar en TTY ofta fortfarande, så att du kan koppla GDB, fånga en backtrace och samla in användbar kraschdata.
 
-## Valfritt: Fjärr/TTY-felsökning
+## Valfritt: fjärr-/TTY-felsökning
 
-För hårda frysningar eller skärmlåsning, använd `gdbserver`:
+För hårda frysningar eller skärmlåsningar, använd `gdbserver`:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash gdbserver.sh
 ```
 
-Sedan från en TTY (rekommenderas för frysningsscenarier) eller en annan terminal:
+Sedan från en TTY (rekommenderas vid frysningar) eller en annan terminal:
 
 ```bash
 gdb /home/mark/code/lumi-dev/bin/lumi-0.1
@@ -94,24 +99,22 @@ gdb /home/mark/code/lumi-dev/bin/lumi-0.1
 (gdb) continue
 ```
 
-För en lokal GDB-lansering (icke-TTY-sökväg):
+För lokal GDB-start (utan TTY):
 
 ```bash
 bash lumi-debug-launch.sh --repo lumi-dev
 ```
 
-## Anmärkning om prestanda
+## Prestandaanmärkning
 
-Felsökningsbyggen är långsammare till sin design. När du är klar med felsökningen byter du tillbaka till en snabbare build:
+Felsökningsbyggen är avsiktligt långsammare. När du är klar med felsökningen, byt tillbaka till ett snabbare bygge:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
-
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
-
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

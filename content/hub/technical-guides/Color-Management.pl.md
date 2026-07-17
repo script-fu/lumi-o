@@ -2,135 +2,142 @@
 title: "Zarządzanie kolorami"
 type: docs
 weight: 15
+url: "hub/technical-guides/Color-Management"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
 ---
-Lumi-o jest skonfigurowany do pracy od razu po wyjęciu z pudełka. Jeśli pracujesz nad obrazem z **16-bitową lub większą precyzją**, oprogramowanie jest już skonfigurowane do korzystania z domyślnego pakietu soft proofingu (CMYK) i wbudowanych profili sRGB; wszystko powinno działać bez żadnej konfiguracji.
 
-Dla tych, którzy potrzebują większej kontroli, ten przewodnik wyjaśnia podstawowy model zarządzania kolorami Lumi, różnicę między profilem obrazu a profilem testowym, gdzie znajdują się elementy sterujące oraz dokładnie, w jaki sposób profile domyślne łączą się z aplikacją.
+Lumi-o jest skonfigurowany do pracy od razu po uruchomieniu. Jeśli pracujesz nad obrazem z **16-bitową lub większą precyzją**, oprogramowanie jest już ustawione na korzystanie z domyślnego pakietu soft proofingu (CMYK) i wbudowanych profili sRGB; wszystko powinno działać bez dodatkowej konfiguracji.
+
+Dla osób potrzebujących większej kontroli ten przewodnik wyjaśnia podstawowy model zarządzania kolorami w Lumi, różnicę między profilem obrazu a profilem soft proof, gdzie znajdują się elementy sterujące oraz dokładnie, w jaki sposób domyślne profile są dołączone do aplikacji.
 
 ## Szybkie podsumowanie
 
-Lumi wykorzystuje trzy różne role profilowe:
+Lumi wykorzystuje trzy różne role profili:
 
 1. **Profil roboczy obrazu**
-   - Definiuje znaczenie liczb RGB lub skali szarości obrazu.
-   - Używany do operacji przypisywania/konwertowania.
-   - Typowe przykłady: wbudowana sRGB, Adobe RGB.
+   - Określa, co oznaczają wartości RGB lub skali szarości obrazu.
+   - Używany do operacji przypisywania i konwersji.
+   - Typowe przykłady: wbudowany sRGB, Adobe RGB.
 
-2. **Wyświetl profil**
+2. **Profil monitora**
    - Opisuje Twój monitor.
    - Służy do prawidłowego wyświetlania obrazu na ekranie.
-   - Zwykle dostarczane przez system lub wybierane w Preferencjach.
+   - Zwykle dostarczany przez system lub wybierany w Preferencjach.
 
-3. **Profil miękki**
-   - Symuluje inne urządzenie wyjściowe lub warunki drukowania.
-   - Czy **nie** redefiniuje wartości pikseli obrazu.
+3. **Profil soft proof**
+   - Symuluje inne urządzenie wyjściowe lub warunki druku.
+   - **Nie** redefiniuje wartości pikseli obrazu.
    - Typowe przykłady: profile prasowe CMYK, takie jak `CoatedFOGRA39`.
 
-## Profil obrazu a profil miękki
+## Profil obrazu a profil soft proof
 
 ### Profil obrazu
 
-Użyj tej opcji, jeśli chcesz powiedzieć Lumi, w jakiej przestrzeni kolorów faktycznie znajduje się obraz.
+Użyj tej opcji, gdy chcesz powiedzieć Lumi, w jakiej przestrzeni barw obraz faktycznie się znajduje.
 
 Dwie typowe operacje:
 
 - **Przypisz profil**
-  - Zmienia etykietę profilu dołączoną do obrazu.
-  - Czy **nie** konwertuje wartości pikseli.
-  - Używaj tylko wtedy, gdy numery pikseli znajdują się już w przestrzeni tego profilu.
+  - Zmienia etykietę profilu przypisaną do obrazu.
+  - **Nie** konwertuje wartości pikseli.
+  - Używaj tylko wtedy, gdy wartości pikseli są już w przestrzeni tego profilu.
 
 - **Konwertuj na profil**
   - Konwertuje wartości pikseli z bieżącego profilu obrazu na nowy.
-  - Użyj, jeśli chcesz, aby obraz rzeczywiście przeniósł się do innej przestrzeni roboczej.
+  - Użyj, gdy chcesz, aby obraz rzeczywiście przeszedł do innej przestrzeni roboczej.
 
-**Lokalizacja menu:**
+**Lokalizacje w menu:**
 - Obraz > Zarządzanie kolorami > Przypisz profil kolorów...
 - Obraz > Zarządzanie kolorami > Konwertuj na profil kolorów...
 
-### Profil odporny na miękkość
+### Profil soft proof
 
-Użyj tej opcji, jeśli chcesz wyświetlić podgląd sposobu reprodukcji obrazu na urządzeniu docelowym lub warunków drukowania.
+Użyj tej opcji, gdy chcesz zobaczyć podgląd tego, jak obraz będzie wyglądał na urządzeniu docelowym lub w danych warunkach druku.
 
-Miękkie sprawdzanie:
-- pozostawia przestrzeń roboczą obrazu w spokoju
+Soft proofing:
+- pozostawia przestrzeń roboczą obrazu bez zmian
 - zmienia potok podglądu
-- potrafi zaznaczyć kolory spoza gamy
-- służy do podglądu, a nie ponownego przypisania danych obrazu
+- może oznaczać kolory spoza gamutu
+- służy do podglądu, a nie do ponownego przypisywania danych obrazu
 
-**Lokalizacja menu:**
-- Obraz > Zarządzanie kolorami > Ustawienia próbne miękkie > Wybierz profil próbny miękkie...
-- Obraz > Zarządzanie kolorami > Ustawienia próbne > Zamiar renderowania
-- Obraz > Zarządzanie kolorami > Ustawienia próbne > Kompensacja czarnego punktu
-- Widok > Zarządzanie kolorami > Włącz podgląd próbny programowy
-- Widok > Zarządzanie kolorami > Zaznacz poza gamą kolorów
+**Lokalizacje w menu:**
+- Obraz > Zarządzanie kolorami > Ustawienia soft proof > Wybierz profil soft proof...
+- Obraz > Zarządzanie kolorami > Ustawienia soft proof > Intencja renderowania
+- Obraz > Zarządzanie kolorami > Ustawienia soft proof > Kompensacja czarnego punktu
+- Widok > Zarządzanie kolorami > Włącz podgląd soft proof
+- Widok > Zarządzanie kolorami > Oznacz kolory spoza gamutu
 
-## Jak wyświetlić podgląd wersji miękkiej
+## Jak włączyć podgląd soft proof
 
-Istnieją dwa główne punkty wejścia do przełączania wydruków próbnych.
+Istnieją dwa główne sposoby przełączania soft proof.
 
-### 1. Wyświetl menu
+### 1. Menu Widok
 
 Użyj:
-- Widok > Zarządzanie kolorami > Włącz podgląd próbny programowy
+- Widok > Zarządzanie kolorami > Włącz podgląd soft proof
 
 Włącza lub wyłącza symulację podglądu dla bieżącego ekranu.
 
-### 2. Przełączanie paska stanu
+### 2. Przełącznik na pasku stanu
 
-Lumi udostępnia także soft proofing bezpośrednio w dolnym pasku stanu.
+Lumi udostępnia soft proofing także bezpośrednio na dolnym pasku stanu.
 
-- **Kliknięcie lewym przyciskiem** (przełącznik): włączenie lub wyłączenie kolorów próbnych
-- **Kliknięcie prawym przyciskiem**: otwórz okno sprawdzające oprogramowanie, w którym możesz dostosować:
-  - aktualny profil
+- **Kliknięcie lewym przyciskiem** (przełącznik): włącz lub wyłącz kolory proof
+- **Kliknięcie prawym przyciskiem**: otwórz okno soft proofing, w którym możesz dostosować:
+  - bieżący profil
   - wybór profilu
-  - zamiar renderowania
-  - kompensacja czarnego punktu
-  - oznakowanie poza zakresem
+  - intencję renderowania
+  - kompensację czarnego punktu
+  - oznaczanie spoza gamutu
 
 {{< callout type="warning" >}}
 **Ważna uwaga dotycząca precyzji**
-Podgląd próbny programowy jest włączony tylko dla obrazów **16-bitowych i 32-bitowych**.
-W przypadku obrazów **8-bitowych** przełącznik jest wyłączony, a Lumi poprosi Cię o przekonwertowanie precyzji na większą głębię przed dokładnym podglądem kolorów.
+Podgląd soft proof jest włączony tylko dla obrazów **16-bitowych i 32-bitowych**.
+W przypadku obrazów **8-bitowych** przełącznik jest wyłączony, a Lumi poprosi o konwersję precyzji na większą głębię bitową przed dokładnym podglądem kolorów.
 {{< /callout >}}
 
 ## Preferencje i ustawienia domyślne
 
-Globalne ustawienia domyślne są obecne w:
-- Edycja > Preferencje > Zarządzanie koloramiOdpowiednie sekcje:
+Globalne ustawienia domyślne znajdują się w:
+- Edycja > Preferencje > Zarządzanie kolorami
+
+Odpowiednie sekcje:
 - **Ręczny profil monitora**
 - **Preferowany profil RGB**
 - **Preferowany profil w skali szarości**
-- **Soft-Proofing**
+- **Soft proofing**
 
 ### Bieżące ustawienia domyślne Lumi
 
 #### Przestrzenie robocze
 
-Pakiety ICC przestrzeni roboczej oferowane obecnie z udostępnionego folderu danych:
+Dołączone profile ICC przestrzeni roboczych, obecnie dostępne z folderu współdzielonych danych:
 - `AdobeRGB1998.icc`
 - `AppleRGB.icc`
 
-Do standardowej pracy w trybie sRGB Lumi zapewnia również **wbudowany wewnętrznie profil roboczy sRGB**.
+Do standardowej pracy w sRGB Lumi udostępnia także **wbudowany wewnętrznie profil roboczy sRGB**.
 
-#### Domyślne ustawienia miękkie
+#### Domyślne ustawienia soft proof
 
-Aktualnie zainstalowane profile miękkie w zestawie:
+Dołączone profile soft proof, obecnie zainstalowane:
 - `CoatedFOGRA39.icc`
 - `USWebCoatedSWOP.icc`
 - `JapanColor2001Coated.icc`
 
-Jeśli jest dostępny, `CoatedFOGRA39.icc` jest używany jako domyślny dołączony profil referencyjny softproof/CMYK.
+Jeśli jest dostępny, `CoatedFOGRA39.icc` jest używany jako domyślny dołączony profil referencyjny soft proof/CMYK.
 
 ## Praktyczne przepływy pracy
 
 ### Do malowania i normalnej pracy na ekranie
 
 - Przechowuj obraz we wbudowanej przestrzeni roboczej sRGB lub innej prawidłowej przestrzeni roboczej RGB.
-- Pozwól Lumi używać profilu monitora systemu, jeśli jest dostępny.
+- Pozwól Lumi używać profilu monitora systemowego, jeśli jest dostępny.
 
 ### Do podglądu wydruku
 
 - Zachowaj obraz w standardowej przestrzeni roboczej RGB.
-- Wybierz profil softproof odpowiadający docelowym warunkom druku (np. FOGRA39).
-- Włącz podgląd soft-proof.
-- Opcjonalnie włącz ostrzeżenia o gamie kolorów, aby zobaczyć przycięte zamiary renderowania.
+- Wybierz profil soft proof odpowiadający docelowym warunkom druku (np. FOGRA39).
+- Włącz podgląd soft proof.
+- Opcjonalnie włącz ostrzeżenia o gamucie, aby zobaczyć przycięte intencje renderowania.

@@ -2,6 +2,9 @@
 title: "過濾器插件"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 我們在[第一步](../../first-step/) 教程中使用了_procedure_插件。這些類型的插件無需圖像或可繪製物件作為輸入即可運作。通常，我們使用插件來更改圖像及其可繪製物件。像這樣的插件稱為_filter_插件。
 
@@ -12,28 +15,28 @@ Lumi 中的 **drawable** 是指可以在其上繪製的圖像元素，例如圖�
 ### 一個簡單的過濾器外掛範例
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; 使用 let 陳述式定義訊息變數和核心程式碼
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; 在 Lumi 的 Error Console 中顯示訊息
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; 反轉第一個所選 drawable 的顏色
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; 註冊 plug-in
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; 主程序名稱
+  "Simple Filter Plug-in Demo"             ;; 在 Lumi 選單中顯示的名稱
+  "Tests a basic Scheme filter plug-in"    ;; 工具提示描述
+  "Author Name"                            ;; 給自己一點肯定
+  "License"                                ;; 授權
+  "Date written"                           ;; 撰寫日期
+  "*"                                      ;; 表示此外掛程式需要影像
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 需要一個或多個所選 drawable
 
-;; Specify the menu location for the plug-in
+;; 指定外掛程式的選單位置
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ Lumi 中的 **drawable** 是指可以在其上繪製的圖像元素，例如圖�
 第一行確保腳本在 Lumi 3 中作為插件運行：
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ Lumi 中的 **drawable** 是指可以在其上繪製的圖像元素，例如圖�
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; 在 Lumi 的 Error Console 中顯示訊息
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 反轉第一個所選 drawable 的顏色
 ```
 
 ### 外掛程式註冊
@@ -96,14 +99,14 @@ Lumi 中的 **drawable** 是指可以在其上繪製的圖像元素，例如圖�
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; 註冊主程序
+  "Simple Filter Plug-in Demo"             ;; 在 Lumi 選單中顯示的名稱
+  "Tests a basic Scheme filter plug-in"    ;; 工具提示描述
+  "Author Name"                            ;; 作者姓名
+  "License"                                ;; 授權類型
+  "Date written"                           ;; 撰寫日期
+  "*"                                      ;; 表示外掛程式需要影像
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 需要一個或多個所選 drawable
 ```
 
 #### 選單註冊

@@ -2,6 +2,9 @@
 title: "デバッグ"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 スクリプトでは、確実な関数は存在しません。最も信頼性の高いコマンドでも、予期しない入力や条件に直面すると失敗する可能性があります。これを防ぐために、カスタム デバッグ システムを実装し、防御的なプログラミング手法を採用できます。標準関数をエラー処理メカニズムでラップし、有益なフィードバックを提供することで、スクリプトをより堅牢にし、トラブルシューティングを容易にすることができます。
 
@@ -12,14 +15,14 @@ weight: 5
 グローバル デバッグ フラグは、スクリプトの実行中に出力される情報のレベルを制御する簡単かつ効果的な方法です。有効にすると、問題を追跡するのに非常に役立つ詳細なデバッグ メッセージが提供されます。無効にすると、本番環境で使用できるように出力が簡潔に保たれます。
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 目的: デバッグ出力を制御するグローバルフラグ。
 (define debug #f)
 ```
 
 デフォルトでは、デバッグはオフになっています。開発中に冗長出力を有効にするには、フラグを `#t` に設定するだけです。
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 目的: デバッグ出力を制御するグローバルフラグ。
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ weight: 5
 より細かく制御するには、ヘルパー関数を使用して、スクリプトの特定の部分内でデバッグをオンまたはオフにすることができます。
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; 目的: コードの一部でデバッグモードをオフにする。
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; 目的: コードの一部でデバッグモードをオンにする。
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ weight: 5
 これにより、デバッグを動的に制御できるようになります。
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; 詳細出力を有効化
 
-;; Some script logic here
+;; ここにスクリプトのロジック
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; 詳細出力を無効化
 ```
 
 ## メッセージング システムのデバッグ
@@ -73,7 +76,7 @@ Scheme でデバッグ出力を効率的に処理するために、複数のヘ�
 `debug-message` 関数は、デバッグ出力を表示するための中心的なメソッドです。これにより、デバッグが有効な場合にのみメッセージが表示されるようになります。
 
 ```scheme
-;; Purpose: Display a debug message.
+;; 目的: デバッグメッセージを表示する。
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ Scheme でデバッグ出力を効率的に処理するために、複数のヘ�
 使用例:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; 目的: 項目のツリー位置を返す。項目が無効なら #f
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Scheme でデバッグ出力を効率的に処理するために、複数のヘ�
 メッセージには、リスト、ベクトル、数値などのさまざまなデータ型が含まれる場合があります。正しくフォーマットされていることを確認するために、`serialize-item` を使用します。
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; 目的: さまざまな Scheme データ型（リスト、ベクター、ペアなど）を変換する
+;;          文字列表現に変換する。
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; 空リスト
+    ((and (string? item) (string=? item "")) "\"\"")  ; 空文字列
+    ((list? item) (list->string item))                ; ネストされたリスト
+    ((vector? item)                                   ; ベクトルを処理
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; ペアを処理
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; 数値
+    ((symbol? item) (symbol->string item))            ; シンボル
+    ((boolean? item) (if item "#t" "#f"))             ; ブール値
+    ((string? item) item)                             ; 文字列
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 複数のメッセージ コンポーネントを 1 つの文字列にマージするには、`concat` を使用します。
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; 目的: 複数の項目を1つの文字列に連結する。
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ list:
 `list->string` 関数は、リストをフォーマットされた文字列に変換します。
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; 目的: 項目のリストを読みやすい文字列に変換する。
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ list:
 ### 警告メッセージ`warning-message` 関数は `debug-message` と同​​様に動作しますが、デバッグが無効になっている場合でも警告が表示されます。
 
 ```scheme
-;; Purpose: Display a warning message.
+;; 目的: 警告メッセージを表示する。
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ list:
 一般的な例は `item-is-valid?` で、これは `lumi-item-id-is-valid` をラップして `#t` または `#f` を返します。 `#f` が返された場合は、呼び出しコードで `warning-message` をトリガーできます。入力が数値でない場合は、関数で警告を与えることができます。
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; 目的: 項目が有効かどうかを確認し、#t または #f を返す。
+;;          項目が数値でない場合に警告を出す。
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Scheme プラグインを開発する場合、この方法で関数をラップ�
 実際に使用される `call` の例:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; 目的: 指定されたグループマスクのリストにテクスチャ処理を適用する
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

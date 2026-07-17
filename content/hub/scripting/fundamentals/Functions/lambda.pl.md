@@ -2,6 +2,9 @@
 title: "Funkcje lambdy"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 **Funkcje Lambda** w Scheme są funkcjami anonimowymi, co oznacza, że ​​są to funkcje bez nazwy. Funkcje te są definiowane inline i są zwykle używane do krótkich, jednorazowych operacji. Konstrukt `lambda` to potężne narzędzie w programowaniu funkcjonalnym, pozwalające na tworzenie zwięzłej i elastycznej logiki na bieżąco.
 
@@ -37,7 +40,7 @@ Funkcje lambda można definiować samodzielnie...
 #### Używanie lambdy do prostych obliczeń
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Zwraca 8
 ```
 
 Tutaj:
@@ -86,7 +89,7 @@ Funkcje lambda są często przekazywane bezpośrednio do funkcji wyższego rzęd
 #### Podnoszenie listy liczb do kwadratu
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Zwraca (1 4 9 16)
 ```
 
 - Funkcja `lambda` podnosi do kwadratu każdy element listy.
@@ -103,7 +106,7 @@ Możesz zwrócić funkcję lambda z innej funkcji, aby stworzyć dynamiczne zach
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Zwraca 15
 ```
 
 - `make-adder` generuje nową funkcję lambda, która dodaje określoną liczbę (`n`).
@@ -117,7 +120,7 @@ Lambdy są często używane z `let` do tworzenia funkcji tymczasowych o zasięgu
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Zwraca 7
 ```
 
 - `let` wiąże funkcję lambda z nazwą `add`.
@@ -130,8 +133,10 @@ Lambdy wyróżniają się w połączeniu z funkcjami wyższego rzędu w celu wyk
 #### Filtrowanie liczb parzystych
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` sprawdza, czy liczba jest parzysta.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Zwraca (2 4 6)
+```
+
+- `lambda` sprawdza, czy liczba jest parzysta.
 - Funkcja `filter` używa lambdy, aby zachować z listy tylko liczby parzyste.
 
 ### Korzyści z funkcji lambda

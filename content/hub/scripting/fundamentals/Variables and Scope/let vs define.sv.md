@@ -1,7 +1,10 @@
 ---
-title: "Namngiven låt eller Lokal definiera"
+title: "Named let eller lokalt define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme för att strukturera din kod, men de tjänar olika syften. Att förstå när de ska användas hjälper till att skapa rena, modulära och effektiva skript.
 
@@ -67,8 +70,8 @@ Både **namnet `let`** och **local `define`** är kraftfulla verktyg i Scheme f�
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Lokal hjälpfunktion
+  (define (cube x) (* x x x))  ;; Lokal hjälpfunktion
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ En av de mest kraftfulla funktionerna hos en namngiven `let` är dess förmåga 
 I en namngiven `let` fungerar bindningarna inom parentes som **lokala variabler** som initieras med specifika värden. Dessa variabler omfångas till kroppen av `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Deklarerar x med startvärdet 1
+           (y 2))  ;; Deklarerar y med startvärdet 2
+  (+ x y))         ;; Använder x och y i kroppen
 ```
 
 - **`x` och `y`** är lokala variabler definierade och initierade som en del av `let`.
@@ -158,7 +161,7 @@ Samma variabler fungerar också som **indataparametrar** för de rekursiva anrop
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Rekursivt anrop med nya x och y
 ```
 
 - **Första iterationen**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ En namngiven `let` inkluderar variabelinitiering som en del av sin syntax. Detta
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Initialt anrop med x = 1, y = 2
 ```
 
 Båda utför samma beräkning, men den namngivna `let` kombinerar variabeldeklarationen och rekursionsinställningen till en kortfattad konstruktion.

@@ -1,7 +1,10 @@
 ---
 title: "Wektory"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 W schemacie wektor jest kolejną podstawową strukturą danych używaną do grupowania wartości. W przeciwieństwie do list, wektory to indeksowane zbiory elementów o stałym rozmiarze, zapewniające szybszy losowy dostęp i aktualizacje. Każdy element wektora może być dowolnego typu, łącznie z innym wektorem. Wektory są reprezentowane za pomocą #, po którym następują nawiasy. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Dostęp do elementów wektora uzyskuje się za pomocą procedury `vector-ref`, k
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Pobiera element o indeksie 0
+(vector-ref my-vector 1)  ; Pobiera element o indeksie 1
 ```
 
 #### Iteracja: przetwarzanie każdego elementu w wektorze
@@ -42,9 +45,9 @@ Możesz iterować po wektorze za pomocą pętli lub rekurencji. Schemat zapewnia
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Wypisuje element
+        (loop (+ i 1)))                                    ; Przetwarza następny indeks
+      (lumi-message "done"))))                             ; Koniec pętli
 ```
 
 - **Przypadek podstawowy:** Jeśli indeks `i` osiągnie długość wektora, zatrzymaj pętlę.
@@ -99,7 +102,7 @@ Procedura `vector-set!` aktualizuje element wektora o określonym indeksie.
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Ustawia drugi element na 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ Wynik: `#(1 42 3)`
 Procedura `vector?` sprawdza, czy dana wartość jest wektorem.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Sprawdza, czy #(1 2 3) jest wektorem
+(vector? 42)              ; Sprawdza, czy 42 jest wektorem
 ```
 
 Wynik:
@@ -127,11 +130,11 @@ Oto przykład pokazujący, jak wektory są przekazywane przez referencję i mody
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Aktualizuje wektor pod wskazanym indeksem
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Zmienia drugi element na 99
+my-vector                              ; Oryginalny wektor jest teraz zaktualizowany
 ```
 
 Wynik: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme udostępnia kilka wbudowanych procedur do pracy z wektorami, w tym:
 - `list->vector`: Konwertuje listę na wektor.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Zwraca 3
+(vector->list (vector 1 2 3))          ; Konwertuje wektor na listę: (1 2 3)
+(list->vector (list 1 2 3))            ; Konwertuje listę na wektor: #(1 2 3)
 ```
 
 Wynik:
@@ -187,8 +190,8 @@ Aby uzyskać dostęp do elementów w zagnieżdżonym wektorze, użyj `vector-ref
 #### Przykład: uzyskiwanie dostępu do elementów
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Pobiera pierwszy element: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Pobiera drugi element pierwszego wektora: 2
 ```
 
 ### Podsumowanie

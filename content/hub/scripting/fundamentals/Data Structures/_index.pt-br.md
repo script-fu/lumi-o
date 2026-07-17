@@ -1,7 +1,10 @@
 ---
 title: "Estruturas de dados"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 No Scheme, **estruturas de dados** são ferramentas essenciais para organizar, armazenar e manipular dados. Eles permitem que os desenvolvedores criem scripts eficientes, legíveis e reutilizáveis. Ao escolher a estrutura de dados certa para um problema específico, você pode otimizar o desempenho e a clareza do seu código.
 

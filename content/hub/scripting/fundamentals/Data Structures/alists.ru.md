@@ -1,7 +1,10 @@
 ---
-title: "Списки ассоциаций (Алисты)"
-type: docs
+title: "Ассоциативные списки (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **список ассоциаций** (или **список**) — это фундаментальная структура данных в Scheme, используемая для представления коллекций пар ключ-значение. Он реализован в виде списка пар, где каждая пара связывает ключ (обычно символ) со значением. Списки просты, гибки и хорошо подходят для наборов данных небольшого и среднего размера.
 
@@ -30,10 +33,10 @@ weight: 6
 Одинарная кавычка (`'`) является сокращением **цитирования**, что не позволяет Scheme оценить выражение. Это делает его идеальным для создания статических списков, в которых все ключи и значения жестко запрограммированы.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ weight: 6
 Чтобы получить значение из списка, вы можете использовать функцию `assoc`, которая ищет пару по ее ключу.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Возвращает (name . "Alice")
+(assoc 'country alist) ; Возвращает #f (ключ не найден)
 ```
 
 ### Извлечение значения
@@ -84,7 +87,7 @@ weight: 6
 После того как вы получите пару с помощью `assoc`, используйте `cdr`, чтобы извлечь значение:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Возвращает "Alice"
 ```
 
 ### Краткое описание основных функций

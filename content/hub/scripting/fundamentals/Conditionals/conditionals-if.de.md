@@ -1,16 +1,19 @@
 ---
-title: "Wenn"
+title: "if"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
 ---
-In seiner einfachsten Form wertet die Bedingung `if` in Scheme einen Test aus und führt basierend auf dem Ergebnis einen von zwei möglichen Codeblöcken aus. Die einfachste Form sieht so aus:
+In seiner einfachsten Form wertet `if` in Scheme einen Test aus und führt je nach Ergebnis einen von zwei Codeblöcken aus:
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-– Wenn das `test` als wahr ausgewertet wird (`#t`), wird der **Codeblock in der Folge** ausgeführt. Der Block kann einen Wert zurückgeben oder andere Aktionen ausführen, z. B. das Zuweisen einer Variablen oder das Drucken von Ausgaben.
+- Bei `#t` wird der **consequent** ausgeführt (Wert zurückgeben oder Nebeneffekte).
 
 ### Beispiel
 
@@ -19,12 +22,10 @@ In seiner einfachsten Form wertet die Bedingung `if` in Scheme einen Test aus un
   (lumi-message "True!"))
 ```
 
-- In diesem Fall ist `test` `(< 0 1)` (überprüft, ob 0 kleiner als 1 ist).
-- Da der Test „true“ ergibt (`#t`), wird der Codeblock `(lumi-message "True!")` ausgeführt, der `"True!"` ausgibt.
+- Test: `(< 0 1)` ist wahr.
+- `(lumi-message "True!")` wird ausgeführt.
 
-### Hinzufügen einer Else-Bedingung: `if-else`
-
-Bei Verwendung einer `if`-Bedingung mit einem alternativen Codeblock (der `else`-Fall) sieht die Struktur wie folgt aus:
+### Else-Zweig: `if-else`
 
 ```scheme
 (if test
@@ -32,29 +33,20 @@ Bei Verwendung einer `if`-Bedingung mit einem alternativen Codeblock (der `else`
   else-do-this)
 ```
 
-– Wenn das `test` als wahr ausgewertet wird (`#t`), wird der **konsequente** Codeblock ausgeführt.
-– Wenn `test` als falsch ausgewertet wird (`#f`), wird der **alternative** Codeblock ausgeführt.
-
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Wie es funktioniert
+### So funktioniert es
 
-1. **Testausdruck**:
-   - Der Ausdruck `test` wird zuerst ausgewertet.
+1. **Test** zuerst auswerten.
+2. Bei `#t` **consequent**, bei `#f` **alternative**.
 
-2. **Ergebnis basierend auf Test**:
-   – Wenn das `test` als wahr ausgewertet wird (`#t`), wird der **konsequente Codeblock** ausgeführt.
-   - Wenn `test` als falsch ausgewertet wird (`#f`), wird der **alternative Codeblock** ausgeführt.
+Beide Blöcke können jeden gültigen Scheme-Ausdruck enthalten.
 
-Sowohl die Codeblöcke `consequent` als auch `alternative` können jede gültige Scheme-Operation ausführen, einschließlich der Rückgabe von Werten, der Änderung von Variablen oder der Ausführung von Prozeduren.
-
-### Beispiele
-
-#### Beispiel 1: Einen Wert zurückgeben
+#### Beispiel 1: Wert zurückgeben
 
 ```scheme
 (if (< 0 1)
@@ -62,14 +54,9 @@ Sowohl die Codeblöcke `consequent` als auch `alternative` können jede gültige
   0)
 ```
 
-- Hier ist `test` `(< 0 1)` (überprüft, ob 0 kleiner als 1 ist).
-- Da der Test „true“ ergibt (`#t`), wird der **konsequente** Block (`1`) ausgeführt und sein Wert zurückgegeben.
-
 Ergebnis: **1**
 
-#### Beispiel 2: Auswertung eines begin-Blocks
-
-In Fällen, in denen Sie mehrere Aktionen ausführen müssen, wenn die Bedingung wahr oder falsch ist, können Sie `begin` oder `let` verwenden, um sie zu gruppieren.
+#### Beispiel 2: `begin`-Block
 
 ```scheme
 (if (= 0 1)
@@ -81,16 +68,9 @@ In Fällen, in denen Sie mehrere Aktionen ausführen müssen, wenn die Bedingung
     (* 3 4)))
 ```
 
-- In diesem Beispiel ist `test` `(= 0 1)` (überprüft, ob 0 gleich 1 ist).
-– Da der Test „falsch“ ergibt (`#f`), wird der **alternative** Block ausgeführt:
-  - Zuerst wird `"False condition met, calculating..."` gedruckt.
-  - Anschließend wird `(* 3 4)` berechnet und `12` zurückgegeben.
+Ergebnis: **Gibt "False condition met, calculating..." aus und liefert 12.**
 
-Ergebnis: **Gibt „Falsche Bedingung erfüllt, Berechnung...“ aus und gibt 12 zurück.**
-
-#### Beispiel 3: Auswertung einer let-Anweisung
-
-Durch die Verwendung eines `let` können wir lokale Bereichsvariablen innerhalb des Codeblocks deklarieren.
+#### Beispiel 3: `let`-Ausdruck
 
 ```scheme
 (if (= 1 1)
@@ -102,14 +82,10 @@ Durch die Verwendung eines `let` können wir lokale Bereichsvariablen innerhalb 
     (* 3 y)))
 ```
 
-- In diesem Beispiel ist `test` `(= 1 1)` (überprüft, ob 1 gleich 1 ist).
-– Da der Test „true“ ergibt (`#t`), wird der **konsequente** Block ausgeführt:
-  - Zuerst wird `"True condition met, calculating..."` gedruckt.
-  - Anschließend wird `(* -1 10)` berechnet und `-10` zurückgegeben.
+Ergebnis: **Gibt "True condition met, calculating..." aus und liefert -10.**
 
-Ergebnis: **Gibt „Wahre Bedingung erfüllt, Berechnung...“ aus und gibt -10 zurück.**
+### Zusammenfassung
 
-### Zusammenfassung- Die Bedingung `if` ist ein leistungsstarkes Tool in Scheme zum Auswerten von Tests und zum Ausführen entsprechender Codeblöcke.
-
-– Es kann sowohl einfache Ausdrücke als auch komplexe Codeblöcke verarbeiten, die Werte zurückgeben, Variablen ändern oder Nebenwirkungen ausführen.
-- Denken Sie daran: Wenn es keinen expliziten `else`-Block gibt, wertet der `if` die **Konsequenz** nur aus und führt sie aus, wenn der Test wahr ist. Andernfalls wertet es die **Alternative** aus und führt sie aus.
+- `if` wertet Tests aus und führt passende Blöcke aus.
+- Einfache Ausdrücke oder `begin`/`let`-Gruppen möglich.
+- Ohne explizites `else` nur **consequent** bei wahrem Test.

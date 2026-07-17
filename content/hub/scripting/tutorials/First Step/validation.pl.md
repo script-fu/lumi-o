@@ -2,52 +2,55 @@
 title: "Walidacja"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
-Tworząc niezawodne wtyczki, ważne jest, aby nasze funkcje sprawnie obsługiwały błędy i działały zgodnie z oczekiwaniami, nawet w przypadku niewłaściwego użycia lub nieoczekiwanych danych wejściowych. Walidacja pomaga chronić integralność funkcji i zapobiegać awariom lub niezamierzonym zachowaniom.
+Tworząc niezawodne wtyczki, ważne jest, aby nasze funkcje sprawnie obsługiwały błędy i działały zgodnie z oczekiwaniami, nawet w przypadku niewłaściwego użycia lub nieoczekiwanych danych wejściowych. Validation helps protect the integrity of the function and prevent crashes or unintended behavior.
 
-Przyjrzyjmy się, jak możemy ulepszyć funkcję `send-message`, dodając kontrole walidacyjne, aby upewnić się, że poprawnie obsługuje ona dane wejściowe.
+Let’s look at how we can improve the `send-message` function by adding validation checks to ensure it handles inputs correctly.
 
 ### Sprawdź wprowadzone dane
 
-Przed wysłaniem wiadomości powinniśmy upewnić się, że argument `output` przekazany do funkcji `send-message` jest poprawny. Możemy dodać kontrolę, aby potwierdzić, że miejsce docelowe wyjścia jest jedną z oczekiwanych wartości (gui, konsola błędów lub terminal).
+Before sending a message, we should ensure the `output` argument passed to the `send-message` function is valid. We can add a check to confirm that the output destination is one of the expected values (gui, error-console, or terminal).
 
 Przykład:
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; Sprawdza poprawność argumentu wyjścia
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Wyślij do Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; Wyślij do okna dialogowego GUI
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; Wyślij do okna terminala
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Przywróć domyślną obsługę wiadomości do Message console
   (lumi-message-set-handler 2))
 ```
 
-W tym przykładzie używamy `member`, aby sprawdzić, czy argument `output` jest poprawny. Jeśli nie, funkcja zgłasza błąd z wyraźnym komunikatem, zapobiegając powodowaniu problemów przez nieprawidłowe wartości.
+In this example, we use `member` to check if the `output` argument is valid. If not, the function raises an error with a clear message, preventing invalid values from causing issues.
 
 ### Obsługuj puste wiadomości
 
-Przydatne jest również upewnienie się, że argument `message` jest poprawny. Na przykład, jeśli jako wiadomość zostanie przekazany pusty ciąg znaków lub #f (fałsz), funkcja powinna obsłużyć to bezproblemowo.
+It’s also useful to ensure that the `message` argument is valid. For example, if an empty string or #f (false) is passed as the message, the function should handle this gracefully.
 
 Przykład obsługi pustej wiadomości:
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; Sprawdź, czy wiadomość jest pusta
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -63,40 +66,40 @@ Przykład obsługi pustej wiadomości:
   (lumi-message-set-handler 2))
 ```
 
-Takie podejście zapewnia, że funkcja zawsze otrzymuje prawidłowe dane wejściowe, co poprawia jej niezawodność i zapobiega nieoczekiwanym zachowaniom.
+This approach ensures that the function always receives valid input, improving its reliability and preventing unexpected behavior.
 
 ### Przykład połączonej walidacji
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Funkcja obsługująca wysyłanie wiadomości do różnych miejsc docelowych
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; Zweryfikuj argumenty wiadomości i wyjścia
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Wyślij do Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; Wyślij do okna dialogowego GUI
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; Wyślij do okna terminala
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Przywróć domyślną obsługę wiadomości do Message console
   (lumi-message-set-handler 2))
 ```
 
 W tej wersji:
-- Funkcja sprawdza najpierw, czy `message` jest pusty lub nieprawidłowy. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z zaakceptowanych wartości (`gui`, `error-console`, lub `terminal`).
+- The function checks if the `message` is empty or invalid first. Jeśli wiadomość jest poprawna, przechodzi do sprawdzenia, czy `output` jest jedną z akceptowanych wartości (`gui`, `error-console`, lub `terminal`).
 - Jeżeli obydwa sprawdzenia przebiegną pomyślnie, wiadomość zostanie wysłana na odpowiednie wyjście. W przeciwnym razie zostanie wyświetlony komunikat o błędzie z jasnym wyjaśnieniem.
 - Przeprowadzana jest dodatkowa kontrola, aby upewnić się, że wiadomość jest również ciągiem znaków.
 

@@ -1,7 +1,10 @@
 ---
 title: "向量"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 在Scheme中，向量是另一种用于对值进行分组的基本数据结构。与列表不同，向量是固定大小的索引元素集合，提供更快的随机访问和更新。向量中的每个元素可以是任何类型，包括另一个向量。向量使用 # 后跟括号来表示。 `#(1 2 3)`
 
@@ -29,8 +32,8 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; 获取索引 0 处的元素
+(vector-ref my-vector 1)  ; 获取索引 1 处的元素
 ```
 
 #### 迭代：处理向量中的每个元素
@@ -42,9 +45,9 @@ weight: 5
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; 打印元素
+        (loop (+ i 1)))                                    ; 处理下一个索引
+      (lumi-message "done"))))                             ; 循环结束
 ```
 
 - **基本情况：** 如果索引 `i` 达到向量的长度，则停止循环。
@@ -99,7 +102,7 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; 将第二个元素设置为 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ my-vector
 `vector?` 过程检查给定值是否是向量。
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; 检查 #(1 2 3) 是否为向量
+(vector? 42)              ; 检查 42 是否为向量
 ```
 
 结果：
@@ -127,11 +130,11 @@ my-vector
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; 在指定索引处更新向量
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; 将第二个元素修改为 99
+my-vector                              ; 原始向量现已更新
 ```
 
 结果：`#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme 提供了几个用于处理向量的内置过程，包括：
 - `list->vector`：将列表转换为向量。
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; 返回 3
+(vector->list (vector 1 2 3))          ; 将向量转换为列表：(1 2 3)
+(list->vector (list 1 2 3))            ; 将列表转换为向量：#(1 2 3)
 ```
 
 结果：
@@ -187,8 +190,8 @@ Scheme 中的向量可以包含其他向量作为元素，从而创建嵌套结�
 #### 示例：访问元素
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; 获取第一个元素：#(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; 获取第一个向量的第二个元素：2
 ```
 
 ### 总结

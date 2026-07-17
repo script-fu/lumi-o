@@ -1,8 +1,11 @@
 ---
 title: "插件"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f273072593fbc0114525e7736ebde1b24861c1a146ef77e254ff85273604a67e
 ---
-本节记录了 Lumi 中使用的一小组 **示例方案插件**。
+本节记录了 Lumi 中使用的一小组 **Scheme 示例插件**。
 
 {{< cards >}}
 

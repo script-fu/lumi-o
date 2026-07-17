@@ -1,8 +1,11 @@
 ---
-title: "메이드 인 루미오"
+title: "Made in Lumi-o"
 type: docs
 layout: made-in-lumio
+url: "hub/made-in-lumio"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e16db685765b758a8f81796376db712aee9dad32c24d9f65e5c7fa88336eb7a7
 ---
-Lumi는 일상적인 사용을 통해 개발되므로 여기에 표시된 그림, 연구 및 제작 작품은 마케팅 모형이 아닙니다. 이는 소프트웨어가 지원하도록 구성되는 이미지 종류의 예입니다. 이 섹션은 여전히 ​​부족하고 발전하고 있지만 시간이 지나면서 애플리케이션이 보다 안정적인 형태로 자리잡으면서 Lumi 자체와 함께 성장할 것입니다.
 
-연구, 연구 및 소프트웨어 개발 목적으로 만들어진 비공식 팬 레크리에이션입니다. 원본 삽화 © Bill Watterson. 소유권 주장은 이루어지지 않습니다. 판매용이나 상업적인 용도로 사용되지 않습니다.
+이 갤러리에는 오리지널 작품과 비공식 팬 아트가 모두 포함되어 있습니다. 툴팁으로 어떤 이미지가 오리지널이고 어떤 것이 스케치·습작인지 확인할 수 있습니다. 팬 아트는 판매하거나 상업적으로 이용할 수 없습니다.

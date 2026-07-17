@@ -2,6 +2,9 @@
 title: "Embrulho"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Os comandos do esquema operam em um nível baixo, o que significa que mesmo tarefas simples podem exigir várias etapas. No entanto, esta granularidade oferece flexibilidade, podemos agrupar comandos em funções pequenas e reutilizáveis ​​que fazem exatamente o que precisamos. Embrulhar não é um conceito preto e branco; ele pode variar de simples aliases para comandos usados ​​com frequência até funções mais complexas que gerenciam fluxos de trabalho inteiros. Às vezes, um wrapper é apenas uma função conveniente para melhorar a legibilidade, enquanto em outros casos evolui para um utilitário completo que encapsula várias operações.
 
@@ -26,7 +29,7 @@ Exemplos:
 ### Semente Aleatória
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Propósito: Retorna um inteiro aleatório para inicializar um filtro
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Além disso, definir ***random-seed*** como uma função independente nos permit
 Por exemplo, se decidirmos mudar para ***random***:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Propósito: Retorna um inteiro aleatório para inicializar um filtro
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ O nome da função permanece o mesmo, garantindo que nossos scripts continuem fu
 A função de exportação de JPEG no Scheme vem com muitos parâmetros, oferecendo um controle preciso sobre como as imagens são salvas. No entanto, na maioria dos casos, nos preocupamos apenas com algumas configurações importantes, como nome e qualidade do arquivo. Para simplificar o processo, podemos agrupar a função.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Propósito: Salva uma imagem como JPEG com uma qualidade especificada
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Evitar jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Isso mantém nosso código limpo, legível e adaptável, ao mesmo tempo que nos 
 A função ***car*** pode ser enigmática e propensa a erros de script. É fácil aplicar erroneamente ***car*** a um vetor ou item que não esteja na lista, levando a um comportamento inesperado. Para tornar nosso código mais robusto e legível, podemos agrupar essa funcionalidade em uma função mais segura.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Propósito: Retorna o primeiro item de uma lista ou vetor.
+;;          Avisa se a entrada for inválida ou vazia.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Trata listas não vazias
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Trata vetores não vazios
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Entrada inválida ou vazia
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ O empacotamento de uma função que já está empacotada pode melhorar ainda mai
 para recuperar a coordenada ***x***. Porém, embora funcional, isso não é muito expressivo. Em vez disso, podemos agrupar o ***primeiro item*** em uma definição mais apropriada para tornar nossa intenção mais clara.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Propósito: Retornar a coordenada x, para legibilidade
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Propósito: Retornar a coordenada y, para legibilidade
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ para recuperar a coordenada ***x***. Porém, embora funcional, isso não é muit
 Agora, em vez de escrever em esquema genérico:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Obtém a coordenada x
+(cadr pixel-coords) ;; Obtém a coordenada y
 ```
 
 Podemos escrever em _nosso_ esquema:

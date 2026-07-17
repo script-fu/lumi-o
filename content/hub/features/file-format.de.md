@@ -1,35 +1,39 @@
 ---
 title: "Dateiformat (.lum)"
 type: docs
+url: "hub/features/file-format"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
 ---
-Das native Dateiformat von Lumi wurde für mehrschichtige Malprojekte entwickelt, die im Laufe der Zeit zuverlässig, überprüfbar und wiederherstellbar bleiben müssen. Es ist auf die Realitäten der Illustrationsarbeit abgestimmt: viele Ebenen, große Leinwände, eingebettete Farbinformationen, Masken, Effekte und Wiederherstellungsdaten.
+Lumis natives Dateiformat ist für mehrschichtige Malprojekte gedacht, die zuverlässig, nachvollziehbar und langfristig wiederherstellbar bleiben müssen. Es orientiert sich an Illustrationsarbeit: viele Ebenen, große Leinwände, eingebettete Farbinformationen, Masken, Effekte und Wiederherstellungsdaten.
 
-Anstatt ein Projekt als einen einzigen undurchsichtigen Fleck zu behandeln, sorgt das Format dafür, dass die Struktur des Bildmaterials für die Anwendung sichtbar bleibt. Dadurch kann Lumi große Bilder intelligenter speichern, laden und wiederherstellen und gleichzeitig die Organisation bewahren, auf die Künstler angewiesen sind.
+Statt ein Projekt als undurchsichtigen Block zu behandeln, bleibt die Kunstwerkstruktur für die Anwendung sichtbar. So speichert, lädt und stellt Lumi große Bilder intelligenter wieder her — und bewahrt die Organisation, auf die Künstler angewiesen sind.
 
-## Projektstruktur öffnen
+## Offene Projektstruktur
 
-Ein Lumi-Projekt hält die Teile des Kunstwerks getrennt: Bildstruktur, Ebeneninhalt, Masken, Farbdaten, Metadaten und Wiederherstellungsinformationen haben jeweils eine klare Rolle. Dadurch ist das Format leichter zu verstehen und eignet sich besser für den langfristigen Zugriff als ein geschlossener, monolithischer Container.
+Ein Lumi-Projekt hält die Teile des Kunstwerks getrennt: Bildstruktur, Ebeneninhalt, Masken, Farbdaten, Metadaten und Wiederherstellungsinformationen haben jeweils eine klare Rolle. Das Format ist leichter nachvollziehbar und für langfristigen Zugriff besser geeignet als ein geschlossener Monolith.
 
-Das Ziel besteht nicht nur darin, Pixel zu speichern, sondern auch den Arbeitszustand einer Illustration zu speichern. Ebenen bleiben Ebenen, Masken bleiben Masken und die Datei spiegelt weiterhin die Art und Weise wider, wie das Bildmaterial erstellt wurde.
+Ziel ist nicht nur, Pixel zu speichern, sondern den Arbeitszustand einer Illustration. Ebenen bleiben Ebenen, Masken bleiben Masken — die Datei spiegelt weiter, wie das Kunstwerk aufgebaut ist.
 
-## Für große Gemälde konzipiert
+## Für große Bilder ausgelegt
 
-Große Bilder mit mehreren Ebenen können schnell schwer werden. Das Format von Lumi unterstützt Arbeitsabläufe, bei denen nicht alle Bilddaten auf einmal in den Speicher geladen werden müssen. Projekte können reaktionsfähig bleiben, indem die Teile des Bildes geladen werden, die tatsächlich zum Anzeigen, Bearbeiten, Zusammenstellen oder Exportieren benötigt werden.
+Große Ebenenbilder werden schnell schwer. Lumis Format unterstützt Workflows, bei denen nicht alle Bilddaten auf einmal in den Speicher müssen. Projekte bleiben reaktionsschnell, indem nur die Teile geladen werden, die Anzeige, Bearbeitung, Komposition oder Export brauchen.
 
-Dieser Ansatz trägt dazu bei, dass sich komplexe Dateien überschaubar anfühlen, insbesondere wenn ein Kunstwerk viele versteckte, archivierte, experimentelle oder gruppierte Ebenen enthält.
+So fühlen sich komplexe Dateien handhabbar an — besonders bei vielen verborgenen, archivierten, experimentellen oder gruppierten Ebenen.
 
-## Sparen, ohne den Fluss zu unterbrechen
+## Speichern ohne Unterbrechung
 
-Das Dateiformat unterstützt sowohl das normale Speichern von Projekten als auch einfache Snapshots im Wiederherstellungsstil. Dies gibt Künstlern die Möglichkeit, ihre Arbeit häufig zu schützen, ohne jeden Kontrollpunkt in ein vollständiges Duplikat des gesamten Bildes zu verwandeln.
+Das Format unterstützt normales Projektspeichern und leichte Wiederherstellungs-Snapshots. Künstler können Arbeit häufig schützen, ohne jeden Kontrollpunkt in ein vollständiges Duplikat des gesamten Bildes zu verwandeln.
 
-Da Wiederherstellungsinformationen zur Projektstruktur gehören, kann Lumi den nützlichen Verlauf nah am Kunstwerk aufbewahren und gleichzeitig automatische Sicherheitsspeicherungen getrennt von der Arbeitsdatei ermöglichen.
+Weil Wiederherstellungsinformationen zur Projektstruktur gehören, kann Lumi nützlichen Verlauf nah am Kunstwerk halten und automatische Sicherungsspeicherungen getrennt von der Arbeitsdatei ablegen.
 
 ## Austausch und Export
 
-Das native Format ist für die fortlaufende Lumi-Arbeit gedacht, während Exportformate für die Weitergabe abgeflachter oder kompatibilitätsorientierter Ergebnisse verwendet werden. Die Importunterstützung hilft dabei, vorhandene Kunstwerke in die Ebenenumgebung von Lumi zu übertragen, und die Exportunterstützung ermöglicht es fertigen Stücken, das Projektformat zu verlassen, wenn sie zur Veröffentlichung, Lieferung oder Weiterverarbeitung bereit sind.
+Das native Format ist für laufende Lumi-Arbeit gedacht; Exportformate dienen der Weitergabe abgeflachter oder kompatibilitätsorientierter Ergebnisse. Import bringt bestehende Kunstwerke in Lumis Ebenenumgebung; Export lässt fertige Stücke das Projektformat verlassen, wenn sie veröffentlicht, geliefert oder weiterverarbeitet werden.
 
-Durch die Unterscheidung bleibt die Arbeitsdatei umfangreich und bearbeitbar, während die endgültigen Bilder in gängigen externen Formaten erstellt werden können.
+Die Arbeitsdatei bleibt reich und bearbeitbar; Endbilder entstehen in gängigen externen Formaten.
 
 ## Langfristige Zuverlässigkeit
 
-Kurz gesagt, das `.lum`-Format ist ein praktischer Behälter für ernsthafte Malarbeiten: offen genug zum Inspizieren, strukturiert genug zum Wiederherstellen und flexibel genug, um komplexe Schichtbilder wirtschaftlich zu verarbeiten.
+Kurz gesagt: Das `.lum`-Format ist ein praktischer Behälter für ernsthafte Malarbeit — offen genug zum Inspizieren, strukturiert genug zur Wiederherstellung, flexibel genug für komplexe Ebenenbilder ohne unnötigen Overhead.

@@ -2,6 +2,9 @@
 title: "可変個引数関数"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 Scheme の **可変引数関数** は、可変数の引数を受け入れる関数です。これらの関数は汎用性が高く、柔軟で再利用可能なコードを作成できます。関数型プログラミングでは、可変引数関数を使用すると、数値リストの合計や文字列の連結など、任意の数の入力を処理する必要がある操作が簡素化されます。
 
@@ -39,7 +42,7 @@ Scheme の **可変引数関数** は、可変数の引数を受け入れる関�
 
 **使用方法**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; 15 を返す
 ```
 
 #### 固定パラメーターを使用した可変個引数関数
@@ -58,7 +61,7 @@ Scheme の **可変引数関数** は、可変数の引数を受け入れる関�
 
 **使用方法**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; ("Hello Alice" "Hello Bob" "Hello Charlie") を返す
 ```
 
 #### 固定ロジックと可変個ロジックの組み合わせ
@@ -76,7 +79,7 @@ Scheme の **可変引数関数** は、可変数の引数を受け入れる関�
 **使用方法**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; "Fruits: Apple, Banana, Cherry" を返す
 ```
 
 ### 高度な使用例
@@ -94,7 +97,7 @@ Scheme の **可変引数関数** は、可変数の引数を受け入れる関�
 
 **使用方法**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; 18 を返す
 ```
 
 #### 再帰ロジックを使用した可変個引数関数
@@ -113,7 +116,7 @@ Scheme の **可変引数関数** は、可変数の引数を受け入れる関�
 
 **使用方法**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; 40 を返す
 ```
 
 ### 可変個引数関数の利点

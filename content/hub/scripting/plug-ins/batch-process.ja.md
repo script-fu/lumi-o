@@ -1,18 +1,21 @@
 ---
 title: "バッチ処理"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
 ---
 多くのファイルを一度に処理するための実用的なエンドツーエンドの例。
 
-## それが住んでいる場所
+## ソースコード
 
 - [ソースを表示](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
-## Lumi で登場する場所
+## Lumi でのメニュー
 
 - **ファイル → バッチ処理**
 
-## それが示すもの
+## 学べる内容
 
 - ソース/宛先ディレクトリの `SF-DIRNAME` パラメータ
 - フォールバックを使用した GUI パスの検証 (`validate-path-and-dir`)

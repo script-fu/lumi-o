@@ -2,6 +2,9 @@
 title: "Refactorización"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Una vez que tenemos una función funcionando, podemos dar un paso atrás y pensar en la mejor manera de estructurar nuestro código. El objetivo es hacer que nuestro complemento sea lo más claro, comprensible y fácil de mantener posible. Este proceso de mejorar y refinar la estructura del código existente sin cambiar su comportamiento se conoce como refactorización.
 
@@ -9,15 +12,15 @@ Aquí está la función inicial nuevamente:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Establecer el controlador de mensajes para enviar el mensaje a un cuadro de diálogo GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Establecer el controlador de mensajes para enviar el mensaje a la Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Enviar el mensaje al terminal, la ventana del SO que inició Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Introduciendo una variable llamada "mensaje":
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Establecer el controlador de mensajes para enviar el mensaje a un cuadro de diálogo GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Establecer el controlador de mensajes para enviar el mensaje a la Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Enviar el mensaje al terminal, la ventana del SO que inició Lumi
     (display message)))
 ```
 
@@ -65,14 +68,14 @@ En nuestro ejemplo hemos utilizado una variable llamada "mensaje" vinculada a un
 
 ### Extrayendo funciones
 
-En programación funcional, refactorizar código para extraer lógica reutilizable en funciones separadas es una práctica común. Al hacer esto, la **función principal** se vuelve mucho más simple y más enfocada en su objetivo de alto nivel, mientras que la **función extraída** parece más compleja porque maneja la lógica detallada. Esto es intencional y se alinea con los principios básicos de la programación funcional, como la modularidad, la separación de preocupaciones y la legibilidad. Aquí está el refactorizado.
-¡Hola Mundo! después de la extracción.
+En programación funcional, refactorizar código para extraer lógica reutilizable en funciones separadas es una práctica común. By doing this, the **main function** becomes much simpler and more focused on its high-level goal, while the **extracted function** appears more complex because it handles the detailed logic. Esto es intencional y se alinea con los principios básicos de la programación funcional, como la modularidad, la separación de preocupaciones y la legibilidad. Aquí está el refactorizado.
+¡Hola mundo! después de la extracción.
 
 Extrayendo la lógica:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Función principal
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Extrayendo la lógica:
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Función para gestionar la salida de mensajes a varios destinos
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Enviar a la Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Establecer el controlador en Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Enviar al cuadro de diálogo GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Establecer el controlador en el diálogo GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Enviar a la ventana de terminal
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; La salida del terminal se gestiona con display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restaurar el controlador de mensajes predeterminado a la Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -121,7 +124,7 @@ En el ejemplo anterior, se utiliza un tipo de datos llamado símbolo, como 'gui.
 
 ### Simplificando la función principal
 
-En la función original (scheme-hello-world), toda la lógica para enviar mensajes a diferentes salidas (GUI, Consola de errores, Terminal) se mezcló en la función principal. Después de la refactorización, la función principal simplemente se centra en **lo que hay que hacer**, enviando el mensaje a diferentes destinos.
+In the original (scheme-hello-world) function, all the logic for sending messages to different outputs (GUI, Error Console, Terminal) was mixed into the main function. Después de la refactorización, la función principal simplemente se centra en **lo que hay que hacer**, enviando el mensaje a diferentes destinos.
 
 La función principal refactorizada es más simple:
 
@@ -135,7 +138,9 @@ Por el contrario, la función **(enviar mensaje)** es donde reside la lógica de
 
 ## Relacionando esto con la programación funcional
 
-En la programación funcional, las funciones se consideran **ciudadanos de primera clase**, lo que significa que pueden reutilizarse, transmitirse y combinarse para formar comportamientos más complejos. El objetivo es:- **Descomponer problemas** en partes más pequeñas e independientes.
+En la programación funcional, las funciones se consideran **ciudadanos de primera clase**, lo que significa que pueden reutilizarse, pasarse y combinarse para formar un comportamiento más complejo. El objetivo es:
+
+- **Descomponer problemas** en partes más pequeñas e independientes.
 - **Aislar la complejidad** en funciones más pequeñas que manejan tareas específicas, como `send-message`.
 - **Mantenga simples las funciones de nivel superior** para que puedan concentrarse en orquestar el flujo de datos y acciones, sin necesidad de conocer los detalles de cómo se realiza cada tarea.
 - **Separación de preocupaciones**: La función se encarga de cómo se envía el mensaje en función del tipo de salida, lo que aísla esta lógica de la función principal.

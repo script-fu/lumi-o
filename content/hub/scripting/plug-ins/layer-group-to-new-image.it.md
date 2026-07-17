@@ -1,14 +1,17 @@
 ---
 title: "Raggruppa livelli in una nuova immagine"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 429937950043523736b0a2e40ace60284cd543755a671550cd8bb5ddb36ff246
 ---
 Copia il gruppo di livelli attivo in una nuova immagine (utile quando la pila completa è troppo pesante per lavorarci).
 
-## Dove vive
+## Codice sorgente
 
-- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Visualizza il codice sorgente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
-## Dove appare in Lumi
+## Menu in Lumi
 
 - **Livello → Raggruppa livelli in una nuova immagine**
 

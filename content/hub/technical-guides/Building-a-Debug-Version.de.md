@@ -1,14 +1,19 @@
 ---
 title: "Erstellen einer Debug-Version"
 type: docs
+url: "hub/technical-guides/Building-a-Debug-Version"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: fecc781e73b4f30881c5150c958ae9b2df4164acd4cf86926186acb8e2021d5f
 ---
+
 Diese Anleitung beschreibt den **lokalen Debug-Workflow** für Lumi mithilfe von Skripten in `build/lumi/scripts`.
 
 Der Workflow ist darauf ausgelegt:
 
-- lokale Build-Artefakte verwenden (keine Symbol-Downloads erforderlich),
-- Überprüfen Sie, ob Debug-Symbole tatsächlich vorhanden sind.
-- Starten Sie GDB standardmäßig mit dem Offline-Symbolmodus.
+- lokale Build-Artefakte zu verwenden (keine Symbol-Downloads erforderlich),
+- zu überprüfen, ob Debug-Symbole tatsächlich vorhanden sind,
+- GDB standardmäßig mit dem Offline-Symbolmodus zu starten.
 
 ## Voraussetzungen
 
@@ -45,7 +50,7 @@ Aus dem Skriptverzeichnis:
 cd ~/code/lumi-dev/build/lumi/scripts
 ```
 
-### Debug Build + Launch (Standard)
+### Debug-Build + Start (Standard)
 
 Verwenden Sie dies für normale Debugging-Sitzungen.
 
@@ -55,7 +60,7 @@ bash lumi-debug-local.sh lumi-dev build
 
 Dieser Befehl:
 
-1. baut Lumi im Debug-Modus auf,
+1. baut Lumi im Debug-Modus,
 2. überprüft Debug-Symbole,
 3. startet Lumi unter GDB.
 
@@ -69,24 +74,24 @@ bash lumi-build-debug.sh lumi-dev build
 
 ## Verwendung von TTYs unter Linux
 
-TTYs (Textkonsolen) sind häufig die zuverlässigste Methode zum Debuggen von Hard Freezes.
+TTYs (Textkonsolen) sind häufig die zuverlässigste Methode zum Debuggen harter Einfrierer.
 
 - Wechseln Sie zu einem TTY mit `Ctrl + Alt + F1` bis `Ctrl + Alt + F6`
 - Melden Sie sich über die Texteingabeaufforderung an
-- Zurück zur grafischen Sitzung mit `Ctrl + Alt + F7` (oder `F2` auf einigen Systemen)
+- Kehren Sie zur grafischen Sitzung mit `Ctrl + Alt + F7` zurück (oder `F2` auf einigen Systemen)
 
-Warum das wichtig ist: Wenn die Desktop-Sitzung ins Stocken gerät, antwortet ein TTY oft immer noch, sodass Sie GDB anhängen, einen Backtrace erfassen und nützliche Absturzdaten wiederherstellen können.
+Warum das wichtig ist: Wenn die Desktop-Sitzung hängt, antwortet ein TTY oft noch, sodass Sie GDB anhängen, einen Backtrace erfassen und nützliche Absturzdaten sichern können.
 
-## Optional: Remote/TTY-Debugging
+## Optional: Remote-/TTY-Debugging
 
-Für ein starkes Einfrieren oder Anzeigenabstürze verwenden Sie `gdbserver`:
+Bei harten Einfrierern oder Display-Blockaden verwenden Sie `gdbserver`:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash gdbserver.sh
 ```
 
-Dann von einem TTY (empfohlen für Einfrier-Szenarien) oder einem anderen Terminal:
+Dann von einem TTY (empfohlen bei Einfrier-Szenarien) oder einem anderen Terminal:
 
 ```bash
 gdb /home/mark/code/lumi-dev/bin/lumi-0.1
@@ -94,7 +99,7 @@ gdb /home/mark/code/lumi-dev/bin/lumi-0.1
 (gdb) continue
 ```
 
-Für einen lokalen GDB-Start (Nicht-TTY-Pfad):
+Für einen lokalen GDB-Start (ohne TTY):
 
 ```bash
 bash lumi-debug-launch.sh --repo lumi-dev
@@ -107,11 +112,9 @@ Debug-Builds sind von Natur aus langsamer. Wenn Sie mit dem Debuggen fertig sind
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
-# Full release reset of all major components
-
+# Vollständiger Release-Reset aller Hauptkomponenten
 bash lumi-debug-reset-release.sh lumi-dev
 
-# Optional faster local-only variant
-
+# Optionale schnellere lokale Variante
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

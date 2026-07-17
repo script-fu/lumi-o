@@ -1,37 +1,42 @@
 ---
 title: "Bestandsherstel"
 type: docs
+url: "hub/features/recovery"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 59495d24302cb3493b90bc61a6dd1ffb9bb9c30b179f7be388882fe4f45a5075
 ---
-Het herstelsysteem van Lumi is ontworpen om schilderwerk te beschermen tegen crashes, fouten en onderbroken sessies. Het geeft projecten een vangnet zonder kunstenaars te dwingen voortdurend bestanden met de hand te dupliceren.
 
-Herstel is opgebouwd rond twee ideeën: automatische achtergrondbescherming en opzettelijke controlepunten. Samen zorgen ze ervoor dat recent werk behouden blijft, terwijl de kunstenaar toch kan terugkeren naar eerdere momenten in een project.
+Het herstelsysteem van Lumi beschermt schilderwerk tegen crashes, fouten en onderbroken sessies. Het geeft projecten een vangnet zonder kunstenaars voortdurend handmatig bestanden te laten dupliceren.
+
+Herstel is opgebouwd rond twee ideeën: automatische achtergrondbescherming en bewuste controlepunten. Samen helpen ze recent werk te bewaren, terwijl de kunstenaar toch kan terugkeren naar eerdere momenten in een project.
 
 ![recover](/images/screens/recover.jpg)
 
 ## Automatische bescherming
 
-Terwijl een afbeelding wordt bewerkt, kan Lumi de herstelgegevens gescheiden houden van het hoofdwerkbestand. Dit betekent dat het project zelf niet telkens opnieuw hoeft te worden geschreven wanneer er een veiligheidssnapshot wordt gemaakt.
+Tijdens het bewerken van een afbeelding kan Lumi herstelgegevens gescheiden houden van het hoofdwerkbestand. Het project hoeft dus niet opnieuw te worden weggeschreven telkens wanneer een veiligheidsmoment wordt vastgelegd.
 
-Als er iets misgaat, kan de automatische herstelstatus een recente versie van het artwork opleveren die mogelijk nieuwer is dan de laatste opzettelijke opslag. Het doel is simpel: de hoeveelheid werk die verloren gaat als een sessie onverwacht eindigt, verminderen.
+Als er iets misgaat, kan de automatische herstelstatus een recente versie van het kunstwerk bieden die nieuwer kan zijn dan de laatste bewuste opslag. Het doel is eenvoudig: minder werk verliezen wanneer een sessie onverwacht eindigt.
 
-## Opzettelijke controlepunten
+## Bewuste controlepunten
 
-Sommige momenten in een schilderij zijn de moeite waard om bewust te bewaren: vóór een grote kleurverandering, na een succesvolle schets, voordat beslissingen worden afgevlakt of wanneer een riskante richting wordt gekozen.
+Sommige momenten in een schilderij zijn het waard om bewust te bewaren: vóór een grote kleurverandering, na een geslaagde schets, vóór beslissingen over samenvoegen, of bij een riskante richting.
 
-Lumi ondersteunt voor deze momenten controlepunten op projectniveau. Ze zijn lichter dan het bewaren van een aparte volledige kopie voor elk experiment, maar bieden de kunstenaar toch een manier om terug te gaan naar betekenisvolle punten in de geschiedenis van het werk.
+Lumi ondersteunt controlepunten op projectniveau voor deze momenten. Ze zijn lichter dan een aparte volledige kopie voor elk experiment, maar geven de kunstenaar toch een manier om terug te gaan naar betekenisvolle punten in de geschiedenis van het werk.
 
 ## Herstellen met context
 
-Herstelstatussen worden gepresenteerd als versies van het artwork in plaats van als onbewerkte bestanden waar u handmatig doorheen kunt zoeken. Hierdoor kan een kunstenaar recente automatische opslagen en doelbewuste controlepunten vergelijken en vervolgens de staat openen die het beste past bij het werk waar hij mee verder wil gaan.
+Herstelstatussen worden gepresenteerd als versies van het kunstwerk, niet als ruwe bestanden om handmatig doorheen te zoeken. Zo kan een kunstenaar recente automatische opslagen en bewuste controlepunten vergelijken en vervolgens de status openen die het beste past bij het werk waar hij mee wil doorgaan.
 
-Herstelde afbeeldingen worden geopend als werkdocumenten, zodat de kunstenaar ze kan inspecteren voordat hij besluit hoe hij deze opslaat of verdergaat.
+Herstelde afbeeldingen openen als werkdocumenten, zodat de kunstenaar ze kan bekijken voordat hij beslist hoe op te slaan of verder te gaan.
 
 ## Herstel praktisch houden
 
-Een bruikbaar herstelsysteem moet bovendien beheersbaar blijven. Lumi is ontworpen om herstelgegevens georganiseerd te houden en oude statussen verwijderbaar te maken wanneer ze niet langer nodig zijn.
+Een bruikbaar herstelsysteem moet beheersbaar blijven. Lumi houdt herstelgegevens geordend en maakt oude statussen verwijderbaar wanneer ze niet meer nodig zijn.
 
-Dit zorgt ervoor dat de veiligheid geen rommel wordt. Herstel kan op de achtergrond actief blijven, terwijl kunstenaars nog steeds een manier hebben om te bepalen hoeveel geschiedenis er in de loop van de tijd behouden blijft.
+Zo wordt veiligheid geen rommel. Herstel kan op de achtergrond actief blijven, terwijl kunstenaars nog steeds bepalen hoeveel geschiedenis in de loop van de tijd wordt bewaard.
 
 ## Vertrouwen tijdens het werken
 
-Het doel van bestandsherstel is niet om het opslaan te vervangen, maar om creatief werk minder kwetsbaar te maken. Kunstenaars kunnen schilderen, experimenteren en risico's nemen, wetende dat Lumi extra manieren handhaaft wanneer een sessie, dossier of beslissing fout gaat.
+Het doel van bestandsherstel is niet opslaan vervangen, maar creatief werk minder kwetsbaar maken. Kunstenaars kunnen schilderen, experimenteren en risico's nemen, wetend dat Lumi extra terugwegen onderhoudt wanneer een sessie, bestand of beslissing misgaat.

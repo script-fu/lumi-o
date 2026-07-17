@@ -1,30 +1,35 @@
 ---
-title: "デバッグバージョンのビルド"
+title: "デバッグ版のビルド"
 type: docs
+url: "hub/technical-guides/Building-a-Debug-Version"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: fecc781e73b4f30881c5150c958ae9b2df4164acd4cf86926186acb8e2021d5f
 ---
-このガイドでは、`build/lumi/scripts` のスクリプトを使用した Lumi の **ローカル デバッグ ワークフロー**について説明します。
 
-ワークフローは次のように設計されています。
+このガイドでは、`build/lumi/scripts` 内のスクリプトを使った Lumi の **ローカルデバッグワークフロー** を説明します。
 
-- ローカル ビルド アーティファクトを使用します (シンボルのダウンロードは必要ありません)。
-- デバッグ シンボルが実際に存在することを確認します。
-- デフォルトでは、オフライン シンボル モードで GDB を起動します。
+このワークフローは次の目的で設計されています:
+
+- ローカルビルド成果物を使う（シンボルのダウンロードは不要）
+- デバッグシンボルが実際に含まれていることを確認する
+- デフォルトでオフラインシンボルモードの GDB を起動する
 
 ## 前提条件
 
-- Debian ベースの Linux (プロジェクト ベースライン: Debian 13)
-- Lumi ソース ツリーはすでにクローン化されています
+- Debian ベースの Linux（プロジェクト基準: Debian 13）
+- Lumi ソースツリーがすでにクローン済み
 
-## ワンタイム GDB セットアップ (オプションですが推奨)
+## 一度だけ行う GDB セットアップ（任意ですが推奨）
 
-GDB ツールをインストールします。
+GDB ツールをインストールします:
 
 ```bash
 sudo apt update
 sudo apt install gdb gdbserver
 ```
 
-オプションのローカル ロギング設定:
+任意のローカルログ設定:
 
 ```bash
 mkdir -p ~/code/gdb_logs
@@ -35,58 +40,58 @@ set logging overwrite on
 EOF
 ```
 
-注: Lumi のローカル デバッグ スクリプトは、シンボル解決をローカルかつ再現可能に保つために、デフォルトで `debuginfod` を無効にします。
+注: Lumi のローカルデバッグスクリプトは、シンボル解決をローカルかつ再現可能に保つため、デフォルトで `debuginfod` を無効にします。
 
 ## クイックスタート
 
-スクリプト ディレクトリから:
+スクリプトディレクトリから:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 ```
 
-### デバッグビルド + 起動 (デフォルト)
+### デバッグビルド + 起動（デフォルト）
 
-これは通常のデバッグ セッションに使用します。
+通常のデバッグセッション向けです。
 
 ```bash
 bash lumi-debug-local.sh lumi-dev build
 ```
 
-このコマンド:
+このコマンドは次を行います:
 
-1. Lumi をデバッグモードでビルドします。
-2. デバッグシンボルを検証します。
-3. GDB の下で Lumi を起動します。
+1. Lumi をデバッグモードでビルドする
+2. デバッグシンボルを検証する
+3. GDB 下で Lumi を起動する
 
-### デバッグ ビルドのみ (後の TTY/リモート セッション用)
+### デバッグビルドのみ（後で TTY/リモートセッション用）
 
-今すぐビルドして後で起動/デバッグしたい場合にこれを使用します。
+今ビルドして、起動やデバッグは後で行う場合に使います。
 
 ```bash
 bash lumi-build-debug.sh lumi-dev build
 ```
 
-## Linux での TTY の使用
+## Linux で TTY を使う
 
-TTY (テキスト コンソール) は、多くの場合、ハード フリーズをデバッグする最も信頼できる方法です。
+TTY（テキストコンソール）は、ハードフリーズのデバッグで最も信頼できる方法であることが多いです。
 
-- `Ctrl + Alt + F1` から `Ctrl + Alt + F6` の TTY に切り替える
-- テキストプロンプトからログインします
-- `Ctrl + Alt + F7` (一部のシステムでは `F2`) を使用してグラフィカル セッションに戻ります。
+- `Ctrl + Alt + F1` から `Ctrl + Alt + F6` で TTY に切り替える
+- テキストプロンプトからログインする
+- `Ctrl + Alt + F7`（一部のシステムでは `F2`）でグラフィカルセッションに戻る
 
-これが重要な理由: デスクトップ セッションが停止しても、TTY は多くの場合まだ応答するため、GDB を接続し、バックトレースをキャプチャし、有用なクラッシュ データを回復できます。
+なぜ重要か: デスクトップセッションが固まっても TTY は応答することが多く、GDB を接続してバックトレースを取得し、有用なクラッシュデータを回収できます。
 
-## オプション: リモート/TTY デバッグ
+## オプション: リモート / TTY デバッグ
 
-ハード フリーズまたはディスプレイのハングアップの場合は、`gdbserver` を使用します。
+ハードフリーズやディスプレイのロックアップには `gdbserver` を使います:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash gdbserver.sh
 ```
 
-次に、TTY (フリーズ シナリオに推奨) または別の端末から次のようにします。
+TTY（フリーズ時は推奨）または別のターミナルから:
 
 ```bash
 gdb /home/mark/code/lumi-dev/bin/lumi-0.1
@@ -94,24 +99,22 @@ gdb /home/mark/code/lumi-dev/bin/lumi-0.1
 (gdb) continue
 ```
 
-ローカル GDB 起動の場合 (非 TTY パス):
+ローカル GDB 起動（非 TTY パス）:
 
 ```bash
 bash lumi-debug-launch.sh --repo lumi-dev
 ```
 
-## パフォーマンスに関するメモ
+## パフォーマンスに関する注意
 
-デバッグ ビルドは設計により遅くなります。デバッグが完了したら、より高速なビルドに戻します。
+デバッグビルドは意図的に遅くなります。デバッグが終わったら、より高速なビルドに戻してください:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
-
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
-
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

@@ -2,6 +2,9 @@
 title: "最初のステップ"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 First Steps では、Scheme でうまく機能する機能パターンを、短い例と段階的なリファクタリングとともに紹介します。
 最終的には、独自のカスタム メッセージング ライブラリを構築し、より高度なプラグインの開発を続けるための強固な基盤が得られるでしょう。
@@ -28,6 +31,6 @@ First Steps では、Scheme でうまく機能する機能パターンを、短�
 {{< cards >}}
   {{< card link="reworking" title="手直し" icon="adjustments" subtitle="高度なコード再構築テクニック" >}}
   {{< card link="refactor-again" title="再度リファクタリングする" icon="arrow-sm-right" subtitle="反復的な改善と最適化" >}}
-  {{< card link="the-procedure-browser" title="プロシージャブラウザ" icon="book-open" subtitle="Lumi のプロシージャ データベースを探索する" >}}
+  {{< card link="the-procedure-browser" title="プロシージャブラウザ" icon="book-open" subtitle="Lumi の手順データベースを探索する" >}}
   {{< card link="final-thoughts" title="最終的な考え" icon="academic-cap" subtitle="開発の概要と次のステップ" >}}
 {{< /cards >}}

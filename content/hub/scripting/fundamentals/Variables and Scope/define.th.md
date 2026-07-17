@@ -1,7 +1,10 @@
 ---
-title: "กำหนด"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 คำสั่ง `define` ใน Scheme เป็นโครงสร้างอเนกประสงค์ที่ใช้ในการสร้างการเชื่อมโยงส่วนกลางหรือท้องถิ่น โดยทั่วไปจะใช้เพื่อกำหนดตัวแปรและฟังก์ชัน ทำให้สามารถนำมาใช้ซ้ำและเข้าถึงได้ทั่วทั้งสคริปต์หรือภายในขอบเขตเฉพาะ การทำความเข้าใจ `define` เป็นสิ่งสำคัญสำหรับการเขียนโปรแกรม Scheme แบบโมดูลาร์ ใช้ซ้ำได้ และอ่านได้
 
@@ -28,7 +31,7 @@ weight: 3
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; คำนวณ 2π
 ```
 
 **ผลลัพธ์**: `6.28318`
@@ -51,7 +54,7 @@ weight: 3
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; คำนวณ 4²
 ```
 
 **ผลลัพธ์**: `16`
@@ -66,8 +69,8 @@ weight: 3
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; ฟังก์ชันช่วยภายใน
+  (define (cube x) (* x x x))  ;; ฟังก์ชันช่วยภายใน
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

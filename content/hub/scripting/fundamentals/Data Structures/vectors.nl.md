@@ -1,7 +1,10 @@
 ---
 title: "Vectoren"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 In Scheme is een vector een andere fundamentele gegevensstructuur die wordt gebruikt om waarden te groeperen. In tegenstelling tot lijsten zijn vectoren geïndexeerde verzamelingen van elementen met een vaste grootte, waardoor snellere willekeurige toegang en updates mogelijk zijn. Elk element in een vector kan van elk type zijn, inclusief een andere vector. Vectoren worden weergegeven met # gevolgd door haakjes. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Elementen in een vector worden benaderd met behulp van de `vector-ref` procedure
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Geeft het element op index 0 terug
+(vector-ref my-vector 1)  ; Geeft het element op index 1 terug
 ```
 
 #### Iteratie: elk element in een vector verwerken
@@ -42,9 +45,9 @@ U kunt een vector herhalen met behulp van een lus of recursie. Schema biedt `vec
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Drukt het element af
+        (loop (+ i 1)))                                    ; Verwerkt de volgende index
+      (lumi-message "done"))))                             ; Einde van de lus
 ```
 
 - **Basisscenario:** Als de index `i` de lengte van de vector bereikt, stop dan de lus.
@@ -99,7 +102,7 @@ De `vector-set!` procedure werkt een element in een vector bij op een gespecific
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Stelt het tweede element in op 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ Resultaat: `#(1 42 3)`
 De `vector?` procedure controleert of een gegeven waarde een vector is.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Controleert of #(1 2 3) een vector is
+(vector? 42)              ; Controleert of 42 een vector is
 ```
 
 Resultaat:
@@ -127,11 +130,11 @@ Hier is een voorbeeld dat laat zien hoe vectoren ter referentie worden doorgegev
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Werkt de vector bij op de opgegeven index
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Wijzigt het tweede element naar 99
+my-vector                              ; De oorspronkelijke vector is nu bijgewerkt
 ```
 
 Resultaat: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme biedt verschillende ingebouwde procedures voor het werken met vectoren, w
 - `list->vector`: Converteert een lijst naar een vector.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Geeft 3 terug
+(vector->list (vector 1 2 3))          ; Zet vector om in lijst: (1 2 3)
+(list->vector (list 1 2 3))            ; Zet lijst om in vector: #(1 2 3)
 ```
 
 Resultaat:
@@ -187,8 +190,8 @@ Om toegang te krijgen tot elementen binnen een geneste vector, gebruikt u `vecto
 #### Voorbeeld: toegang tot elementen
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Geeft het eerste element terug: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Geeft het tweede element van de eerste vector terug: 2
 ```
 
 ### Samenvatting

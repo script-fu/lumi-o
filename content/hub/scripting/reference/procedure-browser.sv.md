@@ -1,6 +1,9 @@
 ---
 title: "Procedur webbläsare"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2593585be79d09f94dee166e7003ceddc532b4d2f7c1060222fe5f5c758ef27
 ---
 Procedurbläddraren är det primära referensverktyget för att upptäcka de hundratals funktioner som finns tillgängliga i Lumis procedurdatabas (PDB). Eftersom alla verktyg, filter och skript i Lumi måste registreras i PDB för att kunna anropas, är den här webbläsaren faktiskt en komplett PDB-utforskare.
 

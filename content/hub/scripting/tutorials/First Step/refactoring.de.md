@@ -2,6 +2,9 @@
 title: "Refactoring"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Sobald eine Funktion funktioniert, können wir einen Schritt zurücktreten und darüber nachdenken, wie wir unseren Code am besten strukturieren. Ziel ist es, unser Plug-in so klar, verständlich und wartbar wie möglich zu gestalten. Dieser Prozess der Verbesserung und Verfeinerung der Struktur des vorhandenen Codes ohne Änderung seines Verhaltens wird als Refactoring bezeichnet.
 
@@ -9,15 +12,15 @@ Hier noch einmal die Ausgangsfunktion:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Nachrichtenhandler so setzen, dass die Nachricht in ein GUI-Dialogfeld ausgegeben wird
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Nachricht an das terminal senden, das OS-Fenster, das Lumi gestartet hat
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Einführung einer Variablen namens „message“:
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Nachrichtenhandler so setzen, dass die Nachricht in ein GUI-Dialogfeld ausgegeben wird
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Nachricht an das terminal senden, das OS-Fenster, das Lumi gestartet hat
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ Hallo Welt! nach der Extraktion.
 
 Extrahieren der Logik:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Hauptfunktion
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Extrahieren der Logik:
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Funktion zur Ausgabe von Nachrichten an verschiedene Ziele
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; An die Error Console senden
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Handler auf Error Console setzen
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; An das GUI-Dialogfeld senden
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Handler auf GUI-Dialog setzen
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; An das Terminalfenster senden
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Terminal-Ausgabe wird mit display verarbeitet
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Standard-Nachrichtenhandler auf die Error Console zurücksetzen
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

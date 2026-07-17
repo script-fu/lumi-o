@@ -2,6 +2,9 @@
 title: "쌈"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 구성표 명령은 낮은 수준에서 작동합니다. 즉, 간단한 작업에도 여러 단계가 필요할 수 있습니다. 그러나 이러한 세분성은 유연성을 제공하므로 필요한 작업을 정확히 수행하는 작고 재사용 가능한 기능으로 명령을 묶을 수 있습니다. 포장은 흑백 개념이 아닙니다. 자주 사용되는 명령에 대한 간단한 별칭부터 전체 작업 흐름을 관리하는 보다 복잡한 기능까지 다양합니다. 때로는 래퍼가 가독성을 높이기 위한 편의 기능일 뿐인 반면, 다른 경우에는 여러 작업을 캡슐화하는 완전한 기능을 갖춘 유틸리티로 발전합니다.
 
@@ -17,7 +20,7 @@ weight: 4
 
 플러그인이 성장함에 따라 래퍼는 핵심 로직을 읽기 쉽게 유지하고 반복적인 세부 정보를 격리하는 데 도움이 됩니다.
 
-함수 래핑의 또 다른 이점은 함수를 Visual Studio Code와 같은 구문 강조 표시에 통합하는 것입니다. 이를 통해 가독성과 탐색 기능이 향상되어 스크립트가 더욱 명확해집니다. 사용자 정의 함수를 사용하는 플러그인에서 녹색으로 강조 표시된 함수는 해당 함수가 라이브러리에서 올바르게 참조되었음을 확인합니다.
+함수 래핑의 또 다른 이점은 함수를 Visual Studio Code와 같은 구문 강조 표시에 통합하는 것입니다. 이를 통해 가독성과 탐색 기능이 향상되어 스크립트가 더 명확해집니다. 사용자 정의 함수를 사용하는 플러그인에서 녹색으로 강조 표시된 함수는 해당 함수가 라이브러리에서 올바르게 참조되었음을 확인합니다.
 
 자체 도우미 라이브러리를 유지 관리하는 경우 편집기의 구문 강조 표시에 프로젝트의 함수 이름을 추가하는 것을 고려해 보세요. 탐색 및 리팩토링이 더 빨라집니다.
 
@@ -26,7 +29,7 @@ weight: 4
 ### 무작위 시드
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 목적: 필터 시드용 난수 정수 반환
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ weight: 4
 예를 들어, 대신 ***random***으로 전환하기로 결정한 경우:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 목적: 필터 시드용 난수 정수 반환
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ weight: 4
 Scheme의 JPEG 내보내기 기능에는 다양한 매개변수가 포함되어 있어 이미지 저장 방법을 세밀하게 제어할 수 있습니다. 그러나 대부분의 경우 파일 이름, 품질 등 몇 가지 주요 설정에만 관심이 있습니다. 프로세스를 단순화하기 위해 함수를 래핑할 수 있습니다.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; 목적: 지정된 품질로 이미지를 JPEG로 저장
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; jpg.jpg 방지
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Scheme의 JPEG 내보내기 기능에는 다양한 매개변수가 포함되어 
 ***car*** 기능은 비밀스럽고 스크립팅 오류가 발생하기 쉽습니다. 실수로 ***car***를 벡터나 목록이 아닌 항목에 적용하여 예상치 못한 동작이 발생하기 쉽습니다. 코드를 더욱 강력하고 읽기 쉽게 만들기 위해 이 기능을 보다 안전한 함수로 래핑할 수 있습니다.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; 목적: 리스트 또는 벡터의 첫 번째 항목 반환.
+;;          입력이 유효하지 않거나 비어 있으면 경고.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; 비어 있지 않은 목록 처리
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; 비어 있지 않은 벡터 처리
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; 잘못되었거나 비어 있는 입력
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Scheme의 JPEG 내보내기 기능에는 다양한 매개변수가 포함되어 
 *x*** 좌표를 검색합니다. 그러나 기능적이긴 하지만 그다지 표현력이 좋지는 않습니다. 대신 ***첫 번째 항목***을 더 적절한 정의로 래핑하여 의도를 더 명확하게 할 수 있습니다.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; 목적: 가독성을 위해 x 좌표 반환
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; 목적: 가독성을 위해 y 좌표 반환
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ Scheme의 JPEG 내보내기 기능에는 다양한 매개변수가 포함되어 
 이제 일반 구성표를 작성하는 대신 다음을 수행하십시오.
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; x 좌표를 가져옴
+(cadr pixel-coords) ;; y 좌표를 가져옴
 ```
 
 우리는 _our_ Scheme으로 작성할 수 있습니다:

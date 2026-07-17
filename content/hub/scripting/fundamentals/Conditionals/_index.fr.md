@@ -2,27 +2,30 @@
 title: "Conditions"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
 ---
-Les conditions sont un élément fondamental de la programmation, permettant aux scripts de prendre des décisions et de contrôler leur flux en fonction de critères spécifiques. Dans Scheme, basé sur le langage de programmation Scheme, les conditions vous permettent de créer des scripts dynamiques et intelligents qui s'adaptent aux modifications des entrées, des environnements ou des actions de l'utilisateur.
+Les conditions sont un élément fondamental de la programmation : elles permettent aux scripts de prendre des décisions et de contrôler leur flux en fonction de critères précis. En Scheme, basé sur le langage de programmation Scheme, les conditions vous aident à créer des scripts dynamiques et intelligents qui s'adaptent aux entrées, environnements ou actions utilisateur changeants.
 
-### Le rôle des conditions dans le schéma
+### Le rôle des conditions en Scheme
 
-Les conditions remplissent plusieurs objectifs clés dans vos scripts :
-- **Directing Logic :** Ils vous permettent d'exécuter différents morceaux de code selon que certaines conditions sont vraies ou fausses.
-- **Amélioration de la flexibilité :** En répondant dynamiquement aux entrées ou aux états, les conditions aident votre script à gérer une variété de scénarios.
-- **Simplification de la complexité :** Ils décomposent la prise de décision en structures gérables, rendant le code plus facile à lire, à déboguer et à maintenir.
+Les conditions remplissent plusieurs fonctions essentielles dans vos scripts :
+- **Diriger la logique :** Elles exécutent des morceaux de code différents selon que certaines conditions sont vraies ou fausses.
+- **Plus de flexibilité :** En réagissant dynamiquement aux entrées ou aux états, elles aident votre script à gérer une variété de scénarios.
+- **Simplifier la complexité :** Elles décomposent la prise de décision en structures gérables, rendant le code plus facile à lire, déboguer et maintenir.
 
 ### Types de conditions disponibles
 
-Scheme fournit plusieurs constructions conditionnelles, chacune adaptée à différents besoins logiques :
-- **`if`:** Pour prendre des décisions binaires simples, en exécutant un bloc de code si une condition est vraie et un autre si elle est fausse.
-- **`cond`:** Une puissante construction multi-branches pour gérer plusieurs conditions de manière claire et structurée.
-- **`and` / `or`:** Opérateurs logiques qui évaluent des combinaisons de conditions, permettant une prise de décision plus complexe.
-- **`else`:** Un fourre-tout qui définit le comportement de repli lorsqu'aucune des conditions spécifiées n'est remplie.
+Scheme propose plusieurs constructions conditionnelles, chacune adaptée à des besoins logiques différents :
+- **`if` :** Pour des décisions binaires simples — un bloc si la condition est vraie, un autre si elle est fausse.
+- **`cond` :** Une construction puissante à branchements multiples pour gérer plusieurs conditions de façon claire et structurée.
+- **`and` / `or` :** Opérateurs logiques qui évaluent des combinaisons de conditions pour une prise de décision plus complexe.
+- **`else` :** Un cas de repli qui définit le comportement lorsqu'aucune condition spécifiée n'est remplie.
 
 ### Comment fonctionnent les conditions
 
-Les conditions impliquent généralement :
-1. **Évaluation d'une condition :** Une expression de test détermine si une condition est vraie ou fausse.
-2. **Exécution de branchement :** En fonction de l'évaluation, le script sélectionne le bloc de code à exécuter.
-3. **Renvoi d'une valeur (facultatif) :** Dans certains cas, les conditions peuvent également produire une valeur que d'autres parties du script peuvent utiliser.
+Les conditions impliquent généralement :
+1. **Évaluer une condition :** Une expression de test détermine si une condition est vraie ou fausse.
+2. **Exécution par branchement :** Selon l'évaluation, le script choisit le bloc de code à exécuter.
+3. **Retourner une valeur (facultatif) :** Dans certains cas, les conditions produisent aussi une valeur utilisable ailleurs dans le script.

@@ -2,6 +2,9 @@
 title: "Variadische functies"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Variadische functies** in Schema zijn functies die een variabel aantal argumenten accepteren. Deze functies zijn zeer veelzijdig en stellen u in staat flexibele en herbruikbare code te creëren. Bij functioneel programmeren vereenvoudigen variadische functies bewerkingen waarbij een willekeurig aantal invoergegevens moet worden verwerkt, zoals het optellen van een lijst met getallen of het aaneenschakelen van tekenreeksen.
 
@@ -39,7 +42,7 @@ Variadische functies worden gedefinieerd met het symbool `.` vóór de laatste p
 
 **Gebruik**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Geeft 15 terug
 ```
 
 #### Variadische functie met vaste parameters
@@ -58,7 +61,7 @@ U kunt vaste parameters combineren met een variabele parameter om flexibelere fu
 
 **Gebruik**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Geeft ("Hello Alice" "Hello Bob" "Hello Charlie") terug
 ```
 
 #### Vaste en variabele logica combineren
@@ -76,7 +79,7 @@ U kunt vaste parameters combineren met een variabele parameter om flexibelere fu
 **Gebruik**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Geeft "Fruits: Apple, Banana, Cherry" terug
 ```
 
 ### Geavanceerde gebruiksscenario's
@@ -94,7 +97,7 @@ Variadische functies blinken uit in het verwerken van willekeurige gegevens. Hie
 
 **Gebruik**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Geeft 18 terug
 ```
 
 #### Variadische functies met recursieve logica
@@ -113,7 +116,7 @@ Variadische functies blinken uit in het verwerken van willekeurige gegevens. Hie
 
 **Gebruik**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Geeft 40 terug
 ```
 
 ### Voordelen van variadische functies

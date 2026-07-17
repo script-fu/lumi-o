@@ -1,11 +1,14 @@
 ---
-title: "いつ"
+title: "when"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
 ---
-Scheme では、`if` はエレガントで多用途ですが、明示的な `else` なしで使用すると混乱を招く可能性があります。これは、`false` の場合に代替アクションを行わずに、条件が true の場合にのみコードの単一分岐を実行することを目的としている場合に特に当てはまります。このようなシナリオでは、`when` 構造がより明確で簡潔な代替手段を提供します。
+En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
 
-`when` の基本的な形式は次のようになります。
+La forme de base de `when` :
 
 ```scheme
 (when test-is-true
@@ -13,10 +16,10 @@ Scheme では、`if` はエレガントで多用途ですが、明示的な `els
   do-that)
 ```
 
-- `test` が true (`#t`) と評価された場合、`when` 構造体の本体内のすべての式が順番に実行されます。
-- `test` が false (`#f`) と評価された場合、何も起こらず、値は返されません。
+- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
+- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
 
-### 例
+### Exemple
 
 ```scheme
 (when (< 0 1)
@@ -24,9 +27,9 @@ Scheme では、`if` はエレガントで多用途ですが、明示的な `els
   (lumi-message "Executing additional actions."))
 ```
 
-### `if` と `when` の対照
+### Comparer `if` et `when`
 
-`if` と `when` の違いをよりよく理解するために、両方を一緒に使用する次の例を考えてみましょう。
+Les deux ensemble dans le même exemple :
 
 ```scheme
 (if (= 0 1)
@@ -36,25 +39,18 @@ Scheme では、`if` はエレガントで多用途ですが、明示的な `els
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### 説明:
+#### Explication
 
-1. **`if` 条件**:
-   - テスト `(= 0 1)` は、0 が 1 に等しいかどうかをチェックします。
-   - false(`#f`)なので、`if`の`else`ブランチが実行されます。
+1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
+2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
 
-2. **`else` ブランチの `when` コンストラクト**:
-   - `when` テスト `(< 0 1)` は、0 が 1 より小さいかどうかをチェックします。
-   - これは true (`#t`) なので、`when` の本文内のすべての式が順番に実行されます。
-     - First, it prints `"The 'when' condition is true!"`.
-     - Then, it prints `"Executing multiple actions within 'when'."`.
+#### Pourquoi `when` ?
 
-#### ここで `when` を使用する理由
+- Pas de `else` vide ou factice.
+- Montre que seule la branche vraie compte.
 
-- 別の `if` の代わりに `when` を使用すると、条件の明示的な `else` 分岐が必要ない場合にロジックが簡素化されます。
-- `when` は、真のブランチのみが関連することを明確にし、潜在的な混乱を軽減します。
+### Résumé
 
-### 概要
-
-- true と false の両方の分岐が必要な場合は、`if` を使用します。
-- 実際のケースに分岐が 1 つしかない場合、特に複数のアクションを実行する必要がある場合は、`when` を使用します。
-- `if` と `when` を組み合わせると、より複雑な条件を明確かつ簡潔に構造化できます。
+- **`if` :** quand les deux branches comptent.
+- **`when` :** branche vraie seule, plusieurs actions possibles.
+- Les combiner structure clairement des conditions complexes.

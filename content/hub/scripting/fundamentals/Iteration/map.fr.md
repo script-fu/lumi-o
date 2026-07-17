@@ -1,22 +1,25 @@
 ---
-title: "carte"
+title: "map"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
 ---
-La fonction `map` dans Scheme est utilisée pour appliquer une procédure à chaque élément d'une liste (ou plusieurs listes) et **renvoyer une nouvelle liste** contenant les résultats. Cela le rend idéal pour transformer les données.
+La fonction `map` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes) et **renvoie une nouvelle liste** contenant les résultats. Idéale pour transformer des données.
 
-La forme la plus simple de `map` ressemble à ceci :
+La forme la plus simple de `map` ressemble à ceci :
 
 ```scheme
 (map procedure list)
 ```
 
-- **Procédure** : Une fonction à appliquer à chaque élément de la liste.
-- **Liste** : La liste dont les éléments seront transformés.
+- **Procédure :** Fonction appliquée à chaque élément.
+- **Liste :** Liste à transformer.
 
 ---
 
-### Exemple : Doublez chaque élément
+### Exemple : doubler chaque élément
 
 ```scheme
 (define (double x)
@@ -25,26 +28,23 @@ La forme la plus simple de `map` ressemble à ceci :
 (map double (list 1 2 3 4))
 ```
 
-- Ici, la fonction `double` est appliquée à chaque élément de la liste `(1 2 3 4)`.
-- Le résultat est une nouvelle liste avec chaque élément doublé.
+- `double` est appliqué à `(1 2 3 4)`.
+- Résultat : nouvelle liste avec valeurs doublées.
 
-**Sortie** : `(2 4 6 8)`
+**Sortie** : `(2 4 6 8)`
 
 ---
 
 ### Comment ça marche
 
-1. **Crée une nouvelle liste** :
-   - `map` applique la procédure fournie à chaque élément de la liste et collecte les résultats dans une nouvelle liste.
-
-2. **Transforme les données** :
-   - Il est principalement utilisé pour les transformations de données plutôt que pour effectuer des effets secondaires.
+1. **Nouvelle liste :** `map` collecte les résultats.
+2. **Transformation :** Plutôt que des effets de bord.
 
 ---
 
-#### Exemple : Utilisation avec plusieurs listes
+#### Plusieurs listes
 
-Si plusieurs listes sont fournies, `map` traite les éléments correspondants de chaque liste.
+Avec plusieurs listes, `map` traite les éléments correspondants.
 
 ```scheme
 (define (sum x y)
@@ -53,16 +53,14 @@ Si plusieurs listes sont fournies, `map` traite les éléments correspondants de
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-- La fonction `sum` ajoute les éléments correspondants des deux listes et renvoie les résultats sous forme d'une nouvelle liste.
-
-**Sortie** : `(5 7 9)`
+**Sortie** : `(5 7 9)`
 
 ---
 
 ### Résumé
 
-- La fonction `map` est un outil puissant pour transformer des listes en appliquant une procédure à chaque élément.
-- Contrairement à `for-each`, `map` **produit une nouvelle liste** contenant les résultats de l'application de la procédure.
-- Il prend en charge plusieurs listes, permettant des opérations par éléments sur elles.
+- `map` transforme des listes élément par élément.
+- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
+- Plusieurs listes sont traitées par paires.
 
-En utilisant `map`, vous pouvez créer efficacement des versions transformées de vos données tout en conservant les listes d'origine inchangées.
+Avec `map`, créez des versions transformées tout en conservant les listes d'origine.

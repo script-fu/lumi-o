@@ -2,6 +2,9 @@
 title: "Refactorizar nuevamente"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 A medida que crece la biblioteca auxiliar, se vuelve más difícil seguirla de un vistazo. Refactorice nuevamente para mantener cada función pequeña y con un solo propósito.
 
@@ -15,11 +18,11 @@ Podemos tomar la parte de la función que valida los argumentos `message` y `out
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; Comprobar si el mensaje es una cadena no vacía
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; Comprobar si la salida es uno de los destinos esperados
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ Ahora que la validación se ha movido a una función separada, la función `send
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; Llamar a la función de validación antes de continuar
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; Enviar a la Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Enviar al cuadro de diálogo GUI
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Enviar a la ventana de terminal
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurar el controlador de mensajes predeterminado a la Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ Cada tipo de salida de mensaje (GUI, consola de mensajes, terminal) se puede mov
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; Enviar a la salida adecuada
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurar el controlador de mensajes predeterminado a la Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ Dado que la validación es una parte importante para garantizar que tanto el men
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ Al trasladar la validación a cada función de envío a*, las hemos hecho reutil
 Una versión de biblioteca refactorizada:
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; Propósito: Envía un mensaje al cuadro de diálogo GUI
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; Propósito: Envía un mensaje a la Message console
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; Propósito: Envía un mensaje a la ventana del terminal
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; Validar el mensaje antes de continuar
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Propósito: Envía un mensaje al destino de salida adecuado
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurar el controlador de mensajes predeterminado a la Message console
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; Propósito: Comprueba que el mensaje es una cadena no vacía y que la salida es válida
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; Comprobar si el mensaje es una cadena no vacía
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; Comprobar si la salida es uno de los destinos esperados
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

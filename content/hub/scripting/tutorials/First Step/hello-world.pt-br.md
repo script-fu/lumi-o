@@ -2,11 +2,14 @@
 title: "Olá mundo!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 Este tutorial percorre a estrutura mínima de um plug-in do Scheme. Algumas linhas são “padrão”: são necessárias para que o Lumi carregue o arquivo, mesmo que você ainda não as entenda completamente.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -23,7 +26,7 @@ Uma função, também conhecida como _procedimento_, é um pedaço de código co
 
 **Entrada** > **_Função_** > **Saída**
 
-### Registre a Função
+### Registre a função
 
 Cadastrar é o ato de colocar o nome da função em uma lista para que Lumi saiba disso.
 
@@ -62,19 +65,19 @@ O código pode organizar as coisas de maneira semelhante, o que pode parecer est
 Aqui está o exemplo completo. A maioria dos procedimentos Lumi são prefixados com `lumi-`. Por exemplo, `lumi-message` imprime uma string no manipulador de mensagens configurado.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Definir o manipulador de mensagens para enviar a mensagem para uma caixa de diálogo GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Definir o manipulador de mensagens para enviar a mensagem para a Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Enviar a mensagem para o terminal, a janela do SO que iniciou o Lumi
   (display "Hello world!\n"))
 
 

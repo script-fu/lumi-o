@@ -1,6 +1,9 @@
 ---
 title: "Verktygswebbläsare"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 Utility Browser låter dig utforska det inbyggda Scheme-verktyget stdlib som levereras med Lumi, utan att behöva lämna appen eller gräva igenom källfiler.
 
@@ -14,7 +17,7 @@ Fönstret öppnas omedelbart; ingen plugin behöver laddas i förväg.
 
 Webbläsaren listar varje procedur, variabel och syntaxform som exporteras av de sju verktygsbiblioteken som Lumi laddar automatiskt vid start:
 
-| Bibliotek | Vad det omfattar |
+| Bibliotek | Innehåll |
 |---|---|
 | `common.scm` | Allmänna hjälpmedel (sträng, nummer, listverktyg) |
 | `files.scm` | Fil- och sökvägshjälpmedel |

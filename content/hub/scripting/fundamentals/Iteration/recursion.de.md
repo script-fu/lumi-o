@@ -2,10 +2,13 @@
 title: "Einfache Rekursion"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 47fd79f37d5542e30722efaf4f87cd10efb77d825101f2045b191e3640137168
 ---
-Rekursion ist ein leistungsstarkes Konzept in Scheme, bei dem sich eine Funktion selbst aufruft, um kleinere Teilprobleme des ursprünglichen Problems zu lösen. Ein **einfaches Rekursionsmuster** umfasst einen Basisfall, um die Rekursion zu stoppen, und einen rekursiven Fall, um das Problem zu reduzieren.
+Rekursion in Scheme bedeutet, dass eine Funktion sich selbst aufruft, um kleinere Teilprobleme zu lösen. **Einfache Rekursion** hat einen Basisfall zum Stoppen und einen rekursiven Fall zur Problemverkleinerung.
 
-Die allgemeine Struktur einer rekursiven Funktion sieht folgendermaßen aus:
+Allgemeine Struktur:
 
 ```scheme
 (define (function-name args)
@@ -14,102 +17,65 @@ Die allgemeine Struktur einer rekursiven Funktion sieht folgendermaßen aus:
     (recursive-call)))
 ```
 
-- **Grundbedingung**: Stoppt die Rekursion.
-- **Basisergebnis**: Der zurückgegebene Wert, wenn die Basisbedingung erfüllt ist.
-- **Rekursiver Aufruf**: Ein Aufruf der Funktion selbst mit geänderten Argumenten, die die Berechnung näher an den Basisfall heranführen.
+- **Base Condition:** stoppt die Rekursion.
+- **Base Result:** Wert im Basisfall.
+- **Recursive Call:** Aufruf mit angepassten Argumenten.
 
 ---
 
-### Beispiel: Summe der Zahlen (1 bis n)
-
-Eine einfache rekursive Funktion zur Berechnung der Summe der Zahlen von 1 bis n:
+### Beispiel: Summe 1 bis n
 
 ```scheme
 (define (sum-to-n n)
-  (if (= n 0)                  ; Base case: stop when n is 0
-    0                          ; Base result: sum is 0
-    (+ n (sum-to-n (- n 1))))) ; Recursive call: sum current n with result of smaller problem
+  (if (= n 0)                  ; Basisfall: Stopp, wenn n 0 ist
+    0                          ; Basisergebnis: Summe ist 0
+    (+ n (sum-to-n (- n 1))))) ; Rekursiver Aufruf: aktuelles n mit Ergebnis des kleineren Problems addieren
 ```
 
----
+#### Zerlegen und wieder zusammensetzen
 
-#### Wie es funktioniert: Zerlegen und wieder zusammenbauen
+Rekursion zerlegt das Problem; jeder Aufruf bearbeitet ein Stück. Am Basisfall setzt sich das Ergebnis wieder zusammen.
 
-Bei der Rekursion wird das ursprüngliche Problem in kleinere Teile zerlegt. Jeder Aufruf der Funktion verarbeitet einen Teil und gibt den Rest weiter. Sobald der einfachste Fall erreicht ist, werden die Ergebnisse nach Abschluss der Berechnung wieder zusammengesetzt.
+#### Schritt für Schritt: sum-to-n 3
 
-#### Schritt-für-Schritt-Nachverfolgung der Summe zu n 3
+1. *sum-to-n 3* → *(+ 3 (sum-to-n 2))*
+2. *sum-to-n 2* → *(+ 2 (sum-to-n 1))*
+3. *sum-to-n 1* → *(+ 1 (sum-to-n 0))*
+4. *sum-to-n 0* → *0*
 
-1. **Erster Aufruf**: *sum-to-n 3*
-   → *(+ 3 (sum-to-n 2))*
+#### Ergebnis zusammensetzen
 
-2. **Zweiter Aufruf**: *sum-to-n 2*
-   → *(+ 2 (sum-to-n 1))*
-
-3. **Dritter Aufruf**: *sum-to-n 1*
-   → *(+ 1 (sum-to-n 0))*
-
-4. **Basisfall**: *Summe-zu-n 0*
-   → *0*
+1. *sum-to-n 0* → *0*
+2. *sum-to-n 1* → *1*
+3. *sum-to-n 2* → *3*
+4. *sum-to-n 3* → *6*
 
 ---
 
-#### Zusammenbau des Endergebnisses
-
-Sobald der einfachste Fall gelöst ist, wird jede Schicht der Berechnung abgeschlossen:
-
-1. *sum-to-n 0* ergibt *0*
-2. *sum-to-n 1* wird zu *(+ 1 0) = 1*
-3. *sum-to-n 2* wird zu *(+ 2 1) = 3*
-4. *sum-to-n 3* wird zu *(+ 3 3) = 6*
-
----
-
-### Beispiel: Jedes Element einer Liste drucken
-
-Hier ist eine einfache rekursive Funktion zum Drucken jedes Elements in einer Liste:
+### Beispiel: Listenelemente ausgeben
 
 ```scheme
 (define (print-elements lst)
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ; Print the first element
-      (print-elements (cdr lst)))))             ; Process the rest of the list
+      (lumi-message (number->string (car lst))) ; Gibt das erste Element aus
+      (print-elements (cdr lst)))))             ; Verarbeitet den Rest der Liste
 ```
 
-- **Basisfall:** Wenn die Liste leer ist (*null? lst*), Rekursion stoppen.
-- **Rekursiver Fall:** Drucken Sie das erste Element (*car lst*) und rufen Sie dann die Funktion für den Rest der Liste auf (*cdr lst*).
+- **Basisfall:** leere Liste → `"done"`.
+- **Rekursiv:** `car` ausgeben, Rest mit `cdr` verarbeiten.
 
-#### Beispielverwendung
+#### Verwendung
 
 ```scheme
 (print-elements (list 1 2 3))
 ```
 
-Ausgabe:
-
-- *"1"*
-- *"2"*
-- *"3"*
-
-Ergebnis: *"erledigt"*
-
----
-
-#### Wie es funktioniert
-
-1. Die Funktion ruft mit *car* das erste Element der Liste ab und verarbeitet es.
-2. Anschließend ruft es sich selbst mit dem Rest der Liste (*cdr*) auf.
-3. Dieser Vorgang wiederholt sich, bis die Liste leer ist (*null? lst*).
-
----
+Ausgabe: *"1"*, *"2"*, *"3"* — Ergebnis: *"done"*
 
 ### Zusammenfassung
 
-- Einfache Rekursion besteht aus:
-  1. **Basisfall**: Stoppt die Rekursion.
-  2. **Rekursiver Fall**: Reduziert das Problem in Richtung des Basisfalls.
-- Jeder rekursive Aufruf treibt die Berechnung bis zum Abschluss voran.
-– Sobald der Basisfall erreicht ist, werden die Ergebnisse kombiniert, während die Rekursion abgeschlossen ist.
-
-Die Rekursion spiegelt die Struktur des Problems wider und sorgt für einen klaren, logischen Ablauf. Stellen Sie immer einen Basisfall sicher, um eine unendliche Rekursion zu vermeiden.
+- Basisfall stoppt; rekursiver Fall verkleinert das Problem.
+- Jeder Aufruf nähert sich dem Basisfall.
+- Immer einen Basisfall definieren — sonst endlose Rekursion.

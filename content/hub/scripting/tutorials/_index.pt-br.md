@@ -1,6 +1,9 @@
 ---
 title: "Tutoriais"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 Estes tutoriais mostram como escrever plug-ins de Scheme para Lumi. Você começará com um procedimento mínimo de “Hello World” e, em seguida, desenvolverá plug-ins que funcionam com imagens, arquivos e bibliotecas auxiliares reutilizáveis.
 

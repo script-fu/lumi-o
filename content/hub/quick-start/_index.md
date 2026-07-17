@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start"
 ---
 
-Lumi-o is currently in its development phase, while core features are production-tested, you may encounter occasional instability. To protect your progress during this phase, **high-speed auto-saving is available and active by default.**
+Lumi-o is currently in its development phase, **high-speed auto-saving is available and active by default.**
 
 Use the pages below to get up and running quickly.
 

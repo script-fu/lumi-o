@@ -2,6 +2,9 @@
 title: "Verpackung"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Schemabefehle arbeiten auf einer niedrigen Ebene, was bedeutet, dass selbst einfache Aufgaben mehrere Schritte erfordern können. Diese Granularität bietet jedoch Flexibilität, wir können Befehle in kleine, wiederverwendbare Funktionen bündeln, die genau das tun, was wir brauchen. Verpackung ist kein Schwarz-Weiß-Konzept; Es kann von einfachen Aliasen für häufig verwendete Befehle bis hin zu komplexeren Funktionen reichen, die ganze Arbeitsabläufe verwalten. Manchmal ist ein Wrapper nur eine praktische Funktion zur Verbesserung der Lesbarkeit, während er sich in anderen Fällen zu einem voll ausgestatteten Dienstprogramm entwickelt, das mehrere Vorgänge kapselt.
 
@@ -26,7 +29,7 @@ Beispiele:
 ### Zufälliger Samen
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Zweck: Gibt eine Zufallszahl für die Initialisierung eines Filters zurück
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Darüber hinaus ermöglicht uns die Definition von ***random-seed*** als eigenst
 Wenn wir uns beispielsweise dazu entschließen, stattdessen auf ***zufällig*** umzusteigen:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Zweck: Gibt eine Zufallszahl für die Initialisierung eines Filters zurück
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Der Funktionsname bleibt derselbe und stellt sicher, dass unsere Skripte weiterh
 Die JPEG-Exportfunktion in Scheme verfügt über viele Parameter und bietet eine genaue Kontrolle darüber, wie Bilder gespeichert werden. In den meisten Fällen kümmern wir uns jedoch nur um einige wenige wichtige Einstellungen, wie z. B. Dateiname und Qualität. Um den Prozess zu vereinfachen, können wir die Funktion umschließen.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Zweck: Speichert ein Bild als JPEG mit angegebener Qualität
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; jpg.jpg vermeiden
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -85,20 +88,20 @@ Dadurch bleibt unser Code sauber, lesbar und anpassungsfähig und ermöglicht un
 
 ### Autoersatz
 
-Die ***car***-Funktion kann kryptisch und anfällig für Skriptfehler sein. Es ist leicht, ***car*** versehentlich auf einen Vektor oder ein Nicht-Listenelement anzuwenden, was zu unerwartetem Verhalten führt. Um unseren Code robuster und lesbarer zu machen, können wir diese Funktionalität in eine sicherere Funktion einschließen.
+Die ***car***-Funktion kann kryptisch und anfällig für Skriptfehler sein. Es ist leicht, ***car*** versehentlich auf einen Vektor oder ein Nicht-Listenelement anzuwenden, was zu unerwartetem Verhalten führt. Um unseren Code robuster und lesbarer zu machen, können wir diese Funktionalität in eine sicherere Funktion einbinden.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Zweck: Gibt das erste Element einer Liste oder eines Vektors zurück.
+;;          Warnt, wenn die Eingabe ungültig oder leer ist.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Behandelt nicht-leere Listen
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Behandelt nicht-leere Vektoren
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Ungültige oder leere Eingabe
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Das Umschließen einer bereits umschlossenen Funktion kann die Lesbarkeit und Wa
 um die ***x***-Koordinate abzurufen. Dies ist zwar funktional, aber nicht sehr ausdrucksstark. Stattdessen können wir ***first-item*** in eine passendere Definition einschließen, um unsere Absicht klarer zu machen.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Zweck: x-Koordinate zurückgeben, zur besseren Lesbarkeit
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Zweck: y-Koordinate zurückgeben, zur besseren Lesbarkeit
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ um die ***x***-Koordinate abzurufen. Dies ist zwar funktional, aber nicht sehr a
 Anstatt nun im generischen Schema zu schreiben:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Ermittelt die x-Koordinate
+(cadr pixel-coords) ;; Ermittelt die y-Koordinate
 ```
 
 Wir können in _unser_ Schema schreiben:

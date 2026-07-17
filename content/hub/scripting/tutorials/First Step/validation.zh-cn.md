@@ -2,6 +2,9 @@
 title: "验证"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 在构建强大的插件时，重要的是要确保我们的函数能够优雅地处理错误并按预期工作，即使在误用或意外输入的情况下也是如此。验证有助于保护功能的完整性并防止崩溃或意外行为。
 
@@ -15,25 +18,25 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; 验证输出参数
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; 发送到 Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; 发送到 GUI 对话框
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; 发送到终端窗口
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 将默认消息处理程序恢复为 Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; 检查消息是否为空
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,30 +71,30 @@ weight: 4
 ### 组合验证示例
 
 ```scheme
-;; Function to handle message output to various destinations
+;; 处理向各种目标输出消息的函数
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; 验证消息和输出参数
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; 发送到 Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; 发送到 GUI 对话框
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; 发送到终端窗口
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 将默认消息处理程序恢复为 Message console
   (lumi-message-set-handler 2))
 ```
 

@@ -1,6 +1,9 @@
 ---
 title: "Código do Visual Studio"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
 ---
 ## O que é código do Visual Studio?
 

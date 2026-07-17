@@ -2,6 +2,9 @@
 title: "Functies"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 Functies zijn een kernconcept in Scheme en bieden de middelen om logica in te kapselen, hergebruik van code mogelijk te maken en uw scripts effectief te structureren. Met functies kunt u modulaire, onderhoudbare scripts maken die een breed scala aan taken afhandelen, van basisbewerkingen tot geavanceerde workflows in Lumi.
 
@@ -12,9 +15,9 @@ Deze sectie dient als een inleiding tot de functies in Scheme en legt de basis v
 Schemacode is gemaakt van **expressies**. Een expressie resulteert in een waarde. De syntaxis is uniform: haakjes vormen een aanroep, met de operator- of functienaam eerst.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; Telt 1 en 2 op, resultaat 3
+(if #t 1 0)     ; Evalueert naar 1 omdat de voorwaarde waar is
+(list 1 2 3)    ; Maakt een lijst: (1 2 3)
 ```
 
 Omdat alles een uitdrukking is, past de controlestroom op natuurlijke wijze in dezelfde stijl als functieaanroepen.
@@ -51,7 +54,7 @@ Scheme biedt een verscheidenheid aan functieconstructies, elk geschikt voor spec
    Functies die andere functies als argumenten gebruiken of functies als resultaten retourneren, waardoor krachtige abstracties zoals mapping, filteren en reduceren mogelijk zijn.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Geeft (1 4 9 16) terug
    ```
 
 ## Algemene syntaxis voor functies
@@ -73,7 +76,7 @@ Voorbeeld:
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; Geeft 8 terug
 ```
 
 ## Bijwerkingen en mondiale toestand

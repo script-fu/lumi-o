@@ -1,9 +1,14 @@
 ---
 title: "다운로드"
 type: docs
+url: "hub/about/download"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 27454964aabdba77c59d9cb096f1d7d618a19f09be6e2f123ab27f08264b7503
 ---
-Lumi는 즉시 실행 가능한 개발 AppImage와 공개 저장소의 소스 코드로 모두 제공됩니다. AppImage는 Linux에서 소프트웨어를 사용해 볼 수 있는 가장 빠른 방법이며, 개발을 면밀히 추적하고 코드를 검사하거나 직접 빌드하려는 경우 저장소가 적합한 장소입니다.
+
+Lumi는 바로 실행할 수 있는 개발용 AppImage와 공개 저장소의 소스 코드로 모두 제공됩니다. AppImage는 Linux에서 소프트웨어를 가장 빠르게 써 보는 방법입니다. 개발을 자세히 따라가거나 코드를 살펴보거나 직접 빌드하려면 저장소가 적합합니다.
 
 {{< cards >}}
   {{< card link="https://gitlab.gnome.org/pixelmixer/lumi-dev/-/artifacts" pageRef="download-appimage" icon="download" >}}

@@ -1,7 +1,10 @@
 ---
-title: "Symbolika"
+title: "Symbole"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 Symbole to jeden z podstawowych typów danych w Scheme, reprezentujący unikalne, niezmienne identyfikatory. Używa się ich głównie jako kluczy, znaczników lub obiektów zastępczych w programach, co czyni je niezbędnymi do pisania czystego i wyrazistego kodu.
 
@@ -17,9 +20,9 @@ Symbol zapisywany jest jako ciąg znaków:
 Przykłady:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; Symbol o nazwie `hello`
+'foo-bar     ; Symbol o nazwie `foo-bar`
+'*special*   ; Symbol o nazwie `*special*`
 ```
 
 ## Tworzenie symboli
@@ -29,7 +32,7 @@ Symbole są zwykle tworzone przy użyciu operatora **cytatu** (`'`), który info
 ### Przykład
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; Tworzy symbol `my-symbol`
 ```
 
 Symbole można także tworzyć programowo, korzystając z procedury `string->symbol`, która konwertuje ciąg znaków na symbol.
@@ -48,8 +51,8 @@ Ponieważ symbole są unikalne, możesz je efektywnie porównywać za pomocą `e
 ### Przykład
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (ten sam symbol)
+(eq? 'apple 'orange)  ; #f (różne symbole)
 ```
 
 Dzięki temu symbole idealnie nadają się do wykorzystania jako klucze w strukturach danych lub znaczniki w kodzie.
@@ -62,7 +65,7 @@ Symbole są często używane w schemacie dla:
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; Zwraca (name . "Alice")
 ```
 
 2. **Identyfikatory w kodzie:**
@@ -88,9 +91,9 @@ Scheme udostępnia wbudowane procedury do pracy z symbolami:
 ### Przykłady
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (prawda: to symbol)
+(symbol->string 'example)     ; Wynik: "example"
+(string->symbol "new-symbol") ; Wynik: 'new-symbol
 ```
 
 ## Podsumowanie

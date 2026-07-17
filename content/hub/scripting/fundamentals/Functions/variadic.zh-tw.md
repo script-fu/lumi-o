@@ -2,6 +2,9 @@
 title: "可變參數函數"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些函數用途廣泛，可讓您建立靈活且可重複使用的程式碼。在函數式程式設計中，可變參數函數簡化了需要處理任意數量輸入的操作，例如對數字列表求和或連接字串。
 
@@ -39,7 +42,7 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 
 **用法**：
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; 傳回 15
 ```
 
 #### 具有固定參數的可變參數函數
@@ -58,7 +61,7 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 
 **用法**：
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; 傳回 ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### 結合固定邏輯和可變邏輯
@@ -76,7 +79,7 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 **用法**：
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; 傳回 "Fruits: Apple, Banana, Cherry"
 ```
 
 ### 進階用例
@@ -94,7 +97,7 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 
 **用法**：
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; 傳回 18
 ```
 
 #### 具有遞歸邏輯的可變參數函數
@@ -113,7 +116,7 @@ Scheme 中的**可變參數函數**是接受可變數量參數的函數。這些
 
 **用法**：
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; 傳回 40
 ```
 
 ### 可變參數函數的好處

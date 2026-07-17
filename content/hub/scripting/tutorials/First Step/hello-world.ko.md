@@ -2,11 +2,14 @@
 title: "안녕하세요 월드!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 이 튜토리얼에서는 Scheme 플러그인의 최소 구조를 안내합니다. 일부 줄은 "상용구"입니다. 아직 완전히 이해하지 못하더라도 Lumi가 파일을 로드하는 데 필요합니다.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Scheme의 기본 언어인 Scheme에서 주석은 일반적으로 유용한 텍�
 다음은 전체 예입니다. 대부분의 Lumi 프로시저에는 `lumi-` 접두사가 붙습니다. 예를 들어 `lumi-message`은 구성된 메시지 처리기에 문자열을 인쇄합니다.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; 메시지 핸들러를 설정하여 메시지를 GUI 대화 상자로 출력
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; 메시지 핸들러를 설정하여 메시지를 Error Console로 출력
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; 메시지를 Lumi를 실행한 OS 창인 terminal로 보냄
   (display "Hello world!\n"))
 
 

@@ -2,58 +2,47 @@
 title: "Lumi-o"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
 ---
-Lumi wordt in het openbaar ontwikkeld, waarbij ontwerpbeslissingen, architectuurdocumenten en ontwikkelingsgeschiedenis openbaar beschikbaar zijn, zodat gebruikers kunnen begrijpen hoe de software zich in de loop van de tijd ontwikkelt.
 
-Het geeft prioriteit aan de toegankelijkheid van kunstwerken op de lange termijn. Het bestandsformaat is open, directory-gebaseerd en leesbaar zonder eigen software, waardoor projecten toegankelijk blijven terwijl de software blijft veranderen. Compatibiliteit wordt ondersteund via XCF- en PSD-import en -export.
+Lumi is een snelle, efficiënte applicatie uitsluitend voor Linux voor het maken van rasterafbeeldingen, ontwikkeld in open ontwikkeling. Ontwerpbeslissingen, architectuurdocumenten en ontwikkelingsgeschiedenis zijn openbaar, zodat gebruikers kunnen volgen hoe het programma evolueert.
 
-Lumi is ontworpen om zowel begrijpelijk als krachtig te zijn. De interface vermindert onnodige complexiteit, waardoor de werkruimte gericht blijft op schilderen en tekenen.
+Lumi is gericht op digitaal schilderen en illustratie, maar blijft geschikt voor gestructureerde beeldbewerking en fotografische correctie. Corrigerende aanpassingen, lensstijleffecten, op toon gebaseerde kleurcorrectie en niet-destructieve filterlagen ondersteunen een breed scala aan bewerkingsworkflows.
+
+Lumi is gebouwd rond het idee dat digitale schildersoftware zich moet gedragen als een betrouwbare studiotool: voorspelbaar, transparant en gericht op het maken van afbeeldingen.
 
 ## Doel
 
-Lumi bestaat ter ondersteuning van een gestructureerde illustratiemethode die is ontwikkeld door jarenlange praktijk, en biedt een betrouwbaar hulpmiddel voor complexe, niet-destructieve workflows waarbij kleuren, lagen en gegevens zich voorspelbaar gedragen.
+Lumi ondersteunt een gestructureerde, niet-destructieve manier van beeldmaken, of de bron nu geschilderd, getekend of fotografisch is. Het is een gericht, eigenzinnig alternatief voor zowel algemene beeldeditors als dedicated schildersoftware: gratis en open source, zonder abonnementen, vendor lock-in, cloudafhankelijkheid of AI-beeldgeneratie.
 
-Het wordt vrijelijk gedeeld zodat anderen het kunnen gebruiken en verkennen. Lumi is geen allesomvattende oplossing, maar een gerichte en eigenzinnige tool, gevormd door echte ervaring met traditionele media en complexe softwaresystemen. Lumi beschouwt het maken van gereedschap als een ambacht: iets dat je moet begrijpen, vormgeven en openlijk delen zonder abonnementen, lock-in of cloudafhankelijke functies.
+Betrouwbaarheid en langdurige toegang zijn kernkenmerken. Het open, op mappen gebaseerde bestandsformaat blijft leesbaar zonder propriëtaire software; import en export van XCF en PSD worden ondersteund.
 
-Lumi adresseert een kloof tussen algemene beeldeditors en speciale schildersoftware. Het blijft gratis en open source, vermijdt AI-gestuurde generatiefuncties binnen de applicatie zelf en neemt fotografie-georiënteerde ontwerpbeperkingen weg, terwijl de kracht en betrouwbaarheid van de GIMP-architectuur behouden blijft.
+## Artistieke basis
 
-Het resultaat is een op schilderkunst gerichte omgeving die is gebouwd voor doelbewuste, handmatige beeldproductie in plaats van geautomatiseerde productie. Betrouwbaarheid is een kernkenmerk: automatisch opslaan, snel opslaan en incrementeel opslaan zijn vanaf het begin in de workflow ingebouwd. Het Lumi-bestandsformaat is open en zeer efficiënt en maakt gebruik van lazyloading, zodat zeer grote projecten snel worden geopend en responsief blijven tijdens lange illustratiesessies.
+Lumi is ontwikkeld door een onafhankelijke kunstenaar met ervaring in pixelkunst, traditioneel tekenen en schilderen, game-ontwikkeling, technical art, illustratie en 3D-animatie. Die achtergrond bepaalt de benadering van kleur, lijnwerk, lagen, prestaties, gegevensherstel, scripting en gebruikerservaring.
 
-Lumi is ontworpen voor kunstenaars die verwachten dat hun gereedschappen gedurende jarenlang werk stabiel, transparant en onder hun controle blijven.
+## Filosofie
 
-## Artistieke Stichting
+Lumi combineert een op pigmenten gebaseerd kleursysteem met een responsieve, niet-destructieve, op lagen gebaseerde workflow. Het kleursysteem wijkt bewust af van conventionele HSV-schuifregelaars en willekeurige RGB-kiezers.
 
-Lumi is ontwikkeld door een onafhankelijke kunstenaar met tientallen jaren ervaring op het gebied van pixelkunst, traditioneel tekenen en schilderen, en professioneel werk op het gebied van game-ontwikkeling, technische kunst, illustratie en 3D-animatie.
+- **Pigmentgerichte kleur**: pigmentprofielen uit de echte wereld (Colour Index-codes) worden spectraal gemengd, zodat paletten zich meer als echte verf gedragen.
+- **Paletgestuurde workflow**: opgeslagen, schakelbare paletten ordenen pigmenten, mengsels, waardebanden en verlopen, zodat kleurbeslissingen coherent blijven binnen een schilderij of project.
+- **Tactiele, gerichte gereedschappen**: penselen integreren stylusdruk, kanteling en snelheid voor directe, genuanceerde controle; bedieningselementen ondersteunen weloverwogen keuzes zonder onnodige complexiteit.
+- **Niet-destructieve betrouwbaarheid**: lagen en bewerkbare filters schalen mee met complexe projecten en blijven voorspelbaar. Automatisch opslaan, snel opslaan, incrementeel opslaan en herstel beschermen lange schildersessies en grote projecten.
+- **Live werkruimten**: benoemde profielen bewaren docks, gereedschappen, voorinstellingen, paletten en apparaatkoppelingen en wisselen die vervolgens atomisch tijdens runtime.
+- **Scheme scripting**: Lumi breidt de Script-Fu-traditie uit met een op Scheme gebaseerde plug-in-taal en extra hulpfuncties voor het bouwen van plug-ins en het automatiseren van workflows.
 
-Deze combinatie van artistieke praktijk en technische implementatie vormt rechtstreeks het ontwerp van Lumi en beïnvloedt de benadering van kleur, lijnwerk, lagen, prestaties, gegevensherstel, scripting en gebruikerservaring.
+[Filters](/hub/features/filters/), waaronder gevormde bokeh-lensvervaging, tilt-shift, tooncorrectie, verscherping en ruisonderdrukking, kunnen naast penseelwerk bewerkbaar blijven.
 
-## De filosofie
+## Grenzen
 
-Lumi combineert een op pigmenten gebaseerd kleursysteem dat is opgebouwd rond fysieke menging met een zeer responsieve, niet-destructieve, op lagen gebaseerde illustratieworkflow.
+- **Gericht, niet allesomvattend**: Lumi is niet bedoeld voor webdesign, desktop publishing of elke niche die een brede editor zoals GIMP probeert te bedienen.
+- **Alleen Linux**: Lumi is specifiek geoptimaliseerd voor Linux en ondersteunt geen Windows of macOS.
 
-- **Pigmentgericht**: kleuren zijn afgeleid van pigmentprofielen uit de echte wereld (kleurindexcodes) in plaats van willekeurige RGB-waarden, waardoor een intuïtieve paletconstructie wordt ondersteund die is gebaseerd op een echte schilderervaring.
-- **Tactiele gereedschappen**: Penselen, stylusdruk, kanteling en snelheid zijn volledig geïntegreerd en gedragen zich als fysieke schildergereedschappen, waardoor genuanceerde controle ontstaat met minimale wrijving.
-- **Scènebeheer**: gelaagde, niet-destructieve workflows worden steeds complexer en blijven voorspelbaar en responsief.
-- **Intent-Focused Controls**: Tools bieden zinvolle opties zonder de artiest te overweldigen, en ondersteunen weloverwogen, op vaardigheden gebaseerde beslissingen.
+## Dankbetuiging
 
-## Wat de software prioriteit geeft- **Artistieke bedoeling**: Tools gedragen zich voorspelbaar en ondersteunen de intuïtie van de kunstenaar.
-
-- **Betrouwbaarheid**: gegevensintegriteit en herstel zijn van het grootste belang; een kunstenaar mag nooit werk verliezen.
-- **Structurele duidelijkheid**: de interface houdt lagen, gereedschappen en bestandsformaten eenvoudig en leesbaar, zodat zelfs grote schilderijen met honderden lagen beheersbaar blijven.
-
-## Dat is het niet
-
-- **Een afbeeldingseditor voor algemeen gebruik**: Lumi is niet bedoeld voor het retoucheren van foto's, webontwerp of desktop publishing.
-- **Een tool voor meerdere platforms**: Lumi is specifiek geoptimaliseerd voor Linux en ondersteunt geen Windows of macOS.
-
-## Toekomstige releases
-
-Functies evolueren snel tijdens de ontwikkeling, maar releases worden pas uitgebracht na langdurig gebruik in illustratieworkflows in de echte wereld. Lumi wordt dagelijks gebruikt in de eigen kunstwerken en productieprojecten van de maker, waarbij de ontwikkeling wordt geleid door de behoeften die door die praktijk zijn ontdekt. Gereedschaps- en kunstproductie worden behandeld als één doorlopende discipline.
-
-Lumi is ontwikkeld met AI-ondersteunde ontwikkeltools als onderdeel van het engineeringproces. Na vele jaren van handmatige ontwikkeling worden AI-systemen nu gebruikt om code te helpen refactoren, architecturale veranderingen te verkennen en de implementatie te versnellen, terwijl de menselijke leiding en eindverantwoordelijkheid voor ontwerpbeslissingen behouden blijven. Naarmate de AI-ontwikkelingstools volwassener worden, wordt verwacht dat ze de duurzaamheid en evolutie van het project zullen verbeteren in plaats van het artistieke auteurschap te vervangen. Lumi past automatisering toe op het bouwen van gereedschappen, niet op het vervangen van het schilderen.
-
-## Dankbetuigingen
-
-Lumi is gebouwd op de basis van het GNU Image Manipulation Program (GIMP). Lumi erkent en is diep dankbaar voor het vele jaren werk van de ontwikkelaars, artiesten en bijdragers.
+Lumi bouwt voort op het GNU Image Manipulation Program (GIMP). Lumi erkent en is diep dankbaar voor het vele jarenlange werk van ontwikkelaars, kunstenaars en bijdragers.
 
 ![Lumi logo placeholder](/images/lumi.png)

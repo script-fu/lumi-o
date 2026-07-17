@@ -2,6 +2,9 @@
 title: "検証"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 堅牢なプラグインを構築する場合、誤用や予期しない入力があった場合でも、関数がエラーを適切に処理し、期待どおりに動作することを確認することが重要です。検証は、関数の整合性を保護し、クラッシュや意図しない動作を防ぐのに役立ちます。
 
@@ -15,25 +18,25 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; 出力引数を検証
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Message console に送信
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; GUI ダイアログボックスに送信
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; ターミナルウィンドウに送信
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; メッセージが空かどうかを確認する
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,30 +71,30 @@ weight: 4
 ### 組み合わせた検証の例
 
 ```scheme
-;; Function to handle message output to various destinations
+;; さまざまな出力先へのメッセージ出力を処理する関数
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; メッセージと出力引数を検証する
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Message console に送信
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; GUI ダイアログボックスに送信
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; ターミナルウィンドウに送信
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 ```
 

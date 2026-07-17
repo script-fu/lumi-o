@@ -1,7 +1,12 @@
 ---
 title: "Ferramenta Pincel"
 type: docs
+url: "hub/features/paintbrush"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
+
 A ferramenta Pincel é o principal instrumento de pintura do Lumi: uma forma responsiva e expressiva de desenhar, pintar, sombrear, texturizar e construir marcas diretamente na tela. Ele foi projetado para parecer imediato e, ao mesmo tempo, dar aos artistas espaço para moldar o comportamento de um traço.
 
 Em vez de ser um único pincel fixo, atua como um sistema de pintura. A forma, a textura, o movimento, a pressão, o tempo e a cor do pincel podem contribuir para a marca final, tornando-o adequado para trabalhos de linhas limpas, pintura suave, efeitos de mídia seca, traços caligráficos, texturas dispersas e formações de pincel com várias cabeças.
@@ -25,7 +30,7 @@ Isso faz com que o pincel pareça menos um padrão estampado e mais um instrumen
 
 ![dynamics](/images/screens/dynamics.jpg)
 
-## Comportamento de AVC
+## Comportamento do traço
 
 Os traços podem ser diretos e imediatos ou podem ser auxiliados por suavização e estabilização. Esses recursos ajudam a reduzir oscilações indesejadas, suavizar mudanças abruptas e fazer com que movimentos mais longos pareçam mais controlados, sem remover o caráter da entrada do artista.
 
@@ -41,7 +46,9 @@ O pincel pode capturar uma pequena amostra de como uma predefinição normalment
 
 Isso mantém os traços construídos mais próximos do caráter do pincel. Uma linha desenhada a partir de um caminho pode começar suavemente, criar pressão, diminuir gradualmente ou variar a resposta de velocidade da mesma maneira ampla que o traço de mão amostrado, enquanto ainda segue a forma exata do caminho, borda de seleção ou gesto de linha reta.
 
-## Pós-processamentoO pincel pode registrar um traço conforme você o desenha e, em seguida, reproduzir o gesto capturado assim que você decolar, refinando o caminho antes que a marca final seja estabelecida. Você pode esboçar livremente e ainda assim chegar a uma direção mais limpa, cantos mais nítidos ou uma estrutura mais deliberada sem precisar desenhar com precisão mecânica.
+## Pós-processamento
+
+O pincel pode registrar um traço conforme você o desenha e, em seguida, reproduzir o gesto capturado quando você levanta a caneta, refinando o caminho antes que a marca final seja estabelecida. Você pode esboçar livremente e ainda assim chegar a uma direção mais limpa, cantos mais nítidos ou uma estrutura mais deliberada sem precisar desenhar com precisão mecânica.
 
 Isso abre marcas de construção hachuradas e pautadas que se encaixam em ângulos limpos, mantendo o comprimento e o caráter desenhados à mão, traços de fita com inclinação estável e reprodução com reconhecimento de canto que trata curvas e linhas retas de maneira diferente. Pincéis com múltiplas cabeças podem compartilhar um caminho corrigido enquanto cada cabeça mantém sua própria variação, e a dinâmica ainda pode moldar o traço ao longo de sua curva final durante a reprodução. O pós-processamento aplica-se a traços desenhados em vez de emissão contínua de aerógrafo.
 
@@ -71,7 +78,9 @@ A carga pode ser reintroduzida entre as pinceladas, mantida em um nível escolhi
 
 O pincel também pode simular a perda intermitente de contato com a superfície da pintura – as marcas quebradas que aparecem quando um lápis, um bastão de carvão, um pincel seco ou um marcador parcialmente esgotado se envolvem apenas parcialmente no papel.
 
-Quando a simulação de contato está habilitada, a escova está em contato ou levantada. Durante o contato, as marcas se depositam normalmente. Durante a elevação, nenhum material é depositado e o curso deixa uma lacuna cujo comprimento é escolhido aleatoriamente entre uma distância mínima e máxima. A transição é binária: o efeito não altera a opacidade, o tamanho, a dureza, o espaçamento ou o fluxo – apenas se a tinta estiver aplicada.A facilidade com que o contato é perdido é determinada pelo limite de contato, pela pressão da ponta e, opcionalmente, pela carga da escova. Valores de limite mais altos tornam as pausas mais frequentes. A pressão atua como uma força estabilizadora: uma leve pressão aumenta a chance de perda de contato, enquanto uma pressão firme aumenta a probabilidade de o golpe permanecer para baixo. Quando a carga da escova está ativada, a carga baixa pode tornar a marca mais quebrada e a carga alta pode ajudar a manter o contato, semelhante a uma ferramenta que ainda carrega material suficiente para aderir à superfície.
+Quando a simulação de contato está habilitada, a escova está em contato ou levantada. Durante o contato, as marcas se depositam normalmente. Durante a elevação, nenhum material é depositado e o curso deixa uma lacuna cujo comprimento é escolhido aleatoriamente entre uma distância mínima e máxima. A transição é binária: o efeito não altera a opacidade, o tamanho, a dureza, o espaçamento ou o fluxo – apenas se a tinta estiver aplicada.
+
+A facilidade com que o contato é perdido é determinada pelo limite de contato, pela pressão da ponta e, opcionalmente, pela carga da escova. Valores de limite mais altos tornam as pausas mais frequentes. A pressão atua como uma força estabilizadora: uma leve pressão aumenta a chance de perda de contato, enquanto uma pressão firme aumenta a probabilidade de o golpe permanecer para baixo. Quando a carga da escova está ativada, a carga baixa pode tornar a marca mais quebrada e a carga alta pode ajudar a manter o contato, semelhante a uma ferramenta que ainda carrega material suficiente para aderir à superfície.
 
 A perda é avaliada a partir da distância percorrida pelo traço em vez da contagem de salpicos, de modo que pincéis com espaçamento denso ou esparso se comportam de forma consistente. O recurso funciona com renderização baseada em carimbo e caligráfica, produzindo lacunas coerentes ao longo do traço, em vez de salpicos ignorados isolados.
 

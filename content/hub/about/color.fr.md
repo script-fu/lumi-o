@@ -1,10 +1,14 @@
 ---
 title: "Couleur"
 type: docs
+url: "hub/about/color"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
 ---
-L'espace de travail Coloration est conçu pour des décisions délibérées en matière de couleurs plutôt que pour un ajustement général de l'image. Il est façonné par la pratique des médias traditionnels, en mettant l'accent sur les pigments, la structure de la palette et le comportement de mélange qui reste compréhensible alors qu'une peinture devient plus complexe.
+L'espace de travail Couleur est conçu pour des décisions chromatiques réfléchies plutôt que pour des retouches d'image généralistes. Il s'inspire des médias traditionnels, avec un accent sur les pigments, la structure des palettes et un comportement de mélange qui reste lisible à mesure qu'une peinture se complexifie.
 
-Le but n’est pas de surcharger le peintre avec tous les contrôles de couleurs possibles à la fois. L'espace de travail peut rester concentré sur les palettes, les outils et les ressources nécessaires à l'étape de coloration, de sorte que les décisions concernant l'harmonie, la valeur et les matériaux semblent plus claires et plus faciles à gérer.
+L'objectif n'est pas de submerger le peintre avec tous les contrôles de couleur à la fois. L'espace de travail peut rester centré sur les palettes, outils et ressources nécessaires à la phase de colorisation, pour que les choix d'harmonie, de valeur et de matière soient plus clairs et plus faciles à gérer.
 
-Cela facilite la création de palettes contrôlées, le travail intentionnel et la lisibilité des relations de couleurs sur l’ensemble de l’image. Faisant partie des trois espaces de flux de travail principaux de Lumi, la coloration est destinée à donner à la peinture son propre environnement dédié plutôt que de la traiter comme quelque chose de ajouté au dessin ou au dessin au trait.
+Cela facilite la création de palettes maîtrisées, le travail avec intention et la lisibilité des relations chromatiques sur l'ensemble de l'image. Parmi les trois espaces de travail de flux principaux de Lumi, Couleur vise à donner à la peinture son propre environnement dédié, plutôt que de la traiter comme un ajout au dessin ou au trait.

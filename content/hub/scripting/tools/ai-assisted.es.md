@@ -1,36 +1,39 @@
 ---
 title: "Desarrollo asistido por IA"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
 ---
-Las herramientas modernas de inteligencia artificial pueden acelerar significativamente el desarrollo de complementos Lumi al actuar como un socio de codificación colaborativo.
+Las herramientas de IA modernas pueden acelerar considerablemente el desarrollo de complementos para Lumi actuando como un compañero de codificación colaborativo.
 
-## Código VS en modo agente
+## VS Code en modo Agent
 
-El uso de Visual Studio Code con un asistente de IA en **modo Agente** (como el modo Agente de GitHub Copilot u otros asistentes habilitados para herramientas) le permite realizar tareas complejas de varios pasos utilizando lenguaje natural.
+Usar Visual Studio Code con un asistente de IA en **modo Agent** (como el modo Agent de GitHub Copilot u otros asistentes con herramientas) le permite realizar tareas complejas de varios pasos en lenguaje natural.
 
-En lugar de simplemente completar una sola línea de código, un Agente puede:
-- Lea todo su espacio de trabajo para comprender el contexto.
-- Crear nuevos archivos y directorios.
-- Ejecutar comandos de terminal para probar o validar scripts.
-- Busque patrones existentes en su código base.
+En lugar de completar solo una línea de código, un agente puede:
+- leer todo el espacio de trabajo para entender el contexto
+- crear archivos y directorios nuevos
+- ejecutar comandos de terminal para probar o validar scripts
+- buscar patrones existentes en la base de código
 
 ## Acceso al repositorio
 
-La asistencia de IA es más efectiva cuando el Agente tiene acceso a **lumi-dev** o al repositorio de su proyecto específico. Con visibilidad del código base existente, el Agente puede:
-- Utilice **[Bibliotecas de utilidades]({{< ref "/hub/scripting/reference/utility-browser" >}})** como referencia para las funciones auxiliares.
-- Seguir patrones existentes para operaciones GEGL y gestión de capas.
-- Reutilizar código repetitivo de complementos establecidos.
+La asistencia de IA es más eficaz cuando el agente tiene acceso a **lumi-dev** o al repositorio de su proyecto. Con visibilidad del código existente, el agente puede:
+- usar las **[bibliotecas de utilidades]({{< ref "/hub/scripting/reference/utility-browser" >}})** como referencia de funciones auxiliares
+- seguir patrones existentes para operaciones GEGL y gestión de capas
+- reutilizar código repetitivo de complementos establecidos
 
-## Ejemplo de flujo de trabajo
+## Flujo de trabajo de ejemplo
 
-Puede pedirle directamente al Agente que genere un complemento completo describiendo el resultado funcional deseado:
+Puede pedir directamente al agente que genere un complemento completo describiendo el resultado funcional deseado:
 
-> "Usando las utilidades y ejemplos de Scheme disponibles en el espacio de trabajo, escriba un nuevo complemento que cree una guía horizontal del 50% en la imagen activa y la llame 'Guía central'".
+> "Usando las utilidades Scheme y los ejemplos disponibles en el espacio de trabajo, escribe un nuevo complemento que cree una guía horizontal al 50 % en la imagen activa y la llame 'Center Guide'."
 
-El Agente buscará cómo crear guías, identificará la función de utilidad correcta (como `lumi-image-add-hguide-percent` de `common.scm`) y generará el archivo `.scm` completo con el modelo de registro correcto.
+El agente buscará cómo crear guías, identificará la función de utilidad correcta (como `lumi-image-add-hguide-percent` de `common.scm`) y generará el archivo `.scm` completo con el boilerplate de registro correcto.
 
-## Mejores prácticas
+## Buenas prácticas
 
-- **Sea específico**: describa exactamente lo que desea que haga el complemento.
-- **Utilidades de referencia**: anime al agente a buscar ayudas de alto nivel en el directorio `share/lumi/scripts/`.
-- **Revisar y probar**: pruebe siempre el complemento generado por la IA; suele ser un proceso iterativo y creativo.
+- **Sea específico**: describa exactamente lo que debe hacer el complemento.
+- **Referencie utilidades**: anime al agente a consultar el directorio `share/lumi/scripts/` para encontrar ayudantes de alto nivel.
+- **Revise y pruebe**: pruebe siempre el complemento generado por la IA; a menudo es un proceso iterativo y creativo.

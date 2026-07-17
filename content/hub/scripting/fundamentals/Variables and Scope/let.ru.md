@@ -1,7 +1,10 @@
 ---
-title: "позволять"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 Имя `let` используется, поскольку оно отражает математическое происхождение введения временных привязок, как в _"Let \( x = 2 \) и \( y = 3 \)"_.
 

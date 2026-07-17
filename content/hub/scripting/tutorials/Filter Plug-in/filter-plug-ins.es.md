@@ -2,6 +2,9 @@
 title: "El complemento de filtro"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 Usamos un complemento _procedure_ para el tutorial [Primer paso](../../first-step/). Esos tipos de complementos funcionan sin necesidad de una imagen o un elemento de diseño como entrada. Por lo general, usamos un complemento para cambiar una imagen y sus elementos de diseño. Los complementos como estos se denominan complementos de filtro.
 
@@ -12,28 +15,28 @@ Un **dibujable** en Lumi se refiere a un elemento de imagen en el que se puede d
 ### Un ejemplo simple de complemento de filtro
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; Usar una instrucción let para definir una variable de mensaje y el código principal
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; Mostrar el mensaje en la consola de errores de Lumi
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; Invertir los colores del primer drawable seleccionado
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; Registra el complemento
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Nombre del procedimiento principal
+  "Simple Filter Plug-in Demo"             ;; El nombre tal como aparece en el menú de Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Descripción de la información sobre herramientas
+  "Author Name"                            ;; Date algo de crédito
+  "License"                                ;; Licencia
+  "Date written"                           ;; Fecha de escritura
+  "*"                                      ;; Indica que este complemento requiere una imagen
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requiere uno o más drawables seleccionados
 
-;; Specify the menu location for the plug-in
+;; Especificar la ubicación del menú para el complemento
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ En Lumi versión 3, no es necesario actualizar los complementos para que los cam
 La primera línea garantiza que el script funcione como un complemento en Lumi 3:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ Una declaración `let` define una variable y realiza operaciones en el elemento 
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Muestra un mensaje en la consola de errores de Lumi
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Invierte los colores del primer drawable seleccionado
 ```
 
 ### Registro de complemento
@@ -96,14 +99,14 @@ El complemento está registrado en Lumi como complemento de filtro:
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Registra el procedimiento principal
+  "Simple Filter Plug-in Demo"             ;; El nombre tal como aparece en el menú de Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Descripción de la información sobre herramientas
+  "Author Name"                            ;; Nombre del autor
+  "License"                                ;; Tipo de licencia
+  "Date written"                           ;; Fecha de escritura
+  "*"                                      ;; Indica que el complemento requiere una imagen
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requiere uno o más drawables seleccionados
 ```
 
 #### Registro de menú

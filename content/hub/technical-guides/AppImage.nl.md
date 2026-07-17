@@ -1,73 +1,76 @@
 ---
-title: "AppAfbeelding"
+title: "AppImage"
 type: docs
+url: "hub/technical-guides/AppImage"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 939beb6f4f1657ab77f785d1753385360cca7920b6291dbcd09f4687bfdfc502
 ---
-Een AppImage is een Linux-applicatiepakket met één bestand. U downloadt één bestand, markeert het als uitvoerbaar bestand en voert het uit zonder software voor het hele systeem te installeren.
+
+Een AppImage is een Linux-applicatiepakket in één bestand. Je downloadt één bestand, maakt het uitvoerbaar en start het zonder software systembreed te installeren.
 
 Officiële AppImage-site: https://appimage.org/
 
-De AppImage biedt een draagbare versie van Lumi die werkt zonder installatie of systeemaanpassing. Het is ideaal voor artiesten die de software onmiddellijk willen gebruiken zonder afhankelijkheden te beheren, broncode te compileren of een ontwikkelomgeving te configureren.
+De AppImage biedt een draagbare versie van Lumi die werkt zonder installatie of systeemaanpassingen. Ideaal voor artiesten die de software meteen willen gebruiken zonder dependencies te beheren, broncode te compileren of een ontwikkelomgeving te configureren.
 
-Als een op zichzelf staand uitvoerbaar bestand kan de AppImage overal op het systeem worden opgeslagen. Dit maakt het eenvoudig om nieuwe releases te testen, meerdere versies te behouden of de software tussen machines te verplaatsen.
+Als zelfstandig uitvoerbaar bestand kan de AppImage overal op het systeem worden opgeslagen. Zo kun je eenvoudig nieuwe releases testen, meerdere versies bewaren of de software tussen machines verplaatsen.
 
-Voor het ontwikkelingsproces van Lumi functioneert de AppImage als een draagbare testbuild die nauw aansluit bij de continue integratie-output. Dit maakt betrouwbaar testen in een consistente omgeving mogelijk, terwijl lokale bronbuilds gericht blijven op ontwikkelingswerk.
+In het ontwikkelproces van Lumi fungeert de AppImage als een draagbare testbuild die nauw aansluit op CI-output. Zo kun je betrouwbaar testen in een consistente omgeving, terwijl lokale source builds gericht blijven op ontwikkelwerk.
 
-Opmerking: CI bouwt de AppImage met behulp van Lumi's in-repo geïntegreerde afhankelijkheidsbronnen (BABL/GEGL/GTK3), zodat de afhankelijkheidsstapel consistent is met de lokale `lumi-build-script.sh`-workflow.
+Opmerking: CI bouwt de AppImage met Lumi's geïntegreerde dependency-bronnen in de repo (BABL/GEGL/GTK3), zodat de dependency-stack consistent is met de lokale `lumi-build-script.sh`-workflow.
 
-## Release versus ontwikkeling AppImage
+## Release versus development AppImage
 
 - **Release AppImage**: nog niet beschikbaar (Lumi is nog niet uitgebracht).
-- **Development AppImage (CI-artefact)**: automatisch gegenereerd op basis van doorlopende ontwikkelingsverplichtingen voor testen.
+- **Development AppImage (CI-artefact)**: automatisch gegenereerd vanuit lopende development commits voor testen.
 
-Deze handleiding behandelt hoofdzakelijk de workflow **ontwikkeling AppImage**.
+Deze gids behandelt vooral de workflow voor de **development AppImage**.
 
 Huidige artefactpagina:
 
 https://gitlab.gnome.org/pixelmixer/lumi-dev/-/artifacts
 
-## Basisprincipes van het downloaden van CI AppImage
+## Basis: CI AppImage downloaden
 
-CI produceert artefact-zipbestanden (bijvoorbeeld `lumi-appimage*.zip`).
+CI levert artefact-zipbestanden (bijvoorbeeld `lumi-appimage*.zip`).
 
-Basis handmatige stroom:
+Eenvoudige handmatige stappen:
 
 1. Download de nieuwste CI-artefact-zip.
 2. Pak het uit.
-3. Voer het meegeleverde `Lumi*.AppImage` bestand uit.
+3. Start het meegeleverde `Lumi*.AppImage`-bestand.
 
-De onderstaande scripts zijn optionele helpers die deze stappen automatiseren.
+De scripts hieronder zijn optionele helpers die deze stappen automatiseren.
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Unpack latest downloaded CI zip from ~/Downloads
-
 bash lumi-appimage-unpack-zip.sh
 
 # Launch AppImage with terminal output
-
 bash lumi-appimage-launch.sh
 ```
 
-## Optionele helperscripts
+## Optionele helper-scripts
 
 - `lumi-appimage-unpack-zip.sh`
-  - vindt de nieuwste `lumi-appimage*.zip` in `~/Downloads`
-  - installeert AppImage op `~/AppImage/Lumi/Lumi_CI.AppImage`
-  - installeert bureaubladbronnen op `~/.local/share/applications/lumi.desktop`
+  - zoekt de nieuwste `lumi-appimage*.zip` in `~/Downloads`
+  - installeert de AppImage op `~/AppImage/Lumi/Lumi_CI.AppImage`
+  - installeert desktopresources op `~/.local/share/applications/lumi.desktop`
 
 - `lumi-appimage-launch.sh`
-  - lanceert de AppImage in een terminal
-  - maakt runtime-uitvoer mogelijk (`APPIMAGE_DEBUG=1`)
+  - start de AppImage in een terminal
+  - schakelt runtime-output in (`APPIMAGE_DEBUG=1`)
 
 ## Algemene opmerkingen
 
-- Als u AppImage handmatig uitvoert (zonder helperscripts), maak het dan eerst uitvoerbaar:
+- Als je AppImage handmatig start (zonder helper-scripts), maak het bestand eerst uitvoerbaar:
 
 ```bash
 chmod +x ~/AppImage/Lumi/Lumi_CI.AppImage
 ```
 
-`lumi-appimage-unpack-zip.sh` past uitvoerbare machtigingen al automatisch toe.
+`lumi-appimage-unpack-zip.sh` stelt uitvoerbare rechten al automatisch in.
 
-- Als Lumi al een andere build gebruikt, sluit deze dan voordat u AppImage start.
+- Als Lumi al draait vanuit een andere build, sluit het af voordat je de AppImage start.

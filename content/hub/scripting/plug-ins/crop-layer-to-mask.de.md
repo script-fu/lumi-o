@@ -1,17 +1,20 @@
 ---
 title: "Ebene auf Maske zuschneiden"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c9d216eb65667fb2f8cb2303213dba69e52477f3085fe795b583ae82e09f83fe
 ---
 Schneidet Ebenen auf den Maskenbereich zu, mit einem optionalen Pixelrand.
 
-## Wo es lebt
+## Quellcode
 
-- [Quelle anzeigen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
+- [Quellcode ansehen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
-## Wo es in Lumi erscheint
+## Menü in Lumi
 
 - **Ebene → Zuschneiden → Ebene auf Maske zuschneiden**
 
-## Vorgehensweise
+## Prozedur
 
 - `scheme-crop-layer-to-mask`

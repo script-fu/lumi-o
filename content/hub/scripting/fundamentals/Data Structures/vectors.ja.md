@@ -1,7 +1,10 @@
 ---
-title: "ベクトル"
-type: docs
+title: "ベクター"
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 Scheme では、ベクトルは値をグループ化するために使用されるもう 1 つの基本的なデータ構造です。リストとは異なり、ベクトルは固定サイズのインデックス付き要素コレクションであり、より高速なランダム アクセスと更新を提供します。ベクトル内の各要素は、別のベクトルを含め、任意のタイプにすることができます。ベクトルは、# に続く括弧を使用して表されます。 `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Scheme では、ベクトルは値をグループ化するために使用され�
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; インデックス 0 の要素を取得
+(vector-ref my-vector 1)  ; インデックス 1 の要素を取得
 ```
 
 #### 反復: ベクトル内の各要素の処理
@@ -42,9 +45,9 @@ Scheme では、ベクトルは値をグループ化するために使用され�
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; 要素を出力
+        (loop (+ i 1)))                                    ; 次のインデックスを処理
+      (lumi-message "done"))))                             ; ループ終了
 ```
 
 - **基本ケース:** インデックス `i` がベクトルの長さに達すると、ループを停止します。
@@ -99,7 +102,7 @@ Scheme では、ベクトルは値をグループ化するために使用され�
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; 2 番目の要素を 42 に設定
 my-vector
 ```
 
@@ -110,8 +113,8 @@ my-vector
 `vector?` プロシージャは、指定された値がベクトルであるかどうかをチェックします。
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; #(1 2 3) がベクトルかどうかを確認
+(vector? 42)              ; 42 がベクトルかどうかを確認
 ```
 
 結果:
@@ -127,11 +130,11 @@ my-vector
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; 指定したインデックスのベクトルを更新
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; 2 番目の要素を 99 に変更
+my-vector                              ; 元のベクトルが更新された
 ```
 
 結果: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme には、ベクトルを操作するための次のような組み込み�
 - `list->vector`: リストをベクトルに変換します。
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; 3 を返す
+(vector->list (vector 1 2 3))          ; ベクトルをリストに変換: (1 2 3)
+(list->vector (list 1 2 3))            ; リストをベクトルに変換: #(1 2 3)
 ```
 
 結果:
@@ -187,8 +190,8 @@ Scheme 内のベクトルには、他のベクトルを要素として含める�
 #### 例: 要素へのアクセス
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; 最初の要素を取得: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; 最初のベクトルの 2 番目の要素を取得: 2
 ```
 
 ### 概要

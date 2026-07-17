@@ -2,6 +2,9 @@
 title: "功能"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 函數是Scheme 中的核心概念，提供封裝邏輯、實作程式碼重複使用和有效建置腳本的方法。透過函數，您可以建立模組化、可維護的腳本來處理各種任務，從基本操作到 Lumi 中的高階工作流程。
 
@@ -12,9 +15,9 @@ weight: 7
 方案代碼由**表達式**組成。表達式計算出一個值。語法是統一的：括號形成調用，運算子或函數名稱在前。
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; 將 1 和 2 相加，結果為 3
+(if #t 1 0)     ; 條件為真，結果為 1
+(list 1 2 3)    ; 建立清單：(1 2 3)
 ```
 
 因為一切都是表達式，所以控制流自然地適合與函數呼叫相同的風格。
@@ -51,7 +54,7 @@ Scheme 提供了多種函數構造，每種構造都適合特定的用例：
    將其他函數作為參數或返回函數作為結果的函數，支援強大的抽象，例如映射、過濾和歸約。
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; 傳回 (1 4 9 16)
    ```
 
 ## 函數的通用語法
@@ -73,7 +76,7 @@ Scheme 中的函數具有簡單且一致的語法：
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; 傳回 8
 ```
 
 ## 副作用和全域狀態

@@ -2,6 +2,9 @@
 title: "Funções Variádicas"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Funções variáveis** em Scheme são funções que aceitam um número variável de argumentos. Essas funções são altamente versáteis e permitem criar código flexível e reutilizável. Na programação funcional, as funções variáveis ​​simplificam as operações que precisam processar um número arbitrário de entradas, como somar uma lista de números ou concatenar strings.
 
@@ -39,7 +42,7 @@ Funções variáveis são definidas usando o símbolo `.` antes do último nome 
 
 **Uso**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Retorna 15
 ```
 
 #### Função Variádica com Parâmetros Fixos
@@ -58,7 +61,7 @@ Você pode combinar parâmetros fixos com um parâmetro variável para criar fun
 
 **Uso**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Retorna ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Combinando Lógica Fixa e Variádica
@@ -76,7 +79,7 @@ Você pode combinar parâmetros fixos com um parâmetro variável para criar fun
 **Uso**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Retorna "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Casos de uso avançados
@@ -94,7 +97,7 @@ Funções variáveis são excelentes no tratamento de dados arbitrários. Aqui e
 
 **Uso**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Retorna 18
 ```
 
 #### Funções Variádicas com Lógica Recursiva
@@ -113,7 +116,7 @@ Funções variáveis são excelentes no tratamento de dados arbitrários. Aqui e
 
 **Uso**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Retorna 40
 ```
 
 ### Benefícios das funções variáveis

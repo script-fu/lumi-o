@@ -1,20 +1,25 @@
 ---
-title: "Malowanie cyfrowe typu open source dla systemu Linux"
+title: "Malowanie cyfrowe open source dla Linuksa"
 toc: false
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 243e39446952d0f300b96a1af304dda1f11738a647283032b543a5cc84a8f496
 ---
 [![gui-01](/images/screens/gui-00.jpg)](/images/screens/gui-01.jpg)
 
-Lumi-o jest przeznaczony do warstwowego malowania rastrowego, celowo smukły i stabilny. Obsługa tabletów Wacom została szczegółowo przetestowana, aby zapewnić płynne i responsywne wprowadzanie danych, wymagane przez profesjonalne ilustracje.
+Lumi-o jest przeznaczone do warstwowego malowania rastrowego — celowo lekkie i stabilne. Obsługa tabletów Wacom zapewnia płynne i responsywne sterowanie, jakiego wymaga profesjonalna ilustracja.
 
-Zbudowany w oparciu o podstawową architekturę GIMP, Lumi-o eliminuje złożoność ogólnego przeznaczenia na rzecz dedykowanego środowiska malowania, w którym najważniejsza jest integralność danych. Szybkie automatyczne zapisywanie i ciągły system zapisywania przyrostowego chronią Twoją pracę bez zakłócania jej pracy.
+System kolorów Lumi oparty na paletach spektralnie miesza profile pigmentów ze świata rzeczywistego. Twórz palety w oparciu o wizualizowane relacje między kolorami, kontroluj wartości tonalne i nadaj kolorom nazwy. Mapa palet i Mikser palet pomagają utrzymać spójność decyzji kolorystycznych w obrazie lub projekcie.
 
-Leniwe ładowanie eliminuje stałe pułapy pamięci, umożliwiając zarządzanie dużymi, złożonymi projektami i ogromnymi wymiarami płótna bez ograniczania limitów pamięci RAM.
+Zbudowane na rdzennej architekturze GIMP-a, Lumi-o zostało zaprojektowane i dopracowane przez artystę. Jego narzędzia pozostają przystępne, oferując jednocześnie możliwości dostosowania potrzebne w zaawansowanych przepływach pracy. Szybkie ładowanie i zapisywanie oraz w pełni zintegrowany system automatycznego zapisu chronią Twoją pracę bez przerywania pracy.
 
-Lumi-o jest rozwijany na Debianie 13 z pulpitem Cinnamon. Jeśli używasz systemu Windows, pierwszym krokiem będzie instalacja Debiana: [Jak zainstalować Linuksa](/hub/install-linux/).
+Leniwe ładowanie pozwala Lumi otwierać duże, złożone projekty przy znacznie mniejszym zużyciu pamięci RAM. Gdy grupa jest zwinięta, Lumi ładuje zapisany obraz złożony, a jej warstwy, maski i zagnieżdżone grupy pozostają lekkimi obiektami zastępczymi, dopóki grupa nie zostanie rozwinięta.
+
+Lumi-o jest rozwijane na Debianie 13 z pulpitem Cinnamon. Jeśli przechodzisz z systemu Windows, pierwszym krokiem jest instalacja Debiana. Zobacz [Jak zainstalować Linuksa](/hub/install-linux/).
 
 {{< cards >}}
-  {{< card link="hub/about/" title="O" icon="information-circle" >}}
+  {{< card link="hub/about/" title="O programie" icon="information-circle" >}}
   {{< card link="hub/quick-start/" title="Szybki start" icon="play" >}}
-  {{< card link="hub/features/" title="Cechy" icon="book-open" >}}
+  {{< card link="hub/features/" title="Funkcje" icon="book-open" >}}
 {{< /cards >}}

@@ -1,7 +1,12 @@
 ---
 title: "Narzędzie Pędzel"
 type: docs
+url: "hub/features/paintbrush"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
+
 Narzędzie Pędzel to podstawowe narzędzie do malowania Lumi: responsywny i wyrazisty sposób rysowania, malowania, cieniowania, teksturowania i tworzenia znaków bezpośrednio na płótnie. Został zaprojektowany tak, aby był natychmiastowy i jednocześnie dawał artystom możliwość kształtowania zachowania udaru.
 
 Zamiast być pojedynczym, stałym pędzlem, działa jak system malarski. Kształt pędzla, tekstura, ruch, nacisk, czas i kolor mogą mieć wpływ na końcowy znak, dzięki czemu nadaje się on do pracy z czystymi liniami, miękkiego malowania, efektów suchych mediów, pociągnięć kaligraficznych, rozproszonych tekstur i wielogłowych formacji pędzla.
@@ -25,9 +30,9 @@ Dzięki temu pędzel nie przypomina odciśniętego wzoru, a bardziej fizyczny in
 
 ![dynamics](/images/screens/dynamics.jpg)
 
-## Zachowanie podczas udaru
+## Zachowanie pociągnięcia
 
-Uderzenia mogą być bezpośrednie i natychmiastowe lub mogą być wspomagane przez wygładzenie i stabilizację. Funkcje te pomagają zredukować niepożądane drgania, złagodzić nagłe zmiany i sprawić, że dłuższe ruchy będą bardziej kontrolowane, bez usuwania charakteru wkładu artysty.
+Pociągnięcia mogą być bezpośrednie i natychmiastowe lub mogą być wspomagane przez wygładzenie i stabilizację. Funkcje te pomagają zredukować niepożądane drgania, złagodzić nagłe zmiany i sprawić, że dłuższe ruchy będą bardziej kontrolowane, bez usuwania charakteru wkładu artysty.
 
 Pędzel obsługuje również różne podejścia do gromadzenia się farby. Może zachowywać się jak ciągłe pociągnięcie, gromadzić powtarzające się muśnięcia lub z czasem emitować ślady, gdy wskaźnik jest trzymany w miejscu. Ta elastyczność sprawia, że ​​jest on przydatny zarówno do celowej pracy z linią, jak i do wolniejszej konstrukcji tonalnej.
 
@@ -41,7 +46,9 @@ Pędzel może przechwycić małą próbkę sposobu, w jaki ustawienie wstępne j
 
 Dzięki temu konstruowane pociągnięcia są bliżej charakteru pędzla. Linia narysowana ze ścieżki może zaczynać się delikatnie, zwiększać nacisk, zwężać się lub zmieniać reakcję na prędkość w taki sam szeroki sposób, jak próbkowany ruch dłoni, zachowując jednocześnie dokładny kształt ścieżki, krawędzi zaznaczenia lub gestu linii prostej.
 
-## Przetwarzanie końcowePędzel może zarejestrować pociągnięcie podczas jego rysowania, a następnie odtworzyć uchwycony gest po oderwaniu się od ziemi, dopracowując ścieżkę przed pozostawieniem ostatecznego znaku. Możesz swobodnie szkicować, a mimo to uzyskać czystszy kierunek, ostrzejsze narożniki lub bardziej przemyślaną strukturę bez konieczności rysowania z mechaniczną precyzją.
+## Przetwarzanie końcowe
+
+Pędzel może zarejestrować pociągnięcie podczas jego rysowania, a następnie odtworzyć uchwycony gest po oderwaniu rysika od płótna, dopracowując ścieżkę przed pozostawieniem ostatecznego znaku. Możesz swobodnie szkicować, a mimo to uzyskać czystszy kierunek, ostrzejsze narożniki lub bardziej przemyślaną strukturę bez konieczności rysowania z mechaniczną precyzją.
 
 Umożliwia to kreskowanie i linijkowe znaki konstrukcyjne, które przyciągają się do czystych kątów, zachowując jednocześnie ręcznie rysowaną długość i charakter, pociągnięcia wstęgą odporne na przechylenie oraz powtórkę uwzględniającą narożniki, która inaczej traktuje zakręty i proste przebiegi. Pędzle wielogłowicowe mogą dzielić skorygowaną ścieżkę, podczas gdy każda główka zachowuje swoją własną odmianę, a dynamika może nadal kształtować pociągnięcie wzdłuż jego końcowej krzywizny podczas odtwarzania. Przetwarzanie końcowe dotyczy pociągnięć rysunkowych, a nie ciągłej emisji aerografu.
 
@@ -71,7 +78,9 @@ Obciążenie można ponownie wprowadzić pomiędzy pociągnięciami, utrzymać n
 
 Pędzel może również symulować chwilową utratę kontaktu z powierzchnią malowania — połamane ślady, które pojawiają się, gdy ołówek, węgiel drzewny, suchy pędzel lub częściowo wyczerpany marker tylko częściowo stykają się z papierem.
 
-Gdy włączona jest symulacja kontaktu, szczotka styka się lub jest podniesiona. Podczas kontaktu normalnie zaznacza depozyt. Podczas podnoszenia nie osadza się żaden materiał, a skok pozostawia szczelinę, której długość jest wybierana losowo pomiędzy odległością minimalną i maksymalną. Przejście jest binarne: efekt nie zmienia krycia, rozmiaru, twardości, odstępów ani płynięcia – tylko to, czy farba jest nałożona.Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że ​​prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.
+Gdy włączona jest symulacja kontaktu, szczotka styka się lub jest podniesiona. Podczas kontaktu normalnie zaznacza depozyt. Podczas podnoszenia nie osadza się żaden materiał, a skok pozostawia szczelinę, której długość jest wybierana losowo pomiędzy odległością minimalną i maksymalną. Przejście jest binarne: efekt nie zmienia krycia, rozmiaru, twardości, odstępów ani płynięcia – tylko to, czy farba jest nałożona.
+
+Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że ​​prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.
 
 Straty są oceniane na podstawie odległości pociągnięć, a nie liczby muśnięć, więc pędzle z gęstymi lub rzadkimi odstępami zachowują się spójnie. Ta funkcja działa zarówno w przypadku renderowania opartego na stemplach, jak i kaligrafii, tworząc spójne przerwy wzdłuż obrysu, a nie pojedyncze, pominięte plamki.
 

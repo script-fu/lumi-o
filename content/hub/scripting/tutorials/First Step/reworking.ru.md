@@ -2,6 +2,9 @@
 title: "Переработка"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Этот шаг исправляет тонкое поведение в примере обмена сообщениями.
 
@@ -13,7 +16,7 @@ weight: 7
 
 Удаление escape-символа и расширение функций:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ weight: 7
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Добавить перевод строки, чтобы принудительно показать окно сообщения
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ weight: 7
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Назначение: Отправляет сообщение в нужное место вывода
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ weight: 7
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Назначение: Проверяет, что сообщение — непустая строка
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Проверить, является ли сообщение непустой строкой
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Назначение: Проверяет, что сообщение отправляется в корректный вывод
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Проверить, является ли вывод одним из ожидаемых мест отображения
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

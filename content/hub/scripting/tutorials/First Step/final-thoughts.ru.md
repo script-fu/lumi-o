@@ -2,12 +2,15 @@
 title: "Заключительные мысли"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 Теперь у вас есть плагин рабочей процедуры и небольшая вспомогательная библиотека. В этой серии представлены основные шаблоны, которые вы будете использовать в большинстве скриптов Lumi:
 
 - Функции: строительные блоки наших плагинов.
 - Рефакторинг: улучшение структуры кода при сохранении функциональности.
-- Библиотеки кода: централизованное использование функций многократного использования для поддержания чистоты и модульности нашего кода.
+- Библиотеки кода: централизация повторно используемых функций для поддержания чистоты и модульности нашего кода.
 - Методы проверки: проверка правильности входных данных перед выполнением нашей основной логики.
 
 Вы также ознакомились с основами использования Git для отслеживания изменений и поддержания чистой структуры проекта. Такой рабочий процесс упрощает повторение без потери рабочих версий.
@@ -15,7 +18,7 @@ weight: 10
 Вот окончательная версия нашего основного кода плагина:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ weight: 10
 Код библиотеки:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Назначение: Отправляет сообщение в строку состояния, возвращает #t при успехе
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Назначение: Отправляет сообщение в диалоговое окно, возвращает #t при успехе
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Назначение: Отправляет сообщение в Error Console, возвращает #t при успехе
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Назначение: Отправляет сообщение в terminal, возвращает #t при успехе
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Назначение: Отправляет сообщение в нужный вывод, возвращает #t при успехе
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ weight: 10
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Назначение: Проверяет, что сообщение — непустая строка, возвращает #t при корректности
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ weight: 10
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Назначение: Проверяет, что вывод — корректное назначение, возвращает #t при корректности
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

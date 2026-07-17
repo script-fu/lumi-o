@@ -1,7 +1,10 @@
 ---
 title: "Listy"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 W schemacie **lista** jest podstawową strukturą danych używaną do grupowania wartości. Listy to uporządkowane zbiory elementów, z których każdy może być dowolnego typu, łącznie z inną listą. Listy są szeroko stosowane w schemacie zarówno do przechowywania danych, jak i struktury programu.
 
@@ -28,8 +31,8 @@ Dostęp do elementów listy uzyskuje się za pomocą procedur `car` i `cdr`:
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; Pobiera pierwszy element
+(cdr my-list)  ; Pobiera resztę listy
 ```
 
 Wynik:
@@ -52,8 +55,8 @@ Oto prosta funkcja rekurencyjna umożliwiająca wydrukowanie każdego elementu l
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; Wypisuje pierwszy element
+      (print-elements (cdr lst)))))             ;; Przetwarza resztę listy
 ```
 
 - **Przypadek podstawowy:** Jeśli lista jest pusta (`null? lst`), zatrzymaj rekursję.
@@ -135,8 +138,8 @@ Procedura `list?` sprawdza, czy dana wartość jest listą.
 #### Przykład: lista?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; Sprawdza, czy (list 1 2 3) jest listą
+(list? 42)            ; Sprawdza, czy 42 jest listą
 ```
 
 Wynik:
@@ -155,16 +158,18 @@ Scheme udostępnia kilka wbudowanych procedur pracy z listami, w tym:
 - `reverse`: Zwraca nową listę z elementami w odwrotnej kolejności.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; Zwraca 3
+(append (list 1 2) (list 3 4)) ; Zwraca (1 2 3 4)
+(reverse (list 1 2 3))         ; Zwraca (3 2 1)
 ```
 
 Wynik:
 
 - `(length (list 1 2 3))` zwraca `3`
 - `(append (list 1 2) (list 3 4))` zwraca `(1 2 3 4)`
-- `(reverse (list 1 2 3))` zwraca `(3 2 1)`#### Korzystanie z `list-ref`
+- `(reverse (list 1 2 3))` zwraca `(3 2 1)`
+
+#### Korzystanie z `list-ref`
 
 Procedura `list-ref` pobiera element o określonym indeksie listy (indeks liczony od zera).
 
@@ -178,7 +183,7 @@ Procedura `list-ref` pobiera element o określonym indeksie listy (indeks liczon
 ##### Przykład: lista-ref
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; Pobiera element o indeksie 2
 ```
 
 Wynik: `30`
@@ -208,10 +213,10 @@ Aby uzyskać dostęp do elementów na zagnieżdżonej liście, możesz użyć ko
 #### Przykład: uzyskiwanie dostępu do elementów
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; Pobiera pierwszy element: (1 2)
+(car (car nested-list))        ; Pobiera pierwszy element pierwszej podlisty: 1
+(cdr (car nested-list))        ; Pobiera resztę pierwszej podlisty: (2)
+(car (cdr (car nested-list)))  ; Pobiera drugi element pierwszej podlisty: 2
 ```
 
 ---
@@ -235,8 +240,8 @@ Aby uzyskać dostęp do elementów na zagnieżdżonej liście, możesz użyć ko
 #### Przykład: uzyskiwanie dostępu do elementów z innych podlist
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; Pobiera drugą podlistę: (3 4)
+(car (car (cdr nested-list)))  ; Pobiera pierwszy element drugiej podlisty: 3
 ```
 
 ---

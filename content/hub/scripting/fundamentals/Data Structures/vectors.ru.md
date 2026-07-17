@@ -1,7 +1,10 @@
 ---
 title: "Векторы"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 В схеме вектор — это еще одна фундаментальная структура данных, используемая для группировки значений. В отличие от списков, векторы представляют собой индексированные коллекции элементов фиксированного размера, обеспечивающие более быстрый произвольный доступ и обновления. Каждый элемент вектора может быть любого типа, включая другой вектор. Векторы обозначаются знаком #, за которым следуют круглые скобки. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Получает элемент с индексом 0
+(vector-ref my-vector 1)  ; Получает элемент с индексом 1
 ```
 
 #### Итерация: обработка каждого элемента вектора
@@ -42,9 +45,9 @@ weight: 5
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Выводит элемент
+        (loop (+ i 1)))                                    ; Обрабатывает следующий индекс
+      (lumi-message "done"))))                             ; Конец цикла
 ```
 
 - **Базовый случай:** Если индекс `i` достигает длины вектора, остановите цикл.
@@ -99,7 +102,7 @@ weight: 5
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Устанавливает второй элемент в 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ my-vector
 Процедура `vector?` проверяет, является ли данное значение вектором.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Проверяет, является ли #(1 2 3) вектором
+(vector? 42)              ; Проверяет, является ли 42 вектором
 ```
 
 Результат:
@@ -127,11 +130,11 @@ my-vector
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Обновляет вектор по указанному индексу
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Изменяет второй элемент на 99
+my-vector                              ; Исходный вектор теперь обновлён
 ```
 
 Результат: `#(10 99 30)`
@@ -157,9 +160,9 @@ Scheme предоставляет несколько встроенных про
 - `list->vector`: преобразует список в вектор.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Возвращает 3
+(vector->list (vector 1 2 3))          ; Преобразует вектор в список: (1 2 3)
+(list->vector (list 1 2 3))            ; Преобразует список в вектор: #(1 2 3)
 ```
 
 Результат:
@@ -187,8 +190,8 @@ Scheme предоставляет несколько встроенных про
 #### Пример: доступ к элементам
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Получает первый элемент: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Получает второй элемент первого вектора: 2
 ```
 
 ### Резюме

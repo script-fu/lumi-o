@@ -2,6 +2,9 @@
 title: "Debug"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 Nello scripting, nessuna funzione è infallibile. Anche i comandi più affidabili possono fallire di fronte a input o condizioni imprevisti. Per salvaguardarci da ciò, possiamo implementare un sistema di debug personalizzato e adottare tecniche di programmazione difensive. Integrando le funzioni standard con meccanismi di gestione degli errori e fornendo feedback informativo, possiamo rendere i nostri script più robusti e più facili da risolvere.
 
@@ -12,14 +15,14 @@ Una parte fondamentale di questa strategia è l'utilizzo di un flag di debug glo
 Un flag di debug globale è un modo semplice ma efficace per controllare il livello di output delle informazioni durante l'esecuzione dello script. Se abilitato, fornisce messaggi di debug dettagliati che possono essere preziosi per individuare i problemi. Quando disabilitato, mantiene l'output conciso per l'uso in produzione.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Scopo: Flag globale per controllare l'output di debug.
 (define debug #f)
 ```
 
 Per impostazione predefinita, il debug è disattivato. Per abilitare l'output dettagliato durante lo sviluppo, imposta semplicemente il flag su `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Scopo: Flag globale per controllare l'output di debug.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ Possiamo anche abilitare o disabilitare temporaneamente il debug per sezioni spe
 Per un controllo più preciso, possiamo attivare o disattivare il debug all'interno di parti specifiche dello script utilizzando le funzioni di supporto.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Scopo: Disattivare la modalità debug per una sezione di codice.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Scopo: Attivare la modalità debug per una sezione di codice.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ Per un controllo più preciso, possiamo attivare o disattivare il debug all'inte
 Questo ci consente di controllare il debug in modo dinamico:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Abilita l'output dettagliato
 
-;; Some script logic here
+;; Qualche logica di script qui
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Disabilita l'output dettagliato
 ```
 
 ## Debug del sistema di messaggistica
@@ -73,7 +76,7 @@ Ciascuna funzione svolge un ruolo nella formattazione e nella visualizzazione de
 La funzione `debug-message` è il metodo principale per visualizzare l'output di debug. Garantisce che i messaggi vengano visualizzati solo quando il debug è abilitato.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Scopo: Visualizzare un messaggio di debug.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ La funzione `debug-message` è il metodo principale per visualizzare l'output di
 Utilizzo di esempio:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Scopo: Restituisce la posizione ad albero dell'elemento o #f se l'elemento non è valido
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Con il debug abilitato, l'output potrebbe essere:
 I messaggi possono contenere diversi tipi di dati come elenchi, vettori e numeri. Per garantire che siano formattati correttamente, utilizziamo `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Scopo: Converte vari tipi di dati Scheme (liste, vettori, coppie, ecc.)
+;;          in una rappresentazione stringa.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Elenco vuoto
+    ((and (string? item) (string=? item "")) "\"\"")  ; Stringa vuota
+    ((list? item) (list->string item))                ; Elenco annidato
+    ((vector? item)                                   ; Gestisce i vettori
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Gestisce le coppie
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Numeri
+    ((symbol? item) (symbol->string item))            ; Simboli
+    ((boolean? item) (if item "#t" "#f"))             ; Valori booleani
+    ((string? item) item)                             ; Stringhe
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 Per unire più componenti del messaggio in un'unica stringa, utilizziamo `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Scopo: Concatenare più elementi in un'unica stringa.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ Utilizzo di esempio:
 La funzione `list->string` converte un elenco in una stringa formattata.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Scopo: Convertire un elenco di elementi in una stringa leggibile.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ La funzione `list->string` converte un elenco in una stringa formattata.
 ### Messaggi di avvisoLa funzione `warning-message` funziona in modo simile a `debug-message`, ma visualizza avvisi anche quando il debug è disabilitato.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Scopo: Visualizzare un messaggio di avviso.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ Una volta predisposto un sistema di debug, possiamo migliorare la nostra libreri
 Un esempio comune è `item-is-valid?`, che avvolge `lumi-item-id-is-valid` per restituire `#t` o `#f`. Se viene restituito `#f`, possiamo attivare un `warning-message` nel codice chiamante, se l'input non è un numero possiamo dare un avviso nella funzione.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Scopo: Verificare se un elemento è valido, restituisce #t o #f.
+;;          Emette un avviso se l'elemento non è un numero.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Un wrapper per la nostra funzione di messaggio per utilizzare `*`
 Esempio di utilizzo pratico di `call`:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Scopo: Applica il processo di texturing all'elenco dato di maschere di gruppo
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

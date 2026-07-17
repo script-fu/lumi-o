@@ -1,7 +1,10 @@
 ---
-title: "변수 및 범위"
+title: "변수와 스코프"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 Scheme에서 변수와 그 범위를 관리하는 것은 효율적이고 유지 관리 가능한 스크립트를 작성하기 위한 핵심 개념입니다. 변수는 스크립트가 조작할 수 있는 데이터 값을 저장하는 반면 범위는 해당 변수에 액세스할 수 있는 위치를 정의합니다. 변수를 효과적으로 정의하고 사용하는 방법을 이해하면 구조화되고 재사용 가능하며 오류 없는 코드를 만들 수 있습니다.
 
@@ -10,8 +13,8 @@ Scheme에서 변수와 그 범위를 관리하는 것은 효율적이고 유지 
 구성표는 동적으로 유형이 지정됩니다. 유형을 미리 선언하지 않으며 변수는 시간이 지남에 따라 다양한 종류의 값을 보유할 수 있습니다.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x는 숫자
+(set! x "hello")    ; 이제 x는 문자열
 ```
 
 ### 스킴에서 변수 정의와 범위의 역할

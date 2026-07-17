@@ -1,6 +1,10 @@
 ---
 title: "Lager"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/layers"
+translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
 Lumis lagersystem ger en illustrationsstruktur. Det låter konstnärer separera skiss, färg, skuggning, textur, masker, justeringar, experiment och slutliga detaljer utan att göra varje beslut direkt i en platt bild.
 

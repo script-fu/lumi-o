@@ -1,43 +1,48 @@
 ---
-title: "Uma visão geral do sistema Linux"
+title: "Visão geral do sistema Linux"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux é um sistema operacional poderoso e versátil com uma vasta comunidade de desenvolvedores. Basicamente, um sistema Linux consiste em vários componentes principais que trabalham juntos para fornecer uma experiência de usuário perfeita. Esta visão geral descreverá as partes essenciais de um sistema Linux, incluindo o kernel, distribuição, gerenciador de pacotes, gerenciador de exibição, ambiente de desktop e servidor de exibição (X11 ou Wayland).
 
-Lumi está no seu melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente.
+Linux é um sistema operacional poderoso e versátil, com uma vasta comunidade de desenvolvedores. Em essência, um sistema Linux consiste em vários componentes principais que trabalham juntos para oferecer uma experiência de usuário fluida. Esta visão geral descreve as partes essenciais de um sistema Linux: kernel, distribuição, gerenciador de pacotes, gerenciador de exibição, ambiente de desktop e servidor de exibição (X11 ou Wayland).
 
-**Padrões atuais comuns de distribuição do Linux**
+O Lumi funciona melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente.
 
-| **Distribuição** | **Gerenciador de Pacotes** | **Gerenciador de exibição** | **Ambiente de área de trabalho** | **Servidor de exibição** |
-|--------------------|----------------------|----------------------|-----------------------------------|--------------------|
-| Debian | APTO | GDM | GNOME | Wayland |
-| Ubuntu | APTO | GDM | GNOME | Wayland |
-| Debian | APTO | GDM | Canela | X11 |
-| Fedora | DNF | GDM | GNOME | Wayland |
-| Arco Linux | Pacman | Escolha do usuário | Escolha do usuário | Escolha do usuário |
+**Padrões comuns atuais das distribuições Linux**
+
+| **Distribuição** | **Gerenciador de pacotes** | **Display Manager** | **Ambiente de desktop** | **Servidor de exibição** |
+|--------------------|----------------------|----------------------|-------------------------|--------------------|
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
+| Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
+| Arch Linux         | Pacman               | Escolha do usuário   | Escolha do usuário      | Escolha do usuário |
 
 ### Termos-chave
 
-#### Núcleo
+#### Kernel
 
-O núcleo do sistema operacional que faz interface direta com o hardware, geralmente Linux.
+O núcleo do sistema operacional que se comunica diretamente com o hardware — em geral, Linux.
 
 #### Distribuição
 
-A distribuição Linux, que empacota o kernel junto com ferramentas, bibliotecas e software de espaço do usuário. Exemplos incluem Debian, Arch Linux e Fedora.
+A distribuição Linux empacota o kernel junto com ferramentas, bibliotecas e software de espaço de usuário. Exemplos: Debian, Arch Linux e Fedora.
 
-#### Gerenciador de Pacotes
+#### Gerenciador de pacotes
 
-Uma ferramenta usada para instalar, atualizar e remover aplicativos de software de repositórios. Os exemplos incluem APT para distribuições baseadas em Debian, DNF para Fedora e Pacman para Arch Linux.
+Ferramenta usada para instalar, atualizar e remover aplicativos a partir de repositórios. Exemplos: APT para distribuições baseadas em Debian, DNF para Fedora e Pacman para Arch Linux.
 
-#### Gerenciador de exibição
+#### Display Manager
 
-Gerencia a tela gráfica de login e o início da sessão. Os exemplos incluem GDM (GNOME Display Manager), LightDM e SDDM (Simple Desktop Display Manager).
+Gerencia a tela gráfica de login e o início da sessão. Exemplos: GDM (GNOME Display Manager), LightDM e SDDM (Simple Desktop Display Manager).
 
-#### Ambiente de Trabalho
+#### Ambiente de desktop
 
-Fornece a interface gráfica do usuário (GUI) e gerencia a aparência geral e a experiência do usuário. Os exemplos incluem GNOME, Cinnamon e KDE Plasma.
+Fornece a interface gráfica do usuário (GUI) e gerencia a aparência geral e a experiência do usuário. Exemplos: GNOME, Cinnamon e KDE Plasma.
 
 #### Servidor de exibição
 
-Gerencia a saída de exibição e os eventos de entrada. Os exemplos incluem X11 (sistema X Window) e Wayland. O X11 é um servidor de exibição tradicional, enquanto o Wayland é uma alternativa mais nova e segura.
+Gerencia a saída de vídeo e os eventos de entrada. Exemplos: X11 (X Window System) e Wayland. O X11 é um servidor de exibição tradicional; o Wayland é uma alternativa mais recente e segura.

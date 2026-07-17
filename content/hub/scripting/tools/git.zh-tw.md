@@ -1,6 +1,9 @@
 ---
 title: "git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 使用 Git 追蹤插件的變更、回滾錯誤以及跨機器共享程式碼。
 
@@ -62,7 +65,7 @@ sudo apt install git
 
 1. **登入GitHub**：前往[GitHub](https://github.com/)並登入您的帳戶。
 2. **建立新儲存庫**：
-   - 點擊右上角的 **+** 圖標，然後選擇 **新儲存庫**。
+   - 點擊右上角的 ***+** 圖標，然後選擇 **新儲存庫**。
    - 輸入儲存庫名稱（例如`your-repository`）。
    - 如果需要，請新增描述。
    - 選擇**公開**或**私人**可見。

@@ -1,12 +1,17 @@
 ---
 title: "Technische Leitfäden"
 type: docs
+url: "hub/technical-guides"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: dc797bbadec28038007ea8876a824b54cfd5d87a1b931bef01ae79609a41caf1
 ---
+
 Willkommen bei den technischen Leitfäden für Lumi.
 
-Diese Leitfäden dokumentieren praktische Arbeitsabläufe bei der Entwicklung und Wartung von Lumi auf Debian-basierten Linux-Systemen. Sie konzentrieren sich eher auf reale Arbeitsumgebungen als auf die allgemeine Linux-Theorie.
+Diese Leitfäden dokumentieren praktische Arbeitsabläufe bei der Entwicklung und Wartung von Lumi auf Debian-basierten Linux-Systemen. Sie konzentrieren sich auf reale Arbeitsumgebungen statt auf allgemeine Linux-Theorie.
 
-Zu den behandelten Themen gehören Lumi-Entwicklung, Debugging, Automatisierung, Systemeinrichtung und unterstützende Tools, die in täglichen Produktionsabläufen verwendet werden.
+Zu den behandelten Themen gehören Lumi-Entwicklung, Debugging, Automatisierung, Systemeinrichtung und unterstützende Tools im täglichen Produktionsbetrieb.
 
 {{< cards >}}
   {{< card link="AppImage" title="AppImage">}}

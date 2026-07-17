@@ -1,149 +1,165 @@
 ---
 title: "Filter"
 type: docs
+url: "hub/features/filters"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
-Das Menü „Filter“ von Lumi vereint Korrekturkorrekturen, stilisierte Linseneffekte, prozedurale Texturgeneratoren, druckinspirierte Behandlungen und Analysetools an einem Ort. Die Reihenfolge der Menüs ist eher praktisch als akademisch: Unschärfe- und Verbesserungswerkzeuge liegen nebeneinander, Verzerrungs- und Beleuchtungseffekte sind nach Aussehen gruppiert und Textur- oder Mustergeneratoren werden zusammengehalten, wenn das Ziel darin besteht, Quellmaterial zu erstellen, anstatt ein vorhandenes Bild zu modifizieren.
+Lumis Filter-Menü vereint Korrekturen, stilisierte Linseneffekte, prozedurale Texturgeneratoren, druckinspirierte Behandlungen und Analysewerkzeuge an einem Ort. Die Menüreihenfolge ist praktisch statt akademisch: Unschärfe- und Verbesserungswerkzeuge liegen nebeneinander, Verzerrungs- und Beleuchtungseffekte nach Erscheinung gruppiert, Textur- und Mustergeneratoren zusammen, wenn Quellmaterial erzeugt statt ein vorhandenes Bild verändert werden soll.
 
-Filterdialoge folgen demselben allgemeinen Arbeitsablauf. Mit Voreinstellungen, Vorschau, geteilter Ansicht und Steuerelementen für Deckkraft oder Mischung kann ein Effekt schnell angepasst werden, und auf Ebenen kann das Ergebnis als bearbeitbarer, zerstörungsfreier Filter verbleiben, anstatt sofort zusammengeführt zu werden. Lumi führt auch einen aktuellen Verlauf der Filterverwendung, sodass das Wiederholen des letzten Effekts oder das erneute Öffnen des letzten Dialogs Teil des normalen Malrhythmus und keine separate Aufgabe ist.
+Filterdialoge folgen demselben Workflow. Voreinstellungen, Vorschau, geteilte Ansicht sowie Deckkraft- oder Mischsteuerungen ermöglichen schnelles Feintuning; auf Ebenen kann das Ergebnis als bearbeitbarer zerstörungsfreier Filter verbleiben, statt sofort zusammengeführt zu werden. Lumi führt zudem einen Verlauf der Filternutzung — den letzten Effekt wiederholen oder den letzten Dialog erneut öffnen gehört zum normalen Malrhythmus, nicht zu einer Extraaufgabe.
 
 ## Unschärfe
 
 ### Gaußsche Unschärfe
 
-Gaußsche Unschärfe ist Lumis Standard-Weichzeichnungsfilter: eine saubere, gleichmäßige Unschärfe mit separaten horizontalen und vertikalen Größensteuerungen, Kantenbehandlung und Kernel-Optionen. Es ist die Allzwecklösung für Weichzeichnung, weichere Masken, atmosphärische Tiefe und alle Arbeitsabläufe, bei denen die Unschärfe selbst neutral bleiben soll.
+Gaussian Blur ist Lumis Standard-Weichzeichner: saubere, gleichmäßige Unschärfe mit separaten horizontalen und vertikalen Größen, Kantenbehandlung und Kernel-Optionen. Allzweckwahl für Weichzeichnung, weiche Masken, atmosphärische Tiefe und jeden Workflow, in dem die Unschärfe selbst neutral bleiben soll.
 
 ### Pixelisieren
 
-Pixelize reduziert Details in bewusste Blockstrukturen statt einer weichen Unschärfe. Da der Dialog Blockbreite, Blockhöhe, Versätze, Pixelform und Füllverhalten offenlegt, fungiert er sowohl als grober Zensureffekt als auch als steuerbares Mosaik oder als Grafikbehandlung mit niedriger Auflösung.
+Pixelize reduziert Details zu bewussten Blockstrukturen statt weicher Unschärfe. Blockbreite, -höhe, Versätze, Pixelform und Füllverhalten im Dialog machen ihn zum groben Zensur-Effekt, steuerbarem Mosaik oder grafischer Niedrigauflösungs-Behandlung.
 
 ### Selektive Gaußsche Unschärfe
 
-Die selektive Gaußsche Unschärfe macht Bereiche innerhalb von Regionen weicher und versucht gleichzeitig, stärkere Kanten beizubehalten. Dies ist nützlich, wenn ein Bild eine ruhigere Textur oder weniger Vibrationen benötigt, ohne die größeren Formgrenzen zu verlieren, die noch klar lesbar sein müssen.
+Selective Gaussian Blur weichzeichnet innerhalb von Bereichen und bewahrt stärkere Kanten. Nützlich, wenn ein Bild ruhigere Textur oder weniger Rauschen braucht, ohne die großen Formgrenzen zu verlieren, die klar lesbar bleiben müssen.
 
 ### Linsenunschärfe
 
-Lens Blur ist einer der stärker auf Illustrationen ausgerichteten Unschärfefilter von Lumi. Seine Steuerelemente basieren auf der Form der Polygon-Iris, der Klingenkrümmung, der anamorphotischen Streckung, der Hervorhebung von Glanzlichtern und einem konfigurierbaren Fokusbereich, sodass es sich weniger wie ein generischer Weichzeichner, sondern eher wie ein stilisiertes Tiefenschärfewerkzeug mit geformtem Bokeh verhält.
+Lens Blur ist einer der illustrationorientierten Unschärfefilter. Steuerungen für Polygon-Iris, Blattkrümmung, anamorphe Streckung, Glanzlicht-Verstärkung und konfigurierbaren Fokusbereich — weniger generischer Weichzeichner, mehr stilisiertes Tiefenschärfewerkzeug mit geformtem Bokeh.
 
 ### Tilt-Shift
 
-Tilt-Shift hält ein steuerbares Fokusband scharf, während das Bild darüber und darunter zunehmend unscharf wird. Aufgrund des Bandwinkels, der Feder, der perspektivischen Ausrichtung, der Irisform und der Miniaturverstärkung des Dialogs eignet er sich gut für Miniaturszenen, Architekturansichten und jede Komposition, bei der der Fokus als entworfener Streifen und nicht als kreisförmiger Tiefenhinweis angezeigt werden soll.
+Tilt-Shift hält ein steuerbares Fokusband scharf und verwischt das Bild darüber und darunter progressiv. Bandwinkel, Weichzeichnung, Perspektivbias, Irisform und Miniatur-Verstärkung eignen sich für Miniatur-Look, Architekturansichten und Kompositionen, in denen der Fokus als entworfener Streifen statt kreisförmiger Tiefenhinweis wirken soll.
 
 ### Kreisförmige Bewegungsunschärfe
 
-„Zirkuläre Bewegungsunschärfe“ verwischt Details um einen Mittelpunkt herum und verwandelt Kanten in Rotationsspuren. Es ist die natürliche Wahl für sich drehende Motive, Turbinen-ähnliche Energie oder Illustrationen, die ein Gefühl von Orbitalbewegung erfordern.
+Circular Motion Blur verwischt Details um einen Mittelpunkt und verwandelt Kanten in Rotationsspuren. Natürliche Wahl für sich drehende Motive, turbinenartige Energie oder Illustrationen mit orbitaler Bewegung.
 
 ### Lineare Bewegungsunschärfe
 
-Lineare Bewegungsunschärfe streckt Details in eine Richtung und simuliert so Reisen, Kamerabewegungen oder schnelle Gesten über das Bild hinweg. Dies ist besonders nützlich, wenn sich die Bewegung richtungsweisend und anschaulich anfühlen soll und nicht diffus.
+Linear Motion Blur streckt Details in eine Richtung — Reise, Kamerabewegung oder schnelle Geste über das Bild. Besonders nützlich, wenn die Bewegung richtungsweisend und grafisch statt diffus wirken soll.
 
 ### Zoom-Bewegungsunschärfe
 
-Zoom Motion Blur strahlt Details von einer Mitte nach außen aus und erzeugt so das Gefühl, als würden sie auf den Betrachter zu oder von ihm weg stürmen. Es eignet sich gut für Aufprallmomente, Geschwindigkeitslinien und Kompositionen, die eine Kamera-Zoom-Energie benötigen, ohne das gesamte Bild neu zu zeichnen.
+Zoom Motion Blur strahlt Details von einer Mitte nach außen — das Gefühl eines Ansturms auf oder weg vom Betrachter. Gut für Aufprallmomente, Geschwindigkeitslinien und Kompositionen mit Kamera-Zoom-Energie, ohne das ganze Bild neu zu malen.
 
 ## Verbessern
 
-### HochpassHigh Pass isoliert feine lokale Kontraste und nicht breite Tonveränderungen. Da nur Skalierung und Kontrast verwaltet werden müssen, ist es ein unkompliziertes Werkzeug zum Extrahieren von Kantendetails, zum Erstellen gestochen scharfer Überlagerungen oder zum Vorbereiten von Schärfungsdurchgängen, bei denen die Struktur mehr als die Farbe betont werden soll.
+### Hochpass
 
-### Rauschunterdrückung
+High Pass isoliert feinen lokalen Kontrast statt breiter Tonveränderung. Mit nur Skala und Kontrast ist es ein unkompliziertes Werkzeug zum Extrahieren von Kantendetails, gestochen scharfen Overlays oder Schärfungsdurchgängen, die Struktur stärker als Farbe betonen sollen.
 
-Die Rauschunterdrückung ist der gegenteilige Schritt: Sie unterdrückt unerwünschte feine Abweichungen, sodass größere Formulare klarer lesbar sind. Dies ist nützlich, wenn gescanntes Material, komprimierte Texturen oder überarbeitete Passagen vor dem weiteren Malen oder Filtern vereinfacht werden müssen.
+### Rauschreduzierung
+
+Noise Reduction ist der Gegenmove: unerwünschte feine Variation wird unterdrückt, damit größere Formen klarer lesen. Nützlich bei gescanntem Material, komprimierten Texturen oder überarbeiteten Passagen, die vor weiterem Malen oder Filtern vereinfacht werden müssen.
 
 ### Schärfen
 
-„Scharfzeichnen“ verwendet ein Unscharfmaskenmodell, bei dem Radius, Betrag und Schwellenwert steuern, wie stark der lokale Kontrast verstärkt wird. In der Praxis eignet es sich daher für die Wiederherstellung der Klarheit nach Unschärfen, Exportgrößenänderungen oder subtilen Nachbearbeitungsschritten, bei denen Details hervortreten müssen, ohne jedes Pixel in Rauschen zu verwandeln.
+Sharpen nutzt ein Unscharfmasken-Modell — Radius, Stärke und Schwellenwert steuern, wie stark lokaler Kontrast angehoben wird. Praktisch zur Wiederherstellung von Klarheit nach Unschärfe, Export-Skalierung oder subtilen Finish-Durchgängen, bei denen Details hervortreten sollen, ohne jedes Pixel in Rauschen zu verwandeln.
+
+## Farbe
+
+### Tonwertkorrektur
+
+Tonal Grading ordnet Farben nach Tonwertbereich neu zu — ohne Kontrastkurven neu zu zeichnen. Die Luminanz jedes Pixels wählt eine sanfte Mischung aus drei Nutzerfarben für Schatten, Mittelton und Lichter; das Bild behält seine Hell-Dunkel-Struktur, während sich die Palette verschiebt. Stärke pro Bereich, Balance-Bias im Lightroom-Stil (links begünstigt Schattengrad, rechts Lichtergrad) und Übergangsweichheit steuern Reichweite und Überlappung der Abstufungen. Für Illustration, Comics, Concept Art und Fotografie, wenn ein stimmiger Look das Ziel ist.
 
 ## Verzerren
 
 ### Chromatische Aberration
 
-Chromatische Aberration trennt Farbkanäle von einem gewählten Zentrum nach außen, mit Steuerelementen für radiale oder tangentiale Richtung, Vorspannung zwischen Kanalpaaren, Abfall und Luminanzerhaltung. Sowohl der Code als auch der Dialog behandeln es als ein Zwei-Wege-Werkzeug: Es kann stilisierte Linsensäume für mehr Energie hinzufügen oder das Vorzeichen umkehren, um leichte Aberrationen im Quellmaterial zu korrigieren.
+Chromatic Aberration trennt Farbkanäle von einem gewählten Zentrum nach außen — mit Steuerungen für radiale oder tangentiale Richtung, Bias zwischen Kanalpaaren, Abfall und Luminanzerhalt. Code und Dialog behandeln es als Zwei-Wege-Werkzeug: stilisierte Linsenfringing für Energie hinzufügen oder Vorzeichen umkehren, um leichte Aberration im Quellmaterial zu korrigieren.
 
-### Linsenverzerrung
+### Linsenverzärung
 
-Durch die Linsenverzerrung wird das Bild durch tonnen- oder kissenartige Krümmung, Randbedingungen, Zoomkompensation, Mittenversätze und Eckenaufhellung umgeformt. Dadurch eignet es sich sowohl für die Korrektur eines Bildes, das sich optisch verzerrt anfühlt, als auch für die bewusste Herbeiführung eines Weitwinkel- oder Retro-Objektivcharakters.
+Lens Distortion formt das Bild durch Tonen- oder Kissenverzerrung, Randterme, Zoomkompensation, Mittelversatz und Eckenaufhellung. Nützlich zur Korrektur optisch verbogener Bilder oder zum bewussten Weitwinkel- oder Retro-Objektivcharakter.
 
 ## Beleuchtung
 
-### Blüte
+### Bloom
 
-Bloom verwandelt helle Bereiche in kontrolliertes Leuchten, wobei Schwellenwert, Weichheit, Radius und Stärke bestimmen, wie weit sich das Licht ausbreitet und wie stark es das Bild anhebt. Durch die zusätzliche Steuerung der Belichtungsbegrenzung kann es als Highlight-Effekt und nicht als automatisches Auswaschen verwendet werden.
+Bloom verwandelt helle Bereiche in kontrolliertes Leuchten — Schwellenwert, Weichheit, Radius und Stärke bestimmen Ausbreitung und Anhebung. Zusätzliche Belichtungsbegrenzung hält es als Highlight-Effekt nutzbar statt automatischem Auswaschen.
 
 ### Himmel
 
-„Himmel“ ist mehr als eine Tönungs- oder Verlaufsüberlagerung: Es rendert einen analytischen Himmel mithilfe von Preetham-, Hosek/Wilkie- oder Nishita-Modellen. Da der Dialog Projektion, Sonnenwinkel, Trübung, atmosphärische Dichte, Höhe, Sonnenscheibensteuerung und Belichtung offenlegt, kann er alles von einem einfachen klaren Hintergrund bis hin zu einem physischeren Sonnenuntergangs- oder Dämmerungshimmel erstellen.
+Sky ist mehr als Tönung oder Verlaufs-Overlay: ein analytischer Himmel mit Preetham-, Hosek/Wilkie- oder Nishita-Modellen. Projektion, Sonnenwinkel, Trübung, atmosphärische Dichte, Höhe, Sonnenscheiben-Steuerungen und Belichtung im Dialog — von einfachem klaren Hintergrund bis zu physisch fundierterem Sonnenuntergang oder Dämmerung.
 
 ### Vignette
 
-Vignetten werden zu den Bildrändern hin dunkler, gefärbt oder sogar gelöscht, mit Steuerelementen für Form, Radius, Weichheit, Gamma, Proportionen, Zusammendrücken, Drehung und Positionierung auf der Leinwand. Es funktioniert wie eine klassische fotografische Kantenbearbeitung, ist jedoch flexibel genug, um als Rahmenmaske oder unregelmäßiger Kompositionsscheinwerfer zu fungieren.
+Vignette verdunkelt, färbt oder tilgt Richtung Bildränder — mit Form, Radius, Weichheit, Gamma, Proportion, Stauchung, Rotation und Positionierung auf der Leinwand. Klassische fotografische Randbehandlung, flexibel genug als Rahmenmaske oder unregelmäßiger Kompositions-Spotlight.
 
-## Lärm
+## Rauschen
 
-### HSV-Lärm
+### HSV-Rauschen
 
-HSV Noise randomisiert Farbton, Sättigung und Wert unabhängig voneinander. Dies macht es nützlich, wenn ein Bild Farblebendigkeit oder analoge Instabilität benötigt, ohne die lokale Struktur vollständig aufzubrechen.
+HSV Noise randomisiert Farbton, Sättigung und Helligkeit unabhängig. Nützlich, wenn ein Bild Farblebendigkeit oder analoge Instabilität braucht, ohne die lokale Struktur vollständig aufzubrechen.
 
-### Schleudern
+### Hurl
 
-Hurl ist die extreme Version von Rauschen: Es ersetzt Pixel durch völlig zufällige Farben. Man kann es sich am besten als destruktive Chaosquelle für Glitch-Arbeiten, gestörte Texturen oder Masken vorstellen, die eine aggressive Auflösung erfordern.
+Hurl ist die extreme Rauschvariante: Pixel werden durch völlig zufällige Farben ersetzt. Destruktive Chaosquelle für Glitch-Arbeit, distressed Texturen oder Masken, die aggressive Auflösung brauchen.
 
-### Auswahl
+### Pick
 
-Pick ersetzt jedes Pixel durch einen zufällig ausgewählten Nachbarn, sodass das Bild mit seiner Quelle verknüpft bleibt und nicht rein statisch wird. Das Ergebnis ist eine gemischte, granulare Variation, die sich organischer anfühlen kann als völlig zufälliges Rauschen.
+Pick ersetzt jedes Pixel durch einen zufällig gewählten Nachbarn — das Bild bleibt mit der Quelle verwandt statt reines Rauschen zu werden. Gemischte, körnige Variation, die organischer wirken kann als völlig zufälliges Rauschen.
 
-### VerbreitenSpread streut Pixel, indem es sie zufällig innerhalb eines Radius verschiebt. Dies ist nützlich, wenn Sie eine bewegungslose Störung wünschen: eine gebrochene Oberfläche, eine verschmierte Kante oder eine abgenutzte Textur, die noch die Farbbeziehungen des Quellbilds aufweist.
+### Spread
+
+Spread streut Pixel durch zufällige Verschiebung innerhalb eines Radius. Für bewegungslose Störung: gebrochene Oberfläche, verschmierte Kante oder abgenutzte Textur, die noch die Farbbeziehungen des Quellbilds trägt.
 
 ### Fraktal
 
-Fractal erzeugt kachelbares fraktales Perlin-Rauschen, was es als wiederverwendbare Quelle für Masken, Wolken, Papiertexturen, geländeähnliche Aufteilungen und prozedurale Überlagerungen besonders wertvoll macht. Da es kachelbar ist, kann es größere Arbeitsabläufe unterstützen, ohne dass offensichtliche Nähte entstehen.
+Fractal erzeugt kachelbar fraktales Perlin-Rauschen — besonders wertvoll als wiederverwendbare Quelle für Masken, Wolken, Papiertextur, geländeähnliche Auflockerung und prozedurale Overlays. Durch Kachelbarkeit ohne sichtbare Nähte in größeren Workflows.
 
-### Blaues Rauschkorn
+### Blue-Noise-Körnung
 
-Blue Noise Grain ist Lumis monochromer Korngenerator im Film-und-Druck-Stil. Die Korngrößenvoreinstellungen, die Maskierung des blauen Rauschens, die Mittelton-Bias, die Schatten-Bias und die Seed-Steuerelemente des Dialogs zeigen, dass er darauf ausgelegt ist, die Körnung gleichmäßig und kontrollierbar zu platzieren und nicht nur zufällige monochrome Flecken über das Bild zu sprühen.
+Blue Noise Grain ist Lumis monochromer Körnungsgenerator im Film- und Druckstil. Korngrößen-Voreinstellungen, Blue-Noise-Maskierung, Mittelton- und Schatten-Bias sowie Seed-Steuerungen im Dialog — gleichmäßige, kontrollierbare Körnung statt zufälliger monochromer Flecken.
 
-### Risograph-Maserung
+### Risograph-Körnung
 
-Risograph Grain baut auf der gleichen Körnungslogik auf, verwandelt sie jedoch in einen Zwei-Platten-Druckeffekt. Separate Tintenfarben, Plattenbalance, absichtliche Fehlregistrierung und gesetzte Variation machen es zu einer guten Wahl für Posterarbeiten, Indie-Print-Ästhetik und Illustrationen, die physisch überdruckt und nicht digital perfekt wirken sollen.
+Risograph Grain baut auf derselben Körnungslogik auf und macht daraus einen Zwei-Platten-Druckeffekt. Separate Tintenfarben, Plattenbalance, absichtliche Fehlregistrierung und geseedete Variation — für Poster, Indie-Print-Ästhetik und Illustrationen, die physisch überdruckt statt digital perfekt wirken sollen.
 
 ### Halbton (FM)
 
-Halftone (FM) erzeugt einen stochastischen, frequenzmodulierten Halbton mithilfe von Blue-Noise oder verwandten Schwellenwertmethoden. Mit Farbmodi für Monochrom, Duoton und CMYK sowie Steuerelementen für Punktzunahme und Plattendekorrelation zielt es auf eine druckähnliche Textur ab, die unregelmäßig und lebendig bleibt, anstatt in ein starres Raster zu verfallen.
+Halftone (FM) erzeugt stochastischen, frequenzmodulierten Halbton mit Blue-Noise oder verwandten Schwellenwertmethoden. Farbmodi für Monochrom, Duoton und CMYK plus Punktvergrößerung und Platten-Dekorrelation — druckähnliche Textur, unregelmäßig und lebendig statt starrem Raster.
 
 ## Kanten
 
-### Unterschied der Gauß-Funktionen
+### Differenz zweier Gauß-Funktionen
 
-Die Gauß-Differenz erkennt Kanten, indem sie zwei unscharfe Versionen des Bildes voneinander subtrahiert. Es handelt sich um einen kompakten, nützlichen Operator für Kantenkarten, die Extraktion stilisierter Linien und die Suche nach Strukturübergängen, ohne sich auf einen vollständigen Schwellenwertumriss festzulegen.
+Difference of Gaussians erkennt Kanten, indem zwei unscharfe Bildversionen voneinander subtrahiert werden. Kompakter, nützlicher Operator für Kantenkarten, stilisierte Linienextraktion und Strukturübergänge ohne vollständigen Schwellenwert-Umriss.
 
 ## Morphologie
 
 ### Median
 
-Median ersetzt jedes Pixel durch den Medianwert aus seiner Nachbarschaft, wodurch isoliertes Rauschen tendenziell entfernt wird und gleichzeitig stärkere Grenzen besser erhalten bleiben als bei einer einfachen Unschärfe. Es handelt sich um einen praktischen Bereinigungsfilter zum Abmildern kleiner visueller Störungen, ohne das gesamte Bild sofort weicher zu machen.
+Median ersetzt jedes Pixel durch den Medianwert der Nachbarschaft — entfernt isoliertes Rauschen und bewahrt stärkere Grenzen besser als einfache Unschärfe. Praktischer Bereinigungsfilter gegen kleines visuelles Rauschen, ohne gleich das ganze Bild weichzuzeichnen.
 
-### Dilatieren
+### Dilatation
 
-Dilate lässt hellere Regionen nach außen wachsen und verwendet dabei die gleiche formbewusste Nachbarschaftslogik. Im Hinblick auf die Bilderzeugung kann es helle Markierungen verstärken, helle Formen erweitern oder kleine dunkle Lücken schließen.
+Dilate lässt helle Regionen nach außen wachsen mit derselben formbewussten Nachbarschaftslogik. Helle Marken verdicken, helle Formen erweitern, kleine dunkle Lücken schließen.
 
-### Erodieren
+### Erosion
 
-Erode führt die komplementäre Bewegung aus, indem es dunklere Bereiche wachsen lässt und hellere zurückzieht. Es ist nützlich, um helle Details auszudünnen, dunkle Massen zu vergrößern oder Masken und grafische Formen zu straffen.
+Erode wächst dunklere Regionen und zieht helle zurück. Nützlich zum Ausdünnen heller Details, Vergrößern dunkler Massen oder Straffen von Masken und grafischen Formen.
 
 ## Muster
 
 ### Schachbrett
 
-Schachbrett erzeugt ein regelmäßig wechselndes Kachelmuster. Es ist einfach, aber diese Einfachheit macht es nützlich zum Testen der Transparenz, zum Erstellen von Masken, zum Blockieren grafischer Hintergründe oder zum Erstellen sauberer geometrischer Quellmaterialien.
+Checkerboard erzeugt ein regelmäßig wechselndes Kachelmuster. Einfach — und deshalb nützlich zum Testen von Transparenz, Maskenbau, grafischen Hintergründen oder sauberem geometrischem Quellmaterial.
 
 ### Raster
 
-Grid zeichnet wiederholte horizontale und vertikale Unterteilungen und eignet sich daher für Layout-Anleitungen, Design-Hintergründe, technische Illustrationen und prozedurale Maskierungen. Da es als Filter generiert wird, können Abstand und Aussehen angepasst werden, ohne dass das Muster manuell erstellt werden muss.
+Grid zeichnet wiederholte horizontale und vertikale Unterteilungen — Layout-Hilfen, Design-Hintergründe, technische Illustration, prozedurale Maskierung. Als Filter generiert, lassen sich Abstand und Erscheinung abstimmen ohne manuelles Musterbauen.
 
 ### Voronoi
 
-Voronoi generiert aus gesetzten Punkten eine kachelbare Zelltextur mit Steuerelementen für Feature-Typ, Distanzmetrik, Zufälligkeit, fraktale Details und nahtlose Umhüllung. In der Praxis kann es von sauberen, rissigen Zellstrukturen zu organischeren Stein-, Haut-, Karten- oder abstrakten Netzwerkmustern übergehen.
+Voronoi erzeugt kachelbare Zelltextur aus geseedeten Punkten — Feature-Typ, Distanzmetrik, Zufälligkeit, fraktales Detail, nahtlose Umhüllung. Von sauberen Riss-Zellstrukturen bis zu organischem Stein, Haut, Karte oder abstraktem Netzwerk.
 
-### WelleWave erzeugt Streifen- oder Ringmuster, die durch Wellenformprofil, geometrische Anordnung, Verzerrung, fraktale Details und Phasenversatz geformt sind. Das macht es zu mehr als einem einfachen Streifenwerkzeug: Es kann kontrollierte Wellen, topografische Bänder, Moiré-ähnliche Grafiken oder verrauschte konzentrische Musterfelder erzeugen.
+### Welle
+
+Wave erzeugt band- oder ringförmige Muster aus Wellenformprofil, geometrischer Anordnung, Verzerrung, fraktalem Detail und Phasenversatz. Mehr als Streifenwerkzeug: kontrollierte Wellen, topografische Bänder, Moiré-ähnliche Grafik oder verrauschte konzentrische Musterfelder.
 
 ### Halbton (AM)
 
-Bei Halftone (AM) wird ein klassisches amplitudenmoduliertes Punktraster mit Frequenz-, Punktform-, Schärfe-, Farbmodus- und CMYK-Winkelsteuerungen für eine rosettenartige Druckstruktur angewendet. Verglichen mit der FM-Rasterung ist es die geordnetere, erkennbar mechanische Option, wenn der gewünschte Look Zeitungspapier, Offset-Lithographie oder eine bewusst sichtbare Siebgeometrie ist.
+Halftone (AM) wendet klassisches amplitudenmoduliertes Punktraster an — Frequenz, Punktform, Schärfe, Farbmodus und CMYK-Winkel für rosettenartige Druckstruktur. Gegenüber FM-Halbton die geordnetere, erkennbar mechanische Option für Zeitungspapier, Offset-Lithografie oder bewusst sichtbare Siebgeometrie.

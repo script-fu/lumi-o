@@ -1,7 +1,12 @@
 ---
 title: "Filtry"
 type: docs
+url: "hub/features/filters"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
+
 Menu Filtry Lumi skupia w jednym miejscu korekty korekcyjne, stylizowane efekty soczewek, generatory tekstur proceduralnych, zabiegi inspirowane drukiem i narzędzia analityczne. Kolejność menu jest raczej praktyczna niż akademicka: narzędzia do rozmycia i ulepszania znajdują się obok siebie, efekty zniekształcania i oświetlenia są pogrupowane według wyglądu, a generatory tekstur i wzorów są trzymane razem, gdy celem jest zbudowanie materiału źródłowego, a nie modyfikowanie istniejącego obrazu.
 
 Okna dialogowe filtrów działają według tego samego ogólnego schematu działania. Ustawienia wstępne, podgląd, widok podzielony oraz elementy sterujące kryciem lub mieszaniem umożliwiają szybkie dostrojenie efektu, a na warstwach wynik może pozostać jako edytowalny, nieniszczący filtr, zamiast być natychmiast łączony. Lumi przechowuje również najnowszą historię użycia filtrów, więc powtarzanie ostatniego efektu lub ponowne otwieranie ostatniego okna dialogowego jest częścią normalnego rytmu malowania, a nie osobnym zadaniem.
@@ -36,13 +41,15 @@ Rozmycie ruchu okrężnego rozmazuje szczegóły wokół punktu centralnego, zam
 
 Liniowe rozmycie ruchu rozciąga szczegóły w jednym kierunku, symulując podróż, ruch aparatu lub szybki gest w całym kadrze. Jest to szczególnie przydatne, gdy ruch musi być kierunkowy i graficzny, a nie rozproszony.
 
-### Powiększ rozmycie ruchu
+### Zoom Motion Blur
 
 Zoom Motion Blur emituje szczegóły na zewnątrz od środka, wywołując wrażenie pędu w stronę widza lub od niego. Działa dobrze w przypadku momentów uderzenia, linii prędkości i kompozycji, które wymagają energii zoomu aparatu bez konieczności ponownego malowania całego obrazu.
 
-## Ulepsz
+## Poprawa
 
-### Wysokie podanieHigh Pass izoluje delikatny lokalny kontrast, a nie szeroką zmianę tonalną. Mając do zarządzania jedynie skalę i kontrast, jest to proste narzędzie do wydobywania szczegółów krawędzi, tworzenia wyraźnych nakładek lub przygotowywania przejść wyostrzających, które powinny bardziej podkreślać strukturę niż kolor.
+### High Pass
+
+High Pass izoluje delikatny lokalny kontrast, a nie szeroką zmianę tonalną. Mając do zarządzania jedynie skalę i kontrast, jest to proste narzędzie do wydobywania szczegółów krawędzi, tworzenia wyraźnych nakładek lub przygotowywania przejść wyostrzających, które powinny bardziej podkreślać strukturę niż kolor.
 
 ### Redukcja hałasu
 
@@ -51,6 +58,12 @@ Redukcja szumów to działanie odwrotne: tłumi niepożądane drobne różnice, 
 ### Wyostrz
 
 Sharpen wykorzystuje model maski wyostrzającej z promieniem, wielkością i progiem kontrolującymi siłę lokalnego kontrastu. W praktyce sprawia to, że nadaje się do przywracania przejrzystości po rozmyciu, zmianie rozmiaru eksportu lub subtelnych przejściach wykończeniowych, gdy szczegóły muszą zostać wydobyte bez zamieniania każdego piksela w szum.
+
+## Kolor
+
+### Tonal Grading
+
+Gradacja tonalna odwzorowuje kolory według zakresu tonalnego, a nie poprzez zmianę kształtu kontrastu lub rysowanie krzywej. Jasność każdego piksela wybiera płynne połączenie trzech kolorów użytkownika dla cienia, półtonów i podświetleń; dzięki czemu obraz zachowuje strukturę od jasnej do ciemnej podczas zmiany palety. Siła dla poszczególnych regionów, odchylenie równowagi w stylu Lightrooma (po lewej stronie faworyzuje stopień cienia, po prawej stopień rozjaśnienia) i miękkość przejścia kontrolują, jak daleko sięga każdy kolor i jak delikatnie nakładają się stopnie. Jest skierowany do ilustracji, komiksów, grafik koncepcyjnych i fotografii, gdy celem jest spójna ocena lub wygląd.
 
 ## Zniekształcanie
 
@@ -82,7 +95,7 @@ Winieta przyciemnia, koloruje, a nawet wymazuje w kierunku krawędzi obrazu, kor
 
 Szum HSV niezależnie losuje odcień, nasycenie i wartość. Dzięki temu jest przydatny, gdy obraz wymaga ożywienia kolorów lub niestabilności analogowej bez całkowitego rozbijania lokalnej struktury.
 
-### Rzuć
+### Hurl
 
 Hurl to ekstremalna wersja szumu: zastępuje piksele całkowicie losowymi kolorami. Najlepiej myśleć o tym jako o niszczycielskim źródle chaosu powodującym usterki, uszkodzone tekstury lub maski wymagające agresywnego rozbicia.
 
@@ -90,7 +103,9 @@ Hurl to ekstremalna wersja szumu: zastępuje piksele całkowicie losowymi kolora
 
 Pick zastępuje każdy piksel losowo wybranym sąsiadem, dzięki czemu obraz pozostaje powiązany ze swoim źródłem, zamiast stać się czysto statyczny. Rezultatem jest tasowana, ziarnista odmiana, która może wydawać się bardziej organiczna niż w pełni losowy szum.
 
-### Rozpowszechnianie sięRozprzestrzenianie powoduje rozproszenie pikseli poprzez losowe przemieszczanie ich w promieniu. Jest to przydatne, gdy potrzebujesz nieruchomego zakłócenia: popękanej powierzchni, rozmazanej krawędzi lub zniszczonej tekstury, która nadal zachowuje relacje kolorystyczne obrazu źródłowego.
+### Rozprzestrzenianie się
+
+Rozprzestrzenianie powoduje rozproszenie pikseli poprzez losowe przemieszczanie ich w promieniu. Jest to przydatne, gdy potrzebujesz nieruchomego zakłócenia: popękanej powierzchni, rozmazanej krawędzi lub zniszczonej tekstury, która nadal zachowuje relacje kolorystyczne obrazu źródłowego.
 
 ### Fraktal
 
@@ -134,15 +149,17 @@ Erode wykonuje ruch uzupełniający, powiększając ciemniejsze obszary i odcią
 
 Szachownica generuje regularny, naprzemienny wzór płytek. Jest to proste, ale dzięki tej prostocie jest przydatne do testowania przezroczystości, budowania masek, blokowania graficznych teł lub tworzenia czystego geometrycznego materiału źródłowego.
 
-### Siatka
+### Grid
 
-Siatka rysuje powtarzające się podziały poziome i pionowe, dzięki czemu jest przydatna w przypadku prowadnic układu, tła projektowego, ilustracji technicznych i maskowania proceduralnego. Ponieważ jest generowany jako filtr, odstępy i wygląd można dostosować bez ręcznego tworzenia wzoru.
+Grid rysuje powtarzające się podziały poziome i pionowe, dzięki czemu jest przydatna w przypadku prowadnic układu, tła projektowego, ilustracji technicznych i maskowania proceduralnego. Ponieważ jest generowany jako filtr, odstępy i wygląd można dostosować bez ręcznego tworzenia wzoru.
 
 ### Woronoj
 
 Voronoi generuje teksturę komórkową z możliwością kafelkowania z rozmieszczonych punktów, z kontrolą typu obiektu, metryki odległości, losowości, szczegółów fraktalnych i płynnego zawijania. W praktyce może przejść od czystych struktur pękniętych komórek do bardziej organicznych wzorów kamienia, skóry, mapy lub abstrakcyjnych wzorów sieci.
 
-### FalaFala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że ​​jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
+### Fala
+
+Fala tworzy wzory pasmowe lub pierścieniowe ukształtowane na podstawie profilu fali, układu geometrycznego, zniekształceń, szczegółów fraktalnych i przesunięcia fazowego. To sprawia, że ​​jest to coś więcej niż proste narzędzie do tworzenia pasków: może generować kontrolowane zmarszczki, pasma topograficzne, grafikę przypominającą morę lub zaszumione koncentryczne pola wzorów.
 
 ### Półtony (AM)
 

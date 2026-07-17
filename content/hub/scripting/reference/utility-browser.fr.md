@@ -1,6 +1,9 @@
 ---
 title: "Navigateur d'utilitaires"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 Le navigateur d'utilitaires vous permet d'explorer l'utilitaire Scheme intégré stdlib fourni avec Lumi, sans avoir à quitter l'application ni à parcourir les fichiers sources.
 
@@ -14,7 +17,7 @@ La fenêtre s'ouvre immédiatement ; aucun plug-in ne doit être chargé à l’
 
 Le navigateur répertorie toutes les procédures, variables et formulaires de syntaxe exportés par les sept bibliothèques d'utilitaires que Lumi charge automatiquement au démarrage :
 
-| Bibliothèque | Ce qu'il couvre |
+| Bibliothèque | Contenu |
 |---|---|
 | `common.scm` | Aides à usage général (utilitaires de chaîne, de nombre, de liste) |
 | `files.scm` | Aides aux fichiers et aux chemins |

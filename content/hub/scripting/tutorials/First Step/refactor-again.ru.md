@@ -2,6 +2,9 @@
 title: "Снова рефакторинг"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 По мере роста вспомогательной библиотеки становится все труднее отслеживать ее с первого взгляда. Снова проведите рефакторинг, чтобы каждая функция была маленькой и одноцелевой.
 
@@ -15,11 +18,11 @@ weight: 5
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; Проверить, является ли сообщение непустой строкой
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; Проверить, является ли вывод одним из ожидаемых мест назначения
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ weight: 5
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; Вызвать функцию проверки перед продолжением
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; Отправить в Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Отправить в диалоговое окно GUI
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Отправить в окно терминала
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ weight: 5
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; Отправить в нужный вывод
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ weight: 5
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ weight: 5
 Переработанная версия библиотеки:
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; Назначение: Отправляет сообщение в диалоговое окно GUI
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; Назначение: Отправляет сообщение в Message console
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; Назначение: Отправляет сообщение в окно terminal
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; Проверить сообщение перед продолжением
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Назначение: Отправляет сообщение в нужное место вывода
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; Назначение: Проверяет, что сообщение — непустая строка и вывод корректен
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; Проверить, является ли сообщение непустой строкой
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; Проверить, является ли вывод одним из ожидаемых мест назначения
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

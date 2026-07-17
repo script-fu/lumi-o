@@ -1,6 +1,9 @@
 ---
 title: "비주얼 스튜디오 코드"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7694f103479275e75fa20f3420ac8e9d779b2c826a97c1017e28641ddabb15b8
 ---
 ## 비주얼 스튜디오 코드란 무엇인가요?
 

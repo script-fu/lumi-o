@@ -1,7 +1,10 @@
 ---
-title: "pozwalać"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 Nazwa `let` jest używana, ponieważ odzwierciedla matematyczne pochodzenie wprowadzenia tymczasowych powiązań, jak w _"Niech \( x = 2 \) i \( y = 3 \)"_.
 

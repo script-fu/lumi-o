@@ -2,6 +2,9 @@
 title: "Funzioni Lambda"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Le **funzioni lambda** in Scheme sono funzioni anonime, ovvero sono funzioni senza nome. Queste funzioni sono definite in linea e vengono generalmente utilizzate per operazioni brevi e una tantum. Il costrutto `lambda` è un potente strumento di programmazione funzionale, che consente di creare al volo una logica concisa e flessibile.
 
@@ -37,7 +40,7 @@ Le funzioni Lambda possono essere definite autonomamente...
 #### Utilizzo di Lambda per calcoli semplici
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Restituisce 8
 ```
 
 Qui:
@@ -86,7 +89,7 @@ Le funzioni Lambda vengono spesso passate direttamente a funzioni di ordine supe
 #### Quadratura di una lista di numeri
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Restituisce (1 4 9 16)
 ```
 
 - La funzione `lambda` quadra ogni elemento dell'elenco.
@@ -103,7 +106,7 @@ Puoi restituire una funzione lambda da un'altra funzione per creare un comportam
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Restituisce 15
 ```
 
 - `make-adder` genera una nuova funzione lambda che aggiunge un numero specifico (`n`).
@@ -117,7 +120,7 @@ I lambda vengono spesso utilizzati con `let` per creare funzioni temporanee con 
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Restituisce 7
 ```
 
 - `let` associa una funzione lambda al nome `add`.
@@ -130,8 +133,10 @@ I Lambda brillano se combinati con funzioni di ordine superiore per eseguire tra
 #### Filtraggio dei numeri pari
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` controlla se un numero è pari.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Restituisce (2 4 6)
+```
+
+- `lambda` controlla se un numero è pari.
 - La funzione `filter` utilizza lambda per mantenere solo i numeri pari dall'elenco.
 
 ### Vantaggi delle funzioni Lambda

@@ -1,11 +1,14 @@
 ---
-title: "条件"
+title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-Scheme では、`cond` 条件は、複数のテストに基づいて、実行する可能性のあるコード ブロックの 1 つを選択するために使用されます。これはマルチブランチ `if` に似ており、一致するものが見つかるまで各ブランチが順番にチェックされます。
+En Scheme, le conditionnel `cond` sélectionne l'un de plusieurs blocs à exécuter selon plusieurs tests — comme un `if` à branches multiples, évalué dans l'ordre jusqu'au premier succès.
 
-### 構文
+### Syntaxe
 
 ```scheme
 (cond
@@ -15,22 +18,18 @@ Scheme では、`cond` 条件は、複数のテストに基づいて、実行す
   (else fallback-consequent))
 ```
 
-- 各テストは、作成された順序で評価されます。
-- テストが true (`#t`) と評価されると、対応する **結果** が実行され、`cond` 式はそれ以降のテストの評価を停止します。
-- `else` 句はオプションであり、どのテストも true と評価されない場合のフォールバックとして機能します。
+- Tests dans l'ordre d'écriture.
+- Premier `#t` : **consequent** exécuté, `cond` s'arrête.
+- `else` optionnel en repli.
 
-### 仕組み
+### Comment ça marche
 
-1. **各条件をテスト**:
-   - `cond` は、リストされている順序でテストを評価します。
+1. **Tester chaque condition** dans l'ordre.
+2. **Exécuter le consequent** correspondant ; sinon `else` si présent.
 
-2. **一致する結果を実行**:
-   - true と評価される最初のテスト (`#t`) が見つかると、その **結果** が実行されます。
-   - true と評価されるテストがなく、`else` 句がある場合、**fallback-consequent** が実行されます。
+### Exemples
 
-### 例
-
-#### 例 1: 単一の式の帰結
+#### Exemple 1 : conséquents sur une expression
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ Scheme では、`cond` 条件は、複数のテストに基づいて、実行す
   (else "Fallback"))
 ```
 
-- 最初のテスト `(< 3 2)` は false (`#f`) と評価されます。
-- 2 番目のテスト `(= 3 3)` は true (`#t`) と評価されるため、`"This will run"` が返されます。
-- 一致がすでに見つかっているため、`else` 句は実行されません。
+Résultat : **"This will run"**
 
-結果: **「これは実行されます」**
-
-#### 例 2: `begin` を使用した複数のアクション
-
-結果に複数のアクションが含まれる場合は、`begin` を使用してそれらをグループ化します。
+#### Exemple 2 : actions multiples avec `begin`
 
 ```scheme
 (cond
@@ -65,45 +58,32 @@ Scheme では、`cond` 条件は、複数のテストに基づいて、実行す
       0)))
 ```
 
-- 最初のテスト `(< 5 3)` は false (`#f`) と評価されます。
-- 2 番目のテスト `(> 5 3)` は true (`#t`) と評価されます。
-  - `"Condition met"` と印刷されます。
-  - 次に、`(* 5 5)` を計算し、`25` を返します。
+Résultat : **Affiche « Condition met » et renvoie 25.**
 
-結果: **「条件が満たされました」を出力し、25 を返します。**
-
-#### 例 3: 後件での `let` ブロックの使用
-
-ローカル変数を導入する必要がある場合は、`let` ブロックを使用します。
+#### Exemple 3 : bloc `let` dans un conséquent
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; ケース 1: 0 が -1 より小さい場合
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; ケース 2: 0 が -1 より大きい場合
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; デフォルト: 上記の条件がいずれも満たされない場合
   (else
     (let ((z 0))
       z)))
 ```
 
-- 最初のテスト `(< 0 -1)` は false です。
-- 2 番目のテスト `(> 0 -1)` は true なので、次のようになります。
-  - `let` ブロックが実行され、`y` を `20` にバインドします。
-  - `"Positive condition met"` と印刷されます。
-  - 次に、`(+ y y)` を計算し、`40` を返します。
+Résultat : **Affiche « Positive condition met » et renvoie 40.**
 
-結果: **「肯定的な条件が満たされました」を出力し、40 を返します。**
-
-#### 例 4: `else` によるフォールバック
+#### Exemple 4 : repli avec `else`
 
 ```scheme
 (cond
@@ -112,16 +92,10 @@ Scheme では、`cond` 条件は、複数のテストに基づいて、実行す
   (else "Fallback value"))
 ```
 
-- 最初の 2 つのテストはいずれも true と評価されません。
-- `else` 句が実行され、`"Fallback value"` が返されます。
+Résultat : **"Fallback value"**
 
-結果: **「フォールバック値」**
+### Résumé
 
-### 概要
-
-- 複数の条件を明確かつ簡潔に処理するには、`cond` を使用します。
-- 結果は、単一の式または `begin` を使用したグループ化されたアクションにすることができます。
-- 結果部で `let` を使用して、計算用のローカル変数を宣言します。
-- 予期しないケースに対処するためのフォールバックとして、常に `else` 句を含めます。
-
-この柔軟性により、`cond` は、複雑な分岐ロジックを処理するための強力で読みやすいツールになります。
+- `cond` pour plusieurs conditions clairement.
+- Conséquents simples ou groupés avec `begin`.
+- `let` pour variables locales ; `else` recommandé en repli.

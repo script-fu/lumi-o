@@ -1,30 +1,35 @@
 ---
-title: "Construyendo una versión de depuración"
+title: "Compilar una versión de depuración"
 type: docs
+url: "hub/technical-guides/Building-a-Debug-Version"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: fecc781e73b4f30881c5150c958ae9b2df4164acd4cf86926186acb8e2021d5f
 ---
-Esta guía describe el **flujo de trabajo de depuración local** para Lumi usando scripts en `build/lumi/scripts`.
 
-El flujo de trabajo está diseñado para:
+Esta guía describe el **flujo de trabajo de depuración local** de Lumi usando los scripts en `build/lumi/scripts`.
 
-- utilizar artefactos de compilación locales (no se requieren descargas de símbolos),
-- verificar que los símbolos de depuración estén realmente presentes,
-- Inicie GDB con el modo de símbolo fuera de línea de forma predeterminada.
+El flujo de trabajo está pensado para:
+
+- usar artefactos de compilación locales (no se requieren descargas de símbolos),
+- verificar que los símbolos de depuración están realmente presentes,
+- iniciar GDB con el modo de símbolos sin conexión activado por defecto.
 
 ## Requisitos previos
 
-- Linux basado en Debian (línea base del proyecto: Debian 13)
-- El árbol fuente de Lumi ya está clonado.
+- Linux basado en Debian (referencia del proyecto: Debian 13)
+- Árbol de código fuente de Lumi ya clonado
 
-## Configuración de GDB por única vez (opcional pero recomendada)
+## Configuración única de GDB (opcional pero recomendada)
 
-Instalar herramientas GDB:
+Instala las herramientas GDB:
 
 ```bash
 sudo apt update
 sudo apt install gdb gdbserver
 ```
 
-Configuración de registro local opcional:
+Configuración opcional de registro local:
 
 ```bash
 mkdir -p ~/code/gdb_logs
@@ -35,7 +40,7 @@ set logging overwrite on
 EOF
 ```
 
-Nota: Los scripts de depuración locales de Lumi desactivan `debuginfod` de forma predeterminada para mantener la resolución de los símbolos local y reproducible.
+Nota: los scripts de depuración local de Lumi desactivan `debuginfod` por defecto para mantener la resolución de símbolos local y reproducible.
 
 ## Inicio rápido
 
@@ -45,9 +50,9 @@ Desde el directorio de scripts:
 cd ~/code/lumi-dev/build/lumi/scripts
 ```
 
-### Depuración, compilación + lanzamiento (predeterminado)
+### Compilación de depuración e inicio (predeterminado)
 
-Úselo para sesiones de depuración normales.
+Úsalo para sesiones de depuración habituales.
 
 ```bash
 bash lumi-debug-local.sh lumi-dev build
@@ -55,38 +60,38 @@ bash lumi-debug-local.sh lumi-dev build
 
 Este comando:
 
-1. construye Lumi en modo de depuración,
+1. compila Lumi en modo depuración,
 2. verifica los símbolos de depuración,
-3. lanza Lumi bajo GDB.
+3. inicia Lumi bajo GDB.
 
-### Solo compilación de depuración (para sesión TTY/remota posterior)
+### Solo compilación de depuración (para una sesión TTY/remota posterior)
 
-Úselo cuando desee compilar ahora e iniciar/depurar más tarde.
+Úsalo cuando quieras compilar ahora e iniciar o depurar más tarde.
 
 ```bash
 bash lumi-build-debug.sh lumi-dev build
 ```
 
-## Uso de TTY en Linux
+## Usar TTY en Linux
 
-Las TTY (consolas de texto) suelen ser la forma más confiable de depurar congelaciones totales.
+Las TTY (consolas de texto) suelen ser la forma más fiable de depurar bloqueos totales.
 
-- Cambie a un TTY con `Ctrl + Alt + F1` a través de `Ctrl + Alt + F6`
-- Inicie sesión desde el mensaje de texto
-- Regresar a la sesión gráfica con `Ctrl + Alt + F7` (o `F2` en algunos sistemas)
+- Cambia a una TTY con `Ctrl + Alt + F1` hasta `Ctrl + Alt + F6`
+- Inicia sesión desde el aviso de texto
+- Vuelve a la sesión gráfica con `Ctrl + Alt + F7` (o `F2` en algunos sistemas)
 
-Por qué esto es importante: si la sesión de escritorio se detiene, un TTY a menudo aún responde, por lo que puede adjuntar GDB, capturar un seguimiento y recuperar datos útiles sobre fallas.
+Por qué importa: si la sesión de escritorio se bloquea, una TTY suele seguir respondiendo, de modo que puedes adjuntar GDB, capturar un backtrace y recuperar datos útiles del fallo.
 
-## Opcional: Depuración remota/TTY
+## Opcional: depuración remota/TTY
 
-Para congelaciones totales o bloqueos de pantalla, use `gdbserver`:
+Para bloqueos totales o bloqueos de pantalla, usa `gdbserver`:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash gdbserver.sh
 ```
 
-Luego desde un TTY (recomendado para escenarios de congelación) u otra terminal:
+Luego, desde una TTY (recomendado para escenarios de bloqueo) u otra terminal:
 
 ```bash
 gdb /home/mark/code/lumi-dev/bin/lumi-0.1
@@ -94,24 +99,22 @@ gdb /home/mark/code/lumi-dev/bin/lumi-0.1
 (gdb) continue
 ```
 
-Para un lanzamiento de GDB local (ruta que no es TTY):
+Para un inicio local de GDB (ruta sin TTY):
 
 ```bash
 bash lumi-debug-launch.sh --repo lumi-dev
 ```
 
-## Nota de rendimiento
+## Nota sobre el rendimiento
 
-Las compilaciones de depuración son más lentas por diseño. Cuando haya terminado de depurar, vuelva a una compilación más rápida:
+Las compilaciones de depuración son más lentas por diseño. Cuando termines de depurar, vuelve a una compilación más rápida:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
-
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
-
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

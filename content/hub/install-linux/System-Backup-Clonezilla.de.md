@@ -1,73 +1,80 @@
 ---
 title: "Systemsicherung mit Clonezilla"
 type: docs
+url: "hub/install-linux/System-Backup-Clonezilla"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: b3453289d7da56bb4fc9039616edb73e537acd6a722f0eb8a000e4a398016863
 ---
-Es ist üblich, Ihre wichtigen Dateien zu sichern, um zu früheren Versionen zurückzukehren oder beschädigte Daten zu ersetzen. Eine weitere wichtige Art der Sicherung ist jedoch ein **Festplattenklon**, eine vollständige Sicherung des Zustands Ihres Systems.
 
-Sobald Ihr System eingerichtet ist und ordnungsgemäß funktioniert, ist die Erstellung eines vollständigen Backups von entscheidender Bedeutung für die Wiederherstellung Ihrer Umgebung im Katastrophenfall. Dieses Backup ergänzt die regelmäßige Sicherung Ihrer Arbeitsdaten.
+Es ist üblich, wichtige Dateien zu sichern, um zu früheren Versionen zurückzukehren oder beschädigte Daten zu ersetzen. Eine weitere wichtige Sicherungsform ist jedoch der **Festplattenklon** — eine vollständige Sicherung des Systemzustands.
 
-[Clonezilla](https://clonezilla.org/) ist eine kostenlose Open-Source-Software zum Erstellen und Klonen von Datenträgern. Benutzer können damit vollständige Backups der Festplatte ihres Computers erstellen und wiederherstellen, was es zu einem beliebten Tool für IT-Experten und Heimanwender gleichermaßen macht.
+Sobald Ihr System eingerichtet ist und zuverlässig läuft, ist ein vollständiges Backup entscheidend, um Ihre Umgebung im Notfall wiederherzustellen. Es ergänzt die regelmäßige Sicherung Ihrer Arbeitsdaten.
 
-Es ist immer besser, ein Backup zu haben und es nicht zu brauchen, als ein Backup zu brauchen und es nicht zu haben.
+[Clonezilla](https://clonezilla.org/) ist eine freie Open-Source-Software für Datenträger-Imaging und -Klonen. Damit lassen sich vollständige Backups der Festplatte erstellen und wiederherstellen — ein beliebtes Werkzeug sowohl für IT-Profis als auch für Heimanwender.
+
+Es ist immer besser, ein Backup zu haben und es nicht zu brauchen, als eines zu brauchen und keines zu haben.
 
 
 ## Hauptfunktionen von Clonezilla
 
-- **Festplatten-Imaging**: Clonezilla erstellt eine exakte Kopie einer Festplatte, einschließlich des Betriebssystems, der Anwendungen und der Daten.
-- **Sichern und Wiederherstellen**: Damit können Sie ein Backup-Image einer Festplatte erstellen und es im Falle eines Fehlers oder einer Migration auf eine neue Festplatte wiederherstellen.
-- **Kostenlos und Open Source**: Die Nutzung von Clonezilla ist völlig kostenlos und der Quellcode steht zur Änderung und Anpassung zur Verfügung.
+- **Festplatten-Imaging**: Clonezilla erstellt eine exakte Kopie einer Festplatte, einschließlich Betriebssystem, Anwendungen und Daten.
+- **Sichern und Wiederherstellen**: Sie können ein Backup-Image einer Festplatte erstellen und es bei Ausfall oder Migration auf ein neues Laufwerk wiederherstellen.
+- **Kostenlos und Open Source**: Clonezilla ist vollständig kostenlos, und der Quellcode steht zur Anpassung bereit.
 
 
-## Verwenden von Clonezilla zum Sichern
+## Mit Clonezilla sichern
 
 ### Vorbereitungsschritte
 
-Sie benötigen ein USB-Laufwerk für Clonezilla und eine externe Festplatte, die größer ist als die interne Festplatte, die Sie klonen möchten.
+Sie benötigen einen USB-Stick für Clonezilla und eine externe Festplatte, die größer ist als das interne Laufwerk, das Sie klonen möchten.
 
-Diese Schritte vereinfachen den Prozess basierend auf dem [offiziellen Leitfaden](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Es empfiehlt sich, die vollständige Anleitung durchzulesen, die zur besseren Verdeutlichung auch Screenshots enthält.
+Diese Schritte vereinfachen den Ablauf auf Basis des [offiziellen Leitfadens](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Lesen Sie die vollständige Anleitung mit Screenshots für zusätzliche Klarheit.
 
-1. **Erstellen Sie einen Clonezilla Live-USB oder eine CD/DVD**: Befolgen Sie die detaillierten Anweisungen auf der Clonezilla-[Website](https://clonezilla.org/liveusb.php), um einen bootfähigen USB-Stick oder eine bootfähige CD/DVD zu erstellen.
+1. **Clonezilla-Live-USB oder CD/DVD erstellen**: Befolgen Sie die detaillierten Anweisungen auf der Clonezilla-[Website](https://clonezilla.org/liveusb.php), um ein bootfähiges Medium zu erstellen.
 
-2. **Schließen Sie Ihr externes Backup-Laufwerk an**: Schließen Sie Ihr externes Laufwerk an und stellen Sie sicher, dass es von Ihrem System erkannt wird. Dies ist das Ziel für Ihr Backup.
+2. **Externes Backup-Laufwerk anschließen**: Schließen Sie Ihr externes Laufwerk an und stellen Sie sicher, dass es vom System erkannt wird. Es dient als Ziel für das Backup.
 
-3. **Überprüfen Sie Ihr Partitionslayout**: Verwenden Sie den Befehl `lsblk` in einem Terminal, um das Partitionslayout Ihrer primären Festplatte zu überprüfen. Notieren Sie sich den primären Gerätenamen.
+3. **Partitionslayout prüfen**: Verwenden Sie den Befehl `lsblk` in einem Terminal, um das Partitionslayout Ihrer primären Festplatte zu prüfen. Notieren Sie den Namen des primären Geräts.
 
-4. **Booten Sie vom Clonezilla Live-USB-Laufwerk**: Starten Sie Ihren Computer neu und booten Sie von dem von Ihnen erstellten Clonezilla-Medium. Möglicherweise müssen Sie auf Ihre BIOS-/UEFI-Einstellungen zugreifen (normalerweise durch Drücken von F2, F12, ESC oder DEL während des Startvorgangs) und die Startreihenfolge anpassen, um dem USB-Laufwerk Priorität einzuräumen.
+4. **Vom Clonezilla-Live-USB booten**: Starten Sie den Computer neu und booten Sie vom erstellten Clonezilla-Medium. Möglicherweise müssen Sie die BIOS-/UEFI-Einstellungen aufrufen (meist mit F2, F12, ESC oder DEL beim Start) und die Boot-Reihenfolge so anpassen, dass der USB-Stick Vorrang hat.
 
 
 
 ### Backup mit Clonezilla
 
-1. **Sicherungsmodus auswählen**: Sobald Clonezilla hochfährt, wählen Sie den „Gerät-Gerät“-Modus. In diesem Modus können Sie Ihr internes Laufwerk direkt auf ein externes Gerät klonen.
+1. **Backup-Modus wählen**: Wählen Sie nach dem Start von Clonezilla den Modus „device-device“. In diesem Modus klonen Sie das interne Laufwerk direkt auf ein externes Gerät.
 
-2. **Wählen Sie das Quellgerät aus**: Wählen Sie das primäre interne Laufwerk.
+2. **Quellgerät wählen**: Wählen Sie das primäre interne Laufwerk.
 
-3. **Wählen Sie das Zielgerät aus**: Wählen Sie Ihr externes Sicherungslaufwerk als Zielgerät. Seien Sie bei der Auswahl des Geräts vorsichtig, um ein Überschreiben wichtiger Daten zu vermeiden. Stellen Sie sicher, dass das Ziellaufwerk genauso groß oder größer als das Quelllaufwerk ist.
+3. **Zielgerät wählen**: Wählen Sie das externe Backup-Laufwerk als Ziel. Seien Sie bei der Geräteauswahl vorsichtig, um wichtige Daten nicht zu überschreiben. Stellen Sie sicher, dass das Ziellaufwerk mindestens so groß ist wie das Quelllaufwerk.
 
-4. **Sicherungsvorgang starten**: Clonezilla startet den Sicherungsvorgang. Abhängig von der Größe Ihrer Partition und der Geschwindigkeit Ihrer Laufwerke kann dies einige Minuten bis einige Stunden dauern.
+4. **Backup starten**: Clonezilla startet den Sicherungsvorgang. Je nach Partitionsgröße und Laufwerksgeschwindigkeit kann das von wenigen Minuten bis zu mehreren Stunden dauern.
 
-5. **Beschriften Sie Ihr Backup**: Nachdem das Backup abgeschlossen ist, beschriften Sie das USB-Laufwerk und die externe Festplatte mit dem Datum und dem System, das Sie gesichert haben. Bewahren Sie sie an einem sicheren Ort auf.
+5. **Backup beschriften**: Beschriften Sie nach Abschluss den USB-Stick und die externe Festplatte mit Datum und gesichertem System. Bewahren Sie beides sicher auf.
 
 ---
 
 ### Wiederherstellung aus dem Backup
 
-Wenn Sie Ihr Debian-System aus dem Backup wiederherstellen müssen, gehen Sie folgendermaßen vor:
+Wenn Sie Ihr Debian-System aus dem Backup wiederherstellen müssen, gehen Sie so vor:
 
-1. **Booten von Clonezilla-Medien**: Stecken Sie den Clonezilla-USB-Stick ein und booten Sie von dort. Befolgen Sie dabei die gleichen Schritte wie während des Sicherungsvorgangs.2. **Wiederherstellungsmodus auswählen**: Wählen Sie erneut den Modus „Gerät-Gerät“, aber dieses Mal erfolgt die Wiederherstellung vom Backup-Image. Dadurch werden alle Daten von Ihrem externen Laufwerk zurück auf Ihr internes Laufwerk kopiert.
+1. **Vom Clonezilla-Medium booten**: Stecken Sie den Clonezilla-USB-Stick ein und booten Sie wie beim Backup.
 
-3. **Wählen Sie das Quellgerät aus**: Wählen Sie Ihr externes Laufwerk, auf dem das Backup gespeichert ist.
+2. **Wiederherstellungsmodus wählen**: Wählen Sie erneut den Modus „device-device“, diesmal jedoch zur Wiederherstellung aus dem Backup-Image. Alle Daten werden vom externen Laufwerk zurück auf das interne Laufwerk kopiert.
 
-4. **Wählen Sie das Zielgerät aus**: Wählen Sie das interne Laufwerk aus, auf dem Sie die Sicherung wiederherstellen möchten.
+3. **Quellgerät wählen**: Wählen Sie das externe Laufwerk, auf dem das Backup gespeichert ist.
 
-5. **Starten Sie den Wiederherstellungsprozess**: Clonezilla beginnt mit dem Wiederherstellungsprozess. Wie beim Backup hängt die benötigte Zeit von der Größe des Laufwerks und der Geschwindigkeit Ihrer Hardware ab.
+4. **Zielgerät wählen**: Wählen Sie das interne Laufwerk, auf das Sie das Backup wiederherstellen möchten.
+
+5. **Wiederherstellung starten**: Clonezilla beginnt den Wiederherstellungsprozess. Wie beim Backup hängt die Dauer von Laufwerksgröße und Hardwaregeschwindigkeit ab.
 
 ---
 
 ## Schlussbemerkungen
 
-Festplattensicherungen mit Clonezilla stellen sicher, dass Ihr gesamtes System – Betriebssystem, Einstellungen und Anwendungen – erhalten bleibt. Mit minimalem Aufwand können Sie Ihr System vor einem katastrophalen Ausfall schützen und Ausfallzeiten im Falle eines Absturzes minimieren.
+Festplatten-Backups mit Clonezilla sichern das gesamte System — Betriebssystem, Einstellungen und Anwendungen. Mit minimalem Aufwand schützen Sie sich vor einem katastrophalen Ausfall und verkürzen Ausfallzeiten nach einem Crash.
 
-Denken Sie daran: **Backups sind unerlässlich**. Aktualisieren Sie Ihre Backups regelmäßig und testen Sie sie regelmäßig, um sicherzustellen, dass Sie Ihr System bei Bedarf wiederherstellen können.
+Denken Sie daran: **Backups sind unerlässlich**. Aktualisieren Sie sie regelmäßig und testen Sie sie in regelmäßigen Abständen, damit Sie Ihr System bei Bedarf wiederherstellen können.
 
-Nach dem Booten können Sie Ihr externes Sicherungslaufwerk anschließen und seine Partitionsstruktur mit dem Festplatten-Dienstprogramm in Linux überprüfen. Das Sicherungslaufwerk sollte die Struktur des internen Laufwerks widerspiegeln, mit denselben Partitionen und etwas ungenutztem Speicherplatz, wenn das externe Laufwerk größer ist.
+Nach dem Booten können Sie das externe Backup-Laufwerk anschließen und seine Partitionsstruktur mit dem Disks-Dienstprogramm unter Linux prüfen. Das Backup-Laufwerk sollte die Struktur des internen Laufwerks widerspiegeln — mit denselben Partitionen und etwas ungenutztem Speicherplatz, wenn das externe Laufwerk größer ist.

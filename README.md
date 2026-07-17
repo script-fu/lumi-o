@@ -24,6 +24,10 @@ the site now runs an incremental translation pass first:
 - writes language variants like `page.fr.md`, `page.de.md`, etc.
 - skips unchanged files for fast subsequent preview starts
 
+For native-quality, agent-reviewed translations and protection from automatic
+regeneration, follow
+[the website translation protocol](docs/protocols/web-translation-protocol.md).
+
 Run locally from this directory:
 
 ```bash

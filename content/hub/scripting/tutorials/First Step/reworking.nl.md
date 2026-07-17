@@ -2,6 +2,9 @@
 title: "Herwerken"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Met deze stap wordt een subtiel gedrag in het berichtenvoorbeeld opgelost.
 
@@ -13,7 +16,7 @@ Werk de inhoud en bestemmingen van het bericht bij, zodat het voorbeeld zich con
 
 Het escape-teken verwijderen en de functies uitbreiden:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Herwerk de bibliotheek:
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Voeg een regeleinde toe om een berichtvak te forceren
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Herwerk de bibliotheek:
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Doel: Stuurt een bericht naar de juiste uitvoerbestemming
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Herwerk de bibliotheek:
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Doel: Controleert dat het bericht een niet-lege tekenreeks is
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Controleren of het bericht een niet-lege tekenreeks is
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Doel: Controleert dat het bericht naar een geldige uitvoer wordt gestuurd
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Controleren of de uitvoer een van de verwachte weergavebestemmingen is
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

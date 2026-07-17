@@ -1,7 +1,10 @@
 ---
 title: "Listen"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 In Scheme ist eine **Liste** eine grundlegende Datenstruktur, die zum Gruppieren von Werten verwendet wird. Listen sind geordnete Sammlungen von Elementen, wobei jedes Element einen beliebigen Typ haben kann, einschließlich einer anderen Liste. Listen werden in Scheme häufig sowohl zur Datenspeicherung als auch zur Programmstruktur verwendet.
 
@@ -28,8 +31,8 @@ Auf Elemente in einer Liste wird mit den Prozeduren `car` und `cdr` zugegriffen:
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; Ruft das erste Element ab
+(cdr my-list)  ; Ruft den Rest der Liste ab
 ```
 
 Ergebnis:
@@ -52,8 +55,8 @@ Hier ist eine einfache rekursive Funktion zum Drucken jedes Elements in einer Li
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; Erstes Element ausgeben
+      (print-elements (cdr lst)))))             ;; Rest der Liste verarbeiten
 ```
 
 - **Basisfall:** Wenn die Liste leer ist (`null? lst`), stoppen Sie die Rekursion.
@@ -135,8 +138,8 @@ Die Prozedur `list?` prüft, ob ein gegebener Wert eine Liste ist.
 #### Beispiel: Liste?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; Prüft, ob (list 1 2 3) eine Liste ist
+(list? 42)            ; Prüft, ob 42 eine Liste ist
 ```
 
 Ergebnis:
@@ -155,9 +158,9 @@ Scheme bietet mehrere integrierte Verfahren zum Arbeiten mit Listen, darunter:
 - `reverse`: Gibt eine neue Liste mit Elementen in umgekehrter Reihenfolge zurück.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; Gibt 3 zurück
+(append (list 1 2) (list 3 4)) ; Gibt (1 2 3 4) zurück
+(reverse (list 1 2 3))         ; Gibt (3 2 1) zurück
 ```
 
 Ergebnis:
@@ -178,7 +181,7 @@ Die Prozedur `list-ref` ruft das Element an einem angegebenen Index einer Liste 
 ##### Beispiel: Listenreferenz
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; Ruft das Element an Index 2 ab
 ```
 
 Ergebnis: `30`
@@ -208,10 +211,10 @@ Um auf Elemente innerhalb einer verschachtelten Liste zuzugreifen, können Sie K
 #### Beispiel: Auf Elemente zugreifen
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; Ruft das erste Element ab: (1 2)
+(car (car nested-list))        ; Ruft das erste Element der ersten Teilliste ab: 1
+(cdr (car nested-list))        ; Ruft den Rest der ersten Teilliste ab: (2)
+(car (cdr (car nested-list)))  ; Ruft das zweite Element der ersten Teilliste ab: 2
 ```
 
 ---
@@ -235,8 +238,8 @@ Um auf Elemente innerhalb einer verschachtelten Liste zuzugreifen, können Sie K
 #### Beispiel: Zugriff auf Elemente aus anderen Unterlisten
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; Ruft die zweite Teilliste ab: (3 4)
+(car (car (cdr nested-list)))  ; Ruft das erste Element der zweiten Teilliste ab: 3
 ```
 
 ---

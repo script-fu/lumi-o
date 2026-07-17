@@ -2,6 +2,9 @@
 title: "包裝"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 方案命令在較低層級上運行，這意味著即使是簡單的任務也可能需要多個步驟。然而，這種粒度提供了靈活性，我們可以將指令捆綁到小的、可重複使用的函數中，從而完全滿足我們的需求。環繞不是一個非黑即白的概念，而是一個非黑即白的概念。它的範圍可以從常用命令的簡單別名到管理整個工作流程的更複雜的功能。有時，包裝器只是一個提高可讀性的便利函數，而在其他情況下，它會演變成封裝多個操作的全功能實用程式。
 
@@ -26,7 +29,7 @@ weight: 4
 ### 隨機種子
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 用途：回傳用於篩選器種子的隨機整數
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ weight: 4
 例如，如果我們決定切換到***隨機***：
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 用途：回傳用於篩選器種子的隨機整數
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ weight: 4
 Scheme 中的 JPEG 導出功能帶有許多參數，可以對影像的保存方式進行精細控制。然而，在大多數情況下，我們只關心一些關鍵設置，例如文件名和品質。為了簡化過程，我們可以包裝該函數。
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; 用途：以指定品質將影像儲存為 JPEG
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; 避免 jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Scheme 中的 JPEG 導出功能帶有許多參數，可以對影像的保存方�
 ***car*** 函數可能很神秘且容易出現腳本錯誤。很容易錯誤地將 ***car*** 應用於向量或非列表項，從而導致意外行為。為了讓我們的程式碼更加健壯和可讀，我們可以將此功能包裝在一個更安全的函數中。
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; 用途：回傳清單或向量的第一項。
+;;          若輸入無效或為空則發出警告。
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; 處理非空清單
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; 處理非空向量
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; 無效或空白輸入
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Scheme 中的 JPEG 導出功能帶有許多參數，可以對影像的保存方�
 檢索 ***x*** 座標。然而，雖然功能齊全，但表現力並不強。相反，我們可以用更合適的定義來包裝***first-item***，以使我們的意圖更清晰。
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; 用途：回傳 x 座標，便於閱讀
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; 用途：回傳 y 座標，便於閱讀
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ Scheme 中的 JPEG 導出功能帶有許多參數，可以對影像的保存方�
 現在，不要用通用方案寫：
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; 取得 x 座標
+(cadr pixel-coords) ;; 取得 y 座標
 ```
 
 我們可以在_our_Scheme中寫：

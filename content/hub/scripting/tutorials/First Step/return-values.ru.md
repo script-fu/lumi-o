@@ -2,6 +2,9 @@
 title: "Возвращаемые значения"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Возвращаемые значения имеют значение, поскольку они позволяют вам управлять потоком без дополнительных состояний. В Scheme возвращаемым значением становится последнее вычисленное выражение.
 
@@ -14,9 +17,9 @@ weight: 8
 Давайте вернемся к функции проверки (is-valid-string?).
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Назначение: Проверяет, что сообщение — непустая строка
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Проверить, является ли сообщение непустой строкой
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ weight: 8
 Мы можем улучшить это, сделав возвращаемое значение более явным. Например, мы могли бы вернуть `#t` (true), если сообщение действительно:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Назначение: Проверяет, что сообщение отправляется в корректный вывод
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Проверить, является ли вывод одним из ожидаемых мест отображения
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ weight: 8
 Вот простой пример использования возвращаемого значения для управления потоком логики:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Назначение: Отправляет сообщение в нужное место вывода
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ weight: 8
 ### Рефакторинг с возвращаемыми значениями
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Назначение: Отправляет сообщение в строку состояния, возвращает #t при успехе
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Назначение: Отправляет сообщение в диалоговое окно, возвращает #t при успехе
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Назначение: Отправляет сообщение в Error Console, возвращает #t при успехе
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Назначение: Отправляет сообщение в terminal, возвращает #t при успехе
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Назначение: Отправляет сообщение в нужный вывод, возвращает #t при успехе
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ weight: 8
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Назначение: Проверяет, что сообщение — непустая строка, возвращает #t при корректности
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ weight: 8
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Назначение: Проверяет, что вывод — корректное назначение, возвращает #t при корректности
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

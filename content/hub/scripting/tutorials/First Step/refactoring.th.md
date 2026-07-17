@@ -2,6 +2,9 @@
 title: "การปรับโครงสร้างใหม่"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 เมื่อเรามีฟังก์ชั่นการทำงานแล้ว เราก็สามารถย้อนกลับไปและคิดว่าจะจัดโครงสร้างโค้ดของเราอย่างไรให้ดีที่สุด เป้าหมายคือการทำให้ปลั๊กอินของเรามีความชัดเจน เข้าใจได้ และบำรุงรักษาได้มากที่สุดเท่าที่จะเป็นไปได้ กระบวนการปรับปรุงและปรับปรุงโครงสร้างของโค้ดที่มีอยู่โดยไม่เปลี่ยนพฤติกรรมนี้เรียกว่าการปรับโครงสร้างใหม่
 
@@ -9,15 +12,15 @@ weight: 2
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยังกล่องโต้ตอบ GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; ส่งข้อความไปยัง terminal หน้าต่าง OS ที่เปิด Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ weight: 2
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยังกล่องโต้ตอบ GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; ส่งข้อความไปยัง terminal หน้าต่าง OS ที่เปิด Lumi
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ weight: 2
 
 แยกตรรกะ:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; ฟังก์ชันหลัก
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ weight: 2
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; ฟังก์ชันจัดการการส่งข้อความไปยังปลายทางต่างๆ
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; ส่งไปยัง Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; ตั้งตัวจัดการเป็น Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; ส่งไปยังกล่องโต้ตอบ GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; ตั้งตัวจัดการเป็น GUI dialog
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ส่งไปยังหน้าต่างเทอร์มินัล
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; เอาต์พุต terminal จัดการด้วย display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

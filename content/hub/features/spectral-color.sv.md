@@ -1,6 +1,10 @@
 ---
 title: "Spektral färgblandning"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/spectral-color"
+translation_source_sha256: eb96e55a075312549727618ea851ee4ed38372c4e144cb2f24ef029b989c0f86
 ---
 Lumis palettsystem använder spektral färgblandning för att få digitalt färgval att bete sig mer som att blanda fysisk färg. Istället för att behandla färger som enkla skärmvärden, modellerar Lumi hur pigment absorberar och reflekterar ljus medan palettfärger genereras och blandas.
 
@@ -32,6 +36,6 @@ För artister betyder det att en palett kan utforskas med större tillit. Färge
 
 ## Färg som ett system
 
-Spektralblandning kopplar Palettredigeraren, Palettkartan och Palettmixern till ett färgsystem. Pigment definierar startpunkten, kartan visar vad paletten kan nå, och mixern låter konstnärer söka efter användbara färger inom det utrymmet.
+Spektralblandning kopplar Palette Editor, Palette Map och Palette Mixer till ett färgsystem. Pigment definierar startpunkten, kartan visar vad paletten kan nå, och mixern låter konstnärer söka efter användbara färger inom det utrymmet.
 
 Detta ger Lumi ett färgarbetsflöde centrerat på målningsbeslut: välj pigmenten, utforska deras blandningar, behåll färgerna som betyder något och måla med en palett som beter sig som en sammanhängande helhet.

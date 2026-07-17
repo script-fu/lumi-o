@@ -2,6 +2,9 @@
 title: "Pinitos"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 First Steps presenta patrones funcionales que funcionan bien en Scheme, con ejemplos breves y refactores incrementales.
 Al final, habrá creado su propia biblioteca de mensajería personalizada y tendrá una base sólida para continuar desarrollando complementos más avanzados.
@@ -10,7 +13,7 @@ Al final, habrá creado su propia biblioteca de mensajería personalizada y tend
 
 Antes de comenzar, asegúrese de tener lo siguiente:
 
-- Lumi installed (a recent build or AppImage).
+- Lumi instalado (una compilación reciente o AppImage).
 - Un editor de texto para archivos `.scm` (VS Code funciona bien): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) para mantener una copia de seguridad de tu código y controlar la versión.
 
@@ -27,7 +30,7 @@ Antes de comenzar, asegúrese de tener lo siguiente:
 
 {{< cards >}}
   {{< card link="reworking" title="Reelaboración" icon="adjustments" subtitle="Técnicas avanzadas de reestructuración de código." >}}
-  {{< card link="refactor-again" title="Refactorizar nuevamente" icon="arrow-sm-right" subtitle="Iterative improvement and optimization" >}}
-  {{< card link="the-procedure-browser" title="Navegador de procedimientos" icon="book-open" subtitle="Exploring Lumi's procedure database" >}}
-  {{< card link="final-thoughts" title="Pensamientos finales" icon="academic-cap" subtitle="Summary and next steps in development" >}}
+  {{< card link="refactor-again" title="Refactorizar nuevamente" icon="arrow-sm-right" subtitle="Mejora y optimización iterativas." >}}
+  {{< card link="the-procedure-browser" title="Navegador de procedimientos" icon="book-open" subtitle="Explorando la base de datos de procedimientos de Lumi" >}}
+  {{< card link="final-thoughts" title="Pensamientos finales" icon="academic-cap" subtitle="Resumen y próximos pasos en el desarrollo." >}}
 {{< /cards >}}

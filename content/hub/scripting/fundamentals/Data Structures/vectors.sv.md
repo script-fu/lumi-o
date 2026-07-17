@@ -1,7 +1,10 @@
 ---
 title: "Vektorer"
-type: docs
+type: "docs"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57cae97347c4a9524567ebcc9eafbdf04228c2792c24e87784bf5f6255987d79
 ---
 I Schema är en vektor en annan grundläggande datastruktur som används för att gruppera värden. Till skillnad från listor är vektorer indexerade samlingar av element med fast storlek, vilket ger snabbare slumpmässig åtkomst och uppdateringar. Varje element i en vektor kan vara av vilken typ som helst, inklusive en annan vektor. Vektorer representeras med # följt av parentes. `#(1 2 3)`
 
@@ -29,8 +32,8 @@ Element i en vektor nås med hjälp av proceduren `vector-ref`, den hämtar elem
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-ref my-vector 0)  ; Retrieves the element at index 0
-(vector-ref my-vector 1)  ; Retrieves the element at index 1
+(vector-ref my-vector 0)  ; Hämtar elementet vid index 0
+(vector-ref my-vector 1)  ; Hämtar elementet vid index 1
 ```
 
 #### Iteration: Bearbetning av varje element i en vektor
@@ -42,9 +45,9 @@ Du kan iterera genom en vektor med en loop eller rekursion. Schema tillhandahål
   (let loop ((i 0))
     (if (< i (vector-length vec))
       (begin
-        (lumi-message (number->string (vector-ref vec i))) ; Print the element
-        (loop (+ i 1)))                                    ; Process the next index
-      (lumi-message "done"))))                             ; End loop
+        (lumi-message (number->string (vector-ref vec i))) ; Skriver ut elementet
+        (loop (+ i 1)))                                    ; Bearbetar nästa index
+      (lumi-message "done"))))                             ; Slut på loop
 ```
 
 - **Basfall:** Om indexet `i` når vektorns längd, stoppa slingan.
@@ -99,7 +102,7 @@ Resultat: `#(0 0 0 0 0)`
 
 ```scheme
 (define my-vector (vector 1 2 3))
-(vector-set! my-vector 1 42)  ; Sets the second element to 42
+(vector-set! my-vector 1 42)  ; Sätter det andra elementet till 42
 my-vector
 ```
 
@@ -110,8 +113,8 @@ Resultat: `#(1 42 3)`
 `vector?`-proceduren kontrollerar om ett givet värde är en vektor.
 
 ```scheme
-(vector? (vector 1 2 3))  ; Checks if #(1 2 3) is a vector
-(vector? 42)              ; Checks if 42 is a vector
+(vector? (vector 1 2 3))  ; Kontrollerar om #(1 2 3) är en vektor
+(vector? 42)              ; Kontrollerar om 42 är en vektor
 ```
 
 Resultat:
@@ -127,11 +130,11 @@ Här är ett exempel som visar hur vektorer skickas med referens och modifieras:
 
 ```scheme
 (define (modify-vector vec index new-value)
-  (vector-set! vec index new-value))  ; Updates the vector at the specified index
+  (vector-set! vec index new-value))  ; Uppdaterar vektorn vid angivet index
 
 (define my-vector (vector 10 20 30))
-(modify-vector my-vector 1 99)         ; Modifies the second element to 99
-my-vector                              ; The original vector is now updated
+(modify-vector my-vector 1 99)         ; Ändrar det andra elementet till 99
+my-vector                              ; Den ursprungliga vektorn är nu uppdaterad
 ```
 
 Resultat: `#(10 99 30)`
@@ -157,9 +160,9 @@ Schema tillhandahåller flera inbyggda procedurer för att arbeta med vektorer, 
 - `list->vector`: Konverterar en lista till en vektor.
 
 ```scheme
-(vector-length (vector 1 2 3))         ; Returns 3
-(vector->list (vector 1 2 3))          ; Converts vector to list: (1 2 3)
-(list->vector (list 1 2 3))            ; Converts list to vector: #(1 2 3)
+(vector-length (vector 1 2 3))         ; Returnerar 3
+(vector->list (vector 1 2 3))          ; Konverterar vektor till lista: (1 2 3)
+(list->vector (list 1 2 3))            ; Konverterar lista till vektor: #(1 2 3)
 ```
 
 Resultat:
@@ -187,8 +190,8 @@ För att komma åt element inom en kapslad vektor, använd `vector-ref` flera g�
 #### Exempel: Åtkomst till element
 
 ```scheme
-(vector-ref nested-vector 0)              ; Retrieves the first element: #(1 2)
-(vector-ref (vector-ref nested-vector 0) 1) ; Retrieves the second element of the first vector: 2
+(vector-ref nested-vector 0)              ; Hämtar det första elementet: #(1 2)
+(vector-ref (vector-ref nested-vector 0) 1) ; Hämtar det andra elementet i den första vektorn: 2
 ```
 
 ### Sammanfattning

@@ -2,6 +2,9 @@
 title: "Bibliothèque de messagerie"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
 Au fil du temps, ce qui a commencé comme une fonction unique pour envoyer des messages a évolué vers un ensemble de fonctions liées. Ces fonctions constituent désormais la base d'une **bibliothèque de messagerie**, conçue pour gérer les sorties vers différentes destinations, telles que l'interface graphique, la console de messages et le terminal du système d'exploitation.
 
@@ -25,7 +28,7 @@ La **Bibliothèque de messagerie** peut facilement être étendue pour prendre e
 
 - **envoyer vers un fichier** : enregistre les messages dans un fichier journal.
 - **send-to-logger** : intégration à un système de journalisation externe.
-- **send-to-notification**: Display messages as system notifications.
+- **envoyer à une notification** : afficher les messages sous forme de notifications système.
 
 En suivant le même modèle de conception modulaire et de fonctions réutilisables, cette bibliothèque peut devenir un outil complet permettant de gérer toutes sortes de tâches de messagerie.
 
@@ -52,7 +55,7 @@ Nous pouvons ajuster la structure du fichier :
 Et n'oubliez pas d'ajuster le `load` dans le plug-in principal :
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

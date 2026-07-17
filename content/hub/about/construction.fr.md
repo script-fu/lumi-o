@@ -1,12 +1,18 @@
 ---
 title: "Construction"
 type: docs
+url: "hub/about/construction"
+aliases:
+  - "hub/about/pencils"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
 ---
-L'espace de travail de construction est conçu pour les travaux de pose. Cela commence par un seul préréglage d'outil Lay-in et une palette de quatre couleurs de blanc, noir, rouge et bleu, vous donnant suffisamment de structure pour bloquer la forme. La pression est réglée pour contrôler l'opacité, afin que vous puissiez créer des marques avec légèreté et rester concentré sur la forme.
+L'espace de travail Construction est conçu pour le lay-in. Il démarre avec un seul preset Lay-in et une palette de quatre couleurs — blanc, noir, rouge et bleu — qui offre assez de structure pour poser les formes. La pression règle l'opacité, pour construire les traits légèrement et rester concentré sur la forme.
 
-L'anneau tactile Wacom est entièrement pris en charge : un glissement dans le sens des aiguilles d'une montre double la taille de l'outil et un glissement dans le sens inverse des aiguilles d'une montre la réduit de moitié. La touche E bascule vers la gomme et vice-versa, ce qui vaut la peine de l'attribuer à un bouton de la tablette.
+L'anneau tactile Wacom est entièrement pris en charge : un passage dans le sens horaire double la taille de l'outil, un passage inverse la divise par deux. La touche E bascule vers la gomme et revient, ce qui vaut la peine d'être assigné à un bouton de tablette.
 
-De par sa conception, il s'agit d'un espace de travail clairsemé, avec très peu de choses entre votre main et le formulaire que vous construisez. Vous ne faites pas de tri parmi les outils ou ne remettez pas en question vos choix. Le préréglage Lay-in, l'anneau tactile et la bascule de gomme suffisent pour construire rapidement et rester concentré. Appuyez sur F11 pour passer en mode plein écran. L'interface disparaît, ne laissant que vous, l'image et le stylo.
+C'est un espace de travail épuré par conception, avec très peu d'éléments entre votre main et la forme que vous construisez. Pas de tri d'outils ni de doutes sur les choix. Le preset Lay-in, l'anneau tactile et la bascule gomme suffisent pour construire vite et rester concentré. Appuyez sur F11 pour le mode plein écran. L'interface disparaît : il ne reste que vous, l'image et le stylo.
 
 ![construction-01](/images/strokes/sketch-default_share.jpg)

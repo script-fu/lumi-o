@@ -1,88 +1,96 @@
 ---
 title: "Pinselwerkzeug"
 type: docs
+url: "hub/features/paintbrush"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
-Das Pinsel-Werkzeug ist Lumis zentrales Malinstrument: eine reaktionsschnelle, ausdrucksstarke Möglichkeit, direkt auf der Leinwand zu zeichnen, zu malen, zu schattieren, zu strukturieren und Markierungen zu erstellen. Es soll sich unmittelbar anfühlen und dem Künstler dennoch Raum geben, das Verhalten eines Strichs zu beeinflussen.
+Das Pinselwerkzeug ist Lumis zentrales Malinstrument — reaktionsschnell und ausdrucksstark zum Zeichnen, Malen, Schattieren, Texturieren und Setzen von Strichen direkt auf der Leinwand. Es soll unmittelbar wirken und dem Künstler trotzdem Raum geben, das Strichverhalten zu formen.
 
-Es handelt sich nicht um einen einzelnen festen Pinsel, sondern um ein Malsystem. Pinselform, Textur, Bewegung, Druck, Timing und Farbe können alle zur endgültigen Markierung beitragen und eignen sich daher für klare Linien, weiches Malen, trockene Medieneffekte, kalligrafische Striche, verstreute Texturen und mehrköpfige Pinselformationen.
+Es ist kein einzelner fester Pinsel, sondern ein Malsystem. Form, Textur, Bewegung, Druck, Timing und Farbe tragen zum finalen Strich bei — für klare Linien, weiches Malen, trockene Medieneffekte, kalligrafische Striche, verstreute Texturen und Mehrkopf-Formationen.
 
 ![brush-tool](/images/screens/brush-tool.jpg)
 
-## Ausdrucksstarke Pinselspuren
+## Ausdrucksstarke Striche
 
-Pinsel können auf Bitmap-Stempeln, prozeduralen Formen oder rahmenbasierten animierten Quellen basieren. Dadurch kann ein Strich von einer einfachen, weichen, runden Markierung bis hin zu einem reich strukturierten oder sich entwickelnden Bürstenkopf reichen. Die gleiche Mal-Engine kann präzises Zeichnen, malerischen Aufbau, dekorative Markierungen und Auflockerung im Stil natürlicher Medien unterstützen.
+Pinsel können auf Bitmap-Stempeln, prozeduralen Formen oder rahmenbasierten animierten Quellen basieren. Ein Strich reicht von einer einfachen weichen Rundung bis zu einem reich strukturierten oder sich entwickelnden Pinselkopf. Dieselbe Mal-Engine unterstützt präzises Zeichnen, malerischen Aufbau, dekorative Striche und natürliche Medien-Auflockerung.
 
-Wenn ein Pinsel optisch komplex wird, kann die Vorschau vereinfacht bleiben, sodass die Malerei reaktionsschnell und leicht lesbar bleibt.
+Wird ein Pinsel optisch komplex, kann die Vorschau vereinfacht bleiben — Malen bleibt reaktionsschnell und gut lesbar.
 
 ![tool-setup](/images/screens/tool-setup.jpg)
 
 
-## Dynamik und Eingabeantwort
+## Dynamik und Eingabe
 
-Das Pinselwerkzeug reagiert auf Live-Eingaben wie Stiftdruck, Geschwindigkeit, Richtung, Neigung und andere Controller-Werte. Diese Signale können den sichtbaren Strich auf viele Arten beeinflussen: Dicke, Deckkraft, Winkel, Texturreaktion, Farbverhalten, Abstände und andere Eigenschaften können sich alle ändern, wenn sich die Hand bewegt.
+Das Pinselwerkzeug reagiert auf Live-Eingabe: Stiftdruck, Geschwindigkeit, Richtung, Neigung und andere Controller-Werte. Diese Signale beeinflussen den sichtbaren Strich vielfältig — Dicke, Deckkraft, Winkel, Texturreaktion, Farbverhalten, Abstand und mehr können sich mit der Handbewegung ändern.
 
-Dadurch fühlt sich der Pinsel weniger wie ein geprägtes Muster an, sondern eher wie ein physisches Zeicheninstrument. Eine leichte Berührung kann zarte Markierungen erzeugen, schnellere Bewegungen können Texturen oder Formen öffnen und richtungsabhängiges Verhalten kann dazu beitragen, dass Striche der Geste der Hand folgen.
+So fühlt sich der Pinsel weniger wie ein Stempelmuster an, mehr wie ein physisches Zeicheninstrument. Leichte Berührung erzeugt zarte Striche; schnellere Bewegung öffnet Textur oder Form; richtungssensitives Verhalten lässt Striche der Geste folgen.
 
 ![dynamics](/images/screens/dynamics.jpg)
 
-## Schlaganfallverhalten
+## Strichverhalten
 
-Striche können direkt und unmittelbar erfolgen oder durch Glättung und Stabilisierung unterstützt werden. Diese Funktionen tragen dazu bei, unerwünschtes Zittern zu reduzieren, abrupte Änderungen abzumildern und dafür zu sorgen, dass sich längere Bewegungen kontrollierter anfühlen, ohne den Charakter der Eingaben des Künstlers zu beeinträchtigen.
+Striche können direkt und unmittelbar sein oder durch Glättung und Stabilisierung unterstützt werden. Das reduziert unerwünschtes Zittern, mildert abrupte Wechsel und macht längere Bewegungen kontrollierter — ohne den Charakter der Künstler-Eingabe zu tilgen.
 
-Der Pinsel unterstützt auch verschiedene Ansätze zum Farbaufbau. Es kann sich wie ein kontinuierlicher Strich verhalten, wiederholte Tupfer ansammeln oder im Laufe der Zeit Markierungen abgeben, während der Zeiger an Ort und Stelle gehalten wird. Diese Flexibilität macht es sowohl für bewusste Linienführung als auch für langsamere Tonkonstruktionen nützlich.
+Der Pinsel unterstützt verschiedene Ansätze zum Farbaufbau: kontinuierlicher Strich, wiederholte Tupfer oder Marken über die Zeit, während der Zeiger stillsteht. Nützlich für bewusste Linienführung und langsamere Tonkonstruktion.
 
-Bei kalligrafischen oder tintenähnlichen Markierungen kann der Pinsel einen kontinuierlicheren, geformten Strich erzeugen, anstatt sich nur auf wiederholte Stempel zu verlassen. Dadurch entstehen fließende, bandartige Formen, die natürlich auf Gesten und Geschwindigkeit reagieren.
+Bei kalligrafischen oder tintenähnlichen Strichen erzeugt der Pinsel einen kontinuierlicheren geformten Strich statt nur wiederholter Stempel — fließende, bandartige Formen, die natürlich auf Geste und Geschwindigkeit reagieren.
 
 ![stroke](/images/screens/stroke.jpg)
 
 ## Stricherfassung und simuliertes Rendering
 
-Der Pinsel kann ein kleines Beispiel davon erfassen, wie eine Voreinstellung normalerweise von Hand gezeichnet wird, und dieses Profil dann verwenden, wenn Striche gerendert werden, die durch Geometrie und nicht durch Live-Bewegungen definiert werden. Gerade Umschalt-Klicklinien, gestrichelte Pfade und gestrichelte Auswahlen können alle das erfasste Druck- und Geschwindigkeitsmuster der aktiven Werkzeugvoreinstellung verwenden, anstatt sich wie eine flache mechanische Linie zu verhalten.
+Der Pinsel kann ein kleines Profil erfassen, wie eine Voreinstellung normalerweise von Hand gezeichnet wird, und dieses Profil nutzen, wenn Striche durch Geometrie statt Live-Bewegung definiert sind. Gerade Shift-Klick-Linien, gestrichelte Pfade und gestrichelte Auswahlen können das erfasste Druck- und Geschwindigkeitsmuster der aktiven Werkzeugvoreinstellung nutzen — statt wie eine flache mechanische Linie zu wirken.
 
-Dadurch bleiben die konstruierten Striche näher am Charakter des Pinsels. Eine von einem Pfad gezeichnete Linie kann sanft beginnen, Druck aufbauen, sich verjüngen oder die Geschwindigkeitsreaktion auf die gleiche Weise wie der gesampelte Handstrich variieren, während sie dennoch der exakten Form des Pfads, der Auswahlkante oder der geradlinigen Geste folgt.
+Konstruierte Striche bleiben näher am Pinselcharakter. Eine pfadbasierte Linie kann sanft beginnen, Druck aufbauen, auslaufen oder die Geschwindigkeitsreaktion variieren wie der gesampelte Handstrich — und folgt trotzdem exakt Pfad, Auswahlkante oder geradliniger Geste.
 
-## NachbearbeitungDer Pinsel kann einen Strich aufzeichnen, während Sie ihn zeichnen, und diese erfasste Geste dann wiedergeben, sobald Sie ihn abheben, und so den Pfad verfeinern, bevor die endgültige Markierung gesetzt wird. Sie können frei skizzieren und dennoch eine klarere Richtung, schärfere Ecken oder eine bewusstere Struktur erzielen, ohne mit mechanischer Präzision zeichnen zu müssen.
+## Nachbearbeitung
 
-Dies ermöglicht Schraffuren und linienförmige Konstruktionsmarkierungen, die an sauberen Winkeln einrasten, während die handgezeichnete Länge und der Charakter erhalten bleiben, kippstabile Bandstriche und eine eckenbewusste Wiedergabe, die Kurven und gerade Strecken unterschiedlich behandelt. Pinsel mit mehreren Köpfen können einen korrigierten Pfad teilen, während jeder Kopf seine eigene Variation beibehält, und die Dynamik kann den Strich während der Wiedergabe immer noch entlang seiner endgültigen Kurve formen. Die Nachbearbeitung bezieht sich auf gezeichnete Striche und nicht auf kontinuierliche Airbrush-Emission.
+Der Pinsel kann einen Strich während des Zeichnens aufzeichnen und die erfasste Geste nach dem Abheben wiedergeben, den Pfad verfeinern, bevor der finale Strich gesetzt wird. Frei skizzieren und trotzdem klarere Richtung, schärfere Ecken oder bewusstere Struktur — ohne mechanische Präzision.
+
+Das ermöglicht Schraffuren und konstruktive Hilfslinien, die an sauberen Winkeln einrasten, während Länge und Handcharakter bleiben; kippstabile Bandstriche; eckenbewusste Wiedergabe, die Kurven und Geraden unterschiedlich behandelt. Mehrkopf-Pinsel teilen einen korrigierten Pfad, jeder Kopf behält eigene Variation; Dynamik formt den Strich entlang der finalen Kurve bei der Wiedergabe. Nachbearbeitung gilt für gezeichnete Striche, nicht für kontinuierliche Airbrush-Emission.
 
 ## Farbe und Textur
 
-Pinselstriche können die aktive Malfarbe verwenden, auf Farbverläufe reagieren oder die Farbe durch Dynamik variieren. Durch die Texturbearbeitung kann ein Pinsel zwischen einer festen Abdeckung und unterbrochenen, über die Oberfläche gleitenden Markierungen wechseln, was für Trockenpinseleffekte, Körnung und ausdrucksstarke Schattierungen nützlich ist.
+Pinselstriche nutzen die aktive Malfarbe, reagieren auf Verläufe oder variieren Farbe durch Dynamik. Texturbehandlung wechselt zwischen fester Deckung und gebrochenen, oberflächenstreifenden Marken — nützlich für Trockenpinseleffekte, Körnung und ausdrucksstarke Schattierung.
 
-Da Farbe und Textur Teil desselben dynamischen Systems sein können wie Form und Deckkraft, kann sich ein einzelner Strich entwickeln, während er sich über die Leinwand bewegt, anstatt optisch einheitlich zu bleiben.
+Weil Farbe und Textur Teil desselben dynamischen Systems sein können wie Form und Deckkraft, entwickelt sich ein Strich über die Leinwand statt optisch einheitlich zu bleiben.
 
-## Bürstenköpfe und Formationen
+## Pinselköpfe und Formationen
 
-Das Pinselwerkzeug kann mit mehr als einem Kopf gleichzeitig malen. Mehrere Köpfe können um den Strichpfad herum angeordnet werden, um Spitzenmarkierungen, gefächerte Striche, borstenartiges Verhalten, Sprühmuster, strukturierte Formationen oder strukturierte Schraffuren zu erzeugen.
+Das Pinselwerkzeug kann mit mehr als einem Kopf gleichzeitig malen. Mehrere Köpfe lassen sich um den Strichpfad anordnen — für Spitzenmarken, gefächerte Striche, borstenartiges Verhalten, Sprühmuster, strukturierte Formationen oder Schraffur.
 
-Diese Köpfe können der Bewegungsrichtung folgen, voneinander abweichen und sich so verteilen, dass sich der Strich eher organisch als mechanisch wiederholt anfühlt. Dies ist besonders nützlich für Pinsel mit natürlichen Medien, dekorative Striche, Blätter, Fell, Schraffuren und andere Markierungen, die von kontrollierten Unregelmäßigkeiten profitieren.
+Die Köpfe folgen der Bewegungsrichtung, weichen voneinander ab und streuen so, dass der Strich organisch statt mechanisch wiederholt wirkt. Besonders nützlich für Naturmedien-Pinsel, dekorative Striche, Laub, Fell, Schraffur und alles, was kontrollierte Unregelmäßigkeit braucht.
 
 ![brush-heads](/images/screens/brush-heads.jpg)
 
 ## Pinselladung und Farbaufnahme
 
-Der Pinsel kann auch simulieren, wie viel Farbe oder Material sich gerade auf dem Pinsel befindet. Mit fortschreitendem Strich kann diese Ladung allmählich nachlassen, wodurch die Markierungen je nach Einstellung der Pinseldynamik heller, trockener, dünner, rauer oder auf andere Weise stärker aufgelöst werden.
+Der Pinsel simuliert, wie viel Farbe oder Material gerade auf dem Pinsel liegt. Mit fortschreitendem Strich kann die Ladung nachlassen — Striche werden heller, trockener, dünner, rauer oder stärker gebrochen, je nach Pinseldynamik.
 
-Die Belastung kann zwischen den Strichen wieder eingeführt, auf einem gewählten Niveau gehalten oder als Live-Steuersignal für andere Pinselverhaltensweisen verwendet werden. Dadurch ist es möglich, Pinsel zu bauen, die sich eher wie echte Medien anfühlen: zu Beginn eines Strichs nass, mit zunehmender Entfernung erschöpft und dann beim nächsten Durchgang wieder eingetaucht.
+Ladung lässt sich zwischen Strichen auffrischen, auf einem gewählten Niveau halten oder als Live-Steuersignal für anderes Pinselverhalten nutzen. Pinsel, die sich wie echte Medien anfühlen: nass am Strichanfang, über die Strecke erschöpft, beim nächsten Durchgang wieder aufgetaucht.
 
 ![material-state](/images/screens/material-state.jpg)
 
-## Kontakt der Bürstenoberfläche
+## Oberflächenkontakt
 
-Der Pinsel kann auch einen zeitweiligen Kontaktverlust mit der Maloberfläche simulieren – die gebrochenen Spuren, die entstehen, wenn ein Bleistift, ein Kohlestift, ein trockener Pinsel oder ein teilweise erschöpfter Marker nur teilweise in das Papier eingreift.
+Der Pinsel simuliert auch zeitweiligen Kontaktverlust mit der Maloberfläche — gebrochene Marken, wenn Bleistift, Kohle, Trockenpinsel oder teilweise erschöpfter Marker nur teilweise ins Papier greifen.
 
-Wenn die Kontaktsimulation aktiviert ist, ist die Bürste entweder in Kontakt oder angehoben. Während des Kontakts hinterlassen die Markierungen eine normale Ablagerung. Beim Anheben wird kein Material abgelagert und der Hub hinterlässt einen Spalt, dessen Länge zufällig zwischen einem minimalen und einem maximalen Abstand gewählt wird. Der Übergang ist binär: Der Effekt ändert weder Deckkraft noch Größe, Härte, Abstand oder Fluss, sondern nur, ob Farbe aufgetragen wird.Wie leicht der Kontakt verloren geht, hängt von der Kontaktschwelle, dem Stiftdruck und optional der Bürstenbelastung ab. Höhere Schwellenwerte führen zu häufigeren Pausen. Druck wirkt als stabilisierende Kraft: Leichter Druck erhöht die Wahrscheinlichkeit, den Kontakt zu verlieren, während starker Druck die Wahrscheinlichkeit erhöht, dass der Schlag unten bleibt. Wenn die Bürstenlast aktiviert ist, kann eine niedrige Last dazu führen, dass die Markierung stärker zerbrochen wird, und eine hohe Last kann dazu beitragen, den Kontakt aufrechtzuerhalten, ähnlich wie bei einem Werkzeug, das noch genügend Material trägt, um die Oberfläche zu greifen.
+Ist Kontaktsimulation aktiv, ist der Pinsel entweder in Kontakt oder angehoben. Im Kontakt lagert sich Material normal ab; angehoben bleibt eine Lücke, deren Länge zufällig zwischen Minimum und Maximum liegt. Der Übergang ist binär — Deckkraft, Größe, Härte, Abstand oder Fluss ändern sich nicht, nur ob Farbe aufgetragen wird.
 
-Der Verlust wird anhand der Wegstrecke der Striche und nicht anhand der Anzahl der Tupfer bewertet, sodass sich Pinsel mit dichtem oder spärlichem Abstand konsistent verhalten. Die Funktion funktioniert sowohl mit stempelbasierter als auch mit kalligrafischer Darstellung und erzeugt zusammenhängende Lücken entlang des Strichs anstelle isolierter übersprungener Tupfer.
+Wie leicht Kontakt verloren geht, formen Kontaktschwelle, Stiftdruck und optional Pinselladung. Höhere Schwellen bedeuten häufigere Unterbrechungen. Druck wirkt stabilisierend: leichter Druck erhöht Kontaktverlust, fester Druck hält den Strich eher unten. Bei aktiver Ladung macht niedrige Ladung den Strich gebrochener, hohe Ladung hält Kontakt — wie ein Werkzeug mit genug Material für Griff auf der Oberfläche.
+
+Verlust wird anhand der Strichstrecke bewertet, nicht der Tupferzahl — Pinsel mit dichtem oder spärlichem Abstand verhalten sich konsistent. Die Funktion arbeitet mit stempel- und kalligrafischem Rendering und erzeugt zusammenhängende Lücken entlang des Strichs statt isolierter ausgelassener Tupfer.
 
 ## Animation und Variation
 
-Animierte Pinselquellen können den Rahmen mit fortschreitendem Strich ändern und den Pinseln ein Gefühl von Bewegung und Abwechslung verleihen. Randomisierung und Variation pro Strich können verhindern, dass wiederholte Markierungen identisch aussehen, während stabiles Seeding einen konsistenten Charakter bewahren kann, wenn Wiederholbarkeit erforderlich ist.
+Animierte Pinselquellen wechseln den Frame mit fortschreitendem Strich — Bewegung und Abwechslung. Randomisierung und Variation pro Strich verhindern identische Wiederholungen; stabiles Seeding bewahrt konsistenten Charakter, wenn Wiederholbarkeit nötig ist.
 
-Diese Verhaltensweisen sind nützlich für Pinsel, die sich lebendig anfühlen sollen: Borsten, die sich während eines Strichs bewegen, strukturierte Stempel, die sich im Laufe der Zeit subtil verändern, oder Werkzeuge mit mehreren Köpfen, bei denen jeder Kopf seine eigene Persönlichkeit hat.
+Nützlich für Pinsel, die lebendig wirken sollen: Borsten, die sich durch den Strich verschieben; strukturierte Stempel mit subtiler zeitlicher Veränderung; Mehrkopf-Werkzeuge, bei denen jeder Kopf eigene Persönlichkeit hat.
 
-## Künstlerorientierter Workflow
+## Workflow mit Künstlerfokus
 
-Das Pinsel-Werkzeug ist so organisiert, dass häufige Malentscheidungen immer griffbereit sind, während weniger häufige Einrichtungsoptionen nicht im Weg sind. Die Absicht besteht darin, das Werkzeug während des Malens zugänglich zu halten und gleichzeitig eine umfassende Anpassung des Pinseldesigns zu unterstützen.
+Das Pinselwerkzeug hält häufige Malentscheidungen griffbereit und seltenere Einrichtung aus dem Weg. Zugänglich beim Malen, trotzdem tief anpassbar für Pinseldesign.
 
-Insgesamt ist der Pinsel so konzipiert, dass er sowohl das alltägliche Malen als auch das Erstellen spezieller Markierungen abdeckt: Schnelles Skizzieren, ausgefeilte Illustrationen, strukturierte Wiedergabe, ausdrucksstarke Tuschearbeiten und komplexe prozedurale Pinseleffekte nutzen alle die gleiche flexible Grundlage.
+Insgesamt deckt der Pinsel Alltagsmalerei und spezialisierte Markenbildung ab: schnelle Skizze, ausgereifte Illustration, strukturiertes Rendering, ausdrucksstarke Tusche, komplexe prozedurale Pinseleffekte — auf derselben flexiblen Grundlage.

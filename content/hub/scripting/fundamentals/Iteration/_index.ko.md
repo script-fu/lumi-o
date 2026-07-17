@@ -2,29 +2,29 @@
 title: "반복"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-반복은 프로그래밍의 초석으로, 스크립트가 작업을 반복하고 데이터 수집을 효율적으로 처리할 수 있도록 해줍니다. Scheme 프로그래밍 언어를 기반으로 하는 Scheme에서 반복은 반복 작업을 자동화하고, 데이터 구조를 조작하고, 정교한 실행 패턴을 생성하는 도구를 제공합니다.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### 계획에서 반복의 역할
+### Le rôle de l'itération en Scheme
 
-반복은 스크립트에서 몇 가지 필수 목적을 수행합니다.
-- **반복 자동화:** 코드를 복제하지 않고도 동일한 작업이나 일련의 작업을 여러 번 수행할 수 있습니다.
-- **효율성 향상:** 데이터 구조를 반복적으로 처리함으로써 스크립트는 대규모 작업을 체계적으로 처리할 수 있습니다.
-- **코드 간소화:** 반복을 통해 중복성을 제거하여 코드를 더욱 간결하고 읽기 쉽고 유지 관리하기 쉽게 만듭니다.
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### 사용 가능한 반복 유형
+### Types d'itération disponibles
 
-Scheme은 반복을 위한 여러 구성을 제공하며 각 구성은 특정 요구 사항에 맞게 조정됩니다.
-- **map:** 목록의 각 요소에 함수를 적용하여 결과와 함께 새 목록을 반환합니다.
-- **for-each:** Similar to `map`, but used for executing a function on each element without returning a result.
-- **do:** 다양한 반복 프로세스를 처리하는 범용 루프 구성입니다.
-- **재귀:** 함수가 스스로를 호출하여 문제를 점진적으로 해결하는 강력한 기술입니다.
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### 반복 작동 방식
+### Comment fonctionne l'itération
 
-반복에는 일반적으로 다음이 포함됩니다.
-1. **반복 정의:** 반복할 동작과 처리할 데이터 또는 범위를 지정합니다.
-2. **순서대로 실행:** 완료될 때까지 각 요소, 단계 또는 조건에 대한 작업을 반복합니다.
-3. **결과 반환(선택 사항):** 구성에 따라 반복을 통해 결과가 생성되거나 상태가 수정될 수 있습니다.
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-이러한 구성을 사용하면 복잡한 작업을 쉽게 처리할 수 있는 적응력 있고 효율적이며 우아한 스크립트를 작성할 수 있습니다.
+Ces constructions aident à écrire des scripts adaptables et efficaces.

@@ -2,6 +2,9 @@
 title: "Pensamientos finales"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 Ahora tiene un complemento de procedimiento de trabajo y una pequeña biblioteca auxiliar. Esta serie presentó los patrones principales que usarás en la mayoría de los scripts de Lumi:
 
@@ -15,7 +18,7 @@ También vio los conceptos básicos del uso de Git para realizar un seguimiento 
 Aquí está la versión final de nuestro código de complemento principal:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ Aquí está la versión final de nuestro código de complemento principal:
 Código de biblioteca:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Propósito: Envía un mensaje a la barra de estado, devuelve #t si tiene éxito
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ Código de biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Propósito: Envía un mensaje al cuadro de diálogo, devuelve #t si tiene éxito
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ Código de biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Propósito: Envía un mensaje a la consola de errores, devuelve #t si tiene éxito
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ Código de biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Propósito: Envía un mensaje al terminal, devuelve #t si tiene éxito
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ Código de biblioteca:
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Propósito: Envía un mensaje a la salida adecuada y devuelve #t si tiene éxito
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ Código de biblioteca:
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Propósito: Comprueba que el mensaje es una cadena no vacía, devuelve #t si es válido
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ Código de biblioteca:
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Propósito: Comprueba que la salida es un destino válido, devuelve #t si es válida
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

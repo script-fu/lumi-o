@@ -2,6 +2,9 @@
 title: "Funktioner"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 Funktioner är ett kärnkoncept i Scheme, som ger möjlighet att kapsla in logik, möjliggöra kodåteranvändning och strukturera dina skript effektivt. Med funktioner kan du skapa modulära, underhållsbara skript som hanterar ett brett utbud av uppgifter, från grundläggande operationer till avancerade arbetsflöden i Lumi.
 
@@ -12,9 +15,9 @@ Detta avsnitt fungerar som en introduktion till funktioner i Scheme och lägger 
 Scheme code is made of **expressions**. Ett uttryck utvärderas till ett värde. Syntaxen är enhetlig: parenteser bildar ett anrop, med operatörens eller funktionsnamnet först.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; Adderar 1 och 2, resultat 3
+(if #t 1 0)     ; Utvärderas till 1 eftersom villkoret är sant
+(list 1 2 3)    ; Skapar en lista: (1 2 3)
 ```
 
 Eftersom allt är ett uttryck passar kontrollflödet naturligt i samma stil som funktionsanrop.
@@ -51,7 +54,7 @@ Schema erbjuder en mängd olika funktionskonstruktioner, var och en lämpad för
    Funktioner som tar andra funktioner som argument eller returnerar funktioner som resultat, vilket möjliggör kraftfulla abstraktioner som kartläggning, filtrering och reducering.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returnerar (1 4 9 16)
    ```
 
 ## Allmän syntax för funktioner
@@ -73,7 +76,7 @@ Exempel:
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; Returnerar 8
 ```
 
 ## Biverkningar och globalt tillstånd

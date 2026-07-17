@@ -1,7 +1,10 @@
 ---
-title: "定义"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Scheme 中的 `define` 语句是一个通用构造，用于创建全局或局部绑定。它最常用于定义变量和函数，使它们可以在整个脚本或特定范围内重用和访问。理解`define`对于编写模块化、可重用且可读的Scheme程序至关重要。
 
@@ -28,7 +31,7 @@ Scheme 中的 `define` 语句是一个通用构造，用于创建全局或局部
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; 计算 2π
 ```
 
 **结果**：`6.28318`
@@ -51,7 +54,7 @@ Scheme 中的 `define` 语句是一个通用构造，用于创建全局或局部
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; 计算 4²
 ```
 
 **结果**：`16`
@@ -66,8 +69,8 @@ Scheme 中的 `define` 语句是一个通用构造，用于创建全局或局部
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; 局部辅助函数
+  (define (cube x) (* x x x))  ;; 局部辅助函数
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

@@ -1,14 +1,18 @@
 ---
-title: "Fondamenti"
+title: "Fondamentali"
 type: docs
 weight: 2
+url: "hub/scripting/fundamentals"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 201acfcd95ecd79800e3cb6faf6628700649b91b6f9669b83acea9fb7c3c40ff
 ---
-I concetti fondamentali coprono gli elementi costitutivi principali utilizzati nei plug-in Lumi Scheme: variabili, funzioni, strutture dati comuni, condizionali e iterazione.
+I fondamentali trattano i mattoni di base usati nei plug-in Scheme di Lumi: variabili, funzioni, strutture dati comuni, condizionali e iterazione.
 
 {{< cards >}}
-  {{< card link="variables-and-scope" title="Variabili e ambito" icon="variable" subtitle="Comprensione delle variabili e dell'ambito in Scheme" >}}
-  {{< card link="functions" title="Funzioni" icon="cog" subtitle="Creazione e utilizzo di funzioni" >}}
-  {{< card link="data-structures" title="Strutture dati" icon="collection" subtitle="Elenchi, array e manipolazione dei dati" >}}
-  {{< card link="conditionals" title="Condizionali" icon="selector" subtitle="Se/allora logica e processo decisionale" >}}
-  {{< card link="iteration" title="Iterazione" icon="refresh" subtitle="Loop e operazioni ripetitive" >}}
+  {{< card link="variables-and-scope" title="Variabili e ambito" icon="variable" subtitle="Comprendere variabili e ambito in Scheme" >}}
+  {{< card link="functions" title="Funzioni" icon="cog" subtitle="Creare e usare funzioni" >}}
+  {{< card link="data-structures" title="Strutture dati" icon="collection" subtitle="Liste, vettori e manipolazione dei dati" >}}
+  {{< card link="conditionals" title="Condizionali" icon="selector" subtitle="Logica se/allora e decisioni" >}}
+  {{< card link="iteration" title="Iterazione" icon="refresh" subtitle="Cicli e operazioni ripetitive" >}}
 {{< /cards >}}

@@ -2,6 +2,9 @@
 title: "调试"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 在脚本编写中，没有任何函数是绝对正确的。当遇到意外的输入或条件时，即使是最可靠的命令也可能会失败。为了防止这种情况，我们可以实现自定义调试系统并采用防御性编程技术。通过用错误处理机制包装标准函数并提供信息反馈，我们可以使我们的脚本更加健壮并且更容易排除故障。
 
@@ -12,14 +15,14 @@ weight: 5
 全局调试标志是控制脚本执行期间信息输出级别的简单而有效的方法。启用后，它会提供详细的调试消息，这对于跟踪问题非常有用。禁用后，它可以保持输出简洁以供生产使用。
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 用途：控制调试输出的全局标志。
 (define debug #f)
 ```
 
 默认情况下，调试是关闭的。要在开发期间启用详细输出，只需将标志设置为`#t`：
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; 用途：控制调试输出的全局标志。
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ weight: 5
 为了更好地控制，我们可以使用辅助函数在脚本的特定部分打开或关闭调试。
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; 用途：关闭某段代码的调试模式。
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; 用途：开启某段代码的调试模式。
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ weight: 5
 这使我们能够动态控制调试：
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; 启用详细输出
 
-;; Some script logic here
+;; 此处为一些脚本逻辑
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; 禁用详细输出
 ```
 
 ## 调试消息系统
@@ -73,7 +76,7 @@ weight: 5
 `debug-message` 函数是显示调试输出的核心方法。它确保仅在启用调试时显示消息。
 
 ```scheme
-;; Purpose: Display a debug message.
+;; 用途：显示调试消息。
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ weight: 5
 用法示例：
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; 用途：返回项目的树位置，若项目无效则返回 #f
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ weight: 5
 消息可能包含不同的数据类型，例如列表、向量和数字。为了确保它们的格式正确，我们使用`serialize-item`。
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; 用途：转换各种 Scheme 数据类型（列表、向量、对偶等）
+;;          转换为字符串表示。
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; 空列表
+    ((and (string? item) (string=? item "")) "\"\"")  ; 空字符串
+    ((list? item) (list->string item))                ; 嵌套列表
+    ((vector? item)                                   ; 处理向量
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; 处理对
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; 数字
+    ((symbol? item) (symbol->string item))            ; 符号
+    ((boolean? item) (if item "#t" "#f"))             ; 布尔值
+    ((string? item) item)                             ; 字符串
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 要将多个消息组件合并为单个字符串，我们使用`concat`。
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; 用途：将多个项目连接成单个字符串。
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ list:
 `list->string` 函数将列表转换为格式化字符串。
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; 用途：将项目列表转换为可读字符串。
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ list:
 ### 警告消息`warning-message` 函数的工作方式与 `debug-message` 类似，但即使禁用调试，它也会显示警告。
 
 ```scheme
-;; Purpose: Display a warning message.
+;; 用途：显示警告消息。
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ list:
 一个常见的示例是`item-is-valid?`，它包装`lumi-item-id-is-valid`以返回`#t`或`#f`。如果返回`#f`，我们可以在调用代码中触发`warning-message`，如果输入不是数字，我们可以在函数中发出警告。
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; 用途：检查项目是否有效，返回 #t 或 #f。
+;;          若项目不是数字则发出警告。
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ list:
 `call` 实际使用的示例：
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; 用途：对给定的组蒙版列表应用纹理处理
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

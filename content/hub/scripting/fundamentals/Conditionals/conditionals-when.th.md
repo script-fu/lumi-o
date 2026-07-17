@@ -1,11 +1,14 @@
 ---
-title: "เมื่อไร"
+title: "when"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
 ---
-ใน Scheme แม้ว่า `if` จะดูหรูหราและใช้งานได้หลากหลาย แต่อาจทำให้เกิดความสับสนได้เมื่อใช้โดยไม่มี `else` ที่ชัดเจน สิ่งนี้จะเกิดขึ้นจริงโดยเฉพาะอย่างยิ่งเมื่อมีความตั้งใจที่จะรันโค้ดสาขาเดียวเฉพาะเมื่อเงื่อนไขเป็นจริงเท่านั้น โดยไม่มีการดำเนินการอื่นสำหรับ `false` case ในสถานการณ์เช่นนี้ โครงสร้าง `when` มอบทางเลือกที่ชัดเจนและกระชับยิ่งขึ้น
+En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
 
-รูปแบบพื้นฐานของ `when` มีลักษณะดังนี้:
+La forme de base de `when` :
 
 ```scheme
 (when test-is-true
@@ -13,10 +16,10 @@ weight: 5
   do-that)
 ```
 
-- หาก `test` ประเมินเป็นจริง (`#t`) นิพจน์ทั้งหมดในส่วนเนื้อหาของ `when` โครงสร้างจะถูกดำเนินการตามลำดับ
-- หาก `test` ประเมินเป็นเท็จ (`#f`) แสดงว่าไม่มีอะไรเกิดขึ้น และไม่มีการส่งคืนค่าใด ๆ
+- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
+- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
 
-### ตัวอย่าง
+### Exemple
 
 ```scheme
 (when (< 0 1)
@@ -24,9 +27,9 @@ weight: 5
   (lumi-message "Executing additional actions."))
 ```
 
-### ตัดกัน `if` และ `when`
+### Comparer `if` et `when`
 
-เพื่อให้เข้าใจความแตกต่างระหว่าง `if` และ `when` ได้ดียิ่งขึ้น โปรดพิจารณาตัวอย่างต่อไปนี้ที่ใช้ทั้งสองอย่างร่วมกัน:
+Les deux ensemble dans le même exemple :
 
 ```scheme
 (if (= 0 1)
@@ -36,25 +39,18 @@ weight: 5
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### คำอธิบาย:
+#### Explication
 
-1. **เงื่อนไข `if`**:
-   - การทดสอบ `(= 0 1)` ตรวจสอบว่า 0 เท่ากับ 1 หรือไม่
-   - เนื่องจากนี่เป็นเท็จ (`#f`) สาขา `else` ของ `if` จึงถูกดำเนินการ
+1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
+2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
 
-2. ** `when` สร้างในสาขา `else`**:
-   - การทดสอบ `when` `(< 0 1)` ตรวจสอบว่า 0 น้อยกว่า 1 หรือไม่
-   - เนื่องจากสิ่งนี้เป็นจริง (`#t`) นิพจน์ทั้งหมดภายในเนื้อหาของ `when` จะถูกดำเนินการตามลำดับ:
-     - First, it prints `"The 'when' condition is true!"`.
-     - Then, it prints `"Executing multiple actions within 'when'."`.
+#### Pourquoi `when` ?
 
-#### ทำไมต้องใช้ `when` ที่นี่
+- Pas de `else` vide ou factice.
+- Montre que seule la branche vraie compte.
 
-- การใช้ `when` แทน `if` อื่นจะช่วยลดความซับซ้อนของตรรกะเมื่อไม่จำเป็นต้องใช้สาขา `else` ที่ชัดเจนสำหรับเงื่อนไข
-- `when` ทำให้ชัดเจนว่าเฉพาะสาขาที่แท้จริงเท่านั้นที่เกี่ยวข้อง ช่วยลดความสับสนที่อาจเกิดขึ้น
+### Résumé
 
-### สรุป
-
-- ใช้ `if` เมื่อคุณต้องการทั้งสาขาจริงและเท็จ
-- ใช้ `when` เมื่อกรณีจริงมีเพียงสาขาเดียว โดยเฉพาะอย่างยิ่งเมื่อจำเป็นต้องดำเนินการหลายอย่าง
-- การรวม `if` และ `when` เข้าด้วยกันสามารถช่วยจัดโครงสร้างเงื่อนไขที่ซับซ้อนมากขึ้นได้อย่างชัดเจนและกระชับ
+- **`if` :** quand les deux branches comptent.
+- **`when` :** branche vraie seule, plusieurs actions possibles.
+- Les combiner structure clairement des conditions complexes.

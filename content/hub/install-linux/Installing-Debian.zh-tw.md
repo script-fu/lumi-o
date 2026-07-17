@@ -1,105 +1,111 @@
 ---
-title: "安裝Debian"
+title: "安裝 Debian"
 type: docs
+url: "hub/install-linux/Installing-Debian"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
 ---
-本文檔概述了將 Debian Stable 安裝為 Lumi-o 開發作業系統的過程。對於其他設置類似環境的人來說可能很有用。
 
-選擇 Debian Stable 是因為 Lumi 的目標是在可預測的長期平台上可靠地建造。 GIMP 開發目標是 Debian 測試，使 Debian 穩定版成為一個緊密結合的基礎系統。
+本文說明將 Debian Stable 安裝為 Lumi-o 開發作業系統的流程，也可供搭建類似環境的讀者參考。
 
-Lumi 在 Debian with Cinnamon (X11) 上表現最佳，並且是在該環境中開發和測試的。 Cinnamon 提供了一個熟悉的類似 Windows 的桌面工作流程，而 X11 則為 Lumi 開發提供了最穩定的環境。
+選擇 Debian Stable，是因為 Lumi 需要在可預期的長期平台上穩定建置。GIMP 開發面向 Debian Testing，因此 Debian Stable 是與之高度一致的基礎系統。
 
-如果您來自 Windows，主要的概念變更是大多數軟體安裝和設定是透過套件管理器和簡單的終端命令而不是可下載的安裝程式進行的。
+Lumi-o 在 Debian 與 Cinnamon（X11）上表現最佳，並在該環境中開發與測試。Cinnamon 提供熟悉的類 Windows 桌面工作流程，X11 則是 Lumi 開發中最穩定的環境。
+
+若您來自 Windows，主要概念差異在於：大多數軟體的安裝與設定透過套件管理器與簡單的終端機命令完成，而非下載安裝程式。
 
 ## 本指南適合誰
 
-本指南記錄了用於 Lumi 開發的 Debian Stable 設定。這不是一般的Linux安裝教學。
+本指南記錄 Lumi 開發所用的 Debian Stable 設定，不是通用的 Linux 安裝教學。
 
-它最適用於：
+最適合：
 
-- 從 Windows 遷移到需要可預測的 Linux 設定的藝術家
-- 開發人員從原始碼建構 Lumi
-- 喜歡重現已知工作環境而不是設計自己的系統配置的用戶
+- 從 Windows 遷移、希望獲得可預期 Linux 環境的藝術家
+- 從原始碼建置 Lumi 的開發者
+- 較傾向重現已知可用環境，而非自行設計系統配置的使用者
 
-假設您基本上熟悉磁碟分割區和簡單的命令列用法。
+假定您已熟悉磁碟分割與基本命令列操作。
 
-## 備份您的數據
+## 備份資料
 
-在安裝 Debian 之前，請在外部磁碟機上建立主目錄的完整備份。包括您想要保留的任何其他資料資料夾。
+安裝 Debian 前，請將整個主目錄完整備份到外接磁碟，並包含需要保留的其他資料夾。
 
 注意：在 Linux 中，`~` 代表您的主目錄。
 
-如果您使用 Git 儲存庫，請將任何重要變更推送到其來源，以便在安裝後可以輕鬆恢復它們。只有當您已經使用 Git 時，此步驟才有意義。
+若使用 Git 儲存庫，請將重要變更推送到遠端，以便安裝後輕鬆還原。此步驟僅適用於已在使用 Git 的讀者。
 
 ## 建立分割區
 
-在主磁碟機上為 Debian 建立空間。此步驟有許多指南和工具，包括 GParted。根據您的設置，您可以：
+在主磁碟上為 Debian 騰出空間。此步驟有許多指南與工具（包括 GParted）。依您的環境，可以：
 
-- 縮小現有的 Windows 分割區以實現雙啟動
-- 重複使用現有的 Linux 分割區
-- 準備新的Linux和交換分區
+- 縮小現有 Windows 分割區以雙開機
+- 重用現有 Linux 分割區
+- 準備新的 Linux 分割區與 swap 分割區
 
-如果您不確定，請在進行更改之前查閱特定於硬體的指南，因為系統之間的分區步驟差異很大。
+分割步驟因硬體差異很大；若不確定，請在變更前查閱針對您硬體的指南。
 
+## 建立 Debian 安裝隨身碟
 
-## 建立 Debian 安裝 USB
+假定目標分割區與 swap 空間已就緒：
 
-假設目標分區和交換空間已經存在：
-
-1.從官網下載Debian ISO：https://www.debian.org/
-2. 在 Windows 上，使用 BalenaEtcher 將 ISO 寫入 USB 隨身碟。
-3. 在 Linux 上，使用 `dd` 等命令列工具建立可啟動 USB。
+1. 從官網下載 Debian ISO：https://www.debian.org/
+2. 在 Windows 上，用 BalenaEtcher 將 ISO 寫入隨身碟。
+3. 在 Linux 上，用 `dd` 等命令列工具建立可開機隨身碟。
 
 ## 安裝 Debian
 
-1. 插入 USB 隨身碟。
-2. 重新啟動並在啟動過程中按下啟動選單鍵（通常為`F2`、`F12`、`Esc` 或`Del`）。
-3. 選擇USB 設備。
+1. 插入隨身碟。
+2. 重新啟動，並在開機時按開機選單鍵（常見為 `F2`、`F12`、`Esc` 或 `Del`）。
+3. 選擇隨身碟裝置。
 4. 選擇非圖形安裝程式。
-5. 出現提示時將 root 密碼留空，以便安裝程式授予對您的使用者帳號的 sudo 存取權。
-6.手動分區：
+5. 將 root 密碼留空，安裝程式會為您的使用者帳戶授予 sudo 權限。
+6. 手動分割：
 
    - 檔案系統：ext4（日誌）
-   - 交換：現有交換分區
+   - Swap：現有 swap 分割區
    - 掛載點：`/`
    - 標籤：`linux`
-   - 主機名稱：系統名稱顯示為`user@hostname`
+   - 主機名稱：以 `user@hostname` 形式顯示的系統名稱
    - 使用者帳戶：您的全名
-   - 使用者名稱：終端登入名
+   - 使用者名稱：終端機登入名稱
 
-7. Debian安裝程式現階段提供桌面環境選擇；選擇 **Cinnamon** 作為 Lumi 建議的設定。
-8. 完成安裝並重新啟動進入 Debian Stable。
+7. 安裝程式在此階段可選桌面環境；請選擇 Lumi 建議的 **Cinnamon**。
+8. 完成安裝並重新開機進入 Debian Stable。
 
 ## 系統設定
 
 ### 顯示縮放
 
-Debian Stable 目前處理分數縮放的方式不一致，尤其是在 4K 顯示器上。不降低顯示分辨率，而是直接調整介面元素。建議調整：
+Debian Stable 目前對分數縮放的處理不一致，尤其在 4K 顯示器上。建議不要降低解析度，而是直接調整介面元素。
 
-- 避免分數顯示縮放。
+建議調整：
+
+- 避免分數顯示縮放
 - 選單 → 字型選擇 → 字型設定 → 文字縮放係數：`2.5`
-- 桌面字體：`14`
-- 面板→自訂→面板高度：`60`
-- 面板外觀 → 右區符號圖示大小：`48px`
-- 滑鼠和觸控板→指標大小調整
-- 桌面（右鍵）→ 自訂→ 更大的圖示尺寸
+- 桌面字型：`14`
+- 面板 → 自訂 → 面板高度：`60`
+- 面板外觀 → 右側區域符號圖示大小：`48px`
+- 滑鼠與觸控板 → 指標大小調整
+- 桌面（右鍵）→ 自訂 → 更大的圖示尺寸
 
-火狐瀏覽器調整：
+Firefox 調整：
 
 - 網址列 → `about:config`
-- 將`layout.css.devPixelsPerPx`設定為`1`
+- 將 `layout.css.devPixelsPerPx` 設為 `1`
 
-### 終端
+### 終端機
 
-配置終端首選項：
+設定終端機偏好：
 
-1. 選單 → 終端 → 編輯 → 首選項
-2. 文字→初始大小：`140 columns`、`40 rows`
-3.文字→自訂字體：`Monospace 10`
-4. 顏色 → 內建方案 → Solarized Dark
+1. 選單 → 終端機 → 編輯 → 偏好設定
+2. 文字 → 初始大小：`140 columns`、`40 rows`
+3. 文字 → 自訂字型：`Monospace 10`
+4. 色彩 → 內建配置 → Solarized Dark
 
-## 復原數據
+## 還原資料
 
-根據需要將備份檔案還原到主目錄中，例如：
+依需要將備份檔還原到主目錄，例如：
 
 - `Backup/Home/Artwork` → `~/Artwork`
 - `Backup/Home/code` → `~/code`
@@ -107,11 +113,11 @@ Debian Stable 目前處理分數縮放的方式不一致，尤其是在 4K 顯�
 - `Backup/Home/.ssh` → `~/.ssh`
 - `Backup/Home/.config/lumi` → `~/.config/lumi`
 
-注意：以`.` 開頭的資料夾是Linux 中的隱藏配置目錄。
+注意：以 `.` 開頭的資料夾是 Linux 中的隱藏設定目錄。
 
-## 可選：Git 設定
+## 選用：Git 設定
 
-僅當您計劃建立 Lumi 或恢復存儲庫時才需要。
+僅在計畫建置 Lumi 或還原儲存庫時需要。
 
 ### 安裝 Git
 
@@ -119,34 +125,34 @@ Debian Stable 目前處理分數縮放的方式不一致，尤其是在 4K 顯�
 sudo apt install git
 ```
 
-配置您的身分：
+設定身分資訊：
 
 ```bash
 git config --global --edit
 ```
 
-#### GitLab 訪問
+#### GitLab 存取
 
-恢復對 GitLab 或 GitHub 的儲存庫存取：
+還原對 GitLab 或 GitHub 的儲存庫存取：
 
-1. 變更 SSH 金鑰檔案的權限：`chmod 600 ~/.ssh/id_rsa`
-2. 將使用者加入新的 Git 安裝：`ssh-add ~/.ssh/id_rsa`
+1. 變更 SSH 金鑰檔權限：`chmod 600 ~/.ssh/id_rsa`
+2. 將金鑰加入 SSH 代理：`ssh-add ~/.ssh/id_rsa`
 3. 測試連線：`ssh -T git@ssh.gitlab.gnome.org` 或 `ssh -T git@github.com`
 
-對於每個儲存庫，取得來源並重置本機分支以匹配：
+對每個儲存庫，拉取遠端並重置本機分支以符合遠端：
 
 ```bash
 git reset --hard remote-name/branch-name
 git clean -df
 ```
 
-運行 `git status` 以確認儲存庫是乾淨的。
+執行 `git status` 確認儲存庫乾淨。
 
-我們現在有了一個新的作業系統，所有資料和儲存庫都已恢復。此設定反映了用於 Lumi 開發的已知工作環境，並且可以根據需要適應單獨的工作流程。
+至此，新作業系統已就緒，資料與儲存庫也已還原。此設定反映 Lumi 開發使用的已知可用環境，可依個人工作流程調整。
 
-## 作業系統設定後建置 Lumi
+## 系統設定後建置 Lumi
 
-Lumi 建置腳本位於：
+Lumi 建置指令碼位於：
 
 `~/code/lumi-dev/build/lumi/scripts`。
 
@@ -154,22 +160,17 @@ Lumi 建置腳本位於：
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Install dependencies once
-
 sudo bash lumi-install-packages.sh
 
 # First full setup build
-
 bash lumi-build-script.sh --scope setup --dir lumi-dev
 
 # Regular rebuild after code changes
-
 bash lumi-build-script.sh --scope build --dir lumi-dev
 
 # Quick compile path
-
 bash lumi-build-script.sh --scope compile --dir lumi-dev
 
 # Launch Lumi
-
 bash lumi-launch-active.sh lumi-dev
 ```

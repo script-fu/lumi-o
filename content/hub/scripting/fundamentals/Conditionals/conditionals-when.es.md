@@ -1,11 +1,14 @@
 ---
-title: "cuando"
+title: "when"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
 ---
-En Scheme, si bien `if` es elegante y versátil, puede resultar confuso cuando se usa sin un `else` explícito. Esto es particularmente cierto cuando la intención es ejecutar una sola rama de código solo cuando una condición es verdadera, sin ninguna acción alternativa para el caso `false`. En tales escenarios, la construcción `when` proporciona una alternativa más clara y concisa.
+En Scheme, `if` es versátil, pero sin un `else` explícito puede confundir — sobre todo cuando solo debe ejecutarse la rama verdadera. Entonces `when` es más claro y conciso.
 
-La forma básica de `when` se ve así:
+La forma básica de `when`:
 
 ```scheme
 (when test-is-true
@@ -13,8 +16,8 @@ La forma básica de `when` se ve así:
   do-that)
 ```
 
-- Si `test` se evalúa como verdadero (`#t`), todas las expresiones en el cuerpo de la construcción `when` se ejecutan secuencialmente.
-- Si `test` se evalúa como falso (`#f`), no sucede nada y no se devuelve ningún valor.
+- Si `#t`, todas las expresiones del cuerpo se ejecutan en secuencia.
+- Si `#f`, no ocurre nada; no se devuelve valor.
 
 ### Ejemplo
 
@@ -24,9 +27,9 @@ La forma básica de `when` se ve así:
   (lumi-message "Executing additional actions."))
 ```
 
-### Contrastando `if` y `when`
+### Comparar `if` y `when`
 
-Para comprender mejor la diferencia entre `if` y `when`, considere el siguiente ejemplo donde ambos se usan juntos:
+Ambos juntos en el mismo ejemplo:
 
 ```scheme
 (if (= 0 1)
@@ -36,25 +39,18 @@ Para comprender mejor la diferencia entre `if` y `when`, considere el siguiente 
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### Explicación:
+#### Explicación
 
-1. **La condición `if`**:
-   - La prueba `(= 0 1)` comprueba si 0 es igual a 1.
-   - Como esto es falso (`#f`), se ejecuta la rama `else` del `if`.
+1. **`if`:** `(= 0 1)` es falso, rama `else`.
+2. **`when` en el `else`:** `(< 0 1)` es verdadero; ambos `lumi-message` se ejecutan.
 
-2. **La construcción `when` en la rama `else`**:
-   - La prueba `when` `(< 0 1)` comprueba si 0 es menor que 1.
-   - Dado que esto es cierto (`#t`), todas las expresiones dentro del cuerpo del `when` se ejecutan secuencialmente:
-     - First, it prints `"The 'when' condition is true!"`.
-     - Then, it prints `"Executing multiple actions within 'when'."`.
+#### ¿Por qué `when`?
 
-#### ¿Por qué utilizar `when` aquí?
-
-- Usar `when` en lugar de otro `if` simplifica la lógica cuando no hay necesidad de una rama `else` explícita para la condición.
-- `when` deja claro que solo la rama verdadera es relevante, lo que reduce la posible confusión.
+- Sin `else` vacío o ficticio.
+- Deja claro que solo importa la rama verdadera.
 
 ### Resumen
 
-- Utilice `if` cuando necesite tanto una rama verdadera como una falsa.
-- Utilice `when` cuando solo haya una rama para el caso real, especialmente cuando se deben ejecutar múltiples acciones.
-- Combinar `if` y `when` puede ayudar a estructurar condicionales más complejos de forma clara y concisa.
+- **`if`:** cuando importan ambas ramas.
+- **`when`:** solo rama verdadera, varias acciones.
+- Combinarlos estructura condiciones complejas con claridad.

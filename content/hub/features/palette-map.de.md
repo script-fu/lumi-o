@@ -1,41 +1,45 @@
 ---
-title: "Palettenkarte"
+title: "Palette Map"
 type: docs
+url: "hub/features/palette-map"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: cab0e21243e33c96395eda5a819807c031b4874433d6f50720e405ba58acc2c6
 ---
-Die Palettenkarte visualisiert, was eine aktive Palette bewirken kann. Ausgehend von den Pigmenten und gespeicherten Farben der Palette stellt es den erreichbaren Farbraum als malerfreundliche Farbton- und Wertekarte dar.
+Die Palette Map visualisiert, was eine aktive Palette erzeugen kann. Ausgehend von Pigmenten und gespeicherten Farben zeigt sie den erreichbaren Farbraum als malerfreundliche Karte aus Farbton und Helligkeit.
 
-Sein Zweck ist praktisch: Anstatt eine flache Liste von Farbfeldern zu durchsuchen, können Künstler sehen, wo Farben im Verhältnis zueinander stehen, und sich räumlich durch die Palette bewegen.
+Praktisch statt einer flachen Farbfeldliste zu stöbern, sehen Künstler, wo Farben zueinander stehen, und bewegen sich räumlich durch die Palette.
 
 ![palette-map](/images/screens/palettemap.jpg)
 
-## Eine Karte mit erreichbarer Farbe
+## Eine Karte erreichbarer Farben
 
-Jede Palette hat einen Charakter. Einige Paletten öffnen sich zu klaren Grün- und Violetttönen; andere verfallen schnell in warme Neutraltöne, Erdfarben oder gedämpfte Schatten. Die Palettenzuordnung macht dieses Zeichen sichtbar.
+Jede Palette hat einen Charakter. Manche öffnen sich zu klaren Grün- und Violetttönen; andere kippen schnell in warme Neutraltöne, Erdfarben oder gedämpfte Schatten. Die Palette Map macht diesen Charakter sichtbar.
 
 ![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
-Erzeugte Mischungen, Primärpigmente und gespeicherte Farben werden als Teil eines organisierten Farbfelds angezeigt. Dies macht es nicht nur einfacher zu verstehen, welche Farben vorhanden sind, sondern auch, wie sie sich auf die Gesamtpalette der Palette auswirken.
+Erzeugte Mischungen, Primärpigmente und gespeicherte Farben erscheinen als ein organisiertes Farbfeld. So wird nicht nur klar, welche Farben existieren, sondern wie sie zur Gesamtspanne der Palette gehören.
 
-## Farbton, Wert und Ausrichtung
+## Farbton, Helligkeit und Orientierung
 
-Die Karte ist nach Farbton und Helligkeit angeordnet, sodass die Farbauswahl eine stabile visuelle Ansprache hat. Helle Farben, dunkle Farben, warme Farbtöne, kühle Farbtöne, gesättigte Bereiche und gedämpfte Passagen lassen sich auf einen Blick leichter vergleichen.
+Die Karte ist nach Farbton und Helligkeit angeordnet — Farbentscheidungen haben eine stabile visuelle Adresse. Helle und dunkle Töne, warme und kühle Verschiebungen, gesättigte Bereiche und gedämpfte Passagen lassen sich auf einen Blick vergleichen.
 
-Diese räumliche Struktur ist besonders nützlich bei der Auswahl der nächsten Farbe in einem Gemälde. Ein Künstler kann sich einem nahegelegenen Farbton zuwenden, in der gleichen Wertefamilie bleiben, nach einem stärkeren Chroma suchen oder bewusst zu einem ruhigeren Neutralton übergehen.
+Diese räumliche Struktur hilft bei der nächsten Farbe im Bild: einem benachbarten Farbton näherkommen, in derselben Helligkeitsfamilie bleiben, stärkeres Chroma suchen oder bewusst in ein ruhigeres Neutral hineinstreifen.
 
-## Mehr als ein Pflücker
+## Mehr als eine Farbauswahl
 
-Die Palette Map ist auch eine Brücke zum Mischen. Farben auf der Karte können als Ausgangspunkte für neue Mischungen dienen, und gespeicherte Mischungen können ihre Beziehung zur Karte behalten, anstatt zu unzusammenhängenden Farbfeldern zu werden.
+Die Palette Map ist auch eine Brücke zum Mischen. Farben auf der Karte können Ausgangspunkte neuer Mischungen sein; gespeicherte Mischungen behalten ihre Beziehung zur Karte, statt zu isolierten Farbfeldern zu werden.
 
-Dies hilft Lumi dabei, Farbe als kontinuierlichen Arbeitsraum zu betrachten. Das Auswählen, Mischen, Speichern und Zurückkehren zu Farben erfolgt innerhalb derselben Palettengeographie.
+So behandelt Lumi Farbe als durchgängigen Arbeitsraum. Auswählen, Mischen, Speichern und Zurückkehren geschehen innerhalb derselben Palettengeographie.
 
-## Canvas-zentrierte Erkundung
+## Erkundung mit der Leinwand im Blick
 
-Die Karte kann als große visuelle Oberfläche verwendet werden, wenn Farbentscheidungen mehr Raum benötigen. Dies macht es nützlich, um eine potenzielle Farbe mit dem Gemälde selbst zu vergleichen, Tonfamilien zu durchsuchen oder sich schnell durch die Palette zu bewegen, ohne auf ein kleines Bedienfeld angewiesen zu sein.
+Die Karte kann als große visuelle Fläche dienen, wenn Farbentscheidungen mehr Raum brauchen — zum Vergleich einer Farbe mit dem Bild, zum Durchsuchen von Tonfamilien oder zum schnellen Navigieren ohne kleines Bedienfeld.
 
-Die Absicht besteht darin, die Palettennavigation unmittelbar und visuell zu gestalten: Schauen Sie sich die Farbwelt an, bewegen Sie sich durch sie und wählen Sie die Markierung aus, die als Nächstes dazugehört.
+Ziel: Palettennavigation soll unmittelbar und visuell sein — die Farbwelt ansehen, sich darin bewegen, den Strich wählen, der als Nächstes passt.
 
 ## Palettenidentität
 
-Da die Palettenkarte aus der aktiven Palette generiert wird, ändert sich beim Wechseln der Paletten die Form und Hervorhebung der Karte. Eine begrenzte Porträtpalette, eine Vollspektrum-Studiopalette und eine gedämpfte Landschaftspalette erzeugen jeweils eine andere Farbgeographie.
+Weil die Palette Map aus der aktiven Palette erzeugt wird, ändern sich Form und Schwerpunkte beim Palettenwechsel. Eine begrenzte Porträtpalette, eine Vollspektrum-Studiopalette und eine gedämpfte Landschaftspalette ergeben jeweils eine andere Farbgeographie.
 
-Auf diese Weise wird die Palettenkarte zu einem Porträt der Palette selbst: ein lesbares Bild dessen, was dieses Farbsystem leisten kann.
+So wird die Palette Map zum Porträt der Palette selbst — ein lesbares Bild dessen, was dieses Farbsystem leisten kann.

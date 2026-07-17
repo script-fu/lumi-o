@@ -1,41 +1,46 @@
 ---
-title: "Mapa de paleta"
+title: "Palette Map"
 type: docs
+url: "hub/features/palette-map"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: cab0e21243e33c96395eda5a819807c031b4874433d6f50720e405ba58acc2c6
 ---
-O Mapa de Paletas visualiza o que uma paleta ativa pode produzir. A partir dos pigmentos da paleta e das cores salvas, ele apresenta o espaço de cores alcançável como um mapa de matiz e valor fácil de pintar.
 
-Seu objetivo é prático: em vez de navegar em uma lista simples de amostras, os artistas podem ver onde as cores vivem umas em relação às outras e se mover espacialmente pela paleta.
+O Palette Map visualiza o que uma paleta ativa pode produzir. A partir dos pigmentos e das cores salvas da paleta, apresenta o espaço de cores alcançável como um mapa de matiz e valor pensado para quem pinta.
+
+O objetivo é prático: em vez de percorrer uma lista plana de amostras, os artistas veem onde as cores se situam umas em relação às outras e se movem pela paleta de forma espacial.
 
 ![palette-map](/images/screens/palettemap.jpg)
 
-## Um mapa de cores alcançáveis
+## Um mapa de cor alcançável
 
-Cada paleta tem um personagem. Algumas paletas se abrem em verdes e violetas claros; outros desmoronam rapidamente em tons neutros quentes, cores terrosas ou sombras suaves. O Mapa da Paleta torna esse caractere visível.
+Cada paleta tem um caráter. Algumas se abrem em verdes e violetas claros; outras rapidamente recuam para neutros quentes, cores terrosas ou sombras suaves. O Palette Map torna esse caráter visível.
 
 ![palette-map-zorn](/images/screens/palettemap-zorn.jpg)
 
-As misturas geradas, os pigmentos primários e as cores salvas aparecem como parte de um campo de cores organizado. Isso torna mais fácil entender não apenas quais cores existem, mas como elas se relacionam com a gama geral da paleta.
+Misturas geradas, pigmentos primários e cores salvas aparecem como um único campo de cor organizado. Fica mais fácil entender não só quais cores existem, mas como se relacionam com a gama geral da paleta.
 
 ## Matiz, valor e orientação
 
-O mapa é organizado em torno de matiz e luminosidade para que as opções de cores tenham um endereço visual estável. Cores brilhantes, cores escuras, mudanças quentes, mudanças frias, áreas saturadas e passagens silenciadas tornam-se mais fáceis de comparar à primeira vista.
+O mapa é organizado em torno de matiz e luminosidade, para que as escolhas de cor tenham um endereço visual estável. Cores claras e escuras, deslocamentos quentes e frios, áreas saturadas e passagens suaves ficam mais fáceis de comparar de relance.
 
-Essa estrutura espacial é especialmente útil na escolha da próxima cor de uma pintura. Um artista pode mover-se em direção a uma tonalidade próxima, permanecer na mesma família de valores, procurar um croma mais forte ou optar deliberadamente por um neutro mais silencioso.
+Essa estrutura espacial ajuda na escolha da próxima cor de uma pintura. O artista pode ir em direção a um matiz próximo, permanecer na mesma família de valores, buscar um croma mais forte ou optar deliberadamente por um neutro mais discreto.
 
-## Mais que um selecionador
+## Mais do que um seletor
 
-O Palette Map também é uma ponte para a mixagem. As cores no mapa podem atuar como pontos de partida para novas misturas, e as misturas salvas podem manter sua relação com o mapa, em vez de se tornarem amostras desconectadas.
+O Palette Map também é uma ponte para a mistura. Cores no mapa podem ser pontos de partida para novas misturas, e misturas salvas mantêm sua relação com o mapa em vez de virar amostras soltas.
 
-Isso ajuda a Lumi a tratar a cor como um espaço de trabalho contínuo. Escolher, misturar, salvar e retornar às cores acontecem na mesma geografia da paleta.
+Isso ajuda o Lumi a tratar a cor como um espaço de trabalho contínuo. Escolher, misturar, salvar e retornar acontecem na mesma geografia da paleta.
 
-## Exploração centrada no Canvas
+## Exploração centrada na tela
 
-O mapa pode ser usado como uma grande superfície visual quando as decisões de cores precisam de mais espaço. Isso o torna útil para comparar uma cor potencial com a própria pintura, navegar por famílias de tons ou mover-se rapidamente pela paleta sem depender de um pequeno painel.
+O mapa pode ser usado como uma grande superfície visual quando decisões de cor precisam de mais espaço. É útil para comparar uma cor em potencial com a própria pintura, percorrer famílias tonais ou mover-se rapidamente pela paleta sem depender de um painel pequeno.
 
-A intenção é fazer com que a navegação na paleta pareça imediata e visual: observe o mundo das cores, percorra-o e escolha a marca que pertence a seguir.
+A navegação na paleta deve parecer imediata e visual: observe o mundo das cores, percorra-o e escolha a marca que vem a seguir.
 
 ## Identidade da paleta
 
-Como o Mapa de Paletas é gerado a partir da paleta ativa, a troca de paletas altera a forma e a ênfase do mapa. Uma paleta de retrato limitada, uma paleta de estúdio de espectro total e uma paleta de paisagem suave produzem, cada uma, uma geografia de cores diferente.
+Como o Palette Map é gerado a partir da paleta ativa, trocar de paleta muda a forma e a ênfase do mapa. Uma paleta de retrato limitada, uma paleta de estúdio de espectro completo e uma paleta de paisagem suave produzem geografias de cor diferentes.
 
-Desta forma, o Mapa da Paleta torna-se um retrato da própria paleta: uma imagem legível do que aquele sistema de cores pode fazer.
+Assim, o Palette Map torna-se um retrato da própria paleta — uma imagem legível do que aquele sistema de cores pode fazer.

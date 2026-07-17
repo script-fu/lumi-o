@@ -1,7 +1,10 @@
 ---
 title: "데이터 구조"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 Scheme에서 **데이터 구조**는 데이터를 구성, 저장 및 조작하는 데 필수적인 도구입니다. 이를 통해 개발자는 효율적이고 읽기 쉽고 재사용 가능한 스크립트를 작성할 수 있습니다. 특정 문제에 적합한 데이터 구조를 선택하면 코드의 성능과 명확성을 모두 최적화할 수 있습니다.
 

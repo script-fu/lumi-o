@@ -2,6 +2,9 @@
 title: "파일"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 파일 및 디렉터리 작업은 구성표 개발에 필수적입니다. 출력을 저장하든, 리소스를 로드하든, 프로젝트 구조를 구성하든 파일 작업을 이해하면 스크립트가 더욱 강력하고 사용자 친화적이게 됩니다.
 
@@ -58,7 +61,7 @@ Lumi는 Linux 전용이므로 사용자의 홈 디렉터리는 `HOME` 환경 변
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme은 디렉터리를 생성하기 위한 ```dir-make``` 명령을 제공합
 일반적으로 실제 경로를 위해 여러 디렉터리를 만들어야 합니다. 여기서는 ```dir-make```에 대한 래퍼를 사용하여 도움을 받을 수 있습니다.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; 목적: 플랫폼에서 지정된 경로를 생성하는 (dir-make) 래퍼
+;;          제공된 경로. dir-make에는 항상 Linux 스타일 구분자를 출력.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; 루트 디렉터리
+    ;; 나머지 디렉터리를 단계별로 생성
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; 경로 구성
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

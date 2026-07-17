@@ -2,29 +2,29 @@
 title: "Iteratie"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-Iteratie is een hoeksteen van programmeren, waardoor scripts acties kunnen herhalen en gegevensverzamelingen efficiënt kunnen verwerken. In Scheme, gebaseerd op de Scheme-programmeertaal, biedt iteratie de tools om repetitieve taken te automatiseren, datastructuren te manipuleren en geavanceerde uitvoeringspatronen te creëren.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### De rol van iteratie in schema's
+### Le rôle de l'itération en Scheme
 
-Iteratie vervult verschillende essentiële doelen in uw scripts:
-- **Herhaling automatiseren:** Hiermee kunt u dezelfde actie of reeks acties meerdere keren uitvoeren zonder code te dupliceren.
-- **Verhoging van de efficiëntie:** Door datastructuren iteratief te verwerken, kunnen scripts grootschalige bewerkingen systematisch afhandelen.
-- **Code stroomlijnen:** Iteratie elimineert redundantie, waardoor de code beknopter, leesbaarder en onderhoudbaarder wordt.
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### Soorten iteratie beschikbaar
+### Types d'itération disponibles
 
-Scheme biedt verschillende constructies voor iteratie, elk afgestemd op specifieke behoeften:
-- **kaart:** Past een functie toe op elk element van een lijst en retourneert een nieuwe lijst met de resultaten.
-- **for-each:** Vergelijkbaar met `map`, maar gebruikt voor het uitvoeren van een functie op elk element zonder een resultaat te retourneren.
-- **do:** Een lusconstructie voor algemene doeleinden die een grote verscheidenheid aan iteratieve processen afhandelt.
-- **recursie:** Een krachtige techniek waarbij functies zichzelf aanroepen om problemen stapsgewijs op te lossen.
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### Hoe iteratie werkt
+### Comment fonctionne l'itération
 
-Iteratie omvat doorgaans:
-1. **Een herhaling definiëren:** Specificeer de actie die moet worden herhaald en de gegevens of het bereik dat moet worden verwerkt.
-2. **Op volgorde uitvoeren:** De actie herhalen voor elk element, stap of voorwaarde tot voltooiing.
-3. **Een resultaat retourneren (optioneel):** Afhankelijk van de constructie kan iteratie een resultaat opleveren of de status wijzigen.
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-Met deze constructies kunt u aanpasbare, efficiënte en elegante scripts schrijven die complexe taken met gemak kunnen uitvoeren.
+Ces constructions aident à écrire des scripts adaptables et efficaces.

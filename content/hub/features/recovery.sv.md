@@ -1,6 +1,10 @@
 ---
 title: "Filåterställning"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/recovery"
+translation_source_sha256: 59495d24302cb3493b90bc61a6dd1ffb9bb9c30b179f7be388882fe4f45a5075
 ---
 Lumis återställningssystem är designat för att skydda målningsarbeten från krascher, misstag och avbrutna sessioner. Det ger projekt ett skyddsnät utan att tvinga artister att ständigt duplicera filer för hand.
 
@@ -24,7 +28,7 @@ Lumi stöder kontrollpunkter på projektnivå för dessa ögonblick. De är lät
 
 Återställningstillstånd presenteras som versioner av konstverket snarare än som råfiler att leta igenom manuellt. Detta låter en artist jämföra de senaste automatiska lagringarna och avsiktliga kontrollpunkterna och sedan öppna det tillstånd som bäst matchar det arbete de vill fortsätta från.
 
-Återställda bilder öppnas som arbetsdokument, vilket gör att konstnären kan inspektera dem innan han bestämmer sig för att spara eller fortsätta.
+Återställda bilder öppnas som arbetsdokument, vilket gör att konstnären kan granska dem innan de bestämmer sig för att spara eller fortsätta.
 
 ## Att hålla återhämtningen praktiskt
 

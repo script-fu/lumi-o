@@ -2,11 +2,14 @@
 title: "สวัสดีชาวโลก!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 บทช่วยสอนนี้จะอธิบายโครงสร้างขั้นต่ำของปลั๊กอิน Scheme บางบรรทัดถือเป็น "แผ่นสำเร็จรูป": Lumi จำเป็นต้องโหลดไฟล์ แม้ว่าคุณจะยังไม่เข้าใจบรรทัดเหล่านั้นอย่างถ่องแท้ก็ตาม
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Code อาจจัดเรียงสิ่งต่าง ๆ ในลั�
 นี่คือตัวอย่างที่สมบูรณ์ ขั้นตอนของ Lumi ส่วนใหญ่ขึ้นต้นด้วย `lumi-` ตัวอย่างเช่น `lumi-message` พิมพ์สตริงไปยังตัวจัดการข้อความที่กำหนดค่าไว้
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยังกล่องโต้ตอบ GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; ตั้งตัวจัดการข้อความให้ส่งข้อความไปยัง Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; ส่งข้อความไปยัง terminal หน้าต่าง OS ที่เปิด Lumi
   (display "Hello world!\n"))
 
 

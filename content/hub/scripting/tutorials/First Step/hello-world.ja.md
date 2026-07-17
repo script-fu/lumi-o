@@ -2,11 +2,14 @@
 title: "「こんにちは世界」"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
-このチュートリアルでは、Scheme プラグインの最小限の構造について説明します。一部の行は「定型文」です。たとえ完全に理解していなくても、Lumi がファイルをロードするにはこれらの行が必要です。
+このチュートリアルでは、Scheme プラグインの最小限の構造について説明します。一部の行は「定型文」です。まだ完全に理解していなくても、Lumi がファイルをロードするために必要です。
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Scheme の基本言語である Scheme では、コメントは通常、役に�
 これが完全な例です。ほとんどの Lumi プロシージャには、`lumi-` というプレフィックスが付いています。たとえば、`lumi-message` は、構成されたメッセージ ハンドラーに文字列を出力します。
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; メッセージハンドラを設定し、メッセージを GUI ダイアログボックスに出力する
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; メッセージを terminal（Lumi を起動した OS ウィンドウ）に送る
   (display "Hello world!\n"))
 
 

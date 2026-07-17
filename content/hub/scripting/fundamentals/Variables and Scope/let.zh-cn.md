@@ -1,7 +1,10 @@
 ---
-title: "让"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 使用 `let` 这个名称是因为它反映了引入临时绑定的数学起源，如 _“Let \( x = 2 \) and \( y = 3 \)”_。
 

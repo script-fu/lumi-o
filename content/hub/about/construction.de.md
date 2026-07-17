@@ -1,12 +1,18 @@
 ---
 title: "Konstruktion"
 type: docs
+url: "hub/about/construction"
+aliases:
+  - "hub/about/pencils"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 633d9378e448d0cd4f2436711db81c14b7962d8ab78b717c8cb96dd13fed5cff
 ---
-Der Arbeitsbereich „Bau“ ist für Einlegearbeiten konzipiert. Es beginnt mit einer einzigen Voreinstellung für das Einlegewerkzeug und einer vierfarbigen Palette aus Weiß, Schwarz, Rot und Blau, die Ihnen genügend Struktur bietet, um die Form zu blocken. Der Druck wird so eingestellt, dass die Deckkraft gesteuert wird, sodass Sie leicht Markierungen erstellen und sich auf die Form konzentrieren können.
+Der Arbeitsbereich Konstruktion ist für Lay-in-Arbeit gedacht. Er startet mit einem einzigen Lay-in-Preset und einer Vierfarben-Palette aus Weiß, Schwarz, Rot und Blau — genug Struktur, um Formen zu blocken. Der Druck steuert die Deckkraft, damit Sie leichte Striche aufbauen und auf der Form bleiben können.
 
-Der Wacom-Touchring wird vollständig unterstützt: Ein Wischen im Uhrzeigersinn verdoppelt die Werkzeuggröße und ein Wischen gegen den Uhrzeigersinn halbiert sie. Die E-Taste schaltet zum Radierer und wieder zurück, weshalb es sich durchaus lohnt, sie einer Tablet-Taste zuzuweisen.
+Der Wacom-Touchring wird vollständig unterstützt: Ein Wisch im Uhrzeigersinn verdoppelt die Werkzeuggröße, ein Wisch gegen den Uhrzeigersinn halbiert sie. Die E-Taste schaltet zum Radierer und zurück — lohnt sich als Tablet-Tastenbelegung.
 
-Es ist von Natur aus ein spärlicher Arbeitsbereich, in dem sich zwischen Ihrer Hand und der Form, die Sie erstellen, nur sehr wenig befindet. Sie durchsuchen keine Tools oder hinterfragen Entscheidungen. Die Lay-in-Voreinstellung, der Touch-Ring und der Radiergummi-Schalter reichen aus, um schnell zu bauen und konzentriert zu bleiben. Drücken Sie F11, um in den Vollbildmodus zu wechseln. Die Benutzeroberfläche verschwindet und es bleiben nur Sie, das Bild und der Stift übrig.
+Bewusst schlank: zwischen Ihrer Hand und der Form, die Sie aufbauen, steht sehr wenig. Kein Sortieren von Werkzeugen, kein Zweifeln an Entscheidungen. Lay-in-Preset, Touchring und Radierer-Umschaltung reichen, um schnell zu konstruieren und fokussiert zu bleiben. F11 startet den Vollbildmodus. Die Oberfläche verschwindet — es bleiben Sie, das Bild und der Stift.
 
 ![construction-01](/images/strokes/sketch-default_share.jpg)

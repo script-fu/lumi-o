@@ -2,8 +2,11 @@
 title: "Плагин фильтра"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
-Мы использовали плагин _procedure_ для руководства [Первый шаг](../../first-step/). Эти типы плагинов работают без необходимости изображения или рисования в качестве входных данных. Обычно мы используем плагин для изменения изображения и его элементов рисования. Подобные плагины называются плагинами _filter_.
+Мы использовали плагин _procedure_ для руководства [Первый шаг](../../first-step/). Эти типы плагинов работают без необходимости использования изображений или изображений в качестве входных данных. Обычно мы используем плагин для изменения изображения и его элементов рисования. Подобные плагины называются плагинами _filter_.
 
 ### Что такое Drawable?
 
@@ -12,28 +15,28 @@ weight: 2
 ### Пример простого плагина фильтра
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; Использовать let для определения переменной сообщения и основного кода
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; Показать сообщение в Error Console Lumi
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; Инвертировать цвета первого выбранного drawable
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; Регистрирует plug-in
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Имя основной процедуры
+  "Simple Filter Plug-in Demo"             ;; Имя, как оно отображается в меню Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Описание подсказки
+  "Author Name"                            ;; Не забудь указать себя в качестве автора
+  "License"                                ;; Лицензия
+  "Date written"                           ;; Дата написания
+  "*"                                      ;; Указывает, что этому plug-in нужно изображение
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Требует один или несколько выбранных drawable
 
-;; Specify the menu location for the plug-in
+;; Указать расположение в меню для plug-in
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ weight: 2
 Первая строка гарантирует, что скрипт работает как плагин в Lumi 3:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ weight: 2
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Отображает сообщение в Error Console Lumi
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Инвертирует цвета первого выбранного drawable
 ```
 
 ### Регистрация плагина
@@ -96,14 +99,14 @@ weight: 2
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Регистрирует основную процедуру
+  "Simple Filter Plug-in Demo"             ;; Имя, как оно отображается в меню Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Описание подсказки
+  "Author Name"                            ;; Имя автора
+  "License"                                ;; Тип лицензии
+  "Date written"                           ;; Дата написания
+  "*"                                      ;; Указывает, что plug-in требует изображение
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Требует один или несколько выбранных drawable
 ```
 
 #### Меню Регистрация

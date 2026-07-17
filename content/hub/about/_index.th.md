@@ -1,14 +1,19 @@
 ---
 type: docs
+url: "hub/about"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
 ---
-ส่วนนี้ให้ภาพรวมโดยย่อของซอฟต์แวร์ ขั้นตอนการทำงานที่สนับสนุน และกระบวนการวาดภาพที่ซอฟต์แวร์กำลังจัดทำขึ้นเพื่อให้บริการ
+
+ส่วนนี้สรุปภาพรวมของซอฟต์แวร์ ขั้นตอนการทำงานที่รองรับ และกระบวนการวาดภาพที่ Lumi กำลังออกแบบให้รองรับ
 
 {{< cards >}}
-	{{< card link="lumi-o" title="ลูมิโอ" icon="information-circle" subtitle="Lumi คืออะไร เหตุใดจึงมีอยู่ และแนวคิดที่เป็นตัวกำหนดการพัฒนา" >}}
-	{{< card link="workspace" title="พื้นที่ทำงาน" icon="view-boards" subtitle="อินเทอร์เฟซเฉพาะที่ออกแบบมาสำหรับเวิร์กโฟลว์การลงสีที่มีโครงสร้างและไม่ทำลาย" >}}
-	{{< card link="construction" title="การก่อสร้าง" icon="pencil" subtitle="พื้นที่ทำงานแบบ Lay-in ที่กระจัดกระจายสำหรับการตัดสินใจเรื่องรูปทรง รูปทรง และการวาดตั้งแต่เนิ่นๆ" >}}
-	{{< card link="inking" title="การใช้หมึก" icon="pencil-alt" subtitle="ควบคุมงานเส้นและการตกแต่งที่สะอาดตาสำหรับเวิร์กโฟลว์ภาพประกอบโดยเจตนา" >}}
-	{{< card link="color" title="สี" icon="color-swatch" subtitle="จานสีที่ใช้เม็ดสีและการจัดการสีที่เกิดจากการฝึกฝนสื่อแบบดั้งเดิม" >}}
-	{{< card link="download" title="ดาวน์โหลด" icon="download" subtitle="รับ AppImage บิวด์ล่าสุดหรือไปที่แหล่งเก็บข้อมูลต้นทาง" >}}
-	{{< card link="Patreon" title="แพทเรียน" icon="heart" subtitle="สนับสนุนการพัฒนาอย่างต่อเนื่องและงานศิลปะที่เป็นแนวทางของ Lumi" >}}
+	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Lumi คืออะไร ทำไมจึงมีอยู่ และแนวคิดที่หล่อหลอมการพัฒนา" >}}
+	{{< card link="workspace" title="พื้นที่ทำงาน" icon="view-boards" subtitle="อินเทอร์เฟซที่มุ่งเน้น ออกแบบมาสำหรับเวิร์กโฟลว์การลงสีแบบมีโครงสร้างและไม่ทำลาย" >}}
+	{{< card link="construction" title="Construction" icon="pencil" subtitle="พื้นที่ทำงาน Lay-in ที่เรียบง่าย สำหรับรูปทรง โครงสร้าง และการตัดสินใจในช่วงเริ่มวาด" >}}
+	{{< card link="inking" title="Inking" icon="pencil-alt" subtitle="งานเส้นที่ควบคุมได้และการเก็บรายละเอียดที่สะอาดตา สำหรับเวิร์กโฟลว์ภาพประกอบอย่างตั้งใจ" >}}
+	{{< card link="color" title="Color" icon="color-swatch" subtitle="จานสีที่ใช้เม็ดสีและการจัดการสี หล่อหลอมจากการฝึกฝนสื่อแบบดั้งเดิม" >}}
+	{{< card link="download" title="ดาวน์โหลด" icon="download" subtitle="ดาวน์โหลด AppImage บิลด์ล่าสุด หรือไปที่แหล่งเก็บซอร์สโค้ด" >}}
+	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="สนับสนุนการพัฒนาอย่างต่อเนื่อง และงานศิลปะที่เป็นแนวทางของ Lumi" >}}
 {{< /cards >}}

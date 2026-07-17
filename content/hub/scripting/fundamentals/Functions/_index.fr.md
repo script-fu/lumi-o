@@ -2,6 +2,9 @@
 title: "Fonctions"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 Les fonctions sont un concept central de Scheme, fournissant les moyens d'encapsuler la logique, de permettre la réutilisation du code et de structurer efficacement vos scripts. Avec les fonctions, vous pouvez créer des scripts modulaires et maintenables qui gèrent un large éventail de tâches, des opérations de base aux flux de travail avancés dans Lumi.
 
@@ -9,12 +12,12 @@ Cette section sert d'introduction aux fonctions de Scheme et jette les bases pou
 
 ## Syntaxe et expressions minimales
 
-Le code du schéma est composé d'**expressions**. Une expression est évaluée à une valeur. La syntaxe est uniforme : les parenthèses forment un appel, avec le nom de l'opérateur ou de la fonction en premier.
+Le code Scheme est composé d'**expressions**. Une expression est évaluée à une valeur. La syntaxe est uniforme : les parenthèses forment un appel, avec le nom de l'opérateur ou de la fonction en premier.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; Additionne 1 et 2, résultat 3
+(if #t 1 0)     ; S'évalue à 1 car la condition est vraie
+(list 1 2 3)    ; Crée une liste : (1 2 3)
 ```
 
 Parce que tout est une expression, le flux de contrôle s’inscrit naturellement dans le même style que les appels de fonction.
@@ -51,7 +54,7 @@ Scheme propose une variété de constructions de fonctions, chacune adaptée à 
    Fonctions qui prennent d'autres fonctions comme arguments ou renvoient des fonctions comme résultats, permettant des abstractions puissantes telles que le mappage, le filtrage et la réduction.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Renvoie (1 4 9 16)
    ```
 
 ## Syntaxe générale des fonctions
@@ -73,7 +76,7 @@ Exemple :
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; Renvoie 8
 ```
 
 ## Effets secondaires et état global

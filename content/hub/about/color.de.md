@@ -1,10 +1,14 @@
 ---
 title: "Farbe"
 type: docs
+url: "hub/about/color"
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
 ---
-Der Arbeitsbereich „Farben“ ist eher für bewusste Farbentscheidungen als für allgemeine Bildanpassungen konzipiert. Es ist von der traditionellen Medienpraxis geprägt und legt den Schwerpunkt auf Pigmente, Palettenstruktur und Mischverhalten, die auch dann verständlich bleiben, wenn ein Gemälde komplexer wird.
+Der Arbeitsbereich Farbe ist für bewusste Farbentscheidungen gedacht, nicht für allgemeine Bildanpassungen. Er orientiert sich an der Praxis traditioneller Malmedien und legt den Schwerpunkt auf Pigmente, Palettenstruktur und ein Mischverhalten, das auch bei komplexer werdenden Bildern nachvollziehbar bleibt.
 
-Das Ziel besteht nicht darin, den Maler mit allen möglichen Farbkontrollen auf einmal zu überfordern. Der Arbeitsbereich kann sich auf die Paletten, Werkzeuge und Ressourcen konzentrieren, die für die Farbphase benötigt werden, sodass Entscheidungen über Harmonie, Wert und Material klarer und einfacher zu handhaben sind.
+Das Ziel ist nicht, Malende mit jedem denkbaren Farbregler gleichzeitig zu überfordern. Der Arbeitsbereich kann auf die Paletten, Werkzeuge und Ressourcen der Farbphase beschränkt bleiben, damit Entscheidungen über Harmonie, Tonwert und Material klarer und leichter zu treffen sind.
 
-Dadurch ist es einfacher, kontrollierte Paletten zu erstellen, gezielt zu arbeiten und die Farbbeziehungen im gesamten Bild lesbar zu halten. Als Teil der drei zentralen Arbeitsabläufe von Lumi soll Coloring der Malerei eine eigene Umgebung bieten, anstatt sie als etwas zu behandeln, das an Zeichnungen oder Linienführung gebunden ist.
+So lassen sich durchdachte Paletten aufbauen, gezielt arbeiten und Farbbeziehungen im gesamten Bild nachvollziehbar halten. Als einer der drei zentralen Workflow-Arbeitsbereiche von Lumi soll Farbe der Malerei eine eigene Umgebung geben — statt sie als Anhängsel zum Zeichnen oder Tuschen zu behandeln.

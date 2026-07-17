@@ -2,6 +2,9 @@
 title: "반환 값"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 반환 값은 추가 상태 없이 흐름을 제어할 수 있게 해주기 때문에 중요합니다. Scheme에서는 마지막으로 평가된 표현식이 반환 값이 됩니다.
 
@@ -14,9 +17,9 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
 유효성 검사 함수(is-valid-string?)를 다시 살펴보겠습니다.
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; 목적: 메시지가 비어 있지 않은 문자열인지 검증
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; 메시지가 비어 있지 않은 문자열인지 확인
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
 반환 값을 더 명확하게 만들어 이를 개선할 수 있습니다. 예를 들어 메시지가 유효한 경우 `#t`(true)를 반환할 수 있습니다.
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; 목적: 메시지가 유효한 출력으로 전송되는지 검증
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 출력이 예상된 표시 대상 중 하나인지 확인
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
 다음은 반환 값을 사용하여 논리 흐름을 제어하는 간단한 예입니다.
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 목적: 메시지를 적절한 출력 대상으로 보냄
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
 ### 반환 값으로 리팩토링됨
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 목적: 메시지를 상태 표시줄로 보내고, 성공하면 #t를 반환
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 목적: 메시지를 대화 상자로 보내고, 성공하면 #t를 반환
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 목적: 메시지를 Error Console로 보내고, 성공하면 #t를 반환
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 목적: 메시지를 terminal로 보내고, 성공하면 #t를 반환
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 목적: 메시지를 적절한 출력으로 보내고, 성공하면 #t를 반환
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 목적: 메시지가 비어 있지 않은 문자열인지 검증하고, 유효하면 #t를 반환
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Scheme에서 함수의 반환 값은 함수가 평가하는 마지막 표현식�
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 목적: 출력이 유효한 대상인지 검증하고, 유효하면 #t를 반환
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

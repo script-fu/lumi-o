@@ -2,11 +2,15 @@
 title: "Espaço de trabalho"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f715e8eae5ee35d9495f37a3268cdf7ecdac5db976fa8fb48a83797cb7ca22b6
 ---
-Os espaços de trabalho são parte fundamental do Lumi, disponíveis diretamente no menu Espaços de trabalho. Eles mudam de forma rápida e suave, portanto, passar de um estágio de um projeto para outro é como selecionar um modo de aplicativo.
 
-O objetivo não é forçar todos os controles, painéis e recursos em um espaço universal. Cada espaço de trabalho pode ser moldado para um trabalho específico, com apenas as ferramentas, plug-ins, paletas e caminhos de recursos realmente necessários para aquela etapa do trabalho. Se você estiver fazendo um desenho de construção, por exemplo, uma única predefinição de ferramenta pode ser suficiente, a inicialização permanece rápida e a interface permanece simples porque foi construída para essa tarefa e não para todas as tarefas possíveis.
+Espaços de trabalho são parte fundamental do Lumi, disponíveis diretamente no menu Espaços de trabalho. Eles alternam de forma rápida e suave, de modo que passar de uma etapa do projeto para outra é como selecionar um modo de aplicativo.
 
-Lumi agrupa três áreas de trabalho principais de fluxo de trabalho: Construção, Tinta e Coloração. Estes são concebidos como os principais espaços de produção. Ele também reúne uma série de layouts alternativos e temáticos para que os usuários possam ver o quão flexível é o sistema do espaço de trabalho, experimentar diferentes arranjos e adaptar o software à maneira como preferem trabalhar.
+O objetivo não é forçar cada controle, painel e recurso em um único espaço universal. Cada espaço de trabalho pode ser moldado para uma tarefa específica — apenas com as ferramentas, plug-ins, paletas e caminhos de recursos necessários naquela fase. Se você está fazendo desenho de construção, por exemplo, uma única predefinição de ferramenta pode bastar: a inicialização permanece rápida e a interface simples, porque foi feita para essa tarefa, não para todas as possíveis.
+
+O Lumi inclui três espaços de trabalho centrais do fluxo: Construção, Tinta e Coloração. Esses são os principais ambientes de produção. Há também layouts alternativos e temáticos, para que os usuários vejam a flexibilidade do sistema de espaços de trabalho, experimentem arranjos diferentes e adaptem o software ao modo como preferem trabalhar.
 
 ![workspace-01](/images/screens/workspace-construction_share.jpg)

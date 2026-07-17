@@ -2,6 +2,9 @@
 title: "Rielaborazione"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Questo passaggio risolve un comportamento sottile nell'esempio di messaggistica.
 
@@ -13,7 +16,7 @@ Aggiorna il contenuto e le destinazioni del messaggio in modo che l'esempio si c
 
 Rimozione del carattere di escape ed estensione delle funzioni:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Rielaborare la libreria:
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Aggiungere un a capo per forzare una casella di messaggio
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Rielaborare la libreria:
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Scopo: Invia un messaggio alla destinazione di output appropriata
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Rielaborare la libreria:
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Scopo: Verifica che il messaggio sia una stringa non vuota
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Verificare se il messaggio è una stringa non vuota
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Scopo: Verifica che il messaggio venga inviato a un output valido
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Verificare se l'output è una delle destinazioni di visualizzazione previste
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

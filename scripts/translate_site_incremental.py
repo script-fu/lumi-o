@@ -31,6 +31,9 @@ LANGUAGE_TARGETS = {
 }
 
 PLACEHOLDER_RE = re.compile(r"@@LUMI_TOKEN_(\d+)@@")
+TRANSLATION_LOCK_KEY = "translation_lock"
+TRANSLATION_PROVENANCE_KEY = "translation_provenance"
+TRANSLATION_SOURCE_HASH_KEY = "translation_source_sha256"
 
 
 def file_hash(path: Path) -> str:
@@ -227,6 +230,11 @@ def parse_args():
         default=",".join(LANGUAGE_TARGETS.keys()),
         help="Comma-separated language codes",
     )
+    parser.add_argument(
+        "--force-locked",
+        action="store_true",
+        help="Regenerate translations marked translation_lock: true",
+    )
     return parser.parse_args()
 
 
@@ -315,6 +323,45 @@ def extract_front_matter_title(front_matter: str):
     return match.group(1).strip()
 
 
+def extract_front_matter_value(front_matter: str, key: str) -> str:
+    match = re.search(rf"(?im)^{re.escape(key)}\s*:\s*(.*?)\s*$", front_matter)
+    if not match:
+        return ""
+    return match.group(1).strip().strip("\"'")
+
+
+def set_front_matter_values(front_matter: str, values: dict[str, str]) -> str:
+    """Set top-level scalar YAML front matter values, adding a block if needed."""
+    if not front_matter:
+        entries = "".join(f"{key}: {value}\n" for key, value in values.items())
+        return f"---\n{entries}---\n"
+
+    updated = front_matter
+    for key, value in values.items():
+        pattern = rf"(?im)^{re.escape(key)}\s*:.*$"
+        replacement = f"{key}: {value}"
+        if re.search(pattern, updated):
+            updated = re.sub(pattern, replacement, updated, count=1)
+            continue
+
+        closing_match = re.search(r"(?m)^---\s*$", updated[3:])
+        if not closing_match:
+            continue
+        closing_index = 3 + closing_match.start()
+        updated = f"{updated[:closing_index]}{replacement}\n{updated[closing_index:]}"
+
+    return updated
+
+
+def translation_is_locked(path: Path) -> tuple[bool, str]:
+    if not path.exists():
+        return False, ""
+    front_matter, _ = split_front_matter(path.read_text(encoding="utf-8"))
+    locked = extract_front_matter_value(front_matter, TRANSLATION_LOCK_KEY).casefold()
+    source_hash = extract_front_matter_value(front_matter, TRANSLATION_SOURCE_HASH_KEY)
+    return locked in {"true", "yes", "1"}, source_hash
+
+
 def dedupe_leading_h1_with_title(body: str, title: str):
     if not title:
         return body
@@ -390,7 +437,7 @@ def main():
                 missing_any = True
                 break
 
-        if src_hash == previous_hash and not missing_any:
+        if not args.force_locked and src_hash == previous_hash and not missing_any:
             skipped_count += 1
             continue
 
@@ -399,14 +446,27 @@ def main():
 
         for lang in languages:
             translator = translators[lang]
+            out_path = translated_path(source_file, lang)
+            locked, locked_source_hash = translation_is_locked(out_path)
+            if locked and not args.force_locked:
+                status = "stale" if locked_source_hash != src_hash else "current"
+                print(f"[translate] preserved locked ({status}): {out_path.relative_to(content_dir)}")
+                continue
+
             translated_front_matter = ensure_translated_title(front_matter, source_file, translator)
             # Avoid language redirect/meta-refresh pages by not pinning translated files to the same URL.
             translated_front_matter = strip_front_matter_keys(translated_front_matter, {"url", "aliases"})
+            translated_front_matter = set_front_matter_values(
+                translated_front_matter,
+                {
+                    TRANSLATION_PROVENANCE_KEY: "machine",
+                    TRANSLATION_SOURCE_HASH_KEY: src_hash,
+                },
+            )
             translated_body = translate_body(body, translator)
             translated_title = extract_front_matter_title(translated_front_matter)
             translated_body = dedupe_leading_h1_with_title(translated_body, translated_title)
             output = f"{translated_front_matter}{translated_body}"
-            out_path = translated_path(source_file, lang)
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_text(output, encoding="utf-8")
 
@@ -424,6 +484,10 @@ def main():
         for lang in languages:
             stale_path = translated_path(source_path, lang)
             if stale_path.exists():
+                locked, _ = translation_is_locked(stale_path)
+                if locked and not args.force_locked:
+                    print(f"[translate] preserved locked translation for removed source: {stale_path.relative_to(content_dir)}")
+                    continue
                 stale_path.unlink()
                 removed += 1
         files_state.pop(key, None)

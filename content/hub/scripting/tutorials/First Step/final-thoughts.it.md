@@ -2,6 +2,9 @@
 title: "Considerazioni finali"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 Ora hai un plug-in per la procedura funzionante e una piccola libreria di supporto. Questa serie ha introdotto i modelli principali che utilizzerai nella maggior parte degli script Lumi:
 
@@ -15,7 +18,7 @@ Hai anche visto le nozioni di base sull'utilizzo di Git per tenere traccia delle
 Ecco la versione finale del nostro codice plug-in principale:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ Ecco la versione finale del nostro codice plug-in principale:
 Codice biblioteca:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Scopo: Invia un messaggio alla barra di stato, restituisce #t in caso di successo
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ Codice biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Scopo: Invia un messaggio alla finestra di dialogo, restituisce #t in caso di successo
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ Codice biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Scopo: Invia un messaggio alla Error Console, restituisce #t in caso di successo
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ Codice biblioteca:
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Scopo: Invia un messaggio al terminal, restituisce #t in caso di successo
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ Codice biblioteca:
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Scopo: Invia un messaggio all'output appropriato, restituisce #t in caso di successo
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ Codice biblioteca:
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Scopo: Verifica che il messaggio sia una stringa non vuota, restituisce #t se valido
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ Codice biblioteca:
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Scopo: Verifica che l'output sia una destinazione valida, restituisce #t se valido
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

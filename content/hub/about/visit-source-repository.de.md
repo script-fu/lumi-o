@@ -1,8 +1,11 @@
 ---
-title: "Besuchen Sie das Quell-Repository"
-description: "Browse the source, history, issues, and build instructions on GitLab."
+title: "Quell-Repository besuchen"
+description: "Durchsuchen Sie Quellcode, Historie, Issues und Build-Anleitungen auf GitLab."
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c7ecee387b611c2e3e2cd3f63b85bbc207aa4bba1b704f07fd3e585b87ac11d8
 ---
-Durchsuchen Sie die Quelle, den Verlauf, die Probleme und die Build-Anweisungen auf GitLab.
+Durchsuchen Sie Quellcode, Historie, Issues und Build-Anleitungen auf GitLab.

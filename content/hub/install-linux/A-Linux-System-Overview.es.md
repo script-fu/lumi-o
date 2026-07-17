@@ -1,43 +1,48 @@
 ---
-title: "Una descripción general del sistema Linux"
+title: "Una visión general del sistema Linux"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux es un sistema operativo potente y versátil con una vasta comunidad de desarrolladores. En esencia, un sistema Linux consta de varios componentes clave que trabajan juntos para brindar una experiencia de usuario perfecta. Esta descripción general describirá las partes esenciales de un sistema Linux, incluido el kernel, la distribución, el administrador de paquetes, el administrador de pantalla, el entorno de escritorio y el servidor de pantalla (X11 o Wayland).
 
-Lumi está en su mejor momento en Debian con Cinnamon (X11) y está desarrollado y probado en ese entorno.
+Linux es un sistema operativo potente y versátil, con una amplia comunidad de desarrolladores. En esencia, un sistema Linux consta de varios componentes clave que trabajan juntos para ofrecer una experiencia de usuario fluida. Esta visión general describe las partes esenciales de un sistema Linux: el kernel, la distribución, el gestor de paquetes, el gestor de pantalla, el entorno de escritorio y el servidor gráfico (X11 o Wayland).
 
-**Valores predeterminados comunes de distribución actual de Linux**
+Lumi rinde al máximo en Debian con Cinnamon (X11) y se desarrolla y prueba en ese entorno.
 
-| **Distribución** | **Administrador de paquetes** | **Administrador de visualización** | **Entorno de escritorio** | **Servidor de visualización** |
-|--------------------|----------------------|----------------------|-------------------------|--------------------|
-| Debian | APTO | DMG | GNOMO | Wayland |
-| Ubuntu | APTO | DMG | GNOMO | Wayland |
-| Debian | APTO | DMG | canela | X11 |
-| Sombrero de fieltro | No abandonar | DMG | GNOMO | Wayland |
-| Arco Linux | Pacman | Elección del usuario | Elección del usuario | Elección del usuario |
+**Valores predeterminados habituales en las distribuciones Linux actuales**
+
+| **Distribución**   | **Gestor de paquetes** | **Gestor de pantalla** | **Entorno de escritorio** | **Servidor gráfico** |
+|--------------------|------------------------|------------------------|---------------------------|----------------------|
+| Debian             | APT                    | GDM                    | GNOME                     | Wayland              |
+| Ubuntu             | APT                    | GDM                    | GNOME                     | Wayland              |
+| Debian             | APT                    | GDM                    | Cinnamon                  | X11                  |
+| Fedora             | DNF                    | GDM                    | GNOME                     | Wayland              |
+| Arch Linux         | Pacman                 | Elección del usuario   | Elección del usuario      | Elección del usuario |
 
 ### Términos clave
 
-#### Núcleo
+#### Kernel
 
-El núcleo del sistema operativo que interactúa directamente con el hardware, generalmente Linux.
+El núcleo del sistema operativo que se comunica directamente con el hardware; normalmente, Linux.
 
 #### Distribución
 
-La distribución de Linux, que empaqueta el kernel junto con herramientas, bibliotecas y software del espacio de usuario. Los ejemplos incluyen Debian, Arch Linux y Fedora.
+La distribución Linux empaqueta el kernel junto con herramientas, bibliotecas y software del espacio de usuario. Entre los ejemplos están Debian, Arch Linux y Fedora.
 
-#### Administrador de paquetes
+#### Gestor de paquetes
 
-Una herramienta utilizada para instalar, actualizar y eliminar aplicaciones de software de los repositorios. Los ejemplos incluyen APT para distribuciones basadas en Debian, DNF para Fedora y Pacman para Arch Linux.
+Herramienta para instalar, actualizar y eliminar aplicaciones desde repositorios. Entre los ejemplos están APT en distribuciones basadas en Debian, DNF en Fedora y Pacman en Arch Linux.
 
-#### Administrador de visualización
+#### Gestor de pantalla
 
-Gestiona la pantalla gráfica de inicio de sesión y el inicio de sesión. Los ejemplos incluyen GDM (GNOME Display Manager), LightDM y SDDM (Simple Desktop Display Manager).
+Gestiona la pantalla de inicio de sesión gráfica y el arranque de la sesión. Entre los ejemplos están GDM (GNOME Display Manager), LightDM y SDDM (Simple Desktop Display Manager).
 
 #### Entorno de escritorio
 
-Proporciona la interfaz gráfica de usuario (GUI) y gestiona la apariencia general y la experiencia del usuario. Los ejemplos incluyen GNOME, Cinnamon y KDE Plasma.
+Proporciona la interfaz gráfica de usuario (GUI) y gestiona la apariencia general y la experiencia de uso. Entre los ejemplos están GNOME, Cinnamon y KDE Plasma.
 
-#### Servidor de visualización
+#### Servidor gráfico
 
-Gestiona los eventos de entrada y salida de la pantalla. Los ejemplos incluyen X11 (Sistema X Window) y Wayland. X11 es un servidor de visualización tradicional, mientras que Wayland es una alternativa más nueva y segura.
+Gestiona la salida de pantalla y los eventos de entrada. Entre los ejemplos están X11 (X Window System) y Wayland. X11 es un servidor gráfico tradicional, mientras que Wayland es una alternativa más reciente y segura.

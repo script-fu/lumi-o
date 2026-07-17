@@ -2,6 +2,9 @@
 title: "가변 함수"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Scheme의 가변 함수**는 가변 개수의 인수를 허용하는 함수입니다. 이러한 기능은 매우 다양하며 유연하고 재사용 가능한 코드를 만들 수 있습니다. 함수형 프로그래밍에서 가변 함수는 숫자 목록 합산 또는 문자열 연결과 같이 임의 개수의 입력을 처리해야 하는 작업을 단순화합니다.
 
@@ -39,7 +42,7 @@ Variadic 함수는 마지막 매개변수 이름 앞에 `.` 기호를 사용하�
 
 **용도**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; 15 반환
 ```
 
 #### 고정 매개변수를 갖는 가변 함수
@@ -58,7 +61,7 @@ Variadic 함수는 마지막 매개변수 이름 앞에 `.` 기호를 사용하�
 
 **용도**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; ("Hello Alice" "Hello Bob" "Hello Charlie") 반환
 ```
 
 #### 고정 및 가변 논리 결합
@@ -76,7 +79,7 @@ Variadic 함수는 마지막 매개변수 이름 앞에 `.` 기호를 사용하�
 **용도**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; "Fruits: Apple, Banana, Cherry" 반환
 ```
 
 ### 고급 사용 사례
@@ -94,7 +97,7 @@ Variadic 함수는 임의의 데이터를 처리하는 데 탁월합니다. 다�
 
 **용도**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; 18 반환
 ```
 
 #### 재귀 논리를 사용한 가변 함수
@@ -113,7 +116,7 @@ Variadic 함수는 임의의 데이터를 처리하는 데 탁월합니다. 다�
 
 **용도**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; 40 반환
 ```
 
 ### 가변 함수의 이점

@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Użyj Git, aby śledzić zmiany we wtyczkach, wycofywać błędy i udostępniać kod pomiędzy maszynami.
 
@@ -62,7 +65,7 @@ Jeśli nie masz jeszcze konta, odwiedź [GitHub](https://github.com/), aby się 
 
 1. **Zaloguj się do GitHub**: Przejdź do [GitHub](https://github.com/) i zaloguj się na swoje konto.
 2. **Utwórz nowe repozytorium**:
-   - Kliknij ikonę **+** w prawym górnym rogu i wybierz **Nowe repozytorium**.
+   - Kliknij ikonę ***+** w prawym górnym rogu i wybierz **Nowe repozytorium**.
    - Wprowadź nazwę repozytorium (np. `your-repository`).
    - W razie potrzeby dodaj opis.
    - Wybierz widoczność **Publiczną** lub **Prywatną**.
@@ -133,7 +136,7 @@ Git i platformy takie jak GitHub i GitLab to potężne narzędzia i chociaż mog
 
 Oto kilka typowych terminów, które możesz spotkać podczas pracy z Git i GitHub:- **Zatwierdź**: Migawka zmian w repozytorium. Każde zatwierdzenie zawiera komunikat opisujący, co zostało zmienione i tworzy zapis historyczny, do którego można się później odwołać lub do którego można wrócić.
 - **Repozytorium (Repo)**: Zbiór plików i ich historia śledzona przez Git. Repozytoria mogą istnieć lokalnie na Twoim komputerze lub zdalnie na platformach takich jak GitHub. Każdy projekt jest zazwyczaj przechowywany we własnym repozytorium.
-- **Zdalne**: Zdalne repozytorium to wersja Twojego projektu hostowana na platformie takiej jak GitHub. Lokalna wersja Twojego projektu na Twoim komputerze jest połączona z tym pilotem, dzięki czemu możesz przesyłać (wypychać) i pobierać (ściągać) zmiany.
+- **Zdalne**: Zdalne repozytorium to wersja Twojego projektu hostowana na platformie takiej jak GitHub. Lokalna wersja Twojego projektu na Twoim komputerze jest połączona z tym zdalnym repozytorium, dzięki czemu możesz przesyłać (wypychać) i pobierać (ściągać) zmiany.
 - **Staging**: Proces przygotowania plików do zatwierdzenia. Kiedy przygotowujesz plik, mówisz Gitowi, że chcesz dołączyć go do następnego zatwierdzenia. Staging pozwala wybrać, które zmiany mają zostać uwzględnione w zatwierdzeniu.
 - **Push**: czynność polegająca na wysłaniu zatwierdzonych zmian z lokalnego repozytorium do zdalnego repozytorium (np. GitHub), aby inne osoby mogły uzyskać dostęp do zaktualizowanej wersji Twojego kodu.
 - **Wyciąganie**: Akt pobierania zmian ze zdalnego repozytorium w celu aktualizacji kopii lokalnej. Pobierasz zmiany, gdy chcesz zsynchronizować swoje lokalne repozytorium z najnowszą wersją z pilota.

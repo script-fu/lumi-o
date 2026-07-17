@@ -2,29 +2,29 @@
 title: "Iteration"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-Iteration ist ein Eckpfeiler der Programmierung und ermöglicht es Skripten, Aktionen zu wiederholen und Datensammlungen effizient zu verarbeiten. In Scheme, das auf der Programmiersprache Scheme basiert, stellt die Iteration die Werkzeuge bereit, um sich wiederholende Aufgaben zu automatisieren, Datenstrukturen zu manipulieren und anspruchsvolle Ausführungsmuster zu erstellen.
+Iteration ist ein Grundpfeiler der Programmierung: Sie ermöglicht Skripten, Aktionen zu wiederholen und Datensammlungen effizient zu verarbeiten. In Scheme bietet Iteration Werkzeuge, um repetitive Aufgaben zu automatisieren, Datenstrukturen zu bearbeiten und ausgefeilte Ausführungsmuster zu erzeugen.
 
-### Die Rolle der Iteration im Schema
+### Die Rolle der Iteration in Scheme
 
-Die Iteration erfüllt in Ihren Skripten mehrere wesentliche Zwecke:
-- **Automatisieren von Wiederholungen:** Es ermöglicht Ihnen, dieselbe Aktion oder Aktionsgruppe mehrmals auszuführen, ohne Code zu duplizieren.
-- **Steigerung der Effizienz:** Durch die iterative Verarbeitung von Datenstrukturen können Skripte umfangreiche Vorgänge systematisch abwickeln.
-- **Optimierung des Codes:** Die Iteration eliminiert Redundanz und macht den Code prägnanter, lesbarer und wartbarer.
+- **Wiederholung automatisieren:** Aktionen mehrfach ausführen, ohne Code zu duplizieren.
+- **Effizienz steigern:** Große Operationen systematisch abwickeln.
+- **Code straffen:** Redundanz vermeiden und Lesbarkeit verbessern.
 
-### Arten der Iteration verfügbar
+### Verfügbare Iterationskonstrukte
 
-Scheme bietet mehrere Konstrukte zur Iteration, die jeweils auf spezifische Anforderungen zugeschnitten sind:
-- **map:** Wendet eine Funktion auf jedes Element einer Liste an und gibt eine neue Liste mit den Ergebnissen zurück.
-- **for-each:** Ähnlich wie `map`, wird jedoch zum Ausführen einer Funktion für jedes Element verwendet, ohne ein Ergebnis zurückzugeben.
-- **do:** Ein allgemeines Schleifenkonstrukt, das eine Vielzahl iterativer Prozesse abwickelt.
-- **Rekursion:** Eine leistungsstarke Technik, bei der sich Funktionen selbst aufrufen, um Probleme inkrementell zu lösen.
+- **map:** Funktion auf jedes Element anwenden, neue Liste zurückgeben.
+- **for-each:** Wie `map`, aber für Nebeneffekte ohne Rückgabe.
+- **do:** Allgemeine Schleife.
+- **recursion:** Funktionen rufen sich selbst auf.
 
-### Wie Iteration funktioniert
+### So funktioniert Iteration
 
-Die Iteration umfasst typischerweise Folgendes:
-1. **Definieren einer Wiederholung:** Angeben der zu wiederholenden Aktion und der zu verarbeitenden Daten oder Bereiche.
-2. **Nacheinander ausführen:** Wiederholen der Aktion für jedes Element, jeden Schritt oder jede Bedingung bis zum Abschluss.
-3. **Zurückgeben eines Ergebnisses (optional):** Abhängig vom Konstrukt kann die Iteration ein Ergebnis liefern oder den Status ändern.
+1. **Wiederholung definieren**
+2. **Sequenziell ausführen**
+3. **Ergebnis zurückgeben (optional)**
 
-Mit diesen Konstrukten können Sie anpassungsfähige, effiziente und elegante Skripte schreiben, die komplexe Aufgaben problemlos bewältigen können.
+Diese Konstrukte helfen, anpassungsfähige und effiziente Skripte zu schreiben.

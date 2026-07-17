@@ -1,22 +1,25 @@
 ---
-title: "それぞれに"
+title: "for-each"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e1e9a2537cadc894d45c7e25e28e9234f35e06298c289c5be57c15e7800cb8cd
 ---
-Scheme の `for-each` 関数は、リスト (または複数のリスト) の各要素にプロシージャを適用するために使用されます。結果を含む新しいリストを返す `map` とは異なり、`for-each` は変数の出力や更新などの**副作用**に使用されます。
+La fonction `for-each` en Scheme applique une procédure à chaque élément d'une liste (ou de plusieurs listes). Contrairement à `map`, qui renvoie une nouvelle liste, `for-each` sert aux **effets de bord** : affichage, journalisation ou modification de variables.
 
-`for-each` の最も単純な形式は次のようになります。
+La forme la plus simple de `for-each` :
 
 ```scheme
 (for-each procedure list)
 ```
 
-- **手順**: リストの各要素に適用する関数。
-- **リスト**: 要素が処理されるリスト。
+- **Procédure :** Fonction par élément.
+- **Liste :** Liste à parcourir.
 
 ---
 
-### 例: リストを印刷する
+### Exemple : afficher une liste
 
 ```scheme
 (define (print-item x)
@@ -25,26 +28,23 @@ Scheme の `for-each` 関数は、リスト (または複数のリスト) の各
 (for-each print-item (list 1 2 3 4))
 ```
 
-- ここでは、関数 `print-item` がリスト `(1 2 3 4)` の各要素に適用されます。
-- これにより、各番号が順番に出力されます。
+- `print-item` est appliqué à `(1 2 3 4)`.
+- Chaque nombre est affiché successivement.
 
-**出力**: `1 2 3 4`
-
----
-
-### 仕組み
-
-1. **各要素を反復処理**:
-   - 提供されたプロシージャは、リスト内のすべての要素に対して順番に実行されます。
-
-2. **副作用を実行します**:
-   - 一般的な副作用には、外部変数の印刷、ログ記録、または変更が含まれます。 `map` とは異なり、`for-each` は新しいリストを返しません。
+**Sortie** : `1 2 3 4`
 
 ---
 
-#### 例: 複数のリストでの使用
+### Comment ça marche
 
-複数のリストが指定された場合、`for-each` は各リストの対応する要素を処理します。
+1. **Parcourir chaque élément :** La procédure s'exécute dans l'ordre.
+2. **Effets de bord :** Affichage, journalisation ou modification — sans nouvelle liste.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `for-each` traite les éléments correspondants.
 
 ```scheme
 (define (sum-and-print x y)
@@ -53,16 +53,14 @@ Scheme の `for-each` 関数は、リスト (または複数のリスト) の各
 (for-each sum-and-print (list 1 2 3) (list 4 5 6))
 ```
 
-- 関数 `sum-and-print` は、2 つのリストの対応する要素を合計し、結果を出力します。
-
-**出力**: `5 7 9`
+**Sortie** : `5 7 9`
 
 ---
 
-### 概要
+### Résumé
 
-- `for-each` 関数は、リストの各要素に対して副作用を実行するのに役立ちます。
-- `map` とは異なり、`for-each` は新しいリストを生成しません。プロシージャの副作用のみに焦点を当てています。
-- 対応する要素にプロシージャを適用して、複数のリストを同時に処理できます。
+- `for-each` convient aux effets de bord sur chaque élément.
+- Contrairement à `map`, **pas de nouvelle liste**.
+- Plusieurs listes simultanément.
 
-`for-each` を使用すると、データの変換ではなくアクションの実行が目的の場合にリストを効果的に処理できます。
+Utilisez `for-each` lorsque l'action prime sur la transformation.

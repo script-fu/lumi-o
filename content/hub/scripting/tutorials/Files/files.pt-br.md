@@ -2,6 +2,9 @@
 title: "Arquivos"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Trabalhar com arquivos e diretórios é essencial para o desenvolvimento do Scheme. Esteja você salvando resultados, carregando recursos ou organizando a estrutura do seu projeto, compreender as operações dos arquivos tornará seus scripts mais robustos e fáceis de usar.
 
@@ -58,7 +61,7 @@ O `SF-DIRNAME` fornece um navegador para um diretório.
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ O esquema fornece o comando ```dir-make``` para criar um diretório. Este comand
 Normalmente precisamos criar vários diretórios para um caminho prático. Podemos usar um wrapper para ```dir-make``` para nos ajudar aqui.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Propósito: Um wrapper para (dir-make) que cria um caminho dado a partir de uma plataforma
+;;          caminho fornecido. Sempre emite separadores no estilo Linux para dir-make.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Diretório raiz
+    ;; Criar o restante dos diretórios passo a passo
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Constrói o caminho
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

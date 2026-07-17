@@ -1,28 +1,31 @@
 ---
-title: "Warunki"
+title: "Instrukcje warunkowe"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a6a08e6af8a8a31688dabd4434bee5da3ff07ec61763f636fb5c2029da03f472
 ---
-Warunki warunkowe stanowią podstawową część programowania, umożliwiając skryptom podejmowanie decyzji i kontrolowanie ich przepływu w oparciu o określone kryteria. W Scheme, który jest oparty na języku programowania Scheme, warunki warunkowe umożliwiają tworzenie dynamicznych i inteligentnych skryptów, które dostosowują się do zmieniających się danych wejściowych, środowisk lub działań użytkownika.
+Instrukcje warunkowe to podstawa programowania: pozwalają skryptom podejmować decyzje i sterować przebiegiem wykonania według określonych kryteriów. W Scheme, opartym na języku Scheme, instrukcje warunkowe pomagają tworzyć dynamiczne, inteligentne skrypty, które dostosowują się do zmieniających się danych wejściowych, środowiska lub działań użytkownika.
 
-### Rola warunków warunkowych w schemacie
+### Rola instrukcji warunkowych w Scheme
 
-Warunki warunkowe służą kilku kluczowym celom w skryptach:
-- **Logika kierująca:** Umożliwiają uruchamianie różnych fragmentów kodu w zależności od tego, czy określone warunki są prawdziwe, czy fałszywe.
-- **Większa elastyczność:** Reagując dynamicznie na dane wejściowe lub stany, warunki warunkowe pomagają skryptowi radzić sobie z różnymi scenariuszami.
-- **Uproszczenie złożoności:** dzielą proces decyzyjny na łatwe do zarządzania struktury, dzięki czemu kod jest łatwiejszy do odczytania, debugowania i konserwacji.
+Instrukcje warunkowe pełnią w skryptach kilka kluczowych funkcji:
+- **Kierowanie logiką:** Uruchamiają różne fragmenty kodu w zależności od tego, czy określone warunki są prawdziwe, czy fałszywe.
+- **Większa elastyczność:** Dynamicznie reagując na dane wejściowe lub stan, pomagają obsłużyć wiele scenariuszy.
+- **Uproszczenie złożoności:** Dzielą podejmowanie decyzji na przejrzyste struktury, ułatwiając czytanie, debugowanie i utrzymanie kodu.
 
-### Dostępne typy warunków warunkowych
+### Dostępne konstrukcje warunkowe
 
-Schemat udostępnia kilka konstrukcji warunkowych, z których każda jest dostosowana do różnych potrzeb logicznych:
-- **`if`:** Do podejmowania prostych decyzji binarnych, wykonanie jednego bloku kodu, jeśli warunek jest prawdziwy, a drugiego, jeśli jest fałszywy.
-- **`cond`:** Potężna, wielorozgałęziona konstrukcja do obsługi wielu warunków w jasny, ustrukturyzowany sposób.
-- **`and` / `or`:** Operatory logiczne oceniające kombinacje warunków, umożliwiające bardziej złożone podejmowanie decyzji.
-- **`else`:** Element typu catch-all, który definiuje zachowanie awaryjne, gdy żaden z określonych warunków nie jest spełniony.
+Scheme oferuje kilka konstrukcji warunkowych, każda dopasowana do innych potrzeb logicznych:
+- **`if`:** Do prostych decyzji binarnych — jeden blok, gdy warunek jest prawdziwy, inny, gdy fałszywy.
+- **`cond`:** Potężna konstrukcja wielościeżkowa do obsługi wielu warunków w przejrzysty, uporządkowany sposób.
+- **`and` / `or`:** Operatory logiczne oceniające kombinacje warunków dla bardziej złożonych decyzji.
+- **`else`:** Przypadek domyślny definiujący zachowanie, gdy żaden ze wskazanych warunków nie jest spełniony.
 
-### Jak działają warunki warunkowe
+### Jak działają instrukcje warunkowe
 
-Warunki warunkowe zazwyczaj obejmują:
+Instrukcje warunkowe zazwyczaj obejmują:
 1. **Ocena warunku:** Wyrażenie testowe określa, czy warunek jest prawdziwy, czy fałszywy.
-2. **Wykonanie rozgałęzione:** Na podstawie oceny skrypt wybiera blok kodu do wykonania.
-3. **Zwracanie wartości (opcjonalnie):** W niektórych przypadkach warunki warunkowe mogą również generować wartość, której mogą używać inne części skryptu.
+2. **Rozgałęziona realizacja:** Na podstawie oceny skrypt wybiera blok kodu do wykonania.
+3. **Zwrócenie wartości (opcjonalnie):** W niektórych przypadkach instrukcje warunkowe zwracają też wartość użyteczną w innych częściach skryptu.

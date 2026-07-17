@@ -1,8 +1,12 @@
 ---
-title: "ดาวน์โหลด App Image"
-description: "Get the latest development AppImage artifacts for Linux."
+title: "ดาวน์โหลด AppImage"
+description: "ดาวน์โหลด AppImage บิลด์สำหรับพัฒนาล่าสุดบน Linux"
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: aae39911e75e51cd1db344aee7e59192f1288c988a19a6d25ddd1e8ec552c45e
 ---
-รับสิ่งประดิษฐ์ AppImage การพัฒนาล่าสุดสำหรับ Linux
+
+ดาวน์โหลด AppImage บิลด์สำหรับพัฒนาล่าสุดบน Linux

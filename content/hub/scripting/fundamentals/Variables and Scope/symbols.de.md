@@ -2,6 +2,9 @@
 title: "Symbole"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 Symbole sind einer der Kerndatentypen in Scheme und stellen eindeutige, unveränderliche Bezeichner dar. Sie werden hauptsächlich als Schlüssel, Markierungen oder Platzhalter in Programmen verwendet und sind daher für das Schreiben von sauberem und ausdrucksstarkem Code unerlässlich.
 
@@ -17,9 +20,9 @@ Ein Symbol wird als eine Folge von Zeichen geschrieben:
 Beispiele:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; Ein Symbol namens `hello`
+'foo-bar     ; Ein Symbol namens `foo-bar`
+'*special*   ; Ein Symbol namens `*special*`
 ```
 
 ## Symbole erstellen
@@ -29,7 +32,7 @@ Symbole werden normalerweise mit dem **Anführungszeichen**-Operator (`'`) erste
 ### Beispiel
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; Erstellt das Symbol `my-symbol`
 ```
 
 Sie können Symbole auch programmgesteuert mit der Prozedur `string->symbol` erstellen, die eine Zeichenfolge in ein Symbol konvertiert.
@@ -48,8 +51,8 @@ Da Symbole einzigartig sind, können Sie sie mithilfe von `eq?` effizient vergle
 ### Beispiel
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (gleiches Symbol)
+(eq? 'apple 'orange)  ; #f (verschiedene Symbole)
 ```
 
 Dadurch eignen sich Symbole ideal für die Verwendung als Schlüssel in Datenstrukturen oder Markierungen in Ihrem Code.
@@ -62,7 +65,7 @@ Symbole werden in Scheme häufig verwendet für:
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; Gibt (name . "Alice") zurück
 ```
 
 2. **Bezeichner im Code:**
@@ -88,9 +91,9 @@ Scheme bietet integrierte Verfahren zum Arbeiten mit Symbolen:
 ### Beispiele
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (wahr: es ist ein Symbol)
+(symbol->string 'example)     ; Ergebnis: "example"
+(string->symbol "new-symbol") ; Ergebnis: 'new-symbol
 ```
 
 ## Zusammenfassung

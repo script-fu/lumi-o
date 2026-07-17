@@ -2,6 +2,9 @@
 title: "기능"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 함수는 Scheme의 핵심 개념으로, 로직을 캡슐화하고 코드 재사용을 활성화하며 스크립트를 효과적으로 구성하는 수단을 제공합니다. 함수를 사용하면 Lumi의 기본 작업부터 고급 작업 흐름까지 광범위한 작업을 처리하는 유지 관리가 가능한 모듈식 스크립트를 만들 수 있습니다.
 
@@ -12,9 +15,9 @@ weight: 7
 스키마 코드는 **표현식**으로 구성됩니다. 표현식은 값으로 평가됩니다. 구문은 동일합니다. 괄호는 연산자 또는 함수 이름을 먼저 사용하여 호출을 형성합니다.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; 1과 2를 더해 3
+(if #t 1 0)     ; 조건이 참이므로 1
+(list 1 2 3)    ; 목록 생성: (1 2 3)
 ```
 
 모든 것이 표현식이기 때문에 제어 흐름은 함수 호출과 동일한 스타일에 자연스럽게 맞습니다.
@@ -51,7 +54,7 @@ Scheme은 각각 특정 사용 사례에 적합한 다양한 기능 구성을 �
    다른 함수를 인수로 사용하거나 함수를 결과로 반환하는 함수로 매핑, 필터링, 축소와 같은 강력한 추상화가 가능합니다.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; (1 4 9 16) 반환
    ```
 
 ## 함수의 일반 구문
@@ -73,7 +76,7 @@ Scheme의 함수에는 간단하고 일관된 구문이 있습니다.
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; 8 반환
 ```
 
 ## 부작용과 전역 상태

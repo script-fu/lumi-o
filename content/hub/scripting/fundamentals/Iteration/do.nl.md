@@ -1,11 +1,14 @@
 ---
-title: "Doen"
+title: "do"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: db8c12b44717a78fddabba563fc62d081db9644b8a1f2b09d74db91eec84bfd1
 ---
-De functie `do` in Scheme is een lusmechanisme dat iteratie met initialisatie-, update- en beëindigingsvoorwaarden mogelijk maakt. Dit is met name handig wanneer u een reeks bewerkingen een bepaald aantal keren moet uitvoeren of totdat aan een voorwaarde is voldaan.
+La fonction `do` en Scheme est une boucle avec initialisation, mise à jour et condition d'arrêt. Utile pour exécuter une séquence un nombre défini de fois ou jusqu'à une condition.
 
-De algemene vorm van `do` is:
+La forme générale de `do` :
 
 ```scheme
 (do ((var1 init1 update1)
@@ -15,49 +18,44 @@ De algemene vorm van `do` is:
   body)
 ```
 
-- **Variabele**: de lusvariabele(n).
-- **Beginwaarde**: de startwaarde van elke lusvariabele.
-- **Update-expressie**: de expressie om de lusvariabele(n) aan het einde van elke iteratie bij te werken.
-- **Beëindigingsvoorwaarde**: de voorwaarde om de lus te stoppen.
-- **Resultaatexpressie**: de waarde die moet worden geretourneerd wanneer de lus eindigt.
-- **Body**: de code die in elke iteratie moet worden uitgevoerd.
+- **Variable :** variable(s) de boucle.
+- **Initial-value :** valeur initiale.
+- **Update-expression :** mise à jour par itération.
+- **Termination-condition :** condition d'arrêt.
+- **Result-expression :** valeur renvoyée à l'arrêt.
+- **Body :** code exécuté à chaque tour.
 
 ---
 
-### Voorbeeld: Tel de getallen van 1 tot en met 5 bij elkaar op
+### Exemple : somme de 1 à 5
 
 ```scheme
-(do ((i 1 (+ i 1))      ; Initialize i to 1, increment by 1
-     (sum 0 (+ sum i))) ; Initialize sum to 0, add i to sum
-    ((> i 5) sum)       ; Terminate when i > 5, return sum
-  (lumi-message (number->string sum))) ; Print sum at each step
+(do ((i 1 (+ i 1))      ; Initialiseer i op 1, verhoog met 1
+     (sum 0 (+ sum i))) ; Initialiseer som op 0, tel i op bij som
+    ((> i 5) sum)       ; Beëindigen wanneer i > 5, retourneer sum
+  (lumi-message (number->string sum))) ; Print de som bij elke stap
 ```
 
-- De lusvariabele `i` begint bij 1 en wordt bij elke iteratie met 1 verhoogd.
-- De variabele `sum` telt de som op van `i`.
-- De lus eindigt wanneer `i > 5` en retourneert de uiteindelijke waarde `sum`.
+- `i` commence à 1 et s'incrémente.
+- `sum` accumule la somme.
+- Arrêt quand `i > 5`, retour de `sum`.
 
-**Uitvoer**: `15`
-
----
-
-### Hoe het werkt
-
-1. **Initialisatie**:
-   - Elke lusvariabele krijgt zijn initiële waarde toegewezen.
-
-2. **Beëindigingscontrole**:
-   - Aan het begin van elke iteratie wordt de beëindigingsvoorwaarde gecontroleerd. Indien waar, stopt de lus en wordt de resultaatexpressie geëvalueerd.
-
-3. **Iteratie**:
-   - Als de beëindigingsvoorwaarde onwaar is, wordt de hoofdtekst uitgevoerd en worden de lusvariabelen bijgewerkt met behulp van hun respectievelijke update-expressies.
+**Sortie** : `15`
 
 ---
 
-### Samenvatting
+### Comment ça marche
 
-- De `do` constructie biedt een flexibele manier om lussen met meerdere variabelen en complexe beëindigingsvoorwaarden te implementeren.
-- Het is handig voor taken waarvoor statusupdates in verschillende iteraties nodig zijn.
-- De beëindigingsvoorwaarde bepaalt wanneer de lus eindigt en kan een eindresultaat opleveren.
+1. **Initialisation :** valeurs de départ.
+2. **Test d'arrêt :** au début de chaque tour.
+3. **Itération :** exécuter le corps, mettre à jour les variables.
 
-Door `do` te gebruiken, kunt u iteratieve algoritmen in Scheme implementeren met nauwkeurige controle over initialisatie, updates en beëindiging. Dit maakt `do` een combinatie van een **scoped bindingsmechanisme** (zoals `let`) en een **iteratieve controlestructuur**, waardoor het in staat is om looping en tijdelijke status op een schone, beknopte manier af te handelen.
+---
+
+### Résumé
+
+- `do` offre des boucles flexibles à plusieurs variables.
+- Utile quand l'état évolue à chaque tour.
+- La condition d'arrêt fixe la fin et le résultat.
+
+`do` combine **liaisons** (comme `let`) et **contrôle itératif**.

@@ -2,6 +2,9 @@
 title: "ファイル"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 ファイルとディレクトリの操作は、Scheme 開発にとって不可欠です。出力の保存、リソースの読み込み、またはプロジェクト構造の整理のいずれの場合でも、ファイル操作を理解すると、スクリプトがより堅牢で使いやすくなります。
 
@@ -58,7 +61,7 @@ Lumi は Linux 専用であるため、ユーザーのホーム ディレクト�
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme には、ディレクトリを作成するための ```dir-make``` コマ
 通常、実際のパスとして複数のディレクトリを作成する必要があります。ここで ```dir-make``` のラッパーを使用すると便利です。
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; 目的: プラットフォームから指定パスを作成する (dir-make) のラッパー
+;;          指定されたパス。dir-make には常に Linux 形式の区切り文字を出力する。
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; ルートディレクトリ
+    ;; 残りのディレクトリを順に作成する
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; パスを構築
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

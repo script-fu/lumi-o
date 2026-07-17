@@ -1,8 +1,12 @@
 ---
-title: "เยี่ยมชมแหล่งเก็บข้อมูล"
-description: "Browse the source, history, issues, and build instructions on GitLab."
+title: "ไปที่แหล่งเก็บซอร์สโค้ด"
+description: "เรียกดูซอร์สโค้ด ประวัติ ปัญหา และคำแนะนำการ build บน GitLab"
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c7ecee387b611c2e3e2cd3f63b85bbc207aa4bba1b704f07fd3e585b87ac11d8
 ---
-เรียกดูแหล่งที่มา ประวัติ ปัญหา และคำแนะนำในการสร้างบน GitLab
+
+เรียกดูซอร์สโค้ด ประวัติ ปัญหา และคำแนะนำการ build บน GitLab

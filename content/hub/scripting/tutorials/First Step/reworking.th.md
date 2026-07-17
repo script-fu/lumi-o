@@ -2,6 +2,9 @@
 title: "การทำงานซ้ำ"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 ขั้นตอนนี้แก้ไขลักษณะการทำงานที่ละเอียดอ่อนในตัวอย่างการรับส่งข้อความ
 
@@ -13,7 +16,7 @@ weight: 7
 
 การลบอักขระหลีกและขยายฟังก์ชัน:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ weight: 7
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; เพิ่มบรรทัดใหม่เพื่อบังคับให้แสดงกล่องข้อความ
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ weight: 7
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; วัตถุประสงค์: ส่งข้อความไปยังปลายทางเอาต์พุตที่เหมาะสม
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ weight: 7
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความถูกส่งไปยังเอาต์พุตที่ถูกต้อง
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; ตรวจสอบว่าเอาต์พุตเป็นปลายทางการแสดงผลที่คาดไว้หรือไม่
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

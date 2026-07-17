@@ -2,6 +2,9 @@
 title: "Dateien"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Die Arbeit mit Dateien und Verzeichnissen ist für die Scheme-Entwicklung unerlässlich. Ganz gleich, ob Sie Ausgaben speichern, Ressourcen laden oder Ihre Projektstruktur organisieren: Wenn Sie Dateivorgänge verstehen, werden Ihre Skripts robuster und benutzerfreundlicher.
 
@@ -58,7 +61,7 @@ Das `SF-DIRNAME` stellt einen Browser für ein Verzeichnis bereit.
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme stellt den Befehl ```dir-make``` zum Erstellen eines Verzeichnisses berei
 Normalerweise müssen wir für einen praktischen Pfad mehrere Verzeichnisse erstellen. Hier können wir einen Wrapper für ```dir-make``` verwenden.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Zweck: Ein Wrapper für (dir-make), der einen angegebenen Pfad plattformübergreifend erstellt
+;;          bereitgestellten Pfad. Gibt für dir-make stets Linux-Trennzeichen aus.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Stammverzeichnis
+    ;; Die restlichen Verzeichnisse schrittweise erstellen
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Erstellt den Pfad
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

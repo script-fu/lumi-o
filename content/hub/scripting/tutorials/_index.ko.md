@@ -1,6 +1,9 @@
 ---
 title: "튜토리얼"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 이 튜토리얼에서는 Lumi용 Scheme 플러그인을 작성하는 방법을 보여줍니다. 최소한의 "Hello World" 절차로 시작한 다음 이미지, 파일 및 재사용 가능한 도우미 라이브러리와 함께 작동하는 플러그인을 구축합니다.
 

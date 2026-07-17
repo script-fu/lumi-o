@@ -2,11 +2,14 @@
 title: "你好世界！"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 本教程将介绍Scheme 插件的最小结构。有些行是“样板文件”：Lumi 加载文件需要它们，即使您还没有完全理解它们。
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ weight: 1
 这是完整的示例。大多数 Lumi 过程都以 `lumi-` 为前缀。例如，`lumi-message` 将字符串打印到配置的消息处理程序。
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; 设置消息处理程序，将消息输出到 GUI 对话框
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; 设置消息处理程序，将消息输出到 Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; 将消息发送到 terminal，即启动 Lumi 的操作系统窗口
   (display "Hello world!\n"))
 
 

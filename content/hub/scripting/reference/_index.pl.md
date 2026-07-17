@@ -1,6 +1,9 @@
 ---
 title: "Odniesienie"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
 ---
 Skrócona instrukcja obsługi wbudowanych narzędzi Scheme i narzędzi przeglądania w aplikacji dostępnych podczas pisania wtyczek Lumi. Ogólne informacje o schemacie i odniesienia do niego można znaleźć w [Książce kucharskiej schematu](https://cookbook.scheme.org/) i [Scheme.org](https://www.scheme.org/).
 

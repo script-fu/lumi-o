@@ -2,6 +2,9 @@
 title: "Första stegen"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
 First Steps introducerar funktionella mönster som fungerar bra i Scheme, med korta exempel och inkrementella refaktorer.
 I slutet kommer du att ha byggt ditt eget anpassade meddelandebibliotek och ha en solid grund för att fortsätta utveckla mer avancerade plugin-program.
@@ -28,6 +31,6 @@ Innan du börjar, se till att du har följande:
 {{< cards >}}
   {{< card link="reworking" title="Omarbetning" icon="adjustments" subtitle="Avancerade tekniker för kodomstrukturering" >}}
   {{< card link="refactor-again" title="Refaktor igen" icon="arrow-sm-right" subtitle="Iterativ förbättring och optimering" >}}
-  {{< card link="the-procedure-browser" title="Procedur webbläsare" icon="book-open" subtitle="Utforska Lumis procedurdatabas" >}}
+  {{< card link="the-procedure-browser" title="Procedur webbläsare" icon="book-open" subtitle="Utforskar Lumis procedurdatabas" >}}
   {{< card link="final-thoughts" title="Slutliga tankar" icon="academic-cap" subtitle="Sammanfattning och nästa steg i utvecklingen" >}}
 {{< /cards >}}

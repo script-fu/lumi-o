@@ -1,7 +1,10 @@
 ---
-title: "協會列表（Alists）"
-type: docs
+title: "關聯列表（Alists）"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **關聯清單**（或**alist**）是Scheme中的基本資料結構，用於表示鍵值對的集合。它被實現為一個對的列表，其中每對將一個鍵（通常是一個符號）與一個值相關聯。清單簡單、靈活，非常適合中小型資料集。
 
@@ -30,10 +33,10 @@ alist 是一個列表，其中每個元素都是一個**對**（使用 `cons` �
 單引號 (`'`) 是 **quoting** 的簡寫，它會阻止Scheme 計算表達式。這使得它非常適合創建所有鍵和值都被硬編碼的靜態列表。
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ alist 是一個列表，其中每個元素都是一個**對**（使用 `cons` �
 若要從清單中檢索值，您可以使用 `assoc` 函數，該函數透過鍵找到一對。
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; 傳回 (name . "Alice")
+(assoc 'country alist) ; 傳回 #f（找不到鍵）
 ```
 
 ### 提取值
@@ -84,7 +87,7 @@ alist 是一個列表，其中每個元素都是一個**對**（使用 `cons` �
 使用 `assoc` 檢索一對後，請使用 `cdr` 提取該值：
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; 傳回 "Alice"
 ```
 
 ### 主要功能總結

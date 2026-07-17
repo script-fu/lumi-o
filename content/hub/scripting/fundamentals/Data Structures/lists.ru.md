@@ -1,7 +1,10 @@
 ---
 title: "Списки"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 В Scheme **список** — это фундаментальная структура данных, используемая для группировки значений. Списки — это упорядоченные коллекции элементов, где каждый элемент может быть любого типа, включая другой список. Списки широко используются в Scheme как для хранения данных, так и для структуры программы.
 
@@ -28,8 +31,8 @@ weight: 4
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; Получает первый элемент
+(cdr my-list)  ; Получает остаток списка
 ```
 
 Результат:
@@ -52,8 +55,8 @@ weight: 4
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; Выводит первый элемент
+      (print-elements (cdr lst)))))             ;; Обрабатывает остаток списка
 ```
 
 - **Базовый случай:** Если список пуст (`null? lst`), остановите рекурсию.
@@ -135,8 +138,8 @@ weight: 4
 #### Пример: список?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; Проверяет, является ли (list 1 2 3) списком
+(list? 42)            ; Проверяет, является ли 42 списком
 ```
 
 Результат:
@@ -155,16 +158,18 @@ Scheme предоставляет несколько встроенных про
 - `reverse`: возвращает новый список с элементами в обратном порядке.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; Возвращает 3
+(append (list 1 2) (list 3 4)) ; Возвращает (1 2 3 4)
+(reverse (list 1 2 3))         ; Возвращает (3 2 1)
 ```
 
 Результат:
 
 - `(length (list 1 2 3))` возвращает `3`
 - `(append (list 1 2) (list 3 4))` возвращает `(1 2 3 4)`
-- `(reverse (list 1 2 3))` возвращает `(3 2 1)`#### Использование `list-ref`
+- `(reverse (list 1 2 3))` возвращает `(3 2 1)`
+
+#### Использование `list-ref`
 
 Процедура `list-ref` извлекает элемент по указанному индексу списка (индекс, начинающийся с нуля).
 
@@ -178,7 +183,7 @@ Scheme предоставляет несколько встроенных про
 ##### Пример: ссылка на список
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; Получает элемент с индексом 2
 ```
 
 Результат: `30`
@@ -208,10 +213,10 @@ Scheme предоставляет несколько встроенных про
 #### Пример: доступ к элементам
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; Получает первый элемент: (1 2)
+(car (car nested-list))        ; Получает первый элемент первого подсписка: 1
+(cdr (car nested-list))        ; Получает остаток первого подсписка: (2)
+(car (cdr (car nested-list)))  ; Получает второй элемент первого подсписка: 2
 ```
 
 ---
@@ -235,8 +240,8 @@ Scheme предоставляет несколько встроенных про
 #### Пример: доступ к элементам из других подсписков
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; Получает второй подсписок: (3 4)
+(car (car (cdr nested-list)))  ; Получает первый элемент второго подсписка: 3
 ```
 
 ---

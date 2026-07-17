@@ -1,30 +1,31 @@
 ---
-title: "Jeśli"
+title: "if"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a31916ea815a99deebce805ed2023a7bedbf63325938649cebdd80e7eba209ee
 ---
-W najprostszej formie warunek `if` w schemacie ocenia test i na podstawie wyniku wykonuje jeden z dwóch możliwych bloków kodu. Najprostsza forma wygląda następująco:
+Dans sa forme la plus simple, `if` en Scheme évalue un test et, selon le résultat, exécute l'un de deux blocs de code :
 
 ```scheme
 (if test-is-true
   do-this)
 ```
 
-- Jeśli `test` ma wartość true (`#t`), wykonywany jest **blok kodu w następstwie**. Blok może zwrócić wartość lub wykonać inne akcje, takie jak przypisanie zmiennej lub wydruk.
+- Si `#t`, le **consequent** s'exécute (valeur ou effets de bord).
 
-### Przykład
+### Exemple
 
 ```scheme
 (if (< 0 1)
   (lumi-message "True!"))
 ```
 
-- W tym przypadku `test` to `(< 0 1)` (sprawdzanie, czy 0 jest mniejsze niż 1).
-- Ponieważ test ma wartość true (`#t`), wykonywany jest blok kodu `(lumi-message "True!")`, który wypisuje `"True!"`.
+- Test : `(< 0 1)` est vrai.
+- `(lumi-message "True!")` s'exécute.
 
-### Dodawanie warunku Else: `if-else`
-
-Kiedy używasz warunku `if` z alternatywnym blokiem kodu (przypadek `else`), struktura wygląda następująco:
+### Branche else : `if-else`
 
 ```scheme
 (if test
@@ -32,29 +33,20 @@ Kiedy używasz warunku `if` z alternatywnym blokiem kodu (przypadek `else`), str
   else-do-this)
 ```
 
-- Jeśli `test` ma wartość true (`#t`), wykonywany jest **następujący** blok kodu.
-- Jeśli `test` ma wartość false (`#f`), wykonywany jest **alternatywny** blok kodu.
-
 ```scheme
 (if test
   consequent
   alternative)
 ```
 
-### Jak to działa
+### Comment ça marche
 
-1. **Wyrażenie testowe**:
-   - Wyrażenie `test` jest oceniane jako pierwsze.
+1. **Tester** d'abord.
+2. Si `#t` **consequent**, si `#f` **alternative**.
 
-2. **Wynik na podstawie testu**:
-   - Jeśli `test` ma wartość true (`#t`), wykonywany jest **kolejny blok kodu**.
-   - Jeśli `test` ma wartość false (`#f`), wykonywany jest **alternatywny blok kodu**.
+Les deux blocs peuvent contenir toute expression Scheme valide.
 
-Zarówno bloki kodu `consequent`, jak i `alternative` mogą wykonywać dowolną prawidłową operację na schemacie, w tym zwracać wartości, modyfikować zmienne lub uruchamiać procedury.
-
-### Przykłady
-
-#### Przykład 1: Zwracanie wartości
+#### Exemple 1 : renvoyer une valeur
 
 ```scheme
 (if (< 0 1)
@@ -62,14 +54,9 @@ Zarówno bloki kodu `consequent`, jak i `alternative` mogą wykonywać dowolną 
   0)
 ```
 
-- Tutaj `test` to `(< 0 1)` (sprawdzanie, czy 0 jest mniejsze niż 1).
-- Ponieważ wynik testu ma wartość true (`#t`), wykonywany jest **następujący** blok (`1`) i zwracana jest jego wartość.
+Résultat : **1**
 
-Wynik: **1**
-
-#### Przykład 2: Obliczanie bloku początkowego
-
-W przypadkach, gdy musisz wykonać wiele akcji, gdy warunek jest prawdziwy lub fałszywy, możesz użyć `begin` lub `let`, aby zgrupować je razem.
+#### Exemple 2 : bloc `begin`
 
 ```scheme
 (if (= 0 1)
@@ -81,16 +68,9 @@ W przypadkach, gdy musisz wykonać wiele akcji, gdy warunek jest prawdziwy lub f
     (* 3 4)))
 ```
 
-- W tym przykładzie `test` to `(= 0 1)` (sprawdzanie, czy 0 równa się 1).
-- Ponieważ wynik testu jest fałszywy (`#f`), wykonywany jest blok **alternatywny**:
-  - Najpierw drukuje `"False condition met, calculating..."`.
-  - Następnie oblicza `(* 3 4)` i zwraca `12`.
+Résultat : **Affiche « False condition met, calculating... » et renvoie 12.**
 
-Wynik: **Wypisuje „Spełniono fałszywy warunek, obliczam…” i zwraca 12,**
-
-#### Przykład 3: Ocena instrukcji let
-
-Użycie `let` pozwala nam zadeklarować zmienne o zasięgu lokalnym za pomocą bloku kodu.
+#### Exemple 3 : expression `let`
 
 ```scheme
 (if (= 1 1)
@@ -102,14 +82,10 @@ Użycie `let` pozwala nam zadeklarować zmienne o zasięgu lokalnym za pomocą b
     (* 3 y)))
 ```
 
-- W tym przykładzie `test` to `(= 1 1)` (sprawdzanie, czy 1 równa się 1).
-- Ponieważ wynik testu jest prawdziwy (`#t`), wykonywany jest **następujący** blok:
-  - Najpierw drukuje `"True condition met, calculating..."`.
-  - Następnie oblicza `(* -1 10)` i zwraca `-10`.
+Résultat : **Affiche « True condition met, calculating... » et renvoie -10.**
 
-Wynik: **Wypisuje „Prawdziwy warunek spełniony, obliczanie…” i zwraca -10,**
+### Résumé
 
-### Podsumowanie- Warunek `if` jest potężnym narzędziem w schemacie do oceny testów i wykonywania odpowiednich bloków kodu.
-
-- Może obsługiwać zarówno proste wyrażenia, jak i złożone bloki kodu, które zwracają wartości, modyfikują zmienne lub wykonują efekty uboczne.
-- Pamiętaj: Jeśli nie ma wyraźnego bloku `else`, `if` ocenia i wykonuje **następnik** tylko wtedy, gdy test jest prawdziwy. W przeciwnym razie ocenia i wykonuje **alternatywę**.
+- `if` évalue un test et exécute le bloc adapté.
+- Expressions simples ou groupes `begin`/`let`.
+- Sans `else` explicite, seul le **consequent** si vrai.

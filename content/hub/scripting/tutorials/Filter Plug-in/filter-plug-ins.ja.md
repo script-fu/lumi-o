@@ -2,6 +2,9 @@
 title: "フィルタープラグイン"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 [最初のステップ](../../first-step/) チュートリアルには _procedure_ プラグインを使用しました。これらのタイプのプラグインは、入力として画像やドローアブルを必要とせずに動作します。通常、画像とそのドローアブルを変更するにはプラグインを使用します。このようなプラグインは、_filter_ プラグインと呼ばれます。
 
@@ -12,28 +15,28 @@ Lumi の **描画可能** は、レイヤーやチャンネルなど、描画で
 ### 単純なフィルター プラグインの例
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; let 文を使ってメッセージ変数とコアコードを定義する
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; メッセージを Lumi の Error Console に表示する
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; 最初に選択した drawable の色を反転する
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; プラグインを登録
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; メインプロシージャ名
+  "Simple Filter Plug-in Demo"             ;; Lumi メニューに表示される名前
+  "Tests a basic Scheme filter plug-in"    ;; ツールチップの説明
+  "Author Name"                            ;; 自分自身を褒めてあげよう
+  "License"                                ;; ライセンス
+  "Date written"                           ;; 作成日
+  "*"                                      ;; このプラグインに画像が必要であることを示す
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 1つ以上の選択された drawable が必要
 
-;; Specify the menu location for the plug-in
+;; プラグインのメニュー位置を指定する
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -47,7 +50,7 @@ Linux では、`simple-filter-plug-in.scm` ファイルを右クリックし、*
 ### プラグインの実行
 
 1. 画像を開きます (このフィルター プラグインを機能させるには画像が必要です)。
-2. **[ツール] > [デバッグ] > [メッセージ コンソール]** を開いてメッセージを表示します。
+2. **[ツール] > [デバッグ] > [メッセージ コンソール]** を開いてメッセージを確認します。
 3. **プラグイン** メニューから **シンプル フィルター プラグイン デモ** を選択します。
 4. 選択したレイヤーの 1 つが色反転され、エラー コンソールにメッセージが出力されます。
 
@@ -68,7 +71,7 @@ Lumi バージョン 3 では、保存された変更を有効にするために
 最初の行は、スクリプトが Lumi 3 のプラグインとして動作することを確認します。
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ Lumi バージョン 3 では、保存された変更を有効にするために
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Lumi の Error Console にメッセージを表示する
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 最初に選択した drawable の色を反転する
 ```
 
 ### プラグインの登録
@@ -96,14 +99,14 @@ Lumi バージョン 3 では、保存された変更を有効にするために
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; メインプロシージャを登録
+  "Simple Filter Plug-in Demo"             ;; Lumi メニューに表示される名前
+  "Tests a basic Scheme filter plug-in"    ;; ツールチップの説明
+  "Author Name"                            ;; 作者名
+  "License"                                ;; ライセンスタイプ
+  "Date written"                           ;; 作成日
+  "*"                                      ;; プラグインに画像が必要であることを示す
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 1つ以上の選択された drawable が必要
 ```
 
 #### メニュー登録

@@ -1,12 +1,15 @@
 ---
-title: "实用浏览器"
+title: "实用工具浏览器"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
-实用程序浏览器可让您探索 Lumi 附带的内置方案实用程序 stdlib，而无需离开应用程序或挖掘源文件。
+实用工具浏览器可让您探索 Lumi 附带的内置 Scheme 实用程序标准库，而无需离开应用程序或查找源文件。
 
-## 打开实用程序浏览器
+## 打开实用工具浏览器
 
-转至 **帮助 → 编程 → 实用程序浏览器**。
+转至 **帮助 → 编程 → 实用工具浏览器**。
 
 窗口立即打开；无需提前加载任何插件。
 
@@ -14,17 +17,17 @@ type: docs
 
 浏览器列出了 Lumi 在启动时自动加载的七个实用程序库导出的每个过程、变量和语法形式：
 
-|图书馆 |它涵盖什么 |
+| 库 | 涵盖内容 |
 |---|---|
 | `common.scm` |通用帮助程序（字符串、数字、列表实用程序）|
 | `files.scm` |文件和路径助手 |
 | `gegl.scm` | GEGL 缓冲区和颜色助手 |
 | `images.scm` |图像级助手（`image-get-open-list` 等）|
 | `layers.scm` |图层和可绘制助手|
-| `parasites.scm` |寄生虫读/写助手 |
+| `parasites.scm` | Parasite 读写助手 |
 | `paths.scm` |路径和矢量助手|
 
-所有这些都可以在任何方案插件或方案控制台中使用。
+这些库可在任何 Scheme 插件或 Scheme 控制台中使用。
 
 ## 搜索和过滤
 
@@ -39,4 +42,4 @@ type: docs
 
 ## 与过程浏览器的关系
 
-实用程序浏览器与**过滤器→ Script-Fu → 控制台→ 浏览**（过程浏览器）是分开的。过程浏览器列出了 PDB 注册的过程。实用程序浏览器列出了有意位于 PDB 之外的帮助器定义：它们仅是方案并且没有 C 绑定。
+实用工具浏览器与**过滤器→ Script-Fu → 控制台→ 浏览**（过程浏览器）是分开的。过程浏览器列出了 PDB 注册的过程。实用工具浏览器列出了有意位于 PDB 之外的 helper 定义：它们仅存在于 Scheme 中，没有 C 绑定。

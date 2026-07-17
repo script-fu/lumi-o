@@ -1,19 +1,24 @@
 ---
-title: "Tworzenie wersji debugującej"
+title: "Budowanie wersji debug"
 type: docs
+url: "hub/technical-guides/Building-a-Debug-Version"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: fecc781e73b4f30881c5150c958ae9b2df4164acd4cf86926186acb8e2021d5f
 ---
-Ten przewodnik opisuje **lokalny przebieg debugowania** dla Lumi przy użyciu skryptów w `build/lumi/scripts`.
 
-Przepływ pracy ma na celu:
+Ten przewodnik opisuje **lokalny przepływ pracy debugowania** Lumi przy użyciu skryptów w `build/lumi/scripts`.
 
-- używaj lokalnych artefaktów kompilacji (nie jest wymagane pobieranie symboli),
-- sprawdź, czy symbole debugowania są rzeczywiście obecne,
-- domyślnie uruchamiaj GDB w trybie symboli offline.
+Przepływ pracy ma:
 
-## Warunki wstępne
+- korzystać z lokalnych artefaktów kompilacji (bez pobierania symboli),
+- weryfikować, czy symbole debugowania są rzeczywiście obecne,
+- domyślnie uruchamiać GDB w trybie symboli offline.
 
-- Linux oparty na Debianie (baza projektu: Debian 13)
-- Drzewo źródeł Lumi zostało już sklonowane
+## Wymagania wstępne
+
+- Linux oparty na Debianie (punkt odniesienia projektu: Debian 13)
+- Drzewo źródeł Lumi już sklonowane
 
 ## Jednorazowa konfiguracja GDB (opcjonalna, ale zalecana)
 
@@ -24,7 +29,7 @@ sudo apt update
 sudo apt install gdb gdbserver
 ```
 
-Opcjonalna konfiguracja lokalnego rejestrowania:
+Opcjonalna konfiguracja lokalnego logowania:
 
 ```bash
 mkdir -p ~/code/gdb_logs
@@ -35,7 +40,7 @@ set logging overwrite on
 EOF
 ```
 
-Uwaga: lokalne skrypty debugowania Lumi domyślnie wyłączają `debuginfod`, aby zachować lokalną i powtarzalną rozdzielczość symboli.
+Uwaga: lokalne skrypty debugowania Lumi domyślnie wyłączają `debuginfod`, aby rozwiązywanie symboli pozostało lokalne i powtarzalne.
 
 ## Szybki start
 
@@ -45,9 +50,9 @@ Z katalogu skryptów:
 cd ~/code/lumi-dev/build/lumi/scripts
 ```
 
-### Debuguj kompilację + uruchamianie (domyślnie)
+### Kompilacja debug + uruchomienie (domyślnie)
 
-Użyj tego do normalnych sesji debugowania.
+Użyj tego w normalnych sesjach debugowania.
 
 ```bash
 bash lumi-debug-local.sh lumi-dev build
@@ -55,38 +60,38 @@ bash lumi-debug-local.sh lumi-dev build
 
 To polecenie:
 
-1. buduje Lumi w trybie debugowania,
+1. buduje Lumi w trybie debug,
 2. weryfikuje symbole debugowania,
 3. uruchamia Lumi pod GDB.
 
-### Tylko kompilacja debugowania (na późniejszą sesję TTY/zdalną)
+### Tylko kompilacja debug (na późniejszą sesję TTY/zdalną)
 
-Użyj tego, jeśli chcesz teraz skompilować i uruchomić/debugować później.
+Użyj tego, gdy chcesz teraz skompilować, a uruchomić/debugować później.
 
 ```bash
 bash lumi-build-debug.sh lumi-dev build
 ```
 
-## Używanie TTY w Linuksie
+## Korzystanie z TTY w Linuksie
 
-TTY (konsole tekstowe) są często najbardziej niezawodnym sposobem na debugowanie twardych zawieszeń.
+TTY (konsola tekstowa) to często najpewniejszy sposób debugowania twardych zawieszeń.
 
-- Przełącz na TTY za pomocą `Ctrl + Alt + F1` do `Ctrl + Alt + F6`
-- Zaloguj się z podpowiedzi tekstowej
-- Wróć do sesji graficznej z `Ctrl + Alt + F7` (lub `F2` w niektórych systemach)
+- Przełącz się na TTY za pomocą `Ctrl + Alt + F1` do `Ctrl + Alt + F6`
+- Zaloguj się z poziomu promptu tekstowego
+- Wróć do sesji graficznej przez `Ctrl + Alt + F7` (lub `F2` w niektórych systemach)
 
-Dlaczego to ma znaczenie: jeśli sesja pulpitu zostanie zatrzymana, TTY często nadal odpowiada, dzięki czemu można podłączyć GDB, przechwycić ślad wstecz i odzyskać przydatne dane o awarii.
+Dlaczego to ma znaczenie: jeśli sesja pulpitu się zawiesi, TTY często nadal odpowiada, więc możesz podłączyć GDB, przechwycić backtrace i odzyskać użyteczne dane o awarii.
 
 ## Opcjonalnie: debugowanie zdalne/TTY
 
-W przypadku twardego zawieszania się lub zawieszania wyświetlania użyj `gdbserver`:
+Przy twardych zawieszeniach lub blokadzie ekranu użyj `gdbserver`:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash gdbserver.sh
 ```
 
-Następnie z TTY (zalecane w przypadku scenariuszy zawieszenia) lub innego terminala:
+Następnie z TTY (zalecane przy zawieszeniach) lub innego terminala:
 
 ```bash
 gdb /home/mark/code/lumi-dev/bin/lumi-0.1
@@ -94,24 +99,22 @@ gdb /home/mark/code/lumi-dev/bin/lumi-0.1
 (gdb) continue
 ```
 
-W przypadku lokalnego uruchomienia GDB (ścieżka inna niż TTY):
+Do lokalnego uruchomienia GDB (bez TTY):
 
 ```bash
 bash lumi-debug-launch.sh --repo lumi-dev
 ```
 
-## Uwaga dotycząca wydajności
+## Uwaga o wydajności
 
-Kompilacje debugowania są z założenia wolniejsze. Po zakończeniu debugowania wróć do szybszej kompilacji:
+Kompilacje debug są z założenia wolniejsze. Po zakończeniu debugowania wróć do szybszej kompilacji:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 
 # Full release reset of all major components
-
 bash lumi-debug-reset-release.sh lumi-dev
 
 # Optional faster local-only variant
-
 bash lumi-build-script.sh --scope build --dir lumi-dev --type debugoptimized
 ```

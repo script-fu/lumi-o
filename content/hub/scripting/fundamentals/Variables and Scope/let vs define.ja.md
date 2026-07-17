@@ -1,7 +1,10 @@
 ---
-title: "名前付き let または Local 定義"
+title: "名前付き let とローカル define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 **`let`** という名前と **ローカル `define`** はどちらもコードを構造化するための Scheme の強力なツールですが、目的は異なります。それぞれをいつ使用するかを理解すると、クリーンでモジュール化された効率的なスクリプトを作成するのに役立ちます。
 
@@ -67,8 +70,8 @@ weight: 5
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; ローカルなヘルパー関数
+  (define (cube x) (* x x x))  ;; ローカルなヘルパー関数
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ weight: 5
 名前付き `let` では、括弧内のバインディングは、特定の値で初期化される **ローカル変数** として機能します。これらの変数のスコープは、`let` の本体に限定されます。
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; x を初期値 1 で宣言
+           (y 2))  ;; y を初期値 2 で宣言
+  (+ x y))         ;; 本体で x と y を使用
 ```
 
 - **`x` および `y`** は、`let` の一部として定義および初期化されるローカル変数です。
@@ -158,7 +161,7 @@ weight: 5
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; 新しい x と y で再帰呼び出し
 ```
 
 - **最初の反復**: `x = 1`、`y = 2`
@@ -189,7 +192,7 @@ weight: 5
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; x = 1、y = 2 で最初の呼び出し
 ```
 
 どちらも同じ計算を実行しますが、名前付きの `let` は、変数宣言と再帰セットアップを 1 つの簡潔な構造に結合します。

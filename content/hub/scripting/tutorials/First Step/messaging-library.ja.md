@@ -2,10 +2,13 @@
 title: "メッセージング ライブラリ"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
 メッセージを送信する単一の機能として始まったものは、時間の経過とともに、関連する機能のコレクションに進化しました。これらの関数は、GUI、メッセージ コンソール、OS ターミナルなどのさまざまな宛先への出力を処理するように設計された **メッセージング ライブラリ** の基礎を形成します。
 
-### なぜメッセージング ライブラリなのか?
+### Why a Messaging Library?
 
 ニーズが高まるにつれ、複数の出力にわたるメッセージを処理するには、よりモジュール化された拡張可能なアプローチが必要になります。単一の関数がすべてを実行するのではなく、プロセスを再利用可能なコンポーネントに分割し、柔軟性を高めました。このライブラリは、他のプラグインや関数が借用できる汎用メッセージング ツールとして使用できるようになりました。
 
@@ -13,7 +16,7 @@ weight: 6
 
 メッセージング ライブラリには現在次の関数が含まれています。
 
-- **send-to-gui**: Lumi GUI ダイアログボックスにメッセージを送信します。
+- **send-to-gui**: Sends messages to the Lumi GUI dialog box.
 - **send-to-error-console**: Lumi メッセージコンソールにメッセージを送信します。
 - **send-to-terminal**: ターミナル ウィンドウにメッセージを送信します。
 - **send-message**: メッセージを適切な出力に送信するディスパッチャー関数。
@@ -24,7 +27,7 @@ weight: 6
 **メッセージング ライブラリ**は、追加の出力をサポートするように簡単に拡張できます。たとえば:
 
 - **send-to-file**: メッセージをログ ファイルに保存します。
-- **send-to-logger**: 外部ログ システムと統合します。
+- **send-to-logger**: Integrate with an external logging system.
 - **send-to-notification**: メッセージをシステム通知として表示します。
 
 モジュール設計と再利用可能な関数の同じパターンに従うことにより、このライブラリは、あらゆる種類のメッセージング タスクを処理するための包括的なツールに成長できます。
@@ -32,7 +35,7 @@ weight: 6
 ## メッセージング ライブラリの利点
 
 - **再利用性**: 機能はさまざまなプラグインまたはプロジェクト間で再利用できます。
-- **モジュール性**: 各関数は 1 つの特定のタスクを処理するため、コードの保守と拡張が容易になります。
+- **Modularity**: Each function handles one specific task, making the code easier to maintain and extend.
 - **一貫性**: 同じ検証機能とメッセージ処理機能を使用することで、アプリケーション全体で一貫した動作が保証されます。
 
 **メッセージング ライブラリ** は、プロジェクト内でのメッセージの管理方法を簡素化できる広範なフレームワークの始まりです。ライブラリが成長するにつれて、新しいプラグインはそれを簡単に利用して、必要な場所にメッセージを送信できるようになります。
@@ -52,7 +55,7 @@ weight: 6
 メイン プラグインの `load` を忘れずに調整してください。
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

@@ -2,6 +2,9 @@
 title: "Браузер процедур"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **Браузер процедур Lumi** позволяет выполнять поиск доступных процедур (встроенных и подключаемых модулей) и проверять их параметры и возвращаемые значения.
 
@@ -31,12 +34,12 @@ weight: 1
 После того, как вы установили «Hello World!» плагин, вы можете найти его в Обозревателе процедур. Просто найдите имя функции, которую вы зарегистрировали в Lumi, в данном случае «scheme-hello-world». В записи будут отображены параметры и все возвращаемые значения, связанные с плагином, а также краткое описание. Вы также увидите, где в разделе **Дополнительная информация** отображаются некоторые текстовые строки, введенные вами в качестве входных параметров в процессе регистрации.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; Имя процедуры
+  "Hello world!"                                        ;; Имя пункта меню
+  "A Scheme procedure plug-in"                       ;; Подсказка и описание
+  "Your Name"                                           ;; Автор
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; Лицензия
+  "2024")                                               ;; Дата copyright
 ```
 
 Это упрощает проверку правильности регистрации вашего плагина и позволяет быстро проверить, как он взаимодействует с другими процедурами в Lumi. Браузер процедур — это мощный инструмент для отладки и расширения ваших плагинов за счет изучения всех доступных процедур в Lumi.

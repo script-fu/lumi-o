@@ -1,7 +1,10 @@
 ---
-title: "Denominato let o definizione locale"
+title: "Named let o define locale"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Scheme per strutturare il codice, ma hanno scopi diversi. Capire quando utilizzarli aiuta a creare script puliti, modulari ed efficienti.
 
@@ -67,8 +70,8 @@ Entrambi **denominati `let`** e **local `define`** sono potenti strumenti in Sch
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Funzione di supporto locale
+  (define (cube x) (* x x x))  ;; Funzione di supporto locale
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ Una delle caratteristiche più potenti di un nome `let` è la sua capacità di c
 In un denominato `let`, i collegamenti tra parentesi agiscono come **variabili locali** che vengono inizializzate con valori specifici. Queste variabili hanno come ambito il corpo di `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Dichiara x con valore iniziale 1
+           (y 2))  ;; Dichiara y con valore iniziale 2
+  (+ x y))         ;; Usa x e y nel corpo
 ```
 
 - **`x` e `y`** sono variabili locali definite e inizializzate come parte di `let`.
@@ -158,7 +161,7 @@ Le stesse variabili fungono anche da **parametri di input** per le chiamate rico
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Chiamata ricorsiva con nuovi valori di x e y
 ```
 
 - **Prima iterazione**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Un nome `let` include l'inizializzazione della variabile come parte della sua si
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Chiamata iniziale con x = 1, y = 2
 ```
 
 Entrambi eseguono lo stesso calcolo, ma il nome `let` combina la dichiarazione della variabile e l'impostazione della ricorsione in un unico costrutto conciso.

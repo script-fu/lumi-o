@@ -1,57 +1,64 @@
 ---
 title: "Ustawienia wstępne narzędzi"
 type: docs
+url: "hub/features/tool-presets"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
 ---
-Ustawienia wstępne narzędzi stanowią centrum przepływu pracy z narzędziami Lumi. Każde narzędzie jest używane poprzez ustawienie wstępne, niezależnie od tego, czy jest to ciche narzędzie domyślne, czy ręcznie wykonane narzędzie zapisane przez artystę. Dzięki temu zachowanie narzędzia jest widoczne, zamierzone i powtarzalne.
 
-Pomysł jest prosty: artysta buduje mały, stabilny zestaw znajomych narzędzi, nadaje im wyraźną tożsamość i przełącza się między nimi tak naturalnie, jak sięganie po różne pędzle, długopisy, noże czy blendery w studiu.
+Ustawienia wstępne narzędzi są centrum przepływu pracy z narzędziami w Lumi. Każde narzędzie działa przez preset — cichy domyślny lub ręcznie wykonany, zapisany przez artystę. Dzięki temu zachowanie narzędzia jest widoczne, zamierzone i powtarzalne.
 
-## Ręcznie robione narzędzia, a nie luźne ustawienia
+Pomysł jest prosty: zbuduj mały, stabilny zestaw znanych narzędzi, nadaj im wyraźną tożsamość i przełączaj się między nimi tak naturalnie, jak sięgasz po różne pędzle, długopisy, noże czy blendery w studiu.
 
-Ustawienie wstępne narzędzia to coś więcej niż zapisana regulacja. Jest to kompletne narzędzie autorskie: tożsamość narzędzia, sposób jego działania, opcje konfiguracji oraz, w razie potrzeby, prywatny pędzel, dynamika, gradient lub ikona.
+## Ręcznie robione narzędzia, nie luźne ustawienia
 
-Dzięki temu ustawienie wstępne zachowuje się jak prawdziwy obiekt w zestawie narzędzi artysty. Ulubiony ołówek do szkicowania może pozostać ołówkiem do szkicowania. Pędzel blokujący może zachować swój szeroki, prosty charakter. Pędzel wykończeniowy może pozostać precyzyjny i znajomy. Narzędzie nie jest każdorazowo odbudowywane z pamięci; wybrano go jako znany instrument.
+Preset narzędzia to więcej niż zapisana regulacja. To kompletne, autorskie narzędzie: tożsamość, sposób pracy, opcje konfiguracji oraz — w razie potrzeby — prywatny pędzel, dynamika, gradient lub ikona.
+
+Preset zachowuje się jak prawdziwy przedmiot w zestawie artysty. Ulubiony ołówek do szkiców pozostaje ołówkiem do szkiców. Pędzel blokujący zachowuje szeroki, prosty charakter. Pędzel wykończeniowy pozostaje precyzyjny i znajomy. Narzędzie nie jest odbudowywane z pamięci za każdym razem — wybierasz znany instrument.
 
 ## Spokojniejszy obszar opcji narzędzi
 
-Lumi oddziela elementy sterujące zmieniane podczas pracy od elementów sterujących definiujących sposób budowy narzędzia. Częste, natychmiastowe poprawki pozostają blisko płótna. Opcje konfiguracji niższych częstotliwości przenoszą się do dedykowanych przestrzeni edycyjnych.
+Lumi oddziela elementy zmieniane w trakcie pracy od tych, które definiują budowę narzędzia. Częste, bieżące poprawki zostają blisko płótna; rzadsze opcje konfiguracji trafiają do dedykowanych edytorów presetów.
 
-Dzięki temu obszar opcji narzędzia jest jaśniejszy i łatwiejszy do odczytania podczas malowania. Artysta widzi elementy sterujące, które mają znaczenie w przebiegu pociągnięć lub edycji, podczas gdy głębsze autorstwo pozostaje dostępne bez zaśmiecania codziennego interfejsu.
+Obszar opcji narzędzi pozostaje lżejszy i czytelniejszy podczas malowania. Artysta widzi to, co ma znaczenie w biegu pociągnięcia lub edycji, a głębsze autorstwo pozostaje dostępne bez zaśmiecania codziennego interfejsu.
 
-## Wstępnie ustawione tworzenie
+## Tworzenie presetów
 
-Edytor ustawień wstępnych narzędzia to miejsce, w którym narzędzie staje się celowe. Nadaje presetowi nazwę, tożsamość wizualną i głębsze zachowanie, które sprawia, że ​​warto go zachować.
+Edytor presetów narzędzi to miejsce, w którym narzędzie staje się świadome: nazwa, tożsamość wizualna i głębsze zachowanie, które warto zachować.
 
-W przypadku narzędzi do malowania może to obejmować zasoby pędzla i dynamiczne zachowanie, które określa charakter znaku. W przypadku innych narzędzi może zachować ustawienia i styl pracy, które zapewniają spójność określonej czynności edycyjnej. Ten sam, wstępnie ustawiony pomysł ma zastosowanie w całym zestawie narzędzi, więc Lumi traktuje stan autorskiego narzędzia jako system współdzielony, a nie wygodę związaną wyłącznie z malowaniem.
+Dla narzędzi malarskich może to obejmować zasoby pędzla i dynamikę określającą charakter śladu. Dla innych narzędzi — ustawienia i styl pracy, które utrzymują spójność danej operacji. Ten sam pomysł presetu obowiązuje w całym zestawie narzędzi: Lumi traktuje stan autorskiego narzędzia jako wspólny system, nie wygodę tylko dla malowania.
 
-## Wizualna półka na narzędzia
+## Wizualna półka narzędzi
 
-Zapisane ustawienia wstępne mogą być prezentowane jako przyciski narzędzi wraz z niestandardowymi ikonami. Dzięki temu gotowa kolekcja staje się rozpoznawalną półką z ręcznie wykonanymi narzędziami, a nie listą anonimowych konfiguracji.
+Zapisane presety mogą być pokazane jako przyciski narzędzi z własnymi ikonami. Kolekcja presetów staje się rozpoznawalną półką ręcznie wykonanych narzędzi, a nie listą anonimowych konfiguracji.
 
-Identyfikacja wizualna ma znaczenie. Artyści mogą wybierać narzędzia według kształtu, koloru, ikony i przyzwyczajenia, budując ten sam rodzaj pamięci mięśniowej, którą rozwijają za pomocą materiałów fizycznych. Mały rząd zaufanych ustawień może stać się szybszy i bardziej osobisty niż wielokrotne przeszukiwanie ustawień.
+Tożsamość wizualna ma znaczenie. Artyści wybierają narzędzia po kształcie, kolorze, ikonie i nawyku, budując tę samą pamięć mięśniową co przy materiałach fizycznych. Krótki rząd zaufanych presetów bywa szybszy i bardziej osobisty niż wielokrotne przeszukiwanie ustawień.
 
-## Zestawy narzędzi obsługujące przestrzeń roboczą
+## Zestawy narzędzi świadome obszaru roboczego
 
-Ustawienia wstępne narzędzi stają się szczególnie wydajne w połączeniu z obszarami roboczymi. Obszar roboczy rysowania może udostępnić narzędzia do rysowania, obszar roboczy odręczny może preferować gotowe ustawienia czystych linii, a obszar roboczy malowania może przełączać się na pędzle zaprojektowane z myślą o kolorze, teksturze i mieszaniu.
+Presety narzędzi są szczególnie mocne w połączeniu z obszarami roboczymi. Obszar rysunku może wysunąć narzędzia do rysowania, obszar inkingu — presety czystych linii, a obszar malarski — pędzle do koloru, tekstury i mieszania.
 
-W panelu Ustawienia wstępne narzędzi można ukryć ustawienia wstępne tylko dla aktywnego obszaru roboczego. Ukryte ustawienia wstępne pozostają na dysku i są dostępne gdzie indziej w Lumi. Każdy obszar roboczy zapamiętuje własną ukrytą listę wraz z niestandardową, wstępnie ustawioną kolejnością, dzięki czemu możesz zachować krótką osobistą półkę bez przenoszenia lub usuwania plików.
+W panelu presetów narzędzi można ukryć presety tylko dla aktywnego obszaru roboczego. Ukryte presety pozostają na dysku i są dostępne gdzie indziej w Lumi. Każdy obszar pamięta własną listę ukrytych presetów i niestandardową kolejność, więc możesz mieć krótką osobistą półkę bez przenoszenia ani usuwania plików.
 
-Zmiana obszaru roboczego może zmienić to, które gotowe ustawienia pojawiają się w doku, w jaki sposób są uporządkowane i które panele są otwarte. Studio nie tylko zmienia aranżację; może uzupełnić się o narzędzia należące do bieżącego zadania.
+Zmiana obszaru roboczego może zmienić, które presety są w doku, jak są uporządkowane i które panele są otwarte. Studio nie tylko zmienia układ — może uzupełnić się narzędziami pasującymi do bieżącego zadania.
 
-## Stabilność między przełącznikami narzędziPonieważ każde narzędzie działa poprzez ustawienie wstępne, zmiana narzędzia nie musi oznaczać utraty ostatniego użytecznego stanu. Lumi może utrzymać każde narzędzie podłączone do aktywnego ustawienia wstępnego, więc powrót do narzędzia przywraca znajomy instrument, którego używał artysta.
+## Stabilność przy zmianie narzędzi
 
-Dzięki temu przełączanie narzędzi wydaje się stabilne. Ołówek, pędzel, narzędzie do przekształcania lub narzędzie do zaznaczania mogą zapamiętać swój stan autorski bez polegania na niewidocznych plikach opcji poszczególnych narzędzi.
+Ponieważ każde narzędzie działa przez preset, zmiana narzędzia nie musi oznaczać utraty ostatniego użytecznego stanu. Lumi może utrzymać każde narzędzie podłączone do aktywnego presetu, więc powrót przywraca znany instrument.
 
-## Autorstwo przenośne
+Przełączanie narzędzi wydaje się stabilne. Ołówek, pędzel, narzędzie transformacji czy zaznaczenia mogą pamiętać swój stan autorski bez niewidocznych plików opcji per narzędzie.
 
-Ustawienie wstępne zawiera zasoby, które sprawiają, że wydaje się wyjątkowe. W przypadku ustawień pędzla pędzel, dynamika i ikona znajdują się wewnątrz samego ustawienia wstępnego, więc narzędzie pozostaje kompletne nawet w przypadku zmiany szerszej biblioteki zasobów.
+## Przenośne autorstwo
 
-Jest to celowe uproszczenie: zapisane narzędzie nie jest delikatnym wskaźnikiem kilku oddzielnych ruchomych części. Pędzle można nadal zapisywać w bibliotece wielokrotnego użytku, ale gdy zostaną wybrane do ustawienia wstępnego, zostaną skopiowane do tego autorskiego narzędzia.
+Preset zawiera zasoby, które czynią go wyjątkowym. W presecie pędzla pędzel, dynamika i ikona żyją w samym presecie, więc narzędzie pozostaje kompletne nawet gdy szersza biblioteka zasobów się zmienia.
 
-Dla artystów ważne jest to, że narzędzie można zapisać jako pełną decyzję twórczą. Jego zachowanie, tożsamość i zasoby współgrają ze sobą, czyniąc gotowe ustawienia narzędzi praktyczną podstawą osobistych przepływów pracy, zestawów narzędzi specyficznych dla projektu i wspólnych konfiguracji studia.
+To świadome uproszczenie: zapisane narzędzie nie jest kruchym wskaźnikiem kilku oddzielnych elementów. Pędzle nadal można trzymać w bibliotece wielokrotnego użytku, lecz wybrane do presetu są kopiowane do tego autorskiego narzędzia.
 
-## Znajomy zestaw instrumentów
+Dla artystów ważne jest, że narzędzie można zapisać jako pełną decyzję twórczą. Zachowanie, tożsamość i zasoby idą razem — presety są praktyczną podstawą osobistych workflow, zestawów projektowych i wspólnych konfiguracji studia.
 
-Ogólnym celem nie jest zmuszanie artystów do zarządzania setkami presetów. Chodzi o to, aby niewielki zestaw dobrze wykonanych narzędzi sprawiał wrażenie stabilnego, rozpoznawalnego i pod ręką.
+## Znany zestaw instrumentów
 
-Zaprogramowany system Lumi wspiera taki rytm pracy: twórz narzędzia raz, udoskonalaj je z czasem, nadaj im tożsamość wizualną i pozwól, aby w każdym miejscu pracy znajdowały się odpowiednie instrumenty.
+Celem nie jest zarządzanie setkami presetów, lecz sprawienie, by mały zestaw dobrze wykonanych narzędzi był stabilny, rozpoznawalny i pod ręką.
+
+System presetów Lumi wspiera taki rytm pracy: stwórz narzędzia raz, dopracuj je, nadaj im tożsamość wizualną i pozwól każdemu obszarowi roboczemu wysunąć właściwe instrumenty.

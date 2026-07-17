@@ -1,35 +1,40 @@
 ---
 title: "Format pliku (.lum)"
 type: docs
+url: "hub/features/file-format"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
 ---
-Natywny format pliku Lumi jest przeznaczony do projektów malowania warstwowego, które muszą pozostać niezawodne, możliwe do sprawdzenia i możliwe do odzyskania w miarę upływu czasu. Został zaprojektowany w oparciu o realia pracy ilustracyjnej: wiele warstw, duże płótna, osadzone informacje o kolorach, maski, efekty i dane do odzyskiwania.
 
-Zamiast traktować projekt jako pojedynczą nieprzezroczystą plamę, format utrzymuje strukturę grafiki widoczną dla aplikacji. Dzięki temu Lumi może zapisywać, ładować i odzyskiwać duże obrazy w bardziej inteligentny sposób, zachowując przy tym organizację, na której polegają artyści.
+Natywny format pliku Lumi służy projektom malarskim opartym na warstwach, które muszą pozostać niezawodne, możliwe do sprawdzenia i odzyskiwania w czasie. Został zaprojektowany z myślą o realiach pracy ilustracyjnej: wielu warstwach, dużych płótnach, osadzonych danych kolorów, maskach, efektach i danych odzyskiwania.
+
+Zamiast traktować projekt jako jedną nieprzezroczystą całość, format utrzymuje strukturę grafiki widoczną dla aplikacji. Dzięki temu Lumi może zapisywać, ładować i odzyskiwać duże obrazy w sposób bardziej inteligentny, zachowując organizację, na której polegają artyści.
 
 ## Otwarta struktura projektu
 
-Projekt Lumi oddziela części dzieła sztuki: struktura obrazu, zawartość warstw, maski, dane o kolorach, metadane i informacje o odtwarzaniu odgrywają wyraźną rolę. Dzięki temu format jest łatwiejszy do zrozumienia i lepiej dostosowany do długoterminowego dostępu niż zamknięty, monolityczny pojemnik.
+Projekt Lumi oddziela części dzieła: strukturę obrazu, zawartość warstw, maski, dane kolorów, metadane i informacje o odzyskiwaniu — każda ma wyraźną rolę. Format jest łatwiejszy do zrozumienia i lepiej nadaje się do długoterminowego dostępu niż zamknięty, monolityczny kontener.
 
-Celem jest nie tylko przechowywanie pikseli, ale także przechowywanie roboczego stanu ilustracji. Warstwy pozostają warstwami, maski pozostają maskami, a plik nadal odzwierciedla sposób, w jaki została zbudowana grafika.
+Chodzi nie tylko o przechowywanie pikseli, lecz o roboczy stan ilustracji. Warstwy pozostają warstwami, maski maskami, a plik nadal odzwierciedla sposób, w jaki powstała grafika.
 
-## Zaprojektowany do dużych obrazów
+## Zaprojektowany pod duże obrazy
 
-Duże, warstwowe obrazy mogą szybko stać się ciężkie. Format Lumi obsługuje przepływ pracy, w którym nie wszystkie dane obrazu muszą zostać wciągnięte do pamięci na raz. Projekty mogą pozostać responsywne, ładując części obrazu, które są faktycznie potrzebne do przeglądania, edycji, komponowania lub eksportowania.
+Duże obrazy warstwowe szybko stają się ciężkie. Format Lumi obsługuje przepływy pracy, w których nie wszystkie dane obrazu muszą trafić do pamięci naraz. Projekty pozostają responsywne, ładując tylko te części obrazu, które są potrzebne do podglądu, edycji, komponowania lub eksportu.
 
-Takie podejście ułatwia zarządzanie złożonymi plikami, szczególnie gdy grafika zawiera wiele ukrytych, zarchiwizowanych, eksperymentalnych lub pogrupowanych warstw.
+Takie podejście ułatwia zarządzanie złożonymi plikami, zwłaszcza gdy grafika zawiera wiele ukrytych, zarchiwizowanych, eksperymentalnych lub pogrupowanych warstw.
 
-## Oszczędzanie bez przerywania przepływu
+## Zapisywanie bez przerywania pracy
 
-Format pliku obsługuje zarówno normalne zapisywanie projektów, jak i lekkie migawki w stylu odzyskiwania. Daje to artystom możliwość częstej ochrony pracy bez przekształcania każdego punktu kontrolnego w pełną kopię całego obrazu.
+Format pliku obsługuje zarówno zwykłe zapisywanie projektu, jak i lekkie migawki odzyskiwania. Artyści mogą często chronić pracę bez tworzenia pełnej kopii całego obrazu przy każdym punkcie kontrolnym.
 
-Ponieważ informacje o odzyskiwaniu należą do struktury projektu, Lumi może przechowywać użyteczną historię blisko grafiki, jednocześnie umożliwiając automatyczne zapisywanie bezpieczeństwa niezależnie od pliku roboczego.
+Ponieważ informacje o odzyskiwaniu należą do struktury projektu, Lumi może trzymać użyteczną historię blisko grafiki, a jednocześnie pozwalać, by automatyczne zapisy bezpieczeństwa pozostawały oddzielnie od pliku roboczego.
 
 ## Wymiana i eksport
 
-Natywny format jest przeznaczony do bieżącej pracy z Lumi, natomiast formaty eksportu służą do udostępniania spłaszczonych lub zorientowanych na kompatybilność wyników. Obsługa importu pomaga przenieść istniejącą grafikę do warstwowego środowiska Lumi, a obsługa eksportu pozwala gotowym elementom opuścić format projektu, gdy są gotowe do publikacji, dostarczenia lub dalszego przetwarzania.
+Format natywny służy bieżącej pracy w Lumi; formaty eksportu udostępniają spłaszczone lub zorientowane na kompatybilność wyniki. Import pomaga przenieść istniejącą grafikę do warstwowego środowiska Lumi, a eksport pozwala gotowym pracom opuścić format projektu, gdy są gotowe do publikacji, dostarczenia lub dalszej obróbki.
 
-To rozróżnienie sprawia, że ​​plik roboczy jest bogaty i edytowalny, a jednocześnie pozwala na tworzenie ostatecznych obrazów w popularnych formatach zewnętrznych.
+Dzięki temu plik roboczy pozostaje bogaty i edytowalny, a końcowe obrazy można tworzyć w popularnych formatach zewnętrznych.
 
 ## Długoterminowa niezawodność
 
-Krótko mówiąc, format `.lum` to praktyczny pojemnik do poważnych prac malarskich: wystarczająco otwarty, aby można go było sprawdzić, wystarczająco zorganizowany, aby można go było odzyskać i wystarczająco elastyczny, aby ekonomicznie obsługiwać złożone obrazy warstwowe.
+Krótko mówiąc, format `.lum` to praktyczny kontener do poważnej pracy malarskiej: wystarczająco otwarty do inspekcji, wystarczająco ustrukturyzowany do odzyskiwania i wystarczająco elastyczny, by ekonomicznie obsługiwać złożone obrazy warstwowe.

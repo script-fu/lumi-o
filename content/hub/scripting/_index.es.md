@@ -1,10 +1,13 @@
 ---
-title: "secuencias de comandos"
+title: "Scripting"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 2116be7665eb5fa29e6a526814a2158919062b9bde91cd12390d1dc4d13e19e0
 ---
-Las secuencias de comandos Scheme le permiten automatizar el trabajo repetitivo, crear herramientas personalizadas y ampliar Lumi con sus propios complementos.
+El scripting en Scheme le permite automatizar tareas repetitivas, crear herramientas personalizadas y ampliar Lumi con sus propios complementos.
 
-Utilice estas guías para aprender los fundamentos básicos del lenguaje, seguir tutoriales paso a paso, configurar un buen flujo de trabajo y explorar complementos de ejemplo que puede leer y modificar.
+Use estas guías para aprender los fundamentos del lenguaje, seguir tutoriales paso a paso, configurar un buen flujo de trabajo y explorar complementos de ejemplo que puede leer y modificar.
 
 {{< cards >}}
   {{< card link="fundamentals/" title="Fundamentos" icon="variable" >}}

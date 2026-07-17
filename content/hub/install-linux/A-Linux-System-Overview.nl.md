@@ -1,43 +1,48 @@
 ---
-title: "Een Linux-systeemoverzicht"
+title: "Overzicht van een Linux-systeem"
 type: docs
+url: "hub/install-linux/A-Linux-System-Overview"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
 ---
-Linux is een krachtig en veelzijdig besturingssysteem met een enorme gemeenschap van ontwikkelaars. In de kern bestaat een Linux-systeem uit verschillende belangrijke componenten die samenwerken om een ​​naadloze gebruikerservaring te bieden. Dit overzicht schetst de essentiële onderdelen van een Linux-systeem, inclusief de kernel, distributie, pakketbeheerder, displaymanager, desktopomgeving en displayserver (X11 of Wayland).
 
-Lumi is op zijn best op Debian met Cinnamon (X11), en is in die omgeving ontwikkeld en getest.
+Linux is een krachtig en veelzijdig besturingssysteem met een grote community van ontwikkelaars. In de kern bestaat een Linux-systeem uit verschillende belangrijke componenten die samenwerken voor een naadloze gebruikerservaring. Dit overzicht beschrijft de essentiële onderdelen van een Linux-systeem: de kernel, distributie, pakketbeheerder, display manager, desktopomgeving en display server (X11 of Wayland).
 
-**Algemene standaardinstellingen voor de huidige Linux-distributie**
+Lumi werkt het best op Debian met Cinnamon (X11) en wordt in die omgeving ontwikkeld en getest.
 
-| **Distributie** | **Pakketbeheer** | **Displaybeheer** | **Desktopomgeving** | **Weergaveserver** |
-|------------------|---------------------|-------------------|----------------------|-----------------|
-| Debian | APT | GDM | GNOME | Wayland |
-| Ubuntu | APT | GDM | GNOME | Wayland |
-| Debian | APT | GDM | Kaneel | X11 |
-| Fedora | DNF | GDM | GNOME | Wayland |
-| Boog Linux | Pacman | Gebruikerskeuze | Gebruikerskeuze | Gebruikerskeuze |
+**Veelvoorkomende standaardinstellingen van Linux-distributies**
 
-### Sleutelbegrippen
+| **Distributie** | **Pakketbeheer** | **Display Manager** | **Desktopomgeving** | **Display Server** |
+|--------------------|----------------------|----------------------|-------------------------|--------------------|
+| Debian             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Ubuntu             | APT                  | GDM                  | GNOME                   | Wayland            |
+| Debian             | APT                  | GDM                  | Cinnamon                | X11                |
+| Fedora             | DNF                  | GDM                  | GNOME                   | Wayland            |
+| Arch Linux         | Pacman               | Keuze van gebruiker  | Keuze van gebruiker     | Keuze van gebruiker |
+
+### Belangrijke termen
 
 #### Kernel
 
-De kern van het besturingssysteem die rechtstreeks communiceert met de hardware, meestal Linux.
+De kern van het besturingssysteem die rechtstreeks met de hardware communiceert, meestal Linux.
 
 #### Distributie
 
-De Linux-distributie, die de kernel samen met gebruikersruimtetools, bibliotheken en software verpakt. Voorbeelden hiervan zijn Debian, Arch Linux en Fedora.
+De Linux-distributie bundelt de kernel met gebruikersruimte-tools, bibliotheken en software. Voorbeelden zijn Debian, Arch Linux en Fedora.
 
 #### Pakketbeheerder
 
-Een tool die wordt gebruikt om softwareapplicaties uit repository's te installeren, bij te werken en te verwijderen. Voorbeelden hiervan zijn APT voor op Debian gebaseerde distributies, DNF voor Fedora en Pacman voor Arch Linux.
+Een tool om software uit repository's te installeren, bij te werken en te verwijderen. Voorbeelden zijn APT voor Debian-gebaseerde distributies, DNF voor Fedora en Pacman voor Arch Linux.
 
-#### Weergavebeheer
+#### Display Manager
 
-Beheert het grafische inlogscherm en sessie-initiatie. Voorbeelden hiervan zijn GDM (GNOME Display Manager), LightDM en SDDM (Simple Desktop Display Manager).
+Beheert het grafische inlogscherm en het starten van sessies. Voorbeelden zijn GDM (GNOME Display Manager), LightDM en SDDM (Simple Desktop Display Manager).
 
 #### Desktopomgeving
 
-Biedt de grafische gebruikersinterface (GUI) en beheert het algehele uiterlijk en de gebruikerservaring. Voorbeelden hiervan zijn GNOME, Cinnamon en KDE Plasma.
+Biedt de grafische gebruikersinterface (GUI) en beheert het uiterlijk en de gebruikerservaring. Voorbeelden zijn GNOME, Cinnamon en KDE Plasma.
 
-#### Weergaveserver
+#### Display Server
 
-Beheert de weergave-uitvoer en invoergebeurtenissen. Voorbeelden hiervan zijn X11 (X Window System) en Wayland. X11 is een traditionele weergaveserver, terwijl Wayland een nieuwer, veiliger alternatief is.
+Beheert schermuitvoer en invoergebeurtenissen. Voorbeelden zijn X11 (X Window System) en Wayland. X11 is een traditionele display server; Wayland is een nieuwer, veiliger alternatief.

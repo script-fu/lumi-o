@@ -2,10 +2,13 @@
 title: "Załadunek"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 Gdy tylko funkcja pomocnicza powiększy się, przenieś ją do małego pliku biblioteki. Dzięki temu wtyczka jest skoncentrowana i sprawia, że ​​pomocnika można używać wielokrotnie w wielu wtyczkach.
 
-### Utwórz funkcję biblioteczną
+### Make a Library Function
 
 Możemy skorzystać z funkcji send-message i utworzyć nowy plik z tą zawartością. Zapisz plik w folderze repo, a nie w części z wtyczkami, być może w pobliżu najwyższego poziomu;
 
@@ -28,38 +31,38 @@ Możemy skorzystać z funkcji send-message i utworzyć nowy plik z tą zawartoś
 Przykład funkcji bibliotecznej send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Funkcja obsługująca wysyłanie wiadomości do różnych miejsc docelowych
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Wyślij do Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Ustaw obsługę na Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Wyślij do okna dialogowego GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Ustaw obsługę na okno dialogowe GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Wyślij do okna terminala
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Wyjście terminal obsługiwane jest przez display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Przywróć domyślną obsługę wiadomości do Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Załaduj funkcję biblioteki
 
-Możemy załadować tę funkcję biblioteczną za pomocą polecenia Scheme `load`;
+We can load that library function with the Scheme `load` command;
 
-Ładowanie pliku biblioteki:
+Loading a library file:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 
@@ -81,4 +84,4 @@ Możemy załadować tę funkcję biblioteczną za pomocą polecenia Scheme `load
   "<Image>/Funky")
 ```
 
-Hej! Mamy teraz coś prostszego i krótszego do przeczytania, co w pewnym sensie opisuje się bez komentarzy. To jest satysfakcjonujący wniosek z refaktoryzacji.
+Hej! We've now got something simpler and shorter to read, that kind of describes itself without comments. To jest satysfakcjonujący wniosek z refaktoryzacji.

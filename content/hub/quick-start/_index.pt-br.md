@@ -2,7 +2,7 @@
 title: "Início rápido"
 type: docs
 ---
-O Lumi-o está atualmente em fase de desenvolvimento, embora os recursos principais sejam testados em produção, você pode encontrar instabilidade ocasional. Para proteger seu progresso durante esta fase, **o salvamento automático em alta velocidade está disponível e ativo por padrão.**
+Lumi-o está atualmente em fase de desenvolvimento, **o salvamento automático de alta velocidade está disponível e ativo por padrão.**
 
 Use as páginas abaixo para começar a trabalhar rapidamente.
 

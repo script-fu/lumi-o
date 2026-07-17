@@ -1,14 +1,17 @@
 ---
 title: "Byt namn på lager"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 669bb9a76d7c849dba73b936e36d319fd2ecafb8f9dbd1500ba3b9205e8efb67
 ---
 Byter namn på alla lager i stacken (eller de markerade lagren). Användbar för animerade borstlagerstaplar.
 
-## Där den bor
+## Källkod
 
-- [Visa källan](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Visa källkod](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
-## Där det visas i Lumi
+## Meny i Lumi
 
 - **Lager → Stack → Byt namn på lager**
 

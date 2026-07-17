@@ -1,7 +1,10 @@
 ---
-title: "Variabler och omfattning"
+title: "Variabler och omfång"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variabler lagrar datavärden som ditt skript kan manipulera, medan scope definierar var dessa variabler är tillgängliga. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
 
@@ -10,8 +13,8 @@ I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för a
 Schema är dynamiskt skrivet: du deklarerar inte typer i förväg, och en variabel kan hålla värden av olika slag över tiden.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x är ett tal
+(set! x "hello")    ; nu är x en sträng
 ```
 
 ### Variabla definitioners roll och omfattning i schemat

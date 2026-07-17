@@ -1,7 +1,10 @@
 ---
-title: "기울기"
-type: docs
+title: "리스트"
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 Scheme에서 **목록**은 값을 그룹화하는 데 사용되는 기본 데이터 구조입니다. 목록은 각 요소가 다른 목록을 포함하여 모든 유형일 수 있는 순서가 지정된 요소 모음입니다. 목록은 데이터 저장 및 프로그램 구조 모두를 위해 Scheme에서 널리 사용됩니다.
 
@@ -28,8 +31,8 @@ Scheme에서 **목록**은 값을 그룹화하는 데 사용되는 기본 데이
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; 첫 번째 요소를 가져옴
+(cdr my-list)  ; 나머지 리스트를 가져옴
 ```
 
 결과:
@@ -52,8 +55,8 @@ Scheme에서 **목록**은 값을 그룹화하는 데 사용되는 기본 데이
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; 첫 번째 요소 출력
+      (print-elements (cdr lst)))))             ;; 나머지 리스트 처리
 ```
 
 - **기본 사례:** 목록이 비어 있는 경우(`null? lst`) 재귀를 중지합니다.
@@ -135,8 +138,8 @@ Scheme에서 **목록**은 값을 그룹화하는 데 사용되는 기본 데이
 #### 예: 목록?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; (list 1 2 3)이 리스트인지 확인
+(list? 42)            ; 42가 리스트인지 확인
 ```
 
 결과:
@@ -155,9 +158,9 @@ Scheme은 다음을 포함하여 목록 작업을 위한 몇 가지 내장 프�
 - `reverse`: 요소가 역순으로 포함된 새 목록을 반환합니다.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; 3 반환
+(append (list 1 2) (list 3 4)) ; (1 2 3 4) 반환
+(reverse (list 1 2 3))         ; (3 2 1) 반환
 ```
 
 결과:
@@ -178,7 +181,7 @@ Scheme은 다음을 포함하여 목록 작업을 위한 몇 가지 내장 프�
 ##### 예: 목록-ref
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; 인덱스 2의 요소를 가져옴
 ```
 
 결과: `30`
@@ -208,10 +211,10 @@ Scheme은 다음을 포함하여 목록 작업을 위한 몇 가지 내장 프�
 #### 예: 요소에 액세스하기
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; 첫 번째 요소를 가져옴: (1 2)
+(car (car nested-list))        ; 첫 번째 하위 리스트의 첫 번째 요소를 가져옴: 1
+(cdr (car nested-list))        ; 첫 번째 하위 리스트의 나머지를 가져옴: (2)
+(car (cdr (car nested-list)))  ; 첫 번째 하위 리스트의 두 번째 요소를 가져옴: 2
 ```
 
 ---
@@ -235,8 +238,8 @@ Scheme은 다음을 포함하여 목록 작업을 위한 몇 가지 내장 프�
 #### 예: 다른 하위 목록의 요소에 액세스
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; 두 번째 하위 리스트를 가져옴: (3 4)
+(car (car (cdr nested-list)))  ; 두 번째 하위 리스트의 첫 번째 요소를 가져옴: 3
 ```
 
 ---

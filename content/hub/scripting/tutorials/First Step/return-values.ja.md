@@ -2,6 +2,9 @@
 title: "戻り値"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 戻り値は、余分な状態を持たずにフローを制御できるため、重要です。 Scheme では、最後に評価された式が戻り値になります。
 
@@ -14,9 +17,9 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
 検証関数 (is-valid-string?) をもう一度見てみましょう。
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; 目的: メッセージが空でない文字列であることを検証する
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; メッセージが空でない文字列かどうかを確認する
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
 戻り値をより明示的にすることで、これを改善できます。たとえば、メッセージが有効な場合は `#t` (true) を返すことができます。
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; 目的: メッセージが有効な出力先に送られることを検証する
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 出力が想定される表示先のいずれかかどうかを確認する
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
 戻り値を使用してロジック フローを制御する簡単な例を次に示します。
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 目的: メッセージを適切な出力先に送る
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
 ### 戻り値を使用してリファクタリングされました
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 目的: メッセージをステータスバーに送り、成功時は #t を返す
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 目的: メッセージをダイアログボックスに送り、成功時は #t を返す
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 目的: メッセージを Error Console に送り、成功時は #t を返す
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 目的: メッセージを terminal に送り、成功時は #t を返す
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 目的: メッセージを適切な出力先に送り、成功時は #t を返す
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 目的: メッセージが空でない文字列であることを検証し、有効なら #t を返す
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Scheme では、関数の戻り値は、関数が評価する最後の式によ�
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 目的: 出力が有効な宛先であることを検証し、有効なら #t を返す
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

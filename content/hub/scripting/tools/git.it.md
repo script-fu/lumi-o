@@ -1,6 +1,9 @@
 ---
-title: "Va bene"
+title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Utilizza Git per tenere traccia delle modifiche ai plug-in, ripristinare gli errori e condividere il codice su più computer.
 
@@ -62,7 +65,7 @@ Se non disponi già di un account, visita [GitHub](https://github.com/) per regi
 
 1. **Accedi a GitHub**: vai a [GitHub](https://github.com/) e accedi al tuo account.
 2. **Crea un nuovo repository**:
-   - Fai clic sull'icona **++** nell'angolo in alto a destra e seleziona **Nuovo repository**.
+   - Fai clic sull'icona *****+** nell'angolo in alto a destra e seleziona **Nuovo repository**.
    - Immettere il nome del repository (ad esempio, `your-repository`).
    - Aggiungi una descrizione se lo desideri.
    - Scegli la visibilità **Pubblica** o **Privata**.
@@ -133,7 +136,7 @@ Git e piattaforme come GitHub e GitLab sono strumenti potenti e, sebbene possano
 
 Ecco alcuni termini comuni che incontrerai quando lavori con Git e GitHub:- **Commit**: un'istantanea delle modifiche apportate al repository. Ogni commit include un messaggio che descrive cosa è stato modificato e crea un record storico a cui puoi fare riferimento o a cui puoi tornare in seguito.
 - **Repository (Repo)**: una raccolta di file e la relativa cronologia tracciata da Git. I repository possono esistere localmente sul tuo computer o in remoto su piattaforme come GitHub. Ogni progetto viene in genere archiviato nel proprio repository.
-- **Remoto**: un repository remoto è una versione del tuo progetto ospitata su una piattaforma come GitHub. La versione locale del tuo progetto sul tuo computer è collegata a questo telecomando in modo che tu possa caricare (push) e scaricare (pull) le modifiche.
+- **Remoto**: un repository remoto è una versione del tuo progetto ospitata su una piattaforma come GitHub. La versione locale del tuo progetto sul tuo computer è collegata a questo remote in modo che tu possa caricare (push) e scaricare (pull) le modifiche.
 - **Staging**: il processo di preparazione dei file per un commit. Quando metti in stage un file, stai dicendo a Git che vuoi includerlo nel prossimo commit. La gestione temporanea ti consente di scegliere quali modifiche includere in un commit.
 - **Push**: l'atto di inviare le modifiche apportate dal repository locale a un repository remoto (ad esempio GitHub), in modo che altri possano accedere alla versione aggiornata del tuo codice.
 - **Pull**: l'atto di recuperare le modifiche da un repository remoto per aggiornare la copia locale. Puoi apportare modifiche quando desideri sincronizzare il tuo repository locale con la versione più recente dal remoto.

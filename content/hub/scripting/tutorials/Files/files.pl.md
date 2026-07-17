@@ -2,6 +2,9 @@
 title: "Akta"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Praca z plikami i katalogami jest niezbędna do opracowania schematu. Niezależnie od tego, czy zapisujesz dane wyjściowe, ładujesz zasoby, czy organizujesz strukturę projektu, zrozumienie operacji na plikach sprawi, że Twoje skrypty będą bardziej niezawodne i przyjazne dla użytkownika.
 
@@ -58,7 +61,7 @@ Możemy zapytać użytkownika o lokalizację katalogu w oknie dialogowym Schemat
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Schemat udostępnia polecenie ```dir-make``` umożliwiające utworzenie katalogu
 Zwykle musimy utworzyć wiele katalogów dla praktycznej ścieżki. Możemy użyć opakowania dla ```dir-make```, aby nam w tym pomóc.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Cel: Opakowanie dla (dir-make), które tworzy podaną ścieżkę z poziomu platformy
+;;          podanej ścieżki. Zawsze emituje separatory w stylu Linux dla dir-make.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Katalog główny
+    ;; Utwórz pozostałe katalogi krok po kroku
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Buduje ścieżkę
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

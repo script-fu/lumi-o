@@ -2,9 +2,13 @@
 title: "Cor"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ea7691ca3a2dd805ced5c77fe914370d9e7b58dd3d898f04a937d39d1b8d3032
 ---
-A área de trabalho Coloração foi criada para decisões deliberadas de cores, em vez de ajustes de imagem de uso geral. É moldado pela prática da mídia tradicional, com ênfase nos pigmentos, na estrutura da paleta e no comportamento de mistura que permanece compreensível enquanto a pintura se torna mais complexa.
 
-O objetivo não é sobrecarregar o pintor com todos os controles de cores possíveis de uma só vez. O espaço de trabalho pode manter o foco nas paletas, ferramentas e recursos necessários para a etapa de coloração, para que as decisões sobre harmonia, valor e material sejam mais claras e fáceis de gerenciar.
+O espaço de trabalho Coloração foi feito para decisões deliberadas de cor, não para ajuste geral de imagem. É moldado pela prática de mídia tradicional, com ênfase em pigmentos, estrutura de paleta e comportamento de mistura que permanece compreensível enquanto a pintura ganha complexidade.
 
-Isso torna mais fácil construir paletas controladas, trabalhar com intenção e manter as relações de cores legíveis em toda a imagem. Como parte dos três principais espaços de fluxo de trabalho do Lumi, o Coloring pretende dar à pintura seu próprio ambiente dedicado, em vez de tratá-la como algo anexado ao desenho ou ao trabalho de linha.
+A ideia não é sobrecarregar o pintor com todos os controles de cor de uma vez. O espaço de trabalho pode permanecer focado nas paletas, ferramentas e recursos necessários na fase de coloração, para que decisões sobre harmonia, valor e sensação de material fiquem mais claras e fáceis de gerenciar.
+
+Isso facilita construir paletas controladas, trabalhar com intenção e manter relações de cor legíveis em toda a imagem. Como um dos três espaços centrais de fluxo do Lumi, Coloração dá à pintura um ambiente dedicado — em vez de tratá-la como algo acoplado ao desenho ou ao trabalho de linha.

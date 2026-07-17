@@ -2,6 +2,9 @@
 title: "重构"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 一旦我们的函数可以工作，我们就可以退一步思考如何最好地构建我们的代码。目标是使我们的插件尽可能清晰、易于理解和可维护。这种在不改变现有代码行为的情况下改进和细化现有代码结构的过程称为重构。
 
@@ -9,15 +12,15 @@ weight: 2
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; 设置消息处理程序，将消息输出到 GUI 对话框
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; 设置消息处理程序，将消息输出到 Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; 将消息发送到 terminal，即启动 Lumi 的操作系统窗口
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; 设置消息处理程序，将消息输出到 GUI 对话框
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; 设置消息处理程序，将消息输出到 Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; 将消息发送到 terminal，即启动 Lumi 的操作系统窗口
     (display message)))
 ```
 
@@ -65,14 +68,14 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
 
 ### 提取函数
 
-在函数式编程中，重构代码以将可重用逻辑提取到单独的函数中是一种常见的做法。通过这样做，**主函数**变得更加简单，并且更加专注于其高级目标，而**提取函数**显得更加复杂，因为它处理详细的逻辑。这是有意为之的，并且符合函数式编程的核心原则，例如模块化、关注点分离和可读性。这是重构的
+在函数式编程中，重构代码以将可重用逻辑提取到单独的函数中是一种常见的做法。通过这样做，**主函数**变得更加简单，更加专注于其高级目标，而**提取函数**显得更加复杂，因为它处理详细的逻辑。这是有意为之的，并且符合函数式编程的核心原则，例如模块化、关注点分离和可读性。这是重构的
 世界你好！提取后。
 
 提取逻辑：
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; 主函数
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ function-name 是函数的名称，parameter 是函数接受的输入内容。�
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; 处理向各种目标输出消息的函数
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; 发送到 Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; 将处理程序设置为 Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; 发送到 GUI 对话框
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; 将处理程序设置为 GUI 对话框
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; 发送到终端窗口
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; terminal 输出通过 display 处理
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; 将默认消息处理程序恢复为 Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

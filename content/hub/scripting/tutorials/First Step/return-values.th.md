@@ -2,6 +2,9 @@
 title: "ส่งกลับค่า"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 ค่าที่ส่งกลับมีความสำคัญเนื่องจากช่วยให้คุณควบคุมโฟลว์ได้โดยไม่ต้องมีสถานะเพิ่มเติม ใน Scheme นิพจน์ที่ได้รับการประเมินล่าสุดจะกลายเป็นค่าที่ส่งคืน
 
@@ -14,9 +17,9 @@ weight: 8
 เรามาทบทวนฟังก์ชั่นการตรวจสอบอีกครั้ง (is-valid-string?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ weight: 8
 เราสามารถปรับปรุงสิ่งนี้ได้โดยทำให้ค่าที่ส่งคืนชัดเจนยิ่งขึ้น ตัวอย่างเช่น เราอาจส่งคืน `#t` (true) หากข้อความถูกต้อง:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความถูกส่งไปยังเอาต์พุตที่ถูกต้อง
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; ตรวจสอบว่าเอาต์พุตเป็นปลายทางการแสดงผลที่คาดไว้หรือไม่
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ weight: 8
 ต่อไปนี้เป็นตัวอย่างง่ายๆ ของการใช้ค่าตอบแทนเพื่อควบคุมการไหลของตรรกะ:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; วัตถุประสงค์: ส่งข้อความไปยังปลายทางเอาต์พุตที่เหมาะสม
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ weight: 8
 ### ปรับโครงสร้างใหม่ด้วยค่าส่งคืน
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังแถบสถานะ คืนค่า #t เมื่อสำเร็จ
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังกล่องโต้ตอบ คืนค่า #t เมื่อสำเร็จ
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยัง Error Console คืนค่า #t เมื่อสำเร็จ
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยัง terminal คืนค่า #t เมื่อสำเร็จ
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; วัตถุประสงค์: ส่งข้อความไปยังเอาต์พุตที่เหมาะสม คืนค่า #t เมื่อสำเร็จ
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ weight: 8
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง คืนค่า #t หากถูกต้อง
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ weight: 8
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; วัตถุประสงค์: ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่ถูกต้อง คืนค่า #t หากถูกต้อง
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

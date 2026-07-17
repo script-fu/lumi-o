@@ -1,8 +1,11 @@
 ---
-title: "Gemaakt in Lumi-o"
+title: "Made in Lumi-o"
 type: docs
 layout: made-in-lumio
+url: "hub/made-in-lumio"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e16db685765b758a8f81796376db712aee9dad32c24d9f65e5c7fa88336eb7a7
 ---
-Lumi is ontwikkeld door dagelijks gebruik, dus de hier getoonde schilderijen, studies en productiestukken zijn geen marketingmodellen. Het zijn voorbeelden van het soort afbeeldingen waarvoor de software wordt ontworpen. Deze sectie is nog steeds schaars en evolueert, maar in de loop van de tijd zal deze samen met Lumi zelf groeien naarmate de applicatie een stabielere vorm krijgt.
 
-Onofficiële fanrecreatie gemaakt voor studie-, onderzoeks- en softwareontwikkelingsdoeleinden. Origineel kunstwerk © Bill Watterson. Er wordt geen eigendomsaanspraak gemaakt. Niet voor verkoop of commercieel gebruik.
+Deze galerij bevat zowel originele werken als onofficiële fanart. Tooltips geven aan welke afbeeldingen originelen zijn en welke studies. Fanart wordt niet te koop aangeboden en is niet bedoeld voor commercieel gebruik.

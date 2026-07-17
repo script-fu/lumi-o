@@ -2,6 +2,9 @@
 title: "Валидация"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 При создании надежных плагинов важно убедиться, что наши функции корректно обрабатывают ошибки и работают должным образом, даже в случаях неправильного использования или неожиданных входных данных. Проверка помогает защитить целостность функции и предотвратить сбои или непреднамеренное поведение.
 
@@ -15,25 +18,25 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; Проверяет аргумент вывода
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Отправить в Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; Отправить в диалоговое окно GUI
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; Отправить в окно терминала
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; Проверить, пусто ли сообщение
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,39 +71,39 @@ weight: 4
 ### Пример комбинированной проверки
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Функция для вывода сообщений в различные места назначения
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; Проверить аргументы сообщения и вывода
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Отправить в Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; Отправить в диалоговое окно GUI
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; Отправить в окно терминала
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 ```
 
 В этой версии:
-- Функция сначала проверяет, является ли `message` пустым или недействительным. Если сообщение действительно, происходит переход к проверке, является ли `output` одним из принятых значений (`gui`, `error-console` или `terminal`).
+- Функция сначала проверяет, является ли `message` пустым или недействительным. Если сообщение действительно, происходит проверка, является ли `output` одним из принятых значений (`gui`, `error-console` или `terminal`).
 - Если обе проверки пройдены, сообщение отправляется на соответствующий выход. В противном случае выдается сообщение об ошибке с четким объяснением.
 - Выполняется дополнительная проверка, чтобы убедиться, что сообщение также является строкой.
 
-Эта комбинированная функция проверки обеспечивает чистоту кода и гарантирует, что оба входных данных проверяются до того, как будут предприняты какие-либо действия, что делает функцию более надежной. Обратите внимание: мы также создаем систему обмена сообщениями отладки. Когда
+Эта комбинированная функция проверки обеспечивает чистоту кода и гарантирует, что оба входных данных проверяются перед выполнением каких-либо действий, что делает функцию более надежной. Обратите внимание: мы также создаем систему обмена сообщениями отладки. Когда
 код терпит неудачу, мы получаем причину, причину, которую мы написали сами.
 
 ```

@@ -1,37 +1,42 @@
 ---
 title: "Mistura espectral de cores"
 type: docs
+url: "hub/features/spectral-color"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: eb96e55a075312549727618ea851ee4ed38372c4e144cb2f24ef029b989c0f86
 ---
-O sistema de paleta de Lumi usa mistura espectral de cores para fazer com que a seleção digital de cores se comporte mais como uma mistura de tinta física. Em vez de tratar as cores como simples valores de tela, Lumi modela como os pigmentos absorvem e refletem a luz enquanto as cores da paleta são geradas e misturadas.
 
-O resultado é um fluxo de trabalho de cores onde as misturas parecem mais familiares aos pintores: amarelos e azuis podem evoluir para verdes, cores saturadas podem se transformar em neutros críveis e paletas limitadas desenvolvem uma harmonia reconhecível.
+O sistema de paletas do Lumi usa mistura espectral de cores para que a seleção digital se comporte mais como a mistura de tinta física. Em vez de tratar cores como simples valores de tela, o Lumi modela como os pigmentos absorvem e refletem luz enquanto as cores da paleta são geradas e misturadas.
 
-## Comportamento semelhante ao pigmento
+O resultado é um fluxo de cor em que as misturas parecem mais familiares aos pintores: amarelos e azuis podem ir em direção a verdes, cores saturadas podem assentar em neutros críveis, e paletas limitadas desenvolvem harmonia reconhecível.
 
-A mistura digital tradicional de cores geralmente passa por pontos médios matemáticos que não se parecem com tinta. A mistura espectral dá ao Lumi uma base mais rica para a construção da paleta, permitindo que as cores interajam de acordo com as tendências do pigmento.
+## Comportamento semelhante a pigmento
 
-Isso torna a exploração da paleta mais intuitiva para artistas que pensam em termos de pintura, não apenas em valores de cores da tela. Uma mistura pode escurecer, silenciar, aquecer, esfriar ou mudar de matiz de maneiras que pareçam conectadas às cores de origem.
+A mistura digital tradicional costuma passar por pontos médios matemáticos que não lembram tinta. A mistura espectral dá ao Lumi uma base mais rica para construir paletas, permitindo que as cores interajam conforme tendências pigmentares.
 
-## Paletas com personagem
+A exploração da paleta fica mais intuitiva para artistas que pensam em termos de tinta, não só de valores de tela. Uma mistura pode escurecer, silenciar, aquecer, esfriar ou mudar de matiz de modos ligados às cores de origem.
 
-Como o comportamento espectral faz parte do sistema de paletas, cada paleta desenvolve sua própria personalidade. Uma paleta pequena e limitada pode produzir uma unidade forte e transições suaves, enquanto uma paleta mais ampla pode abrir uma gama mais ampla de tons limpos e neutros controlados.
+## Paletas com caráter
 
-A identidade do pigmento é importante. A mesma cor visível pode se misturar de maneira diferente dependendo do tipo de pigmento que representa, o que ajuda Lumi a capturar algumas das diferenças práticas que os pintores esperam dos materiais reais.
+Como o comportamento espectral faz parte do sistema de paletas, cada paleta desenvolve personalidade própria. Uma paleta pequena e limitada pode produzir unidade forte e transições suaves; uma mais ampla abre mais matizes limpos e neutros controlados.
 
-## Misturando antes de pintar
+A identidade do pigmento importa. A mesma cor visível pode misturar-se de forma diferente conforme o tipo de pigmento que representa — o Lumi captura parte das diferenças práticas que pintores esperam de materiais reais.
 
-A cor espectral no Lumi é usada durante a construção de paletas, geração de cores relacionadas e mistura de novas entradas de paleta. Depois que uma cor é aplicada à tela, ela se torna um dado normal de cor da imagem para pintura e composição.
+## Misturar antes de pintar
 
-Isso mantém o processo de pintura prático, ao mesmo tempo que melhora a experiência do artista na escolha e construção de cores. O modelo espectral molda a paleta; a tela permanece eficiente e compatível com fluxos de trabalho de imagem padrão.
+A cor espectral no Lumi é usada ao construir paletas, gerar cores relacionadas e misturar novas entradas de paleta. Depois que uma cor é aplicada à tela, torna-se dado normal de cor da imagem para pintura e composição.
 
-## Uma ponte entre cores digitais e físicas
+O fluxo de pintura permanece prático enquanto melhora a experiência de escolher e construir cor. O modelo espectral molda a paleta; a tela continua eficiente e compatível com workflows de imagem padrão.
 
-O objetivo da mistura espectral não é imitar todas as propriedades físicas da tinta, mas trazer a parte mais útil do comportamento do pigmento para a pintura digital: relações de mistura críveis.
+## Ponte entre cor digital e física
 
-Para os artistas, isso significa que uma paleta pode ser explorada com mais confiança. As cores produzidas a partir do mesmo conjunto de pigmentos tendem a pertencer umas às outras e as misturas salvas mantêm um sentido de origem dentro da paleta, em vez de parecerem valores de amostra não relacionados.
+O objetivo da mistura espectral não é imitar toda propriedade física da tinta, mas trazer a parte mais útil do comportamento pigmentar para a pintura digital: relações de mistura críveis.
+
+Para artistas, isso significa explorar a paleta com mais confiança. Cores do mesmo conjunto de pigmentos tendem a pertencer umas às outras, e misturas salvas mantêm senso de origem dentro da paleta em vez de parecer amostras soltas.
 
 ## Cor como sistema
 
-A mistura espectral conecta o Palette Editor, o Palette Map e o Palette Mixer em um sistema de cores. Os pigmentos definem o ponto de partida, o mapa mostra o que a paleta pode alcançar e o mixer permite que os artistas procurem cores úteis nesse espaço.
+A mistura espectral conecta o Palette Editor, o Palette Map e o Palette Mixer em um sistema de cor. Pigmentos definem o ponto de partida, o mapa mostra o que a paleta alcança, e o mixer permite buscar cores úteis nesse espaço.
 
-Isso dá à Lumi um fluxo de trabalho de cores centrado nas decisões de pintura: escolha os pigmentos, explore suas misturas, mantenha as cores que importam e pinte com uma paleta que se comporte como um todo coerente.
+O Lumi ganha um fluxo de cor centrado em decisões de pintura: escolha pigmentos, explore misturas, guarde o que importa e pinte com uma paleta que se comporta como um todo coerente.

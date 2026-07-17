@@ -1,6 +1,10 @@
 ---
-title: "Palettmixer"
+title: "Palette Mixer"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/palette-mixer"
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
 Palettmixern är Lumis utrymme för att hämta nya färger från den aktiva paletten. Den behandlar blandning som en målarprocess snarare än ett enkelt digitalt medelvärde, så färger kan skifta, mjukna, mörkna och harmonisera på sätt som känns närmare fysiska pigment.
 

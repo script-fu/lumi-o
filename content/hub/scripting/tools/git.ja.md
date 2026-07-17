@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Git を使用して、プラグインへの変更を追跡し、間違いをロールバックし、マシン間でコードを共有します。
 
@@ -62,7 +65,7 @@ sudo apt install git
 
 1. **GitHub にログイン**: [GitHub](https://github.com/) にアクセスし、アカウントにログインします。
 2. **新しいリポジトリを作成**:
-   - 右上隅の **+** アイコンをクリックし、**新しいリポジトリ** を選択します。
+   - 右上隅の ***+** アイコンをクリックし、**新しいリポジトリ** を選択します。
    - リポジトリ名を入力します (例: `your-repository`)。
    - 必要に応じて説明を追加します。
    - **パブリック**または**プライベート**の公開設定を選択します。

@@ -2,6 +2,9 @@
 title: "Refactorisation"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Une fois qu’une fonction fonctionne, nous pouvons prendre du recul et réfléchir à la meilleure façon de structurer notre code. L'objectif est de rendre notre plug-in aussi clair, compréhensible et maintenable que possible. Ce processus d'amélioration et d'affinement de la structure du code existant sans modifier son comportement est appelé refactoring.
 
@@ -9,15 +12,15 @@ Voici à nouveau la fonction initiale :
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Définir le gestionnaire de messages pour envoyer le message vers une boîte de dialogue GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Définir le gestionnaire de messages pour envoyer le message vers l'Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Envoyer le message vers le terminal, la fenêtre OS qui a lancé Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Introduction d'une variable appelée "message":
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Définir le gestionnaire de messages pour envoyer le message vers une boîte de dialogue GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Définir le gestionnaire de messages pour envoyer le message vers l'Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Envoyer le message vers le terminal, la fenêtre OS qui a lancé Lumi
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ Bonjour tout le monde ! après extraction.
 
 Extraire la logique :
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Fonction principale
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Extraire la logique :
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Fonction pour gérer la sortie de messages vers diverses destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Envoyer vers l'Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Définir le gestionnaire sur Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Envoyer vers la boîte de dialogue GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Définir le gestionnaire sur la boîte de dialogue GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Envoyer vers la fenêtre de terminal
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; La sortie du terminal est gérée avec display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Restaurer le gestionnaire de messages par défaut vers l'Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

@@ -2,6 +2,9 @@
 title: "Omarbetning"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Det här steget fixar ett subtilt beteende i meddelandeexemplet.
 
@@ -13,7 +16,7 @@ Uppdatera meddelandets innehåll och destinationer så att exemplet beter sig ko
 
 Ta bort escape-tecknet och utöka funktionerna:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Omarbeta biblioteket:
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Lägg till radbrytning för att tvinga fram ett meddelanderuta
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Omarbeta biblioteket:
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Syfte: Skickar ett meddelande till rätt utdatamål
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Omarbeta biblioteket:
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Syfte: Validerar att meddelandet är en icke-tom sträng
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Kontrollera om meddelandet är en icke-tom sträng
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Syfte: Validerar att meddelandet skickas till en giltig utdata
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Kontrollera om utdata är en av de förväntade visningsdestinationerna
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

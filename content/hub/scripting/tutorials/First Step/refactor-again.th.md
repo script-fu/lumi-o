@@ -2,6 +2,9 @@
 title: "รีแฟคเตอร์อีกครั้ง"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 เมื่อไลบรารีตัวช่วยเติบโตขึ้น การดูอย่างรวดเร็วจะติดตามได้ยากขึ้น ปรับโครงสร้างใหม่อีกครั้งเพื่อให้แต่ละฟังก์ชันมีขนาดเล็กและมีวัตถุประสงค์เดียว
 
@@ -15,11 +18,11 @@ weight: 5
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่คาดไว้หรือไม่
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ weight: 5
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; เรียกฟังก์ชันตรวจสอบก่อนดำเนินการต่อ
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; ส่งไปยัง Message console
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; ส่งไปยังกล่องโต้ตอบ GUI
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ส่งไปยังหน้าต่างเทอร์มินัล
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ weight: 5
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; ส่งไปยังเอาต์พุตที่เหมาะสม
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ weight: 5
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ weight: 5
 เวอร์ชันไลบรารีที่ปรับโครงสร้างใหม่:
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; วัตถุประสงค์: ส่งข้อความไปยังกล่องโต้ตอบ GUI
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; วัตถุประสงค์: ส่งข้อความไปยัง Message console
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; วัตถุประสงค์: ส่งข้อความไปยังหน้าต่าง terminal
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; ตรวจสอบข้อความก่อนดำเนินการต่อ
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; วัตถุประสงค์: ส่งข้อความไปยังปลายทางเอาต์พุตที่เหมาะสม
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; วัตถุประสงค์: ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง และเอาต์พุตถูกต้อง
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; ตรวจสอบว่าข้อความเป็นสตริงที่ไม่ว่าง
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; ตรวจสอบว่าเอาต์พุตเป็นปลายทางที่คาดไว้หรือไม่
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

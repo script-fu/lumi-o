@@ -1,55 +1,60 @@
 ---
-title: "CI do GitLab"
+title: "GitLab CI"
 type: docs
+url: "hub/technical-guides/GitLab-CI"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9917cebc417adeeae24d91b05b919b679a397d5db652cf4442d4330c0f8eeea5
 ---
-Integração Contínua (CI) é uma forma de testar, construir e validar automaticamente seu código sempre que alterações são feitas.
 
-**GitLab** fornece recursos integrados de CI/CD por meio de seu arquivo `.gitlab-ci.yml`. Este arquivo, colocado na raiz do seu repositório, informa ao GitLab como construir e testar seu projeto. Ele define estágios e scripts que são executados em um ambiente limpo sempre que alterações são enviadas.
+Integração Contínua (CI) é uma forma de testar, compilar e validar automaticamente seu código sempre que alterações são feitas.
 
-Este documento descreve como funciona o pipeline GitLab CI/CD da Lumi, incluindo a função do arquivo `.gitlab-ci.yml`, scripts de shell e ferramentas externas como Meson e Ninja.
+**GitLab** oferece recursos integrados de CI/CD por meio do arquivo `.gitlab-ci.yml`. Esse arquivo, colocado na raiz do repositório, informa ao GitLab como compilar e testar seu projeto. Ele define stages e scripts executados em um ambiente limpo sempre que alterações são enviadas.
 
-Para documentação técnica detalhada do processo de construção do Lumi CI, consulte [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) no repositório.
+Este documento descreve como funciona o pipeline CI/CD do GitLab no Lumi, incluindo o papel do arquivo `.gitlab-ci.yml`, scripts shell e ferramentas externas como Meson e Ninja.
 
-## Noções básicas de CI/CD do GitLab
+Para documentação técnica detalhada do processo de build CI do Lumi, consulte [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md) no repositório.
 
-O CI é controlado por um arquivo denominado `.gitlab-ci.yml`. Este arquivo define:
+## Noções básicas de GitLab CI/CD
 
-- **Estágios**: grupos ordenados de trabalhos (por exemplo, `build-this`, `build-that`, `package-up`)
-- **Trabalhos**: tarefas individuais a serem executadas em cada estágio
-- **Scripts**: comandos Shell executados para cada trabalho
-- **Runners**: computadores que o GitLab usa para executar trabalhos definidos no pipeline.
+O CI é controlado por um arquivo chamado `.gitlab-ci.yml`. Esse arquivo define:
 
-No Lumi, as etapas do pipeline são:
+- **Stages**: grupos ordenados de jobs (por exemplo, `build-this`, `build-that`, `package-up`)
+- **Jobs**: tarefas individuais executadas em cada stage
+- **Scripts**: comandos shell executados para cada job
+- **Runners**: computadores que o GitLab usa para executar jobs definidos no pipeline
+
+No Lumi, os stages do pipeline são:
 
 - `dependencies`
--`build lumi`
+- `build lumi`
 - `appimage`
 
-## Construções baseadas em contêiner
+## Builds baseados em contêiner
 
-O pipeline Lumi usa conteinerização para construções consistentes:
+O pipeline do Lumi usa conteinerização para builds consistentes:
 
-1. **Criando o Build Container**: O primeiro estágio usa Buildah para criar uma imagem Docker com todas as dependências
-2. **Usando o contêiner**: os estágios subsequentes são executados dentro deste contêiner, garantindo um ambiente consistente
-3. **Builds reproduzíveis**: o isolamento do contêiner garante os mesmos resultados em diferentes executores
+1. **Criação do contêiner de build**: o primeiro stage usa Buildah para criar uma imagem Docker com todas as dependências
+2. **Uso do contêiner**: stages subsequentes rodam dentro desse contêiner, garantindo um ambiente consistente
+3. **Builds reproduzíveis**: o isolamento do contêiner garante os mesmos resultados em diferentes runners
 
-Essa abordagem garante que os builds funcionem da mesma maneira em qualquer executor do GitLab e fornece um ambiente controlado para processos de build complexos.
+Essa abordagem garante que os builds funcionem da mesma forma em qualquer runner do GitLab e oferece um ambiente controlado para processos de build complexos.
 
-### Fontes de Dependência Integradas
+### Fontes de dependências integradas
 
-A imagem de dependência de CI do Lumi constrói a pilha bifurcada a partir de **fontes integradas no repositório** (não de clones externos):
+A imagem de dependências CI do Lumi compila a stack forkada a partir de **fontes integradas no repositório** (sem clones externos):
 
 - `lumi-babl/` (BABL)
 - `lumi-gegl/` (GEGL)
 - `lumi-gtk3/` (GTK3)
 
-Esses diretórios são copiados no contexto de construção do contêiner e compilados no prefixo de dependência (normalmente `/opt/lumi-deps`). Isso mantém o CI reproduzível e garante que a construção do AppImage use a mesma fonte de verdade que o desenvolvimento local.
+Esses diretórios são copiados para o contexto de build do contêiner e compilados no prefixo de dependências (normalmente `/opt/lumi-deps`). Isso mantém o CI reproduzível e garante que o build do AppImage use a mesma fonte da verdade do desenvolvimento local.
 
-## Função dos scripts Shell
+## Papel dos scripts shell
 
-Jobs em `.gitlab-ci.yml` normalmente invocam comandos shell diretamente. Operações complexas são frequentemente movidas para scripts separados armazenados no repositório.
+Jobs em `.gitlab-ci.yml` normalmente invocam comandos shell diretamente. Operações complexas costumam ser movidas para scripts separados armazenados no repositório.
 
-O Lumi CI usa scripts de shell modulares para organizar a lógica de construção:
+O CI do Lumi usa scripts shell modulares para organizar a lógica de build:
 
 **Exemplo de invocação de script:**
 ```yaml
@@ -57,17 +62,17 @@ script:
   - bash build/linux/appimage/lumi-goappimage.sh 2>&1 | tee appimage_creation.log
 ```
 
-**Benefícios desta abordagem:**
-- **Clean YAML**: Mantém o arquivo `.gitlab-ci.yml` focado na estrutura do trabalho
-- **Manutenção**: lógica complexa é mais fácil de depurar e modificar em scripts shell
-- **Reutilização**: os scripts podem ser usados em diferentes contextos ou ambientes
-- **Modularidade**: Diferentes aspectos da construção podem ser separados em scripts específicos
+**Benefícios dessa abordagem:**
+- **YAML limpo**: mantém o arquivo `.gitlab-ci.yml` focado na estrutura dos jobs
+- **Manutenibilidade**: lógica complexa é mais fácil de depurar e modificar em scripts shell
+- **Reutilização**: scripts podem ser usados em diferentes contextos ou ambientes
+- **Modularidade**: diferentes aspectos do build podem ser separados em scripts focados
 
-Isso mantém a configuração do CI limpa enquanto permite processos de construção sofisticados.
+Isso mantém a configuração CI limpa enquanto permite processos de build sofisticados.
 
-## Integração com sistemas de construção
+## Integração com sistemas de build
 
-Lumi usa **Meson** e **Ninja** para preparar e depois construir o código.
+O Lumi usa **Meson** e **Ninja** para preparar e depois compilar o código.
 
 Por exemplo:
 
@@ -80,18 +85,20 @@ script:
 
 Aqui:
 
-- `meson setup` prepara o diretório de construção e gera `build.ninja`
-- `ninja` executa os comandos de construção conforme definido
+- `meson setup` prepara o diretório de build e gera `build.ninja`
+- `ninja` executa os comandos de build conforme definido
 
-## Estrutura do sistema de construção Meson
+## Estrutura do sistema de build Meson
 
-O sistema de compilação **Meson** usa um arquivo raiz `meson.build` colocado no diretório raiz do projeto. Este arquivo define a configuração de compilação de nível superior e o ponto de entrada para o processo de compilação.- A raiz `meson.build` normalmente está localizada no mesmo diretório que `.gitlab-ci.yml`
-- A partir daí, ele **cascata recursivamente** em subdiretórios, cada um dos quais pode ter seu próprio arquivo `meson.build`
-- Esses arquivos de subdiretórios definem destinos, fontes, dependências e instruções de construção relevantes para esse diretório
+O sistema de build **Meson** usa um arquivo raiz `meson.build` colocado no diretório raiz do projeto. Esse arquivo define a configuração de build de nível superior e o ponto de entrada do processo de build.
+
+- O `meson.build` raiz normalmente fica no mesmo diretório que `.gitlab-ci.yml`
+- A partir daí, ele **cascateia recursivamente** para subdiretórios, cada um podendo ter seu próprio arquivo `meson.build`
+- Esses arquivos de subdiretório definem targets, fontes, dependências e instruções de build relevantes para aquele diretório
 
 ## Variáveis de ambiente
 
-As principais variáveis no pipeline do Lumi incluem:
+Variáveis-chave no pipeline do Lumi incluem:
 
 ```yaml
 variables:
@@ -100,7 +107,7 @@ variables:
   CI_RUNNER_TAG: "x86_64"            # Architecture specification
 ```
 
-**Variáveis específicas do trabalho:**
+**Variáveis específicas do job:**
 ```yaml
 build-lumi:
   variables:
@@ -111,9 +118,9 @@ build-lumi:
     MESON_OPTIONS: "-Dpkgconfig.relocatable=true -Drelocatable-bundle=yes"  # Build configuration
 ```
 
-Essas variáveis controlam o comportamento de construção e garantem consistência entre diferentes estágios e executores.
+Essas variáveis controlam o comportamento do build e garantem consistência entre diferentes stages e runners.
 
-## Exemplo de estrutura
+## Estrutura de exemplo
 
 ```
 project-root/
@@ -127,15 +134,15 @@ project-root/
 │   └── icons/
 ```
 
-Nesta estrutura:
+Nessa estrutura:
 
-- O arquivo raiz `meson.build` configura o ambiente geral de construção
-- Os arquivos do subdiretório `meson.build` lidam com detalhes de compilação para componentes ou módulos específicos
-- Este layout hierárquico mantém a lógica de construção modular e sustentável
+- O arquivo raiz `meson.build` configura o ambiente geral de build
+- Arquivos `meson.build` em subdiretórios tratam dos detalhes de compilação de componentes ou módulos específicos
+- Esse layout hierárquico mantém a lógica de build modular e fácil de manter
 
-## Artefatos entre estágios
+## Artifacts entre stages
 
-Artefatos são arquivos gerados por trabalhos necessários nas etapas subsequentes:
+Artifacts são arquivos gerados por jobs que são necessários em stages subsequentes:
 
 ```yaml
 build-lumi:
@@ -146,15 +153,15 @@ build-lumi:
       - _build-${CI_RUNNER_TAG}/meson-logs/meson-log.txt  # Build logs
 ```
 
-## Estágios e dependências do pipeline
+## Stages do pipeline e dependências
 
-O pipeline Lumi consiste em três etapas principais:
+O pipeline do Lumi consiste em três stages principais:
 
-1. **Dependências**: Cria um ambiente de construção em contêiner com todas as ferramentas e bibliotecas necessárias
-2. **Build Lumi**: Compila Lumi usando Meson e Ninja no ambiente preparado
-3. **AppImage**: empacota o aplicativo criado em um formato AppImage distribuível
+1. **Dependencies**: cria um ambiente de build conteinerizado com todas as ferramentas e bibliotecas necessárias
+2. **Build Lumi**: compila o Lumi usando Meson e Ninja no ambiente preparado
+3. **AppImage**: empacota a aplicação compilada em um formato AppImage distribuível
 
-**Dependências do Estágio:**
+**Dependências entre stages:**
 ```yaml
 build-lumi:
   needs: [deps-debian]  # Waits for dependency container
@@ -163,28 +170,28 @@ lumi-appimage:
   needs: [build-lumi] # Waits for application build
 ```
 
-Cada estágio é executado somente depois que suas dependências são concluídas com êxito, garantindo a ordem de construção adequada e a disponibilidade do artefato.
+Cada stage só é executado depois que suas dependências são concluídas com sucesso, garantindo a ordem correta de build e a disponibilidade de artifacts.
 
-## Nomes de empregos atuais
+## Nomes de jobs atuais
 
-O Lumi `.gitlab-ci.yml` atualmente define estes nomes de trabalho:
+O `.gitlab-ci.yml` do Lumi atualmente define estes nomes de jobs:
 
--`deps-debian`
+- `deps-debian`
 - `build-lumi`
 - `lumi-appimage`
 
 ## Resumo
 
-- `.gitlab-ci.yml` define a estrutura e lógica do pipeline
-- Os trabalhos contêm comandos shell ou scripts externos
-- Ferramentas como Meson e Ninja são usadas dentro de jobs como parte do processo de construção
+- `.gitlab-ci.yml` define a estrutura e a lógica do pipeline
+- Jobs contêm comandos shell ou scripts externos
+- Ferramentas como Meson e Ninja são usadas dentro de jobs como parte do processo de build
 
-Lumi usa GitLab CI para construir automaticamente seu AppImage para plataformas baseadas em Debian. O pipeline cria dependências, compila o Lumi e, em seguida, empacota um AppImage.
+O Lumi usa GitLab CI para compilar automaticamente seu AppImage para plataformas baseadas em Debian. O pipeline compila dependências, compila o Lumi e depois empacota um AppImage.
 
-Para detalhes no nível da fonte, use:
+Para detalhes no nível do código-fonte, use:
 
 - `.gitlab-ci.yml` na raiz do repositório Lumi
 - `build/linux/appimage/lumi-goappimage.sh`
--`build/linux/appimage/README-CI.md`
+- `build/linux/appimage/README-CI.md`
 
-Para obter detalhes técnicos abrangentes sobre o processo de construção do Lumi CI, incluindo configuração do ambiente, arquitetura de script e solução de problemas, consulte [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).
+Para detalhes técnicos completos sobre o processo de build CI do Lumi, incluindo configuração de ambiente, arquitetura de scripts e solução de problemas, consulte [README-CI.md](https://gitlab.gnome.org/pixelmixer/lumi/-/blob/main/build/linux/appimage/README-CI.md).

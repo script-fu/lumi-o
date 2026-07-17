@@ -2,79 +2,82 @@
 title: "Il plugin filtro"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
-We used a _procedure_ plug-in for the [First Step](../../first-step/) tutorial. Those types of plug-ins work without needing an image or drawable as input. Usually, we use a plug-in to change an image and its drawables. Plug-ins like these are called _filter_ plug-ins.
+Abbiamo utilizzato un plug-in _procedure_ per il tutorial [Primo passaggio](../../first-step/). Questi tipi di plug-in funzionano senza bisogno di un'immagine o di un elemento disegnabile come input. Di solito, utilizziamo un plug-in per modificare un'immagine e i suoi disegni. Plug-in come questi sono chiamati plug-in _filter_.
 
 ### Cos'è un Drawable?
 
-A **drawable** in Lumi refers to an image element that can be drawn on, such as a layer or channel. Filter plug-ins typically operate on these elements.
+Un **disegnabile** in Lumi si riferisce a un elemento dell'immagine su cui è possibile disegnare, come un livello o un canale. I plug-in di filtro in genere funzionano su questi elementi.
 
 ### Un semplice esempio di plug-in di filtro
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; Usare un'istruzione let per definire una variabile messaggio e il codice principale
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; Visualizzare il messaggio nella Error Console di Lumi
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; Invertire i colori del primo drawable selezionato
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; Registra il plug-in
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Nome della procedura principale
+  "Simple Filter Plug-in Demo"             ;; Il nome come appare nel menu di Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Descrizione del suggerimento
+  "Author Name"                            ;; Dai un po' di merito a te stesso
+  "License"                                ;; Licenza
+  "Date written"                           ;; Data di scrittura
+  "*"                                      ;; Indica che questo plug-in richiede un'immagine
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Richiede uno o più drawable selezionati
 
-;; Specify the menu location for the plug-in
+;; Specificare la posizione nel menu per il plug-in
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
 ```
 
-Copy the text and save it as `simple-filter-plug-in.scm` in a folder called `simple-filter-plug-in` within one of Lumi's plug-ins folders. A Lumi plug-ins folder is _any_ folder listed under:
- **Lumi > Edit > Preferences > Folders > Plug-ins**
+Copia il testo e salvalo come `simple-filter-plug-in.scm` in una cartella denominata `simple-filter-plug-in` all'interno di una delle cartelle dei plug-in di Lumi. Una cartella di plug-in Lumi è _qualsiasi_ cartella elencata in:
+ **Lumi > Modifica > Preferenze > Cartelle > Plug-in**
 
-In Linux, right-click the `simple-filter-plug-in.scm` file, go to **Properties > Permissions**, and check **Allow executing file as program**. Una volta che il file è nel posto giusto, eseguibile e privo di errori di sintassi, al riavvio di Lumi apparirà nella barra di intestazione del menu in alto, all'interno di un menu chiamato **Plug-in**.
+In Linux, fare clic con il pulsante destro del mouse sul file `simple-filter-plug-in.scm`, andare su **Proprietà > Autorizzazioni** e selezionare **Consenti l'esecuzione del file come programma**. Una volta che il file è nel posto giusto, eseguibile e privo di errori di sintassi, al riavvio di Lumi apparirà nella barra di intestazione del menu in alto, all'interno di un menu chiamato **Plug-in**.
 
 ### Esecuzione del plug-in
 
-1. Open an image (this filter plug-in requires an image to work).
-2. Open **Tools > Debug > Message console** to see a message.
-3. Select **Simple Filter Plug-in Demo** from the **Plug-in** menu.
-4. One of the selected layers will have its colors inverted and a message will be printed to the error console.
+1. Apri un'immagine (questo plug-in del filtro richiede un'immagine per funzionare).
+2. Aprire **Strumenti > Debug > Console messaggi** per visualizzare un messaggio.
+3. Selezionare **Demo plug-in filtro semplice** dal menu **Plug-in**.
+4. Uno dei livelli selezionati avrà i colori invertiti e verrà stampato un messaggio sulla console degli errori.
 
 ### Modifica del plug-in
 
-You can customize the plug-in by editing its `.scm` file. Ad esempio, per modificare il messaggio visualizzato:
+È possibile personalizzare il plug-in modificando il relativo file `.scm`. Ad esempio, per modificare il messaggio visualizzato:
 
-1. Open the file and locate the line defining `message`.
-2. Replace `"hello, world"` with your custom text.
+1. Aprire il file e individuare la riga che definisce `message`.
+2. Sostituisci `"hello, world"` con il testo personalizzato.
 3. Salvare il file.
 
-In Lumi version 3, plug-ins do not need refreshing for saved changes to take effect. Simply re-run the plug-in to see the updated message.
+Nella versione 3 di Lumi, i plug-in non necessitano di aggiornamento affinché le modifiche salvate abbiano effetto. È sufficiente eseguire nuovamente il plug-in per visualizzare il messaggio aggiornato.
 
 ### Esame dei plug-in
 
-#### Shebang Line
+#### Linea Shebang
 
-The first line ensures the script works as a plug-in in Lumi 3:
+La prima riga garantisce che lo script funzioni come plug-in in Lumi 3:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
 #### Definizione della procedura
 
-The procedure accepts two arguments: the active image and the selected drawables.
+La procedura accetta due argomenti: l'immagine attiva e i drawable selezionati.
 
 ```scheme
 (define (scheme-simple-filter-plug-in image drawables)
@@ -82,33 +85,33 @@ The procedure accepts two arguments: the active image and the selected drawables
 
 #### Logica fondamentale
 
-A `let` statement defines a variable and performs operations on the drawable.
+Un'istruzione `let` definisce una variabile ed esegue operazioni sul drawable.
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Mostra un messaggio nella Error Console di Lumi
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverte i colori del primo drawable selezionato
 ```
 
 ### Registrazione del plug-in
 
-The plug-in is registered with Lumi as a filter plug-in:
+Il plug-in è registrato con Lumi come plug-in filtro:
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Registra la procedura principale
+  "Simple Filter Plug-in Demo"             ;; Il nome come appare nel menu di Lumi
+  "Tests a basic Scheme filter plug-in"    ;; Descrizione del suggerimento
+  "Author Name"                            ;; Nome dell'autore
+  "License"                                ;; Tipo di licenza
+  "Date written"                           ;; Data di scrittura
+  "*"                                      ;; Indica che il plug-in richiede un'immagine
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Richiede uno o più drawable selezionati
 ```
 
 #### Registrazione nel menu
 
-This line specifies the menu location for the plug-in:
+Questa riga specifica la posizione del menu per il plug-in:
 
 ```scheme
 (scheme-menu-register
@@ -118,11 +121,11 @@ This line specifies the menu location for the plug-in:
 
 ### Risoluzione dei problemi
 
-If a plug-in does not appear, check its location, name, and executable property.
+Se un plug-in non viene visualizzato, controllane la posizione, il nome e la proprietà eseguibile.
 
 La posizione deve trovarsi in un percorso di ricerca del plug-in.
-The file name must match the name of the containing folder.
+Il nome del file deve corrispondere al nome della cartella che lo contiene.
 Il file deve essere impostato come eseguibile.
 
 
-The **Message console** is a valuable tool for troubleshooting custom plug-ins. If your plug-in doesn't behave as expected, check here for error messages or logs. The **Terminal** window can also provide debugging information and report loading issues.
+La **Console dei messaggi** è uno strumento prezioso per la risoluzione dei problemi relativi ai plug-in personalizzati. Se il tuo plug-in non si comporta come previsto, controlla qui i messaggi di errore o i registri. La finestra **Terminale** può anche fornire informazioni di debug e segnalare problemi di caricamento.

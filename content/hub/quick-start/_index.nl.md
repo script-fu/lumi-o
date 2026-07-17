@@ -2,7 +2,7 @@
 title: "Snel beginnen"
 type: docs
 ---
-Lumi-o bevindt zich momenteel in de ontwikkelingsfase. Hoewel de kernfuncties in productie zijn getest, kunt u af en toe instabiliteit tegenkomen. Om je voortgang tijdens deze fase te beschermen, is **automatisch opslaan op hoge snelheid beschikbaar en standaard actief.**
+Lumi-o bevindt zich momenteel in de ontwikkelingsfase. **Automatisch opslaan op hoge snelheid is beschikbaar en standaard actief.**
 
 Gebruik de onderstaande pagina's om snel aan de slag te gaan.
 

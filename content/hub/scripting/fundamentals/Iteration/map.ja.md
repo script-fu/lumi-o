@@ -1,22 +1,25 @@
 ---
-title: "地図"
+title: "map"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
 ---
-Scheme の `map` 関数は、リスト (または複数のリスト) の各要素にプロシージャを適用し、結果を含む**新しいリストを返す**ために使用されます。そのため、データの変換に最適です。
+Scheme の `map` 関数は、リスト（または複数のリスト）の各要素に手続きを適用し、結果を含む**新しいリスト**を返します。データ変換に最適です。
 
-`map` の最も単純な形式は次のようになります。
+La forme la plus simple de `map` ressemble à ceci :
 
 ```scheme
 (map procedure list)
 ```
 
-- **手順**: リストの各要素に適用する関数。
-- **リスト**: 要素が変換されるリスト。
+- **Procédure :** Fonction appliquée à chaque élément.
+- **Liste :** Liste à transformer.
 
 ---
 
-### 例: 各要素を 2 倍にする
+### Exemple : doubler chaque élément
 
 ```scheme
 (define (double x)
@@ -25,26 +28,23 @@ Scheme の `map` 関数は、リスト (または複数のリスト) の各要�
 (map double (list 1 2 3 4))
 ```
 
-- ここでは、関数 `double` がリスト `(1 2 3 4)` の各要素に適用されます。
-- 結果は、各要素が 2 倍になった新しいリストになります。
+- `double` est appliqué à `(1 2 3 4)`.
+- Résultat : nouvelle liste avec valeurs doublées.
 
-**出力**: `(2 4 6 8)`
-
----
-
-### 仕組み
-
-1. **新しいリストを作成します**:
-   - `map` は、提供されたプロシージャをリストの各要素に適用し、結果を新しいリストに収集します。
-
-2. **データを変換**:
-   - 副作用を実行するのではなく、主にデータ変換に使用されます。
+**Sortie** : `(2 4 6 8)`
 
 ---
 
-#### 例: 複数のリストでの使用
+### Comment ça marche
 
-複数のリストが指定された場合、`map` は各リストの対応する要素を処理します。
+1. **Nouvelle liste :** `map` collecte les résultats.
+2. **Transformation :** Plutôt que des effets de bord.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `map` traite les éléments correspondants.
 
 ```scheme
 (define (sum x y)
@@ -53,16 +53,14 @@ Scheme の `map` 関数は、リスト (または複数のリスト) の各要�
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-- 関数 `sum` は、2 つのリストから対応する要素を追加し、結果を新しいリストとして返します。
-
-**出力**: `(5 7 9)`
+**Sortie** : `(5 7 9)`
 
 ---
 
-### 概要
+### Résumé
 
-- `map` 関数は、各要素にプロシージャを適用してリストを変換するための強力なツールです。
-- `for-each` とは異なり、`map` **プロシージャを適用した結果を含む新しいリストを生成**します。
-- 複数のリストをサポートし、要素ごとの操作を可能にします。
+- `map` transforme des listes élément par élément.
+- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
+- Plusieurs listes sont traitées par paires.
 
-`map` を使用すると、元のリストを変更せずに、データの変換バージョンを効率的に作成できます。
+Avec `map`, créez des versions transformées tout en conservant les listes d'origine.

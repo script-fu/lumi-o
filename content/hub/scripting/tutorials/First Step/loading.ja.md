@@ -2,10 +2,13 @@
 title: "読み込み中"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 ヘルパー関数が大きくなったらすぐに、それを小さなライブラリ ファイルに移動します。これにより、プラグインに焦点が当てられ、ヘルパーを複数のプラグイン間で再利用できるようになります。
 
-### ライブラリ関数を作成する
+### Make a Library Function
 
 send-message 関数を使用して、それをコンテンツとして含む新しいファイルを作成できます。ファイルをプラグイン部分ではなく、リポジトリ フォルダー (おそらく最上位近く) に保存します。
 
@@ -25,41 +28,41 @@ send-message 関数を使用して、それをコンテンツとして含む新�
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
-ライブラリ関数send-message.scmの例
+Example of a library function send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; さまざまな出力先へのメッセージ出力を処理する関数
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Message console に送信
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; ハンドラを Message console に設定する
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; GUI ダイアログボックスに送信
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; ハンドラを GUI ダイアログに設定する
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ターミナルウィンドウに送信
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; terminal 出力は display で処理される
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 ```
 
-### ライブラリ関数をロードする
+### Load the Library Function
 
 Scheme `load` コマンドを使用してそのライブラリ関数をロードできます。
 
 ライブラリファイルのロード:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 

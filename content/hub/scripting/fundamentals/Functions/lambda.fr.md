@@ -2,6 +2,9 @@
 title: "Fonctions Lambda"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Les **fonctions Lambda** dans Scheme sont des fonctions anonymes, ce qui signifie que ce sont des fonctions sans nom. Ces fonctions sont définies en ligne et sont généralement utilisées pour des opérations courtes et ponctuelles. La construction `lambda` est un outil puissant de programmation fonctionnelle, vous permettant de créer une logique concise et flexible à la volée.
 
@@ -9,7 +12,7 @@ Les fonctions Lambda sont particulièrement utiles lorsque :
 
 - Vous avez besoin d'une petite fonction dans un but précis et temporaire.
 - Passer des fonctions comme arguments à des fonctions d'ordre supérieur comme `map`, `filter` ou `fold`.
-- Renvoi de fonctions à partir d'autres fonctions.
+- Renvoyer des fonctions à partir d'autres fonctions.
 
 ### Syntaxe des fonctions Lambda
 
@@ -20,7 +23,7 @@ Les fonctions Lambda peuvent être définies seules...
   body-expression)
 ```
 
-...ou invoqué immédiatement :
+...ou invoquées immédiatement :
 
 ```scheme
 ((lambda (parameter1 parameter2 ...)
@@ -37,7 +40,7 @@ Les fonctions Lambda peuvent être définies seules...
 #### Utiliser Lambda pour des calculs simples
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Renvoie 8
 ```
 
 Ici :
@@ -86,7 +89,7 @@ Les fonctions Lambda sont souvent transmises directement aux fonctions d'ordre s
 #### Mettre au carré une liste de nombres
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Renvoie (1 4 9 16)
 ```
 
 - La fonction `lambda` met au carré chaque élément de la liste.
@@ -96,17 +99,17 @@ Les fonctions Lambda sont souvent transmises directement aux fonctions d'ordre s
 
 Vous pouvez renvoyer une fonction lambda à partir d'une autre fonction pour créer un comportement dynamique.
 
-#### Générer une fonction Adder
+#### Générer une fonction d'addition
 
 ```scheme
 (define (make-adder n)
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Renvoie 15
 ```
 
-- `make-adder` génère une nouvelle fonction lambda qui ajoute un numéro spécifique (`n`).
+- `make-adder` génère une nouvelle fonction lambda qui ajoute un nombre spécifique (`n`).
 - Le lambda renvoyé est stocké dans `add5`, ce qui ajoute `5` à son entrée.
 
 #### Utilisation de Lambda avec `let`
@@ -117,7 +120,7 @@ Les lambdas sont souvent utilisés avec `let` pour créer des fonctions temporai
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Renvoie 7
 ```
 
 - Le `let` lie une fonction lambda au nom `add`.
@@ -130,14 +133,16 @@ Les Lambda brillent lorsqu'ils sont combinés avec des fonctions d'ordre supéri
 #### Filtrage des nombres pairs
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- Le `lambda` vérifie si un nombre est pair.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Renvoie (2 4 6)
+```
+
+- Le `lambda` vérifie si un nombre est pair.
 - La fonction `filter` utilise le lambda pour ne conserver que les nombres pairs de la liste.
 
 ### Avantages des fonctions Lambda
 
 - **Concision :** Les Lambdas réduisent le code passe-partout en supprimant le besoin de définir des fonctions nommées distinctes.
-- **Flexibilité :** Vous pouvez les définir et les utiliser partout où ils sont nécessaires, rendant le code plus modulaire.
+- **Flexibilité :** Vous pouvez les définir et les utiliser partout où elles sont nécessaires, rendant le code plus modulaire.
 - **Lisibilité améliorée :** Pour les tâches courtes et spécifiques, les lambdas indiquent clairement l'intention sans encombrer le code avec des fonctions nommées supplémentaires.
 
 ### Quand utiliser les fonctions Lambda

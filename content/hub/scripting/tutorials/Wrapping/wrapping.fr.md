@@ -2,6 +2,9 @@
 title: "Emballage"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Les commandes Scheme fonctionnent à un niveau bas, ce qui signifie que même des tâches simples peuvent nécessiter plusieurs étapes. Cependant, cette granularité offre de la flexibilité : nous pouvons regrouper les commandes en petites fonctions réutilisables qui font exactement ce dont nous avons besoin. L’emballage n’est pas un concept en noir et blanc ; cela peut aller de simples alias pour les commandes fréquemment utilisées à des fonctions plus complexes qui gèrent des flux de travail entiers. Parfois, un wrapper n’est qu’une fonction pratique destinée à améliorer la lisibilité, tandis que dans d’autres cas, il évolue vers un utilitaire complet qui encapsule plusieurs opérations.
 
@@ -26,19 +29,19 @@ Exemples :
 ### Graine aléatoire
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Objectif : Renvoie un entier aléatoire pour initialiser un filtre
 (define (random-seed)
   (msrg-rand))
 ```
 
 Bien que nous puissions utiliser ***msrg-rand*** directement dans notre code, l'envelopper dans une fonction appelée ***random-seed*** améliore la lisibilité. En donnant à la fonction un nom clair et descriptif, il devient plus facile de comprendre son objectif en un coup d'œil.
 
-De plus, définir ***random-seed*** comme fonction autonome nous permet de l'utiliser n'importe où dans nos plug-ins tout en centralisant l'implémentation en un seul endroit. Si jamais nous devons modifier la façon dont la graine est générée, il nous suffit de mettre à jour cette fonction, en laissant le reste de notre code intact.
+De plus, définir ***random-seed*** comme fonction autonome nous permet de l'utiliser n'importe où dans nos plug-ins tout en centralisant l'implémentation en un seul emplacement. Si jamais nous devons modifier la façon dont la graine est générée, il nous suffit de mettre à jour cette fonction, en laissant le reste de notre code intact.
 
 Par exemple, si nous décidons de passer à ***aléatoire*** à la place :
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Objectif : Renvoie un entier aléatoire pour initialiser un filtre
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Le nom de la fonction reste le même, garantissant que nos scripts continuent de
 La fonction d'exportation JPEG de Scheme est livrée avec de nombreux paramètres, offrant un contrôle précis sur la façon dont les images sont enregistrées. Cependant, dans la plupart des cas, nous ne nous soucions que de quelques paramètres clés, tels que le nom et la qualité du fichier. Pour simplifier le processus, nous pouvons envelopper la fonction.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Objectif : Enregistre une image en JPEG avec une qualité spécifiée
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Éviter jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Cela maintient notre code propre, lisible et adaptable tout en nous permettant d
 La fonction ***car*** peut être énigmatique et sujette à des erreurs de script. Il est facile d'appliquer par erreur ***car*** à un vecteur ou à un élément hors liste, ce qui entraîne un comportement inattendu. Pour rendre notre code plus robuste et lisible, nous pouvons envelopper cette fonctionnalité dans une fonction plus sûre.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Objectif : Renvoie le premier élément d'une liste ou d'un vecteur.
+;;          Avertit si l'entrée est invalide ou vide.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Gère les listes non vides
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Gère les vecteurs non vides
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Entrée invalide ou vide
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Encapsuler une fonction déjà encapsulée peut améliorer encore la lisibilité
 pour récupérer la coordonnée ***x***. Cependant, bien que fonctionnel, celui-ci n’est pas très expressif. Au lieu de cela, nous pouvons envelopper ***first-item*** dans une définition plus appropriée pour rendre notre intention plus claire.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Objectif : Renvoie la coordonnée x, pour la lisibilité
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Objectif : Renvoie la coordonnée y, pour la lisibilité
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ pour récupérer la coordonnée ***x***. Cependant, bien que fonctionnel, celui-
 Maintenant, au lieu d'écrire dans un schéma générique :
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Obtient la coordonnée x
+(cadr pixel-coords) ;; Obtient la coordonnée y
 ```
 
 Nous pouvons écrire dans _notre_ Scheme :

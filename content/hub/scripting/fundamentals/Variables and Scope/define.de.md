@@ -1,7 +1,10 @@
 ---
-title: "definieren"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Die `define`-Anweisung in Scheme ist ein vielseitiges Konstrukt, das zum Erstellen globaler oder lokaler Bindungen verwendet wird. Es wird am häufigsten zum Definieren von Variablen und Funktionen verwendet, um sie im gesamten Skript oder innerhalb eines bestimmten Bereichs wiederverwendbar und zugänglich zu machen. Das Verständnis von `define` ist entscheidend für das Schreiben modularer, wiederverwendbarer und lesbarer Scheme-Programme.
 
@@ -28,7 +31,7 @@ Eine grundlegende Verwendung von `define` besteht darin, Variablen zu erstellen,
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; Berechnet 2π
 ```
 
 **Ergebnis**: `6.28318`
@@ -51,7 +54,7 @@ Sie können `define` verwenden, um wiederverwendbare Prozeduren zu erstellen.
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; Berechnet 4²
 ```
 
 **Ergebnis**: `16`
@@ -66,8 +69,8 @@ Bei Verwendung innerhalb einer Funktion erstellt `define` lokale Bindungen, auf 
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Lokale Hilfsfunktion
+  (define (cube x) (* x x x))  ;; Lokale Hilfsfunktion
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

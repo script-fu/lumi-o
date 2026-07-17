@@ -1,6 +1,9 @@
 ---
 title: "Navegador de utilitários"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 O Navegador de utilitários permite explorar o utilitário de esquema integrado stdlib que acompanha o Lumi, sem precisar sair do aplicativo ou vasculhar os arquivos de origem.
 
@@ -14,7 +17,7 @@ A janela abre imediatamente; nenhum plug-in precisa ser carregado antecipadament
 
 O navegador lista todos os procedimentos, variáveis e formulários de sintaxe exportados pelas sete bibliotecas de utilitários que o Lumi carrega automaticamente na inicialização:
 
-| Biblioteca | O que cobre |
+| Biblioteca | Conteúdo |
 |---|---|
 | `common.scm` | Auxiliares de uso geral (string, número, utilitários de lista) |
 | `files.scm` | Ajudantes de arquivo e caminho |

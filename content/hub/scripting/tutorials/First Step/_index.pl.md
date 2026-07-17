@@ -2,8 +2,11 @@
 title: "Pierwsze kroki"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
 ---
-First Steps wprowadza wzorce funkcjonalne, które dobrze sprawdzają się w Scheme, z krótkimi przykładami i przyrostowymi refaktoryzatorami.
+First Steps wprowadza wzorce funkcjonalne, które dobrze sprawdzają się w Scheme, z krótkimi przykładami i przyrostowymi refaktorami.
 Na koniec zbudujesz własną, niestandardową bibliotekę wiadomości i będziesz mieć solidne podstawy do dalszego rozwijania bardziej zaawansowanych wtyczek.
 
 ### Czego potrzebujesz

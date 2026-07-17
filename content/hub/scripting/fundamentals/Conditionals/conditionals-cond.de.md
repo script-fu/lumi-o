@@ -1,9 +1,12 @@
 ---
-title: "Kond"
+title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-In Scheme wird die Bedingung `cond` verwendet, um basierend auf mehreren Tests einen von mehreren möglichen Codeblöcken auszuwählen, die ausgeführt werden sollen. Es ist wie ein `if` mit mehreren Zweigen, bei dem jeder Zweig der Reihe nach überprüft wird, bis eine Übereinstimmung gefunden wird.
+In Scheme wählt das bedingte `cond` anhand mehrerer Tests einen von mehreren Codeblöcken — wie ein mehrgliedriges `if`, geprüft in Reihenfolge bis zum ersten Treffer.
 
 ### Syntax
 
@@ -15,22 +18,18 @@ In Scheme wird die Bedingung `cond` verwendet, um basierend auf mehreren Tests e
   (else fallback-consequent))
 ```
 
-- Jeder Test wird in der Reihenfolge ausgewertet, in der er geschrieben wurde.
-– Wenn ein Test „true“ ergibt (`#t`), wird seine entsprechende **Konsequenz** ausgeführt und der Ausdruck `cond` stoppt die Auswertung weiterer Tests.
-– Die `else`-Klausel ist optional und dient als Fallback, wenn keiner der Tests „true“ ergibt.
+- Tests in Schreibreihenfolge.
+- Erster `#t`-Test: **consequent** läuft, `cond` stoppt.
+- `else` optional als Fallback.
 
-### Wie es funktioniert
+### So funktioniert es
 
-1. **Testen Sie jede Bedingung**:
-   - `cond` wertet die Tests in der Reihenfolge aus, in der sie aufgelistet sind.
-
-2. **Führen Sie die Matching-Konsequenz aus**:
-   – Wenn der erste Test gefunden wird, der „true“ ergibt (`#t`), wird seine **Konsequenz** ausgeführt.
-   – Wenn keine Tests „true“ ergeben und eine `else`-Klausel vorhanden ist, wird die **Fallback-Konsequenz** ausgeführt.
+1. **Jede Bedingung testen** in Reihenfolge.
+2. **Passenden consequent ausführen**; sonst `else` falls vorhanden.
 
 ### Beispiele
 
-#### Beispiel 1: Konsequenzen einzelner Ausdrücke
+#### Beispiel 1: Einzeilige consequents
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ In Scheme wird die Bedingung `cond` verwendet, um basierend auf mehreren Tests e
   (else "Fallback"))
 ```
 
-– Der erste Test `(< 3 2)` ergibt „falsch“ (`#f`).
-– Der zweite Test `(= 3 3)` ergibt „true“ (`#t`), sodass `"This will run"` zurückgegeben wird.
-– Die Klausel `else` wird nicht ausgeführt, da bereits eine Übereinstimmung gefunden wurde.
-
-Ergebnis: **"Dies wird ausgeführt"**
+Ergebnis: **"This will run"**
 
 #### Beispiel 2: Mehrere Aktionen mit `begin`
-
-Wenn eine Konsequenz mehrere Aktionen umfasst, verwenden Sie `begin`, um sie zu gruppieren:
 
 ```scheme
 (cond
@@ -65,43 +58,30 @@ Wenn eine Konsequenz mehrere Aktionen umfasst, verwenden Sie `begin`, um sie zu 
       0)))
 ```
 
-– Der erste Test `(< 5 3)` ergibt „falsch“ (`#f`).
-- Der zweite Test `(> 5 3)` ergibt wahr (`#t`):
-  - Es wird `"Condition met"` gedruckt.
-  - Dann berechnet es `(* 5 5)` und gibt `25` zurück.
+Ergebnis: **Gibt "Condition met" aus und liefert 25.**
 
-Ergebnis: **Gibt „Bedingung erfüllt“ aus und gibt 25 zurück.**
-
-#### Beispiel 3: Verwendung eines `let` Blocks in einer Konsequenz
-
-Wenn Sie lokale Variablen einführen müssen, verwenden Sie einen `let` Block:
+#### Beispiel 3: `let` im consequent
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; Fall 1: Wenn 0 kleiner als -1 ist
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; Fall 2: Wenn 0 größer als -1 ist
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; Standardfall: Wenn keine der obigen Bedingungen zutrifft
   (else
     (let ((z 0))
       z)))
 ```
 
-- Der erste Test `(< 0 -1)` ist falsch.
-- Der zweite Test `(> 0 -1)` ist wahr, also:
-  - Ein `let` Block wird ausgeführt, der `y` an `20` bindet.
-  - Es wird `"Positive condition met"` gedruckt.
-  - Dann berechnet es `(+ y y)` und gibt `40` zurück.
-
-Ergebnis: **Gibt „Positive Bedingung erfüllt“ aus und gibt 40 zurück.**
+Ergebnis: **Gibt "Positive condition met" aus und liefert 40.**
 
 #### Beispiel 4: Fallback mit `else`
 
@@ -112,16 +92,10 @@ Ergebnis: **Gibt „Positive Bedingung erfüllt“ aus und gibt 40 zurück.**
   (else "Fallback value"))
 ```
 
-- Keiner der ersten beiden Tests ergibt „true“.
-- Die Klausel `else` wird ausgeführt und gibt `"Fallback value"` zurück.
-
-Ergebnis: **"Fallback-Wert"**
+Ergebnis: **"Fallback value"**
 
 ### Zusammenfassung
 
-- Verwenden Sie `cond`, um mehrere Bedingungen klar und prägnant zu behandeln.
-- Konsequenzen können einzelne Ausdrücke oder gruppierte Aktionen mit `begin` sein.
-- Verwenden Sie `let` in Folge, um lokale Variablen für Berechnungen zu deklarieren.
-– Fügen Sie immer eine `else`-Klausel als Fallback zur Behandlung unerwarteter Fälle ein.
-
-Diese Flexibilität macht `cond` zu einem leistungsstarken und lesbaren Werkzeug für die Handhabung komplexer Verzweigungslogik.
+- `cond` für mehrere Bedingungen klar und kompakt.
+- consequents einzeln oder mit `begin` gruppiert.
+- `let` für lokale Variablen; `else` als Fallback empfohlen.

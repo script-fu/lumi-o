@@ -1,37 +1,42 @@
 ---
-title: "Verdraaiingsgereedschap"
+title: "Warp Tool"
 type: docs
+url: "hub/features/warp-tool"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed71825993da9e
 ---
-Met het gereedschap Verdraaien kunnen kunstenaars geschilderde inhoud rechtstreeks op het canvas duwen, trekken, buigen, verzachten en opnieuw vormgeven. Het is ontworpen voor expressieve aanpassingen: proporties corrigeren, vloei toevoegen, silhouetten een duwtje geven of een voltooide vorm meer beweging geven zonder deze helemaal opnieuw te schilderen.
 
-Bij Lumi is warping vooral gericht op het behoud van gelaagde kunstwerken. Een complex onderwerp kan als een visueel geheel worden hervormd, terwijl de onderliggende lagen en maskers beschikbaar blijven voor verdere bewerking.
+Met de Warp Tool kunnen kunstenaars geschilderde inhoud direct op het canvas duwen, trekken, buigen, verzachten en opnieuw vormgeven. Het is bedoeld voor expressieve aanpassingen: proporties corrigeren, flow toevoegen, silhouetten bijsturen of een afgeronde vorm meer beweging geven zonder alles opnieuw te schilderen.
 
-## Directe canvasvormgeving
+In Lumi richt warpen zich vooral op het behouden van gelaagde kunstwerken. Een complex onderwerp kan als visueel geheel opnieuw worden gevormd, terwijl onderliggende lagen en maskers beschikbaar blijven voor verdere bewerking.
 
-Kromtrekken voelt alsof er beweging in het beeld wordt geborsteld. In plaats van een rigide transformatiedoos te selecteren, kan de kunstenaar lokaal werken en verplaatsing opbouwen door middel van streken totdat de vorm correct zit.
+## Directe vormgeving op het canvas
 
-Dit maakt de tool nuttig voor zowel subtiele correcties als dramatische vervormingen. Een wang kan worden verzacht, een mouw kan in het ritme worden getrokken, gebladerte kan vloeiend worden gemaakt of een schets kan dichter bij het beoogde gebaar worden geduwd.
+Warpen voelt als beweging in het beeld borstelen. In plaats van een starre transformatiebox te kiezen, werkt de kunstenaar lokaal en bouwt verplaatsing op met streken tot de vorm klopt.
 
-## Groepsbewust kromtrekken
+Zo is het hulpmiddel nuttig voor subtiele correcties én dramatische vervorming. Een wang kan worden verzacht, een mouw in ritme worden getrokken, gebladerte flow krijgen, of een schets dichter bij het bedoelde gebaar worden geduwd.
 
-Gelaagde illustraties scheiden vaak lijntekeningen, kleur, arcering, textuur, maskers en effecten. Het hervormen van een deel van die structuur door het plat te maken zou de organisatie vernietigen die de afbeelding bewerkbaar maakt.
+## Groepsbewust warpen
 
-Lumi's Warp Tool is ontworpen om een ​​lagengroep als één enkel zichtbaar onderwerp te behandelen, terwijl de stukken erin toch behouden blijven. De kunstenaar kan het gecombineerde uiterlijk vormgeven en de interne lagen intact houden nadat de verandering is aangebracht.
+Gelaagde illustraties scheiden vaak lijnwerk, kleur, schaduw, textuur, maskers en effecten. Een deel van die structuur opnieuw vormgeven door het samen te voegen zou juist de organisatie vernietigen die het beeld bewerkbaar maakt.
+
+De Warp Tool van Lumi behandelt een lagengroep als één zichtbaar onderwerp, terwijl de onderdelen erin behouden blijven. De kunstenaar vormt het gecombineerde uiterlijk en houdt de interne lagen intact na de wijziging.
 
 ## Maskers en structuur
 
-Maskers maken deel uit van de structuur van het kunstwerk en zijn geen bijzaak. Wanneer een verwrongen onderwerp afhankelijk is van maskers voor randen, uitsnijdingen, schaduwen of groepsgrenzen, moeten deze relaties met het beeld meebewegen.
+Maskers horen bij de structuur van het kunstwerk, niet als nasleep. Wanneer een vervormd onderwerp op maskers vertrouwt voor randen, uitknipsels, schaduw of groepsgrenzen, moeten die relaties meebewegen met het beeld.
 
-Lumi's aanpak houdt inhoud en maskers op één lijn, zodat het bewerkte resultaat coherent blijft. Het doel is dat de voorbeeldverdraaiing en het vastgelegde gelaagde resultaat visueel overeenkomen, zonder dat de kunstenaar elke onderliggende laag met de hand hoeft te repareren.
+Lumi's aanpak houdt inhoud en maskers op één lijn, zodat het bewerkte resultaat coherent blijft. De voorbeeldvervorming en het vastgelegde gelaagde resultaat moeten visueel overeenkomen, zonder dat elke onderliggende laag handmatig moet worden hersteld.
 
 ## Iteratieve aanpassing
 
-Warping is van nature verkennend. Kunstenaars moeten vaak een streek uitproberen, het resultaat vergelijken, verzachten, ongedaan maken of geleidelijk aan een sterkere verandering opbouwen.
+Warpen is van nature exploratief. Kunstenaars proberen vaak een streek, vergelijken het resultaat, verzachten het, maken het ongedaan of bouwen geleidelijk een sterkere verandering op.
 
-De Warp Tool ondersteunt dat soort iteratie door de werkende warp tijdens de sessie instelbaar te laten blijven. De kunstenaar kan de verplaatsing verfijnen voordat hij de wijziging doorvoert in de reguliere ongedaanmakingsgeschiedenis van het beeld.
+De Warp Tool ondersteunt die iteratie doordat de werkende vervorming tijdens de sessie aanpasbaar blijft. De kunstenaar kan de verplaatsing verfijnen voordat de wijziging in de reguliere undo-geschiedenis van het beeld wordt vastgelegd.
 
 ## Creatieve toepassingen
 
-Naast correctie kan kromtrekken ook een hulpmiddel zijn bij het maken van markeringen en bij het ontwerpen. Het kan beweging toevoegen aan haar en stof, expressie overdrijven, grafische vormen buigen, texturen rimpelen of schilderkunstige vervormingen creëren die moeilijk handmatig te tekenen zijn.
+Naast correctie kan warpen een hulpmiddel zijn voor markering en ontwerp. Het kan beweging toevoegen aan haar en stof, expressie overdrijven, grafische vormen buigen, texturen laten rimpelen of schilderachtige vervormingen creëren die moeilijk handmatig te tekenen zijn.
 
-Omdat het werkt met gelaagde onderwerpen, is het gereedschap geschikt voor zowel vroege ruwe vormgeving als latere polijstwerkzaamheden, waardoor kunstenaars een afbeelding opnieuw kunnen vormgeven terwijl het schilderproces flexibel blijft.
+Omdat het met gelaagde onderwerpen werkt, is het geschikt voor zowel ruwe vormgeving in een vroeg stadium als late afwerking — opnieuw vormgeven met behoud van een flexibel schilderproces.

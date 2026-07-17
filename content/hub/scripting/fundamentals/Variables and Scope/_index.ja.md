@@ -2,6 +2,9 @@
 title: "変数とスコープ"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 Scheme では、変数とそのスコープの管理が、効率的で保守可能なスクリプトを作成するための中心的な概念です。変数にはスクリプトで操作できるデータ値が格納されますが、スコープはそれらの変数にアクセスできる場所を定義します。変数を効果的に定義して使用する方法を理解すると、構造化され、再利用可能で、エラーのないコードを作成できます。
 
@@ -10,8 +13,8 @@ Scheme では、変数とそのスコープの管理が、効率的で保守可�
 スキームは動的に型付けされます。前もって型を宣言する必要はなく、変数は時間の経過とともにさまざまな種類の値を保持できます。
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x は数値
+(set! x "hello")    ; x は文字列になった
 ```
 
 ### スキームにおける変数定義とスコープの役割

@@ -2,10 +2,13 @@
 title: "傳回值"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 傳回值很重要，因為它們可以讓您控制流程而無需額外的狀態。在Scheme中，最後計算的表達式成為回傳值。
 
-此页面使用消息传递示例中的验证助手来展示显式返回值如何使代码更易于编写。
+此頁面使用訊息傳遞範例中的驗證助手來展示明確傳回值如何使程式碼更易於編寫。
 
 ### 什麼是回傳值？
 
@@ -14,9 +17,9 @@ weight: 8
 讓我們回顧一下驗證函數，（is-valid-string？）
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; 用途：驗證訊息為非空字串
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; 檢查訊息是否為非空字串
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ weight: 8
 我們可以透過使返回值更加明確來改進這一點。例如，如果訊息有效，我們可以返回 `#t` (true)：
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; 用途：驗證訊息是否傳送到有效輸出
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 檢查輸出是否為預期的顯示目標之一
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ weight: 8
 這是一個使用傳回值來控制邏輯流程的簡單範例：
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 用途：將訊息分發到適當的輸出目標
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ weight: 8
 ### 用回傳值重構
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 用途：向狀態列傳送訊息，成功時回傳 #t
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 用途：向對話方塊傳送訊息，成功時回傳 #t
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 用途：向 Error Console 傳送訊息，成功時回傳 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 用途：向 terminal 傳送訊息，成功時回傳 #t
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ weight: 8
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 用途：將訊息分發到適當的輸出，成功時回傳 #t
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ weight: 8
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 用途：驗證訊息為非空字串，有效時回傳 #t
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ weight: 8
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 用途：驗證輸出為有效目標，有效時回傳 #t
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

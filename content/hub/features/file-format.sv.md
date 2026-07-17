@@ -1,6 +1,10 @@
 ---
 title: "Filformat (.lum)"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/file-format"
+translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
 ---
 Lumis ursprungliga filformat är byggt för skiktade målningsprojekt som måste förbli tillförlitliga, inspekterbara och återställbara över tid. Den är designad kring verkligheten i illustrationsarbete: många lager, stora dukar, inbäddad färginformation, masker, effekter och återställningsdata.
 

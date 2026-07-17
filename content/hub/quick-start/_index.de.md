@@ -2,7 +2,7 @@
 title: "Schnellstart"
 type: docs
 ---
-Lumi-o befindet sich derzeit in der Entwicklungsphase. Während die Kernfunktionen in der Produktion getestet werden, kann es gelegentlich zu Instabilitäten kommen. Um Ihren Fortschritt in dieser Phase zu schützen, ist **die automatische Hochgeschwindigkeitsspeicherung standardmäßig verfügbar und aktiv.**
+Lumi-o befindet sich derzeit in der Entwicklungsphase. **Die automatische Hochgeschwindigkeitsspeicherung ist standardmäßig verfügbar und aktiv.**
 
 Nutzen Sie die folgenden Seiten, um schnell loszulegen.
 

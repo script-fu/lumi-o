@@ -1,7 +1,10 @@
 ---
 title: "Estructuras de datos"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 En Scheme, las **estructuras de datos** son herramientas esenciales para organizar, almacenar y manipular datos. Permiten a los desarrolladores crear scripts eficientes, legibles y reutilizables. Al elegir la estructura de datos adecuada para un problema específico, puede optimizar tanto el rendimiento como la claridad de su código.
 

@@ -1,22 +1,25 @@
 ---
-title: "지도"
+title: "map"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
 ---
-Scheme의 `map` 함수는 목록(또는 여러 목록)의 각 요소에 프로시저를 적용하고 결과가 포함된 **새 목록을 반환**하는 데 사용됩니다. 이는 데이터 변환에 이상적입니다.
+Scheme의 `map` 함수는 리스트(또는 여러 리스트)의 각 요소에 프로시저를 적용하고 결과가 담긴 **새 리스트**를 반환합니다. 데이터 변환에 이상적입니다.
 
-`map`의 가장 간단한 형태는 다음과 같습니다.
+La forme la plus simple de `map` ressemble à ceci :
 
 ```scheme
 (map procedure list)
 ```
 
-- **프로시저**: 목록의 각 요소에 적용하는 함수입니다.
-- **목록**: 요소가 변환될 목록입니다.
+- **Procédure :** Fonction appliquée à chaque élément.
+- **Liste :** Liste à transformer.
 
 ---
 
-### 예: 각 요소를 두 배로 늘림
+### Exemple : doubler chaque élément
 
 ```scheme
 (define (double x)
@@ -25,26 +28,23 @@ Scheme의 `map` 함수는 목록(또는 여러 목록)의 각 요소에 프로�
 (map double (list 1 2 3 4))
 ```
 
-- 여기서 `double` 함수는 `(1 2 3 4)` 목록의 각 요소에 적용됩니다.
-- 결과는 각 요소가 두 배가 된 새 목록입니다.
+- `double` est appliqué à `(1 2 3 4)`.
+- Résultat : nouvelle liste avec valeurs doublées.
 
-**출력**: `(2 4 6 8)`
-
----
-
-### 작동 방식
-
-1. **새 목록 생성**:
-   - `map` 제공된 절차를 목록의 각 요소에 적용하고 결과를 새 목록에 수집합니다.
-
-2. **데이터 변환**:
-   - Side Effect를 수행하기보다는 주로 데이터 변환에 사용됩니다.
+**Sortie** : `(2 4 6 8)`
 
 ---
 
-#### 예: 여러 목록과 함께 사용
+### Comment ça marche
 
-여러 목록이 제공되는 경우 `map`은 각 목록의 해당 요소를 처리합니다.
+1. **Nouvelle liste :** `map` collecte les résultats.
+2. **Transformation :** Plutôt que des effets de bord.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `map` traite les éléments correspondants.
 
 ```scheme
 (define (sum x y)
@@ -53,16 +53,14 @@ Scheme의 `map` 함수는 목록(또는 여러 목록)의 각 요소에 프로�
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-- `sum` 함수는 두 목록의 해당 요소를 추가하고 결과를 새 목록으로 반환합니다.
-
-**출력**: `(5 7 9)`
+**Sortie** : `(5 7 9)`
 
 ---
 
-### 요약
+### Résumé
 
-- `map` 함수는 각 요소에 절차를 적용하여 목록을 변환하는 강력한 도구입니다.
-- `for-each`과 달리 `map`은 절차 적용 결과가 포함된 **새 목록**을 생성합니다.
-- 여러 목록을 지원하여 요소별 작업이 가능합니다.
+- `map` transforme des listes élément par élément.
+- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
+- Plusieurs listes sont traitées par paires.
 
-`map`을 사용하면 원본 목록을 변경하지 않고 데이터의 변환된 버전을 효율적으로 생성할 수 있습니다.
+Avec `map`, créez des versions transformées tout en conservant les listes d'origine.

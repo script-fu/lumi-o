@@ -1,45 +1,50 @@
 ---
-title: "Strati"
+title: "Livelli"
 type: docs
+url: "hub/features/layers"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
-Il sistema a strati di Lumi fornisce una struttura illustrativa. Consente agli artisti di separare schizzi, colori, ombreggiature, texture, maschere, regolazioni, esperimenti e dettagli finali senza impegnare ogni decisione direttamente in un'unica immagine piatta.
 
-I livelli non sono solo una pila di pixel. Portano visibilità, fusione, maschere, blocchi, effetti, raggruppamento e comportamento di composizione, rendendoli la base per flussi di lavoro di pittura flessibili e non distruttivi.
+Il sistema a livelli di Lumi-o dà struttura a un'illustrazione. Consente agli artisti di separare schizzi, colore, ombreggiatura, texture, maschere, regolazioni, esperimenti e dettagli finali senza consolidare ogni decisione in un'unica immagine piatta.
+
+I livelli non sono solo una pila di pixel. Portano visibilità, fusione, maschere, blocchi, effetti, raggruppamento e comportamento di composizione, e costituiscono la base dei flussi di lavoro di pittura flessibili e non distruttivi.
 
 ![layers](/images/screens/layers.jpg)
 
 ## Pittura strutturata
 
-Un'immagine a più livelli può essere creata in più fasi. I segni grezzi possono trovarsi sotto linee pulite, il colore può essere bloccato separatamente dall'illuminazione, la trama può essere isolata e idee alternative possono rimanere disponibili senza disturbare la composizione principale.
+Un'immagine a livelli può essere costruita per fasi. I segni grezzi possono stare sotto linee pulite, il colore può essere bloccato separatamente dall'illuminazione, la texture può essere isolata e idee alternative possono restare disponibili senza disturbare la composizione principale.
 
-I gruppi rendono leggibile quella struttura. Le parti correlate di un'illustrazione possono spostarsi insieme, fondersi insieme o essere trattate come parte condivisa dell'opera d'arte mentre i singoli livelli rimangono modificabili.
+I gruppi rendono leggibile quella struttura. Parti correlate di un'illustrazione possono spostarsi insieme, fondersi insieme o essere trattate come parte condivisa dell'opera, mentre i singoli livelli restano modificabili.
 
-## Miscelazioni e maschere
+## Fusione e maschere
 
-La fusione dei livelli controlla il modo in cui una parte dell'opera d'arte interagisce con ciò che si trova sotto di essa. Ciò rende possibile ombreggiare, schiarire, tingere, strutturare o correggere il colore senza ridipingere le forme sottostanti.
+La fusione dei livelli controlla come una parte dell'opera interagisce con ciò che sta sotto. È possibile ombreggiare, schiarire, tingere, texturizzare o correggere il colore senza ridipingere le forme sottostanti.
 
-Le maschere aggiungono un altro livello di controllo. Consentono di dipingere, ammorbidire, nascondere, ripristinare o modellare la visibilità indipendentemente dal contenuto di colore del livello. Ciò mantiene flessibili le decisioni sui bordi e le transizioni tonali per tutta la vita di un pezzo.
+Le maschere aggiungono un ulteriore livello di controllo. Consentono di dipingere, ammorbidire, nascondere, ripristinare o modellare la visibilità indipendentemente dal contenuto colore del livello. Le decisioni sui bordi e le transizioni tonali restano flessibili per tutta la vita dell'opera.
 
 ## Selezione e navigazione
 
-I dipinti complessi possono contenere molti piccoli pezzi. Lumi supporta la navigazione diretta orientata ai livelli in modo che gli artisti possano spostarsi dalla tela alla pila di livelli senza perdere il flusso della pittura.
+I dipinti complessi possono contenere molti elementi piccoli. Lumi-o supporta la navigazione diretta orientata ai livelli, così gli artisti possono passare dalla tela alla pila di livelli senza perdere il ritmo della pittura.
 
-L'intento è quello di far sì che il lavoro a strati sembri spaziale piuttosto che amministrativo: se un segno è visibile sulla tela, il sistema a strati dovrebbe aiutare l'artista a ritornarci rapidamente.
+L'obiettivo è far sentire il lavoro a livelli come qualcosa di spaziale, non amministrativo: se un segno è visibile sulla tela, il sistema dei livelli dovrebbe aiutare l'artista a tornarci rapidamente.
 
-## Protezione e intenti
+## Protezione e intenzione
 
-I livelli possono essere protetti in diversi modi in modo che il lavoro finito, le maschere, le posizioni, la trasparenza o le decisioni sui colori non vengano modificati accidentalmente. Queste protezioni sono utili quando un'immagine diventa densa e alcune parti devono rimanere stabili mentre altre continuano ad evolversi.
+I livelli possono essere protetti in diversi modi, così lavoro finito, maschere, posizioni, trasparenza o decisioni cromatiche non vengono modificati per errore. Queste protezioni sono utili quando un'immagine diventa densa e alcune parti devono restare stabili mentre altre continuano a evolversi.
 
-Questa protezione supporta flussi di lavoro deliberati: disegna liberamente dove il cambiamento è benvenuto, blocca le aree che sono state risolte e continua a sviluppare l'immagine senza timore di danni accidentali.
+La protezione supporta flussi di lavoro deliberati: disegna liberamente dove il cambiamento è benvenuto, blocca le aree risolte e continua a sviluppare l'immagine senza timore di danni accidentali.
 
 ## Effetti non distruttivi
 
-Filtri ed effetti possono far parte dello stato modificabile di un livello anziché diventare immediatamente pixel permanenti. Ciò mantiene le modifiche visive regolabili e consente a uno stack di effetti di rimanere parte della composizione di lavoro.
+Filtri ed effetti possono far parte dello stato modificabile di un livello invece di diventare subito pixel permanenti. Le modifiche visive restano regolabili e uno stack di effetti può rimanere parte della composizione operativa.
 
-Per gli artisti, ciò significa che la sperimentazione può rimanere reversibile. Un look può essere testato, nascosto, riordinato, perfezionato o eventualmente impegnato quando diventa parte dell'immagine finale.
+Per gli artisti significa che la sperimentazione può restare reversibile. Una resa visiva può essere testata, nascosta, riordinata, perfezionata o infine consolidata quando diventa parte dell'immagine finale.
 
-## Prestazioni per file profondi
+## Prestazioni per file complessi
 
-Le illustrazioni a più livelli possono diventare complesse, soprattutto quando interagiscono gruppi, maschere ed effetti. Il sistema a strati di Lumi è progettato per mantenere reattive le azioni di pittura comuni evitando ricomposizioni non necessarie quando possibile.
+Le illustrazioni a livelli possono diventare complesse, soprattutto quando gruppi, maschere ed effetti interagiscono. Il sistema a livelli di Lumi-o è progettato per mantenere reattive le azioni di pittura più comuni, evitando ricomposizioni non necessarie quando possibile.
 
-Il risultato è un flusso di lavoro a livelli mirato sia al controllo che alla velocità: sufficientemente dettagliato per un lavoro attento e non distruttivo, ma comunque pratico per la pittura di tutti i giorni.
+Il risultato è un flusso di lavoro a livelli orientato sia al controllo sia alla velocità: abbastanza dettagliato per un lavoro attento e non distruttivo, ma comunque pratico per la pittura quotidiana.

@@ -2,6 +2,9 @@
 title: "재작업"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 이 단계에서는 메시징 예제의 미묘한 동작을 수정합니다.
 
@@ -13,7 +16,7 @@ weight: 7
 
 이스케이프 문자를 제거하고 기능을 확장합니다.
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ weight: 7
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; 메시지 상자를 강제로 띄우기 위해 줄바꿈 추가
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ weight: 7
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 목적: 메시지를 적절한 출력 대상으로 보냄
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ weight: 7
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; 목적: 메시지가 비어 있지 않은 문자열인지 검증
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; 메시지가 비어 있지 않은 문자열인지 확인
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; 목적: 메시지가 유효한 출력으로 전송되는지 검증
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 출력이 예상된 표시 대상 중 하나인지 확인
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

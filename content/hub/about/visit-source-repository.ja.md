@@ -1,8 +1,12 @@
 ---
-title: "ソースリポジトリにアクセス"
-description: "Browse the source, history, issues, and build instructions on GitLab."
+title: "ソースリポジトリ"
+description: "GitLab でソース、履歴、issues、ビルド手順をご覧ください。"
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c7ecee387b611c2e3e2cd3f63b85bbc207aa4bba1b704f07fd3e585b87ac11d8
 ---
-GitLab でソース、履歴、問題、ビルド手順を参照します。
+
+GitLab でソース、履歴、issues、ビルド手順をご覧ください。

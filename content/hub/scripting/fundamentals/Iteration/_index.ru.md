@@ -2,29 +2,29 @@
 title: "Итерация"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-Итерация — это краеугольный камень программирования, позволяющий сценариям повторять действия и эффективно обрабатывать наборы данных. В Scheme, основанном на языке программирования Scheme, итерация предоставляет инструменты для автоматизации повторяющихся задач, манипулирования структурами данных и создания сложных шаблонов выполнения.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### Роль итерации в схеме
+### Le rôle de l'itération en Scheme
 
-Итерация выполняет несколько важных целей в ваших сценариях:
-– **Автоматическое повторение:** позволяет выполнять одно и то же действие или набор действий несколько раз без дублирования кода.
-- **Повышение эффективности.** За счет итеративной обработки структур данных скрипты могут систематически обрабатывать крупномасштабные операции.
-– **Оптимизация кода.** Итерация устраняет избыточность, делая код более кратким, читабельным и удобным в сопровождении.
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### Доступные типы итераций
+### Types d'itération disponibles
 
-Scheme предлагает несколько конструкций для итерации, каждая из которых адаптирована к конкретным потребностям:
-- **map:** Применяет функцию к каждому элементу списка, возвращая новый список с результатами.
-- **for-each:** Аналогично `map`, но используется для выполнения функции для каждого элемента без возврата результата.
-- **do:** Конструкция цикла общего назначения, обрабатывающая широкий спектр итеративных процессов.
-– **рекурсия**. Мощный метод, при котором функции вызывают сами себя для постепенного решения проблем.
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### Как работает итерация
+### Comment fonctionne l'itération
 
-Итерация обычно включает в себя:
-1. **Определение повторения.** Указание действия для повторения и данных или диапазона для обработки.
-2. **Последовательное выполнение**: повторение действия для каждого элемента, шага или условия до завершения.
-3. **Возврат результата (необязательно):** В зависимости от конструкции итерация может дать результат или изменить состояние.
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-Эти конструкции позволяют писать адаптируемые, эффективные и элегантные сценарии, которые легко справляются со сложными задачами.
+Ces constructions aident à écrire des scripts adaptables et efficaces.

@@ -1,22 +1,25 @@
 ---
-title: "แผนที่"
+title: "map"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
 ---
-ฟังก์ชัน `map` ใน Scheme ใช้เพื่อใช้ขั้นตอนกับแต่ละองค์ประกอบของรายการ (หรือหลายรายการ) และ **ส่งคืนรายการใหม่** ที่มีผลลัพธ์ ทำให้เหมาะสำหรับการแปลงข้อมูล
+ฟังก์ชัน `map` ใน Scheme ใช้ procedure กับแต่ละองค์ประกอบของ list (หรือหลาย list) และ**คืน list ใหม่**ที่มีผลลัพธ์ เหมาะสำหรับการแปลงข้อมูล
 
-รูปแบบที่ง่ายที่สุดของ `map` มีลักษณะดังนี้:
+La forme la plus simple de `map` ressemble à ceci :
 
 ```scheme
 (map procedure list)
 ```
 
-- **ขั้นตอน**: ฟังก์ชันที่ใช้กับแต่ละองค์ประกอบของรายการ
-- **รายการ**: รายการองค์ประกอบที่จะแปลง
+- **Procédure :** Fonction appliquée à chaque élément.
+- **Liste :** Liste à transformer.
 
 ---
 
-### ตัวอย่าง: เพิ่มแต่ละองค์ประกอบเป็นสองเท่า
+### Exemple : doubler chaque élément
 
 ```scheme
 (define (double x)
@@ -25,26 +28,23 @@ weight: 3
 (map double (list 1 2 3 4))
 ```
 
-- ในที่นี้ ฟังก์ชัน `double` ถูกนำไปใช้กับแต่ละองค์ประกอบของรายการ `(1 2 3 4)`
-- ผลลัพธ์คือรายการใหม่โดยแต่ละองค์ประกอบจะเพิ่มเป็นสองเท่า
+- `double` est appliqué à `(1 2 3 4)`.
+- Résultat : nouvelle liste avec valeurs doublées.
 
-**เอาต์พุต**: `(2 4 6 8)`
-
----
-
-### มันทำงานอย่างไร
-
-1. **สร้างรายการใหม่**:
-   - `map` ใช้ขั้นตอนที่ให้ไว้กับแต่ละองค์ประกอบของรายการและรวบรวมผลลัพธ์ลงในรายการใหม่
-
-2. **แปลงข้อมูล**:
-   - ส่วนใหญ่จะใช้สำหรับการแปลงข้อมูลมากกว่าการแสดงผลข้างเคียง
+**Sortie** : `(2 4 6 8)`
 
 ---
 
-#### ตัวอย่าง: การใช้งานกับหลายรายการ
+### Comment ça marche
 
-หากมีการระบุหลายรายการ `map` จะประมวลผลองค์ประกอบที่เกี่ยวข้องจากแต่ละรายการ
+1. **Nouvelle liste :** `map` collecte les résultats.
+2. **Transformation :** Plutôt que des effets de bord.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `map` traite les éléments correspondants.
 
 ```scheme
 (define (sum x y)
@@ -53,16 +53,14 @@ weight: 3
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-- ฟังก์ชัน `sum` เพิ่มองค์ประกอบที่เกี่ยวข้องจากทั้งสองรายการและส่งกลับผลลัพธ์เป็นรายการใหม่
-
-**เอาต์พุต**: `(5 7 9)`
+**Sortie** : `(5 7 9)`
 
 ---
 
-### สรุป
+### Résumé
 
-- ฟังก์ชัน `map` เป็นเครื่องมืออันทรงพลังสำหรับการแปลงรายการโดยใช้ขั้นตอนกับแต่ละองค์ประกอบ
-- ต่างจาก `for-each`, `map` **สร้างรายการใหม่** ที่มีผลลัพธ์ของการนำขั้นตอนไปใช้
-- รองรับหลายรายการ ช่วยให้สามารถดำเนินการตามองค์ประกอบต่างๆ ได้
+- `map` transforme des listes élément par élément.
+- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
+- Plusieurs listes sont traitées par paires.
 
-เมื่อใช้ `map` คุณสามารถสร้างเวอร์ชันที่แปลงข้อมูลของคุณได้อย่างมีประสิทธิภาพ ขณะเดียวกันก็รักษารายการดั้งเดิมไว้ไม่เปลี่ยนแปลง
+Avec `map`, créez des versions transformées tout en conservant les listes d'origine.

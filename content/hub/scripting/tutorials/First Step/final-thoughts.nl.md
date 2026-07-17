@@ -2,6 +2,9 @@
 title: "Laatste gedachten"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 U beschikt nu over een werkprocedure-plug-in en een kleine helperbibliotheek. In deze serie zijn de kernpatronen geïntroduceerd die u in de meeste Lumi-scripts zult gebruiken:
 
@@ -15,7 +18,7 @@ Je zag ook de basisprincipes van het gebruik van Git om veranderingen bij te hou
 Hier is de definitieve versie van onze belangrijkste plug-incode:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ Hier is de definitieve versie van onze belangrijkste plug-incode:
 Bibliotheekcode:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Doel: Stuurt een bericht naar de statusbalk, retourneert #t bij succes
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ Bibliotheekcode:
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Doel: Stuurt een bericht naar het dialoogvenster, retourneert #t bij succes
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ Bibliotheekcode:
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Doel: Stuurt een bericht naar de Error Console, retourneert #t bij succes
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ Bibliotheekcode:
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Doel: Stuurt een bericht naar de terminal, retourneert #t bij succes
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ Bibliotheekcode:
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Doel: Stuurt een bericht naar de juiste uitvoer, retourneert #t bij succes
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ Bibliotheekcode:
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Doel: Controleert dat het bericht een niet-lege tekenreeks is, retourneert #t indien geldig
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ Bibliotheekcode:
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Doel: Controleert dat de uitvoer een geldige bestemming is, retourneert #t indien geldig
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

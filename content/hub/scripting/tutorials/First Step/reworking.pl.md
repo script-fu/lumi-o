@@ -2,6 +2,9 @@
 title: "Przeróbka"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Ten krok rozwiązuje subtelne zachowanie w przykładzie wiadomości.
 
@@ -13,7 +16,7 @@ Zaktualizuj treść wiadomości i miejsca docelowe, aby przykład działał spó
 
 Usunięcie znaku ucieczki i rozszerzenie funkcji:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Przerób bibliotekę:
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Dołącz znak nowej linii, aby wymusić okno wiadomości
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Przerób bibliotekę:
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Cel: Wysyła wiadomość do właściwego miejsca docelowego wyjścia
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Przerób bibliotekę:
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Cel: Sprawdza, czy wiadomość jest niepustym ciągiem znaków
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Sprawdź, czy wiadomość jest niepustym ciągiem znaków
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Cel: Sprawdza, czy wiadomość jest wysyłana do prawidłowego wyjścia
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Sprawdź, czy wyjście jest jednym z oczekiwanych miejsc docelowych wyświetlania
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

@@ -1,11 +1,14 @@
 ---
-title: "wanneer"
+title: "when"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
 ---
-Hoewel `if` in Scheme elegant en veelzijdig is, kan het verwarrend worden als het wordt gebruikt zonder een expliciete `else`. Dit geldt met name als het de bedoeling is om één enkele codevertakking alleen uit te voeren als een voorwaarde waar is, zonder alternatieve actie voor het geval `false`. In dergelijke scenario's biedt de `when` constructie een duidelijker en beknopter alternatief.
+En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
 
-De basisvorm van `when` ziet er als volgt uit:
+La forme de base de `when` :
 
 ```scheme
 (when test-is-true
@@ -13,10 +16,10 @@ De basisvorm van `when` ziet er als volgt uit:
   do-that)
 ```
 
-- Als de `test` evalueert naar true (`#t`), worden alle expressies in de hoofdtekst van de `when` constructie opeenvolgend uitgevoerd.
-- Als `test` resulteert in false (`#f`), gebeurt er niets en worden er geen waarden geretourneerd.
+- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
+- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
 
-### Voorbeeld
+### Exemple
 
 ```scheme
 (when (< 0 1)
@@ -24,9 +27,9 @@ De basisvorm van `when` ziet er als volgt uit:
   (lumi-message "Executing additional actions."))
 ```
 
-### Contrasterende `if` en `when`
+### Comparer `if` et `when`
 
-Om het verschil tussen `if` en `when` beter te begrijpen, kunt u het volgende voorbeeld bekijken waarin beide samen worden gebruikt:
+Les deux ensemble dans le même exemple :
 
 ```scheme
 (if (= 0 1)
@@ -36,25 +39,18 @@ Om het verschil tussen `if` en `when` beter te begrijpen, kunt u het volgende vo
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### Uitleg:
+#### Explication
 
-1. **De `if` voorwaarde**:
-   - De test `(= 0 1)` controleert of 0 gelijk is aan 1.
-   - Omdat dit niet waar is (`#f`), wordt de `else` branch van `if` uitgevoerd.
+1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
+2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
 
-2. **Het `when`-construct in de `else`-filiaal**:
-   - De `when` test `(< 0 1)` controleert of 0 kleiner is dan 1.
-   - Aangezien dit waar is (`#t`), worden alle expressies in de hoofdtekst van `when` opeenvolgend uitgevoerd:
-     - First, it prints `"The 'when' condition is true!"`.
-     - Then, it prints `"Executing multiple actions within 'when'."`.
+#### Pourquoi `when` ?
 
-#### Waarom hier `when` gebruiken?
+- Pas de `else` vide ou factice.
+- Montre que seule la branche vraie compte.
 
-- Het gebruik van `when` in plaats van een andere `if` vereenvoudigt de logica wanneer er geen behoefte is aan een expliciete `else` vertakking voor de voorwaarde.
-- `when` maakt duidelijk dat alleen de echte branch relevant is, waardoor potentiële verwarring wordt verminderd.
+### Résumé
 
-### Samenvatting
-
-- Gebruik `if` als je zowel een true als false branch nodig hebt.
-- Gebruik `when` als er slechts één vertakking is voor het ware geval, vooral als er meerdere acties moeten worden uitgevoerd.
-- Het combineren van `if` en `when` kan helpen complexere voorwaardelijke bepalingen duidelijk en beknopt te structureren.
+- **`if` :** quand les deux branches comptent.
+- **`when` :** branche vraie seule, plusieurs actions possibles.
+- Les combiner structure clairement des conditions complexes.

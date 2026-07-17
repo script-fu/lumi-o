@@ -2,6 +2,9 @@
 title: "Le navigateur de procédures"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 Le **Lumi Procedure Browser** vous permet de rechercher les procédures disponibles (intégrées et plug-in fournies) et d'inspecter leurs paramètres et leurs valeurs de retour.
 
@@ -31,12 +34,12 @@ Recherchez `lumi-message` pour voir ses paramètres et ses valeurs de retour.
 Une fois que vous avez installé le programme "Hello World!" plug-in, vous pouvez le trouver répertorié dans le navigateur de procédures. Recherchez simplement le nom de fonction que vous avez enregistré auprès de Lumi, dans ce cas, "scheme-hello-world". L'entrée affichera les paramètres et toutes les valeurs de retour associées au plug-in, ainsi qu'une brève description. Vous verrez également où certaines des lignes de texte que vous avez saisies comme paramètres de saisie lors du processus d'inscription sont affichées dans la section **Informations supplémentaires**.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; Nom de la procédure
+  "Hello world!"                                        ;; Nom de l'élément de menu
+  "A Scheme procedure plug-in"                       ;; Info-bulle et description
+  "Your Name"                                           ;; Auteur
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; Licence
+  "2024")                                               ;; Date de copyright
 ```
 
 Cela permet de vérifier facilement que votre plug-in est correctement enregistré et vous donne un moyen rapide de vérifier comment il interagit avec d'autres procédures dans Lumi. Le navigateur de procédures est un outil puissant pour déboguer et développer vos plug-ins en explorant toutes les procédures disponibles dans Lumi.

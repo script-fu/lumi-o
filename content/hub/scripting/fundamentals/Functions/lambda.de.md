@@ -2,6 +2,9 @@
 title: "Lambda-Funktionen"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 **Lambda-Funktionen** in Scheme sind anonyme Funktionen, das heißt, sie sind Funktionen ohne Namen. Diese Funktionen werden inline definiert und werden typischerweise für kurze, einmalige Vorgänge verwendet. Das `lambda`-Konstrukt ist ein leistungsstarkes Werkzeug in der funktionalen Programmierung, mit dem Sie im Handumdrehen prägnante und flexible Logik erstellen können.
 
@@ -37,7 +40,7 @@ Lambda-Funktionen können eigenständig definiert werden ...
 #### Verwendung von Lambda für einfache Berechnungen
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; Gibt 8 zurück
 ```
 
 Hier:
@@ -86,7 +89,7 @@ Lambda-Funktionen werden oft direkt an Funktionen höherer Ordnung wie `map` ode
 #### Eine Liste von Zahlen quadrieren
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; Gibt (1 4 9 16) zurück
 ```
 
 - Die Funktion `lambda` quadriert jedes Element der Liste.
@@ -103,7 +106,7 @@ Sie können eine Lambda-Funktion von einer anderen Funktion zurückgeben, um dyn
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; Gibt 15 zurück
 ```
 
 - `make-adder` generiert eine neue Lambda-Funktion, die eine bestimmte Zahl hinzufügt (`n`).
@@ -117,7 +120,7 @@ Lambdas werden oft mit `let` verwendet, um lokal gültige, temporäre Funktionen
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; Gibt 7 zurück
 ```
 
 - Das `let` bindet eine Lambda-Funktion an den Namen `add`.
@@ -130,8 +133,10 @@ Lambdas glänzen, wenn sie mit Funktionen höherer Ordnung kombiniert werden, um
 #### Gerade Zahlen filtern
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- Der `lambda` prüft, ob eine Zahl gerade ist.
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Gibt (2 4 6) zurück
+```
+
+- Der `lambda` prüft, ob eine Zahl gerade ist.
 – Die Funktion `filter` verwendet das Lambda, um nur gerade Zahlen aus der Liste zu behalten.
 
 ### Vorteile von Lambda-Funktionen

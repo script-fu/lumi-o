@@ -2,10 +2,13 @@
 title: "Carregando"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 Assim que uma função auxiliar crescer, mova-a para um pequeno arquivo de biblioteca. Isso mantém o plug-in focado e torna o auxiliar reutilizável em vários plug-ins.
 
-### Faça uma função de biblioteca
+### Make a Library Function
 
 Podemos pegar a função enviar mensagem e criar um novo arquivo com ela como conteúdo. Salve o arquivo em sua pasta repo, não na parte de plugins, talvez próximo ao nível superior;
 
@@ -28,27 +31,27 @@ Podemos pegar a função enviar mensagem e criar um novo arquivo com ela como co
 Exemplo de função de biblioteca send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Função para tratar a saída de mensagens para vários destinos
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Enviar para a Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Definir o manipulador para Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Enviar para a caixa de diálogo GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Definir o manipulador para o diálogo GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Enviar para a janela do terminal
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; A saída do terminal é tratada com display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurar o manipulador de mensagens padrão para a Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -59,7 +62,7 @@ Podemos carregar essa função de biblioteca com o comando Scheme `load`;
 Carregando um arquivo de biblioteca:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 
@@ -81,4 +84,4 @@ Carregando um arquivo de biblioteca:
   "<Image>/Funky")
 ```
 
-Ei! Agora temos algo mais simples e curto de ler, que se descreve sem comentários. Esta é a conclusão satisfatória da refatoração.
+Ei! We've now got something simpler and shorter to read, that kind of describes itself without comments. Esta é a conclusão satisfatória da refatoração.

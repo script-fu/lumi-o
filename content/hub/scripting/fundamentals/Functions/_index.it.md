@@ -2,6 +2,9 @@
 title: "Funzioni"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c00aaf1e68592dcb36dc914e6713d3dfe68870506b71842d63f8d6a02a01337a
 ---
 Le funzioni sono un concetto fondamentale in Scheme, poiché forniscono i mezzi per incapsulare la logica, abilitare il riutilizzo del codice e strutturare gli script in modo efficace. Con le funzioni, puoi creare script modulari e gestibili che gestiscono un'ampia gamma di attività, dalle operazioni di base ai flussi di lavoro avanzati in Lumi.
 
@@ -12,9 +15,9 @@ Questa sezione funge da introduzione alle funzioni di Scheme e pone le basi per 
 Il codice schema è composto da **espressioni**. Un'espressione restituisce un valore. La sintassi è uniforme: le parentesi formano una chiamata, preceduta dal nome dell'operatore o della funzione.
 
 ```scheme
-(+ 1 2)         ; Adds 1 and 2, resulting in 3
-(if #t 1 0)     ; Evaluates to 1 because the condition is true
-(list 1 2 3)    ; Creates a list: (1 2 3)
+(+ 1 2)         ; Somma 1 e 2, risultato 3
+(if #t 1 0)     ; Si valuta a 1 perché la condizione è vera
+(list 1 2 3)    ; Crea un elenco: (1 2 3)
 ```
 
 Poiché tutto è un'espressione, il flusso di controllo si adatta naturalmente allo stesso stile delle chiamate di funzione.
@@ -51,7 +54,7 @@ Scheme offre una varietà di costrutti di funzioni, ciascuno adatto a casi d'uso
    Funzioni che accettano altre funzioni come argomenti o restituiscono funzioni come risultati, consentendo potenti astrazioni come mappatura, filtraggio e riduzione.
 
    ```scheme
-   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+   (map (lambda (x) (* x x)) '(1 2 3 4))  ; Restituisce (1 4 9 16)
    ```
 
 ## Sintassi generale per le funzioni
@@ -73,7 +76,7 @@ Esempio:
 (define (add x y)
   (+ x y))
 
-(add 3 5)  ; Returns 8
+(add 3 5)  ; Restituisce 8
 ```
 
 ## Effetti collaterali e stato globale

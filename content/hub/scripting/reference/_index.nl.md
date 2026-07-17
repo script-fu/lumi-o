@@ -1,6 +1,9 @@
 ---
 title: "Referentie"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 17a336a8464759ae574c925274d1f194cb2d5777c52399fcd0ff329d49b1606e
 ---
 Snelle referentie voor de ingebouwde Scheme-hulpprogramma's en in-app-browsingtools die beschikbaar zijn bij het schrijven van Lumi-plug-ins. Voor algemene informatie over schema's en naslagwerken, bekijk het [Scheme Cookbook](https://cookbook.scheme.org/) en [Scheme.org](https://www.scheme.org/).
 

@@ -2,6 +2,9 @@
 title: "Filterplugin"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 Vi använde ett plugin-program _procedure_ för handledningen [Första steget](../../first-step/). Dessa typer av plugin-program fungerar utan att behöva en bild eller ritbar som indata. Vanligtvis använder vi en plug-in för att ändra en bild och dess dragbara bilder. Plug-ins som dessa kallas _filter_ plug-ins.
 
@@ -12,28 +15,28 @@ En **ritbar** i Lumi hänvisar till ett bildelement som kan ritas på, till exem
 ### Ett enkelt filterplugin-exempel
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; Använd ett let-uttryck för att definiera en meddelandevariabel och kärnkod
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; Visa meddelandet i Lumis Error Console
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; Invertera färgerna på det första valda drawable
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; Registrerar insticksprogrammet
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Namn på huvudproceduren
+  "Simple Filter Plug-in Demo"             ;; Namnet som det visas i Lumi-menyn
+  "Tests a basic Scheme filter plug-in"    ;; Verktygstipsbeskrivning
+  "Author Name"                            ;; Ge dig själv lite beröm
+  "License"                                ;; Licens
+  "Date written"                           ;; Skrivdatum
+  "*"                                      ;; Anger att detta plug-in kräver en bild
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Kräver ett eller flera valda drawables
 
-;; Specify the menu location for the plug-in
+;; Ange menyplatsen för plug-in
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ I Lumi version 3 behöver plugin-program inte uppdateras för att sparade ändri
 Den första raden säkerställer att skriptet fungerar som en plug-in i Lumi 3:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ En `let`-sats definierar en variabel och utför operationer på den ritbara.
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Visar ett meddelande i Lumis Error Console
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverterar färgerna på det första valda drawable
 ```
 
 ### Plugin-registrering
@@ -96,14 +99,14 @@ Plug-in är registrerad hos Lumi som en filterplugin:
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; Registrerar huvudproceduren
+  "Simple Filter Plug-in Demo"             ;; Namnet som det visas i Lumi-menyn
+  "Tests a basic Scheme filter plug-in"    ;; Verktygstipsbeskrivning
+  "Author Name"                            ;; Författarens namn
+  "License"                                ;; Licenstyp
+  "Date written"                           ;; Skrivdatum
+  "*"                                      ;; Anger att plug-in kräver en bild
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; Kräver ett eller flera valda drawables
 ```
 
 #### Menyregistrering

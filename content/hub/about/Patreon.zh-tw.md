@@ -1,21 +1,26 @@
 
 ---
-title: "派特隆"
+title: "Patreon"
 type: docs
+url: "hub/about/Patreon"
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9e1cb1f39fa1e62f32b73f3284249ba249dff4eef3a4195682f0dae88ad17234
 ---
-嘿！
 
-自 1984 年以來，我一直在像素和代碼方面進行創意之旅，從 ZX Spectrum 開始，探索從 Deluxe Paint 和 Photoshop 到 Maya，最後到 Lumi-o 的一切。製作工具和創作藝術品是我的熱情。
+你好！
 
-如果您喜歡我的工作並且發現它有幫助，請考慮透過小額捐款來表達您的支持。這是表達「感謝」並保持創造力的簡單方式！您的支援有助於支付軟體開發、教程和正在進行的藝術專案的成本。
+自 1984 年起，我一直在像素與程式碼之間創作，從 ZX Spectrum 出發，一路經歷 Deluxe Paint、Photoshop、Maya，最終來到 Lumi-o。打造工具、創作藝術作品，是我的熱情所在。
 
-您可以透過 Patreon 來做到這一點，這是許多創意人員用來獲得直接支援的平台：
+若你喜歡我的作品並覺得有所幫助，歡迎透過小額捐助表達支持。這是一種簡單的「謝謝」，也能讓創作持續進行。你的支持有助於支付軟體開發、教學與進行中的藝術專案。
 
-[造訪我的 Patreon 頁面](https://www.patreon.com/pixelmixer) 進行支援。
+你可以透過 Patreon——許多創作者用來獲得直接支援的平台——參與：
+
+[造訪我的 Patreon 頁面](https://www.patreon.com/pixelmixer) 進行支持。
 
 {{< cards >}}
-  {{< card link="https://www.patreon.com/pixelmixer" title="派特隆" icon="heart" >}}
+  {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}
 
-如有任何問題，您可以直接與我聯繫 **pixelmixer@lumi-o.org**
+如有任何問題，請直接聯絡 **pixelmixer@lumi-o.org**

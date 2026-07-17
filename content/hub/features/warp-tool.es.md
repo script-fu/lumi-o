@@ -1,37 +1,42 @@
 ---
-title: "Herramienta de deformación"
+title: "Herramienta Warp"
 type: docs
+url: "hub/features/warp-tool"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 594e71e2f7c52d0feaa7b4ca2fc66194e4a6d256b6372f748eed71825993da9e
 ---
-La herramienta Deformar permite a los artistas empujar, tirar, doblar, suavizar y remodelar el contenido pintado directamente sobre el lienzo. Está diseñado para realizar ajustes expresivos: corregir proporciones, agregar fluidez, modificar siluetas o darle más movimiento a una forma terminada sin tener que volver a pintarla desde cero.
 
-En Lumi, la deformación se centra especialmente en preservar obras de arte en capas. Un tema complejo se puede remodelar como un todo visual mientras sus capas y máscaras subyacentes permanecen disponibles para su posterior edición.
+La herramienta Warp permite empujar, tirar, doblar, suavizar y remodelar el contenido pintado directamente en el lienzo. Está pensada para ajustes expresivos: corregir proporciones, añadir fluidez, desplazar siluetas o dar más movimiento a una forma acabada sin repintarla desde cero.
 
-## Conformación directa del lienzo
+En Lumi, la deformación se centra especialmente en preservar obras en capas. Un motivo complejo puede remodelarse como un todo visual mientras sus capas y máscaras subyacentes siguen disponibles para seguir editando.
 
-La deformación se siente como introducir movimiento en la imagen. En lugar de seleccionar una caja de transformación rígida, el artista puede trabajar localmente, generando desplazamiento a través de trazos hasta que la forma se asiente correctamente.
+## Modelado directo en el lienzo
 
-Esto hace que la herramienta sea útil tanto para correcciones sutiles como para distorsiones dramáticas. Se puede suavizar una mejilla, se puede poner ritmo a una manga, se puede dar fluidez al follaje o se puede acercar un boceto al gesto deseado.
+La deformación se siente como introducir movimiento en la imagen. En lugar de seleccionar una caja de transformación rígida, el artista puede trabajar de forma local, construyendo desplazamiento con trazos hasta que la forma quede correcta.
 
-## Deformación consciente del grupo
+Eso hace útil la herramienta tanto para correcciones sutiles como para distorsiones dramáticas. Se puede suavizar una mejilla, dar ritmo a una manga, aportar fluidez al follaje o acercar un boceto al gesto buscado.
 
-Las ilustraciones en capas a menudo separan el arte lineal, el color, el sombreado, la textura, las máscaras y los efectos. Reformar una parte de esa estructura aplanándola destruiría la misma organización que hace que la imagen sea editable.
+## Deformación consciente de grupos
 
-La herramienta Deformar de Lumi está diseñada para tratar un grupo de capas como un único sujeto visible y al mismo tiempo preservar las piezas dentro de él. El artista puede dar forma a la apariencia combinada y mantener intactas las capas internas después de aplicar el cambio.
+Las ilustraciones en capas suelen separar arte lineal, color, sombreado, textura, máscaras y efectos. Remodelar una parte de esa estructura aplanándola destruiría la organización que hace editable la imagen.
+
+La herramienta Warp de Lumi está diseñada para tratar un grupo de capas como un único sujeto visible preservando las piezas que contiene. El artista puede dar forma a la apariencia combinada y mantener intactas las capas internas tras aplicar el cambio.
 
 ## Máscaras y estructura
 
-Las máscaras son parte de la estructura de la obra de arte, no una ocurrencia tardía. Cuando un sujeto deformado depende de máscaras para los bordes, recortes, sombreados o límites de grupo, esas relaciones deben moverse con la imagen.
+Las máscaras forman parte de la estructura de la obra, no son un añadido tardío. Cuando un sujeto deformado depende de máscaras para bordes, recortes, sombreado o límites de grupo, esas relaciones deben moverse con la imagen.
 
-El enfoque de Lumi mantiene el contenido y las máscaras alineados para que el resultado editado siga siendo coherente. El objetivo es que la deformación previsualizada y el resultado de las capas comprometidas coincidan visualmente, sin necesidad de que el artista repare cada capa secundaria a mano.
+El enfoque de Lumi mantiene contenido y máscaras alineados para que el resultado editado siga siendo coherente. El objetivo es que la deformación previsualizada y el resultado final en capas coincidan visualmente sin obligar al artista a reparar cada capa secundaria a mano.
 
 ## Ajuste iterativo
 
-La deformación es naturalmente exploratoria. Los artistas a menudo necesitan probar un trazo, comparar el resultado, suavizarlo, deshacerlo o crear un cambio más fuerte gradualmente.
+La deformación es naturalmente exploratoria. A menudo hace falta probar un trazo, comparar el resultado, suavizarlo, deshacerlo o construir un cambio más fuerte de forma gradual.
 
-La herramienta Deformación admite ese tipo de iteración al permitir que la deformación de trabajo permanezca ajustable durante la sesión. El artista puede refinar el desplazamiento antes de realizar el cambio en el historial de deshacer habitual de la imagen.
+La herramienta Warp admite esa iteración permitiendo que la deformación en curso siga siendo ajustable durante la sesión. El artista puede refinar el desplazamiento antes de confirmar el cambio en el historial habitual de deshacer de la imagen.
 
 ## Usos creativos
 
-Más allá de la corrección, la deformación puede ser una herramienta de diseño y creación de marcas. Puede agregar movimiento al cabello y la tela, exagerar la expresión, doblar formas gráficas, ondular texturas o crear distorsiones pictóricas que serían difíciles de dibujar manualmente.
+Más allá de la corrección, la deformación puede ser una herramienta de diseño y de creación de marcas. Puede añadir movimiento al pelo y la tela, exagerar la expresión, doblar formas gráficas, ondular texturas o crear distorsiones pictóricas difíciles de dibujar a mano.
 
-Debido a que funciona con sujetos en capas, la herramienta es adecuada tanto para el modelado preliminar inicial como para el pulido final, lo que ayuda a los artistas a remodelar una imagen mientras mantiene flexible el proceso de pintura.
+Al trabajar con sujetos en capas, la herramienta sirve tanto para el modelado inicial como para el acabado final, ayudando a remodelar una imagen manteniendo flexible el proceso de pintura.

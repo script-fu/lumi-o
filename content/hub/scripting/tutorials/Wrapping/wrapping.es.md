@@ -2,6 +2,9 @@
 title: "Envase"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Los comandos de Scheme funcionan a un nivel bajo, lo que significa que incluso las tareas simples pueden requerir varios pasos. Sin embargo, esta granularidad ofrece flexibilidad: podemos agrupar comandos en funciones pequeñas y reutilizables que hacen exactamente lo que necesitamos. Envolver no es un concepto en blanco y negro; puede variar desde alias simples para comandos utilizados con frecuencia hasta funciones más complejas que administran flujos de trabajo completos. A veces, un contenedor es solo una función conveniente para mejorar la legibilidad, mientras que en otros casos evoluciona hasta convertirse en una utilidad con todas las funciones que encapsula múltiples operaciones.
 
@@ -13,7 +16,7 @@ Las funciones de envoltura ofrecen varios beneficios clave:
 - **Mejora la legibilidad**: Dar a nuestras funciones empaquetadas nombres claros y descriptivos hace que nuestro código sea más fácil de entender de un vistazo.
 - **Encapsula la complejidad**: en lugar de lidiar con listas largas y crípticas de comandos, bucles profundamente anidados o declaraciones de mensajes complejos, podemos dividirlos en funciones auxiliares más pequeñas y bien estructuradas.
 - **Mejora la capacidad de mantenimiento**: si la funcionalidad principal de un comando cambia, solo necesitamos actualizar nuestra función empaquetada una vez, aislando nuestros complementos de los detalles de esos cambios.
-- **Fomenta la reutilización de código**: cada ayudante se convierte en parte de su biblioteca, lo que hace que los scripts futuros se escriban y depuren más rápidamente.
+- **Fomenta la reutilización de código**: cada ayudante se convierte en parte de su biblioteca, lo que hace que los scripts futuros se escriban y depuren más rápido.
 
 A medida que sus complementos crecen, los contenedores lo ayudan a mantener legible la lógica central y aislar los detalles repetitivos.
 
@@ -26,7 +29,7 @@ Ejemplos:
 ### Semilla aleatoria
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Propósito: Devuelve un entero aleatorio para inicializar un filtro
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Además, definir ***random-seed*** como una función independiente nos permite u
 Por ejemplo, si decidimos cambiar a ***aleatorio*** en su lugar:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Propósito: Devuelve un entero aleatorio para inicializar un filtro
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ El nombre de la función sigue siendo el mismo, lo que garantiza que nuestros sc
 La función de exportación JPEG en Scheme viene con muchos parámetros, lo que ofrece un control preciso sobre cómo se guardan las imágenes. Sin embargo, en la mayoría de los casos, sólo nos preocupamos por algunas configuraciones clave, como el nombre del archivo y la calidad. Para simplificar el proceso, podemos ajustar la función.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Propósito: Guarda una imagen como JPEG con una calidad especificada
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Evitar jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Esto mantiene nuestro código limpio, legible y adaptable al mismo tiempo que no
 La función ***car*** puede ser críptica y propensa a errores de secuencia de comandos. Es fácil aplicar por error ***car*** a un vector o a un elemento que no está en la lista, lo que genera un comportamiento inesperado. Para hacer que nuestro código sea más robusto y legible, podemos incluir esta funcionalidad en una función más segura.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Propósito: Devuelve el primer elemento de una lista o vector.
+;;          Advierte si la entrada no es válida o está vacía.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Maneja listas no vacías
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Maneja vectores no vacíos
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Entrada inválida o vacía
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Ajustar una función que ya está ajustada puede mejorar aún más la legibilida
 para recuperar la coordenada ***x***. Sin embargo, aunque funcional, no es muy expresivo. En su lugar, podemos incluir ***primer elemento*** en una definición más apropiada para aclarar nuestra intención.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Propósito: Devolver la coordenada x, para mayor legibilidad
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Propósito: Devolver la coordenada y, para mayor legibilidad
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ para recuperar la coordenada ***x***. Sin embargo, aunque funcional, no es muy e
 Ahora, en lugar de escribir en un esquema genérico:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Obtiene la coordenada x
+(cadr pixel-coords) ;; Obtiene la coordenada y
 ```
 
 Podemos escribir en _nuestro_ esquema:

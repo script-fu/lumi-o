@@ -1,11 +1,14 @@
 ---
 title: "Ferramentas"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c4c14f8ed284abd28bdb6e567187a850ba5eb7815fdb376bab03cc8c62091640
 ---
-Esses guias cobrem um conjunto de ferramentas mínimo para escrever plug-ins de Scheme para Lumi no Linux. Use o controle de versão antecipadamente. O Git fornece um histórico confiável e a hospedagem no GitLab ou GitHub facilita a sincronização e a revisão das alterações.
+Estes guias cobrem uma cadeia mínima de ferramentas para escrever plug-ins Scheme para o Lumi no Linux. Use controle de versão cedo. O Git oferece um histórico confiável, e hospedar no GitLab ou GitHub facilita sincronizar e revisar alterações.
 
 {{< cards >}}
-  {{< card link="git" title="Git" icon="folder-tree" subtitle="Controle de versão para desenvolvimento de esquema" >}}
-  {{< card link="visual-studio-code" title="Código do Visual Studio" icon="code" subtitle="Configuração do editor de código e extensões para Scheme" >}}
-  {{< card link="ai-assisted" title="Assistido por IA" icon="sparkles" subtitle="Use agentes de IA para escrever e refatorar plug-ins" >}}
+  {{< card link="git" title="Git" icon="folder-tree" subtitle="Controle de versão para desenvolvimento em Scheme" >}}
+  {{< card link="visual-studio-code" title="Visual Studio Code" icon="code" subtitle="Configuração do editor e extensões para Scheme" >}}
+  {{< card link="ai-assisted" title="Assistido por IA" icon="sparkles" subtitle="Escrever e refatorar plug-ins com agentes de IA" >}}
 {{< /cards >}}

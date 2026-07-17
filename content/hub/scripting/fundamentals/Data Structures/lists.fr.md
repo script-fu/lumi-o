@@ -1,7 +1,10 @@
 ---
 title: "Listes"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 Dans Scheme, une **list** est une structure de données fondamentale utilisée pour regrouper des valeurs. Les listes sont des collections ordonnées d'éléments où chaque élément peut être de n'importe quel type, y compris une autre liste. Les listes sont largement utilisées dans Scheme à la fois pour le stockage de données et la structure du programme.
 
@@ -28,8 +31,8 @@ Les éléments d'une liste sont accessibles à l'aide des procédures `car` et `
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; Récupère le premier élément
+(cdr my-list)  ; Récupère le reste de la liste
 ```
 
 Résultat :
@@ -52,8 +55,8 @@ Voici une fonction récursive simple pour imprimer chaque élément d'une liste�
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; Affiche le premier élément
+      (print-elements (cdr lst)))))             ;; Traite le reste de la liste
 ```
 
 - **Cas de base :** Si la liste est vide (`null? lst`), arrêtez la récursivité.
@@ -71,7 +74,7 @@ Sortie :
 - `"2"`
 - `"3"`
 
-Résultat : "fait"
+Result: "done"
 
 ---
 
@@ -135,8 +138,8 @@ La procédure `list?` vérifie si une valeur donnée est une liste.
 #### Exemple : liste ?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; Vérifie si (list 1 2 3) est une liste
+(list? 42)            ; Vérifie si 42 est une liste
 ```
 
 Résultat :
@@ -155,16 +158,18 @@ Scheme fournit plusieurs procédures intégrées pour travailler avec des listes
 - `reverse` : Renvoie une nouvelle liste avec les éléments dans l'ordre inverse.
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; Renvoie 3
+(append (list 1 2) (list 3 4)) ; Renvoie (1 2 3 4)
+(reverse (list 1 2 3))         ; Renvoie (3 2 1)
 ```
 
 Résultat :
 
 - `(length (list 1 2 3))` renvoie `3`
 - `(append (list 1 2) (list 3 4))` renvoie `(1 2 3 4)`
-- `(reverse (list 1 2 3))` renvoie `(3 2 1)`#### Utilisation de `list-ref`
+- `(reverse (list 1 2 3))` renvoie `(3 2 1)`
+
+#### Utilisation de `list-ref`
 
 La procédure `list-ref` récupère l'élément à un index spécifié d'une liste (index de base zéro).
 
@@ -178,7 +183,7 @@ La procédure `list-ref` récupère l'élément à un index spécifié d'une lis
 ##### Exemple : list-ref
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; Récupère l'élément à l'index 2
 ```
 
 Résultat : `30`
@@ -208,10 +213,10 @@ Pour accéder aux éléments d'une liste imbriquée, vous pouvez utiliser des co
 #### Exemple : accès aux éléments
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; Récupère le premier élément : (1 2)
+(car (car nested-list))        ; Récupère le premier élément de la première sous-liste : 1
+(cdr (car nested-list))        ; Récupère le reste de la première sous-liste : (2)
+(car (cdr (car nested-list)))  ; Récupère le second élément de la première sous-liste : 2
 ```
 
 ---
@@ -235,8 +240,8 @@ Pour accéder aux éléments d'une liste imbriquée, vous pouvez utiliser des co
 #### Exemple : accès aux éléments à partir d'autres sous-listes
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; Récupère la seconde sous-liste : (3 4)
+(car (car (cdr nested-list)))  ; Récupère le premier élément de la seconde sous-liste : 3
 ```
 
 ---

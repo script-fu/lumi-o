@@ -2,6 +2,9 @@
 title: "Symboler"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 Symboler är en av kärndatatyperna i Scheme, som representerar unika, oföränderliga identifierare. De används främst som nycklar, markörer eller platshållare i program, vilket gör dem viktiga för att skriva ren och uttrycksfull kod.
 
@@ -17,9 +20,9 @@ En symbol skrivs som en sekvens av tecken:
 Exempel:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; En symbol med namnet `hello`
+'foo-bar     ; En symbol med namnet `foo-bar`
+'*special*   ; En symbol med namnet `*special*`
 ```
 
 ## Skapa symboler
@@ -29,7 +32,7 @@ Symboler skapas vanligtvis med operatorn **citat** (`'`), som säger till Scheme
 ### Exempel
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; Skapar symbolen `my-symbol`
 ```
 
 Du kan också skapa symboler programmatiskt med hjälp av proceduren `string->symbol`, som konverterar en sträng till en symbol.
@@ -48,8 +51,8 @@ Eftersom symboler är unika kan du jämföra dem effektivt med `eq?`.
 ### Exempel
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (samma symbol)
+(eq? 'apple 'orange)  ; #f (olika symboler)
 ```
 
 Detta gör symboler idealiska att använda som nycklar i datastrukturer eller markörer i din kod.
@@ -62,7 +65,7 @@ Symboler används ofta i Schema för:
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; Returnerar (name . "Alice")
 ```
 
 2. **Identifierare i kod:**
@@ -88,9 +91,9 @@ Schema tillhandahåller inbyggda procedurer för att arbeta med symboler:
 ### Exempel
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (sant: det är en symbol)
+(symbol->string 'example)     ; Resultat: "example"
+(string->symbol "new-symbol") ; Resultat: 'new-symbol
 ```
 
 ## Sammanfattning

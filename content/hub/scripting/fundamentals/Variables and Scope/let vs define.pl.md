@@ -1,7 +1,10 @@
 ---
-title: "Nazwany niech lub lokalny definiuje"
+title: "Named let lub lokalne define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzędziami w Scheme do konstruowania kodu, ale służą różnym celom. Zrozumienie, kiedy używać każdego z nich, pomaga w tworzeniu przejrzystych, modułowych i wydajnych skryptów.
 
@@ -67,8 +70,8 @@ Zarówno **o nazwie `let`**, jak i **lokalnie `define`** są potężnymi narzęd
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Lokalna funkcja pomocnicza
+  (define (cube x) (* x x x))  ;; Lokalna funkcja pomocnicza
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ Jedną z najpotężniejszych cech nazwanego `let` jest jego zdolność do łącz
 W nazwanym `let` powiązania w nawiasach działają jak **zmienne lokalne**, które są inicjowane określonymi wartościami. Zakres tych zmiennych obejmuje treść `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Deklaruje x z wartością początkową 1
+           (y 2))  ;; Deklaruje y z wartością początkową 2
+  (+ x y))         ;; Używa x i y w ciele
 ```
 
 - **`x` i `y`** to zmienne lokalne zdefiniowane i zainicjowane jako część `let`.
@@ -158,7 +161,7 @@ Te same zmienne działają również jako **parametry wejściowe** dla rekurency
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Wywołanie rekurencyjne z nowymi x i y
 ```
 
 - **Pierwsza iteracja**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Nazwany `let` zawiera inicjalizację zmiennej jako część swojej składni. Eli
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Początkowe wywołanie z x = 1, y = 2
 ```
 
 Obydwa wykonują te same obliczenia, ale o nazwie `let` łączy deklarację zmiennej i konfigurację rekurencji w jedną zwięzłą konstrukcję.

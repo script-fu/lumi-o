@@ -1,33 +1,37 @@
 ---
-title: "Palettenmischer"
+title: "Palette Mixer"
 type: docs
+url: "hub/features/palette-mixer"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
-Der Palettenmischer ist Lumis Raum zum Ableiten neuer Farben aus der aktiven Palette. Das Mischen wird als malerischer Prozess und nicht als einfacher digitaler Durchschnitt behandelt, sodass Farben auf eine Weise verschoben, weicher, dunkler und harmonisiert werden können, die sich physischen Pigmenten nähert.
+Der Palette Mixer ist Lumis Raum, um aus der aktiven Palette neue Farben abzuleiten. Mischen ist ein malerischer Prozess, kein simpler digitaler Mittelwert — Farben verschieben, weichen, verdunkeln und harmonisieren sich näher an physischen Pigmenten.
 
-Der Mixer arbeitet mit der eigenen Farbidentität der Palette. Neue Mischungen sind keine willkürlichen Farben, die von außerhalb des Systems gezogen werden; es handelt sich um Beziehungen zwischen Farben, die bereits in der Palette vorhanden sind.
+Der Mixer arbeitet mit der Farbidentität der Palette. Neue Mischungen sind keine beliebigen Farben von außerhalb; sie sind Beziehungen zwischen Farben, die bereits in der Palette sind.
 
 ![palette-mixer](/images/screens/palettemixer.jpg)
 
 ## Mischen aus Palettenbeziehungen
 
-Eine Mischung beginnt mit den Quellfarben aus der Palette. Durch das Wechseln zwischen ihnen kann ein Künstler den Übergang von einer Farbtonfamilie zur anderen erkunden und dabei im Charakter der Palette bleiben.
+Eine Mischung beginnt mit Quellfarben aus der Palette. Beim Wechseln zwischen ihnen erkundet der Künstler den Übergang von einer Farbfamilie zur nächsten — innerhalb des Palettencharakters.
 
-Da die Palette aus pigmentähnlichen Inhaltsstoffen besteht, kann der Übergang zwischen zwei Farben nützliche Zwischentöne erzeugen: Grüntöne aus Gelb- und Blautönen, gedämpftes Violett, warme Grautöne, gedämpfte Erdtöne oder subtile Temperaturschwankungen.
+Weil die Palette aus pigmentähnlichen Bestandteilen aufgebaut ist, liefert der Weg zwischen zwei Farben nützliche Zwischentöne: Grün aus Gelb und Blau, gedämpftes Violett, warme Grautöne, gedämpfte Erden oder subtile Temperaturverschiebungen.
 
 ## Chroma und Ton
 
-Der Mixer trennt das Gefühl einer Farbe in praktische Malentscheidungen. Eine Farbe kann in eine klarere oder neutralere Version verschoben, aufgehellt oder abgedunkelt oder nahe einem bestimmten Wert gehalten werden, während Farbton und Sättigung untersucht werden.
+Der Mixer zerlegt das Gefühl einer Farbe in praktische Malentscheidungen. Eine Farbe lässt sich reiner oder neutraler treiben, aufhellen, abdunkeln oder nahe einem bestimmten Wert halten, während Farbton und Sättigung erkundet werden.
 
-Dies erleichtert die Suche nach der Farbe, die ein Gemälde benötigt: nicht nur „mehr Rot“ oder „mehr Blau“, sondern auch ruhiger, tiefer, blasser, wärmer, kühler oder zurückhaltender und dennoch zur gleichen Palettenfamilie gehörend.
+So wird die gesuchte Bildfarbe leichter gefunden — nicht nur „mehr Rot“ oder „mehr Blau“, sondern ruhiger, tiefer, blasser, wärmer, kühler oder zurückhaltender, und trotzdem derselben Palettenfamilie angehörend.
 
 ## Nützliche Entdeckungen speichern
 
-Wenn eine Mischung wichtig wird, kann sie Teil der Palette werden. Gespeicherte Mischungen behalten ihre Beziehung zu den Farben, die sie erzeugt haben, sodass sie erneut aufgerufen, angepasst und wiederverwendet werden können, anstatt zu isolierten Farbfeldern zu werden.
+Wird eine Mischung wichtig, kann sie Teil der Palette werden. Gespeicherte Mischungen behalten ihre Beziehung zu den erzeugenden Farben — wieder aufrufbar, anpassbar, wiederverwendbar, statt isolierte Farbfelder.
 
-Mit der Zeit kann so eine Palette von einer Reihe von Zutaten zu einer Aufzeichnung künstlerischer Entscheidungen heranwachsen. Die nützlichen Mischungen einer Sitzung können die Ausgangsfarben für die nächste sein.
+Mit der Zeit wächst eine Palette von einer Zutatenliste zu einem Protokoll künstlerischer Entscheidungen. Nützliche Mischungen einer Sitzung werden Ausgangsfarben für die nächste.
 
-## Ein Begleiter zur Palette Map
+## Begleiter zur Palette Map
 
-Der Palettenmixer und die Palettenkarte sind für die Zusammenarbeit konzipiert. Die Karte zeigt die Palette als navigierbaren Farbraum, während der Mixer es einem Künstler ermöglicht, sich gezielt zwischen ausgewählten Punkten innerhalb dieses Raums zu bewegen.
+Palette Mixer und Palette Map sind füreinander gemacht. Die Map zeigt die Palette als navigierbaren Farbraum; der Mixer lässt gezielt zwischen gewählten Punkten in diesem Raum wechseln.
 
-Zusammen unterstützen sie einen Arbeitsablauf, der dem Mischen von Farbe auf einer Palette ähnelt: Wählen Sie benachbarte oder kontrastierende Farben, suchen Sie nach der richtigen Balance, behalten Sie die Farben bei, die wichtig sind, und malen Sie in einer kohärenten Farbwelt weiter.
+Zusammen unterstützen sie einen Workflow wie das Mischen auf der Malpalette: benachbarte oder kontrastierende Farben wählen, die richtige Balance suchen, wichtige Farben behalten — und in einer stimmigen Farbwelt weiter malen.

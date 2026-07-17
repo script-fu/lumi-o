@@ -1,7 +1,10 @@
 ---
-title: "연관 목록(Alist)"
-type: docs
+title: "연관 리스트(Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **연관 목록**(또는 **alist**)은 키-값 쌍 모음을 나타내는 데 사용되는 Scheme의 기본 데이터 구조입니다. 이는 쌍 목록으로 구현되며, 각 쌍은 키(일반적으로 기호)를 값과 연결합니다. Alist는 간단하고 유연하며 중소 규모 데이터세트에 적합합니다.
 
@@ -30,10 +33,10 @@ alist는 각 요소가 **쌍**(`cons`으로 구성됨)인 목록입니다. 각 �
 작은따옴표(`'`)는 **인용**을 줄여서 Scheme이 표현식을 평가하지 못하도록 합니다. 이는 모든 키와 값이 하드코딩된 정적 목록을 생성하는 데 이상적입니다.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ alist는 각 요소가 **쌍**(`cons`으로 구성됨)인 목록입니다. 각 �
 alist에서 값을 검색하려면 해당 키로 쌍을 찾는 `assoc` 함수를 사용할 수 있습니다.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; (name . "Alice") 반환
+(assoc 'country alist) ; #f 반환 (키를 찾을 수 없음)
 ```
 
 ### 값 추출
@@ -84,7 +87,7 @@ alist에서 값을 검색하려면 해당 키로 쌍을 찾는 `assoc` 함수를
 `assoc`을 사용하여 쌍을 검색한 후 `cdr`을 사용하여 값을 추출합니다.
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; "Alice" 반환
 ```
 
 ### 주요 기능 요약

@@ -1,22 +1,25 @@
 ---
-title: "地圖"
+title: "map"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c11f2c7984493d3fda20fca757958884b8752ef9a15640e4a7357c544e29c6c6
 ---
-Scheme 中的 `map` 函數用於將過程應用於列表（或多個列表）的每個元素，並**返回包含結果的新列表**。這使其成為轉換資料的理想選擇。
+Scheme 中的 `map` 函數對列表（或多個列表）的每個元素套用一個程序，並**回傳包含結果的新列表**。非常適合資料轉換。
 
-`map` 最簡單的形式如下：
+La forme la plus simple de `map` ressemble à ceci :
 
 ```scheme
 (map procedure list)
 ```
 
-- **過程**：應用於清單中每個元素的函數。
-- **列表**：其元素將被轉換的列表。
+- **Procédure :** Fonction appliquée à chaque élément.
+- **Liste :** Liste à transformer.
 
 ---
 
-### 範例：將每個元素加倍
+### Exemple : doubler chaque élément
 
 ```scheme
 (define (double x)
@@ -25,26 +28,23 @@ Scheme 中的 `map` 函數用於將過程應用於列表（或多個列表）的
 (map double (list 1 2 3 4))
 ```
 
-- 此處，函數`double` 應用於列表`(1 2 3 4)` 的每個元素。
-- 結果是一個新列表，其中每個元素都加倍。
+- `double` est appliqué à `(1 2 3 4)`.
+- Résultat : nouvelle liste avec valeurs doublées.
 
-**輸出**：`(2 4 6 8)`
-
----
-
-### 它是如何運作的
-
-1. **建立新清單**：
-   - `map` 將提供的流程套用至清單的每個元素並將結果收集到新清單中。
-
-2. **轉換資料**：
-   - 它主要用於資料轉換而不是執行副作用。
+**Sortie** : `(2 4 6 8)`
 
 ---
 
-#### 範例：與多個清單一起使用
+### Comment ça marche
 
-如果提供了多個列表，`map` 會處理每個列表中的對應元素。
+1. **Nouvelle liste :** `map` collecte les résultats.
+2. **Transformation :** Plutôt que des effets de bord.
+
+---
+
+#### Plusieurs listes
+
+Avec plusieurs listes, `map` traite les éléments correspondants.
 
 ```scheme
 (define (sum x y)
@@ -53,16 +53,14 @@ Scheme 中的 `map` 函數用於將過程應用於列表（或多個列表）的
 (map sum (list 1 2 3) (list 4 5 6))
 ```
 
-- 函數`sum` 新增兩個清單中的對應元素，並將結果作為新列表傳回。
-
-**輸出**：`(5 7 9)`
+**Sortie** : `(5 7 9)`
 
 ---
 
-### 總結
+### Résumé
 
-- `map` 函數是一個強大的工具，用於透過對每個元素應用過程來轉換列表。
-- 與 `for-each` 不同，`map` **產生新清單**，其中包含應用該過程的結果。
-- 它支援多個列表，允許對它們進行元素級操作。
+- `map` transforme des listes élément par élément.
+- Contrairement à `for-each`, `map` **produit une nouvelle liste**.
+- Plusieurs listes sont traitées par paires.
 
-透過使用 `map`，您可以有效率地建立資料的轉換版本，同時保持原始清單不變。
+Avec `map`, créez des versions transformées tout en conservant les listes d'origine.

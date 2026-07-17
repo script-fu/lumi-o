@@ -1,11 +1,14 @@
 ---
-title: "Hulpmiddelen"
+title: "Tools"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c4c14f8ed284abd28bdb6e567187a850ba5eb7815fdb376bab03cc8c62091640
 ---
-Deze handleidingen behandelen een minimale toolchain voor het schrijven van Scheme-plug-ins voor Lumi op Linux. Maak vroegtijdig gebruik van versiebeheer. Git geeft je een betrouwbare geschiedenis, en hosting op GitLab of GitHub maakt het gemakkelijk om wijzigingen te synchroniseren en te bekijken.
+Deze gidsen behandelen een minimale toolchain voor het schrijven van Scheme-plug-ins voor Lumi op Linux. Gebruik versiebeheer vroeg. Git geeft u een betrouwbare geschiedenis en hosting op GitLab of GitHub maakt synchroniseren en reviewen eenvoudig.
 
 {{< cards >}}
-  {{< card link="git" title="Git" icon="folder-tree" subtitle="Versiebeheer voor schemaontwikkeling" >}}
-  {{< card link="visual-studio-code" title="Visual Studio-code" icon="code" subtitle="Installatie van code-editor en uitbreidingen voor Scheme" >}}
-  {{< card link="ai-assisted" title="AI-geassisteerd" icon="sparkles" subtitle="Gebruik AI-agenten om plug-ins te schrijven en te refactoren" >}}
+  {{< card link="git" title="Git" icon="folder-tree" subtitle="Versiebeheer voor Scheme-ontwikkeling" >}}
+  {{< card link="visual-studio-code" title="Visual Studio Code" icon="code" subtitle="Editorconfiguratie en extensies voor Scheme" >}}
+  {{< card link="ai-assisted" title="AI-ondersteund" icon="sparkles" subtitle="Plug-ins schrijven en refactoren met AI-agents" >}}
 {{< /cards >}}

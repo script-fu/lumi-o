@@ -2,6 +2,9 @@
 title: "Depuración"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 En las secuencias de comandos, ninguna función es infalible. Incluso los comandos más confiables pueden fallar cuando se enfrentan a entradas o condiciones inesperadas. Para protegernos contra esto, podemos implementar un sistema de depuración personalizado y adoptar técnicas de programación defensiva. Al incluir funciones estándar con mecanismos de manejo de errores y proporcionar comentarios informativos, podemos hacer que nuestros scripts sean más sólidos y más fáciles de solucionar.
 
@@ -12,14 +15,14 @@ Una parte clave de esta estrategia es utilizar un indicador de depuración globa
 Un indicador de depuración global es una forma sencilla pero eficaz de controlar el nivel de salida de información durante la ejecución del script. Cuando está habilitado, proporciona mensajes de depuración detallados que pueden ser invaluables para rastrear problemas. Cuando está deshabilitado, mantiene la salida concisa para uso en producción.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Propósito: Indicador global para controlar la salida de depuración.
 (define debug #f)
 ```
 
 De forma predeterminada, la depuración está desactivada. Para habilitar la salida detallada durante el desarrollo, simplemente establezca el indicador en `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Propósito: Indicador global para controlar la salida de depuración.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ También podemos habilitar o deshabilitar temporalmente la depuración para secc
 Para un control más preciso, podemos activar o desactivar la depuración dentro de partes específicas del script utilizando funciones auxiliares.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Propósito: Desactivar el modo de depuración para una sección de código.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Propósito: Activar el modo de depuración para una sección de código.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ Para un control más preciso, podemos activar o desactivar la depuración dentro
 Esto nos permite controlar la depuración dinámicamente:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Activar la salida detallada
 
-;; Some script logic here
+;; Algo de lógica de script aquí
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Desactivar la salida detallada
 ```
 
 ## Sistema de mensajería de depuración
@@ -73,7 +76,7 @@ Cada función desempeña un papel en el formato y visualización de mensajes est
 La función `debug-message` es el método principal para mostrar la salida de depuración. Garantiza que los mensajes solo se muestren cuando la depuración esté habilitada.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Propósito: Mostrar un mensaje de depuración.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ La función `debug-message` es el método principal para mostrar la salida de de
 Uso de ejemplo:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Propósito: Devuelve la posición en el árbol del elemento o #f si el elemento no es válido
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Con la depuración habilitada, el resultado podría ser:
 Los mensajes pueden contener diferentes tipos de datos, como listas, vectores y números. Para garantizar que tengan el formato adecuado, utilizamos `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Propósito: Convierte varios tipos de datos de Scheme (listas, vectores, pares, etc.)
+;;          en una representación de cadena.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Lista vacía
+    ((and (string? item) (string=? item "")) "\"\"")  ; Cadena vacía
+    ((list? item) (list->string item))                ; Lista anidada
+    ((vector? item)                                   ; Maneja vectores
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Maneja pares
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Números
+    ((symbol? item) (symbol->string item))            ; Símbolos
+    ((boolean? item) (if item "#t" "#f"))             ; Booleanos
+    ((string? item) item)                             ; Cadenas
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 Para fusionar varios componentes del mensaje en una sola cadena, usamos `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Propósito: Concatenar varios elementos en una sola cadena.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ Uso de ejemplo:
 La función `list->string` convierte una lista en una cadena formateada.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Propósito: Convertir una lista de elementos en una cadena legible.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ La función `list->string` convierte una lista en una cadena formateada.
 ### Mensajes de advertenciaLa función `warning-message` funciona de manera similar a `debug-message`, pero muestra advertencias incluso cuando la depuración está deshabilitada.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Propósito: Mostrar un mensaje de advertencia.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ Una vez implementado un sistema de depuración, podemos mejorar nuestra bibliote
 Un ejemplo común es `item-is-valid?`, que envuelve `lumi-item-id-is-valid` para devolver `#t` o `#f`. Si se devuelve `#f`, podemos activar un `warning-message` en el código de llamada, si la entrada no es un número, podemos dar una advertencia en la función.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Propósito: Comprobar si un elemento es válido, devuelve #t o #f.
+;;          Emite una advertencia si el elemento no es un número.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Un contenedor para nuestra función de mensaje para usar un `*`
 Ejemplo de uso de `call` en la práctica:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Propósito: Aplica el proceso de texturizado a la lista dada de máscaras de grupo
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

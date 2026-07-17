@@ -2,6 +2,9 @@
 title: "Validation"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 Lors de la création de plug-ins robustes, il est important de s’assurer que nos fonctions gèrent les erreurs correctement et fonctionnent comme prévu, même en cas d’utilisation abusive ou d’entrées inattendues. La validation permet de protéger l'intégrité de la fonction et d'éviter les plantages ou les comportements involontaires.
 
@@ -15,25 +18,25 @@ Exemple :
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; Valide l'argument de sortie
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Envoyer vers la Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; Envoyer vers la boîte de dialogue GUI
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; Envoyer vers la fenêtre de terminal
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ Exemple de gestion d'un message vide :
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; Vérifier si le message est vide
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,39 +71,39 @@ Cette approche garantit que la fonction reçoit toujours des entrées valides, a
 ### Exemple de validation combinée
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Fonction pour gérer la sortie de messages vers diverses destinations
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; Valider les arguments du message et de la sortie
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Envoyer vers la Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; Envoyer vers la boîte de dialogue GUI
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; Envoyer vers la fenêtre de terminal
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
   (lumi-message-set-handler 2))
 ```
 
 Dans cette version :
-- La fonction vérifie d'abord si le `message` est vide ou invalide. If the message is valid, it moves on to checking if the `output` is one of the accepted values (`gui`, `error-console`, or `terminal`).
+- La fonction vérifie d'abord si le `message` est vide ou invalide. Si le message est valide, il vérifie si `output` est l'une des valeurs acceptées (`gui`, `error-console` ou `terminal`).
 - Si les deux vérifications réussissent, le message est envoyé à la sortie appropriée. Sinon, un message d'erreur s'affiche avec une explication claire.
 - Une vérification supplémentaire est effectuée pour s'assurer que le message est également une chaîne.
 
-Cette fonction de validation combinée maintient le code plus propre et garantit que les deux entrées sont validées avant qu'une action ne soit entreprise, ce qui rend la fonction plus robuste. Notice, we are also building in a debug messaging system. Quand le
+Cette fonction de validation combinée maintient le code plus propre et garantit que les deux entrées sont validées avant qu'une action ne soit entreprise, ce qui rend la fonction plus robuste. Remarquez que nous intégrons également un système de messagerie de débogage. Quand le
 le code échoue, nous obtenons une raison, une raison que nous avons écrite nous-mêmes.
 
 ```

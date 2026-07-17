@@ -2,6 +2,9 @@
 title: "เบราว์เซอร์ขั้นตอน"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 **เบราว์เซอร์ขั้นตอน Lumi** ช่วยให้คุณค้นหาขั้นตอนที่มีอยู่ (ในตัวและปลั๊กอินที่ให้มา) และตรวจสอบพารามิเตอร์และค่าที่ส่งคืน
 
@@ -31,12 +34,12 @@ Procedure Browser แสดงรายการขั้นตอนภาย�
 เมื่อคุณติดตั้ง "Hello World!" แล้ว ปลั๊กอิน คุณจะพบรายการดังกล่าวอยู่ในเบราว์เซอร์ขั้นตอน เพียงค้นหาชื่อฟังก์ชันที่คุณลงทะเบียนกับ Lumi ในกรณีนี้คือ "scheme-hello-world" รายการจะแสดงพารามิเตอร์และค่าส่งคืนใดๆ ที่เกี่ยวข้องกับปลั๊กอิน พร้อมด้วยคำอธิบายโดยย่อ นอกจากนี้ คุณจะเห็นว่าบรรทัดข้อความบางบรรทัดที่คุณป้อนเป็นพารามิเตอร์อินพุตระหว่างขั้นตอนการลงทะเบียนแสดงอยู่ใต้ส่วน **ข้อมูลเพิ่มเติม**
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; ชื่อขั้นตอน
+  "Hello world!"                                        ;; ชื่อรายการเมนู
+  "A Scheme procedure plug-in"                       ;; คำอธิบายเครื่องมือและคำบรรยาย
+  "Your Name"                                           ;; ผู้เขียน
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; ใบอนุญาต
+  "2024")                                               ;; วันที่ลิขสิทธิ์
 ```
 
 ทำให้ง่ายต่อการตรวจสอบว่าปลั๊กอินของคุณได้รับการลงทะเบียนอย่างถูกต้อง และช่วยให้คุณตรวจสอบได้อย่างรวดเร็วว่าปลั๊กอินโต้ตอบกับขั้นตอนอื่นๆ ใน Lumi อย่างไร Procedure Browser เป็นเครื่องมืออันทรงพลังสำหรับการดีบักและขยายปลั๊กอินของคุณโดยสำรวจขั้นตอนทั้งหมดที่มีอยู่ภายใน Lumi

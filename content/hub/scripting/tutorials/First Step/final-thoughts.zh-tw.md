@@ -2,6 +2,9 @@
 title: "最後的想法"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 您現在擁有一個工作程序外掛程式和一個小型幫助程式庫。本系列介紹了您將在大多數 Lumi 腳本中使用的核心模式：
 
@@ -15,7 +18,7 @@ weight: 10
 這是我們主要插件程式碼的最終版本：
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ weight: 10
 庫程式碼：
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 用途：向狀態列傳送訊息，成功時回傳 #t
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 用途：向對話方塊傳送訊息，成功時回傳 #t
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 用途：向 Error Console 傳送訊息，成功時回傳 #t
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 用途：向 terminal 傳送訊息，成功時回傳 #t
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 用途：將訊息分發到適當的輸出，成功時回傳 #t
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ weight: 10
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 用途：驗證訊息為非空字串，有效時回傳 #t
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ weight: 10
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 用途：驗證輸出為有效目標，有效時回傳 #t
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

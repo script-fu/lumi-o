@@ -2,6 +2,9 @@
 title: "Отладка"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 В сценариях ни одна функция не является непогрешимой. Даже самые надежные команды могут дать сбой при столкновении с неожиданными входными данными или условиями. Чтобы защититься от этого, мы можем реализовать собственную систему отладки и применить методы защитного программирования. Обогащая стандартные функции механизмами обработки ошибок и предоставляя информативную обратную связь, мы можем сделать наши сценарии более надежными и упростить устранение неполадок.
 
@@ -12,14 +15,14 @@ weight: 5
 Глобальный флаг отладки — это простой, но эффективный способ контролировать уровень вывода информации во время выполнения сценария. Когда он включен, он предоставляет подробные сообщения отладки, которые могут оказаться неоценимыми для отслеживания проблем. Если этот параметр отключен, выходные данные остаются краткими для использования в производстве.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Назначение: Глобальный флаг для управления отладочным выводом.
 (define debug #f)
 ```
 
 По умолчанию отладка отключена. Чтобы включить подробный вывод во время разработки, просто установите флаг `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Назначение: Глобальный флаг для управления отладочным выводом.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ weight: 5
 Для более точного управления мы можем включать или отключать отладку в определенных частях сценария с помощью вспомогательных функций.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Назначение: Отключает режим отладки для участка кода.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Назначение: Включает режим отладки для участка кода.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ weight: 5
 Это позволяет нам динамически управлять отладкой:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Включить подробный вывод
 
-;; Some script logic here
+;; Здесь логика скрипта
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Отключить подробный вывод
 ```
 
 ## Система сообщений об отладке
@@ -73,7 +76,7 @@ weight: 5
 Функция `debug-message` — это основной метод отображения выходных данных отладки. Это гарантирует, что сообщения будут отображаться только при включенной отладке.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Назначение: Показать отладочное сообщение.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ weight: 5
 Пример использования:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Назначение: Возвращает позицию элемента в дереве или #f, если элемент недействителен
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ weight: 5
 Сообщения могут содержать различные типы данных, такие как списки, векторы и числа. Чтобы убедиться, что они правильно отформатированы, мы используем `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Назначение: Преобразует различные типы данных Scheme (списки, векторы, пары и т. д.)
+;;          в строковое представление.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Пустой список
+    ((and (string? item) (string=? item "")) "\"\"")  ; Пустая строка
+    ((list? item) (list->string item))                ; Вложенный список
+    ((vector? item)                                   ; Обрабатывает векторы
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Обрабатывает пары
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Числа
+    ((symbol? item) (symbol->string item))            ; Символы
+    ((boolean? item) (if item "#t" "#f"))             ; Логические значения
+    ((string? item) item)                             ; Строки
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 Чтобы объединить несколько компонентов сообщения в одну строку, мы используем `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Назначение: Объединяет несколько элементов в одну строку.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ list:
 Функция `list->string` преобразует список в форматированную строку.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Назначение: Преобразует список элементов в читаемую строку.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ list:
 ### Предупреждающие сообщенияФункция `warning-message` работает аналогично `debug-message`, но отображает предупреждения, даже если отладка отключена.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Назначение: Показать предупреждающее сообщение.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ list:
 Типичным примером является `item-is-valid?`, который оборачивает `lumi-item-id-is-valid` для возврата `#t` или `#f`. Если возвращается `#f`, мы можем вызвать `warning-message` в вызывающем коде. Если входные данные не являются числом, мы можем выдать предупреждение в функции.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Назначение: Проверяет, действителен ли элемент, возвращает #t или #f.
+;;          Выводит предупреждение, если элемент не является числом.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ list:
 Пример использования `call` на практике:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Назначение: Применяет процесс текстурирования к заданному списку групповых масок
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

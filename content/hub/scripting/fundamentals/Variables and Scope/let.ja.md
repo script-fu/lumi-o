@@ -1,7 +1,10 @@
 ---
-title: "させて"
+title: "let"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 005223eb0588849468d9d96fec0070456c3dc53fa30bee45eedd1a793c20875d
 ---
 `let` という名前が使用されているのは、_"Let \( x = 2 \) and \( y = 3 \)"_ のように、一時バインディングを導入するという数学的起源を反映しているためです。
 

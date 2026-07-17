@@ -2,18 +2,21 @@
 title: "Libreria di messaggistica"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bfe459b9f717201d646bde29196fd66e6c3b19b3e9dbdb3338e0c853153e1c05
 ---
-Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. Queste funzioni ora costituiscono la base di una **Libreria di messaggistica**, progettata per gestire l'output verso destinazioni diverse, come la GUI, la console dei messaggi e il terminale del sistema operativo.
+Nel corso del tempo, quella che era iniziata come un'unica funzione per inviare messaggi si è evoluta in un insieme di funzioni correlate. These functions now form the foundation of a **Messaging Library**, designed to handle output to different destinations, such as the GUI, Message console, and OS terminal.
 
 ### Perché una libreria di messaggistica?
 
 Man mano che le nostre esigenze crescono, la gestione dei messaggi su più output richiede un approccio più modulare ed estensibile. Invece di una singola funzione che fa tutto, abbiamo suddiviso il processo in componenti riutilizzabili, consentendo una maggiore flessibilità. Questa libreria può ora essere utilizzata come strumento di messaggistica generico da cui possono prendere in prestito altri plug-in o funzioni.
 
-### Cosa fa la Libreria di messaggistica?
+### What Does the Messaging Library Do?
 
 La Libreria Messaggistica attualmente include le seguenti funzioni:
 
-- **send-to-gui**: invia messaggi alla finestra di dialogo della GUI di Lumi.
+- **send-to-gui**: Sends messages to the Lumi GUI dialog box.
 - **send-to-error-console**: invia messaggi alla console Lumi Message.
 - **send-to-terminal**: invia messaggi alla finestra del terminale.
 - **send-message**: una funzione dispatcher che indirizza i messaggi all'output appropriato.
@@ -23,21 +26,21 @@ La Libreria Messaggistica attualmente include le seguenti funzioni:
 
 La **Libreria di messaggistica** può essere facilmente estesa per supportare output aggiuntivi. Ad esempio:
 
-- **send-to-file**: salva i messaggi in un file di registro.
+- **send-to-file**: Save messages to a log file.
 - **send-to-logger**: integrazione con un sistema di registrazione esterno.
 - **invio a notifica**: visualizza i messaggi come notifiche di sistema.
 
-Seguendo lo stesso modello di design modulare e funzioni riutilizzabili, questa libreria può trasformarsi in uno strumento completo per gestire tutti i tipi di attività di messaggistica.
+By following the same pattern of modular design and reusable functions, this library can grow into a comprehensive tool for handling all kinds of messaging tasks.
 
 ## Vantaggi di una libreria di messaggistica
 
-- **Riutilizzabilità**: le funzioni possono essere riutilizzate su diversi plug-in o progetti.
-- **Modularità**: ciascuna funzione gestisce un'attività specifica, semplificando la manutenzione e l'estensione del codice.
-- **Coerenza**: l'utilizzo delle stesse funzioni di convalida e gestione dei messaggi garantisce un comportamento coerente in tutta l'applicazione.
+- **Reusability**: The functions can be reused across different plug-ins or projects.
+- **Modularity**: Each function handles one specific task, making the code easier to maintain and extend.
+- **Consistency**: Using the same validation and message-handling functions ensures consistent behavior across the application.
 
 La **Libreria dei messaggi** è l'inizio di un quadro più ampio che potrebbe semplificare il modo in cui i messaggi vengono gestiti nel tuo progetto. Man mano che la libreria cresce, nuovi plug-in possono facilmente attingere ad essa per inviare messaggi ovunque debbano andare.
 
-Possiamo modificare la struttura del file:
+We can adjust the file structure:
 
 ```plaintext
 /home/your-username/code/
@@ -52,7 +55,7 @@ Possiamo modificare la struttura del file:
 E ricorda di regolare `load` nel plug-in principale:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/messaging.scm")
 

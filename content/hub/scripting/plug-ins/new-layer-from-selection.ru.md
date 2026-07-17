@@ -1,14 +1,17 @@
 ---
 title: "Новый слой из выделения"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 73e083715459f91de1967499488660752d2a2eec798e99a1185f0f995ee0d9a4
 ---
 Создает новый именованный слой из активного выделения.
 
-## Где он живет
+## Исходный код
 
-- [Просмотреть источник](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Посмотреть исходный код](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
-## Где он появляется в Lumi
+## Меню в Lumi
 
 - **Слой → Слой из выделения**
 

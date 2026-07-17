@@ -1,7 +1,10 @@
 ---
-title: "รายชื่อสมาคม (Alists)"
-type: docs
+title: "รายการเชื่อมโยง (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **รายการการเชื่อมโยง** (หรือ **รายการ**) เป็นโครงสร้างข้อมูลพื้นฐานในโครงการที่ใช้เพื่อแสดงคอลเลกชันของคู่คีย์-ค่า มันถูกนำไปใช้เป็นรายการคู่ โดยที่แต่ละคู่เชื่อมโยงคีย์ (โดยทั่วไปคือสัญลักษณ์) กับค่า รายการมีความเรียบง่าย ยืดหยุ่น และเหมาะสำหรับชุดข้อมูลขนาดเล็กถึงขนาดกลาง
 
@@ -30,10 +33,10 @@ weight: 6
 เครื่องหมายคำพูดเดี่ยว (`'`) เป็นการย่อสำหรับ **quoting** ซึ่งทำให้ Scheme ไม่สามารถประเมินนิพจน์ได้ ทำให้เหมาะอย่างยิ่งสำหรับการสร้างรายการคงที่โดยที่คีย์และค่าทั้งหมดเป็นแบบฮาร์ดโค้ด
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ weight: 6
 หากต้องการดึงค่าจากรายการ คุณสามารถใช้ฟังก์ชัน `assoc` ซึ่งจะค้นหาคู่ด้วยคีย์
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; คืนค่า (name . "Alice")
+(assoc 'country alist) ; คืนค่า #f (ไม่พบคีย์)
 ```
 
 ### การแยกคุณค่า
@@ -84,7 +87,7 @@ weight: 6
 เมื่อคุณดึงข้อมูลคู่โดยใช้ `assoc` ให้ใช้ `cdr` เพื่อแยกค่า:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; คืนค่า "Alice"
 ```
 
 ### สรุปคุณสมบัติที่สำคัญ

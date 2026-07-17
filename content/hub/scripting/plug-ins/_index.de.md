@@ -1,6 +1,9 @@
 ---
 title: "Plug-Ins"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f273072593fbc0114525e7736ebde1b24861c1a146ef77e254ff85273604a67e
 ---
 In diesem Abschnitt wird eine kleine Reihe von **Beispiel-Scheme-Plug-Ins** dokumentiert, die in Lumi verwendet werden.
 

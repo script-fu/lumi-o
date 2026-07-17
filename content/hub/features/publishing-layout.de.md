@@ -1,37 +1,41 @@
 ---
-title: "Veröffentlichungslayout"
+title: "Publishing Layout"
 type: docs
+url: "hub/features/publishing-layout"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: dc0367028ed8f6b4e1508c309384967daa43a4148f8d70f00880173a0a1fca7d
 ---
-Illustrationen für Druck und Veröffentlichung benötigen oft mehr als eine Leinwandgröße. Seiten haben Beschnittkanten, Doppelseiten haben Mittelnähte und wichtige Inhalte müssen möglicherweise von Bereichen ferngehalten werden, die weggeschnitten oder in einen Zwischensteg gebunden werden. Die Publishing-Layout-Tools von Lumi sorgen dafür, dass diese Bedenken beim Malen sichtbar bleiben, ohne sie im Bildmaterial zu verflachen.
+Illustrationen für Druck und Publikation brauchen oft mehr als eine Leinwandgröße. Seiten haben Beschnittkanten, Doppelseiten haben Mittelnähte, und wichtige Inhalte müssen von Bereichen fernbleiben, die weggeschnitten oder in den Bundsteg gebunden werden. Die Publishing-Layout-Werkzeuge von Lumi halten diese Aspekte beim Malen sichtbar, ohne sie ins Kunstwerk einzuflachen.
 
-Layoutgrenzen werden pro Bild gespeichert, mit dem Projekt gespeichert und können deaktiviert werden, wenn sie nicht benötigt werden. Das Ziel besteht darin, Buch-, Comic- und Druck-Workflows eine klare Seitenstruktur zu verleihen, während das darunter liegende Ebenenbild vollständig bearbeitbar bleibt.
+Layoutgrenzen werden pro Bild gespeichert, reisen mit dem Projekt mit und lassen sich abschalten, wenn sie nicht gebraucht werden. Ziel ist, Buch-, Comic- und Druck-Workflows eine klare Seitenstruktur zu geben, während das darunterliegende Ebenenbild vollständig bearbeitbar bleibt.
 
-## Entlüften und beschneiden
+## Anschnitt und Beschnitt
 
-Der Anschnitt definiert, wie weit das Bildmaterial über den letzten Seitenrand hinausragt. Lumi zeigt den Beschnittbereich als Live-Seitengrenze innerhalb der Leinwand an, mit dem Anschnittrand als schattierter Überlagerung um ihn herum. Dies erleichtert das Malen von Hintergründen und Kantendetails, die das Zuschneiden überstehen müssen, ohne zu erraten, wo die fertige Seite enden wird.
+Der Anschnitt legt fest, wie weit das Kunstwerk über den fertigen Seitenrand hinausreicht. Lumi zeigt den Beschnittbereich als aktive Seitengrenze innerhalb der Leinwand, den Anschnitt als schattierte Überlagerung darum. So lassen sich Hintergründe und Randdetails malen, die den Beschnitt überstehen müssen — ohne zu raten, wo die fertige Seite endet.
 
-Die Maße können in den für den Auftrag passenden Einheiten eingestellt werden, so dass der Beschnitt in Zoll, Millimetern oder einer anderen bekannten Druckeinheit und nicht nur in Pixeln berücksichtigt werden kann.
+Maße lassen sich in passenden Einheiten setzen: Anschnitt in Zoll, Millimetern oder einer anderen vertrauten Druckeinheit statt nur in Pixeln.
 
-## Dachrinne und Aufstriche
+## Bundsteg und Doppelseiten
 
-Bei Doppelseiten markiert ein Zwischensteg den geschützten Bereich rund um die Mittelnaht, in dem wichtige Inhalte vermieden werden sollten. Wenn diese Option aktiviert ist, zeigt Lumi auf der gesamten Doppelseite Stegstreifen an, sodass Gesichter, Text und Schwerpunkte aus dem Bindungsbereich ferngehalten werden können, während die gesamte Doppelseite eine durchgehende Leinwand bleibt.
+Bei Doppelseiten markiert der Bundsteg den geschützten Bereich um die Mittelnaht, in dem wichtige Inhalte vermieden werden sollten. Ist die Option aktiv, zeigt Lumi Bundstegstreifen über die gesamte Doppelseite — Gesichter, Text und Schwerpunkte bleiben außerhalb des Bindungsbereichs, während die Doppelseite eine durchgehende Leinwand bleibt.
 
-Dies ist besonders nützlich für Comics, Bilderbücher und alle Kunstwerke, die als gegenüberliegende Seiten und nicht als einzelne Blätter gedruckt werden.
+Besonders nützlich für Comics, Bilderbücher und alles, was als gegenüberliegende Seiten und nicht als Einzelblätter gedruckt wird.
 
-## Kompositionsanleitungen
+## Kompositionshilfen
 
-Optionale Kantenführungen markieren den beschnittenen Seitenbereich mit subtilen Kompositionsmarkierungen. Leitfäden können der Einteilung pro Seite oder einer vollständigen Lektüre folgen und Terzen, goldene Abschnitte oder Quinten verwenden, je nachdem, wie das Layout beurteilt werden soll.
+Optionale Randhilfen markieren den beschnittenen Seitenbereich mit dezenten Kompositionsmarken. Sie können pro Seite oder über die gesamte Doppelseite hinweg gesetzt werden — mit Drittelregel, Goldener Schnitt oder Fünftelung, je nachdem, wie das Layout beurteilt werden soll.
 
-Die Leitfäden dienen als stille Referenz während der Layout- und Endbearbeitungsarbeiten. Sie helfen dabei, die Platzierung anhand der Seite zu erkennen, die tatsächlich gedruckt wird, und nicht nur anhand der gesamten digitalen Leinwand.
+Die Hilfen sind eine leise Referenz beim Layout und bei der Endbearbeitung. Sie helfen, die Platzierung gegenüber der Seite zu beurteilen, die tatsächlich gedruckt wird — nicht nur gegenüber der vollen digitalen Leinwand.
 
 ## Layout auf der Leinwand anzeigen
 
-Layout-Overlays werden über das Menü „Ansicht“ gesteuert. Anschnitt-, Bundsteg- und Führungsbereiche können einzeln oder zusammen angezeigt werden, sodass sich ein Künstler auf den Teil der Publikationsstruktur konzentrieren kann, der gerade wichtig ist.
+Layout-Overlays steuert man über das Menü „Ansicht“. Anschnitt, Bundsteg und Hilfen lassen sich einzeln oder gemeinsam einblenden, sodass sich der Künstler auf den gerade relevanten Teil der Publikationsstruktur konzentrieren kann.
 
-Mit „Bild“ > „Layout aktivieren“ werden die Layoutgrenzen für das aktuelle Bild aktiviert oder deaktiviert. Wenn das Layout deaktiviert ist, werden Überlagerungen ausgeblendet und die Ansichtsumschaltung wird verschoben, die Grenzeinstellungen bleiben jedoch zur späteren Verwendung in der Datei gespeichert.
+Unter „Bild“ > „Layout aktivieren“ schaltet man Layoutgrenzen für das aktuelle Bild ein oder aus. Ist das Layout deaktiviert, werden Overlays ausgeblendet und Ansichtsumschalter treten zurück — die Grenzeinstellungen bleiben in der Datei gespeichert.
 
 ## Mit dem Projekt gespeichert
 
-Layouteinstellungen werden mit dem `.lum` Projekt übertragen. Wenn Sie das Bild später öffnen, werden Anschnitt, Bundsteg, Überlagerungsdarstellung, Hilfslinienoptionen wiederhergestellt und ob das Layout für diese Datei aktiviert ist. Dadurch bleibt die publikationsbezogene Einrichtung Teil des Arbeitszustands des Bildmaterials und nicht eine vorübergehende Anzeigeeinstellung.
+Layouteinstellungen reisen mit dem `.lum`-Projekt. Beim späteren Öffnen werden Anschnitt, Bundsteg, Overlay-Darstellung, Hilfen und der Aktivierungszustand wiederhergestellt. Die publikationsbezogene Einrichtung bleibt Teil des Arbeitszustands des Kunstwerks — keine vorübergehende Anzeigeeinstellung.
 
-Für Künstler, die zwischen Skizzieren, Malen und Druckvorbereitung wechseln, bleibt der Arbeitsablauf an einem Ort: das gleiche Ebenenbild mit der Publikationsstruktur, die jederzeit verfügbar ist, wenn die Seite sie benötigt.
+Für Künstler, die zwischen Skizze, Malerei und Druckvorbereitung wechseln, bleibt alles an einem Ort: dasselbe Ebenenbild, mit Publikationsstruktur, wann immer die Seite sie braucht.

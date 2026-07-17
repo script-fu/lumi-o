@@ -2,12 +2,15 @@
 title: "Caricamento"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
-As soon as a helper function grows, move it into a small library file. That keeps the plug-in focused and makes the helper reusable across multiple plug-ins.
+Non appena una funzione di supporto cresce, spostala in un piccolo file di libreria. Ciò mantiene il plug-in focalizzato e rende l'helper riutilizzabile su più plug-in.
 
 ### Crea una funzione di libreria
 
-We can take the send-message function and make a new file with that as its content. Save the file into your repo folder, not the plugins part, perhaps near the top level;
+Possiamo prendere la funzione di invio del messaggio e creare un nuovo file con quello come contenuto. Salva il file nella cartella del repository, non nella parte dei plugin, magari vicino al livello più alto;
 
 ```plaintext
 /home/your-username/code/
@@ -19,47 +22,47 @@ We can take the send-message function and make a new file with that as its conte
                   └── hello-world.scm
 ```
 
-- **scheme/**: This is your main directory for storing your Scheme code.
-  - **library/**: This is where shared functions like `send-message.scm` live.
-  - **plug-ins/**: This is where your individual plug-ins are stored.
+- **scheme/**: questa è la directory principale in cui memorizzare il codice Scheme.
+  - **library/**: qui risiedono le funzioni condivise come `send-message.scm`.
+  - **plug-in/**: qui sono memorizzati i tuoi plug-in individuali.
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
 Esempio di una funzione di libreria send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Funzione per gestire l'output dei messaggi verso varie destinazioni
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Invia alla Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Impostare il gestore su Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Invia alla finestra di dialogo GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Impostare il gestore sulla finestra di dialogo GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Invia alla finestra del terminale
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; L'output del terminal è gestito con display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Ripristinare il gestore dei messaggi predefinito alla Message console
   (lumi-message-set-handler 2))
 ```
 
 ### Carica la funzione di libreria
 
-We can load that library function with the Scheme `load` command;
+Possiamo caricare quella funzione di libreria con il comando Scheme `load`;
 
 Caricamento di un file di libreria:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 
@@ -81,4 +84,4 @@ Caricamento di un file di libreria:
   "<Image>/Funky")
 ```
 
-Ehi! We've now got something simpler and shorter to read, that kind of describes itself without comments. This is the satisfying conclusion of refactoring.
+Ehi! Ora abbiamo qualcosa di più semplice e più breve da leggere, che si descrive da solo senza commenti. Questa è la conclusione soddisfacente del refactoring.

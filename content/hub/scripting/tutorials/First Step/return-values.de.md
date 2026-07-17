@@ -2,6 +2,9 @@
 title: "Rückgabewerte"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Rückgabewerte sind wichtig, weil Sie damit den Fluss ohne zusätzlichen Status steuern können. In Scheme wird der zuletzt ausgewertete Ausdruck zum Rückgabewert.
 
@@ -14,9 +17,9 @@ In Scheme wird der Rückgabewert einer Funktion durch den letzten Ausdruck besti
 Schauen wir uns noch einmal die Validierungsfunktion an (is-valid-string?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Prüfen, ob die Nachricht eine nicht leere Zeichenkette ist
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ Wenn in dieser Funktion die Nachricht ungültig ist, wird ein Fehler ausgegeben.
 Wir können dies verbessern, indem wir den Rückgabewert expliziter machen. Beispielsweise könnten wir `#t` (true) zurückgeben, wenn die Nachricht gültig ist:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Zweck: Prüft, dass die Nachricht an eine gültige Ausgabe gesendet wird
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Prüfen, ob die Ausgabe eines der erwarteten Anzeigeziele ist
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Indem wir entscheiden, was unsere Funktionen zurückgeben, können wir sie vorhe
 Hier ist ein einfaches Beispiel für die Verwendung eines Rückgabewerts zur Steuerung des Logikflusses:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Zweck: Leitet eine Nachricht an das passende Ausgabeziel weiter
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
 ### Mit Rückgabewerten umgestaltet
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Zweck: Sendet eine Nachricht an die Statusleiste, gibt #t bei Erfolg zurück
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Zweck: Sendet eine Nachricht an das Dialogfeld, gibt #t bei Erfolg zurück
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Zweck: Sendet eine Nachricht an die Error Console, gibt #t bei Erfolg zurück
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Zweck: Sendet eine Nachricht an das terminal, gibt #t bei Erfolg zurück
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Zweck: Leitet eine Nachricht an die passende Ausgabe weiter, gibt #t bei Erfolg zurück
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist, gibt #t bei Gültigkeit zurück
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Okay, hier ist der Bibliothekscode mit eingebetteten Rückgabewerten, der zur St
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Zweck: Prüft, dass die Ausgabe ein gültiges Ziel ist, gibt #t bei Gültigkeit zurück
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

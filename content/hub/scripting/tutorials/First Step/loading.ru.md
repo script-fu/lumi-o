@@ -2,8 +2,11 @@
 title: "Загрузка"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
-Как только вспомогательная функция вырастет, переместите ее в небольшой библиотечный файл. Это сохраняет фокус плагина и позволяет повторно использовать помощник в нескольких плагинах.
+As soon as a helper function grows, move it into a small library file. That keeps the plug-in focused and makes the helper reusable across multiple plug-ins.
 
 ### Создаем библиотечную функцию
 
@@ -21,34 +24,34 @@ weight: 3
 
 - **scheme/**: это ваш основной каталог для хранения кода схемы.
   - **library/**: здесь живут общие функции, такие как `send-message.scm`.
-  - **плагины/**: здесь хранятся ваши отдельные плагины.
+  - **plug-ins/**: This is where your individual plug-ins are stored.
     - **hello-world/**: A folder for the specific "Hello World!" plug-in.
       - **hello-world.scm**: The script file for the plug-in.
 
 Пример библиотечной функции send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Функция для вывода сообщений в различные места назначения
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Отправить в Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Установить обработчик на Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Отправить в диалоговое окно GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Установить обработчик на диалог GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Отправить в окно терминала
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Вывод terminal обрабатывается с помощью display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Восстановить обработчик сообщений по умолчанию для Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -59,7 +62,7 @@ weight: 3
 Загрузка файла библиотеки:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 

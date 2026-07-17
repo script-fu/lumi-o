@@ -2,38 +2,41 @@
 title: "확인"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
-강력한 플러그인을 구축할 때 오용이나 예상치 못한 입력이 있는 경우에도 함수가 오류를 우아하게 처리하고 예상대로 작동하는지 확인하는 것이 중요합니다. 유효성 검사는 기능의 무결성을 보호하고 충돌이나 의도하지 않은 동작을 방지하는 데 도움이 됩니다.
+When building robust plug-ins, it’s important to ensure that our functions handle errors gracefully and work as expected, even in cases of misuse or unexpected inputs. 유효성 검사는 기능의 무결성을 보호하고 충돌이나 의도하지 않은 동작을 방지하는 데 도움이 됩니다.
 
 입력을 올바르게 처리하는지 확인하기 위해 유효성 검사를 추가하여 `send-message` 함수를 개선할 수 있는 방법을 살펴보겠습니다.
 
-### 입력 확인
+### Validate Inputs
 
 메시지를 보내기 전에 `send-message` 함수에 전달된 `output` 인수가 유효한지 확인해야 합니다. 출력 대상이 예상 값(gui, 오류 콘솔 또는 터미널) 중 하나인지 확인하는 검사를 추가할 수 있습니다.
 
-예:
+Example:
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; 출력 인수 검증
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; Message console로 보내기
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; GUI 대화 상자로 보내기
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; 터미널 창으로 보내기
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 기본 메시지 핸들러를 Message console로 복원
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; 메시지가 비어 있는지 확인
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,40 +71,39 @@ weight: 4
 ### 결합 검증 예
 
 ```scheme
-;; Function to handle message output to various destinations
+;; 다양한 대상으로 메시지 출력을 처리하는 함수
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; 메시지 및 출력 인수 검증
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; Message console로 보내기
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; GUI 대화 상자로 보내기
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; 터미널 창으로 보내기
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; 기본 메시지 핸들러를 Message console로 복원
   (lumi-message-set-handler 2))
 ```
 
 이 버전에서는:
-- 이 함수는 `message`이 비어 있거나 유효하지 않은지 먼저 확인합니다. 메시지가 유효하면 `output`이 허용되는 값(`gui`, `error-console` 또는 `terminal`) 중 하나인지 확인하는 단계로 넘어갑니다.
+- 이 함수는 `message`가 비어 있거나 유효하지 않은지 먼저 확인합니다. 메시지가 유효하면 `output`이 허용된 값(`gui`, `error-console`, `terminal`) 중 하나인지 확인합니다.
 - 두 검사가 모두 통과되면 메시지가 적절한 출력으로 전송됩니다. 그렇지 않으면 명확한 설명과 함께 오류 메시지가 표시됩니다.
 - 메시지도 문자열인지 확인하기 위해 추가 검사가 수행됩니다.
 
-이 결합된 유효성 검사 기능은 코드를 더욱 깔끔하게 유지하고 작업을 수행하기 전에 두 입력 모두 유효성을 검사하여 기능을 더욱 강력하게 만듭니다. 우리는 또한 디버그 메시징 시스템을 구축하고 있습니다. 때
-코드가 실패하면 우리는 이유를 알게 됩니다. 우리가 직접 작성한 이유입니다.
+이 통합 유효성 검사 함수는 코드를 더 깔끔하게 유지하고, 어떤 동작을 수행하기 전에 두 입력이 모두 검증되도록 하여 함수를 더 견고하게 만듭니다. 또한 디버그 메시징 시스템을 구축하고 있습니다. 코드가 실패하면 우리가 직접 작성한 이유를 확인할 수 있습니다.
 
 ```
 Execution error for 'Hello loaded!':

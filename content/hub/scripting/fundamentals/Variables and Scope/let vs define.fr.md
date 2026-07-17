@@ -1,7 +1,10 @@
 ---
-title: "Let nommé ou définition locale"
+title: "Named let ou define local"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 **named `let`** et **local `define`** sont des outils puissants dans Scheme pour structurer votre code, mais ils servent à des fins différentes. Comprendre quand utiliser chacun aide à créer des scripts propres, modulaires et efficaces.
 
@@ -67,8 +70,8 @@ weight: 5
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Fonction auxiliaire locale
+  (define (cube x) (* x x x))  ;; Fonction auxiliaire locale
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ L'une des fonctionnalités les plus puissantes d'un `let` nommé est sa capacit�
 Dans un `let` nommé, les liaisons entre parenthèses agissent comme des **variables locales** initialisées avec des valeurs spécifiques. Ces variables sont limitées au corps du `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Déclare x avec la valeur initiale 1
+           (y 2))  ;; Déclare y avec la valeur initiale 2
+  (+ x y))         ;; Utilise x et y dans le corps
 ```
 
 - **`x` et `y`** sont des variables locales définies et initialisées dans le cadre de `let`.
@@ -158,7 +161,7 @@ Les mêmes variables agissent également comme **paramètres d'entrée** pour le
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Appel récursif avec de nouvelles valeurs pour x et y
 ```
 
 - **Première itération** : `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Un `let` nommé inclut l'initialisation des variables dans le cadre de sa syntax
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Appel initial avec x = 1, y = 2
 ```
 
 Les deux effectuent le même calcul, mais le `let` nommé combine la déclaration de variable et la configuration de la récursion en une seule construction concise.

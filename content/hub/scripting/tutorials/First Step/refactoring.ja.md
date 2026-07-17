@@ -2,6 +2,9 @@
 title: "リファクタリング"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 関数が動作するようになったら、一歩下がって、コードをどのように構成するのが最適かを考えることができます。目標は、プラグインをできるだけ明確で、理解しやすく、保守しやすいものにすることです。既存のコードの動作を変更せずにその構造を改善および改良するこのプロセスは、リファクタリングとして知られています。
 
@@ -9,15 +12,15 @@ weight: 2
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; メッセージハンドラを設定し、メッセージを GUI ダイアログボックスに出力する
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; メッセージを terminal（Lumi を起動した OS ウィンドウ）に送る
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Scheme では、変数には変数が認識されている「スコープ」が�
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; メッセージハンドラを設定し、メッセージを GUI ダイアログボックスに出力する
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; メッセージハンドラを設定し、メッセージを Error Console に出力する
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; メッセージを terminal（Lumi を起動した OS ウィンドウ）に送る
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ Scheme では、変数には変数が認識されている「スコープ」が�
 
 ロジックを抽出すると、次のようになります。
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; メイン関数
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Scheme では、変数には変数が認識されている「スコープ」が�
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; さまざまな出力先へのメッセージ出力を処理する関数
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Error Console に送信
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; ハンドラを Error Console に設定する
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; GUI ダイアログボックスに送信
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; ハンドラを GUI ダイアログに設定する
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ターミナルウィンドウに送信
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; terminal 出力は display で処理される
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; 既定のメッセージハンドラを Error Console に戻す
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"
@@ -135,7 +138,7 @@ Scheme では、変数には変数が認識されている「スコープ」が�
 
 ## これを関数型プログラミングに関連付ける
 
-関数型プログラミングでは、関数は **第一級市民**として見なされます。これは、関数を再利用したり、渡したり、組み合わせてより複雑な動作を形成したりできることを意味します。目標は次のとおりです。- **問題をより小さな独立した部分に分解**します。
+関数型プログラミングでは、関数は **第一級市民**として見なされます。つまり、関数を再利用したり、渡したり、組み合わせてより複雑な動作を形成したりすることができます。目標は次のとおりです。- **問題をより小さな独立した部分に分解**します。
 - **複雑性を**、`send-message` など、特定のタスクを処理する小さな関数に分離します。
 - **高レベルの関数をシンプルに保つ**ことで、各タスクの実行方法の詳細を知る必要がなく、データとアクションのフローの調整に集中できます。
 - **懸念事項の分離**: この関数は、出力タイプに基づいてメッセージの送信方法を処理し、このロジックをメイン関数から分離します。

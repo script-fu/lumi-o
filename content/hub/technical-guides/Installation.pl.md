@@ -1,12 +1,17 @@
 ---
 title: "Instalacja"
 type: docs
+url: "hub/technical-guides/Installation"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ff429321515ea8c3b77a6f1f0cfd2486c8042e168032b9b0bec97b497930e25e
 ---
-Do wykonania poniższego początkowego kroku klonowania potrzebujesz Gita. Jeśli Git nie jest jeszcze zainstalowany, zainstaluj go najpierw (Debian/Ubuntu: `sudo apt install git`) lub wykonaj polecenie: [Using Git on Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
-## 1) Klonuj Lumi (pierwsza konfiguracja)
+Do wykonania poniższego początkowego klonowania potrzebujesz Gita. Jeśli Git nie jest jeszcze zainstalowany, zainstaluj go najpierw (Debian/Ubuntu: `sudo apt install git`) lub postępuj zgodnie z: [Git w systemie Linux](/hub/technical-guides/Using-Git-on-Linux/)
 
-Utwórz katalog dla Lumi i użyj Gita do sklonowania kodu źródłowego.
+## 1) Sklonuj Lumi (pierwsza konfiguracja)
+
+Utwórz katalog dla Lumi i użyj Gita, aby sklonować kod źródłowy.
 
 ```bash
 sudo apt install git
@@ -15,13 +20,10 @@ mkdir -p ~/code
 cd ~/code
 
 # Clone via SSH (matches the Git guide above)
-
 git clone git@ssh.gitlab.gnome.org:pixelmixer/lumi-dev.git lumi-dev
 
 # Or clone via HTTPS (no SSH key setup)
-
 # git clone https://gitlab.gnome.org/pixelmixer/lumi-dev.git lumi-dev
-
 ```
 
 ## 2) Zainstaluj zależności (pierwsza konfiguracja)
@@ -47,16 +49,16 @@ cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-launch-active.sh lumi-dev
 ```
 
-## Opcjonalnie: Przebuduj/Skompiluj
+## Opcjonalnie: przebudowa / kompilacja
 
-Normalna przebudowa po zmianach kodu:
+Normalna przebudowa po zmianach w kodzie:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
 bash lumi-build-script.sh --scope build --dir lumi-dev
 ```
 
-Ścieżka do szybkiej kompilacji:
+Szybka ścieżka tylko do kompilacji:
 
 ```bash
 cd ~/code/lumi-dev/build/lumi/scripts
@@ -74,9 +76,9 @@ bash lumi-build-script.sh --scope build --dir lumi-dev --component babl
 
 W razie potrzeby użyj `--type`:
 
-- `debug` – debugowanie przepływów pracy
-- `debugoptimized` – zrównoważona wartość domyślna dla rozwoju
-- `release` – najszybszy czas działania
+- `debug` – do debugowania
+- `debugoptimized` – zrównoważona wartość domyślna na czas rozwoju
+- `release` – najszybszy czas wykonywania
 
 Przykład:
 

@@ -1,6 +1,9 @@
 ---
 title: "플러그인 브라우저"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
 ---
 플러그인 브라우저를 사용하면 메뉴 시스템을 탐색하고 특정 플러그인이 설치된 위치를 확인할 수 있습니다.
 

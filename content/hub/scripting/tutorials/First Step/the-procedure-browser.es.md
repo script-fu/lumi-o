@@ -2,6 +2,9 @@
 title: "El navegador de procedimientos"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 El **Explorador de procedimientos Lumi** le permite buscar los procedimientos disponibles (integrados y complementos incluidos) e inspeccionar sus parámetros y valores de retorno.
 
@@ -31,12 +34,12 @@ Busque `lumi-message` para ver sus parámetros y valores de retorno.
 Una vez que haya instalado "¡Hola mundo!" complemento, puede encontrarlo en la lista del Explorador de procedimientos. Simplemente busque el nombre de la función que registró en Lumi, en este caso, "scheme-hello-world". La entrada mostrará los parámetros y los valores de retorno asociados con el complemento, junto con una breve descripción. También verá dónde se muestran algunas de las líneas de texto que ingresó como parámetros de entrada durante el proceso de registro en la sección **Información adicional**.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; Nombre del procedimiento
+  "Hello world!"                                        ;; Nombre del elemento del menú
+  "A Scheme procedure plug-in"                       ;; Información sobre herramientas y descripción
+  "Your Name"                                           ;; Autor
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; Licencia
+  "2024")                                               ;; Fecha de copyright
 ```
 
 Esto facilita verificar que su complemento esté registrado correctamente y le brinda una manera rápida de revisar cómo interactúa con otros procedimientos en Lumi. El Explorador de procedimientos es una poderosa herramienta para depurar y expandir sus complementos explorando todos los procedimientos disponibles dentro de Lumi.

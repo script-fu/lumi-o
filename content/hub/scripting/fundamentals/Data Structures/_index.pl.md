@@ -1,7 +1,10 @@
 ---
 title: "Struktury danych"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 W schemacie **struktury danych** są niezbędnymi narzędziami do organizowania, przechowywania i manipulowania danymi. Umożliwiają programistom tworzenie wydajnych, czytelnych i nadających się do ponownego użycia skryptów. Wybierając odpowiednią strukturę danych dla konkretnego problemu, możesz zoptymalizować zarówno wydajność, jak i przejrzystość swojego kodu.
 

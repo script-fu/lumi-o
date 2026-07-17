@@ -2,6 +2,9 @@
 title: "Il browser delle procedure"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2ea095c0407f9641d28803e937a992e044584f6bcbed960239d0c0df4b430d2
 ---
 Il **Lumi Procedure Browser** consente di cercare le procedure disponibili (integrate e plug-in fornite) e di controllarne i parametri e i valori restituiti.
 
@@ -31,12 +34,12 @@ Cerca `lumi-message` per visualizzarne i parametri e i valori restituiti.
 Dopo aver installato "Hello World!" plug-in, è possibile trovarlo elencato nel browser delle procedure. Cerca semplicemente il nome della funzione che hai registrato con Lumi, in questo caso "scheme-hello-world". La voce visualizzerà i parametri e gli eventuali valori restituiti associati al plug-in, insieme a una breve descrizione. Vedrai anche dove vengono visualizzate alcune delle righe di testo che hai inserito come parametri di input durante il processo di registrazione nella sezione **Informazioni aggiuntive**.
 
 ```scheme
-(scheme-register-procedure "scheme-hello-world"   ;; Procedure name
-  "Hello world!"                                        ;; Menu item name
-  "A Scheme procedure plug-in"                       ;; Tool tip and description
-  "Your Name"                                           ;; Author
-  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; License
-  "2024")                                               ;; Copyright Date
+(scheme-register-procedure "scheme-hello-world"   ;; Nome della procedura
+  "Hello world!"                                        ;; Nome della voce di menu
+  "A Scheme procedure plug-in"                       ;; Suggerimento e descrizione
+  "Your Name"                                           ;; Autore
+  "Under GNU GENERAL PUBLIC LICENSE Version 3"          ;; Licenza
+  "2024")                                               ;; Data del copyright
 ```
 
 Ciò semplifica la verifica che il plug-in sia registrato correttamente e fornisce un modo rapido per verificare come interagisce con le altre procedure in Lumi. Il Procedure Browser è un potente strumento per eseguire il debug ed espandere i plug-in esplorando tutte le procedure disponibili all'interno di Lumi.

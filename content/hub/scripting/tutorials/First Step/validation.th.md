@@ -2,6 +2,9 @@
 title: "การตรวจสอบ"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d5d160ddb40b6a09f1d92ebf0287ce6912dcc703702b7701c564688226e92842
 ---
 เมื่อสร้างปลั๊กอินที่มีประสิทธิภาพ สิ่งสำคัญคือต้องแน่ใจว่าฟังก์ชันของเราจัดการกับข้อผิดพลาดได้อย่างงดงามและทำงานตามที่คาดไว้ แม้ว่าในกรณีของการใช้ในทางที่ผิดหรืออินพุตที่ไม่คาดคิดก็ตาม การตรวจสอบความถูกต้องจะช่วยปกป้องความสมบูรณ์ของฟังก์ชันและป้องกันการหยุดทำงานหรือพฤติกรรมที่ไม่ได้ตั้งใจ
 
@@ -15,25 +18,25 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Validate the output argument
+  ;; ตรวจสอบอาร์กิวเมนต์เอาต์พุต
   (if (not (member output '(gui error-console terminal)))
     (error "Invalid output destination: " output)
     (cond
-      ;; Send to the Message console
+      ;; ส่งไปยัง Message console
       ((eq? output 'error-console)
          (lumi-message-set-handler 2)
          (lumi-message message))
 
-      ;; Send to the GUI dialog box
+      ;; ส่งไปยังกล่องโต้ตอบ GUI
       ((eq? output 'gui)
          (lumi-message-set-handler 0)
          (lumi-message message))
 
-      ;; Send to the terminal window
+      ;; ส่งไปยังหน้าต่างเทอร์มินัล
       ((eq? output 'terminal)
          (display message))))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -47,7 +50,7 @@ weight: 4
 
 ```scheme
 (define (send-message message output)
-  ;; Check if the message is empty
+  ;; ตรวจสอบว่าข้อความว่างหรือไม่
   (if (or (not message) (string=? message ""))
     (error "Message cannot be empty")
     (cond
@@ -68,30 +71,30 @@ weight: 4
 ### ตัวอย่างการตรวจสอบแบบรวม
 
 ```scheme
-;; Function to handle message output to various destinations
+;; ฟังก์ชันจัดการการส่งข้อความไปยังปลายทางต่างๆ
 (define (send-message message output)
 
-  ;; Validate the message and output arguments
+  ;; ตรวจสอบอาร์กิวเมนต์ข้อความและเอาต์พุต
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")
     (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)
       (cond
-        ;; Send to the Message console
+        ;; ส่งไปยัง Message console
         ((eq? output 'error-console)
            (lumi-message-set-handler 2)
            (lumi-message message))
 
-        ;; Send to the GUI dialog box
+        ;; ส่งไปยังกล่องโต้ตอบ GUI
         ((eq? output 'gui)
            (lumi-message-set-handler 0)
            (lumi-message message))
 
-        ;; Send to the terminal window
+        ;; ส่งไปยังหน้าต่างเทอร์มินัล
         ((eq? output 'terminal)
            (display message)))))
 
-  ;; Restore the default message handler to the Message console
+  ;; คืนค่าตัวจัดการข้อความเริ่มต้นไปยัง Message console
   (lumi-message-set-handler 2))
 ```
 

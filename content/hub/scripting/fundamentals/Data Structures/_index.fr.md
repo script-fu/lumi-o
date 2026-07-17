@@ -1,11 +1,14 @@
 ---
 title: "Structures de données"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 Dans Scheme, les **structures de données** sont des outils essentiels pour organiser, stocker et manipuler les données. Ils permettent aux développeurs de créer des scripts efficaces, lisibles et réutilisables. En choisissant la bonne structure de données pour un problème spécifique, vous pouvez optimiser à la fois les performances et la clarté de votre code.
 
-## Structures de données clés dans le schéma
+## Structures de données clés en Scheme
 
 Scheme fournit plusieurs structures de données puissantes et polyvalentes, chacune adaptée à des tâches spécifiques. Les structures de données principales comprennent :
 
@@ -19,7 +22,7 @@ Principales caractéristiques :
 - Couramment utilisé pour les algorithmes récursifs et pour représenter des structures arborescentes.
 
 Exemples d'utilisation :
-- Gestion des collections d'articles.
+- Gestion de collections d'éléments.
 - Représenter des séquences ou des hiérarchies.
 
 ---

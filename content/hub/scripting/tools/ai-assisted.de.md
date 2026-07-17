@@ -1,36 +1,39 @@
 ---
 title: "KI-unterstützte Entwicklung"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7867639dd5e951131133f23635a10898d35de3c275f48b78b7ed7091c73e15c4
 ---
-Moderne KI-Tools können die Entwicklung von Lumi-Plug-ins erheblich beschleunigen, indem sie als kollaborativer Codierungspartner fungieren.
+Moderne KI-Tools können die Entwicklung von Lumi-Plug-Ins erheblich beschleunigen, indem sie als kollaborativer Codierungspartner fungieren.
 
-## VS-Code im Agentenmodus
+## VS Code im Agent-Modus
 
-Durch die Verwendung von Visual Studio Code mit einem KI-Assistenten im **Agent-Modus** (z. B. dem Agent-Modus von GitHub Copilot oder anderen Tool-fähigen Assistenten) können Sie komplexe, mehrstufige Aufgaben in natürlicher Sprache ausführen.
+Mit Visual Studio Code und einem KI-Assistenten im **Agent-Modus** (z. B. GitHub Copilots Agent-Modus oder andere toolfähige Assistenten) können Sie komplexe, mehrstufige Aufgaben in natürlicher Sprache ausführen.
 
-Anstatt nur eine einzige Codezeile fertigzustellen, kann ein Agent:
-- Lesen Sie Ihren gesamten Arbeitsbereich, um den Kontext zu verstehen.
-- Erstellen Sie neue Dateien und Verzeichnisse.
-- Führen Sie Terminalbefehle aus, um Skripte zu testen oder zu validieren.
-- Suchen Sie nach vorhandenen Mustern in Ihrer Codebasis.
+Statt nur eine einzelne Codezeile zu vervollständigen, kann ein Agent:
+- den gesamten Arbeitsbereich lesen, um den Kontext zu verstehen
+- neue Dateien und Verzeichnisse anlegen
+- Terminalbefehle ausführen, um Skripte zu testen oder zu validieren
+- nach vorhandenen Mustern in der Codebasis suchen
 
 ## Repository-Zugriff
 
-Die KI-Unterstützung ist am effektivsten, wenn der Agent Zugriff auf **lumi-dev** oder Ihr spezifisches Projekt-Repository hat. Mit Einblick in die vorhandene Codebasis kann der Agent:
-- Verwenden Sie die **[Dienstprogrammbibliotheken]({{< ref "/hub/scripting/reference/utility-browser" >}})** als Referenz für Hilfsfunktionen.
-- Befolgen Sie bestehende Muster für GEGL-Operationen und Layer-Management.
-- Boilerplate-Code aus etablierten Plug-Ins wiederverwenden.
+KI-Unterstützung ist am effektivsten, wenn der Agent Zugriff auf **lumi-dev** oder Ihr Projekt-Repository hat. Mit Einblick in die vorhandene Codebasis kann der Agent:
+- die **[Utility Libraries]({{< ref "/hub/scripting/reference/utility-browser" >}})** als Referenz für Hilfsfunktionen nutzen
+- bestehende Muster für GEGL-Operationen und Ebenenverwaltung befolgen
+- Boilerplate-Code aus etablierten Plug-Ins wiederverwenden
 
 ## Beispiel-Workflow
 
-Sie können den Agenten direkt bitten, ein vollständiges Plug-in zu generieren, indem Sie das gewünschte funktionale Ergebnis beschreiben:
+Sie können den Agenten direkt bitten, ein vollständiges Plug-In zu erzeugen, indem Sie das gewünschte funktionale Ergebnis beschreiben:
 
-> „Schreiben Sie mithilfe der verfügbaren Scheme-Dienstprogramme und Beispiele im Arbeitsbereich ein neues Plug-In, das eine 50 % horizontale Hilfslinie auf dem aktiven Bild erstellt und es „Center Guide“ nennt.“
+> „Schreiben Sie mithilfe der verfügbaren Scheme-Utilities und Beispiele im Arbeitsbereich ein neues Plug-In, das eine horizontale Hilfslinie bei 50 % auf dem aktiven Bild erstellt und sie ‚Center Guide‘ nennt.“
 
-Der Agent sucht nach Anleitungen zum Erstellen von Anleitungen, identifiziert die richtige Dienstprogrammfunktion (z. B. `lumi-image-add-hguide-percent` aus `common.scm`) und generiert die vollständige `.scm`-Datei mit dem richtigen Registrierungsbaustein.
+Der Agent sucht nach der Vorgehensweise zum Erstellen von Hilfslinien, findet die passende Utility-Funktion (z. B. `lumi-image-add-hguide-percent` aus `common.scm`) und erzeugt die vollständige `.scm`-Datei mit dem korrekten Registrierungs-Boilerplate.
 
 ## Best Practices
 
-- **Seien Sie genau**: Beschreiben Sie genau, was das Plug-in tun soll.
-- **Referenzdienstprogramme**: Ermutigen Sie den Agenten, im Verzeichnis `share/lumi/scripts/` nach hochrangigen Hilfsprogrammen zu suchen.
-- **Überprüfen und testen**: Testen Sie immer das von der KI generierte Plug-in, es ist oft ein iterativer und kreativer Prozess.
+- **Seien Sie präzise**: Beschreiben Sie genau, was das Plug-In tun soll.
+- **Utilities referenzieren**: Weisen Sie den Agenten auf das Verzeichnis `share/lumi/scripts/` hin, um High-Level-Helfer zu finden.
+- **Prüfen und testen**: Testen Sie jedes von der KI erzeugte Plug-In — oft ist das ein iterativer, kreativer Prozess.

@@ -1,37 +1,41 @@
 ---
 title: "Spektrale Farbmischung"
 type: docs
+url: "hub/features/spectral-color"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: eb96e55a075312549727618ea851ee4ed38372c4e144cb2f24ef029b989c0f86
 ---
-Das Palettensystem von Lumi nutzt die spektrale Farbmischung, damit sich die digitale Farbauswahl eher wie das Mischen physischer Farbe verhält. Anstatt Farben als einfache Bildschirmwerte zu behandeln, modelliert Lumi, wie Pigmente Licht absorbieren und reflektieren, während Palettenfarben erzeugt und gemischt werden.
+Lumis Palettensystem nutzt spektrale Farbmischung, damit sich digitale Farbauswahl eher wie physisches Farbmischen verhält. Statt Farben als einfache Bildschirmwerte zu behandeln, modelliert Lumi, wie Pigmente Licht absorbieren und reflektieren, während Palettenfarben erzeugt und gemischt werden.
 
-Das Ergebnis ist ein Farbworkflow, bei dem sich Mischungen für Maler vertrauter anfühlen: Gelb- und Blautöne können sich in Richtung Grün bewegen, gesättigte Farben können sich in glaubhafte Neutraltöne verwandeln und begrenzte Paletten entwickeln eine erkennbare Harmonie.
+Ergebnis: Mischungen fühlen sich Malern vertrauter an — Gelb und Blau gehen Richtung Grün, gesättigte Farben werden zu glaubhaften Neutraltönen, begrenzte Paletten entwickeln erkennbare Harmonie.
 
-## Pigmentartiges Verhalten
+## Pigmentähnliches Verhalten
 
-Bei der herkömmlichen digitalen Farbmischung werden häufig mathematische Mittelpunkte durchlaufen, die nicht mit Farbe vergleichbar sind. Durch die spektrale Mischung erhält Lumi eine reichhaltigere Grundlage für den Palettenaufbau, sodass Farben entsprechend pigmentähnlicher Tendenzen interagieren können.
+Herkömmliche digitale Farbmischung läuft oft über mathematische Mittelpunkte, die nicht an Farbe erinnern. Spektrale Mischung gibt Lumi eine reichere Grundlage für Palettenaufbau — Farben interagieren nach pigmentähnlichen Tendenzen.
 
-Dadurch wird die Erkundung der Palette für Künstler, die in Farbe und nicht nur in Bildschirmfarbwerten denken, intuitiver. Eine Mischung kann den Farbton auf eine Weise verdunkeln, dämpfen, erwärmen, abkühlen oder verändern, die mit den Ausgangsfarben in Verbindung steht.
+Palettenerkundung wird intuitiver für Künstler, die in Farbe statt nur in Bildschirmwerten denken. Eine Mischung kann abdunkeln, dämpfen, wärmen, kühlen oder den Farbton verschieben — verbunden mit den Ausgangsfarben.
 
 ## Paletten mit Charakter
 
-Da das Spektralverhalten Teil des Palettensystems ist, entwickelt jede Palette ihre eigene Persönlichkeit. Eine kleine, begrenzte Palette kann starke Einheitlichkeit und gedämpfte Übergänge erzeugen, während eine breitere Palette eine größere Auswahl an klaren Farbtönen und kontrollierten Neutraltönen eröffnen kann.
+Weil Spektralverhalten Teil des Palettensystems ist, entwickelt jede Palette eigene Persönlichkeit. Eine kleine begrenzte Palette erzeugt starke Einheit und gedämpfte Übergänge; eine breitere öffnet mehr klare Farbtöne und kontrollierte Neutraltöne.
 
-Pigmentidentität ist wichtig. Die gleiche sichtbare Farbe kann je nach Art des Pigments, das sie darstellt, unterschiedlich gemischt werden, was Lumi dabei hilft, einige der praktischen Unterschiede einzufangen, die Maler von echten Materialien erwarten.
+Pigmentidentität zählt. Dieselbe sichtbare Farbe mischt sich je nach Pigmentart unterschiedlich — Lumi fängt praktische Unterschiede ein, die Maler von echten Materialien erwarten.
 
-## Vor dem Lackieren mischen
+## Mischen vor dem Malen
 
-Spektralfarben in Lumi werden beim Erstellen von Paletten, beim Generieren verwandter Farben und beim Mischen neuer Paletteneinträge verwendet. Sobald eine Farbe auf die Leinwand aufgetragen wird, werden sie zu normalen Bildfarbdaten zum Malen und Zusammenstellen.
+Spektrale Farbe in Lumi wirkt beim Palettenaufbau, beim Erzeugen verwandter Farben und beim Mischen neuer Paletteneinträge. Aufgetragen auf die Leinwand wird eine Farbe normale Bildfarbdaten zum Malen und Komponieren.
 
-Dies hält die Malpipeline praktisch und verbessert gleichzeitig die Erfahrung des Künstlers bei der Auswahl und Konstruktion von Farben. Das Spektralmodell prägt die Palette; Die Leinwand bleibt effizient und kompatibel mit Standard-Bildworkflows.
+Die Malpipeline bleibt praktisch; die Erfahrung beim Wählen und Aufbau von Farbe verbessert sich. Das Spektralmodell prägt die Palette — die Leinwand bleibt effizient und kompatibel mit Standard-Bild-Workflows.
 
-## Eine Brücke zwischen digitaler und physischer Farbe
+## Brücke zwischen digitaler und physischer Farbe
 
-Der Zweck der Spektralmischung besteht nicht darin, jede physikalische Eigenschaft der Farbe zu imitieren, sondern den nützlichsten Teil des Pigmentverhaltens in die digitale Malerei zu übertragen: glaubwürdige Mischungsverhältnisse.
+Spektralmischung soll nicht jede physikalische Eigenschaft von Farbe nachahmen, sondern den nützlichsten Teil des Pigmentverhaltens in die digitale Malerei bringen: glaubwürdige Mischungsbeziehungen.
 
-Für Künstler bedeutet das, dass eine Palette mit mehr Vertrauen erkundet werden kann. Farben, die aus dem gleichen Pigmentsatz erzeugt werden, neigen dazu, zusammenzugehören, und gespeicherte Mischungen behalten ein Gefühl der Herkunft innerhalb der Palette, anstatt sich wie unzusammenhängende Musterwerte anzufühlen.
+Für Künstler heißt das: Paletten lassen sich mit mehr Vertrauen erkunden. Farben aus demselben Pigmentsatz gehören zusammen; gespeicherte Mischungen behalten ein Gefühl der Herkunft in der Palette — keine losgelösten Musterwerte.
 
 ## Farbe als System
 
-Spektralmischung verbindet den Paletteneditor, die Palettenzuordnung und den Palettenmischer zu einem Farbsystem. Pigmente definieren den Ausgangspunkt, die Karte zeigt, was die Palette erreichen kann, und der Mixer ermöglicht es Künstlern, in diesem Raum nach nützlichen Farben zu suchen.
+Spektralmischung verbindet Paletteneditor, Palette Map und Palette Mixer zu einem Farbsystem. Pigmente definieren den Ausgangspunkt, die Map zeigt, was die Palette erreichen kann, der Mixer lässt nützliche Farben in diesem Raum suchen.
 
-Dies gibt Lumi einen Farbworkflow, der sich auf Malentscheidungen konzentriert: Wählen Sie die Pigmente aus, erkunden Sie ihre Mischungen, behalten Sie die Farben bei, die wichtig sind, und malen Sie mit einer Palette, die sich wie ein kohärentes Ganzes verhält.
+Lumi erhält so einen Farb-Workflow um Malentscheidungen: Pigmente wählen, Mischungen erkunden, wichtige Farben behalten — malen mit einer Palette, die sich als stimmiges Ganzes verhält.

@@ -1,37 +1,42 @@
 ---
-title: "Lay-out publiceren"
+title: "Publicatielayout"
 type: docs
+url: "hub/features/publishing-layout"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: dc0367028ed8f6b4e1508c309384967daa43a4148f8d70f00880173a0a1fca7d
 ---
-Voor illustraties voor drukwerk en publicatie is vaak meer nodig dan alleen een canvasformaat. Pagina's hebben snijranden, spreads hebben middennaden en belangrijke inhoud moet mogelijk uit de buurt blijven van gebieden die worden weggesneden of in een rugmarge worden gebonden. De lay-outtools van Lumi houden deze zorgen zichtbaar terwijl u schildert, zonder ze plat te drukken in de illustratie.
 
-Lay-outgrenzen worden per afbeelding opgeslagen, bij het project opgeslagen en kunnen worden uitgeschakeld wanneer ze niet nodig zijn. Het doel is om workflows voor boeken, strips en afdrukken een duidelijk gevoel van paginastructuur te geven, terwijl de gelaagde afbeelding eronder volledig bewerkbaar blijft.
+Illustraties voor druk en publicatie vragen vaak om meer dan alleen een canvasformaat. Pagina's hebben snijranden, spreads hebben middennaden, en belangrijke inhoud moet soms uit de buurt blijven van zones die worden weggesneden of in de rugmarge verdwijnen. De publicatielayout-tools van Lumi houden die aandachtspunten zichtbaar tijdens het schilderen, zonder ze in het kunstwerk plat te drukken.
 
-## Bloeden en trimmen
+Layoutgrenzen worden per afbeelding opgeslagen, bij het project bewaard en kunnen worden uitgeschakeld wanneer ze niet nodig zijn. Het doel is boek-, strip- en printf workflows een duidelijk gevoel van paginastructuur te geven, terwijl de gelaagde afbeelding eronder volledig bewerkbaar blijft.
 
-Afloop bepaalt hoe ver illustraties buiten de laatste paginarand uitsteken. Lumi toont het bijsnijdgebied als de grens van de livepagina binnen het canvas, met de afloopmarge als een gearceerde overlay eromheen. Dit maakt het gemakkelijker om achtergronden en randdetails te schilderen die het bijsnijden moeten overleven zonder te raden waar de voltooide pagina zal eindigen.
+## Afloop en snijrand
 
-Afmetingen kunnen worden ingesteld in de eenheden die bij de taak passen, zodat er kan worden gedacht aan afloop in inches, millimeters of een andere bekende afdrukeenheid in plaats van alleen in pixels.
+Afloop bepaalt hoe ver artwork voorbij de uiteindelijke paginarand doorloopt. Lumi toont het snijgebied als de actieve paginagrens binnen het canvas, met de afloopmarge als gearceerde overlay eromheen. Zo kun je achtergronden en randdetails schilderen die het snijden moeten overleven, zonder te raden waar de afgedrukte pagina eindigt.
 
-## Dakgoot en smeersels
+Afmetingen kunnen in eenheden worden ingesteld die bij de opdracht passen — inches, millimeters of een andere gangbare druk-eenheid, niet alleen pixels.
 
-Bij dubbele pagina's markeert een rugmarge de beschermde zone rond de middennaad waar belangrijke inhoud moet worden vermeden. Indien ingeschakeld, toont Lumi rugmarges over de spread, zodat gezichten, tekst en focuspunten buiten het inbindgebied kunnen worden gehouden, terwijl de volledige spread één doorlopend canvas blijft.
+## Rugmarge en spreads
 
-Dit is vooral handig voor strips, prentenboeken en andere illustraties die als tegenover elkaar liggende pagina's worden afgedrukt in plaats van als afzonderlijke vellen.
+Bij dubbele pagina's markeert de rugmarge de beschermde zone rond de middennaad waar belangrijke inhoud vermeden moet worden. Wanneer ingeschakeld, toont Lumi rugmargebanden over de spread, zodat gezichten, tekst en focuspunten buiten het bindgebied blijven terwijl de volledige spread één doorlopend canvas blijft.
 
-## Compositiegidsen
+Dat is vooral nuttig voor strips, prentenboeken en werk dat als tegenoverliggende pagina's wordt gedrukt in plaats van losse vellen.
 
-Optionele randgeleiders markeren het bijgesneden paginagebied met subtiele compositiemarkeringen. Gidsen kunnen een indeling per pagina of een volledige lezing volgen, en kunnen tertsen, gulden secties of kwinten gebruiken, afhankelijk van hoe de lay-out moet worden beoordeeld.
+## Compositiehulplijnen
 
-De handleidingen zijn bedoeld als rustig naslagwerk tijdens de opmaak- en afwerkingswerkzaamheden. Ze helpen de plaatsing af te lezen tegen de pagina die daadwerkelijk wordt afgedrukt, en niet alleen tegen het volledige digitale canvas.
+Optionele randhulplijnen markeren het bijgesneden paginagebied met subtiele compositieticks. Hulplijnen kunnen per pagina of over de hele spread lopen, en derden, gouden snede of vijfdelen gebruiken, afhankelijk van hoe de layout beoordeeld moet worden.
 
-## Lay-out op het canvas bekijken
+Ze dienen als stille referentie tijdens layout en afwerking en helpen plaatsing af te lezen tegen de pagina die daadwerkelijk wordt gedrukt, niet alleen tegen het volledige digitale canvas.
 
-Lay-outoverlays worden beheerd vanuit het menu Beeld. Afloop-, goot- en gidsgebieden kunnen afzonderlijk of samen worden weergegeven, zodat een kunstenaar zich kan concentreren op dat deel van de publicatiestructuur dat er op dat moment toe doet.
+## Layout op het canvas bekijken
 
-Afbeelding > Lay-out inschakelen schakelt de lay-outgrenzen voor de huidige afbeelding in of uit. Wanneer de lay-out is uitgeschakeld, zijn overlays verborgen en worden de weergaveschakelaars opzij gezet, maar de grensinstellingen blijven samen met het bestand opgeslagen voor later gebruik.
+Layout-overlays worden beheerd vanuit het menu Beeld. Afloop-, rugmarge- en hulplijngebieden kunnen afzonderlijk of samen worden getoond, zodat een kunstenaar zich kan richten op het deel van de publicatiestructuur dat op dat moment telt.
+
+Afbeelding > Layout inschakelen schakelt layoutgrenzen voor de huidige afbeelding in of uit. Wanneer layout uit staat, zijn overlays verborgen en wijken weergaveschakelaars opzij, maar de grensinstellingen blijven met het bestand bewaard voor later gebruik.
 
 ## Opgeslagen bij het project
 
-De lay-outinstellingen reizen mee met het `.lum` project. Als u de afbeelding later opent, worden de afloop, de rugmarge, het uiterlijk van de overlay, de hulplijnen en de vraag of de lay-out voor dat bestand is ingeschakeld, hersteld. Hierdoor blijft de publicatiebewuste opstelling onderdeel van de werkstatus van het kunstwerk, in plaats van een tijdelijke weergavevoorkeur.
+Layoutinstellingen reizen mee met het `.lum`-project. Later openen herstelt afloop, rugmarge, overlay-uiterlijk, hulplijnkeuzes en of layout voor dat bestand is ingeschakeld. Publicatiebewuste setup blijft zo onderdeel van de werkstatus van het kunstwerk, niet een tijdelijke weergavevoorkeur.
 
-Voor kunstenaars die wisselen tussen schetsen, schilderen en printvoorbereiding, blijft de workflow op één plek: dezelfde gelaagde afbeelding, waarbij de publicatiestructuur beschikbaar is wanneer de pagina deze nodig heeft.
+Voor kunstenaars die wisselen tussen schetsen, schilderen en printvoorbereiding blijft alles op één plek: dezelfde gelaagde afbeelding, met publicatiestructuur wanneer de pagina die nodig heeft.

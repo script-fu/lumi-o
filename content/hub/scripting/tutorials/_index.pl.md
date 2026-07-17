@@ -1,6 +1,9 @@
 ---
 title: "Poradniki"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 11f6860761bab3b42e4431a952cff4c0e1c4959fb20e0f227fa5d5d17fae37f8
 ---
 W tych samouczkach dowiesz się, jak pisać wtyczki Scheme dla Lumi. Zaczniesz od minimalnej procedury „Hello World”, a następnie skonfigurujesz wtyczki współpracujące z obrazami, plikami i bibliotekami pomocniczymi wielokrotnego użytku.
 

@@ -2,6 +2,9 @@
 title: "Funzioni variadiche"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 Le **Funzioni variadiche** in Scheme sono funzioni che accettano un numero variabile di argomenti. Queste funzioni sono altamente versatili e consentono di creare codice flessibile e riutilizzabile. Nella programmazione funzionale, le funzioni variadiche semplificano le operazioni che richiedono l'elaborazione di un numero arbitrario di input, come la somma di un elenco di numeri o la concatenazione di stringhe.
 
@@ -39,7 +42,7 @@ Le funzioni variadiche vengono definite utilizzando il simbolo `.` prima del nom
 
 **Utilizzo**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Restituisce 15
 ```
 
 #### Funzione variadica con parametri fissi
@@ -58,7 +61,7 @@ Le funzioni variadiche vengono definite utilizzando il simbolo `.` prima del nom
 
 **Utilizzo**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Restituisce ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Combinazione di logica fissa e variadica
@@ -76,7 +79,7 @@ Le funzioni variadiche vengono definite utilizzando il simbolo `.` prima del nom
 **Utilizzo**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Restituisce "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Casi d'uso avanzati
@@ -94,7 +97,7 @@ Le funzioni variadiche eccellono nella gestione di dati arbitrari. Ecco un esemp
 
 **Utilizzo**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Restituisce 18
 ```
 
 #### Funzioni variadiche con logica ricorsiva
@@ -113,7 +116,7 @@ Le funzioni variadiche eccellono nella gestione di dati arbitrari. Ecco un esemp
 
 **Utilizzo**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Restituisce 40
 ```
 
 ### Vantaggi delle funzioni variadiche

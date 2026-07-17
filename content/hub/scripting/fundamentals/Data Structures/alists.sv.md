@@ -1,7 +1,10 @@
 ---
-title: "Associationslistor (Alister)"
-type: docs
+title: "Associationslistor (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 En **associationslista** (eller **alist**) är en grundläggande datastruktur i Schema som används för att representera samlingar av nyckel-värdepar. Det implementeras som en lista med par, där varje par associerar en nyckel (vanligtvis en symbol) med ett värde. Alister är enkla, flexibla och väl lämpade för små till medelstora datamängder.
 
@@ -30,10 +33,10 @@ Du kan skapa en lista genom att manuellt konstruera par eller genom att programm
 Det enkla citatet (`'`) är en förkortning för **citat**, vilket hindrar Scheme från att utvärdera uttrycket. Detta gör den idealisk för att skapa statiska listor där alla nycklar och värden är hårdkodade.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Dynamisk lista med `` ` `` and `,`:
 För att hämta ett värde från en lista kan du använda `assoc`-funktionen, som slår upp ett par med sin nyckel.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Returnerar (name . "Alice")
+(assoc 'country alist) ; Returnerar #f (nyckeln hittades inte)
 ```
 
 ### Extrahera värdet
@@ -84,7 +87,7 @@ För att hämta ett värde från en lista kan du använda `assoc`-funktionen, so
 När du har hämtat ett par med `assoc`, använd `cdr` för att extrahera värdet:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Returnerar "Alice"
 ```
 
 ### Sammanfattning av nyckelfunktioner

@@ -2,6 +2,9 @@
 title: "Chargement"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3dd031042d2683ece82da9ee4444cc1818609d9acf5f609bb1a42115c39275d8
 ---
 Dès qu'une fonction d'assistance se développe, déplacez-la dans un petit fichier de bibliothèque. Cela permet de garder le plug-in concentré et de rendre l'assistant réutilisable sur plusieurs plug-ins.
 
@@ -28,27 +31,27 @@ Nous pouvons prendre la fonction d'envoi de message et créer un nouveau fichier
 Exemple de fonction de bibliothèque send-message.scm
 
 ```scheme
-;; Function to handle message output to various destinations
+;; Fonction pour gérer la sortie de messages vers diverses destinations
 (define (send-message message output)
   (cond
-    ;; Send to the Message console
+    ;; Envoyer vers la Message console
     ((eq? output 'error-console)
-       ;; Set the handler to Message console
+       ;; Définir le gestionnaire sur Message console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Envoyer vers la boîte de dialogue GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Définir le gestionnaire sur la boîte de dialogue GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Envoyer vers la fenêtre de terminal
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; La sortie du terminal est gérée avec display
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; Restaurer le gestionnaire de messages par défaut vers la Message console
   (lumi-message-set-handler 2))
 ```
 
@@ -59,7 +62,7 @@ Nous pouvons charger cette fonction de bibliothèque avec la commande Scheme `lo
 Chargement d'un fichier de bibliothèque :
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/mark/code/github/script-plugins/funky-library/send-message.scm")
 

@@ -2,6 +2,9 @@
 title: "拉姆达函数"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0b7e9469f1005fe09a6600b0e748e282fe860a701b6d4cdc65854420ab6f99f7
 ---
 Scheme 中的 **Lambda 函数** 是匿名函数，这意味着它们是没有名称的函数。这些函数是内联定义的，通常用于简短的一次性操作。 `lambda` 构造是函数式编程中的强大工具，允许您动态创建简洁且灵活的逻辑。
 
@@ -37,7 +40,7 @@ Lambda 函数可以自己定义...
 #### 使用 Lambda 进行简单计算
 
 ```scheme
-((lambda (x y) (+ x y)) 3 5)  ; Returns 8
+((lambda (x y) (+ x y)) 3 5)  ; 返回 8
 ```
 
 这里：
@@ -86,7 +89,7 @@ Lambda 函数通常直接传递给高阶函数，例如 `map` 或 `filter`。
 #### 对数字列表进行平方
 
 ```scheme
-(map (lambda (x) (* x x)) '(1 2 3 4))  ; Returns (1 4 9 16)
+(map (lambda (x) (* x x)) '(1 2 3 4))  ; 返回 (1 4 9 16)
 ```
 
 - `lambda` 函数对列表中的每个元素进行平方。
@@ -103,7 +106,7 @@ Lambda 函数通常直接传递给高阶函数，例如 `map` 或 `filter`。
   (lambda (x) (+ x n)))
 
 (define add5 (make-adder 5))
-(add5 10)  ; Returns 15
+(add5 10)  ; 返回 15
 ```
 
 - `make-adder` 生成一个新的 lambda 函数，该函数添加特定数字 (`n`)。
@@ -117,7 +120,7 @@ Lambda 通常与 `let` 一起使用来创建本地范围的临时函数。
 
 ```scheme
 (let ((add (lambda (a b) (+ a b))))
-  (add 3 4))  ; Returns 7
+  (add 3 4))  ; 返回 7
 ```
 
 - `let` 将 lambda 函数绑定到名称 `add`。
@@ -130,8 +133,10 @@ Lambda 与高阶函数结合执行复杂的数据转换时会表现出色。
 #### 过滤偶数
 
 ```scheme
-(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; Returns (2 4 6)
-```- `lambda` 检查数字是否为偶数。
+(filter (lambda (x) (= (modulo x 2) 0)) '(1 2 3 4 5 6))  ; 返回 (2 4 6)
+```
+
+- `lambda` 检查数字是否为偶数。
 - `filter` 函数使用 lambda 仅保留列表中的偶数。
 
 ### Lambda 函数的优点

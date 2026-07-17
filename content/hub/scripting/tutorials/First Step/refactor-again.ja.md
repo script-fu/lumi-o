@@ -2,6 +2,9 @@
 title: "再度リファクタリングする"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4563817b27aa107aa948c9bb7fb53f358c663dfbc6f070c4a4b725b0d1d600f0
 ---
 ヘルパー ライブラリが大きくなるにつれて、一目で理解するのが難しくなります。各関数を小さく、単一目的に保つために再度リファクタリングします。
 
@@ -15,11 +18,11 @@ weight: 5
 
 ```scheme
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; メッセージが空でない文字列かどうかを確認する
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 出力が想定される宛先のいずれかかどうかを確認する
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
@@ -30,25 +33,25 @@ weight: 5
 
 ```scheme
 (define (send-message message output)
-  ;; Call the validation function before proceeding
+  ;; 続行する前に検証関数を呼び出す
   (validate-message message output)
 
   (cond
-    ;; Send to the Message console
+    ;; Message console に送信
     ((eq? output 'error-console)
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; GUI ダイアログボックスに送信
     ((eq? output 'gui)
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; ターミナルウィンドウに送信
     ((eq? output 'terminal)
        (display message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -69,13 +72,13 @@ weight: 5
   (display message))
 
 (define (send-message message output)
-  ;; Send to the appropriate output
+  ;; 適切な出力先に送る
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 ```
 
@@ -85,19 +88,19 @@ weight: 5
 
 ```scheme
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'terminal)
   (display message))
 ```
@@ -118,43 +121,43 @@ weight: 5
 リファクタリングされたライブラリのバージョン:
 
 ```scheme
-;; Purpose: Sends a message to the GUI dialog box
+;; 目的: メッセージを GUI ダイアログボックスに送る
 (define (send-to-gui message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'gui)
   (lumi-message-set-handler 0)
   (lumi-message message))
 
-;; Purpose: Sends a message to the Message console
+;; 目的: メッセージを Message console に送る
 (define (send-to-error-console message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'error-console)
   (lumi-message-set-handler 2)
   (lumi-message message))
 
-;; Purpose: Sends a message to the terminal window
+;; 目的: メッセージを terminal ウィンドウに送る
 (define (send-to-terminal message)
-  ;; Validate the message before proceeding
+  ;; 続行する前にメッセージを検証する
   (validate-message message 'terminal)
   (display message))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 目的: メッセージを適切な出力先に送る
 (define (send-message message output)
   (cond
     ((eq? output 'error-console) (send-to-error-console message))
     ((eq? output 'gui) (send-to-gui message))
     ((eq? output 'terminal) (send-to-terminal message)))
 
-  ;; Restore the default message handler to the Message console
+  ;; 既定のメッセージハンドラを Message console に戻す
   (lumi-message-set-handler 2))
 
-;; Purpose: Validates that the message is a non-empty string and the output is valid
+;; 目的: メッセージが空でない文字列であり、出力が有効であることを検証する
 (define (validate-message message output)
-  ;; Check if the message is a non-empty string
+  ;; メッセージが空でない文字列かどうかを確認する
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string"))
 
-  ;; Check if the output is one of the expected destinations
+  ;; 出力が想定される宛先のいずれかかどうかを確認する
   (if (not (member output '(gui error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

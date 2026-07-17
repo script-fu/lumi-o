@@ -1,6 +1,9 @@
 ---
 title: "插件浏览器"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
 ---
 插件浏览器允许您浏览菜单系统并查看特定插件的安装位置。
 

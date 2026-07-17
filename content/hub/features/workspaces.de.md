@@ -1,37 +1,41 @@
 ---
-title: "Arbeitsplatz"
+title: "Arbeitsbereiche"
 type: docs
+url: "hub/features/workspaces"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
-Mithilfe von Arbeitsbereichen kann sich Lumi an unterschiedliche Arbeitsweisen anpassen. Ein Arbeitsbereich fängt das Gefühl der Studioumgebung ein: Panel-Layout, Werkzeugstatus, Leinwandpräsentation, Ressourcenpfade, Palettenauswahl, Thema und andere Benutzeroberflächenpräferenzen, die die Malsitzung prägen.
+Arbeitsbereiche passen Lumi an unterschiedliche Arbeitsweisen an. Ein Arbeitsbereich fasst die Studioatmosphäre zusammen: Panel-Layout, Werkzeugzustand, Leinwanddarstellung, Ressourcenpfade, Palettenwahl, Theme und andere Oberflächeneinstellungen, die eine Malsitzung prägen.
 
-Anstatt für jede Aufgabe eine feste Anordnung beizubehalten, können Künstler separate Umgebungen zum Skizzieren, Malen, Tuschen, Farbarbeiten, Präsentieren, Skripten oder gezielten Vollbildsitzungen verwalten. Jede Umgebung kann die Ressourcen bereitstellen, die zu dieser Art von Arbeit gehören, sodass ein Zeichenarbeitsplatz mit Zeichnungsvoreinstellungen ausgestattet sein kann, während ein Malarbeitsplatz auf malerische Werkzeuge umsteigen kann.
+Statt einer festen Anordnung für jede Aufgabe pflegen Künstler getrennte Umgebungen für Skizze, Malerei, Tusche, Farbe, Präsentation, Skripting oder fokussierte Vollbildsitzungen. Jede Umgebung bringt die passenden Ressourcen nach vorn — ein Zeichen-Arbeitsbereich mit Zeichenvoreinstellungen, ein Mal-Arbeitsbereich mit malerischen Werkzeugen.
 
-## Ein Studio, das sich mit der Aufgabe verändert
+## Ein Studio, das zur Aufgabe passt
 
-Verschiedene Phasen eines Kunstwerks profitieren von unterschiedlichen Umgebungen. Für grobe Skizzen sind möglicherweise eine klare Leinwand und minimale Tafeln erforderlich. Beim Malen sind möglicherweise Pinseleinstellungen und Palettenzugriff in unmittelbarer Nähe erforderlich. Für das Einfärben sind möglicherweise Führungen, stabile Werkzeugoptionen und eine neutrale Ansicht erforderlich. Für eine Rezension oder Präsentation ist möglicherweise ein übersichtlicheres Vollbild-Setup erforderlich.
+Verschiedene Phasen eines Kunstwerks brauchen verschiedene Umgebungen. Grobe Skizze: klare Leinwand, wenige Panels. Malerei: Pinseleinstellungen und Palette griffbereit. Tusche: Hilfslinien, stabile Werkzeugoptionen, neutrale Ansicht. Review oder Präsentation: aufgeräumtes Vollbild.
 
-Arbeitsbereiche machen diese Veränderungen bewusst. Die Benutzeroberfläche kann je nach Aufgabe geändert werden, ohne dass der Künstler das Studio jedes Mal von Hand neu aufbauen muss.
+Arbeitsbereiche machen diese Wechsel bewusst. Die Oberfläche passt sich der Aufgabe an, ohne dass der Künstler das Studio jedes Mal von Hand neu aufbaut.
 
-## Mehr als nur Panel-Platzierung
+## Mehr als Panel-Anordnung
 
-Ein Arbeitsbereich ist nicht nur ein Dock-Layout. Dadurch kann der breitere Arbeitskontext erhalten bleiben: die Art und Weise, wie die Leinwand gerahmt ist, wie sich die Toolbox verhält, welche Farb- und Werkzeugressourcen bereitstehen, wie Werkzeuge konfiguriert sind und wie Eingabegeräte voraussichtlich reagieren.
+Ein Arbeitsbereich ist nicht nur ein Dock-Layout. Er bewahrt den breiteren Arbeitskontext: wie die Leinwand gerahmt ist, wie sich die Werkzeugleiste verhält, welche Farb- und Werkzeugressourcen bereitstehen, wie Werkzeuge konfiguriert sind und wie Eingabegeräte reagieren sollen.
 
-Dies macht den Wechsel des Arbeitsbereichs auch dann sinnvoll, wenn die Panels ähnlich aussehen. Zwei Umgebungen können ein gemeinsames allgemeines Layout haben, unterscheiden sich jedoch in der Werkzeugbedienung, dem visuellen Komfort, der Palettenidentität, den verfügbaren Voreinstellungen oder dem Geräteverhalten.
+So ist der Wechsel nützlich, auch wenn Panels ähnlich aussehen. Zwei Umgebungen können dasselbe Grundlayout teilen und sich in Werkzeuggefühl, visuellem Komfort, Palettenidentität, verfügbaren Voreinstellungen oder Geräteverhalten unterscheiden.
 
-## Sofortiges Umschalten
+## Sofortiger Wechsel
 
-Arbeitsbereiche sollen fließend sein. Der Wechsel sollte sich anfühlen, als würde man zwischen vorbereiteten Schreibtischen im selben Studio wechseln, anstatt die Anwendung neu zu starten oder eine separate Konfiguration zu öffnen.
+Arbeitsbereiche sollen fließend sein. Wechseln soll sich anfühlen wie zwischen vorbereiteten Tischen im selben Studio — nicht wie Neustart oder separate Konfiguration.
 
-Offene Bilder können an Ort und Stelle bleiben, während sich die Umgebung verändert, sodass der Künstler von einer Arbeitsphase zur nächsten wechseln kann, ohne die Konzentration zu beeinträchtigen.
+Offene Bilder bleiben an Ort und Stelle, während sich die Umgebung ändert. Der Künstler wechselt von einer Arbeitsphase zur nächsten, ohne die Konzentration zu verlieren.
 
-## Persönliche und projektbasierte Setups
+## Persönliche und projektbezogene Setups
 
-Bei einigen Arbeitsbereichen handelt es sich möglicherweise um persönliche Standardeinstellungen: ein komfortables Mal-Setup, ein kompaktes Laptop-Setup oder ein Vollbild-Fokusmodus. Andere können zu einem Projekt gehören: eine bestimmte Palette, ein bestimmtes Thema, eine bestimmte Panelanordnung, eine Ressourcensammlung oder eine Gerätekonfiguration, die zu einer bestimmten Bildserie passt.
+Manche Arbeitsbereiche sind persönliche Standardumgebungen: komfortables Mal-Setup, kompaktes Laptop-Setup, Vollbild-Fokusmodus. Andere gehören zu einem Projekt: bestimmte Palette, Theme, Panelanordnung, Ressourcensammlung oder Gerätekonfiguration für eine Bildserie.
 
-Da Arbeitsbereiche benannt und wiederverwendbar sind, können sie Teil des Rhythmus eines Künstlers werden. Die richtige Umgebung kann wiederhergestellt werden, wenn die Arbeit es erfordert.
+Weil Arbeitsbereiche benannt und wiederverwendbar sind, werden sie Teil des Rhythmus eines Künstlers — die richtige Umgebung, wenn die Arbeit sie braucht.
 
-## Reibung reduzieren
+## Weniger Reibung
 
-Der Zweck von Arbeitsbereichen besteht darin, wiederholte Einrichtungsvorgänge aus dem kreativen Prozess zu entfernen. Sobald sich ein Arrangement richtig anfühlt, kann sich Lumi daran erinnern. Wenn sich die Aufgabe ändert, kann die Schnittstelle folgen.
+Arbeitsbereiche nehmen wiederholte Einrichtung aus dem kreativen Prozess. Fühlt sich eine Anordnung richtig an, merkt sich Lumi sie. Ändert sich die Aufgabe, folgt die Oberfläche.
 
-Dadurch bleibt die Aufmerksamkeit auf dem Bildmaterial und nicht auf der Fensterverwaltung, sodass sich Lumi weniger wie eine einzelne statische Anwendung, sondern eher wie ein flexibles digitales Studio anfühlt.
+So bleibt die Aufmerksamkeit beim Kunstwerk, nicht beim Fenstermanagement — Lumi weniger als statische Anwendung, mehr als flexibles digitales Studio.

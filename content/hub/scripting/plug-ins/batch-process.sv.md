@@ -1,14 +1,17 @@
 ---
 title: "Batchprocess"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
 ---
 Ett praktiskt, heltäckande exempel för att bearbeta många filer på en gång.
 
-## Där den bor
+## Källkod
 
-- [Visa källan](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Visa källkod](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
-## Där det visas i Lumi
+## Meny i Lumi
 
 - **Arkiv → Batchprocess**
 

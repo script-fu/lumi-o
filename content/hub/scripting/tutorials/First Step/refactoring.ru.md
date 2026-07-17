@@ -2,22 +2,25 @@
 title: "Рефакторинг"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
-Когда у нас есть работающая функция, мы можем сделать шаг назад и подумать о том, как лучше структурировать наш код. Цель — сделать наш плагин максимально ясным, понятным и удобным в обслуживании. Этот процесс улучшения и уточнения структуры существующего кода без изменения его поведения известен как рефакторинг.
+Как только у нас будет работающая функция, мы можем сделать шаг назад и подумать о том, как лучше структурировать наш код. Цель — сделать наш плагин максимально ясным, понятным и удобным в обслуживании. Этот процесс улучшения и уточнения структуры существующего кода без изменения его поведения известен как рефакторинг.
 
 Вот еще раз исходная функция:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Установить обработчик сообщений для вывода в диалоговое окно GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Установить обработчик сообщений для вывода в Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Отправить сообщение в terminal — окно ОС, из которого запущен Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ weight: 2
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Установить обработчик сообщений для вывода в диалоговое окно GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Установить обработчик сообщений для вывода в Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Отправить сообщение в terminal — окно ОС, из которого запущен Lumi
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ weight: 2
 
 Извлекаем логику:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Главная функция
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ weight: 2
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Функция для вывода сообщений в различные места назначения
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Отправить в Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Установить обработчик на Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Отправить в диалоговое окно GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Установить обработчик на диалог GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Отправить в окно терминала
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Вывод terminal обрабатывается с помощью display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Восстановить обработчик сообщений по умолчанию для Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

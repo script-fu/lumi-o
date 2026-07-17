@@ -2,11 +2,14 @@
 title: "Hallo Welt!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 Dieses Tutorial führt Sie durch die minimale Struktur eines Scheme-Plug-Ins. Einige Zeilen sind „Boilerplate“: Sie sind erforderlich, damit Lumi die Datei laden kann, auch wenn Sie sie noch nicht vollständig verstehen.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Code kann Dinge auf ähnliche Weise anordnen, was auf den ersten Blick seltsam a
 Hier ist das vollständige Beispiel. Den meisten Lumi-Prozeduren wird `lumi-` vorangestellt. Beispielsweise gibt `lumi-message` eine Zeichenfolge an den konfigurierten Nachrichtenhandler aus.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Nachrichtenhandler so setzen, dass die Nachricht in ein GUI-Dialogfeld ausgegeben wird
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Nachrichtenhandler so setzen, dass die Nachricht an die Error Console ausgegeben wird
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Nachricht an das terminal senden, das OS-Fenster, das Lumi gestartet hat
   (display "Hello world!\n"))
 
 

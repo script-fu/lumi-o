@@ -1,14 +1,17 @@
 ---
 title: "Nouveau calque à partir de la sélection"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 73e083715459f91de1967499488660752d2a2eec798e99a1185f0f995ee0d9a4
 ---
 Crée un nouveau calque nommé à partir de la sélection active.
 
-## Où il vit
+## Code source
 
-- [Voir la source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
+- [Voir le code source](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/new-layer-from-selection/new-layer-from-selection.scm)
 
-## Où il apparaît dans Lumi
+## Emplacement dans Lumi
 
 - **Calque → Calque de la sélection**
 

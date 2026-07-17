@@ -1,7 +1,10 @@
 ---
-title: "Verenigingslijsten (alisten)"
-type: docs
+title: "Associatielijsten (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 Een **associatielijst** (of **alist**) is een fundamentele gegevensstructuur in Scheme die wordt gebruikt om verzamelingen sleutel-waardeparen weer te geven. Het wordt geïmplementeerd als een lijst met paren, waarbij elk paar een sleutel (meestal een symbool) associeert met een waarde. Alists zijn eenvoudig, flexibel en zeer geschikt voor kleine tot middelgrote datasets.
 
@@ -30,10 +33,10 @@ U kunt een alist maken door handmatig paren te construeren of deze programmatisc
 Het enkele aanhalingsteken (`'`) is een afkorting voor **quoting**, waardoor Scheme de expressie niet kan evalueren. Dit maakt het ideaal voor het maken van statische alisten waarbij alle sleutels en waarden hardgecodeerd zijn.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Dynamische lijst met `` ` `` and `,`:
 Om een waarde uit een lijst op te halen, kunt u de functie `assoc` gebruiken, die een paar opzoekt aan de hand van de sleutel.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Retourneert (name . "Alice")
+(assoc 'country alist) ; Retourneert #f (sleutel niet gevonden)
 ```
 
 ### De waarde extraheren
@@ -84,7 +87,7 @@ Om een waarde uit een lijst op te halen, kunt u de functie `assoc` gebruiken, di
 Zodra u een paar heeft opgehaald met `assoc`, gebruikt u `cdr` om de waarde te extraheren:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Retourneert "Alice"
 ```
 
 ### Samenvatting van de belangrijkste kenmerken

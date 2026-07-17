@@ -1,37 +1,42 @@
 ---
-title: "Espaço de trabalho"
+title: "Espaços de trabalho"
 type: docs
+url: "hub/features/workspaces"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
-Os espaços de trabalho permitem que o Lumi se adapte a diferentes formas de trabalhar. Um espaço de trabalho captura a sensação do ambiente de estúdio: layout do painel, estado da ferramenta, apresentação da tela, caminhos de recursos, escolha de paleta, tema e outras preferências de interface que moldam a sessão de pintura.
 
-Em vez de manter um arranjo fixo para cada tarefa, os artistas podem manter ambientes separados para esboços, pinturas, tintas, trabalhos coloridos, apresentações, scripts ou sessões focadas em tela cheia. Cada ambiente pode trazer os recursos que pertencem a esse tipo de trabalho, de modo que um espaço de trabalho de desenho pode parecer abastecido com predefinições de desenho, enquanto um espaço de trabalho de pintura pode mudar para ferramentas de pintura.
+Os espaços de trabalho permitem que o Lumi se adapte a diferentes formas de trabalhar. Um espaço de trabalho captura a sensação do ambiente de estúdio: layout de painéis, estado das ferramentas, apresentação da tela, caminhos de recursos, escolha de paleta, tema e outras preferências de interface que moldam a sessão de pintura.
+
+Em vez de manter um arranjo fixo para cada tarefa, artistas podem manter ambientes separados para esboço, pintura, tinta, trabalho de cor, apresentação, scripts ou sessões focadas em tela cheia. Cada ambiente pode trazer os recursos daquele tipo de trabalho — um espaço de desenho pode parecer abastecido com predefinições de desenho, enquanto um espaço de pintura muda para pincéis.
 
 ## Um estúdio que muda com a tarefa
 
-Diferentes estágios de uma obra de arte se beneficiam de diferentes ambientes. O esboço aproximado pode exigir uma tela transparente e painéis mínimos. A pintura pode precisar de configurações de pincel e acesso à paleta à mão. A tinta pode precisar de guias, opções de ferramentas estáveis ​​e uma visão neutra. A revisão ou apresentação pode precisar de uma configuração de tela cheia mais limpa.
+Diferentes fases de uma obra pedem ambientes diferentes. Esboço inicial pode exigir tela limpa e painéis mínimos. Pintura pode exigir configurações de pincel e acesso à paleta à mão. Tinta pode exigir guias, opções estáveis de ferramentas e visão neutra. Revisão ou apresentação pode exigir uma configuração em tela cheia mais limpa.
 
-Os espaços de trabalho tornam essas mudanças deliberadas. A interface pode mudar para corresponder à tarefa sem exigir que o artista reconstrua o estúdio manualmente a cada vez.
+Os espaços de trabalho tornam essas mudanças deliberadas. A interface pode acompanhar a tarefa sem exigir que o artista reconstrua o estúdio manualmente a cada vez.
 
-## Mais do que posicionamento do painel
+## Mais do que posição de painéis
 
-Um espaço de trabalho não é apenas um layout de doca. Ele pode preservar o contexto de trabalho mais amplo: a forma como a tela é enquadrada, como a caixa de ferramentas se comporta, quais cores e recursos de ferramentas estão prontos, como as ferramentas são configuradas e como se espera que os dispositivos de entrada respondam.
+Um espaço de trabalho não é só um layout de doca. Ele pode preservar o contexto mais amplo de trabalho: como a tela é enquadrada, como a caixa de ferramentas se comporta, quais cores e recursos de ferramentas estão prontos, como as ferramentas estão configuradas e como os dispositivos de entrada devem responder.
 
-Isso torna a troca de espaço de trabalho útil mesmo quando os painéis parecem semelhantes. Dois ambientes podem compartilhar um layout geral, mas diferem na sensação da ferramenta, no conforto visual, na identidade da paleta, nas predefinições disponíveis ou no comportamento do dispositivo.
+Isso torna a troca útil mesmo quando os painéis parecem semelhantes. Dois ambientes podem compartilhar um layout geral, mas diferir na sensação da ferramenta, conforto visual, identidade da paleta, predefinições disponíveis ou comportamento do dispositivo.
 
 ## Troca imediata
 
-Os espaços de trabalho devem ser fluidos. A troca deve ser semelhante à movimentação entre mesas preparadas no mesmo estúdio, em vez de reiniciar o aplicativo ou abrir uma configuração separada.
+Os espaços de trabalho devem ser fluidos. Trocar deve parecer mover-se entre mesas preparadas no mesmo estúdio, não reiniciar o aplicativo ou abrir uma configuração separada.
 
-As imagens abertas podem permanecer no lugar enquanto o ambiente circundante muda, permitindo ao artista passar de uma fase do trabalho para outra sem perder a concentração.
+Imagens abertas podem permanecer no lugar enquanto o ambiente ao redor muda, permitindo passar de uma fase do trabalho para outra sem quebrar a concentração.
 
-## Configurações pessoais e baseadas em projetos
+## Configurações pessoais e por projeto
 
-Alguns espaços de trabalho podem ser padrões pessoais: uma configuração de pintura confortável, uma configuração de laptop compacta ou um modo de foco em tela cheia. Outros podem pertencer a um projeto: uma paleta específica, um tema, uma disposição de painéis, uma coleção de recursos ou uma configuração de dispositivo que se adapte a uma série específica de imagens.
+Alguns espaços de trabalho podem ser padrões pessoais: uma configuração confortável de pintura, um layout compacto para laptop ou um modo de foco em tela cheia. Outros podem pertencer a um projeto: uma paleta específica, tema, disposição de painéis, coleção de recursos ou configuração de dispositivo para uma série de imagens.
 
-Como os espaços de trabalho são nomeados e reutilizáveis, eles podem se tornar parte do ritmo de um artista. O ambiente certo pode ser restaurado quando o trabalho assim o exigir.
+Como os espaços de trabalho têm nome e são reutilizáveis, podem fazer parte do ritmo de um artista. O ambiente certo pode ser restaurado quando o trabalho pedir.
 
-## Reduzindo o atrito
+## Menos atrito
 
-O objetivo dos espaços de trabalho é remover configurações repetidas do processo criativo. Quando um arranjo parece certo, Lumi consegue se lembrar dele. Quando a tarefa muda, a interface pode acompanhá-la.
+O objetivo dos espaços de trabalho é remover configuração repetida do processo criativo. Quando um arranjo parece certo, o Lumi lembra dele. Quando a tarefa muda, a interface pode seguir.
 
-Isso mantém a atenção na arte e não no gerenciamento de janelas, fazendo com que o Lumi pareça menos um único aplicativo estático e mais um estúdio digital flexível.
+Isso mantém a atenção na arte, não no gerenciamento de janelas — o Lumi parece menos um aplicativo estático e mais um estúdio digital flexível.

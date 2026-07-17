@@ -2,52 +2,56 @@
 title: "Tuszowanie"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
 ---
-Przestrzeń robocza Inking została stworzona z myślą o celowej pracy liniowej lub atramentowym chaosie. Jest to etap, na którym rysowanie przestaje być odkrywcze, a zaczyna wymagać zaangażowania: kontrolowane pociągnięcia, wyraźna definicja krawędzi i znaki, które muszą pewnie trzymać swój kształt. Lub po prostu uwolnij się dzięki wyrazistemu rozpryskiwaniu, zapętlonym liniom, zadrapaniom suchą stalówką i dzikim uderzeniom sumi.
 
-Poniżej znajdują się niektóre narzędzia i tryby, które to umożliwiają.
+Obszar roboczy Tuszowanie służy celowej pracy linią albo atramentowemu chaosowi. To etap, na którym rysunek przestaje być odkrywczy, a staje się zaangażowany: kontrolowane pociągnięcia, wyraźne krawędzie i znaki, które muszą pewnie trzymać kształt. Albo po prostu puść wodze fantazji — ekspresywne rozpryski, zapętlone linie, suche zadrapania Nib i dzikie pociągnięcia Sumi.
 
-## Wstępne ustawienie Sumi
+Poniżej kilka narzędzi i trybów, które to umożliwiają.
 
-Pędzel sumi nie jest do końca ujarzmiony. Zamiast zachowywać się jak pojedyncza końcówka szczoteczki, jest zbudowana z wielu niezależnych główek szczoteczek lub wiązek włosia, które współpracują ze sobą tworząc dynamiczną formację. Rezultatem mogą być mokre smugi, połamane, suche smugi, splątane włókna lub wybuchowe teksturowane krawędzie, w zależności od nacisku, prędkości, odstępów i gestów.
+## Sumi Preset
 
-Istnieje szeroki zakres kontroli nad zachowaniem formacji, a połączenie jej z dynamiką, teksturami i zmianami stempla może dać ogromną gamę znaków.
+Pędzel Sumi nie jest w pełni oswojony. Zamiast zachowywać się jak pojedyncza końcówka, składa się z wielu niezależnych główek lub wiązek włosia współpracujących jako dynamiczna formacja. Efekt może przechodzić od mokrych smug do połamanych, suchych smug, splątanych włókien lub wybuchowych, teksturowanych krawędzi — zależnie od nacisku, prędkości, odstępów i gestu.
+
+Masz szeroką kontrolę nad zachowaniem formacji; połączenie jej z dynamiką, teksturami i wariacją stempla daje ogromną gamę znaków.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
-## Wstępne ustawienie kaligraficzne
+## Calligraphic Preset
 
-W trybie kaligraficznym narzędzie Pędzel staje się ciągłym pociągnięciem dłuta, a nie rzędem odbitych punktów. Dołączone ustawienie wstępne kaligrafii wykorzystuje również kąt pochylenia rysika jako dodatkową oś kontroli, dzięki czemu pociągnięcie może reagować nie tylko na nacisk, ale także na sposób trzymania pióra. Jest to przydatne w przypadku twardych, ukształtowanych znaków, które należy czytać jak pojedynczą wstęgę atramentu, nawet gdy zmienia się kąt i nacisk.
+Tryb kaligraficzny zamienia narzędzie Pędzel w ciągłe pociągnięcie pióra klinowego, a nie w rząd stemplowanych plamek. Dołączone ustawienie wstępne Calligraphic wykorzystuje też kąt nachylenia rysika jako dodatkową oś kontroli, więc pociągnięcie reaguje nie tylko na nacisk, lecz także na sposób trzymania pióra. Przydatne przy mocnych, ukształtowanych znakach czytanych jako jedna wstęga atramentu — nawet gdy zmieniają się kąt i nacisk.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Ustawienie zygzakowate
+## Zig-zag Preset
 
-Ustawienie wstępne Zig-zag wyostrza rogi, gdy pociągnięcie szybko zmienia kierunek, tworząc ostre, kątowe zakręty z zatrzaskiem, którego nie można uzyskać na gładkich krzywiznach. Przydatny do szkicowania energetycznego, graficznego i kreskowania.
+Ustawienie wstępne Zig-zag wyostrza narożniki, gdy pociągnięcie szybko zmienia kierunek, dając ostre, kątowe zakręty ze „snapem”, którego nie dają gładkie krzywe. Przydatne do energicznej, graficznej linii i kreskowania.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Ustawienie sobolowe
+## Sable Preset
 
-Klasyczna linia pędzli komiksowych. Płynne uderzenia o zmiennej masie i pewnym rytmie od grubych do cienkich; taki rodzaj wypowiedzi, jaki Watterson lub Uderzo rozpoznaliby.
+Klasyczna linia pędzla komiksowego. Płynne pociągnięcia o zmiennej grubości i pewnym rytmie od gruba do cienka — rodzaj linii, którą rozpoznaliby Watterson lub Uderzo.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
 
-## Wstępne ustawienie końcówki
+## Nib Preset
 
-Zainspirowany stalówką Waverly, ustawienie wstępne toleruje szybki ruch i zmiany kierunku, jednocześnie tworząc ostre, wyraziste linie atramentu. Ponieważ ilość atramentu wyczerpuje się w miarę pracy, pociągnięcia mogą zaczynać się od ciemnych i nasyconych, a następnie w miarę opróżniania stalówki zamieniać się w bardziej zarysowane, zaschnięte ślady.
+Inspirowane stalówką Waverly: ustawienie wstępne toleruje szybki ruch i zmiany kierunku, wciąż dając ostre, ekspresywne linie atramentu. Ponieważ zapas atramentu maleje w trakcie pracy, pociągnięcia mogą zaczynać się ciemne i nasycone, a potem przechodzić w bardziej zadrapane, „głodne” znaki, gdy stalówka się opróżnia.
 
 ![ink-02](/images/strokes/ink-nib_share.jpg)
 
-## Wstępnie ustawione wskazówki
+## Tip Preset
 
-Martwa linia pióra do rysowania technicznego. Stała szerokość, czyste krawędzie i niewielkie lub żadne różnice w obrysach. Przydatny do linii konstrukcyjnych, diagramów, liter i kontrolowanych prac graficznych, gdzie jednolitość jest ważniejsza niż ekspresja. Niektóre z naszych ulubionych animacji korzystają z tej linii.
+Martwa linia technicznego pisaka rysunkowego. Stała szerokość, czyste krawędzie i niewielka lub żadna zmienność obrysu. Przydatne do linii konstrukcyjnych, diagramów, liternictwa i kontrolowanej pracy graficznej, gdzie jednolitość ważniejsza jest od ekspresji. Niektóre z naszych ulubionych animacji właśnie takiej linii używają.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
-## Ustawienie wstępne szybkiego przesuwania
+## Flick Preset
 
-Zaprojektowany do wykonywania gestów i rozproszonych sprayów kierunkowych. W zależności od prędkości, ciśnienia i odstępów, uderzenia mogą wahać się od subtelnego i lekkiego rozproszenia po cięższe rzucane kropelki. Przydatny do prac teksturalnych i wyrazistych wykończeń.
+Zaprojektowane pod gesty „flick” i rozproszone, kierunkowe rozpryski. W zależności od prędkości, nacisku i odstępów pociągnięcia mogą sięgać od subtelnego, lekkiego rozsypu po cięższe, rzucone krople. Przydatne do pracy teksturalnej i ekspresywnych akcentów końcowych.
 
 ![flick-01](/images/strokes/flick_share.jpg)

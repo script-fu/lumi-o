@@ -2,6 +2,9 @@
 title: "최종 생각"
 type: docs
 weight: 10
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 5233667e27065df0a6bc940209f767b9f9e32876d41fa3d09428737b535906e9
 ---
 이제 작업 절차 플러그인과 작은 도우미 라이브러리가 생겼습니다. 이 시리즈에서는 대부분의 Lumi 스크립트에서 사용할 핵심 패턴을 소개했습니다.
 
@@ -15,7 +18,7 @@ weight: 10
 주요 플러그인 코드의 최종 버전은 다음과 같습니다.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/home/your-name/code/path/to/repo/funky-library/messages.scm")
 (load "/path/to/your/library/messages.scm")
@@ -42,7 +45,7 @@ weight: 10
 도서관 코드:
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; 목적: 메시지를 상태 표시줄로 보내고, 성공하면 #t를 반환
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -52,7 +55,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; 목적: 메시지를 대화 상자로 보내고, 성공하면 #t를 반환
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -62,7 +65,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; 목적: 메시지를 Error Console로 보내고, 성공하면 #t를 반환
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -71,7 +74,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; 목적: 메시지를 terminal로 보내고, 성공하면 #t를 반환
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -80,7 +83,7 @@ weight: 10
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; 목적: 메시지를 적절한 출력으로 보내고, 성공하면 #t를 반환
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -90,7 +93,7 @@ weight: 10
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; 목적: 메시지가 비어 있지 않은 문자열인지 검증하고, 유효하면 #t를 반환
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -98,7 +101,7 @@ weight: 10
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; 목적: 출력이 유효한 대상인지 검증하고, 유효하면 #t를 반환
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

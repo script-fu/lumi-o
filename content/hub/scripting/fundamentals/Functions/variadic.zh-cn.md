@@ -2,6 +2,9 @@
 title: "可变参数函数"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些函数用途广泛，允许您创建灵活且可重用的代码。在函数式编程中，可变参数函数简化了需要处理任意数量输入的操作，例如对数字列表求和或连接字符串。
 
@@ -39,7 +42,7 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 
 **用法**：
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; 返回 15
 ```
 
 #### 具有固定参数的可变参数函数
@@ -58,7 +61,7 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 
 **用法**：
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; 返回 ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### 结合固定逻辑和可变逻辑
@@ -76,7 +79,7 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 **用法**：
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; 返回 "Fruits: Apple, Banana, Cherry"
 ```
 
 ### 高级用例
@@ -94,7 +97,7 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 
 **用法**：
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; 返回 18
 ```
 
 #### 具有递归逻辑的可变参数函数
@@ -113,7 +116,7 @@ Scheme 中的**可变参数函数**是接受可变数量参数的函数。这些
 
 **用法**：
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; 返回 40
 ```
 
 ### 可变参数函数的好处

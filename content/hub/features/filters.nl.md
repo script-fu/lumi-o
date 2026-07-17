@@ -1,8 +1,13 @@
 ---
 title: "Filters"
 type: docs
+url: "hub/features/filters"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
-Lumi's Filters-menu brengt corrigerende aanpassingen, gestileerde lenseffecten, procedurele textuurgeneratoren, op print geïnspireerde behandelingen en analysehulpmiddelen op één plek samen. De menuvolgorde is eerder praktisch dan academisch: hulpmiddelen voor vervaging en verbetering zitten naast elkaar, vervormings- en lichteffecten zijn gegroepeerd op uiterlijk, en textuur- of patroongeneratoren worden bij elkaar gehouden als het doel is om bronmateriaal samen te stellen in plaats van een bestaande afbeelding te wijzigen.
+
+Het menu Filters van Lumi brengt corrigerende aanpassingen, gestileerde lenseffecten, procedurele textuurgeneratoren, op print geïnspireerde behandelingen en analysehulpmiddelen op één plek samen. De menuvolgorde is eerder praktisch dan academisch: hulpmiddelen voor vervaging en verbetering zitten naast elkaar, vervormings- en lichteffecten zijn gegroepeerd op uiterlijk, en textuur- of patroongeneratoren worden bij elkaar gehouden als het doel is om bronmateriaal samen te stellen in plaats van een bestaande afbeelding te wijzigen.
 
 Filterdialoogvensters volgen dezelfde algemene workflow. Met voorinstellingen, voorbeeldweergave, gesplitste weergave en dekkings- of overvloeiopties kan een effect snel worden afgestemd, en op lagen kan het resultaat als een bewerkbaar, niet-destructief filter blijven in plaats van onmiddellijk te worden samengevoegd. Lumi houdt ook een recente geschiedenis van filtergebruik bij, dus het herhalen van het laatste effect of het opnieuw openen van de laatste dialoog is eerder onderdeel van het normale schilderritme dan een afzonderlijke taak.
 
@@ -18,7 +23,7 @@ Pixelize reduceert details tot doelbewuste blokstructuren in plaats van een zach
 
 ### Selectieve Gaussiaanse vervaging
 
-Selectieve Gaussiaanse vervaging verzacht binnen de regio's terwijl de sterkere randen worden behouden. Dit is handig wanneer een afbeelding een rustigere textuur of minder gebabbel nodig heeft zonder de grotere vormgrenzen te verliezen die nog steeds duidelijk moeten worden gelezen.
+Selectieve Gaussiaanse vervaging verzacht binnen de regio's terwijl de sterkere randen worden behouden. Dit is handig wanneer een afbeelding een rustigere textuur of minder visuele ruis nodig heeft zonder de grotere vormgrenzen te verliezen die nog steeds duidelijk moeten worden gelezen.
 
 ### Lensonscherpte
 
@@ -42,7 +47,9 @@ Zoom Motion Blur straalt details vanuit het midden naar buiten uit, waardoor het
 
 ## Verbeteren
 
-### Hoge pasHigh Pass isoleert fijn lokaal contrast in plaats van brede toonverandering. Met alleen schaal en contrast om te beheren, is het een eenvoudig hulpmiddel voor het extraheren van randdetails, het bouwen van scherpe overlays of het voorbereiden van verscherpingspassages die de structuur meer dan de kleur moeten benadrukken.
+### High Pass
+
+High Pass isoleert fijn lokaal contrast in plaats van brede toonverandering. Met alleen schaal en contrast om te beheren, is het een eenvoudig hulpmiddel voor het extraheren van randdetails, het bouwen van scherpe overlays of het voorbereiden van verscherpingspassages die de structuur meer dan de kleur moeten benadrukken.
 
 ### Ruisonderdrukking
 
@@ -51,6 +58,12 @@ Ruisonderdrukking is het tegenovergestelde: het onderdrukt ongewenste fijne vari
 ### Verscherpen
 
 Sharpen gebruikt een onscherp maskermodel, waarbij straal, hoeveelheid en drempel bepalen hoe sterk het lokale contrast wordt gepusht. In de praktijk maakt dit het geschikt voor het herstellen van de helderheid na vervaging, het wijzigen van het formaat van de export of subtiele afwerkingsgangen waarbij details naar voren moeten komen zonder elke pixel in ruis te veranderen.
+
+## Kleur
+
+### Tooncorrectie
+
+Met Tonal Grading wordt kleur opnieuw toegewezen op basis van toonbereik in plaats van door het contrast opnieuw vorm te geven of een curve te tekenen. De luminantie van elke pixel kiest een vloeiende mix van drie gebruikerskleuren voor schaduw, middentoon en hooglicht; zodat het beeld zijn licht-naar-donker-structuur behoudt terwijl het palet verschuift. Sterkte per regio, een balansafwijking in Lightroom-stijl (links geeft de voorkeur aan de schaduwgradatie, rechts de hooglichtgradatie) en de zachtheid van de overgang bepalen hoe ver elke kleur reikt en hoe zacht de kwaliteiten elkaar overlappen. Het is gericht op illustratie, strips, concept art en foto's wanneer het doel een samenhangend cijfer of uiterlijk is.
 
 ## Vervormen
 
@@ -82,7 +95,7 @@ Vignettering wordt donkerder, kleurt of wordt zelfs gewist in de richting van de
 
 HSV Noise randomiseert tint, verzadiging en waarde onafhankelijk. Dat maakt het handig wanneer een beeld kleurlevendigheid of analoge instabiliteit nodig heeft zonder de lokale structuur volledig uit elkaar te halen.
 
-### Slinger
+### Hurl
 
 Hurl is de extreme versie van ruis: het vervangt pixels door volledig willekeurige kleuren. Het kan het beste worden gezien als een destructieve chaosbron voor glitch-werk, noodlijdende texturen of maskers die agressief moeten worden afgebroken.
 
@@ -90,7 +103,9 @@ Hurl is de extreme versie van ruis: het vervangt pixels door volledig willekeuri
 
 Pick vervangt elke pixel door een willekeurig gekozen buur, zodat de afbeelding gerelateerd blijft aan de bron in plaats van puur statisch te worden. Het resultaat is een geschudde, korrelige variatie die organischer kan aanvoelen dan volledig willekeurige ruis.
 
-### SpreidingVerspreid verstrooide pixels door ze willekeurig binnen een straal te verplaatsen. Dit is handig als u bewegingsloze verstoring wilt: een gebroken oppervlak, een vlekkerige rand of een versleten textuur die nog steeds de kleurrelaties van de bronafbeelding draagt.
+### Verspreiding
+
+Verspreid verstrooide pixels door ze willekeurig binnen een straal te verplaatsen. Dit is handig als u bewegingsloze verstoring wilt: een gebroken oppervlak, een vlekkerige rand of een versleten textuur die nog steeds de kleurrelaties van de bronafbeelding draagt.
 
 ### Fractaal
 
@@ -106,7 +121,7 @@ Risograph Grain bouwt voort op dezelfde korrellogica, maar verandert deze in een
 
 ### Halftoon (FM)
 
-Halftoon (FM) creëert een stochastische, frequentiegemoduleerde halftoon met behulp van blauwe ruis of verwante drempelmethoden. Met kleurmodi voor monochroom, duotoon en CMYK, plus besturingselementen voor puntversterking en plaatdecorrelatie, is het gericht op een printachtige textuur die onregelmatig en levendig blijft in plaats van in een strak raster te vervallen.
+Halftoon (FM) creëert een stochastische, frequentiegemoduleerde halftoon met behulp van blauwe ruis of verwante drempelmethoden. Met kleurmodi voor monochroom, duotoon en CMYK, plus besturingselementen voor puntversterking en plaatdecorrelatie, is het gericht op een afdrukachtige textuur die onregelmatig en levendig blijft in plaats van in een strak raster te vervallen.
 
 ## Randen
 
@@ -118,7 +133,7 @@ Verschil van Gaussianen detecteert randen door twee wazige versies van het beeld
 
 ### Mediaan
 
-Mediaan vervangt elke pixel door de mediaanwaarde uit zijn omgeving, waardoor geïsoleerde ruis wordt verwijderd terwijl sterkere grenzen beter behouden blijven dan een simpele vervaging. Het is een praktisch opschoonfilter voor het afvlakken van kleine visuele chatter zonder onmiddellijk het hele beeld te verzachten.
+Mediaan vervangt elke pixel door de mediaanwaarde uit zijn omgeving, waardoor geïsoleerde ruis wordt verwijderd terwijl sterkere grenzen beter behouden blijven dan een simpele vervaging. Het is een praktisch opschoonfilter voor het afvlakken van kleine visuele ruis zonder onmiddellijk het hele beeld te verzachten.
 
 ### Verwijden
 
@@ -134,7 +149,7 @@ Eroderen doet de complementaire beweging, waarbij donkere gebieden worden groter
 
 Dambord genereert een regelmatig afwisselend tegelpatroon. Het is eenvoudig, maar die eenvoud maakt het nuttig voor het testen van transparantie, het bouwen van maskers, het blokkeren van grafische achtergronden of het maken van schoon geometrisch bronmateriaal.
 
-### Raster
+### Grid
 
 Grid tekent herhaalde horizontale en verticale scheidingen, waardoor het handig is voor lay-outhandleidingen, ontwerpachtergronden, technische illustraties en procedurele maskering. Omdat het als filter wordt gegenereerd, kunnen de afstand en het uiterlijk worden aangepast zonder het patroon met de hand op te bouwen.
 
@@ -142,7 +157,9 @@ Grid tekent herhaalde horizontale en verticale scheidingen, waardoor het handig 
 
 Voronoi genereert een tegelbare cellulaire textuur van geplaatste punten, met bedieningselementen voor het objecttype, de afstandsmetriek, willekeur, fractale details en naadloze omloop. In de praktijk kan het overgaan van zuivere gebarsten celstructuren naar meer organische steen-, huid-, kaart- of abstracte netwerkpatronen.
 
-### GolfWave produceert gestreepte of geringde patronen gevormd door golfvormprofiel, geometrische rangschikking, vervorming, fractale details en faseverschuiving. Dat maakt het meer dan een simpele stripe-tool: het kan gecontroleerde rimpelingen, topografische banden, moiré-achtige afbeeldingen of luidruchtige concentrische patroonvelden genereren.
+### Zwaai
+
+Wave produceert gestreepte of geringde patronen gevormd door golfvormprofiel, geometrische rangschikking, vervorming, fractale details en faseverschuiving. Dat maakt het meer dan een simpele stripe-tool: het kan gecontroleerde rimpelingen, topografische banden, moiré-achtige afbeeldingen of luidruchtige concentrische patroonvelden genereren.
 
 ### Halftoon (AM)
 

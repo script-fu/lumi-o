@@ -2,11 +2,14 @@
 title: "Hej världen!"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 48ce3cd904e6f30f374c770d6b6da002536da6d3041b914180bd22fbd34fb430
 ---
 Denna handledning går igenom den minimala strukturen för ett Scheme-pluginprogram. Vissa rader är "boilerplate": de krävs för att Lumi ska ladda filen, även om du inte helt förstår dem ännu.
 
 ```bash
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -62,19 +65,19 @@ Kod kan ordna saker på liknande sätt, vilket kan se konstigt ut till en börja
 Här är det fullständiga exemplet. De flesta Lumi-procedurer har prefixet `lumi-`. Till exempel, `lumi-message` skriver ut en sträng till den konfigurerade meddelandehanteraren.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-hello-world)
 
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Ställ in meddelandehanteraren så att meddelandet skickas till en GUI-dialogruta
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Ställ in meddelandehanteraren så att meddelandet skickas till Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Skicka meddelandet till terminal, OS-fönstret som startade Lumi
   (display "Hello world!\n"))
 
 

@@ -1,7 +1,10 @@
 ---
-title: "定義"
+title: "define"
 type: docs
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: da147bc6719c5d9c569a9e6e0f50ecf0cb8cb3ed90179fe969457b802a19890f
 ---
 Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部綁定。它最常用於定義變數和函數，使它們可以在整個腳本或特定範圍內重複使用和存取。理解`define`對於編寫模組化、可重複使用且可讀的Scheme程式至關重要。
 
@@ -28,7 +31,7 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 
 ```scheme
 (define pi 3.14159)
-(* pi 2) ;; Computes 2π
+(* pi 2) ;; 計算 2π
 ```
 
 **結果**：`6.28318`
@@ -51,7 +54,7 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 ```scheme
 (define (square x)
   (* x x))
-(square 4) ;; Computes 4²
+(square 4) ;; 計算 4²
 ```
 
 **結果**：`16`
@@ -66,8 +69,8 @@ Scheme 中的 `define` 語句是一個通用構造，用於建立全域或局部
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; 區域輔助函式
+  (define (cube x) (* x x x))  ;; 區域輔助函式
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```

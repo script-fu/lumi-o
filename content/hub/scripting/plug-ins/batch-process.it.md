@@ -1,14 +1,17 @@
 ---
 title: "Processo batch"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 141b5ee23e77ecfc8ef5e8112706cfaebc1a2a528518218296dffda5b9dee6d1
 ---
 Un esempio pratico e completo per elaborare molti file in una volta sola.
 
-## Dove vive
+## Codice sorgente
 
-- [Visualizza la fonte](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
+- [Visualizza il codice sorgente](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/batch-process/batch-process.scm)
 
-## Dove appare in Lumi
+## Menu in Lumi
 
 - **File → Elaborazione batch**
 

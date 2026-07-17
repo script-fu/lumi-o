@@ -1,7 +1,10 @@
 ---
-title: "Variáveis ​​e Escopo"
+title: "Variáveis e escopo"
 type: docs
 weight: 1
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a9918c313de4c5b034465400bfcbf1d493996435543a410382e481bde0d19ae4
 ---
 No Scheme, o gerenciamento de variáveis ​​e seu escopo é um conceito central para escrever scripts eficientes e de fácil manutenção. As variáveis ​​armazenam valores de dados que seu script pode manipular, enquanto o escopo define onde essas variáveis ​​são acessíveis. Compreender como definir e usar variáveis ​​de forma eficaz permite criar código estruturado, reutilizável e livre de erros.
 
@@ -10,8 +13,8 @@ No Scheme, o gerenciamento de variáveis ​​e seu escopo é um conceito centr
 O esquema é digitado dinamicamente: você não declara os tipos antecipadamente e uma variável pode conter valores de diferentes tipos ao longo do tempo.
 
 ```scheme
-(define x 42)       ; x is a number
-(set! x "hello")    ; now x is a string
+(define x 42)       ; x é um número
+(set! x "hello")    ; agora x é uma string
 ```
 
 ### O papel das definições de variáveis e do escopo no esquema

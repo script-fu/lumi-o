@@ -1,8 +1,13 @@
 ---
-title: "Penseel gereedschap"
+title: "Penseelgereedschap"
 type: docs
+url: "hub/features/paintbrush"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
 ---
-Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een beroerte zich gedraagt.
+
+Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een streek zich gedraagt.
 
 In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, beweging, druk, timing en kleur kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen en meerkoppige penseelformaties.
 
@@ -25,9 +30,9 @@ Hierdoor voelt de Brush minder aan als een gestempeld patroon en meer als een fy
 
 ![dynamics](/images/screens/dynamics.jpg)
 
-## Beroertegedrag
+## Streekgedrag
 
-Beroertes kunnen direct en onmiddellijk zijn, of ze kunnen worden ondersteund door verzachting en stabilisatie. Deze functies helpen ongewenste trillingen te verminderen, abrupte veranderingen te verzachten en ervoor te zorgen dat langere bewegingen meer gecontroleerd aanvoelen, zonder het karakter van de inbreng van de artiest weg te nemen.
+Streeks kunnen direct en onmiddellijk zijn, of ze kunnen worden ondersteund door verzachting en stabilisatie. Deze functies helpen ongewenste trillingen te verminderen, abrupte veranderingen te verzachten en ervoor te zorgen dat langere bewegingen meer gecontroleerd aanvoelen, zonder het karakter van de inbreng van de artiest weg te nemen.
 
 De Brush ondersteunt ook verschillende benaderingen van verfopbouw. Het kan zich gedragen als een ononderbroken streek, herhaaldelijke deppen verzamelen of na verloop van tijd sporen afgeven terwijl de wijzer op zijn plaats wordt gehouden. Deze flexibiliteit maakt het bruikbaar voor zowel opzettelijk lijnwerk als langzamere tonale constructie.
 
@@ -35,13 +40,15 @@ Voor kalligrafische of inktachtige markeringen kan het penseel een meer continu 
 
 ![stroke](/images/screens/stroke.jpg)
 
-## Beroerteregistratie en gesimuleerde weergave
+## Streekregistratie en gesimuleerde weergave
 
 Het penseel kan een klein voorbeeld vastleggen van hoe een voorinstelling normaal gesproken met de hand wordt getekend, en dat profiel vervolgens gebruiken bij het renderen van lijnen die worden gedefinieerd door geometrie in plaats van door live beweging. Rechte Shift-kliklijnen, lijnpaden en lijnselecties kunnen allemaal het vastgelegde druk- en snelheidspatroon van de actieve gereedschapsvoorinstelling gebruiken in plaats van zich te gedragen als een platte mechanische lijn.
 
 Hierdoor blijven de geconstrueerde streken dichter bij het karakter van het penseel. Een lijn die vanaf een pad wordt getrokken, kan zacht beginnen, druk opbouwen, afnemen of de snelheidsreactie op dezelfde brede manier variëren als de bemonsterde handbeweging, terwijl hij nog steeds de exacte vorm van het pad, de selectierand of het rechte lijngebaar volgt.
 
-## NaverwerkingHet penseel kan een streek registreren terwijl u deze tekent, en dat vastgelegde gebaar vervolgens opnieuw afspelen zodra u opstijgt, waardoor het pad wordt verfijnd voordat de definitieve markering wordt vastgelegd. U kunt vrij schetsen en toch tot een strakkere richting, scherpere hoeken of een meer bewuste structuur komen zonder dat u met mechanische precisie hoeft te tekenen.
+## Naverwerking
+
+Het penseel kan een streek registreren terwijl u deze tekent, en dat vastgelegde gebaar vervolgens opnieuw afspelen zodra u opstijgt, waardoor het pad wordt verfijnd voordat de definitieve markering wordt vastgelegd. U kunt vrij schetsen en toch tot een strakkere richting, scherpere hoeken of een meer bewuste structuur komen zonder dat u met mechanische precisie hoeft te tekenen.
 
 Dit opent arcerings- en gelinieerde constructiemarkeringen die in strakke hoeken klikken, terwijl de met de hand getekende lengte en karakter, kantelstabiele lintstreken en hoekbewuste herhaling behouden blijven, waarbij bochten en rechte stukken anders worden behandeld. Penselen met meerdere koppen kunnen een gecorrigeerd pad delen, terwijl elke kop zijn eigen variatie behoudt, en de dynamiek kan tijdens het afspelen nog steeds de streek langs de uiteindelijke curve vormgeven. Nabewerking is van toepassing op getekende streken in plaats van op continue airbrush-emissie.
 
@@ -71,7 +78,9 @@ De belasting kan opnieuw worden geïntroduceerd tussen de poetsbewegingen, op ee
 
 De Brush kan ook periodiek verlies van contact met het schilderoppervlak simuleren: de gebroken vlekken die verschijnen wanneer een potlood, houtskoolstok, droog penseel of gedeeltelijk uitgeputte marker slechts gedeeltelijk in contact komt met het papier.
 
-Wanneer contactsimulatie is ingeschakeld, maakt de borstel contact of wordt hij opgetild. Tijdens contact markeert de storting normaal. Terwijl het wordt opgetild, wordt er geen materiaal afgezet en laat de slag een opening achter waarvan de lengte willekeurig wordt gekozen tussen een minimale en maximale afstand. De overgang is binair: het effect verandert niets aan de dekking, grootte, hardheid, tussenruimte of vloeiing, maar alleen aan de vraag of de verf is aangebracht.Hoe gemakkelijk contact verloren gaat, wordt bepaald door de contactdrempel, de naalddruk en eventueel de borstelbelasting. Hogere drempelwaarden zorgen ervoor dat pauzes vaker plaatsvinden. Druk werkt als een stabiliserende kracht: lichte druk vergroot de kans op contactverlies, terwijl stevige druk ervoor zorgt dat de slag eerder blijft liggen. Wanneer de borstelbelasting is ingeschakeld, kan een lage belasting ervoor zorgen dat de markering nog meer kapot gaat en kan een hoge belasting helpen het contact te behouden, vergelijkbaar met gereedschap dat nog steeds voldoende materiaal draagt ​​om grip te krijgen op het oppervlak.
+Wanneer contactsimulatie is ingeschakeld, maakt de borstel contact of wordt hij opgetild. Tijdens contact markeert de storting normaal. Terwijl het wordt opgetild, wordt er geen materiaal afgezet en laat de slag een opening achter waarvan de lengte willekeurig wordt gekozen tussen een minimale en maximale afstand. De overgang is binair: het effect verandert niets aan de dekking, grootte, hardheid, tussenruimte of vloeiing, maar alleen aan de vraag of de verf is aangebracht.
+
+Hoe gemakkelijk contact verloren gaat, wordt bepaald door de contactdrempel, de naalddruk en eventueel de borstelbelasting. Hogere drempelwaarden zorgen ervoor dat pauzes vaker plaatsvinden. Druk werkt als een stabiliserende kracht: lichte druk vergroot de kans op contactverlies, terwijl stevige druk ervoor zorgt dat de slag eerder blijft liggen. Wanneer de borstelbelasting is ingeschakeld, kan een lage belasting ervoor zorgen dat de markering nog meer kapot gaat en kan een hoge belasting helpen het contact te behouden, vergelijkbaar met gereedschap dat nog steeds voldoende materiaal draagt ​​om grip te krijgen op het oppervlak.
 
 Verlies wordt beoordeeld op basis van de slagafstand in plaats van op het aantal schartjes, zodat borstels met een dichte of dunne tussenruimte zich consistent gedragen. De functie werkt met zowel op stempels gebaseerde als kalligrafische weergave, waardoor coherente gaten langs de streek ontstaan ​​in plaats van geïsoleerde overgeslagen schartjes.
 

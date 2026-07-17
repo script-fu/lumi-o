@@ -2,29 +2,29 @@
 title: "迭代"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-迭代是程式設計的基石，使腳本能夠重複操作並有效地處理資料集合。在Scheme中，基於Scheme程式語言，迭代提供了自動執行重複任務、操作資料結構和建立複雜執行模式的工具。
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### 迭代在Scheme中的作用
+### Le rôle de l'itération en Scheme
 
-迭代在腳本中實現了幾個基本目的：
-- **自動重複：** 它允許您多次執行相同的操作或一組操作，而無需重複程式碼。
-- **提高效率：** 透過迭代處理資料結構，腳本可以系統地處理大規模操作。
-- **精簡程式碼：**迭代消除冗餘，讓程式碼更簡潔、可讀、可維護。
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### 可用的迭代類型
+### Types d'itération disponibles
 
-Scheme 提供了多種迭代構造，每種構造都根據特定需求量身定制：
-- **map:** 將函數應用於列表的每個元素，傳回一個包含結果的新列表。
-- **for-each:** 與 `map` 類似，但用於在每個元素上執行函數而不傳回結果。
-- **do：** 處理各種迭代過程的通用循環結構。
-- **遞歸：**一種強大的技術，函數可以呼叫自身來逐步解決問題。
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
-### 迭代是如何運作的
+### Comment fonctionne l'itération
 
-迭代通常涉及：
-1. **定義重複：** 指定要重複的操作以及要處理的資料或範圍。
-2. **依序執行：** 對每個元素、步驟或條件重複執行操作，直至完成。
-3. **傳回結果（可選）：** 根據構造，迭代可能會產生結果或修改狀態。
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-這些構造使您能夠編寫適應性強、高效且優雅的腳本，從而輕鬆處理複雜的任務。
+Ces constructions aident à écrire des scripts adaptables et efficaces.

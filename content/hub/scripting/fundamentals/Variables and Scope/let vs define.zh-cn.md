@@ -1,7 +1,10 @@
 ---
-title: "命名为 let 或 Local Define"
+title: "命名 let 与局部 define"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 **名为`let`** 和**本地`define`** 都是Scheme 中用于构建代码的强大工具，但它们有不同的用途。了解何时使用每种脚本有助于创建干净、模块化且高效的脚本。
 
@@ -67,8 +70,8 @@ weight: 5
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; 局部辅助函数
+  (define (cube x) (* x x x))  ;; 局部辅助函数
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ weight: 5
 在命名的`let` 中，括号中的绑定充当使用特定值初始化的**局部变量**。这些变量的作用域为 `let` 的主体。
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; 将 x 初始化为 1
+           (y 2))  ;; 将 y 初始化为 2
+  (+ x y))         ;; 在主体中使用 x 和 y
 ```
 
 - **`x` 和 `y`** 是作为 `let` 的一部分定义和初始化的局部变量。
@@ -158,7 +161,7 @@ weight: 5
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; 用新的 x 和 y 递归调用
 ```
 
 - **第一次迭代**：`x = 1`、`y = 2`
@@ -189,7 +192,7 @@ weight: 5
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; 以 x = 1、y = 2 进行初始调用
 ```
 
 两者执行相同的计算，但名为 `let` 将变量声明和递归设置合并为一个简洁的构造。

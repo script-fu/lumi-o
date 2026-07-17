@@ -2,6 +2,9 @@
 title: "ปลั๊กอินตัวกรอง"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 เราใช้ปลั๊กอิน _procedure_ สำหรับบทแนะนำ [ขั้นตอนแรก](../../first-step/) ปลั๊กอินประเภทเหล่านั้นทำงานได้โดยไม่ต้องใช้รูปภาพหรือวาดเป็นอินพุตได้ โดยปกติแล้ว เราใช้ปลั๊กอินเพื่อเปลี่ยนรูปภาพและสิ่งที่วาดได้ ปลั๊กอินลักษณะนี้เรียกว่าปลั๊กอิน _filter_
 
@@ -12,28 +15,28 @@ weight: 2
 ### ตัวอย่างปลั๊กอินตัวกรองอย่างง่าย
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; ใช้คำสั่ง let เพื่อกำหนดตัวแปรข้อความและโค้ดหลัก
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; แสดงข้อความใน Error Console ของ Lumi
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; กลับสีของ drawable ที่เลือกแรก
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; ลงทะเบียนปลั๊กอิน
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; ชื่อขั้นตอนหลัก
+  "Simple Filter Plug-in Demo"             ;; ชื่อที่ปรากฏในเมนู Lumi
+  "Tests a basic Scheme filter plug-in"    ;; คำอธิบายเครื่องมือ
+  "Author Name"                            ;; ให้เครดิตตัวเองบ้าง
+  "License"                                ;; ใบอนุญาต
+  "Date written"                           ;; วันที่เขียน
+  "*"                                      ;; ระบุว่า plug-in นี้ต้องการภาพ
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; ต้องการ drawable ที่เลือกอย่างน้อยหนึ่งรายการ
 
-;; Specify the menu location for the plug-in
+;; ระบุตำแหน่งเมนูสำหรับ plug-in
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ weight: 2
 บรรทัดแรกช่วยให้แน่ใจว่าสคริปต์ทำงานเป็นปลั๊กอินใน Lumi 3:
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ weight: 2
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; แสดงข้อความใน Error Console ของ Lumi
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; กลับสีของ drawable ที่เลือกแรก
 ```
 
 ### การลงทะเบียนปลั๊กอิน
@@ -96,14 +99,14 @@ weight: 2
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; ลงทะเบียนขั้นตอนหลัก
+  "Simple Filter Plug-in Demo"             ;; ชื่อที่ปรากฏในเมนู Lumi
+  "Tests a basic Scheme filter plug-in"    ;; คำอธิบายเครื่องมือ
+  "Author Name"                            ;; ชื่อผู้เขียน
+  "License"                                ;; ประเภทใบอนุญาต
+  "Date written"                           ;; วันที่เขียน
+  "*"                                      ;; ระบุว่า plug-in ต้องการภาพ
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; ต้องการ drawable ที่เลือกอย่างน้อยหนึ่งรายการ
 ```
 
 #### ลงทะเบียนเมนู

@@ -1,130 +1,137 @@
 ---
-title: "Använder Git på Linux"
+title: "Använda Git på Linux"
 type: docs
+url: "hub/technical-guides/Using-Git-on-Linux"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7054a9ff9efeb93b4f494197e09ed1fe34d5d6bde7bc305480693c3982d375ae
 ---
-Välkommen till denna nybörjarguide för att använda Git på Linux! Den här guiden är utformad för att hjälpa dig komma igång med Git och GitLab, och för att ge en grundläggande förståelse för hur du använder dessa verktyg.
 
-## Git Översikt
+Välkommen till den här nybörjarguiden för att använda Git på Linux! Guiden hjälper dig att komma igång med Git och GitLab och ger en grundläggande förståelse för hur du använder dessa verktyg.
 
-Koden som används för att skapa applikationer sparas i en samling mappar och filer på ditt system. Git är en applikation som låter oss säkerhetskopiera, dela och kopiera den samlingen. Git är känt som ett versionskontrollsystem som låter dig spåra ändringar i din kod och samarbeta med andra. Det är ett kraftfullt verktyg som används i stor utsträckning i öppen källkod. GitLab är en webbaserad plattform som låter dig vara värd för och hantera dina Git-förråd online, vilket gör det enkelt att samarbeta med andra och spåra ändringar i din kod.
+## Git-översikt
 
-## Vad är ett arkiv?
+Koden som används för att skapa applikationer finns i en samling mappar och filer på ditt system. Git är ett program som låter dig säkerhetskopiera, dela och kopiera den samlingen. Git är ett versionskontrollsystem som låter dig spåra ändringar i koden och samarbeta med andra. Det är ett kraftfullt verktyg som används flitigt i open source-gemenskapen. GitLab är en webbaserad plattform där du kan hosta och hantera dina Git-repositories online, vilket gör det enkelt att samarbeta med andra och följa ändringar i koden.
 
-En _repo_, förkortning för repository, är en Git-hanterad lokal mapp med en onlinekopia. En Git Lab-repo är en samling filer och mappar som utgör ett projekt. Det kan ha _grenar_ som är oberoende kopior av samma projekt. En filial är en separat version av ditt projekt som låter dig göra ändringar utan att påverka huvudversionen. Detta är användbart för att testa nya funktioner eller fixa buggar utan att störa huvudprojektet. Det finns ditt lokala repo, lagrat på din hårddisk, och fjärrrepo, lagrat online med Git och GitLab.
+## Vad är ett repository?
 
-## Använder Git
+Ett _repo_, förkortning av repository, är en lokal mapp som hanteras av Git och som har en onlinekopia. Ett GitLab-repo är en samling filer och mappar som utgör ett projekt. Det kan ha _branches_ — oberoende kopior av samma projekt. En branch är en separat version av projektet som låter dig göra ändringar utan att påverka huvudversionen. Det är användbart för att testa nya funktioner eller fixa buggar utan att störa huvudprojektet. Du har ett lokalt repo på hårddisken och ett remote repo som lagras online med Git och GitLab.
 
-Du måste installera Git på ditt system. På Debian-baserade system kan du använda kommandot apt för att installera programpaket. I det här fallet använder vi det för att installera Git, som är ett paket som tillhandahåller Git versionskontrollsystem. Kommandot sudo ger installationsprogrammet behörighet att installera på ditt system.
+## Använda Git
+
+Du behöver installera Git på ditt system. På Debian-baserade system kan du använda kommandot apt för att installera programpaket. Här använder vi det för att installera Git, ett paket som tillhandahåller Git-versionskontrollsystemet. Kommandot sudo ger installationsprogrammet behörighet att installera på ditt system.
 
 ```bash
  sudo apt install git
 ```
 
-## Gå till GitLab
+## Åtkomst till GitLab
 
-Innan du kan använda [GitLab](https://gitlab.com/users/sign_up) måste du skapa ett konto genom att besöka GitLabs webbplats och slutföra registreringsprocessen.
+Innan du kan använda [GitLab](https://gitlab.com/users/sign_up) behöver du skapa ett konto genom att besöka GitLabs webbplats och slutföra registreringen.
 
-GitLab kräver _SSH_ för säker och autentiserad kommunikation mellan en klient (till exempel du) och GitLab-servern när du utför Git-operationer som _cloning_, _pushing_ och _fetching_ repositories. Kloning är att göra en lokal kopia av repet, hämtning överför alla ändringar som gjorts i repet till din lokala kopia, och push skickar ändringar och innehåll till serverförvaret. SSH (Secure Shell) är ett nätverksprotokoll som tillåter säker fjärråtkomst och använder _nyckelpar_ för att autentisera och upprätta säkra anslutningar. För att generera ett SSH-nyckelpar kan du använda kommandot ssh-keygen i din terminal.
+GitLab kräver _SSH_ för säker, autentiserad kommunikation mellan en klient (till exempel du) och GitLab-servern när du utför Git-operationer som _clone_, _push_ och _fetch_ av repositories. Clone innebär att skapa en lokal kopia av repot, fetch hämtar ändringar från repot till din lokala kopia, och push skickar ändringar och innehåll till server-repot. SSH (Secure Shell) är ett nätverksprotokoll som möjliggör säker fjärråtkomst och använder _nyckelpar_ för att autentisera och upprätta säkra anslutningar. För att generera ett SSH-nyckelpar kan du använda kommandot ssh-keygen i terminalen.
 
 ```bash
  ssh-keygen
 ```
 
-Ange ett filnamn, eller använd standardinställningen genom att trycka på Enter, och eventuellt ett lösenord. I din hemkatalog, i en dold mapp som heter .ssh, finns det nu två id_rsa-filer, om du gick med standardnamn. .pub-filen är den offentliga nyckeln och du kan se dess innehåll med en textredigerare.
+Ange ett filnamn, eller tryck Enter för standardnamnet, och eventuellt ett lösenord. I din hemkatalog, i en dold mapp som heter .ssh, finns nu två id_rsa-filer om du använde standardnamn. .pub-filen är den publika nyckeln; du kan se innehållet i en textredigerare.
 
-Logga in på ditt GitLab-konto och navigera till dina användarinställningar. Klicka på 'SSH-nycklar' i den vänstra navigeringsmenyn. Kopiera och klistra in din publika nyckel i nyckelfältet och ge nyckeln en relevant titel, som PC@Home. Klicka på knappen "Lägg till nyckel" för att spara nyckeln. Din offentliga SSH-nyckel läggs nu till ditt GitLab-konto och du kan använda den för att autentisera med GitLab-arkiv. Testa om dina nycklar och anslutning fungerar med kommandot ssh -T för att se ett välkomstmeddelande från GitLab.
+Logga in på ditt GitLab-konto och gå till användarinställningarna. Klicka på 'SSH Keys' i navigeringsmenyn till vänster. Kopiera och klistra in din publika nyckel i fältet Key och ge nyckeln en relevant titel, till exempel PC@Home. Klicka på 'Add Key' för att spara nyckeln. Din publika SSH-nyckel är nu tillagd i ditt GitLab-konto och du kan använda den för att autentisera mot GitLab-repositories. Testa om nycklarna och anslutningen fungerar med kommandot ssh -T; du bör se ett välkomstmeddelande från GitLab.
 
 ```bash
  $ ssh -T git@ssh.gitlab.gnome.org
  Welcome to GitLab, @username!
 ```
 
-## Grundläggande Git-kommandonNu när du har installerat Git och har ställt in din SSH-nyckel med GitLab, låt oss gå igenom några viktiga Git-kommandon för att hantera arkiv. Dessa kommandon hjälper dig att arbeta med befintliga projekt, hålla dem uppdaterade och göra ändringar på ett säkert sätt.
+## Grundläggande Git-kommandon
 
-### 1. **Klona ett arkiv**
+Nu när du har installerat Git och konfigurerat din SSH-nyckel med GitLab går vi igenom några viktiga Git-kommandon för att hantera repositories. Dessa kommandon hjälper dig att arbeta med befintliga projekt, hålla dem uppdaterade och göra ändringar på ett säkert sätt.
 
-Kloning är processen att skapa en lokal kopia av ett fjärrlager. Detta är användbart när du vill arbeta med ett projekt som redan finns på GitLab. För att klona ett arkiv, använd kommandot `git clone` följt av arkivets URL:
+### 1. **Klona ett repository**
+
+Att klona är processen att skapa en lokal kopia av ett remote repository. Det är användbart när du vill arbeta med ett projekt som redan finns på GitLab. För att klona ett repository använder du kommandot `git clone` följt av repository-URL:en:
 
 ```sh
 git clone https://gitlab.com/username/repository.git
 ```
 
-Byt ut `https://gitlab.com/username/repository.git` med URL:en till det arkiv du vill klona. Detta kommando kommer att skapa en lokal kopia av förvaret i en ny katalog.
+Byt ut `https://gitlab.com/username/repository.git` mot URL:en till det repository du vill klona. Detta kommando skapar en lokal kopia av repositoryt i en ny katalog.
 
-### 2. **Kontrollerar arkivets status**
+### 2. **Kontrollera repositorystatus**
 
-För att se om ditt lokala arkiv har några ändringar eller för att se dess nuvarande tillstånd, använd:
+För att se om ditt lokala repository har några ändringar, eller för att se dess nuvarande tillstånd, använd:
 
 ```sh
 git status
 ```
 
-Detta kommando visar dig vilka filer som har ändrats, lagts till eller tagits bort i din lokala kopia av förvaret.
+Detta kommando visar vilka filer som har ändrats, lagts till eller tagits bort i din lokala kopia av repositoryt.
 
-### 3. **Fjärrförråd**
+### 3. **Remote repositories**
 
-Fjärrlager är versioner av ditt projekt som är värd online, till exempel på GitLab. De fungerar som den centrala platsen där din kod lagras och kan nås av andra. Standardfjärrförrådet som Git skapar när du klona ett projekt heter `origin`. Du kan lägga till, ta bort eller lista fjärrlager med hjälp av följande kommandon:
+Remote repositories är versioner av ditt projekt som hostas online, till exempel på GitLab. De fungerar som den centrala platsen där koden lagras och där andra kan komma åt den. Det standard remote repository som Git skapar när du klonar ett projekt heter `origin`. Du kan lägga till, ta bort eller lista remote repositories med följande kommandon:
 
-- **Fjärrkontroller:**
+- **Lista remote repositories:**
 
-  För att se vilka fjärrlager som är länkade till ditt lokala projekt, använd:
+  För att se vilka remote repositories som är kopplade till ditt lokala projekt, använd:
 
   ```sh
   git remote -v
   ```
 
-  Detta kommando listar alla fjärrkontroller och deras webbadresser. Vanligtvis kommer du att se `origin` listad här.
+  Detta kommando listar alla remote repositories och deras URL:er. Vanligtvis ser du `origin` här.
 
-- **Lägga till en fjärrkontroll:**
+- **Lägga till ett remote repository:**
 
-  Om du behöver lägga till ett nytt fjärrlager kan du göra det med:
+  Om du behöver lägga till ett nytt remote repository kan du göra det med:
 
   ```sh
   git remote add <name> <url>
   ```
 
-  Ersätt `<name>` med ett namn för fjärrkontrollen och `<url>` med URL:en till förvaret.
+  Byt ut `<name>` mot ett namn för remote repositoryt och `<url>` mot repository-URL:en.
 
-- **Ta bort en fjärrkontroll:**
+- **Ta bort ett remote repository:**
 
-  För att ta bort ett fjärrlager, använd:
+  För att ta bort ett remote repository, använd:
 
   ```sh
   git remote remove <name>
   ```
 
-  Ersätt `<name>` med namnet på fjärrkontrollen du vill ta bort.
+  Byt ut `<name>` mot namnet på det remote repository du vill ta bort.
 
-### 4. **Hämta ändringar från Remote Repository**
+### 4. **Hämta ändringar från remote repository**
 
-Om du vill se vilka ändringar som har gjorts i fjärrförvaret utan att tillämpa dem på din lokala kopia, använd:
+Om du vill se vilka ändringar som gjorts i remote repository utan att tillämpa dem på din lokala kopia, använd:
 
 ```sh
 git fetch origin
 ```
 
-Det här kommandot hämtar de senaste ändringarna från fjärrarkivet men slår inte ihop dem med din lokala filial. Det är ett sätt att söka efter uppdateringar innan du bestämmer dig för att införliva dem.
+Detta kommando hämtar de senaste ändringarna från remote repository men slår inte ihop dem med din lokala branch. Det är ett sätt att kontrollera efter uppdateringar innan du bestämmer dig för att ta in dem.
 
-### 5. **Återställa ditt lokala arkiv**
+### 5. **Återställa ditt lokala repository**
 
-Om du vill återställa ditt lokala förråd så att det matchar fjärrförvaret exakt, kan du använda en "hård" återställning. **Varning:** Detta kommer att skriva över alla lokala ändringar du har gjort.
+Om du vill återställa ditt lokala repository så att det exakt matchar remote repository kan du använda en 'hard' reset. **Varning:** detta skriver över alla lokala ändringar du har gjort.
 
 ```sh
 git reset --hard origin/branch-name
 ```
 
-Ersätt `branch-name` med namnet på grenen du vill återställa. Detta kommando tar bort alla lokala ändringar och gör ditt lokala arkiv identiskt med fjärrarkivet.
+Byt ut `branch-name` mot namnet på den branch du vill återställa. Detta kommando kasserar alla lokala ändringar och gör ditt lokala repository identiskt med remote repository.
 
-### 6. **Visning av åtagandehistorik**
+### 6. **Visa commithistorik**
 
-För att se en lista över ändringar som gjorts i arkivet över tid, använd:
+För att se en lista över ändringar som gjorts i repositoryt över tid, använd:
 
 ```sh
 git log
 ```
 
-Det här kommandot visar en historik över åtaganden, inklusive författare, datum och meddelande för varje ändring. Det är användbart för att förstå vilka ändringar som har gjorts och när.
+Detta kommando visar en historik över commits, inklusive författare, datum och meddelande för varje ändring. Det är användbart för att förstå vilka ändringar som gjorts och när.
 
 ### Sammanfattning
 
-Dessa grundläggande Git-kommandon hjälper dig att arbeta med arkiv, hålla dina lokala kopior uppdaterade och säkerställa att du säkert kan hantera fjärrarkiv. Att klona förråd, kontrollera statusen för din lokala kopia och hantera fjärrförvar är nyckelfärdigheter för att hantera projekt med Git.
+Dessa grundläggande Git-kommandon hjälper dig att arbeta med repositories, hålla dina lokala kopior uppdaterade och hantera remote repositories på ett säkert sätt. Att klona repositories, kontrollera statusen på din lokala kopia och hantera remote repositories är nyckelkunskaper för projekthantering med Git.

@@ -2,6 +2,9 @@
 title: "Файлы"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 Работа с файлами и каталогами важна для разработки Scheme. Независимо от того, сохраняете ли вы выходные данные, загружаете ресурсы или организуете структуру проекта, понимание файловых операций сделает ваши сценарии более надежными и удобными для пользователя.
 
@@ -58,7 +61,7 @@ Lumi предназначен только для Linux, поэтому дома
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Lumi предназначен только для Linux, поэтому дома
 Обычно нам нужно создать несколько каталогов для практического пути. Мы можем использовать оболочку для ```dir-make```, чтобы помочь нам здесь.
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; Назначение: Обёртка для (dir-make), создающая заданный путь с учётом платформы
+;;          указанного пути. Всегда выводит разделители в стиле Linux для dir-make.
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; Корневой каталог
+    ;; Создать остальные каталоги пошагово
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; Строит путь
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)
@@ -114,7 +117,7 @@ Lumi предназначен только для Linux, поэтому дома
 
 Чтобы перестроить путь, используйте ```string-append```:
 
-### Построение пути Linux
+### Построение путей Linux
 
 ```scheme
 > (string-append (getenv "HOME") DIR-SEPARATOR "myfolder" DIR-SEPARATOR "myfile.xcf")

@@ -2,6 +2,9 @@
 title: "Funciones variadas"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Funciones variables** en Scheme son funciones que aceptan un número variable de argumentos. Estas funciones son muy versátiles y le permiten crear código flexible y reutilizable. En la programación funcional, las funciones variadas simplifican las operaciones que necesitan procesar un número arbitrario de entradas, como sumar una lista de números o concatenar cadenas.
 
@@ -39,7 +42,7 @@ Las funciones variables se definen utilizando el símbolo `.` antes del último 
 
 **Uso**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Devuelve 15
 ```
 
 #### Función variable con parámetros fijos
@@ -58,7 +61,7 @@ Puede combinar parámetros fijos con un parámetro variado para crear funciones 
 
 **Uso**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Devuelve ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### Combinando lógica fija y variable
@@ -76,7 +79,7 @@ Puede combinar parámetros fijos con un parámetro variado para crear funciones 
 **Uso**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Devuelve "Fruits: Apple, Banana, Cherry"
 ```
 
 ### Casos de uso avanzados
@@ -94,7 +97,7 @@ Las funciones variadas destacan en el manejo de datos arbitrarios. Aquí hay un 
 
 **Uso**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Devuelve 18
 ```
 
 #### Funciones variadas con lógica recursiva
@@ -113,7 +116,7 @@ Las funciones variadas destacan en el manejo de datos arbitrarios. Aquí hay un 
 
 **Uso**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Devuelve 40
 ```
 
 ### Beneficios de las funciones variables

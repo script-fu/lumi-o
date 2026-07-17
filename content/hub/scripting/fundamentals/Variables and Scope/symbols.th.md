@@ -2,6 +2,9 @@
 title: "สัญลักษณ์"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 สัญลักษณ์เป็นหนึ่งในประเภทข้อมูลหลักใน Scheme ซึ่งแสดงถึงตัวระบุที่ไม่ซ้ำใครและไม่เปลี่ยนรูป พวกมันถูกใช้เป็นคีย์ มาร์กเกอร์ หรือตัวยึดตำแหน่งในโปรแกรมเป็นหลัก ทำให้จำเป็นสำหรับการเขียนโค้ดที่ชัดเจนและชัดเจน
 
@@ -17,9 +20,9 @@ weight: 6
 ตัวอย่าง:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; สัญลักษณ์ชื่อ `hello`
+'foo-bar     ; สัญลักษณ์ชื่อ `foo-bar`
+'*special*   ; สัญลักษณ์ชื่อ `*special*`
 ```
 
 ## การสร้างสัญลักษณ์
@@ -29,7 +32,7 @@ weight: 6
 ### ตัวอย่าง
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; สร้างสัญลักษณ์ `my-symbol`
 ```
 
 คุณยังสามารถสร้างสัญลักษณ์โดยทางโปรแกรมโดยใช้ขั้นตอน `string->symbol` ซึ่งจะแปลงสตริงเป็นสัญลักษณ์
@@ -48,8 +51,8 @@ weight: 6
 ### ตัวอย่าง
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (สัญลักษณ์เดียวกัน)
+(eq? 'apple 'orange)  ; #f (สัญลักษณ์ต่างกัน)
 ```
 
 ทำให้สัญลักษณ์เหมาะสำหรับใช้เป็นคีย์ในโครงสร้างข้อมูลหรือเครื่องหมายในโค้ดของคุณ
@@ -62,7 +65,7 @@ weight: 6
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; คืนค่า (name . "Alice")
 ```
 
 2. **ตัวระบุในรหัส:**
@@ -88,9 +91,9 @@ Scheme จัดเตรียมขั้นตอนในตัวสำห�
 ### ตัวอย่าง
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (จริง: เป็นสัญลักษณ์)
+(symbol->string 'example)     ; ผลลัพธ์: "example"
+(string->symbol "new-symbol") ; ผลลัพธ์: 'new-symbol
 ```
 
 ## สรุป

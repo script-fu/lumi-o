@@ -1,6 +1,9 @@
 ---
 title: "Git"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c2c03721fbcc205a8c33d945786290712bc60e71beb18b9a1dda1a34d975051f
 ---
 Utilisez Git pour suivre les modifications apportées à vos plug-ins, annuler les erreurs et partager du code entre les machines.
 
@@ -62,7 +65,7 @@ Si vous n'avez pas encore de compte, visitez [GitHub](https://github.com/) pour 
 
 1. **Connectez-vous à GitHub** : accédez à [GitHub](https://github.com/) et connectez-vous à votre compte.
 2. **Créer un nouveau référentiel** :
-   - Cliquez sur l'icône **** dans le coin supérieur droit et sélectionnez **Nouveau référentiel**.
+   - Cliquez sur l'icône ***+** dans le coin supérieur droit et sélectionnez **Nouveau référentiel**.
    - Entrez un nom de référentiel (par exemple, `your-repository`).
    - Ajoutez une description si vous le souhaitez.
    - Choisissez une visibilité **Public** ou **Privée**.
@@ -133,8 +136,8 @@ Git et les plateformes comme GitHub et GitLab sont des outils puissants et, mêm
 
 Voici quelques termes courants que vous rencontrerez lorsque vous travaillerez avec Git et GitHub :- **Commit** : un instantané de vos modifications dans le référentiel. Chaque validation comprend un message décrivant ce qui a été modifié et crée un enregistrement historique auquel vous pouvez vous référer ou revenir ultérieurement.
 - **Dépôt (Repo)** : Une collection de fichiers et leur historique suivis par Git. Les référentiels peuvent exister localement sur votre ordinateur ou à distance sur des plateformes comme GitHub. Chaque projet est généralement stocké dans son propre référentiel.
-- **Remote** : Un référentiel distant est une version de votre projet hébergée sur une plateforme comme GitHub. La version locale de votre projet sur votre ordinateur est liée à cette télécommande afin que vous puissiez télécharger (push) et télécharger (pull) les modifications.
+- **Remote** : Un référentiel distant est une version de votre projet hébergée sur une plateforme comme GitHub. La version locale de votre projet sur votre ordinateur est liée à cette dépôt distant afin que vous puissiez télécharger (push) et télécharger (pull) les modifications.
 - **Staging** : processus de préparation des fichiers pour une validation. When you stage a file, you're telling Git that you want to include it in the next commit. La mise en scène vous permet de choisir les modifications à inclure dans une validation.
 - **Push** : action d'envoyer vos modifications validées depuis votre référentiel local vers un référentiel distant (par exemple, GitHub), afin que d'autres puissent accéder à la version mise à jour de votre code.
-- **Pull** : action de récupérer les modifications depuis un référentiel distant pour mettre à jour votre copie locale. Vous extrayez les modifications lorsque vous souhaitez synchroniser votre référentiel local avec la dernière version de la télécommande.
+- **Pull** : action de récupérer les modifications depuis un référentiel distant pour mettre à jour votre copie locale. Vous extrayez les modifications lorsque vous souhaitez synchroniser votre référentiel local avec la dernière version de la dépôt distant.
 - **Origin** : Le nom par défaut d'un référentiel distant lorsque vous connectez pour la première fois votre référentiel local à un référentiel distant. Fait généralement référence à l'URL principale de votre projet sur GitHub.

@@ -2,6 +2,9 @@
 title: "Refaktoryzacja"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Kiedy już funkcja zadziała, możemy cofnąć się o krok i zastanowić, jak najlepiej ustrukturyzować nasz kod. Celem jest uczynienie naszej wtyczki tak przejrzystą, zrozumiałą i łatwą w utrzymaniu, jak to tylko możliwe. Ten proces ulepszania i udoskonalania struktury istniejącego kodu bez zmiany jego zachowania nazywany jest refaktoryzacją.
 
@@ -9,15 +12,15 @@ Oto ponownie funkcja początkowa:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do okna dialogowego GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Wyślij wiadomość do terminal, okna systemu operacyjnego, które uruchomiło Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Wprowadzenie zmiennej o nazwie „wiadomość”:
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do okna dialogowego GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Ustaw obsługę wiadomości, aby wysyłała wiadomość do Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Wyślij wiadomość do terminal, okna systemu operacyjnego, które uruchomiło Lumi
     (display message)))
 ```
 
@@ -70,9 +73,9 @@ Witaj świecie! po ekstrakcji.
 
 Wyodrębnianie logiki:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Funkcja główna
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Wyodrębnianie logiki:
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Funkcja obsługująca wysyłanie wiadomości do różnych miejsc docelowych
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Wyślij do Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Ustaw obsługę na Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Wyślij do okna dialogowego GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Ustaw obsługę na okno dialogowe GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Wyślij do okna terminala
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; Wyjście terminal obsługiwane jest przez display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Przywróć domyślną obsługę wiadomości do Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

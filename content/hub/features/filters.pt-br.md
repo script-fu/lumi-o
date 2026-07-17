@@ -1,7 +1,12 @@
 ---
 title: "Filtros"
 type: docs
+url: "hub/features/filters"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 312088430d35761f6df789821c1629c829e6eb1d2f8b4be58c5843c893c3c7ed
 ---
+
 O menu Filtros do Lumi reúne ajustes corretivos, efeitos de lente estilizados, geradores de textura processual, tratamentos inspirados em impressão e ferramentas de análise em um só lugar. A ordem do menu é mais prática do que acadêmica: as ferramentas de desfoque e aprimoramento ficam lado a lado, os efeitos de distorção e iluminação são agrupados por aparência e os geradores de textura ou padrão são mantidos juntos quando o objetivo é construir o material de origem em vez de modificar uma imagem existente.
 
 As caixas de diálogo de filtro seguem o mesmo fluxo de trabalho geral. Predefinições, visualização, visualização dividida e controles de opacidade ou mesclagem permitem que um efeito seja ajustado rapidamente e, nas camadas, o resultado pode permanecer como um filtro editável e não destrutivo, em vez de ser mesclado imediatamente. Lumi também mantém um histórico recente de uso de filtros, portanto, repetir o último efeito ou reabrir o último diálogo faz parte do ritmo normal da pintura, e não uma tarefa separada.
@@ -24,7 +29,7 @@ O Desfoque Gaussiano Seletivo suaviza dentro das regiões enquanto tenta preserv
 
 Lens Blur é um dos filtros de desfoque mais focados em ilustrações do Lumi. Seus controles são construídos em torno do formato da íris poligonal, curvatura da lâmina, alongamento anamórfico, aumento de destaque e uma região de foco configurável, de modo que se comporta menos como um suavizador genérico e mais como uma ferramenta estilizada de profundidade de campo com bokeh modelado.
 
-### Mudança de inclinação
+### Tilt-shift
 
 A mudança de inclinação mantém nítida uma banda de foco controlável enquanto desfoca progressivamente a imagem acima e abaixo dela. O ângulo da faixa, a difusão, o viés de perspectiva, o formato da íris e o aumento de miniatura do diálogo o tornam adequado para cenas com aparência de miniatura, vistas arquitetônicas e qualquer composição em que o foco deva ser lido como uma faixa projetada em vez de uma sugestão circular de profundidade.
 
@@ -36,13 +41,15 @@ O Circular Motion Blur espalha detalhes em torno de um ponto central, transforma
 
 O Linear Motion Blur estende os detalhes em uma direção, simulando viagens, movimentos de câmera ou gestos rápidos no quadro. É especialmente útil quando o movimento precisa parecer direcional e gráfico, em vez de difuso.
 
-### Zoom desfoque de movimento
+### Zoom Motion Blur
 
 O Zoom Motion Blur irradia detalhes para fora a partir de um centro, produzindo a sensação de aproximação ou afastamento do espectador. Funciona bem para momentos de impacto, linhas de velocidade e composições que precisam de energia de zoom da câmera sem repintar toda a imagem.
 
 ## Melhorar
 
-### Passa altaHigh Pass isola contraste local fino em vez de ampla mudança tonal. Com apenas escala e contraste para gerenciar, é uma ferramenta simples para extrair detalhes de bordas, construir sobreposições nítidas ou preparar passagens de nitidez que devem enfatizar mais a estrutura do que a cor.
+### High Pass
+
+High Pass isola contraste local fino em vez de ampla mudança tonal. Com apenas escala e contraste para gerenciar, é uma ferramenta simples para extrair detalhes de bordas, construir sobreposições nítidas ou preparar passagens de nitidez que devem enfatizar mais a estrutura do que a cor.
 
 ### Redução de ruído
 
@@ -51,6 +58,12 @@ A Redução de Ruído é o movimento oposto: ela suprime variações finas indes
 ### Afiar
 
 O Sharpen usa um modelo de máscara não nítida, com raio, quantidade e limite controlando a intensidade com que o contraste local é pressionado. Na prática, isso o torna adequado para restaurar a clareza após desfoque, redimensionamento de exportação ou passagens de acabamento sutis onde os detalhes precisam aparecer sem transformar cada pixel em ruído.
+
+## Cor
+
+### Classificação tonal
+
+A gradação tonal remapeia as cores por faixa tonal, em vez de remodelar o contraste ou desenhar uma curva. A luminância de cada pixel escolhe uma mistura suave de três cores do usuário para sombra, meio-tom e realce; portanto, a imagem mantém sua estrutura claro-escuro enquanto a paleta muda. A intensidade por região, uma tendência de equilíbrio no estilo Lightroom (a esquerda favorece a gradação de sombra, a direita a gradação de realce) e a suavidade da transição controlam o alcance de cada cor e a suavidade com que as gradações se sobrepõem. Destina-se a ilustração, quadrinhos, arte conceitual e fotografia quando o objetivo é uma nota ou visual coerente.
 
 ## Distorcer
 
@@ -82,7 +95,7 @@ A vinheta escurece, colore ou até mesmo apaga as bordas da imagem, com controle
 
 HSV Noise randomiza matiz, saturação e valor de forma independente. Isso o torna útil quando uma imagem precisa de vivacidade de cores ou instabilidade analógica sem quebrar totalmente a estrutura local.
 
-### Arremesso
+### Hurl
 
 Hurl é a versão extrema do ruído: substitui pixels por cores completamente aleatórias. É melhor considerá-lo uma fonte de caos destrutivo para falhas, texturas desgastadas ou máscaras que precisam de uma ruptura agressiva.
 
@@ -90,11 +103,13 @@ Hurl é a versão extrema do ruído: substitui pixels por cores completamente al
 
 Pick substitui cada pixel por um vizinho escolhido aleatoriamente, para que a imagem permaneça relacionada à sua fonte em vez de se tornar pura estática. O resultado é uma variação granular e embaralhada que pode parecer mais orgânica do que ruído totalmente aleatório.
 
-### EspalharSpread espalha pixels deslocando-os aleatoriamente dentro de um raio. É útil quando você deseja uma interrupção imóvel: uma superfície quebrada, uma borda manchada ou uma textura desgastada que ainda mantém as relações de cores da imagem de origem.
+### Espalhar
 
-### fractal
+Spread espalha pixels deslocando-os aleatoriamente dentro de um raio. É útil quando você deseja uma interrupção imóvel: uma superfície quebrada, uma borda manchada ou uma textura desgastada que ainda mantém as relações de cores da imagem de origem.
 
-Fractal gera ruído Perlin fractal em blocos, o que o torna especialmente valioso como uma fonte reutilizável para máscaras, nuvens, textura de papel, ruptura semelhante a terreno e sobreposições procedimentais. Por ser lado a lado, ele pode alimentar fluxos de trabalho maiores sem criar costuras óbvias.
+### Fractal
+
+Fractal gera ruído Perlin fractal em blocos, o que o torna especialmente valioso como uma fonte reutilizável para máscaras, nuvens, textura de papel, ruptura semelhante a terreno e sobreposições procedimentais. Como pode ser lado a lado, ele pode alimentar fluxos de trabalho maiores sem criar costuras óbvias.
 
 ### Grão de ruído azul
 
@@ -134,15 +149,17 @@ Erode faz o movimento complementar, aumentando as regiões mais escuras e retira
 
 O tabuleiro de damas gera um padrão regular de ladrilhos alternados. É simples, mas essa simplicidade o torna útil para testar transparência, construir máscaras, bloquear fundos gráficos ou criar material de origem geométrica limpa.
 
-### Grade
+### Grid
 
-A grade desenha repetidas divisões horizontais e verticais, tornando-a útil para guias de layout, cenários de design, ilustrações técnicas e máscaras procedurais. Por ser gerado como um filtro, o espaçamento e a aparência podem ser ajustados sem a necessidade de construir o padrão manualmente.
+Grid desenha repetidas divisões horizontais e verticais, tornando-a útil para guias de layout, cenários de design, ilustrações técnicas e máscaras procedurais. Por ser gerado como um filtro, o espaçamento e a aparência podem ser ajustados sem a necessidade de construir o padrão manualmente.
 
 ### Voronói
 
 Voronoi gera uma textura celular lado a lado a partir de pontos propagados, com controles para tipo de recurso, métrica de distância, aleatoriedade, detalhes fractais e envolvimento contínuo. Na prática, ele pode passar de estruturas limpas de células rachadas para padrões mais orgânicos de pedra, pele, mapa ou rede abstrata.
 
-### AcenoWave produz padrões em faixas ou anéis moldados por perfil de forma de onda, arranjo geométrico, distorção, detalhe fractal e deslocamento de fase. Isso o torna mais do que uma simples ferramenta de distribuição: ela pode gerar ondulações controladas, bandas topográficas, gráficos tipo moiré ou campos de padrões concêntricos ruidosos.
+### Onda
+
+Wave produz padrões em faixas ou anéis moldados por perfil de forma de onda, arranjo geométrico, distorção, detalhe fractal e deslocamento de fase. Isso o torna mais do que uma simples ferramenta de distribuição: ela pode gerar ondulações controladas, bandas topográficas, gráficos semelhantes a moiré ou campos de padrões concêntricos ruidosos.
 
 ### Meio-tom (AM)
 

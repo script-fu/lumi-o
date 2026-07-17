@@ -1,6 +1,9 @@
 ---
 title: "유틸리티 브라우저"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
 ---
 유틸리티 브라우저를 사용하면 앱을 종료하거나 소스 파일을 탐색할 필요 없이 Lumi와 함께 제공되는 내장 Scheme 유틸리티 stdlib를 탐색할 수 있습니다.
 
@@ -14,7 +17,7 @@ type: docs
 
 브라우저에는 Lumi가 시작 시 자동으로 로드하는 7개의 유틸리티 라이브러리에서 내보낸 모든 프로시저, 변수 및 구문 형식이 나열됩니다.
 
-| 도서관 | 다루는 내용 |
+| 라이브러리 | 내용 |
 |---|---|
 | `common.scm` | 범용 도우미(문자열, 숫자, 목록 유틸리티) |
 | `files.scm` | 파일 및 경로 도우미 |

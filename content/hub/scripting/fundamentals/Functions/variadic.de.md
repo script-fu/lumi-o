@@ -2,6 +2,9 @@
 title: "Variadische Funktionen"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **Variadische Funktionen** in Scheme sind Funktionen, die eine variable Anzahl von Argumenten akzeptieren. Diese Funktionen sind äußerst vielseitig und ermöglichen die Erstellung flexiblen und wiederverwendbaren Codes. In der funktionalen Programmierung vereinfachen variadische Funktionen Vorgänge, die eine beliebige Anzahl von Eingaben verarbeiten müssen, z. B. das Summieren einer Liste von Zahlen oder das Verketten von Zeichenfolgen.
 
@@ -39,7 +42,7 @@ Variadische Funktionen werden mit dem Symbol `.` vor dem letzten Parameternamen 
 
 **Verwendung**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; Gibt 15 zurück
 ```
 
 #### Variadische Funktion mit festen Parametern
@@ -58,7 +61,7 @@ Sie können feste Parameter mit einem variadischen Parameter kombinieren, um fle
 
 **Verwendung**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; Gibt ("Hello Alice" "Hello Bob" "Hello Charlie") zurück
 ```
 
 #### Kombination von fester und variadischer Logik
@@ -76,7 +79,7 @@ Sie können feste Parameter mit einem variadischen Parameter kombinieren, um fle
 **Verwendung**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; Gibt "Fruits: Apple, Banana, Cherry" zurück
 ```
 
 ### Erweiterte Anwendungsfälle
@@ -94,7 +97,7 @@ Variadische Funktionen zeichnen sich durch die Verarbeitung beliebiger Daten aus
 
 **Verwendung**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; Gibt 18 zurück
 ```
 
 #### Variadische Funktionen mit rekursiver Logik
@@ -113,7 +116,7 @@ Variadische Funktionen zeichnen sich durch die Verarbeitung beliebiger Daten aus
 
 **Verwendung**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; Gibt 40 zurück
 ```
 
 ### Vorteile variadischer Funktionen

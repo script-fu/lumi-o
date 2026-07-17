@@ -2,6 +2,9 @@
 title: "ฟังก์ชันแปรผัน"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 0433dd9a86d6d273965c5f962121c0cc17717b5407f3f4b87282a33e2ea89c78
 ---
 **ฟังก์ชัน Variadic** ใน Scheme คือฟังก์ชันที่ยอมรับจำนวนอาร์กิวเมนต์ที่แปรผันได้ ฟังก์ชันเหล่านี้มีความหลากหลายสูงและช่วยให้คุณสร้างโค้ดที่ยืดหยุ่นและนำมาใช้ซ้ำได้ ในการเขียนโปรแกรมเชิงฟังก์ชัน ฟังก์ชันแปรผันช่วยลดความซับซ้อนของการดำเนินการที่ต้องประมวลผลอินพุตตามจำนวนที่ต้องการ เช่น การรวมรายการตัวเลขหรือการเชื่อมสตริงเข้าด้วยกัน
 
@@ -39,7 +42,7 @@ weight: 2
 
 **การใช้งาน**:
 ```scheme
-(sum 1 2 3 4 5)  ; Returns 15
+(sum 1 2 3 4 5)  ; คืนค่า 15
 ```
 
 #### ฟังก์ชั่น Variadic พร้อมพารามิเตอร์คงที่
@@ -58,7 +61,7 @@ weight: 2
 
 **การใช้งาน**:
 ```scheme
-(greet "Hello" "Alice" "Bob" "Charlie")  ; Returns ("Hello Alice" "Hello Bob" "Hello Charlie")
+(greet "Hello" "Alice" "Bob" "Charlie")  ; คืนค่า ("Hello Alice" "Hello Bob" "Hello Charlie")
 ```
 
 #### การรวมตรรกะแบบคงที่และแบบแปรผัน
@@ -76,7 +79,7 @@ weight: 2
 **การใช้งาน**:
 ```scheme
 (describe-collection "Fruits" "Apple" "Banana" "Cherry")
-; Returns "Fruits: Apple, Banana, Cherry"
+; คืนค่า "Fruits: Apple, Banana, Cherry"
 ```
 
 ### กรณีการใช้งานขั้นสูง
@@ -94,7 +97,7 @@ weight: 2
 
 **การใช้งาน**:
 ```scheme
-(sum-positive -5 3 7 -2 8)  ; Returns 18
+(sum-positive -5 3 7 -2 8)  ; คืนค่า 18
 ```
 
 #### ฟังก์ชัน Variadic พร้อมลอจิกแบบเรียกซ้ำ
@@ -113,7 +116,7 @@ weight: 2
 
 **การใช้งาน**:
 ```scheme
-(max-value 10 20 5 40 15)  ; Returns 40
+(max-value 10 20 5 40 15)  ; คืนค่า 40
 ```
 
 ### ประโยชน์ของฟังก์ชัน Variadic

@@ -1,8 +1,11 @@
 ---
 title: "外掛"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f273072593fbc0114525e7736ebde1b24861c1a146ef77e254ff85273604a67e
 ---
-本節記錄了 Lumi 中使用的一組 **範例方案插件**。
+本節記錄了 Lumi 中使用的一組 **Scheme 範例外掛**。
 
 {{< cards >}}
 

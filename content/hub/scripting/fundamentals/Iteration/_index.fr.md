@@ -2,29 +2,29 @@
 title: "Itération"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1dc2e6858c3fe17ed2256e479e5f0e9ed9a7a3baea2e37a667f325fbbc39166d
 ---
-L'itération est la pierre angulaire de la programmation, permettant aux scripts de répéter des actions et de traiter efficacement des collections de données. Dans Scheme, basé sur le langage de programmation Scheme, l'itération fournit les outils nécessaires pour automatiser les tâches répétitives, manipuler les structures de données et créer des modèles d'exécution sophistiqués.
+L'itération est une pierre angulaire de la programmation : elle permet aux scripts de répéter des actions et de traiter efficacement des collections de données. En Scheme, l'itération fournit les outils pour automatiser les tâches répétitives, manipuler des structures de données et créer des schémas d'exécution sophistiqués.
 
-### Le rôle de l'itération dans le schéma
+### Le rôle de l'itération en Scheme
 
-L'itération remplit plusieurs objectifs essentiels dans vos scripts :
-- **Répétition automatisée :** Il vous permet d'effectuer la même action ou un même ensemble d'actions plusieurs fois sans dupliquer le code.
-- **Amélioration de l'efficacité :** En traitant les structures de données de manière itérative, les scripts peuvent gérer systématiquement des opérations à grande échelle.
-- ** Rationalisation du code : ** L'itération élimine la redondance, rendant le code plus concis, lisible et maintenable.
+- **Automatiser la répétition :** Exécuter des actions plusieurs fois sans dupliquer le code.
+- **Gagner en efficacité :** Traiter des opérations à grande échelle.
+- **Alléger le code :** Éliminer la redondance et améliorer la lisibilité.
 
-### Types d'itérations disponibles
+### Types d'itération disponibles
 
-Scheme propose plusieurs constructions pour l'itération, chacune adaptée à des besoins spécifiques :
-- **map :** Applique une fonction à chaque élément d'une liste, renvoyant une nouvelle liste avec les résultats.
-- **for-each :** Similaire à `map`, mais utilisé pour exécuter une fonction sur chaque élément sans renvoyer de résultat.
-- **do:** Une construction de boucle à usage général qui gère une grande variété de processus itératifs.
-- **récursivité :** Une technique puissante où les fonctions s'appellent elles-mêmes pour résoudre les problèmes de manière incrémentale.
+- **map :** Applique une fonction à chaque élément, renvoie une nouvelle liste.
+- **for-each :** Comme `map`, mais pour des effets de bord sans valeur de retour.
+- **do :** Boucle générale.
+- **recursion :** Les fonctions s'appellent elles-mêmes.
 
 ### Comment fonctionne l'itération
 
-L'itération implique généralement :
-1. **Définir une répétition :** Spécifier l'action à répéter et les données ou la plage à traiter.
-2. **Exécution en séquence :** Répéter l'action pour chaque élément, étape ou condition jusqu'à la fin.
-3. **Renvoi d'un résultat (facultatif) :** Selon la construction, l'itération peut donner un résultat ou modifier un état.
+1. **Définir une répétition**
+2. **Exécuter en séquence**
+3. **Renvoyer un résultat (facultatif)**
 
-Ces constructions vous permettent d'écrire des scripts adaptables, efficaces et élégants, capables de gérer facilement des tâches complexes.
+Ces constructions aident à écrire des scripts adaptables et efficaces.

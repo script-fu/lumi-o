@@ -1,73 +1,81 @@
 ---
-title: "Kopia zapasowa systemu za pomocą Clonezilli"
+title: "Kopia zapasowa systemu z Clonezilla"
 type: docs
+url: "hub/install-linux/System-Backup-Clonezilla"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: b3453289d7da56bb4fc9039616edb73e537acd6a722f0eb8a000e4a398016863
 ---
-Często tworzy się kopie zapasowe ważnych plików, aby powrócić do wcześniejszych wersji lub zastąpić uszkodzone dane. Jednakże innym istotnym typem kopii zapasowej jest **klon dysku**, czyli pełna kopia zapasowa stanu systemu.
 
-Gdy system jest już skonfigurowany i działa prawidłowo, utworzenie pełnej kopii zapasowej ma kluczowe znaczenie dla przywrócenia środowiska w przypadku wystąpienia awarii. Ta kopia zapasowa uzupełnia regularne zapisywanie danych roboczych.
+Często tworzy się kopie zapasowe ważnych plików, aby wrócić do wcześniejszych wersji lub zastąpić uszkodzone dane. Innym ważnym typem kopii zapasowej jest jednak **klon dysku** — pełna kopia stanu systemu.
 
-[Clonezilla](https://clonezilla.org/) to bezpłatne oprogramowanie do tworzenia i klonowania dysków o otwartym kodzie źródłowym. Umożliwia użytkownikom tworzenie i przywracanie pełnych kopii zapasowych dysku twardego komputera, co czyni go popularnym narzędziem zarówno wśród informatyków, jak i użytkowników domowych.
+Gdy system jest już skonfigurowany i działa dobrze, pełna kopia zapasowa jest kluczowa do przywrócenia środowiska po awarii. Uzupełnia ona regularne zapisywanie danych roboczych.
 
-Zawsze lepiej mieć kopię zapasową i jej nie potrzebować, niż potrzebować kopii zapasowej i jej nie mieć.
+[Clonezilla](https://clonezilla.org/) to darmowe oprogramowanie open source do tworzenia obrazów dysków i klonowania. Umożliwia tworzenie i przywracanie pełnych kopii zapasowych dysku twardego komputera — popularne narzędzie zarówno dla specjalistów IT, jak i użytkowników domowych.
+
+Lepiej mieć kopię zapasową i jej nie potrzebować, niż potrzebować kopii zapasowej i jej nie mieć.
 
 
-## Kluczowe cechy Clonezilli
+## Kluczowe funkcje Clonezilla
 
 - **Obraz dysku**: Clonezilla tworzy dokładną kopię dysku twardego, w tym system operacyjny, aplikacje i dane.
-- **Kopia zapasowa i przywracanie**: Umożliwia utworzenie obrazu kopii zapasowej dysku twardego i przywrócenie go w przypadku awarii lub migracji na nowy dysk.
-- **Bezpłatne i otwarte oprogramowanie**: Clonezilla jest całkowicie darmowa, a kod źródłowy można modyfikować i dostosowywać.
+- **Kopia zapasowa i przywracanie**: pozwala utworzyć obraz kopii zapasowej dysku i przywrócić go po awarii lub migracji na nowy dysk.
+- **Darmowe i open source**: Clonezilla jest całkowicie darmowa; kod źródłowy można modyfikować i dostosowywać.
 
 
-## Używanie Clonezilli do tworzenia kopii zapasowych
+## Tworzenie kopii zapasowej w Clonezilla
 
 ### Kroki przygotowawcze
 
-Będziesz potrzebował dysku USB dla Clonezilli i zewnętrznego dysku twardego, który jest większy niż dysk wewnętrzny, który chcesz sklonować.
+Potrzebujesz dysku USB dla Clonezilla oraz zewnętrznego dysku twardego większego niż dysk wewnętrzny, który chcesz sklonować.
 
-Poniższe kroki upraszczają proces w oparciu o [oficjalny przewodnik](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Dobrym pomysłem jest przejrzenie pełnego przewodnika, który zawiera zrzuty ekranu dla większej przejrzystości.
+Poniższe kroki upraszczają proces na podstawie [oficjalnego przewodnika](https://clonezilla.org//fine-print-live-doc.php?path=./clonezilla-live/doc/01_Save_disk_image/00-boot-clonezilla-live-cd.doc#00-boot-clonezilla-live-cd.doc). Warto też przejrzeć pełny przewodnik ze zrzutami ekranu.
 
-1. **Utwórz Clonezilla Live USB lub CD/DVD**: Postępuj zgodnie ze szczegółowymi instrukcjami na [stronie internetowej] Clonezilla(https://clonezilla.org/liveusb.php), aby utworzyć bootowalną pamięć USB lub CD/DVD.
+1. **Utwórz Clonezilla Live USB lub CD/DVD**: postępuj zgodnie ze szczegółowymi instrukcjami na [stronie internetowej Clonezilla](https://clonezilla.org/liveusb.php), aby utworzyć rozruchowy nośnik USB lub CD/DVD.
 
-2. **Podłącz zewnętrzny dysk kopii zapasowej**: Podłącz dysk zewnętrzny i upewnij się, że jest rozpoznawany przez system. To będzie miejsce docelowe Twojej kopii zapasowej.
+2. **Podłącz zewnętrzny dysk kopii zapasowej**: podłącz dysk zewnętrzny i upewnij się, że system go rozpoznaje. To będzie miejsce docelowe kopii zapasowej.
 
-3. **Sprawdź układ partycji**: Użyj polecenia `lsblk` w terminalu, aby sprawdzić układ partycji głównego dysku twardego. Zanotuj nazwę głównego urządzenia.
+3. **Sprawdź układ partycji**: użyj polecenia `lsblk` w terminalu, aby sprawdzić układ partycji głównego dysku twardego. Zanotuj nazwę głównego urządzenia.
 
-4. **Uruchom z dysku USB Clonezilla Live**: Uruchom ponownie komputer i uruchom komputer z utworzonego nośnika Clonezilla. Może być konieczne uzyskanie dostępu do ustawień BIOS/UEFI (zwykle poprzez naciśnięcie klawisza F2, F12, ESC lub DEL podczas uruchamiania) i dostosowanie kolejności rozruchu, aby nadać priorytet napędowi USB.
+4. **Uruchom komputer z Clonezilla Live USB**: uruchom ponownie komputer z nośnika Clonezilla, który utworzyłeś. Może być konieczne wejście do ustawień BIOS/UEFI (zwykle klawisze F2, F12, ESC lub DEL podczas startu) i ustawienie priorytetu rozruchu z USB.
 
 
 
-### Kopia zapasowa w Clonezilli
+### Kopia zapasowa w Clonezilla
 
-1. **Wybierz tryb kopii zapasowej**: Po uruchomieniu Clonezilli wybierz tryb „urządzenie-urządzenie”. Ten tryb umożliwia bezpośrednie klonowanie dysku wewnętrznego na urządzenie zewnętrzne.
+1. **Wybierz tryb kopii zapasowej**: po uruchomieniu Clonezilla wybierz tryb „device-device”. Umożliwia on bezpośrednie sklonowanie dysku wewnętrznego na urządzenie zewnętrzne.
 
-2. **Wybierz urządzenie źródłowe**: Wybierz główny dysk wewnętrzny.
+2. **Wybierz urządzenie źródłowe**: wybierz główny dysk wewnętrzny.
 
-3. **Wybierz urządzenie docelowe**: Wybierz zewnętrzny dysk kopii zapasowych jako urządzenie docelowe. Przy wyborze urządzenia należy zachować ostrożność, aby uniknąć nadpisania ważnych danych. Upewnij się, że dysk docelowy jest równy lub większy niż dysk źródłowy.
+3. **Wybierz urządzenie docelowe**: wybierz zewnętrzny dysk kopii zapasowej jako cel. Uważaj przy wyborze urządzenia, aby nie nadpisać ważnych danych. Dysk docelowy musi być co najmniej tak duży jak źródłowy.
 
-4. **Rozpocznij proces tworzenia kopii zapasowej**: Clonezilla rozpocznie proces tworzenia kopii zapasowej. W zależności od rozmiaru partycji i szybkości dysków może to zająć od kilku minut do kilku godzin.
+4. **Rozpocznij tworzenie kopii zapasowej**: Clonezilla rozpocznie proces. W zależności od rozmiaru partycji i szybkości dysków może to potrwać od kilku minut do kilku godzin.
 
-5. **Oznacz swoją kopię zapasową**: Po zakończeniu tworzenia kopii zapasowej oznacz dysk USB i zewnętrzny dysk twardy datą oraz nazwą systemu, którego kopię zapasową utworzono. Przechowuj je w bezpiecznym miejscu.
+5. **Oznacz kopię zapasową**: po zakończeniu oznacz dysk USB i dysk zewnętrzny datą oraz nazwą systemu, którego kopię utworzyłeś. Przechowuj je w bezpiecznym miejscu.
 
 ---
 
 ### Przywracanie z kopii zapasowej
 
-Jeśli chcesz przywrócić system Debian z kopii zapasowej, wykonaj następujące kroki:
+Aby przywrócić system Debian z kopii zapasowej, wykonaj następujące kroki:
 
-1. **Uruchom z Clonezilla Media**: Włóż Clonezilla USB i uruchom z niego komputer, wykonując te same czynności, co podczas procesu tworzenia kopii zapasowej.2. **Wybierz tryb przywracania**: Wybierz ponownie tryb „urządzenie-urządzenie”, ale tym razem przywrócisz z obrazu kopii zapasowej. Spowoduje to skopiowanie wszystkich danych z dysku zewnętrznego z powrotem na dysk wewnętrzny.
+1. **Uruchom z nośnika Clonezilla**: włóż nośnik USB Clonezilla i uruchom z niego komputer, tak jak podczas tworzenia kopii zapasowej.
 
-3. **Wybierz urządzenie źródłowe**: Wybierz dysk zewnętrzny, na którym przechowywana jest kopia zapasowa.
+2. **Wybierz tryb przywracania**: ponownie wybierz tryb „device-device”, ale tym razem przywracaj z obrazu kopii zapasowej. Wszystkie dane zostaną skopiowane z dysku zewnętrznego z powrotem na dysk wewnętrzny.
 
-4. **Wybierz urządzenie docelowe**: Wybierz dysk wewnętrzny, na którym chcesz przywrócić kopię zapasową.
+3. **Wybierz urządzenie źródłowe**: wybierz dysk zewnętrzny, na którym przechowywana jest kopia zapasowa.
 
-5. **Rozpocznij proces przywracania**: Clonezilla rozpocznie proces przywracania. Podobnie jak w przypadku tworzenia kopii zapasowej, wymagany czas będzie zależał od rozmiaru dysku i szybkości sprzętu.
+4. **Wybierz urządzenie docelowe**: wybierz dysk wewnętrzny, na który chcesz przywrócić kopię.
+
+5. **Rozpocznij przywracanie**: Clonezilla rozpocznie proces przywracania. Podobnie jak przy tworzeniu kopii, czas zależy od rozmiaru dysku i szybkości sprzętu.
 
 ---
 
 ## Uwagi końcowe
 
-Kopie zapasowe dysków za pomocą Clonezilla zapewniają zachowanie całego systemu — systemu operacyjnego, ustawień i aplikacji. Przy minimalnym wysiłku można zabezpieczyć system przed katastrofalną awarią i zminimalizować przestoje w przypadku awarii.
+Kopie zapasowe dysków w Clonezilla zachowują cały system — system operacyjny, ustawienia i aplikacje. Przy niewielkim wysiłku zabezpieczysz system przed poważną awarią i ograniczysz przestoje po awarii.
 
-Pamiętaj, **kopie zapasowe są niezbędne**. Regularnie aktualizuj swoje kopie zapasowe i okresowo je testuj, aby mieć pewność, że w razie potrzeby będziesz mógł przywrócić system.
+Pamiętaj: **kopie zapasowe są niezbędne**. Regularnie je aktualizuj i okresowo testuj, aby mieć pewność, że w razie potrzeby przywrócisz system.
 
-Po uruchomieniu możesz podłączyć zewnętrzny dysk kopii zapasowej i sprawdzić strukturę jego partycji za pomocą narzędzia Disks w systemie Linux. Dysk zapasowy powinien odzwierciedlać strukturę dysku wewnętrznego, z tymi samymi partycjami i pewną ilością niewykorzystanego miejsca, jeśli dysk zewnętrzny jest większy.
+Po uruchomieniu możesz podłączyć zewnętrzny dysk kopii zapasowej i sprawdzić strukturę partycji narzędziem Disks w Linuxie. Dysk zapasowy powinien odzwierciedlać strukturę dysku wewnętrznego — te same partycje oraz ewentualnie wolne miejsce, jeśli dysk zewnętrzny jest większy.
+

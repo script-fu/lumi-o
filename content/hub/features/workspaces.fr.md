@@ -1,37 +1,42 @@
 ---
-title: "Espace de travail"
+title: "Espaces de travail"
 type: docs
+url: "hub/features/workspaces"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 1d6c29a5ccf6ecbecc97b8edbaa78d101be584d52a59f6370eab3e2458a6476a
 ---
-Les espaces de travail permettent à Lumi de s'adapter à différentes façons de travailler. Un espace de travail capture l'ambiance de l'environnement du studio : disposition des panneaux, état de l'outil, présentation du canevas, chemins de ressources, choix de palette, thème et autres préférences d'interface qui façonnent la session de peinture.
 
-Au lieu de conserver un arrangement fixe pour chaque tâche, les artistes peuvent conserver des environnements séparés pour le dessin, la peinture, l'encrage, le travail de couleur, la présentation, la rédaction de scripts ou des sessions ciblées en plein écran. Chaque environnement peut mettre en avant les ressources qui appartiennent à ce type de travail, de sorte qu'un espace de travail de dessin peut sembler doté de préréglages de dessin tandis qu'un espace de travail de peinture peut passer à des outils de peinture.
+Les espaces de travail permettent à Lumi de s'adapter à différentes façons de travailler. Un espace de travail capture l'ambiance de l'environnement de studio : disposition des panneaux, état des outils, présentation du canevas, chemins de ressources, choix de palette, thème et autres préférences d'interface qui façonnent la session de peinture.
 
-## Un studio qui évolue avec la tâche
+Plutôt que de conserver un arrangement fixe pour chaque tâche, les artistes peuvent maintenir des environnements distincts pour le croquis, la peinture, l'encrage, le travail couleur, la présentation, le scripting ou des sessions plein écran concentrées. Chaque environnement peut mettre en avant les ressources qui lui correspondent, de sorte qu'un espace de croquis paraisse équipé pour le dessin tandis qu'un espace de peinture bascule vers des outils plus picturaux.
 
-Différentes étapes d’une œuvre d’art bénéficient d’un environnement différent. Les croquis approximatifs peuvent nécessiter une toile claire et un minimum de panneaux. La peinture peut nécessiter des paramètres de pinceau et un accès à la palette à portée de main. L’encrage peut nécessiter des guides, des options d’outils stables et une vue neutre. La révision ou la présentation peut nécessiter une configuration plein écran plus propre.
+## Un studio qui suit la tâche
 
-Les espaces de travail rendent ces changements délibérés. L'interface peut changer pour s'adapter à la tâche sans que l'artiste ait à reconstruire le studio à la main à chaque fois.
+Les différentes étapes d'une illustration bénéficient d'environnements différents. Le croquis grossier peut demander une toile dégagée et un minimum de panneaux. La peinture peut exiger réglages de pinceau et accès à la palette à portée de main. L'encrage peut demander des guides, des options d'outil stables et une vue neutre. La relecture ou la présentation peut demander une configuration plein écran plus épurée.
 
-## Plus que le placement des panneaux
+Les espaces de travail rendent ces changements intentionnels. L'interface peut s'adapter à la tâche sans que l'artiste doive reconstruire le studio à la main à chaque fois.
 
-Un espace de travail n’est pas seulement une disposition de quai. Il peut préserver le contexte de travail plus large : la façon dont le canevas est cadré, comment se comporte la boîte à outils, quelles ressources de couleurs et d'outils sont prêtes, comment les outils sont configurés et comment les périphériques d'entrée sont censés réagir.
+## Plus que la disposition des panneaux
 
-Cela rend le changement d’espace de travail utile même lorsque les panneaux se ressemblent. Deux environnements peuvent partager une présentation générale mais différer par la sensation de l'outil, le confort visuel, l'identité de la palette, les préréglages disponibles ou le comportement de l'appareil.
+Un espace de travail n'est pas seulement une disposition de docks. Il peut conserver le contexte de travail plus large : cadrage du canevas, comportement de la boîte à outils, ressources couleur et outils prêtes à l'emploi, configuration des outils et réponse attendue des périphériques d'entrée.
 
-## Commutation immédiate
+Le changement d'espace de travail reste utile même lorsque les panneaux se ressemblent. Deux environnements peuvent partager une disposition générale tout en différant par la sensation des outils, le confort visuel, l'identité de palette, les préréglages disponibles ou le comportement des périphériques.
 
-Les espaces de travail se veulent fluides. La commutation devrait donner l'impression de se déplacer entre des bureaux préparés dans le même studio plutôt que de redémarrer l'application ou d'ouvrir une configuration distincte.
+## Basculement immédiat
 
-Les images ouvertes peuvent rester en place tandis que l'environnement change, permettant à l'artiste de passer d'une phase de travail à une autre sans rompre sa concentration.
+Les espaces de travail sont pensés pour être fluides. Basculer doit donner l'impression de passer d'un poste préparé à un autre dans le même studio, plutôt que de redémarrer l'application ou d'ouvrir une configuration séparée.
 
-## Configurations personnelles et basées sur des projets
+Les images ouvertes peuvent rester en place pendant que l'environnement change, ce qui permet de passer d'une phase de travail à une autre sans rompre la concentration.
 
-Certains espaces de travail peuvent être des paramètres personnels par défaut : une configuration de peinture confortable, une configuration d'ordinateur portable compact ou un mode de mise au point plein écran. D'autres peuvent appartenir à un projet : une palette particulière, un thème, une disposition des panneaux, une collection de ressources ou une configuration de périphérique adaptée à une série spécifique d'images.
+## Configurations personnelles et par projet
 
-Parce que les espaces de travail sont nommés et réutilisables, ils peuvent faire partie du rythme d'un artiste. Le bon environnement peut être rétabli lorsque les travaux l’exigent.
+Certains espaces de travail peuvent servir de réglages personnels par défaut : une configuration de peinture confortable, une configuration compacte pour ordinateur portable ou un mode plein écran concentré. D'autres peuvent appartenir à un projet : une palette particulière, un thème, une disposition de panneaux, une collection de ressources ou une configuration de périphérique adaptée à une série d'images.
+
+Comme les espaces de travail sont nommés et réutilisables, ils peuvent entrer dans le rythme de travail de l'artiste. Le bon environnement peut être restauré lorsque la tâche l'exige.
 
 ## Réduire les frictions
 
-Le but des espaces de travail est de supprimer les configurations répétées du processus de création. Une fois qu’un arrangement semble bon, Lumi peut s’en souvenir. Lorsque la tâche change, l'interface peut suivre.
+Les espaces de travail visent à supprimer les configurations répétées du processus créatif. Une fois qu'un arrangement convient, Lumi peut s'en souvenir. Lorsque la tâche change, l'interface peut suivre.
 
-Cela permet de garder l'attention sur les illustrations plutôt que sur la gestion des fenêtres, ce qui fait que Lumi ressemble moins à une application statique unique qu'à un studio numérique flexible.
+L'attention reste sur l'illustration plutôt que sur la gestion des fenêtres, et Lumi ressemble moins à une application statique qu'à un studio numérique flexible.

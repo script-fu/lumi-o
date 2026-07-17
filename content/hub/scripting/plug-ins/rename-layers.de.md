@@ -1,17 +1,20 @@
 ---
 title: "Ebenen umbenennen"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 669bb9a76d7c849dba73b936e36d319fd2ecafb8f9dbd1500ba3b9205e8efb67
 ---
 Benennt alle Ebenen im Stapel (oder die ausgewählten Ebenen) um. Nützlich für animierte Pinselebenenstapel.
 
-## Wo es lebt
+## Quellcode
 
-- [Quelle anzeigen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
+- [Quellcode ansehen](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/rename-layers/rename-layers.scm)
 
-## Wo es in Lumi erscheint
+## Menü in Lumi
 
 - **Ebene → Stapel → Ebenen umbenennen**
 
-## Vorgehensweise
+## Prozedur
 
 - `scheme-rename-layers`

@@ -2,135 +2,142 @@
 title: "Gestione del colore"
 type: docs
 weight: 15
+url: "hub/technical-guides/Color-Management"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
 ---
-Lumi-o è configurato per funzionare immediatamente. Finché lavori su un'immagine con **precisione a 16 bit o superiore**, il software è già configurato per utilizzare il soft-proofing (CMYK) predefinito in bundle e i profili sRGB integrati; dovrebbe funzionare tutto senza alcuna configurazione.
 
-Per coloro che necessitano di un controllo più approfondito, questa guida spiega il modello principale di gestione del colore di Lumi, la differenza tra un profilo immagine e un profilo soft-proof, dove risiedono i controlli e esattamente come i profili predefiniti si integrano con l'applicazione.
+Lumi-o è configurato per funzionare immediatamente. Finché lavori su un'immagine con **precisione a 16 bit o superiore**, il software è già impostato per usare il soft-proofing (CMYK) predefinito incluso e i profili sRGB integrati; tutto dovrebbe funzionare senza alcuna configurazione.
+
+Per chi necessita di un controllo più approfondito, questa guida spiega il modello principale di gestione del colore di Lumi, la differenza tra un profilo immagine e un profilo soft-proof, dove si trovano i controlli e come i profili predefiniti sono inclusi nell'applicazione.
 
 ## Riepilogo rapido
 
-Lumi utilizza tre diversi ruoli del profilo:
+Lumi utilizza tre ruoli di profilo distinti:
 
 1. **Profilo di lavoro dell'immagine**
-   - Definisce il significato dei numeri RGB o della scala di grigi dell'immagine.
-   - Utilizzato per operazioni di assegnazione/conversione.
+   - Definisce il significato dei valori RGB o della scala di grigi dell'immagine.
+   - Viene usato per le operazioni di assegnazione e conversione.
    - Esempi tipici: sRGB integrato, Adobe RGB.
 
-2. **Visualizza profilo**
+2. **Profilo del monitor**
    - Descrive il tuo monitor.
-   - Utilizzato per mostrare correttamente l'immagine sullo schermo.
-   - Solitamente fornito dal sistema o scelto nelle Preferenze.
+   - Viene usato per visualizzare correttamente l'immagine sullo schermo.
+   - Di solito è fornito dal sistema o scelto nelle Preferenze.
 
 3. **Profilo soft-proof**
    - Simula un altro dispositivo di output o una condizione di stampa.
    - **Non** ridefinisce i valori dei pixel dell'immagine.
-   - Esempi tipici: profili di stampa CMYK come `CoatedFOGRA39`.
+   - Esempi tipici: profili CMYK da stampa come `CoatedFOGRA39`.
 
 ## Profilo immagine e profilo soft-proof
 
 ### Profilo immagine
 
-Usalo quando vuoi dire a Lumi in quale spazio colore si trova effettivamente l'immagine.
+Usalo quando vuoi indicare a Lumi in quale spazio colore si trova effettivamente l'immagine.
 
 Due operazioni comuni:
 
 - **Assegna profilo**
-  - Modifica l'etichetta del profilo allegata all'immagine.
+  - Modifica l'etichetta del profilo associata all'immagine.
   - **Non** converte i valori dei pixel.
-  - Utilizzare solo quando i numeri di pixel sono già nello spazio di quel profilo.
+  - Usalo solo quando i valori dei pixel appartengono già a quello spazio colore.
 
 - **Converti in profilo**
   - Converte i valori dei pixel dal profilo immagine corrente a uno nuovo.
-  - Utilizzare quando si desidera che l'immagine si sposti realmente in uno spazio di lavoro diverso.
+  - Usalo quando vuoi che l'immagine passi effettivamente a uno spazio di lavoro diverso.
 
-**Posizioni del menu:**
+**Posizioni nel menu:**
 - Immagine > Gestione colore > Assegna profilo colore...
 - Immagine > Gestione colore > Converti in profilo colore...
 
-### Profilo Soft-Proof
+### Profilo soft-proof
 
-Utilizzalo quando desideri visualizzare in anteprima come verrebbe riprodotta l'immagine su un dispositivo di destinazione o su una condizione di stampa.
+Usalo quando vuoi visualizzare in anteprima come verrebbe riprodotta l'immagine su un dispositivo di destinazione o in una condizione di stampa.
 
-Prova soft:
-- lascia da solo lo spazio di lavoro dell'immagine
+Il soft-proofing:
+- lascia invariato lo spazio di lavoro dell'immagine
 - modifica la pipeline di anteprima
 - può contrassegnare i colori fuori gamma
-- è destinato all'anteprima, non alla riassegnazione dei dati dell'immagine
+- è pensato per l'anteprima, non per riassegnare i dati dell'immagine
 
-**Posizioni del menu:**
-- Immagine > Gestione colore > Impostazioni Soft-Proof > Scegli profilo Soft-Proof...
-- Immagine > Gestione colore > Impostazioni prova video > Intento di rendering
-- Immagine > Gestione colore > Impostazioni prova video > Compensazione del punto nero
-- Visualizza > Gestione colore > Abilita anteprima prova soft
-- Visualizza > Gestione colore > Seleziona colori fuori gamma
+**Posizioni nel menu:**
+- Immagine > Gestione colore > Impostazioni soft-proof > Scegli profilo soft-proof...
+- Immagine > Gestione colore > Impostazioni soft-proof > Intento di rendering
+- Immagine > Gestione colore > Impostazioni soft-proof > Compensazione del punto nero
+- Visualizza > Gestione colore > Abilita anteprima soft-proof
+- Visualizza > Gestione colore > Contrassegna colori fuori gamma
 
-## Come visualizzare l'anteprima della prova soft
+## Come visualizzare l'anteprima soft-proof
 
-Esistono due punti di ingresso principali per attivare/disattivare le prove software.
+Esistono due modi principali per attivare o disattivare il soft-proof.
 
 ### 1. Menu Visualizza
 
-Utilizzo:
-- Visualizza > Gestione colore > Abilita anteprima prova soft
+Usa:
+- Visualizza > Gestione colore > Abilita anteprima soft-proof
 
-Ciò attiva o disattiva la simulazione dell'anteprima per la visualizzazione corrente.
+Questo attiva o disattiva la simulazione di anteprima per la visualizzazione corrente.
 
-### 2. Attiva/disattiva la barra di stato
+### 2. Interruttore nella barra di stato
 
-Lumi espone anche il soft-proofing direttamente nella barra di stato inferiore.
+Lumi offre anche l'accesso diretto al soft-proofing nella barra di stato inferiore.
 
-- **Clic sinistro** (attiva/disattiva): attiva o disattiva i colori di prova
-- **Fare clic con il pulsante destro del mouse**: apre il popover di soft-proof in cui è possibile modificare:
-  - profilo attuale
+- **Clic sinistro** (interruttore): attiva o disattiva i colori di prova
+- **Clic destro**: apre il popover del soft-proofing, dove puoi regolare:
+  - profilo corrente
   - selettore del profilo
   - intento di rendering
   - compensazione del punto nero
-  - marcatura fuori gamma
+  - contrassegno dei colori fuori gamma
 
 {{< callout type="warning" >}}
 **Nota importante sulla precisione**
-L'anteprima soft-proof è abilitata solo per le immagini **16 bit e 32 bit**.
-Per le immagini **8 bit**, l'interruttore è disabilitato e Lumi ti chiederà di convertire la precisione in una profondità maggiore prima di visualizzare in anteprima i colori in modo accurato.
+L'anteprima soft-proof è abilitata solo per le immagini a **16 e 32 bit**.
+Per le immagini a **8 bit**, l'interruttore è disabilitato e Lumi chiederà di convertire prima la precisione a una profondità maggiore prima di visualizzare i colori in modo accurato.
 {{< /callout >}}
 
 ## Preferenze e impostazioni predefinite
 
-I default globali risiedono in:
-- Modifica > Preferenze > Gestione coloreSezioni rilevanti:
+Le impostazioni globali predefinite si trovano in:
+- Modifica > Preferenze > Gestione colore
+
+Sezioni rilevanti:
 - **Profilo monitor manuale**
 - **Profilo RGB preferito**
 - **Profilo scala di grigi preferito**
-- **Prova soft**
+- **Soft-proofing**
 
 ### Impostazioni predefinite attuali di Lumi
 
 #### Spazi di lavoro
 
-ICC dello spazio di lavoro in bundle attualmente offerti dalla cartella dei dati condivisi:
+Profili ICC degli spazi di lavoro attualmente inclusi nella cartella dati condivisa:
 - `AdobeRGB1998.icc`
 - `AppleRGB.icc`
 
-Per il lavoro sRGB standard, Lumi fornisce internamente anche un **profilo di lavoro sRGB integrato**.
+Per il lavoro sRGB standard, Lumi fornisce anche internamente un **profilo di lavoro sRGB integrato**.
 
-#### Impostazioni predefinite per la prova software
+#### Impostazioni predefinite soft-proof
 
-Profili soft-proof in bundle attualmente installati:
+Profili soft-proof attualmente inclusi e installati:
 - `CoatedFOGRA39.icc`
 - `USWebCoatedSWOP.icc`
 - `JapanColor2001Coated.icc`
 
-Se disponibile, `CoatedFOGRA39.icc` viene utilizzato come profilo di riferimento soft-proof/CMYK in bundle predefinito.
+Quando disponibile, `CoatedFOGRA39.icc` viene usato come profilo di riferimento soft-proof/CMYK incluso per impostazione predefinita.
 
 ## Flussi di lavoro pratici
 
-### Per la verniciatura e il normale lavoro su serigrafia
+### Per la pittura e il lavoro abituale su schermo
 
-- Conserva l'immagine nello spazio sRGB integrato o in un altro spazio di lavoro RGB valido.
-- Consenti a Lumi di utilizzare il profilo del monitor di sistema, se disponibile.
+- Mantieni l'immagine in sRGB integrato o in un altro spazio di lavoro RGB valido.
+- Lascia che Lumi usi il profilo del monitor di sistema, se disponibile.
 
 ### Per l'anteprima di stampa
 
 - Mantieni l'immagine nel suo spazio di lavoro RGB standard.
-- Scegli un profilo soft-proof che corrisponda alle condizioni di stampa target (ad esempio FOGRA39).
-- Abilita l'anteprima della prova virtuale.
-- Facoltativamente, abilita gli avvisi sulla gamma per visualizzare gli intenti di rendering ritagliati.
+- Scegli un profilo soft-proof che corrisponda alla condizione di stampa di destinazione (ad es. FOGRA39).
+- Abilita l'anteprima soft-proof.
+- Facoltativamente, abilita gli avvisi di gamma per vedere i colori tagliati in base all'intento di rendering.

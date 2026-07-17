@@ -1,6 +1,10 @@
 ---
 title: "เลเยอร์"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/layers"
+translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
 ---
 ระบบเลเยอร์ของ Lumi ให้โครงสร้างภาพประกอบ ช่วยให้ศิลปินแยกการสเก็ตช์ภาพ สี การแรเงา พื้นผิว มาสก์ การปรับแต่ง การทดลอง และรายละเอียดขั้นสุดท้าย โดยไม่ต้องตัดสินใจทุกอย่างลงในภาพเดียวโดยตรง
 

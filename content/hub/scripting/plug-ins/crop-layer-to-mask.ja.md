@@ -1,17 +1,20 @@
 ---
 title: "レイヤーをマスクにトリミング"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c9d216eb65667fb2f8cb2303213dba69e52477f3085fe795b583ae82e09f83fe
 ---
 オプションのピクセルマージンを使用して、レイヤーをマスク領域にトリミングします。
 
-## それが住んでいる場所
+## ソースコード
 
 - [ソースを表示](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/crop-layer-to-mask/crop-layer-to-mask.scm)
 
-## Lumi で登場する場所
+## Lumi でのメニュー
 
 - **レイヤー→トリミング→レイヤーをマスクにトリミング**
 
-## 手順
+## プロシージャ
 
 - `scheme-crop-layer-to-mask`

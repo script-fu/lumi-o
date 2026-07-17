@@ -1,7 +1,10 @@
 ---
 title: "リスト"
-type: docs
+type: "docs"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3402372e80f6b7c94f9e9423f7a9285a03a76d1706433953a93e65c34a2318e9
 ---
 Scheme では、**リスト** は値をグループ化するために使用される基本的なデータ構造です。リストは要素の順序付けられたコレクションであり、各要素は別のリストを含む任意の型にすることができます。リストは、Scheme でデータ ストレージとプログラム構造の両方に広く使用されています。
 
@@ -28,8 +31,8 @@ Scheme では、**リスト** は値をグループ化するために使用さ�
 
 ```scheme
 (define my-list (list 1 2 3))
-(car my-list)  ; Retrieves the first element
-(cdr my-list)  ; Retrieves the rest of the list
+(car my-list)  ; 最初の要素を取得
+(cdr my-list)  ; リストの残りを取得
 ```
 
 結果:
@@ -52,8 +55,8 @@ Scheme では、**リスト** は値をグループ化するために使用さ�
   (if (null? lst)
     (lumi-message "done")
     (begin
-      (lumi-message (number->string (car lst))) ;; Print the first element
-      (print-elements (cdr lst)))))             ;; Process the rest of the list
+      (lumi-message (number->string (car lst))) ;; 最初の要素を出力
+      (print-elements (cdr lst)))))             ;; リストの残りを処理
 ```
 
 - **基本ケース:** リストが空の場合 (`null? lst`)、再帰を停止します。
@@ -135,8 +138,8 @@ Scheme では、**リスト** は値をグループ化するために使用さ�
 #### 例: リスト?
 
 ```scheme
-(list? (list 1 2 3))  ; Checks if (list 1 2 3) is a list
-(list? 42)            ; Checks if 42 is a list
+(list? (list 1 2 3))  ; (list 1 2 3) がリストかどうかを確認
+(list? 42)            ; 42 がリストかどうかを確認
 ```
 
 結果:
@@ -155,9 +158,9 @@ Scheme には、リストを操作するための次のような組み込みプ�
 - `reverse`: 要素を逆順にした新しいリストを返します。
 
 ```scheme
-(length (list 1 2 3))          ; Returns 3
-(append (list 1 2) (list 3 4)) ; Returns (1 2 3 4)
-(reverse (list 1 2 3))         ; Returns (3 2 1)
+(length (list 1 2 3))          ; 3 を返す
+(append (list 1 2) (list 3 4)) ; (1 2 3 4) を返す
+(reverse (list 1 2 3))         ; (3 2 1) を返す
 ```
 
 結果:
@@ -178,7 +181,7 @@ Scheme には、リストを操作するための次のような組み込みプ�
 ##### 例: リスト参照
 
 ```scheme
-(list-ref (list 10 20 30 40) 2)  ; Retrieves the element at index 2
+(list-ref (list 10 20 30 40) 2)  ; インデックス 2 の要素を取得
 ```
 
 結果: `30`
@@ -208,10 +211,10 @@ Scheme のリストには他のリストを要素として含めることがで�
 #### 例: 要素へのアクセス
 
 ```scheme
-(car nested-list)              ; Retrieves the first element: (1 2)
-(car (car nested-list))        ; Retrieves the first element of the first sublist: 1
-(cdr (car nested-list))        ; Retrieves the rest of the first sublist: (2)
-(car (cdr (car nested-list)))  ; Retrieves the second element of the first sublist: 2
+(car nested-list)              ; 最初の要素を取得: (1 2)
+(car (car nested-list))        ; 最初の部分リストの最初の要素を取得: 1
+(cdr (car nested-list))        ; 最初の部分リストの残りを取得: (2)
+(car (cdr (car nested-list)))  ; 最初の部分リストの 2 番目の要素を取得: 2
 ```
 
 ---
@@ -235,8 +238,8 @@ Scheme のリストには他のリストを要素として含めることがで�
 #### 例: 他のサブリストからの要素へのアクセス
 
 ```scheme
-(car (cdr nested-list))        ; Retrieves the second sublist: (3 4)
-(car (car (cdr nested-list)))  ; Retrieves the first element of the second sublist: 3
+(car (cdr nested-list))        ; 2 番目の部分リストを取得: (3 4)
+(car (car (cdr nested-list)))  ; 2 番目の部分リストの最初の要素を取得: 3
 ```
 
 ---

@@ -2,38 +2,41 @@
 title: "필터 플러그인"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e8eb69ed9dff7c65cc926ba4bfb4c333fdd8baa3832aa92765ba6bb19b17516d
 ---
 [첫 번째 단계](../../first-step/) 튜토리얼에서는 _procedure_ 플러그인을 사용했습니다. 이러한 유형의 플러그인은 입력으로 이미지나 드로어블이 필요 없이 작동합니다. 일반적으로 우리는 플러그인을 사용하여 이미지와 해당 드로어블을 변경합니다. 이와 같은 플러그인을 _filter_ 플러그인이라고 합니다.
 
-### 드로어블이란 무엇입니까?
+### 드로어블이란 무엇인가요?
 
 Lumi의 **드로어블**은 레이어나 채널과 같이 그릴 수 있는 이미지 요소를 나타냅니다. 필터 플러그인은 일반적으로 이러한 요소에서 작동합니다.
 
 ### 간단한 필터 플러그인 예
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (define (scheme-simple-filter-plug-in image drawables)
-  ;; Use a let statement to define a message variable and core code
+  ;; let 문을 사용하여 메시지 변수와 핵심 코드 정의
   (let ((message "hello, world"))
-    ;; Display the message in Lumi's error console
+    ;; Lumi의 Error Console에 메시지 표시
     (lumi-message message)
-    ;; Invert the colors of the first selected drawable
+    ;; 첫 번째로 선택한 drawable의 색상 반전
     (lumi-drawable-invert (vector-ref drawables 0) 1)))
 
-;; Register the plug-in
+;; 플러그인 등록
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Main procedure name
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Give yourself some credit
-  "License"                                ;; License
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates this plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; 메인 프로시저 이름
+  "Simple Filter Plug-in Demo"             ;; Lumi 메뉴에 표시되는 이름
+  "Tests a basic Scheme filter plug-in"    ;; 도구 설명
+  "Author Name"                            ;; 자신에게 공로를 인정하세요
+  "License"                                ;; 라이선스
+  "Date written"                           ;; 작성일
+  "*"                                      ;; 이 플러그인에 이미지가 필요함을 나타냄
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 하나 이상의 선택된 drawable 필요
 
-;; Specify the menu location for the plug-in
+;; 플러그인의 메뉴 위치 지정
 (scheme-menu-register
   "scheme-simple-filter-plug-in"
   "<Image>/Plug-in")
@@ -68,7 +71,7 @@ Lumi 버전 3에서는 저장된 변경 사항을 적용하기 위해 플러그�
 첫 번째 줄은 스크립트가 Lumi 3에서 플러그인으로 작동하는지 확인합니다.
 
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 ```
 
@@ -86,8 +89,8 @@ Lumi 버전 3에서는 저장된 변경 사항을 적용하기 위해 플러그�
 
 ```scheme
 (let ((message "hello, world"))
-  (lumi-message message) ;; Displays a message in Lumi's error console
-  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; Inverts the colors of the first selected drawable
+  (lumi-message message) ;; Lumi의 Error Console에 메시지 표시
+  (lumi-drawable-invert (vector-ref drawables 0) 1)) ;; 첫 번째로 선택한 drawable의 색상 반전
 ```
 
 ### 플러그인 등록
@@ -96,14 +99,14 @@ Lumi 버전 3에서는 저장된 변경 사항을 적용하기 위해 플러그�
 
 ```scheme
 (scheme-register-filter
-  "scheme-simple-filter-plug-in"           ;; Register the main procedure
-  "Simple Filter Plug-in Demo"             ;; The name as it appears in the Lumi menu
-  "Tests a basic Scheme filter plug-in"    ;; Tool-tip description
-  "Author Name"                            ;; Author's name
-  "License"                                ;; License type
-  "Date written"                           ;; Date written
-  "*"                                      ;; Indicates the plug-in requires an image
-  SF-ONE-OR-MORE-DRAWABLE)                 ;; Requires one or more selected drawables
+  "scheme-simple-filter-plug-in"           ;; 메인 프로시저 등록
+  "Simple Filter Plug-in Demo"             ;; Lumi 메뉴에 표시되는 이름
+  "Tests a basic Scheme filter plug-in"    ;; 도구 설명
+  "Author Name"                            ;; 작성자 이름
+  "License"                                ;; 라이선스 유형
+  "Date written"                           ;; 작성일
+  "*"                                      ;; 플러그인에 이미지가 필요함을 나타냄
+  SF-ONE-OR-MORE-DRAWABLE)                 ;; 하나 이상의 선택된 drawable 필요
 ```
 
 #### 메뉴등록

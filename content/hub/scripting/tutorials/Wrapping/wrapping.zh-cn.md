@@ -2,6 +2,9 @@
 title: "包装"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 方案命令在较低级别上运行，这意味着即使是简单的任务也可能需要多个步骤。然而，这种粒度提供了灵活性，我们可以将命令捆绑到小的、可重用的函数中，从而完全满足我们的需要。环绕并不是一个非黑即白的概念，而是一个非黑即白的概念。它的范围可以从常用命令的简单别名到管理整个工作流程的更复杂的功能。有时，包装器只是一个提高可读性的便利函数，而在其他情况下，它会演变成封装多个操作的全功能实用程序。
 
@@ -26,7 +29,7 @@ weight: 4
 ### 随机种子
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 用途：返回用于过滤器种子的随机整数
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ weight: 4
 例如，如果我们决定切换到***随机***：
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; 用途：返回用于过滤器种子的随机整数
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ weight: 4
 Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方式进行精细控制。然而，在大多数情况下，我们只关心一些关键设置，例如文件名和质量。为了简化过程，我们可以包装该函数。
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; 用途：以指定质量将图像保存为 JPEG
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; 避免 jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
 ***car*** 函数可能很神秘并且容易出现脚本错误。很容易错误地将 ***car*** 应用于向量或非列表项，从而导致意外行为。为了使我们的代码更加健壮和可读，我们可以将此功能包装在一个更安全的函数中。
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; 用途：返回列表或向量的第一项。
+;;          若输入无效或为空则发出警告。
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; 处理非空列表
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; 处理非空向量
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; 无效或空输入
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
 检索 ***x*** 坐标。然而，虽然功能齐全，但表现力并不强。相反，我们可以用更合适的定义来包装***first-item***，以使我们的意图更清晰。
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; 用途：返回 x 坐标，便于阅读
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; 用途：返回 y 坐标，便于阅读
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ Scheme 中的 JPEG 导出功能带有许多参数，可以对图像的保存方�
 现在，不要用通用方案编写：
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; 获取 x 坐标
+(cadr pixel-coords) ;; 获取 y 坐标
 ```
 
 我们可以在_our_Scheme中写：

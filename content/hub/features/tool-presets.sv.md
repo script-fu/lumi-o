@@ -1,6 +1,10 @@
 ---
 title: "Verktygsförinställningar"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/tool-presets"
+translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
 ---
 Verktygsförinställningar är centrum i Lumis verktygsarbetsflöde. Varje verktyg används genom en förinställning, oavsett om det är en tyst standard eller ett handgjort verktyg som sparats av konstnären. Detta gör verktygets beteende synligt, avsiktligt och repeterbart.
 
@@ -38,7 +42,9 @@ I Dock för verktygsförinställningar kan du dölja förinställningar endast f
 
 Att ändra arbetsyta kan ändra vilka förinställningar som visas i dockan, hur de är ordnade och vilka paneler som är öppna. Studion gör inte bara om sin layout; den kan fylla på med de verktyg som hör till den aktuella uppgiften.
 
-## Stabilitet över verktygsomkopplareEftersom varje verktyg fungerar genom en förinställning, behöver byte av verktyg inte betyda att man förlorar det senaste användbara tillståndet. Lumi kan hålla varje verktyg anslutet till dess aktiva förinställning, så att återgå till ett verktyg tar tillbaka det välbekanta instrument som artisten använde.
+## Stabilitet vid verktygsbyte
+
+Eftersom varje verktyg fungerar genom en förinställning, behöver byte av verktyg inte betyda att man förlorar det senaste användbara tillståndet. Lumi kan hålla varje verktyg anslutet till dess aktiva förinställning, så att återgå till ett verktyg tar tillbaka det välbekanta instrument som artisten använde.
 
 Detta gör att verktygsbytet känns stabilt. Blyertspennan, penseln, transformeringsverktyget eller markeringsverktyget kan var och en komma ihåg sitt författade tillstånd utan att förlita sig på osynliga alternativfiler per verktyg.
 

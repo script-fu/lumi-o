@@ -1,14 +1,17 @@
 ---
 title: "Lagergrupp till ny bild"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 429937950043523736b0a2e40ace60284cd543755a671550cd8bb5ddb36ff246
 ---
 Kopierar den aktiva lagergruppen till en ny bild (användbart när hela stacken är för tung att arbeta i).
 
-## Där den bor
+## Källkod
 
-- [Visa källan](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
+- [Visa källkod](https://gitlab.gnome.org/pixelmixer/lumi-dev/-/blob/main/plug-ins/lumi/layer-group-to-new-image/layer-group-to-new-image.scm)
 
-## Där det visas i Lumi
+## Meny i Lumi
 
 - **Lager → Lagergrupp till ny bild**
 

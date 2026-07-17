@@ -1,7 +1,10 @@
 ---
-title: "Listy stowarzyszeń (alistów)"
-type: docs
+title: "Listy asocjacyjne (Alists)"
+type: "docs"
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 05e4621ad061bed6351b31246d6705025936683acec1f2d104a0fd7f038f31f7
 ---
 **Lista powiązań** (lub **alista**) to podstawowa struktura danych w schemacie używana do reprezentowania kolekcji par klucz-wartość. Jest zaimplementowany jako lista par, gdzie każda para kojarzy klucz (zwykle symbol) z wartością. Alisty są proste, elastyczne i dobrze nadają się do małych i średnich zbiorów danych.
 
@@ -30,10 +33,10 @@ Możesz utworzyć listę, ręcznie konstruując pary lub budując ją programowo
 Pojedynczy cudzysłów (`'`) jest skrótem od **cytowania**, co uniemożliwia Scheme ocenę wyrażenia. Dzięki temu idealnie nadaje się do tworzenia statycznych list, w których wszystkie klucze i wartości są zakodowane na stałe.
 
 ```scheme
-;; Manually define an alist
+;; Alist manuell definieren
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
 
-;; Programmatically add a new pair
+;; Programmatisch ein neues Paar hinzufügen
 (define updated-alist (cons '(country . "France") alist))
 ```
 
@@ -75,8 +78,8 @@ Dynamiczny alist używający `` ` `` and `,`:
 Aby pobrać wartość z listy, możesz użyć funkcji `assoc`, która wyszukuje parę według jej klucza.
 
 ```scheme
-(assoc 'name alist)   ; Returns (name . "Alice")
-(assoc 'country alist) ; Returns #f (key not found)
+(assoc 'name alist)   ; Zwraca (name . "Alice")
+(assoc 'country alist) ; Zwraca #f (klucz nie znaleziony)
 ```
 
 ### Wyodrębnianie wartości
@@ -84,7 +87,7 @@ Aby pobrać wartość z listy, możesz użyć funkcji `assoc`, która wyszukuje 
 Po odzyskaniu pary za pomocą `assoc` użyj `cdr`, aby wyodrębnić wartość:
 
 ```scheme
-(cdr (assoc 'name alist))   ; Returns "Alice"
+(cdr (assoc 'name alist))   ; Zwraca "Alice"
 ```
 
 ### Podsumowanie kluczowych funkcji

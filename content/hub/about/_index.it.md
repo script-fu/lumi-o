@@ -1,14 +1,18 @@
 ---
 type: docs
+url: "hub/about"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 96dce9d17ddc04bf9375fc9051375e598cb2ed92fa605930de19f48b39df64ee
 ---
-Questa sezione offre una rapida panoramica del software, del flusso di lavoro che supporta e del processo di disegno per cui è stato progettato.
+Questa sezione offre una panoramica del software, del flusso di lavoro che supporta e del processo di disegno a cui è dedicato.
 
 {{< cards >}}
-	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Cos'è Lumi, perché esiste e le idee che ne determinano lo sviluppo." >}}
-	{{< card link="workspace" title="Spazio di lavoro" icon="view-boards" subtitle="Un'interfaccia mirata progettata per flussi di lavoro di verniciatura strutturati e non distruttivi." >}}
-	{{< card link="construction" title="Costruzione" icon="pencil" subtitle="Uno spazio di lavoro rado per la forma, la forma e le prime decisioni di disegno." >}}
-	{{< card link="inking" title="Inchiostrazione" icon="pencil-alt" subtitle="Lavoro di linea controllato e finitura pulita per flussi di lavoro di illustrazione mirati." >}}
-	{{< card link="color" title="Colore" icon="color-swatch" subtitle="Tavolozze basate su pigmenti e gestione del colore modellate dalla pratica dei media tradizionali." >}}
-	{{< card link="download" title="Scaricamento" icon="download" subtitle="Ottieni l'ultima build di AppImage o visita il repository dei sorgenti." >}}
-	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="Supportare lo sviluppo continuo e le opere d'arte che guidano la direzione di Lumi." >}}
+	{{< card link="lumi-o" title="Lumi-o" icon="information-circle" subtitle="Cos'è Lumi, perché esiste e le idee che ne guidano lo sviluppo." >}}
+	{{< card link="workspace" title="Spazio di lavoro" icon="view-boards" subtitle="Un'interfaccia mirata per flussi di pittura strutturati e non distruttivi." >}}
+	{{< card link="construction" title="Costruzione" icon="pencil" subtitle="Uno spazio di lavoro essenziale per forma, volume e prime decisioni di disegno." >}}
+	{{< card link="inking" title="Inchiostrazione" icon="pencil-alt" subtitle="Tratto controllato e finiture pulite per flussi di illustrazione mirati." >}}
+	{{< card link="color" title="Colore" icon="color-swatch" subtitle="Tavolozze basate su pigmenti e gestione del colore ispirate ai media tradizionali." >}}
+	{{< card link="download" title="Download" icon="download" subtitle="Scarica l'ultima build AppImage o visita il repository dei sorgenti." >}}
+	{{< card link="Patreon" title="Patreon" icon="heart" subtitle="Sostieni lo sviluppo continuo e le opere che guidano la direzione di Lumi." >}}
 {{< /cards >}}

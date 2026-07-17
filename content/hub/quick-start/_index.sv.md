@@ -2,7 +2,7 @@
 title: "Snabbstart"
 type: docs
 ---
-Lumi-o är för närvarande i sin utvecklingsfas, medan kärnfunktionerna är produktionstestade, kan du stöta på instabilitet då och då. För att skydda dina framsteg under den här fasen är **höghastighets automatiskt sparande tillgängligt och aktivt som standard.**
+Lumi-o är för närvarande i sin utvecklingsfas, **höghastighets automatisk lagring är tillgänglig och aktiv som standard.**
 
 Använd sidorna nedan för att snabbt komma igång.
 

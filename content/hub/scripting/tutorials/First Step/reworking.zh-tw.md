@@ -2,6 +2,9 @@
 title: "返工"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 此步驟修復了訊息傳遞範例中的一個微妙行為。
 
@@ -13,7 +16,7 @@ weight: 7
 
 刪除轉義字元並擴展功能：
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ weight: 7
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; 附加換行以強制顯示訊息方塊
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ weight: 7
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; 用途：將訊息分發到適當的輸出目標
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ weight: 7
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; 用途：驗證訊息為非空字串
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; 檢查訊息是否為非空字串
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; 用途：驗證訊息是否傳送到有效輸出
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; 檢查輸出是否為預期的顯示目標之一
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

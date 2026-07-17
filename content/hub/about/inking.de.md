@@ -1,53 +1,57 @@
 ---
-title: "Einfärben"
+title: "Tuschen"
 type: docs
+url: "hub/about/inking"
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
 ---
-Der Freihand-Arbeitsbereich ist für bewusste Linienarbeit oder Tintenchaos konzipiert. Es ist die Phase, in der das Zeichnen aufhört, forschend zu sein, und beginnt, sich zu engagieren: kontrollierte Striche, klare Kantendefinition und Markierungen, die ihre Form souverän beibehalten müssen. Oder lassen Sie sich einfach mit ausdrucksstarken Spritzern, geschlungenen Linien, trockenen Federkratzern und wilden Sumi-Strichen austoben.
+Der Arbeitsbereich Tuschen ist für bewusste Linienführung oder kontrolliertes Tintenchaos gedacht. Hier hört das Zeichnen auf, explorativ zu sein, und wird verbindlich: kontrollierte Striche, klare Kanten und Marken, die ihre Form zuverlässig halten. Oder lassen Sie sich mit ausdrucksstarken Spritzern, geschlungenen Linien, trockenen Federkratzern und wilden Sumi-Strichen gehen.
 
-Nachfolgend finden Sie einige der Tools und Modi, die dies ermöglichen.
+Einige Werkzeuge und Modi, die das möglich machen:
 
-## Sumi-Voreinstellung
+## Sumi-Preset
 
-Der Sumi-Pinsel ist nicht ganz gezähmt. Anstatt sich wie eine einzelne Bürstenspitze zu verhalten, besteht sie aus vielen unabhängigen Bürstenköpfen oder Borstenbündeln, die als dynamische Formation zusammenarbeiten. Das Ergebnis kann je nach Druck, Geschwindigkeit, Abstand und Geste von nassen Streifen zu gebrochenen trockenen Streifen, verwickelten Fasern oder explosiven strukturierten Kanten wechseln.
+Der Sumi-Pinsel ist nicht ganz gezähmt. Statt einer einzelnen Pinselspitze besteht er aus vielen unabhängigen Pinselköpfen oder Borstenbündeln, die als dynamische Formation zusammenarbeiten. Je nach Druck, Geschwindigkeit, Abstand und Geste reicht das Ergebnis von nassen Zügen über gebrochene trockene Streifen und verfilzte Fasern bis zu explosiven strukturierten Kanten.
 
-Das Verhalten der Formation lässt sich in weiten Grenzen steuern, und durch die Kombination mit Dynamik, Texturen und Stempelvariationen kann eine enorme Bandbreite an Markierungen entstehen.
+Die Formation lässt sich weitgehend steuern; kombiniert mit Dynamik, Texturen und Stempelvariation entsteht eine enorme Bandbreite an Marken.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
-## Kalligrafische Voreinstellung
+## Calligraphic-Preset
 
-Der kalligrafische Modus verwandelt das Pinselwerkzeug in einen kontinuierlichen Meißelstrich und nicht in eine Reihe geprägter Tupfer. Die mitgelieferte kalligrafische Voreinstellung nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse, sodass der Strich nicht nur auf Druck, sondern auch darauf reagieren kann, wie der Stift gehalten wird. Es ist nützlich für feste, geformte Markierungen, die als einzelnes Farbband lesbar sein müssen, selbst wenn sich Winkel und Druck ändern.
+Der Calligraphic-Modus macht aus dem Pinselwerkzeug einen durchgehenden Kalligraphie-Strich statt einer Reihe gestempelter Tupfer. Das mitgelieferte Calligraphic-Preset nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse — der Strich reagiert auf Druck und darauf, wie der Stift gehalten wird. Nützlich für feste, geformte Marken, die als ein einziges Tintenband lesbar bleiben, auch wenn Winkel und Druck wechseln.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 
-## Zick-Zack-Voreinstellung
+## Zig-zag-Preset
 
-Die Voreinstellung „Zick-Zack“ schärft Ecken, wenn sich die Richtung des Strichs schnell ändert, und erzeugt so scharfe, eckige Kurven mit einem Schwung, den glatte Kurven nicht erreichen können. Nützlich für energische, grafische Linienführung und Schraffuren.
+Das Zig-zag-Preset schärft Ecken, wenn sich die Strichrichtung schnell ändert, und erzeugt klare, eckige Wendungen mit einem Schwung, den glatte Kurven nicht erreichen. Nützlich für energische, grafische Linienführung und Schraffuren.
 
 ![calligraphic-02](/images/strokes/ink-zig-zag_share.jpg)
 
-## Sable-Voreinstellung
+## Sable-Preset
 
-Die klassische Comic-Pinsellinie. Flüssige Striche mit variablem Gewicht und einem sicheren Dick-zu-Dünn-Rhythmus; die Art von Linie, die Watterson oder Uderzo erkennen würden.
+Die klassische Comic-Pinsellinie. Flüssige Striche mit variablem Strichgewicht und einem sicheren Dick-zu-Dünn-Rhythmus — die Art Linie, die Watterson oder Uderzo wiedererkennen würden.
 
 ![ink-01](/images/strokes/ink-brush_share.jpg)
 
-## Federvoreinstellung
+## Nib-Preset
 
-Inspiriert von der Waverly-Feder toleriert die Voreinstellung schnelle Bewegungen und Richtungsänderungen und erzeugt dennoch scharfe, ausdrucksstarke Tintenlinien. Da die Tintenmenge mit der Arbeit abnimmt, können die Striche zunächst dunkel und gesättigt sein und sich beim Entleeren der Spitze in kratzigere, ausgehungerte Flecken verwandeln.
+Inspiriert von der Waverly-Feder toleriert dieses Preset schnelle Bewegungen und Richtungswechsel und liefert dennoch scharfe, ausdrucksstarke Tintenlinien. Weil die Tintenladung beim Arbeiten abnimmt, können Striche dunkel und gesättigt beginnen und in kratzigere, ausgehungerte Marken übergehen, wenn die Feder leer wird.
 
 ![ink-02](/images/strokes/ink-nib_share.jpg)
 
-## Spitzenvoreinstellung
+## Tip-Preset
 
-Die Deadline eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten und geringe bis keine Strichabweichung. Nützlich für Konstruktionslinien, Diagramme, Beschriftungen und kontrollierte grafische Arbeiten, bei denen Einheitlichkeit wichtiger ist als Ausdruck. Einige unserer Lieblingsanimationen verwenden diese Zeile.
+Die tote Linie eines technischen Zeichenstifts. Gleichbleibende Breite, saubere Kanten, wenig bis keine Strichvariation. Nützlich für Konstruktionslinien, Diagramme, Beschriftung und kontrollierte grafische Arbeit, wo Einheitlichkeit wichtiger ist als Ausdruck. Einige unserer Lieblingsanimationen nutzen diese Linie.
 
 ![ink-03](/images/strokes/ink-tip_share.jpg)
 
-## Flick-Voreinstellung
+## Flick-Preset
 
-Konzipiert für schnippende Gesten und verstreute Richtungssprays. Je nach Geschwindigkeit, Druck und Abstand können die Striche von subtiler und leichter Streuung bis hin zu schwereren Tröpfchen reichen. Nützlich für Strukturarbeiten und ausdrucksstarke Feinarbeiten.
+Für Schnipp-Gesten und verstreute Richtungssprays. Je nach Geschwindigkeit, Druck und Abstand reichen die Striche von subtiler, leichter Streuung bis zu schwereren geworfenen Tropfen. Nützlich für Texturarbeit und ausdrucksstarke Finishings.
 
 ![flick-01](/images/strokes/flick_share.jpg)

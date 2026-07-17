@@ -1,8 +1,11 @@
 ---
-title: "Wykonane w Lumi-o"
+title: "Made in Lumi-o"
 type: docs
 layout: made-in-lumio
+url: "hub/made-in-lumio"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e16db685765b758a8f81796376db712aee9dad32c24d9f65e5c7fa88336eb7a7
 ---
-Lumi powstaje w wyniku codziennego użytku, więc pokazane tutaj obrazy, badania i elementy produkcyjne nie są makietami marketingowymi. Są to przykłady rodzajów obrazów, do obsługi których oprogramowanie jest projektowane. Ta sekcja jest wciąż nieliczna i ewoluuje, ale z czasem będzie się rozwijać wraz z samą Lumi, gdy aplikacja osiągnie bardziej stabilną formę.
 
-Nieoficjalna gra dla fanów stworzona do celów naukowych, badawczych i tworzenia oprogramowania. Oryginalna grafika © Bill Watterson. Nie zgłasza się żadnych roszczeń własności. Nie na sprzedaż ani do użytku komercyjnego.
+Ta galeria obejmuje oryginalne prace i nieoficjalne fanarty. Podpowiedzi wskazują, które obrazy są oryginałami, a które studiami. Fanarty nie są przeznaczone do sprzedaży ani użytku komercyjnego.

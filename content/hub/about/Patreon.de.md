@@ -2,20 +2,24 @@
 ---
 title: "Patreon"
 type: docs
+url: "hub/about/Patreon"
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 9e1cb1f39fa1e62f32b73f3284249ba249dff4eef3a4195682f0dae88ad17234
 ---
 Hallo!
 
-Ich befinde mich seit 1984 auf einer kreativen Reise mit Pixeln und Code, beginnend mit ZX Spectrum und erkundete alles von Deluxe Paint und Photoshop über Maya bis hin zu Lumi-o. Das Basteln von Werkzeugen und das Schaffen von Kunstwerken ist meine Leidenschaft.
+Seit 1984 bin ich mit Pixeln und Code unterwegs — vom ZX Spectrum über Deluxe Paint und Photoshop bis Maya und schließlich Lumi-o. Werkzeuge zu bauen und Kunst zu schaffen ist meine Leidenschaft.
 
-Wenn Ihnen meine Arbeit gefallen hat und Sie sie hilfreich fanden, denken Sie darüber nach, Ihre Unterstützung mit einer kleinen Spende zu zeigen. Es ist eine einfache Möglichkeit, „Danke“ zu sagen und der Kreativität freien Lauf zu lassen! Mit Ihrer Unterstützung können Sie die Kosten für Softwareentwicklung, Tutorials und laufende künstlerische Projekte decken.
+Wenn Ihnen meine Arbeit gefallen hat oder geholfen hat, freue ich mich über eine kleine Spende. Ein einfaches „Danke“, das die Kreativität am Laufen hält. Ihre Unterstützung deckt Kosten für Softwareentwicklung, Tutorials und laufende künstlerische Projekte.
 
-Sie können dies über Patreon tun, eine Plattform, über die viele Kreative direkte Unterstützung erhalten:
+Das geht über Patreon — eine Plattform, die viele Kreative für direkte Unterstützung nutzen:
 
-[Besuchen Sie meine Patreon-Seite](https://www.patreon.com/pixelmixer) zur Unterstützung.
+[Besuchen Sie meine Patreon-Seite](https://www.patreon.com/pixelmixer), um mich zu unterstützen.
 
 {{< cards >}}
   {{< card link="https://www.patreon.com/pixelmixer" title="Patreon" icon="heart" >}}
 {{< /cards >}}
 
-Bei Fragen können Sie mich direkt unter **pixelmixer@lumi-o.org** kontaktieren.
+Bei Fragen erreichen Sie mich direkt unter **pixelmixer@lumi-o.org**

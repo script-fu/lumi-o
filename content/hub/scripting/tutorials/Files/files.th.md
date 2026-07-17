@@ -2,6 +2,9 @@
 title: "ไฟล์"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: a68dc9328daa1e5b96aee6bf0949a8454b7826df85bdae254502ad9a24864992
 ---
 การทำงานกับไฟล์และไดเร็กทอรีถือเป็นสิ่งสำคัญสำหรับการพัฒนา Scheme ไม่ว่าคุณจะบันทึกเอาต์พุต โหลดทรัพยากร หรือจัดโครงสร้างโปรเจ็กต์ การทำความเข้าใจการทำงานของไฟล์จะทำให้สคริปต์ของคุณมีประสิทธิภาพและใช้งานง่ายยิ่งขึ้น
 
@@ -58,7 +61,7 @@ Lumi เป็น Linux เท่านั้น ดังนั้นโฮม�
   (let* ((validated-src-dir (validate-path-and-dir src-dir src-dir-fallback "Source"))
          (validated-dst-dir (validate-path-and-dir dst-dir dst-dir-fallback "Destination"))
          (files (discover-files validated-src-dir extension)))
-    ;; ...
+    ;; …
     ))
 ```
 
@@ -75,15 +78,15 @@ Scheme จัดเตรียมคำสั่ง ```dir-make``` เพื่
 โดยปกติแล้วเราจำเป็นต้องสร้างหลายไดเร็กทอรีสำหรับเส้นทางที่ใช้งานได้จริง เราสามารถใช้ wrapper สำหรับ ```dir-make``` เพื่อช่วยเราที่นี่
 
 ```scheme
-;; Purpose: A wrapper for (dir-make) that creates a given path from a platform
-;;          supplied path. Always emits Linux style separators for dir-make.
+;; วัตถุประสงค์: ตัวห่อ (dir-make) ที่สร้างพาธที่กำหนดจากแพลตฟอร์ม
+;;          พาธที่ให้มา ส่งออกตัวคั่นแบบ Linux เสมอสำหรับ dir-make
 (define (make-dir-path path)
   (let* ((path-parts (strbreakup path DIR-SEPARATOR))
-         (current-path (car path-parts))) ; Root dir
-    ;; Create the rest of the directories step-by-step
+         (current-path (car path-parts))) ; ไดเรกทอรีหลัก
+    ;; สร้างไดเรกทอรีที่เหลือทีละขั้นตอน
     (for-each
      (lambda (part)
-       (set! current-path (string-append current-path "/" part)) ; build the path
+       (set! current-path (string-append current-path "/" part)) ; สร้างเส้นทาง
        (if (file-exists? current-path)
          (debug-message "Directory exists: " current-path)
          (if (dir-make current-path)

@@ -1,8 +1,11 @@
 ---
-title: "Visitez le référentiel source"
-description: "Browse the source, history, issues, and build instructions on GitLab."
+title: "Visiter le dépôt source"
+description: "Parcourez le code source, l'historique, les tickets et les instructions de compilation sur GitLab."
 type: docs
 sidebar:
   exclude: true
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: c7ecee387b611c2e3e2cd3f63b85bbc207aa4bba1b704f07fd3e585b87ac11d8
 ---
-Parcourez la source, l'historique, les problèmes et les instructions de création sur GitLab.
+Parcourez le code source, l'historique, les tickets et les instructions de compilation sur GitLab.

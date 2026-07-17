@@ -2,6 +2,9 @@
 title: "Retravailler"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Cette étape corrige un comportement subtil dans l’exemple de messagerie.
 
@@ -13,7 +16,7 @@ Mettez à jour le contenu et les destinations du message afin que l'exemple se c
 
 Suppression du caractère d'échappement et extension des fonctions :
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Retravailler la bibliothèque :
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Ajouter un saut de ligne pour forcer une boîte de message
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Retravailler la bibliothèque :
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Objectif : Envoie un message vers la destination de sortie appropriée
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Retravailler la bibliothèque :
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Objectif : Vérifie que le message est une chaîne non vide
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Vérifier si le message est une chaîne non vide
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Objectif : Vérifie que le message est envoyé vers une sortie valide
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Vérifier si la sortie est l'une des destinations d'affichage attendues
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```

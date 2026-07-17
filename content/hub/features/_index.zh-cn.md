@@ -1,24 +1,27 @@
 ---
-title: "特征"
+title: "功能"
 type: docs
+url: "hub/features"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: df541f07648f18234031778b916116d8f6fd0dbbf018e30b0a17a49ca37a8825
 ---
-Lumi 的功能集专注于数字绘画和结构化插图工作流程，建立在非破坏性、基于图层的编辑基础上。
 
-本节介绍 Lumi 中提供的核心功能及其支持的创意工作流程。
+本节介绍 Lumi-o 的核心功能，以及它们所支持的创作工作流程。
 
 {{< cards >}}
-  {{< card link="file-format" title="文件格式 (.lum)" icon="document-text" subtitle="用于分层图稿、恢复、颜色数据和长期编辑的结构化项目格式。" >}}
-  {{< card link="filters" title="过滤器" icon="filter" subtitle="使用模糊、照明、纹理、打印和分析滤镜校正、风格化、生成图层效果并保持图层效果可编辑。" >}}
-  {{< card link="recovery" title="文件恢复" icon="refresh" subtitle="背景保护和有意的检查点有助于防止绘画过程变得脆弱。" >}}
-  {{< card link="layers" title="图层和无损编辑" icon="collection" subtitle="具有可编辑图层、组、蒙版、效果和受保护工作状态的结构化绘画。" >}}
-  {{< card link="paintbrush" title="画笔工具" icon="pencil-alt" subtitle="具有响应标记、动态输入、纹理、平滑和多头画笔行为的富有表现力的绘画。" >}}
-  {{< card link="palette-editor" title="调色板编辑器" icon="color-swatch" subtitle="使用颜料、保存的混合、使用的颜色、值和渐变将调色板构建为完整的颜色系统。" >}}
-  {{< card link="palette-map" title="调色板图" icon="view-grid" subtitle="将调色板可触及的色彩世界视为探索和选择的视觉地图。" >}}
-  {{< card link="palette-mixer" title="调色板混合器" icon="adjustments" subtitle="使用类似颜料的混合、色调和色度决策，根据调色板关系创建新的颜色。" >}}
-  {{< card link="publishing-layout" title="出版布局" icon="book-open" subtitle="用于印刷和出版工作的出血线、装订线和构图指南，随项目保存每个图像。" >}}
-  {{< card link="scripting" title="方案脚本" icon="code" subtitle="使用嵌入式方案解释器自动化工作流程并扩展 Lumi。" >}}
-  {{< card link="spectral-color" title="光谱混色" icon="beaker" subtitle="调色板颜色与类似颜料的行为混合在一起，使数字颜色选择更具绘画感。" >}}
-  {{< card link="tool-presets" title="工具预设" icon="template" subtitle="构建一套小型、熟悉的手工工具，具有稳定的行为、资源和自定义身份。" >}}
-  {{< card link="warp-tool" title="变形工具" icon="cursor-click" subtitle="直接重塑绘制的内容，同时保留复杂艺术品的分层结构。" >}}
-  {{< card link="workspaces" title="工作空间" icon="view-boards" subtitle="在准备好的工作室环境之间切换以进行素描、绘画、上墨、色彩工作和对焦。" >}}
+  {{< card link="file-format" title="文件格式 (.lum)" icon="document-text" subtitle="面向分层图稿、恢复、色彩数据与长期编辑的结构化项目格式。" >}}
+  {{< card link="filters" title="滤镜" icon="filter" subtitle="通过模糊、光照、纹理、印刷与分析类滤镜，校正、风格化、生成效果，并保持图层效果可编辑。" >}}
+  {{< card link="recovery" title="文件恢复" icon="refresh" subtitle="后台保护与主动检查点，帮助绘画过程不再脆弱。" >}}
+  {{< card link="layers" title="图层与非破坏性编辑" icon="collection" subtitle="结构化绘画：可编辑图层、编组、蒙版、效果与受保护的工作状态。" >}}
+  {{< card link="paintbrush" title="画笔工具" icon="pencil-alt" subtitle="富有表现力的绘画：响应灵敏的笔触、动态输入、纹理、平滑与多头画笔行为。" >}}
+  {{< card link="palette-editor" title="调色板编辑器" icon="color-swatch" subtitle="以颜料、已保存混色、已用颜色、明度与渐变，构建完整的色彩系统。" >}}
+  {{< card link="palette-map" title="Palette Map" icon="view-grid" subtitle="将调色板可及的色彩世界呈现为便于探索与选色的视觉地图。" >}}
+  {{< card link="palette-mixer" title="Palette Mixer" icon="adjustments" subtitle="基于调色板关系，通过类颜料混色、色调与色度调整，创造新颜色。" >}}
+  {{< card link="publishing-layout" title="出版版面" icon="book-open" subtitle="出血、装订线与构图参考线，面向印刷与出版，随项目按图像保存。" >}}
+  {{< card link="scripting" title="Scheme 脚本" icon="code" subtitle="通过内嵌 Scheme 解释器，自动化工作流程并扩展 Lumi-o。" >}}
+  {{< card link="spectral-color" title="光谱混色" icon="beaker" subtitle="调色板颜色以类颜料方式混合，让数字选色更接近绘画体验。" >}}
+  {{< card link="tool-presets" title="工具预设" icon="template" subtitle="构建少量熟悉的手工工具，行为稳定，资源与自定义标识齐备。" >}}
+  {{< card link="warp-tool" title="Warp Tool" icon="cursor-click" subtitle="直接重塑已绘制内容，同时保留复杂图稿的分层结构。" >}}
+  {{< card link="workspaces" title="工作区" icon="view-boards" subtitle="在素描、绘画、勾线、上色与专注等预设工作室环境之间切换。" >}}
 {{< /cards >}}

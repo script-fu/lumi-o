@@ -2,6 +2,9 @@
 title: "Valores de retorno"
 type: docs
 weight: 8
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 80a8f61c6fc7f6b86167f7489f61558b49f3d1d2b7e1e5236406cbca31ff611e
 ---
 Los valores de retorno son importantes porque le permiten controlar el flujo sin un estado adicional. En Scheme, la última expresión evaluada se convierte en el valor de retorno.
 
@@ -14,9 +17,9 @@ En Scheme, el valor de retorno de una función está determinado por la última 
 Revisemos la función de validación (¿es-cadena-válida?)
 
 ```scheme
-;; Purpose: Validates that the message is a non-empty string
+;; Propósito: Comprueba que el mensaje es una cadena no vacía
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Comprobar si el mensaje es una cadena no vacía
   (if (or (not (string? message)) (string=? message ""))
     (error "Message must be a non-empty string")))
 ```
@@ -28,9 +31,9 @@ En esta función, si el mensaje no es válido, se genera un error. Sin embargo, 
 Podemos mejorar esto haciendo que el valor de retorno sea más explícito. Por ejemplo, podríamos devolver `#t` (verdadero) si el mensaje es válido:
 
 ```scheme
-;; Purpose: Validates that the message is sent to a valid output
+;; Propósito: Comprueba que el mensaje se envía a una salida válida
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Comprobar si la salida es uno de los destinos de visualización esperados
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (error "Invalid output destination: " output)
     #t))
@@ -45,7 +48,7 @@ Al decidir qué devuelven nuestras funciones, podemos hacerlas más predecibles 
 A continuación se muestra un ejemplo sencillo del uso de un valor de retorno para controlar el flujo de la lógica:
 
 ```scheme
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Propósito: Envía un mensaje al destino de salida adecuado
 (define (send-message message output)
   (if (is-valid-output-display? output)
     (cond
@@ -89,7 +92,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
 ### Refactorizado con valores de retorno
 
 ```scheme
-;; Purpose: Sends a message to the status bar, returns #t if successful
+;; Propósito: Envía un mensaje a la barra de estado, devuelve #t si tiene éxito
 (define (send-to-status-bar message)
   (if (is-valid-string? message)
     (begin
@@ -99,7 +102,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       #t)
     #f))
 
-;; Purpose: Sends a message to the dialog box, returns #t if successful
+;; Propósito: Envía un mensaje al cuadro de diálogo, devuelve #t si tiene éxito
 (define (send-to-dialog-box message)
   (if (is-valid-string? message)
     (begin
@@ -109,7 +112,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       #t)
     #f))
 
-;; Purpose: Sends a message to the error console, returns #t if successful
+;; Propósito: Envía un mensaje a la consola de errores, devuelve #t si tiene éxito
 (define (send-to-error-console message)
   (if (is-valid-string? message)
     (begin
@@ -118,7 +121,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       #t)
     #f))
 
-;; Purpose: Sends a message to the terminal, returns #t if successful
+;; Propósito: Envía un mensaje al terminal, devuelve #t si tiene éxito
 (define (send-to-terminal message)
   (if (is-valid-string? message)
     (begin
@@ -127,7 +130,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       #t)
     #f))
 
-;; Purpose: Dispatches a message to the appropriate output, returns #t if successful
+;; Propósito: Envía un mensaje a la salida adecuada y devuelve #t si tiene éxito
 (define (send-message message output)
   (if (is-valid-string-output? output)
     (cond
@@ -137,7 +140,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       ((eq? output 'terminal) (send-to-terminal message)))
     #f))
 
-;; Purpose: Validates that the message is a non-empty string, returns #t if valid
+;; Propósito: Comprueba que el mensaje es una cadena no vacía, devuelve #t si es válido
 (define (is-valid-string? message)
   (if (or (not (string? message)) (string=? message ""))
     (begin
@@ -145,7 +148,7 @@ Bien, aquí está el código de la biblioteca con valores de retorno incrustados
       #f)
     #t))
 
-;; Purpose: Validates that the output is a valid destination, returns #t if valid
+;; Propósito: Comprueba que la salida es un destino válido, devuelve #t si es válida
 (define (is-valid-string-output? output)
   (if (not (member output '(dialog-box status-bar error-console terminal)))
     (begin

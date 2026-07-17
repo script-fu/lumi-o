@@ -2,135 +2,142 @@
 title: "Färghantering"
 type: docs
 weight: 15
+url: "hub/technical-guides/Color-Management"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: e124f17c1f65c73f4e135c25dd7962eb44f1d0676147a7e4bcbf6dc8ecf51e69
 ---
-Lumi-o är konfigurerad för att fungera direkt. Så länge du arbetar på en bild med **16-bitars eller högre precision**, är programvaran redan inställd för att använda standard buntade mjuksäkring (CMYK) och inbyggda sRGB-profiler; allt borde bara fungera utan någon konfiguration.
 
-För dem som behöver djupare kontroll, förklarar den här guiden Lumis kärnfärghanteringsmodell, skillnaden mellan en bildprofil och en mjukbeständig profil, var kontrollerna finns och exakt hur standardprofilerna buntas ihop med applikationen.
+Lumi-o är konfigurerad för att fungera direkt. Så länge du arbetar med en bild i **16-bitars eller högre precision** är programvaran redan inställd för att använda standardpaketerad soft proof (CMYK) och inbyggda sRGB-profiler; allt bör fungera utan någon konfiguration.
+
+För dig som behöver mer kontroll förklarar den här guiden Lumis kärnmodell för färghantering, skillnaden mellan en bildprofil och en soft-proof-profil, var kontrollerna finns och exakt hur standardprofilerna levereras med programmet.
 
 ## Snabb sammanfattning
 
 Lumi använder tre olika profilroller:
 
-1. **Bild arbetsprofil**
+1. **Bildens arbetsprofil**
    - Definierar vad bildens RGB- eller gråskalenummer betyder.
-   - Används för att tilldela/konvertera operationer.
+   - Används för tilldelnings- och konverteringsåtgärder.
    - Typiska exempel: inbyggd sRGB, Adobe RGB.
 
-2. **Visa profil**
+2. **Skärmprofil**
    - Beskriver din bildskärm.
-   - Används för att visa bilden korrekt på din skärm.
-   - Vanligtvis tillhandahålls av systemet eller väljs i Inställningar.
+   - Används för att visa bilden korrekt på skärmen.
+   - Tillhandahålls vanligtvis av systemet eller väljs i Inställningar.
 
-3. **Mjuktät profil**
+3. **Soft-proof-profil**
    - Simulerar en annan utenhet eller utskriftsvillkor.
    - Omdefinierar **inte** bildens pixelvärden.
    - Typiska exempel: CMYK-pressprofiler som `CoatedFOGRA39`.
 
-## Bildprofil vs mjuksäker profil
+## Bildprofil kontra soft-proof-profil
 
 ### Bildprofil
 
-Använd detta när du vill berätta för Lumi vilken färgrymd bilden faktiskt befinner sig i.
+Använd detta när du vill berätta för Lumi vilket färgrymd bilden faktiskt befinner sig i.
 
-Två vanliga operationer:
+Två vanliga åtgärder:
 
 - **Tilldela profil**
   - Ändrar profiletiketten som är kopplad till bilden.
   - Konverterar **inte** pixelvärden.
-  - Använd endast när pixelnumren redan finns i profilens utrymme.
+  - Använd endast när pixelvärdena redan finns i profilens färgrymd.
 
 - **Konvertera till profil**
   - Konverterar pixelvärden från den aktuella bildprofilen till en ny.
-  - Använd när du vill att bilden verkligen ska flytta in i en annan arbetsyta.
+  - Använd när du vill att bilden verkligen ska flyttas till en annan arbetsrymd.
 
 **Menyplatser:**
 - Bild > Färghantering > Tilldela färgprofil...
 - Bild > Färghantering > Konvertera till färgprofil...
 
-### Mjuksäker profil
+### Soft-proof-profil
 
-Använd detta när du vill förhandsgranska hur bilden skulle reproduceras på en målenhet eller utskriftsvillkor.
+Använd detta när du vill förhandsgranska hur bilden skulle reproduceras på en målenhet eller under ett utskriftsvillkor.
 
-Mjuktätning:
-- lämnar bildens arbetsutrymme ifred
-- ändrar förhandsgranskningens pipeline
-- kan markera färger utanför omfånget
-- är avsedd för förhandsgranskning, inte omtilldelning av bilddata
+Soft proof:
+- lämnar bildens arbetsrymd orörd
+- ändrar förhandsgranskningspipelinen
+- kan markera färger utanför gamut
+- är avsett för förhandsgranskning, inte omtilldelning av bilddata
 
 **Menyplatser:**
-- Bild > Färghantering > Soft-Proof Settings > Välj Soft-Proof Profile...
-- Bild > Färghantering > Soft-Proof Settings > Rendering Intent
-- Bild > Färghantering > Soft-Proof Settings > Black Point Compensation
-- Visa > Färghantering > Aktivera Soft-Proof Preview
-- Visa > Färghantering > Markera utanför färgomfånget
+- Bild > Färghantering > Soft-proof-inställningar > Välj soft-proof-profil...
+- Bild > Färghantering > Soft-proof-inställningar > Renderingsavsikt
+- Bild > Färghantering > Soft-proof-inställningar > Svartpunktskompensation
+- Visa > Färghantering > Aktivera soft-proof-förhandsgranskning
+- Visa > Färghantering > Markera färger utanför gamut
 
-## Så här ser du förhandsgranskningen av mjukt
+## Så här visar du soft-proof-förhandsgranskningen
 
-Det finns två huvudsakliga ingångspunkter för att växla mjuka korrektur.
+Det finns två huvudsakliga ingångspunkter för att växla soft proof.
 
-### 1. Visa-menyn
+### 1. Menyn Visa
 
 Använd:
-- Visa > Färghantering > Aktivera Soft-Proof Preview
+- Visa > Färghantering > Aktivera soft-proof-förhandsgranskning
 
-Detta slår på eller av förhandsvisningssimuleringen för den aktuella skärmen.
+Detta slår på eller av förhandsgranskningssimuleringen för den aktuella skärmen.
 
-### 2. Växla statusfält
+### 2. Växling i statusfältet
 
-Lumi exponerar även mjukskydd direkt i den nedre statusraden.
+Lumi exponerar soft proofing även direkt i det nedre statusfältet.
 
-- **Vänsterklicka** (växla): aktivera eller inaktivera korrekturfärger
-- **Högerklicka**: öppna soft-proofing popover där du kan justera:
+- **Vänsterklick** (växla): aktivera eller inaktivera proof-färger
+- **Högerklick**: öppna soft-proof-popovern där du kan justera:
   - aktuell profil
   - profilväljare
-  - återgivningsuppsåt
-  - Svartpunktskompensation
-  - markering utanför omfånget
+  - renderingsavsikt
+  - svartpunktskompensation
+  - markering utanför gamut
 
 {{< callout type="warning" >}}
 **Viktig anmärkning om precision**
-Mjuksäker förhandsgranskning är endast aktiverad för **16-bitars och 32-bitars**-bilder.
-För **8-bitars** bilder är växlingen inaktiverad och Lumi kommer att uppmana dig att konvertera precision till ett högre djup först innan du förhandsgranskar färgerna korrekt.
+Soft-proof-förhandsgranskning är endast aktiverad för **16-bitars och 32-bitars** bilder.
+För **8-bitars** bilder är växlingen inaktiverad och Lumi uppmanar dig att konvertera precisionen till högre bitdjup innan du kan förhandsgranska färgerna korrekt.
 {{< /callout >}}
 
-## Inställningar och standardinställningar
+## Inställningar och standardvärden
 
 Globala standardvärden finns i:
-- Redigera > Inställningar > FärghanteringRelevanta avsnitt:
-- **Manuell monitorprofil**
-- **Önskad RGB-profil**
-- **Rekommenderad gråskaleprofil**
-- **Mjuktätning**
+- Redigera > Inställningar > Färghantering
+
+Relevanta avsnitt:
+- **Manuell skärmprofil**
+- **Föredragen RGB-profil**
+- **Föredragen gråskaleprofil**
+- **Soft proofing**
 
 ### Aktuella Lumi-standardinställningar
 
-#### Arbetsytor
+#### Arbetsrymder
 
-Buntade ICC:er för arbetsutrymmen som för närvarande erbjuds från mappen med delad data:
+Paketerade ICC-profiler för arbetsrymder som för närvarande erbjuds från den delade datamappen:
 - `AdobeRGB1998.icc`
 - `AppleRGB.icc`
 
-För standard sRGB-arbete tillhandahåller Lumi även en **inbyggd sRGB-arbetsprofil internt**.
+För standard sRGB-arbete tillhandahåller Lumi även en **inbyggd sRGB-arbetsprofil**.
 
-#### Soft-Proof Defaults
+#### Soft-proof-standardinställningar
 
-Medföljande mjuktäta profiler installerade för närvarande:
+Paketerade soft-proof-profiler som för närvarande är installerade:
 - `CoatedFOGRA39.icc`
 - `USWebCoatedSWOP.icc`
 - `JapanColor2001Coated.icc`
 
-När tillgängligt används `CoatedFOGRA39.icc` som standard medföljande mjukbevis/CMYK-referensprofil.
+När tillgänglig används `CoatedFOGRA39.icc` som standard paketerad soft-proof-/CMYK-referensprofil.
 
 ## Praktiska arbetsflöden
 
 ### För målning och normalt skärmarbete
 
-- Behåll bilden i inbyggd sRGB eller annan giltig RGB-arbetsyta.
-- Låt Lumi använda systemmonitorprofilen om tillgänglig.
+- Behåll bilden i inbyggd sRGB eller en annan giltig RGB-arbetsrymd.
+- Låt Lumi använda systemets skärmprofil om tillgänglig.
 
-### För förhandsgranskning
+### För utskriftsförhandsgranskning
 
-- Behåll bilden i dess vanliga RGB-arbetsutrymme.
-- Välj en mjukbeständig profil som matchar målutskriftsvillkoret (t.ex. FOGRA39).
-- Aktivera mjuksäker förhandsgranskning.
-- Aktivera omfångsvarningar om du vill se klippta renderingsavsikter.
+- Behåll bilden i standard RGB-arbetsrymd.
+- Välj en soft-proof-profil som matchar målutskriftsvillkoret (t.ex. FOGRA39).
+- Aktivera soft-proof-förhandsgranskning.
+- Aktivera valfritt gamut-varningar för att se avklippta renderingsavsikter.

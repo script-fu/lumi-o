@@ -1,6 +1,10 @@
 ---
-title: "Palettredigerare"
+title: "Palette Editor"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+url: "hub/features/palette-editor"
+translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
 ---
 Palettredigeraren är där en Lumi-palett blir en komplett färgmiljö. Den sammanför pigmenten som en palett är byggd av, de blandningar som en konstnär väljer att behålla, färgerna som används under målningen och den tonala strukturen som formar hur paletten utforskas.
 

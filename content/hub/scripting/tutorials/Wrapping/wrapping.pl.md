@@ -2,6 +2,9 @@
 title: "Zawijanie"
 type: docs
 weight: 4
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: d32723b24b603bbced0be9cfa82dca374631b21b3eddf2a4ab479bf695a59bf6
 ---
 Polecenia schematu działają na niskim poziomie, co oznacza, że ​​nawet proste zadania mogą wymagać wielu kroków. Jednak ta szczegółowość zapewnia elastyczność, możemy łączyć polecenia w małe funkcje wielokrotnego użytku, które robią dokładnie to, czego potrzebujemy. Opakowanie nie jest koncepcją czarno-białą; może obejmować zarówno proste aliasy dla często używanych poleceń, jak i bardziej złożone funkcje zarządzające całymi przepływami pracy. Czasami opakowanie jest po prostu wygodną funkcją poprawiającą czytelność, podczas gdy w innych przypadkach przekształca się w w pełni funkcjonalne narzędzie, które zawiera wiele operacji.
 
@@ -11,7 +14,7 @@ Funkcje owijania mają kilka kluczowych zalet:
 
 - **Ułatwia powtarzalne zadania** – Zamiast powtarzać polecenia niskiego poziomu, zawiń je w funkcję pomocniczą i użyj jej ponownie.
 - **Poprawia czytelność** – Nadanie naszym opakowanym funkcjom jasnych, opisowych nazw sprawia, że ​​nasz kod jest łatwiejszy do zrozumienia na pierwszy rzut oka.
-- ** Hermetyzuje złożoność** – Zamiast zajmować się długimi, tajemniczymi listami poleceń, głęboko zagnieżdżonymi pętlami lub złożonymi instrukcjami komunikatów, możemy podzielić je na mniejsze, dobrze ustrukturyzowane funkcje pomocnicze.
+- ** Hermetyzuje złożoność** – Zamiast zajmować się długimi, tajemniczymi listami poleceń, głęboko zagnieżdżonymi pętlami lub złożonymi instrukcjami komunikatów, możemy podzielić je na mniejsze, dobrze zorganizowane funkcje pomocnicze.
 - **Większa łatwość konserwacji** – Jeśli podstawowa funkcjonalność polecenia ulegnie zmianie, wystarczy tylko raz zaktualizować opakowaną funkcję, izolując nasze wtyczki od szczegółów tych zmian.
 - **Zachęca do ponownego wykorzystania kodu** – Każdy pomocnik staje się częścią Twojej biblioteki, dzięki czemu przyszłe skrypty można szybciej pisać i debugować.
 
@@ -26,7 +29,7 @@ Przykłady:
 ### Losowe nasiona
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Cel: Zwraca losową liczbę całkowitą do inicjalizacji filtra
 (define (random-seed)
   (msrg-rand))
 ```
@@ -38,7 +41,7 @@ Dodatkowo zdefiniowanie ***random-seed*** jako samodzielnej funkcji pozwala nam 
 Na przykład, jeśli zamiast tego zdecydujemy się przejść na ***random***:
 
 ```scheme
-;; Purpose: Returns a random int for seeding a filter
+;; Cel: Zwraca losową liczbę całkowitą do inicjalizacji filtra
 (define (random-seed)
   (random 1000))
 ```
@@ -50,11 +53,11 @@ Nazwa funkcji pozostaje taka sama, co zapewnia dalsze działanie naszych skrypt�
 Funkcja eksportu JPEG w Scheme ma wiele parametrów, oferujących precyzyjną kontrolę nad sposobem zapisywania obrazów. Jednak w większości przypadków interesuje nas tylko kilka kluczowych ustawień, takich jak nazwa pliku i jakość. Aby uprościć proces, możemy zawinąć funkcję.
 
 ```scheme
-;; Purpose: Saves an image as a JPEG with a specified quality
+;; Cel: Zapisuje obraz jako JPEG o określonej jakości
 (define (file-jpg-save image file quality)
   (let ((export-file (if (has-substring? file ".jpg")
                          file
-                         (string-append file ".jpg")))) ;; Avoid jpg.jpg
+                         (string-append file ".jpg")))) ;; Unikaj jpg.jpg
     (debug-message "Exporting: " export-file)
     (file-jpeg-export #:run-mode RUN-NONINTERACTIVE
                       #:image image
@@ -88,17 +91,17 @@ Dzięki temu nasz kod jest czysty, czytelny i elastyczny, a jednocześnie pozwal
 Funkcja ***samochód*** może być tajemnicza i podatna na błędy skryptów. Łatwo jest omyłkowo zastosować ***samochód*** do wektora lub elementu spoza listy, co może prowadzić do nieoczekiwanego zachowania. Aby uczynić nasz kod bardziej solidnym i czytelnym, możemy opakować tę funkcjonalność w bezpieczniejszą funkcję.
 
 ```scheme
-;; Purpose: Returns the first item of a list or vector.
-;;          Warns if the input is invalid or empty.
+;; Cel: Zwraca pierwszy element listy lub wektora.
+;;          Ostrzega, jeśli dane wejściowe są nieprawidłowe lub puste.
 (define (first-item collection)
   (cond
-    ;; Handle non-empty lists
+    ;; Obsługuje niepuste listy
     ((and (list? collection) (not (null? collection)))
      (list-ref collection 0))
-    ;; Handle non-empty vectors
+    ;; Obsługuje niepuste wektory
     ((and (vector? collection) (> (vector-length collection) 0))
      (vector-ref collection 0))
-    ;; Invalid or empty input
+    ;; Nieprawidłowe lub puste dane wejściowe
     (else
      (begin
        (warning-message "first-item: Expected a non-empty list or vector, but received: " collection)
@@ -127,11 +130,11 @@ Zawijanie funkcji, która jest już opakowana, może jeszcze bardziej poprawić 
 aby pobrać współrzędne ***x***. Jednak choć funkcjonalne, nie jest to zbyt wyraziste. Zamiast tego możemy zawinąć ***pierwszy element*** w bardziej odpowiednią definicję, aby uczynić nasze intencje jaśniejszymi.
 
 ```scheme
-;; Purpose: Return the x-coordinate, for readability
+;; Cel: Zwraca współrzędną x, dla czytelności
 (define (x-coord pixel-coords)
   (first-item pixel-coords))
 
-;; Purpose: Return the y-coordinate, for readability
+;; Cel: Zwraca współrzędną y, dla czytelności
 (define (y-coord pixel-coords)
   (second-item pixel-coords))
 ```
@@ -145,8 +148,8 @@ aby pobrać współrzędne ***x***. Jednak choć funkcjonalne, nie jest to zbyt 
 Teraz zamiast pisać w ogólnym schemacie:
 
 ```scheme
-(car pixel-coords) ;; Gets the x-coordinate
-(cadr pixel-coords) ;; Gets the y-coordinate
+(car pixel-coords) ;; Pobiera współrzędną x
+(cadr pixel-coords) ;; Pobiera współrzędną y
 ```
 
 W _naszym_ schemacie możemy napisać:

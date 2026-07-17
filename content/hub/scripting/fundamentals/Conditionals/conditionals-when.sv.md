@@ -1,11 +1,14 @@
 ---
-title: "när"
+title: "when"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 61f1a78c3b37d9a33d3dff25f889287b32fc932bea8c22b4c06100052944b6a6
 ---
-I Scheme, medan `if` är elegant och mångsidig, kan det bli förvirrande när det används utan ett uttryckligt `else`. Detta är särskilt sant när avsikten är att exekvera en enda kodgren endast när ett villkor är sant, utan någon alternativ åtgärd för `false`-fallet. I sådana scenarier ger `when` konstruktionen ett tydligare och mer kortfattat alternativ.
+En Scheme, `if` est polyvalent, mais sans `else` explicite il devient vite confus — surtout quand seule la branche vraie doit s'exécuter. Dans ce cas, `when` est plus clair et concis.
 
-Den grundläggande formen av `when` ser ut så här:
+La forme de base de `when` :
 
 ```scheme
 (when test-is-true
@@ -13,10 +16,10 @@ Den grundläggande formen av `when` ser ut så här:
   do-that)
 ```
 
-- Om `test` evalueras till sant (`#t`), exekveras alla uttryck i kroppen av `when` konstruktionen sekventiellt.
-- Om `test` utvärderas till falskt (`#f`), händer ingenting och inga värden returneras.
+- Si `#t`, toutes les expressions du corps s'exécutent en séquence.
+- Si `#f`, rien ne se passe ; aucune valeur n'est renvoyée.
 
-### Exempel
+### Exemple
 
 ```scheme
 (when (< 0 1)
@@ -24,9 +27,9 @@ Den grundläggande formen av `when` ser ut så här:
   (lumi-message "Executing additional actions."))
 ```
 
-### Kontrasterande `if` och `when`
+### Comparer `if` et `when`
 
-För att bättre förstå skillnaden mellan `if` och `when`, överväg följande exempel där båda används tillsammans:
+Les deux ensemble dans le même exemple :
 
 ```scheme
 (if (= 0 1)
@@ -36,25 +39,18 @@ För att bättre förstå skillnaden mellan `if` och `when`, överväg följande
     (lumi-message "Executing multiple actions within 'when'.")))
 ```
 
-#### Förklaring:
+#### Explication
 
-1. **`if` tillstånd**:
-   - Testet `(= 0 1)` kontrollerar om 0 är lika med 1.
-   - Eftersom detta är falskt (`#f`), exekveras `else`-grenen av `if`.
+1. **`if` :** `(= 0 1)` est faux, donc branche `else`.
+2. **`when` dans le `else` :** `(< 0 1)` est vrai ; les deux `lumi-message` s'exécutent.
 
-2. **`when`-konstruktionen i `else`-grenen**:
-   - `when`-testet `(< 0 1)` kontrollerar om 0 är mindre än 1.
-   - Eftersom detta är sant (`#t`), exekveras alla uttryck i kroppen av `when` sekventiellt:
-     - First, it prints `"The 'when' condition is true!"`.
-     - Then, it prints `"Executing multiple actions within 'when'."`.
+#### Pourquoi `when` ?
 
-#### Varför använda `when` här?
+- Pas de `else` vide ou factice.
+- Montre que seule la branche vraie compte.
 
-- Att använda `when` istället för en annan `if` förenklar logiken när det inte finns något behov av en explicit `else`-gren för villkoret.
-- `when` gör det klart att endast den sanna grenen är relevant, vilket minskar potentiell förvirring.
+### Résumé
 
-### Sammanfattning
-
-- Använd `if` när du behöver både en sann och falsk gren.
-- Använd `when` när det bara finns en enda gren för det sanna fallet, speciellt när flera åtgärder måste utföras.
-- Att kombinera `if` och `when` kan hjälpa till att strukturera mer komplexa villkor tydligt och koncist.
+- **`if` :** quand les deux branches comptent.
+- **`when` :** branche vraie seule, plusieurs actions possibles.
+- Les combiner structure clairement des conditions complexes.

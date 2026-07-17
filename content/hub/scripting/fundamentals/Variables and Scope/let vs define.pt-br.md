@@ -1,7 +1,10 @@
 ---
-title: "Nomeado let ou Local define"
+title: "Named let ou define local"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 3931ad66060e30fb62a4634fd1c6dc05a008c71dfee8bd5b80d832036ae117f1
 ---
 Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme para estruturar seu código, mas servem a propósitos diferentes. Compreender quando usar cada um ajuda na criação de scripts limpos, modulares e eficientes.
 
@@ -67,8 +70,8 @@ Ambos **named `let`** e **local `define`** são ferramentas poderosas no Scheme 
 
 ```scheme
 (define (process-values a b c)
-  (define (square x) (* x x))  ;; Local helper function
-  (define (cube x) (* x x x))  ;; Local helper function
+  (define (square x) (* x x))  ;; Função auxiliar local
+  (define (cube x) (* x x x))  ;; Função auxiliar local
   (+ (square a) (cube b) (square c)))
 (process-values 2 3 4)
 ```
@@ -140,9 +143,9 @@ Um dos recursos mais poderosos de um `let` nomeado é sua capacidade de combinar
 Em um `let` nomeado, as ligações entre parênteses atuam como **variáveis locais** que são inicializadas com valores específicos. Essas variáveis ​​têm como escopo o corpo do `let`.
 
 ```scheme
-(let loop ((x 1)   ;; Declares x with initial value 1
-           (y 2))  ;; Declares y with initial value 2
-  (+ x y))         ;; Uses x and y in the body
+(let loop ((x 1)   ;; Declara x com valor inicial 1
+           (y 2))  ;; Declara y com valor inicial 2
+  (+ x y))         ;; Usa x e y no corpo
 ```
 
 - **`x` e `y`** são variáveis locais definidas e inicializadas como parte de `let`.
@@ -158,7 +161,7 @@ As mesmas variáveis também atuam como **parâmetros de entrada** para as chama
            (y 2))
   (if (> x 5)
     y
-    (loop (+ x 1) (* y 2))))  ;; Recursive call with new x and y
+    (loop (+ x 1) (* y 2))))  ;; Chamada recursiva com novos x e y
 ```
 
 - **Primeira Iteração**: `x = 1`, `y = 2`
@@ -189,7 +192,7 @@ Um `let` nomeado inclui inicialização de variável como parte de sua sintaxe. 
     (if (> x 5)
       y
       (loop (+ x 1) (* y 2))))
-  (loop 1 2))  ;; Initial call with x = 1, y = 2
+  (loop 1 2))  ;; Chamada inicial com x = 1, y = 2
 ```
 
 Ambos executam o mesmo cálculo, mas o `let` nomeado combina a declaração de variável e a configuração de recursão em uma construção concisa.

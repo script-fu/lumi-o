@@ -1,33 +1,38 @@
 ---
-title: "Miscelatore di tavolozze"
+title: "Palette Mixer"
 type: docs
+url: "hub/features/palette-mixer"
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 7800f98180183f734bb1f5cfb4c768f6f4e507079c23d387cc4417125a06ef86
 ---
-Il Mixer Palette è lo spazio di Lumi per derivare nuovi colori dalla tavolozza attiva. Tratta la miscelazione come un processo pittorico piuttosto che come una semplice media digitale, in modo che i colori possano spostarsi, ammorbidirsi, scurirsi e armonizzarsi in modi che sembrano più vicini ai pigmenti fisici.
 
-Il Mixer funziona con l'identità cromatica propria della tavolozza. Le nuove miscele non sono colori arbitrari presi dall’esterno del sistema; sono relazioni tra colori già presenti nella tavolozza.
+Palette Mixer è lo spazio di Lumi-o per derivare nuovi colori dalla tavolozza attiva. Tratta la miscelazione come un processo pittorico piuttosto che come una semplice media digitale, così i colori possono spostarsi, ammorbidirsi, scurirsi e armonizzarsi in modi più vicini ai pigmenti fisici.
+
+Il Mixer lavora con l'identità cromatica della tavolozza. Le nuove miscele non sono colori arbitrari presi dall'esterno del sistema: sono relazioni tra colori già presenti nella tavolozza.
 
 ![palette-mixer](/images/screens/palettemixer.jpg)
 
-## Miscelazione dalle relazioni delle tavolozze
+## Miscelazione dalle relazioni della tavolozza
 
-Un mix inizia con i colori sorgente della tavolozza. Muovendosi tra di loro, un artista può esplorare il passaggio da una famiglia di tonalità all'altra rimanendo all'interno del carattere della tavolozza.
+Una miscela inizia con i colori sorgente della tavolozza. Muovendosi tra di essi, l'artista può esplorare il passaggio da una famiglia di tonalità all'altra restando nel carattere della tavolozza.
 
-Poiché la tavolozza è composta da ingredienti simili a pigmenti, il percorso tra due colori può produrre utili note intermedie: verdi da gialli e blu, viola temperati, grigi caldi, terre tenui o sottili sbalzi di temperatura.
+Poiché la tavolozza è costruita con ingredienti simili ai pigmenti, il percorso tra due colori può produrre note intermedie utili: verdi da gialli e blu, viola temperati, grigi caldi, terre attenuate o sottili sbalzi di temperatura.
 
 ## Crominanza e tono
 
-Il Mixer separa la sensazione di un colore in decisioni pratiche di pittura. Un colore può essere spinto verso una versione più pulita o più neutra, schiarito, scurito o mantenuto vicino a un valore particolare mentre se ne esplorano la tonalità e la saturazione.
+Il Mixer separa la sensazione di un colore in decisioni pratiche di pittura. Un colore può essere spinto verso una versione più pulita o più neutra, schiarito, scurito o mantenuto vicino a un valore particolare mentre se ne esplorano tonalità e saturazione.
 
-Ciò rende più facile la ricerca del colore di cui un dipinto ha bisogno: non solo "più rosso" o "più blu", ma più silenzioso, più profondo, più chiaro, più caldo, più freddo o più sobrio pur appartenendo alla stessa famiglia di tavolozze.
+È più facile cercare il colore di cui un dipinto ha bisogno: non solo «più rosso» o «più blu», ma più sobrio, più profondo, più chiaro, più caldo, più freddo o più contenuto, pur appartenendo alla stessa famiglia della tavolozza.
 
-## Salvataggio di scoperte utili
+## Salvare le scoperte utili
 
-Quando una miscela diventa importante, può entrare a far parte della tavolozza. Le miscele salvate mantengono la loro relazione con i colori che le hanno prodotte, quindi possono essere rivisitate, regolate e riutilizzate anziché diventare campioni isolati.
+Quando una miscela diventa importante, può entrare a far parte della tavolozza. Le miscele salvate mantengono il legame con i colori che le hanno prodotte, così possono essere rivisitate, regolate e riutilizzate invece di diventare campioni isolati.
 
-Nel tempo, ciò consente alla tavolozza di trasformarsi da un insieme di ingredienti in un registro di decisioni artistiche. Le miscele utili di una sessione possono diventare i colori di partenza per quella successiva.
+Col tempo la tavolozza cresce da un insieme di ingredienti a un registro di decisioni artistiche. Le miscele utili di una sessione possono diventare i colori di partenza per quella successiva.
 
-## Un compagno della mappa delle tavolozze
+## Un compagno di Palette Map
 
-Il Mixer tavolozza e la Mappa tavolozza sono progettati per funzionare insieme. La mappa mostra la tavolozza come uno spazio colore navigabile, mentre il mixer consente all'artista di spostarsi deliberatamente tra i punti scelti all'interno di quello spazio.
+Palette Mixer e Palette Map sono progettati per funzionare insieme. La mappa mostra la tavolozza come uno spazio colore navigabile, mentre il Mixer consente all'artista di spostarsi deliberatamente tra i punti scelti in quello spazio.
 
-Insieme supportano un flusso di lavoro che sembra più vicino alla miscelazione della pittura su una tavolozza: scegli colori vicini o contrastanti, cerca il giusto equilibrio, mantieni i colori che contano e continua a dipingere all'interno di un mondo cromatico coerente.
+Insieme supportano un flusso di lavoro più vicino alla miscelazione della vernice su una tavolozza: scegli colori vicini o contrastanti, cerca il giusto equilibrio, conserva i colori che contano e continua a dipingere in un mondo cromatico coerente.

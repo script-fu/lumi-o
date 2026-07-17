@@ -1,6 +1,9 @@
 ---
 title: "Browser plug-in"
 type: docs
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: ffbf087ea102e00b7057bf6bad9b6e2cb8f75ad05c7f26f0f2818d10f34392ce
 ---
 Il browser dei plug-in consente di esplorare il sistema dei menu e vedere dove sono installati plug-in specifici.
 

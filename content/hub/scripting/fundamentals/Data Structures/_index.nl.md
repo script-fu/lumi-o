@@ -1,7 +1,10 @@
 ---
 title: "Gegevensstructuren"
-type: docs
+type: "docs"
 weight: 3
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: f2e5dad6d2a5b677f9f18aefab366c5499cdbb8a5f3ebe5d97656255810e854f
 ---
 In Scheme zijn **datastructuren** essentiële hulpmiddelen voor het organiseren, opslaan en manipuleren van gegevens. Ze stellen ontwikkelaars in staat efficiënte, leesbare en herbruikbare scripts te bouwen. Door de juiste datastructuur voor een specifiek probleem te kiezen, kunt u zowel de prestaties als de duidelijkheid van uw code optimaliseren.
 

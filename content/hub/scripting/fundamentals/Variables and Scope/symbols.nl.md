@@ -2,6 +2,9 @@
 title: "Symbolen"
 type: docs
 weight: 6
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 4ae0cc2f5749cbe997d6fa25315ee3fe54646eb065b4dba0114778c75a889ae5
 ---
 Symbolen zijn een van de belangrijkste gegevenstypen in Scheme en vertegenwoordigen unieke, onveranderlijke identificatiegegevens. Ze worden voornamelijk gebruikt als sleutels, markeringen of tijdelijke aanduidingen in programma's, waardoor ze essentieel zijn voor het schrijven van schone en expressieve code.
 
@@ -17,9 +20,9 @@ Een symbool wordt geschreven als een reeks tekens:
 Voorbeelden:
 
 ```scheme
-'hello       ; A symbol named `hello`
-'foo-bar     ; A symbol named `foo-bar`
-'*special*   ; A symbol named `*special*`
+'hello       ; Een symbool genaamd `hello`
+'foo-bar     ; Een symbool genaamd `foo-bar`
+'*special*   ; Een symbool genaamd `*special*`
 ```
 
 ## Symbolen maken
@@ -29,7 +32,7 @@ Symbolen worden doorgaans gemaakt met behulp van de operator **quote** (`'`), di
 ### Voorbeeld
 
 ```scheme
-'my-symbol   ; Creates the symbol `my-symbol`
+'my-symbol   ; Maakt het symbool `my-symbol`
 ```
 
 U kunt ook programmatisch symbolen maken met behulp van de `string->symbol` procedure, die een tekenreeks naar een symbool converteert.
@@ -48,8 +51,8 @@ Omdat symbolen uniek zijn, kunt u ze efficiënt vergelijken met `eq?`.
 ### Voorbeeld
 
 ```scheme
-(eq? 'apple 'apple)   ; #t (same symbol)
-(eq? 'apple 'orange)  ; #f (different symbols)
+(eq? 'apple 'apple)   ; #t (zelfde symbool)
+(eq? 'apple 'orange)  ; #f (verschillende symbolen)
 ```
 
 Dit maakt symbolen ideaal voor gebruik als sleutels in datastructuren of markeringen in uw code.
@@ -62,7 +65,7 @@ In Scheme worden vaak symbolen gebruikt voor:
 
 ```scheme
 (define alist '((name . "Alice") (age . 30) (city . "Paris")))
-(assoc 'name alist)   ; Returns (name . "Alice")
+(assoc 'name alist)   ; Geeft (name . "Alice") terug
 ```
 
 2. **ID's in code:**
@@ -88,9 +91,9 @@ Schema biedt ingebouwde procedures voor het werken met symbolen:
 ### Voorbeelden
 
 ```scheme
-(symbol? 'example)            ; #t (true: it's a symbol)
-(symbol->string 'example)     ; "example"
-(string->symbol "new-symbol") ; 'new-symbol
+(symbol? 'example)            ; #t (waar: het is een symbool)
+(symbol->string 'example)     ; Resultaat: "example"
+(string->symbol "new-symbol") ; Resultaat: 'new-symbol
 ```
 
 ## Samenvatting

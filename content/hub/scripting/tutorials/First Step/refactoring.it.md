@@ -2,6 +2,9 @@
 title: "Refactoring"
 type: docs
 weight: 2
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bc83f55511f34e6f099f8de8c6af3bba5e459974aa4bff6265ae70d679517646
 ---
 Una volta che abbiamo una funzione funzionante, possiamo fare un passo indietro e pensare a come strutturare al meglio il nostro codice. L'obiettivo è rendere il nostro plug-in il più chiaro, comprensibile e gestibile possibile. Questo processo di miglioramento e perfezionamento della struttura del codice esistente senza modificarne il comportamento è noto come refactoring.
 
@@ -9,15 +12,15 @@ Ecco di nuovo la funzione iniziale:
 
 ```scheme
 (define (scheme-hello-world)
-  ;; Set the message handler to output the message to a GUI dialog box
+  ;; Impostare il gestore dei messaggi per inviare il messaggio a una finestra di dialogo GUI
   (lumi-message-set-handler 0)
   (lumi-message "Hello world!\n")
 
-  ;; Set the message handler to output the message to the Error Console
+  ;; Impostare il gestore dei messaggi per inviare il messaggio alla Error Console
   (lumi-message-set-handler 2)
   (lumi-message "Hello world!\n")
 
-  ;; Send the message to the terminal, the OS window that launched Lumi
+  ;; Inviare il messaggio al terminal, la finestra del SO che ha avviato Lumi
   (display "Hello world!\n"))
 ```
 
@@ -49,15 +52,15 @@ Introducendo una variabile chiamata "messaggio":
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
-    ;; Set the message handler to output the message to a GUI dialog box
+    ;; Impostare il gestore dei messaggi per inviare il messaggio a una finestra di dialogo GUI
     (lumi-message-set-handler 0)
     (lumi-message message)
 
-    ;; Set the message handler to output the message to the Error Console
+    ;; Impostare il gestore dei messaggi per inviare il messaggio alla Error Console
     (lumi-message-set-handler 2)
     (lumi-message message)
 
-    ;; Send the message to the terminal, the OS window that launched Lumi
+    ;; Inviare il messaggio al terminal, la finestra del SO che ha avviato Lumi
     (display message)))
 ```
 
@@ -68,11 +71,11 @@ Nel nostro esempio abbiamo utilizzato una variabile chiamata "messaggio" legata 
 Nella programmazione funzionale, il refactoring del codice per estrarre la logica riutilizzabile in funzioni separate è una pratica comune. In questo modo, la **funzione principale** diventa molto più semplice e più focalizzata sul suo obiettivo di alto livello, mentre la **funzione estratta** appare più complessa perché gestisce la logica dettagliata. Ciò è intenzionale e in linea con i principi fondamentali della programmazione funzionale, come modularità, separazione delle preoccupazioni e leggibilità. Ecco il refactoring
 Ciao mondo! dopo l'estrazione.
 
-Estrazione della logica:
+Estrarre la logica:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
-;; Main Function
+;; Funzione principale
 (define (scheme-hello-world)
   (let ((message "Hello world!\n"))
 
@@ -80,27 +83,27 @@ Estrazione della logica:
     (send-message message 'error-console)
     (send-message message 'terminal)))
 
-;; Function to handle message output to various destinations
+;; Funzione per gestire l'output dei messaggi verso varie destinazioni
 (define (send-message message output)
   (cond
-    ;; Send to the Error Console
+    ;; Invia alla Error Console
     ((eq? output 'error-console)
-       ;; Set the handler to Error Console
+       ;; Impostare il gestore su Error Console
        (lumi-message-set-handler 2)
        (lumi-message message))
 
-    ;; Send to the GUI dialog box
+    ;; Invia alla finestra di dialogo GUI
     ((eq? output 'gui)
-       ;; Set the handler to GUI dialog
+       ;; Impostare il gestore sulla finestra di dialogo GUI
        (lumi-message-set-handler 0)
        (lumi-message message))
 
-    ;; Send to the terminal window
+    ;; Invia alla finestra del terminale
     ((eq? output 'terminal)
-       ;; Terminal output is handled with display
+       ;; L'output del terminal è gestito con display
        (display message)))
 
-  ;; Restore the default message handler to the Error Console
+  ;; Ripristinare il gestore dei messaggi predefinito alla Error Console
   (lumi-message-set-handler 2))
 
 (scheme-register-procedure "scheme-hello-world"

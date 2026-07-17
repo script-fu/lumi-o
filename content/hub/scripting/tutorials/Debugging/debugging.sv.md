@@ -2,6 +2,9 @@
 title: "Felsökning"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: bd5eaf8ed491a7a74b7e4bcd130ed5177cfb15be41526bb6aefdfa0fb2a2428f
 ---
 I skript är ingen funktion ofelbar. Även de mest tillförlitliga kommandona kan misslyckas när de ställs inför oväntade inmatningar eller förhållanden. För att skydda oss mot detta kan vi implementera ett anpassat felsökningssystem och använda defensiva programmeringstekniker. Genom att slå in standardfunktioner med felhanteringsmekanismer och ge informativ feedback kan vi göra våra skript mer robusta och lättare att felsöka.
 
@@ -12,14 +15,14 @@ En viktig del av denna strategi är att använda en global felsökningsflagga f�
 En global felsökningsflagga är ett enkelt men effektivt sätt att kontrollera nivån på informationsutmatning under skriptkörning. När den är aktiverad ger den detaljerade felsökningsmeddelanden som kan vara ovärderliga för att spåra problem. När den är inaktiverad håller den utgången kortfattad för produktionsanvändning.
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Syfte: Global flagga för att styra felsökningsutdata.
 (define debug #f)
 ```
 
 Som standard är felsökning avstängd. För att aktivera utförlig utdata under utveckling, ställ helt enkelt in flaggan till `#t`:
 
 ```scheme
-;; Purpose: Global flag to control debug output.
+;; Syfte: Global flagga för att styra felsökningsutdata.
 (define debug #t)
 ```
 
@@ -30,11 +33,11 @@ Vi kan också tillfälligt aktivera eller inaktivera felsökning för specifika 
 För bättre kontroll kan vi aktivera eller inaktivera felsökning inom specifika delar av skriptet med hjälp av hjälpfunktioner.
 
 ```scheme
-;; Purpose: Turn off debug mode for a section of code.
+;; Syfte: Stänger av felsökningsläge för ett kodavsnitt.
 (define (debug-off)
   (set! debug #f))
 
-;; Purpose: Turn on debug mode for a section of code.
+;; Syfte: Slår på felsökningsläge för ett kodavsnitt.
 (define (debug-on)
   (set! debug #t))
 ```
@@ -42,11 +45,11 @@ För bättre kontroll kan vi aktivera eller inaktivera felsökning inom specifik
 Detta gör att vi kan styra felsökningen dynamiskt:
 
 ```scheme
-(debug-on)  ;; Enable verbose output
+(debug-on)  ;; Aktivera utförlig utdata
 
-;; Some script logic here
+;; Någon skriptlogik här
 
-(debug-off) ;; Disable verbose output
+(debug-off) ;; Inaktivera utförlig utdata
 ```
 
 ## Felsöka meddelandesystem
@@ -73,7 +76,7 @@ Varje funktion spelar en roll vid formatering och visning av strukturerade medde
 `debug-message`-funktionen är kärnmetoden för att visa felsökningsutdata. Det säkerställer att meddelanden endast visas när felsökning är aktiverad.
 
 ```scheme
-;; Purpose: Display a debug message.
+;; Syfte: Visa ett felsökningsmeddelande.
 (define (debug-message . items)
   (when debug (message "> " (apply concat items))))
 ```
@@ -86,7 +89,7 @@ Varje funktion spelar en roll vid formatering och visning av strukturerade medde
 Exempel på användning:
 
 ```scheme
-;; Purpose: Returns the item's tree position or #f if the item is invalid
+;; Syfte: Returnerar objektets trädposition eller #f om objektet är ogiltigt
 (define (get-item-tree-position image item)
   (if (item-is-valid? item)
     (let ((position (list->item (lumi-image-get-item-position image item))))
@@ -106,27 +109,27 @@ Med felsökning aktiverad kan utdata vara:
 Meddelanden kan innehålla olika datatyper som listor, vektorer och siffror. För att säkerställa att de är korrekt formaterade använder vi `serialize-item`.
 
 ```scheme
-;; Purpose: Converts various Scheme data types (lists, vectors, pairs, etc.)
-;;          into a string representation.
+;; Syfte: Konverterar olika Scheme-datatyper (listor, vektorer, par, etc.)
+;;          till en strängrepresentation.
 (define (serialize-item item)
   (cond
-    ((and (list? item) (null? item)) "\"\"")          ; Empty list
-    ((and (string? item) (string=? item "")) "\"\"")  ; Empty string
-    ((list? item) (list->string item))                ; Nested list
-    ((vector? item)                                   ; Handle vectors
+    ((and (list? item) (null? item)) "\"\"")          ; Tom lista
+    ((and (string? item) (string=? item "")) "\"\"")  ; Tom sträng
+    ((list? item) (list->string item))                ; Nästad lista
+    ((vector? item)                                   ; Hanterar vektorer
      (string-append "#("
                     (string-join (map serialize-item (vector->list item)) " ")
                     ")"))
-    ((pair? item)                                     ; Handle pairs
+    ((pair? item)                                     ; Hanterar par
      (string-append "("
                     (serialize-item (car item))
                     " . "
                     (serialize-item (cdr item))
                     ")"))
-    ((number? item) (number->string item))            ; Numbers
-    ((symbol? item) (symbol->string item))            ; Symbols
-    ((boolean? item) (if item "#t" "#f"))             ; Booleans
-    ((string? item) item)                             ; Strings
+    ((number? item) (number->string item))            ; Tal
+    ((symbol? item) (symbol->string item))            ; Symboler
+    ((boolean? item) (if item "#t" "#f"))             ; Booleska värden
+    ((string? item) item)                             ; Strängar
     (else (warning-message "serialize-item: Unsupported item type!" item))))
 ```
 
@@ -150,7 +153,7 @@ list:
 För att slå samman flera meddelandekomponenter till en enda sträng använder vi `concat`.
 
 ```scheme
-;; Purpose: Concatenate multiple items into a single string.
+;; Syfte: Konkatenerar flera objekt till en enda sträng.
 (define (concat . items)
   (apply string-append (map serialize-item items)))
 ```
@@ -166,7 +169,7 @@ Exempel på användning:
 Funktionen `list->string` konverterar en lista till en formaterad sträng.
 
 ```scheme
-;; Purpose: Convert a list of items into a readable string.
+;; Syfte: Konverterar en lista med objekt till en läsbar sträng.
 (define (list->string list)
   (if (list? list)
       (string-append "list: \n" (string-join (map serialize-item list) "\n"))
@@ -176,7 +179,7 @@ Funktionen `list->string` konverterar en lista till en formaterad sträng.
 ### Varningsmeddelanden`warning-message`-funktionen fungerar på samma sätt som `debug-message`, men den visar varningar även när felsökning är inaktiverad.
 
 ```scheme
-;; Purpose: Display a warning message.
+;; Syfte: Visa ett varningsmeddelande.
 (define (warning-message . items)
   (if warning
     (message "Warning: " (apply concat items)))
@@ -194,8 +197,8 @@ När ett felsökningssystem väl är på plats kan vi förbättra vårt bibliote
 Ett vanligt exempel är `item-is-valid?`, som omsluter `lumi-item-id-is-valid` för att returnera `#t` eller `#f`. Om `#f` returneras kan vi trigga ett `warning-message` i anropskoden, om inmatningen inte är ett nummer kan vi ge en varning i funktionen.
 
 ```scheme
-;; Purpose: Check if an item is valid, returning #t or #f.
-;;          Issues a warning if the item is not a number.
+;; Syfte: Kontrollerar om ett objekt är giltigt, returnerar #t eller #f.
+;;          Ger en varning om objektet inte är ett tal.
 (define (item-is-valid? item)
   (if (number? item)
       (= (list->item (lumi-item-id-is-valid item)) 1)
@@ -220,7 +223,7 @@ Ett omslag för vår meddelandefunktion för att använda en `*`
 Exempel på att `call` används i praktiken:
 
 ```scheme
-;; Purpose: Apply the texturing process to the given list of group masks
+;; Syfte: Tillämpar textureringsprocessen på den angivna listan med gruppmasker
 (define (process-masks groups pattern) (call 'process-masks)
   (for-each
     (lambda (group)

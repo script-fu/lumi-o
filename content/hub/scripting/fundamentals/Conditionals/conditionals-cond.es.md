@@ -2,8 +2,11 @@
 title: "cond"
 type: docs
 weight: 5
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 32d7e6d0c54bc515f245b0c108d23441754f7248c2510c61a552c693f37d0382
 ---
-En Scheme, el condicional `cond` se utiliza para seleccionar uno de varios bloques de código posibles para ejecutar, en función de múltiples pruebas. Es como una `if` de múltiples ramas, donde cada rama se verifica en orden hasta que se encuentra una coincidencia.
+En Scheme, el condicional `cond` elige uno de varios bloques según múltiples pruebas — como un `if` multirrama evaluado en orden hasta el primer acierto.
 
 ### Sintaxis
 
@@ -15,22 +18,18 @@ En Scheme, el condicional `cond` se utiliza para seleccionar uno de varios bloqu
   (else fallback-consequent))
 ```
 
-- Cada prueba se evalúa en el orden en que se escriben.
-- Cuando una prueba se evalúa como verdadera (`#t`), su **consecuente** correspondiente se ejecuta y la expresión `cond` deja de evaluar más pruebas.
-- La cláusula `else` es opcional y sirve como alternativa si ninguna de las pruebas se evalúa como verdadera.
+- Pruebas en orden.
+- Primer `#t`: **consequent** ejecutado, `cond` para.
+- `else` opcional como respaldo.
 
 ### Cómo funciona
 
-1. **Test Each Condition**:
-   - `cond` evalúa las pruebas en el orden en que aparecen.
-
-2. **Execute the Matching Consequent**:
-   - Cuando se encuentra la primera prueba que se evalúa como verdadera (`#t`), se ejecuta su **consecuente**.
-   - Si ninguna prueba se evalúa como verdadera y hay una cláusula `else`, se ejecuta **fallback-consequent**.
+1. **Probar cada condición** en orden.
+2. **Ejecutar el consequent** correspondiente; si no, `else` si existe.
 
 ### Ejemplos
 
-#### Example 1: Single Expression Consequents
+#### Ejemplo 1: consecuentes de una expresión
 
 ```scheme
 (cond
@@ -39,15 +38,9 @@ En Scheme, el condicional `cond` se utiliza para seleccionar uno de varios bloqu
   (else "Fallback"))
 ```
 
-- La primera prueba `(< 3 2)` se evalúa como falsa (`#f`).
-- La segunda prueba `(= 3 3)` se evalúa como verdadera (`#t`), por lo que se devuelve `"This will run"`.
-- La cláusula `else` no se ejecuta porque ya se encontró una coincidencia.
+Resultado: **"This will run"**
 
-Result: **"This will run"**
-
-#### Ejemplo 2: Acciones múltiples usando `begin`
-
-Cuando un consecuente implica múltiples acciones, use `begin` para agruparlas:
+#### Ejemplo 2: varias acciones con `begin`
 
 ```scheme
 (cond
@@ -65,45 +58,32 @@ Cuando un consecuente implica múltiples acciones, use `begin` para agruparlas:
       0)))
 ```
 
-- La primera prueba `(< 5 3)` se evalúa como falsa (`#f`).
-- La segunda prueba `(> 5 3)` se evalúa como verdadera (`#t`):
-  - It prints `"Condition met"`.
-  - Luego calcula `(* 5 5)` y devuelve `25`.
+Resultado: **Imprime "Condition met" y devuelve 25.**
 
-Resultado: **Imprime "Condición cumplida" y devuelve 25.**
-
-#### Ejemplo 3: uso de un bloque `let` en un consecuente
-
-Cuando necesites introducir variables locales, utiliza un bloque `let`:
+#### Ejemplo 3: bloque `let` en el consecuente
 
 ```scheme
 (cond
-  ;; Case 1: If 0 is less than -1
+  ;; Caso 1: si 0 es menor que -1
   ((< 0 -1)
     (let ((x 10))
       (* x x)))
 
-  ;; Case 2: If 0 is greater than -1
+  ;; Caso 2: si 0 es mayor que -1
   ((> 0 -1)
     (let ((y 20))
       (lumi-message "Positive condition met")
       (+ y y)))
 
-  ;; Default case: If none of the above conditions are met
+  ;; Caso por defecto: si ninguna condición anterior se cumple
   (else
     (let ((z 0))
       z)))
 ```
 
-- The first test `(< 0 -1)` is false.
-- The second test `(> 0 -1)` is true, so:
-  - Se ejecuta un bloque `let`, vinculando `y` a `20`.
-  - It prints `"Positive condition met"`.
-  - Luego calcula `(+ y y)` y devuelve `40`.
+Resultado: **Imprime "Positive condition met" y devuelve 40.**
 
-Resultado: **Imprime "Condición positiva cumplida" y devuelve 40.**
-
-#### Example 4: Fallback with `else`
+#### Ejemplo 4: respaldo con `else`
 
 ```scheme
 (cond
@@ -112,16 +92,10 @@ Resultado: **Imprime "Condición positiva cumplida" y devuelve 40.**
   (else "Fallback value"))
 ```
 
-- Ninguna de las dos primeras pruebas se evalúa como verdadera.
-- La cláusula `else` se ejecuta y devuelve `"Fallback value"`.
-
-Result: **"Fallback value"**
+Resultado: **"Fallback value"**
 
 ### Resumen
 
-- Utilice `cond` para manejar múltiples condiciones de manera clara y concisa.
-- Los consecuentes pueden ser expresiones individuales o acciones agrupadas usando `begin`.
-- Utilice `let` en consecuencia para declarar variables locales para los cálculos.
-- Incluya siempre una cláusula `else` como alternativa para manejar casos inesperados.
-
-Esta flexibilidad convierte a `cond` en una herramienta poderosa y legible para manejar lógica de ramificación compleja.
+- `cond` para varias condiciones con claridad.
+- Consecuentes simples o con `begin`.
+- `let` para variables locales; `else` recomendado.

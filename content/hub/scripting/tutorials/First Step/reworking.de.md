@@ -2,6 +2,9 @@
 title: "Überarbeitung"
 type: docs
 weight: 7
+translation_provenance: ai-reviewed
+translation_lock: true
+translation_source_sha256: 324662811965905bad18a135ac343a3eb8120da180149b19bc212a6af61a4bb7
 ---
 Dieser Schritt behebt ein subtiles Verhalten im Messaging-Beispiel.
 
@@ -13,7 +16,7 @@ Aktualisieren Sie die Nachrichteninhalte und -ziele, damit sich das Beispiel kon
 
 Entfernen des Escape-Zeichens und Erweitern der Funktionen:
 ```scheme
-# !/usr/bin/env lumi-scheme-interpreter-0.1
+#!/usr/bin/env lumi-scheme-interpreter-0.1
 
 (load "/path/to/your/messaging.scm")
 
@@ -56,7 +59,7 @@ Teilen Sie dann die Validierung in zwei Funktionen auf, damit sie von mehreren A
   (is-valid-string? message)
   (lumi-message-set-handler MESSAGE-BOX)
 
-  ;; Append a newline to force a box the message
+  ;; Zeilenumbruch anhängen, um das Nachrichtenfeld zu erzwingen
   (lumi-message (string-append message "\n"))
   (lumi-message-set-handler ERROR-CONSOLE))
 
@@ -70,7 +73,7 @@ Teilen Sie dann die Validierung in zwei Funktionen auf, damit sie von mehreren A
   (display message)
   (lumi-message-set-handler ERROR-CONSOLE))
 
-;; Purpose: Dispatches a message to the appropriate output destination
+;; Zweck: Leitet eine Nachricht an das passende Ausgabeziel weiter
 (define (send-message message output)
   (is-valid-output-display? output)
   (cond
@@ -79,15 +82,15 @@ Teilen Sie dann die Validierung in zwei Funktionen auf, damit sie von mehreren A
     ((eq? output 'status-bar) (send-to-status-bar message))
     ((eq? output 'terminal) (send-to-terminal message))))
 
-;; Purpose: Validates that the message is a non-empty string
+;; Zweck: Prüft, dass die Nachricht eine nicht leere Zeichenkette ist
 (define (is-valid-string? message)
-  ;; Check if the message is a non-empty string
+  ;; Prüfen, ob die Nachricht eine nicht leere Zeichenkette ist
   (if (or (not (string? message)) (string=? message ""))
       (error "Message must be a non-empty string")))
 
-;; Purpose: Validates that the message is sent to a valid output
+;; Zweck: Prüft, dass die Nachricht an eine gültige Ausgabe gesendet wird
 (define (is-valid-output-display? output)
-  ;; Check if the output is one of the expected display destinations
+  ;; Prüfen, ob die Ausgabe eines der erwarteten Anzeigeziele ist
   (if (not (member output '(dialog-box status-bar error-console terminal)))
       (error "Invalid output destination: " output)))
 ```
