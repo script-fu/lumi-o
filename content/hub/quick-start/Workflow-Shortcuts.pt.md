@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 ---
 O Lumi-o foi concebido para um fluxo de trabalho orientado por atalhos. Depois de internalizar estes comandos, consegue navegar pela tela e pelas ferramentas significativamente mais depressa.
 
@@ -16,6 +16,17 @@ O Lumi-o foi concebido para um fluxo de trabalho orientado por atalhos. Depois d
 | **Alternar camadas seleccionadas** | `Alt` + passar o rato sobre a tela |
 
 
+
+{{< callout type="info" >}}
+**Dica: conflito da tecla Alt no Linux**
+
+Se `Alt` + clique com o botão direito e arrastar não redimensionar os pincéis no Lumi, o ambiente de trabalho está a usar Alt para a gestão de janelas.
+
+1. Procure **Janelas** no menu do sistema.
+2. Janelas → Comportamento → Tecla especial para mover e redimensionar janelas → **Desativado**
+
+Após esta alteração, `Alt` + clique com o botão direito e arrastar deverá funcionar no Lumi para redimensionar ferramentas.
+{{< /callout >}}
 
 ## Configuração e persistência
 

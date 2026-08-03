@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 このドキュメントでは、Lumi-o 開発用オペレーティングシステムとして Debian Stable をインストールする手順を説明します。同様の環境を構築する方にも参考になるでしょう。
@@ -102,6 +102,15 @@ Firefox の調整:
 2. テキスト → 初期サイズ: `140 columns`、`40 rows`
 3. テキスト → カスタムフォント: `Monospace 10`
 4. 色 → 組み込みスキーム → Solarized Dark
+
+### ツールサイズ変更用の Alt キー
+
+Lumi で `Alt` + 右クリックドラッグでブラシのサイズが変わらない場合、デスクトップがウィンドウ管理に Alt を使っています。
+
+1. システムメニューで **ウィンドウ** を検索します。
+2. ウィンドウ → 振る舞い → ウィンドウの移動とサイズ変更に使用する特定キー → **無効**
+
+この変更後、Lumi でツールのサイズ変更に `Alt` + 右クリックドラッグが使えるようになります。
 
 ## データの復元
 

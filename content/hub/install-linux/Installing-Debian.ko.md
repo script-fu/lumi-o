@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 이 문서는 Lumi-o 개발용 운영 체제로 Debian Stable을 설치하는 과정을 설명합니다. 비슷한 환경을 구성하는 분에게도 도움이 될 수 있습니다.
@@ -102,6 +102,15 @@ Firefox 조정:
 2. 텍스트 → 초기 크기: `140 columns`, `40 rows`
 3. 텍스트 → 사용자 지정 글꼴: `Monospace 10`
 4. 색 → 내장 구성표 → Solarized Dark
+
+### 도구 크기 조절용 Alt 키
+
+Lumi에서 `Alt` + 오른쪽 클릭 드래그로 브러시 크기가 조절되지 않으면, 데스크톱이 Alt를 창 관리에 사용하고 있는 것입니다.
+
+1. 시스템 메뉴에서 **창**을 검색하세요.
+2. 창 → 동작 → 창을 이동할 때 사용할 특수 키 → **사용 안함**
+
+이 변경 후 Lumi에서 도구 크기 조절에 `Alt` + 오른쪽 클릭 드래그가 작동해야 합니다.
 
 ## 데이터 복원
 

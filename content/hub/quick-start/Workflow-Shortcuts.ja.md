@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 ---
 Lumi-o は、ショートカット主導のワークフロー向けに構築されています。これらのコマンドの筋肉の記憶を確立すると、キャンバスとツールを大幅に高速に操作できるようになります。
 
@@ -16,6 +16,17 @@ Lumi-o は、ショートカット主導のワークフロー向けに構築さ�
 | **レイヤー選択のサイクル** | `Alt` + キャンバスの上にマウスを移動します |
 
 
+
+{{< callout type="info" >}}
+**ヒント: Linux での Alt キーの競合**
+
+Lumi で `Alt` + 右クリックドラッグでブラシのサイズが変わらない場合、デスクトップがウィンドウ管理に Alt を使っています。
+
+1. システムメニューで **ウィンドウ** を検索します。
+2. ウィンドウ → 振る舞い → ウィンドウの移動とサイズ変更に使用する特定キー → **無効**
+
+この変更後、Lumi でツールのサイズ変更に `Alt` + 右クリックドラッグが使えるようになります。
+{{< /callout >}}
 
 ## 構成と永続性
 

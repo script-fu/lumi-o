@@ -2,7 +2,7 @@
 title: "Cài đặt Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -102,6 +102,15 @@ Cấu hình tùy chọn terminal:
 2. Văn bản → Kích thước ban đầu: `140 columns`, `40 rows`
 3. Văn bản → Phông chữ tùy chỉnh: `Monospace 10`
 4. Màu sắc → Đề án tích hợp → Tối năng lượng mặt trời
+
+### Phím Alt để đổi kích thước công cụ
+
+Nếu `Alt` + nhấp chuột phải và kéo không đổi kích thước cọ trong Lumi, thì máy tính để bàn đang dùng Alt để quản lý cửa sổ.
+
+1. Tìm **Cửa sổ** trong menu hệ thống.
+2. Cửa sổ → Ứng xử → Phím đặt biệt để di chuyển và định cỡ cửa sổ → **Đã tắt**
+
+Sau thay đổi này, `Alt` + nhấp chuột phải và kéo sẽ hoạt động trong Lumi để đổi kích thước công cụ.
 
 ## Khôi phục dữ liệu
 

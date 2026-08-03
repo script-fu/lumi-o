@@ -2,7 +2,7 @@
 title: "اختصارات سير العمل"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_lock: true
 ---
@@ -17,6 +17,17 @@ translation_lock: true
 | **التنقل بين الطبقات المحددة** | `Alt` + مرور فوق اللوحة |
 
 
+
+{{< callout type="info" >}}
+**نصيحة: تعارض مفتاح Alt على Linux**
+
+إذا لم يُغيّر `Alt` + السحب بالنقر الأيمن حجم الفرش في Lumi، فإن سطح المكتب يستخدم Alt لإدارة النوافذ.
+
+1. ابحث في قائمة النظام عن **النوافذ**.
+2. النوافذ ← السلوك ← مفتاح خاص لنقل وتغيير حجم النوافذ ← **معطل**
+
+بعد هذا التغيير، يفترض أن يعمل `Alt` + السحب بالنقر الأيمن في Lumi لتغيير حجم الأدوات.
+{{< /callout >}}
 
 ## التكوين والحفظ
 

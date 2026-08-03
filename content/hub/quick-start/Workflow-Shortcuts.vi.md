@@ -2,7 +2,7 @@
 title: "Phím tắt quy trình làm việc"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_lock: true
 ---
@@ -16,6 +16,17 @@ Lumi-o được xây dựng cho quy trình làm việc theo lối tắt. Sau khi
 | **Chuyển vòng các lớp được chọn** | `Alt` + Di chuột qua canvas |
 
 
+
+{{< callout type="info" >}}
+**Mẹo: xung đột phím Alt trên Linux**
+
+Nếu `Alt` + nhấp chuột phải và kéo không đổi kích thước cọ trong Lumi, thì máy tính để bàn đang dùng Alt để quản lý cửa sổ.
+
+1. Tìm **Cửa sổ** trong menu hệ thống.
+2. Cửa sổ → Ứng xử → Phím đặt biệt để di chuyển và định cỡ cửa sổ → **Đã tắt**
+
+Sau thay đổi này, `Alt` + nhấp chuột phải và kéo sẽ hoạt động trong Lumi để đổi kích thước công cụ.
+{{< /callout >}}
 
 ## Cấu hình và lưu cài đặt
 

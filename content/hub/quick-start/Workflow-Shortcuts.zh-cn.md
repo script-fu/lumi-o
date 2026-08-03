@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 ---
 Lumi-o 专为快捷方式驱动的工作流程而设计。一旦您建立了这些命令的肌肉记忆，您就可以更快地导航画布和工具。
 
@@ -16,6 +16,17 @@ Lumi-o 专为快捷方式驱动的工作流程而设计。一旦您建立了这�
 | **循环选择图层** | `Alt` + 将鼠标悬停在画布上 |
 
 
+
+{{< callout type="info" >}}
+**提示：Linux 上的 Alt 键冲突**
+
+如果在 Lumi 中 `Alt` + 右键拖动无法调整画笔大小，说明桌面正在将 Alt 用于窗口管理。
+
+1. 在系统菜单中搜索 **窗口**。
+2. 窗口 → 行为 → 窗口移动和调整大小的特殊键 → **已禁用**
+
+完成此更改后，`Alt` + 右键拖动应可在 Lumi 中用于调整工具大小。
+{{< /callout >}}
 
 ## 配置和持久化
 

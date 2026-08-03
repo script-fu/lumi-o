@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 ---
 Lumi-o est conçu pour un flux de travail piloté par des raccourcis. Une fois que vous avez établi une mémoire musculaire pour ces commandes, vous pouvez naviguer beaucoup plus rapidement dans votre canevas et vos outils.
 
@@ -16,6 +16,17 @@ Lumi-o est conçu pour un flux de travail piloté par des raccourcis. Une fois q
 | **Couches de sélection de cycle** | `Alt` + Survolez la toile |
 
 
+
+{{< callout type="info" >}}
+**Astuce : conflit de la touche Alt sous Linux**
+
+Si `Alt` + clic droit et glisser ne redimensionne pas les pinceaux dans Lumi, le bureau utilise Alt pour la gestion des fenêtres.
+
+1. Recherchez **Fenêtres** dans le menu système.
+2. Fenêtres → Comportement → Touche spéciale pour déplacer et redimensionner les fenêtres → **Désactivé**
+
+Après cette modification, `Alt` + clic droit et glisser devrait fonctionner dans Lumi pour redimensionner les outils.
+{{< /callout >}}
 
 ## Configuration et persistance
 

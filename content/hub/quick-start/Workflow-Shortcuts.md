@@ -13,7 +13,16 @@ Lumi-o is built for a shortcut-driven workflow. Once you establish muscle memory
 | **Adjust Brush Size** | `Alt` + Right Click & Drag |
 | **Cycle Select Layers** | `Alt` + Hover over canvas |
 
+{{< callout type="info" >}}
+**Tip: Alt Key Conflict on Linux**
 
+If `Alt` + Right Click Drag does not resize brushes in Lumi, the desktop is using Alt for window management.
+
+1. Search the system menu for **Windows**.
+2. Windows → Behaviour → Special key to move and resize windows → **Disabled**
+
+After this change, `Alt` + Right Click Drag should work in Lumi for tool resizing.
+{{< /callout >}}
 
 ## Configuration & Persistence
 

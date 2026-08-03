@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 ---
 Lumi-o는 바로가기 기반 워크플로우를 위해 제작되었습니다. 이러한 명령에 대한 머슬 메모리를 구축하면 캔버스와 도구를 훨씬 더 빠르게 탐색할 수 있습니다.
 
@@ -16,6 +16,17 @@ Lumi-o는 바로가기 기반 워크플로우를 위해 제작되었습니다. �
 | **사이클 선택 레이어** | `Alt` + 캔버스 위로 마우스를 가져가세요 |
 
 
+
+{{< callout type="info" >}}
+**팁: Linux에서 Alt 키 충돌**
+
+Lumi에서 `Alt` + 오른쪽 클릭 드래그로 브러시 크기가 조절되지 않으면, 데스크톱이 Alt를 창 관리에 사용하고 있는 것입니다.
+
+1. 시스템 메뉴에서 **창**을 검색하세요.
+2. 창 → 동작 → 창을 이동할 때 사용할 특수 키 → **사용 안함**
+
+이 변경 후 Lumi에서 도구 크기 조절에 `Alt` + 오른쪽 클릭 드래그가 작동해야 합니다.
+{{< /callout >}}
 
 ## 구성 및 지속성
 

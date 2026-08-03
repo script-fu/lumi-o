@@ -2,7 +2,7 @@
 title: "Menginstal Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -103,6 +103,15 @@ Konfigurasikan preferensi terminal:
 2. Teks → Ukuran awal: `140 columns`, `40 rows`
 3. Teks → Font khusus: `Monospace 10`
 4. Warna → Skema bawaan → Solarized Dark
+
+### Tombol Alt untuk mengubah ukuran alat
+
+Jika `Alt` + klik kanan dan seret tidak mengubah ukuran kuas di Lumi, desktop menggunakan Alt untuk manajemen jendela.
+
+1. Cari **Jendela** di menu sistem.
+2. Jendela → Tingkah laku → Tombol khusus untuk menggerakkan dan mengubah ukuran jendela → **Dinonaktifkan**
+
+Setelah perubahan ini, `Alt` + klik kanan dan seret seharusnya berfungsi di Lumi untuk mengubah ukuran alat.
 
 ## Pulihkan data
 

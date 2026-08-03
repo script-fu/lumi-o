@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 Det här dokumentet beskriver processen för att installera Debian Stable som utvecklingsoperativsystem för Lumi-o. Det kan vara användbart för andra som sätter upp en liknande miljö.
@@ -103,6 +103,15 @@ Konfigurera terminalinställningar:
 2. Text → Initial size: `140 columns`, `40 rows`
 3. Text → Custom font: `Monospace 10`
 4. Colours → Built-in schemes → Solarized Dark
+
+### Alt-tangenten för att ändra verktygsstorlek
+
+Om `Alt` + högerklick och dra inte ändrar penselstorleken i Lumi använder skrivbordet Alt för fönsterhantering.
+
+1. Sök efter **Fönster** i systemmenyn.
+2. Fönster → Beteende → Specialtangent för att flytta och storleksändra fönster → **Inaktiverad**
+
+Efter den här ändringen bör `Alt` + högerklick och dra fungera i Lumi för att ändra verktygsstorlek.
 
 ## Återställ data
 

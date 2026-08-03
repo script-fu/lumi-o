@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 เอกสารนี้อธิบายขั้นตอนการติดตั้ง Debian Stable เป็นระบบปฏิบัติการสำหรับการพัฒนา Lumi-o ซึ่งอาจเป็นประโยชน์สำหรับผู้ที่ตั้งค่าสภาพแวดล้อมที่คล้ายกัน
@@ -103,6 +103,15 @@ Lumi ทำงานได้ดีที่สุดบน Debian กับ Cin
 2. Text → Initial size: `140 columns`, `40 rows`
 3. Text → Custom font: `Monospace 10`
 4. Colours → Built-in schemes → Solarized Dark
+
+### ปุ่ม Alt สำหรับปรับขนาดเครื่องมือ
+
+หาก `Alt` + คลิกขวาแล้วลาก ไม่ปรับขนาดแปรงใน Lumi แสดงว่าระบบเดสก์ท็อปใช้ Alt สำหรับการจัดการหน้าต่าง
+
+1. ค้นหา **หน้าต่าง** ในเมนูระบบ
+2. หน้าต่าง → ลักษณะการทำงาน → ปุ่มพิเศษที่ใช้ย้ายและปรับขนาดหน้าต่าง → **ปิดใช้งานแล้ว**
+
+หลังจากการเปลี่ยนแปลงนี้ `Alt` + คลิกขวาแล้วลาก ควรใช้งานได้ใน Lumi สำหรับการปรับขนาดเครื่องมือ
 
 ## กู้คืนข้อมูล
 

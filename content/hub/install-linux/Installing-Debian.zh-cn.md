@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 本文档概述将 Debian Stable 安装为 Lumi-o 开发操作系统的流程，也可供搭建类似环境的读者参考。
@@ -102,6 +102,15 @@ Firefox 调整：
 2. 文本 → 初始大小：`140 columns`、`40 rows`
 3. 文本 → 自定义字体：`Monospace 10`
 4. 颜色 → 内置方案 → Solarized Dark
+
+### 用于调整工具大小的 Alt 键
+
+如果在 Lumi 中 `Alt` + 右键拖动无法调整画笔大小，说明桌面正在将 Alt 用于窗口管理。
+
+1. 在系统菜单中搜索 **窗口**。
+2. 窗口 → 行为 → 窗口移动和调整大小的特殊键 → **已禁用**
+
+完成此更改后，`Alt` + 右键拖动应可在 Lumi 中用于调整工具大小。
 
 ## 恢复数据
 

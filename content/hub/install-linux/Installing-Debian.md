@@ -101,6 +101,15 @@ Configure terminal preferences:
 3. Text → Custom font: `Monospace 10`
 4. Colours → Built-in schemes → Solarized Dark
 
+### Alt Key for Tool Resizing
+
+If `Alt` + Right Click Drag does not resize brushes in Lumi, the desktop is using Alt for window management.
+
+1. Search the system menu for **Windows**.
+2. Windows → Behaviour → Special key to move and resize windows → **Disabled**
+
+After this change, `Alt` + Right Click Drag should work in Lumi for tool resizing.
+
 ## Restore Data
 
 Restore backed-up files into the Home directory as needed, for example:

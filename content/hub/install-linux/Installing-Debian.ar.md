@@ -2,7 +2,7 @@
 title: "تثبيت Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -103,6 +103,15 @@ Lumi في أفضل حالاته على Debian مع Cinnamon (X11)، ويُطوّ
 2. Text ← Initial size: `140 columns`، `40 rows`
 3. Text ← Custom font: `Monospace 10`
 4. Colours ← Built-in schemes ← Solarized Dark
+
+### مفتاح Alt لتغيير حجم الأدوات
+
+إذا لم يُغيّر `Alt` + السحب بالنقر الأيمن حجم الفرش في Lumi، فإن سطح المكتب يستخدم Alt لإدارة النوافذ.
+
+1. ابحث في قائمة النظام عن **النوافذ**.
+2. النوافذ ← السلوك ← مفتاح خاص لنقل وتغيير حجم النوافذ ← **معطل**
+
+بعد هذا التغيير، يفترض أن يعمل `Alt` + السحب بالنقر الأيمن في Lumi لتغيير حجم الأدوات.
 
 ## استعادة البيانات
 

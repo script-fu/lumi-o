@@ -2,7 +2,7 @@
 title: "Pintasan Alur Kerja"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 52df4c1dc9f3cbbc71379ed91c00868e54125cb04f8c5fadfe2ce6f595202ee0
+translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_lock: true
 ---
@@ -17,6 +17,17 @@ Lumi-o dibuat untuk alur kerja berbasis pintasan. Setelah Anda membangun memori 
 | **Siklus Pemilihan Lapisan** | `Alt` + Arahkan kursor di atas kanvas |
 
 
+
+{{< callout type="info" >}}
+**Tip: Konflik tombol Alt di Linux**
+
+Jika `Alt` + klik kanan dan seret tidak mengubah ukuran kuas di Lumi, desktop menggunakan Alt untuk manajemen jendela.
+
+1. Cari **Jendela** di menu sistem.
+2. Jendela → Tingkah laku → Tombol khusus untuk menggerakkan dan mengubah ukuran jendela → **Dinonaktifkan**
+
+Setelah perubahan ini, `Alt` + klik kanan dan seret seharusnya berfungsi di Lumi untuk mengubah ukuran alat.
+{{< /callout >}}
 
 ## Konfigurasi & penyimpanan
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 42b2f95f8ff71be8eff6777dfd9808855f99f943c55575079566588a08fd8fcd
+translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
 ---
 
 Questo documento descrive il processo utilizzato per installare Debian Stable come sistema operativo di sviluppo di Lumi-o. Può essere utile a chi configura un ambiente simile.
@@ -103,6 +103,15 @@ Configura le preferenze del terminale:
 2. Testo → Dimensione iniziale: `140 columns`, `40 rows`
 3. Testo → Carattere personalizzato: `Monospace 10`
 4. Colori → Schemi integrati → Solarized Dark
+
+### Tasto Alt per ridimensionare gli strumenti
+
+Se `Alt` + clic destro e trascinamento non ridimensiona i pennelli in Lumi, il desktop sta usando Alt per la gestione delle finestre.
+
+1. Cerca **Finestre** nel menu di sistema.
+2. Finestre → Comportamento → Tasto speciale di spostamento e ridimensionamento finestre → **Disabilitato**
+
+Dopo questa modifica, `Alt` + clic destro e trascinamento dovrebbe funzionare in Lumi per ridimensionare gli strumenti.
 
 ## Ripristina i dati
 
