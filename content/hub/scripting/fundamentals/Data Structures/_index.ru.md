@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 В Scheme **структуры данных** — это важные инструменты для организации, хранения и управления данными. Они позволяют разработчикам создавать эффективные, читаемые и повторно используемые сценарии. Выбрав правильную структуру данных для конкретной задачи, вы можете оптимизировать как производительность, так и ясность вашего кода.
 

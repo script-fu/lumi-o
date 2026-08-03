@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 Scheme では、**データ構造** はデータを整理、保存、操作するための重要なツールです。これらにより、開発者は効率的で読みやすく、再利用可能なスクリプトを構築できます。特定の問題に対して適切なデータ構造を選択することで、コードのパフォーマンスと明瞭さの両方を最適化できます。
 

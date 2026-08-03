@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
 translation_lock: true
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Hàm là khái niệm cốt lõi trong Scheme, cung cấp phương tiện để đóng gói logic, cho phép tái sử dụng mã và cấu trúc tập lệnh của bạn một cách hiệu quả. Với các chức năng, bạn có thể tạo các tập lệnh mô-đun, có thể bảo trì để xử lý nhiều tác vụ khác nhau, từ các thao tác cơ bản đến quy trình công việc nâng cao trong Lumi.
 

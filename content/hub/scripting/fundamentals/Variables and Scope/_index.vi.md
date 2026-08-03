@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
 translation_lock: true
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 Trong Scheme, quản lý các biến và phạm vi của chúng là khái niệm cốt lõi để viết các tập lệnh hiệu quả và có thể bảo trì. Các biến lưu trữ các giá trị dữ liệu mà tập lệnh của bạn có thể thao tác, trong khi phạm vi xác định nơi các biến đó có thể truy cập được. Hiểu cách xác định và sử dụng các biến một cách hiệu quả cho phép bạn tạo mã có cấu trúc, có thể tái sử dụng và không có lỗi.
 

@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 関数は Scheme の中核概念であり、ロジックをカプセル化し、コードの再利用を可能にし、スクリプトを効果的に構造化する手段を提供します。関数を使用すると、Lumi の基本操作から高度なワークフローまで、幅広いタスクを処理するモジュール式の保守可能なスクリプトを作成できます。
 

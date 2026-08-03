@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 Scheme에서 변수와 그 범위를 관리하는 것은 효율적이고 유지 관리 가능한 스크립트를 작성하기 위한 핵심 개념입니다. 변수는 스크립트가 조작할 수 있는 데이터 값을 저장하는 반면 범위는 해당 변수에 액세스할 수 있는 위치를 정의합니다. 변수를 효과적으로 정의하고 사용하는 방법을 이해하면 구조화되고 재사용 가능하며 오류 없는 코드를 만들 수 있습니다.
 

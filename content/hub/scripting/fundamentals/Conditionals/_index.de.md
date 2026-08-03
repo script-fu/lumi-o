@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Bedingungen sind ein grundlegender Bestandteil der Programmierung: Sie ermöglichen Skripten, Entscheidungen zu treffen und ihren Ablauf anhand bestimmter Kriterien zu steuern. In Scheme, basierend auf der Programmiersprache Scheme, helfen Ihnen Bedingungen dabei, dynamische und intelligente Skripte zu schreiben, die sich an veränderte Eingaben, Umgebungen oder Benutzeraktionen anpassen.
 

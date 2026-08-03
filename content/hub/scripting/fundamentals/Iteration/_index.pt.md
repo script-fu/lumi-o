@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 A iteração é a base da programação, permitindo que os scripts repitam ações e processem coleções de dados com eficiência. No Scheme, baseado na linguagem de programação Scheme, a iteração fornece as ferramentas para automatizar tarefas repetitivas, manipular estruturas de dados e criar padrões sofisticados de execução.
 

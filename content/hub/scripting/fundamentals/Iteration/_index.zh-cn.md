@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 迭代是编程的基石，使脚本能够重复操作并有效地处理数据集合。在Scheme中，基于Scheme编程语言，迭代提供了自动执行重复任务、操作数据结构和创建复杂执行模式的工具。
 

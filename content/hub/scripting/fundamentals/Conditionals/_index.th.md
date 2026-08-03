@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 เงื่อนไขเป็นส่วนพื้นฐานของการเขียนโปรแกรม: ช่วยให้สคริปต์ตัดสินใจและควบคุมการไหลของงานตามเกณฑ์ที่กำหนด ใน Scheme ซึ่งอิงจากภาษา Scheme เงื่อนไขช่วยให้คุณสร้างสคริปต์ที่ยืดหยุ่นและฉลาด ปรับตัวตามข้อมูลนำเข้า สภาพแวดล้อม หรือการกระทำของผู้ใช้ที่เปลี่ยนแปลง
 

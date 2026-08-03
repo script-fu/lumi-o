@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 يُعدّ التكرار حجر الزاوية في البرمجة: فهو يُمكّن النصوص من تكرار الإجراءات ومعالجة مجموعات البيانات بكفاءة. في Scheme، المبني على لغة البرمجة Scheme، يوفر التكرار الأدوات اللازمة لأتمتة المهام المتكررة ومعالجة هياكل البيانات وإنشاء أنماط تنفيذ معقدة.
 

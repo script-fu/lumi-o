@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 ใน Scheme การจัดการตัวแปรและขอบเขตเป็นแนวคิดหลักสำหรับการเขียนสคริปต์ที่มีประสิทธิภาพและบำรุงรักษาได้ ตัวแปรเก็บค่าข้อมูลที่สคริปต์ของคุณสามารถจัดการได้ ในขณะที่ขอบเขตจะกำหนดตำแหน่งที่ตัวแปรเหล่านั้นสามารถเข้าถึงได้ การทำความเข้าใจวิธีกำหนดและใช้ตัวแปรอย่างมีประสิทธิภาพช่วยให้คุณสร้างโค้ดที่มีโครงสร้าง ใช้ซ้ำได้ และปราศจากข้อผิดพลาด
 

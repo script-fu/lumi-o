@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Условные конструкции — фундамент программирования: они позволяют сценариям принимать решения и управлять потоком выполнения по заданным критериям. В Scheme, основанном на языке Scheme, условия помогают создавать динамичные, гибкие сценарии, адаптирующиеся к изменяющимся входным данным, среде или действиям пользователя.
 

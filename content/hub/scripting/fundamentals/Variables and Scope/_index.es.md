@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 En Scheme, la gestión de variables y su alcance es un concepto central para escribir scripts eficientes y fáciles de mantener. Las variables almacenan valores de datos que su script puede manipular, mientras que el alcance define dónde se puede acceder a esas variables. Comprender cómo definir y utilizar variables de forma eficaz le permite crear código estructurado, reutilizable y sin errores.
 

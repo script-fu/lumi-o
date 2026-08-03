@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 In Scheme is het beheren van variabelen en hun reikwijdte een kernconcept voor het schrijven van efficiënte en onderhoudbare scripts. Variabelen slaan gegevenswaarden op die uw script kan manipuleren, terwijl het bereik bepaalt waar die variabelen toegankelijk zijn. Als u begrijpt hoe u variabelen effectief kunt definiëren en gebruiken, kunt u gestructureerde, herbruikbare en foutloze code maken.
 

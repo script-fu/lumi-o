@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
 translation_lock: true
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Funções são um conceito central no Scheme, fornecendo os meios para encapsular a lógica, permitir a reutilização de código e estruturar os scripts de forma eficaz. Com funções, pode criar scripts modulares e de fácil manutenção que lidam com uma ampla variedade de tarefas, desde operações básicas até fluxos de trabalho avançados no Lumi.
 

@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 I Scheme är hantering av variabler och deras omfattning ett kärnkoncept för att skriva effektiva och underhållbara skript. Variabler lagrar datavärden som ditt skript kan manipulera, medan scope definierar var dessa variabler är tillgängliga. Genom att förstå hur man definierar och använder variabler effektivt kan du skapa strukturerad, återanvändbar och felfri kod.
 

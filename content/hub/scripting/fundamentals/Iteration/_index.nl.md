@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 Iteratie is een hoeksteen van programmeren: het stelt scripts in staat acties te herhalen en verzamelingen gegevens efficiënt te verwerken. In Scheme biedt iteratie de hulpmiddelen om repetitieve taken te automatiseren, datastructuren te manipuleren en geavanceerde uitvoeringspatronen te creëren.
 

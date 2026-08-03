@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
 translation_lock: true
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Функції — ключова концепція Scheme: вони інкапсулюють логіку, дають змогу повторно використовувати код і структурувати скрипти. З їх допомогою можна створювати модульні, підтримувані скрипти — від базових операцій до складних робочих процесів у Lumi.
 

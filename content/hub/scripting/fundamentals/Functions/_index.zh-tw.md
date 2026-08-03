@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 函數是Scheme 中的核心概念，提供封裝邏輯、實作程式碼重複使用和有效建置腳本的方法。透過函數，您可以建立模組化、可維護的腳本來處理各種任務，從基本操作到 Lumi 中的高階工作流程。
 

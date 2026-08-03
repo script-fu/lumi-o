@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 W Scheme zarządzanie zmiennymi i ich zakresem jest podstawową koncepcją pisania wydajnych i łatwych w utrzymaniu skryptów. Zmienne przechowują wartości danych, którymi może manipulować skrypt, natomiast zakres określa, gdzie te zmienne są dostępne. Zrozumienie, jak skutecznie definiować i wykorzystywać zmienne, pozwala na tworzenie ustrukturyzowanego, wielokrotnego użytku i wolnego od błędów kodu.
 

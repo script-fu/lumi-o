@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 条件语句是编程的基础：它们让脚本能够根据特定标准做出决策并控制执行流程。在基于 Scheme 编程语言的 Scheme 中，条件语句帮助您编写动态、智能的脚本，适应不断变化的输入、环境或用户操作。
 

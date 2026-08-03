@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 Ітерація — основа програмування: вона дозволяє скриптам повторювати дії та ефективно обробляти колекції даних. У Scheme ітерація дає інструменти для автоматизації повторюваних завдань, маніпулювання структурами даних і створення складних шаблонів виконання.
 

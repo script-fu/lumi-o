@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
 translation_lock: true
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 تُعدّ الشروط جزءًا أساسيًا من البرمجة: فهي تسمح للسكربتات باتخاذ قرارات والتحكم في تدفقها وفق معايير محددة. في Scheme، تُمكّنك الشروط من إنشاء سكربتات ديناميكية وذكية تتكيف مع المدخلات أو البيئات أو إجراءات المستخدم المتغيرة.
 

@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 In Scheme, la gestione delle variabili e il loro ambito è un concetto fondamentale per scrivere script efficienti e gestibili. Le variabili memorizzano i valori dei dati che lo script può manipolare, mentre l'ambito definisce dove tali variabili sono accessibili. Comprendere come definire e utilizzare le variabili in modo efficace consente di creare codice strutturato, riutilizzabile e privo di errori.
 

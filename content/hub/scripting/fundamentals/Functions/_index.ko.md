@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 함수는 Scheme의 핵심 개념으로, 로직을 캡슐화하고 코드 재사용을 활성화하며 스크립트를 효과적으로 구성하는 수단을 제공합니다. 함수를 사용하면 Lumi의 기본 작업부터 고급 작업 흐름까지 광범위한 작업을 처리하는 유지 관리가 가능한 모듈식 스크립트를 만들 수 있습니다.
 

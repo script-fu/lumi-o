@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Villkor är en grundläggande del av programmering: de låter skript fatta beslut och styra flödet utifrån specifika kriterier. I Scheme, baserat på programmespråket Scheme, hjälper villkor dig att skriva dynamiska, intelligenta skript som anpassar sig till förändrade indata, miljöer eller användaråtgärder.
 

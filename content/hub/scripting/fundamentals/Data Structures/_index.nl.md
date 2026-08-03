@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 In Scheme zijn **datastructuren** essentiële hulpmiddelen voor het organiseren, opslaan en manipuleren van gegevens. Ze stellen ontwikkelaars in staat efficiënte, leesbare en herbruikbare scripts te bouwen. Door de juiste datastructuur voor een specifiek probleem te kiezen, kunt u zowel de prestaties als de duidelijkheid van uw code optimaliseren.
 

@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 В Scheme управление переменными и их областью действия является основной концепцией написания эффективных и удобных в сопровождении сценариев. Переменные хранят значения данных, которыми может манипулировать ваш скрипт, а область действия определяет, где эти переменные доступны. Понимание того, как эффективно определять и использовать переменные, позволяет создавать структурированный, повторно используемый и безошибочный код.
 

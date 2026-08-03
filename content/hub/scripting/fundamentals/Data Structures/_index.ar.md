@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
 translation_lock: true
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 في Scheme، **هياكل البيانات** أدوات أساسية لتنظيم البيانات وتخزينها ومعالجتها. تمكّن المطورين من إنشاء سكربتات فعالة وقابلة للقراءة وقابلة لإعادة الاستخدام. باختيار بنية البيانات المناسبة لمشكلة معيّنة، يمكنك تحسين أداء ووضوح التعليمات البرمجية.
 

@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
 translation_lock: true
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 Dalam Scheme, **struktur data** adalah alat penting untuk mengatur, menyimpan, dan memanipulasi data. Mereka memungkinkan pengembang untuk membuat skrip yang efisien, mudah dibaca, dan digunakan kembali. Dengan memilih struktur data yang tepat untuk masalah tertentu, Anda dapat mengoptimalkan performa dan kejelasan kode Anda.
 

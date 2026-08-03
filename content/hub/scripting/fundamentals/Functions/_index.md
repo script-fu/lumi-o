@@ -1,7 +1,7 @@
 ---
 title: Functions
 type: docs
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 weight: 7
 ---
 

@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
 translation_lock: true
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Умовні конструкції — фундаментальна частина програмування: вони дозволяють скриптам приймати рішення та керувати потоком виконання на основі певних критеріїв. У Scheme умови дають змогу створювати динамічні скрипти, які адаптуються до змін вхідних даних, середовища або дій користувача.
 

@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
 translation_lock: true
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 Trong Scheme, **cấu trúc dữ liệu** là công cụ thiết yếu để tổ chức, lưu trữ và thao tác dữ liệu. Chúng cho phép các nhà phát triển xây dựng các tập lệnh hiệu quả, dễ đọc và có thể tái sử dụng. Bằng cách chọn cấu trúc dữ liệu phù hợp cho một vấn đề cụ thể, bạn có thể tối ưu hóa cả hiệu suất và độ rõ ràng của mã.
 

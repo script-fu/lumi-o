@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
 translation_lock: true
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Fungsi adalah konsep inti dalam Scheme, yang menyediakan sarana untuk merangkum logika, memungkinkan penggunaan kembali kode, dan menyusun skrip Anda secara efektif. Dengan fungsi, Anda dapat membuat skrip modular dan dapat dipelihara yang menangani berbagai tugas, mulai dari operasi dasar hingga alur kerja tingkat lanjut di Lumi.
 

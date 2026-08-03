@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Функции — это основная концепция Scheme, предоставляющая средства для инкапсуляции логики, возможности повторного использования кода и эффективного структурирования ваших сценариев. С помощью функций вы можете создавать модульные, удобные в обслуживании сценарии, которые решают широкий спектр задач: от базовых операций до сложных рабочих процессов в Lumi.
 

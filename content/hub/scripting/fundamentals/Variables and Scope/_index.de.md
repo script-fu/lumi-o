@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 In Scheme ist die Verwaltung von Variablen und ihrem Umfang ein Kernkonzept zum Schreiben effizienter und wartbarer Skripte. Variablen speichern Datenwerte, die Ihr Skript bearbeiten kann, während der Bereich definiert, wo auf diese Variablen zugegriffen werden kann. Wenn Sie verstehen, wie Variablen effektiv definiert und verwendet werden, können Sie strukturierten, wiederverwendbaren und fehlerfreien Code erstellen.
 

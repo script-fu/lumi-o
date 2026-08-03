@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 函数是Scheme 中的核心概念，提供封装逻辑、实现代码重用和有效构建脚本的方法。通过函数，您可以创建模块化、可维护的脚本来处理各种任务，从基本操作到 Lumi 中的高级工作流程。
 

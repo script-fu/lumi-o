@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 Iteration ist ein Grundpfeiler der Programmierung: Sie ermöglicht Skripten, Aktionen zu wiederholen und Datensammlungen effizient zu verarbeiten. In Scheme bietet Iteration Werkzeuge, um repetitive Aufgaben zu automatisieren, Datenstrukturen zu bearbeiten und ausgefeilte Ausführungsmuster zu erzeugen.
 

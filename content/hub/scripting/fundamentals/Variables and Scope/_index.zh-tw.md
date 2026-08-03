@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 在Scheme中，管理變數及其範圍是編寫高效且可維護的腳本的核心概念。變數儲存腳本可以操作的資料值，而範圍定義可以存取這些變數的位置。了解如何有效定義和使用變數可以讓您建立結構化、可重複使用且無錯誤的程式碼。
 

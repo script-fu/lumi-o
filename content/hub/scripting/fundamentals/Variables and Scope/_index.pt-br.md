@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 Em Scheme, o gerenciamento de variáveis e seu escopo é um conceito central para escrever scripts eficientes e de fácil manutenção. As variáveis armazenam valores de dados que seu script pode manipular, enquanto o escopo define onde essas variáveis são acessíveis. Compreender como definir e usar variáveis de forma eficaz permite criar código estruturado, reutilizável e livre de erros.
 

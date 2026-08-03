@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 5faeaef488b8a330727b633f7808b8e1982e8633d9894b959c2a4080fff7aeca
-url: "hub/scripting/_index"
+url: "hub/scripting"
 ---
 Scheme 脚本可用于自动化重复性工作、构建自定义工具，并用您自己的插件扩展 Lumi。
 

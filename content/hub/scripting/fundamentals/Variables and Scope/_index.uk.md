@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
 translation_lock: true
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 У Scheme керування змінними та їхньою областю видимості — ключова концепція для написання ефективних і підтримуваних скриптів. Змінні зберігають значення, з якими працює ваш код, а область видимості визначає, де ці змінні доступні. Розуміння того, як визначати й використовувати змінні, допомагає створювати структурований, багаторазовий і надійний код.
 

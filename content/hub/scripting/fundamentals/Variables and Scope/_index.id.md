@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
 translation_lock: true
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 Dalam Scheme, pengelolaan variabel dan cakupannya adalah konsep inti untuk menulis skrip yang efisien dan mudah dipelihara. Variabel menyimpan nilai data yang dapat dimanipulasi oleh skrip Anda, sementara cakupan menentukan di mana variabel tersebut dapat diakses. Memahami cara mendefinisikan dan menggunakan variabel secara efektif memungkinkan Anda membuat kode yang terstruktur, dapat digunakan kembali, dan bebas kesalahan.
 

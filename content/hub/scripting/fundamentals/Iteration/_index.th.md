@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 การวนซ้ำเป็นรากฐานสำคัญของการเขียนโปรแกรม ช่วยให้สคริปต์สามารถทำซ้ำและประมวลผลการรวบรวมข้อมูลได้อย่างมีประสิทธิภาพ ใน Scheme ซึ่งอิงตามภาษาการเขียนโปรแกรม Scheme การวนซ้ำจะมีเครื่องมือในการทำให้งานซ้ำๆ โดยอัตโนมัติ จัดการโครงสร้างข้อมูล และสร้างรูปแบบการดำเนินการที่ซับซ้อน
 

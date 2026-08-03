@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
 translation_lock: true
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 У Scheme **структури даних** — основні інструменти для організації, зберігання та маніпулювання даними. Вони дають змогу створювати ефективні, читабельні та багаторазові скрипти. Правильний вибір структури даних оптимізує і продуктивність, і ясність коду.
 

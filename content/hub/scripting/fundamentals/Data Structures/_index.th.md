@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 ใน Scheme **โครงสร้างข้อมูล** เป็นเครื่องมือสำคัญสำหรับการจัดระเบียบ จัดเก็บ และจัดการข้อมูล ช่วยให้นักพัฒนาสามารถสร้างสคริปต์ที่มีประสิทธิภาพ อ่านได้ และนำกลับมาใช้ใหม่ได้ ด้วยการเลือกโครงสร้างข้อมูลที่เหมาะสมสำหรับปัญหาเฉพาะ คุณสามารถเพิ่มประสิทธิภาพทั้งประสิทธิภาพและความชัดเจนของโค้ดของคุณได้
 

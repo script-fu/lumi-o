@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 A iteração é um pilar da programação: permite que scripts repitam ações e processem coleções de dados com eficiência. Em Scheme, a iteração oferece ferramentas para automatizar tarefas repetitivas, manipular estruturas de dados e criar padrões de execução sofisticados.
 

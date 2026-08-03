@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Conditionals vormen een fundament onder programmeren: ze laten scripts beslissingen nemen en hun verloop sturen op basis van specifieke criteria. In Scheme, gebaseerd op de Scheme-programmeertaal, helpen conditionals u dynamische, intelligente scripts te schrijven die zich aanpassen aan veranderende invoer, omgevingen of gebruikersacties.
 

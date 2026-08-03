@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 W Scheme **struktury danych** są niezbędnymi narzędziami do organizowania, przechowywania i manipulowania danymi. Umożliwiają programistom tworzenie wydajnych, czytelnych i nadających się do ponownego użycia skryptów. Wybierając odpowiednią strukturę danych dla konkretnego problemu, możesz zoptymalizować zarówno wydajność, jak i przejrzystość swojego kodu.
 

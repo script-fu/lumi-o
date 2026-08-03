@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 L'iterazione è un pilastro della programmazione: consente agli script di ripetere azioni ed elaborare raccolte di dati in modo efficiente. In Scheme, l'iterazione offre strumenti per automatizzare compiti ripetitivi, manipolare strutture dati e creare schemi di esecuzione sofisticati.
 

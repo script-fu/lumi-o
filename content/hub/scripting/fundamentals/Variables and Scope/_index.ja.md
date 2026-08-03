@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 Scheme では、変数とそのスコープの管理が、効率的で保守可能なスクリプトを作成するための中心的な概念です。変数にはスクリプトで操作できるデータ値が格納されますが、スコープはそれらの変数にアクセスできる場所を定義します。変数を効果的に定義して使用する方法を理解すると、構造化され、再利用可能で、エラーのないコードを作成できます。
 

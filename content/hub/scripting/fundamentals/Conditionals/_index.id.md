@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
 translation_lock: true
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Kondisional adalah bagian mendasar dari pemrograman, yang memungkinkan skrip membuat keputusan dan mengontrol alirannya berdasarkan kriteria tertentu. Dalam Scheme, kondisional memungkinkan Anda membuat skrip dinamis dan cerdas yang beradaptasi dengan perubahan input, lingkungan, atau tindakan pengguna.
 

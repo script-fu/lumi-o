@@ -5,7 +5,7 @@ weight: 7
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: a1808e88698d7f38626bf136806af5388132ed2799927b899141c749dac679a3
-url: "hub/scripting/fundamentals/Functions/_index"
+url: "hub/scripting/fundamentals/Functions"
 ---
 Funktioner är ett kärnkoncept i Scheme, som ger möjlighet att kapsla in logik, möjliggöra kodåteranvändning och strukturera dina skript effektivt. Med funktioner kan du skapa modulära, underhållsbara skript som hanterar ett brett utbud av uppgifter, från grundläggande operationer till avancerade arbetsflöden i Lumi.
 

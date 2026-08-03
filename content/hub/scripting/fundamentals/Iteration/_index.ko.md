@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 반복은 프로그래밍의 초석으로, 스크립트가 작업을 반복하고 데이터 수집을 효율적으로 처리할 수 있도록 해줍니다. Scheme 프로그래밍 언어를 기반으로 하는 Scheme에서 반복은 반복 작업을 자동화하고, 데이터 구조를 조작하고, 정교한 실행 패턴을 생성하는 도구를 제공합니다.
 

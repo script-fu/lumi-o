@@ -5,7 +5,7 @@ weight: 3
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 352594bbda9977488d773240c50663f63fd432a17483772a9cbf8d59dab378be
-url: "hub/scripting/fundamentals/Data Structures/_index"
+url: "hub/scripting/fundamentals/Data Structures"
 ---
 I Scheme är **datastrukturer** viktiga verktyg för att organisera, lagra och manipulera data. De gör det möjligt för utvecklare att bygga effektiva, läsbara och återanvändbara skript. Genom att välja rätt datastruktur för ett specifikt problem kan du optimera både prestanda och tydlighet i din kod.
 

@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 5faeaef488b8a330727b633f7808b8e1982e8633d9894b959c2a4080fff7aeca
-url: "hub/scripting/_index"
+url: "hub/scripting"
 ---
 Le scripting Scheme vous permet d'automatiser les tâches répétitives, de créer des outils personnalisés et d'étendre Lumi avec vos propres plug-ins.
 

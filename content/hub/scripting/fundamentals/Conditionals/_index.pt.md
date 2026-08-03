@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
 translation_lock: true
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 As condicionais são uma parte fundamental da programação, permitindo que os scripts tomem decisões e controlem o fluxo com base em critérios específicos. No Scheme, as condicionais permitem criar scripts dinâmicos e inteligentes que se adaptam às mudanças de entradas, ambientes ou ações do utilizador.
 

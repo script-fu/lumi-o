@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
 translation_lock: true
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Điều kiện là một phần cơ bản của lập trình, cho phép các tập lệnh đưa ra quyết định và kiểm soát luồng của chúng dựa trên các tiêu chí cụ thể. Trong Scheme, dựa trên ngôn ngữ lập trình Scheme, các điều kiện cho phép bạn tạo các tập lệnh động và thông minh thích ứng với việc thay đổi đầu vào, môi trường hoặc hành động của người dùng.
 

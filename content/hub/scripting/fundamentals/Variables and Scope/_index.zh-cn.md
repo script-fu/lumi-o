@@ -5,7 +5,7 @@ weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 82a033dab5a3f8e3bacc73cde3d2f965fda6cd1b8957877e29da8cfcb547abdd
-url: "hub/scripting/fundamentals/Variables and Scope/_index"
+url: "hub/scripting/fundamentals/Variables and Scope"
 ---
 在Scheme中，管理变量及其范围是编写高效且可维护的脚本的核心概念。变量存储脚本可以操作的数据值，而范围定义可以访问这些变量的位置。了解如何有效地定义和使用变量可以让您创建结构化、可重用且无错误的代码。
 

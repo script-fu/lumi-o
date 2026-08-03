@@ -5,7 +5,7 @@ weight: 2
 translation_provenance: ai-reviewed
 translation_lock: true
 translation_source_sha256: 8e9a64dd1bc1445c996fe17ce6b666b8d597ab16040cf0ef0876232026ff11b2
-url: "hub/scripting/fundamentals/Conditionals/_index"
+url: "hub/scripting/fundamentals/Conditionals"
 ---
 Condicionais são um elemento fundamental da programação: permitem que scripts tomem decisões e controlem seu fluxo com base em critérios específicos. Em Scheme, baseado na linguagem de programação Scheme, os condicionais ajudam a criar scripts dinâmicos e inteligentes que se adaptam a entradas, ambientes ou ações do usuário em mudança.
 

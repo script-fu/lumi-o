@@ -5,7 +5,7 @@ weight: 4
 translation_provenance: ai-reviewed
 translation_source_sha256: df3e2118b9a580de4eed6ac56d9717aa3cbf555ab66bb49fabb4164b2994af91
 translation_lock: true
-url: "hub/scripting/fundamentals/Iteration/_index"
+url: "hub/scripting/fundamentals/Iteration"
 ---
 Lặp lại là nền tảng của lập trình, cho phép các tập lệnh lặp lại các hành động và xử lý việc thu thập dữ liệu một cách hiệu quả. Trong Scheme, dựa trên ngôn ngữ lập trình Scheme, phép lặp cung cấp các công cụ để tự động hóa các tác vụ lặp đi lặp lại, thao tác với cấu trúc dữ liệu và tạo ra các mẫu thực thi phức tạp.
 
