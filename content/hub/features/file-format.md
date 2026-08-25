@@ -4,34 +4,40 @@ type: docs
 url: "hub/features/file-format"
 ---
 
-Lumi's native file format is built for layered painting projects that need to remain reliable, inspectable, and recoverable over time. It is designed around the realities of illustration work: many layers, large canvases, embedded colour information, masks, effects, and recovery data.
+Lumi's native `.lum` format is a project directory, not a single sealed file. It is designed for layered illustration: deep layer trees, large canvases, masks, non-destructive effects, and checkpoints that do not have to duplicate the entire painting.
 
-Rather than treating a project as a single opaque blob, the format keeps the structure of the artwork visible to the application. This lets Lumi save, load, and recover large images more intelligently while preserving the organisation artists depend on.
+The format's job is to keep that working structure intact — so a project can be reopened faithfully, inspected when something goes wrong, and recovered from a recent checkpoint without treating the artwork as one opaque blob.
 
-## Open project structure
+## Separate pieces, on purpose
 
-A Lumi project keeps the artwork's parts separate: image structure, layer content, masks, colour data, metadata, and recovery information each have a clear role. This makes the format easier to reason about and better suited to long-term access than a closed, monolithic container.
+A `.lum` project is a folder. The layer tree and image properties live in readable XML. Each layer and mask keeps its own pixel buffer, named after the artwork rather than after an internal ID. Vector paths are stored as ordinary SVG. Heavy filter settings sit in their own files next to the image. ICC profiles are stored once at the project root, so recovery snapshots can refer to them instead of copying them.
 
-The goal is not only to store pixels, but to store the working state of an illustration. Layers remain layers, masks remain masks, and the file continues to reflect the way the artwork was built.
+That split is what makes the rest of the format possible. Unchanged layers can be left alone on disk. A damaged buffer fails on its own instead of taking the whole file with it. Missing layer pixels become empty layers that still have names, positions, and blend settings; a missing group composite is rebuilt from the children. The project remains a map of how the painting was built.
 
-## Designed for large paintings
+Pigment palettes stay with Lumi's colour tools. A project can remember which palette was associated with the image, but the palette library itself is outside the `.lum`.
 
-Large layered images can become heavy quickly. Lumi's format supports workflows where not every piece of image data needs to be pulled into memory at once. Projects can remain responsive by loading the parts of the image that are actually needed for viewing, editing, compositing, or export.
+## Editable state, not a flatten
 
-This approach helps complex files feel manageable, especially when an artwork contains many hidden, archived, experimental, or grouped layers.
+The file stores the working painting. Layers remain layers, groups remain groups, and masks remain masks, including offsets, locks, blend behaviour, and filter stacks. Non-destructive filters are saved as operations and parameters rather than as baked pixels. A layer that is a single flat colour does not need a pixel file at all.
 
-## Saving without breaking flow
+Collapsed groups also keep a composited view of themselves. That cached composite is what appears on the canvas when a group is shut, so children do not have to be reconstructed just to look at the picture. Display-only inspection modes stay out of that cache: showing a mask or alpha for editing is restored as metadata, not burned into the saved group.
 
-The file format supports both normal project saving and lightweight recovery-style snapshots. This gives artists a way to protect work frequently without turning every checkpoint into a full duplicate of the entire image.
+## Large files can stay partly on disk
 
-Because recovery information belongs to the project structure, Lumi can keep useful history close to the artwork while still allowing automatic safety saves to live separately from the working file.
+Opening a `.lum` does not have to load every pixel. Content inside collapsed groups can remain on disk while the group's saved composite is shown immediately. Expanding a group is when those layers, masks, and nested groups come into memory. Groups that stay closed stay cheap.
 
-## Interchange and export
+The file also records which groups were actually in use. Groups on the active selection path can reopen expanded; other folders are stored as collapsed even if they happened to be open in the last session. That keeps a deep file from hydrating every unused branch the moment it is opened.
 
-The native format is intended for ongoing Lumi work, while export formats are used for sharing flattened or compatibility-focused results. Import support helps bring existing artwork into Lumi's layered environment, and export support lets finished pieces leave the project format when they are ready for publishing, delivery, or further processing.
+Grouping is therefore a performance choice as well as an organisational one. Large background plates, archived experiments, and unused variants can sit in closed groups without occupying the same memory as the layers being painted. Saving follows the same rule: still-hidden buffers are copied or skipped as files, not inflated back into memory just to be written out again.
 
-The distinction keeps the working file rich and editable while allowing final images to be produced in common external formats.
+## Checkpoints that write only what changed
 
-## Long-term reliability
+File → Save updates the working project. Incremental saves and autosaves write into a recovery tree, and they only write dirty data — changed layer buffers, not a second copy of the entire image. Each checkpoint still carries a full description of the layer tree, so any point in that trail can be opened by filling in unchanged pixels from older checkpoints and, if needed, from the working file itself.
 
-In short, the `.lum` format is a practical container for serious painting work: open enough to inspect, structured enough to recover, and flexible enough to handle complex layered images economically.
+Autosave uses the same pattern in a separate cache, so automatic protection does not have to rewrite the file on disk. If a project is opened when newer checkpoints exist than the last full save, Lumi can offer them instead of silently discarding the more recent work. Recovered images open under a distinct name so a quick save cannot overwrite the original.
+
+## A working format
+
+`.lum` is for continuing a painting in Lumi. Flattened or compatibility formats are for publishing, delivery, and other applications. Because a project is a directory of many files, it should be archived if it needs to travel.
+
+The working file stays rich and editable. Exports are how a finished or shared image leaves that structure.

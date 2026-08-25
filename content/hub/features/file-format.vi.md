@@ -3,38 +3,44 @@ title: "Định dạng tệp (.lum)"
 type: docs
 url: "hub/features/file-format"
 translation_provenance: ai-reviewed
-translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
+translation_source_sha256: c5e414a0d2870f1b111751c8c462e7ac5a4530103d70cb9be52a9fbd11417028
 translation_lock: true
 ---
 
-Định dạng gốc của Lumi dành cho dự án vẽ nhiều lớp cần đáng tin cậy, có thể kiểm tra và khôi phục theo thời gian. Nó được thiết kế quanh thực tế minh họa: nhiều lớp, canvas lớn, thông tin màu nhúng, mặt nạ, hiệu ứng và dữ liệu khôi phục.
+Định dạng `.lum` gốc của Lumi là thư mục dự án, không phải một tệp khép kín duy nhất. Nó được thiết kế cho minh họa nhiều lớp: cây lớp sâu, canvas lớn, mặt nạ, hiệu ứng không phá hủy, và điểm kiểm tra không cần sao chép toàn bộ bức tranh.
 
-Thay vì coi dự án là một khối mờ duy nhất, định dạng giữ cấu trúc tác phẩm hiển thị với ứng dụng. Điều này giúp Lumi lưu, tải và khôi phục hình lớn thông minh hơn trong khi giữ tổ chức mà nghệ sĩ phụ thuộc.
+Nhiệm vụ của định dạng là giữ nguyên cấu trúc làm việc đó — để mở lại dự án đúng như cũ, kiểm tra khi có sự cố, và khôi phục từ điểm kiểm tra gần đây mà không coi tác phẩm là một khối mờ.
 
-## Cấu trúc dự án mở
+## Tách thành phần, có chủ đích
 
-Dự án Lumi tách các phần tác phẩm: cấu trúc hình ảnh, nội dung lớp, mặt nạ, dữ liệu màu, metadata và thông tin khôi phục — mỗi phần có vai trò rõ ràng. Điều này giúp định dạng dễ lý giải và phù hợp truy cập lâu dài hơn vùng chứa đóng, nguyên khối.
+Dự án `.lum` là một thư mục. Cây lớp và thuộc tính ảnh nằm trong XML đọc được. Mỗi lớp và mặt nạ giữ bộ đệm pixel riêng, đặt tên theo tác phẩm chứ không theo ID nội bộ. Đường vector lưu dưới dạng SVG thông thường. Cài đặt bộ lọc nặng nằm ở tệp riêng cạnh ảnh. Hồ sơ ICC lưu một lần ở gốc dự án, để ảnh chụp khôi phục tham chiếu thay vì sao chép.
 
-Mục tiêu không chỉ lưu pixel mà lưu trạng thái làm việc của minh họa. Lớp vẫn là lớp, mặt nạ vẫn là mặt nạ, và tệp phản ánh cách tác phẩm được xây dựng.
+Sự tách đó mới làm phần còn lại của định dạng khả thi. Lớp không đổi có thể để yên trên đĩa. Bộ đệm hỏng thì hỏng một mình, không kéo cả tệp theo. Pixel lớp bị thiếu trở thành lớp trống vẫn còn tên, vị trí và cài đặt pha trộn; bản tổng hợp nhóm bị thiếu được dựng lại từ lớp con. Dự án vẫn là bản đồ cách bức tranh được xây.
 
-## Thiết kế cho tranh lớn
+Bảng màu sắc tố thuộc công cụ màu của Lumi. Dự án có thể nhớ bảng nào gắn với ảnh, nhưng thư viện bảng màu nằm ngoài `.lum`.
 
-Hình nhiều lớp lớn nhanh chóng trở nên nặng. Định dạng Lumi hỗ trợ quy trình mà không phải mọi phần dữ liệu hình ảnh đều cần vào bộ nhớ cùng lúc. Dự án có thể phản hồi nhanh bằng cách tải phần hình ảnh thực sự cần để xem, chỉnh sửa, tổng hợp hoặc xuất.
+## Trạng thái chỉnh sửa, không phải bản làm phẳng
 
-Cách tiếp cận này giúp tệp phức tạp dễ quản lý, đặc biệt khi tác phẩm có nhiều lớp ẩn, lưu trữ, thử nghiệm hoặc được nhóm.
+Tệp lưu bức tranh đang làm. Lớp vẫn là lớp, nhóm lớp vẫn là nhóm, mặt nạ vẫn là mặt nạ — gồm độ lệch vị trí, khóa, hành vi pha trộn và ngăn bộ lọc. Bộ lọc không phá hủy được lưu thành thao tác và tham số, không phải pixel đã áp sẵn. Lớp một màu phẳng không cần tệp pixel.
 
-## Lưu mà không gián đoạn dòng công việc
+Nhóm đã thu gọn cũng giữ một khung nhìn đã tổng hợp. Bản tổng hợp đã lưu đó hiện trên canvas khi nhóm đóng, nên không phải dựng lại lớp con chỉ để nhìn tranh. Chế độ kiểm tra chỉ để xem thì không vào bộ nhớ đệm đó: hiện mặt nạ hoặc alpha để chỉnh được khôi phục như metadata, không bị ghi cứng vào nhóm đã lưu.
 
-Định dạng hỗ trợ cả lưu dự án thông thường và ảnh chụp khôi phục nhẹ. Nghệ sĩ có thể bảo vệ tác phẩm thường xuyên mà không biến mọi điểm kiểm tra thành bản sao đầy đủ toàn bộ hình.
+## Tệp lớn có thể để một phần trên đĩa
 
-Vì thông tin khôi phục thuộc cấu trúc dự án, Lumi giữ lịch sử hữu ích gần tác phẩm trong khi vẫn cho phép lưu an toàn tự động tách khỏi tệp đang làm việc.
+Mở `.lum` không bắt buộc tải mọi pixel. Nội dung trong nhóm đã thu gọn có thể ở lại trên đĩa trong khi bản tổng hợp đã lưu của nhóm hiện ngay. Mở rộng nhóm mới là lúc các lớp, mặt nạ và nhóm lồng được nạp vào bộ nhớ. Nhóm nào vẫn đóng thì vẫn nhẹ.
 
-## Trao đổi và xuất
+Tệp cũng ghi nhóm nào thực sự đang dùng. Nhóm trên đường chọn hiện tại có thể mở lại ở trạng thái mở rộng; thư mục khác được lưu dạng thu gọn dù phiên trước có mở. Nhờ đó tệp có cấu trúc sâu không nạp mọi nhánh không dùng vào bộ nhớ ngay lúc mở.
 
-Định dạng gốc dành cho công việc Lumi đang tiến hành; định dạng xuất dùng để chia sẻ kết quả phẳng hoặc tập trung tương thích. Hỗ trợ nhập đưa tác phẩm hiện có vào môi trường nhiều lớp của Lumi; hỗ trợ xuất cho phép tác phẩm hoàn thiện rời định dạng dự án khi sẵn sàng xuất bản, giao hàng hoặc xử lý thêm.
+Nhóm lớp vì thế vừa là lựa chọn hiệu năng vừa là cách tổ chức. Tấm nền lớn, thử nghiệm đã lưu trữ và biến thể không dùng có thể nằm trong nhóm đóng mà không chiếm cùng bộ nhớ với lớp đang vẽ. Lưu theo cùng quy tắc: bộ đệm vẫn ẩn được sao chép hoặc bỏ qua như tệp, không nạp lại vào bộ nhớ chỉ để ghi ra lần nữa.
 
-Sự phân biệt này giữ tệp làm việc phong phú, có thể chỉnh sửa, đồng thời cho phép tạo hình cuối ở định dạng bên ngoài phổ biến.
+## Điểm kiểm tra chỉ ghi những gì đã đổi
 
-## Độ tin cậy lâu dài
+Tập tin → Lưu cập nhật dự án đang làm. Lưu tăng dần và tự động lưu ghi vào cây khôi phục, và chỉ ghi dữ liệu đã thay đổi — bộ đệm lớp đã đổi, không phải bản sao thứ hai của cả ảnh. Mỗi điểm kiểm tra vẫn mang mô tả đầy đủ cây lớp, nên bất kỳ điểm nào trên đường đó đều mở được bằng cách điền pixel không đổi từ điểm kiểm tra cũ hơn và, nếu cần, từ chính tệp đang làm.
 
-Tóm lại, định dạng `.lum` là vùng chứa thực tế cho công việc vẽ nghiêm túc: đủ mở để kiểm tra, đủ cấu trúc để khôi phục và đủ linh hoạt để xử lý hình nhiều lớp phức tạp một cách tiết kiệm.
+Tự động lưu dùng cùng kiểu trong bộ nhớ đệm riêng, nên bảo vệ tự động không phải ghi lại tệp trên đĩa. Nếu mở dự án khi có điểm kiểm tra mới hơn lần lưu đầy đủ cuối, Lumi có thể đề xuất chúng thay vì lặng lẽ bỏ tác phẩm mới hơn. Ảnh khôi phục mở với tên riêng để lần lưu nhanh không ghi đè bản gốc.
+
+## Định dạng để làm việc
+
+`.lum` dùng để tiếp tục vẽ trong Lumi. Định dạng đã làm phẳng hay hướng tương thích dùng để xuất bản, giao nộp và dùng với ứng dụng khác. Vì dự án là thư mục nhiều tệp, nên đóng gói lưu trữ nếu cần mang đi.
+
+Tệp làm việc vẫn phong phú, chỉnh sửa được. Xuất là cách ảnh hoàn thiện hoặc chia sẻ rời khỏi cấu trúc đó.

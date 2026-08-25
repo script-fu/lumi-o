@@ -4,37 +4,43 @@ type: docs
 url: "hub/features/file-format"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
+translation_source_sha256: c5e414a0d2870f1b111751c8c462e7ac5a4530103d70cb9be52a9fbd11417028
 ---
 
-El formato de archivo nativo de Lumi está pensado para proyectos de pintura en capas que deben seguir siendo fiables, inspeccionables y recuperables con el tiempo. Se diseña en torno a la realidad del trabajo de ilustración: muchas capas, lienzos grandes, información de color incrustada, máscaras, efectos y datos de recuperación.
+El formato nativo `.lum` de Lumi es un directorio de proyecto, no un único archivo cerrado. Está pensado para la ilustración en capas: árboles de capas profundos, lienzos grandes, máscaras, efectos no destructivos y puntos de control que no tienen que duplicar toda la pintura.
 
-En lugar de tratar un proyecto como un único bloque opaco, el formato mantiene visible para la aplicación la estructura de la obra. Así Lumi puede guardar, cargar y recuperar imágenes grandes de forma más inteligente preservando la organización de la que dependen los artistas.
+La función del formato es conservar intacta esa estructura de trabajo: reabrir un proyecto con fidelidad, inspeccionarlo cuando algo falla y recuperarlo desde un punto de control reciente, sin tratar la obra como un bloque opaco.
 
-## Estructura abierta del proyecto
+## Piezas separadas, a propósito
 
-Un proyecto de Lumi mantiene separadas las partes de la obra: estructura de imagen, contenido de capas, máscaras, datos de color, metadatos e información de recuperación tienen cada uno un papel claro. Eso hace el formato más fácil de entender y más adecuado para el acceso a largo plazo que un contenedor monolítico cerrado.
+Un proyecto `.lum` es una carpeta. El árbol de capas y las propiedades de la imagen se guardan en XML legible. Cada capa y cada máscara conserva su propio búfer de píxeles, nombrado según la obra y no según un identificador interno. Los trazados vectoriales se guardan como SVG corriente. Los ajustes de filtros pesados ocupan sus propios archivos, junto a la imagen. Los perfiles ICC se almacenan una sola vez en la raíz del proyecto, para que las instantáneas de recuperación puedan referirse a ellos en lugar de copiarlos.
 
-El objetivo no es solo almacenar píxeles, sino almacenar el estado de trabajo de una ilustración. Las capas siguen siendo capas, las máscaras siguen siendo máscaras y el archivo sigue reflejando cómo se construyó la obra.
+Esa separación es lo que hace posible el resto del formato. Las capas que no han cambiado pueden permanecer intactas en el disco. Un búfer dañado falla por su cuenta, en vez de llevarse el archivo entero. Los píxeles de capa que faltan se convierten en capas vacías que aún tienen nombre, posición y ajustes de fusión; si falta la vista compuesta de un grupo, se reconstruye a partir de los hijos. El proyecto sigue siendo un mapa de cómo se construyó la pintura.
 
-## Pensado para pinturas grandes
+Las paletas de pigmentos pertenecen a las herramientas de color de Lumi. Un proyecto puede recordar qué paleta estaba asociada a la imagen, pero la biblioteca de paletas en sí queda fuera del `.lum`.
 
-Las imágenes grandes en capas pueden volverse pesadas con rapidez. El formato de Lumi admite flujos de trabajo en los que no hace falta cargar en memoria todos los datos de imagen a la vez. Los proyectos pueden seguir siendo ágiles cargando solo las partes necesarias para ver, editar, componer o exportar.
+## Estado editable, no un aplanamiento
 
-Este enfoque ayuda a que los archivos complejos resulten manejables, sobre todo cuando una obra contiene muchas capas ocultas, archivadas, experimentales o agrupadas.
+El archivo guarda la pintura en curso. Las capas siguen siendo capas, los grupos siguen siendo grupos y las máscaras siguen siendo máscaras, incluidos desplazamientos, bloqueos, comportamiento de fusión y pilas de filtros. Los filtros no destructivos se guardan como operaciones y parámetros, no como píxeles ya aplicados. Una capa de un solo color plano no necesita archivo de píxeles.
 
-## Guardar sin interrumpir el flujo
+Los grupos contraídos también conservan una vista compuesta de sí mismos. Esa vista guardada es lo que aparece en el lienzo cuando un grupo está cerrado, así que no hace falta reconstruir los hijos solo para mirar la imagen. Los modos de inspección solo para visualización quedan fuera de esa caché: mostrar una máscara o el alfa para editar se restaura como metadatos, no se graba en el grupo guardado.
 
-El formato admite tanto el guardado normal del proyecto como instantáneas ligeras de recuperación. Así el artista puede proteger el trabajo con frecuencia sin convertir cada punto de control en un duplicado completo de toda la imagen.
+## Los archivos grandes pueden quedarse en parte en el disco
 
-Como la información de recuperación pertenece a la estructura del proyecto, Lumi puede mantener un historial útil cerca de la obra y, al mismo tiempo, permitir que los guardados de seguridad automáticos vivan separados del archivo de trabajo.
+Abrir un `.lum` no tiene que cargar todos los píxeles. El contenido de los grupos contraídos puede permanecer en el disco mientras se muestra de inmediato la vista compuesta guardada del grupo. Al expandir un grupo, esas capas, máscaras y grupos anidados pasan a memoria. Los grupos que permanecen cerrados siguen siendo ligeros.
 
-## Intercambio y exportación
+El archivo también registra qué grupos estaban realmente en uso. Los grupos en la ruta de la selección activa pueden reabrirse expandidos; las demás carpetas se almacenan contraídas aunque estuvieran abiertas en la última sesión. Así un archivo profundo no carga en memoria cada rama sin usar en el momento de abrirlo.
 
-El formato nativo está pensado para el trabajo continuo en Lumi, mientras que los formatos de exportación sirven para compartir resultados aplanados o centrados en compatibilidad. La importación ayuda a incorporar obras existentes al entorno en capas de Lumi, y la exportación permite que las piezas acabadas salgan del formato de proyecto cuando estén listas para publicación, entrega o procesamiento posterior.
+Agrupar es, por tanto, una decisión de rendimiento además de una de organización. Fondos grandes, experimentos archivados y variantes sin usar pueden quedarse en grupos cerrados sin ocupar la misma memoria que las capas que se están pintando. El guardado sigue la misma regla: los búferes aún ocultos se copian o se omiten como archivos, no se vuelven a cargar en memoria solo para escribirlos de nuevo.
 
-Esa distinción mantiene el archivo de trabajo rico y editable y, al mismo tiempo, permite producir imágenes finales en formatos externos habituales.
+## Puntos de control que solo escriben lo que cambió
 
-## Fiabilidad a largo plazo
+Archivo → Guardar actualiza el proyecto de trabajo. Los guardados incrementales y el autoguardado escriben en un árbol de recuperación, y solo escriben datos modificados: búferes de capa cambiados, no una segunda copia de toda la imagen. Cada punto de control lleva igualmente una descripción completa del árbol de capas, de modo que cualquier momento de ese historial puede abrirse rellenando los píxeles sin cambios desde puntos de control anteriores y, si hace falta, desde el propio archivo de trabajo.
 
-En resumen, el formato `.lum` es un contenedor práctico para trabajo de pintura serio: lo bastante abierto para inspeccionarlo, lo bastante estructurado para recuperarlo y lo bastante flexible para manejar imágenes complejas en capas de forma eficiente.
+El autoguardado usa el mismo esquema en una caché aparte, así que la protección automática no tiene que reescribir el archivo en el disco. Si se abre un proyecto cuando existen puntos de control más recientes que el último guardado completo, Lumi puede ofrecerlos en lugar de descartar en silencio el trabajo más reciente. Las imágenes recuperadas se abren con un nombre distinto para que un guardado rápido no pueda sobrescribir el original.
+
+## Un formato de trabajo
+
+`.lum` sirve para continuar una pintura en Lumi. Los formatos aplanados o de compatibilidad sirven para publicar, entregar y usar en otras aplicaciones. Como un proyecto es un directorio de muchos archivos, conviene archivarlo si tiene que viajar.
+
+El archivo de trabajo sigue siendo rico y editable. Las exportaciones son el modo en que una imagen terminada o compartida sale de esa estructura.

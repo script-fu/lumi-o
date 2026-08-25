@@ -4,36 +4,43 @@ type: docs
 url: "hub/features/file-format"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
+translation_source_sha256: c5e414a0d2870f1b111751c8c462e7ac5a4530103d70cb9be52a9fbd11417028
 ---
-Lumis natives Dateiformat ist für mehrschichtige Malprojekte gedacht, die zuverlässig, nachvollziehbar und langfristig wiederherstellbar bleiben müssen. Es orientiert sich an Illustrationsarbeit: viele Ebenen, große Leinwände, eingebettete Farbinformationen, Masken, Effekte und Wiederherstellungsdaten.
 
-Statt ein Projekt als undurchsichtigen Block zu behandeln, bleibt die Kunstwerkstruktur für die Anwendung sichtbar. So speichert, lädt und stellt Lumi große Bilder intelligenter wieder her — und bewahrt die Organisation, auf die Künstler angewiesen sind.
+Lumis natives `.lum`-Format ist ein Projektverzeichnis, keine einzelne abgeschlossene Datei. Es ist für Illustration mit Ebenen ausgelegt: tiefe Ebenenbäume, große Leinwände, Masken, zerstörungsfreie Effekte und Kontrollpunkte, die nicht das ganze Bild duplizieren müssen.
 
-## Offene Projektstruktur
+Aufgabe des Formats ist, diese Arbeitsstruktur unversehrt zu halten — damit ein Projekt getreu wieder geöffnet, bei Problemen geprüft und aus einem aktuellen Kontrollpunkt wiederhergestellt werden kann, ohne das Kunstwerk als undurchsichtigen Block zu behandeln.
 
-Ein Lumi-Projekt hält die Teile des Kunstwerks getrennt: Bildstruktur, Ebeneninhalt, Masken, Farbdaten, Metadaten und Wiederherstellungsinformationen haben jeweils eine klare Rolle. Das Format ist leichter nachvollziehbar und für langfristigen Zugriff besser geeignet als ein geschlossener Monolith.
+## Absichtlich getrennte Teile
 
-Ziel ist nicht nur, Pixel zu speichern, sondern den Arbeitszustand einer Illustration. Ebenen bleiben Ebenen, Masken bleiben Masken — die Datei spiegelt weiter, wie das Kunstwerk aufgebaut ist.
+Ein `.lum`-Projekt ist ein Ordner. Ebenenbaum und Bildeigenschaften liegen in lesbarem XML. Jede Ebene und jede Maske behält ihren eigenen Pixelpuffer, benannt nach dem Kunstwerk statt nach einer internen ID. Vektorpfade werden als gewöhnliches SVG gespeichert. Umfangreiche Filtereinstellungen liegen in eigenen Dateien neben dem Bild. ICC-Profile stehen einmal im Projektordner, sodass Wiederherstellungsstände darauf verweisen statt sie zu kopieren.
 
-## Für große Bilder ausgelegt
+Diese Trennung macht den Rest des Formats möglich. Unveränderte Ebenen können auf der Festplatte unangetastet bleiben. Ein beschädigter Puffer scheitert für sich, statt die ganze Datei mitzureißen. Fehlende Ebenenpixel werden zu leeren Ebenen, die Namen, Positionen und Überblendungseinstellungen behalten; fehlt das gespeicherte Gruppenbild, wird es aus den Kindern neu aufgebaut. Das Projekt bleibt eine Karte des Bildaufbaus.
 
-Große Ebenenbilder werden schnell schwer. Lumis Format unterstützt Workflows, bei denen nicht alle Bilddaten auf einmal in den Speicher müssen. Projekte bleiben reaktionsschnell, indem nur die Teile geladen werden, die Anzeige, Bearbeitung, Komposition oder Export brauchen.
+Pigmentpaletten gehören zu Lumis Farbwerkzeugen. Ein Projekt kann merken, welche Palette dem Bild zugeordnet war — die Palettenbibliothek selbst liegt außerhalb von `.lum`.
 
-So fühlen sich komplexe Dateien handhabbar an — besonders bei vielen verborgenen, archivierten, experimentellen oder gruppierten Ebenen.
+## Bearbeitbarer Zustand, kein Abflachen
 
-## Speichern ohne Unterbrechung
+Die Datei speichert das Arbeitsbild. Ebenen bleiben Ebenen, Gruppen bleiben Gruppen, Masken bleiben Masken — einschließlich Versätzen, Sperren, Überblendungsverhalten und Filterstapeln. Zerstörungsfreie Filter werden als Operationen und Parameter gespeichert, nicht als festgeschriebene Pixel. Eine Ebene in einer einzigen Flächenfarbe braucht gar keine Pixeldatei.
 
-Das Format unterstützt normales Projektspeichern und leichte Wiederherstellungs-Snapshots. Künstler können Arbeit häufig schützen, ohne jeden Kontrollpunkt in ein vollständiges Duplikat des gesamten Bildes zu verwandeln.
+Zugeklappte Gruppen behalten außerdem eine zusammengesetzte Ansicht ihrer selbst. Dieses gespeicherte Gruppenbild erscheint auf der Leinwand, wenn eine Gruppe geschlossen ist — die Kinder müssen nicht rekonstruiert werden, nur um das Bild zu sehen. Reine Inspektionsansichten bleiben außerhalb dieses Zwischenspeichers: Maske oder Alpha zur Bearbeitung anzuzeigen wird als Metadaten wiederhergestellt, nicht fest in die gespeicherte Gruppe übernommen.
 
-Weil Wiederherstellungsinformationen zur Projektstruktur gehören, kann Lumi nützlichen Verlauf nah am Kunstwerk halten und automatische Sicherungsspeicherungen getrennt von der Arbeitsdatei ablegen.
+## Große Dateien können teilweise auf der Festplatte bleiben
 
-## Austausch und Export
+Beim Öffnen einer `.lum` müssen nicht alle Pixel geladen werden. Inhalt in zugeklappten Gruppen kann auf der Festplatte bleiben, während das gespeicherte Gruppenbild sofort angezeigt wird. Beim Aufklappen kommen diese Ebenen, Masken und verschachtelten Gruppen in den Speicher. Gruppen, die geschlossen bleiben, belasten den Speicher kaum.
 
-Das native Format ist für laufende Lumi-Arbeit gedacht; Exportformate dienen der Weitergabe abgeflachter oder kompatibilitätsorientierter Ergebnisse. Import bringt bestehende Kunstwerke in Lumis Ebenenumgebung; Export lässt fertige Stücke das Projektformat verlassen, wenn sie veröffentlicht, geliefert oder weiterverarbeitet werden.
+Die Datei hält außerdem fest, welche Gruppen tatsächlich in Gebrauch waren. Gruppen auf dem Weg zur aktiven Auswahl können aufgeklappt wieder geöffnet werden; andere Ordner werden zugeklappt gespeichert, auch wenn sie in der letzten Sitzung offen waren. So muss eine tiefe Datei nicht jeden ungenutzten Zweig sofort in den Speicher laden.
 
-Die Arbeitsdatei bleibt reich und bearbeitbar; Endbilder entstehen in gängigen externen Formaten.
+Gruppieren ist deshalb ebenso eine Frage der Leistung wie der Organisation. Große Hintergründe, archivierte Experimente und ungenutzte Varianten können in geschlossenen Gruppen liegen, ohne denselben Speicher zu belegen wie die Ebenen, an denen gemalt wird. Das Speichern folgt derselben Regel: noch verborgene Puffer werden als Dateien kopiert oder übersprungen, nicht erst wieder in den Speicher geholt, nur um erneut geschrieben zu werden.
 
-## Langfristige Zuverlässigkeit
+## Kontrollpunkte, die nur Änderungen schreiben
 
-Kurz gesagt: Das `.lum`-Format ist ein praktischer Behälter für ernsthafte Malarbeit — offen genug zum Inspizieren, strukturiert genug zur Wiederherstellung, flexibel genug für komplexe Ebenenbilder ohne unnötigen Overhead.
+Datei → Speichern aktualisiert das Arbeitsprojekt. Inkrementelle Speicherungen und Automatisch speichern schreiben in einen Wiederherstellungsbaum und schreiben nur geänderte Daten — veränderte Ebenenpuffer, keine zweite Kopie des gesamten Bildes. Jeder Kontrollpunkt trägt trotzdem eine vollständige Beschreibung des Ebenenbaums, sodass jeder Stand in diesem Verlauf geöffnet werden kann, indem unveränderte Pixel aus älteren Kontrollpunkten und nötigenfalls aus der Arbeitsdatei selbst ergänzt werden.
+
+Automatisch speichern nutzt dasselbe Muster in einem getrennten Zwischenspeicher, sodass der automatische Schutz die Datei auf der Festplatte nicht umschreiben muss. Wird ein Projekt geöffnet, während neuere Kontrollpunkte als der letzte vollständige Speicherstand existieren, kann Lumi sie anbieten, statt die neuere Arbeit stillschweigend zu verwerfen. Wiederhergestellte Bilder öffnen sich unter einem eigenen Namen, damit ein schnelles Speichern das Original nicht überschreibt.
+
+## Ein Arbeitsformat
+
+`.lum` dient dazu, ein Bild in Lumi weiterzumalen. Abgeflachte Formate und Kompatibilitätsformate sind für Veröffentlichung, Übergabe und andere Anwendungen. Weil ein Projekt ein Verzeichnis vieler Dateien ist, sollte es archiviert werden, wenn es transportiert werden muss.
+
+Die Arbeitsdatei bleibt reich und bearbeitbar. Exporte sind der Weg, auf dem ein fertiges oder geteiltes Bild diese Struktur verlässt.

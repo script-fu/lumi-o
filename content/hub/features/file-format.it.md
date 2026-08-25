@@ -4,37 +4,43 @@ type: docs
 url: "hub/features/file-format"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
+translation_source_sha256: c5e414a0d2870f1b111751c8c462e7ac5a4530103d70cb9be52a9fbd11417028
 ---
 
-Il formato nativo di Lumi è pensato per progetti di pittura a livelli che devono restare affidabili, ispezionabili e recuperabili nel tempo. È progettato intorno alla realtà del lavoro di illustrazione: molti livelli, tele di grandi dimensioni, informazioni colore incorporate, maschere, effetti e dati di recupero.
+Il formato nativo `.lum` di Lumi è una cartella di progetto, non un unico file chiuso. È pensato per l'illustrazione a livelli: alberi di livelli profondi, tele grandi, maschere, effetti non distruttivi e checkpoint che non devono duplicare l'intero dipinto.
 
-Invece di trattare un progetto come un unico blocco opaco, il formato mantiene visibile all'applicazione la struttura dell'opera. Così Lumi può salvare, caricare e recuperare immagini grandi in modo più intelligente, preservando l'organizzazione da cui dipendono gli artisti.
+Il compito del formato è mantenere intatta quella struttura di lavoro: così un progetto si riapre fedelmente, si può ispezionare quando qualcosa va storto e si recupera da un checkpoint recente, senza trattare l'opera come un blocco opaco.
 
-## Struttura aperta del progetto
+## Pezzi separati, di proposito
 
-Un progetto Lumi mantiene separate le parti dell'opera: struttura dell'immagine, contenuto dei livelli, maschere, dati colore, metadati e informazioni di recupero hanno ciascuno un ruolo chiaro. Il formato risulta più comprensibile e più adatto all'accesso a lungo termine rispetto a un contenitore chiuso e monolitico.
+Un progetto `.lum` è una cartella. L'albero dei livelli e le proprietà dell'immagine stanno in XML leggibile. Ogni livello e ogni maschera conserva il proprio buffer di pixel, nominato secondo l'opera e non secondo un ID interno. I tracciati vettoriali sono memorizzati come SVG ordinario. Le impostazioni dei filtri pesanti occupano file propri, accanto all'immagine. I profili ICC sono memorizzati una sola volta nella radice del progetto, così le istantanee di recupero possono farvi riferimento invece di copiarli.
 
-L'obiettivo non è solo memorizzare i pixel, ma conservare lo stato operativo di un'illustrazione. I livelli restano livelli, le maschere restano maschere e il file continua a riflettere il modo in cui l'opera è stata costruita.
+È questa separazione a rendere possibile il resto del formato. I livelli invariati possono restare intatti su disco. Un buffer danneggiato fallisce da solo, invece di trascinare con sé l'intero file. I pixel di livello mancanti diventano livelli vuoti che hanno ancora nome, posizione e impostazioni di fusione; un'anteprima di gruppo mancante si ricostruisce dai figli. Il progetto resta una mappa di come è stato costruito il dipinto.
 
-## Progettato per opere di grandi dimensioni
+Le tavolozze di pigmenti appartengono agli strumenti colore di Lumi. Un progetto può ricordare quale tavolozza era associata all'immagine, ma la libreria delle tavolozze è fuori dal `.lum`.
 
-Le immagini a livelli di grandi dimensioni possono diventare pesanti rapidamente. Il formato di Lumi supporta flussi di lavoro in cui non è necessario caricare in memoria tutti i dati dell'immagine contemporaneamente. I progetti possono restare reattivi caricando solo le parti necessarie per visualizzazione, modifica, composizione o esportazione.
+## Stato modificabile, non un appiattimento
 
-Questo approccio rende gestibili i file complessi, soprattutto quando un'opera contiene molti livelli nascosti, archiviati, sperimentali o raggruppati.
+Il file conserva il dipinto in lavorazione. I livelli restano livelli, i gruppi restano gruppi, le maschere restano maschere, compresi spostamenti, blocchi, comportamento di fusione e pile di filtri. I filtri non distruttivi si salvano come operazioni e parametri, non come pixel già applicati. Un livello di una sola tinta unita non ha bisogno di un file di pixel.
 
-## Salvare senza interrompere il flusso
+I gruppi compressi conservano anche una vista composta di se stessi. È quell'anteprima salvata a comparire sulla tela quando un gruppo è chiuso, così i figli non devono essere ricostruiti solo per guardare l'immagine. Le modalità di ispezione solo per la visualizzazione restano fuori da quella cache: mostrare una maschera o l'alfa per la modifica si ripristina come metadati, non viene inciso nel gruppo salvato.
 
-Il formato supporta sia il salvataggio normale del progetto sia istantanee leggere in stile recupero. Gli artisti possono proteggere frequentemente il proprio lavoro senza trasformare ogni checkpoint in un duplicato completo dell'intera immagine.
+## I file grandi possono restare in parte su disco
 
-Poiché le informazioni di recupero appartengono alla struttura del progetto, Lumi può conservare una cronologia utile vicino all'opera consentendo comunque ai salvataggi di sicurezza automatici di restare separati dal file di lavoro.
+Aprire un `.lum` non implica caricare ogni pixel. Il contenuto dei gruppi compressi può restare su disco mentre l'anteprima salvata del gruppo viene mostrata subito. Quando si espande un gruppo, quei livelli, maschere e gruppi nidificati arrivano in memoria. I gruppi che restano chiusi restano leggeri.
 
-## Interscambio ed esportazione
+Il file registra anche quali gruppi erano davvero in uso. I gruppi sul percorso della selezione attiva possono riaprirsi espansi; le altre cartelle sono memorizzate come compresse anche se nella sessione precedente erano aperte. Così un file profondo non deve caricare in memoria ogni ramo inutilizzato nel momento in cui si apre.
 
-Il formato nativo è destinato al lavoro continuo in Lumi, mentre i formati di esportazione servono per condividere risultati appiattiti o orientati alla compatibilità. Il supporto all'importazione aiuta a portare opere esistenti nell'ambiente a livelli di Lumi, mentre il supporto all'esportazione consente ai pezzi finiti di uscire dal formato di progetto quando sono pronti per pubblicazione, consegna o ulteriore elaborazione.
+Raggruppare è quindi una scelta di prestazioni oltre che di organizzazione. Grandi sfondi, esperimenti archiviati e varianti inutilizzate possono stare in gruppi chiusi senza occupare la stessa memoria dei livelli su cui si dipinge. Il salvataggio segue la stessa regola: i buffer ancora nascosti vengono copiati o saltati come file, non riportati in memoria solo per essere scritti di nuovo.
 
-La distinzione mantiene il file di lavoro ricco e modificabile, consentendo al tempo stesso di produrre immagini finali in formati esterni comuni.
+## Checkpoint che scrivono solo ciò che è cambiato
 
-## Affidabilità a lungo termine
+File → Salva aggiorna il progetto di lavoro. I salvataggi incrementali e il salvataggio automatico scrivono in un albero di recupero, e scrivono solo i dati modificati — i buffer di livello cambiati, non una seconda copia dell'intera immagine. Ogni checkpoint porta comunque una descrizione completa dell'albero dei livelli, così qualsiasi punto di quella traccia può essere aperto riempiendo i pixel invariati da checkpoint più vecchi e, se serve, dal file di lavoro stesso.
 
-In breve, il formato `.lum` è un contenitore pratico per lavori di pittura seri: abbastanza aperto per l'ispezione, abbastanza strutturato per il recupero e abbastanza flessibile per gestire in modo efficiente immagini complesse a livelli.
+Il salvataggio automatico usa lo stesso schema in una cache separata, così la protezione automatica non deve riscrivere il file su disco. Se si apre un progetto quando esistono checkpoint più recenti dell'ultimo salvataggio completo, Lumi può proporli invece di scartare in silenzio il lavoro più recente. Le immagini recuperate si aprono con un nome distinto, così un salvataggio rapido non può sovrascrivere l'originale.
+
+## Un formato di lavoro
+
+`.lum` serve a continuare un dipinto in Lumi. I formati appiattiti o di compatibilità servono alla pubblicazione, alla consegna e ad altre applicazioni. Poiché un progetto è una cartella di molti file, va archiviato se deve viaggiare.
+
+Il file di lavoro resta ricco e modificabile. Le esportazioni sono il modo in cui un'immagine finita o condivisa lascia quella struttura.

@@ -4,37 +4,43 @@ type: docs
 url: "hub/features/file-format"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f26bd5ecb0cb647cd3180b1ab39402ee6943085b7ad899518a406ee6ae98c4c9
+translation_source_sha256: c5e414a0d2870f1b111751c8c462e7ac5a4530103d70cb9be52a9fbd11417028
 ---
 
-Natywny format pliku Lumi służy projektom malarskim opartym na warstwach, które muszą pozostać niezawodne, możliwe do sprawdzenia i odzyskiwania w czasie. Został zaprojektowany z myślą o realiach pracy ilustracyjnej: wielu warstwach, dużych płótnach, osadzonych danych kolorów, maskach, efektach i danych odzyskiwania.
+Natywny format `.lum` w Lumi to katalog projektu, nie pojedynczy zamknięty plik. Powstał z myślą o ilustracji warstwowej: głębokich drzewach warstw, dużych płótnach, maskach, nieniszczących efektach i punktach kontrolnych, które nie muszą duplikować całego obrazu.
 
-Zamiast traktować projekt jako jedną nieprzezroczystą całość, format utrzymuje strukturę grafiki widoczną dla aplikacji. Dzięki temu Lumi może zapisywać, ładować i odzyskiwać duże obrazy w sposób bardziej inteligentny, zachowując organizację, na której polegają artyści.
+Zadaniem formatu jest utrzymać tę roboczą strukturę — żeby projekt można było otworzyć wiernie, sprawdzić, gdy coś pójdzie nie tak, i odzyskać z niedawnego punktu kontrolnego, nie traktując grafiki jak jednej nieprzejrzystej bryły.
 
-## Otwarta struktura projektu
+## Osobne części — celowo
 
-Projekt Lumi oddziela części dzieła: strukturę obrazu, zawartość warstw, maski, dane kolorów, metadane i informacje o odzyskiwaniu — każda ma wyraźną rolę. Format jest łatwiejszy do zrozumienia i lepiej nadaje się do długoterminowego dostępu niż zamknięty, monolityczny kontener.
+Projekt `.lum` to folder. Drzewo warstw i właściwości obrazu są w czytelnym XML. Każda warstwa i każda maska ma własny bufor pikseli, nazwany według grafiki, a nie według wewnętrznego identyfikatora. Ścieżki wektorowe zapisuje się zwykłym SVG. Ciężkie ustawienia filtrów są we własnych plikach obok obrazu. Profile ICC są przechowywane raz, w katalogu głównym projektu, więc migawki odzyskiwania mogą się do nich odwoływać zamiast je kopiować.
 
-Chodzi nie tylko o przechowywanie pikseli, lecz o roboczy stan ilustracji. Warstwy pozostają warstwami, maski maskami, a plik nadal odzwierciedla sposób, w jaki powstała grafika.
+To rozdzielenie umożliwia resztę formatu. Niezmienione warstwy można zostawić na dysku w spokoju. Uszkodzony bufor psuje się sam, zamiast pociągnąć za sobą cały plik. Brakujące piksele warstwy stają się pustymi warstwami, które nadal mają nazwy, pozycje i ustawienia mieszania; brakujący podgląd złożony grupy odtwarza się z warstw podrzędnych. Projekt pozostaje mapą tego, jak powstał obraz.
 
-## Zaprojektowany pod duże obrazy
+Palety pigmentów należą do narzędzi koloru Lumi. Projekt może pamiętać, która paleta była powiązana z obrazem, ale sama biblioteka palet jest poza `.lum`.
 
-Duże obrazy warstwowe szybko stają się ciężkie. Format Lumi obsługuje przepływy pracy, w których nie wszystkie dane obrazu muszą trafić do pamięci naraz. Projekty pozostają responsywne, ładując tylko te części obrazu, które są potrzebne do podglądu, edycji, komponowania lub eksportu.
+## Stan edycji, nie spłaszczenie
 
-Takie podejście ułatwia zarządzanie złożonymi plikami, zwłaszcza gdy grafika zawiera wiele ukrytych, zarchiwizowanych, eksperymentalnych lub pogrupowanych warstw.
+Plik przechowuje roboczy obraz. Warstwy pozostają warstwami, grupy warstw grupami, a maski maskami — wraz z przesunięciami, blokadami, zachowaniem mieszania i stosami filtrów. Filtry nieniszczące zapisuje się jako operacje i parametry, nie jako już wkomponowane piksele. Warstwa o jednolitym płaskim kolorze w ogóle nie potrzebuje pliku pikseli.
 
-## Zapisywanie bez przerywania pracy
+Zwinięte grupy zachowują też złożony widok samych siebie. Ten zapisany podgląd złożony pojawia się na płótnie, gdy grupa jest zamknięta, więc warstw podrzędnych nie trzeba odtwarzać tylko po to, by spojrzeć na obraz. Tryby podglądu wyłącznie do inspekcji zostają poza tym zapisem: wyświetlanie maski lub alfy do edycji wraca jako metadane, a nie zostaje wpisane w zapisaną grupę.
 
-Format pliku obsługuje zarówno zwykłe zapisywanie projektu, jak i lekkie migawki odzyskiwania. Artyści mogą często chronić pracę bez tworzenia pełnej kopii całego obrazu przy każdym punkcie kontrolnym.
+## Duże pliki mogą pozostać częściowo na dysku
 
-Ponieważ informacje o odzyskiwaniu należą do struktury projektu, Lumi może trzymać użyteczną historię blisko grafiki, a jednocześnie pozwalać, by automatyczne zapisy bezpieczeństwa pozostawały oddzielnie od pliku roboczego.
+Otwarcie `.lum` nie wymaga wczytania wszystkich pikseli. Zawartość zwiniętych grup może pozostać na dysku, a zapisany podgląd złożony grupy pokazuje się od razu. Dopiero rozwinięcie grupy wczytuje te warstwy, maski i zagnieżdżone grupy do pamięci. Grupy, które pozostają zamknięte, pozostają lekkie.
 
-## Wymiana i eksport
+Plik zapisuje też, które grupy były faktycznie w użyciu. Grupy na ścieżce aktywnego zaznaczenia mogą otworzyć się rozwinięte; pozostałe grupy są zapisane jako zwinięte, nawet jeśli w poprzedniej sesji akurat były otwarte. Dzięki temu głęboki plik nie wczytuje do pamięci każdej nieużywanej gałęzi w chwili otwarcia.
 
-Format natywny służy bieżącej pracy w Lumi; formaty eksportu udostępniają spłaszczone lub zorientowane na kompatybilność wyniki. Import pomaga przenieść istniejącą grafikę do warstwowego środowiska Lumi, a eksport pozwala gotowym pracom opuścić format projektu, gdy są gotowe do publikacji, dostarczenia lub dalszej obróbki.
+Grupowanie jest więc wyborem wydajnościowym, nie tylko organizacyjnym. Duże tła, zarchiwizowane eksperymenty i nieużywane warianty mogą leżeć w zamkniętych grupach, nie zajmując tej samej pamięci co warstwy, na których się maluje. Zapisywanie działa według tej samej zasady: nadal ukryte bufory kopiuje się lub pomija jako pliki, zamiast wpychać je z powrotem do pamięci tylko po to, by znów je zapisać.
 
-Dzięki temu plik roboczy pozostaje bogaty i edytowalny, a końcowe obrazy można tworzyć w popularnych formatach zewnętrznych.
+## Punkty kontrolne zapisują tylko zmiany
 
-## Długoterminowa niezawodność
+Plik → Zapisz aktualizuje projekt roboczy. Zapisy przyrostowe i Autozapis trafiają do drzewa odzyskiwania i zapisują wyłącznie zmienione dane — zmodyfikowane bufory warstw, nie drugą kopię całego obrazu. Każdy punkt kontrolny niesie jednak pełny opis drzewa warstw, więc dowolny moment tego ciągu można otworzyć, uzupełniając niezmienione piksele ze starszych punktów kontrolnych i, w razie potrzeby, z samego pliku roboczego.
 
-Krótko mówiąc, format `.lum` to praktyczny kontener do poważnej pracy malarskiej: wystarczająco otwarty do inspekcji, wystarczająco ustrukturyzowany do odzyskiwania i wystarczająco elastyczny, by ekonomicznie obsługiwać złożone obrazy warstwowe.
+Autozapis stosuje ten sam wzorzec w osobnej pamięci podręcznej, więc automatyczna ochrona nie musi przepisywać pliku na dysku. Jeśli przy otwieraniu projektu istnieją nowsze punkty kontrolne niż ostatni pełny zapis, Lumi może je zaproponować zamiast po cichu odrzucać świeższą pracę. Odzyskane obrazy otwierają się pod inną nazwą, żeby szybki zapis nie nadpisał oryginału.
+
+## Format roboczy
+
+`.lum` służy do kontynuowania malowania w Lumi. Formaty spłaszczone i formaty zgodności służą publikacji, przekazaniu i innym programom. Ponieważ projekt to katalog wielu plików, warto go zarchiwizować, gdy ma podróżować.
+
+Plik roboczy pozostaje bogaty i edytowalny. Eksport to sposób, w jaki skończony lub udostępniany obraz opuszcza tę strukturę.

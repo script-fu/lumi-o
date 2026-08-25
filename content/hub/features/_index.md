@@ -7,7 +7,7 @@ url: "hub/features"
 This section introduces the core capabilities available in Lumi and the creative workflows they support.
 
 {{< cards >}}
-  {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="A structured project format for layered artwork, recovery, colour data, and long-term editing." >}}
+  {{< card link="file-format" title="File Format (.lum)" icon="document-text" subtitle="A directory-based project format for layered artwork, large files, recovery, and long-term editing." >}}
   {{< card link="filters" title="Filters" icon="filter" subtitle="Correct, stylize, generate, and keep layer effects editable with blur, lighting, texture, print, and analysis filters." >}}
   {{< card link="recovery" title="File Recovery" icon="refresh" subtitle="Background protection and intentional checkpoints help keep painting sessions from becoming fragile." >}}
   {{< card link="layers" title="Layers & Non-Destructive Editing" icon="collection" subtitle="Structured painting with editable layers, groups, masks, effects, and protected work states." >}}
