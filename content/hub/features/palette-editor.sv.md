@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/palette-editor"
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 ---
 Palettredigeraren är där en Lumi-palett blir en komplett färgmiljö. Den sammanför pigmenten som en palett är byggd av, de blandningar som en konstnär väljer att behålla, färgerna som används under målningen och den tonala strukturen som formar hur paletten utforskas.
 
@@ -32,6 +32,13 @@ Tillsammans låter dessa områden en palett utvecklas naturligt. Det kan börja 
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Användarpigment
+
+Målare förmixar ofta en hög färg — en marsröd dämpad med ett neutralt, ett tempererat gult, en varm skugga — och behandlar de högarna som målningens arbetsprimärer. Sparade blandningar kan hålla de upptäckterna, men en blandning är ännu inte ett pigment: den genererar inte resten av paletten och kan inte läggas till som pigment i en annan palett.
+
+En sparad blandning kan upphöjas till ett användarpigment. Den beter sig då som ett vanligt palettpigment: den genererar blandningar, syns på kartan och kan väljas som vilket annat pigment som helst, samtidigt som den behåller färgen från den upphöjda blandningen. Samma pigment kan läggas till i vilken annan palett som helst från ett delat bibliotek.
+
+Det biblioteket förblir kopplat. Att byta namn, byta ut eller ta bort ett användarpigment når varje palett som använder det, så att en arbetsprimär kan utvecklas med konstnärens färgordförråd i stället för att bli instängd i en fil.
 
 ## Värdeledd organisation
 

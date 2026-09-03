@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/palette-editor"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 ---
 
 In de Palette Editor wordt een Lumi-palet een complete kleuromgeving. Het brengt samen de pigmenten waaruit een palet is opgebouwd, de mengsels die een kunstenaar wil bewaren, de kleuren die tijdens het schilderen worden gebruikt, en de toonstructuur die bepaalt hoe het palet wordt verkend.
@@ -33,6 +33,13 @@ Samen laten deze onderdelen een palet natuurlijk evolueren: van pigmentset naar 
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Gebruikerspigmenten
+
+Schilders premixen vaak een hoop kleur — een marsrood getemperd met een neutraal, een getemperd geel, een warme schaduw — en behandelen die hopen als de primaire werkkleuren van het schilderij. Opgeslagen mengsels kunnen die ontdekkingen bewaren, maar een mengsel is nog geen pigment: het genereert de rest van het palet niet, en het kan niet als pigment aan een ander palet worden toegevoegd.
+
+Een opgeslagen mengsel kan tot gebruikerspigment worden gepromoveerd. Het gedraagt zich dan als een gewoon paletpigment: het genereert mengsels, verschijnt op de kaart en is te kiezen zoals elk ander pigment, terwijl het de kleur van het gepromoveerde mengsel behoudt. Hetzelfde pigment kan vanuit een gedeelde bibliotheek aan elk ander palet worden toegevoegd.
+
+Die bibliotheek blijft gekoppeld. Hernoemen, vervangen of verwijderen van een gebruikerspigment bereikt elk palet dat het gebruikt, zodat een primaire werkkleur met het kleurenvocabulaire van de kunstenaar kan meegroeien in plaats van in één bestand vast te zitten.
 
 ## Organisatie op basis van waarde
 

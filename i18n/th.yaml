@@ -4,6 +4,8 @@
   translation: "เกี่ยวกับ"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "คุณสมบัติ"
 - id: menuMadeInLumio

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 Das Ebenensystem von Lumi gibt Illustrationen Struktur. Künstler können Skizze, Farbe, Schattierung, Textur, Masken, Korrekturen, Experimente und Feindetails trennen, ohne jede Entscheidung direkt in ein flaches Bild zu brennen.
 
@@ -35,6 +35,12 @@ Ziel ist, dass Ebenenarbeit räumlich statt administrativ wirkt: Ist ein Strich 
 Ebenen lassen sich auf verschiedene Weise schützen, damit fertige Bereiche, Masken, Positionen, Transparenz oder Farbentscheidungen nicht versehentlich geändert werden. Das ist nützlich, sobald ein Bild dichter wird und manche Teile stabil bleiben sollen, während andere weiter wachsen.
 
 So entstehen bewusste Workflows: frei skizzieren, wo Änderung willkommen ist; gelöste Bereiche sperren; weiterentwickeln ohne Angst vor versehentlichem Schaden.
+
+## Gesperrte Malfarbe
+
+Eine Ebene, die mit einer einzigen, einheitlichen Farbe gefüllt ist, lässt sich an eine Palettenfarbe koppeln. Die Auswahl der Ebene wählt dann die verknüpfte Farbe in der Palette; ändert man diese Palettenfarbe, aktualisiert sich die Ebene sofort.
+
+Malen auf einer Ebene mit gesperrter Malfarbe verwendet immer die verknüpfte Palettenfarbe. So entsteht eine direkte Verbindung zwischen Palette und Ebene — Farben lassen sich dynamisch anpassen, während die Palette noch gestaltet wird.
 
 ## Zerstörungsfreie Effekte
 

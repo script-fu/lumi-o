@@ -2,7 +2,7 @@
 title: "Lapisan"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 url: "hub/features/layers"
 translation_lock: true
 ---
@@ -35,6 +35,12 @@ Tujuannya membuat pekerjaan berlapis terasa spasial, bukan administratif: jika t
 Lapisan dapat dilindungi dengan berbagai cara agar pekerjaan selesai, mask, posisi, transparansi, atau keputusan warna tidak berubah secara tidak sengaja. Perlindungan ini berguna saat gambar menjadi padat dan beberapa bagian perlu stabil sementara bagian lain terus berkembang.
 
 Perlindungan ini mendukung alur kerja disengaja: sketsa bebas di area yang masih berubah, kunci area yang sudah selesai, dan lanjutkan mengembangkan gambar tanpa takut kerusakan tidak sengaja.
+
+## Warna cat terkunci
+
+Lapisan yang diisi satu warna seragam dapat dikunci ke warna palet. Memilih lapisan itu lalu memilih warna tertaut di palet, dan mengubah warna palet tersebut langsung memperbarui lapisan.
+
+Melukis pada lapisan dengan warna cat terkunci selalu memakai warna palet tertaut. Ini membuat hubungan langsung antara palet dan lapisan, sehingga warna dapat disesuaikan secara dinamis saat palet masih dirancang.
 
 ## Efek non-destruktif
 

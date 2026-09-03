@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/palette-editor"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 ---
 
 L'Editor della tavolozza è il luogo in cui una tavolozza Lumi diventa un ambiente cromatico completo. Riunisce i pigmenti da cui è costruita, le miscele che l'artista sceglie di conservare, i colori usati durante la pittura e la struttura tonale che modella il modo in cui la tavolozza viene esplorata.
@@ -30,6 +30,14 @@ Le miscele salvate rappresentano scoperte deliberate: colori che vale la pena co
 Insieme queste aree permettono alla tavolozza di evolversi in modo naturale. Può iniziare come set di pigmenti, raccogliere miscele utili durante la pittura e diventare gradualmente un vocabolario cromatico personalizzato.
 
 ![add-pigment](/images/screens/add-pigment.jpg)
+
+## Pigmenti utente
+
+I pittori spesso premiscelano un mucchio di colore — un rosso di Marte smorzato con un neutro, un giallo temperato, un'ombra calda — e trattano quei mucchi come i primari di lavoro del dipinto. Le miscele salvate possono conservare quelle scoperte, ma una miscela non è ancora un pigmento: non genera il resto della tavolozza e non può essere aggiunta come pigmento a un'altra tavolozza.
+
+Una miscela salvata può essere promossa a pigmento utente. Si comporta allora come un pigmento di tavolozza ordinario: genera miscele, compare sulla mappa e si può scegliere come qualsiasi altro pigmento, conservando il colore della miscela promossa. Lo stesso pigmento può essere aggiunto a qualsiasi altra tavolozza da una libreria condivisa.
+
+Quella libreria resta collegata. Rinominare, sostituire o eliminare un pigmento utente raggiunge ogni tavolozza che lo usa, così un primario di lavoro può evolvere con il vocabolario cromatico dell'artista invece di restare imprigionato in un file.
 
 ## Organizzazione guidata dal valore
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/palette-editor"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 ---
 
 Le Palette Editor est l'endroit où une palette Lumi devient un environnement couleur complet. Il rassemble les pigments dont la palette est construite, les mélanges que l'artiste choisit de conserver, les couleurs utilisées pendant la peinture et la structure tonale qui façonne la façon dont la palette est explorée.
@@ -33,6 +33,13 @@ Ensemble, ces zones permettent à une palette d'évoluer naturellement. Elle peu
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Pigments utilisateur
+
+Les peintres prémélangent souvent un tas de couleur — un rouge de Mars rabattu avec un neutre, un jaune tempéré, une ombre chaude — et traitent ces tas comme les primaires de travail de la peinture. Les mélanges enregistrés peuvent conserver ces découvertes, mais un mélange n'est pas encore un pigment : il ne génère pas le reste de la palette, et on ne peut pas l'ajouter comme pigment à une autre palette.
+
+Un mélange enregistré peut être promu en pigment utilisateur. Il se comporte alors comme un pigment de palette ordinaire : il génère des mélanges, apparaît sur la carte, et se choisit comme n'importe quel autre pigment, tout en conservant la couleur du mélange promu. Le même pigment peut être ajouté à n'importe quelle autre palette depuis une bibliothèque partagée.
+
+Cette bibliothèque reste liée. Renommer, remplacer ou supprimer un pigment utilisateur atteint chaque palette qui l'utilise, pour qu'une primaire de travail évolue avec le vocabulaire couleur de l'artiste plutôt que de rester coincée dans un fichier.
 
 ## Organisation par la valeur
 

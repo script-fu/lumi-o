@@ -4,6 +4,8 @@
   translation: "О проекте"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Функции"
 - id: menuMadeInLumio

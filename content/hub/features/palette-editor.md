@@ -30,6 +30,13 @@ Together, these areas let a palette evolve naturally. It can begin as a pigment 
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## User pigments
+
+Painters often premix a pile of colour — a Mars red knocked back with a neutral, a tempered yellow, a warm shadow — and treat those piles as the painting's working primaries. Saved mixes can hold those discoveries, but a mix is not yet a pigment: it does not generate the rest of the palette, and it cannot be added as a pigment to another palette.
+
+A saved mix can be promoted into a user pigment. It then behaves as an ordinary palette pigment: it generates mixes, appears on the map, and can be picked like any other pigment, while keeping the colour of the mix that was promoted. The same pigment can be added to any other palette from a shared library.
+
+That library stays linked. Renaming, replacing, or deleting a user pigment reaches every palette that uses it, so a working primary can evolve with the artist's colour vocabulary rather than remaining trapped in one file.
 
 ## Value-led organisation
 

@@ -34,6 +34,12 @@ Layers can be protected in different ways so finished work, masks, positions, tr
 
 This protection supports deliberate workflows: sketch freely where change is welcome, lock down areas that are resolved, and continue developing the image without fear of accidental damage.
 
+## Locked paint colour
+
+A layer filled with a single, uniform colour can be locked to a palette colour. Selecting the layer then selects the linked colour in the palette, and changing that palette colour immediately updates the layer.
+
+Painting on a layer with a locked paint colour always uses the linked palette colour. This creates a live connection between the palette and the layer, so colours can be adjusted dynamically while the palette is still being designed.
+
 ## Non-destructive effects
 
 Filters and effects can be part of a layer's editable state rather than immediately becoming permanent pixels. This keeps visual changes adjustable and allows an effect stack to remain part of the working composition.

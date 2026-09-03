@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 Het lagensysteem van Lumi geeft een illustratie structuur. Kunstenaars kunnen schets, kleur, schaduw, textuur, maskers, aanpassingen, experimenten en finale details scheiden zonder elke beslissing direct in één vlak beeld vast te leggen.
@@ -36,6 +36,12 @@ Gelaagd werk moet ruimtelijk aanvoelen, niet administratief: als een streek op h
 Lagen kunnen op verschillende manieren worden beschermd, zodat afgewerkt werk, maskers, posities, transparantie of kleurbeslissingen niet per ongeluk veranderen. Dat is nuttig zodra een beeld dicht wordt en sommige delen stabiel moeten blijven terwijl andere evolueren.
 
 Deze bescherming ondersteunt bewuste workflows: vrij schetsen waar verandering welkom is, afgeronde gebieden vergrendelen en het beeld verder ontwikkelen zonder angst voor onbedoelde schade.
+
+## Vergrendelde verfkleur
+
+Een laag die met één uniforme kleur is gevuld, kan aan een paletkleur worden gekoppeld. De laag selecteren selecteert dan de gekoppelde kleur in het palet, en die paletkleur wijzigen werkt de laag meteen bij.
+
+Schilderen op een laag met vergrendelde verfkleur gebruikt altijd de gekoppelde paletkleur. Zo ontstaat een levende verbinding tussen palet en laag, zodat kleuren dynamisch kunnen worden aangepast terwijl het palet nog wordt ontworpen.
 
 ## Niet-destructieve effecten
 

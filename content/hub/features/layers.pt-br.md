@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 O sistema de camadas do Lumi dá estrutura a uma ilustração. Artistas podem separar esboço, cor, sombreamento, textura, máscaras, ajustes, experimentos e detalhes finais sem registrar cada decisão diretamente em uma imagem plana.
@@ -36,6 +36,12 @@ O trabalho em camadas deve parecer espacial, não administrativo: se uma marca e
 As camadas podem ser protegidas de diferentes formas para que trabalho finalizado, máscaras, posições, transparência ou decisões de cor não sejam alterados acidentalmente. Isso ajuda quando a imagem fica densa e algumas partes precisam permanecer estáveis enquanto outras evoluem.
 
 Essa proteção apoia fluxos deliberados: esboce livremente onde a mudança é bem-vinda, trave áreas resolvidas e continue desenvolvendo a imagem sem medo de danos acidentais.
+
+## Cor da tinta bloqueada
+
+Uma camada preenchida com uma única cor uniforme pode ser bloqueada a uma cor da paleta. Selecionar a camada seleciona então a cor vinculada na paleta, e alterar essa cor da paleta atualiza a camada imediatamente.
+
+Pintar em uma camada com cor da tinta bloqueada usa sempre a cor vinculada da paleta. Isso cria uma conexão viva entre a paleta e a camada, para que as cores possam ser ajustadas dinamicamente enquanto a paleta ainda está sendo projetada.
 
 ## Efeitos não destrutivos
 

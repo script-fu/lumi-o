@@ -4,6 +4,8 @@
   translation: "Про нас"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Можливості"
 - id: menuMadeInLumio

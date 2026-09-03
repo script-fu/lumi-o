@@ -2,7 +2,7 @@
 title: "Camadas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 url: "hub/features/layers"
 translation_lock: true
 ---
@@ -35,6 +35,12 @@ O objectivo é que o trabalho em camadas pareça espacial e não administrativo:
 As camadas podem ser protegidas de diferentes formas para que o trabalho concluído, as máscaras, as posições, a transparência ou as escolhas de cor não sejam alteradas por acidente. Estas salvaguardas são úteis quando a imagem se torna densa e algumas partes precisam de permanecer estáveis enquanto outras continuam a evoluir.
 
 Esta protecção favorece fluxos de trabalho deliberados: esboçar livremente onde a mudança é bem-vinda, bloquear as áreas resolvidas e continuar a desenvolver a imagem sem receio de danos acidentais.
+
+## Cor da tinta bloqueada
+
+Uma camada preenchida com uma única cor uniforme pode ser bloqueada a uma cor da paleta. Seleccionar a camada selecciona então a cor associada na paleta, e alterar essa cor da paleta actualiza imediatamente a camada.
+
+Pintar numa camada com cor da tinta bloqueada usa sempre a cor associada da paleta. Isto cria uma ligação viva entre a paleta e a camada, para que as cores possam ser ajustadas dinamicamente enquanto a paleta ainda está a ser concebida.
 
 ## Efeitos não destrutivos
 

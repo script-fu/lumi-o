@@ -3,7 +3,7 @@ title: "Palette Editor"
 type: docs
 url: "hub/features/palette-editor"
 translation_provenance: ai-reviewed
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 translation_lock: true
 ---
 
@@ -33,6 +33,13 @@ Cùng nhau, các vùng này giúp bảng màu phát triển tự nhiên. Nó có
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Sắc tố người dùng
+
+Họa sĩ thường pha sẵn một đống màu — đỏ Mars dịu bằng trung tính, vàng đã kiềm, bóng ấm — và coi những đống đó là màu gốc làm việc của bức tranh. Hỗn hợp đã lưu có thể giữ những khám phá đó, nhưng hỗn hợp chưa phải sắc tố: nó không sinh phần còn lại của bảng màu và không thể thêm làm sắc tố vào bảng màu khác.
+
+Hỗn hợp đã lưu có thể được nâng thành sắc tố người dùng. Khi đó nó ứng xử như sắc tố bảng màu thông thường: sinh hỗn hợp, xuất hiện trên bản đồ và chọn được như sắc tố khác, đồng thời giữ màu của hỗn hợp đã nâng. Cùng sắc tố đó có thể thêm vào bảng màu khác từ thư viện dùng chung.
+
+Thư viện đó vẫn liên kết. Đổi tên, thay thế hoặc xóa sắc tố người dùng lan tới mọi bảng màu dùng nó, nên màu gốc làm việc có thể tiến cùng từ vựng màu của nghệ sĩ thay vì bị kẹt trong một tệp.
 
 ## Tổ chức theo giá trị
 

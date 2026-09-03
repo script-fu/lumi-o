@@ -4,6 +4,8 @@
   translation: "O projekcie"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Cechy"
 - id: menuMadeInLumio

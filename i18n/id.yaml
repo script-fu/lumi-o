@@ -4,6 +4,8 @@
   translation: "Tentang"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Fitur"
 - id: menuMadeInLumio

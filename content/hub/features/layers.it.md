@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 Il sistema a livelli di Lumi dà struttura a un'illustrazione. Consente agli artisti di separare schizzi, colore, ombreggiatura, texture, maschere, regolazioni, esperimenti e dettagli finali senza consolidare ogni decisione in un'unica immagine piatta.
@@ -36,6 +36,12 @@ L'obiettivo è far sentire il lavoro a livelli come qualcosa di spaziale, non am
 I livelli possono essere protetti in diversi modi, così lavoro finito, maschere, posizioni, trasparenza o decisioni cromatiche non vengono modificati per errore. Queste protezioni sono utili quando un'immagine diventa densa e alcune parti devono restare stabili mentre altre continuano a evolversi.
 
 La protezione supporta flussi di lavoro deliberati: disegna liberamente dove il cambiamento è benvenuto, blocca le aree risolte e continua a sviluppare l'immagine senza timore di danni accidentali.
+
+## Colore di pittura bloccato
+
+Un livello riempito con un unico colore uniforme può essere bloccato a un colore della tavolozza. Selezionando il livello si seleziona il colore collegato nella tavolozza, e cambiare quel colore aggiorna subito il livello.
+
+Dipingere su un livello con un colore di pittura bloccato usa sempre il colore collegato della tavolozza. Si crea così un collegamento vivo tra tavolozza e livello, così i colori si possono regolare dinamicamente mentre la tavolozza è ancora in fase di progettazione.
 
 ## Effetti non distruttivi
 

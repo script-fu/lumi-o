@@ -4,6 +4,8 @@
   translation: "Giới thiệu"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Tính năng"
 - id: menuMadeInLumio

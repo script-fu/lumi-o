@@ -199,6 +199,15 @@ pageRef = "hub/made-in-lumio/"
 weight = 6
 
 [[menu.main]]
+name = "YouTube"
+identifier = "menuYoutube"
+url = "https://www.youtube.com/channel/UCXZ3Xl208juBYXsI0TgluvQ"
+weight = 9
+
+  [menu.main.params]
+  icon = "youtube"
+
+[[menu.main]]
 name = "Search"
 weight = 10
 

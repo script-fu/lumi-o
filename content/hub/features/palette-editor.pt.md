@@ -2,7 +2,7 @@
 title: "Palette Editor"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 url: "hub/features/palette-editor"
 translation_lock: true
 ---
@@ -32,6 +32,13 @@ Juntas, estas áreas permitem que uma paleta evolua naturalmente. Pode começar 
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Pigmentos de utilizador
+
+Os pintores preparam frequentemente um monte de cor — um vermelho de Marte atenuado com um neutro, um amarelo temperado, uma sombra quente — e tratam esses montes como os primários de trabalho da pintura. As misturas guardadas podem conservar essas descobertas, mas uma mistura ainda não é um pigmento: não gera o resto da paleta e não pode ser adicionada como pigmento a outra paleta.
+
+Uma mistura guardada pode ser promovida a pigmento de utilizador. Passa então a comportar-se como um pigmento de paleta ordinário: gera misturas, aparece no mapa e escolhe-se como qualquer outro pigmento, conservando a cor da mistura promovida. O mesmo pigmento pode ser adicionado a qualquer outra paleta a partir de uma biblioteca partilhada.
+
+Essa biblioteca permanece ligada. Mudar o nome, substituir ou eliminar um pigmento de utilizador chega a todas as paletas que o usam, para que um primário de trabalho evolua com o vocabulário cromático do artista em vez de ficar preso num ficheiro.
 
 ## Organização orientada por valor
 

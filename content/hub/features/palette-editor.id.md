@@ -2,7 +2,7 @@
 title: "Palette Editor"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 url: "hub/features/palette-editor"
 translation_lock: true
 ---
@@ -32,6 +32,13 @@ Bersama-sama, area ini memungkinkan palet berkembang alami. Palet dapat dimulai 
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Pigmen pengguna
+
+Pelukis sering mencampur dulu tumpukan warna — merah Mars yang diredam dengan netral, kuning yang diredam, bayangan hangat — dan memperlakukan tumpukan itu sebagai primer kerja lukisan. Campuran tersimpan dapat menampung penemuan itu, tetapi campuran belum menjadi pigmen: ia tidak menghasilkan sisa palet, dan tidak dapat ditambahkan sebagai pigmen ke palet lain.
+
+Campuran tersimpan dapat dipromosikan menjadi pigmen pengguna. Ia lalu berperilaku seperti pigmen palet biasa: menghasilkan campuran, muncul di peta, dan dapat dipilih seperti pigmen lain, sambil mempertahankan warna campuran yang dipromosikan. Pigmen yang sama dapat ditambahkan ke palet mana pun dari pustaka bersama.
+
+Pustaka itu tetap tertaut. Mengganti nama, mengganti, atau menghapus pigmen pengguna menjangkau setiap palet yang menggunakannya, sehingga primer kerja dapat berkembang bersama kosakata warna seniman, bukan terperangkap dalam satu berkas.
 
 ## Organisasi berbasis nilai
 

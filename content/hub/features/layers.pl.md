@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 System warstw Lumi nadaje ilustracji strukturę. Artyści mogą oddzielić szkic, kolor, cieniowanie, teksturę, maski, korekty, eksperymenty i końcowe detale bez wpisywania każdej decyzji bezpośrednio w jeden płaski obraz.
@@ -36,6 +36,12 @@ Praca warstwowa ma być przestrzenna, a nie administracyjna: jeśli znak jest wi
 Warstwy można chronić na różne sposoby, aby ukończona praca, maski, pozycje, przezroczystość lub decyzje kolorystyczne nie uległy przypadkowej zmianie. To pomaga, gdy obraz staje się gęsty i niektóre części muszą pozostać stabilne, podczas gdy inne ewoluują.
 
 Ta ochrona wspiera świadome przepływy pracy: swobodnie szkicuj tam, gdzie zmiany są mile widziane, blokuj rozwiązane obszary i rozwijaj obraz bez obawy o przypadkowe uszkodzenie.
+
+## Zablokowany kolor farby
+
+Warstwę wypełnioną jednym, jednolitym kolorem można zablokować na kolorze palety. Zaznaczenie warstwy zaznacza wtedy powiązany kolor na palecie, a zmiana tego koloru palety natychmiast aktualizuje warstwę.
+
+Malowanie na warstwie z zablokowanym kolorem farby zawsze używa powiązanego koloru palety. Tworzy to żywe połączenie między paletą a warstwą, dzięki czemu kolory można dostosowywać dynamicznie, gdy paleta jest jeszcze projektowana.
 
 ## Efekty nieniszczące
 

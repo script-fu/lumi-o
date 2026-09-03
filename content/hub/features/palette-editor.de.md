@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/palette-editor"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 21f25b43bfd00aedabc9a6aa51fb325eabf707ac939dd7b193dc8b77ed649af0
+translation_source_sha256: 21ebf10fe8b43e6b83161bd8734aafa42546b91b13d669356e0395ac4c9c8530
 ---
 Im Paletteneditor wird eine Lumi-Palette zu einer vollständigen Farbumgebung. Er vereint die Pigmente, aus denen eine Palette besteht, die Mischungen, die der Künstler behält, die beim Malen verwendeten Farben und die Tonstruktur, die prägt, wie die Palette erkundet wird.
 
@@ -32,6 +32,13 @@ Zusammen lässt eine Palette natürlich wachsen — vom Pigmentsatz über nützl
 
 ![add-pigment](/images/screens/add-pigment.jpg)
 
+## Benutzerpigmente
+
+Maler premixen oft einen Farbhaufen — ein mit Neutral abgedämpftes Marsrot, ein gemäßigtes Gelb, ein warmer Schatten — und behandeln diese Haufen als Arbeitsprimärfarben des Bildes. Gespeicherte Mischungen können solche Entdeckungen halten, aber eine Mischung ist noch kein Pigment: sie erzeugt den Rest der Palette nicht und lässt sich nicht als Pigment zu einer anderen Palette hinzufügen.
+
+Eine gespeicherte Mischung lässt sich zu einem Benutzerpigment erheben. Dann verhält sie sich wie ein gewöhnliches Palettenpigment: sie erzeugt Mischungen, erscheint auf der Karte und lässt sich wie jedes andere Pigment wählen, behält dabei die Farbe der erhobenen Mischung. Dasselbe Pigment kann aus einer gemeinsamen Bibliothek zu jeder anderen Palette hinzugefügt werden.
+
+Diese Bibliothek bleibt verknüpft. Umbenennen, Ersetzen oder Löschen eines Benutzerpigments erreicht jede Palette, die es verwendet — eine Arbeitsprimärfarbe kann mit dem Farbvokabular des Künstlers wachsen, statt in einer Datei gefangen zu bleiben.
 
 ## Wertorientierte Organisation
 

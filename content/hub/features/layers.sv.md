@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/layers"
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 Lumis lagersystem ger en illustrationsstruktur. Det låter konstnärer separera skiss, färg, skuggning, textur, masker, justeringar, experiment och slutliga detaljer utan att göra varje beslut direkt i en platt bild.
 
@@ -35,6 +35,12 @@ Avsikten är att få skiktat arbete att kännas rumsligt snarare än administrat
 Lager kan skyddas på olika sätt så att färdigt arbete, masker, positioner, transparens eller färgbeslut inte ändras av misstag. Dessa skyddsåtgärder är användbara när en bild blir tät och vissa delar måste förbli stabila medan andra fortsätter att utvecklas.
 
 Detta skydd stöder avsiktliga arbetsflöden: skissa fritt där förändring är välkommen, lås områden som är lösta och fortsätt att utveckla bilden utan rädsla för oavsiktlig skada.
+
+## Låst penselfärg
+
+Ett lager fyllt med en enda, enhetlig färg kan låsas till en palettfärg. När lagret markeras markeras den länkade färgen i paletten, och om den palettfärgen ändras uppdateras lagret omedelbart.
+
+Målning på ett lager med låst penselfärg använder alltid den länkade palettfärgen. Det skapar en levande koppling mellan paletten och lagret, så att färger kan justeras dynamiskt medan paletten fortfarande utformas.
 
 ## Icke-förstörande effekter
 

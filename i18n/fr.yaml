@@ -4,6 +4,8 @@
   translation: "À propos"
 - id: menuPatreon
   translation: "Patreon"
+- id: menuYoutube
+  translation: "YouTube"
 - id: menuFeatures
   translation: "Caractéristiques"
 - id: menuMadeInLumio

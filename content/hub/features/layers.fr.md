@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 Le système de calques de Lumi donne une structure à l'illustration. Il permet aux artistes de séparer croquis, couleur, ombrage, texture, masques, ajustements, essais et détails finaux sans graver chaque décision dans une seule image plate.
@@ -36,6 +36,12 @@ L'objectif est que le travail en calques paraisse spatial plutôt qu'administrat
 Les calques peuvent être protégés de différentes manières afin que le travail terminé, les masques, les positions, la transparence ou les choix de couleur ne soient pas modifiés par accident. Ces garde-fous sont utiles lorsque l'image devient dense et que certaines parties doivent rester stables pendant que d'autres continuent d'évoluer.
 
 Cette protection favorise des flux de travail réfléchis : croquer librement là où le changement est souhaité, verrouiller les zones résolues, et continuer à développer l'image sans craindre un dommage accidentel.
+
+## Couleur de peinture verrouillée
+
+Un calque rempli d'une couleur unique et uniforme peut être verrouillé sur une couleur de palette. Sélectionner le calque sélectionne alors la couleur liée dans la palette, et modifier cette couleur de palette met immédiatement à jour le calque.
+
+Peindre sur un calque dont la couleur de peinture est verrouillée utilise toujours la couleur de palette liée. Cela crée un lien vivant entre la palette et le calque, pour ajuster les couleurs dynamiquement pendant la conception de la palette.
 
 ## Effets non destructifs
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 ---
 
 El sistema de capas de Lumi da estructura a la ilustración. Permite separar boceto, color, sombreado, textura, máscaras, ajustes, experimentos y detalle final sin fijar cada decisión directamente en una imagen plana.
@@ -36,6 +36,12 @@ La intención es que el trabajo en capas se sienta espacial y no administrativo:
 Las capas pueden protegerse de distintas maneras para que el trabajo terminado, las máscaras, las posiciones, la transparencia o las decisiones de color no cambien por accidente. Esas salvaguardas son útiles cuando la imagen se vuelve densa y algunas partes deben permanecer estables mientras otras siguen evolucionando.
 
 Esta protección favorece flujos de trabajo deliberados: bocetar con libertad donde el cambio es bienvenido, fijar las zonas resueltas y seguir desarrollando la imagen sin miedo a daños accidentales.
+
+## Color de pintura bloqueado
+
+Una capa rellenada con un único color uniforme puede bloquearse a un color de paleta. Al seleccionar la capa se selecciona el color vinculado en la paleta, y al cambiar ese color de paleta la capa se actualiza de inmediato.
+
+Pintar en una capa con color de pintura bloqueado usa siempre el color de paleta vinculado. Así se crea una conexión viva entre paleta y capa, y los colores pueden ajustarse de forma dinámica mientras se diseña la paleta.
 
 ## Efectos no destructivos
 

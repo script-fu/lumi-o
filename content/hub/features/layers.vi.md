@@ -3,7 +3,7 @@ title: "Lớp"
 type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
-translation_source_sha256: f152e5395910a6ed0a7638f816024936d171defb4cfc5ef63f18dc968317790b
+translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
 translation_lock: true
 ---
 
@@ -36,6 +36,12 @@ Mục tiêu là làm công việc nhiều lớp cảm giác không gian hơn là
 Lớp có thể được bảo vệ theo nhiều cách để phần đã hoàn thiện, mặt nạ, vị trí, độ trong suốt hoặc quyết định màu không bị thay đổi vô tình. Biện pháp này hữu ích khi hình dày đặc và một số phần cần ổn định trong khi phần khác tiếp tục phát triển.
 
 Bảo vệ hỗ trợ quy trình có chủ ý: phác thảo tự do nơi thay đổi được chào đón, khóa vùng đã xong và tiếp tục phát triển hình mà không sợ hư hại do tai nạn.
+
+## Màu sơn bị khóa
+
+Một lớp tô một màu đồng nhất có thể được khóa vào một màu trên bảng màu. Chọn lớp đó sẽ chọn màu liên kết trên bảng màu, và đổi màu đó trên bảng màu sẽ cập nhật lớp ngay.
+
+Vẽ trên lớp có màu sơn bị khóa luôn dùng màu liên kết trên bảng màu. Điều này tạo kết nối trực tiếp giữa bảng màu và lớp, nên có thể điều chỉnh màu động trong lúc bảng màu vẫn đang được thiết kế.
 
 ## Hiệu ứng không phá hủy
 
