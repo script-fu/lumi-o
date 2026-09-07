@@ -24,9 +24,11 @@ Masks add another level of control. They let visibility be painted, softened, hi
 
 ## Picking and navigation
 
-Complex paintings can contain many small pieces. Lumi supports direct layer-oriented navigation so artists can move from the canvas back to the layer stack without losing the flow of painting.
+Complex paintings can contain many small pieces. Lumi supports direct, layer based navigation, so artists can move from the canvas back to the layer stack without interrupting the flow of painting.
 
-The intent is to make layered work feel spatial rather than administrative: if a mark is visible on the canvas, the layer system should help the artist get back to it quickly.
+Hover the cursor over the pixels and press Alt to select the layer under the cursor. If you are using special inking layers, an ink pixel layer is given priority. Press Alt repeatedly over the same pixels to cycle through the available layers at that location.
+
+The goal is to make working with layers feel spatial rather than administrative. If a mark is visible on the canvas, the layer system should help the artist get back to it quickly, without having to scroll through hundreds of layers to find the right one.
 
 ## Protection and intent
 
