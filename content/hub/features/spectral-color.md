@@ -20,11 +20,11 @@ Because spectral behaviour is part of the palette system, each palette develops 
 
 Pigment identity matters. The same visible colour can mix differently depending on the kind of pigment it represents, which helps Lumi capture some of the practical differences painters expect from real materials.
 
-## Mixing before painting
+## Mixing before and during painting
 
-Spectral colour in Lumi is used while building palettes, generating related colours, and mixing new palette entries. Once a colour is applied to the canvas, it becomes normal image colour data for painting and compositing.
+Spectral colour in Lumi is used while building palettes, generating related colours, and mixing new palette entries. It can also be enabled for individual layers through the layer attributes, allowing painting on that layer to use spectral mixing.
 
-This keeps the painting pipeline practical while still improving the artist's experience of choosing and constructing colour. The spectral model shapes the palette; the canvas remains efficient and compatible with standard image workflows.
+This gives artists control over where spectral colour is used. Palettes can benefit from spectral colour construction, while selected layers can retain spectral information throughout the painting process. Layers that do not use spectral mixing continue to use normal image colour data, keeping the wider painting workflow practical and compatible with standard image workflows.
 
 ## A bridge between digital and physical colour
 
