@@ -1,0 +1,37 @@
+{{/*
+  Social preview image.
+  Page params.images win. The homepage uses the configured product shot.
+  Other pages use their first local content image, then that same fallback.
+  Returns url, alt, width, height. Width and height are set only for the known fallback.
+*/}}
+{{- $configured := site.Params.seo.image -}}
+{{- $url := "" -}}
+{{- $alt := site.Params.seo.imageAlt | default site.Title -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+
+{{- if and .Params.images (gt (len .Params.images) 0) -}}
+  {{- $url = index .Params.images 0 | absURL -}}
+  {{- $alt = .Title | default site.Title -}}
+{{- else if and .IsHome $configured -}}
+  {{- $url = $configured | absURL -}}
+  {{- $width = site.Params.seo.imageWidth | default 0 -}}
+  {{- $height = site.Params.seo.imageHeight | default 0 -}}
+{{- else -}}
+  {{- $match := findRESubmatch `!\[[^\]]*\]\(([^)\s]+)` .RawContent 1 -}}
+  {{- if gt (len $match) 0 -}}
+    {{- $src := index (index $match 0) 1 -}}
+    {{- if or (hasPrefix $src "/images/") (hasPrefix $src "images/") -}}
+      {{- $url = $src | absURL -}}
+      {{- $alt = .Title | default site.Title -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $url) $configured -}}
+    {{- $url = $configured | absURL -}}
+    {{- $alt = site.Params.seo.imageAlt | default site.Title -}}
+    {{- $width = site.Params.seo.imageWidth | default 0 -}}
+    {{- $height = site.Params.seo.imageHeight | default 0 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return dict "url" $url "alt" $alt "width" $width "height" $height -}}

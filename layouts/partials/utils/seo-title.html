@@ -1,0 +1,16 @@
+{{/*
+  Document title used by <title>, Open Graph, Twitter, and structured data.
+  The homepage leads with the brand, then the page title.
+*/}}
+{{- $pageTitle := "" -}}
+{{- with .Title -}}
+  {{- $pageTitle = . -}}
+{{- end -}}
+{{- $siteTitle := site.Title -}}
+{{- $docTitle := $siteTitle -}}
+{{- if and .IsHome $pageTitle (ne $pageTitle $siteTitle) -}}
+  {{- $docTitle = printf "%s – %s" $siteTitle $pageTitle -}}
+{{- else if and (not .IsHome) $pageTitle -}}
+  {{- $docTitle = printf "%s – %s" $pageTitle $siteTitle -}}
+{{- end -}}
+{{- return $docTitle -}}

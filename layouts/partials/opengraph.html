@@ -1,0 +1,35 @@
+{{- $title := partial "utils/seo-title.html" . -}}
+{{- $description := partial "utils/seo-description.html" . -}}
+{{- $image := partial "utils/seo-image.html" . -}}
+{{- $locale := replace (.Language.LanguageCode | default .Lang) "-" "_" -}}
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
+<meta property="og:locale" content="{{ $locale }}" />
+{{- range .AllTranslations -}}
+  {{- $altLocale := replace (.Language.LanguageCode | default .Lang) "-" "_" -}}
+  {{- if ne $altLocale $locale }}
+<meta property="og:locale:alternate" content="{{ $altLocale }}" />
+  {{- end }}
+{{- end -}}
+{{- with $image.url }}
+<meta property="og:image" content="{{ . }}" />
+<meta property="og:image:alt" content="{{ $image.alt }}" />
+{{- with $image.width }}{{ if gt . 0 }}
+<meta property="og:image:width" content="{{ . }}" />
+{{- end }}{{ end -}}
+{{- with $image.height }}{{ if gt . 0 }}
+<meta property="og:image:height" content="{{ . }}" />
+{{- end }}{{ end -}}
+{{- end -}}
+{{- if .IsPage }}
+  {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+  {{- with .PublishDate }}{{ if not .IsZero }}
+<meta property="article:published_time" content="{{ .Format $iso8601 }}" />
+  {{- end }}{{ end -}}
+  {{- with .Lastmod }}{{ if not .IsZero }}
+<meta property="article:modified_time" content="{{ .Format $iso8601 }}" />
+  {{- end }}{{ end -}}
+{{- end -}}

@@ -1,0 +1,38 @@
+{{/*
+  Meta description. Prefer front matter, then the default-language site
+  description on the homepage, then the first real paragraph. Card shortcodes
+  and images are left out so section indexes do not turn into a keyword mash.
+*/}}
+{{- $raw := "" -}}
+{{- with .Description | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- $raw = . -}}
+{{- else -}}
+  {{- $isDefaultHome := and .IsHome (eq .Lang site.Sites.Default.Language.Lang) -}}
+  {{- if $isDefaultHome -}}
+    {{- $raw = site.Params.description | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- else -}}
+    {{- $body := .RawContent -}}
+    {{- $body = replaceRE `(?s)\{\{[<\%].*?[>\%]\}\}` "" $body -}}
+    {{- $body = replaceRE `!\[[^\]]*\]\([^)]*\)` "" $body -}}
+    {{- $body = replaceRE `(?m)^#{1,6}\s+.*$` "" $body -}}
+    {{- range split $body "\n\n" -}}
+      {{- if not $raw -}}
+        {{- $candidate := . | markdownify | plainify | htmlUnescape | strings.TrimSpace -}}
+        {{- $candidate = replaceRE `\s+` " " $candidate -}}
+        {{- $candidate = strings.TrimPrefix "```" $candidate -}}
+        {{- if and (ge (len $candidate) 40) (not (hasPrefix $candidate "```")) (not (hasPrefix $candidate "|")) -}}
+          {{- $raw = $candidate -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $raw -}}
+    {{- $raw = .Summary | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- end -}}
+  {{- if not $raw -}}
+    {{- $raw = site.Params.description | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- end -}}
+{{- end -}}
+{{- $raw = replaceRE `\*+` "" $raw -}}
+{{- $raw = replaceRE `\s+` " " $raw | strings.TrimSpace -}}
+{{- return ($raw | truncate 160) -}}

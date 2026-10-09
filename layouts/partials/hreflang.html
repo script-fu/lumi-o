@@ -1,0 +1,8 @@
+{{- $defaultLang := site.Sites.Default.Language.Lang -}}
+{{- range .AllTranslations -}}
+  {{- $code := .Language.LanguageCode | default .Lang -}}
+  <link rel="alternate" hreflang="{{ $code }}" href="{{ .Permalink }}" />
+  {{- if eq .Lang $defaultLang }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+  {{- end }}
+{{- end -}}

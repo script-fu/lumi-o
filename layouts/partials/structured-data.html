@@ -1,0 +1,99 @@
+{{- $desc := partial "utils/seo-description.html" . -}}
+{{- $title := partial "utils/seo-title.html" . -}}
+{{- $image := partial "utils/seo-image.html" . -}}
+{{- $home := site.Sites.Default.Home.Permalink -}}
+{{- $orgID := printf "%s#organization" $home -}}
+{{- $siteID := printf "%s#website" $home -}}
+{{- $appID := printf "%s#software" $home -}}
+{{- $logo := "images/favicon/android-chrome-512x512.png" | absURL -}}
+{{- $lang := .Language.LanguageCode | default .Lang -}}
+
+{{- $org := dict
+  "@type" "Organization"
+  "@id" $orgID
+  "name" site.Title
+  "url" $home
+  "logo" (dict "@type" "ImageObject" "url" $logo)
+  "sameAs" (slice
+    "https://gitlab.gnome.org/pixelmixer/lumi-dev"
+    "https://www.youtube.com/channel/UCXZ3Xl208juBYXsI0TgluvQ"
+    "https://www.patreon.com/pixelmixer"
+  )
+-}}
+
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" $siteID
+  "url" $home
+  "name" site.Title
+  "description" (site.Params.description | plainify)
+  "publisher" (dict "@id" $orgID)
+-}}
+
+{{- $crumbItems := slice -}}
+{{- if not .IsHome -}}
+  {{- $position := 1 -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- $crumbTitle := partial "utils/title" . -}}
+    {{- if and (not .IsHome) (not (or (eq $crumbTitle "Hub") (eq $crumbTitle "Hubs"))) -}}
+      {{- $crumbItems = $crumbItems | append (dict "@type" "ListItem" "position" $position "name" $crumbTitle "item" .Permalink) -}}
+      {{- $position = add $position 1 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $crumbItems = $crumbItems | append (dict "@type" "ListItem" "position" $position "name" (.Title | default $title) "item" .Permalink) -}}
+{{- end -}}
+
+{{- $webpage := dict
+  "@type" "WebPage"
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" $title
+  "description" $desc
+  "isPartOf" (dict "@id" $siteID)
+  "about" (dict "@id" $appID)
+  "inLanguage" $lang
+  "publisher" (dict "@id" $orgID)
+-}}
+{{- with $image.url -}}
+  {{- $webpage = merge $webpage (dict "primaryImageOfPage" (dict "@type" "ImageObject" "url" .)) -}}
+{{- end -}}
+{{- if gt (len $crumbItems) 1 -}}
+  {{- $webpage = merge $webpage (dict "breadcrumb" (dict "@id" (printf "%s#breadcrumb" $.Permalink))) -}}
+{{- end -}}
+
+{{- $graph := slice $org $website $webpage -}}
+
+{{- if and .IsHome (eq .Lang site.Sites.Default.Language.Lang) -}}
+  {{- $app := dict
+    "@type" "SoftwareApplication"
+    "@id" $appID
+    "name" site.Title
+    "url" $home
+    "applicationCategory" "DesignApplication"
+    "operatingSystem" "Linux"
+    "description" (site.Params.description | plainify)
+    "isAccessibleForFree" true
+    "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "USD")
+    "publisher" (dict "@id" $orgID)
+  -}}
+  {{- with $image.url -}}
+    {{- $app = merge $app (dict "image" .) -}}
+  {{- end -}}
+  {{- with site.GetPage "/hub/about/download" -}}
+    {{- $app = merge $app (dict "downloadUrl" .Permalink) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $app -}}
+{{- end -}}
+
+{{- if gt (len $crumbItems) 1 -}}
+  {{- $crumbs := dict
+    "@type" "BreadcrumbList"
+    "@id" (printf "%s#breadcrumb" .Permalink)
+    "itemListElement" $crumbItems
+  -}}
+  {{- $graph = $graph | append $crumbs -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{- dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS -}}
+</script>
