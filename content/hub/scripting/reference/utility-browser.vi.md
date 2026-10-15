@@ -2,9 +2,12 @@
 title: "Trình duyệt tiện ích"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+translation_source_sha256: a941d03e263a62f5d01713cc2b796015e1c485ea5f697d10a5ee04ece7fa7285
 url: "hub/scripting/reference/utility-browser"
 translation_lock: true
+noindex: true
+sitemap:
+  disable: true
 ---
 Trình duyệt tiện ích cho phép bạn khám phá stdlib tiện ích Scheme tích hợp sẵn đi kèm với Lumi mà không cần phải rời khỏi ứng dụng hoặc tìm hiểu các tệp nguồn.
 

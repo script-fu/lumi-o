@@ -2,6 +2,9 @@
 title: Utility Browser
 type: docs
 url: "hub/scripting/reference/utility-browser"
+noindex: true
+sitemap:
+  disable: true
 ---
 
 The Utility Browser lets you explore the built-in Scheme utility stdlib that ships with Lumi, without having to leave the app or dig through source files.

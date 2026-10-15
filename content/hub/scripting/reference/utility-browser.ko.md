@@ -3,8 +3,11 @@ title: "유틸리티 브라우저"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+translation_source_sha256: a941d03e263a62f5d01713cc2b796015e1c485ea5f697d10a5ee04ece7fa7285
 url: "hub/scripting/reference/utility-browser"
+noindex: true
+sitemap:
+  disable: true
 ---
 유틸리티 브라우저를 사용하면 앱을 종료하거나 소스 파일을 탐색할 필요 없이 Lumi와 함께 제공되는 내장 Scheme 유틸리티 stdlib를 탐색할 수 있습니다.
 

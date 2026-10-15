@@ -3,8 +3,11 @@ title: "ユーティリティブラウザ"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 99abaafdc68cf3433959e5db87130b22c51cfbd5a98697fa807732b9fdae9ff0
+translation_source_sha256: a941d03e263a62f5d01713cc2b796015e1c485ea5f697d10a5ee04ece7fa7285
 url: "hub/scripting/reference/utility-browser"
+noindex: true
+sitemap:
+  disable: true
 ---
 ユーティリティブラウザを使用すると、アプリを終了したりソースファイルを調べたりすることなく、Lumi に同梱されている組み込みの Scheme ユーティリティ stdlib を探索できます。
 
