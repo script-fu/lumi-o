@@ -2,7 +2,7 @@
 title: "Phím tắt quy trình làm việc"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
+translation_source_sha256: 5ffddefe157a79e2c7a59872e7978b7a6ef4ed6c9734521875f9c67552341393
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_lock: true
 ---
@@ -28,10 +28,36 @@ Nếu `Alt` + nhấp chuột phải và kéo không đổi kích thước cọ t
 Sau thay đổi này, `Alt` + nhấp chuột phải và kéo sẽ hoạt động trong Lumi để đổi kích thước công cụ.
 {{< /callout >}}
 
-## Cấu hình và lưu cài đặt
+## Di chuyển trên canvas
+
+Kéo khung và thu phóng đều giữ nguyên công cụ hiện tại.
+
+| Hành động | Phím tắt |
+| :--- | :--- |
+| **Kéo khung** | Nhấp giữa và kéo |
+| **Kéo khung** | Giữ `Space` và kéo |
+| **Thu phóng** | `Ctrl` + nhấp giữa và kéo |
+
+`Space` mặc định dùng để kéo khung nhìn.
+
+## Xoay khung nhìn
+
+Xoay canvas để một nét đã luyện đi theo hướng thuận tay. Họa sĩ và người tô mực hay làm vậy. Chỉ khung nhìn xoay. Bản thân hình ảnh không đổi.
+
+| Hành động | Phím tắt |
+| :--- | :--- |
+| **Xoay mà không rời công cụ hiện tại** | Giữ `R` và kéo |
+| **Xoay khung nhìn** | `Shift` + nhấp giữa và kéo |
+| **Xoay khung nhìn** | `Ctrl` + nhấp phải và kéo |
+| **Khóa lần kéo đó theo bước 15°** | `Shift` + `Ctrl` trong lúc kéo |
+| **Giữ Xoay khung nhìn được chọn** | Bấm **Xoay khung nhìn**, rồi kéo. `Shift` khóa theo 15°. `Esc` hoặc **Đặt lại khung nhìn** đưa về 0° |
+
+`R` đơn không gán lại được trong **Chỉnh sửa → Phím tắt**. `Shift` + `R` là chọn hình chữ nhật.
+
+## Cấu hình
 
 Để xem hoặc gán lại phím tắt hiện có, mở:
 
 **Chỉnh sửa → Phím tắt**
 
-> **Lưu ý về lưu cài đặt:** Cấu hình phím tắt tùy chỉnh chỉ được ghi vào tệp cấu hình khi bạn thoát đúng cách qua **Tệp → Thoát**. Sau khi thay đổi quan trọng, hãy đóng ứng dụng qua menu để đảm bảo cài đặt được giữ lại.
+Phím tắt được ghi ngay khi bạn đặt, khi **Lưu các phím tắt khi thoát** đang bật. Mục này bật theo mặc định.

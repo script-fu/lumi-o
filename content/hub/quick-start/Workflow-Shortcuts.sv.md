@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
+translation_source_sha256: 5ffddefe157a79e2c7a59872e7978b7a6ef4ed6c9734521875f9c67552341393
 ---
 Lumi-o är byggd för ett genvägsdrivet arbetsflöde. När du väl har etablerat muskelminne för dessa kommandon kan du navigera din duk och verktyg betydligt snabbare.
 
@@ -28,10 +28,36 @@ Om `Alt` + högerklick och dra inte ändrar penselstorleken i Lumi använder skr
 Efter den här ändringen bör `Alt` + högerklick och dra fungera i Lumi för att ändra verktygsstorlek.
 {{< /callout >}}
 
-## Konfiguration & Persistens
+## Röra sig på duken
+
+Panorering och zoom lämnar det aktuella verktyget valt.
+
+| Åtgärd | Genväg |
+| :--- | :--- |
+| **Panorera** | Mittklick och dra |
+| **Panorera** | Håll `Space` och dra |
+| **Zooma** | `Ctrl` + mittklick och dra |
+
+`Space` panorerar som standard.
+
+## Rotera vyn
+
+Vrid duken så att ett inövat streck går i en bekväm riktning. Målare och tuschtecknare gör det ofta. Bara vyn vrids. Själva bilden ändras inte.
+
+| Åtgärd | Genväg |
+| :--- | :--- |
+| **Rotera utan att lämna det aktuella verktyget** | Håll `R` och dra |
+| **Rotera vyn** | `Shift` + mittklick och dra |
+| **Rotera vyn** | `Ctrl` + högerklick och dra |
+| **Snäpp det draget till 15°** | `Shift` + `Ctrl` medan du drar |
+| **Låt Rotera vyn vara valt** | Klicka på **Rotera vyn** och dra. `Shift` snäpper till 15°. `Esc` eller **Återställ vyn** återgår till 0° |
+
+Ensam `R` kan inte mappas om under **Redigera → Kortkommandon**. `Shift` + `R` är rektangelmarkering.
+
+## Konfiguration
 
 För att se eller mappa om dina befintliga bindningar, navigera till:
 
 **Redigera → Kortkommandon**
 
-> **Anmärkning om persistens:** Din anpassade genvägskonfiguration är ansluten till din konfigurationsfil endast efter en korrekt **File → Avsluta**. Se till att du stänger programmet via menyn efter att du har gjort betydande ändringar för att säkerställa att dina inställningar kvarstår.
+En genväg skrivs så fort du sätter den, så länge **Spara tangentbordsgenvägar vid avslut** är på. Alternativet är på som standard.

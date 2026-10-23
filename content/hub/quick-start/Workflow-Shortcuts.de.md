@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
+translation_source_sha256: 5ffddefe157a79e2c7a59872e7978b7a6ef4ed6c9734521875f9c67552341393
 ---
 Lumi-o ist für einen Shortcut-gesteuerten Workflow konzipiert. Sobald Sie Ihr Muskelgedächtnis für diese Befehle aufgebaut haben, können Sie deutlich schneller auf Ihrer Leinwand und Ihren Werkzeugen navigieren.
 
@@ -28,10 +28,36 @@ Wenn `Alt` + Rechtsklick und Ziehen in Lumi die Pinselgröße nicht ändert, ver
 Danach sollte `Alt` + Rechtsklick und Ziehen in Lumi zum Ändern der Werkzeuggröße funktionieren.
 {{< /callout >}}
 
-## Konfiguration und Persistenz
+## Auf der Leinwand bewegen
+
+Verschieben und Zoomen lassen das aktuelle Werkzeug ausgewählt.
+
+| Aktion | Verknüpfung |
+| :--- | :--- |
+| **Verschieben** | Mittelklick und ziehen |
+| **Verschieben** | `Space` halten und ziehen |
+| **Zoomen** | `Ctrl` + Mittelklick und ziehen |
+
+`Space` verschiebt standardmäßig die Ansicht.
+
+## Ansicht drehen
+
+Drehen Sie die Leinwand, damit ein geübter Strich in einer bequemen Richtung läuft. Maler und Tuscher machen das oft. Es dreht sich nur die Ansicht. Das Bild selbst bleibt unverändert.
+
+| Aktion | Verknüpfung |
+| :--- | :--- |
+| **Drehen, ohne das aktuelle Werkzeug zu verlassen** | `R` halten und ziehen |
+| **Ansicht drehen** | `Shift` + Mittelklick und ziehen |
+| **Ansicht drehen** | `Ctrl` + Rechtsklick und ziehen |
+| **Diesen Zug auf 15° einrasten** | `Shift` + `Ctrl` während des Ziehens |
+| **Ansicht drehen ausgewählt lassen** | **Ansicht drehen** anklicken, dann ziehen. `Shift` rastet auf 15° ein. `Esc` oder **Ansicht zurücksetzen** stellt 0° wieder her |
+
+Einfaches `R` lässt sich unter **Bearbeiten → Tastaturkürzel** nicht neu belegen. `Shift` + `R` ist die Rechteckauswahl.
+
+## Konfiguration
 
 Um Ihre vorhandenen Bindungen anzuzeigen oder neu zuzuordnen, navigieren Sie zu:
 
 **Bearbeiten → Tastaturkürzel**
 
-> **Hinweis zur Persistenz:** Ihre benutzerdefinierte Verknüpfungskonfiguration wird nur bei ordnungsgemäßem **Datei → Beenden** in Ihre Konfigurationsdatei übernommen. Bitte stellen Sie sicher, dass Sie die Anwendung über das Menü schließen, nachdem Sie wesentliche Änderungen vorgenommen haben, um sicherzustellen, dass Ihre Einstellungen erhalten bleiben.
+Eine geänderte Tastenkombination wird sofort geschrieben, solange **Tastenkombination beim Beenden speichern** aktiv ist. Die Option ist standardmäßig an.

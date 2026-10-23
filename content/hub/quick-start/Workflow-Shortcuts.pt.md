@@ -4,7 +4,7 @@ type: docs
 url: "hub/quick-start/Workflow-Shortcuts"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 121dbfc79e665305b8beae2c4919e6d21362f547169cb591493c3a27d3260209
+translation_source_sha256: 5ffddefe157a79e2c7a59872e7978b7a6ef4ed6c9734521875f9c67552341393
 ---
 O Lumi-o foi concebido para um fluxo de trabalho orientado por atalhos. Depois de internalizar estes comandos, consegue navegar pela tela e pelas ferramentas significativamente mais depressa.
 
@@ -28,12 +28,38 @@ Se `Alt` + clique com o botão direito e arrastar não redimensionar os pincéis
 Após esta alteração, `Alt` + clique com o botão direito e arrastar deverá funcionar no Lumi para redimensionar ferramentas.
 {{< /callout >}}
 
-## Configuração e persistência
+## Mover-se na tela
+
+Deslocar e fazer zoom deixam a ferramenta actual seleccionada.
+
+| Acção | Atalho |
+| :--- | :--- |
+| **Deslocar** | Clique com o botão do meio e arrastar |
+| **Deslocar** | Manter `Space` e arrastar |
+| **Zoom** | `Ctrl` + clique com o botão do meio e arrastar |
+
+`Space` desloca a vista por predefinição.
+
+## Rodar a vista
+
+Rode a tela para que um traço já treinado saia numa direção confortável. Pintores e arte-finalistas fazem isto muitas vezes. Só a vista roda. A imagem não muda.
+
+| Acção | Atalho |
+| :--- | :--- |
+| **Rodar sem sair da ferramenta actual** | Manter `R` e arrastar |
+| **Rodar a vista** | `Shift` + clique com o botão do meio e arrastar |
+| **Rodar a vista** | `Ctrl` + clique com o botão direito e arrastar |
+| **Encaixar esse arrasto em passos de 15°** | `Shift` + `Ctrl` enquanto arrasta |
+| **Manter Rodar a vista seleccionada** | Clique em **Rodar a vista** e arraste. `Shift` encaixa em 15°. `Esc` ou **Repor a vista** volta a 0° |
+
+`R` sozinho não pode ser reatribuído em **Editar → Atalhos de teclado**. `Shift` + `R` é a selecção rectangular.
+
+## Configuração
 
 Para ver ou remapear atalhos existentes, navegue até:
 
 **Editar → Atalhos de teclado**
 
-> **Nota sobre persistência:** a configuração personalizada de atalhos só é gravada no ficheiro de configuração após um **Ficheiro → Sair** correcto. Certifique-se de fechar a aplicação pelo menu depois de alterações significativas, para garantir que as definições ficam guardadas.
+Uma alteração de atalho é gravada assim que a defines, enquanto **Guardar atalhos de teclado ao sair** estiver ativo. A opção vem ativa.
 
 
