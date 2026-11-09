@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-Gereedschapsvoorinstellingen vormen het hart van Lumi's gereedschapsworkflow. Elk gereedschap wordt via een voorinstelling gebruikt — een stille default of een handgemaakt gereedschap van de kunstenaar. Zo wordt gereedschapsgedrag zichtbaar, bewust en herhaalbaar.
+Gereedschapsvoorinstellingen vormen het hart van Lumi's gereedschapsworkflow. Elk gereedschap wordt via een voorinstelling gebruikt — een stille default of een handgemaakt gereedschap van de kunstenaar. Zo wordt gereedschapsgedrag zichtbaar, bewust en herhaalbaar, ook of een schildertool zijn streken met OpenGL tekent.
 
 Het idee is eenvoudig: bouw een kleine, stabiele set vertrouwde tools, geef ze duidelijke identiteiten en wissel ertussen zo natuurlijk als het grijpen naar verschillende penselen, pennen, messen of blenders in een studio.
 
@@ -56,6 +56,10 @@ Een preset bezit de bronnen die het uniek maken. Bij een penseelpreset leven pen
 Dat is een bewuste vereenvoudiging: een opgeslagen tool is geen kwetsbare verwijzing naar losse onderdelen. Penselen kunnen nog in een herbruikbare bibliotheek, maar wanneer ze voor een preset worden gekozen, worden ze naar die vormgegeven tool gekopieerd.
 
 Voor kunstenaars telt dat een tool als volledige creatieve beslissing kan worden bewaard. Gedrag, identiteit en bronnen reizen samen — presets zijn een praktische basis voor persoonlijke workflows, projectspecifieke toolkits en gedeelde studio-opstellingen.
+
+## Weergave op de voorinstelling
+
+Een schildervoorinstelling kan onthouden of de streken ervan met OpenGL worden getekend. Die keuze hoort bij het gereedschap, samen met penseel, dynamiek en identiteit. Een grote airbrush of een zware textuurstempel kan de snellere streek gebruiken, en een andere voorinstelling kan de gewone behouden. Ook de canvasweergave van de lagenstapel kan OpenGL gebruiken, en dat houdt verschuiven, zoomen en draaien vloeiend. Beide worden beschreven in [OpenGL](/hub/features/opengl/).
 
 ## Een vertrouwd instrumentarium
 

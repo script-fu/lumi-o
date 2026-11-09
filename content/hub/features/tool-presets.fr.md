@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-Les préréglages d'outils sont au centre du flux de travail des outils de Lumi. Chaque outil s'utilise via un préréglage, qu'il s'agisse d'un réglage par défaut discret ou d'un outil fait main enregistré par l'artiste. Le comportement de l'outil devient visible, intentionnel et reproductible.
+Les préréglages d'outils sont au centre du flux de travail des outils de Lumi. Chaque outil s'utilise via un préréglage, qu'il s'agisse d'un réglage par défaut discret ou d'un outil fait main enregistré par l'artiste. Le comportement de l'outil devient visible, intentionnel et reproductible, y compris le fait qu'un outil de peinture trace ou non ses traits avec OpenGL.
 
 L'idée est simple : l'artiste constitue un petit ensemble stable d'outils familiers, leur donne des identités claires et bascule entre eux aussi naturellement que s'il prenait différents pinceaux, stylos, couteaux ou estompeurs dans un studio.
 
@@ -56,6 +56,10 @@ Un préréglage possède les ressources qui le rendent unique. Pour un prérégl
 C'est une simplification volontaire : un outil enregistré n'est pas un pointeur fragile vers plusieurs pièces mobiles distinctes. Les pinceaux peuvent toujours être enregistrés dans une bibliothèque réutilisable, mais lorsqu'ils sont choisis pour un préréglage, ils sont copiés dans cet outil personnalisé.
 
 Pour les artistes, l'important est qu'un outil puisse être enregistré comme une décision créative complète. Son comportement, son identité et ses ressources voyagent ensemble, ce qui fait des préréglages d'outils une base pratique pour les flux personnels, les boîtes à outils par projet et les configurations de studio partagées.
+
+## Rendu du préréglage
+
+Un préréglage de peinture peut mémoriser si ses traits sont dessinés avec OpenGL. Ce choix appartient à l'outil, avec son pinceau, sa dynamique et son identité. Un grand aérographe ou un tampon de texture lourd peut prendre le trait le plus rapide, et un autre préréglage peut garder le trait ordinaire. La vue du canevas sur la pile de calques peut elle aussi utiliser OpenGL, et c'est ce qui garde fluides le déplacement, le zoom et la rotation. Les deux sont décrits dans [OpenGL](/hub/features/opengl/).
 
 ## Un ensemble d'instruments familiers
 

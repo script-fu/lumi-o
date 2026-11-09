@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 Il sistema a livelli di Lumi dà struttura a un'illustrazione. Consente agli artisti di separare schizzi, colore, ombreggiatura, texture, maschere, regolazioni, esperimenti e dettagli finali senza consolidare ogni decisione in un'unica immagine piatta.
@@ -52,5 +52,7 @@ Per gli artisti significa che la sperimentazione può restare reversibile. Una r
 ## Prestazioni per file complessi
 
 Le illustrazioni a livelli possono diventare complesse, soprattutto quando gruppi, maschere ed effetti interagiscono. Il sistema a livelli di Lumi è progettato per mantenere reattive le azioni di pittura più comuni, evitando ricomposizioni non necessarie quando possibile.
+
+La finestra dell'immagine può disegnare quella pila composta con OpenGL. Spostamento, zoom e rotazione restano fluidi, perché la vista muove un'immagine già pronta per lo schermo, e un tratto può comparire al suo posto tra i livelli che lo circondano. [OpenGL](/hub/features/opengl/) descrive la navigazione sulla tela e i tratti del pennello per ogni preimpostazione.
 
 Il risultato è un flusso di lavoro a livelli orientato sia al controllo sia alla velocità: abbastanza dettagliato per un lavoro attento e non distruttivo, ma comunque pratico per la pittura quotidiana.

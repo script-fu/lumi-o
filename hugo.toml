@@ -110,8 +110,8 @@ enableGitInfo = true
   weight = 20
 
 [params]
-description = "Lumi-o is a free, open-source digital painting and illustration app for Linux. Lightweight, focused, and easy to build from source."
-keywords = "Lumi-o, Lumi, digital painting, illustration software, Linux art app, open-source art app, Debian, AppImage"
+description = "Lumi-o is a free, open-source digital painting and illustration app for Linux, with layered painting, spectral colour, and OpenGL canvas drawing."
+keywords = "Lumi-o, Lumi, digital painting, illustration software, Linux art app, open-source art app, Debian, AppImage, OpenGL, bristle brush, surface texture"
 
 [params.seo]
 image = "images/screens/gui-01.jpg"

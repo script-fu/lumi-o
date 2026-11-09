@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-As predefinições de ferramentas são o centro do fluxo de trabalho de ferramentas do Lumi. Cada ferramenta é usada por meio de um preset — um padrão silencioso ou uma ferramenta artesanal salva pelo artista. Isso torna o comportamento da ferramenta visível, intencional e repetível.
+As predefinições de ferramentas são o centro do fluxo de trabalho de ferramentas do Lumi. Cada ferramenta é usada por meio de um preset — um padrão silencioso ou uma ferramenta artesanal salva pelo artista. Isso torna o comportamento da ferramenta visível, intencional e repetível, inclusive se uma ferramenta de pintura desenha os traços com OpenGL.
 
 A ideia é simples: monte um conjunto pequeno e estável de ferramentas familiares, dê identidades claras e alterne entre elas tão naturalmente quanto pegar pincéis, canetas, facas ou blenders diferentes no estúdio.
 
@@ -56,6 +56,10 @@ Um preset possui os recursos que o tornam único. Em um preset de pincel, pincel
 É simplificação deliberada: uma ferramenta salva não é um ponteiro frágil para peças móveis separadas. Pincéis ainda podem ir para uma biblioteca reutilizável, mas quando escolhidos para um preset são copiados para aquela ferramenta autoral.
 
 Para artistas, o importante é guardar uma ferramenta como decisão criativa completa. Comportamento, identidade e recursos viajam juntos — presets são base prática para fluxos pessoais, kits de projeto e configurações de estúdio compartilhadas.
+
+## Renderização no preset
+
+Um preset de pintura pode lembrar se os traços são desenhados com OpenGL. Essa escolha pertence à ferramenta, junto com o pincel, a dinâmica e a identidade. Um aerógrafo grande ou um carimbo de textura pesado pode usar o traço mais rápido, e outro preset pode manter o comum. A vista da tela sobre a pilha de camadas também pode usar OpenGL, e é isso que mantém fluidas a panorâmica, a ampliação e a rotação. Os dois estão descritos em [OpenGL](/hub/features/opengl/).
 
 ## Um conjunto familiar de instrumentos
 

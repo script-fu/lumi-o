@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-Le preimpostazioni degli strumenti sono al centro del flusso di lavoro degli strumenti di Lumi. Ogni strumento viene usato tramite una preimpostazione, sia che si tratti di un default discreto sia di uno strumento personalizzato salvato dall'artista. Il comportamento degli strumenti diventa così visibile, intenzionale e ripetibile.
+Le preimpostazioni degli strumenti sono al centro del flusso di lavoro degli strumenti di Lumi. Ogni strumento viene usato tramite una preimpostazione, sia che si tratti di un default discreto sia di uno strumento personalizzato salvato dall'artista. Il comportamento degli strumenti diventa così visibile, intenzionale e ripetibile, anche nel fatto che uno strumento di pittura disegni o no i propri tratti con OpenGL.
 
 L'idea è semplice: l'artista costruisce un insieme piccolo e stabile di strumenti familiari, dà loro identità chiare e passa da uno all'altro con la stessa naturalezza con cui si prendono pennelli, penne, coltelli o sfumini diversi in uno studio.
 
@@ -56,6 +56,10 @@ Una preimpostazione possiede le risorse che la rendono unica. Per un preset penn
 È una semplificazione deliberata: uno strumento salvato non è un fragile puntatore a più parti mobili separate. I pennelli possono ancora essere salvati in una libreria riutilizzabile, ma quando vengono scelti per una preimpostazione vengono copiati nello strumento personalizzato.
 
 Per gli artisti la parte importante è che uno strumento possa essere salvato come decisione creativa completa. Comportamento, identità e risorse viaggiano insieme, rendendo le preimpostazioni strumento una base pratica per flussi di lavoro personali, kit specifici per progetto e configurazioni di studio condivise.
+
+## Rendering sulla preimpostazione
+
+Una preimpostazione di pittura può ricordare se i suoi tratti vengono disegnati con OpenGL. Quella scelta appartiene allo strumento, insieme al pennello, alle dinamiche e all'identità. Un aerografo grande o un timbro di texture pesante può usare il tratto più rapido, e un'altra preimpostazione può tenere quello ordinario. Anche la vista sulla tela della pila dei livelli può usare OpenGL, ed è questo che mantiene fluidi spostamento, zoom e rotazione. Entrambi sono descritti in [OpenGL](/hub/features/opengl/).
 
 ## Un set familiare di strumenti
 

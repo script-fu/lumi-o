@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 El sistema de capas de Lumi da estructura a la ilustración. Permite separar boceto, color, sombreado, textura, máscaras, ajustes, experimentos y detalle final sin fijar cada decisión directamente en una imagen plana.
@@ -52,5 +52,7 @@ Para el artista, eso significa que la experimentación puede seguir siendo rever
 ## Rendimiento en archivos complejos
 
 Las ilustraciones en capas pueden volverse complejas, sobre todo cuando interactúan grupos, máscaras y efectos. El sistema de capas de Lumi está diseñado para mantener ágiles las acciones habituales de pintura evitando la recomposición innecesaria siempre que sea posible.
+
+La ventana de imagen puede dibujar esa pila compuesta con OpenGL. El desplazamiento, el zoom y la rotación se mantienen fluidos, porque la vista mueve una imagen ya preparada para la pantalla, y un trazo puede aparecer en su sitio entre las capas que lo rodean. [OpenGL](/hub/features/opengl/) describe la navegación por el lienzo y los trazos de pincel de cada preajuste.
 
 El resultado es un flujo de trabajo por capas orientado al control y a la velocidad: lo bastante detallado para un trabajo cuidadoso y no destructivo, pero aún práctico para la pintura diaria.

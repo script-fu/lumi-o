@@ -3,7 +3,7 @@ title: "Encreagem"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 url: "hub/about/inking"
 translation_lock: true
 ---
@@ -15,14 +15,14 @@ Abaixo estão algumas das ferramentas e modos que tornam isso possível.
 
 O pincel sumi não está totalmente domesticado. Em vez de uma única ponta, é composto por muitas cabeças de pincel ou tufos de cerdas independentes que trabalham em conjunto como uma formação dinâmica. O resultado pode ir de arrastos húmidos a riscos secos quebrados, fibras emaranhadas ou bordas texturizadas explosivas, consoante a pressão, a velocidade, o espaçamento e o gesto.
 
-A formação oferece um amplo leque de controlos; combinada com dinâmicas, texturas e variação de carimbo, produz uma enorme variedade de marcas.
+Há um amplo leque de controlo sobre o comportamento da formação. O espaçamento, o tamanho, o agrupamento e a forma da ponta podem ser afinados de perto, e as cerdas podem crescer, encolher e renovar-se ao longo do traço, enquanto a densidade da marca se mantém. Combinar o pincel com dinâmicas, texturas e variação de carimbo pode produzir uma enorme variedade de marcas.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Predefinição Calligraphic
 
-O modo Calligraphic transforma a ferramenta Pincel num traço contínuo de caneta de caligrafia, em vez de uma fila de carimbos. A predefinição Calligraphic incluída usa também o ângulo de inclinação do stylus como eixo de controlo adicional: o traço responde à pressão e à forma como a caneta é segurada. Útil para marcas firmes e perfiladas que se leem como uma fita única de tinta, mesmo quando o ângulo e a pressão variam.
+O modo Calligraphic transforma a ferramenta Pincel num traço contínuo de caneta de caligrafia, em vez de uma fila de carimbos. A predefinição Calligraphic incluída usa também o ângulo de inclinação do stylus como eixo de controlo adicional: o traço responde à pressão e à forma como a caneta é segurada. A fita também pode receber uma textura de superfície com grão e dente. Uma viragem pode deslocar esse grão, de modo que uma mudança de direcção encontra uma fase nova do dente, enquanto o traço permanece uma marca contínua. Útil para marcas firmes e perfiladas que se leem como uma fita única de tinta, mesmo quando o ângulo e a pressão variam.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

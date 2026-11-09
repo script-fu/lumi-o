@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 Het lagensysteem van Lumi geeft een illustratie structuur. Kunstenaars kunnen schets, kleur, schaduw, textuur, maskers, aanpassingen, experimenten en finale details scheiden zonder elke beslissing direct in één vlak beeld vast te leggen.
@@ -52,5 +52,7 @@ Voor kunstenaars betekent dit dat experimenten omkeerbaar kunnen blijven. Een lo
 ## Prestaties voor diepe bestanden
 
 Gelaagde illustraties kunnen complex worden, vooral wanneer groepen, maskers en effecten samenwerken. Het lagensysteem van Lumi houdt algemene schilderacties responsief door waar mogelijk onnodige hercompositie te vermijden.
+
+Het afbeeldingsvenster kan die samengestelde stapel met OpenGL tekenen. Verschuiven, zoomen en draaien blijven vloeiend, omdat de weergave een beeld verplaatst dat al voor het scherm klaarstaat, en een streek ter plekke kan verschijnen tussen de lagen eromheen. [OpenGL](/hub/features/opengl/) beschrijft de navigatie over het canvas en de penseelstreken per voorinstelling.
 
 Het resultaat is een workflow die controle én snelheid combineert: gedetailleerd genoeg voor zorgvuldig niet-destructief werk, maar nog steeds praktisch voor dagelijks schilderen.

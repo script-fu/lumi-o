@@ -3,7 +3,7 @@ title: "Inking"
 type: docs
 weight: 4
 translation_provenance: ai-reviewed
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 url: "hub/about/inking"
 translation_lock: true
 ---
@@ -15,14 +15,14 @@ Berikut beberapa alat dan mode yang memungkinkannya.
 
 Kuas sumi belum sepenuhnya dijinakkan. Alih-alih berperilaku seperti satu ujung kuas, kuas ini dibangun dari banyak kepala kuas atau ikatan bulu independen yang bekerja bersama sebagai formasi dinamis. Hasilnya dapat bergeser dari tarikan basah ke goresan kering pecah, serat kusut, atau tepi bertekstur eksplosif—tergantung tekanan, kecepatan, jarak, dan gerakan.
 
-Formasinya dapat dikendalikan dengan luas, dan dikombinasikan dengan dinamika, tekstur, dan variasi cap, ia menghasilkan rentang tanda yang sangat besar.
+Ada rentang kendali yang luas atas perilaku formasi. Jarak, ukuran, penggumpalan, dan bentuk ujung dapat diatur dengan rapat, dan bulu dapat tumbuh, menyusut, serta diperbarui sepanjang goresan sementara kepadatan tanda tetap. Menggabungkan kuas dengan dinamika, tekstur, dan variasi cap dapat menghasilkan rentang tanda yang sangat besar.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Preset Calligraphic
 
-Mode Calligraphic mengubah alat Kuas menjadi goresan pena chisel yang kontinu, bukan deretan cap berulang. Preset Calligraphic bawaan juga memakai sudut kemiringan stylus sebagai sumbu kontrol tambahan, sehingga goresan merespons tidak hanya tekanan tetapi juga cara pena dipegang. Berguna untuk tanda tegas dan berbentuk yang terbaca sebagai satu pita tinta, meski sudut dan tekanan berubah.
+Mode Calligraphic mengubah alat Kuas menjadi goresan pena chisel yang kontinu, bukan deretan cap berulang. Preset Calligraphic bawaan juga memakai sudut kemiringan stylus sebagai sumbu kontrol tambahan, sehingga goresan merespons tidak hanya tekanan tetapi juga cara pena dipegang. Pita itu juga dapat menerima tekstur permukaan berupa butiran dan gigi. Sebuah belokan dapat menggeser butiran itu, sehingga perubahan arah bertemu fase baru dari gigi, sementara goresan tetap satu tanda yang kontinu. Berguna untuk tanda tegas dan berbentuk yang terbaca sebagai satu pita tinta, meski sudut dan tekanan berubah.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

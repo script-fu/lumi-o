@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/layers"
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 Lumis lagersystem ger en illustrationsstruktur. Det låter konstnärer separera skiss, färg, skuggning, textur, masker, justeringar, experiment och slutliga detaljer utan att göra varje beslut direkt i en platt bild.
 
@@ -51,5 +51,7 @@ För artister innebär detta att experiment kan förbli reversibelt. En look kan
 ## Prestanda för djupa filer
 
 Skiktade illustrationer kan bli komplexa, särskilt när grupper, masker och effekter interagerar. Lumis lagersystem är designat för att hålla vanliga målningsåtgärder lyhörda genom att undvika onödig omkomposition när det är möjligt.
+
+Bildfönstret kan rita den sammansatta stacken med OpenGL. Panorering, zoom och rotation förblir jämna, eftersom vyn flyttar en bild som redan hålls för skärmen, och ett drag kan synas på plats bland lagren runt det. [OpenGL](/hub/features/opengl/) beskriver navigering på duken och penseldrag per förinställning.
 
 Resultatet är ett lagerarbetsflöde som syftar till både kontroll och hastighet: tillräckligt detaljerat för noggrant oförstörande arbete, men ändå praktiskt för vardagsmålning.

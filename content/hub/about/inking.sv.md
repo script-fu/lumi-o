@@ -4,7 +4,7 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 url: "hub/about/inking"
 ---
 
@@ -16,14 +16,14 @@ Nedan följer några verktyg och lägen som gör det möjligt.
 
 Sumipenseln är inte helt tämd. I stället för att bete sig som en enda penselspets byggs den av många oberoende penselhuvuden eller borstknippen som samverkar som en dynamisk formation. Resultatet kan skifta från våta drag till brutna torra strimmor, trassliga fibrer eller explosiva texturerade kanter — beroende på tryck, hastighet, avstånd och gest.
 
-Det finns brett utrymme att styra hur formationen beter sig; kombinerat med dynamik, texturer och stämpelvariation ger det ett enormt spektrum av markeringar.
+Det finns ett brett utrymme att styra hur formationen beter sig. Avstånd, storlek, klustring och spetsform kan ställas in tätt, och borsten kan växa, krympa och förnyas längs draget medan märkets täthet hålls. Att kombinera penseln med dynamik, texturer och stämpelvariation kan ge ett enormt spektrum av markeringar.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic Preset
 
-Kalligrafiläge förvandlar penselverktyget till ett sammanhängande mejselpenndrag i stället för en rad stämplade prickar. Den medföljande Calligraphic-förinställningen använder också pennans lutningsvinkel som en extra kontrollaxel, så att draget reagerar inte bara på tryck utan på hur pennan hålls. Användbart för fasta, formade markeringar som ska läsas som ett enda bläckband, även när vinkel och tryck ändras.
+Kalligrafiläge förvandlar penselverktyget till ett sammanhängande mejselpenndrag i stället för en rad stämplade prickar. Den medföljande Calligraphic-förinställningen använder också pennans lutningsvinkel som en extra kontrollaxel, så att draget reagerar inte bara på tryck utan på hur pennan hålls. Bandet kan också ta en yttextur av gräng och tand. En sväng kan förskjuta den grängen, så att ett riktningsbyte möter en ny fas av tanden, medan draget förblir ett sammanhängande märke. Användbart för fasta, formade markeringar som ska läsas som ett enda bläckband, även när vinkel och tryck ändras.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

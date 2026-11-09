@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux는 강력하고 다재다능한 운영 체제이며, 방대한 개발자 커뮤니티를 갖고 있습니다. Linux 시스템의 핵심에는 원활한 사용자 경험을 위해 함께 동작하는 여러 주요 구성 요소가 있습니다. 이 개요에서는 커널, 배포판, 패키지 관리자, 디스플레이 관리자, 데스크톱 환경, 디스플레이 서버(X11 또는 Wayland) 등 Linux 시스템의 필수 요소를 설명합니다.
 
-Lumi는 Debian과 Cinnamon(X11)에서 가장 잘 동작하며, 해당 환경에서 개발 및 테스트됩니다.
+Lumi는 Debian과 Cinnamon(X11)에서 개발하고 테스트합니다. 그 환경이 여전히 개발 환경입니다. Wayland의 GNOME은 그와 나란히, 애플리케이션의 전반적인 모습과 OpenGL 렌더링을 확인했습니다.
 
 **주요 Linux 배포판의 일반적인 기본값**
 

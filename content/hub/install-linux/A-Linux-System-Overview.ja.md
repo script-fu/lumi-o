@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux は強力で汎用性の高いオペレーティングシステムで、大規模な開発者コミュニティがあります。Linux システムの中核には、スムーズなユーザー体験のために連携する主要コンポーネントがあります。本概要では、カーネル、ディストリビューション、パッケージマネージャー、ディスプレイマネージャー、デスクトップ環境、ディスプレイサーバー（X11 または Wayland）など、Linux システムの基本要素を説明します。
 
-Lumi は Debian と Cinnamon（X11）で最も快適に動作し、その環境で開発・テストされています。
+Lumi は Debian と Cinnamon（X11）で開発・テストされています。それが今も開発環境です。Wayland 上の GNOME は、それと並べて、アプリケーション全体の見た目と OpenGL による描画を確認しています。
 
 **主要 Linux ディストリビューションの一般的な既定値**
 

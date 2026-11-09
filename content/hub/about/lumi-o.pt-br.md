@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 url: "hub/about/lumi-o"
 ---
 
@@ -30,7 +30,8 @@ Lumi combina um sistema de cores baseado em pigmentos com um fluxo de trabalho r
 
 - **Cor centrada em pigmentos**: perfis de pigmentos do mundo real (códigos Colour Index) são misturados espectralmente, para que paletas se comportem mais como tinta real.
 - **Fluxo de trabalho orientado por paleta**: paletas salvas e alternáveis organizam pigmentos, misturas, faixas de valor e gradientes, mantendo decisões de cor coerentes em uma pintura ou projeto.
-- **Ferramentas táteis e focadas**: pincéis integram pressão, inclinação e velocidade da caneta para controle direto e refinado; controles apoiam decisões deliberadas sem complexidade desnecessária.
+- **Ferramentas táteis e focadas**: os pincéis integram a pressão, a inclinação e a velocidade da caneta para um controle direto e refinado. A textura de superfície pode dar a um traço o grão e o dente de uma superfície, inclusive nos traços caligráficos, e uma virada pode deslocar esse grão. Os pincéis de cerdas podem ser moldados de perto e animados ao longo do traço.
+- **Tela responsiva**: o OpenGL pode desenhar a pilha de camadas e pintar traços de pincel para predefinições de ferramenta individuais. Aerógrafos grandes e carimbos de textura grandes acompanham a mão, e circular pela tela permanece fluido.
 - **Confiabilidade não destrutiva**: camadas e filtros editáveis escalam para projetos complexos e permanecem previsíveis. Salvamento automático, salvamento rápido, salvamentos incrementais e recuperação protegem longas sessões de pintura e projetos grandes.
 - **Espaços de trabalho dinâmicos**: perfis nomeados preservam docks, ferramentas, predefinições, paletas e vínculos de dispositivos e os alternam atomicamente em tempo de execução.
 - **Scheme scripting**: Lumi estende a tradição Script-Fu com uma linguagem de plug-in baseada em Scheme e funções utilitárias adicionais para criar plug-ins e automatizar fluxos de trabalho.
@@ -40,7 +41,7 @@ Lumi combina um sistema de cores baseado em pigmentos com um fluxo de trabalho r
 ## Limites
 
 - **Focado, não exaustivo**: Lumi não visa web design, editoração eletrônica ou cada nicho que um editor amplo como o GIMP tenta cobrir.
-- **Somente Linux**: Lumi é otimizado especificamente para Linux e não oferece suporte a Windows ou macOS.
+- **Somente Linux**: o Lumi é desenvolvido no Debian com Cinnamon (X11). O GNOME no Wayland foi testado quanto à aparência geral do aplicativo e à renderização OpenGL. Windows e macOS não têm suporte.
 
 ## Agradecimentos
 

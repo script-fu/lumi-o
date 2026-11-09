@@ -4,14 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
+translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
 ---
 
 Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een streek zich gedraagt.
 
-In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, beweging, druk, timing en kleur kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen en meerkoppige penseelformaties.
-
-![brush-tool](/images/screens/brush-tool.jpg)
+In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, korrel van het oppervlak, beweging, druk, timing en kleur kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen, plukken borstelharen en meerkoppige penseelformaties.
 
 ## Expressieve penseelstreken
 
@@ -19,16 +17,11 @@ Penselen kunnen gebaseerd zijn op bitmapstempels, procedurele vormen of op frame
 
 Wanneer een penseel visueel complex wordt, kan het voorbeeld vereenvoudigd blijven, zodat het schilderen responsief en gemakkelijk leesbaar blijft.
 
-![tool-setup](/images/screens/tool-setup.jpg)
-
-
 ## Dynamiek en invoerreactie
 
 Het penseel reageert op live invoer, zoals stylusdruk, snelheid, richting, kanteling en andere controllerwaarden. Deze signalen kunnen de zichtbare streek op veel manieren beïnvloeden: dikte, dekking, hoek, textuurreactie, kleurgedrag, afstand en andere eigenschappen kunnen allemaal veranderen als de hand beweegt.
 
 Hierdoor voelt de Brush minder aan als een gestempeld patroon en meer als een fysiek tekeninstrument. Een lichte aanraking kan delicate vlekken veroorzaken, snellere bewegingen kunnen textuur of vorm onthullen, en richtinggevoelig gedrag kan ertoe bijdragen dat de bewegingen het gebaar van de hand volgen.
-
-![dynamics](/images/screens/dynamics.jpg)
 
 ## Streekgedrag
 
@@ -37,8 +30,6 @@ Streeks kunnen direct en onmiddellijk zijn, of ze kunnen worden ondersteund door
 De Brush ondersteunt ook verschillende benaderingen van verfopbouw. Het kan zich gedragen als een ononderbroken streek, herhaaldelijke deppen verzamelen of na verloop van tijd sporen afgeven terwijl de wijzer op zijn plaats wordt gehouden. Deze flexibiliteit maakt het bruikbaar voor zowel opzettelijk lijnwerk als langzamere tonale constructie.
 
 Voor kalligrafische of inktachtige markeringen kan het penseel een meer continu gevormde lijn genereren in plaats van alleen te vertrouwen op herhaalde stempels. Dit levert vloeiende, lintachtige vormen op die op natuurlijke wijze reageren op gebaren en snelheid.
-
-![stroke](/images/screens/stroke.jpg)
 
 ## Streekregistratie en gesimuleerde weergave
 
@@ -58,21 +49,53 @@ Penseelstreken kunnen de actieve verfkleur gebruiken, reageren op verlopen of kl
 
 Omdat kleur en textuur deel kunnen uitmaken van hetzelfde dynamische systeem als vorm en dekking, kan een enkele streek evolueren terwijl deze over het canvas beweegt in plaats van visueel uniform te blijven.
 
+De textuur in een penseelpunt breekt de stempel zelf op. Oppervlaktetextuur, hierna beschreven, is de korrel en de tand van het oppervlak dat de streek ontmoet.
+
+## Oppervlaktetextuur
+
+Oppervlaktetextuur geeft een streek de korrel en de tand van een oppervlak: papier, doek of een ander patroon. Lumi levert daarvoor geschikte korrels mee. Lichte delen van het patroon laten verf door. Donkere delen houden de verf tegen, zodat de markering breekt zoals droog materiaal over de tand breekt.
+
+Waar die korrel zit, kan met de streek veranderen. Elke streek kan op een eigen plek in het patroon beginnen, en een draai kan een nieuwe verschuiving doorrollen. Heen en weer arceren laat dat zien: elke omkering neemt een nieuwe fase van de tand op, en de overlappende gangen bouwen een gebroken, geloofwaardige schaduwing op. Een geleidelijke boog kan de fase behouden die al onder de streek ligt, zodat de tand langs de zwaai samenhangend blijft.
+
+Gestempelde penselen en kalligrafische streken kunnen allebei deze korrel aannemen. Een rij deppen en een doorlopend inktlint kunnen over hetzelfde soort tand breken. Bij een kalligrafische streek blijft de lijn één gevormde markering, en de korrel bepaalt waar dat lint open is en waar het wordt tegengehouden.
+
+Hoe open de tand is, kan langs de streek veranderen. Druk en andere invoer kunnen schuiven tussen een drogere en een vollere stand. In de drogere stand blijven de gaten open. Naarmate de streek opent, kunnen de geschilderde eilanden in die gaten groeien, zodat de korrel zich vanaf de randen vult. In de volle stand komt de streek overeen met het opener patroon.
+
+Overlappende deppen binnen één streek kunnen dekking opbouwen in de eilanden. Ze kunnen ook één laag dekking neerleggen die een latere lus van die streek overschrijft, zodat de korrel niet op zichzelf stapelt.
+
 ## Opzetborstels en formaties
 
 Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kunnen meerdere koppen rond het streekpad worden geplaatst om puntmarkeringen, waaiervormige lijnen, borstelachtig gedrag, spuitpatronen, structuurformaties of gestructureerde arceringen te creëren.
 
 Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.
 
-![brush-heads](/images/screens/brush-heads.jpg)
+Gegenereerde penselen kunnen ook als velden van borstelharen worden opgebouwd. Vorm en animatie tijdens de streek voor die velden worden hieronder beschreven.
+
+## Vorm van de borstelharen
+
+Een penseel met borstelharen is een veld van afzonderlijke markeringen binnen een gegenereerde vorm. De omtrek van die vorm bepaalt waar de haren kunnen zitten: een cirkel, een vierkant, een ruit, een driehoek, een stekelige vorm, verzachte hoeken of een uitgerekte verhouding. Elke haar houdt de eigen markering binnen die omtrek.
+
+Afstand en grootte bepalen hoe dicht de haren staan en hoe groot elk is. Groottevariatie laat naburige haren verschillen, van een gelijkmatige kop tot een kop waarvan de haren van volle grootte tot bijna leeg lopen. Regelmaat schuift het veld tussen een gelijkmatig raster en een lossere strooiing. Klontering trekt de haren naar minder centra, zodat de kop als plukken leest. Het veld kan ook worden uitgedund, zodat een schralere set van dezelfde markeringen overblijft.
+
+De punten kunnen rond blijven. Ze kunnen ook kleine veelhoeken worden die binnen elke haar blijven. De punten kunnen gelijkmatig rond de cirkel staan of rafelig worden gelaten, en ze kunnen op de rand zitten of naar binnen trekken. Waar punten overlappen, is de sterkere markering degene die zichtbaar is.
+
+Elke kop van een penseel met meerdere koppen kan een eigen schikking dragen, zodat een waaier van pennen een set verwante plukken is.
+
+De grootte van de haren kan de stylusdruk volgen en de andere invoer die een streek vormt. Verandert die grootte, dan kan de kop opnieuw worden getekend, zodat een lichte aanraking en een stevige druk in de haren zelf verschillen.
+
+## Borstelharen langs de streek
+
+Een penseel met borstelharen kan veranderen terwijl de streek nog wordt getekend. Afzonderlijke haren groeien en krimpen. Sommige doven uit, andere groeien elders bij, zodat het karakter van de kop langs de markering reist. De dichtheid van de pluk blijft gelijk terwijl de haren zich herschikken.
+
+De animatie loopt mee met de deppen van de streek. Ze kan beginnen nadat de markering een afstand heeft afgelegd, of wanneer de hand draait. De tussenstanden spelen zich af langs het pad, en hetzelfde gebaar levert dezelfde reeks op.
+
+Een airbrush is een andere soort beweging. Hij kan bij het uitstoten een verse schikking van haren neerleggen, zodat een vastgehouden streek de nevel blijft vernieuwen. Een kalligrafische streek houdt zijn doorlopende pen, en die pen kan nog steeds oppervlaktetextuur opnemen. De animatie van borstelharen hoort bij het gestempelde penseel met borstelharen.
 
 ## Borstelbelasting en verfopname
 
 De Brush kan ook simuleren hoeveel verf of materiaal er momenteel op de kwast zit. Naarmate een streek voortduurt, kan die belasting geleidelijk afnemen, waardoor markeringen lichter, droger, dunner, ruwer of anderszins meer gebroken worden, afhankelijk van hoe de penseeldynamiek is ingesteld.
 
 De belasting kan opnieuw worden geïntroduceerd tussen de poetsbewegingen, op een gekozen niveau worden gehouden of worden gebruikt als een live controlesignaal voor ander poetsgedrag. Dit maakt het mogelijk om penselen te bouwen die meer aanvoelen als echte media: nat aan het begin van een streek, geleidelijk uitgeput door de afstand, en dan weer ondergedompeld voor de volgende passage.
-
-![material-state](/images/screens/material-state.jpg)
 
 ## Contact met het borsteloppervlak
 
@@ -88,7 +111,11 @@ Verlies wordt beoordeeld op basis van de slagafstand in plaats van op het aantal
 
 Geanimeerde penseelbronnen kunnen van frame veranderen naarmate een streek vordert, waardoor penselen een gevoel van beweging en variatie krijgen. Randomisatie en variatie per slag kunnen ervoor zorgen dat herhaalde markeringen er niet identiek uitzien, terwijl stabiel zaaien een consistent karakter kan behouden wanneer herhaalbaarheid nodig is.
 
-Dit gedrag is handig voor penselen die levend moeten aanvoelen: borstelharen die tijdens een streek verschuiven, gestructureerde stempels die in de loop van de tijd subtiel veranderen, of gereedschappen met meerdere koppen waarbij elk hoofd zijn eigen persoonlijkheid heeft.
+Dit gedrag is handig voor penselen die levend moeten aanvoelen: getextureerde stempels die in de loop van de tijd subtiel veranderen, of gereedschappen met meerdere koppen waarbij elke kop een eigen persoonlijkheid heeft. Penselen met borstelharen hebben hun eigen animatie tijdens de streek, hierboven beschreven.
+
+## OpenGL-streken
+
+Een gereedschapsvoorinstelling kan zijn streken met OpenGL schilderen. Het verschil is het grootst bij grote airbrushes en grote textuurstempels, die met de hand meelopen terwijl de markering groeit. Het afbeeldingsvenster kan de lagenstapel ook met OpenGL tekenen, wat de navigatie over het canvas vloeiend houdt. Beide worden beschreven in [OpenGL](/hub/features/opengl/).
 
 ## Artiestgerichte workflow
 

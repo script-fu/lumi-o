@@ -2,7 +2,7 @@
 title: "Lapisan"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 url: "hub/features/layers"
 translation_lock: true
 ---
@@ -51,5 +51,7 @@ Bagi seniman, eksperimen tetap reversibel. Sebuah tampilan dapat diuji, disembun
 ## Kinerja untuk berkas dalam
 
 Ilustrasi berlapis bisa kompleks, terutama saat grup, mask, dan efek saling berinteraksi. Sistem lapisan Lumi dirancang menjaga tindakan melukis umum tetap responsif dengan menghindari rekomposisi yang tidak perlu bila memungkinkan.
+
+Jendela gambar dapat menggambar tumpukan tersusun itu dengan OpenGL. Geser, perbesar, dan rotasi tetap mulus, karena pandangan menggerakkan gambar yang sudah disimpan untuk tampilan, dan goresan dapat muncul di tempatnya di antara lapisan di sekelilingnya. [OpenGL](/hub/features/opengl/) menjelaskan navigasi kanvas dan goresan kuas per preset.
 
 Hasilnya alur kerja lapisan yang menyeimbangkan kontrol dan kecepatan: cukup detail untuk pekerjaan non-destruktif hati-hati, namun tetap praktis untuk melukis sehari-hari.

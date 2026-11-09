@@ -2,7 +2,7 @@
 title: "Camadas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 url: "hub/features/layers"
 translation_lock: true
 ---
@@ -51,5 +51,7 @@ Para os artistas, isto significa que a experimentação pode permanecer reversí
 ## Desempenho para ficheiros profundos
 
 Ilustrações em camadas podem tornar-se complexas, especialmente quando grupos, máscaras e efeitos interagem. O sistema de camadas do Lumi foi concebido para manter as acções comuns de pintura responsivas, evitando recomposições desnecessárias sempre que possível.
+
+A janela da imagem pode desenhar essa pilha composta com OpenGL. A panorâmica, a ampliação e a rotação mantêm-se fluidas, porque a vista percorre uma imagem já retida para o ecrã, e um traço pode aparecer no lugar, entre as camadas à volta. O [OpenGL](/hub/features/opengl/) descreve a navegação na tela e os traços de pincel por predefinição.
 
 O resultado é um fluxo de camadas que visa controlo e velocidade: suficientemente detalhado para trabalho cuidadoso e não destrutivo, mas ainda prático para a pintura quotidiana.

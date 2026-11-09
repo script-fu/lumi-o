@@ -52,4 +52,6 @@ For artists, this means experimentation can stay reversible. A look can be teste
 
 Layered illustrations can become complex, especially when groups, masks, and effects interact. Lumi's layer system is designed to keep common painting actions responsive by avoiding unnecessary recomposition whenever possible.
 
+The image window can draw that composed stack with OpenGL. Pan, zoom, and rotation stay smooth, because the view moves a picture already held for the display, and a stroke can appear in place among the layers around it. [OpenGL](/hub/features/opengl/) describes canvas navigation and per-preset brush strokes.
+
 The result is a layer workflow aimed at both control and speed: detailed enough for careful non-destructive work, but still practical for everyday painting.

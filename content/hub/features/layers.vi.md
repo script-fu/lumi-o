@@ -3,7 +3,7 @@ title: "Lớp"
 type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 translation_lock: true
 ---
 
@@ -52,5 +52,7 @@ Với nghệ sĩ, thử nghiệm vẫn có thể đảo ngược. Một look có
 ## Hiệu năng cho tệp sâu
 
 Minh họa nhiều lớp có thể phức tạp, đặc biệt khi nhóm, mặt nạ và hiệu ứng tương tác. Hệ thống lớp Lumi giữ thao tác vẽ thường ngày phản hồi nhanh bằng cách tránh tổng hợp lại không cần thiết khi có thể.
+
+Cửa sổ hình ảnh có thể vẽ chồng lớp đã tổng hợp đó bằng OpenGL. Kéo khung, thu phóng và xoay vẫn mượt, vì khung nhìn dịch một hình đã giữ sẵn cho màn hình, và một nét có thể hiện đúng chỗ giữa các lớp xung quanh. [OpenGL](/hub/features/opengl/) mô tả việc di chuyển trên canvas và nét cọ theo từng cài đặt sẵn.
 
 Kết quả là quy trình lớp vừa kiểm soát vừa nhanh: đủ chi tiết cho công việc không phá hủy cẩn thận, vẫn thực tế cho vẽ hàng ngày.

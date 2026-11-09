@@ -2,14 +2,14 @@
 title: "نظرة عامة على نظام Linux"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_lock: true
 ---
 
 Linux نظام تشغيل قوي ومتعدد الاستخدامات، مدعوم بمجتمع واسع من المطورين. يتكوّن نظام Linux أساسًا من عدة مكوّنات رئيسية تعمل معًا لتوفير تجربة مستخدم سلسة. تقدّم هذه النظرة العامة الأجزاء الأساسية لنظام Linux: النواة، التوزيعة، مدير الحزم، مدير العرض، بيئة سطح المكتب، وخادم العرض (X11 أو Wayland).
 
-Lumi في أفضل حالاته على Debian مع Cinnamon (X11)، ويُطوَّر ويُختبَر في هذه البيئة.
+يُطوَّر Lumi ويُختبَر على Debian مع Cinnamon (X11). تبقى هذه بيئة التطوير. جرى اختبار GNOME على Wayland إلى جانبها للمظهر العام ولعرض OpenGL.
 
 **الإعدادات الافتراضية الشائعة لتوزيعات Linux**
 

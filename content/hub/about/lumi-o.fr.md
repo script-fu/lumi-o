@@ -5,7 +5,7 @@ url: "hub/about/lumi-o"
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 ---
 Lumi est une application rapide et efficace, exclusivement pour Linux, dédiée à la création d'images matricielles. Elle est développée ouvertement : ses choix de conception, sa documentation d'architecture et son historique de développement sont publics, afin que les utilisateurs puissent comprendre comment elle évolue.
 
@@ -29,7 +29,8 @@ Lumi combine un système de couleurs à base de pigments avec un flux de travail
 
 - **Couleur centrée sur les pigments** : les profils de pigments réels (codes Colour Index) sont mélangés spectralement, de sorte que les palettes se comportent davantage comme de la vraie peinture.
 - **Flux de travail piloté par les palettes** : des palettes enregistrées et interchangeables organisent pigments, mélanges, plages de valeurs et dégradés, pour garder les décisions chromatiques cohérentes au sein d'une illustration ou d'un projet.
-- **Outils tactiles et ciblés** : les pinceaux intègrent pression, inclinaison et vitesse du stylet pour un contrôle direct et nuancé ; les commandes soutiennent des choix réfléchis sans complexité superflue.
+- **Outils tactiles et ciblés** : les pinceaux intègrent pression, inclinaison et vitesse du stylet pour un contrôle direct et nuancé ; les commandes soutiennent des choix réfléchis sans complexité superflue. Une texture de surface peut donner au trait le grain et l'accroche d'un support, y compris sur un trait calligraphique, et un virage peut décaler ce grain. Les pinceaux à poils se façonnent de près et s'animent le long du trait.
+- **Canevas réactif** : OpenGL peut dessiner la pile de calques et peindre les traits de pinceau de chaque préréglage d'outil. Les grands aérographes et les grands tampons de texture suivent la main, et se déplacer sur le canevas reste fluide.
 - **Fiabilité non destructive** : calques et filtres modifiables prennent en charge des projets complexes tout en restant prévisibles. Sauvegarde automatique, enregistrement rapide, sauvegardes incrémentielles et récupération protègent les longues sessions de peinture et les grands projets.
 - **Espaces de travail dynamiques** : des profils nommés conservent docks, outils, presets, palettes et associations de périphériques, et peuvent être activés de façon atomique à l'exécution.
 - **Scripts Scheme** : Lumi prolonge la tradition Script-Fu avec un langage de plug-ins basé sur Scheme et des fonctions utilitaires supplémentaires pour créer des plug-ins et automatiser les flux de travail.
@@ -39,7 +40,7 @@ Les [filtres](/hub/features/filters/), y compris le flou d'objectif à bokeh fa�
 ## Limites
 
 - **Ciblé, pas exhaustif** : Lumi ne vise ni la conception web, ni la publication assistée par ordinateur, ni toutes les niches qu'un éditeur généraliste comme GIMP cherche à couvrir.
-- **Linux uniquement** : Lumi est optimisé spécifiquement pour Linux et ne prend pas en charge Windows ni macOS.
+- **Linux uniquement** : Lumi est développé sur Debian avec Cinnamon (X11). GNOME sur Wayland a été testé pour l'apparence générale de l'application et pour le rendu OpenGL. Windows et macOS ne sont pas pris en charge.
 
 ## Remerciements
 

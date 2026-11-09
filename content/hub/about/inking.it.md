@@ -5,7 +5,7 @@ url: "hub/about/inking"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 ---
 Lo spazio di lavoro Inchiostrazione è pensato per un tratto deliberato o un caos d'inchiostro controllato. È la fase in cui il disegno smette di essere esplorativo e diventa impegnativo: tratti controllati, bordi netti e segni che mantengono la forma con sicurezza. Oppure lasciatevi andare a schizzi espressivi, linee a loop, graffi di pennino asciutto e tratti sumi selvaggi.
 
@@ -15,14 +15,14 @@ Alcuni strumenti e modalità che lo rendono possibile:
 
 Il pennello sumi non è del tutto domato. Invece di comportarsi come una singola punta, è costituito da molte testine o ciuffi di setole indipendenti che lavorano insieme come una formazione dinamica. Il risultato può passare da trascinamenti bagnati a strisce secche spezzate, fibre aggrovigliate o bordi strutturati esplosivi, a seconda di pressione, velocità, spaziatura e gesto.
 
-La formazione offre un ampio controllo; combinata con dinamiche, texture e variazione di timbro, produce un'enorme gamma di segni.
+C'è un ampio controllo su come si comporta la formazione. Spaziatura, dimensione, raggruppamento e forma della punta si possono regolare da vicino, e le setole possono crescere, ridursi e rinnovarsi lungo il tratto mentre la densità del segno resta costante. Combinare il pennello con dinamiche, texture e variazione del timbro può produrre una gamma enorme di segni.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Preset Calligraphic
 
-La modalità Calligraphic trasforma lo strumento Pennello in un tratto continuo da pennello a taglio, non in una fila di tocchi stampati. Il preset Calligraphic incluso usa anche l'angolo di inclinazione dello stilo come asse di controllo aggiuntivo, così il tratto risponde alla pressione e a come la penna è impugnata. Utile per segni solidi e sagomati che si leggono come un unico nastro d'inchiostro, anche quando angolo e pressione cambiano.
+La modalità Calligraphic trasforma lo strumento Pennello in un tratto continuo da pennello a taglio, non in una fila di tocchi stampati. Il preset Calligraphic incluso usa anche l'angolo di inclinazione dello stilo come asse di controllo aggiuntivo, così il tratto risponde alla pressione e a come la penna è impugnata. Utile per segni solidi e sagomati che si leggono come un unico nastro d'inchiostro, anche quando angolo e pressione cambiano. Il nastro può anche prendere una texture di superficie, con grana e dente. Una svolta può spostare quella grana, così un cambio di direzione incontra una fase nuova del dente, mentre il tratto resta un unico segno continuo.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

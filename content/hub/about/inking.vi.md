@@ -4,7 +4,7 @@ type: docs
 url: "hub/about/inking"
 weight: 4
 translation_provenance: ai-reviewed
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 translation_lock: true
 ---
 
@@ -16,14 +16,14 @@ Dưới đây là một số công cụ và chế độ giúp điều đó.
 
 Cọ sumi không hoàn toàn bị thuần hóa. Thay vì hoạt động như một đầu cọ duy nhất, nó gồm nhiều đầu cọ độc lập hoặc bó lông cùng hoạt động như một đội hình động. Kết quả có thể chuyển từ vệt kéo ướt sang vệt khô đứt, sợi rối hoặc cạnh có kết cấu dễ nổ, tùy áp lực, tốc độ, khoảng cách và cử chỉ.
 
-Có nhiều cách kiểm soát hành vi đội hình; kết hợp với dynamics, kết cấu và biến thể stamp có thể tạo ra vô số loại nét.
+Có thể kiểm soát sự hình thành rất rộng. Khoảng cách, kích thước, độ tụ và hình đầu có thể đặt sát; lông lớn lên, nhỏ lại và mọc mới dọc nét trong khi mật độ vết vẫn giữ. Kết hợp cọ với dynamics, kết cấu và biến thể stamp tạo ra một dải nét rất rộng.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Cài đặt sẵn Calligraphic
 
-Chế độ calligraphic biến công cụ cọ thành nét bút đục liên tục thay vì hàng dấu chấm được đóng. Cài đặt sẵn calligraphic đi kèm cũng dùng góc nghiêng bút cảm ứng làm trục điều khiển bổ sung, nên nét phản hồi không chỉ áp lực mà cả cách cầm bút. Hữu ích cho nét chắc, có hình dạng cần đọc như một dải mực duy nhất, dù góc và áp lực thay đổi.
+Chế độ calligraphic biến công cụ cọ thành nét bút đục liên tục thay vì hàng dấu chấm được đóng. Cài đặt sẵn calligraphic đi kèm cũng dùng góc nghiêng bút cảm ứng làm trục điều khiển bổ sung, nên nét phản hồi không chỉ áp lực mà cả cách cầm bút. Dải mực cũng có thể nhận kết cấu bề mặt với hạt và độ nhám. Một chỗ ngoặt dịch hạt đó, nên khi đổi hướng nét gặp một pha nhám mới, trong khi nét vẫn là một dấu liên tục. Hữu ích cho nét chắc, có hình dạng cần đọc như một dải mực duy nhất, dù góc và áp lực thay đổi.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

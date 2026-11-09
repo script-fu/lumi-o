@@ -2,7 +2,7 @@
 title: "تثبيت Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -11,7 +11,7 @@ translation_lock: true
 
 اختير Debian Stable لأن Lumi يهدف إلى البناء بموثوقية على منصة طويلة الأمد ويمكن التنبؤ بها. يستهدف تطوير GIMP Debian Testing، ما يجعل Debian Stable نظامًا أساسيًا متوافقًا بشكل وثيق.
 
-Lumi في أفضل حالاته على Debian مع Cinnamon (X11)، ويُطوَّر ويُختبَر في هذه البيئة. يوفّر Cinnamon سير عمل سطح مكتب مألوفًا يشبه Windows، بينما يوفّر X11 البيئة الأكثر استقرارًا لتطوير Lumi.
+يُطوَّر Lumi ويُختبَر على Debian مع Cinnamon (X11). تبقى هذه بيئة التطوير والإعداد الذي يتبعه هذا الدليل. يوفّر Cinnamon سير عمل سطح مكتب مألوفاً يشبه Windows، وكان X11 البيئة الأكثر استقراراً لتطوير Lumi. جرى اختبار GNOME على Wayland إلى جانب هذا الإعداد للمظهر ولعرض OpenGL.
 
 إذا كنت قادمًا من Windows، فإن التغيير المفاهيمي الرئيسي هو أن معظم تثبيت البرامج وتكوينها يتم عبر مديري الحزم وأوامر طرفية بسيطة، وليس عبر مثبّتات قابلة للتنزيل.
 

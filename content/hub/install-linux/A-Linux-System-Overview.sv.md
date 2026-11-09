@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux är ett kraftfullt och mångsidigt operativsystem med en stor utvecklargemenskap. I grunden består ett Linux-system av flera viktiga komponenter som samverkar för en smidig användarupplevelse. Den här översikten beskriver de väsentliga delarna: kärnan, distributionen, pakethanteraren, display manager, skrivbordsmiljö och display server (X11 eller Wayland).
 
-Lumi fungerar bäst på Debian med Cinnamon (X11) och utvecklas och testas i den miljön.
+Lumi utvecklas och testas på Debian med Cinnamon (X11). Det förblir utvecklingsmiljön. GNOME på Wayland har testats vid sidan av den, för programmets allmänna utseende och för OpenGL-rendering.
 
 **Vanliga standardval i Linux-distributioner**
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 System warstw Lumi nadaje ilustracji strukturę. Artyści mogą oddzielić szkic, kolor, cieniowanie, teksturę, maski, korekty, eksperymenty i końcowe detale bez wpisywania każdej decyzji bezpośrednio w jeden płaski obraz.
@@ -52,5 +52,7 @@ Dla artystów oznacza to, że eksperymentowanie może pozostać odwracalne. Wygl
 ## Wydajność dla głębokich plików
 
 Warstwowe ilustracje stają się złożone, zwłaszcza gdy grupy, maski i efekty współdziałają. System warstw Lumi utrzymuje responsywność typowych działań malarskich, unikając niepotrzebnej rekompozycji, gdy tylko to możliwe.
+
+Okno obrazu może rysować ten złożony stos za pomocą OpenGL. Przesuwanie, powiększanie i obrót pozostają płynne, bo widok przesuwa obraz już trzymany do wyświetlania, a pociągnięcie może pojawić się na miejscu wśród warstw wokół niego. [OpenGL](/hub/features/opengl/) opisuje poruszanie się po płótnie i pociągnięcia pędzla według presetu.
 
 Efekt to przepływ pracy łączący kontrolę ze szybkością: wystarczająco szczegółowy do starannej, nieniszczącej pracy, a jednocześnie praktyczny w codziennym malowaniu.

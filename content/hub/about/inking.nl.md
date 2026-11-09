@@ -4,7 +4,7 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 url: "hub/about/inking"
 ---
 
@@ -16,14 +16,14 @@ Hieronder staan enkele gereedschappen en modi die dat mogelijk maken.
 
 De Sumi-pen is niet helemaal getemd. In plaats van als één penseelpunt te werken, bestaat hij uit vele onafhankelijke penseelkoppen of bundels die samen een dynamische formatie vormen. Het resultaat kan verschuiven van natte slepen naar gebroken droge strepen, verwarde vezels of explosieve getextureerde randen — afhankelijk van druk, snelheid, spacing en gebaar.
 
-Er is veel controle over het gedrag van die formatie; gecombineerd met dynamiek, texturen en stempelvariatie levert dat een enorm bereik aan markeringen op.
+Er is een ruime controle over hoe de formatie zich gedraagt. Afstand, grootte, klontering en puntvorm zijn nauwkeurig in te stellen, en de borstelharen kunnen langs de streek groeien, krimpen en zich vernieuwen terwijl de dichtheid van de markering gelijk blijft. Het penseel combineren met dynamiek, texturen en stempelvariatie kan een enorm bereik aan markeringen opleveren.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic Preset
 
-De calligrafische modus maakt van het penseelgereedschap één doorlopende kalligrafische streek in plaats van een rij gestempelde stippen. De meegeleverde Calligraphic-voorinstelling gebruikt ook de kantelhoek van de stylus als extra controle-as, zodat de streek niet alleen op druk reageert, maar ook op hoe u de pen vasthoudt. Handig voor stevige, gevormde markeringen die als één inktlint moeten lezen, ook wanneer hoek en druk veranderen.
+De calligrafische modus maakt van het penseelgereedschap één doorlopende kalligrafische streek in plaats van een rij gestempelde stippen. De meegeleverde Calligraphic-voorinstelling gebruikt ook de kantelhoek van de stylus als extra controle-as, zodat de streek niet alleen op druk reageert, maar ook op hoe u de pen vasthoudt. Handig voor stevige, gevormde markeringen die als één inktlint moeten lezen, ook wanneer hoek en druk veranderen. Het lint kan ook een oppervlaktetextuur aannemen, met korrel en tand. Een draai kan die korrel verschuiven, zodat een verandering van richting een nieuwe fase van de tand ontmoet, terwijl de streek één doorlopende markering blijft.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

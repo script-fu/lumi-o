@@ -8,7 +8,7 @@ This document outlines the process used to install Debian Stable as the Lumi-o d
 
 Debian Stable was selected because Lumi aims to build reliably on a predictable long-term platform. GIMP development targets Debian Testing, making Debian Stable a closely aligned base system.
 
-Lumi is at its best on Debian with Cinnamon (X11), and is developed and tested in that environment. Cinnamon provides a familiar Windows-like desktop workflow, while X11 has provided the most stable environment for Lumi development.
+Lumi is developed and tested on Debian with Cinnamon (X11). That remains the development environment, and the setup this guide follows. Cinnamon provides a familiar Windows-like desktop workflow, and X11 has provided the most stable environment for Lumi development. GNOME on Wayland has been tested alongside that setup, for the general appearance of the application and for OpenGL rendering.
 
 If you are coming from Windows, the main conceptual change is that most software installation and configuration happens through package managers and simple terminal commands rather than downloadable installers.
 

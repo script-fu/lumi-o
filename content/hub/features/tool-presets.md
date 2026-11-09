@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/tool-presets"
 ---
 
-Tool Presets are the centre of Lumi's tool workflow. Every tool is used through a preset, whether it is a quiet default or a handmade tool saved by the artist. This makes tool behaviour visible, intentional, and repeatable.
+Tool Presets are the centre of Lumi's tool workflow. Every tool is used through a preset, whether it is a quiet default or a handmade tool saved by the artist. This makes tool behaviour visible, intentional, and repeatable, including whether a paint tool draws its strokes with OpenGL.
 
 The idea is simple: an artist builds a small, stable set of familiar tools, gives them clear identities, and switches between them as naturally as reaching for different brushes, pens, knives, or blenders in a studio.
 
@@ -53,6 +53,10 @@ A preset owns the resources that make it feel unique. For a brush preset, the br
 This is a deliberate simplification: a saved tool is not a fragile pointer to several separate moving parts. Brushes can still be saved to a reusable library, but when they are chosen for a preset they are copied into that authored tool.
 
 For artists, the important part is that a tool can be saved as a complete creative decision. Its behaviour, identity, and resources travel together, making tool presets a practical foundation for personal workflows, project-specific toolkits, and shared studio setups.
+
+## Rendering on the preset
+
+A paint preset can remember whether its strokes are drawn with OpenGL. That choice belongs to the tool, together with its brush, dynamics, and identity. A large airbrush or a heavy texture stamp can use the faster stroke, and another preset can keep the ordinary one. The canvas view of the layer stack can use OpenGL as well, which is what keeps pan, zoom, and rotation smooth. Both are described in [OpenGL](/hub/features/opengl/).
 
 ## A familiar set of instruments
 

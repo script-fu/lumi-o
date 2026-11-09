@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 Das Ebenensystem von Lumi gibt Illustrationen Struktur. Künstler können Skizze, Farbe, Schattierung, Textur, Masken, Korrekturen, Experimente und Feindetails trennen, ohne jede Entscheidung direkt in ein flaches Bild zu brennen.
 
@@ -51,5 +51,7 @@ Für Künstler heißt das: Experimentieren bleibt reversibel. Ein Look lässt si
 ## Leistung bei umfangreichen Dateien
 
 Ebenenillustrationen werden komplex, besonders wenn Gruppen, Masken und Effekte zusammenwirken. Lumis Ebenensystem hält gängige Malaktionen reaktionsschnell, indem unnötige Neukomposition nach Möglichkeit vermieden wird.
+
+Das Bildfenster kann diesen zusammengesetzten Stapel mit OpenGL zeichnen. Verschieben, Zoomen und Drehen bleiben flüssig, weil die Ansicht ein Bild bewegt, das für die Anzeige bereits bereitliegt, und ein Strich kann an Ort und Stelle zwischen den umgebenden Ebenen erscheinen. [OpenGL](/hub/features/opengl/) beschreibt die Navigation auf der Leinwand und die Pinselstriche je Voreinstellung.
 
 Ergebnis: ein Ebenen-Workflow mit Kontrolle und Tempo — detailliert genug für sorgfältige zerstörungsfreie Arbeit, praktisch genug für den Alltag.

@@ -2,13 +2,13 @@
 title: "Tổng quan về hệ thống Linux"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_lock: true
 ---
 Linux là một hệ điều hành mạnh mẽ và linh hoạt với cộng đồng các nhà phát triển rộng lớn. Về cốt lõi, một hệ thống Linux bao gồm một số thành phần chính phối hợp với nhau để mang lại trải nghiệm liền mạch cho người dùng. Tổng quan này sẽ phác thảo các phần thiết yếu của hệ thống Linux, bao gồm kernel, bản phân phối, trình quản lý gói, trình quản lý hiển thị, môi trường máy tính để bàn và máy chủ hiển thị (X11 hoặc Wayland).
 
-Lumi hoạt động tốt nhất trên Debian với Cinnamon (X11) và được phát triển và thử nghiệm trong môi trường đó.
+Lumi được phát triển và thử trên Debian với Cinnamon (X11). Đó vẫn là môi trường phát triển. GNOME trên Wayland đã được thử song song với môi trường đó, cho diện mạo chung và cho kết xuất OpenGL.
 
 **Cấu hình mặc định phổ biến của các bản phân phối Linux**
 

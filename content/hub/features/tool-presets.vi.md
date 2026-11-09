@@ -3,11 +3,11 @@ title: "Cài đặt sẵn công cụ"
 type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 translation_lock: true
 ---
 
-Tool Presets là trung tâm quy trình công cụ Lumi. Mọi công cụ đều dùng qua cài đặt sẵn — dù mặc định yên lặng hay công cụ thủ công nghệ sĩ lưu lại. Hành vi công cụ rõ ràng, có chủ ý và lặp lại được.
+Tool Presets là trung tâm quy trình công cụ Lumi. Mọi công cụ đều dùng qua cài đặt sẵn — dù mặc định yên lặng hay công cụ thủ công nghệ sĩ lưu lại. Hành vi công cụ rõ ràng, có chủ ý và lặp lại được, kể cả việc công cụ vẽ có vẽ nét bằng OpenGL hay không.
 
 Ý tưởng đơn giản: nghệ sĩ xây bộ công cụ quen thuộc nhỏ, ổn định, cho chúng danh tính rõ và chuyển đổi tự nhiên như lấy cọ, bút, dao hay máy xay khác nhau trong studio.
 
@@ -56,6 +56,10 @@ Preset sở hữu tài nguyên khiến nó cảm giác hoàn chỉnh. Với pres
 Đơn giản hóa có chủ ý: công cụ đã lưu không phải con trỏ mỏng tới bộ phận rời. Cọ vẫn có thể lưu thư viện tái sử dụng; khi chọn làm preset, chúng được sao vào công cụ tạo đó.
 
 Với nghệ sĩ, công cụ có thể lưu như quyết định sáng tạo hoàn chỉnh. Hành vi, danh tính và tài nguyên đi cùng nhau — preset công cụ là nền quy trình cá nhân, bộ công cụ theo dự án và thiết lập studio chung.
+
+## Kết xuất trên preset
+
+Một preset vẽ có thể nhớ nét của nó có được vẽ bằng OpenGL hay không. Lựa chọn đó thuộc về công cụ, cùng với cọ, dynamics và danh tính. Airbrush lớn hoặc stamp kết cấu nặng có thể dùng nét nhanh hơn, và preset khác giữ nét thường. Khung nhìn chồng lớp trên canvas cũng có thể dùng OpenGL, và đó là điều giữ kéo khung, thu phóng và xoay cho mượt. Cả hai được mô tả trong [OpenGL](/hub/features/opengl/).
 
 ## Bộ nhạc cụ quen thuộc
 

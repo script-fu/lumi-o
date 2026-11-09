@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux ist ein leistungsstarkes und vielseitiges Betriebssystem mit einer großen Entwicklergemeinschaft. Im Kern besteht ein Linux-System aus mehreren Schlüsselkomponenten, die zusammenarbeiten, um ein reibungsloses Benutzererlebnis zu bieten. Dieser Überblick stellt die wesentlichen Teile eines Linux-Systems vor: Kernel, Distribution, Paketmanager, Display-Manager, Desktop-Umgebung und Display-Server (X11 oder Wayland).
 
-Lumi läuft unter Debian mit Cinnamon (X11) am besten und wird in dieser Umgebung entwickelt und getestet.
+Lumi wird auf Debian mit Cinnamon (X11) entwickelt und getestet. Das bleibt die Entwicklungsumgebung. GNOME unter Wayland wurde daneben getestet, auf das allgemeine Erscheinungsbild der Anwendung und auf das OpenGL-Rendering.
 
 **Typische Standardkonfigurationen gängiger Linux-Distributionen**
 

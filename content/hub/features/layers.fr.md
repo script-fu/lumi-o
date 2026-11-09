@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 Le système de calques de Lumi donne une structure à l'illustration. Il permet aux artistes de séparer croquis, couleur, ombrage, texture, masques, ajustements, essais et détails finaux sans graver chaque décision dans une seule image plate.
@@ -52,5 +52,7 @@ Pour les artistes, l'expérimentation reste réversible. Un rendu peut être tes
 ## Performance pour les fichiers profonds
 
 Les illustrations en calques peuvent devenir complexes, surtout lorsque groupes, masques et effets interagissent. Le système de calques de Lumi est conçu pour garder les actions de peinture courantes réactives en évitant autant que possible les recompositions inutiles.
+
+La fenêtre d'image peut dessiner cette pile composée avec OpenGL. Le déplacement, le zoom et la rotation restent fluides, parce que la vue déplace une image déjà tenue pour l'affichage, et un trait peut apparaître en place parmi les calques qui l'entourent. [OpenGL](/hub/features/opengl/) décrit la navigation sur le canevas et les traits de pinceau de chaque préréglage.
 
 Le résultat est un flux de calques à la fois maîtrisé et rapide : assez détaillé pour un travail non destructif soigné, mais toujours pratique pour la peinture quotidienne.

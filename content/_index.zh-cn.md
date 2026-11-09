@@ -4,7 +4,7 @@ toc: false
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 243e39446952d0f300b96a1af304dda1f11738a647283032b543a5cc84a8f496
+translation_source_sha256: 4f453bf4100140e9a2779d4b9806a0ef8f27e68af8a9b6f680d01a6a5d2f2341
 ---
 [![gui-01](/images/screens/gui-00.jpg)](/images/screens/gui-01.jpg)
 
@@ -14,9 +14,11 @@ Lumi 基于调色板的色彩系统以光谱方式混合真实世界的颜料特
 
 Lumi-o 基于 GIMP 的核心架构构建，由艺术家设计和完善。其工具易于上手，同时提供高级工作流所需的自定义能力。快速加载与保存，以及完全集成的自动保存系统，在不打断创作流程的情况下保护您的作品。
 
+笔触可以带上颗粒与齿纹那样的表面纹理，书法笔触也包括在内。新的一笔，或笔触中的一次转向，可以挪动那层颗粒，因此来回铺明暗时，每次折返都从一段新的位置叠起。刷毛笔刷可以精细塑形，刷毛也能沿笔触偏移并更新。OpenGL 在图像窗口中绘制图层堆叠，并可以按各个工具预设绘制笔触。大型喷笔和大型纹理图章快得多，画布浏览也保持顺滑。
+
 延迟加载让 Lumi 以更少的 RAM 打开大型、复杂的项目。当图层组处于折叠状态时，Lumi 会加载其保存的合成图像，而其中的图层、蒙版和嵌套组在组再次展开之前仍保持为轻量级占位符。
 
-Lumi-o 在 Debian 13 与 Cinnamon 桌面上开发。如果您是从 Windows 转来的，安装 Debian 是第一步。请参阅[如何安装 Linux](/hub/install-linux/)。
+Lumi-o 在 Debian 13 上、于 X11 的 Cinnamon 中开发。Wayland 上的 GNOME 已就应用程序的整体外观和 OpenGL 渲染做过测试。如果您是从 Windows 转来的，安装 Debian 是第一步。请参阅[如何安装 Linux](/hub/install-linux/)。
 
 {{< cards >}}
   {{< card link="hub/about/" title="关于" icon="information-circle" >}}

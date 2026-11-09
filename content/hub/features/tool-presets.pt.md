@@ -2,11 +2,11 @@
 title: "Predefinições de ferramentas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 url: "hub/features/tool-presets"
 translation_lock: true
 ---
-As predefinições de ferramentas são o centro do fluxo de ferramentas do Lumi. Cada ferramenta é usada através de uma predefinição, quer seja um padrão discreto ou uma ferramenta feita à mão guardada pelo artista. Isto torna o comportamento visível, intencional e repetível.
+As predefinições de ferramentas são o centro do fluxo de ferramentas do Lumi. Cada ferramenta é usada através de uma predefinição, quer seja um padrão discreto ou uma ferramenta feita à mão guardada pelo artista. Isto torna o comportamento visível, intencional e repetível, incluindo o facto de uma ferramenta de pintura desenhar ou não os seus traços com OpenGL.
 
 A ideia é simples: o artista constrói um conjunto pequeno e estável de ferramentas familiares, dá-lhes identidades claras e alterna entre elas tão naturalmente como pegar em pincéis, canetas, espátulas ou misturadores diferentes num estúdio.
 
@@ -55,6 +55,10 @@ Uma predefinição possui os recursos que a tornam única. Para uma predefiniç�
 Isto é simplificação deliberada: uma ferramenta guardada não é um ponteiro frágil para várias peças móveis separadas. Pincéis ainda podem ser guardados numa biblioteca reutilizável, mas quando escolhidos para uma predefinição são copiados para essa ferramenta autoral.
 
 Para os artistas, o importante é que uma ferramenta pode ser guardada como decisão criativa completa. Comportamento, identidade e recursos viajam juntos, tornando as predefinições base prática para fluxos pessoais, kits por projecto e setups de estúdio partilhados.
+
+## Renderização na predefinição
+
+Uma predefinição de pintura pode lembrar se os seus traços são desenhados com OpenGL. Essa escolha pertence à ferramenta, juntamente com o pincel, as dinâmicas e a identidade. Um aerógrafo grande ou um carimbo de textura pesado pode usar o traço mais rápido, e outra predefinição pode manter o habitual. A vista da tela sobre a pilha de camadas também pode usar OpenGL, e é isso que mantém fluidas a panorâmica, a ampliação e a rotação. Ambos estão descritos em [OpenGL](/hub/features/opengl/).
 
 ## Um conjunto familiar de instrumentos
 

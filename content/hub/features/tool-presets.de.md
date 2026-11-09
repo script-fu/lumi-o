@@ -4,9 +4,9 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
-Werkzeugvoreinstellungen sind das Herzstück von Lumis Werkzeug-Workflow. Jedes Werkzeug läuft über eine Voreinstellung — ob unauffälliger Standard oder handgefertigtes Werkzeug des Künstlers. Werkzeugverhalten wird sichtbar, beabsichtigt und wiederholbar.
+Werkzeugvoreinstellungen sind das Herzstück von Lumis Werkzeug-Workflow. Jedes Werkzeug läuft über eine Voreinstellung — ob unauffälliger Standard oder handgefertigtes Werkzeug des Künstlers. Werkzeugverhalten wird sichtbar, beabsichtigt und wiederholbar, auch darin, ob ein Malwerkzeug seine Striche mit OpenGL zeichnet.
 
 Die Idee ist einfach: ein kleiner, stabiler Satz vertrauter Werkzeuge mit klaren Identitäten — wechseln so selbstverständlich wie das Greifen nach Pinsel, Stift, Messer oder Mischer im Studio.
 
@@ -55,6 +55,10 @@ Eine Voreinstellung besitzt die Ressourcen, die sie einzigartig machen. Bei eine
 Bewusste Vereinfachung: ein gespeichertes Werkzeug ist kein fragiler Verweis auf mehrere bewegliche Teile. Pinsel können weiter in einer wiederverwendbaren Bibliothek liegen; für eine Voreinstellung werden sie ins gestaltete Werkzeug kopiert.
 
 Für Künstler zählt: ein Werkzeug als vollständige kreative Entscheidung speichern — Verhalten, Identität und Ressourcen reisen zusammen. Werkzeugvoreinstellungen sind Grundlage für persönliche Workflows, projektspezifische Werkzeugkästen und gemeinsame Studio-Setups.
+
+## Rendering der Voreinstellung
+
+Eine Malvoreinstellung kann sich merken, ob ihre Striche mit OpenGL gezeichnet werden. Diese Wahl gehört zum Werkzeug, zusammen mit seinem Pinsel, seiner Dynamik und seiner Identität. Ein großer Airbrush oder ein schwerer Texturstempel kann den schnelleren Strich nutzen, eine andere Voreinstellung den gewöhnlichen behalten. Auch die Leinwandansicht des Ebenenstapels kann OpenGL verwenden, und das hält Verschieben, Zoomen und Drehen flüssig. Beides ist in [OpenGL](/hub/features/opengl/) beschrieben.
 
 ## Ein vertrauter Instrumentensatz
 

@@ -13,14 +13,14 @@ Below are some of the tools and modes that make that possible.
 
 The sumi brush is not entirely tamed. Instead of behaving like a single brush tip, it is built from many independent brush heads or bristle bundles working together as a dynamic formation. The result can shift from wet drags to broken dry streaks, tangled fibres, or explosive textured edges depending on pressure, speed, spacing, and gesture.
 
-There is a wide range of control over how the formation behaves, and combining it with dynamics, textures, and stamp variation can produce an enormous range of marks.
+There is a wide range of control over how the formation behaves. Spacing, size, clumping, and tip shape can be set closely, and the bristles can grow, shrink, and renew along the stroke while the density of the mark holds. Combining the brush with dynamics, textures, and stamp variation can produce an enormous range of marks.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic Preset
 
-Calligraphic mode turns the Brush tool into a continuous chisel-pen stroke rather than a row of stamped dabs. The bundled calligraphic preset also uses the tilt angle of the stylus as an extra axis of control, so the stroke can respond not just to pressure but to how the pen is being held. It is useful for firm, shaped marks that need to read as a single ribbon of ink, even when angle and pressure are changing.
+Calligraphic mode turns the Brush tool into a continuous chisel-pen stroke rather than a row of stamped dabs. The bundled calligraphic preset also uses the tilt angle of the stylus as an extra axis of control, so the stroke can respond not just to pressure but to how the pen is being held. The ribbon can also take a surface texture of grain and tooth. A turn can shift that grain, so a change of direction meets a fresh phase of the tooth, while the stroke remains one continuous mark. It is useful for firm, shaped marks that need to read as a single ribbon of ink, even when angle and pressure are changing.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

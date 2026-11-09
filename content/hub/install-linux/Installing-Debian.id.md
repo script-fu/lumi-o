@@ -2,7 +2,7 @@
 title: "Menginstal Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -11,7 +11,7 @@ Dokumen ini menguraikan proses yang digunakan untuk menginstal Debian Stable seb
 
 Debian Stable dipilih karena Lumi bertujuan untuk dibangun secara andal di platform jangka panjang yang dapat diprediksi. Pengembangan GIMP menargetkan Debian Testing, sehingga Debian Stable menjadi basis sistem yang selaras.
 
-Lumi berjalan paling baik di Debian dengan Cinnamon (X11), dan dikembangkan serta diuji di lingkungan tersebut. Cinnamon menyediakan alur kerja desktop yang familiar seperti Windows, sementara X11 memberikan lingkungan paling stabil untuk pengembangan Lumi.
+Lumi dikembangkan dan diuji di Debian dengan Cinnamon (X11). Itu tetap lingkungan pengembangan, dan pengaturan yang diikuti panduan ini. Cinnamon menyediakan alur kerja desktop yang familiar seperti Windows, dan X11 memberikan lingkungan paling stabil untuk pengembangan Lumi. GNOME di Wayland telah diuji di samping pengaturan itu, untuk tampilan umum aplikasi dan untuk rendering OpenGL.
 
 Jika Anda beralih dari Windows, perubahan konseptual utamanya adalah sebagian besar instalasi dan konfigurasi perangkat lunak dilakukan melalui manajer paket dan perintah terminal sederhana, bukan melalui installer yang dapat diunduh.
 

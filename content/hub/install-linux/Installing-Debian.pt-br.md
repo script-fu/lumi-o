@@ -4,14 +4,14 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 ---
 
 Este documento descreve o processo usado para instalar o Debian Stable como sistema operacional de desenvolvimento do Lumi-o. Pode ser útil para quem estiver configurando um ambiente semelhante.
 
 O Debian Stable foi escolhido porque o Lumi precisa compilar de forma confiável em uma plataforma previsível de longo prazo. O desenvolvimento do GIMP tem como alvo o Debian Testing, o que torna o Debian Stable um sistema base muito alinhado.
 
-O Lumi funciona melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente. O Cinnamon oferece um fluxo de trabalho de desktop familiar, semelhante ao do Windows, enquanto o X11 proporciona o ambiente mais estável para o desenvolvimento do Lumi.
+O Lumi é desenvolvido e testado no Debian com Cinnamon (X11). Esse continua sendo o ambiente de desenvolvimento, e a configuração que este guia segue. O Cinnamon oferece um fluxo de trabalho de desktop familiar, semelhante ao do Windows, e o X11 tem sido o ambiente mais estável para o desenvolvimento do Lumi. O GNOME no Wayland foi testado junto com essa configuração, quanto à aparência geral do aplicativo e à renderização OpenGL.
 
 Se você vem do Windows, a principal mudança conceitual é que a maior parte da instalação e configuração de software acontece por meio de gerenciadores de pacotes e comandos simples de terminal, em vez de instaladores para download.
 

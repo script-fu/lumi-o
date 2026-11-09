@@ -4,14 +4,14 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 ---
 
 本文說明將 Debian Stable 安裝為 Lumi-o 開發作業系統的流程，也可供搭建類似環境的讀者參考。
 
 選擇 Debian Stable，是因為 Lumi 需要在可預期的長期平台上穩定建置。GIMP 開發面向 Debian Testing，因此 Debian Stable 是與之高度一致的基礎系統。
 
-Lumi-o 在 Debian 與 Cinnamon（X11）上表現最佳，並在該環境中開發與測試。Cinnamon 提供熟悉的類 Windows 桌面工作流程，X11 則是 Lumi 開發中最穩定的環境。
+Lumi 在 Debian 上、以 Cinnamon（X11）開發並測試。那仍然是開發環境，也是這份指南跟著走的配置。Cinnamon 提供熟悉的、接近 Windows 的桌面工作流程，X11 則為 Lumi 開發提供了最穩的環境。Wayland 上的 GNOME 已在這套配置旁邊測過整體外觀與 OpenGL 渲染。
 
 若您來自 Windows，主要概念差異在於：大多數軟體的安裝與設定透過套件管理器與簡單的終端機命令完成，而非下載安裝程式。
 

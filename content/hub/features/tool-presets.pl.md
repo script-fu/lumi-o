@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-Ustawienia wstępne narzędzi są centrum przepływu pracy z narzędziami w Lumi. Każde narzędzie działa przez preset — cichy domyślny lub ręcznie wykonany, zapisany przez artystę. Dzięki temu zachowanie narzędzia jest widoczne, zamierzone i powtarzalne.
+Ustawienia wstępne narzędzi są centrum przepływu pracy z narzędziami w Lumi. Każde narzędzie działa przez preset — cichy domyślny lub ręcznie wykonany, zapisany przez artystę. Dzięki temu zachowanie narzędzia jest widoczne, zamierzone i powtarzalne, w tym to, czy narzędzie malarskie rysuje pociągnięcia za pomocą OpenGL.
 
 Pomysł jest prosty: zbuduj mały, stabilny zestaw znanych narzędzi, nadaj im wyraźną tożsamość i przełączaj się między nimi tak naturalnie, jak sięgasz po różne pędzle, długopisy, noże czy blendery w studiu.
 
@@ -56,6 +56,10 @@ Preset zawiera zasoby, które czynią go wyjątkowym. W presecie pędzla pędzel
 To świadome uproszczenie: zapisane narzędzie nie jest kruchym wskaźnikiem kilku oddzielnych elementów. Pędzle nadal można trzymać w bibliotece wielokrotnego użytku, lecz wybrane do presetu są kopiowane do tego autorskiego narzędzia.
 
 Dla artystów ważne jest, że narzędzie można zapisać jako pełną decyzję twórczą. Zachowanie, tożsamość i zasoby idą razem — presety są praktyczną podstawą osobistych przepływów pracy, zestawów projektowych i wspólnych konfiguracji studia.
+
+## Renderowanie w presecie
+
+Preset malarski może pamiętać, czy jego pociągnięcia są rysowane z OpenGL. Wybór ten należy do narzędzia, razem z pędzlem, dynamiką i tożsamością. Duży aerograf albo ciężki stempel tekstury może użyć szybszego pociągnięcia, a inny preset może zachować zwykłe. Widok płótna ze stosem warstw też może używać OpenGL, i to właśnie utrzymuje płynność przesuwania, powiększania i obrotu. Oba są opisane w [OpenGL](/hub/features/opengl/).
 
 ## Znany zestaw instrumentów
 

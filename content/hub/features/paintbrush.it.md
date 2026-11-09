@@ -4,14 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
+translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
 ---
 
 Lo strumento Pennello è lo strumento di pittura principale di Lumi: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
 
-Non è un unico pennello fisso, ma un sistema di pittura. Forma, texture, movimento, pressione, tempismo e colore del pennello possono tutti contribuire al segno finale, rendendolo adatto a linee pulite, pittura morbida, effetti di media asciutta, tratti calligrafici, texture sparse e formazioni a più teste.
-
-![brush-tool](/images/screens/brush-tool.jpg)
+Non è un unico pennello fisso, ma un sistema di pittura. Forma del pennello, texture, grana della superficie, movimento, pressione, tempismo e colore possono tutti contribuire al segno finale, rendendolo adatto a linee pulite, pittura morbida, effetti di media asciutta, tratti calligrafici, texture sparse, ciuffi di setole e formazioni a più teste.
 
 ## Segni espressivi del pennello
 
@@ -19,15 +17,11 @@ I pennelli possono basarsi su timbri bitmap, forme procedurali o sorgenti animat
 
 Quando un pennello diventa visivamente complesso, l'anteprima può restare semplificata, così la pittura rimane reattiva e leggibile.
 
-![tool-setup](/images/screens/tool-setup.jpg)
-
 ## Dinamiche e risposta all'input
 
 Lo strumento Pennello risponde a input in tempo reale come pressione dello stilo, velocità, direzione, inclinazione e altri valori del controller. Questi segnali possono influenzare il tratto visibile in molti modi: spessore, opacità, angolo, risposta della texture, comportamento del colore, spaziatura e altre qualità possono cambiare mentre la mano si muove.
 
 Il Pennello sembra meno un motivo stampato e più uno strumento di disegno fisico. Un tocco leggero produce segni delicati, un movimento più rapido apre texture o forme e un comportamento sensibile alla direzione aiuta i tratti a seguire il gesto della mano.
-
-![dynamics](/images/screens/dynamics.jpg)
 
 ## Comportamento del tratto
 
@@ -36,8 +30,6 @@ I tratti possono essere diretti e immediati, oppure assistiti da levigatura e st
 Il Pennello supporta anche diversi approcci all'accumulo della vernice. Può comportarsi come un tratto continuo, accumulare tocchi ripetuti o emettere segni nel tempo mentre il puntatore resta fermo. Questa flessibilità lo rende utile sia per il lavoro di linea deliberato sia per la costruzione tonale più lenta.
 
 Per segni calligrafici o simili all'inchiostro, il Pennello può generare un tratto dalla forma più continua invece di affidarsi solo a timbri ripetuti. Produce forme fluide, simili a nastri, che rispondono naturalmente a gesto e velocità.
-
-![stroke](/images/screens/stroke.jpg)
 
 ## Acquisizione del tratto e rendering simulato
 
@@ -57,21 +49,53 @@ I tratti del pennello possono usare il colore di pittura attivo, rispondere alle
 
 Poiché colore e texture possono far parte dello stesso sistema dinamico di forma e opacità, un singolo tratto può evolversi mentre attraversa la tela invece di restare visivamente uniforme.
 
+La texture nella punta del pennello spezza il timbro stesso. La texture di superficie, descritta di seguito, è la grana e il dente della superficie che il tratto incontra.
+
+## Texture di superficie
+
+La texture di superficie dà a un tratto la grana e il dente di un supporto: carta, tela o un altro motivo. Lumi include grane adatte a questo. Le zone chiare del motivo lasciano passare la pittura. Le zone scure la trattengono, così il segno si spezza come i media asciutti si spezzano sul dente.
+
+Dove si colloca quella grana può cambiare con il tratto. Ogni tratto può iniziare in un punto proprio del motivo, e una svolta può far rotolare uno scostamento nuovo. L'ombreggiatura avanti e indietro è dove questo si vede: ogni inversione campiona una fase nuova del dente, e le passate sovrapposte costruiscono un'ombreggiatura spezzata e credibile. Una curva graduale può tenere la fase già sotto il tratto, così il dente resta coerente lungo l'arco.
+
+Pennelli a timbro e tratti calligrafici possono entrambi prendere questa grana. Una fila di tocchi e un nastro continuo d'inchiostro possono spezzarsi sullo stesso tipo di dente. In un tratto calligrafico la linea resta un unico segno modellato, e la grana decide dove quel nastro è aperto e dove viene trattenuto.
+
+Quanto è aperto il dente può cambiare lungo il tratto. La pressione e gli altri input possono passare da una lettura più asciutta a una più piena. Nella lettura più asciutta i vuoti restano liberi. Man mano che il tratto si apre, le isole dipinte possono crescere in quei vuoti, così la grana si riempie dai bordi. Alla lettura piena il tratto corrisponde al motivo più aperto.
+
+Tocchi sovrapposti dentro un singolo tratto possono accumulare opacità nelle isole. Possono anche stendere un unico velo di copertura che un giro successivo di quel tratto riscrive, così la grana non si impila su se stessa.
+
 ## Teste di pennello e formazioni
 
 Lo strumento Pennello può dipingere con più di una testa alla volta. Più teste possono essere disposte attorno al percorso del tratto per creare segni di pennino, tratti a ventaglio, comportamento simile alle setole, pattern di spruzzo, formazioni strutturate o tratteggi organizzati.
 
 Queste teste possono seguire la direzione del movimento, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. È particolarmente utile per pennelli di media naturale, tratti decorativi, fogliame, pelliccia, tratteggi e altri segni che beneficiano di irregolarità controllata.
 
-![brush-heads](/images/screens/brush-heads.jpg)
+I pennelli generati possono anche essere costruiti come campi di setole. Forma e animazione nel tratto di quei campi sono descritte più sotto.
+
+## Forma delle setole
+
+Un pennello a setole è un campo di segni distinti tenuti dentro una forma generata. Il contorno di quella forma decide dove possono stare le setole: un cerchio, un quadrato, un rombo, un triangolo, una forma appuntita, angoli ammorbiditi o una proporzione allungata. Ogni setola conserva il proprio segno dentro quel contorno.
+
+Spaziatura e dimensione stabiliscono quanto fitti sono i peli e quanto è grande ciascuno. La variazione di dimensione lascia differire le setole vicine, da una testa uniforme a una i cui peli vanno dalla dimensione piena verso il vuoto. La regolarità sposta il campo tra una griglia regolare e una dispersione più libera. Il raggruppamento tira le setole verso meno centri, così la testa si legge come ciuffi. Il campo può anche essere diradato, e lascia un insieme più rado degli stessi segni.
+
+Le punte possono restare rotonde. Possono anche diventare piccoli poligoni che restano dentro ogni setola. Le punte possono essere distribuite in modo uniforme intorno al cerchio, o lasciate irregolari, e possono stare sul bordo o ritirarsi verso l'interno. Dove le punte si sovrappongono, il segno che si vede è quello più forte.
+
+Ogni testa di un pennello a più teste può portare la propria disposizione, così un ventaglio di pennini è un insieme di ciuffi affini.
+
+La dimensione delle setole può seguire la pressione dello stilo e gli altri input che modellano un tratto. Quando quella dimensione cambia, la testa può essere ridisegnata, così un tocco leggero e una pressione decisa differiscono nei peli stessi.
+
+## Setole lungo il tratto
+
+Un pennello a setole può cambiare mentre il tratto è ancora in corso. Le singole setole crescono e si riducono. Alcune svaniscono, altre crescono altrove, così il carattere della testa viaggia lungo il segno. La densità del ciuffo resta stabile mentre i peli si riorganizzano.
+
+L'animazione avanza con i tocchi del tratto. Può iniziare dopo che il segno ha percorso una distanza, oppure quando la mano gira. Gli stati intermedi si svolgono lungo il percorso, e lo stesso gesto produce la stessa sequenza.
+
+Un aerografo è un movimento di altro tipo. Può depositare una disposizione di setole nuova mentre emette, così un tratto tenuto rinnova lo spruzzo. Un tratto calligrafico conserva il suo pennino continuo, e quel pennino può ancora prendere la texture di superficie. L'animazione delle setole appartiene al pennello a setole stampato.
 
 ## Carico del pennello e prelievo della vernice
 
 Il Pennello può anche simulare quanta vernice o materiale è attualmente trasportata sul pennello. Man mano che un tratto continua, il carico può ridursi gradualmente, lasciando che i segni diventino più leggeri, più asciutti, più sottili, più ruvidi o comunque più spezzati a seconda di come sono impostate le dinamiche del pennello.
 
 Il carico può essere reintrodotto tra una passata e l'altra, mantenuto a un livello scelto o usato come segnale di controllo in tempo reale per altri comportamenti del pennello. È possibile costruire pennelli che sembrano più vicini ai media reali: bagnati all'inizio di una pennellata, progressivamente esauriti lungo la distanza e poi immersi di nuovo per la passata successiva.
-
-![material-state](/images/screens/material-state.jpg)
 
 ## Contatto con la superficie del pennello
 
@@ -87,7 +111,11 @@ La perdita viene valutata in base alla distanza percorsa dal tratto, non al cont
 
 Le sorgenti animate del pennello possono cambiare fotogramma man mano che il tratto avanza, dando ai pennelli un senso di movimento e varietà. Randomizzazione e variazione per tratto possono evitare che i segni ripetuti sembrino identici, mentre un seed stabile può preservare un carattere coerente quando serve ripetibilità.
 
-Questi comportamenti sono utili per pennelli che dovrebbero sembrare vivi: setole che si spostano durante un tratto, timbri con texture che cambiano leggermente nel tempo o strumenti a più teste in cui ogni testa ha una personalità propria.
+Questi comportamenti sono utili per pennelli che dovrebbero sembrare vivi: timbri con texture che cambiano leggermente nel tempo, o strumenti a più teste in cui ogni testa ha una personalità propria. I pennelli a setole hanno una propria animazione nel tratto, descritta sopra.
+
+## Tratti OpenGL
+
+Una preimpostazione dello strumento può dipingere i propri tratti con OpenGL. La differenza si vede soprattutto sugli aerografi grandi e sui timbri di texture grandi, che restano al passo con la mano mentre il segno cresce. La finestra dell'immagine può disegnare anche la pila dei livelli con OpenGL, il che mantiene fluida la navigazione sulla tela. Entrambi sono descritti in [OpenGL](/hub/features/opengl/).
 
 ## Flusso di lavoro orientato all'artista
 

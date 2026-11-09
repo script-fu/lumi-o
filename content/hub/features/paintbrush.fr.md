@@ -4,14 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: a37df7a3325c5a6028907f9584d45fd23746dd345b2d649f0a3ff5c1e03ed657
+translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
 ---
 
 L'outil Pinceau est l'instrument de peinture principal de Lumi : une façon réactive et expressive de dessiner, peindre, ombrer, texturer et poser des marques directement sur le canevas. Il est conçu pour rester immédiat tout en laissant aux artistes la possibilité de façonner le comportement d'un trait.
 
-Plutôt qu'un pinceau fixe unique, il agit comme un système de peinture. Forme, texture, mouvement, pression, timing et couleur peuvent tous contribuer à la marque finale, ce qui le rend adapté aux lignes nettes, à la peinture douce, aux effets de médium sec, aux traits calligraphiques, aux textures dispersées et aux formations multi-têtes.
-
-![brush-tool](/images/screens/brush-tool.jpg)
+Plutôt qu'un pinceau fixe unique, il agit comme un système de peinture. La forme du pinceau, la texture, le grain de surface, le mouvement, la pression, le timing et la couleur peuvent tous contribuer à la marque finale, ce qui le rend adapté aux lignes nettes, à la peinture douce, aux effets de médium sec, aux traits calligraphiques, aux textures dispersées, aux touffes de poils et aux formations multi-têtes.
 
 ## Marques expressives
 
@@ -19,16 +17,11 @@ Les pinceaux peuvent reposer sur des tampons bitmap, des formes procédurales ou
 
 Lorsqu'un pinceau devient visuellement complexe, l'aperçu peut rester simplifié afin que la peinture reste réactive et lisible.
 
-![tool-setup](/images/screens/tool-setup.jpg)
-
-
 ## Dynamique et réponse à la saisie
 
 L'outil Pinceau répond à la saisie en direct : pression du stylet, vitesse, direction, inclinaison et autres valeurs du contrôleur. Ces signaux peuvent influencer le trait visible de nombreuses façons : épaisseur, opacité, angle, réponse de texture, comportement couleur, espacement et autres qualités peuvent toutes évoluer au fil du geste.
 
 Le pinceau ressemble moins à un motif estampé qu'à un instrument de dessin physique. Un toucher léger produit des marques délicates, un mouvement plus rapide ouvre texture ou forme, et un comportement sensible à la direction aide les traits à suivre le geste de la main.
-
-![dynamics](/images/screens/dynamics.jpg)
 
 ## Comportement du trait
 
@@ -37,8 +30,6 @@ Les traits peuvent être directs et immédiats, ou assistés par lissage et stab
 Le pinceau prend aussi en charge différentes approches d'accumulation de peinture. Il peut se comporter comme un trait continu, accumuler des touches répétées ou émettre des marques au fil du temps pendant que le pointeur reste en place. Cette souplesse le rend utile aussi bien pour le travail de ligne réfléchi que pour une construction tonale plus lente.
 
 Pour les marques calligraphiques ou proches de l'encre, le pinceau peut générer un trait continu de forme plutôt que de s'appuyer uniquement sur des tampons répétés. Il produit alors des formes fluides, proches du ruban, qui répondent naturellement au geste et à la vitesse.
-
-![stroke](/images/screens/stroke.jpg)
 
 ## Capture de trait et rendu simulé
 
@@ -58,21 +49,53 @@ Les coups de pinceau peuvent utiliser la couleur active, réagir aux dégradés 
 
 Comme couleur et texture peuvent faire partie du même système dynamique que forme et opacité, un seul trait peut évoluer à mesure qu'il traverse le canevas au lieu de rester visuellement uniforme.
 
+La texture d'une pointe de pinceau fragmente le tampon lui-même. La texture de surface, décrite ensuite, est le grain et l'accroche de la surface que le trait rencontre.
+
+## Texture de surface
+
+La texture de surface donne à un trait le grain et l'accroche d'un support : papier, toile ou un autre motif. Lumi fournit des grains prévus pour cela. Les zones claires du motif laissent passer la peinture. Les zones sombres la retiennent, si bien que la marque se brise comme un médium sec se brise sur l'accroche.
+
+La place de ce grain peut changer avec le trait. Chaque trait peut commencer à son propre endroit dans le motif, et un virage peut faire rouler un nouveau décalage. C'est dans l'ombrage en aller-retour que cela se voit : chaque renversement prélève une phase nouvelle de l'accroche, et les passages qui se recouvrent construisent un ombrage brisé et réaliste. Une courbe progressive peut garder la phase déjà engagée sous le trait, de sorte que l'accroche reste cohérente le long du geste.
+
+Les pinceaux estampés et les traits calligraphiques peuvent tous deux recevoir ce grain. Une rangée de touches et un ruban d'encre continu peuvent se briser sur la même sorte d'accroche. Sur un trait calligraphique, la ligne reste une seule marque façonnée, et le grain décide où ce ruban est ouvert et où il est retenu.
+
+L'ouverture de l'accroche peut varier le long du trait. La pression et les autres saisies font passer l'accroche d'une lecture plus sèche à une lecture plus pleine. Dans la lecture plus sèche, les vides restent dégagés. À mesure que le trait s'ouvre, les îlots peints peuvent s'étendre dans ces vides, et le grain se remplit depuis ses bords. À la lecture pleine, le trait rejoint le motif plus ouvert.
+
+Des touches qui se chevauchent dans un même trait peuvent monter l'opacité dans les îlots. Elles peuvent aussi poser une seule nappe de couverture qu'une boucle suivante de ce trait réécrit, de sorte que le grain ne s'empile pas sur lui-même.
+
 ## Têtes de pinceau et formations
 
 L'outil Pinceau peut peindre avec plusieurs têtes à la fois. Plusieurs têtes peuvent être disposées autour du tracé pour créer des marques de plume, des traits en éventail, un comportement proche des poils, des motifs de pulvérisation, des formations texturées ou des hachures structurées.
 
 Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait un aspect organique plutôt que mécaniquement répété. C'est particulièrement utile pour les pinceaux de type médium naturel, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques qui gagnent à une irrégularité maîtrisée.
 
-![brush-heads](/images/screens/brush-heads.jpg)
+Les pinceaux générés peuvent aussi être construits comme des champs de poils. La forme de ces champs, et leur animation en cours de trait, sont décrites plus bas.
+
+## Forme des poils
+
+Un pinceau à poils est un champ de marques distinctes, tenues dans une forme générée. Le contour de cette forme décide où les poils peuvent se placer : un cercle, un carré, un losange, un triangle, une forme hérissée, des coins adoucis ou un format étiré. Chaque poil garde sa propre marque à l'intérieur de ce contour.
+
+L'espacement et la taille règlent le serrage des poils et la grandeur de chacun. La variation de taille laisse les poils voisins différer, d'une tête uniforme à une tête dont les poils vont de la pleine taille jusqu'au vide. La régularité fait passer le champ d'une grille régulière à une dispersion plus lâche. Le regroupement ramène les poils vers moins de centres, de sorte que la tête se lit comme des touffes. Le champ peut aussi s'éclaircir, et laisser un ensemble plus clairsemé des mêmes marques.
+
+Les pointes peuvent rester rondes. Elles peuvent aussi devenir de petits polygones qui restent à l'intérieur de chaque poil. Elles peuvent être réparties régulièrement autour du cercle, ou laissées irrégulières, et se tenir sur le bord ou se retirer vers l'intérieur. Là où les pointes se chevauchent, c'est la marque la plus forte qui apparaît.
+
+Chaque tête d'un pinceau multi-têtes peut porter sa propre disposition : un éventail de plumes est alors un ensemble de touffes apparentées.
+
+La taille des poils peut suivre la pression du stylet et les autres saisies qui façonnent un trait. Quand cette taille change, la tête peut être redessinée, de sorte qu'un toucher léger et un appui ferme diffèrent dans les poils eux-mêmes.
+
+## Poils le long du trait
+
+Un pinceau à poils peut changer pendant que le trait se trace encore. Pris un à un, les poils grandissent et rétrécissent. Certains s'effacent, d'autres poussent ailleurs, et le caractère de la tête voyage ainsi le long de la marque. La densité de la touffe reste stable pendant que les poils se réorganisent.
+
+L'animation avance avec les touches du trait. Elle peut commencer une fois que la marque a parcouru une distance, ou lorsque la main tourne. Les états intermédiaires se jouent le long du trajet, et le même geste produit la même suite.
+
+Un aérographe est un autre genre de mouvement. Il peut poser un arrangement de poils neuf à mesure qu'il émet, de sorte qu'un trait tenu renouvelle le jet sans cesse. Un trait calligraphique conserve sa plume continue, et cette plume peut encore recevoir une texture de surface. L'animation des poils appartient au pinceau à poils estampé.
 
 ## Charge de pinceau et reprise de matière
 
 Le pinceau peut aussi simuler la quantité de peinture ou de matière actuellement portée. Au fil d'un trait, cette charge peut diminuer progressivement, laissant les marques devenir plus claires, plus sèches, plus fines, plus rugueuses ou autrement plus fragmentées selon la dynamique du pinceau.
 
 La charge peut être réintroduite entre les traits, maintenue à un niveau choisi ou utilisée comme signal de contrôle en direct pour d'autres comportements. Il devient possible de créer des pinceaux proches des médiums réels : humides au début d'un trait, progressivement épuisés sur la distance, puis trempés à nouveau pour le passage suivant.
-
-![material-state](/images/screens/material-state.jpg)
 
 ## Contact avec la surface
 
@@ -88,7 +111,11 @@ La perte est évaluée à partir de la distance parcourue par le trait plutôt q
 
 Les sources de pinceau animées peuvent changer d'image au fil du trait, donnant aux pinceaux une impression de mouvement et de variété. La randomisation et la variation par trait empêchent les marques répétées de paraître identiques, tandis qu'une graine stable peut préserver un caractère cohérent lorsque la répétabilité est nécessaire.
 
-Ces comportements conviennent aux pinceaux qui doivent paraître vivants : poils qui se déplacent au fil du trait, tampons texturés qui évoluent subtilement, ou outils multi-têtes où chaque tête a sa propre personnalité.
+Ces comportements conviennent aux pinceaux qui doivent paraître vivants : tampons texturés qui changent subtilement avec le temps, ou outils multi-têtes où chaque tête a sa propre personnalité. Les pinceaux à poils ont leur propre animation en cours de trait, décrite plus haut.
+
+## Traits OpenGL
+
+Un préréglage d'outil peut peindre ses traits avec OpenGL. La différence se voit surtout sur les grands aérographes et les grands tampons de texture, qui suivent la main à mesure que la marque grandit. La fenêtre d'image peut aussi dessiner la pile de calques avec OpenGL, ce qui garde fluide la navigation sur le canevas. Les deux sont décrits dans [OpenGL](/hub/features/opengl/).
 
 ## Flux de travail centré sur l'artiste
 

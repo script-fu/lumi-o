@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 url: "hub/about/lumi-o"
 ---
 
@@ -30,7 +30,8 @@ Lumi combineert een op pigmenten gebaseerd kleursysteem met een responsieve, nie
 
 - **Pigmentgerichte kleur**: pigmentprofielen uit de echte wereld (Colour Index-codes) worden spectraal gemengd, zodat paletten zich meer als echte verf gedragen.
 - **Paletgestuurde workflow**: opgeslagen, schakelbare paletten ordenen pigmenten, mengsels, waardebanden en verlopen, zodat kleurbeslissingen coherent blijven binnen een schilderij of project.
-- **Tactiele, gerichte gereedschappen**: penselen integreren stylusdruk, kanteling en snelheid voor directe, genuanceerde controle; bedieningselementen ondersteunen weloverwogen keuzes zonder onnodige complexiteit.
+- **Tactiele, gerichte gereedschappen**: penselen integreren stylusdruk, kanteling en snelheid voor directe, genuanceerde controle; bedieningselementen ondersteunen weloverwogen keuzes zonder onnodige complexiteit. Oppervlaktetextuur kan een streek de korrel en de tand van een ondergrond geven, ook bij kalligrafische streken, en een draai kan die korrel verschuiven. Penselen met borstelharen kunnen nauwkeurig worden gevormd en langs een streek geanimeerd.
+- **Vloeiend canvas**: OpenGL kan de lagenstapel tekenen en penseelstreken schilderen voor afzonderlijke gereedschapsvoorinstellingen. Grote airbrushes en grote textuurstempels lopen met de hand mee, en het bewegen over het canvas blijft vloeiend.
 - **Niet-destructieve betrouwbaarheid**: lagen en bewerkbare filters schalen mee met complexe projecten en blijven voorspelbaar. Automatisch opslaan, snel opslaan, incrementeel opslaan en herstel beschermen lange schildersessies en grote projecten.
 - **Live werkruimten**: benoemde profielen bewaren docks, gereedschappen, voorinstellingen, paletten en apparaatkoppelingen en wisselen die vervolgens atomisch tijdens runtime.
 - **Scheme scripting**: Lumi breidt de Script-Fu-traditie uit met een op Scheme gebaseerde plug-in-taal en extra hulpfuncties voor het bouwen van plug-ins en het automatiseren van workflows.
@@ -40,7 +41,7 @@ Lumi combineert een op pigmenten gebaseerd kleursysteem met een responsieve, nie
 ## Grenzen
 
 - **Gericht, niet allesomvattend**: Lumi is niet bedoeld voor webdesign, desktop publishing of elke niche die een brede editor zoals GIMP probeert te bedienen.
-- **Alleen Linux**: Lumi is specifiek geoptimaliseerd voor Linux en ondersteunt geen Windows of macOS.
+- **Alleen Linux**: Lumi wordt ontwikkeld op Debian met Cinnamon (X11). GNOME op Wayland is getest op het algemene uiterlijk van de toepassing en op OpenGL-weergave. Windows en macOS worden niet ondersteund.
 
 ## Dankbetuiging
 

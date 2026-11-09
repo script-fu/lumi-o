@@ -2,14 +2,14 @@
 title: "Tinjauan Sistem Linux"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_lock: true
 ---
 
 Linux adalah sistem operasi yang andal dan serbaguna dengan komunitas pengembang yang luas. Inti sistem Linux terdiri dari beberapa komponen utama yang bekerja sama untuk memberikan pengalaman pengguna yang lancar. Ikhtisar ini menguraikan bagian-bagian penting dari sistem Linux, termasuk kernel, distribusi, manajer paket, display manager, lingkungan desktop, dan display server (X11 atau Wayland).
 
-Lumi berjalan paling baik di Debian dengan Cinnamon (X11), dan dikembangkan serta diuji di lingkungan tersebut.
+Lumi dikembangkan dan diuji di Debian dengan Cinnamon (X11). Itu tetap lingkungan pengembangan. GNOME di Wayland telah diuji di sampingnya, untuk tampilan umum aplikasi dan untuk rendering OpenGL.
 
 **Konfigurasi default distribusi Linux umum saat ini**
 

@@ -4,9 +4,9 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/tool-presets"
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
-Verktygsförinställningar är centrum i Lumis verktygsarbetsflöde. Varje verktyg används genom en förinställning, oavsett om det är en tyst standard eller ett handgjort verktyg som sparats av konstnären. Detta gör verktygets beteende synligt, avsiktligt och repeterbart.
+Verktygsförinställningar är centrum i Lumis verktygsarbetsflöde. Varje verktyg används genom en förinställning, oavsett om det är en tyst standard eller ett handgjort verktyg som sparats av konstnären. Detta gör verktygets beteende synligt, avsiktligt och repeterbart, inklusive om ett målarverktyg ritar sina drag med OpenGL.
 
 Tanken är enkel: en konstnär bygger en liten, stabil uppsättning välbekanta verktyg, ger dem tydliga identiteter och växlar mellan dem lika naturligt som att sträcka sig efter olika penslar, pennor, knivar eller mixers i en studio.
 
@@ -55,6 +55,10 @@ En förinställning äger resurserna som gör att den känns unik. För en pense
 Detta är en avsiktlig förenkling: ett sparat verktyg är inte en ömtålig pekare till flera separata rörliga delar. Penslar kan fortfarande sparas i ett återanvändbart bibliotek, men när de väljs för en förinställning kopieras de till det skapade verktyget.
 
 För konstnärer är den viktiga delen att ett verktyg kan sparas som ett komplett kreativt beslut. Dess beteende, identitet och resurser reser tillsammans, vilket gör verktygsförinställningar till en praktisk grund för personliga arbetsflöden, projektspecifika verktygssatser och delade studioinställningar.
+
+## Rendering i förinställningen
+
+En målarförinställning kan minnas om dess drag ritas med OpenGL. Det valet hör till verktyget, tillsammans med penseln, dynamiken och identiteten. En stor airbrush eller en tung texturstämpel kan använda det snabbare draget, och en annan förinställning kan behålla det vanliga. Dukvyn av lagerstacken kan också använda OpenGL, och det är det som håller panorering, zoom och rotation jämna. Båda beskrivs i [OpenGL](/hub/features/opengl/).
 
 ## En välbekant uppsättning instrument
 

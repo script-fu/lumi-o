@@ -4,14 +4,14 @@ type: docs
 url: "hub/install-linux/Installing-Debian"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 ---
 
 이 문서는 Lumi-o 개발용 운영 체제로 Debian Stable을 설치하는 과정을 설명합니다. 비슷한 환경을 구성하는 분에게도 도움이 될 수 있습니다.
 
 Debian Stable을 선택한 이유는 Lumi가 예측 가능한 장기 플랫폼 위에서 안정적으로 빌드되도록 하기 위해서입니다. GIMP 개발은 Debian Testing을 대상으로 하므로, Debian Stable은 이와 밀접하게 맞는 기본 시스템입니다.
 
-Lumi-o는 Debian과 Cinnamon(X11)에서 가장 잘 동작하며, 해당 환경에서 개발 및 테스트됩니다. Cinnamon은 Windows와 유사한 익숙한 데스크톱 워크플로를 제공하고, X11은 Lumi 개발에 가장 안정적인 환경입니다.
+Lumi는 Debian과 Cinnamon(X11)에서 개발하고 테스트합니다. 그 환경이 여전히 개발 환경이며, 이 가이드가 따르는 구성입니다. Cinnamon은 Windows와 유사한 익숙한 데스크톱 워크플로를 제공하고, X11은 Lumi 개발에 가장 안정적인 환경을 제공해 왔습니다. Wayland의 GNOME은 그 구성과 나란히, 애플리케이션의 전반적인 모습과 OpenGL 렌더링을 확인했습니다.
 
 Windows에서 넘어온다면, 가장 큰 개념적 차이는 대부분의 소프트웨어 설치와 구성이 다운로드형 설치 프로그램이 아니라 패키지 관리자와 간단한 터미널 명령으로 이루어진다는 점입니다.
 

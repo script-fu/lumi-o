@@ -4,10 +4,10 @@ type: docs
 url: "hub/features/tool-presets"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 ---
 
-Los preajustes de herramientas son el centro del flujo de trabajo de herramientas de Lumi. Cada herramienta se usa a través de un preajuste, ya sea un valor predeterminado discreto o una herramienta hecha a mano guardada por el artista. Así el comportamiento de la herramienta es visible, intencionado y repetible.
+Los preajustes de herramientas son el centro del flujo de trabajo de herramientas de Lumi. Cada herramienta se usa a través de un preajuste, ya sea un valor predeterminado discreto o una herramienta hecha a mano guardada por el artista. Así el comportamiento de la herramienta es visible, intencionado y repetible, también en si una herramienta de pintura dibuja sus trazos con OpenGL.
 
 La idea es sencilla: el artista construye un conjunto pequeño y estable de herramientas familiares, les da identidades claras y alterna entre ellas con la misma naturalidad con la que alcanzaría distintos pinceles, bolígrafos, espátulas o mezcladores en un estudio.
 
@@ -56,6 +56,10 @@ Un preajuste posee los recursos que lo hacen único. En un preajuste de pincel, 
 Es una simplificación deliberada: una herramienta guardada no es un puntero frágil a varias piezas móviles separadas. Los pinceles pueden seguir guardándose en una biblioteca reutilizable, pero cuando se eligen para un preajuste se copian en esa herramienta creada.
 
 Para el artista, lo importante es que una herramienta puede guardarse como una decisión creativa completa. Su comportamiento, identidad y recursos viajan juntos, lo que hace de los preajustes de herramientas una base práctica para flujos de trabajo personales, kits específicos de proyecto y configuraciones de estudio compartidas.
+
+## Renderizado en el preajuste
+
+Un preajuste de pintura puede recordar si sus trazos se dibujan con OpenGL. Esa elección pertenece a la herramienta, junto con su pincel, su dinámica y su identidad. Un aerógrafo grande o un sello de textura pesado puede usar el trazo más rápido, y otro preajuste puede conservar el ordinario. La vista del lienzo de la pila de capas también puede usar OpenGL, y eso es lo que mantiene fluidos el desplazamiento, el zoom y la rotación. Ambos se describen en [OpenGL](/hub/features/opengl/).
 
 ## Un conjunto familiar de instrumentos
 

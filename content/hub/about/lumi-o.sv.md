@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 url: "hub/about/lumi-o"
 ---
 
@@ -30,7 +30,8 @@ Lumi kombinerar ett pigmentbaserat färgsystem med ett responsivt, icke-förstö
 
 - **Pigmentcentrerad färg**: verkliga pigmentprofiler (Colour Index-koder) blandas spektralt så att paletter beter sig mer som riktig färg.
 - **Palettstyrt arbetsflöde**: sparade, växlingsbara paletter organiserar pigment, blandningar, värdeband och gradienter och håller färgbesluten sammanhängande i en målning eller ett projekt.
-- **Taktila, fokuserade verktyg**: penslar integrerar penntryck, lutning och hastighet för direkt, nyanserad kontroll; reglage stödjer medvetna beslut utan onödig komplexitet.
+- **Taktila, fokuserade verktyg**: penslar förenar penntryck, lutning och hastighet för direkt, nyanserad kontroll. Ytans textur kan ge ett drag gräng och tand från en yta, även på kalligrafiska drag, och en sväng kan förskjuta den grängen. Borstpenslar kan formas tätt och animeras längs ett drag.
+- **Responsiv duk**: OpenGL kan rita lagerstacken och måla penseldrag för enskilda verktygsförinställningar. Stora airbrushar och stora texturstämplar följer handen, och rörelsen över duken förblir jämn.
 - **Icke-förstörande tillförlitlighet**: lager och redigerbara filter skalar till komplexa projekt och förblir förutsägbara. Autosparning, snabbt sparande, inkrementella sparningar och återställning skyddar långa målningssessioner och stora projekt.
 - **Live-arbetsytor**: namngivna profiler bevarar dockor, verktyg, förinställningar, paletter och enhetsbindningar och byter dem atomärt vid körning.
 - **Scheme scripting**: Lumi utökar Script-Fu-traditionen med ett Scheme-baserat plug-in-språk och extra hjälpfunktioner för att bygga plug-ins och automatisera arbetsflöden.
@@ -40,7 +41,7 @@ Lumi kombinerar ett pigmentbaserat färgsystem med ett responsivt, icke-förstö
 ## Gränser
 
 - **Fokuserat, inte uttömmande**: Lumi är inte avsett för webbdesign, desktop publishing eller varje nisch en bred redigerare som GIMP försöker täcka.
-- **Endast Linux**: Lumi är optimerat specifikt för Linux och stödjer inte Windows eller macOS.
+- **Endast Linux**: Lumi utvecklas på Debian med Cinnamon (X11). GNOME på Wayland har testats för programmets allmänna utseende och för OpenGL-rendering. Windows och macOS stöds inte.
 
 ## Erkännanden
 

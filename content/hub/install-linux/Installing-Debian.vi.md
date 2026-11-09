@@ -2,7 +2,7 @@
 title: "Cài đặt Debian"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 1e79ae25c72fd6b2a9d31e1efe3019289f4b44d9230990f6874c0332de6c5f19
+translation_source_sha256: 8bb28847862b62480973378e3cc7d68fd97dd49b9405c0eeeaa6175ae67439fc
 url: "hub/install-linux/Installing-Debian"
 translation_lock: true
 ---
@@ -10,7 +10,7 @@ Tài liệu này phác thảo quy trình được sử dụng để cài đặt 
 
 Debian Stable được chọn vì Lumi hướng tới biên dịch đáng tin cậy trên nền tảng dài hạn, có thể dự đoán. Phát triển GIMP nhắm tới Debian Testing, nên Debian Stable là hệ nền gần nhất.
 
-Lumi hoạt động tốt nhất trên Debian với Cinnamon (X11) và được phát triển và thử nghiệm trong môi trường đó. Cinnamon cung cấp quy trình làm việc trên máy tính để bàn quen thuộc giống Windows, trong khi X11 cung cấp môi trường ổn định nhất để phát triển Lumi.
+Lumi được phát triển và thử trên Debian với Cinnamon (X11). Đó vẫn là môi trường phát triển và là thiết lập mà hướng dẫn này đi theo. Cinnamon mang lại quy trình desktop quen thuộc giống Windows, và X11 là môi trường ổn định nhất cho việc phát triển Lumi. GNOME trên Wayland đã được thử song song với thiết lập đó, cho diện mạo và kết xuất OpenGL.
 
 Nếu bạn đến từ Windows, thay đổi khái niệm chính là hầu hết việc cài đặt và cấu hình phần mềm diễn ra thông qua trình quản lý gói và các lệnh đầu cuối đơn giản thay vì trình cài đặt có thể tải xuống.
 

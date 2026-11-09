@@ -4,7 +4,7 @@ toc: false
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 243e39446952d0f300b96a1af304dda1f11738a647283032b543a5cc84a8f496
+translation_source_sha256: 4f453bf4100140e9a2779d4b9806a0ef8f27e68af8a9b6f680d01a6a5d2f2341
 ---
 [![gui-01](/images/screens/gui-00.jpg)](/images/screens/gui-01.jpg)
 
@@ -14,9 +14,11 @@ Le système de couleurs de Lumi, fondé sur les palettes, mélange de façon spe
 
 Bâti sur l’architecture centrale de GIMP, Lumi-o est conçu et affiné par un artiste. Ses outils restent accessibles tout en offrant la personnalisation nécessaire aux flux de travail avancés. Des chargements et enregistrements rapides, ainsi qu’un système de sauvegarde automatique entièrement intégré, protègent votre travail sans interrompre votre élan.
 
+Les traits de pinceau peuvent prendre une texture de surface, avec le grain et l’accroche d’un support, y compris les traits calligraphiques. Un nouveau trait, ou un virage dans le trait, peut décaler ce grain, de sorte qu’un ombrage en aller-retour se construit sur une phase nouvelle à chaque renversement. Les pinceaux à poils se façonnent dans le détail, et leurs poils peuvent se déplacer et se renouveler le long du trait. OpenGL dessine la pile de calques dans la fenêtre d’image et peut peindre les traits de chaque préréglage d’outil. Les grands aérographes et les grands tampons de texture sont bien plus rapides, et la navigation sur le canevas reste fluide.
+
 Le chargement différé permet à Lumi d’ouvrir des projets volumineux et complexes en utilisant beaucoup moins de mémoire vive. Lorsqu’un groupe est replié, Lumi charge l’image composite enregistrée, tandis que ses calques, masques et groupes imbriqués restent de légers espaces réservés jusqu’à leur ouverture.
 
-Lumi-o est développé sous Debian 13 avec le bureau Cinnamon. Si vous venez de Windows, installer Debian est la première étape. Consultez [Comment installer Linux](/hub/install-linux/).
+Lumi-o est développé sous Debian 13 avec Cinnamon sur X11. GNOME sur Wayland a été testé pour l’apparence générale de l’application et pour le rendu OpenGL. Si vous venez de Windows, installer Debian est la première étape. Consultez [Comment installer Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="À propos" icon="information-circle" >}}

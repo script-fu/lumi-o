@@ -5,7 +5,7 @@ url: "hub/about/lumi-o"
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 ---
 O Lumi é uma aplicação rápida e eficiente, exclusiva para Linux, dedicada à criação de imagens raster, desenvolvida em aberto. As decisões de design, a documentação de arquitetura e o historial de desenvolvimento são públicos para que os utilizadores possam compreender a sua evolução.
 
@@ -29,7 +29,8 @@ O Lumi combina um sistema de cor baseado em pigmentos com um fluxo de trabalho r
 
 - **Cor centrada no pigmento**: perfis de pigmento reais (códigos Colour Index) são misturados espectralmente para que as paletes se comportem mais como tinta verdadeira.
 - **Fluxo de trabalho orientado por paletes**: paletes guardadas e permutáveis organizam pigmentos, misturas, bandas de valor e gradientes, mantendo coerentes as decisões de cor numa pintura ou projecto.
-- **Ferramentas tácteis e focadas**: os pincéis integram pressão, inclinação e velocidade da caneta para um controlo directo e nuanceado; os controlos apoiam decisões deliberadas sem complexidade desnecessária.
+- **Ferramentas tácteis e focadas**: os pincéis integram a pressão, a inclinação e a velocidade da caneta para um controlo directo e nuanceado. A textura de superfície pode dar a um traço o grão e o dente de uma superfície, incluindo nos traços caligráficos, e uma viragem pode deslocar esse grão. Os pincéis de cerdas podem ser moldados de perto e animados ao longo do traço.
+- **Tela responsiva**: o OpenGL pode desenhar a pilha de camadas e pintar traços de pincel para predefinições de ferramenta individuais. Os aerógrafos grandes e os carimbos de textura grandes acompanham a mão, e mover-se pela tela mantém-se fluido.
 - **Fiabilidade não destrutiva**: camadas e filtros editáveis escalam para projectos complexos mantendo-se previsíveis. Gravação automática, gravação rápida, gravações incrementais e recuperação protegem longas sessões de pintura e projectos grandes.
 - **Espaços de trabalho activos**: perfis nomeados preservam docks, ferramentas, presets, paletes e associações de dispositivos, alternando-os atomicamente em runtime.
 - **Scripting Scheme**: o Lumi prolonga a tradição Script-Fu com uma linguagem de plug-ins baseada em Scheme e funções utilitárias adicionais para construir plug-ins e automatizar fluxos de trabalho.
@@ -39,7 +40,7 @@ Os [filtros](/hub/features/filters/), incluindo desfoque de lente bokeh moldado,
 ## Limites
 
 - **Focado, não exaustivo**: o Lumi não se destina ao web design, à editoração electrónica nem a todas as especialidades que um editor amplo como o GIMP tenta cobrir.
-- **Apenas Linux**: o Lumi está optimizado especificamente para Linux e não suporta Windows nem macOS.
+- **Apenas Linux**: o Lumi é desenvolvido no Debian com Cinnamon (X11). O GNOME em Wayland foi testado quanto ao aspecto geral da aplicação e à renderização OpenGL. Windows e macOS não são suportados.
 
 ## Agradecimentos
 

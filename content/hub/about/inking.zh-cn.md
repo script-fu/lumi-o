@@ -5,7 +5,7 @@ url: "hub/about/inking"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 ---
 
 勾线工作区面向有意识的线条创作，或放任的墨韵挥洒。这是绘画从探索走向定稿的阶段：笔触可控、边缘清晰，线条需要稳定地保持形态。当然，你也可以尽情泼洒、绕线、干笔刮擦，或写出狂放的 sumi 笔触。
@@ -16,14 +16,14 @@ translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3
 
 Sumi 画笔并未被完全驯服。它不像单一笔头，而是由许多独立的笔头或笔簇共同组成动态阵型。根据压感、速度、间距与手势，效果可在湿拖、干裂、缠结纤维与爆发式肌理边缘之间变化。
 
-对阵型行为有广泛的控制空间；结合动态、纹理与压印变化，可产生极为丰富的笔触。
+阵型如何行动，有很宽的控制余地。间距、大小、聚拢和笔尖形状都可以细细设定，刷毛还能沿笔触生长、收缩、更新，同时笔迹的密度保持住。再配合动态、纹理与压印变化，可以得到极为丰富的笔触。
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic Preset
 
-Calligraphic 模式将画笔变为连续的斜笔锋线条，而非一串压印点。内置的 Calligraphic 预设还将笔的倾斜角度作为额外控制轴，因此线条不仅响应压力，也响应握笔方式。适合需要读成一条完整墨带的、形状明确的笔触，即使角度与压力不断变化。
+Calligraphic 模式将画笔变为连续的斜笔锋线条，而非一串压印点。内置的 Calligraphic 预设还将笔的倾斜角度作为额外控制轴，因此线条不仅响应压力，也响应握笔方式。墨带也可以带上颗粒与齿纹那样的表面纹理。转向会挪动那层颗粒，因此方向一变，就遇上齿纹的新一段。笔触仍是一道连续的痕迹。适合需要读成一条完整墨带的、形状明确的笔触，即使角度与压力不断变化。
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

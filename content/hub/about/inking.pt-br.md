@@ -4,7 +4,7 @@ type: docs
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 url: "hub/about/inking"
 ---
 
@@ -16,14 +16,14 @@ Abaixo estão algumas ferramentas e modos que tornam isso possível.
 
 O pincel Sumi não está totalmente domado. Em vez de se comportar como uma única ponta, é formado por muitas cabeças de pincel independentes ou feixes de cerdas trabalhando juntos como uma formação dinâmica. O resultado pode ir de arrastos úmidos a listras secas quebradas, fibras emaranhadas ou bordas texturizadas explosivas — conforme pressão, velocidade, espaçamento e gesto.
 
-Há amplo controle sobre o comportamento da formação; combiná-la com dinâmicas, texturas e variação de carimbo produz uma enorme variedade de marcas.
+Há um amplo controle sobre como a formação se comporta. Espaçamento, tamanho, agrupamento e forma da ponta podem ser ajustados de perto, e as cerdas podem crescer, encolher e se renovar ao longo do traço, enquanto a densidade da marca se mantém. Combinar o pincel com dinâmicas, texturas e variação de carimbo pode produzir uma variedade enorme de marcas.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic Preset
 
-O modo caligráfico transforma a ferramenta Pincel em um traço contínuo de caneta de cálice, em vez de uma fileira de pontos carimbados. A predefinição Calligraphic incluída também usa o ângulo de inclinação da caneta como eixo extra de controle, para que o traço responda não só à pressão, mas à forma como a caneta é segurada. Útil para marcas firmes e moldadas que precisam ler como uma única fita de tinta, mesmo quando ângulo e pressão mudam.
+O modo caligráfico transforma a ferramenta Pincel em um traço contínuo de caneta de cálice, em vez de uma fileira de pontos carimbados. A predefinição Calligraphic incluída também usa o ângulo de inclinação da caneta como eixo extra de controle, para que o traço responda não só à pressão, mas à forma como a caneta é segurada. A fita também pode receber uma textura de superfície com grão e dente. Uma virada pode deslocar esse grão, de modo que uma mudança de direção encontra uma fase nova do dente, enquanto o traço continua sendo uma marca contínua. Útil para marcas firmes e moldadas que precisam ler como uma única fita de tinta, mesmo quando ângulo e pressão mudam.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

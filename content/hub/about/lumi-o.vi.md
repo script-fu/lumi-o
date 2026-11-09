@@ -5,7 +5,7 @@ url: "hub/about/lumi-o"
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 ---
 Lumi là ứng dụng nhanh, hiệu quả, chỉ dành cho Linux để tạo ảnh raster, được phát triển công khai. Quyết định thiết kế, tài liệu kiến trúc và lịch sử phát triển đều công khai để người dùng hiểu cách nó tiến hóa.
 
@@ -29,7 +29,8 @@ Lumi kết hợp hệ thống màu dựa trên sắc tố với quy trình làm 
 
 - **Màu lấy sắc tố làm trung tâm**: Hồ sơ sắc tố thực (mã Colour Index) được trộn theo phổ để bảng màu hoạt động giống sơn thật hơn.
 - **Quy trình theo bảng màu**: Các bảng màu đã lưu, có thể chuyển đổi, sắp xếp sắc tố, pha màu, dải giá trị và gradient, giữ quyết định màu nhất quán trong một bức tranh hoặc dự án.
-- **Công cụ xúc giác, tập trung**: Cọ tích hợp lực nặng, góc nghiêng và tốc độ bút để điều khiển trực tiếp, tinh tế; các điều khiển hỗ trợ quyết định có chủ đích mà không phức tạp thừa.
+- **Công cụ xúc giác, tập trung**: Cọ tích hợp lực nặng, góc nghiêng và tốc độ bút để điều khiển trực tiếp, tinh tế. Kết cấu bề mặt có thể cho nét hạt và độ nhám của một bề mặt, kể cả trên nét thư pháp, và một chỗ ngoặt có thể dịch hạt đó. Cọ lông cứng định hình sát và chuyển động dọc nét.
+- **Canvas đáp ứng**: OpenGL có thể vẽ chồng lớp và vẽ nét cọ cho từng cài đặt sẵn công cụ. Airbrush lớn và stamp kết cấu lớn đi cùng tay, và việc di chuyển trên canvas vẫn mượt.
 - **Độ tin cậy không phá hủy**: Lớp và bộ lọc có thể chỉnh sửa mở rộng cho dự án phức tạp nhưng vẫn dự đoán được. Tự động lưu, lưu nhanh, lưu tăng dần và phục hồi bảo vệ các phiên vẽ dài và dự án lớn.
 - **Workspace trực tiếp**: Hồ sơ đặt tên giữ dock, công cụ, preset, bảng màu và liên kết thiết bị, rồi chuyển đổi chúng nguyên tử khi chạy.
 - **Scripting Scheme**: Lumi mở rộng truyền thống Script-Fu bằng ngôn ngữ plug-in dựa trên Scheme và các hàm tiện ích bổ sung để xây dựng plug-in và tự động hóa quy trình.
@@ -39,7 +40,7 @@ Lumi kết hợp hệ thống màu dựa trên sắc tố với quy trình làm 
 ## Ranh giới
 
 - **Tập trung, không bao quát**: Lumi không nhắm tới thiết kế web, xuất bản desktop hay mọi ngách mà một trình biên tập rộng như GIMP cố gắng phủ.
-- **Chỉ Linux**: Lumi được tối ưu riêng cho Linux và không hỗ trợ Windows hay macOS.
+- **Chỉ Linux**: Lumi được phát triển trên Debian với Cinnamon (X11). GNOME trên Wayland đã được thử cho diện mạo chung của ứng dụng và cho kết xuất OpenGL. Windows và macOS không được hỗ trợ.
 
 ## Lời cảm ơn
 

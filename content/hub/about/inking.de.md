@@ -5,7 +5,7 @@ url: "hub/about/inking"
 weight: 4
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 7954b2f122c41044b9d5e496b9de7b2093ed9454b9b04ce5bb5b3172388f66eb
+translation_source_sha256: 9e3d1d773fb38b0b8e951a9d98d0fd8bdd973c2e73d92c89f2e3c496af7d7f24
 ---
 Der Arbeitsbereich Tuschen ist für bewusste Linienführung oder kontrolliertes Tintenchaos gedacht. Hier hört das Zeichnen auf, explorativ zu sein, und wird verbindlich: kontrollierte Striche, klare Kanten und Marken, die ihre Form zuverlässig halten. Oder lassen Sie sich mit ausdrucksstarken Spritzern, geschlungenen Linien, trockenen Federkratzern und wilden Sumi-Strichen gehen.
 
@@ -15,14 +15,14 @@ Einige Werkzeuge und Modi, die das möglich machen:
 
 Der Sumi-Pinsel ist nicht ganz gezähmt. Statt einer einzelnen Pinselspitze besteht er aus vielen unabhängigen Pinselköpfen oder Borstenbündeln, die als dynamische Formation zusammenarbeiten. Je nach Druck, Geschwindigkeit, Abstand und Geste reicht das Ergebnis von nassen Zügen über gebrochene trockene Streifen und verfilzte Fasern bis zu explosiven strukturierten Kanten.
 
-Die Formation lässt sich weitgehend steuern; kombiniert mit Dynamik, Texturen und Stempelvariation entsteht eine enorme Bandbreite an Marken.
+Das Verhalten der Formation lässt sich in weitem Umfang steuern. Abstand, Größe, Büschelung und Spitzenform lassen sich fein einstellen, und die Borsten können entlang des Strichs wachsen, schrumpfen und sich erneuern, während die Dichte der Marke hält. Den Pinsel mit Dynamik, Texturen und Stempelvariation zu verbinden kann eine enorme Bandbreite an Marken hervorbringen.
 
 ![sumi-01](/images/strokes/sumi_share.jpg)
 
 
 ## Calligraphic-Preset
 
-Der Calligraphic-Modus macht aus dem Pinselwerkzeug einen durchgehenden Kalligraphie-Strich statt einer Reihe gestempelter Tupfer. Das mitgelieferte Calligraphic-Preset nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse — der Strich reagiert auf Druck und darauf, wie der Stift gehalten wird. Nützlich für feste, geformte Marken, die als ein einziges Tintenband lesbar bleiben, auch wenn Winkel und Druck wechseln.
+Der Calligraphic-Modus macht aus dem Pinselwerkzeug einen durchgehenden Kalligraphie-Strich statt einer Reihe gestempelter Tupfer. Das mitgelieferte Calligraphic-Preset nutzt außerdem den Neigungswinkel des Stifts als zusätzliche Steuerachse — der Strich reagiert auf Druck und darauf, wie der Stift gehalten wird. Nützlich für feste, geformte Marken, die als ein einziges Tintenband lesbar bleiben, auch wenn Winkel und Druck wechseln. Das Band kann außerdem eine Oberflächentextur aus Körnung und Griffigkeit annehmen. Eine Wendung kann diese Körnung verschieben, sodass ein Richtungswechsel auf eine neue Phase der Griffigkeit trifft, während der Strich eine durchgehende Marke bleibt.
 
 ![calligraphic-01](/images/strokes/ink-calligraphic_share.jpg)
 

@@ -2,11 +2,11 @@
 title: "Preset Alat"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 93c6efd01c01807aabec13e5816f4c4cb9c893fe7f45bbcbf2618a27f072a1bd
+translation_source_sha256: 721a7008a670d00106b29d515dd3923ef90f3efb1669f4afaab2daa86545e1fd
 url: "hub/features/tool-presets"
 translation_lock: true
 ---
-Preset Alat adalah pusat alur kerja alat Lumi. Setiap alat dipakai melalui preset—baik default sederhana maupun alat buatan tangan yang disimpan seniman. Perilaku alat menjadi terlihat, disengaja, dan dapat diulang.
+Preset Alat adalah pusat alur kerja alat Lumi. Setiap alat dipakai melalui preset—baik default sederhana maupun alat buatan tangan yang disimpan seniman. Perilaku alat menjadi terlihat, disengaja, dan dapat diulang, termasuk apakah alat cat menggambar goresannya dengan OpenGL.
 
 Idenya sederhana: seniman membangun set alat kecil dan stabil, memberi identitas jelas, dan beralih di antaranya senatural meraih kuas, pena, pisau, atau blender berbeda di studio.
 
@@ -55,6 +55,10 @@ Preset memiliki sumber daya yang membuatnya terasa unik. Untuk preset kuas, kuas
 Ini penyederhanaan disengaja: alat tersimpan bukan pointer rapuh ke beberapa bagian terpisah. Kuas masih dapat disimpan ke pustaka reusable, tetapi saat dipilih untuk preset kuas disalin ke alat authored itu.
 
 Bagi seniman, alat dapat disimpan sebagai keputusan kreatif lengkap. Perilaku, identitas, dan sumber daya berjalan bersama—preset alat menjadi fondasi praktis alur kerja personal, toolkit khusus proyek, dan setup studio bersama.
+
+## Rendering pada preset
+
+Preset cat dapat mengingat apakah goresannya digambar dengan OpenGL. Pilihan itu milik alat, bersama kuas, dinamika, dan identitasnya. Airbrush besar atau cap tekstur yang berat dapat memakai goresan yang lebih cepat, dan preset lain dapat mempertahankan yang biasa. Tampilan kanvas dari tumpukan lapisan juga dapat memakai OpenGL, dan itulah yang menjaga geser, perbesar, dan rotasi tetap mulus. Keduanya dijelaskan di [OpenGL](/hub/features/opengl/).
 
 ## Set instrumen familiar
 

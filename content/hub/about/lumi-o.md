@@ -27,7 +27,8 @@ Lumi combines a pigment-based color system with a responsive, non-destructive, l
 
 - **Pigment-centric color**: Real world pigment profiles (Colour Index codes) are mixed spectrally so palettes behave more like real paint.
 - **Palette-driven workflow**: Saved, switchable palettes organize pigments, mixes, value bands, and gradients, keeping color decisions coherent across an individual painting or a project.
-- **Tactile, focused tools**: Brushes integrate stylus pressure, tilt, and velocity for direct, nuanced control; controls support deliberate decisions without unnecessary complexity.
+- **Tactile, focused tools**: Brushes integrate stylus pressure, tilt, and velocity for direct, nuanced control. Surface texture can give a stroke the grain and tooth of a surface, including on calligraphic strokes, and a turn can shift that grain. Bristle brushes can be shaped closely and animated along a stroke.
+- **Responsive canvas**: OpenGL can draw the layer stack and paint brush strokes for individual tool presets. Large airbrushes and large texture stamps stay with the hand, and moving around the canvas stays smooth.
 - **Non-destructive reliability**: Layers and editable filters scale to complex projects while remaining predictable. Autosave, fast saving, incremental saves, and recovery protect long painting sessions and large projects.
 - **Live workspaces**: Named profiles preserve docks, tools, presets, palettes, and device bindings, then switch them atomically at runtime.
 - **Scheme scripting**: Lumi extends the Script-Fu tradition with a Scheme-based plug-in language and additional utility functions for building plug-ins and automating workflows.
@@ -37,7 +38,7 @@ Lumi combines a pigment-based color system with a responsive, non-destructive, l
 ## Boundaries
 
 - **Focused, not exhaustive**: Lumi is not aimed at web design, desktop publishing, or every niche a broad editor such as GIMP tries to cover.
-- **Linux-only**: Lumi is optimized specifically for Linux and does not support Windows or macOS.
+- **Linux-only**: Lumi is developed on Debian with Cinnamon (X11). GNOME on Wayland has been tested for the general appearance of the application and for OpenGL rendering. Windows and macOS are not supported.
 
 ## Acknowledgments
 

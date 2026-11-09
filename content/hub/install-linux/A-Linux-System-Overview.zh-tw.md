@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux 是功能強大且用途廣泛的作業系統，擁有龐大的開發者社群。Linux 系統的核心由若干關鍵元件協同運作，以提供流暢的使用者體驗。本概述介紹 Linux 系統的基本組成部分，包括核心、發行版、套件管理器、顯示管理器、桌面環境與顯示伺服器（X11 或 Wayland）。
 
-Lumi 在 Debian 與 Cinnamon（X11）上表現最佳，並在該環境中開發與測試。
+Lumi 在 Debian 上、以 Cinnamon（X11）開發並測試。那仍然是開發環境。Wayland 上的 GNOME 則在旁邊一併測過，看的是應用程式的整體外觀，以及 OpenGL 渲染。
 
 **常見 Linux 發行版的預設配置**
 

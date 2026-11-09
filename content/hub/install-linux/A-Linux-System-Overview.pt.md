@@ -4,11 +4,11 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 Linux é um sistema operativo poderoso e versátil, com uma vasta comunidade de programadores. No seu núcleo, um sistema Linux consiste em vários componentes principais que trabalham em conjunto para proporcionar uma experiência de utilizador fluida. Esta visão geral descreve as partes essenciais de um sistema Linux, incluindo o kernel, a distribuição, o gestor de pacotes, o gestor de ecrã, o ambiente gráfico e o servidor gráfico (X11 ou Wayland).
 
-O Lumi funciona melhor no Debian com Cinnamon (X11) e é desenvolvido e testado nesse ambiente.
+O Lumi é desenvolvido e testado no Debian com Cinnamon (X11). Esse continua a ser o ambiente de desenvolvimento. O GNOME em Wayland foi testado a par dele, quanto ao aspecto geral da aplicação e à renderização OpenGL.
 
 **Predefinições actuais comuns das distribuições Linux**
 

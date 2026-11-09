@@ -4,12 +4,12 @@ type: docs
 url: "hub/install-linux/A-Linux-System-Overview"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 57573497133d7364dcc0acf023b2cb3b098b2a931ed245e846a539b96adb78b0
+translation_source_sha256: a38745c31470f2662ed8b220af2cc2065e981b8c1435fce2efae41886a2a7996
 ---
 
 Linux เป็นระบบปฏิบัติการที่ทรงพลังและอเนกประสงค์ พร้อมชุมชนนักพัฒนาขนาดใหญ่ โดยพื้นฐานแล้ว ระบบ Linux ประกอบด้วยองค์ประกอบสำคัญหลายส่วนที่ทำงานร่วมกันเพื่อมอบประสบการณ์ผู้ใช้ที่ราบรื่น ภาพรวมนี้อธิบายส่วนสำคัญของระบบ Linux ได้แก่ kernel ดิสทริบิวชัน ตัวจัดการแพ็กเกจ display manager สภาพแวดล้อมเดสก์ท็อป และ display server (X11 หรือ Wayland)
 
-Lumi ทำงานได้ดีที่สุดบน Debian กับ Cinnamon (X11) และได้รับการพัฒนาและทดสอบในสภาพแวดล้อมนั้น
+Lumi พัฒนาและทดสอบบน Debian ด้วย Cinnamon (X11) นั่นยังคงเป็นสภาพแวดล้อมของการพัฒนา ทดสอบ GNOME บน Wayland ควบคู่กันแล้ว ทั้งรูปลักษณ์โดยรวมและการเรนเดอร์ OpenGL
 
 **ค่าเริ่มต้นทั่วไปของดิสทริบิวชัน Linux ในปัจจุบัน**
 

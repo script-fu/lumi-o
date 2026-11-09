@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/layers"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: ff151a84a2bca18cbd1389f1e7048fda7231ee8c1adf0bc16b1d7513c224f3ce
+translation_source_sha256: 6dbb2dc10c71714d1aed2036ac55c90a05b2e1fb1738e447049234b2577e3edb
 ---
 
 Lumi 的图层系统为插画提供结构。艺术家可以将草图、上色、阴影、纹理、蒙版、调整、实验与最终细节分开处理，而不必把每个决定都直接画进一张扁平图像。
@@ -52,5 +52,7 @@ Lumi 的图层系统为插画提供结构。艺术家可以将草图、上色、
 ## 深度文件的性能
 
 分层插画可能变得相当复杂，尤其在编组、蒙版与效果相互影响时。Lumi 的图层系统通过尽可能避免不必要的重合成，保持常见绘画操作的响应速度。
+
+图像窗口可以用 OpenGL 绘制已经合成好的那一叠图层。平移、缩放和旋转保持顺滑，因为视图移动的是已经为显示准备好的画面，笔触也能出现在周围图层之间的原位。[OpenGL](/hub/features/opengl/) 说明画布浏览，以及按预设绘制的笔刷笔触。
 
 结果是兼顾控制与速度的图层工作流程：足够细致以支持精密的非破坏性工作，又足够实用，适合日常绘画。

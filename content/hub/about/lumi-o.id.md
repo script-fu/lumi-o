@@ -5,7 +5,7 @@ url: "hub/about/lumi-o"
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 1bf50df22bdb2af7931727f82bc3c90eee5242be66847535aec8e41c47087e53
+translation_source_sha256: 060cd1cd6261e7278b4bc6e6c7330a374ecb20b5368faedde03a6e15da424d12
 ---
 Lumi adalah aplikasi cepat dan efisien khusus Linux untuk membuat gambar raster, dikembangkan secara terbuka. Keputusan desain, dokumen arsitektur, dan riwayat pengembangannya publik agar pengguna dapat memahami evolusinya.
 
@@ -29,7 +29,8 @@ Lumi menggabungkan sistem warna berbasis pigmen dengan alur kerja berbasis lapis
 
 - **Warna berpusat pada pigmen**: Profil pigmen dunia nyata (kode Colour Index) dicampur secara spektral sehingga palet berperilaku lebih seperti cat sungguhan.
 - **Alur kerja berbasis palet**: Palet tersimpan yang dapat diganti mengatur pigmen, campuran, pita nilai, dan gradien, menjaga keputusan warna tetap koheren dalam satu lukisan atau proyek.
-- **Alat taktil dan terfokus**: Kuas mengintegrasikan tekanan, kemiringan, dan kecepatan stylus untuk kontrol langsung yang nuans; kontrol mendukung keputusan yang disengaja tanpa kerumitan berlebihan.
+- **Alat taktil dan terfokus**: Kuas mengintegrasikan tekanan, kemiringan, dan kecepatan stylus untuk kontrol langsung yang bernuansa. Tekstur permukaan dapat memberi goresan butiran dan gigi suatu permukaan, termasuk pada goresan kaligrafi, dan belokan dapat menggeser butiran itu. Kuas bulu dapat dibentuk rapat dan dianimasikan sepanjang goresan.
+- **Kanvas yang responsif**: OpenGL dapat menggambar tumpukan lapisan dan melukis goresan kuas untuk masing-masing preset alat. Airbrush besar dan cap tekstur besar tetap mengikuti tangan, dan bergerak di kanvas tetap mulus.
 - **Keandalan non-destruktif**: Lapisan dan filter yang dapat diedit skala ke proyek kompleks sambil tetap prediktif. Autosave, penyimpanan cepat, penyimpanan inkremental, dan recovery melindungi sesi melukis panjang dan proyek besar.
 - **Ruang kerja langsung**: Profil bernama menyimpan dock, alat, preset, palet, dan binding perangkat, lalu mengalihkannya secara atomik saat runtime.
 - **Scripting Scheme**: Lumi melanjutkan tradisi Script-Fu dengan bahasa plug-in berbasis Scheme dan fungsi utilitas tambahan untuk membangun plug-in dan mengotomatisasi alur kerja.
@@ -39,7 +40,7 @@ Lumi menggabungkan sistem warna berbasis pigmen dengan alur kerja berbasis lapis
 ## Batasan
 
 - **Terfokus, bukan ekshaustif**: Lumi tidak ditujukan untuk desain web, desktop publishing, atau setiap niche yang coba dijangkau editor luas seperti GIMP.
-- **Khusus Linux**: Lumi dioptimalkan khusus untuk Linux dan tidak mendukung Windows atau macOS.
+- **Khusus Linux**: Lumi dikembangkan di Debian dengan Cinnamon (X11). GNOME di Wayland telah diuji untuk tampilan umum aplikasi dan untuk rendering OpenGL. Windows dan macOS tidak didukung.
 
 ## Ucapan terima kasih
 

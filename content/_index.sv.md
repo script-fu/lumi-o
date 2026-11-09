@@ -4,7 +4,7 @@ toc: false
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 243e39446952d0f300b96a1af304dda1f11738a647283032b543a5cc84a8f496
+translation_source_sha256: 4f453bf4100140e9a2779d4b9806a0ef8f27e68af8a9b6f680d01a6a5d2f2341
 ---
 [![gui-01](/images/screens/gui-00.jpg)](/images/screens/gui-01.jpg)
 
@@ -14,9 +14,11 @@ Lumis palettstyrda färgsystem blandar verkliga pigmentprofiler spektralt. Bygg 
 
 Lumi-o bygger på GIMP:s kärnarkitektur och har utformats och förfinats av en konstnär. Verktygen förblir lättanvända och erbjuder samtidigt de anpassningsmöjligheter som avancerade arbetsflöden kräver. Snabb inläsning och sparande, plus ett helt integrerat autosparningssystem, skyddar ditt arbete utan att avbryta ditt flöde.
 
+Penseldrag kan ta en yttextur av gräng och tand, även kalligrafiska drag. Ett nytt drag, eller en sväng i draget, kan förskjuta den grängen, så att skuggning fram och tillbaka byggs från en ny fas vid varje vändning. Borstpenslar kan formas i fin detalj, och borsten kan skifta och förnyas längs ett drag. OpenGL ritar lagerstacken i bildfönstret och kan måla drag för enskilda verktygsförinställningar. Stora airbrushar och stora texturstämplar är mycket snabbare, och navigeringen på duken förblir jämn.
+
 Lat inläsning gör att Lumi kan öppna stora, komplexa projekt med betydligt mindre RAM. När en grupp är ihopfälld laddar Lumi dess sparade sammansatta bild, medan lager, masker och kapslade grupper förblir lätta platshållare tills gruppen fälls ut.
 
-Lumi-o utvecklas på Debian 13 med skrivbordet Cinnamon. Om du kommer från Windows är installation av Debian det första steget. Se [Hur man installerar Linux](/hub/install-linux/).
+Lumi-o utvecklas på Debian 13 med Cinnamon på X11. GNOME på Wayland har testats för programmets allmänna utseende och för OpenGL-rendering. Om du kommer från Windows är installation av Debian det första steget. Se [Hur man installerar Linux](/hub/install-linux/).
 
 {{< cards >}}
   {{< card link="hub/about/" title="Om Lumi-o" icon="information-circle" >}}
