@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 L'outil Pinceau est l'instrument de peinture principal de Lumi : une façon réactive et expressive de dessiner, peindre, ombrer, texturer et poser des marques directement sur le canevas. Il est conçu pour rester immédiat tout en laissant aux artistes la possibilité de façonner le comportement d'un trait.
@@ -90,6 +90,12 @@ Un pinceau à poils peut changer pendant que le trait se trace encore. Pris un �
 L'animation avance avec les touches du trait. Elle peut commencer une fois que la marque a parcouru une distance, ou lorsque la main tourne. Les états intermédiaires se jouent le long du trajet, et le même geste produit la même suite.
 
 Un aérographe est un autre genre de mouvement. Il peut poser un arrangement de poils neuf à mesure qu'il émet, de sorte qu'un trait tenu renouvelle le jet sans cesse. Un trait calligraphique conserve sa plume continue, et cette plume peut encore recevoir une texture de surface. L'animation des poils appartient au pinceau à poils estampé.
+
+## Dégradés de bord
+
+Un trait peut porter un côté net et un côté estompé, à la façon d'un bâton de fusain ou d'un pastel. Vers le côté doux, la peinture peut s'effacer, la pointe sécher et se fragmenter, et l'accroche du papier se montrer davantage. Les poils peuvent s'y éclaircir et disparaître, et une formation de têtes rester serrée et pleine du côté dur, tandis que le côté doux se relâche et se disperse en jet.
+
+La chute de ce dégradé, et la direction vers laquelle il se tourne, se règlent librement. Il peut suivre le trait, ou rester sur l'inclinaison du stylet, de sorte qu'un ombrage en aller-retour garde le même bord net.
 
 ## Charge de pinceau et reprise de matière
 

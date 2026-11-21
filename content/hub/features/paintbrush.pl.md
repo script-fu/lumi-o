@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 Narzędzie Pędzel to podstawowe narzędzie do malowania Lumi: responsywny i wyrazisty sposób rysowania, malowania, cieniowania, teksturowania i tworzenia znaków bezpośrednio na płótnie. Został zaprojektowany tak, aby był natychmiastowy i jednocześnie dawał artystom możliwość kształtowania zachowania udaru.
@@ -90,6 +90,12 @@ Pędzel z włosia może zmieniać się w trakcie rysowania pociągnięcia. Włos
 Animacja postępuje wraz z plamkami. Może zacząć się po przebyciu odległości albo gdy ręka skręca. Stany pośrednie odtwarzają się wzdłuż ścieżki. Ten sam gest daje tę samą sekwencję.
 
 Aerograf kładzie świeży układ włosia w miarę emisji, więc przytrzymane pociągnięcie wciąż odnawia natrysk. Pociągnięcie kaligraficzne zachowuje ciągłą stalówkę, która nadal może przyjąć teksturę powierzchni. Animacja włosia należy do stemplowanego pędzla z włosia.
+
+## Gradienty krawędzi
+
+Pociągnięcie może mieć ostrą stronę i rozmytą, jak węgiel albo pastel. Ku miękkiej stronie farba może gasnąć, końcówka schnąć i kruszyć się, a ząb papieru wychodzić mocniej. Włosie może się tam przerzedzać i wypadać, a formacja główek zostać zwarta i pełna po twardej stronie, podczas gdy miękka się rozluźnia i rozprasza.
+
+To, jak ten gradient opada i w którą stronę jest zwrócony, da się swobodnie kształtować. Może obracać się wraz z pociągnięciem albo trzymać się nachylenia rysika, tak że cieniowanie tam i z powrotem zachowuje tę samą twardą krawędź.
 
 ## Załadunek pędzla i pobieranie farby
 

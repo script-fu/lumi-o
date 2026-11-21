@@ -88,6 +88,12 @@ The animation advances with the dabs of the stroke. It can begin after the mark 
 
 An airbrush is a different kind of motion. It can lay a fresh bristle arrangement as it emits, so a held stroke keeps renewing the spray. A calligraphic stroke keeps its continuous nib, and that nib can still pick up surface texture. Bristle animation belongs to the stamped bristle brush.
 
+## Edge gradients
+
+A stroke can hold a sharp side and a feathered one, the way a charcoal stick or a pastel does. Toward the soft side the paint can fade, the tip can dry and break up, and more of the paper tooth can show. Bristles can thin and drop away there, and a formation of heads can stay tight and solid on the hard side while the soft side loosens and sprays.
+
+The fall of that grade, and the direction it faces, can be shaped freely. It can turn with the stroke, or hold to the lean of the stylus so a back-and-forth shade keeps the same hard edge. 
+
 ## Brush load and paint pickup
 
 The Brush can also simulate how much paint or material is currently carried on the brush. As a stroke continues, that load can gradually run down, letting marks become lighter, drier, thinner, rougher, or otherwise more broken up depending on how the brush dynamics are set.

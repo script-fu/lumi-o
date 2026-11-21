@@ -2,7 +2,7 @@
 title: "Alat Kuas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 url: "hub/features/paintbrush"
 translation_lock: true
 ---
@@ -89,6 +89,12 @@ Kuas bulu dapat berubah saat goresan digambar. Bulu tumbuh dan menyusut. Sebagia
 Animasi maju bersama cap. Animasi dapat dimulai setelah jarak tertentu, atau saat tangan berbelok. Keadaan antara dimainkan sepanjang jalur. Gerakan yang sama menghasilkan urutan yang sama.
 
 Airbrush meletakkan susunan bulu yang baru saat ia memancarkan cat, sehingga goresan yang ditahan terus memperbarui semprotan. Goresan kaligrafi mempertahankan ujung pena yang kontinu, yang tetap dapat mengambil tekstur permukaan. Animasi bulu adalah milik kuas bulu yang dicap.
+
+## Gradien tepi
+
+Sebuah goresan dapat memegang sisi yang tajam dan sisi yang meluruh, seperti arang atau pastel. Ke arah sisi yang lembut, cat dapat memudar, ujung mengering dan pecah, dan gigi kertas lebih banyak terlihat. Bulu dapat menipis dan rontok di sana, sementara formasi kepala tetap rapat dan padat di sisi yang keras, dan sisi yang lembut mengendur lalu menyebar.
+
+Turunnya gradien itu, dan arah yang dihadapinya, dapat dibentuk dengan bebas. Gradien dapat berputar mengikuti goresan, atau mengikuti kemiringan stylus, sehingga bayangan bolak-balik mempertahankan tepi keras yang sama.
 
 ## Muatan kuas dan pickup cat
 

@@ -3,7 +3,7 @@ title: "Công cụ cọ"
 type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 translation_lock: true
 ---
 
@@ -90,6 +90,12 @@ Cọ lông cứng có thể đổi trong khi nét vẫn đang vẽ. Từng sợi
 Hoạt hình tiến cùng các dấu chấm của nét. Nó có thể bắt đầu sau khi dấu đã đi một quãng, hoặc khi tay ngoặt. Các trạng thái ở giữa diễn ra dọc đường, và cùng một cử chỉ cho cùng một chuỗi.
 
 Airbrush là một chuyển động khác. Nó có thể đặt một sắp xếp lông mới khi phun, nên nét giữ yên vẫn làm mới tia. Nét thư pháp giữ ngòi liên tục, và ngòi đó vẫn nhận kết cấu bề mặt. Chuyển động của lông thuộc về cọ lông cứng đóng dấu.
+
+## Chuyển sắc cạnh
+
+Một nét có thể giữ một bên sắc và một bên loang, như thỏi than hoặc phấn tiên. Về phía mềm, sơn có thể nhạt đi, đầu khô và vỡ, và độ nhám của giấy hiện ra nhiều hơn. Lông có thể mỏng đi và rụng ở đó, và một đội hình các đầu có thể giữ chặt, đặc ở phía cứng, trong khi phía mềm nới ra và tóe.
+
+Độ rơi của chuyển sắc đó, và hướng nó quay, có thể uốn tự do. Nó có thể quay theo nét, hoặc giữ theo độ nghiêng của bút, để tô bóng qua lại giữ cùng một cạnh cứng.
 
 ## Tải mực và nhặt sơn
 

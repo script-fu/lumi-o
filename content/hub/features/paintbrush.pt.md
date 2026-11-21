@@ -2,7 +2,7 @@
 title: "Ferramenta Pincel"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 url: "hub/features/paintbrush"
 translation_lock: true
 ---
@@ -89,6 +89,12 @@ Um pincel de cerdas pode mudar enquanto o traço é desenhado. As cerdas crescem
 A animação avança com as pinceladas. Pode começar depois de uma distância, ou quando a mão vira. Os estados intermédios percorrem o caminho. O mesmo gesto produz a mesma sequência.
 
 Um aerógrafo assenta um arranjo novo de cerdas à medida que emite, pelo que um traço parado continua a renovar o spray. Um traço caligráfico conserva a sua pena contínua, que ainda pode receber textura de superfície. A animação das cerdas pertence ao pincel de cerdas carimbado.
+
+## Gradientes de bordo
+
+Um traço pode ter um lado nítido e outro esfumado, como um carvão ou um pastel. Para o lado suave a tinta pode desvanecer, a ponta secar e partir, e o dente do papel aparecer mais. As cerdas podem adelgaçar e cair aí, e uma formação de cabeças manter-se apertada e sólida no lado duro, enquanto o lado suave se solta e se espalha.
+
+A queda desse gradiente, e a direcção para que olha, moldam-se livremente. Pode virar com o traço, ou manter-se na inclinação do stylus, de modo que um sombreado de vai-e-vem conserve o mesmo bordo duro.
 
 ## Carga de pincel e recolha de tinta
 

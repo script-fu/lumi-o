@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een streek zich gedraagt.
@@ -90,6 +90,12 @@ Een penseel met borstelharen kan veranderen terwijl de streek nog wordt getekend
 De animatie loopt mee met de deppen van de streek. Ze kan beginnen nadat de markering een afstand heeft afgelegd, of wanneer de hand draait. De tussenstanden spelen zich af langs het pad, en hetzelfde gebaar levert dezelfde reeks op.
 
 Een airbrush is een andere soort beweging. Hij kan bij het uitstoten een verse schikking van haren neerleggen, zodat een vastgehouden streek de nevel blijft vernieuwen. Een kalligrafische streek houdt zijn doorlopende pen, en die pen kan nog steeds oppervlaktetextuur opnemen. De animatie van borstelharen hoort bij het gestempelde penseel met borstelharen.
+
+## Randverlopen
+
+Een streek kan een scherpe en een uitlopende kant hebben, zoals een houtskoolstift of een pastel. Naar de zachte kant kan de verf vervagen, de punt opdrogen en openbreken, en meer van de tand van het papier doorkomen. Borstelharen kunnen daar dunner worden en wegvallen, en een formatie van koppen kan aan de harde kant dicht en dekkend blijven terwijl de zachte kant losser wordt en uitwaaiert.
+
+De val van dat verloop, en de richting waarin het wijst, zijn vrij te vormen. Het kan met de streek meedraaien, of de helling van de stylus volgen, zodat schaduwen heen en weer dezelfde harde rand houden.
 
 ## Borstelbelasting en verfopname
 

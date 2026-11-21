@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 Lo strumento Pennello è lo strumento di pittura principale di Lumi: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
@@ -90,6 +90,12 @@ Un pennello a setole può cambiare mentre il tratto è ancora in corso. Le singo
 L'animazione avanza con i tocchi del tratto. Può iniziare dopo che il segno ha percorso una distanza, oppure quando la mano gira. Gli stati intermedi si svolgono lungo il percorso, e lo stesso gesto produce la stessa sequenza.
 
 Un aerografo è un movimento di altro tipo. Può depositare una disposizione di setole nuova mentre emette, così un tratto tenuto rinnova lo spruzzo. Un tratto calligrafico conserva il suo pennino continuo, e quel pennino può ancora prendere la texture di superficie. L'animazione delle setole appartiene al pennello a setole stampato.
+
+## Gradienti di bordo
+
+Un tratto può tenere un lato netto e uno sfumato, come un carboncino o un pastello. Verso il lato morbido la pittura può svanire, la punta seccarsi e spezzarsi, e il dente della carta mostrarsi di più. Le setole possono assottigliarsi e cadere lì, e una formazione di teste restare fitta e piena sul lato duro, mentre il lato morbido si allenta e si apre a spruzzo.
+
+La caduta di quel gradiente, e la direzione verso cui guarda, si possono modellare liberamente. Può girare con il tratto, oppure restare sull'inclinazione dello stilo, così un'ombreggiatura avanti e indietro conserva lo stesso bordo netto.
 
 ## Carico del pennello e prelievo della vernice
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 La herramienta Pincel es el instrumento de pintura principal de Lumi: una forma sensible y expresiva de dibujar, pintar, sombrear, texturizar y crear marcas directamente en el lienzo. Está diseñada para sentirse inmediata y, al mismo tiempo, dar al artista margen para definir cómo se comporta un trazo.
@@ -90,6 +90,12 @@ Un pincel de cerdas puede cambiar mientras el trazo aún se está dibujando. Las
 La animación avanza con los toques del trazo. Puede empezar después de que la marca haya recorrido una distancia, o cuando la mano gira. Los estados intermedios se desarrollan a lo largo del recorrido, y el mismo gesto produce la misma secuencia.
 
 Un aerógrafo es otro tipo de movimiento. Puede depositar una disposición de cerdas nueva a medida que emite, de modo que un trazo sostenido renueva la pulverización. Un trazo caligráfico conserva su pluma continua, y esa pluma puede seguir tomando textura de superficie. La animación de las cerdas pertenece al pincel de cerdas estampado.
+
+## Degradados de borde
+
+Un trazo puede sostener un lado nítido y otro difuminado, como un carboncillo o un pastel. Hacia el lado suave la pintura puede desvanecerse, la punta secarse y romperse, y asomar más el diente del papel. Las cerdas pueden adelgazarse y caer ahí, y una formación de cabezales mantenerse prieta y sólida en el lado duro, mientras el lado suave se afloja y se pulveriza.
+
+La caída de ese degradado, y la dirección hacia la que mira, se pueden modelar con libertad. Puede girar con el trazo, o sujetarse a la inclinación del lápiz, de modo que un sombreado de ida y vuelta conserve el mismo borde duro.
 
 ## Carga del pincel y recogida de pintura
 

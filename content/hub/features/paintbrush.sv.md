@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/paintbrush"
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 Penselverktyget är Lumis kärnmålningsinstrument: ett lyhört, uttrycksfullt sätt att rita, måla, skugga, strukturera och bygga märken direkt på duken. Den är designad för att kännas omedelbar samtidigt som den ger konstnärer utrymme att forma hur en stroke beter sig.
 
@@ -89,6 +89,12 @@ En borstpensel kan förändras medan draget ritas. Borsten växer och krymper. E
 Animationen går framåt med avtrycken. Den kan börja efter en sträcka, eller när handen svänger. Mellantillstånden spelas längs banan. Samma gest ger samma följd.
 
 En airbrush lägger ett nytt borstarrangemang medan den avger färg, så att ett hållet drag fortsätter att förnya sprutet. Ett kalligrafiskt drag behåller sin sammanhängande spets, som fortfarande kan ta upp ytans textur. Borstanimationen hör till den stämplade borstpenseln.
+
+## Kantövertoningar
+
+Ett drag kan hålla en skarp och en utlöpande sida, som en kolsticka eller en pastell. Mot den mjuka sidan kan färgen tona av, spetsen torka och brytas upp, och mer av papprets tand synas. Borsten kan glesna och falla bort där, och en formation av huvuden kan ligga tät och täckande på den hårda sidan medan den mjuka sidan lossnar och sprider sig.
+
+Fallet i den övertoningen, och riktningen den vänder sig åt, kan formas fritt. Den kan vrida sig med draget, eller följa pennans lutning, så att en skuggning fram och tillbaka behåller samma hårda kant.
 
 ## Penselladdning och färgupptagning
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 Das Pinselwerkzeug ist Lumis zentrales Malinstrument — reaktionsschnell und ausdrucksstark zum Zeichnen, Malen, Schattieren, Texturieren und Setzen von Strichen direkt auf der Leinwand. Es soll unmittelbar wirken und dem Künstler trotzdem Raum geben, das Strichverhalten zu formen.
 
@@ -89,6 +89,12 @@ Ein Borstenpinsel kann sich ändern, während der Strich noch gezeichnet wird. E
 Die Animation schreitet mit den Tupfern des Strichs voran. Sie kann einsetzen, nachdem die Marke eine Strecke zurückgelegt hat, oder wenn die Hand wendet. Die Zwischenzustände spielen sich entlang des Pfades ab, und dieselbe Geste erzeugt dieselbe Folge.
 
 Ein Airbrush ist eine andere Art von Bewegung. Er kann beim Ausgeben eine frische Borstenanordnung legen, sodass ein gehaltener Strich den Sprühnebel fortlaufend erneuert. Ein kalligrafischer Strich behält seine durchgehende Feder, und diese Feder kann weiterhin Oberflächentextur aufnehmen. Die Borstenanimation gehört zum gestempelten Borstenpinsel.
+
+## Kantenverläufe
+
+Ein Strich kann eine scharfe und eine auslaufende Seite haben, wie ein Kohlestift oder ein Pastell. Zur weichen Seite hin kann die Farbe verblassen, die Spitze trocknen und aufbrechen, und mehr von der Griffigkeit des Papiers hervortreten. Dort können Borsten dünner werden und ausfallen, und eine Formation aus Köpfen kann auf der harten Seite dicht und deckend bleiben, während sich die weiche Seite lockert und versprüht.
+
+Wie dieser Verlauf abfällt, und wohin er weist, lässt sich frei formen. Er kann sich mit dem Strich drehen oder der Neigung des Stifts folgen, sodass eine Hin-und-her-Schattierung dieselbe harte Kante behält.
 
 ## Pinselladung und Farbaufnahme
 

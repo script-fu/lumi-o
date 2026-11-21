@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 467281fdb592ef90257d2dc951c59516e623a5ae34360c4be446a8d487529330
+translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
 ---
 
 A ferramenta Pincel é o principal instrumento de pintura do Lumi: uma forma responsiva e expressiva de desenhar, pintar, sombrear, texturizar e construir marcas diretamente na tela. Ele foi projetado para parecer imediato e, ao mesmo tempo, dar aos artistas espaço para moldar o comportamento de um traço.
@@ -90,6 +90,12 @@ Um pincel de cerdas pode mudar enquanto o traço é desenhado. As cerdas crescem
 A animação avança com as pinceladas. Pode começar depois de uma distância, ou quando a mão vira. Os estados intermediários percorrem o caminho. O mesmo gesto produz a mesma sequência.
 
 Um aerógrafo deposita um arranjo novo de cerdas conforme emite, e um traço parado continua renovando o spray. Um traço caligráfico conserva a ponta contínua, que ainda pode receber textura de superfície. A animação das cerdas pertence ao pincel de cerdas carimbado.
+
+## Gradientes de borda
+
+Um traço pode ter um lado nítido e outro esfumado, como um carvão ou um pastel. Para o lado suave a tinta pode sumir, a ponta secar e se partir, e o dente do papel aparecer mais. As cerdas podem afinar e cair ali, e uma formação de cabeças ficar apertada e sólida no lado duro, enquanto o lado suave se solta e se espalha.
+
+A queda desse gradiente, e a direção para a qual ele aponta, podem ser modeladas à vontade. Ele pode virar com o traço, ou seguir a inclinação da caneta, de modo que um sombreamento de vai e vem mantenha a mesma borda dura.
 
 ## Carregamento de pincel e coleta de tinta
 
