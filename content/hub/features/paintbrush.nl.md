@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een streek zich gedraagt.
@@ -69,7 +69,7 @@ Met het penseel kan met meer dan één hoofd tegelijk worden geschilderd. Er kun
 
 Deze koppen kunnen de bewegingsrichting volgen, van elkaar variëren en zich verspreiden op een manier waardoor de slag organisch aanvoelt in plaats van mechanisch herhaald. Dit is vooral handig voor penselen met natuurlijke media, decoratieve streken, bladeren, vacht, arceringen en andere markeringen die baat hebben bij gecontroleerde onregelmatigheden.
 
-Gegenereerde penselen kunnen ook als velden van borstelharen worden opgebouwd. Vorm en animatie tijdens de streek voor die velden worden hieronder beschreven.
+Gegenereerde penselen kunnen ook als velden van borstelharen worden opgebouwd. Vorm, en hoe die velden langs een streek bewegen, worden hieronder beschreven.
 
 ## Vorm van de borstelharen
 
@@ -85,11 +85,11 @@ De grootte van de haren kan de stylusdruk volgen en de andere invoer die een str
 
 ## Borstelharen langs de streek
 
-Een penseel met borstelharen kan veranderen terwijl de streek nog wordt getekend. Afzonderlijke haren groeien en krimpen. Sommige doven uit, andere groeien elders bij, zodat het karakter van de kop langs de markering reist. De dichtheid van de pluk blijft gelijk terwijl de haren zich herschikken.
+Terwijl een streek wordt getekend, kunnen de haren bewegen als een levende pluk. Ze slepen achter de hand aan, zwaaien door een draai en komen in de nieuwe richting tot rust, duwen terug als de streek omkeert, draaien mee met de rotatie van het penseel, openen onder druk en veren terug naar hun ruststand. Haren die naslepen kunnen voorbij de rustende omtrek reiken.
 
-De animatie loopt mee met de deppen van de streek. Ze kan beginnen nadat de markering een afstand heeft afgelegd, of wanneer de hand draait. De tussenstanden spelen zich af langs het pad, en hetzelfde gebaar levert dezelfde reeks op.
+Hoe ver ze gaan, hoe vast de plukken bij elkaar blijven en hoe snel ze tot rust komen, is vrij te vormen. Een stugge pluk kan in één spoor blijven. Een zachtere kan splijten, een draai na-ijlen en een beetje van de buiging houden voordat hij terugveert. Hetzelfde gebaar levert dezelfde beweging op.
 
-Een airbrush is een andere soort beweging. Hij kan bij het uitstoten een verse schikking van haren neerleggen, zodat een vastgehouden streek de nevel blijft vernieuwen. Een kalligrafische streek houdt zijn doorlopende pen, en die pen kan nog steeds oppervlaktetextuur opnemen. De animatie van borstelharen hoort bij het gestempelde penseel met borstelharen.
+Een airbrush is een andere soort beweging. Hij kan bij het uitstoten een verse schikking van haren neerleggen, zodat een vastgehouden streek de nevel blijft vernieuwen. Een kalligrafische streek houdt zijn doorlopende pen, en die pen kan nog steeds oppervlaktetextuur opnemen. Deze levende beweging hoort bij het gestempelde penseel met borstelharen.
 
 ## Randverlopen
 

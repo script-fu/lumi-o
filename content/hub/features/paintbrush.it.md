@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 Lo strumento Pennello è lo strumento di pittura principale di Lumi: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
@@ -69,7 +69,7 @@ Lo strumento Pennello può dipingere con più di una testa alla volta. Più test
 
 Queste teste possono seguire la direzione del movimento, variare l'una dall'altra e disperdersi in modi che rendono il tratto organico piuttosto che ripetuto meccanicamente. È particolarmente utile per pennelli di media naturale, tratti decorativi, fogliame, pelliccia, tratteggi e altri segni che beneficiano di irregolarità controllata.
 
-I pennelli generati possono anche essere costruiti come campi di setole. Forma e animazione nel tratto di quei campi sono descritte più sotto.
+I pennelli generati possono anche essere costruiti come campi di setole. La forma di quei campi, e come si muovono lungo un tratto, sono descritte più sotto.
 
 ## Forma delle setole
 
@@ -85,11 +85,11 @@ La dimensione delle setole può seguire la pressione dello stilo e gli altri inp
 
 ## Setole lungo il tratto
 
-Un pennello a setole può cambiare mentre il tratto è ancora in corso. Le singole setole crescono e si riducono. Alcune svaniscono, altre crescono altrove, così il carattere della testa viaggia lungo il segno. La densità del ciuffo resta stabile mentre i peli si riorganizzano.
+Mentre un tratto è ancora in corso, i peli possono muoversi come un ciuffo vivo. Seguono la mano restando indietro, oscillano in una svolta e si assestano nella nuova direzione, fanno resistenza quando il tratto si inverte, si torcono con la rotazione del pennello, si aprono sotto la pressione e tornano a molla verso la disposizione di riposo. I peli che restano indietro possono uscire dal contorno a riposo.
 
-L'animazione avanza con i tocchi del tratto. Può iniziare dopo che il segno ha percorso una distanza, oppure quando la mano gira. Gli stati intermedi si svolgono lungo il percorso, e lo stesso gesto produce la stessa sequenza.
+Quanto viaggiano, quanto i ciuffi restano uniti e quanto in fretta si assestano si possono modellare. Un ciuffo rigido può restare su una sola traccia. Uno più morbido può dividersi, ritardare una torsione e tenere un po' della piega prima di tornare. Lo stesso gesto produce lo stesso movimento.
 
-Un aerografo è un movimento di altro tipo. Può depositare una disposizione di setole nuova mentre emette, così un tratto tenuto rinnova lo spruzzo. Un tratto calligrafico conserva il suo pennino continuo, e quel pennino può ancora prendere la texture di superficie. L'animazione delle setole appartiene al pennello a setole stampato.
+Un aerografo è un movimento di altro tipo. Può depositare una disposizione di setole nuova mentre emette, così un tratto tenuto rinnova lo spruzzo. Un tratto calligrafico conserva il suo pennino continuo, e quel pennino può ancora prendere la texture di superficie. Questo movimento vivo appartiene al pennello a setole stampato.
 
 ## Gradienti di bordo
 

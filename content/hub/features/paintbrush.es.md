@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 La herramienta Pincel es el instrumento de pintura principal de Lumi: una forma sensible y expresiva de dibujar, pintar, sombrear, texturizar y crear marcas directamente en el lienzo. Está diseñada para sentirse inmediata y, al mismo tiempo, dar al artista margen para definir cómo se comporta un trazo.
@@ -69,7 +69,7 @@ La herramienta Pincel puede pintar con más de un cabezal a la vez. Varios cabez
 
 Esos cabezales pueden seguir la dirección del recorrido, variar entre sí y dispersarse de modo que el trazo se sienta orgánico y no mecánicamente repetido. Es especialmente útil para pinceles de medios naturales, trazos decorativos, follaje, pelo, rayado y otras marcas que se benefician de una irregularidad controlada.
 
-Los pinceles generados también pueden construirse como campos de cerdas. La forma y la animación en el trazo de esos campos se describen más abajo.
+Los pinceles generados también pueden construirse como campos de cerdas. La forma de esos campos, y cómo se mueven a lo largo de un trazo, se describen más abajo.
 
 ## Forma de las cerdas
 
@@ -85,11 +85,11 @@ El tamaño de las cerdas puede seguir la presión del lápiz y las demás entrad
 
 ## Cerdas a lo largo del trazo
 
-Un pincel de cerdas puede cambiar mientras el trazo aún se está dibujando. Las cerdas individuales crecen y menguan. Unas se desvanecen y otras crecen en otro lugar, de modo que el carácter del cabezal viaja a lo largo de la marca. La densidad del mechón se mantiene estable mientras los pelos se reordenan.
+Mientras se dibuja un trazo, los pelos pueden moverse como un mechón vivo. Siguen la mano con retraso, giran en un cambio de dirección y se asientan en la nueva, empujan cuando el trazo invierte el sentido, se retuercen al girar el pincel, se abren bajo la presión y vuelven de resorte a su forma en reposo. Los pelos que van a la zaga pueden salir del contorno en reposo.
 
-La animación avanza con los toques del trazo. Puede empezar después de que la marca haya recorrido una distancia, o cuando la mano gira. Los estados intermedios se desarrollan a lo largo del recorrido, y el mismo gesto produce la misma secuencia.
+Cuánto recorren, cuán unidos se mantienen los mechones y con qué rapidez se asientan se puede modelar. Un mechón rígido puede quedarse en una sola huella. Uno más blando puede partirse, retrasar un giro y conservar un poco de la curva antes de volver a su sitio. El mismo gesto produce el mismo movimiento.
 
-Un aerógrafo es otro tipo de movimiento. Puede depositar una disposición de cerdas nueva a medida que emite, de modo que un trazo sostenido renueva la pulverización. Un trazo caligráfico conserva su pluma continua, y esa pluma puede seguir tomando textura de superficie. La animación de las cerdas pertenece al pincel de cerdas estampado.
+Un aerógrafo es otro tipo de movimiento. Puede depositar una disposición de cerdas nueva a medida que emite, de modo que un trazo sostenido renueva la pulverización. Un trazo caligráfico conserva su pluma continua, y esa pluma puede seguir tomando textura de superficie. Este movimiento vivo pertenece al pincel de cerdas estampado.
 
 ## Degradados de borde
 

@@ -2,7 +2,7 @@
 title: "Alat Kuas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 url: "hub/features/paintbrush"
 translation_lock: true
 ---
@@ -68,7 +68,7 @@ Alat Kuas dapat melukis dengan lebih dari satu kepala sekaligus. Beberapa kepala
 
 Kepala dapat mengikuti arah perjalanan, bervariasi satu sama lain, dan tersebar sehingga goresan terasa organik alih-alih berulang mekanis. Sangat berguna untuk kuas media alami, goresan dekoratif, dedaunan, bulu, arsiran, dan tanda lain yang mendapat manfaat dari ketidakteraturan terkendali.
 
-Kuas yang dihasilkan juga dapat dibangun sebagai bidang bulu. Bentuk dan animasi di dalam goresan untuk bidang itu dijelaskan di bawah.
+Kuas yang dihasilkan juga dapat dibangun sebagai bidang bulu. Bentuk bidang itu, dan cara bidang itu bergerak sepanjang goresan, dijelaskan di bawah.
 
 ## Bentuk bulu
 
@@ -84,11 +84,11 @@ Ukuran bulu dapat mengikuti tekanan stylus dan masukan lain. Saat ukuran berubah
 
 ## Bulu sepanjang goresan
 
-Kuas bulu dapat berubah saat goresan digambar. Bulu tumbuh dan menyusut. Sebagian memudar dan sebagian lain tumbuh, sehingga karakter berjalan sepanjang tanda. Kepadatan tetap stabil.
+Saat goresan digambar, bulu dapat bergerak sebagai ikatan yang hidup. Bulu tertinggal di belakang tangan, berayun pada belokan lalu menetap di arah baru, menolak saat goresan berbalik, terpuntir mengikuti putaran kuas, membuka di bawah tekanan, dan memegas kembali ke susunan istirahat. Bulu yang tertinggal dapat melewati garis luar saat istirahat.
 
-Animasi maju bersama cap. Animasi dapat dimulai setelah jarak tertentu, atau saat tangan berbelok. Keadaan antara dimainkan sepanjang jalur. Gerakan yang sama menghasilkan urutan yang sama.
+Seberapa jauh mereka berjalan, seberapa erat gumpalan saling menahan, dan seberapa cepat mereka menetap dapat dibentuk. Ikatan yang kaku dapat tetap pada satu jejak. Yang lebih lunak dapat terbelah, terlambat pada puntiran, dan menyimpan sedikit lengkungan sebelum kembali. Gerakan yang sama menghasilkan gerak yang sama.
 
-Airbrush meletakkan susunan bulu yang baru saat ia memancarkan cat, sehingga goresan yang ditahan terus memperbarui semprotan. Goresan kaligrafi mempertahankan ujung pena yang kontinu, yang tetap dapat mengambil tekstur permukaan. Animasi bulu adalah milik kuas bulu yang dicap.
+Airbrush meletakkan susunan bulu yang baru saat ia memancarkan cat, sehingga goresan yang ditahan terus memperbarui semprotan. Goresan kaligrafi mempertahankan ujung pena yang kontinu, yang tetap dapat mengambil tekstur permukaan. Gerakan hidup ini milik kuas bulu yang dicap.
 
 ## Gradien tepi
 

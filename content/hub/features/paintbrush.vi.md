@@ -3,7 +3,7 @@ title: "Công cụ cọ"
 type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 translation_lock: true
 ---
 
@@ -69,7 +69,7 @@ Cọ vẽ bằng nhiều đầu cùng lúc. Nhiều đầu sắp quanh path tạ
 
 Các đầu theo hướng di chuyển, khác nhau và phân tán khiến nét hữu cơ hơn lặp máy móc. Đặc biệt hữu ích cho cọ media tự nhiên, nét trang trí, lá, lông, gạch bóng và nét cần bất quy tắc có kiểm soát.
 
-Cọ tạo được cũng có thể dựng thành một trường lông. Hình dạng và chuyển động trong nét của trường đó được mô tả bên dưới.
+Cọ tạo được cũng có thể dựng thành một trường lông. Hình dạng của trường đó, và trường đó chuyển động dọc nét thế nào, được mô tả bên dưới.
 
 ## Hình dạng lông
 
@@ -85,11 +85,11 @@ Kích thước lông có thể theo áp lực bút và các đầu vào khác đ
 
 ## Lông theo nét vẽ
 
-Cọ lông cứng có thể đổi trong khi nét vẫn đang vẽ. Từng sợi lớn lên và nhỏ lại. Một số phai đi, số khác mọc ở chỗ khác, nên tính cách của đầu đi dọc dấu. Mật độ chùm giữ đều trong khi lông sắp lại.
+Trong khi nét vẫn đang vẽ, lông có thể chuyển động như một chùm sống. Chúng theo tay mà trễ lại, vung qua chỗ ngoặt rồi vào hướng mới, đẩy lại khi nét đảo chiều, xoắn theo vòng quay của cọ, mở ra dưới áp lực, và bật về thế nghỉ. Những sợi trễ có thể vươn khỏi đường viền lúc nghỉ.
 
-Hoạt hình tiến cùng các dấu chấm của nét. Nó có thể bắt đầu sau khi dấu đã đi một quãng, hoặc khi tay ngoặt. Các trạng thái ở giữa diễn ra dọc đường, và cùng một cử chỉ cho cùng một chuỗi.
+Chúng đi bao xa, các chùm giữ nhau chặt đến mức nào, và lắng lại nhanh thế nào, có thể uốn được. Một chùm cứng có thể ở trên một vệt. Một chùm mềm hơn có thể tách, chậm một nhịp xoắn, và giữ một chút độ cong trước khi về chỗ. Cùng một cử chỉ cho cùng một chuyển động.
 
-Airbrush là một chuyển động khác. Nó có thể đặt một sắp xếp lông mới khi phun, nên nét giữ yên vẫn làm mới tia. Nét thư pháp giữ ngòi liên tục, và ngòi đó vẫn nhận kết cấu bề mặt. Chuyển động của lông thuộc về cọ lông cứng đóng dấu.
+Airbrush là một chuyển động khác. Nó có thể đặt một sắp xếp lông mới khi phun, nên nét giữ yên vẫn làm mới tia. Nét thư pháp giữ ngòi liên tục, và ngòi đó vẫn nhận kết cấu bề mặt. Chuyển động sống này thuộc về cọ lông cứng đóng dấu.
 
 ## Chuyển sắc cạnh
 

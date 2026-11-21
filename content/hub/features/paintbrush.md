@@ -66,7 +66,7 @@ The Brush tool can paint with more than one head at a time. Multiple heads can b
 
 These heads can follow the direction of travel, vary from one another, and scatter in ways that make the stroke feel organic rather than mechanically repeated. This is especially useful for natural media brushes, decorative strokes, foliage, fur, hatching, and other marks that benefit from controlled irregularity.
 
-Generated brushes can also be built as bristle fields. Shape and in-stroke animation for those fields are described below.
+Generated brushes can also be built as bristle fields. Shape, and how those fields move along a stroke, are described below.
 
 ## Bristle shape
 
@@ -82,11 +82,11 @@ Bristle size can follow stylus pressure and the other inputs that shape a stroke
 
 ## Bristles along the stroke
 
-A bristle brush can change while the stroke is still being drawn. Individual bristles grow and shrink. Some fade out, and others grow in elsewhere, so the character of the head travels along the mark. The density of the tuft stays steady while the hairs rearrange.
+While a stroke is being drawn, the hairs can move as a living tuft. They trail the hand, swing through a turn and settle into the new direction, push back when the stroke reverses, twist as the brush rotates, open under pressure, and spring back toward the way they rest. Hairs that trail can reach past the resting outline.
 
-The animation advances with the dabs of the stroke. It can begin after the mark has travelled a distance, or when the hand turns. The in-between states play out along the path, and the same gesture produces the same sequence.
+How far they travel, how tightly the clumps hold together, and how quickly they settle can be shaped. A stiff tuft can stay in one track. A softer one can split, lag a twist, and keep a little of the bend before it eases home. The same gesture produces the same motion.
 
-An airbrush is a different kind of motion. It can lay a fresh bristle arrangement as it emits, so a held stroke keeps renewing the spray. A calligraphic stroke keeps its continuous nib, and that nib can still pick up surface texture. Bristle animation belongs to the stamped bristle brush.
+An airbrush is a different kind of motion. It can lay a fresh bristle arrangement as it emits, so a held stroke keeps renewing the spray. A calligraphic stroke keeps its continuous nib, and that nib can still pick up surface texture. This live motion belongs to the stamped bristle brush.
 
 ## Edge gradients
 

@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 L'outil Pinceau est l'instrument de peinture principal de Lumi : une façon réactive et expressive de dessiner, peindre, ombrer, texturer et poser des marques directement sur le canevas. Il est conçu pour rester immédiat tout en laissant aux artistes la possibilité de façonner le comportement d'un trait.
@@ -69,7 +69,7 @@ L'outil Pinceau peut peindre avec plusieurs têtes à la fois. Plusieurs têtes 
 
 Ces têtes peuvent suivre la direction du déplacement, varier les unes des autres et se disperser de manière à donner au trait un aspect organique plutôt que mécaniquement répété. C'est particulièrement utile pour les pinceaux de type médium naturel, les traits décoratifs, le feuillage, la fourrure, les hachures et autres marques qui gagnent à une irrégularité maîtrisée.
 
-Les pinceaux générés peuvent aussi être construits comme des champs de poils. La forme de ces champs, et leur animation en cours de trait, sont décrites plus bas.
+Les pinceaux générés peuvent aussi être construits comme des champs de poils. La forme de ces champs, et la façon dont ils bougent le long d'un trait, sont décrites plus bas.
 
 ## Forme des poils
 
@@ -85,11 +85,11 @@ La taille des poils peut suivre la pression du stylet et les autres saisies qui 
 
 ## Poils le long du trait
 
-Un pinceau à poils peut changer pendant que le trait se trace encore. Pris un à un, les poils grandissent et rétrécissent. Certains s'effacent, d'autres poussent ailleurs, et le caractère de la tête voyage ainsi le long de la marque. La densité de la touffe reste stable pendant que les poils se réorganisent.
+Pendant qu'un trait se trace, les poils peuvent bouger comme une touffe vivante. Ils traînent derrière la main, basculent dans un virage et se posent dans la nouvelle direction, repoussent quand le trait s'inverse, se tordent avec la rotation du pinceau, s'ouvrent sous la pression et reviennent vers leur repos. Les poils qui traînent peuvent dépasser le contour au repos.
 
-L'animation avance avec les touches du trait. Elle peut commencer une fois que la marque a parcouru une distance, ou lorsque la main tourne. Les états intermédiaires se jouent le long du trajet, et le même geste produit la même suite.
+La distance qu'ils parcourent, la tenue des touffes et la vitesse à laquelle elles se posent se règlent librement. Une touffe raide peut rester sur une seule trace. Une plus souple peut se fendre, retarder une torsion et garder un peu de la courbure avant de revenir. Le même geste produit le même mouvement.
 
-Un aérographe est un autre genre de mouvement. Il peut poser un arrangement de poils neuf à mesure qu'il émet, de sorte qu'un trait tenu renouvelle le jet sans cesse. Un trait calligraphique conserve sa plume continue, et cette plume peut encore recevoir une texture de surface. L'animation des poils appartient au pinceau à poils estampé.
+Un aérographe est un autre genre de mouvement. Il peut poser un arrangement de poils neuf à mesure qu'il émet, de sorte qu'un trait tenu renouvelle le jet sans cesse. Un trait calligraphique conserve sa plume continue, et cette plume peut encore recevoir une texture de surface. Ce mouvement vivant appartient au pinceau à poils estampé.
 
 ## Dégradés de bord
 

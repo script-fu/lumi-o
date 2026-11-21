@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 Das Pinselwerkzeug ist Lumis zentrales Malinstrument — reaktionsschnell und ausdrucksstark zum Zeichnen, Malen, Schattieren, Texturieren und Setzen von Strichen direkt auf der Leinwand. Es soll unmittelbar wirken und dem Künstler trotzdem Raum geben, das Strichverhalten zu formen.
 
@@ -68,7 +68,7 @@ Das Pinselwerkzeug kann mit mehr als einem Kopf gleichzeitig malen. Mehrere Köp
 
 Die Köpfe folgen der Bewegungsrichtung, weichen voneinander ab und streuen so, dass der Strich organisch statt mechanisch wiederholt wirkt. Besonders nützlich für Naturmedien-Pinsel, dekorative Striche, Laub, Fell, Schraffur und alles, was kontrollierte Unregelmäßigkeit braucht.
 
-Erzeugte Pinsel lassen sich auch als Borstenfelder aufbauen. Form und Animation im Strich für diese Felder sind unten beschrieben.
+Erzeugte Pinsel lassen sich auch als Borstenfelder aufbauen. Form und Bewegung dieser Felder entlang des Strichs sind unten beschrieben.
 
 ## Borstenform
 
@@ -84,11 +84,11 @@ Die Borstengröße kann dem Stiftdruck folgen und den anderen Eingaben, die eine
 
 ## Borsten entlang des Strichs
 
-Ein Borstenpinsel kann sich ändern, während der Strich noch gezeichnet wird. Einzelne Borsten wachsen und schrumpfen. Manche blenden aus, andere wachsen an anderer Stelle nach, sodass der Charakter des Kopfes entlang der Marke wandert. Die Dichte des Büschels bleibt gleich, während sich die Borsten neu ordnen.
+Während ein Strich gezeichnet wird, können sich die Borsten als lebendiges Büschel bewegen. Sie hängen der Hand nach, schwingen durch eine Wendung und legen sich in die neue Richtung, stemmen sich gegen eine Umkehr, verdrehen sich mit der Drehung des Pinsels, öffnen sich unter Druck und federn zur Ruheform zurück. Borsten, die nachhängen, können über den ruhenden Umriss hinausreichen.
 
-Die Animation schreitet mit den Tupfern des Strichs voran. Sie kann einsetzen, nachdem die Marke eine Strecke zurückgelegt hat, oder wenn die Hand wendet. Die Zwischenzustände spielen sich entlang des Pfades ab, und dieselbe Geste erzeugt dieselbe Folge.
+Wie weit sie wandern, wie fest die Büschel zusammenhalten und wie schnell sie zur Ruhe kommen, lässt sich formen. Ein steifes Büschel kann in einer Spur bleiben. Ein weicheres kann sich teilen, einer Drehung nachhängen und ein wenig von der Biegung behalten, bevor es sich wieder legt. Dieselbe Geste erzeugt dieselbe Bewegung.
 
-Ein Airbrush ist eine andere Art von Bewegung. Er kann beim Ausgeben eine frische Borstenanordnung legen, sodass ein gehaltener Strich den Sprühnebel fortlaufend erneuert. Ein kalligrafischer Strich behält seine durchgehende Feder, und diese Feder kann weiterhin Oberflächentextur aufnehmen. Die Borstenanimation gehört zum gestempelten Borstenpinsel.
+Ein Airbrush ist eine andere Art von Bewegung. Er kann beim Ausgeben eine frische Borstenanordnung legen, sodass ein gehaltener Strich den Sprühnebel fortlaufend erneuert. Ein kalligrafischer Strich behält seine durchgehende Feder, und diese Feder kann weiterhin Oberflächentextur aufnehmen. Diese lebendige Bewegung gehört zum gestempelten Borstenpinsel.
 
 ## Kantenverläufe
 

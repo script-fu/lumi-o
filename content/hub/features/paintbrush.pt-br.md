@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 A ferramenta Pincel é o principal instrumento de pintura do Lumi: uma forma responsiva e expressiva de desenhar, pintar, sombrear, texturizar e construir marcas diretamente na tela. Ele foi projetado para parecer imediato e, ao mesmo tempo, dar aos artistas espaço para moldar o comportamento de um traço.
@@ -69,7 +69,7 @@ A ferramenta Pincel pode pintar com mais de uma cabeça por vez. Várias cabeça
 
 Essas cabeças podem seguir a direção do deslocamento, variar umas das outras e se espalhar de maneiras que fazem com que o golpe pareça orgânico, em vez de repetido mecanicamente. Isso é especialmente útil para pincéis de mídia natural, traços decorativos, folhagens, pêlos, hachuras e outras marcas que se beneficiam de irregularidades controladas.
 
-Pincéis gerados também podem ser construídos como campos de cerdas. A forma e a animação ao longo do traço desses campos estão descritas abaixo.
+Pincéis gerados também podem ser construídos como campos de cerdas. A forma desses campos, e como eles se movem ao longo de um traço, estão descritas abaixo.
 
 ## Forma das cerdas
 
@@ -85,11 +85,11 @@ O tamanho das cerdas pode seguir a pressão da caneta e outras entradas. Conform
 
 ## Cerdas ao longo do traço
 
-Um pincel de cerdas pode mudar enquanto o traço é desenhado. As cerdas crescem e encolhem. Algumas se apagam e outras crescem em outro ponto, e o caráter percorre a marca. A densidade continua estável.
+Enquanto um traço é desenhado, os fios podem se mover como um tufo vivo. Acompanham a mão com atraso, balançam numa virada e assentam na nova direção, empurram quando o traço inverte, torcem com a rotação do pincel, abrem sob pressão e voltam como mola para o arranjo em repouso. Os fios que ficam para trás podem passar do contorno em repouso.
 
-A animação avança com as pinceladas. Pode começar depois de uma distância, ou quando a mão vira. Os estados intermediários percorrem o caminho. O mesmo gesto produz a mesma sequência.
+O quanto percorrem, o quanto os tufos se mantêm juntos e a rapidez com que assentam podem ser modelados. Um tufo rígido pode ficar numa só trilha. Um mais macio pode se fender, atrasar uma torção e guardar um pouco da curva antes de voltar. O mesmo gesto produz o mesmo movimento.
 
-Um aerógrafo deposita um arranjo novo de cerdas conforme emite, e um traço parado continua renovando o spray. Um traço caligráfico conserva a ponta contínua, que ainda pode receber textura de superfície. A animação das cerdas pertence ao pincel de cerdas carimbado.
+Um aerógrafo deposita um arranjo novo de cerdas conforme emite, e um traço parado continua renovando o spray. Um traço caligráfico conserva a ponta contínua, que ainda pode receber textura de superfície. Este movimento vivo pertence ao pincel de cerdas carimbado.
 
 ## Gradientes de borda
 

@@ -4,7 +4,7 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/paintbrush"
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 Penselverktyget är Lumis kärnmålningsinstrument: ett lyhört, uttrycksfullt sätt att rita, måla, skugga, strukturera och bygga märken direkt på duken. Den är designad för att kännas omedelbar samtidigt som den ger konstnärer utrymme att forma hur en stroke beter sig.
 
@@ -68,7 +68,7 @@ Penselverktyget kan måla med mer än ett huvud åt gången. Flera huvuden kan a
 
 Dessa huvuden kan följa färdriktningen, variera från varandra och sprida sig på ett sätt som gör att slaget känns organiskt snarare än att det upprepas mekaniskt. Detta är särskilt användbart för naturliga mediapenslar, dekorativa drag, lövverk, päls, kläckning och andra märken som drar nytta av kontrollerade oregelbundenheter.
 
-Genererade penslar kan också byggas som borstfält. Form och animering under draget för de fälten beskrivs nedan.
+Genererade penslar kan också byggas som borstfält. Form, och hur de fälten rör sig längs ett drag, beskrivs nedan.
 
 ## Borstform
 
@@ -84,11 +84,11 @@ Borststorleken kan följa penntryck och andra indata. När storleken ändras kan
 
 ## Borst längs draget
 
-En borstpensel kan förändras medan draget ritas. Borsten växer och krymper. En del tonar bort och andra växer fram, så att karaktären vandrar längs märket. Tätheten hålls stadig.
+Medan ett drag ritas kan håren röra sig som en levande tofs. De släpar efter handen, svänger genom en vändning och lägger sig i den nya riktningen, trycker emot när draget vänder, vrider sig med penselns rotation, öppnar sig under tryck och fjädrar tillbaka mot viloläget. Hår som släpar efter kan nå förbi den vilande konturen.
 
-Animationen går framåt med avtrycken. Den kan börja efter en sträcka, eller när handen svänger. Mellantillstånden spelas längs banan. Samma gest ger samma följd.
+Hur långt de färdas, hur hårt tofsarna håller ihop och hur snabbt de lägger sig kan formas. En styv tofs kan stanna i ett spår. En mjukare kan dela sig, släpa efter en vridning och behålla lite av böjen innan den går tillbaka. Samma gest ger samma rörelse.
 
-En airbrush lägger ett nytt borstarrangemang medan den avger färg, så att ett hållet drag fortsätter att förnya sprutet. Ett kalligrafiskt drag behåller sin sammanhängande spets, som fortfarande kan ta upp ytans textur. Borstanimationen hör till den stämplade borstpenseln.
+En airbrush lägger ett nytt borstarrangemang medan den avger färg, så att ett hållet drag fortsätter att förnya sprutet. Ett kalligrafiskt drag behåller sin sammanhängande spets, som fortfarande kan ta upp ytans textur. Den här levande rörelsen hör till den stämplade borstpenseln.
 
 ## Kantövertoningar
 

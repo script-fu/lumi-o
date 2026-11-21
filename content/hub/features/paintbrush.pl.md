@@ -4,7 +4,7 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 76440413692203d9fe98258b8114d3bf7a74b30c27f61e69fea6b70cbd0616af
+translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
 ---
 
 Narzędzie Pędzel to podstawowe narzędzie do malowania Lumi: responsywny i wyrazisty sposób rysowania, malowania, cieniowania, teksturowania i tworzenia znaków bezpośrednio na płótnie. Został zaprojektowany tak, aby był natychmiastowy i jednocześnie dawał artystom możliwość kształtowania zachowania udaru.
@@ -69,7 +69,7 @@ Narzędzie Pędzel może malować więcej niż jedną głowicą na raz. Wokół 
 
 Głowice te mogą podążać za kierunkiem ruchu, różnić się od siebie i rozpraszać w taki sposób, że uderzenie sprawia wrażenie organicznego, a nie powtarzanego mechanicznie. Jest to szczególnie przydatne w przypadku pędzli mediów naturalnych, pociągnięć dekoracyjnych, liści, futra, kreskowania i innych znaków, które korzystają z kontrolowanej nieregularności.
 
-Pędzle generowane można też budować jako pola włosia. Kształt i animacja w trakcie pociągnięcia dla tych pól są opisane poniżej.
+Pędzle generowane można też budować jako pola włosia. Kształt tych pól i to, jak poruszają się wzdłuż pociągnięcia, są opisane poniżej.
 
 ## Kształt włosia
 
@@ -85,11 +85,11 @@ Rozmiar włosia może podążać za naciskiem rysika i innymi wejściami. Gdy ro
 
 ## Włosie wzdłuż pociągnięcia
 
-Pędzel z włosia może zmieniać się w trakcie rysowania pociągnięcia. Włosie rośnie i maleje. Część zanika, a inne wyrasta, więc charakter wędruje wzdłuż znaku. Gęstość pozostaje stała.
+Podczas rysowania pociągnięcia włosie może poruszać się jak żywa kępka. Włosy wloką się za ręką, wychylają się w skręcie i układają w nowym kierunku, odpychają przy nawrocie, skręcają się wraz z obrotem pędzla, otwierają pod naciskiem i sprężynują z powrotem ku układowi spoczynkowemu. Włosy, które wloką się z tyłu, mogą wyjść poza spoczynkowy obrys.
 
-Animacja postępuje wraz z plamkami. Może zacząć się po przebyciu odległości albo gdy ręka skręca. Stany pośrednie odtwarzają się wzdłuż ścieżki. Ten sam gest daje tę samą sekwencję.
+To, jak daleko wędrują, jak mocno kępki trzymają się razem i jak szybko się uspokajają, da się kształtować. Sztywna kępka może zostać na jednym śladzie. Miększa może się rozdzielić, opóźnić skręt i zatrzymać odrobinę wygięcia, zanim wróci na miejsce. Ten sam gest daje ten sam ruch.
 
-Aerograf kładzie świeży układ włosia w miarę emisji, więc przytrzymane pociągnięcie wciąż odnawia natrysk. Pociągnięcie kaligraficzne zachowuje ciągłą stalówkę, która nadal może przyjąć teksturę powierzchni. Animacja włosia należy do stemplowanego pędzla z włosia.
+Aerograf kładzie świeży układ włosia w miarę emisji, więc przytrzymane pociągnięcie wciąż odnawia natrysk. Pociągnięcie kaligraficzne zachowuje ciągłą stalówkę, która nadal może przyjąć teksturę powierzchni. Ten żywy ruch należy do stemplowanego pędzla z włosia.
 
 ## Gradienty krawędzi
 
