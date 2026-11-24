@@ -4,11 +4,11 @@ type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
 url: "hub/features/paintbrush"
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 Penselverktyget är Lumis kärnmålningsinstrument: ett lyhört, uttrycksfullt sätt att rita, måla, skugga, strukturera och bygga märken direkt på duken. Den är designad för att kännas omedelbar samtidigt som den ger konstnärer utrymme att forma hur en stroke beter sig.
 
-Snarare än att vara en enda fast pensel fungerar den som ett målningssystem. Form, textur, ytgräng, rörelse, tryck, timing och färg kan alla bidra till det slutliga märket, vilket gör den lämplig för rena linjer, mjuk målning, torra medier, kalligrafiska drag, spridda texturer, borsttofsar och flerhövdade formationer.
+Snarare än att vara en enda fast pensel fungerar den som ett målningssystem. Form, textur, ytgräng, rörelse, tryck, timing, färg och hur fullt penseln möter ytan kan alla bidra till det slutliga märket, vilket gör den lämplig för rena linjer, mjuk målning, torra medier, kalligrafiska drag, spridda texturer, borsttofsar och flerhövdade formationer.
 
 ## Uttrycksfulla borstmärken
 
@@ -102,15 +102,15 @@ Penseln kan också simulera hur mycket färg eller material som för närvarande
 
 Belastningen kan återinföras mellan dragen, hållas på en vald nivå eller användas som en direkt styrsignal för andra borstbeteenden. Detta gör det möjligt att bygga penslar som känns mer som riktiga media: blöta i början av ett slag, gradvis utmattade genom sträckan och sedan doppade igen för nästa pass.
 
-## Kontakt med borstens yta
+## Penselkontakt
 
-Penseln kan också simulera intermittent förlust av kontakt med målningsytan - de trasiga märken som uppstår när en penna, kolpinne, torr pensel eller delvis utmattad markör bara delvis griper in i papperet.
+Penselkontakt är sättet ett drag möter papperet och sedan släpper det. Längs vägen kan märket svälla och smalna, lyfta en sträcka och lägga sig igen. En penna, ett kol, en torr pensel eller en trött tuschpenna kan bli tjockare, hoppa över och fästa igen.
 
-När kontaktsimulering är aktiverad är borsten antingen i kontakt eller lyfts. Vid kontakt avsätts märken normalt. Medan den lyfts avlagras inget material och slaget lämnar ett gap vars längd väljs slumpmässigt mellan ett minimum och ett maximalt avstånd. Övergången är binär: effekten ändrar inte opacitet, storlek, hårdhet, avstånd eller flöde - bara om färgen läggs ner.
+Hur lätt det sker kan följa handen. En lätt beröring bryts tidigare. Ett fast tryck stannar nere längre. Tjockare märken kan hålla kontakten medan finare öppnar hål, och en avsmalning kan vara det som får ett tungt drag att börja hoppa. Lyftet kan vara plötsligt, eller så kan märket krympa in i glappet och växa ut ur det igen.
 
-Hur lätt kontakten tappas formas av en kontakttröskel, pekpennas tryck och eventuellt borstbelastning. Högre tröskelvärden gör pauser oftare. Trycket fungerar som en stabiliserande kraft: lätt tryck ökar chansen att tappa kontakten, medan ett fast tryck gör att slaget mer sannolikt stannar nere. När borstbelastning är aktiverad kan låg belastning göra att märket går sönder och hög belastning kan hjälpa till att upprätthålla kontakt, liknande ett verktyg som fortfarande bär tillräckligt med material för att greppa ytan.
+En fullt laddad pensel kan möta papperet på ett annat sätt. Svällningen och avsmalningen går starkare, och märket håller kontakten över längre sträckor. När laddningen tar slut tonar det mötet bort, och draget blir tystare och mer benäget att hoppa över.
 
-Förlusten utvärderas utifrån slaglängd snarare än klickantal, så borstar med täta eller glesa mellanrum beter sig konsekvent. Funktionen fungerar med både stämpelbaserad och kalligrafisk rendering, vilket ger sammanhängande luckor längs slaget snarare än isolerade överhoppade dabs.
+En borsttofs kan göra det hår för hår, så att draget fransar sig i separata strån och samlas igen. Huvuden i en formation kan bryta tillsammans eller var för sig. Ett kalligrafiskt drag lyfter som en enda udd, och bandet stannar där kontakten stannar. Varje nytt drag hittar sin egen rytm.
 
 ## Animation och variation
 

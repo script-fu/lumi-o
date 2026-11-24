@@ -4,11 +4,11 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 Das Pinselwerkzeug ist Lumis zentrales Malinstrument — reaktionsschnell und ausdrucksstark zum Zeichnen, Malen, Schattieren, Texturieren und Setzen von Strichen direkt auf der Leinwand. Es soll unmittelbar wirken und dem Künstler trotzdem Raum geben, das Strichverhalten zu formen.
 
-Es ist kein einzelner fester Pinsel, sondern ein Malsystem. Pinselform, Textur, Oberflächenkörnung, Bewegung, Druck, Timing und Farbe tragen zum finalen Strich bei — für klare Linien, weiches Malen, trockene Medieneffekte, kalligrafische Striche, verstreute Texturen, Borstenbüschel und Mehrkopf-Formationen.
+Es ist kein einzelner fester Pinsel, sondern ein Malsystem. Pinselform, Textur, Oberflächenkörnung, Bewegung, Druck, Timing, Farbe und wie satt der Pinsel auf der Fläche aufsetzt tragen zum finalen Strich bei — für klare Linien, weiches Malen, trockene Medieneffekte, kalligrafische Striche, verstreute Texturen, Borstenbüschel und Mehrkopf-Formationen.
 
 ## Ausdrucksstarke Striche
 
@@ -102,15 +102,15 @@ Der Pinsel simuliert, wie viel Farbe oder Material gerade auf dem Pinsel liegt. 
 
 Ladung lässt sich zwischen Strichen auffrischen, auf einem gewählten Niveau halten oder als Live-Steuersignal für anderes Pinselverhalten nutzen. Pinsel, die sich wie echte Medien anfühlen: nass am Strichanfang, über die Strecke erschöpft, beim nächsten Durchgang wieder aufgetaucht.
 
-## Oberflächenkontakt
+## Pinselkontakt
 
-Der Pinsel simuliert auch zeitweiligen Kontaktverlust mit der Maloberfläche — gebrochene Marken, wenn Bleistift, Kohle, Trockenpinsel oder teilweise erschöpfter Marker nur teilweise ins Papier greifen.
+Der Pinselkontakt beschreibt, wie ein Strich das Papier trifft und es wieder verliert. Auf dem Weg kann die Marke anschwellen und sich verengen, eine Strecke lang abheben und sich wieder setzen. Bleistift, Kohle, ein Trockenpinsel oder ein erschöpfter Marker können dicker werden, aussetzen und wieder greifen.
 
-Ist Kontaktsimulation aktiv, ist der Pinsel entweder in Kontakt oder angehoben. Im Kontakt lagert sich Material normal ab; angehoben bleibt eine Lücke, deren Länge zufällig zwischen Minimum und Maximum liegt. Der Übergang ist binär — Deckkraft, Größe, Härte, Abstand oder Fluss ändern sich nicht, nur ob Farbe aufgetragen wird.
+Wie leicht das geschieht, kann der Hand folgen. Eine leichte Berührung bricht früher. Ein fester Druck bleibt länger unten. Dickere Marken können den Kontakt halten, während feinere Löcher öffnen, und eine Verengung kann der Moment sein, in dem ein schwerer Strich zu springen beginnt. Das Abheben kann abrupt sein, oder die Marke schrumpft in die Lücke und wächst wieder heraus.
 
-Wie leicht Kontakt verloren geht, formen Kontaktschwelle, Stiftdruck und optional Pinselladung. Höhere Schwellen bedeuten häufigere Unterbrechungen. Druck wirkt stabilisierend: leichter Druck erhöht Kontaktverlust, fester Druck hält den Strich eher unten. Bei aktiver Ladung macht niedrige Ladung den Strich gebrochener, hohe Ladung hält Kontakt — wie ein Werkzeug mit genug Material für Griff auf der Oberfläche.
+Ein voll beladener Pinsel kann die Fläche anders treffen. Anschwellen und Verengen laufen stärker, und die Marke hält den Kontakt über längere Strecken. Wenn die Ladung nachlässt, verblasst dieses Treffen, und der Strich wird matter und setzt eher aus.
 
-Verlust wird anhand der Strichstrecke bewertet, nicht der Tupferzahl — Pinsel mit dichtem oder spärlichem Abstand verhalten sich konsistent. Die Funktion arbeitet mit stempel- und kalligrafischem Rendering und erzeugt zusammenhängende Lücken entlang des Strichs statt isolierter ausgelassener Tupfer.
+Ein Borstenbüschel kann das Haar für Haar tun, sodass der Strich in einzelne Stränge ausfranst und sich wieder sammelt. Köpfe einer Formation können gemeinsam absetzen oder jeder für sich. Ein kalligrafischer Strich hebt als eine Feder ab, und das Band endet dort, wo der Kontakt endet. Jeder neue Strich findet seinen eigenen Rhythmus.
 
 ## Animation und Variation
 

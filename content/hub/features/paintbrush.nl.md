@@ -4,12 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 
 Het penseel is het belangrijkste schilderinstrument van Lumi: een responsieve, expressieve manier om rechtstreeks op het canvas te tekenen, te schilderen, schaduw te geven, textuur aan te brengen en markeringen aan te brengen. Het is ontworpen om onmiddellijk aan te voelen en tegelijkertijd artiesten de ruimte te geven om vorm te geven hoe een streek zich gedraagt.
 
-In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, korrel van het oppervlak, beweging, druk, timing en kleur kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen, plukken borstelharen en meerkoppige penseelformaties.
+In plaats van een enkele vaste borstel te zijn, fungeert het als een verfsysteem. Penseelvorm, textuur, korrel van het oppervlak, beweging, druk, timing, kleur en hoe volledig het penseel het oppervlak raakt kunnen allemaal bijdragen aan het uiteindelijke resultaat, waardoor het geschikt is voor strak lijnwerk, zacht schilderen, droge media-effecten, kalligrafische streken, verspreide texturen, plukken borstelharen en meerkoppige penseelformaties.
 
 ## Expressieve penseelstreken
 
@@ -103,15 +103,15 @@ De Brush kan ook simuleren hoeveel verf of materiaal er momenteel op de kwast zi
 
 De belasting kan opnieuw worden geïntroduceerd tussen de poetsbewegingen, op een gekozen niveau worden gehouden of worden gebruikt als een live controlesignaal voor ander poetsgedrag. Dit maakt het mogelijk om penselen te bouwen die meer aanvoelen als echte media: nat aan het begin van een streek, geleidelijk uitgeput door de afstand, en dan weer ondergedompeld voor de volgende passage.
 
-## Contact met het borsteloppervlak
+## Penseelcontact
 
-De Brush kan ook periodiek verlies van contact met het schilderoppervlak simuleren: de gebroken vlekken die verschijnen wanneer een potlood, houtskoolstok, droog penseel of gedeeltelijk uitgeputte marker slechts gedeeltelijk in contact komt met het papier.
+Penseelcontact is de manier waarop een streek het papier raakt en het weer verliest. Onderweg kan de markering opzwellen en versmallen, een stuk loskomen en weer neerkomen. Een potlood, houtskool, een droog penseel of een vermoeide marker kan dikker worden, overslaan en weer pakken.
 
-Wanneer contactsimulatie is ingeschakeld, maakt de borstel contact of wordt hij opgetild. Tijdens contact markeert de storting normaal. Terwijl het wordt opgetild, wordt er geen materiaal afgezet en laat de slag een opening achter waarvan de lengte willekeurig wordt gekozen tussen een minimale en maximale afstand. De overgang is binair: het effect verandert niets aan de dekking, grootte, hardheid, tussenruimte of vloeiing, maar alleen aan de vraag of de verf is aangebracht.
+Hoe gemakkelijk dat gebeurt, kan de hand volgen. Een lichte aanraking breekt eerder. Een stevige druk blijft langer liggen. Dikkere markeringen kunnen hun contact houden terwijl fijnere gaten openen, en een versmalling kan het moment zijn waarop een zware streek begint over te slaan. Het loskomen kan plotseling zijn, of de markering krimpt de opening in en groeit er weer uit.
 
-Hoe gemakkelijk contact verloren gaat, wordt bepaald door de contactdrempel, de naalddruk en eventueel de borstelbelasting. Hogere drempelwaarden zorgen ervoor dat pauzes vaker plaatsvinden. Druk werkt als een stabiliserende kracht: lichte druk vergroot de kans op contactverlies, terwijl stevige druk ervoor zorgt dat de slag eerder blijft liggen. Wanneer de borstelbelasting is ingeschakeld, kan een lage belasting ervoor zorgen dat de markering nog meer kapot gaat en kan een hoge belasting helpen het contact te behouden, vergelijkbaar met gereedschap dat nog steeds voldoende materiaal draagt om grip te krijgen op het oppervlak.
+Een vol beladen penseel kan het papier anders ontmoeten. Het opzwellen en versmallen verlopen sterker, en de markering houdt langer contact. Naarmate de belasting afneemt, vervaagt die manier van raken, en de streek wordt stiller en slaat eerder over.
 
-Verlies wordt beoordeeld op basis van de slagafstand in plaats van op het aantal schartjes, zodat borstels met een dichte of dunne tussenruimte zich consistent gedragen. De functie werkt met zowel op stempels gebaseerde als kalligrafische weergave, waardoor coherente gaten langs de streek ontstaan in plaats van geïsoleerde overgeslagen schartjes.
+Een pluk borstelharen kan dit haar voor haar doen, zodat de streek in losse draden rafelt en zich weer verzamelt. Koppen in een formatie kunnen samen breken, of elk voor zich. Een kalligrafische streek komt omhoog als één penpunt, en het lint stopt waar het contact stopt. Elke nieuwe streek vindt zijn eigen ritme.
 
 ## Animatie en variatie
 

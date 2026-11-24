@@ -4,12 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 
 L'outil Pinceau est l'instrument de peinture principal de Lumi : une façon réactive et expressive de dessiner, peindre, ombrer, texturer et poser des marques directement sur le canevas. Il est conçu pour rester immédiat tout en laissant aux artistes la possibilité de façonner le comportement d'un trait.
 
-Plutôt qu'un pinceau fixe unique, il agit comme un système de peinture. La forme du pinceau, la texture, le grain de surface, le mouvement, la pression, le timing et la couleur peuvent tous contribuer à la marque finale, ce qui le rend adapté aux lignes nettes, à la peinture douce, aux effets de médium sec, aux traits calligraphiques, aux textures dispersées, aux touffes de poils et aux formations multi-têtes.
+Plutôt qu'un pinceau fixe unique, il agit comme un système de peinture. La forme du pinceau, la texture, le grain de surface, le mouvement, la pression, le timing, la couleur et la façon dont le pinceau rencontre la surface peuvent tous contribuer à la marque finale, ce qui le rend adapté aux lignes nettes, à la peinture douce, aux effets de médium sec, aux traits calligraphiques, aux textures dispersées, aux touffes de poils et aux formations multi-têtes.
 
 ## Marques expressives
 
@@ -103,15 +103,15 @@ Le pinceau peut aussi simuler la quantité de peinture ou de matière actuelleme
 
 La charge peut être réintroduite entre les traits, maintenue à un niveau choisi ou utilisée comme signal de contrôle en direct pour d'autres comportements. Il devient possible de créer des pinceaux proches des médiums réels : humides au début d'un trait, progressivement épuisés sur la distance, puis trempés à nouveau pour le passage suivant.
 
-## Contact avec la surface
+## Contact du pinceau
 
-Le pinceau peut aussi simuler une perte intermittente de contact avec la surface à peindre — les marques brisées qui apparaissent lorsqu'un crayon, un fusain, un pinceau sec ou un marqueur partiellement épuisé n'engage le papier que partiellement.
+Le contact du pinceau est la manière dont un trait rencontre le papier, puis le quitte. Au fil du trajet, la marque peut gonfler et se resserrer, se lever sur une longueur, puis se reposer. Un crayon, un fusain, un pinceau sec ou un marqueur fatigué peuvent s'épaissir, sauter et reprendre.
 
-Lorsque la simulation de contact est activée, le pinceau est soit en contact, soit levé. En contact, les marques se déposent normalement. Levé, aucune matière n'est déposée et le trait laisse un intervalle dont la longueur est choisie aléatoirement entre une distance minimale et maximale. La transition est binaire : l'effet ne modifie pas opacité, taille, dureté, espacement ou débit — seulement le fait que la peinture soit posée ou non.
+La facilité de ce mouvement peut suivre la main. Un toucher léger casse plus tôt. Un appui ferme reste posé plus longtemps. Les marques plus épaisses peuvent garder le contact pendant que les plus fines ouvrent des trous, et un rétrécissement peut être ce qui fait qu'un trait lourd commence à sauter. Le décollement peut être soudain, ou la marque peut se réduire dans le vide et en ressortir en grandissant.
 
-La facilité avec laquelle le contact se perd dépend d'un seuil de contact, de la pression du stylet et, éventuellement, de la charge du pinceau. Des seuils plus élevés rendent les ruptures plus fréquentes. La pression agit comme une force stabilisatrice : une pression légère augmente le risque de perdre le contact, tandis qu'une pression ferme favorise un trait continu. Lorsque la charge de pinceau est activée, une faible charge peut rendre la marque plus brisée et une charge élevée peut aider à maintenir le contact, comme un outil qui transporte encore assez de matière pour accrocher la surface.
+Un pinceau pleinement chargé peut rencontrer le papier autrement. Le gonflement et le rétrécissement sont plus marqués, et la marque tient le contact sur de plus longues distances. À mesure que la charge s'épuise, cette façon de poser s'estompe, et le trait devient plus discret et plus enclin à sauter.
 
-La perte est évaluée à partir de la distance parcourue par le trait plutôt que du nombre de touches, de sorte que les pinceaux à espacement dense ou clairsemé se comportent de façon cohérente. La fonctionnalité fonctionne avec le rendu par tampons et le rendu calligraphique, produisant des intervalles cohérents le long du trait plutôt que des touches isolées sautées.
+Une touffe de poils peut le faire poil par poil, si bien que le trait s'effiloche en brins séparés, puis se rassemble. Les têtes d'une formation peuvent rompre ensemble, ou chacune de son côté. Un trait calligraphique se lève d'un seul bec, et le ruban s'arrête là où le contact s'arrête. Chaque nouveau trait trouve son propre rythme.
 
 ## Animation et variation
 

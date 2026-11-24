@@ -2,13 +2,13 @@
 title: "Alat Kuas"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 url: "hub/features/paintbrush"
 translation_lock: true
 ---
 Alat Kuas adalah instrumen melukis inti Lumi: cara responsif dan ekspresif untuk menggambar, melukis, membayangi, memberi tekstur, dan membuat tanda langsung di kanvas. Dirancang terasa langsung sambil tetap memberi ruang bagi seniman membentuk perilaku goresan.
 
-Alih-alih satu kuas tetap, alat ini bertindak sebagai sistem melukis. Bentuk, tekstur, butiran permukaan, gerakan, tekanan, waktu, dan warna semuanya berkontribusi pada tanda akhir—cocok untuk garis bersih, lukisan lembut, media kering, goresan kaligrafi, tekstur tersebar, ikatan bulu, dan formasi multi-kepala.
+Alih-alih satu kuas tetap, alat ini bertindak sebagai sistem melukis. Bentuk, tekstur, butiran permukaan, gerakan, tekanan, waktu, warna, dan seberapa penuh kuas menemui permukaan semuanya berkontribusi pada tanda akhir—cocok untuk garis bersih, lukisan lembut, media kering, goresan kaligrafi, tekstur tersebar, ikatan bulu, dan formasi multi-kepala.
 
 ## Tanda kuas ekspresif
 
@@ -102,15 +102,15 @@ Kuas juga dapat mensimulasikan berapa banyak cat atau material yang dibawa kuas.
 
 Muatan dapat diperkenalkan kembali antar goresan, dipertahankan di level tertentu, atau dipakai sebagai sinyal kontrol langsung untuk perilaku kuas lain. Memungkinkan kuas terasa lebih seperti media nyata: basah di awal goresan, habis seiring jarak, lalu dicelupkan lagi untuk lintasan berikutnya.
 
-## Kontak permukaan kuas
+## Kontak kuas
 
-Kuas juga dapat mensimulasikan hilangnya kontak intermittens dengan permukaan lukisan—tanda pecah yang muncul saat pensil, arang, kuas kering, atau spidol hampir habis hanya sebagian menyentuh kertas.
+Kontak kuas adalah cara goresan menemui kertas lalu melepaskannya. Sepanjang perjalanan, tanda dapat menggembung dan menyempit, terangkat sejenak, lalu kembali menempel. Pensil, arang, kuas kering, atau spidol yang lelah dapat menebal, putus, lalu menyambar lagi.
 
-Saat simulasi kontak diaktifkan, kuas bersentuhan atau terangkat. Saat bersentuhan, tanda didepositkan normal. Saat terangkat, tidak ada material yang didepositkan dan goresan meninggalkan celah dengan panjang acak antara jarak minimum dan maksimum. Transisinya biner: efek tidak mengubah opasitas, ukuran, hardness, jarak, atau flow—hanya apakah cat ditaruh.
+Seberapa mudah itu terjadi dapat mengikuti tangan. Sentuhan ringan putus lebih cepat. Tekanan kuat lebih lama tetap menempel. Tanda yang lebih tebal dapat menahan kontak sementara yang lebih halus membuka lubang, dan penyempitan dapat menjadi saat goresan yang berat mulai putus. Terangkatnya dapat terjadi tiba-tiba, atau tanda menyusut ke dalam celah lalu tumbuh kembali.
 
-Seberapa mudah kontak hilang dibentuk ambang kontak, tekanan stylus, dan opsional muatan kuas. Ambang lebih tinggi membuat jeda lebih sering. Tekanan bertindak sebagai kekuatan stabilisasi: tekanan ringan meningkatkan peluang kehilangan kontak, tekanan kuat membuat goresan lebih mungkin tetap menempel. Saat muatan kuas diaktifkan, muatan rendah membuat tanda lebih pecah dan muatan tinggi membantu mempertahankan kontak—seperti alat yang masih membawa cukup material untuk menggrip permukaan.
+Kuas yang bermuatan penuh dapat menemui kertas dengan cara lain. Gembungan dan penyempitan berjalan lebih kuat, dan tanda menahan kontak pada rentang yang lebih panjang. Saat muatan habis, interaksi itu memudar, dan goresan menjadi lebih tenang serta lebih mudah putus.
 
-Evaluasi kerugian kontak berdasarkan jarak tempuh goresan, bukan jumlah cap, sehingga kuas dengan jarak rapat atau jarang berperilaku konsisten. Fitur ini bekerja dengan rendering berbasis cap dan kaligrafi, menghasilkan celah koheren sepanjang goresan alih-alih cap terlewat terisolasi.
+Sekumpulan bulu dapat melakukan ini helai demi helai, sehingga goresan terurai menjadi untai terpisah lalu berkumpul kembali. Kepala dalam satu formasi dapat putus bersama, atau masing-masing sendiri. Goresan kaligrafi terangkat sebagai satu ujung, dan pita berhenti di tempat kontak berhenti. Setiap goresan baru menemukan iramanya sendiri.
 
 ## Animasi dan variasi
 

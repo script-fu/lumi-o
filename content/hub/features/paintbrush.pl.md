@@ -4,12 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 
 Narzędzie Pędzel to podstawowe narzędzie do malowania Lumi: responsywny i wyrazisty sposób rysowania, malowania, cieniowania, teksturowania i tworzenia znaków bezpośrednio na płótnie. Został zaprojektowany tak, aby był natychmiastowy i jednocześnie dawał artystom możliwość kształtowania zachowania udaru.
 
-Zamiast być pojedynczym, stałym pędzlem, działa jak system malarski. Kształt, tekstura, ziarno powierzchni, ruch, nacisk, czas i kolor mogą wpływać na końcowy znak, dzięki czemu nadaje się do czystych linii, miękkiego malowania, suchych mediów, pociągnięć kaligraficznych, rozproszonych tekstur, kępek włosia i wielogłowych formacji.
+Zamiast być pojedynczym, stałym pędzlem, działa jak system malarski. Kształt, tekstura, ziarno powierzchni, ruch, nacisk, czas, kolor i to, jak w pełni pędzel styka się z powierzchnią, mogą wpływać na końcowy znak, dzięki czemu nadaje się do czystych linii, miękkiego malowania, suchych mediów, pociągnięć kaligraficznych, rozproszonych tekstur, kępek włosia i wielogłowych formacji.
 
 ## Wyraziste ślady pędzla
 
@@ -103,15 +103,15 @@ Pędzel może również symulować ilość farby lub materiału aktualnie znajdu
 
 Obciążenie można ponownie wprowadzić pomiędzy pociągnięciami, utrzymać na wybranym poziomie lub wykorzystać jako sygnał sterujący na żywo dla innych zachowań pędzla. Umożliwia to budowanie pędzli, które w dotyku bardziej przypominają prawdziwe media: mokre na początku pociągnięcia, stopniowo zużywające się wraz z upływem dystansu, a następnie ponownie zanurzane przy następnym przejściu.
 
-## Kontakt z powierzchnią szczotki
+## Kontakt pędzla
 
-Pędzel może również symulować chwilową utratę kontaktu z powierzchnią malowania — połamane ślady, które pojawiają się, gdy ołówek, węgiel drzewny, suchy pędzel lub częściowo wyczerpany marker tylko częściowo stykają się z papierem.
+Kontakt pędzla to sposób, w jaki pociągnięcie spotyka papier, a potem go traci. Po drodze ślad może puchnąć i zwężać się, na odcinku oderwać i znowu osiąść. Ołówek, węgiel, suchy pędzel albo zmęczony marker mogą grubieć, przerywać i znów chwytać.
 
-Gdy włączona jest symulacja kontaktu, szczotka styka się lub jest podniesiona. Podczas kontaktu normalnie zaznacza depozyt. Podczas podnoszenia nie osadza się żaden materiał, a skok pozostawia szczelinę, której długość jest wybierana losowo pomiędzy odległością minimalną i maksymalną. Przejście jest binarne: efekt nie zmienia krycia, rozmiaru, twardości, odstępów ani płynięcia – tylko to, czy farba jest nałożona.
+To, jak łatwo się to dzieje, może iść za ręką. Lekki dotyk urywa się wcześniej. Mocny nacisk zostaje dłużej. Grubsze ślady mogą trzymać kontakt, podczas gdy cieńsze otwierają dziury, a zwężenie może sprawić, że ciężkie pociągnięcie zaczyna przerywać. Oderwanie może być nagłe, albo ślad kurczy się w lukę i wyrasta z niej z powrotem.
 
-Łatwość utraty kontaktu zależy od progu kontaktu, nacisku igły i opcjonalnie obciążenia szczotki. Wyższe wartości progowe powodują częstsze przerwy. Nacisk działa jak siła stabilizująca: lekki nacisk zwiększa ryzyko utraty kontaktu, podczas gdy mocny nacisk sprawia, że prawdopodobieństwo utrzymania ruchu jest większe. Gdy włączone jest obciążenie szczotką, niskie obciążenie może spowodować, że znak będzie bardziej uszkodzony, a duże obciążenie może pomóc w utrzymaniu kontaktu, podobnie jak w przypadku narzędzia, które nadal przenosi wystarczającą ilość materiału, aby uchwycić powierzchnię.
+Pędzel z pełnym obciążeniem może spotkać papier inaczej. Puchnięcie i zwężanie są mocniejsze, a ślad trzyma kontakt na dłuższych odcinkach. W miarę jak obciążenie spada, to spotkanie słabnie, a pociągnięcie staje się cichsze i chętniej przerywa.
 
-Straty są oceniane na podstawie odległości pociągnięć, a nie liczby muśnięć, więc pędzle z gęstymi lub rzadkimi odstępami zachowują się spójnie. Ta funkcja działa zarówno w przypadku renderowania opartego na stemplach, jak i kaligrafii, tworząc spójne przerwy wzdłuż obrysu, a nie pojedyncze, pominięte plamki.
+Kępka włosia może robić to włos po włosie, więc pociągnięcie strzępi się w osobne pasma i znów się zbiera. Główki w formacji mogą urywać się razem albo każda osobno. Pociągnięcie kaligraficzne unosi się jako jedna stalówka, a wstęga kończy się tam, gdzie kończy się kontakt. Każde nowe pociągnięcie znajduje własny rytm.
 
 ## Animacja i wariacje
 

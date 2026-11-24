@@ -6,7 +6,7 @@ url: "hub/features/paintbrush"
 
 The Brush tool is Lumi's core painting instrument: a responsive, expressive way to draw, paint, shade, texture, and build marks directly on the canvas. It is designed to feel immediate while still giving artists room to shape how a stroke behaves.
 
-Rather than being a single fixed brush, it acts as a painting system. Brush shape, texture, surface grain, movement, pressure, timing, and colour can all contribute to the final mark, making it suitable for clean line work, soft painting, dry media effects, calligraphic strokes, scattered textures, bristle tufts, and multi-headed brush formations.
+Rather than being a single fixed brush, it acts as a painting system. Brush shape, texture, surface grain, movement, pressure, timing, colour, and how fully the brush meets the surface can all contribute to the final mark, making it suitable for clean line work, soft painting, dry media effects, calligraphic strokes, scattered textures, bristle tufts, and multi-headed brush formations.
 
 ## Expressive brush marks
 
@@ -100,15 +100,15 @@ The Brush can also simulate how much paint or material is currently carried on t
 
 Load can be reintroduced between strokes, held at a chosen level, or used as a live control signal for other brush behaviours. This makes it possible to build brushes that feel more like real media: wet at the start of a stroke, progressively exhausted through distance, and then dipped again for the next pass.
 
-## Brush surface contact
+## Brush contact
 
-The Brush can also simulate intermittent loss of contact with the painting surface — the broken marks that appear when a pencil, charcoal stick, dry brush, or partly exhausted marker only partly engages with the paper.
+Brush contact is the way a stroke meets the paper and then loses it. Along the travel the mark can swell and narrow, lift clear for a stretch, and settle back down. A pencil, charcoal, dry brush, or tired marker can fatten, skip, and catch again.
 
-When contact simulation is enabled, the brush is either in contact or lifted. While in contact, marks deposit normally. While lifted, no material is deposited and the stroke leaves a gap whose length is chosen randomly between a minimum and maximum distance. The transition is binary: the effect does not change opacity, size, hardness, spacing, or flow — only whether paint is laid down.
+How readily that happens can follow the hand. A light touch breaks sooner. A firm press stays down longer. Thicker marks can hold their contact while finer ones open holes, and a narrowing of the mark can be what lets a heavy stroke start to skip. The lift can be sudden, or the mark can shrink into the gap and grow back out of it.
 
-How easily contact is lost is shaped by a contact threshold, stylus pressure, and optionally brush load. Higher threshold values make breaks more frequent. Pressure acts as a stabilising force: light pressure increases the chance of losing contact, while firm pressure makes the stroke more likely to stay down. When brush load is enabled, low load can make the mark more broken and high load can help maintain contact, similar to a tool that still carries enough material to grip the surface.
+A fully loaded brush can meet the paper differently. The swell and the narrowing run stronger, and the mark holds contact for longer stretches. As the load runs down, that interaction fades, and the stroke grows quieter and more willing to skip.
 
-Loss is evaluated from stroke travel distance rather than dab count, so brushes with dense or sparse spacing behave consistently. The feature works with both stamp-based and calligraphic rendering, producing coherent gaps along the stroke rather than isolated skipped dabs.
+A bristle tuft can do this hair by hair, so the stroke frays into separate strands and then gathers again. Heads in a formation can break together, or each on its own. A calligraphic stroke lifts as one nib, and the ribbon stops where the contact stops. Each new stroke finds its own rhythm. 
 
 ## Animation and variation
 

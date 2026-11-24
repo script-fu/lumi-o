@@ -2,13 +2,13 @@
 title: "Ferramenta Pincel"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 url: "hub/features/paintbrush"
 translation_lock: true
 ---
 A ferramenta Pincel é o instrumento central de pintura do Lumi: uma forma responsiva e expressiva de desenhar, pintar, sombrear, texturizar e construir marcas directamente na tela. Foi concebida para parecer imediata, dando ao artista margem para moldar o comportamento de um traço.
 
-Em vez de ser um único pincel fixo, actua como um sistema de pintura. A forma, a textura, o grão de superfície, o movimento, a pressão, o tempo e a cor podem contribuir para a marca final, tornando-o adequado a linhas limpas, pintura suave, media seca, traços caligráficos, texturas dispersas, tufos de cerdas e formações multi-cabeça.
+Em vez de ser um único pincel fixo, actua como um sistema de pintura. A forma, a textura, o grão de superfície, o movimento, a pressão, o tempo, a cor e a plenitude com que o pincel encontra a superfície podem contribuir para a marca final, tornando-o adequado a linhas limpas, pintura suave, media seca, traços caligráficos, texturas dispersas, tufos de cerdas e formações multi-cabeça.
 
 ## Marcas expressivas
 
@@ -102,15 +102,15 @@ O Pincel também pode simular quanta tinta ou material está actualmente na esco
 
 A carga pode ser reintroduzida entre traços, mantida num nível escolhido ou usada como sinal de controlo em tempo real para outros comportamentos do pincel. Isto torna possível construir pincéis que parecem media real: húmidos no início do traço, progressivamente esgotados ao longo da distância e depois mergulhados de novo para a passagem seguinte.
 
-## Contacto com a superfície
+## Contacto do pincel
 
-O Pincel também pode simular perda intermitente de contacto com a superfície de pintura — as marcas quebradas que aparecem quando um lápis, um carvão, um pincel seco ou um marcador parcialmente esgotado apenas se apoiam parcialmente no papel.
+O contacto do pincel é a forma como um traço encontra o papel e depois o perde. Ao longo do percurso a marca pode inchar e estreitar, levantar-se num trecho e voltar a assentar. Um lápis, um carvão, um pincel seco ou um marcador cansado podem engrossar, falhar e voltar a agarrar.
 
-Quando a simulação de contacto está activa, o pincel está em contacto ou levantado. Em contacto, as marcas depositam-se normalmente. Levantado, nenhum material é depositado e o traço deixa um intervalo cujo comprimento é escolhido aleatoriamente entre distâncias mínima e máxima. A transição é binária: o efeito não altera opacidade, tamanho, dureza, espaçamento ou fluxo — apenas se a tinta é depositada.
+A facilidade com que isso acontece pode seguir a mão. Um toque leve interrompe mais cedo. Uma pressão firme fica mais tempo assente. Marcas mais grossas podem manter o contacto enquanto as mais finas abrem buracos, e um estreitamento pode ser o que faz um traço pesado começar a falhar. O levantamento pode ser súbito, ou a marca pode encolher para o intervalo e voltar a crescer ao sair dele.
 
-A facilidade com que se perde contacto é moldada por um limiar de contacto, pressão do stylus e, opcionalmente, carga do pincel. Valores de limiar mais altos tornam as pausas mais frequentes. A pressão actua como força estabilizadora: pressão leve aumenta a probabilidade de perder contacto, enquanto pressão firme mantém o traço assente. Com carga activa, carga baixa pode tornar a marca mais quebrada e carga alta pode ajudar a manter contacto, como uma ferramenta que ainda transporta material suficiente para agarrar à superfície.
+Um pincel em plena carga pode encontrar o papel de outra maneira. O inchar e o estreitar correm mais fortes, e a marca mantém o contacto em trechos mais longos. À medida que a carga se esgota, essa forma de encontro desvanece, e o traço fica mais quieto e mais disposto a falhar.
 
-A perda é avaliada pela distância percorrida do traço e não pela contagem de pinceladas, pelo que pincéis com espaçamento denso ou esparso se comportam de forma consistente. A funcionalidade funciona com renderização por carimbo e caligráfica, produzindo intervalos coerentes ao longo do traço em vez de pinceladas isoladas ignoradas.
+Um tufo de cerdas pode fazê-lo cerda a cerda, de modo que o traço se desfia em fios separados e depois se reúne. As cabeças de uma formação podem quebrar juntas, ou cada uma por si. Um traço caligráfico levanta-se como uma só ponta, e a fita termina onde termina o contacto. Cada traço novo encontra o seu próprio ritmo.
 
 ## Animação e variação
 

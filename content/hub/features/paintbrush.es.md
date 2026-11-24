@@ -4,12 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 
 La herramienta Pincel es el instrumento de pintura principal de Lumi: una forma sensible y expresiva de dibujar, pintar, sombrear, texturizar y crear marcas directamente en el lienzo. Está diseñada para sentirse inmediata y, al mismo tiempo, dar al artista margen para definir cómo se comporta un trazo.
 
-Más que un único pincel fijo, actúa como un sistema de pintura. La forma del pincel, la textura, el grano de la superficie, el movimiento, la presión, el tiempo y el color pueden contribuir a la marca final, lo que la hace adecuada para líneas limpias, pintura suave, efectos de medios secos, trazos caligráficos, texturas dispersas, mechones de cerdas y formaciones de pincel con varios cabezales.
+Más que un único pincel fijo, actúa como un sistema de pintura. La forma del pincel, la textura, el grano de la superficie, el movimiento, la presión, el tiempo, el color y lo plenamente que el pincel se apoya en la superficie pueden contribuir a la marca final, lo que la hace adecuada para líneas limpias, pintura suave, efectos de medios secos, trazos caligráficos, texturas dispersas, mechones de cerdas y formaciones de pincel con varios cabezales.
 
 ## Marcas de pincel expresivas
 
@@ -103,15 +103,15 @@ El Pincel también puede simular cuánta pintura o material lleva el pincel en c
 
 La carga puede reintroducirse entre pasadas, mantenerse en un nivel elegido o usarse como señal de control en directo para otros comportamientos del pincel. Así es posible crear pinceles que se sientan más como medios reales: húmedos al inicio del trazo, agotándose progresivamente con la distancia y volviendo a cargarse para la siguiente pasada.
 
-## Contacto con la superficie del pincel
+## Contacto del pincel
 
-El pincel también puede simular la pérdida intermitente de contacto con la superficie de pintura: las marcas rotas que aparecen cuando un lápiz, un carboncillo, un pincel seco o un rotulador casi agotado solo se apoya parcialmente en el papel.
+El contacto del pincel es la forma en que un trazo se apoya en el papel y luego lo pierde. A lo largo del recorrido la marca puede hincharse y estrecharse, despegarse un trecho y volver a asentarse. Un lápiz, un carboncillo, un pincel seco o un rotulador cansado pueden engordar, saltar y volver a agarrar.
 
-Cuando la simulación de contacto está activada, el pincel está en contacto o levantado. En contacto, las marcas se depositan con normalidad. Levantado, no se deposita material y el trazo deja un hueco cuya longitud se elige al azar entre una distancia mínima y máxima. La transición es binaria: el efecto no cambia opacidad, tamaño, dureza, espaciado ni flujo, solo si se aplica pintura.
+La facilidad con que ocurre puede seguir a la mano. Un toque ligero se interrumpe antes. Una presión firme se mantiene más tiempo. Las marcas más gruesas pueden conservar el contacto mientras las más finas abren huecos, y un estrechamiento puede ser lo que haga que un trazo pesado empiece a saltar. El despegue puede ser repentino, o la marca puede encogerse hacia el hueco y volver a crecer al salir de él.
 
-La facilidad con la que se pierde el contacto depende de un umbral de contacto, la presión del lápiz y, opcionalmente, la carga del pincel. Valores de umbral más altos hacen las pausas más frecuentes. La presión actúa como fuerza estabilizadora: una presión ligera aumenta la probabilidad de perder contacto, mientras que una presión firme hace más probable que el trazo se mantenga apoyado. Cuando la carga del pincel está activada, una carga baja puede hacer la marca más rota y una carga alta puede ayudar a mantener el contacto, como una herramienta que aún lleva material suficiente para adherirse a la superficie.
+Un pincel a plena carga puede encontrar el papel de otro modo. El hinchado y el estrechamiento son más fuertes, y la marca mantiene el contacto durante tramos más largos. A medida que la carga se agota, esa relación se desvanece y el trazo se vuelve más quieto y más propenso a saltar.
 
-La pérdida se evalúa por la distancia recorrida del trazo y no por el número de pinceladas, de modo que los pinceles con espaciado denso o disperso se comportan de forma coherente. La función funciona tanto con renderizado basado en sellos como caligráfico, produciendo huecos coherentes a lo largo del trazo en lugar de pinceladas aisladas omitidas.
+Un mechón de cerdas puede hacerlo cerda a cerda, de modo que el trazo se deshilacha en hebras separadas y luego se vuelve a reunir. Los cabezales de una formación pueden romperse juntos o cada uno por su cuenta. Un trazo caligráfico se levanta como una sola punta, y la cinta se detiene donde se detiene el contacto. Cada trazo nuevo encuentra su propio ritmo.
 
 ## Animación y variación
 

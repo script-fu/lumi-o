@@ -4,12 +4,12 @@ type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 ---
 
 Lo strumento Pennello è lo strumento di pittura principale di Lumi: un modo reattivo ed espressivo per disegnare, dipingere, sfumare, texturizzare e creare segni direttamente sulla tela. È progettato per essere immediato, pur offrendo agli artisti ampio margine per modellare il comportamento del tratto.
 
-Non è un unico pennello fisso, ma un sistema di pittura. Forma del pennello, texture, grana della superficie, movimento, pressione, tempismo e colore possono tutti contribuire al segno finale, rendendolo adatto a linee pulite, pittura morbida, effetti di media asciutta, tratti calligrafici, texture sparse, ciuffi di setole e formazioni a più teste.
+Non è un unico pennello fisso, ma un sistema di pittura. Forma del pennello, texture, grana della superficie, movimento, pressione, tempismo, colore e quanto pienamente il pennello incontra la superficie possono tutti contribuire al segno finale, rendendolo adatto a linee pulite, pittura morbida, effetti di media asciutta, tratti calligrafici, texture sparse, ciuffi di setole e formazioni a più teste.
 
 ## Segni espressivi del pennello
 
@@ -103,15 +103,15 @@ Il Pennello può anche simulare quanta vernice o materiale è attualmente traspo
 
 Il carico può essere reintrodotto tra una passata e l'altra, mantenuto a un livello scelto o usato come segnale di controllo in tempo reale per altri comportamenti del pennello. È possibile costruire pennelli che sembrano più vicini ai media reali: bagnati all'inizio di una pennellata, progressivamente esauriti lungo la distanza e poi immersi di nuovo per la passata successiva.
 
-## Contatto con la superficie del pennello
+## Contatto del pennello
 
-Il Pennello può anche simulare la perdita intermittente di contatto con la superficie di pittura: i segni spezzati che compaiono quando una matita, un pezzo di carboncino, un pennello asciutto o un pennarello parzialmente esaurito toccano la carta solo in parte.
+Il contatto del pennello è il modo in cui un tratto incontra la carta e poi la perde. Lungo il percorso il segno può gonfiarsi e restringersi, sollevarsi per un tratto e tornare a posarsi. Una matita, un carboncino, un pennello asciutto o un pennarello stanco possono ingrossarsi, saltare e riprendere.
 
-Quando la simulazione del contatto è attiva, il pennello è in contatto oppure sollevato. In contatto i segni si depositano normalmente. Quando è sollevato non si deposita materiale e il tratto lascia uno spazio la cui lunghezza viene scelta casualmente tra una distanza minima e massima. La transizione è binaria: l'effetto non cambia opacità, dimensione, durezza, spaziatura o flusso, ma solo se la vernice viene depositata.
+Quanto facilmente accade può seguire la mano. Un tocco leggero si interrompe prima. Una pressione decisa resta giù più a lungo. I segni più spessi possono tenere il contatto mentre quelli più fini aprono buchi, e un restringimento può essere ciò che fa iniziare a saltare un tratto pesante. Il distacco può essere improvviso, oppure il segno può restringersi nel vuoto e uscirne crescendo di nuovo.
 
-La facilità con cui si perde il contatto dipende da una soglia di contatto, dalla pressione dello stilo e, facoltativamente, dal carico del pennello. Valori di soglia più alti rendono le interruzioni più frequenti. La pressione agisce come forza stabilizzante: una pressione leggera aumenta la probabilità di perdere il contatto, mentre una pressione decisa rende più probabile che il tratto resti a contatto. Quando il carico del pennello è attivo, un carico basso può rendere il segno più spezzato e un carico alto può aiutare a mantenere il contatto, come uno strumento che trasporta ancora abbastanza materiale per aderire alla superficie.
+Un pennello a pieno carico può incontrare la carta in un altro modo. Il gonfiore e il restringimento sono più forti, e il segno tiene il contatto per tratti più lunghi. Man mano che il carico si esaurisce, quell'incontro si attenua e il tratto diventa più quieto e più incline a saltare.
 
-La perdita viene valutata in base alla distanza percorsa dal tratto, non al conteggio dei tocchi, così i pennelli con spaziatura densa o rada si comportano in modo coerente. La funzione funziona sia con il rendering basato su timbri sia con quello calligrafico, producendo interruzioni coerenti lungo il tratto invece di tocchi saltati isolati.
+Un ciuffo di setole può farlo setola per setola, così il tratto si sfilaccia in fili distinti e poi si raccoglie di nuovo. Le teste di una formazione possono staccarsi insieme, o ciascuna per conto proprio. Un tratto calligrafico si solleva come un solo pennino, e il nastro si ferma dove si ferma il contatto. Ogni nuovo tratto trova il proprio ritmo.
 
 ## Animazione e variazione
 

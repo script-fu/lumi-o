@@ -3,13 +3,13 @@ title: "Công cụ cọ"
 type: docs
 url: "hub/features/paintbrush"
 translation_provenance: ai-reviewed
-translation_source_sha256: c14407070107da120a5192a839635c8970b7646c82b3362d95f221c4921364cd
+translation_source_sha256: b11c0248addcd834613763c198cf5d00356b8d31e99d3dad18a1cea96e6b7e3f
 translation_lock: true
 ---
 
 Công cụ cọ là công cụ vẽ cốt lõi của Lumi: cách đáp ứng, biểu cảm để vẽ, tô màu, tạo bóng, thêm kết cấu và đặt nét trực tiếp trên canvas. Thiết kế mang lại cảm giác tức thì trong khi vẫn cho nghệ sĩ không gian định hình hành vi nét vẽ.
 
-Thay vì một cọ cố định, nó hoạt động như hệ thống vẽ. Hình dạng cọ, kết cấu, hạt bề mặt, chuyển động, áp lực, thời gian và màu đều góp phần tạo nét cuối — phù hợp nét sạch, tô mềm, hiệu ứng media khô, nét thư pháp, kết cấu rải, chùm lông và đội hình cọ nhiều đầu.
+Thay vì một cọ cố định, nó hoạt động như hệ thống vẽ. Hình dạng cọ, kết cấu, hạt bề mặt, chuyển động, áp lực, thời gian, màu và độ đầy khi cọ gặp bề mặt đều góp phần tạo nét cuối — phù hợp nét sạch, tô mềm, hiệu ứng media khô, nét thư pháp, kết cấu rải, chùm lông và đội hình cọ nhiều đầu.
 
 ## Nét cọ biểu cảm
 
@@ -103,15 +103,15 @@ Cọ mô phỏng lượng mực/sơn đang mang. Khi nét tiếp tục, tải gi
 
 Tải có thể nạp lại giữa các nét, giữ ở mức chọn hoặc dùng làm tín hiệu điều khiển cho hành vi cọ khác. Xây cọ giống media thật: ướt lúc bắt đầu, cạn dần theo quãng đường, nhúng lại cho lần vẽ sau.
 
-## Tiếp xúc bề mặt cọ
+## Tiếp xúc của cọ
 
-Cọ mô phỏng mất tiếp xúc không liên tục với bề mặt — vết đứt khi bút chì, than, cọ khô hoặc marker cạn chỉ bám một phần giấy.
+Tiếp xúc của cọ là cách một nét gặp giấy rồi rời khỏi nó. Dọc đường đi, vết có thể phồng và thon, nhấc khỏi mặt một đoạn, rồi đặt xuống lại. Bút chì, than, cọ khô hoặc bút dạ đã mệt có thể đậm lên, đứt, rồi bắt giấy trở lại.
 
-Khi bật mô phỏng tiếp xúc, cọ đang chạm hoặc đang nhấc. Khi chạm, nét đặt bình thường. Khi nhấc, không đặt vật liệu và nét để khoảng trống có chiều dài ngẫu nhiên giữa min và max. Chuyển đổi nhị phân: hiệu ứng không đổi độ mờ, kích thước, độ cứng, khoảng cách hay flow — chỉ có hay không đặt mực.
+Mức dễ xảy ra có thể đi theo tay. Chạm nhẹ đứt sớm hơn. Nhấn chắc ở lại lâu hơn. Vết dày hơn có thể giữ tiếp xúc trong khi vết mảnh mở lỗ, và chỗ thon có thể là điều khiến một nét nặng bắt đầu đứt. Nhấc lên có thể đột ngột, hoặc vết co vào khoảng trống rồi lớn trở lại khi ra khỏi đó.
 
-Mức dễ mất tiếp xúc do ngưỡng tiếp xúc, áp lực bút và tùy chọn tải cọ. Ngưỡng cao hơn làm đứt nét thường xuyên hơn. Áp lực ổn định: nhẹ tăng khả năng mất tiếp xúc; mạnh giúp nét giữ chạm. Khi bật tải cọ, tải thấp làm nét vỡ hơn; tải cao giúp duy trì tiếp xúc — như dụng cụ còn đủ vật liệu bám bề mặt.
+Một cọ đầy tải có thể gặp giấy theo cách khác. Chỗ phồng và chỗ thon mạnh hơn, và vết giữ tiếp xúc trên những quãng dài hơn. Khi tải cạn, cách gặp ấy nhạt đi, và nét trở nên dịu hơn, dễ đứt hơn.
 
-Mất tiếp xúc đánh giá theo quãng đường nét, không theo số dab — cọ dày hoặc thưa khoảng cách đều nhất quán. Tính năng hoạt động với render stamp và calligraphic, tạo khoảng trống mạch lạc dọc nét thay vì dab bị bỏ rời rạc.
+Một chùm lông có thể làm điều này từng sợi, nên nét xơ thành những sợi riêng rồi tụ lại. Các đầu trong một đội hình có thể đứt cùng nhau, hoặc mỗi đầu một kiểu. Nét thư pháp nhấc lên như một ngòi, và dải mực dừng ở chỗ tiếp xúc dừng. Mỗi nét mới tìm được nhịp của riêng mình.
 
 ## Hoạt hình và biến thể
 
