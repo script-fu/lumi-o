@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 В программе «Первые шаги» представлены функциональные шаблоны, которые хорошо работают в Scheme, с короткими примерами и дополнительными рефакторингами.
@@ -15,7 +15,7 @@ url: "hub/scripting/tutorials/first-step"
 Прежде чем приступить к работе, убедитесь, что у вас есть следующее:
 
 - Установлен Lumi (недавняя сборка или AppImage).
-- Текстовый редактор для файлов `.scm` (VS Code работает хорошо): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- Текстовый редактор для файлов `.scm` (Cursor работает хорошо): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) для резервного копирования вашего кода и контроля версий.
 
 ## Этапы обучения

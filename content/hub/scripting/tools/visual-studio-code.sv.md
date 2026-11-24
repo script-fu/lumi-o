@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio-kod"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Vad är Visual Studio Code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (ofta förkortat till "VS Code" eller "VSC") är en gratis textredigerare med öppen källkod utvecklad av Microsoft, designad speciellt för kodning. Den är lätt, snabb och mycket anpassningsbar, vilket gör den till en av de mest populära kodredigerarna bland utvecklare. Här är varför VSC är ett utmärkt val:
+## Vad är Cursor?
 
-- **Syntaxmarkering**: Syntaxmarkering färgkodar din kod, vilket gör det lättare att upptäcka fel, förstå struktur och läsa komplex kod.
-- **Tillägg**: Du kan förbättra VSC med tusentals tillägg. Oavsett om du behöver stöd för ett specifikt språk, tema eller verktyg kan du hitta ett tillägg som passar.
-- **Version Control Integration**: VSC har inbyggt Git-stöd, vilket gör det enkelt att spåra dina kodändringar, hantera grenar, använda tjänster som [GitHub](https://github.com/) eller [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) är en kodredigerare med AI-hjälp i samma fönster. Den bygger på Visual Studio Code, så syntaxmarkering, tillägg, arbetsytor och Git följer med. Cursor är redigeraren som används här för Lumi-skript, eftersom den AI-hjälpen är mycket billigare.
 
-### Nyckelfunktioner för nybörjare
+- **Syntaxmarkering**: Markeringen färglägger koden. Fel syns tidigare, strukturen blir tydligare och komplex kod är lättare att läsa.
+- **Tillägg**: Cursor kör tillägg från Visual Studio Code. Språk, tema eller verktyg: det finns ett tillägg som passar.
+- **Versionshantering**: Git är inbyggt. Det är enkelt att följa ändringar och hantera grenar, med tjänster som [GitHub](https://github.com/) eller [GitLab](https://gitlab.com/).
+- **AI i redigeraren**: Du kan be om en sökning, en omstrukturering eller en liten ändring bredvid filen som redan är öppen. Kostnaden för den hjälpen är låg nog att använda den i det vanliga skriptarbetet.
 
-- **Arbetsytor**: VSC låter dig organisera flera projekt i "arbetsytor", som låter dig hålla relaterade filer och mappar tillsammans för enklare navigering och projekthantering.
+### Viktiga funktioner för nybörjare
 
-- **Profiler**: Med profiler kan du skapa olika inställningar för olika projekt eller uppgifter. Du kan använda en profil för webbutveckling och en annan för Scheme-programmering, var och en med sina egna specifika tillägg, teman och inställningar.
+- **Arbetsytor**: Cursor samlar flera projekt i "arbetsytor", som håller ihop relaterade filer och mappar. Navigering och projekthantering blir enklare.
 
-### Komma igång med Visual Studio Code
+- **Profiler**: Med profiler kan du ha olika upplägg för projekt eller uppgifter. En för webbutveckling och en annan för Scheme, var och en med egna tillägg, teman och inställningar.
 
-Så här börjar du använda VSC:
+### Kom igång med Cursor
 
-- **Ladda ner och installera**: Gå till webbplatsen [Visual Studio Code](https://code.visualstudio.com/) och ladda ner Linux-versionen.
+Så börjar du använda Cursor:
 
-- **Utforska gränssnittet**: När du öppnar VSC kommer du att märka flera paneler. Till vänster har du **Aktivitetsfältet**, där du kan navigera mellan filer, söka, använda Git och installera tillägg.
+- **Hämta och installera**: Gå till [Cursors webbplats](https://cursor.com/) och hämta Linux-versionen.
 
-- **Öppna en fil eller mapp**: Konfigurera din arbetsyta genom att lägga till mappen där ditt projekt är lagrat och spara den aktiva konfigurationen i en arbetsytafil.
+- **Utforska gränssnittet**: När du öppnar Cursor ser du flera paneler. Till vänster finns **aktivitetsfältet**, där du växlar mellan filer, sökning, Git och tillägg.
 
-En arbetsyta är bara en sparad mappvy plus redigeringsinställningar för ditt projekt.
+- **Öppna en fil eller en mapp**: Ställ in arbetsytan genom att lägga till projektmappen och spara den aktiva konfigurationen i en arbetsytefil.
+
+En arbetsyta är bara en sparad mappvy plus redigerarens inställningar för projektet.
 
 ### Tillägg
 
-- **Installera tillägg**: Klicka på ikonen **tillägg** i aktivitetsfältet för att bläddra och installera användbara verktyg för Scheme. Den viktigaste att installera är **"vscode-scheme"** av Allen Huang. Det här tillägget ger syntaxmarkering och grundläggande stöd för Scheme, som är basspråket för Scheme.
+- **Installera tillägg**: Klicka på ikonen **Tillägg** i aktivitetsfältet för att söka och installera verktyg som hjälper med Scheme. Det viktigaste är **"vscode-scheme"** av Allen Huang. Det ger syntaxmarkering och ett grundläggande stöd för Scheme, språket som Lumi-insticksprogram skrivs i.
 
-Du kan också anpassa tillägget genom att redigera språkfilen för att inkludera fler schemaspecifika nyckelord eller något relaterat till Lumi-skript.
+Du kan också anpassa tillägget genom att redigera språkfilen och lägga till fler Scheme-nyckelord eller termer från Lumi-skript.
 
-Om du underhåller ditt eget hjälpbibliotek, kan navigering och omstrukturering gå snabbare om du lägger till ditt projekts funktionsnamn i syntaxmarkören.
+Om du sköter ett eget hjälpbibliotek går navigering och omstrukturering snabbare när funktionsnamnen finns i markeringen.
 
 ### Slutsats
 
-Använd en redigerare som gör det enkelt att söka, omstrukturera och köra snabba redigeringar. VS Code + a Scheme extension är en solid baslinje.
+Använd en redigerare som gör det lätt att söka, strukturera om och göra snabba ändringar, med AI nära till hands. Cursor plus ett Scheme-tillägg är grunden som används här.

@@ -2,7 +2,7 @@
 title: "Alat"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: c4c14f8ed284abd28bdb6e567187a850ba5eb7815fdb376bab03cc8c62091640
+translation_source_sha256: 14200af787284664a6750da0b0c52f702096c74abc9947ec4bea29aaa953f96b
 url: "hub/scripting/tools"
 translation_lock: true
 ---
@@ -10,6 +10,6 @@ Panduan ini mencakup rangkaian alat minimal untuk menulis plug-in Scheme untuk L
 
 {{< cards >}}
   {{< card link="git" title="Git" icon="folder-tree" subtitle="Kontrol versi untuk pengembangan Scheme" >}}
-  {{< card link="visual-studio-code" title="Visual Studio Code" icon="code" subtitle="Penyiapan editor kode dan ekstensi untuk Scheme" >}}
+  {{< card link="visual-studio-code" title="Cursor" icon="code" subtitle="Penyiapan editor kode dan ekstensi untuk Scheme" >}}
   {{< card link="ai-assisted" title="Bantuan AI" icon="sparkles" subtitle="Gunakan Agen AI untuk menulis dan memfaktorkan ulang plug-in" >}}
 {{< /cards >}}

@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps introducerar funktionella mönster som fungerar bra i Scheme, med korta exempel och inkrementella refaktorer.
@@ -15,7 +15,7 @@ I slutet kommer du att ha byggt ditt eget anpassade meddelandebibliotek och ha e
 Innan du börjar, se till att du har följande:
 
 - Lumi installerad (en nyligen byggd eller AppImage).
-- En textredigerare för `.scm` filer (VS Code fungerar bra): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- En textredigerare för `.scm` filer (Cursor fungerar bra): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) för att hålla din kod säkerhetskopierad och versionskontrollerad.
 
 ## Handledningssteg

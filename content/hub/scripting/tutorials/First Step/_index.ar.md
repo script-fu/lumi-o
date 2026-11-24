@@ -3,7 +3,7 @@ title: "الخطوات الأولى"
 type: docs
 weight: 1
 translation_provenance: ai-reviewed
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 translation_lock: true
 ---
@@ -15,7 +15,7 @@ translation_lock: true
 قبل البدء، تأكد من توفر ما يلي:
 
 - Lumi مثبت (إصدار حديث أو AppImage).
-- محرر نصوص لملفات `.scm` (VS Code مناسب جيدًا): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- محرر نصوص لملفات `.scm` (Cursor مناسب جيدًا): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) للاحتفاظ بنسخة احتياطية من الكود والتحكم بالإصدارات.
 
 ## خطوات البرنامج التعليمي

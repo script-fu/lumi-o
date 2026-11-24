@@ -1,45 +1,47 @@
 ---
-title: "Codice di Visual Studio"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Cos'è Visual Studio Code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (spesso abbreviato in "VS Code" o "VSC") è un editor di testo open source gratuito sviluppato da Microsoft, progettato specificamente per la codifica. È leggero, veloce e altamente personalizzabile, rendendolo uno degli editor di codice più popolari tra gli sviluppatori. Ecco perché VSC è un'ottima scelta:
+## Che cos'è Cursor?
 
-- **Evidenziazione della sintassi**: l'evidenziazione della sintassi codifica a colori il codice, semplificando l'individuazione degli errori, la comprensione della struttura e la lettura del codice complesso.
-- **Estensioni**: puoi migliorare VSC con migliaia di estensioni. Se hai bisogno di supporto per una lingua, un tema o uno strumento specifico, puoi trovare l'estensione adatta.
-- **Integrazione del controllo versione**: VSC dispone del supporto Git integrato, che semplifica il monitoraggio delle modifiche al codice, la gestione dei rami, l'utilizzo di servizi come [GitHub](https://github.com/) o [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) è un editor di codice con l'assistenza dell'IA nella stessa finestra. Si basa su Visual Studio Code, quindi evidenziazione della sintassi, estensioni, aree di lavoro e Git restano disponibili. Cursor è l'editor usato qui per gli script di Lumi, perché quell'aiuto dell'IA è molto più economico.
 
-### Funzionalità principali per principianti
+- **Evidenziazione della sintassi**: L'evidenziazione colora il codice. Gli errori si notano prima, la struttura si capisce meglio e il codice complesso si legge con più chiarezza.
+- **Estensioni**: Cursor esegue le estensioni di Visual Studio Code. Lingua, tema o strumento: c'è un'estensione adatta.
+- **Integrazione del controllo di versione**: Git è integrato. Diventa semplice seguire le modifiche e gestire i rami, con servizi come [GitHub](https://github.com/) o [GitLab](https://gitlab.com/).
+- **IA nell'editor**: Puoi chiedere una ricerca, un refactoring o una piccola modifica accanto al file già aperto. Il costo di quell'aiuto è abbastanza basso da usarlo nel lavoro ordinario sugli script.
 
-- **Spazi di lavoro**: VSC ti consente di organizzare più progetti in "spazi di lavoro", che ti consentono di tenere insieme file e cartelle correlati per facilitare la navigazione e la gestione dei progetti.
+### Funzioni principali per chi inizia
 
-- **Profili**: con i profili puoi creare diverse configurazioni per vari progetti o attività. Potresti utilizzare un profilo per lo sviluppo web e un altro per la programmazione di Scheme, ciascuno con le proprie estensioni, temi e impostazioni specifici.
+- **Aree di lavoro**: Cursor organizza più progetti in «aree di lavoro», che tengono insieme file e cartelle collegati. Navigazione e gestione del progetto diventano più semplici.
 
-### Introduzione a Visual Studio Code
+- **Profili**: Con i profili puoi preparare configurazioni diverse per progetti o compiti. Uno per lo sviluppo web e un altro per Scheme, ciascuno con le proprie estensioni, i temi e le impostazioni.
 
-Per iniziare a utilizzare VSC:
+### Primi passi con Cursor
 
-- **Scarica e installa**: vai al [sito web di Visual Studio Code](https://code.visualstudio.com/) e scarica la versione Linux.
+Per iniziare a usare Cursor:
 
-- **Esplora l'interfaccia**: quando apri VSC, noterai diversi pannelli. Sulla sinistra hai la **Barra delle attività**, dove puoi navigare tra i file, cercare, utilizzare Git e installare estensioni.
+- **Scarica e installa**: Vai sul [sito di Cursor](https://cursor.com/) e scarica la versione per Linux.
 
-- **Apri un file o una cartella**: configura il tuo spazio di lavoro aggiungendo la cartella in cui è archiviato il tuo progetto e salva la configurazione attiva in un file dell'area di lavoro.
+- **Esplora l'interfaccia**: Aprendo Cursor noti diversi pannelli. A sinistra c'è la **barra delle attività**, da cui passi tra file, ricerca, Git ed estensioni.
 
-Un'area di lavoro è semplicemente una visualizzazione di cartelle salvata più le impostazioni dell'editor per il tuo progetto.
+- **Apri un file o una cartella**: Prepara l'area di lavoro aggiungendo la cartella del progetto e salva la configurazione attiva in un file di area di lavoro.
+
+Un'area di lavoro è solo una vista di cartella salvata, più le impostazioni dell'editor per il progetto.
 
 ### Estensioni
 
-- **Installa estensioni**: fai clic sull'icona **Estensioni** nella barra delle attività per sfogliare e installare strumenti utili per Scheme. Il principale da installare è **"vscode-scheme"** di Allen Huang. Questa estensione fornisce l'evidenziazione della sintassi e il supporto di base per Scheme, che è il linguaggio di base per Scheme.
+- **Installa le estensioni**: Fai clic sull'icona **Estensioni** nella barra delle attività per cercare e installare strumenti utili per Scheme. La principale è **«vscode-scheme»** di Allen Huang. Offre l'evidenziazione della sintassi e un supporto di base per Scheme, il linguaggio in cui sono scritti i plug-in di Lumi.
 
-Puoi anche personalizzare l'estensione modificando il file della lingua per includere più parole chiave specifiche di Scheme o qualsiasi cosa relativa allo scripting Lumi.
+Puoi anche adattare l'estensione modificando il file della lingua, per aggiungere altre parole chiave di Scheme o termini legati agli script di Lumi.
 
-Se mantieni la tua libreria di supporto, l'aggiunta dei nomi delle funzioni del tuo progetto all'evidenziatore della sintassi velocizza la navigazione e il refactoring.
+Se curi una libreria di supporto tua, aggiungere i nomi delle funzioni all'evidenziatore rende più rapide la navigazione e il refactoring.
 
 ### Conclusione
 
-Utilizza un editor che semplifichi la ricerca, il refactoring e l'esecuzione di modifiche rapide. VS Code + un'estensione dello schema rappresentano una solida base di partenza.
+Usa un editor che renda facili ricerca, refactoring e piccole modifiche, con l'IA a portata di mano. Cursor più un'estensione Scheme è la base usata qui.

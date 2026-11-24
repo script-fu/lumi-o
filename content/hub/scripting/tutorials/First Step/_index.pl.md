@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 Pierwsze kroki wprowadzają wzorce funkcjonalne, które dobrze sprawdzają się w Scheme, z krótkimi przykładami i przyrostowymi refaktorami.
@@ -15,7 +15,7 @@ Na koniec zbudujesz własną, niestandardową bibliotekę wiadomości i będzies
 Zanim zaczniesz, upewnij się, że masz następujące elementy:
 
 - Zainstalowano Lumi (ostatnia kompilacja lub AppImage).
-- Edytor tekstu dla plików `.scm` (VS Code działa dobrze): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- Edytor tekstu dla plików `.scm` (Cursor działa dobrze): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/), aby zachować kopię zapasową kodu i kontrolować wersję.
 
 ## Kroki samouczka

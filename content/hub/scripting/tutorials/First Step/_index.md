@@ -13,7 +13,7 @@ By the end, you'll have built your own custom messaging library and have a solid
 Before you get started, ensure you have the following:
 
 - Lumi installed (a recent build or AppImage).
-- A text editor for `.scm` files (VS Code works well): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- A text editor for `.scm` files (Cursor works well): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) to keep your code backed-up and version controlled.
 
 ## Tutorial Steps

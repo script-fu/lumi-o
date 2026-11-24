@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio Code"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Was ist Visual Studio-Code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (oft abgekürzt als „VS Code“ oder „VSC“) ist ein kostenloser Open-Source-Texteditor, der von Microsoft entwickelt wurde und speziell für die Codierung entwickelt wurde. Er ist leichtgewichtig, schnell und hochgradig anpassbar, was ihn zu einem der beliebtesten Code-Editoren unter Entwicklern macht. Deshalb ist VSC eine gute Wahl:
+## Was ist Cursor?
 
-- **Syntaxhervorhebung**: Durch die Syntaxhervorhebung wird Ihr Code farblich gekennzeichnet, sodass Sie Fehler leichter erkennen, die Struktur verstehen und komplexen Code lesen können.
-- **Erweiterungen**: Sie können VSC mit Tausenden von Erweiterungen erweitern. Egal, ob Sie Unterstützung für eine bestimmte Sprache, ein bestimmtes Thema oder ein bestimmtes Tool benötigen, Sie können eine passende Erweiterung finden.
-- **Integration der Versionskontrolle**: VSC verfügt über eine integrierte Git-Unterstützung, die es einfach macht, Ihre Codeänderungen zu verfolgen, Zweige zu verwalten und Dienste wie [GitHub](https://github.com/) oder [GitLab](https://gitlab.com/) zu verwenden.
+[Cursor](https://cursor.com/) ist ein Code-Editor mit KI-Hilfe im selben Fenster. Er beruht auf Visual Studio Code, deshalb bleiben Syntaxhervorhebung, Erweiterungen, Arbeitsbereiche und Git erhalten. Cursor ist der Editor, der hier für Lumi-Skripte verwendet wird, weil diese KI-Hilfe deutlich günstiger ist.
+
+- **Syntaxhervorhebung**: Die Syntaxhervorhebung färbt den Code ein. Fehler fallen leichter auf, die Struktur wird klarer, und komplexer Code lässt sich besser lesen.
+- **Erweiterungen**: Cursor führt Erweiterungen von Visual Studio Code aus. Ob Sprache, Thema oder Werkzeug: Es gibt eine passende Erweiterung.
+- **Integration der Versionskontrolle**: Git ist eingebaut. Änderungen lassen sich verfolgen und Zweige verwalten, mit Diensten wie [GitHub](https://github.com/) oder [GitLab](https://gitlab.com/).
+- **KI im Editor**: Eine Suche, ein Refactoring oder eine kleine Änderung lässt sich direkt neben der geöffneten Datei anfragen. Die Kosten dieser Hilfe sind niedrig genug, um sie beim gewöhnlichen Schreiben von Skripten zu nutzen.
 
 ### Hauptfunktionen für Anfänger
 
-- **Arbeitsbereiche**: Mit VSC können Sie mehrere Projekte in „Arbeitsbereichen“ organisieren, sodass Sie verwandte Dateien und Ordner zusammenhalten können, um die Navigation und Projektverwaltung zu vereinfachen.
+- **Arbeitsbereiche**: Cursor fasst mehrere Projekte in „Arbeitsbereichen“ zusammen. Zusammengehörige Dateien und Ordner bleiben beieinander, die Navigation und die Projektverwaltung werden leichter.
 
-- **Profile**: Mit Profilen können Sie unterschiedliche Setups für verschiedene Projekte oder Aufgaben erstellen. Sie können ein Profil für die Webentwicklung und ein anderes für die Scheme-Programmierung verwenden, jeweils mit eigenen spezifischen Erweiterungen, Themen und Einstellungen.
+- **Profile**: Mit Profilen lassen sich verschiedene Einrichtungen für Projekte oder Aufgaben anlegen. Ein Profil für die Webentwicklung, ein anderes für Scheme, jeweils mit eigenen Erweiterungen, Themen und Einstellungen.
 
-### Erste Schritte mit Visual Studio Code
+### Erste Schritte mit Cursor
 
-So beginnen Sie mit der Verwendung von VSC:
+So starten Sie mit Cursor:
 
-- **Herunterladen und installieren**: Gehen Sie zur [Visual Studio Code-Website](https://code.visualstudio.com/) und laden Sie die Linux-Version herunter.
+- **Herunterladen und installieren**: Gehen Sie zur [Cursor-Website](https://cursor.com/) und laden Sie die Linux-Version herunter.
 
-- **Erkunden Sie die Benutzeroberfläche**: Wenn Sie VSC öffnen, werden Ihnen mehrere Bedienfelder auffallen. Auf der linken Seite befindet sich die **Aktivitätsleiste**, in der Sie zwischen Dateien navigieren, suchen, Git verwenden und Erweiterungen installieren können.
+- **Die Oberfläche erkunden**: Beim Öffnen von Cursor sehen Sie mehrere Bereiche. Links liegt die **Aktivitätsleiste**. Von dort wechseln Sie zwischen Dateien, Suche, Git und Erweiterungen.
 
-- **Öffnen Sie eine Datei oder einen Ordner**: Richten Sie Ihren Arbeitsbereich ein, indem Sie den Ordner hinzufügen, in dem Ihr Projekt gespeichert ist, und speichern Sie die aktive Konfiguration in einer Arbeitsbereichsdatei.
+- **Eine Datei oder einen Ordner öffnen**: Richten Sie den Arbeitsbereich ein, indem Sie den Ordner des Projekts hinzufügen, und speichern Sie die aktive Konfiguration in einer Arbeitsbereichsdatei.
 
-Ein Arbeitsbereich ist lediglich eine gespeicherte Ordneransicht plus Editoreinstellungen für Ihr Projekt.
+Ein Arbeitsbereich ist nur eine gespeicherte Ordneransicht plus die Editoreinstellungen des Projekts.
 
 ### Erweiterungen
 
-- **Erweiterungen installieren**: Klicken Sie in der Aktivitätsleiste auf das Symbol **Erweiterungen**, um hilfreiche Tools für Scheme zu durchsuchen und zu installieren. Das wichtigste zu installierende Programm ist **"vscode-scheme"** von Allen Huang. Diese Erweiterung bietet Syntaxhervorhebung und grundlegende Unterstützung für Scheme, die Basissprache für Scheme.
+- **Erweiterungen installieren**: Klicken Sie in der Aktivitätsleiste auf das Symbol **Erweiterungen**, um nützliche Werkzeuge für Scheme zu suchen und zu installieren. Die wichtigste ist **„vscode-scheme“** von Allen Huang. Sie liefert Syntaxhervorhebung und eine grundlegende Unterstützung für Scheme, die Sprache, in der Lumi-Plug-ins geschrieben werden.
 
-Sie können die Erweiterung auch anpassen, indem Sie die Sprachdatei bearbeiten, um weitere Scheme-spezifische Schlüsselwörter oder alles, was mit Lumi-Skripten zu tun hat, einzuschließen.
+Sie können die Erweiterung auch anpassen, indem Sie die Sprachdatei bearbeiten und weitere Scheme-Schlüsselwörter oder Begriffe aus dem Lumi-Skripting aufnehmen.
 
-Wenn Sie Ihre eigene Hilfsbibliothek verwalten, beschleunigt das Hinzufügen der Funktionsnamen Ihres Projekts zum Syntax-Highlighter die Navigation und das Refactoring.
+Wenn Sie eine eigene Hilfsbibliothek pflegen, macht das Eintragen der Funktionsnamen in die Syntaxhervorhebung Navigation und Refactoring schneller.
 
 ### Fazit
 
-Verwenden Sie einen Editor, der die Suche, Umgestaltung und schnelle Bearbeitung erleichtert. VS Code + eine Scheme-Erweiterung ist eine solide Basis.
+Nutzen Sie einen Editor, in dem Suche, Refactoring und kleine Änderungen leicht sind und die KI in Reichweite bleibt. Cursor zusammen mit einer Scheme-Erweiterung ist hier die Grundlage.

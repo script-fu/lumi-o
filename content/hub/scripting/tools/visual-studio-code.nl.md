@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio-code"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Wat is Visual Studio-code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (vaak afgekort tot "VS Code" of "VSC") is een gratis, open-source teksteditor ontwikkeld door Microsoft, speciaal ontworpen voor codering. Het is lichtgewicht, snel en zeer aanpasbaar, waardoor het een van de populairste code-editors onder ontwikkelaars is. Dit is waarom VSC een goede keuze is:
+## Wat is Cursor?
 
-- **Syntaxisaccentuering**: Syntaxisaccentuering geeft kleurcodes aan uw code, waardoor het gemakkelijker wordt om fouten op te sporen, de structuur te begrijpen en complexe code te lezen.
-- **Extensies**: u kunt VSC uitbreiden met duizenden extensies. Of u nu ondersteuning nodig heeft voor een specifieke taal, thema of tool, er is altijd een extensie die bij u past.
-- **Versiebeheerintegratie**: VSC heeft ingebouwde Git-ondersteuning, waardoor het eenvoudig is om uw codewijzigingen bij te houden, branches te beheren en services als [GitHub](https://github.com/) of [GitLab](https://gitlab.com/) te gebruiken.
+[Cursor](https://cursor.com/) is een code-editor met AI-hulp in hetzelfde venster. Hij is gebaseerd op Visual Studio Code, dus syntaxiskleuring, extensies, werkruimten en Git blijven beschikbaar. Cursor is de editor die hier voor Lumi-scripts wordt gebruikt, omdat die AI-hulp veel voordeliger is.
 
-### Belangrijkste kenmerken voor beginners
+- **Syntaxiskleuring**: De kleuring geeft de code kleur. Fouten vallen eerder op, de structuur wordt duidelijker en complexe code leest prettiger.
+- **Extensies**: Cursor voert extensies van Visual Studio Code uit. Taal, thema of hulpmiddel: er is een extensie die past.
+- **Integratie van versiebeheer**: Git is ingebouwd. Wijzigingen volgen en branches beheren gaat eenvoudig, met diensten als [GitHub](https://github.com/) of [GitLab](https://gitlab.com/).
+- **AI in de editor**: U kunt een zoekactie, een refactoring of een kleine wijziging vragen naast het bestand dat al openstaat. De kosten van die hulp zijn laag genoeg om haar bij het gewone schrijven van scripts te gebruiken.
 
-- **Werkruimten**: met VSC kunt u meerdere projecten organiseren in "werkruimten", waarmee u gerelateerde bestanden en mappen bij elkaar kunt houden voor eenvoudiger navigatie en projectbeheer.
+### Belangrijkste functies voor beginners
 
-- **Profielen**: met profielen kunt u verschillende instellingen maken voor verschillende projecten of taken. U kunt één profiel gebruiken voor webontwikkeling en een ander voor Scheme-programmering, elk met zijn eigen specifieke extensies, thema's en instellingen.
+- **Werkruimten**: Cursor ordent meerdere projecten in "werkruimten", die bij elkaar horende bestanden en mappen bijeenhouden. Navigeren en het project beheren wordt eenvoudiger.
 
-### Aan de slag met Visual Studio Code
+- **Profielen**: Met profielen maakt u verschillende opstellingen voor projecten of taken. Eén profiel voor webontwikkeling en een ander voor Scheme, elk met eigen extensies, thema's en instellingen.
 
-Om VSC te gaan gebruiken:
+### Aan de slag met Cursor
 
-- **Downloaden en installeren**: Ga naar de [Visual Studio Code-website](https://code.visualstudio.com/) en download de Linux-versie.
+Cursor gebruiken:
 
-- **Verken de interface**: wanneer u VSC opent, ziet u verschillende panelen. Aan de linkerkant heb je de **Activiteitenbalk**, waar je tussen bestanden kunt navigeren, zoeken, Git kunt gebruiken en extensies kunt installeren.
+- **Downloaden en installeren**: Ga naar de [website van Cursor](https://cursor.com/) en download de Linux-versie.
 
-- **Open een bestand of map**: stel uw werkruimte in door de map toe te voegen waarin uw project is opgeslagen en sla de actieve configuratie op in een werkruimtebestand.
+- **De interface verkennen**: Als u Cursor opent, ziet u verschillende panelen. Links staat de **activiteitenbalk**, waarmee u tussen bestanden, zoeken, Git en extensies wisselt.
 
-Een werkruimte is slechts een opgeslagen mapweergave plus editorinstellingen voor uw project.
+- **Een bestand of map openen**: Richt de werkruimte in door de projectmap toe te voegen en sla de actieve configuratie op in een werkruimtebestand.
+
+Een werkruimte is alleen een opgeslagen mapweergave plus de editorinstellingen van het project.
 
 ### Extensies
 
-- **Extensies installeren**: klik op het pictogram **Extensies** in de activiteitenbalk om door handige tools voor Scheme te bladeren en deze te installeren. De belangrijkste die u moet installeren is **"vscode-scheme"** van Allen Huang. Deze extensie biedt syntaxisaccentuering en basisondersteuning voor Scheme, de basistaal voor Scheme.
+- **Extensies installeren**: Klik op het pictogram **Extensies** in de activiteitenbalk om nuttige hulpmiddelen voor Scheme te zoeken en te installeren. De belangrijkste is **"vscode-scheme"** van Allen Huang. Die biedt syntaxiskleuring en basisondersteuning voor Scheme, de taal waarin Lumi-plug-ins worden geschreven.
 
-U kunt de extensie ook aanpassen door het taalbestand te bewerken, zodat u meer schemaspecifieke trefwoorden of andere zaken die verband houden met Lumi-scripting kunt opnemen.
+U kunt de extensie ook aanpassen door het taalbestand te bewerken en er meer Scheme-trefwoorden of termen uit Lumi-scripts aan toe te voegen.
 
-Als u uw eigen helperbibliotheek onderhoudt, zorgt het toevoegen van de functienamen van uw project aan de syntaxisaccentuering ervoor dat de navigatie en refactoring sneller gaan.
+Als u een eigen hulpbibliotheek bijhoudt, maakt het toevoegen van de functienamen aan de kleuring het navigeren en refactoren sneller.
 
 ### Conclusie
 
-Gebruik een editor waarmee u eenvoudig kunt zoeken, refactoren en snelle bewerkingen kunt uitvoeren. VS Code + een Scheme-uitbreiding is een solide basislijn.
+Gebruik een editor waarin zoeken, refactoren en snelle wijzigingen gemakkelijk zijn, met de AI bij de hand. Cursor plus een Scheme-extensie is de basis die hier wordt gebruikt.

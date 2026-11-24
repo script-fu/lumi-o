@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio Code"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 translation_lock: true
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Apa itu Visual Studio Code?
 
-[Visual Studio Code](https://code.visualstudio.com/) (sering disingkat menjadi "VS Code" atau "VSC") adalah editor teks sumber terbuka gratis yang dikembangkan oleh Microsoft, dirancang khusus untuk pengkodean. Ringan, cepat, dan sangat dapat disesuaikan, menjadikannya salah satu editor kode paling populer di kalangan pengembang. Inilah mengapa VSC adalah pilihan yang bagus:
+## Apa itu Cursor?
 
-- **Penyorotan Sintaks**: Sintaks yang menyorot kode warna pada kode Anda, membuatnya lebih mudah untuk menemukan kesalahan, memahami struktur, dan membaca kode kompleks.
-- **Ekstensi**: Anda dapat meningkatkan VSC dengan ribuan ekstensi. Apakah Anda memerlukan dukungan untuk bahasa, tema, atau alat tertentu, Anda dapat menemukan ekstensi yang sesuai.
-- **Integrasi Kontrol Versi**: VSC memiliki dukungan Git bawaan, sehingga memudahkan pelacakan perubahan kode Anda, mengelola cabang, menggunakan layanan seperti [GitHub](https://github.com/) atau [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) adalah editor kode dengan bantuan AI di jendela yang sama. Ia didasarkan pada Visual Studio Code, jadi penyorotan sintaksis, ekstensi, ruang kerja, dan Git tetap ada. Cursor adalah editor yang dipakai di sini untuk skrip Lumi, karena bantuan AI itu jauh lebih hemat.
 
-### Fitur Utama untuk Pemula
+- **Penyorotan sintaksis**: Penyorotan mewarnai kode. Kesalahan lebih mudah terlihat, struktur lebih jelas, dan kode yang rumit lebih enak dibaca.
+- **Ekstensi**: Cursor menjalankan ekstensi Visual Studio Code. Bahasa, tema, atau alat: ada ekstensi yang cocok.
+- **Integrasi kontrol versi**: Git sudah terpasang. Perubahan mudah dilacak dan cabang mudah dikelola, lewat layanan seperti [GitHub](https://github.com/) atau [GitLab](https://gitlab.com/).
+- **AI di editor**: Anda dapat meminta pencarian, refaktor, atau suntingan kecil di samping file yang sudah terbuka. Biaya bantuan itu cukup rendah untuk dipakai dalam penulisan skrip sehari-hari.
 
-- **Ruang Kerja**: VSC memungkinkan Anda mengatur beberapa proyek ke dalam "ruang kerja", yang memungkinkan Anda menyimpan file dan folder terkait bersama-sama untuk navigasi dan manajemen proyek yang lebih mudah.
+### Fitur utama untuk pemula
 
-- **Profil**: Dengan profil, Anda dapat membuat pengaturan berbeda untuk berbagai proyek atau tugas. Anda mungkin menggunakan satu profil untuk pengembangan web dan profil lainnya untuk pemrograman Scheme, masing-masing dengan ekstensi, tema, dan pengaturan spesifiknya sendiri.
+- **Ruang kerja**: Cursor menata beberapa proyek ke dalam "ruang kerja", yang menahan file dan folder terkait tetap bersama. Navigasi dan pengelolaan proyek menjadi lebih mudah.
 
-### Memulai dengan Visual Studio Code
+- **Profil**: Dengan profil Anda dapat menyiapkan susunan berbeda untuk tiap proyek atau tugas. Satu untuk pengembangan web, satu lagi untuk Scheme, masing-masing dengan ekstensi, tema, dan pengaturannya sendiri.
 
-Untuk mulai menggunakan VSC:
+### Memulai Cursor
 
-- **Unduh dan Instal**: Kunjungi [situs web Visual Studio Code](https://code.visualstudio.com/) dan unduh versi Linux.
+Untuk mulai memakai Cursor:
 
-- **Jelajahi Antarmuka**: Saat Anda membuka VSC, Anda akan melihat beberapa panel. Di sebelah kiri, Anda memiliki **Bilah Aktivitas**, tempat Anda dapat bernavigasi antar file, mencari, menggunakan Git, dan menginstal ekstensi.
+- **Unduh dan pasang**: Buka [situs Cursor](https://cursor.com/) dan unduh versi Linux.
 
-- **Buka File atau Folder**: Siapkan ruang kerja Anda dengan menambahkan folder tempat proyek Anda disimpan, dan simpan konfigurasi aktif ke file ruang kerja.
+- **Jelajahi antarmuka**: Saat Cursor terbuka, Anda akan melihat beberapa panel. Di kiri ada **Bilah Aktivitas**, tempat berpindah antara file, pencarian, Git, dan ekstensi.
 
-Ruang kerja hanyalah tampilan folder tersimpan ditambah pengaturan editor untuk proyek Anda.
+- **Buka file atau folder**: Siapkan ruang kerja dengan menambahkan folder proyek, lalu simpan konfigurasi yang aktif ke file ruang kerja.
+
+Ruang kerja hanyalah tampilan folder yang tersimpan, ditambah pengaturan editor untuk proyek itu.
 
 ### Ekstensi
 
-- **Instal Ekstensi**: Klik ikon **Ekstensi** di Bilah Aktivitas untuk menelusuri dan menginstal alat yang berguna untuk Scheme. Yang utama untuk diinstal adalah **"vscode-scheme"** oleh Allen Huang. Ekstensi ini menyediakan penyorotan sintaksis dan dukungan dasar untuk Scheme, yang merupakan bahasa dasar untuk Scheme.
+- **Pasang ekstensi**: Klik ikon **Ekstensi** di Bilah Aktivitas untuk mencari dan memasang alat yang berguna bagi Scheme. Yang utama adalah **"vscode-scheme"** karya Allen Huang. Ekstensi ini memberi penyorotan sintaksis dan dukungan dasar untuk Scheme, bahasa yang dipakai menulis plug-in Lumi.
 
-Anda juga dapat menyesuaikan ekstensi dengan mengedit file bahasa untuk memasukkan lebih banyak kata kunci khusus Scheme atau apa pun yang terkait dengan skrip Lumi.
+Anda juga dapat menyesuaikan ekstensi dengan menyunting file bahasa, untuk menambah kata kunci Scheme atau istilah dari skrip Lumi.
 
-Jika Anda mengelola pustaka pembantu Anda sendiri, menambahkan nama fungsi proyek Anda ke penyorot sintaks akan membuat navigasi dan pemfaktoran ulang menjadi lebih cepat.
+Jika Anda memelihara pustaka bantuan sendiri, menambahkan nama fungsi ke penyorot membuat navigasi dan refaktor lebih cepat.
 
 ### Kesimpulan
 
-Gunakan editor yang memudahkan pencarian, pemfaktoran ulang, dan menjalankan pengeditan cepat. VS Code + ekstensi Scheme adalah dasar yang kuat.
+Gunakan editor yang memudahkan pencarian, refaktor, dan suntingan cepat, dengan AI di dekat tangan. Cursor ditambah ekstensi Scheme adalah dasar yang dipakai di sini.

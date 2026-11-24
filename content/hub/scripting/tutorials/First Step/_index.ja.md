@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps では、Scheme でうまく機能する機能パターンを、短い例と段階的なリファクタリングとともに紹介します。
@@ -15,7 +15,7 @@ First Steps では、Scheme でうまく機能する機能パターンを、短�
 始める前に、以下のものがあることを確認してください。
 
 - Lumi がインストールされています (最近のビルドまたは AppImage)。
-- `.scm` ファイル用のテキスト エディター (VS Code は適切に機能します): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- `.scm` ファイル用のテキスト エディター (Cursor は適切に機能します): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) を使用してコードをバックアップし、バージョンを管理します。
 
 ## チュートリアルの手順

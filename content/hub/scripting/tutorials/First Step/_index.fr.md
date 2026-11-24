@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps présente des modèles fonctionnels qui fonctionnent bien dans Scheme, avec de courts exemples et des refactoristes incrémentiels.
@@ -15,7 +15,7 @@ First Steps présente des modèles fonctionnels qui fonctionnent bien dans Schem
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 - Lumi installé (une version récente ou AppImage).
-- Un éditeur de texte pour les fichiers `.scm` (VS Code fonctionne bien) : [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- Un éditeur de texte pour les fichiers `.scm` (Cursor fonctionne bien) : [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) pour garder votre code sauvegardé et contrôlé par version.
 
 ## Étapes du didacticiel

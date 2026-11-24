@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio Code"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 translation_lock: true
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## Visual Studio Code là gì?
 
-[Visual Studio Code](https://code.visualstudio.com/) (thường được rút ngắn thành "VS Code" hoặc "VSC") là trình soạn thảo văn bản mã nguồn mở miễn phí do Microsoft phát triển, được thiết kế đặc biệt cho mã hóa. Nó nhẹ, nhanh và có khả năng tùy biến cao, khiến nó trở thành một trong những trình soạn thảo mã phổ biến nhất trong số các nhà phát triển. Đây là lý do tại sao VSC là một lựa chọn tuyệt vời:
+## Cursor là gì?
 
-- **Đánh dấu cú pháp**: Đánh dấu cú pháp mã hóa màu mã của bạn, giúp phát hiện lỗi, hiểu cấu trúc và đọc mã phức tạp dễ dàng hơn.
-- **Tiện ích mở rộng**: Bạn có thể nâng cao VSC với hàng nghìn tiện ích mở rộng. Cho dù bạn cần hỗ trợ cho một ngôn ngữ, chủ đề hoặc công cụ cụ thể, bạn đều có thể tìm thấy tiện ích mở rộng phù hợp.
-- **Tích hợp kiểm soát phiên bản**: VSC có hỗ trợ Git tích hợp, giúp bạn dễ dàng theo dõi các thay đổi mã, quản lý các nhánh bằng cách sử dụng các dịch vụ như [GitHub](https://github.com/) hoặc [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) là trình soạn thảo mã có trợ giúp AI trong cùng một cửa sổ. Nó dựa trên Visual Studio Code, nên tô màu cú pháp, tiện ích, không gian làm việc và Git vẫn còn. Cursor là trình soạn thảo dùng ở đây cho script Lumi, vì trợ giúp AI đó tiết kiệm hơn nhiều.
 
-### Các tính năng chính dành cho người mới bắt đầu
+- **Tô màu cú pháp**: Việc tô màu gán màu cho mã. Lỗi hiện sớm hơn, cấu trúc rõ hơn, và mã phức tạp dễ đọc hơn.
+- **Tiện ích**: Cursor chạy tiện ích của Visual Studio Code. Ngôn ngữ, giao diện hay công cụ: có tiện ích phù hợp.
+- **Tích hợp quản lý phiên bản**: Git có sẵn. Theo dõi thay đổi và quản lý nhánh trở nên dễ, với các dịch vụ như [GitHub](https://github.com/) hoặc [GitLab](https://gitlab.com/).
+- **AI trong trình soạn thảo**: Bạn có thể nhờ tìm kiếm, tái cấu trúc hoặc một sửa nhỏ bên cạnh tệp đang mở. Chi phí của trợ giúp đó đủ thấp để dùng trong việc viết script hàng ngày.
 
-- **Không gian làm việc**: VSC cho phép bạn tổ chức nhiều dự án thành "không gian làm việc", cho phép bạn giữ các tệp và thư mục liên quan lại với nhau để điều hướng và quản lý dự án dễ dàng hơn.
+### Tính năng chính cho người mới
 
-- **Hồ sơ**: Với hồ sơ, bạn có thể tạo các thiết lập khác nhau cho các dự án hoặc nhiệm vụ khác nhau. Bạn có thể sử dụng một hồ sơ để phát triển web và một hồ sơ khác để lập trình Scheme, mỗi hồ sơ có các tiện ích mở rộng, chủ đề và cài đặt cụ thể riêng.
+- **Không gian làm việc**: Cursor sắp nhiều dự án vào "không gian làm việc", giữ các tệp và thư mục liên quan ở cùng chỗ. Việc di chuyển và quản lý dự án trở nên đơn giản hơn.
 
-### Bắt đầu với Visual Studio Code
+- **Hồ sơ**: Với hồ sơ, bạn chuẩn bị cấu hình khác nhau cho từng dự án hoặc việc. Một hồ sơ cho phát triển web, một hồ sơ cho Scheme, mỗi hồ sơ có tiện ích, giao diện và thiết lập riêng.
 
-Để bắt đầu sử dụng VSC:
+### Bắt đầu với Cursor
 
-- **Tải xuống và cài đặt**: Truy cập [trang web Visual Studio Code](https://code.visualstudio.com/) và tải xuống phiên bản Linux.
+Để bắt đầu dùng Cursor:
 
-- **Khám phá Giao diện**: Khi mở VSC, bạn sẽ thấy một số bảng. Ở bên trái, bạn có **Thanh hoạt động**, nơi bạn có thể điều hướng giữa các tệp, tìm kiếm, sử dụng Git và cài đặt tiện ích mở rộng.
+- **Tải và cài**: Vào [trang Cursor](https://cursor.com/) và tải bản cho Linux.
 
-- **Mở tệp hoặc thư mục**: Thiết lập không gian làm việc của bạn bằng cách thêm thư mục nơi dự án của bạn được lưu trữ và lưu cấu hình hoạt động vào tệp không gian làm việc.
+- **Xem giao diện**: Khi mở Cursor, bạn sẽ thấy vài bảng. Bên trái là **Thanh hoạt động**, nơi chuyển giữa tệp, tìm kiếm, Git và tiện ích.
 
-Không gian làm việc chỉ là chế độ xem thư mục đã lưu cộng với cài đặt trình soạn thảo cho dự án của bạn.
+- **Mở tệp hoặc thư mục**: Dựng không gian làm việc bằng cách thêm thư mục dự án, rồi lưu cấu hình đang dùng vào một tệp không gian làm việc.
 
-### Tiện ích mở rộng
+Không gian làm việc chỉ là một cách xem thư mục đã lưu, cùng thiết lập trình soạn thảo cho dự án đó.
 
-- **Cài đặt tiện ích mở rộng**: Nhấp vào biểu tượng **Tiện ích mở rộng** trên Thanh hoạt động để duyệt và cài đặt các công cụ hữu ích cho Scheme. Cái chính để cài đặt là **"vscode-scheme"** của Allen Huang. Tiện ích mở rộng này cung cấp tính năng đánh dấu cú pháp và hỗ trợ cơ bản cho Scheme, đây là ngôn ngữ cơ bản cho Scheme.
+### Tiện ích
 
-Bạn cũng có thể tùy chỉnh tiện ích mở rộng bằng cách chỉnh sửa tệp ngôn ngữ để bao gồm nhiều từ khóa dành riêng cho Scheme hoặc bất kỳ thứ gì liên quan đến tập lệnh Lumi.
+- **Cài tiện ích**: Bấm biểu tượng **Tiện ích** trên Thanh hoạt động để tìm và cài công cụ hữu ích cho Scheme. Cái chính là **"vscode-scheme"** của Allen Huang. Nó tô màu cú pháp và hỗ trợ cơ bản cho Scheme, ngôn ngữ dùng để viết plug-in Lumi.
 
-Nếu bạn duy trì thư viện trợ giúp của riêng mình, việc thêm tên hàm của dự án vào công cụ đánh dấu cú pháp sẽ giúp việc điều hướng và tái cấu trúc nhanh hơn.
+Bạn cũng có thể chỉnh tiện ích bằng cách sửa tệp ngôn ngữ, để thêm từ khóa Scheme hoặc thuật ngữ của script Lumi.
+
+Nếu bạn giữ một thư viện trợ giúp riêng, thêm tên hàm vào phần tô màu sẽ làm việc di chuyển và tái cấu trúc nhanh hơn.
 
 ### Kết luận
 
-Sử dụng trình chỉnh sửa giúp dễ dàng tìm kiếm, cấu trúc lại và chạy các chỉnh sửa nhanh. Mã VS + tiện ích mở rộng Scheme là cơ sở vững chắc.
+Hãy dùng trình soạn thảo giúp tìm, tái cấu trúc và sửa nhanh dễ dàng, với AI ở gần. Cursor cùng một tiện ích Scheme là nền dùng ở đây.

@@ -1,45 +1,47 @@
 ---
-title: "Código de estudio visual"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## ¿Qué es el código de Visual Studio?
 
-[Visual Studio Code](https://code.visualstudio.com/) (a menudo abreviado como "VS Code" o "VSC") es un editor de texto gratuito y de código abierto desarrollado por Microsoft, diseñado específicamente para codificar. Es liviano, rápido y altamente personalizable, lo que lo convierte en uno de los editores de código más populares entre los desarrolladores. He aquí por qué VSC es una excelente opción:
+## ¿Qué es Cursor?
 
-- **Resaltado de sintaxis**: el resaltado de sintaxis codifica con colores su código, lo que facilita detectar errores, comprender la estructura y leer código complejo.
-- **Extensiones**: Puedes mejorar VSC con miles de extensiones. Ya sea que necesite soporte para un idioma, tema o herramienta específicos, puede encontrar una extensión que se adapte a sus necesidades.
-- **Integración de control de versiones**: VSC tiene soporte Git incorporado, lo que facilita el seguimiento de los cambios de código, la administración de sucursales y el uso de servicios como [GitHub](https://github.com/) o [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) es un editor de código con ayuda de IA en la misma ventana. Se basa en Visual Studio Code, así que el resaltado de sintaxis, las extensiones, los espacios de trabajo y Git se conservan. Cursor es el editor que se usa aquí para los scripts de Lumi, porque esa ayuda de IA resulta mucho más económica.
+
+- **Resaltado de sintaxis**: El resaltado colorea el código. Los errores se ven antes, la estructura se entiende mejor y el código complejo se lee con más claridad.
+- **Extensiones**: Cursor ejecuta las extensiones de Visual Studio Code. Idioma, tema o herramienta: hay una extensión que encaja.
+- **Integración del control de versiones**: Git viene integrado. Resulta fácil seguir los cambios y gestionar ramas, con servicios como [GitHub](https://github.com/) o [GitLab](https://gitlab.com/).
+- **IA en el editor**: Puedes pedir una búsqueda, una refactorización o un cambio pequeño junto al archivo que ya tienes abierto. El coste de esa ayuda es lo bastante bajo para usarla en el trabajo ordinario con scripts.
 
 ### Funciones clave para principiantes
 
-- **Espacios de trabajo**: VSC le permite organizar múltiples proyectos en "espacios de trabajo", lo que le permite mantener juntos archivos y carpetas relacionados para facilitar la navegación y la gestión de proyectos.
+- **Espacios de trabajo**: Cursor organiza varios proyectos en «espacios de trabajo», que mantienen juntos los archivos y carpetas relacionados. La navegación y la gestión del proyecto se vuelven más sencillas.
 
-- **Perfiles**: con los perfiles, puedes crear diferentes configuraciones para varios proyectos o tareas. Puede utilizar un perfil para el desarrollo web y otro para la programación de Scheme, cada uno con sus propias extensiones, temas y configuraciones específicas.
+- **Perfiles**: Con los perfiles puedes preparar configuraciones distintas para cada proyecto o tarea. Uno para desarrollo web y otro para Scheme, cada uno con sus extensiones, temas y ajustes.
 
-### Introducción a Visual Studio Code
+### Primeros pasos con Cursor
 
-Para comenzar a usar VSC:
+Para empezar a usar Cursor:
 
-- **Descargar e instalar**: vaya al [sitio web de Visual Studio Code](https://code.visualstudio.com/) y descargue la versión de Linux.
+- **Descargar e instalar**: Entra en el [sitio de Cursor](https://cursor.com/) y descarga la versión para Linux.
 
-- **Explora la interfaz**: cuando abres VSC, verás varios paneles. A la izquierda, tienes la **Barra de actividad**, donde puedes navegar entre archivos, buscar, usar Git e instalar extensiones.
+- **Explorar la interfaz**: Al abrir Cursor verás varios paneles. A la izquierda está la **barra de actividades**, desde la que pasas entre archivos, búsqueda, Git y extensiones.
 
-- **Abrir un archivo o carpeta**: configure su espacio de trabajo agregando la carpeta donde está almacenado su proyecto y guarde la configuración activa en un archivo de espacio de trabajo.
+- **Abrir un archivo o una carpeta**: Prepara el espacio de trabajo añadiendo la carpeta del proyecto y guarda la configuración activa en un archivo de espacio de trabajo.
 
-Un espacio de trabajo es solo una vista de carpeta guardada más la configuración del editor para su proyecto.
+Un espacio de trabajo es solo una vista de carpeta guardada, más los ajustes del editor para el proyecto.
 
 ### Extensiones
 
-- **Instalar extensiones**: haga clic en el ícono **Extensiones** en la barra de actividades para buscar e instalar herramientas útiles para Scheme. El principal a instalar es **"vscode-scheme"** de Allen Huang. Esta extensión proporciona resaltado de sintaxis y soporte básico para Scheme, que es el lenguaje base de Scheme.
+- **Instalar extensiones**: Pulsa el icono **Extensiones** de la barra de actividades para buscar e instalar herramientas útiles para Scheme. La principal es **«vscode-scheme»**, de Allen Huang. Ofrece resaltado de sintaxis y un soporte básico de Scheme, el lenguaje en el que se escriben los complementos de Lumi.
 
-También puede personalizar la extensión editando el archivo de idioma para incluir más palabras clave específicas de Scheme o cualquier cosa relacionada con las scripts de Lumi.
+También puedes adaptar la extensión editando el archivo de lenguaje, para incluir más palabras clave de Scheme o cualquier término del scripting de Lumi.
 
-Si mantiene su propia biblioteca auxiliar, agregar los nombres de las funciones de su proyecto al resaltador de sintaxis agiliza la navegación y la refactorización.
+Si mantienes tu propia biblioteca de ayuda, añadir los nombres de las funciones al resaltado hace más rápidas la navegación y la refactorización.
 
 ### Conclusión
 
-Utilice un editor que facilite la búsqueda, la refactorización y la ejecución de ediciones rápidas. VS Code + una extensión Scheme es una base sólida.
+Usa un editor que facilite buscar, refactorizar y hacer cambios rápidos, con la IA al alcance. Cursor más una extensión de Scheme es la base que se usa aquí.

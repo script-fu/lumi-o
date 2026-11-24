@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps apresenta padrões funcionais que funcionam bem no Scheme, com exemplos curtos e refatoradores incrementais.
@@ -15,7 +15,7 @@ No final, você terá criado sua própria biblioteca de mensagens personalizadas
 Antes de começar, certifique-se de ter o seguinte:
 
 - Lumi instalado (uma compilação recente ou AppImage).
-- Um editor de texto para arquivos `.scm` (VS Code funciona bem): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- Um editor de texto para arquivos `.scm` (Cursor funciona bem): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) para manter o backup do seu código e a versão controlada.
 
 ## Etapas do tutorial

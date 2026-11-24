@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps 介紹了在Scheme 中運作良好的功能模式，並提供簡短的範例和增量重構。
@@ -15,7 +15,7 @@ First Steps 介紹了在Scheme 中運作良好的功能模式，並提供簡短�
 在開始之前，請確保您具備以下條件：
 
 - 安裝了 Lumi（最近的版本或 AppImage）。
-- `.scm` 檔案的文字編輯器（VS Code 效果很好）：[Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- `.scm` 檔案的文字編輯器（Cursor 效果很好）：[Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) 保持程式碼備份和版本控制。
 
 ## 教學步驟

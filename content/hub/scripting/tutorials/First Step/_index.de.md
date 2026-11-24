@@ -4,7 +4,7 @@ type: docs
 weight: 1
 translation_provenance: ai-reviewed
 translation_lock: true
-translation_source_sha256: 12b18e7c1a6a5a15b08287b2374111d34bd3d8bf8d24344f1ae8318db90b3342
+translation_source_sha256: 765fb187aa3e75fe1ccf1dc23fe7d1f6f172256cc66ce89145745ff63d9d1f3c
 url: "hub/scripting/tutorials/first-step"
 ---
 First Steps stellt funktionale Muster vor, die in Scheme gut funktionieren, mit kurzen Beispielen und inkrementellen Refaktoren.
@@ -15,7 +15,7 @@ Am Ende haben Sie Ihre eigene benutzerdefinierte Messaging-Bibliothek erstellt u
 Bevor Sie beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
 
 - Lumi installiert (ein aktueller Build oder AppImage).
-- Ein Texteditor für `.scm` Dateien (VS-Code funktioniert gut): [Visual Studio Code](/hub/scripting/tools/visual-studio-code)
+- Ein Texteditor für `.scm` Dateien (Cursor funktioniert gut): [Cursor](/hub/scripting/tools/visual-studio-code)
 - [Git](/hub/scripting/tools/git/) um Ihren Code zu sichern und die Versionskontrolle zu gewährleisten.
 
 ## Tutorial-Schritte

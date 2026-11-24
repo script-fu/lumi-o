@@ -1,45 +1,47 @@
 ---
-title: "Visual Studio Code"
+title: "Cursor"
 type: docs
 translation_provenance: ai-reviewed
-translation_source_sha256: 00ab3a6024dd5a7dfce444462e988f39314fb05b961751a37458d77942287b37
+translation_source_sha256: d3a7764cd3f00336fdcbb4d09a47fc3cabf4c99767cd005ccdc2fafdfa119117
 translation_lock: true
 url: "hub/scripting/tools/visual-studio-code"
 ---
-## O que é código do Visual Studio?
 
-[Visual Studio Code](https://code.visualstudio.com/) (geralmente abreviado para "VS Code" ou "VSC") é um editor de texto gratuito e de código aberto desenvolvido pela Microsoft, projetado especificamente para codificação. É leve, rápido e altamente personalizável, o que o torna um dos editores de código mais populares entre os desenvolvedores. Veja por que o VSC é uma ótima escolha:
+## O que é o Cursor?
 
-- **Destaque de sintaxe**: o realce de sintaxe codifica o código por cores, facilitando a detecção de erros, a compreensão da estrutura e a leitura de códigos complexos.
-- **Extensões**: pode aprimorar o VSC com milhares de extensões. Se precisa de suporte para um idioma, tema ou ferramenta específico, pode encontrar uma extensão adequada.
-- **Integração de controlo de versões**: o VSC possui suporte Git integrado, facilitando o rastreamento de alterações de código e o gestão de filiais, usando serviços como [GitHub](https://github.com/) ou [GitLab](https://gitlab.com/).
+[Cursor](https://cursor.com/) é um editor de código com ajuda de IA na mesma janela. Baseia-se no Visual Studio Code, pelo que o realce de sintaxe, as extensões, as áreas de trabalho e o Git se mantêm. O Cursor é o editor usado aqui para os scripts do Lumi, porque essa ajuda de IA é muito mais económica.
 
-### Principais recursos para iniciantes
+- **Realce de sintaxe**: O realce colore o código. Os erros vêem-se mais cedo, a estrutura compreende-se melhor e o código complexo lê-se com mais clareza.
+- **Extensões**: O Cursor executa as extensões do Visual Studio Code. Língua, tema ou ferramenta: há uma extensão adequada.
+- **Integração do controlo de versões**: O Git vem integrado. Torna-se simples seguir alterações e gerir ramos, com serviços como o [GitHub](https://github.com/) ou o [GitLab](https://gitlab.com/).
+- **IA no editor**: Pode pedir uma pesquisa, uma refatoração ou uma pequena alteração ao lado do ficheiro já aberto. O custo dessa ajuda é baixo o suficiente para a usar no trabalho corrente com scripts.
 
-- **Espaços de trabalho**: o VSC permite organizar vários projetos em "espaços de trabalho", que permitem manter ficheiros e pastas relacionados juntos para facilitar a navegação e o gestão de projetos.
+### Funções principais para principiantes
 
-- **Perfis**: com perfis, pode criar diferentes configurações para vários projetos ou tarefas. Pode usar um perfil para desenvolvimento web e outro para programação Scheme, cada um com as suas próprias extensões, temas e configurações específicas.
+- **Áreas de trabalho**: O Cursor organiza vários projetos em «áreas de trabalho», que mantêm juntos ficheiros e pastas relacionados. A navegação e a gestão do projeto ficam mais simples.
 
-### Introdução ao código do Visual Studio
+- **Perfis**: Com os perfis pode preparar configurações diferentes para cada projeto ou tarefa. Um para desenvolvimento web e outro para Scheme, cada um com as suas extensões, temas e definições.
 
-Para começar a usar o VSC:
+### Primeiros passos com o Cursor
 
-- **Baixar e instalar**: Vá para o [site do Visual Studio Code](https://code.visualstudio.com/) e baixe a versão Linux.
+Para começar a usar o Cursor:
 
-- **Explore a interface**: Ao abrir o VSC, notará vários painéis. À esquerda, tem a **Barra de atividades**, onde pode navegar entre ficheiros, pesquisar, usar o Git e instalar extensões.
+- **Transferir e instalar**: Vá ao [sítio do Cursor](https://cursor.com/) e transfira a versão para Linux.
 
-- **Abra um ficheiro ou pasta**: Configure o espaço de trabalho adicionando a pasta onde o projeto está armazenado e salve a configuração ativa em um ficheiro de espaço de trabalho.
+- **Explorar a interface**: Ao abrir o Cursor, vê vários painéis. À esquerda está a **barra de atividades**, de onde passa entre ficheiros, pesquisa, Git e extensões.
 
-Um espaço de trabalho é apenas uma visualização de pasta salva e mais configurações de editor para o projeto.
+- **Abrir um ficheiro ou uma pasta**: Prepare a área de trabalho acrescentando a pasta do projeto e guarde a configuração ativa num ficheiro de área de trabalho.
+
+Uma área de trabalho é apenas uma vista de pasta guardada, mais as definições do editor para o projeto.
 
 ### Extensões
 
-- **Instalar extensões**: clique no ícone **Extensões** na barra de atividades para navegar e instalar ferramentas úteis para o Scheme. O principal a ser instalado é **"vscode-scheme"** de Allen Huang. Esta extensão fornece destaque de sintaxe e suporte básico para Scheme, que é a linguagem base do Scheme.
+- **Instalar extensões**: Clique no ícone **Extensões** da barra de atividades para procurar e instalar ferramentas úteis para Scheme. A principal é **«vscode-scheme»**, de Allen Huang. Oferece realce de sintaxe e um suporte básico de Scheme, a linguagem em que se escrevem os plug-ins do Lumi.
 
- também pode personalizar a extensão editando o ficheiro de idioma para incluir mais palavras-chave específicas do Scheme ou qualquer coisa relacionada ao script Lumi.
+Também pode adaptar a extensão editando o ficheiro de linguagem, para incluir mais palavras-chave de Scheme ou termos ligados aos scripts do Lumi.
 
-Se mantiver uma biblioteca auxiliar, adicionar os nomes das funções do projeto ao realçador de sintaxe torna a navegação e a refatoração mais rápidas.
+Se mantiver a sua própria biblioteca de apoio, acrescentar os nomes das funções ao realce torna a navegação e a refatoração mais rápidas.
 
 ### Conclusão
 
-Use um editor que facilite a pesquisa, a refatoração e a execução de edições rápidas. Código VS + uma extensão de Scheme é uma linha de base sólida.
+Use um editor que facilite a pesquisa, a refatoração e as alterações rápidas, com a IA à mão. O Cursor com uma extensão Scheme é a base usada aqui.
